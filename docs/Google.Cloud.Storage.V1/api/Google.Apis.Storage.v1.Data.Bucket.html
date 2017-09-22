@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Bucket
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -80,35 +81,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Bucket</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Storage.v1.Data.html">Google.Apis.Storage.v1.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Storage.v1.dll</h6>
   <h5 id="Google_Apis_Storage_v1_Data_Bucket_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Bucket : IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class Bucket : Requests.IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -119,8 +96,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;acl&quot;)]
-public virtual IList&lt;BucketAccessControl&gt; Acl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;BucketAccessControl&gt; Acl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -144,8 +120,7 @@ public virtual IList&lt;BucketAccessControl&gt; Acl { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;billing&quot;)]
-public virtual Bucket.BillingData Billing { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Bucket.BillingData Billing { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,8 +144,7 @@ public virtual Bucket.BillingData Billing { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;cors&quot;)]
-public virtual IList&lt;Bucket.CorsData&gt; Cors { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;Bucket.CorsData&gt; Cors { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,8 +168,7 @@ public virtual IList&lt;Bucket.CorsData&gt; Cors { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;defaultObjectAcl&quot;)]
-public virtual IList&lt;ObjectAccessControl&gt; DefaultObjectAcl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;ObjectAccessControl&gt; DefaultObjectAcl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,8 +193,7 @@ specified.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;encryption&quot;)]
-public virtual Bucket.EncryptionData Encryption { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Bucket.EncryptionData Encryption { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,8 +217,7 @@ public virtual Bucket.EncryptionData Encryption { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;etag&quot;)]
-public virtual string ETag { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string ETag { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,8 +234,6 @@ public virtual string ETag { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Storage_v1_Data_Bucket_Id_" data-uid="Google.Apis.Storage.v1.Data.Bucket.Id*"></a>
   <h4 id="Google_Apis_Storage_v1_Data_Bucket_Id" data-uid="Google.Apis.Storage.v1.Data.Bucket.Id">Id</h4>
   <div class="markdown level1 summary"><p>The ID of the bucket. For buckets, the id and name properities are the same.</p>
@@ -272,8 +241,7 @@ public virtual string ETag { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
-public virtual string Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -297,8 +265,7 @@ public virtual string Id { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
-public virtual string Kind { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -322,8 +289,7 @@ public virtual string Kind { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;labels&quot;)]
-public virtual IDictionary&lt;string, string&gt; Labels { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IDictionary&lt;string, string&gt; Labels { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,8 +313,7 @@ public virtual IDictionary&lt;string, string&gt; Labels { get; set; }</code></pr
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;lifecycle&quot;)]
-public virtual Bucket.LifecycleData Lifecycle { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Bucket.LifecycleData Lifecycle { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -373,8 +338,7 @@ within this region. Defaults to US. See the developer&apos;s guide for the autho
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;location&quot;)]
-public virtual string Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -399,8 +363,7 @@ for the current bucket&apos;s logs.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;logging&quot;)]
-public virtual Bucket.LoggingData Logging { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Bucket.LoggingData Logging { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,8 +387,7 @@ public virtual Bucket.LoggingData Logging { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;metageneration&quot;)]
-public virtual long ? Metageneration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual long ? Metageneration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -449,8 +411,7 @@ public virtual long ? Metageneration { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;name&quot;)]
-public virtual string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -474,8 +435,7 @@ public virtual string Name { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;owner&quot;)]
-public virtual Bucket.OwnerData Owner { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Bucket.OwnerData Owner { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -499,8 +459,7 @@ public virtual Bucket.OwnerData Owner { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;projectNumber&quot;)]
-public virtual ulong ? ProjectNumber { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ulong ? ProjectNumber { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -524,8 +483,7 @@ public virtual ulong ? ProjectNumber { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;selfLink&quot;)]
-public virtual string SelfLink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string SelfLink { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -553,8 +511,7 @@ see storage classes.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;storageClass&quot;)]
-public virtual string StorageClass { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string StorageClass { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -578,8 +535,7 @@ public virtual string StorageClass { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public virtual DateTime? TimeCreated { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual DateTime? TimeCreated { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -603,8 +559,7 @@ public virtual DateTime? TimeCreated { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;timeCreated&quot;)]
-public virtual string TimeCreatedRaw { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string TimeCreatedRaw { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -628,8 +583,7 @@ public virtual string TimeCreatedRaw { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public virtual DateTime? Updated { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual DateTime? Updated { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -653,8 +607,7 @@ public virtual DateTime? Updated { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;updated&quot;)]
-public virtual string UpdatedRaw { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string UpdatedRaw { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -678,8 +631,7 @@ public virtual string UpdatedRaw { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;versioning&quot;)]
-public virtual Bucket.VersioningData Versioning { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Bucket.VersioningData Versioning { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -704,8 +656,7 @@ contents as a web site. See the Static Website Examples for more information.</p
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;website&quot;)]
-public virtual Bucket.WebsiteData Website { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Bucket.WebsiteData Website { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

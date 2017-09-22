@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FieldDescriptor
    | Google.Cloud.Spanner.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -80,6 +81,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Google.Protobuf.Reflection.DescriptorBase.html">DescriptorBase</a></div>
     <div class="level2"><span class="xref">FieldDescriptor</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.Reflection.IDescriptor.html">IDescriptor</a></div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="Google.Protobuf.Reflection.FieldDescriptor.html">FieldDescriptor</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -457,7 +463,7 @@ but can be overridden using the <code>json_name</code> option in the .proto file
   <a id="Google_Protobuf_Reflection_FieldDescriptor_CompareTo_" data-uid="Google.Protobuf.Reflection.FieldDescriptor.CompareTo*"></a>
   <h4 id="Google_Protobuf_Reflection_FieldDescriptor_CompareTo_Google_Protobuf_Reflection_FieldDescriptor_" data-uid="Google.Protobuf.Reflection.FieldDescriptor.CompareTo(Google.Protobuf.Reflection.FieldDescriptor)">CompareTo(FieldDescriptor)</h4>
   <div class="markdown level1 summary"><p>Compares this descriptor with another one, ordering in &quot;canonical&quot; order
-which simply means ascending order by field number. <span class="paramref">other</span>
+which simply means ascending order by field number. <code data-dev-comment-type="paramref" class="paramref">other</code>
 must be a field of the same type, i.e. the <a class="xref" href="Google.Protobuf.Reflection.FieldDescriptor.html#Google_Protobuf_Reflection_FieldDescriptor_ContainingType">ContainingType</a> of
 both fields must be the same.</p>
 </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RpcException
    | Google.Cloud.Logging.Log4Net ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -80,6 +81,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">System.Exception</span></div>
     <div class="level2"><span class="xref">RpcException</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+    <div><span class="xref">System.Runtime.InteropServices._Exception</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -174,6 +180,39 @@
     </tbody>
   </table>
   <a id="Grpc_Core_RpcException__ctor_" data-uid="Grpc.Core.RpcException.#ctor*"></a>
+  <h4 id="Grpc_Core_RpcException__ctor_Grpc_Core_Status_Grpc_Core_Metadata_" data-uid="Grpc.Core.RpcException.#ctor(Grpc.Core.Status,Grpc.Core.Metadata)">RpcException(Status, Metadata)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <code>RpcException</code> associated with given status and trailing response metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RpcException(Status status, Metadata trailers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Status.html">Status</a></td>
+        <td><span class="parametername">status</span></td>
+        <td><p>Resulting status of a call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">trailers</span></td>
+        <td><p>Response trailing metadata.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Grpc_Core_RpcException__ctor_" data-uid="Grpc.Core.RpcException.#ctor*"></a>
   <h4 id="Grpc_Core_RpcException__ctor_Grpc_Core_Status_System_String_" data-uid="Grpc.Core.RpcException.#ctor(Grpc.Core.Status,System.String)">RpcException(Status, String)</h4>
   <div class="markdown level1 summary"><p>Creates a new <code>RpcException</code> associated with given status and message.</p>
 </div>
@@ -228,6 +267,32 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Grpc.Core.Status.html">Status</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Grpc_Core_RpcException_Trailers_" data-uid="Grpc.Core.RpcException.Trailers*"></a>
+  <h4 id="Grpc_Core_RpcException_Trailers" data-uid="Grpc.Core.RpcException.Trailers">Trailers</h4>
+  <div class="markdown level1 summary"><p>Gets the call trailing metadata.
+Trailers only have meaningful content for client-side calls (in which case they represent the trailing metadata sent by the server when closing the call).
+Instances of <code>RpcException</code> thrown by the server-side part of the stack will have trailers always set to empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Metadata Trailers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td></td>
       </tr>
     </tbody>

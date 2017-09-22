@@ -8,7 +8,7 @@
     <title>Google.Cloud.Spanner.Data | Google.Cloud.Spanner.Data </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Spanner.Data | Google.Cloud.Spanner.Data ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <meta property="docfx:navrel" content="toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -145,7 +146,8 @@ commands provided by SpannerDataAdapter with your own custom commands.</p>
         cmd.Parameters[&quot;Key&quot;].Value = Guid.NewGuid().ToString(&quot;N&quot;);
         cmd.Parameters[&quot;StringValue&quot;].Value = $&quot;StringValue{i}&quot;;
         cmd.Parameters[&quot;Int64Value&quot;].Value = i;
-        await cmd.ExecuteNonQueryAsync();
+        int rowsAffected = await cmd.ExecuteNonQueryAsync();
+        Console.WriteLine($&quot;{rowsAffected} rows written...&quot;);
     }
 }
 </code></pre><h2 id="reading-updating-and-deleting-data">Reading, Updating and Deleting Data</h2>
@@ -159,14 +161,9 @@ commands provided by SpannerDataAdapter with your own custom commands.</p>
     var selectCmd = connection.CreateSelectCommand(&quot;SELECT * FROM TestTable&quot;);
     using (var reader = await selectCmd.ExecuteReaderAsync())
     {
-        while (await reader.ReadAsync())
+        while (keys.Count &lt; 3 &amp;&amp; await reader.ReadAsync())
         {
-            if (keys.Count &lt; 3)
-            {
-                keys.Add(reader.GetFieldValue&lt;string&gt;(&quot;Key&quot;));
-                continue;
-            }
-            break;
+            keys.Add(reader.GetFieldValue&lt;string&gt;(&quot;Key&quot;));
         }
     }
 
@@ -276,7 +273,6 @@ await retryPolicy.ExecuteAsync(
                 }
 
                 scope.Complete();
-                await Task.Yield();
             }
         }
     });

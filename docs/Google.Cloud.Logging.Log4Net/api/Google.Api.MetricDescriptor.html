@@ -1,0 +1,909 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MetricDescriptor
+   | Google.Cloud.Logging.Log4Net </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MetricDescriptor
+   | Google.Cloud.Logging.Log4Net ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Api.MetricDescriptor">
+  
+  
+  <h1 id="Google_Api_MetricDescriptor" data-uid="Google.Api.MetricDescriptor" class="text-break">Class MetricDescriptor
+  </h1>
+  <div class="markdown level0 summary"><p>Defines a metric type and its schema. Once a metric descriptor is created,
+deleting or altering it stops data collection and makes the metric type&apos;s
+existing data unusable.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MetricDescriptor</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.html">Google.Api</a></h6>
+  <h6><strong>Assembly</strong>: Google.Api.CommonProtos.dll</h6>
+  <h5 id="Google_Api_MetricDescriptor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class MetricDescriptor : Protobuf.IMessage&lt;MetricDescriptor&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Api_MetricDescriptor__ctor_" data-uid="Google.Api.MetricDescriptor.#ctor*"></a>
+  <h4 id="Google_Api_MetricDescriptor__ctor" data-uid="Google.Api.MetricDescriptor.#ctor">MetricDescriptor()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MetricDescriptor()</code></pre>
+  </div>
+  <a id="Google_Api_MetricDescriptor__ctor_" data-uid="Google.Api.MetricDescriptor.#ctor*"></a>
+  <h4 id="Google_Api_MetricDescriptor__ctor_Google_Api_MetricDescriptor_" data-uid="Google.Api.MetricDescriptor.#ctor(Google.Api.MetricDescriptor)">MetricDescriptor(MetricDescriptor)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MetricDescriptor(MetricDescriptor other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Google_Api_MetricDescriptor_DescriptionFieldNumber" data-uid="Google.Api.MetricDescriptor.DescriptionFieldNumber">DescriptionFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;description&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DescriptionFieldNumber = 6</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Api_MetricDescriptor_DisplayNameFieldNumber" data-uid="Google.Api.MetricDescriptor.DisplayNameFieldNumber">DisplayNameFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;display_name&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DisplayNameFieldNumber = 7</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Api_MetricDescriptor_LabelsFieldNumber" data-uid="Google.Api.MetricDescriptor.LabelsFieldNumber">LabelsFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;labels&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int LabelsFieldNumber = 2</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Api_MetricDescriptor_MetricKindFieldNumber" data-uid="Google.Api.MetricDescriptor.MetricKindFieldNumber">MetricKindFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;metric_kind&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MetricKindFieldNumber = 3</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Api_MetricDescriptor_NameFieldNumber" data-uid="Google.Api.MetricDescriptor.NameFieldNumber">NameFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;name&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int NameFieldNumber = 1</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Api_MetricDescriptor_TypeFieldNumber" data-uid="Google.Api.MetricDescriptor.TypeFieldNumber">TypeFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;type&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int TypeFieldNumber = 8</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Api_MetricDescriptor_UnitFieldNumber" data-uid="Google.Api.MetricDescriptor.UnitFieldNumber">UnitFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;unit&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int UnitFieldNumber = 5</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Api_MetricDescriptor_ValueTypeFieldNumber" data-uid="Google.Api.MetricDescriptor.ValueTypeFieldNumber">ValueTypeFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;value_type&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int ValueTypeFieldNumber = 4</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Api_MetricDescriptor_Description_" data-uid="Google.Api.MetricDescriptor.Description*"></a>
+  <h4 id="Google_Api_MetricDescriptor_Description" data-uid="Google.Api.MetricDescriptor.Description">Description</h4>
+  <div class="markdown level1 summary"><p>A detailed description of the metric, which can be used in documentation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_Descriptor_" data-uid="Google.Api.MetricDescriptor.Descriptor*"></a>
+  <h4 id="Google_Api_MetricDescriptor_Descriptor" data-uid="Google.Api.MetricDescriptor.Descriptor">Descriptor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Protobuf.Reflection.MessageDescriptor Descriptor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">Protobuf.Reflection.MessageDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_DisplayName_" data-uid="Google.Api.MetricDescriptor.DisplayName*"></a>
+  <h4 id="Google_Api_MetricDescriptor_DisplayName" data-uid="Google.Api.MetricDescriptor.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"><p>A concise name for the metric, which can be displayed in user interfaces.
+Use sentence case without an ending period, for example &quot;Request count&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DisplayName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_Labels_" data-uid="Google.Api.MetricDescriptor.Labels*"></a>
+  <h4 id="Google_Api_MetricDescriptor_Labels" data-uid="Google.Api.MetricDescriptor.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>The set of labels that can be used to describe a specific
+instance of this metric type. For example, the
+<code>appengine.googleapis.com/http/server/response_latencies</code> metric
+type has a label for the HTTP response code, <code>response_code</code>, so
+you can look at latencies for successful responses or just
+for responses that failed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Protobuf.Collections.RepeatedField&lt;LabelDescriptor&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">Protobuf.Collections.RepeatedField</a>&lt;<a class="xref" href="Google.Api.LabelDescriptor.html">LabelDescriptor</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_MetricKind_" data-uid="Google.Api.MetricDescriptor.MetricKind*"></a>
+  <h4 id="Google_Api_MetricDescriptor_MetricKind" data-uid="Google.Api.MetricDescriptor.MetricKind">MetricKind</h4>
+  <div class="markdown level1 summary"><p>Whether the metric records instantaneous values, changes to a value, etc.
+Some combinations of <code>metric_kind</code> and <code>value_type</code> might not be supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MetricDescriptor.Types.MetricKind MetricKind { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.MetricDescriptor.Types.MetricKind.html">MetricDescriptor.Types.MetricKind</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_Name_" data-uid="Google.Api.MetricDescriptor.Name*"></a>
+  <h4 id="Google_Api_MetricDescriptor_Name" data-uid="Google.Api.MetricDescriptor.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The resource name of the metric descriptor. Depending on the
+implementation, the name typically includes: (1) the parent resource name
+that defines the scope of the metric type or of its data; and (2) the
+metric&apos;s URL-encoded type, which also appears in the <code>type</code> field of this
+descriptor. For example, following is the resource name of a custom
+metric within the GCP project <code>my-project-id</code>:</p>
+<p>&quot;projects/my-project-id/metricDescriptors/custom.googleapis.com%2Finvoice%2Fpaid%2Famount&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_Parser_" data-uid="Google.Api.MetricDescriptor.Parser*"></a>
+  <h4 id="Google_Api_MetricDescriptor_Parser" data-uid="Google.Api.MetricDescriptor.Parser">Parser</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Protobuf.MessageParser&lt;MetricDescriptor&gt; Parser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.MessageParser-1.html">Protobuf.MessageParser</a>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_Type_" data-uid="Google.Api.MetricDescriptor.Type*"></a>
+  <h4 id="Google_Api_MetricDescriptor_Type" data-uid="Google.Api.MetricDescriptor.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The metric type, including its DNS name prefix. The type is not
+URL-encoded.  All user-defined custom metric types have the DNS name
+<code>custom.googleapis.com</code>.  Metric types should use a natural hierarchical
+grouping. For example:</p>
+<p>&quot;custom.googleapis.com/invoice/paid/amount&quot;
+&quot;appengine.googleapis.com/http/server/response_latencies&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Type { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_Unit_" data-uid="Google.Api.MetricDescriptor.Unit*"></a>
+  <h4 id="Google_Api_MetricDescriptor_Unit" data-uid="Google.Api.MetricDescriptor.Unit">Unit</h4>
+  <div class="markdown level1 summary"><p>The unit in which the metric value is reported. It is only applicable
+if the <code>value_type</code> is <code>INT64</code>, <code>DOUBLE</code>, or <code>DISTRIBUTION</code>. The
+supported units are a subset of <a href="http://unitsofmeasure.org/ucum.html">The Unified Code for Units of
+Measure</a> standard:</p>
+<p><strong>Basic units (UNIT)</strong></p>
+<ul>
+<li><code>bit</code>   bit</li>
+<li><code>By</code>    byte</li>
+<li><code>s</code>     second</li>
+<li><code>min</code>   minute</li>
+<li><code>h</code>     hour</li>
+<li><code>d</code>     day</li>
+</ul>
+<p><strong>Prefixes (PREFIX)</strong></p>
+<ul>
+<li><code>k</code>     kilo    (10**3)</li>
+<li><code>M</code>     mega    (10**6)</li>
+<li><code>G</code>     giga    (10**9)</li>
+<li><code>T</code>     tera    (10**12)</li>
+<li><code>P</code>     peta    (10**15)</li>
+<li><code>E</code>     exa     (10**18)</li>
+<li><code>Z</code>     zetta   (10**21)</li>
+<li><code>Y</code>     yotta   (10**24)</li>
+<li><code>m</code>     milli   (10**-3)</li>
+<li><code>u</code>     micro   (10**-6)</li>
+<li><code>n</code>     nano    (10**-9)</li>
+<li><code>p</code>     pico    (10**-12)</li>
+<li><code>f</code>     femto   (10**-15)</li>
+<li><code>a</code>     atto    (10**-18)</li>
+<li><code>z</code>     zepto   (10**-21)</li>
+<li><code>y</code>     yocto   (10**-24)</li>
+<li><code>Ki</code>    kibi    (2**10)</li>
+<li><code>Mi</code>    mebi    (2**20)</li>
+<li><code>Gi</code>    gibi    (2**30)</li>
+<li><code>Ti</code>    tebi    (2**40)</li>
+</ul>
+<p><strong>Grammar</strong></p>
+<p>The grammar includes the dimensionless unit <code>1</code>, such as <code>1/s</code>.</p>
+<p>The grammar also includes these connectors:</p>
+<ul>
+<li><code>/</code>    division (as an infix operator, e.g. <code>1/s</code>).</li>
+<li><code>.</code>    multiplication (as an infix operator, e.g. <code>GBy.d</code>)</li>
+</ul>
+<p>The grammar for a unit is as follows:</p>
+<p>Expression = Component { &quot;.&quot; Component } { &quot;/&quot; Component } ;</p>
+<p>Component = [ PREFIX ] UNIT [ Annotation ]
+         | Annotation
+         | &quot;1&quot;
+         ;</p>
+<p>Annotation = &quot;{&quot; NAME &quot;}&quot; ;</p>
+<p>Notes:</p>
+<ul>
+<li><code>Annotation</code> is just a comment if it follows a <code>UNIT</code> and is
+equivalent to <code>1</code> if it is used alone. For examples,
+<code>{requests}/s == 1/s</code>, <code>By{transmitted}/s == By/s</code>.</li>
+<li><code>NAME</code> is a sequence of non-blank printable ASCII characters not
+containing &apos;{&apos; or &apos;}&apos;.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Unit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_ValueType_" data-uid="Google.Api.MetricDescriptor.ValueType*"></a>
+  <h4 id="Google_Api_MetricDescriptor_ValueType" data-uid="Google.Api.MetricDescriptor.ValueType">ValueType</h4>
+  <div class="markdown level1 summary"><p>Whether the measurement is an integer, a floating-point number, etc.
+Some combinations of <code>metric_kind</code> and <code>value_type</code> might not be supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MetricDescriptor.Types.ValueType ValueType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.MetricDescriptor.Types.ValueType.html">MetricDescriptor.Types.ValueType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Api_MetricDescriptor_CalculateSize_" data-uid="Google.Api.MetricDescriptor.CalculateSize*"></a>
+  <h4 id="Google_Api_MetricDescriptor_CalculateSize" data-uid="Google.Api.MetricDescriptor.CalculateSize">CalculateSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_Clone_" data-uid="Google.Api.MetricDescriptor.Clone*"></a>
+  <h4 id="Google_Api_MetricDescriptor_Clone" data-uid="Google.Api.MetricDescriptor.Clone">Clone()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MetricDescriptor Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_Equals_" data-uid="Google.Api.MetricDescriptor.Equals*"></a>
+  <h4 id="Google_Api_MetricDescriptor_Equals_Google_Api_MetricDescriptor_" data-uid="Google.Api.MetricDescriptor.Equals(Google.Api.MetricDescriptor)">Equals(MetricDescriptor)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(MetricDescriptor other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_Equals_" data-uid="Google.Api.MetricDescriptor.Equals*"></a>
+  <h4 id="Google_Api_MetricDescriptor_Equals_System_Object_" data-uid="Google.Api.MetricDescriptor.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_GetHashCode_" data-uid="Google.Api.MetricDescriptor.GetHashCode*"></a>
+  <h4 id="Google_Api_MetricDescriptor_GetHashCode" data-uid="Google.Api.MetricDescriptor.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_MergeFrom_" data-uid="Google.Api.MetricDescriptor.MergeFrom*"></a>
+  <h4 id="Google_Api_MetricDescriptor_MergeFrom_Google_Api_MetricDescriptor_" data-uid="Google.Api.MetricDescriptor.MergeFrom(Google.Api.MetricDescriptor)">MergeFrom(MetricDescriptor)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MergeFrom(MetricDescriptor other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_MergeFrom_" data-uid="Google.Api.MetricDescriptor.MergeFrom*"></a>
+  <h4 id="Google_Api_MetricDescriptor_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.MetricDescriptor.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(Protobuf.CodedInputStream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MergeFrom(Protobuf.CodedInputStream input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">Protobuf.CodedInputStream</a></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_ToString_" data-uid="Google.Api.MetricDescriptor.ToString*"></a>
+  <h4 id="Google_Api_MetricDescriptor_ToString" data-uid="Google.Api.MetricDescriptor.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_MetricDescriptor_WriteTo_" data-uid="Google.Api.MetricDescriptor.WriteTo*"></a>
+  <h4 id="Google_Api_MetricDescriptor_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.MetricDescriptor.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(Protobuf.CodedOutputStream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteTo(Protobuf.CodedOutputStream output)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">Protobuf.CodedOutputStream</a></td>
+        <td><span class="parametername">output</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

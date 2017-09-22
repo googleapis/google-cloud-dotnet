@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SpannerConnection
    | Google.Cloud.Spanner.Data ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -94,6 +95,12 @@ configurable
     <div class="level2"><span class="xref">System.ComponentModel.Component</span></div>
     <div class="level3"><span class="xref">System.Data.Common.DbConnection</span></div>
     <div class="level4"><span class="xref">SpannerConnection</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.IComponent</span></div>
+    <div><span class="xref">System.Data.IDbConnection</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -301,32 +308,6 @@ Console.WriteLine(connection.Database);
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.ConnectionString</span></div>
-  <a id="Google_Cloud_Spanner_Data_SpannerConnection_Credential_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Credential*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_Credential" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Credential">Credential</h4>
-  <div class="markdown level1 summary"><p>The credential used for the connection, if set.
-If credentials are not specified, then application default credentials are used instead.
-See gcloud documentation on how to set up application default credentials.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ITokenAccess Credential { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection_Database_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Database*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_Database" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Database">Database</h4>
   <div class="markdown level1 summary"></div>
@@ -605,7 +586,7 @@ This method is thread safe.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;SpannerTransaction&gt; BeginReadOnlyTransactionAsync(TimestampBound targetReadTimestamp, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;SpannerTransaction&gt; BeginReadOnlyTransactionAsync(TimestampBound targetReadTimestamp, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -656,7 +637,7 @@ This method is thread safe.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;SpannerTransaction&gt; BeginReadOnlyTransactionAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;SpannerTransaction&gt; BeginReadOnlyTransactionAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -700,7 +681,7 @@ This method is thread safe.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;SpannerTransaction&gt; BeginTransactionAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;SpannerTransaction&gt; BeginTransactionAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -736,6 +717,46 @@ This method is thread safe.</p>
       </tr>
     </tbody>
   </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerConnection_BeginTransactionAsync_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">var retryPolicy = new RetryPolicy&lt;SpannerFaultDetectionStrategy&gt;(RetryStrategy.DefaultExponential);
+
+await retryPolicy.ExecuteAsync(
+    async () =&gt;
+    {
+        using (var connection =
+            new SpannerConnection(
+                $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+        {
+            await connection.OpenAsync();
+
+            using (var transaction = await connection.BeginTransactionAsync())
+            {
+                var cmd = connection.CreateInsertCommand(
+                    &quot;TestTable&quot;, new SpannerParameterCollection
+                    {
+                        {&quot;Key&quot;, SpannerDbType.String},
+                        {&quot;StringValue&quot;, SpannerDbType.String},
+                        {&quot;Int64Value&quot;, SpannerDbType.Int64}
+                    });
+                cmd.Transaction = transaction;
+
+                // This executes a single transactions with alls row written at once during CommitAsync().
+                // If a transient fault occurs, this entire method is re-run.
+                for (var i = 0; i &lt; 5; i++)
+                {
+                    cmd.Parameters[&quot;Key&quot;].Value = Guid.NewGuid().ToString(&quot;N&quot;);
+                    cmd.Parameters[&quot;StringValue&quot;].Value = $&quot;StringValue{i}&quot;;
+                    cmd.Parameters[&quot;Int64Value&quot;].Value = i;
+                    await cmd.ExecuteNonQueryAsync();
+                }
+
+                await transaction.CommitAsync();
+            }
+        }
+    });
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection_ChangeDatabase_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.ChangeDatabase*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_ChangeDatabase_System_String_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.ChangeDatabase(System.String)">ChangeDatabase(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -842,6 +863,24 @@ This method is thread safe.</p>
       </tr>
     </tbody>
   </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateDdlCommand_System_String__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">using (var connection =
+    new SpannerConnection($&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    var createDbCmd = connection.CreateDdlCommand($&quot;CREATE DATABASE {_databaseName}&quot;);
+    await createDbCmd.ExecuteNonQueryAsync();
+
+    var createTableCmd = connection.CreateDdlCommand(
+        @&quot;CREATE TABLE TestTable (
+                                Key                STRING(MAX) NOT NULL,
+                                StringValue        STRING(MAX),
+                                Int64Value         INT64,
+                              ) PRIMARY KEY (Key)&quot;);
+    await createTableCmd.ExecuteNonQueryAsync();
+}
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection_CreateDeleteCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateDeleteCommand*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateDeleteCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateDeleteCommand(System.String,Google.Cloud.Spanner.Data.SpannerParameterCollection)">CreateDeleteCommand(String, SpannerParameterCollection)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> to delete rows from a Spanner database table.
@@ -892,6 +931,44 @@ This method is thread safe.</p>
       </tr>
     </tbody>
   </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateDeleteCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">using (var connection = new SpannerConnection(
+    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    await connection.OpenAsync();
+
+    // Read the first two keys in the database.
+    var keys = new List&lt;string&gt;();
+    var selectCmd = connection.CreateSelectCommand(&quot;SELECT * FROM TestTable&quot;);
+    using (var reader = await selectCmd.ExecuteReaderAsync())
+    {
+        while (keys.Count &lt; 3 &amp;&amp; await reader.ReadAsync())
+        {
+            keys.Add(reader.GetFieldValue&lt;string&gt;(&quot;Key&quot;));
+        }
+    }
+
+    // Update the Int64Value of keys[0]
+    // Include the primary key and update columns.
+    var updateCmd = connection.CreateUpdateCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[0]},
+            {&quot;Int64Value&quot;, SpannerDbType.Int64, 0L}
+        });
+    await updateCmd.ExecuteNonQueryAsync();
+
+    // Delete row for keys[1]
+    var deleteCmd = connection.CreateDeleteCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[1]}
+        });
+    await deleteCmd.ExecuteNonQueryAsync();
+}
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection_CreateInsertCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateInsertCommand*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateInsertCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateInsertCommand(System.String,Google.Cloud.Spanner.Data.SpannerParameterCollection)">CreateInsertCommand(String, SpannerParameterCollection)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> to insert rows into a Spanner database table.
@@ -944,6 +1021,45 @@ May be null.</p>
       </tr>
     </tbody>
   </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateInsertCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">var retryPolicy = new RetryPolicy&lt;SpannerFaultDetectionStrategy&gt;(RetryStrategy.DefaultExponential);
+
+await retryPolicy.ExecuteAsync(
+    async () =&gt;
+    {
+        using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+        {
+            using (var connection =
+                new SpannerConnection(
+                    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+            {
+                await connection.OpenAsync();
+
+                var cmd = connection.CreateInsertCommand(
+                    &quot;TestTable&quot;, new SpannerParameterCollection
+                    {
+                        {&quot;Key&quot;, SpannerDbType.String},
+                        {&quot;StringValue&quot;, SpannerDbType.String},
+                        {&quot;Int64Value&quot;, SpannerDbType.Int64}
+                    });
+
+                // This executes a single transactions with alls row written at once during scope.Complete().
+                // If a transient fault occurs, this entire method is re-run.
+                for (var i = 0; i &lt; 5; i++)
+                {
+                    cmd.Parameters[&quot;Key&quot;].Value = Guid.NewGuid().ToString(&quot;N&quot;);
+                    cmd.Parameters[&quot;StringValue&quot;].Value = $&quot;StringValue{i}&quot;;
+                    cmd.Parameters[&quot;Int64Value&quot;].Value = i;
+                    await cmd.ExecuteNonQueryAsync();
+                }
+
+                scope.Complete();
+            }
+        }
+    });
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection_CreateInsertOrUpdateCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateInsertOrUpdateCommand*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateInsertOrUpdateCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateInsertOrUpdateCommand(System.String,Google.Cloud.Spanner.Data.SpannerParameterCollection)">CreateInsertOrUpdateCommand(String, SpannerParameterCollection)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> to insert or update rows into a Spanner database table.
@@ -1048,6 +1164,44 @@ that correspond to the parameters used in the SQL query. May be null.</p>
       </tr>
     </tbody>
   </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateSelectCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">using (var connection = new SpannerConnection(
+    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    await connection.OpenAsync();
+
+    // Read the first two keys in the database.
+    var keys = new List&lt;string&gt;();
+    var selectCmd = connection.CreateSelectCommand(&quot;SELECT * FROM TestTable&quot;);
+    using (var reader = await selectCmd.ExecuteReaderAsync())
+    {
+        while (keys.Count &lt; 3 &amp;&amp; await reader.ReadAsync())
+        {
+            keys.Add(reader.GetFieldValue&lt;string&gt;(&quot;Key&quot;));
+        }
+    }
+
+    // Update the Int64Value of keys[0]
+    // Include the primary key and update columns.
+    var updateCmd = connection.CreateUpdateCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[0]},
+            {&quot;Int64Value&quot;, SpannerDbType.Int64, 0L}
+        });
+    await updateCmd.ExecuteNonQueryAsync();
+
+    // Delete row for keys[1]
+    var deleteCmd = connection.CreateDeleteCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[1]}
+        });
+    await deleteCmd.ExecuteNonQueryAsync();
+}
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection_CreateUpdateCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateUpdateCommand*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateUpdateCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateUpdateCommand(System.String,Google.Cloud.Spanner.Data.SpannerParameterCollection)">CreateUpdateCommand(String, SpannerParameterCollection)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> to update rows in a Spanner database table.
@@ -1101,6 +1255,44 @@ May be null.</p>
       </tr>
     </tbody>
   </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateUpdateCommand_System_String_Google_Cloud_Spanner_Data_SpannerParameterCollection__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">using (var connection = new SpannerConnection(
+    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    await connection.OpenAsync();
+
+    // Read the first two keys in the database.
+    var keys = new List&lt;string&gt;();
+    var selectCmd = connection.CreateSelectCommand(&quot;SELECT * FROM TestTable&quot;);
+    using (var reader = await selectCmd.ExecuteReaderAsync())
+    {
+        while (keys.Count &lt; 3 &amp;&amp; await reader.ReadAsync())
+        {
+            keys.Add(reader.GetFieldValue&lt;string&gt;(&quot;Key&quot;));
+        }
+    }
+
+    // Update the Int64Value of keys[0]
+    // Include the primary key and update columns.
+    var updateCmd = connection.CreateUpdateCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[0]},
+            {&quot;Int64Value&quot;, SpannerDbType.Int64, 0L}
+        });
+    await updateCmd.ExecuteNonQueryAsync();
+
+    // Delete row for keys[1]
+    var deleteCmd = connection.CreateDeleteCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[1]}
+        });
+    await deleteCmd.ExecuteNonQueryAsync();
+}
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection_Dispose_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Dispose*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_Dispose_System_Boolean_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Dispose(System.Boolean)">Dispose(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -1155,6 +1347,32 @@ May be null.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.EnlistTransaction(System.Transactions.Transaction)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerConnection_GetCredential_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.GetCredential*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_GetCredential" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.GetCredential">GetCredential()</h4>
+  <div class="markdown level1 summary"><p>The credential used for the connection, if set.
+If credentials are not specified, then application default credentials are used instead.
+See gcloud documentation on how to set up application default credentials.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITokenAccess GetCredential()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection_Open_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Open*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_Open" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Open">Open()</h4>
   <div class="markdown level1 summary"></div>
@@ -1204,7 +1422,7 @@ the created Cloud Spanner transaction to be a read-only transaction with the giv
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

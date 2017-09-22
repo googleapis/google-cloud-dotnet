@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigQueryClient
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,8 +80,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">BigQueryClient</span></div>
-  </div>
       <div class="level2"><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClientImpl.html">BigQueryClientImpl</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -335,7 +336,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CancelJobAsync(JobReference jobReference, CancelJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CancelJobAsync(JobReference jobReference, CancelJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,7 +393,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CancelJobAsync(string jobId, CancelJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CancelJobAsync(string jobId, CancelJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -449,7 +450,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CancelJobAsync(string projectId, string jobId, CancelJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CancelJobAsync(string projectId, string jobId, CancelJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -688,7 +689,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ClearDatasetLabelsAsync(DatasetReference datasetReference, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ClearDatasetLabelsAsync(DatasetReference datasetReference, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -750,7 +751,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ClearDatasetLabelsAsync(string datasetId, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ClearDatasetLabelsAsync(string datasetId, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -812,7 +813,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ClearDatasetLabelsAsync(string projectId, string datasetId, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ClearDatasetLabelsAsync(string projectId, string datasetId, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1125,7 +1126,7 @@ This method creates a single-element array and delegates to <a class="xref" href
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateCopyJobAsync(TableReference source, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateCopyJobAsync(TableReference source, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1210,7 +1211,7 @@ if (job.Status.ErrorResult != null)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateCopyJobAsync(IEnumerable&lt;TableReference&gt; sources, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateCopyJobAsync(IEnumerable&lt;TableReference&gt; sources, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1438,7 +1439,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; CreateDatasetAsync(DatasetReference datasetReference, CreateDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; CreateDatasetAsync(DatasetReference datasetReference, CreateDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1495,7 +1496,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; CreateDatasetAsync(string datasetId, CreateDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; CreateDatasetAsync(string datasetId, CreateDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1559,7 +1560,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; CreateDatasetAsync(string projectId, string datasetId, CreateDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; CreateDatasetAsync(string projectId, string datasetId, CreateDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2022,7 +2023,7 @@ See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(TableReference tableReference, IEnumerable&lt;string&gt; destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(TableReference tableReference, IEnumerable&lt;string&gt; destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2086,7 +2087,7 @@ See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(TableReference tableReference, string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(TableReference tableReference, string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2149,7 +2150,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string datasetId, string tableId, IEnumerable&lt;string&gt; destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string datasetId, string tableId, IEnumerable&lt;string&gt; destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2219,7 +2220,7 @@ See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string datasetId, string tableId, string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string datasetId, string tableId, string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2288,7 +2289,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string projectId, string datasetId, string tableId, IEnumerable&lt;string&gt; destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string projectId, string datasetId, string tableId, IEnumerable&lt;string&gt; destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2364,7 +2365,7 @@ See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string projectId, string datasetId, string tableId, string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string projectId, string datasetId, string tableId, string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2655,7 +2656,7 @@ if (job.Status.ErrorResult != null)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateLoadJobAsync(IEnumerable&lt;string&gt; sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateLoadJobAsync(IEnumerable&lt;string&gt; sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2730,7 +2731,7 @@ This method creates a single-element array and delegates to <a class="xref" href
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateLoadJobAsync(string sourceUri, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateLoadJobAsync(string sourceUri, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2965,7 +2966,7 @@ foreach (BigQueryRow row in result)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3022,7 +3023,7 @@ the results of the query.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3303,7 +3304,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; CreateTableAsync(TableReference tableReference, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; CreateTableAsync(TableReference tableReference, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3366,7 +3367,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; CreateTableAsync(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; CreateTableAsync(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3448,7 +3449,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; CreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; CreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3635,7 +3636,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DeleteDatasetAsync(DatasetReference datasetReference, DeleteDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteDatasetAsync(DatasetReference datasetReference, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3691,7 +3692,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DeleteDatasetAsync(string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteDatasetAsync(string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3753,7 +3754,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DeleteDatasetAsync(string projectId, string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteDatasetAsync(string projectId, string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3939,7 +3940,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DeleteTableAsync(TableReference tableReference, DeleteTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteTableAsync(TableReference tableReference, DeleteTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3995,7 +3996,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DeleteTableAsync(string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteTableAsync(string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4063,7 +4064,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DeleteTableAsync(string projectId, string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteTableAsync(string projectId, string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4284,7 +4285,7 @@ foreach (BigQueryRow row in result)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4369,7 +4370,7 @@ await resultRows.ForEachAsync(row =&gt;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4608,7 +4609,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetDatasetAsync(DatasetReference datasetReference, GetDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetDatasetAsync(DatasetReference datasetReference, GetDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4665,7 +4666,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetDatasetAsync(string datasetId, GetDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetDatasetAsync(string datasetId, GetDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4722,7 +4723,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetDatasetAsync(string projectId, string datasetId, GetDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetDatasetAsync(string projectId, string datasetId, GetDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5032,7 +5033,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; GetJobAsync(JobReference jobReference, GetJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; GetJobAsync(JobReference jobReference, GetJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5089,7 +5090,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; GetJobAsync(string jobId, GetJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; GetJobAsync(string jobId, GetJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5146,7 +5147,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; GetJobAsync(string projectId, string jobId, GetJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; GetJobAsync(string projectId, string jobId, GetJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5474,7 +5475,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5537,7 +5538,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetOrCreateDatasetAsync(string datasetId, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetOrCreateDatasetAsync(string datasetId, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5600,7 +5601,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetOrCreateDatasetAsync(string projectId, string datasetId, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; GetOrCreateDatasetAsync(string projectId, string datasetId, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5871,7 +5872,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetOrCreateTableAsync(TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetOrCreateTableAsync(TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5940,7 +5941,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetOrCreateTableAsync(string datasetId, string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetOrCreateTableAsync(string datasetId, string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -6015,7 +6016,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetOrCreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetOrCreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -6308,7 +6309,7 @@ This operation will only complete when the specified query has completed.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -6370,7 +6371,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; GetQueryResultsAsync(string jobId, GetQueryResultsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; GetQueryResultsAsync(string jobId, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -6432,7 +6433,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; GetQueryResultsAsync(string projectId, string jobId, GetQueryResultsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; GetQueryResultsAsync(string projectId, string jobId, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -6666,7 +6667,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetTableAsync(TableReference tableReference, GetTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetTableAsync(TableReference tableReference, GetTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -6723,7 +6724,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetTableAsync(string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetTableAsync(string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -6786,7 +6787,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetTableAsync(string projectId, string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; GetTableAsync(string projectId, string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -7098,7 +7099,7 @@ This method just creates an array with the single element and delegates to <a cl
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task InsertRowAsync(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task InsertRowAsync(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -7160,7 +7161,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task InsertRowAsync(string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task InsertRowAsync(string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -7228,7 +7229,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task InsertRowAsync(string projectId, string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task InsertRowAsync(string projectId, string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -7646,7 +7647,7 @@ To specify options, create a collection or array explicitly, and call <a class="
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task InsertRowsAsync(TableReference tableReference, IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task InsertRowsAsync(TableReference tableReference, IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -7768,7 +7769,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task InsertRowsAsync(string datasetId, string tableId, IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task InsertRowsAsync(string datasetId, string tableId, IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -7924,7 +7925,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task InsertRowsAsync(string projectId, string datasetId, string tableId, IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task InsertRowsAsync(string projectId, string datasetId, string tableId, IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -9167,6 +9168,12 @@ the table first.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_ListTablesOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+call for each table you need the details of.
+</p>
+</div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTables_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListTables*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTables_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListTables(System.String,Google.Cloud.BigQuery.V2.ListTablesOptions)">ListTables(String, ListTablesOptions)</h4>
   <div class="markdown level1 summary"><p>Lists the tables in a dataset specified by dataset ID, where the dataset is in this client&apos;s project.
@@ -9217,6 +9224,12 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
       </tr>
     </tbody>
   </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTables_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+call for each table you need the details of.
+</p>
+</div>
   <div>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTables_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions__snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
@@ -9283,6 +9296,12 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
       </tr>
     </tbody>
   </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTables_System_String_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+call for each table you need the details of.
+</p>
+</div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListTablesAsync*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_ListTablesOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListTablesAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.ListTablesOptions)">ListTablesAsync(DatasetReference, ListTablesOptions)</h4>
   <div class="markdown level1 summary"><p>Lists the tables in a dataset.</p>
@@ -9332,6 +9351,12 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
       </tr>
     </tbody>
   </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_ListTablesOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+call for each table you need the details of.
+</p>
+</div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListTablesAsync*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListTablesAsync(System.String,Google.Cloud.BigQuery.V2.ListTablesOptions)">ListTablesAsync(String, ListTablesOptions)</h4>
   <div class="markdown level1 summary"><p>Lists the tables in a dataset specified by dataset ID, where the dataset is in this client&apos;s project.
@@ -9382,6 +9407,12 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
       </tr>
     </tbody>
   </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+call for each table you need the details of.
+</p>
+</div>
   <div>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions__snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
@@ -9448,6 +9479,12 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
       </tr>
     </tbody>
   </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_System_String_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+call for each table you need the details of.
+</p>
+</div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabels_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabels_Google_Apis_Bigquery_v2_Data_DatasetReference_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions)">ModifyDatasetLabels(DatasetReference, IDictionary&lt;String, String&gt;, ModifyLabelsOptions)</h4>
   <div class="markdown level1 summary"><p>Sets or removes one or more labels on the specified dataset.</p>
@@ -9498,7 +9535,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><p>A dictionary with the same keys as <span class="paramref">labels</span>, and values indicating the corresponding label value
+        <td><p>A dictionary with the same keys as <code data-dev-comment-type="paramref" class="paramref">labels</code>, and values indicating the corresponding label value
 before this operation completed. Labels which weren&apos;t present on the dataset before the modification have corresponding
 null values in the returned dictionary.</p>
 </td>
@@ -9506,7 +9543,7 @@ null values in the returned dictionary.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabels_Google_Apis_Bigquery_v2_Data_DatasetReference_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each entry in <span class="paramref">labels</span> is treated as a label to set or remove. If the value is null,
+  <div class="markdown level1 remarks"><p>Each entry in <code data-dev-comment-type="paramref" class="paramref">labels</code> is treated as a label to set or remove. If the value is null,
 it will be removed from the dataset; otherwise, it will be set/added. Labels which do not have an entry
 in the dictionary will be ignored.</p>
 </div>
@@ -9566,7 +9603,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><p>A dictionary with the same keys as <span class="paramref">labels</span>, and values indicating the corresponding label value
+        <td><p>A dictionary with the same keys as <code data-dev-comment-type="paramref" class="paramref">labels</code>, and values indicating the corresponding label value
 before this operation completed. Labels which weren&apos;t present on the dataset before the modification have corresponding
 null values in the returned dictionary.</p>
 </td>
@@ -9574,7 +9611,7 @@ null values in the returned dictionary.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabels_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each entry in <span class="paramref">labels</span> is treated as a label to set or remove. If the value is null,
+  <div class="markdown level1 remarks"><p>Each entry in <code data-dev-comment-type="paramref" class="paramref">labels</code> is treated as a label to set or remove. If the value is null,
 it will be removed from the dataset; otherwise, it will be set/added. Labels which do not have an entry
 in the dictionary will be ignored.</p>
 </div>
@@ -9653,7 +9690,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><p>A dictionary with the same keys as <span class="paramref">labels</span>, and values indicating the corresponding label value
+        <td><p>A dictionary with the same keys as <code data-dev-comment-type="paramref" class="paramref">labels</code>, and values indicating the corresponding label value
 before this operation completed. Labels which weren&apos;t present on the dataset before the modification have corresponding
 null values in the returned dictionary.</p>
 </td>
@@ -9661,7 +9698,7 @@ null values in the returned dictionary.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabels_System_String_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each entry in <span class="paramref">labels</span> is treated as a label to set or remove. If the value is null,
+  <div class="markdown level1 remarks"><p>Each entry in <code data-dev-comment-type="paramref" class="paramref">labels</code> is treated as a label to set or remove. If the value is null,
 it will be removed from the dataset; otherwise, it will be set/added. Labels which do not have an entry
 in the dictionary will be ignored.</p>
 </div>
@@ -9677,7 +9714,7 @@ in the dictionary will be ignored.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ModifyDatasetLabelsAsync(DatasetReference datasetReference, IDictionary&lt;string, string&gt; labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ModifyDatasetLabelsAsync(DatasetReference datasetReference, IDictionary&lt;string, string&gt; labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -9727,7 +9764,7 @@ in the dictionary will be ignored.</p>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td><p>A task representing the asynchronous operation. When complete, the result is
-a dictionary with the same keys as <span class="paramref">labels</span>, and values indicating the corresponding label value
+a dictionary with the same keys as <code data-dev-comment-type="paramref" class="paramref">labels</code>, and values indicating the corresponding label value
 before this operation completed. Labels which weren&apos;t present on the dataset before the modification have corresponding
 null values in the returned dictionary.</p>
 </td>
@@ -9735,7 +9772,7 @@ null values in the returned dictionary.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabelsAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each entry in <span class="paramref">labels</span> is treated as a label to set or remove. If the value is null,
+  <div class="markdown level1 remarks"><p>Each entry in <code data-dev-comment-type="paramref" class="paramref">labels</code> is treated as a label to set or remove. If the value is null,
 it will be removed from the dataset; otherwise, it will be set/added. Labels which do not have an entry
 in the dictionary will be ignored.</p>
 </div>
@@ -9752,7 +9789,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ModifyDatasetLabelsAsync(string datasetId, IDictionary&lt;string, string&gt; labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ModifyDatasetLabelsAsync(string datasetId, IDictionary&lt;string, string&gt; labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -9802,7 +9839,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td><p>A task representing the asynchronous operation. When complete, the result is
-a dictionary with the same keys as <span class="paramref">labels</span>, and values indicating the corresponding label value
+a dictionary with the same keys as <code data-dev-comment-type="paramref" class="paramref">labels</code>, and values indicating the corresponding label value
 before this operation completed. Labels which weren&apos;t present on the dataset before the modification have corresponding
 null values in the returned dictionary.</p>
 </td>
@@ -9810,7 +9847,7 @@ null values in the returned dictionary.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabelsAsync_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each entry in <span class="paramref">labels</span> is treated as a label to set or remove. If the value is null,
+  <div class="markdown level1 remarks"><p>Each entry in <code data-dev-comment-type="paramref" class="paramref">labels</code> is treated as a label to set or remove. If the value is null,
 it will be removed from the dataset; otherwise, it will be set/added. Labels which do not have an entry
 in the dictionary will be ignored.</p>
 </div>
@@ -9827,7 +9864,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ModifyDatasetLabelsAsync(string projectId, string datasetId, IDictionary&lt;string, string&gt; labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ModifyDatasetLabelsAsync(string projectId, string datasetId, IDictionary&lt;string, string&gt; labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -9883,7 +9920,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td><p>A task representing the asynchronous operation. When complete, the result is
-a dictionary with the same keys as <span class="paramref">labels</span>, and values indicating the corresponding label value
+a dictionary with the same keys as <code data-dev-comment-type="paramref" class="paramref">labels</code>, and values indicating the corresponding label value
 before this operation completed. Labels which weren&apos;t present on the dataset before the modification have corresponding
 null values in the returned dictionary.</p>
 </td>
@@ -9891,7 +9928,7 @@ null values in the returned dictionary.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabelsAsync_System_String_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each entry in <span class="paramref">labels</span> is treated as a label to set or remove. If the value is null,
+  <div class="markdown level1 remarks"><p>Each entry in <code data-dev-comment-type="paramref" class="paramref">labels</code> is treated as a label to set or remove. If the value is null,
 it will be removed from the dataset; otherwise, it will be set/added. Labels which do not have an entry
 in the dictionary will be ignored.</p>
 </div>
@@ -10102,7 +10139,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; PatchDatasetAsync(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; PatchDatasetAsync(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -10168,7 +10205,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; PatchDatasetAsync(string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; PatchDatasetAsync(string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -10234,7 +10271,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; PatchDatasetAsync(string projectId, string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; PatchDatasetAsync(string projectId, string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -10522,7 +10559,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; PatchTableAsync(TableReference tableReference, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; PatchTableAsync(TableReference tableReference, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -10593,7 +10630,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; PatchTableAsync(string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; PatchTableAsync(string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -10670,7 +10707,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; PatchTableAsync(string projectId, string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; PatchTableAsync(string projectId, string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -10925,7 +10962,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; PollJobUntilCompletedAsync(JobReference jobReference, GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; PollJobUntilCompletedAsync(JobReference jobReference, GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -10988,7 +11025,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; PollJobUntilCompletedAsync(string jobId, GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; PollJobUntilCompletedAsync(string jobId, GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -11051,7 +11088,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; PollJobUntilCompletedAsync(string projectId, string jobId, GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; PollJobUntilCompletedAsync(string projectId, string jobId, GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -11314,7 +11351,7 @@ attempt to remove a label that doesn&apos;t already exist.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; RemoveDatasetLabelAsync(DatasetReference datasetReference, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; RemoveDatasetLabelAsync(DatasetReference datasetReference, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -11383,7 +11420,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; RemoveDatasetLabelAsync(string datasetId, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; RemoveDatasetLabelAsync(string datasetId, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -11452,7 +11489,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; RemoveDatasetLabelAsync(string projectId, string datasetId, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; RemoveDatasetLabelAsync(string projectId, string datasetId, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -11753,7 +11790,7 @@ not exist, or updated if it already exists.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; SetDatasetLabelAsync(DatasetReference datasetReference, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; SetDatasetLabelAsync(DatasetReference datasetReference, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -11833,7 +11870,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; SetDatasetLabelAsync(string datasetId, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; SetDatasetLabelAsync(string datasetId, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -11913,7 +11950,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; SetDatasetLabelAsync(string projectId, string datasetId, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; SetDatasetLabelAsync(string projectId, string datasetId, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -12205,7 +12242,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; UpdateDatasetAsync(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; UpdateDatasetAsync(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -12276,7 +12313,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; UpdateDatasetAsync(string datasetId, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; UpdateDatasetAsync(string datasetId, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -12347,7 +12384,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; UpdateDatasetAsync(string projectId, string datasetId, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; UpdateDatasetAsync(string projectId, string datasetId, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -12643,7 +12680,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; UpdateTableAsync(TableReference tableReference, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; UpdateTableAsync(TableReference tableReference, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -12714,7 +12751,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; UpdateTableAsync(string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; UpdateTableAsync(string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -12791,7 +12828,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; UpdateTableAsync(string projectId, string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; UpdateTableAsync(string projectId, string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -13076,7 +13113,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -13145,7 +13182,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadAvroAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadAvroAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -13220,7 +13257,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadAvroAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadAvroAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -13321,7 +13358,7 @@ a data upload job.</p>
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -13356,9 +13393,9 @@ a data upload job.</p>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -13397,7 +13434,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -13432,9 +13469,9 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsv_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -13505,7 +13542,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -13540,9 +13577,9 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsv_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -13553,7 +13590,7 @@ it is expected that the table already exists, and its schema is loaded automatic
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadCsvAsync(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadCsvAsync(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -13574,7 +13611,7 @@ it is expected that the table already exists, and its schema is loaded automatic
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -13616,9 +13653,9 @@ a data upload job.</p>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsvAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -13630,7 +13667,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadCsvAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadCsvAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -13657,7 +13694,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -13699,9 +13736,9 @@ a data upload job.</p>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsvAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -13738,7 +13775,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadCsvAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadCsvAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -13771,7 +13808,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -13813,9 +13850,9 @@ a data upload job.</p>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsvAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -13847,7 +13884,7 @@ it is expected that the table already exists, and its schema is loaded automatic
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -13882,14 +13919,14 @@ it is expected that the table already exists, and its schema is loaded automatic
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-Each element of <span class="paramref">rows</span> is converted into a single line of text by replacing carriage returns and line
+Each element of <code data-dev-comment-type="paramref" class="paramref">rows</code> is converted into a single line of text by replacing carriage returns and line
 feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
 original JSON can be formatted however you choose.
 </p>
 <p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -13921,7 +13958,7 @@ it is expected that the table already exists, and its schema is loaded automatic
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -13956,9 +13993,9 @@ it is expected that the table already exists, and its schema is loaded automatic
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -13997,7 +14034,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -14032,14 +14069,14 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-Each element of <span class="paramref">rows</span> is converted into a single line of text by replacing carriage returns and line
+Each element of <code data-dev-comment-type="paramref" class="paramref">rows</code> is converted into a single line of text by replacing carriage returns and line
 feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
 original JSON can be formatted however you choose.
 </p>
 <p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -14097,7 +14134,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -14132,9 +14169,9 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -14201,7 +14238,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -14236,14 +14273,14 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-Each element of <span class="paramref">rows</span> is converted into a single line of text by replacing carriage returns and line
+Each element of <code data-dev-comment-type="paramref" class="paramref">rows</code> is converted into a single line of text by replacing carriage returns and line
 feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
 original JSON can be formatted however you choose.
 </p>
 <p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -14288,7 +14325,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -14323,9 +14360,9 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -14336,7 +14373,7 @@ it is expected that the table already exists, and its schema is loaded automatic
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(TableReference tableReference, TableSchema schema, IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(TableReference tableReference, TableSchema schema, IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -14357,7 +14394,7 @@ it is expected that the table already exists, and its schema is loaded automatic
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -14399,14 +14436,14 @@ a data upload job.</p>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-Each element of <span class="paramref">rows</span> is converted into a single line of text by replacing carriage returns and line
+Each element of <code data-dev-comment-type="paramref" class="paramref">rows</code> is converted into a single line of text by replacing carriage returns and line
 feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
 original JSON can be formatted however you choose.
 </p>
 <p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -14417,7 +14454,7 @@ it is expected that the table already exists, and its schema is loaded automatic
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(TableReference tableReference, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(TableReference tableReference, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -14438,7 +14475,7 @@ it is expected that the table already exists, and its schema is loaded automatic
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -14480,9 +14517,9 @@ a data upload job.</p>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -14494,7 +14531,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(string datasetId, string tableId, TableSchema schema, IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(string datasetId, string tableId, TableSchema schema, IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -14521,7 +14558,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -14563,14 +14600,14 @@ a data upload job.</p>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-Each element of <span class="paramref">rows</span> is converted into a single line of text by replacing carriage returns and line
+Each element of <code data-dev-comment-type="paramref" class="paramref">rows</code> is converted into a single line of text by replacing carriage returns and line
 feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
 original JSON can be formatted however you choose.
 </p>
 <p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -14582,7 +14619,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -14609,7 +14646,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -14651,9 +14688,9 @@ a data upload job.</p>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -14665,7 +14702,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(string projectId, string datasetId, string tableId, TableSchema schema, IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(string projectId, string datasetId, string tableId, TableSchema schema, IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -14698,7 +14735,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -14740,14 +14777,14 @@ a data upload job.</p>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-Each element of <span class="paramref">rows</span> is converted into a single line of text by replacing carriage returns and line
+Each element of <code data-dev-comment-type="paramref" class="paramref">rows</code> is converted into a single line of text by replacing carriage returns and line
 feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
 original JSON can be formatted however you choose.
 </p>
 <p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>
@@ -14778,7 +14815,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -14811,7 +14848,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
         <td><span class="parametername">schema</span></td>
-        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <span class="paramref">options</span>).</p>
+        <td><p>The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <code data-dev-comment-type="paramref" class="paramref">options</code>).</p>
 </td>
       </tr>
       <tr>
@@ -14853,9 +14890,9 @@ a data upload job.</p>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-The schema can come from three places: it can be specified by <span class="paramref">schema</span>,
+The schema can come from three places: it can be specified by <code data-dev-comment-type="paramref" class="paramref">schema</code>,
 it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-If <span class="paramref">schema</span> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <span class="paramref">options</span> is not set to true,
+If <code data-dev-comment-type="paramref" class="paramref">schema</code> is null and the <a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_Autodetect">Autodetect</a> of <code data-dev-comment-type="paramref" class="paramref">options</code> is not set to true,
 it is expected that the table already exists, and its schema is loaded automatically.
 </p>
 </div>

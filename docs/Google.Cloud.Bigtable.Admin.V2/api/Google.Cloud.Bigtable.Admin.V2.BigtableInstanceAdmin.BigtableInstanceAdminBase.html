@@ -1,0 +1,628 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BigtableInstanceAdmin.BigtableInstanceAdminBase
+   | Google.Cloud.Bigtable.Admin.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BigtableInstanceAdmin.BigtableInstanceAdminBase
+   | Google.Cloud.Bigtable.Admin.V2 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase">
+  
+  
+  <h1 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase" class="text-break">Class BigtableInstanceAdmin.BigtableInstanceAdminBase
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for server-side implementations of BigtableInstanceAdmin</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BigtableInstanceAdmin.BigtableInstanceAdminBase</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.html">Google.Cloud.Bigtable.Admin.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Bigtable.Admin.V2.dll</h6>
+  <h5 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BigtableInstanceAdminBase</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_CreateCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.CreateCluster*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_CreateCluster_Google_Cloud_Bigtable_Admin_V2_CreateClusterRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.CreateCluster(Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest,Grpc.Core.ServerCallContext)">CreateCluster(CreateClusterRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Creates a cluster within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; CreateCluster(CreateClusterRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest.html">CreateClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_CreateInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.CreateInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_CreateInstance_Google_Cloud_Bigtable_Admin_V2_CreateInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.CreateInstance(Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest,Grpc.Core.ServerCallContext)">CreateInstance(CreateInstanceRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Create an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; CreateInstance(CreateInstanceRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest.html">CreateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_DeleteCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.DeleteCluster*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_DeleteCluster_Google_Cloud_Bigtable_Admin_V2_DeleteClusterRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.DeleteCluster(Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest,Grpc.Core.ServerCallContext)">DeleteCluster(DeleteClusterRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Deletes a cluster from an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteCluster(DeleteClusterRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.html">DeleteClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_DeleteInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.DeleteInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_DeleteInstance_Google_Cloud_Bigtable_Admin_V2_DeleteInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.DeleteInstance(Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest,Grpc.Core.ServerCallContext)">DeleteInstance(DeleteInstanceRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Delete an instance from a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteInstance(DeleteInstanceRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest.html">DeleteInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetCluster*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetCluster_Google_Cloud_Bigtable_Admin_V2_GetClusterRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetCluster(Google.Cloud.Bigtable.Admin.V2.GetClusterRequest,Grpc.Core.ServerCallContext)">GetCluster(GetClusterRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Gets information about a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Cluster&gt; GetCluster(GetClusterRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetClusterRequest.html">GetClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetInstance_Google_Cloud_Bigtable_Admin_V2_GetInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetInstance(Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest,Grpc.Core.ServerCallContext)">GetInstance(GetInstanceRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Gets information about an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Instance&gt; GetInstance(GetInstanceRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest.html">GetInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_ListClusters_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.ListClusters*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_ListClusters_Google_Cloud_Bigtable_Admin_V2_ListClustersRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.ListClusters(Google.Cloud.Bigtable.Admin.V2.ListClustersRequest,Grpc.Core.ServerCallContext)">ListClusters(ListClustersRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Lists information about clusters in an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListClustersResponse&gt; ListClusters(ListClustersRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListClustersRequest.html">ListClustersRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListClustersResponse.html">ListClustersResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_ListInstances_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.ListInstances*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_ListInstances_Google_Cloud_Bigtable_Admin_V2_ListInstancesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.ListInstances(Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest,Grpc.Core.ServerCallContext)">ListInstances(ListInstancesRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Lists information about instances in a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListInstancesResponse&gt; ListInstances(ListInstancesRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest.html">ListInstancesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.html">ListInstancesResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_UpdateCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.UpdateCluster*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_UpdateCluster_Google_Cloud_Bigtable_Admin_V2_Cluster_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.UpdateCluster(Google.Cloud.Bigtable.Admin.V2.Cluster,Grpc.Core.ServerCallContext)">UpdateCluster(Cluster, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Updates a cluster within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; UpdateCluster(Cluster request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_UpdateInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.UpdateInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_UpdateInstance_Google_Cloud_Bigtable_Admin_V2_Instance_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.UpdateInstance(Google.Cloud.Bigtable.Admin.V2.Instance,Grpc.Core.ServerCallContext)">UpdateInstance(Instance, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Updates an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Instance&gt; UpdateInstance(Instance request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

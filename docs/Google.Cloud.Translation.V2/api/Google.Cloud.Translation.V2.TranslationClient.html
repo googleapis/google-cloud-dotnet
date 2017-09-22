@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TranslationClient
    | Google.Cloud.Translation.V2 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,8 +80,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TranslationClient</span></div>
-  </div>
       <div class="level2"><a class="xref" href="Google.Cloud.Translation.V2.TranslationClientImpl.html">TranslationClientImpl</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -395,7 +396,7 @@ Console.WriteLine($&quot;Language: {result.Language}; confidence {result.Confide
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Detection&gt; DetectLanguageAsync(string text, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Detection&gt; DetectLanguageAsync(string text, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -442,8 +443,10 @@ Console.WriteLine($&quot;Language: {result.Language}; confidence {result.Confide
 </div>
   <div>
   <h5 id="Google_Cloud_Translation_V2_TranslationClient_DetectLanguageAsync_System_String_System_Threading_CancellationToken__snippet">Sample code</h5>
-  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_DetectLanguage_System_String_">DetectLanguage</a> for a synchronous example.</p>
-</div>
+  <div class="markdown level1"><pre><code class="lang-cs">TranslationClient client = TranslationClient.Create();
+Detection result = await client.DetectLanguageAsync(&quot;It is raining.&quot;);
+Console.WriteLine($&quot;Language: {result.Language}; confidence {result.Confidence}&quot;);
+</code></pre></div>
   </div>
   <a id="Google_Cloud_Translation_V2_TranslationClient_DetectLanguages_" data-uid="Google.Cloud.Translation.V2.TranslationClient.DetectLanguages*"></a>
   <h4 id="Google_Cloud_Translation_V2_TranslationClient_DetectLanguages_System_Collections_Generic_IEnumerable_System_String__" data-uid="Google.Cloud.Translation.V2.TranslationClient.DetectLanguages(System.Collections.Generic.IEnumerable{System.String})">DetectLanguages(IEnumerable&lt;String&gt;)</h4>
@@ -483,7 +486,7 @@ Console.WriteLine($&quot;Language: {result.Language}; confidence {result.Confide
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.Detection.html">Detection</a>&gt;</td>
-        <td><p>A list of detected languages. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+        <td><p>A list of detected languages. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">textItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
@@ -505,7 +508,7 @@ foreach (var result in results)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;Detection&gt;&gt; DetectLanguagesAsync(IEnumerable&lt;string&gt; textItems, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;Detection&gt;&gt; DetectLanguagesAsync(IEnumerable&lt;string&gt; textItems, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -542,15 +545,20 @@ foreach (var result in results)
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.Detection.html">Detection</a>&gt;&gt;</td>
-        <td><p>A list of detected languages. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+        <td><p>A list of detected languages. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">textItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <div>
   <h5 id="Google_Cloud_Translation_V2_TranslationClient_DetectLanguagesAsync_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken__snippet">Sample code</h5>
-  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_DetectLanguages_System_Collections_Generic_IEnumerable_System_String__">DetectLanguages</a> for a synchronous example.</p>
-</div>
+  <div class="markdown level1"><pre><code class="lang-cs">TranslationClient client = TranslationClient.Create();
+IList&lt;Detection&gt; results = await client.DetectLanguagesAsync(new[] { &quot;It is raining.&quot;, &quot;Il pleut.&quot; });
+foreach (var result in results)
+{
+    Console.WriteLine($&quot;Text: {result.Text}; language: {result.Language}; confidence {result.Confidence}&quot;);
+}
+</code></pre></div>
   </div>
   <a id="Google_Cloud_Translation_V2_TranslationClient_ListLanguages_" data-uid="Google.Cloud.Translation.V2.TranslationClient.ListLanguages*"></a>
   <h4 id="Google_Cloud_Translation_V2_TranslationClient_ListLanguages_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__" data-uid="Google.Cloud.Translation.V2.TranslationClient.ListLanguages(System.String,System.Nullable{Google.Cloud.Translation.V2.TranslationModel})">ListLanguages(String, Nullable&lt;TranslationModel&gt;)</h4>
@@ -559,7 +567,7 @@ foreach (var result in results)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IList&lt;Language&gt; ListLanguages(string target = null, TranslationModel? model = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;Language&gt; ListLanguages(string target = null, TranslationModel? model = default (TranslationModel? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -621,7 +629,7 @@ foreach (Language language in languages.Take(10))
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;Language&gt;&gt; ListLanguagesAsync(string target = null, TranslationModel? model = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;Language&gt;&gt; ListLanguagesAsync(string target = null, TranslationModel? model = default (TranslationModel? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -673,8 +681,14 @@ used.</p>
   </table>
   <div>
   <h5 id="Google_Cloud_Translation_V2_TranslationClient_ListLanguagesAsync_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_Threading_CancellationToken__snippet">Sample code</h5>
-  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_ListLanguages_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__">ListLanguages</a> for a synchronous example.</p>
-</div>
+  <div class="markdown level1"><pre><code class="lang-cs">TranslationClient client = await TranslationClient.CreateAsync();
+IList&lt;Language&gt; languages = await client.ListLanguagesAsync(LanguageCodes.English);
+// Display just the first 10 languages for brevity
+foreach (Language language in languages.Take(10))
+{
+    Console.WriteLine($&quot;Language: {language.Name}; code {language.Code}&quot;);
+}
+</code></pre></div>
   </div>
   <a id="Google_Cloud_Translation_V2_TranslationClient_TranslateHtml_" data-uid="Google.Cloud.Translation.V2.TranslationClient.TranslateHtml*"></a>
   <h4 id="Google_Cloud_Translation_V2_TranslationClient_TranslateHtml_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__" data-uid="Google.Cloud.Translation.V2.TranslationClient.TranslateHtml(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{Google.Cloud.Translation.V2.TranslationModel})">TranslateHtml(IEnumerable&lt;String&gt;, String, String, Nullable&lt;TranslationModel&gt;)</h4>
@@ -683,7 +697,7 @@ used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IList&lt;TranslationResult&gt; TranslateHtml(IEnumerable&lt;string&gt; htmlItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;TranslationResult&gt; TranslateHtml(IEnumerable&lt;string&gt; htmlItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -734,7 +748,7 @@ used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;</td>
-        <td><p>A list of translations. This will be the same size as <span class="paramref">htmlItems</span>, in the same order.</p>
+        <td><p>A list of translations. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">htmlItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
@@ -762,7 +776,7 @@ foreach (TranslationResult result in results)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TranslationResult TranslateHtml(string html, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TranslationResult TranslateHtml(string html, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -813,7 +827,7 @@ used.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a></td>
-        <td><p>The translation of <span class="paramref">html</span>.</p>
+        <td><p>The translation of <code data-dev-comment-type="paramref" class="paramref">html</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -841,7 +855,7 @@ Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {res
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;TranslationResult&gt;&gt; TranslateHtmlAsync(IEnumerable&lt;string&gt; htmlItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;TranslationResult&gt;&gt; TranslateHtmlAsync(IEnumerable&lt;string&gt; htmlItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -898,7 +912,7 @@ used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;&gt;</td>
-        <td><p>A list of translations. This will be the same size as <span class="paramref">htmlItems</span>, in the same order.</p>
+        <td><p>A list of translations. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">htmlItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
@@ -909,7 +923,7 @@ on how to translate HTML and the terms of service.</p>
 </div>
   <div>
   <h5 id="Google_Cloud_Translation_V2_TranslationClient_TranslateHtmlAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_Threading_CancellationToken__snippet">Sample code</h5>
-  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_TranslateHtml_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__">TranslateHtml</a> for a synchronous example.</p>
+  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_TranslateHtmlAsync_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_Threading_CancellationToken_">TranslateHtmlAsync</a> for an example using an alternative overload.</p>
 </div>
   </div>
   <a id="Google_Cloud_Translation_V2_TranslationClient_TranslateHtmlAsync_" data-uid="Google.Cloud.Translation.V2.TranslationClient.TranslateHtmlAsync*"></a>
@@ -919,7 +933,7 @@ on how to translate HTML and the terms of service.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;TranslationResult&gt; TranslateHtmlAsync(string html, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;TranslationResult&gt; TranslateHtmlAsync(string html, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -976,7 +990,7 @@ used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;</td>
-        <td><p>The translation of <span class="paramref">html</span>.</p>
+        <td><p>The translation of <code data-dev-comment-type="paramref" class="paramref">html</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -992,8 +1006,10 @@ on how to translate HTML and the terms of service.
 </div>
   <div>
   <h5 id="Google_Cloud_Translation_V2_TranslationClient_TranslateHtmlAsync_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_Threading_CancellationToken__snippet">Sample code</h5>
-  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_TranslateHtml_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__">TranslateHtml</a> for a synchronous example.</p>
-</div>
+  <div class="markdown level1"><pre><code class="lang-cs">TranslationClient client = await TranslationClient.CreateAsync();
+TranslationResult result = await client.TranslateHtmlAsync(&quot;&lt;p&gt;&lt;strong&gt;It is raining.&lt;/strong&gt;&lt;/p&gt;&quot;, LanguageCodes.French);
+Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
+</code></pre></div>
   </div>
   <a id="Google_Cloud_Translation_V2_TranslationClient_TranslateText_" data-uid="Google.Cloud.Translation.V2.TranslationClient.TranslateText*"></a>
   <h4 id="Google_Cloud_Translation_V2_TranslationClient_TranslateText_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__" data-uid="Google.Cloud.Translation.V2.TranslationClient.TranslateText(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{Google.Cloud.Translation.V2.TranslationModel})">TranslateText(IEnumerable&lt;String&gt;, String, String, Nullable&lt;TranslationModel&gt;)</h4>
@@ -1002,7 +1018,7 @@ on how to translate HTML and the terms of service.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IList&lt;TranslationResult&gt; TranslateText(IEnumerable&lt;string&gt; textItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;TranslationResult&gt; TranslateText(IEnumerable&lt;string&gt; textItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1053,7 +1069,7 @@ used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;</td>
-        <td><p>A list of translations. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+        <td><p>A list of translations. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">textItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
@@ -1077,7 +1093,7 @@ foreach (TranslationResult result in results)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TranslationResult TranslateText(string text, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TranslationResult TranslateText(string text, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1128,7 +1144,7 @@ used.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a></td>
-        <td><p>The translation of <span class="paramref">text</span>.</p>
+        <td><p>The translation of <code data-dev-comment-type="paramref" class="paramref">text</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -1150,7 +1166,7 @@ Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {res
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;TranslationResult&gt;&gt; TranslateTextAsync(IEnumerable&lt;string&gt; textItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;TranslationResult&gt;&gt; TranslateTextAsync(IEnumerable&lt;string&gt; textItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1207,14 +1223,14 @@ used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;&gt;</td>
-        <td><p>A list of translations. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+        <td><p>A list of translations. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">textItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <div>
   <h5 id="Google_Cloud_Translation_V2_TranslationClient_TranslateTextAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_Threading_CancellationToken__snippet">Sample code</h5>
-  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_TranslateText_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__">TranslateText</a> for a synchronous example.</p>
+  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_TranslateTextAsync_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_Threading_CancellationToken_">TranslateTextAsync</a> for an example using an alternative overload.</p>
 </div>
   </div>
   <a id="Google_Cloud_Translation_V2_TranslationClient_TranslateTextAsync_" data-uid="Google.Cloud.Translation.V2.TranslationClient.TranslateTextAsync*"></a>
@@ -1224,7 +1240,7 @@ used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;TranslationResult&gt; TranslateTextAsync(string text, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;TranslationResult&gt; TranslateTextAsync(string text, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1281,7 +1297,7 @@ used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;</td>
-        <td><p>The translation of <span class="paramref">text</span>.</p>
+        <td><p>The translation of <code data-dev-comment-type="paramref" class="paramref">text</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -1291,8 +1307,10 @@ used.</p>
 </div>
   <div>
   <h5 id="Google_Cloud_Translation_V2_TranslationClient_TranslateTextAsync_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_Threading_CancellationToken__snippet">Sample code</h5>
-  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_TranslateText_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__">TranslateText</a> for a synchronous example.</p>
-</div>
+  <div class="markdown level1"><pre><code class="lang-cs">TranslationClient client = await TranslationClient.CreateAsync();
+TranslationResult result = await client.TranslateTextAsync(&quot;It is raining.&quot;, LanguageCodes.French);
+Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
+</code></pre></div>
   </div>
 </article>
           </div>

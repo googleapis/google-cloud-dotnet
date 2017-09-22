@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreTransaction
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -101,8 +102,12 @@ methods in this class; instead, all methods either delegate to another or throw 
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DatastoreTransaction</span></div>
-  </div>
       <div class="level2"><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.html">DatastoreTransactionImpl</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -346,7 +351,7 @@ instead of calling this method directly.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">namespaceId</span></td>
-        <td><p>The ID of the namespace which is combined with <span class="paramref">projectId</span> to form a partition ID
+        <td><p>The ID of the namespace which is combined with <code data-dev-comment-type="paramref" class="paramref">projectId</code> to form a partition ID
 to use in query operations. May be null.</p>
 </td>
       </tr>
@@ -753,7 +758,7 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
-        <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
+        <td><p>A collection of entities with the same size as <code data-dev-comment-type="paramref" class="paramref">keys</code>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
       </tr>
@@ -841,7 +846,7 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
-        <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
+        <td><p>A collection of entities with the same size as <code data-dev-comment-type="paramref" class="paramref">keys</code>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
       </tr>
@@ -950,7 +955,7 @@ references, or <code>null</code> where the key was not found.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;&gt;</td>
-        <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
+        <td><p>A collection of entities with the same size as <code data-dev-comment-type="paramref" class="paramref">keys</code>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
       </tr>
@@ -1019,7 +1024,7 @@ number of entities, partition the look-ups into batches. See
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;&gt;</td>
-        <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
+        <td><p>A collection of entities with the same size as <code data-dev-comment-type="paramref" class="paramref">keys</code>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
       </tr>

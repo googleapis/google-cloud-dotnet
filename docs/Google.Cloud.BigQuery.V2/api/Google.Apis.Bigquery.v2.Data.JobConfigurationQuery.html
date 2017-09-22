@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JobConfigurationQuery
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,35 +80,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">JobConfigurationQuery</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
   <h5 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class JobConfigurationQuery : IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class JobConfigurationQuery : Requests.IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -121,8 +98,7 @@ destinationTable when result size exceeds the allowed maximum response size.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;allowLargeResults&quot;)]
-public virtual bool ? AllowLargeResults { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool ? AllowLargeResults { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,8 +126,7 @@ completion.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;createDisposition&quot;)]
-public virtual string CreateDisposition { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string CreateDisposition { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,8 +150,7 @@ public virtual string CreateDisposition { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;defaultDataset&quot;)]
-public virtual DatasetReference DefaultDataset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual DatasetReference DefaultDataset { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,6 +167,30 @@ public virtual DatasetReference DefaultDataset { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DestinationEncryptionConfiguration_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DestinationEncryptionConfiguration*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DestinationEncryptionConfiguration" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DestinationEncryptionConfiguration">DestinationEncryptionConfiguration</h4>
+  <div class="markdown level1 summary"><p>[Experimental] Custom encryption configuration (e.g., Cloud KMS keys).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.EncryptionConfiguration.html">EncryptionConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DestinationTable_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DestinationTable*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DestinationTable" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DestinationTable">DestinationTable</h4>
   <div class="markdown level1 summary"><p>[Optional] Describes the table where the query results should be stored. If not present, a new
@@ -202,8 +200,7 @@ maximum response size.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;destinationTable&quot;)]
-public virtual TableReference DestinationTable { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TableReference DestinationTable { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,8 +241,6 @@ public virtual TableReference DestinationTable { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_FlattenResults_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.FlattenResults*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_FlattenResults" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.FlattenResults">FlattenResults</h4>
   <div class="markdown level1 summary"><p>[Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields in
@@ -255,8 +250,7 @@ flag is ignored and results are never flattened.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;flattenResults&quot;)]
-public virtual bool ? FlattenResults { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool ? FlattenResults { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -281,8 +275,7 @@ will fail (without incurring a charge). If unspecified, this will be set to your
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;maximumBillingTier&quot;)]
-public virtual int ? MaximumBillingTier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual int ? MaximumBillingTier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,8 +301,7 @@ default.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;maximumBytesBilled&quot;)]
-public virtual long ? MaximumBytesBilled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual long ? MaximumBytesBilled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -334,8 +326,7 @@ named (@myparam) query parameters in this query.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;parameterMode&quot;)]
-public virtual string ParameterMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string ParameterMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,8 +350,7 @@ public virtual string ParameterMode { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;preserveNulls&quot;)]
-public virtual bool ? PreserveNulls { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool ? PreserveNulls { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -385,8 +375,7 @@ default value is INTERACTIVE.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;priority&quot;)]
-public virtual string Priority { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Priority { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,8 +400,7 @@ query uses legacy SQL or standard SQL.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;query&quot;)]
-public virtual string Query { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Query { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,8 +424,7 @@ public virtual string Query { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;queryParameters&quot;)]
-public virtual IList&lt;QueryParameter&gt; QueryParameters { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;QueryParameter&gt; QueryParameters { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -466,8 +453,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;schemaUpdateOptions&quot;)]
-public virtual IList&lt;string&gt; SchemaUpdateOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;string&gt; SchemaUpdateOptions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -493,8 +479,7 @@ queried as if it were a standard BigQuery table.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;tableDefinitions&quot;)]
-public virtual IDictionary&lt;string, ExternalDataConfiguration&gt; TableDefinitions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IDictionary&lt;string, ExternalDataConfiguration&gt; TableDefinitions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -511,18 +496,42 @@ public virtual IDictionary&lt;string, ExternalDataConfiguration&gt; TableDefinit
       </tr>
     </tbody>
   </table>
-  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseLegacySql_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseLegacySql*"></a>
-  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseLegacySql" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseLegacySql">UseLegacySql</h4>
-  <div class="markdown level1 summary"><p>Specifies whether to use BigQuery&apos;s legacy SQL dialect for this query. The default value is true.
-If set to false, the query will use BigQuery&apos;s standard SQL: <a href="https://cloud.google.com/bigquery/sql-">https://cloud.google.com/bigquery/sql-</a>
-reference/ When useLegacySql is set to false, the values of allowLargeResults and flattenResults are
-ignored; query will be run as if allowLargeResults is true and flattenResults is false.</p>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_TimePartitioning_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.TimePartitioning*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_TimePartitioning" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.TimePartitioning">TimePartitioning</h4>
+  <div class="markdown level1 summary"><p>[Experimental] If specified, configures time-based partitioning for the destination
+table.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;useLegacySql&quot;)]
-public virtual bool ? UseLegacySql { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual TimePartitioning TimePartitioning { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TimePartitioning.html">TimePartitioning</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseLegacySql_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseLegacySql*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseLegacySql" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseLegacySql">UseLegacySql</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to use BigQuery&apos;s legacy SQL dialect for this query. The default value is true.
+If set to false, the query will use BigQuery&apos;s standard SQL: <a href="https://cloud.google.com/bigquery/sql-">https://cloud.google.com/bigquery/sql-</a>
+reference/ When useLegacySql is set to false, the value of flattenResults is ignored; query will be run as
+if flattenResults is false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool ? UseLegacySql { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -548,8 +557,7 @@ available when a query does not have a destination table specified. The default 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;useQueryCache&quot;)]
-public virtual bool ? UseQueryCache { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool ? UseQueryCache { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -573,8 +581,7 @@ public virtual bool ? UseQueryCache { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;userDefinedFunctionResources&quot;)]
-public virtual IList&lt;UserDefinedFunctionResource&gt; UserDefinedFunctionResources { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;UserDefinedFunctionResource&gt; UserDefinedFunctionResources { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -594,17 +601,17 @@ public virtual IList&lt;UserDefinedFunctionResource&gt; UserDefinedFunctionResou
   <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_WriteDisposition_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.WriteDisposition*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_WriteDisposition" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.WriteDisposition">WriteDisposition</h4>
   <div class="markdown level1 summary"><p>[Optional] Specifies the action that occurs if the destination table already exists. The following
-values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data.
-WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table
-already exists and contains data, a &apos;duplicate&apos; error is returned in the job result. The default value is
-WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
-Creation, truncation and append actions occur as one atomic update upon job completion.</p>
+values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and
+uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data
+to the table. WRITE_EMPTY: If the table already exists and contains data, a &apos;duplicate&apos; error is returned in
+the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able
+to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon
+job completion.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeDisposition&quot;)]
-public virtual string WriteDisposition { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string WriteDisposition { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

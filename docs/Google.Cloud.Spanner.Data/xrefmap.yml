@@ -5863,24 +5863,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.DataAdapterTests.AdapterUpdate
   fullName: Google.Cloud.Spanner.Data.IntegrationTests.DataAdapterTests.AdapterUpdate
   nameWithType: DataAdapterTests.AdapterUpdate
-- uid: Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests
-  name: MySqlStressTests
-  href: api/Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.html
-  commentId: T:Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests
-  fullName: Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests
-  nameWithType: MySqlStressTests
-- uid: Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.RunStress
-  name: RunStress()
-  href: api/Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.html#Google_Cloud_Spanner_Data_IntegrationTests_MySqlStressTests_RunStress
-  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.RunStress
-  fullName: Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.RunStress()
-  nameWithType: MySqlStressTests.RunStress()
-- uid: Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.RunStress*
-  name: RunStress
-  href: api/Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.html#Google_Cloud_Spanner_Data_IntegrationTests_MySqlStressTests_RunStress_
-  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.RunStress
-  fullName: Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.RunStress
-  nameWithType: MySqlStressTests.RunStress
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests
   name: ReadTests
   href: api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.html
@@ -6175,13 +6157,13 @@ references:
   commentId: F:Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestDuration
   fullName: Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestDuration
   nameWithType: StressTestBase.TestDuration
-- uid: Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps(System.Double,System.TimeSpan,System.Func{System.Diagnostics.Stopwatch,System.Threading.Tasks.Task{System.TimeSpan}})
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps(System.Double,TimeSpan,Func{Stopwatch,Task{TimeSpan}})
   name: TestWriteLatencyWithQps(Double, TimeSpan, Func<Stopwatch, Task<TimeSpan>>)
-  href: api/Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.html#Google_Cloud_Spanner_Data_IntegrationTests_StressTestBase_TestWriteLatencyWithQps_System_Double_System_TimeSpan_System_Func_System_Diagnostics_Stopwatch_System_Threading_Tasks_Task_System_TimeSpan___
-  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps(System.Double,System.TimeSpan,System.Func{System.Diagnostics.Stopwatch,System.Threading.Tasks.Task{System.TimeSpan}})
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.html#Google_Cloud_Spanner_Data_IntegrationTests_StressTestBase_TestWriteLatencyWithQps_System_Double_TimeSpan_Func_Stopwatch_Task_TimeSpan___
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps(System.Double,TimeSpan,Func{Stopwatch,Task{TimeSpan}})
   name.vb: TestWriteLatencyWithQps(Double, TimeSpan, Func(Of Stopwatch, Task(Of TimeSpan)))
-  fullName: Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps(System.Double, System.TimeSpan, System.Func<System.Diagnostics.Stopwatch, System.Threading.Tasks.Task<System.TimeSpan>>)
-  fullName.vb: Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps(System.Double, System.TimeSpan, System.Func(Of System.Diagnostics.Stopwatch, System.Threading.Tasks.Task(Of System.TimeSpan)))
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps(System.Double, TimeSpan, Func<Stopwatch, Task<TimeSpan>>)
+  fullName.vb: Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps(System.Double, TimeSpan, Func(Of Stopwatch, Task(Of TimeSpan)))
   nameWithType: StressTestBase.TestWriteLatencyWithQps(Double, TimeSpan, Func<Stopwatch, Task<TimeSpan>>)
   nameWithType.vb: StressTestBase.TestWriteLatencyWithQps(Double, TimeSpan, Func(Of Stopwatch, Task(Of TimeSpan)))
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps*
@@ -7489,18 +7471,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.SpannerConnection.CreateUpdateCommand
   fullName: Google.Cloud.Spanner.Data.SpannerConnection.CreateUpdateCommand
   nameWithType: SpannerConnection.CreateUpdateCommand
-- uid: Google.Cloud.Spanner.Data.SpannerConnection.Credential
-  name: Credential
-  href: api/Google.Cloud.Spanner.Data.SpannerConnection.html#Google_Cloud_Spanner_Data_SpannerConnection_Credential
-  commentId: P:Google.Cloud.Spanner.Data.SpannerConnection.Credential
-  fullName: Google.Cloud.Spanner.Data.SpannerConnection.Credential
-  nameWithType: SpannerConnection.Credential
-- uid: Google.Cloud.Spanner.Data.SpannerConnection.Credential*
-  name: Credential
-  href: api/Google.Cloud.Spanner.Data.SpannerConnection.html#Google_Cloud_Spanner_Data_SpannerConnection_Credential_
-  commentId: Overload:Google.Cloud.Spanner.Data.SpannerConnection.Credential
-  fullName: Google.Cloud.Spanner.Data.SpannerConnection.Credential
-  nameWithType: SpannerConnection.Credential
 - uid: Google.Cloud.Spanner.Data.SpannerConnection.Database
   name: Database
   href: api/Google.Cloud.Spanner.Data.SpannerConnection.html#Google_Cloud_Spanner_Data_SpannerConnection_Database
@@ -7573,6 +7543,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.SpannerConnection.EnlistTransaction
   fullName: Google.Cloud.Spanner.Data.SpannerConnection.EnlistTransaction
   nameWithType: SpannerConnection.EnlistTransaction
+- uid: Google.Cloud.Spanner.Data.SpannerConnection.GetCredential
+  name: GetCredential()
+  href: api/Google.Cloud.Spanner.Data.SpannerConnection.html#Google_Cloud_Spanner_Data_SpannerConnection_GetCredential
+  commentId: M:Google.Cloud.Spanner.Data.SpannerConnection.GetCredential
+  fullName: Google.Cloud.Spanner.Data.SpannerConnection.GetCredential()
+  nameWithType: SpannerConnection.GetCredential()
+- uid: Google.Cloud.Spanner.Data.SpannerConnection.GetCredential*
+  name: GetCredential
+  href: api/Google.Cloud.Spanner.Data.SpannerConnection.html#Google_Cloud_Spanner_Data_SpannerConnection_GetCredential_
+  commentId: Overload:Google.Cloud.Spanner.Data.SpannerConnection.GetCredential
+  fullName: Google.Cloud.Spanner.Data.SpannerConnection.GetCredential
+  nameWithType: SpannerConnection.GetCredential
 - uid: Google.Cloud.Spanner.Data.SpannerConnection.Open
   name: Open()
   href: api/Google.Cloud.Spanner.Data.SpannerConnection.html#Google_Cloud_Spanner_Data_SpannerConnection_Open
@@ -7705,18 +7687,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.#ctor
   fullName: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.SpannerConnectionStringBuilder
   nameWithType: SpannerConnectionStringBuilder.SpannerConnectionStringBuilder
-- uid: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.Credential
-  name: Credential
-  href: api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html#Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_Credential
-  commentId: P:Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.Credential
-  fullName: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.Credential
-  nameWithType: SpannerConnectionStringBuilder.Credential
-- uid: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.Credential*
-  name: Credential
-  href: api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html#Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_Credential_
-  commentId: Overload:Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.Credential
-  fullName: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.Credential
-  nameWithType: SpannerConnectionStringBuilder.Credential
+- uid: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.CredentialFile
+  name: CredentialFile
+  href: api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html#Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_CredentialFile
+  commentId: P:Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.CredentialFile
+  fullName: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.CredentialFile
+  nameWithType: SpannerConnectionStringBuilder.CredentialFile
+- uid: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.CredentialFile*
+  name: CredentialFile
+  href: api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html#Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_CredentialFile_
+  commentId: Overload:Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.CredentialFile
+  fullName: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.CredentialFile
+  nameWithType: SpannerConnectionStringBuilder.CredentialFile
 - uid: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.DataSource
   name: DataSource
   href: api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html#Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_DataSource
@@ -7741,6 +7723,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.EndPoint
   fullName: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.EndPoint
   nameWithType: SpannerConnectionStringBuilder.EndPoint
+- uid: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredential
+  name: GetCredential()
+  href: api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html#Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_GetCredential
+  commentId: M:Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredential
+  fullName: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredential()
+  nameWithType: SpannerConnectionStringBuilder.GetCredential()
+- uid: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredential*
+  name: GetCredential
+  href: api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html#Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_GetCredential_
+  commentId: Overload:Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredential
+  fullName: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredential
+  nameWithType: SpannerConnectionStringBuilder.GetCredential
 - uid: Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.Host
   name: Host
   href: api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html#Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_Host
@@ -12088,6 +12082,18 @@ references:
   commentId: T:Google.Cloud.Spanner.V1.SessionPoolOptions
   fullName: Google.Cloud.Spanner.V1.SessionPoolOptions
   nameWithType: SessionPoolOptions
+- uid: Google.Cloud.Spanner.V1.SessionPoolOptions.#ctor
+  name: SessionPoolOptions()
+  href: api/Google.Cloud.Spanner.V1.SessionPoolOptions.html#Google_Cloud_Spanner_V1_SessionPoolOptions__ctor
+  commentId: M:Google.Cloud.Spanner.V1.SessionPoolOptions.#ctor
+  fullName: Google.Cloud.Spanner.V1.SessionPoolOptions.SessionPoolOptions()
+  nameWithType: SessionPoolOptions.SessionPoolOptions()
+- uid: Google.Cloud.Spanner.V1.SessionPoolOptions.#ctor*
+  name: SessionPoolOptions
+  href: api/Google.Cloud.Spanner.V1.SessionPoolOptions.html#Google_Cloud_Spanner_V1_SessionPoolOptions__ctor_
+  commentId: Overload:Google.Cloud.Spanner.V1.SessionPoolOptions.#ctor
+  fullName: Google.Cloud.Spanner.V1.SessionPoolOptions.SessionPoolOptions
+  nameWithType: SessionPoolOptions.SessionPoolOptions
 - uid: Google.Cloud.Spanner.V1.SessionPoolOptions.MaximumActiveSessions
   name: MaximumActiveSessions
   href: api/Google.Cloud.Spanner.V1.SessionPoolOptions.html#Google_Cloud_Spanner_V1_SessionPoolOptions_MaximumActiveSessions
@@ -16273,6 +16279,18 @@ references:
   commentId: Overload:Grpc.Core.GrpcEnvironment.SetCompletionQueueCount
   fullName: Grpc.Core.GrpcEnvironment.SetCompletionQueueCount
   nameWithType: GrpcEnvironment.SetCompletionQueueCount
+- uid: Grpc.Core.GrpcEnvironment.SetHandlerInlining(System.Boolean)
+  name: SetHandlerInlining(Boolean)
+  href: api/Grpc.Core.GrpcEnvironment.html#Grpc_Core_GrpcEnvironment_SetHandlerInlining_System_Boolean_
+  commentId: M:Grpc.Core.GrpcEnvironment.SetHandlerInlining(System.Boolean)
+  fullName: Grpc.Core.GrpcEnvironment.SetHandlerInlining(System.Boolean)
+  nameWithType: GrpcEnvironment.SetHandlerInlining(Boolean)
+- uid: Grpc.Core.GrpcEnvironment.SetHandlerInlining*
+  name: SetHandlerInlining
+  href: api/Grpc.Core.GrpcEnvironment.html#Grpc_Core_GrpcEnvironment_SetHandlerInlining_
+  commentId: Overload:Grpc.Core.GrpcEnvironment.SetHandlerInlining
+  fullName: Grpc.Core.GrpcEnvironment.SetHandlerInlining
+  nameWithType: GrpcEnvironment.SetHandlerInlining
 - uid: Grpc.Core.GrpcEnvironment.SetLogger(Grpc.Core.Logging.ILogger)
   name: SetLogger(ILogger)
   href: api/Grpc.Core.GrpcEnvironment.html#Grpc_Core_GrpcEnvironment_SetLogger_Grpc_Core_Logging_ILogger_
@@ -16309,6 +16327,12 @@ references:
   commentId: Overload:Grpc.Core.GrpcEnvironment.ShutdownChannelsAsync
   fullName: Grpc.Core.GrpcEnvironment.ShutdownChannelsAsync
   nameWithType: GrpcEnvironment.ShutdownChannelsAsync
+- uid: Grpc.Core.GrpcEnvironment.ShuttingDown
+  name: ShuttingDown
+  href: api/Grpc.Core.GrpcEnvironment.html#Grpc_Core_GrpcEnvironment_ShuttingDown
+  commentId: E:Grpc.Core.GrpcEnvironment.ShuttingDown
+  fullName: Grpc.Core.GrpcEnvironment.ShuttingDown
+  nameWithType: GrpcEnvironment.ShuttingDown
 - uid: Grpc.Core.IAsyncStreamReader`1
   name: IAsyncStreamReader<T>
   href: api/Grpc.Core.IAsyncStreamReader-1.html
@@ -17651,6 +17675,12 @@ references:
   commentId: M:Grpc.Core.RpcException.#ctor(Grpc.Core.Status)
   fullName: Grpc.Core.RpcException.RpcException(Grpc.Core.Status)
   nameWithType: RpcException.RpcException(Status)
+- uid: Grpc.Core.RpcException.#ctor(Grpc.Core.Status,Grpc.Core.Metadata)
+  name: RpcException(Status, Metadata)
+  href: api/Grpc.Core.RpcException.html#Grpc_Core_RpcException__ctor_Grpc_Core_Status_Grpc_Core_Metadata_
+  commentId: M:Grpc.Core.RpcException.#ctor(Grpc.Core.Status,Grpc.Core.Metadata)
+  fullName: Grpc.Core.RpcException.RpcException(Grpc.Core.Status, Grpc.Core.Metadata)
+  nameWithType: RpcException.RpcException(Status, Metadata)
 - uid: Grpc.Core.RpcException.#ctor(Grpc.Core.Status,System.String)
   name: RpcException(Status, String)
   href: api/Grpc.Core.RpcException.html#Grpc_Core_RpcException__ctor_Grpc_Core_Status_System_String_
@@ -17675,6 +17705,18 @@ references:
   commentId: Overload:Grpc.Core.RpcException.Status
   fullName: Grpc.Core.RpcException.Status
   nameWithType: RpcException.Status
+- uid: Grpc.Core.RpcException.Trailers
+  name: Trailers
+  href: api/Grpc.Core.RpcException.html#Grpc_Core_RpcException_Trailers
+  commentId: P:Grpc.Core.RpcException.Trailers
+  fullName: Grpc.Core.RpcException.Trailers
+  nameWithType: RpcException.Trailers
+- uid: Grpc.Core.RpcException.Trailers*
+  name: Trailers
+  href: api/Grpc.Core.RpcException.html#Grpc_Core_RpcException_Trailers_
+  commentId: Overload:Grpc.Core.RpcException.Trailers
+  fullName: Grpc.Core.RpcException.Trailers
+  nameWithType: RpcException.Trailers
 - uid: Grpc.Core.Server
   name: Server
   href: api/Grpc.Core.Server.html

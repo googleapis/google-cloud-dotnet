@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigQueryTable
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,6 +80,10 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">BigQueryTable</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IFormattable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -182,7 +187,8 @@ dataset ID and table ID components.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_Resource_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The data within the resource may be incomplete, depending on how it was obtained.</p>
+  <div class="markdown level1 remarks"><p>The data within the resource may be incomplete, depending on how it was obtained.
+(ListTables operations return less data than GetTable operations.)</p>
 </div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryTable_Schema_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Schema*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_Schema" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Schema">Schema</h4>
@@ -273,7 +279,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; CreateCopyJobAsync(TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; CreateCopyJobAsync(TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,7 +442,7 @@ See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; CreateExtractJobAsync(IEnumerable&lt;string&gt; destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; CreateExtractJobAsync(IEnumerable&lt;string&gt; destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -493,7 +499,7 @@ See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -577,7 +583,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DeleteAsync(DeleteTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DeleteAsync(DeleteTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -661,7 +667,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task InsertRowAsync(BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task InsertRowAsync(BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -823,7 +829,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task InsertRowsAsync(IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task InsertRowsAsync(IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1017,8 +1023,8 @@ await result.ForEachAsync(row =&gt;
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">matchETag</span></td>
-        <td><p>If true, the etag from <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> is propagated into <span class="paramref">resource</span> for
-optimistic concurrency. Otherwise, <span class="paramref">resource</span> is left unchanged.</p>
+        <td><p>If true, the etag from <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> is propagated into <code data-dev-comment-type="paramref" class="paramref">resource</code> for
+optimistic concurrency. Otherwise, <code data-dev-comment-type="paramref" class="paramref">resource</code> is left unchanged.</p>
 </td>
       </tr>
       <tr>
@@ -1055,7 +1061,7 @@ optimistic concurrency. Otherwise, <span class="paramref">resource</span> is lef
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryTable&gt; PatchAsync(Table resource, bool matchETag, PatchTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryTable&gt; PatchAsync(Table resource, bool matchETag, PatchTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1076,8 +1082,8 @@ optimistic concurrency. Otherwise, <span class="paramref">resource</span> is lef
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">matchETag</span></td>
-        <td><p>If true, the etag from <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> is propagated into <span class="paramref">resource</span> for
-optimistic concurrency. Otherwise, <span class="paramref">resource</span> is left unchanged.</p>
+        <td><p>If true, the etag from <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> is propagated into <code data-dev-comment-type="paramref" class="paramref">resource</code> for
+optimistic concurrency. Otherwise, <code data-dev-comment-type="paramref" class="paramref">resource</code> is left unchanged.</p>
 </td>
       </tr>
       <tr>
@@ -1306,7 +1312,7 @@ as the new, self-consistent representation of the table.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryTable&gt; UpdateAsync(Table resource = null, UpdateTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryTable&gt; UpdateAsync(Table resource = null, UpdateTableOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1423,7 +1429,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; UploadAvroAsync(Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; UploadAvroAsync(Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1530,7 +1536,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; UploadCsvAsync(Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; UploadCsvAsync(Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1630,7 +1636,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
     </tbody>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadJson_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each element of <span class="paramref">rows</span> is converted into a single line of text by replacing carriage returns and line
+  <div class="markdown level1 remarks"><p>Each element of <code data-dev-comment-type="paramref" class="paramref">rows</code> is converted into a single line of text by replacing carriage returns and line
 feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
 original JSON can be formatted however you choose.</p>
 </div>
@@ -1692,7 +1698,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; UploadJsonAsync(IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; UploadJsonAsync(IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1742,7 +1748,7 @@ a data upload job.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadJsonAsync_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each element of <span class="paramref">rows</span> is converted into a single line of text by replacing carriage returns and line
+  <div class="markdown level1 remarks"><p>Each element of <code data-dev-comment-type="paramref" class="paramref">rows</code> is converted into a single line of text by replacing carriage returns and line
 feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
 original JSON can be formatted however you choose.</p>
 </div>
@@ -1754,7 +1760,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; UploadJsonAsync(Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; UploadJsonAsync(Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

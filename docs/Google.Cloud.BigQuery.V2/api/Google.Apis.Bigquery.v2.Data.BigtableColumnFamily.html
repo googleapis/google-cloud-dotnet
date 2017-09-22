@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigtableColumnFamily
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,35 +80,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">BigtableColumnFamily</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
   <h5 id="Google_Apis_Bigquery_v2_Data_BigtableColumnFamily_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BigtableColumnFamily : IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class BigtableColumnFamily : Requests.IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -120,8 +97,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;columns&quot;)]
-public virtual IList&lt;BigtableColumn&gt; Columns { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;BigtableColumn&gt; Columns { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,8 +124,7 @@ Bytes.toBytes family of functions. This can be overridden for a specific column 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;encoding&quot;)]
-public virtual string Encoding { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Encoding { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,8 +165,6 @@ public virtual string Encoding { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Bigquery_v2_Data_BigtableColumnFamily_FamilyId_" data-uid="Google.Apis.Bigquery.v2.Data.BigtableColumnFamily.FamilyId*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_BigtableColumnFamily_FamilyId" data-uid="Google.Apis.Bigquery.v2.Data.BigtableColumnFamily.FamilyId">FamilyId</h4>
   <div class="markdown level1 summary"><p>Identifier of the column family.</p>
@@ -199,8 +172,7 @@ public virtual string Encoding { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;familyId&quot;)]
-public virtual string FamilyId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string FamilyId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,8 +198,7 @@ specifying a different setting for that column.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;onlyReadLatest&quot;)]
-public virtual bool ? OnlyReadLatest { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool ? OnlyReadLatest { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,8 +225,7 @@ overridden for a specific column by listing that column in &apos;columns&apos; a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;type&quot;)]
-public virtual string Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

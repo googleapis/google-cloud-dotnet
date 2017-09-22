@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GrpcEnvironment
    | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -193,6 +194,39 @@ Note: this method is part of an experimental API that can change or be removed w
       </tr>
     </tbody>
   </table>
+  <a id="Grpc_Core_GrpcEnvironment_SetHandlerInlining_" data-uid="Grpc.Core.GrpcEnvironment.SetHandlerInlining*"></a>
+  <h4 id="Grpc_Core_GrpcEnvironment_SetHandlerInlining_System_Boolean_" data-uid="Grpc.Core.GrpcEnvironment.SetHandlerInlining(System.Boolean)">SetHandlerInlining(Boolean)</h4>
+  <div class="markdown level1 summary"><p>By default, gRPC&apos;s internal event handlers get offloaded to .NET default thread pool thread (<code>inlineHandlers=false</code>).
+Setting <code>inlineHandlers</code> to <code>true</code> will allow scheduling the event handlers directly to
+<code>GrpcThreadPool</code> internal threads. That can lead to significant performance gains in some situations,
+but requires user to never block in async code (incorrectly written code can easily lead to deadlocks).
+Inlining handlers is an advanced setting and you should only use it if you know what you are doing.
+Most users should rely on the default value provided by gRPC library.
+Note: this method is part of an experimental API that can change or be removed without any prior notice.
+Note: <code>inlineHandlers=true</code> was the default in gRPC C# v1.4.x and earlier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetHandlerInlining(bool inlineHandlers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">inlineHandlers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Grpc_Core_GrpcEnvironment_SetLogger_" data-uid="Grpc.Core.GrpcEnvironment.SetLogger*"></a>
   <h4 id="Grpc_Core_GrpcEnvironment_SetLogger_Grpc_Core_Logging_ILogger_" data-uid="Grpc.Core.GrpcEnvironment.SetLogger(Grpc.Core.Logging.ILogger)">SetLogger(ILogger)</h4>
   <div class="markdown level1 summary"><p>Sets the application-wide logger that should be used by gRPC.</p>
@@ -269,6 +303,32 @@ Note: this method is part of an experimental API that can change or be removed w
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <h4 id="Grpc_Core_GrpcEnvironment_ShuttingDown" data-uid="Grpc.Core.GrpcEnvironment.ShuttingDown">ShuttingDown</h4>
+  <div class="markdown level1 summary"><p>Occurs when <code>GrpcEnvironment</code> is about the start the shutdown logic.
+If <code>GrpcEnvironment</code> is later initialized and shutdown, the event will be fired again (unless unregistered first).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event EventHandler ShuttingDown</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span></td>
         <td></td>
       </tr>
     </tbody>

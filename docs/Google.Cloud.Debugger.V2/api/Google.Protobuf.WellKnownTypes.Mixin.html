@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Mixin
    | Google.Cloud.Debugger.V2 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -72,9 +73,9 @@
   
   <h1 id="Google_Protobuf_WellKnownTypes_Mixin" data-uid="Google.Protobuf.WellKnownTypes.Mixin" class="text-break">Class Mixin
   </h1>
-  <div class="markdown level0 summary"><p>Declares an API to be included in this API. The including API must
-redeclare all the methods from the included API, but documentation
-and options are inherited as follows:</p>
+  <div class="markdown level0 summary"><p>Declares an API Interface to be included in this interface. The including
+interface must redeclare all the methods from the included interface, but
+documentation and options are inherited as follows:</p>
 <ul>
 <li><p>If after comment and whitespace stripping, the documentation
 string of the redeclared method is empty, it will be inherited
@@ -86,7 +87,8 @@ inherited.</p>
 </li>
 <li><p>If an http annotation is inherited, the path pattern will be
 modified as follows. Any version prefix will be replaced by the
-version of the including API plus the [root][] path if specified.</p>
+version of the including interface plus the [root][] path if
+specified.</p>
 </li>
 </ul>
 <p>Example of a simple mixin:</p>
@@ -152,6 +154,13 @@ root: acls</li>
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Mixin</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Mixin.html">Mixin</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Mixin.html">Mixin</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Mixin.html">Mixin</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -284,7 +293,7 @@ root: acls</li>
   </table>
   <a id="Google_Protobuf_WellKnownTypes_Mixin_Name_" data-uid="Google.Protobuf.WellKnownTypes.Mixin.Name*"></a>
   <h4 id="Google_Protobuf_WellKnownTypes_Mixin_Name" data-uid="Google.Protobuf.WellKnownTypes.Mixin.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The fully qualified name of the API which is included.</p>
+  <div class="markdown level1 summary"><p>The fully qualified name of the interface which is included.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

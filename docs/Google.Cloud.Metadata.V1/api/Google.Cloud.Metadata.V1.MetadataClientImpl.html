@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MetadataClientImpl
    | Google.Cloud.Metadata.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -252,7 +253,7 @@ create a default instance.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;TokenResponse&gt; GetAccessTokenAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;TokenResponse&gt; GetAccessTokenAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -386,7 +387,7 @@ The key must conform to the following regular expression: [a-zA-Z0-9-_]+ and mus
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;string&gt; GetCustomInstanceMetadataAsync(string key, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;string&gt; GetCustomInstanceMetadataAsync(string key, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -539,7 +540,7 @@ The key must conform to the following regular expression: [a-zA-Z0-9-_]+ and mus
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;string&gt; GetCustomProjectMetadataAsync(string key, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;string&gt; GetCustomProjectMetadataAsync(string key, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -651,7 +652,7 @@ accessed without authentication from an application running on the instance. Che
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;Instance&gt; GetInstanceMetadataAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;Instance&gt; GetInstanceMetadataAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -738,7 +739,7 @@ to perform any tasks in preparation for the event, such as backing up data or up
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;MaintenanceStatus&gt; GetMaintenanceStatusAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;MaintenanceStatus&gt; GetMaintenanceStatusAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -851,7 +852,7 @@ See <a href="https://cloud.google.com/compute/docs/storing-retrieving-metadata#p
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentException</span></td>
-        <td><p><span class="paramref">key</span> does not have the proper format for a metadata key, which is a relative URL.</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">key</code> does not have the proper format for a metadata key, which is a relative URL.</p>
 </td>
       </tr>
     </tbody>
@@ -867,7 +868,7 @@ See <a href="https://cloud.google.com/compute/docs/storing-retrieving-metadata#p
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;MetadataResult&gt; GetMetadataAsync(string key, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;MetadataResult&gt; GetMetadataAsync(string key, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -931,7 +932,7 @@ See <a href="https://cloud.google.com/compute/docs/storing-retrieving-metadata#p
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentException</span></td>
-        <td><p><span class="paramref">key</span> does not have the proper format for a metadata key, which is a relative URL.</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">key</code> does not have the proper format for a metadata key, which is a relative URL.</p>
 </td>
       </tr>
     </tbody>
@@ -979,7 +980,7 @@ accessed without authentication from an application running on an instance of th
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;Project&gt; GetProjectMetadataAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;Project&gt; GetProjectMetadataAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1060,7 +1061,7 @@ Google App Engine Flexible Environment, but if an metadata server emulator is av
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;bool&gt; IsServerAvailableAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;bool&gt; IsServerAvailableAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1109,7 +1110,7 @@ Google App Engine Flexible Environment, but if an metadata server emulator is av
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override MetadataResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override MetadataResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default (TimeSpan))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1165,11 +1166,11 @@ If the key specified is a metadata endpoint, the result will be the value, possi
 If the key specified is a directory, a recursive request will be made and the result will be a JSON object containing all values in the directory.
 </p>
 <p>
-If the <span class="paramref">lastETag</span> is specified and it differs from the ETag of the value currently on the server, it indicates that the value has already
+If the <code data-dev-comment-type="paramref" class="paramref">lastETag</code> is specified and it differs from the ETag of the value currently on the server, it indicates that the value has already
 changed since the last known value as obtained, and the changed value will be returned immediately.
 </p>
 <p>
-If the <span class="paramref">timeout</span> expires before changes are made, the current value will be returned. If unspecified, half the length of the timeout in
+If the <code data-dev-comment-type="paramref" class="paramref">timeout</code> expires before changes are made, the current value will be returned. If unspecified, half the length of the timeout in
 the <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_HttpClient">HttpClient</a> will be used instead. Note that if the the timeout in the <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_HttpClient">HttpClient</a> elapses before the wait timeout elapses
 on the server a <span class="xref">System.Threading.Tasks.TaskCanceledException</span> exception will occur.
 </p>
@@ -1177,7 +1178,7 @@ on the server a <span class="xref">System.Threading.Tasks.TaskCanceledException<
 See <a href="https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata">https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata</a> for more information on available keys.
 </p>
 <p>
-To detect any changes at the project or instance level, use a <span class="paramref">key</span> of &quot;project&quot; or &quot;instance&quot;.
+To detect any changes at the project or instance level, use a <code data-dev-comment-type="paramref" class="paramref">key</code> of &quot;project&quot; or &quot;instance&quot;.
 Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_ProjectMetadataChanged">ProjectMetadataChanged</a> or <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_InstanceMetadataChanged">InstanceMetadataChanged</a>, respectively.
 </p>
 </div>
@@ -1192,8 +1193,8 @@ Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentException</span></td>
-        <td><p><span class="paramref">key</span> does not have the proper format for a metadata key, which is a relative URL, <span class="paramref">timeout</span> represents a negative duration,
-or <span class="paramref">lastETag</span> is invalid.</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">key</code> does not have the proper format for a metadata key, which is a relative URL, <code data-dev-comment-type="paramref" class="paramref">timeout</code> represents a negative duration,
+or <code data-dev-comment-type="paramref" class="paramref">lastETag</code> is invalid.</p>
 </td>
       </tr>
       <tr>
@@ -1216,7 +1217,7 @@ or <span class="paramref">lastETag</span> is invalid.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;MetadataResult&gt; WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;MetadataResult&gt; WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = default (TimeSpan), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1278,11 +1279,11 @@ If the key specified is a metadata endpoint, the result will be the value, possi
 If the key specified is a directory, a recursive request will be made and the result will be a JSON object containing all values in the directory.
 </p>
 <p>
-If the <span class="paramref">lastETag</span> is specified and it differs from the ETag of the value currently on the server, it indicates that the value has already
+If the <code data-dev-comment-type="paramref" class="paramref">lastETag</code> is specified and it differs from the ETag of the value currently on the server, it indicates that the value has already
 changed since the last known value as obtained, and the changed value will be returned immediately.
 </p>
 <p>
-If the <span class="paramref">timeout</span> expires before changes are made, the current value will be returned. If unspecified, half the length of the timeout in
+If the <code data-dev-comment-type="paramref" class="paramref">timeout</code> expires before changes are made, the current value will be returned. If unspecified, half the length of the timeout in
 the <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_HttpClient">HttpClient</a> will be used instead. Note that if the the timeout in the <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_HttpClient">HttpClient</a> elapses before the wait timeout elapses
 on the server a <span class="xref">System.Threading.Tasks.TaskCanceledException</span> exception will occur.
 </p>
@@ -1290,7 +1291,7 @@ on the server a <span class="xref">System.Threading.Tasks.TaskCanceledException<
 See <a href="https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata">https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata</a> for more information on available keys.
 </p>
 <p>
-To detect any changes at the project or instance level, use a <span class="paramref">key</span> of &quot;project&quot; or &quot;instance&quot;.
+To detect any changes at the project or instance level, use a <code data-dev-comment-type="paramref" class="paramref">key</code> of &quot;project&quot; or &quot;instance&quot;.
 Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_ProjectMetadataChanged">ProjectMetadataChanged</a> or <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_InstanceMetadataChanged">InstanceMetadataChanged</a>, respectively.
 </p>
 </div>
@@ -1305,8 +1306,8 @@ Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentException</span></td>
-        <td><p><span class="paramref">key</span> does not have the proper format for a metadata key, which is a relative URL, <span class="paramref">timeout</span> represents a negative duration,
-or <span class="paramref">lastETag</span> is invalid.</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">key</code> does not have the proper format for a metadata key, which is a relative URL, <code data-dev-comment-type="paramref" class="paramref">timeout</code> represents a negative duration,
+or <code data-dev-comment-type="paramref" class="paramref">lastETag</code> is invalid.</p>
 </td>
       </tr>
       <tr>

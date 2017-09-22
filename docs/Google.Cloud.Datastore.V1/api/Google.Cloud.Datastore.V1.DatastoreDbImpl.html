@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreDbImpl
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -379,7 +380,7 @@ for manually obtaining an instance, including automatic client creation.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
-        <td><p>A collection of complete keys with allocated IDs, in the same order as <span class="paramref">keys</span>.</p>
+        <td><p>A collection of complete keys with allocated IDs, in the same order as <code data-dev-comment-type="paramref" class="paramref">keys</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -435,7 +436,7 @@ number of keys, partition the allocations into batches. See
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;&gt;</td>
-        <td><p>A collection of complete keys with allocated IDs, in the same order as <span class="paramref">keys</span>.</p>
+        <td><p>A collection of complete keys with allocated IDs, in the same order as <code data-dev-comment-type="paramref" class="paramref">keys</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -821,7 +822,7 @@ number of entities, partition the changes into batches. See
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
-        <td><p>A collection of keys of inserted entities, in the same order as <span class="paramref">entities</span>.
+        <td><p>A collection of keys of inserted entities, in the same order as <code data-dev-comment-type="paramref" class="paramref">entities</code>.
 Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
 the collection.</p>
 </td>
@@ -882,7 +883,7 @@ number of entities, partition the changes into batches. See
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;&gt;</td>
         <td><p>A task representing the asynchronous operation. The result of the task is
-a collection of keys of inserted entities, in the same order as <span class="paramref">entities</span>.
+a collection of keys of inserted entities, in the same order as <code data-dev-comment-type="paramref" class="paramref">entities</code>.
 Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
 the collection.</p>
 </td>
@@ -904,7 +905,7 @@ number of entities, partition the look-ups into batches. See
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IReadOnlyList&lt;Entity&gt; Lookup(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override IReadOnlyList&lt;Entity&gt; Lookup(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = default (ReadOptions.Types.ReadConsistency? ), CallSettings callSettings = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -947,7 +948,7 @@ number of entities, partition the look-ups into batches. See
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
-        <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
+        <td><p>A collection of entities with the same size as <code data-dev-comment-type="paramref" class="paramref">keys</code>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
       </tr>
@@ -968,7 +969,7 @@ number of entities, partition the look-ups into batches. See
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = default (ReadOptions.Types.ReadConsistency? ), CallSettings callSettings = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1011,7 +1012,7 @@ number of entities, partition the look-ups into batches. See
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;&gt;</td>
-        <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
+        <td><p>A collection of entities with the same size as <code data-dev-comment-type="paramref" class="paramref">keys</code>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
       </tr>
@@ -1032,7 +1033,7 @@ number of entities, partition the look-ups into batches. See
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = default (ReadOptions.Types.ReadConsistency? ), CallSettings callSettings = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1094,7 +1095,7 @@ multiple times will execute the query again, potentially returning different res
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override LazyDatastoreQuery RunQueryLazily(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override LazyDatastoreQuery RunQueryLazily(Query query, ReadOptions.Types.ReadConsistency? readConsistency = default (ReadOptions.Types.ReadConsistency? ), CallSettings callSettings = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1156,7 +1157,7 @@ multiple times will execute the query again, potentially returning different res
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = default (ReadOptions.Types.ReadConsistency? ), CallSettings callSettings = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1218,7 +1219,7 @@ multiple times will execute the query again, potentially returning different res
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = default (ReadOptions.Types.ReadConsistency? ), CallSettings callSettings = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1414,7 +1415,7 @@ number of entities, partition the changes into batches. See
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
-        <td><p>A collection of allocated keys, in the same order as <span class="paramref">entities</span>. Each inserted entity
+        <td><p>A collection of allocated keys, in the same order as <code data-dev-comment-type="paramref" class="paramref">entities</code>. Each inserted entity
 which had an incomplete key - requiring the server to allocate a new key - will have a non-null
 value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
 with a predefined key will have a null value in the collection.</p>
@@ -1476,7 +1477,7 @@ number of entities, partition the changes into batches. See
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;&gt;</td>
         <td><p>A task representing the asynchronous operation. The result of the task is
-a collection of allocated keys, in the same order as <span class="paramref">entities</span>. Each inserted entity
+a collection of allocated keys, in the same order as <code data-dev-comment-type="paramref" class="paramref">entities</code>. Each inserted entity
 which had an incomplete key - requiring the server to allocate a new key - will have a non-null
 value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
 with a predefined key will have a null value in the collection.</p>

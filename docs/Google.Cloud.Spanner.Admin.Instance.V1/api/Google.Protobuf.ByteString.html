@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ByteString
    | Google.Cloud.Spanner.Admin.Instance.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,6 +80,12 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ByteString</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Byte</span>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -498,7 +505,7 @@ the given encoding.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p><code>true</code> if <span class="paramref">other</span> refers to an equal byte string; <code>false</code> otherwise.</p>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">other</code> refers to an equal byte string; <code>false</code> otherwise.</p>
 </td>
       </tr>
     </tbody>
@@ -543,7 +550,7 @@ the given encoding.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p><code>true</code> if <span class="paramref">obj</span> refers to an equal <a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a>; <code>false</code> otherwise.</p>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">obj</code> refers to an equal <a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a>; <code>false</code> otherwise.</p>
 </td>
       </tr>
     </tbody>
@@ -635,7 +642,7 @@ the given encoding.</p>
     </tbody>
   </table>
   <h5 id="Google_Protobuf_ByteString_FromStream_System_IO_Stream__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If successful, <span class="paramref">stream</span> will be read completely, from the position
+  <div class="markdown level1 remarks"><p>If successful, <code data-dev-comment-type="paramref" class="paramref">stream</code> will be read completely, from the position
 at the start of the call.</p>
 </div>
   <a id="Google_Protobuf_ByteString_FromStreamAsync_" data-uid="Google.Protobuf.ByteString.FromStreamAsync*"></a>
@@ -645,7 +652,7 @@ at the start of the call.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;ByteString&gt; FromStreamAsync(Stream stream, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;ByteString&gt; FromStreamAsync(Stream stream, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -688,7 +695,7 @@ at the start of the call.</p>
     </tbody>
   </table>
   <h5 id="Google_Protobuf_ByteString_FromStreamAsync_System_IO_Stream_System_Threading_CancellationToken__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If successful, <span class="paramref">stream</span> will be read completely, from the position
+  <div class="markdown level1 remarks"><p>If successful, <code data-dev-comment-type="paramref" class="paramref">stream</code> will be read completely, from the position
 at the start of the call.</p>
 </div>
   <a id="Google_Protobuf_ByteString_GetEnumerator_" data-uid="Google.Protobuf.ByteString.GetEnumerator*"></a>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SimpleSubscriberImpl
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -260,11 +261,11 @@ it behaves as if it returned <a class="xref" href="Google.Cloud.PubSub.V1.Simple
   <div><a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.html#Google_Cloud_PubSub_V1_SimpleSubscriber_StartAsync_System_Func_Google_Cloud_PubSub_V1_PubsubMessage_System_Threading_CancellationToken_System_Threading_Tasks_Task_Google_Cloud_PubSub_V1_SimpleSubscriber_Reply___">SimpleSubscriber.StartAsync(Func&lt;PubsubMessage, CancellationToken, Task&lt;SimpleSubscriber.Reply&gt;&gt;)</a></div>
   <a id="Google_Cloud_PubSub_V1_SimpleSubscriberImpl_StopAsync_" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriberImpl.StopAsync*"></a>
   <h4 id="Google_Cloud_PubSub_V1_SimpleSubscriberImpl_StopAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriberImpl.StopAsync(System.Threading.CancellationToken)">StopAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Stop this <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a>. Cancelling <span class="paramref">hardStopToken</span> aborts the
+  <div class="markdown level1 summary"><p>Stop this <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a>. Cancelling <code data-dev-comment-type="paramref" class="paramref">hardStopToken</code> aborts the
 clean stop process, and may leave some handled messages un-ACKnowledged.
 The returned <span class="xref">System.Threading.Tasks.Task</span> completes when all handled messages have been ACKnowledged.
 The returned <span class="xref">System.Threading.Tasks.Task</span> faults if there is an unrecoverable error with the underlying service.
-The returned <span class="xref">System.Threading.Tasks.Task</span> cancels if <span class="paramref">hardStopToken</span> is cancelled.</p>
+The returned <span class="xref">System.Threading.Tasks.Task</span> cancels if <code data-dev-comment-type="paramref" class="paramref">hardStopToken</code> is cancelled.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -301,7 +302,7 @@ The returned <span class="xref">System.Threading.Tasks.Task</span> cancels if <s
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td><p>A <span class="xref">System.Threading.Tasks.Task</span> that completes when all handled messages have been ACKnowledged;
-faults on unrecoverable service errors; or cancels if <span class="paramref">hardStopToken</span> is cancelled.</p>
+faults on unrecoverable service errors; or cancels if <code data-dev-comment-type="paramref" class="paramref">hardStopToken</code> is cancelled.</p>
 </td>
       </tr>
     </tbody>

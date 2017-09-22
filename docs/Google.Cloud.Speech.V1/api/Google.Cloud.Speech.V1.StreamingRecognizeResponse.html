@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StreamingRecognizeResponse
    | Google.Cloud.Speech.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -73,8 +74,10 @@
   <h1 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse" class="text-break">Class StreamingRecognizeResponse
   </h1>
   <div class="markdown level0 summary"><p><code>StreamingRecognizeResponse</code> is the only message returned to the client by
-<code>StreamingRecognize</code>. A series of one or more <code>StreamingRecognizeResponse</code>
-messages are streamed back to the client.</p>
+<code>StreamingRecognize</code>. A series of zero or more <code>StreamingRecognizeResponse</code>
+messages are streamed back to the client. If there is no recognizable
+audio, and <code>single_utterance</code> is set to false, then no messages are streamed
+back to the client.</p>
 <p>Here&apos;s an example of a series of ten <code>StreamingRecognizeResponse</code>s that might
 be returned while processing audio:</p>
 <ol>
@@ -128,6 +131,13 @@ one or more (repeated) <code>results</code>.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">StreamingRecognizeResponse</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeResponse.html">StreamingRecognizeResponse</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeResponse.html">StreamingRecognizeResponse</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeResponse.html">StreamingRecognizeResponse</a>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -180,8 +190,8 @@ specifies the error for the operation.</p>
   <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Results" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Results">Results</h4>
   <div class="markdown level1 summary"><p><em>Output-only</em> This repeated list contains zero or more results that
 correspond to consecutive portions of the audio currently being processed.
-It contains zero or one <code>is_final=true</code> result (the newly settled portion),
-followed by zero or more <code>is_final=false</code> results.</p>
+It contains zero or more <code>is_final=false</code> results followed by zero or one
+<code>is_final=true</code> result (the newly settled portion).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

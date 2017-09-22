@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SimplePublisher
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -82,8 +83,8 @@ https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1188</a>.</p>
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SimplePublisher</span></div>
-  </div>
       <div class="level2"><a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisherImpl.html">SimplePublisherImpl</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -194,7 +195,7 @@ Default values are:
 The gRPC <a class="xref" href="Grpc.Core.Channel.html">Channel</a>s underlying the provided <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a>s must have their
 maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
 possibly causing a deadlock.
-The default <span class="paramref">settings</span> are suitable for machines with high network bandwidth
+The default <code data-dev-comment-type="paramref" class="paramref">settings</code> are suitable for machines with high network bandwidth
 (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
 settings may need changing.</p>
 </div>
@@ -253,7 +254,7 @@ For high performance, these should all use distinct <a class="xref" href="Grpc.C
   <a id="Google_Cloud_PubSub_V1_SimplePublisher_CreateAsync_" data-uid="Google.Cloud.PubSub.V1.SimplePublisher.CreateAsync*"></a>
   <h4 id="Google_Cloud_PubSub_V1_SimplePublisher_CreateAsync_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_SimplePublisher_ClientCreationSettings_Google_Cloud_PubSub_V1_SimplePublisher_Settings_" data-uid="Google.Cloud.PubSub.V1.SimplePublisher.CreateAsync(Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.SimplePublisher.ClientCreationSettings,Google.Cloud.PubSub.V1.SimplePublisher.Settings)">CreateAsync(TopicName, SimplePublisher.ClientCreationSettings, SimplePublisher.Settings)</h4>
   <div class="markdown level1 summary"><p>Create a <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a> instance associated with the specified <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html#Google_Cloud_PubSub_V1_SimplePublisher_TopicName">TopicName</a>.
-The default <span class="paramref">settings</span> and <span class="paramref">clientCreationSettings</span> are suitable for machines with
+The default <code data-dev-comment-type="paramref" class="paramref">settings</code> and <code data-dev-comment-type="paramref" class="paramref">clientCreationSettings</code> are suitable for machines with
 high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
 settings may need changing; especially
 <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.ClientCreationSettings.html#Google_Cloud_PubSub_V1_SimplePublisher_ClientCreationSettings_PublisherSettings">PublisherSettings</a>.<a class="xref" href="Google.Cloud.PubSub.V1.PublisherSettings.html#Google_Cloud_PubSub_V1_PublisherSettings_PublishSettings">PublishSettings</a>.<a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings_Timing">Timing</a>.<a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html#Google_Api_Gax_Grpc_CallTiming_Retry">Retry</a>.<a class="xref" href="Google.Api.Gax.Grpc.RetrySettings.html#Google_Api_Gax_Grpc_RetrySettings_TimeoutBackoff">TimeoutBackoff</a>.</p>
@@ -563,10 +564,10 @@ The task <span class="xref">System.Threading.Tasks.Task`1.Result</span> contains
   </table>
   <a id="Google_Cloud_PubSub_V1_SimplePublisher_ShutdownAsync_" data-uid="Google.Cloud.PubSub.V1.SimplePublisher.ShutdownAsync*"></a>
   <h4 id="Google_Cloud_PubSub_V1_SimplePublisher_ShutdownAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SimplePublisher.ShutdownAsync(System.Threading.CancellationToken)">ShutdownAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Shutdown this <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a>. Cancelling <span class="paramref">hardStopToken</span> aborts the
+  <div class="markdown level1 summary"><p>Shutdown this <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a>. Cancelling <code data-dev-comment-type="paramref" class="paramref">hardStopToken</code> aborts the
 clean shutdown process, and may leave some locally queued messages unsent.
 The returned <span class="xref">System.Threading.Tasks.Task</span> completes when all queued messages have been published.
-The returned <span class="xref">System.Threading.Tasks.Task</span> cancels if <span class="paramref">hardStopToken</span> is cancelled.</p>
+The returned <span class="xref">System.Threading.Tasks.Task</span> cancels if <code data-dev-comment-type="paramref" class="paramref">hardStopToken</code> is cancelled.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -603,17 +604,17 @@ The returned <span class="xref">System.Threading.Tasks.Task</span> cancels if <s
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td><p>A <span class="xref">System.Threading.Tasks.Task</span> that completes when all queued messages have been published; or cancels if
-<span class="paramref">hardStopToken</span> is cancelled.</p>
+<code data-dev-comment-type="paramref" class="paramref">hardStopToken</code> is cancelled.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_PubSub_V1_SimplePublisher_ShutdownAsync_" data-uid="Google.Cloud.PubSub.V1.SimplePublisher.ShutdownAsync*"></a>
   <h4 id="Google_Cloud_PubSub_V1_SimplePublisher_ShutdownAsync_System_TimeSpan_" data-uid="Google.Cloud.PubSub.V1.SimplePublisher.ShutdownAsync(System.TimeSpan)">ShutdownAsync(TimeSpan)</h4>
-  <div class="markdown level1 summary"><p>Shutdown this <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a>. If <span class="paramref">timeout</span> expires, the clean shutdown process will
+  <div class="markdown level1 summary"><p>Shutdown this <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a>. If <code data-dev-comment-type="paramref" class="paramref">timeout</code> expires, the clean shutdown process will
 abort; leaving some locally queued messages unsent.
 The returned <span class="xref">System.Threading.Tasks.Task</span> completes when all queued messages have been published.
-The returned <span class="xref">System.Threading.Tasks.Task</span> cancels if the <span class="paramref">timeout</span> expires before all messages are published.</p>
+The returned <span class="xref">System.Threading.Tasks.Task</span> cancels if the <code data-dev-comment-type="paramref" class="paramref">timeout</code> expires before all messages are published.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -650,7 +651,7 @@ The returned <span class="xref">System.Threading.Tasks.Task</span> cancels if th
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td><p>A <span class="xref">System.Threading.Tasks.Task</span> that completes when all queued messages have been published; or cancels if
-<span class="paramref">timeout</span> expires.</p>
+<code data-dev-comment-type="paramref" class="paramref">timeout</code> expires.</p>
 </td>
       </tr>
     </tbody>

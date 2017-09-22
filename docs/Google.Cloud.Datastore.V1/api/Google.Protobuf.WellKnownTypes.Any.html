@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Any
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -99,6 +100,14 @@ any.Pack(foo)
 if any.Is(Foo.DESCRIPTOR):
  any.Unpack(foo)
  ...</p>
+<p>Example 4: Pack and unpack a message in Go</p>
+<p>foo := &amp;pb.Foo{...}
+any, err := ptypes.MarshalAny(foo)
+...
+foo := &amp;pb.Foo{}
+if err := ptypes.UnmarshalAny(any, foo); err != nil {
+  ...
+}</p>
 <p>The pack methods provided by protobuf library will by default use
 &apos;type.googleapis.com/full.type.name&apos; as the type URL and the unpack
 methods only use the fully qualified type name after the last &apos;/&apos;
@@ -132,6 +141,13 @@ field. Example (for message [google.protobuf.Duration][]):</p>
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Any</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -513,6 +529,61 @@ used with implementation specific semantics.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <a id="Google_Protobuf_WellKnownTypes_Any_GetTypeName_" data-uid="Google.Protobuf.WellKnownTypes.Any.GetTypeName*"></a>
+  <h4 id="Google_Protobuf_WellKnownTypes_Any_GetTypeName_System_String_" data-uid="Google.Protobuf.WellKnownTypes.Any.GetTypeName(System.String)">GetTypeName(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the type name for a type URL, matching the <a class="xref" href="Google.Protobuf.Reflection.DescriptorBase.html#Google_Protobuf_Reflection_DescriptorBase_FullName">FullName</a>
+of the packed message type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetTypeName(string typeUrl)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">typeUrl</span></td>
+        <td><p>The URL to extract the type name from</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The type name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Protobuf_WellKnownTypes_Any_GetTypeName_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This is always just the last part of the URL, after the final slash. No validation of 
+anything before the trailing slash is performed. If the type URL does not include a slash,
+an empty string is returned rather than an exception being thrown; this won&apos;t match any types,
+and the calling code is probably in a better position to give a meaningful error.
+</p>
+<p>
+There is no handling of fragments or queries  at the moment.
+</p>
+</div>
   <a id="Google_Protobuf_WellKnownTypes_Any_MergeFrom_" data-uid="Google.Protobuf.WellKnownTypes.Any.MergeFrom*"></a>
   <h4 id="Google_Protobuf_WellKnownTypes_Any_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Protobuf.WellKnownTypes.Any.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
   <div class="markdown level1 summary"></div>
@@ -605,7 +676,7 @@ used with implementation specific semantics.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a></td>
-        <td><p>An Any message with the content and type URL of <span class="paramref">message</span>.</p>
+        <td><p>An Any message with the content and type URL of <code data-dev-comment-type="paramref" class="paramref">message</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -654,7 +725,7 @@ used with implementation specific semantics.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a></td>
-        <td><p>An Any message with the content and type URL of <span class="paramref">message</span>.</p>
+        <td><p>An Any message with the content and type URL of <code data-dev-comment-type="paramref" class="paramref">message</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -684,6 +755,65 @@ used with implementation specific semantics.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Object.ToString()</span></div>
+  <a id="Google_Protobuf_WellKnownTypes_Any_TryUnpack_" data-uid="Google.Protobuf.WellKnownTypes.Any.TryUnpack*"></a>
+  <h4 id="Google_Protobuf_WellKnownTypes_Any_TryUnpack__1___0__" data-uid="Google.Protobuf.WellKnownTypes.Any.TryUnpack``1(``0@)">TryUnpack&lt;T&gt;(out T)</h4>
+  <div class="markdown level1 summary"><p>Attempts to unpack the content of this Any message into the target message type,
+if it matches the type URL within this Any message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryUnpack&lt;T&gt;(out T result)where T : IMessage, new ()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the message was successfully unpacked; <code>false</code> if the type name didn&apos;t match</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of message to attempt to unpack the content into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Protobuf_WellKnownTypes_Any_Unpack_" data-uid="Google.Protobuf.WellKnownTypes.Any.Unpack*"></a>
   <h4 id="Google_Protobuf_WellKnownTypes_Any_Unpack__1" data-uid="Google.Protobuf.WellKnownTypes.Any.Unpack``1">Unpack&lt;T&gt;()</h4>
   <div class="markdown level1 summary"><p>Unpacks the content of this Any message into the target message type,

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ClientHelper
    | Google.Cloud.Spanner.Admin.Database.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -197,7 +198,7 @@ will return the <a class="xref" href="Google.Api.Gax.SystemScheduler.html">Syste
   <h3 id="methods">Methods
   </h3>
   <a id="Google_Api_Gax_Grpc_ClientHelper_BuildApiCall_" data-uid="Google.Api.Gax.Grpc.ClientHelper.BuildApiCall*"></a>
-  <h4 id="Google_Api_Gax_Grpc_ClientHelper_BuildApiCall__2_System_Func___0_Grpc_Core_CallOptions_Grpc_Core_AsyncServerStreamingCall___1___Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Api.Gax.Grpc.ClientHelper.BuildApiCall``2(System.Func{``0,Grpc.Core.CallOptions,Grpc.Core.AsyncServerStreamingCall{``1}},Google.Api.Gax.Grpc.CallSettings)">BuildApiCall&lt;TRequest, TResponse&gt;(Func&lt;TRequest, CallOptions, AsyncServerStreamingCall&lt;TResponse&gt;&gt;, CallSettings)</h4>
+  <h4 id="Google_Api_Gax_Grpc_ClientHelper_BuildApiCall__2_System_Func___0_CallOptions_AsyncServerStreamingCall___1___Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Api.Gax.Grpc.ClientHelper.BuildApiCall``2(System.Func{``0,CallOptions,AsyncServerStreamingCall{``1}},Google.Api.Gax.Grpc.CallSettings)">BuildApiCall&lt;TRequest, TResponse&gt;(Func&lt;TRequest, CallOptions, AsyncServerStreamingCall&lt;TResponse&gt;&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Builds an <span class="xref">Google.Api.Gax.Grpc.ApiServerStreamingCall</span> given a suitable underlying server streaming call.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -216,7 +217,7 @@ will return the <a class="xref" href="Google.Api.Gax.SystemScheduler.html">Syste
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TRequest, <a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a>, <a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">AsyncServerStreamingCall</a>&lt;TResponse&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;TRequest, <span class="xref">CallOptions</span>, <span class="xref">AsyncServerStreamingCall</span>&lt;TResponse&gt;&gt;</td>
         <td><span class="parametername">grpcCall</span></td>
         <td><p>The underlying gRPC duplex streaming call.</p>
 </td>
@@ -267,7 +268,7 @@ will return the <a class="xref" href="Google.Api.Gax.SystemScheduler.html">Syste
     </tbody>
   </table>
   <a id="Google_Api_Gax_Grpc_ClientHelper_BuildApiCall_" data-uid="Google.Api.Gax.Grpc.ClientHelper.BuildApiCall*"></a>
-  <h4 id="Google_Api_Gax_Grpc_ClientHelper_BuildApiCall__2_System_Func___0_Grpc_Core_CallOptions_Grpc_Core_AsyncUnaryCall___1___System_Func___0_Grpc_Core_CallOptions___1__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Api.Gax.Grpc.ClientHelper.BuildApiCall``2(System.Func{``0,Grpc.Core.CallOptions,Grpc.Core.AsyncUnaryCall{``1}},System.Func{``0,Grpc.Core.CallOptions,``1},Google.Api.Gax.Grpc.CallSettings)">BuildApiCall&lt;TRequest, TResponse&gt;(Func&lt;TRequest, CallOptions, AsyncUnaryCall&lt;TResponse&gt;&gt;, Func&lt;TRequest, CallOptions, TResponse&gt;, CallSettings)</h4>
+  <h4 id="Google_Api_Gax_Grpc_ClientHelper_BuildApiCall__2_System_Func___0_CallOptions_AsyncUnaryCall___1___System_Func___0_CallOptions___1__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Api.Gax.Grpc.ClientHelper.BuildApiCall``2(System.Func{``0,CallOptions,AsyncUnaryCall{``1}},System.Func{``0,CallOptions,``1},Google.Api.Gax.Grpc.CallSettings)">BuildApiCall&lt;TRequest, TResponse&gt;(Func&lt;TRequest, CallOptions, AsyncUnaryCall&lt;TResponse&gt;&gt;, Func&lt;TRequest, CallOptions, TResponse&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Builds an <span class="xref">Google.Api.Gax.Grpc.ApiCall</span> given suitable underlying async and sync calls.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -286,13 +287,13 @@ will return the <a class="xref" href="Google.Api.Gax.SystemScheduler.html">Syste
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TRequest, <a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a>, <a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;TResponse&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;TRequest, <span class="xref">CallOptions</span>, <span class="xref">AsyncUnaryCall</span>&lt;TResponse&gt;&gt;</td>
         <td><span class="parametername">asyncGrpcCall</span></td>
         <td><p>The underlying synchronous gRPC call.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TRequest, <a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a>, TResponse&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;TRequest, <span class="xref">CallOptions</span>, TResponse&gt;</td>
         <td><span class="parametername">syncGrpcCall</span></td>
         <td><p>The underlying asynchronous gRPC call.</p>
 </td>
@@ -343,7 +344,7 @@ will return the <a class="xref" href="Google.Api.Gax.SystemScheduler.html">Syste
     </tbody>
   </table>
   <a id="Google_Api_Gax_Grpc_ClientHelper_BuildApiCall_" data-uid="Google.Api.Gax.Grpc.ClientHelper.BuildApiCall*"></a>
-  <h4 id="Google_Api_Gax_Grpc_ClientHelper_BuildApiCall__2_System_Func_Grpc_Core_CallOptions_Grpc_Core_AsyncDuplexStreamingCall___0___1___Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_" data-uid="Google.Api.Gax.Grpc.ClientHelper.BuildApiCall``2(System.Func{Grpc.Core.CallOptions,Grpc.Core.AsyncDuplexStreamingCall{``0,``1}},Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)">BuildApiCall&lt;TRequest, TResponse&gt;(Func&lt;CallOptions, AsyncDuplexStreamingCall&lt;TRequest, TResponse&gt;&gt;, CallSettings, BidirectionalStreamingSettings)</h4>
+  <h4 id="Google_Api_Gax_Grpc_ClientHelper_BuildApiCall__2_System_Func_CallOptions_AsyncDuplexStreamingCall___0___1___Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_" data-uid="Google.Api.Gax.Grpc.ClientHelper.BuildApiCall``2(System.Func{CallOptions,AsyncDuplexStreamingCall{``0,``1}},Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)">BuildApiCall&lt;TRequest, TResponse&gt;(Func&lt;CallOptions, AsyncDuplexStreamingCall&lt;TRequest, TResponse&gt;&gt;, CallSettings, BidirectionalStreamingSettings)</h4>
   <div class="markdown level1 summary"><p>Builds an <span class="xref">Google.Api.Gax.Grpc.ApiBidirectionalStreamingCall</span> given a suitable underlying duplex call.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -362,7 +363,7 @@ will return the <a class="xref" href="Google.Api.Gax.SystemScheduler.html">Syste
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a>, <a class="xref" href="Grpc.Core.AsyncDuplexStreamingCall-2.html">AsyncDuplexStreamingCall</a>&lt;TRequest, TResponse&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">CallOptions</span>, <span class="xref">AsyncDuplexStreamingCall</span>&lt;TRequest, TResponse&gt;&gt;</td>
         <td><span class="parametername">grpcCall</span></td>
         <td><p>The underlying gRPC duplex streaming call.</p>
 </td>

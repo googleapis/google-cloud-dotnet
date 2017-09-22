@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Protobuf.WellKnownTypes
    | Google.Cloud.Trace.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -104,6 +105,14 @@ any.Pack(foo)
 if any.Is(Foo.DESCRIPTOR):
  any.Unpack(foo)
  ...</p>
+<p>Example 4: Pack and unpack a message in Go</p>
+<p>foo := &amp;pb.Foo{...}
+any, err := ptypes.MarshalAny(foo)
+...
+foo := &amp;pb.Foo{}
+if err := ptypes.UnmarshalAny(any, foo); err != nil {
+  ...
+}</p>
 <p>The pack methods provided by protobuf library will by default use
 &apos;type.googleapis.com/full.type.name&apos; as the type URL and the unpack
 methods only use the fully qualified type name after the last &apos;/&apos;
@@ -136,7 +145,14 @@ field. Example (for message [google.protobuf.Duration][]):</p>
       <section><p>Holder for reflection information generated from google/protobuf/any.proto</p>
 </section>
       <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Api.html">Api</a></h4>
-      <section><p>Api is a light-weight descriptor for a protocol buffer service.</p>
+      <section><p>Api is a light-weight descriptor for an API Interface.</p>
+<p>Interfaces are also described as &quot;protocol buffer services&quot; in some contexts,
+such as by the &quot;service&quot; keyword in a .proto file, but they are different
+from API Services, which represent a concrete implementation of an interface
+as opposed to simply a description of methods and bindings. They are also
+sometimes simply referred to as &quot;APIs&quot; in other contexts, such as the name of
+this message itself. See <a href="https://cloud.google.com/apis/design/glossary">https://cloud.google.com/apis/design/glossary</a> for
+detailed terminology.</p>
 </section>
       <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.ApiReflection.html">ApiReflection</a></h4>
       <section><p>Holder for reflection information generated from google/protobuf/api.proto</p>
@@ -402,12 +418,12 @@ paths.</p>
 <p>The JSON representation for <code>ListValue</code> is JSON array.</p>
 </section>
       <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Method.html">Method</a></h4>
-      <section><p>Method represents a method of an api.</p>
+      <section><p>Method represents a method of an API interface.</p>
 </section>
       <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Mixin.html">Mixin</a></h4>
-      <section><p>Declares an API to be included in this API. The including API must
-redeclare all the methods from the included API, but documentation
-and options are inherited as follows:</p>
+      <section><p>Declares an API Interface to be included in this interface. The including
+interface must redeclare all the methods from the included interface, but
+documentation and options are inherited as follows:</p>
 <ul>
 <li><p>If after comment and whitespace stripping, the documentation
 string of the redeclared method is empty, it will be inherited
@@ -419,7 +435,8 @@ inherited.</p>
 </li>
 <li><p>If an http annotation is inherited, the path pattern will be
 modified as follows. Any version prefix will be replaced by the
-version of the including API plus the [root][] path if specified.</p>
+version of the including interface plus the [root][] path if
+specified.</p>
 </li>
 </ul>
 <p>Example of a simple mixin:</p>

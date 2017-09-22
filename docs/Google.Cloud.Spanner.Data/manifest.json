@@ -1,1 +1,2797 @@
-{"homepages":[],"source_base_path":"C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.Spanner.Data","xrefmap":"xrefmap.yml","files":[{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.html","hash":"UEza8v9GgzfMqLav6YsIUw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.html","hash":"MnTT/xvqkQQHc9HFh7pjsQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.html","hash":"lAIes6jrIC3SQeSIRceJ1A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html","hash":"tqahMiMIDWFEG07Rky2MYQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceName.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceName.html","hash":"LJVfaH++vWIhOZz62z2qOA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.html","hash":"tEhvHShRA51HrUkUCX35uQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.html","hash":"eXYdC5hv8ir2qsPnHfSM/Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.html","hash":"6Rrd04OJtjeuVqqBKozAIA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.ChunkingTests.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.ChunkingTests.html","hash":"4yqg8dYL6oxaZXGH/R2i3w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.DataAdapterTests.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.DataAdapterTests.html","hash":"Y6h3cgv6MkC4kj/kJQKeWA=="}},"is_incremental":false,"version":""},{"log_codes":["InvalidFileLink"],"type":"Toc","source_relative_path":"toc.yml","output":{".html":{"relative_path":"toc.html","hash":"Nf5Ghv6mhtGXSuVsJzvU9g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ClientStreamingServerMethod-2.yml","output":{".html":{"relative_path":"api/Grpc.Core.ClientStreamingServerMethod-2.html","hash":"4WZWUBeqsPk38ozAb/oKJA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.KeyCertificatePair.yml","output":{".html":{"relative_path":"api/Grpc.Core.KeyCertificatePair.html","hash":"3zJ3xpvIfMs0nmbsdkM++g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Logging.ConsoleLogger.yml","output":{".html":{"relative_path":"api/Grpc.Core.Logging.ConsoleLogger.html","hash":"Gh4ytNJY/luuGJE421jXZw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Logging.ILogger.yml","output":{".html":{"relative_path":"api/Grpc.Core.Logging.ILogger.html","hash":"Y0ujBDwSOA9G+V28tQW7bQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Logging.LogLevel.yml","output":{".html":{"relative_path":"api/Grpc.Core.Logging.LogLevel.html","hash":"37K1MsrmKIi7wcMI/ILBiA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Server.ServiceDefinitionCollection.yml","output":{".html":{"relative_path":"api/Grpc.Core.Server.ServiceDefinitionCollection.html","hash":"Tcif4HTLSUL+9t3eQ56raQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Server.yml","output":{".html":{"relative_path":"api/Grpc.Core.Server.html","hash":"E2BPI7ElnnC6YSlhYP5pcA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ServerCallContext.yml","output":{".html":{"relative_path":"api/Grpc.Core.ServerCallContext.html","hash":"EYwSZAGTIJ3L2Rw0iba0uA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ServerCredentials.yml","output":{".html":{"relative_path":"api/Grpc.Core.ServerCredentials.html","hash":"fDUymkYatTDCMrtcmdqwBw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State.html","hash":"tpBYqLx2GZmX32FAf6De+Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.html","hash":"io2uFZv9aZ69ct2e5d0A/Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html","hash":"wGLJCCbi3B3vo5yktqxGvA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerCommand.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerCommand.html","hash":"KnIFjOOG0mArxAbrTx5BhA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.html","hash":"vSEdRTTKcGQmJqvMV0kzVQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html","hash":"ZL4MPi1fusgayv1K+6sCow=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerDataAdapter.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerDataAdapter.html","hash":"9lItTiMi1gAlGgIvtkUttw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerException.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerException.html","hash":"wP/sQeeplLNI78uBBa187w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerOptions.html","hash":"UF9a+EbC4pvg1Q2ij3huyg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerRowUpdatingEventArgs.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerRowUpdatingEventArgs.html","hash":"rvFv5mErsEhtqIhKzwVUcA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerTransaction.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerTransaction.html","hash":"wAakky1Ohb+P8jukMhnhhQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.html","hash":"gaW0NUBW43P9iNEpxqEkOg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.BeginTransactionRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.BeginTransactionRequest.html","hash":"UCga/A3/Ax0/41QLvy5VNA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.CommitRequest.TransactionOneofCase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.CommitRequest.TransactionOneofCase.html","hash":"220XIu5WJTAyOmFWraqRAQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.CommitRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.CommitRequest.html","hash":"lj8RVKcF52Tno0Kf5i7Njw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Internal.Logging.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Internal.Logging.html","hash":"UwFzcqsqe22omZArSsLH4A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Internal.PriorityList-1.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Internal.PriorityList-1.html","hash":"CxG1itacg7vLgMcy5efe2g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Internal.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Internal.html","hash":"nMqeipkjzwoIZhTJbrK/DA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.KeyRange.EndKeyTypeOneofCase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.KeyRange.EndKeyTypeOneofCase.html","hash":"MiVYWKO8Ln82MGkP6X3bJA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.QueryPlan.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.QueryPlan.html","hash":"wal6s4Rp8jkstjF4+8AJcA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.ReadRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.ReadRequest.html","hash":"H1A2A+H0xLpvasn+W4B/VA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.ReliableStreamReader.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.ReliableStreamReader.html","hash":"OimkESWmpMyoh2R64Up6MQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.ResultSet.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.ResultSet.html","hash":"QhYTLXXqhtijoqrkZ5B9VQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSqlStream.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSqlStream.html","hash":"vfObG6wfrgK7Sf4fps/Isw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.SpannerClient.StreamingReadStream.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.SpannerClient.StreamingReadStream.html","hash":"wpKDWN+/nhpukSPLbU69nw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.SpannerClient.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.SpannerClient.html","hash":"2sOer5E0gzCPAcHJDNXwtg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.SpannerClientImpl.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.SpannerClientImpl.html","hash":"zNjPDirUgISSLyHJ4jS4XQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TransactionSelector.SelectorOneofCase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TransactionSelector.SelectorOneofCase.html","hash":"0rxw0SgIiu1w3NF3FDjCqA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TransactionSelector.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TransactionSelector.html","hash":"AYwsO6VFMTzJtOkYK+RHdg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Type.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Type.html","hash":"WtQUsURSvAVTa3wxB2CYQQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TypeCode.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TypeCode.html","hash":"kDPRZE5MaN1POikYHRVDYA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.AuthProperty.yml","output":{".html":{"relative_path":"api/Grpc.Core.AuthProperty.html","hash":"tZZMBmHjHnYbT4vFPTUdTg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.CallCredentials.yml","output":{".html":{"relative_path":"api/Grpc.Core.CallCredentials.html","hash":"LM5o5dGYB1YcwtBMiyHwsg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.CallInvocationDetails-2.yml","output":{".html":{"relative_path":"api/Grpc.Core.CallInvocationDetails-2.html","hash":"LYPqote0MJGqjQEwRZnZ5w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.CallInvoker.yml","output":{".html":{"relative_path":"api/Grpc.Core.CallInvoker.html","hash":"p/cGHhbd+m7oIm/jaAWhZQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.CompressionLevel.yml","output":{".html":{"relative_path":"api/Grpc.Core.CompressionLevel.html","hash":"66l/SuSELNKZdNFkjK4Qug=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ContextPropagationOptions.yml","output":{".html":{"relative_path":"api/Grpc.Core.ContextPropagationOptions.html","hash":"R8Rb8/d0fsX/mtpVRSxPzw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ContextPropagationToken.yml","output":{".html":{"relative_path":"api/Grpc.Core.ContextPropagationToken.html","hash":"Ic42bToOfPYUIPjNPA484w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.DefaultCallInvoker.yml","output":{".html":{"relative_path":"api/Grpc.Core.DefaultCallInvoker.html","hash":"051SwEf8/WxSzl3E11CRqw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Marshaller-1.yml","output":{".html":{"relative_path":"api/Grpc.Core.Marshaller-1.html","hash":"93WlDhi8Nobrc620XDxW6A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Marshallers.yml","output":{".html":{"relative_path":"api/Grpc.Core.Marshallers.html","hash":"/jfb7ULqHcLYk+2IqGQUYw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Metadata.Entry.yml","output":{".html":{"relative_path":"api/Grpc.Core.Metadata.Entry.html","hash":"uRGC4gy4XbSlToRtfgZUEQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Metadata.yml","output":{".html":{"relative_path":"api/Grpc.Core.Metadata.html","hash":"LrtgjqjRvGdmF//chQEEkA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ServerPort.yml","output":{".html":{"relative_path":"api/Grpc.Core.ServerPort.html","hash":"/JtSDYejQhOQQQibQEoYaw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ServerServiceDefinition.Builder.yml","output":{".html":{"relative_path":"api/Grpc.Core.ServerServiceDefinition.Builder.html","hash":"Ev2S3fAOsOGoUYl+Szu6xg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ServerServiceDefinition.yml","output":{".html":{"relative_path":"api/Grpc.Core.ServerServiceDefinition.html","hash":"SJErO+WawjOo+PnrPJc9IA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ServerStreamingServerMethod-2.yml","output":{".html":{"relative_path":"api/Grpc.Core.ServerStreamingServerMethod-2.html","hash":"BvPwGOKnk6yxtWQ7jxABKw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.SslCredentials.yml","output":{".html":{"relative_path":"api/Grpc.Core.SslCredentials.html","hash":"SqaPnYESl93AYSE8rxNotw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.SslServerCredentials.yml","output":{".html":{"relative_path":"api/Grpc.Core.SslServerCredentials.html","hash":"99P2StLFY8X6RSLuYGy7Jw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Status.yml","output":{".html":{"relative_path":"api/Grpc.Core.Status.html","hash":"Cnbf+a4dipXwq9CxlOXXIw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.StatusCode.yml","output":{".html":{"relative_path":"api/Grpc.Core.StatusCode.html","hash":"eD+ksxJ93tk/ceyvKHuhqQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.Database.Types.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.Database.Types.html","hash":"4Ttv3cBvlFaOJyQR2s/gQg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.Database.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.Database.html","hash":"/5EgafM16yk9V5kNGDlGUw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html","hash":"YfDnsQCde0Wx8vtBhpGaoQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html","hash":"d65nUY7s/GfakKVujucK+w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest.html","hash":"cqDL+VSF+AT6pF8+8OGfwg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.html","hash":"T9A77Wao95F2Pd+N8Ekjqg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.html","hash":"b0fo5wZR1zHoaPRXtvcqIg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.html","hash":"qCTiom2qkAV8ryBBE/7hWw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminClient.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminClient.html","hash":"Jv/DUez3eURev9nwmRsq2w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html","hash":"LhoaBmCrz1XIpbHzGdgj4Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.html","hash":"ygrFhJYBV2DMW62eBEVfLg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.html","hash":"/nmVOxy5I0mQSH86m0PcbA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.html","hash":"SIgqUp+EYDoQ3sWgrxo5Rg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.html","hash":"aL25IscVYlML3e6JNqD0wA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.html","hash":"sR6aPZ3ionY+HffIPWUonA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html","hash":"NJ7BJOy5sPqd+d7vVBxdYg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html","hash":"u9RRQ/VAufLpg+0b2CRnpg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.html","hash":"OEyFGPoE5oskEDq2J8DOtw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.ProjectName.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.ProjectName.html","hash":"7Kjx+jzHxhaEFNds7dAqqg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.html","hash":"+MBLyDOT1/Lg4FOiBDEDHg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.BindingTests.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.BindingTests.html","hash":"ijFDl3fr5b0EcRJ2nTFJ9g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.SpannerStressTests.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.SpannerStressTests.html","hash":"FvNo2xS5jW1Zr273U4ledQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.html","hash":"ywEJPtrmJRRk5Xz4Dlce5Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.LogLevel.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.LogLevel.html","hash":"WrgELhxf2EOnNatYRQ4pRA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.ResourcesExhaustedBehavior.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.ResourcesExhaustedBehavior.html","hash":"0JrsATPAJdm1H9y0IVIDuw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerDataReader.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerDataReader.html","hash":"WoZHGte5DRBXT1/NxHnT6w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerDbType.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerDbType.html","hash":"+0BIVe9dK2kymapdjVeydw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerParameter.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerParameter.html","hash":"vuic8oLMyrQqluA2fRCc/w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerParameterCollection.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerParameterCollection.html","hash":"zumGbromsmlTuOw6VRgMNg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.TimestampBound.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.TimestampBound.html","hash":"XJxBtTkr9doFrKFya5Ls2w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.TimestampBoundMode.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.TimestampBoundMode.html","hash":"1HNKfIezBRlQ7CitZJpzCA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.DatabaseName.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.DatabaseName.html","hash":"UntIXRRENxGiRKBcQ7qXTQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.DeleteSessionRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.DeleteSessionRequest.html","hash":"ZviCabrGaWij5+/gOgg/oA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode.html","hash":"jtgZKIk9EVKQWbsUZeeaQw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.html","hash":"K04ouwGg2YOYBA3w3Tr3XA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.KeySet.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.KeySet.html","hash":"/ED8J7HqTy7POVclLhQKrg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Mutation.OperationOneofCase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Mutation.OperationOneofCase.html","hash":"B915xQHBoRtw8R1ATxFunQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Mutation.Types.Delete.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Mutation.Types.Delete.html","hash":"m351DlrDXG5aRSUBIgrISw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Mutation.Types.Write.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Mutation.Types.Write.html","hash":"eJynnVAAdFvNdFPfooRfgA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.ResultSetMetadata.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.ResultSetMetadata.html","hash":"X7+M1x9Bh6WN4y08mHDSyA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.ResultSetStats.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.ResultSetStats.html","hash":"XnU98VbzXWfrFxdsk9Jbow=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.RollbackRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.RollbackRequest.html","hash":"TwSeGWoSIcaH73/6wyjK6Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Session.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Session.html","hash":"hxJUZ6yVD/DRR4kHF9AFkw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.SpannerSettings.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.SpannerSettings.html","hash":"FvUB5cVCUzxIrEU1dueDbw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.StreamClosedEventArgs.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.StreamClosedEventArgs.html","hash":"Aq0QxHkveaShbMrRDOX4oA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.StructType.Types.Field.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.StructType.Types.Field.html","hash":"TYNvsgWkRBvlQH/A3lx9eA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.StructType.Types.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.StructType.Types.html","hash":"3gLH/MS4M4CXzBBEy2tqJA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.AsyncServerStreamingCall-1.yml","output":{".html":{"relative_path":"api/Grpc.Core.AsyncServerStreamingCall-1.html","hash":"HDIUL0ZI4qNz4tvp8o5VXQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.AsyncUnaryCall-1.yml","output":{".html":{"relative_path":"api/Grpc.Core.AsyncUnaryCall-1.html","hash":"+kp9Ler3djUAdwtmW0dPjw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.AuthContext.yml","output":{".html":{"relative_path":"api/Grpc.Core.AuthContext.html","hash":"EG+mKxA1Eb5e/UBMw7Z8pA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.AuthInterceptorContext.yml","output":{".html":{"relative_path":"api/Grpc.Core.AuthInterceptorContext.html","hash":"xkHh4PtApnWKNmLm2VKAFQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ClientBase-1.yml","output":{".html":{"relative_path":"api/Grpc.Core.ClientBase-1.html","hash":"LpyVG4rDDvvqbtz94DFlFQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ClientBase.ClientBaseConfiguration.yml","output":{".html":{"relative_path":"api/Grpc.Core.ClientBase.ClientBaseConfiguration.html","hash":"hZ5urYRiqXAYVkUY5XNGjw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ClientBase.yml","output":{".html":{"relative_path":"api/Grpc.Core.ClientBase.html","hash":"gdmaHQDzLO3/3CYwo7EuDw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.html","hash":"2KColDuZPM6lUa3ug/tSHQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html","hash":"hkgYepegZ5Q9bfwFGysh5g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.html","hash":"UR1IOSqoePsmYqbBfxazRg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.html","hash":"nVmQQLi5gp1Ik5cMmIkOJg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.html","hash":"cIenN4FfxWjO/ovmJ8i5DQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.html","hash":"6CmWD9JQRbiwdFbCWR7IwA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.html","hash":"GD66B0kDFwAbqGrXVsxZmw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html","hash":"gQ1P87qXXGyJmVECvEBn+g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName.html","hash":"hflmInSQIeEsrDau+qUG1Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.TransactionMode.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.TransactionMode.html","hash":"q7I/IpyyX/EBdFhksXPbmw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.TransientFaultDetector.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.TransientFaultDetector.html","hash":"sYazV6U3RU+dThtoCntCaQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html","hash":"LYC1JneEZaonYKGKeXLsoA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Internal.Logging.LogLevel.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Internal.Logging.LogLevel.html","hash":"k1QZsX44uwwbPqvjICpttw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.KeyRange.StartKeyTypeOneofCase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.KeyRange.StartKeyTypeOneofCase.html","hash":"hhLCPfWg2u5uKfF3wqdTIw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.KeyRange.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.KeyRange.html","hash":"XC6B1uuiYg4YKHiGZJ8nvg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.PlanNode.Types.Kind.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.PlanNode.Types.Kind.html","hash":"2cmti9kyBlIv0IJB2h3kFg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation.html","hash":"GeKolF5M59sFR8XQEh+DOg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.PlanNode.Types.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.PlanNode.Types.html","hash":"MKtlpagNoy4A6k7xAYy+eA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.PlanNode.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.PlanNode.html","hash":"ZvIxPM+bGcQQ8yzrvicwSg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.html","hash":"ek0tRwWN28hbkhh0PXybag=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Spanner.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Spanner.html","hash":"zhLaPGMNCmdZkrFs54ISVg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.StructType.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.StructType.html","hash":"95jTEawPyO4r8yTY+g6ntQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TestExtensions.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TestExtensions.html","hash":"2Adj0NpLdGVcJLRUNkVHvw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.html","hash":"oyHXgPElk/7txJW9OQF8fw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TransactionOptions.Types.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TransactionOptions.Types.html","hash":"UxdT2FNMi8C/l9zCeqBtOw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TransactionOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TransactionOptions.html","hash":"4aLvPK5oc7SRk9+3o01ebg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TransactionPool.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TransactionPool.html","hash":"vXaCt2Lk0HliLWiJwJNBHA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ChannelOption.OptionType.yml","output":{".html":{"relative_path":"api/Grpc.Core.ChannelOption.OptionType.html","hash":"JaoKlsWND5QozrEQGLO0+g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ChannelOption.yml","output":{".html":{"relative_path":"api/Grpc.Core.ChannelOption.html","hash":"eG/Bb+27maTme+7SyegBNg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ChannelOptions.yml","output":{".html":{"relative_path":"api/Grpc.Core.ChannelOptions.html","hash":"IXy2t5pSHrps8ca9ye9adg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ChannelState.yml","output":{".html":{"relative_path":"api/Grpc.Core.ChannelState.html","hash":"z+KcP1lDQ6PDaIQNd5eEvw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.IClientStreamWriter-1.yml","output":{".html":{"relative_path":"api/Grpc.Core.IClientStreamWriter-1.html","hash":"sPK91su5bSckP1Xm+iNe7Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.IHasWriteOptions.yml","output":{".html":{"relative_path":"api/Grpc.Core.IHasWriteOptions.html","hash":"6ji3700FcXZk+4gUyd5EIA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.IMethod.yml","output":{".html":{"relative_path":"api/Grpc.Core.IMethod.html","hash":"EbOexh2MM9TvgBe+qX19hQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.IServerStreamWriter-1.yml","output":{".html":{"relative_path":"api/Grpc.Core.IServerStreamWriter-1.html","hash":"MtOKsi4rXBMedkjFlV6fMw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Method-2.yml","output":{".html":{"relative_path":"api/Grpc.Core.Method-2.html","hash":"qhr2qxlqQRuFw4zIBQ9mjg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.MethodType.yml","output":{".html":{"relative_path":"api/Grpc.Core.MethodType.html","hash":"vYa9v4OEcR7VF3jg9qZSfA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.RpcException.yml","output":{".html":{"relative_path":"api/Grpc.Core.RpcException.html","hash":"B/INWUdJyZVY7yQLGC+9Fg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Server.ServerPortCollection.yml","output":{".html":{"relative_path":"api/Grpc.Core.Server.ServerPortCollection.html","hash":"RFJ9jtzp8vCEP7U3d6UKFA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.UnaryServerMethod-2.yml","output":{".html":{"relative_path":"api/Grpc.Core.UnaryServerMethod-2.html","hash":"O88RADNiQ9hN79D5wIMOCg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Utils.AsyncStreamExtensions.yml","output":{".html":{"relative_path":"api/Grpc.Core.Utils.AsyncStreamExtensions.html","hash":"fqew4tG25F2Ohk5lJIp11Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Utils.BenchmarkUtil.yml","output":{".html":{"relative_path":"api/Grpc.Core.Utils.BenchmarkUtil.html","hash":"uVtYOB2UXxCF4StTkPWUDA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Utils.GrpcPreconditions.yml","output":{".html":{"relative_path":"api/Grpc.Core.Utils.GrpcPreconditions.html","hash":"XT5JIfd3mC0MNh1htFbzRw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.html","hash":"Ojj11M/wWY69vUjSLLafbg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.html","hash":"ncJ01fjSZY5Ebvri8PjaBg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest.html","hash":"sjgHw9gbbWoSbgPtADAaIw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Database.V1.InstanceName.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Database.V1.InstanceName.html","hash":"IbH3R3UKC2/pEojgD8P6eQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.html","hash":"DOMqTyqymzWM4EnlKuVEdw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.html","hash":"o8hW2A+bf7E1frrZRjbQ7Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.html","hash":"8/Fd++vTc/GEgHji8IfAVA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.html","hash":"OQQMsyqnq3jQC462tfA4MQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.html","hash":"CaZnbJiJFfd9oc8EH+r37Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Admin.Instance.V1.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Admin.Instance.V1.html","hash":"JJM0cHgFKrG/8KbYwBO2Tw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.ErrorCode.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.ErrorCode.html","hash":"PdS6zR74iXQDX/+cseAHCA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.html","hash":"Ukbi7zAO7SRYQt+QwnZAsg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.html","hash":"y+UewJJZvJkVLvHAFuAaHg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.html","hash":"34VCTHzfvVKohoA4bRrD6g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.IntegrationTests.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.IntegrationTests.html","hash":"VEiUlAvOo7qB60YcfFY+OA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerCommandType.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerCommandType.html","hash":"mxli8xYyZdr1jg+Et9f4tQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerConnection.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerConnection.html","hash":"oYIyEq2PfHhbLVbaG41kCg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerProviderFactory.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerProviderFactory.html","hash":"uj/1cZ1NYq10Nt5HVPUdDw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.Data.SpannerRowUpdatedEventArgs.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.Data.SpannerRowUpdatedEventArgs.html","hash":"IPKQdsQ05qZKnCK4sneVoA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.CommitResponse.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.CommitResponse.html","hash":"+V6p2iwEeweDA6o1wmnzww=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.CreateSessionRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.CreateSessionRequest.html","hash":"T1406SdtPtgrWw6QfRNhpQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.html","hash":"3dVWY4tn6IORbgP7+sHz5g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.GetSessionRequest.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.GetSessionRequest.html","hash":"7HFu/2tv16wo7AYAOwcHfg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Internal.ExecuteHelper.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Internal.ExecuteHelper.html","hash":"wizJkjdHhVATxS53byO0sg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Internal.IPriorityListItem-1.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Internal.IPriorityListItem-1.html","hash":"qK7xV3Zn1OkTuD238S8zGA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Mutation.Types.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Mutation.Types.html","hash":"TaOQnWL2B2fVXrcpuU+QMA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Mutation.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Mutation.html","hash":"ZUk2UAAopWcTUbJVK7p1Bw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.PartialResultSet.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.PartialResultSet.html","hash":"hkDF+kk5XVQdSjKtiWx77g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink.html","hash":"h11K3iOBEB2Z8+yCPy6SzQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.SessionName.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.SessionName.html","hash":"rovaDTwFTXXo22ZdRbF7LQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.SessionPool.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.SessionPool.html","hash":"pUvPJTJPW3QxaqvG+VPjGQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.SessionPoolOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.SessionPoolOptions.html","hash":"xCc1YgYkh3jnxA/CwYSxjA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Spanner.SpannerBase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Spanner.SpannerBase.html","hash":"kugh09RJr9x9xbAH7przYQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.Transaction.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.Transaction.html","hash":"2hnlZ9rIH4rjcMTD1ZMrGg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TransactionOptions.ModeOneofCase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TransactionOptions.ModeOneofCase.html","hash":"BF1lrPvfho01HWrSf0f1aA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.TimestampBoundOneofCase.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.TimestampBoundOneofCase.html","hash":"Tc4Q/aHw+wN1L7Y0Km2QUA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.html","hash":"+oVgQHdsgxnzGL6R6+8HqQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.Spanner.V1.yml","output":{".html":{"relative_path":"api/Google.Cloud.Spanner.V1.html","hash":"quZs5yEUbo2BllXwTTfoCw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.AsyncAuthInterceptor.yml","output":{".html":{"relative_path":"api/Grpc.Core.AsyncAuthInterceptor.html","hash":"0lpjGGXCRAVAVoRLmpp87g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.AsyncClientStreamingCall-2.yml","output":{".html":{"relative_path":"api/Grpc.Core.AsyncClientStreamingCall-2.html","hash":"Z96q63veJoBzqbjkV8fBDA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.AsyncDuplexStreamingCall-2.yml","output":{".html":{"relative_path":"api/Grpc.Core.AsyncDuplexStreamingCall-2.html","hash":"YQEWo4AR2EdXZ5eohYFKgQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.CallOptions.yml","output":{".html":{"relative_path":"api/Grpc.Core.CallOptions.html","hash":"O5xoyeotQLzD07XX9h9CrQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Calls.yml","output":{".html":{"relative_path":"api/Grpc.Core.Calls.html","hash":"REwQ2zyM9Xa6zFkm/fajRw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Channel.yml","output":{".html":{"relative_path":"api/Grpc.Core.Channel.html","hash":"qAjofvfyaB2KTjcuaIUxFA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.ChannelCredentials.yml","output":{".html":{"relative_path":"api/Grpc.Core.ChannelCredentials.html","hash":"V5ODSaW7MbhpXJWuWCWKbA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.DuplexStreamingServerMethod-2.yml","output":{".html":{"relative_path":"api/Grpc.Core.DuplexStreamingServerMethod-2.html","hash":"y8OeyCjTytXxpdCWl2chAg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.GrpcEnvironment.yml","output":{".html":{"relative_path":"api/Grpc.Core.GrpcEnvironment.html","hash":"jL8s6OwDku/7r8nStb9DmA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.IAsyncStreamReader-1.yml","output":{".html":{"relative_path":"api/Grpc.Core.IAsyncStreamReader-1.html","hash":"RVcPQXJhaO0c2LFxJEayOw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.IAsyncStreamWriter-1.yml","output":{".html":{"relative_path":"api/Grpc.Core.IAsyncStreamWriter-1.html","hash":"8v+Lzhat0R4j0s3daGcENQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Logging.LogLevelFilterLogger.yml","output":{".html":{"relative_path":"api/Grpc.Core.Logging.LogLevelFilterLogger.html","hash":"Wk78uoT7FIK7rtb4BKfu/Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Logging.NullLogger.yml","output":{".html":{"relative_path":"api/Grpc.Core.Logging.NullLogger.html","hash":"9FbphZv6xxCHV44omp/fIA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Logging.TextWriterLogger.yml","output":{".html":{"relative_path":"api/Grpc.Core.Logging.TextWriterLogger.html","hash":"Ds1dkx7xESlPzb5hoHHZ3w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Logging.yml","output":{".html":{"relative_path":"api/Grpc.Core.Logging.html","hash":"JyVbMjawiuHegsTj7D9DWA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Utils.TaskUtils.yml","output":{".html":{"relative_path":"api/Grpc.Core.Utils.TaskUtils.html","hash":"md2iMJ1ukrNt5X+0GM0b1w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.Utils.yml","output":{".html":{"relative_path":"api/Grpc.Core.Utils.html","hash":"Jcvp/x/QRXYZtgcLFyiJ8g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.VersionInfo.yml","output":{".html":{"relative_path":"api/Grpc.Core.VersionInfo.html","hash":"JDTMy/X6Usj/WpntrC9Tfw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.WriteFlags.yml","output":{".html":{"relative_path":"api/Grpc.Core.WriteFlags.html","hash":"EfYNCzuCK0R0e+ipwHedGw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.WriteOptions.yml","output":{".html":{"relative_path":"api/Grpc.Core.WriteOptions.html","hash":"nQtoBYvCrEB0LephAUaxOQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Grpc.Core.yml","output":{".html":{"relative_path":"api/Grpc.Core.html","hash":"2922m5MxnogAXxmkNmTPow=="}},"is_incremental":false,"version":""},{"log_codes":["InvalidFileLink"],"type":"Conceptual","source_relative_path":"index.md","output":{".html":{"relative_path":"index.html","hash":"R8pkBjAlXIUI+ce903VHcg=="}},"is_incremental":false,"version":""},{"type":"Toc","source_relative_path":"obj/api/toc.yml","output":{".html":{"relative_path":"api/toc.html","hash":"07+Mckt0+pey8BD4XqNWVQ=="}},"is_incremental":false,"version":""}],"incremental_info":[{"status":{"can_incremental":false,"details":"Cannot build incrementally because last build info is missing.","incrementalPhase":"build"},"processors":{"TocDocumentProcessor":{"can_incremental":false,"details":"Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.","incrementalPhase":"build"},"ResourceDocumentProcessor":{"can_incremental":false,"details":"Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.","incrementalPhase":"build"},"ConceptualDocumentProcessor":{"can_incremental":false,"incrementalPhase":"build"},"ManagedReferenceDocumentProcessor":{"can_incremental":false,"incrementalPhase":"build"},"RestApiDocumentProcessor":{"can_incremental":false,"details":"Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.","incrementalPhase":"build"}}},{"status":{"can_incremental":false,"details":"Cannot support incremental post processing, the reason is: last post processor info is null.","incrementalPhase":"postProcessing"},"processors":{}}],"version_info":{}}
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.Spanner.Data",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "EWY43ukbq2pGblmi3FWBxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.html",
+          "hash": "HEn3WaBng9TSDF2ZQqXEfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.html",
+          "hash": "AkWLMUnWL5CnFKVGoFE/Ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State.html",
+          "hash": "CA6xJnPhkmuzMJ6M32OsyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.Database.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.Database.Types.html",
+          "hash": "bYlxRCvgzOQueXjwa3dYaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.Database.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.Database.html",
+          "hash": "bcEyegDP20AASOP3dOYOSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.html",
+          "hash": "YXhahUhaXRDu0x42uYee2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminClient.html",
+          "hash": "cE5DAWWNMEeOZgwsXK62HQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.html",
+          "hash": "KbmuVqlVLlYlq5PCNH56aA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html",
+          "hash": "kMR8gnAjwhaLu26LFmBBow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html",
+          "hash": "8YKBz0+St2puf8v0Q6SCxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html",
+          "hash": "Dc7x8k5wuN8FZf+XkMkCVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html",
+          "hash": "/MAwomDj0aLXZ6krXHfYXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.html",
+          "hash": "fj3QgPlVRRr6A8thZ82mAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest.html",
+          "hash": "TZrm1PLW49VrqyZV6BZN2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.html",
+          "hash": "Tm5VBumQmYgLPIVYdHsmiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest.html",
+          "hash": "c05Fl8FvnXx1EpBqYTQfnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.InstanceName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.InstanceName.html",
+          "hash": "cz0OdZATvakZRTV95jU5+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.html",
+          "hash": "QAfazKDyHX+4N+0iOuGG2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.html",
+          "hash": "u3vP5uxVZNW1tcXflB7xuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.html",
+          "hash": "HH3SdI5kmog/hQJPvu/EOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.html",
+          "hash": "EVDumSn7OtIGZiP1WAxHfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Database.V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.html",
+          "hash": "v+8mpuMK214Wzdvmjs9dvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.html",
+          "hash": "ywmSGRH24vRobLW7D50GPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.html",
+          "hash": "y+QsVhmEHUSGR5ir/zhHKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.html",
+          "hash": "BCSewqnjYbBeqpACyjtsXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.html",
+          "hash": "xbO4xRpAJObBI2eRX2rzrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.html",
+          "hash": "vaDEU8BzQNuSSeFixwrquw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.html",
+          "hash": "rAlk4pSZ8P3E82FyI3sKmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.html",
+          "hash": "deIUhkS6yhXbHY8gzGECeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.html",
+          "hash": "NfaDooA8kEE5kHtKtwrbsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.html",
+          "hash": "XRQ7NkD4viNWitQiqeexKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.html",
+          "hash": "O22gf7FJ2yIkckAKLivNoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.html",
+          "hash": "rsyTSk5yeXlHIiEHeeSDTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html",
+          "hash": "ILyYY+p1Z1z0uhKeM9CBug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html",
+          "hash": "AEymTXGuygaJmVoButWr/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html",
+          "hash": "E3PD2hPQpz8ZtHc/r7hTCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html",
+          "hash": "lkN74QZdsHQZJGuH1IWL/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName.html",
+          "hash": "4pE/+iQtnWlZznrjwOaaWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceName.html",
+          "hash": "vv4YleU6TVqBiRNoMq95xA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.html",
+          "hash": "BrF5ZVyzIXEz1AcYJlaAVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.html",
+          "hash": "tNs2D8RqglKXmm/9GN7SXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.html",
+          "hash": "8JeLHPenKo+iib/mFeVHAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.html",
+          "hash": "iPFcYD5wVWJ4dl4b7ZUdgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.ProjectName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.ProjectName.html",
+          "hash": "B4GHZ6MAJjRHdIwXQX+tDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.html",
+          "hash": "NJBLRUAHBoVpPys8JYdZRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.html",
+          "hash": "86WqNUeZ9ajcKlOnxIia0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Admin.Instance.V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.html",
+          "hash": "XbE1OBmObEuN+/kz61MwAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.ErrorCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.ErrorCode.html",
+          "hash": "Ds4XRZQekY2na9cQDfMhzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.html",
+          "hash": "CTNYr3zd42DhDjYnXOjzPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.BindingTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.BindingTests.html",
+          "hash": "YRkXhW89W90AhSOqRxyV3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.ChunkingTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.ChunkingTests.html",
+          "hash": "B01ZfD3NW0BIJ1VPR354KQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.DataAdapterTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.DataAdapterTests.html",
+          "hash": "ooFYkds2Rx2RdZy6+xGOlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.html",
+          "hash": "A0UvhQ0OIVwqQ9m3IDB6OQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.SpannerStressTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.SpannerStressTests.html",
+          "hash": "TjMyDZ+fJuLqJexndPPu1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.html",
+          "hash": "bPf9M2yt+FYqYQ6AGJG8zA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.html",
+          "hash": "X7Z0KJVE9nsfDHJBozjiHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html",
+          "hash": "TR+c6PN1v9ANmmzbI22/vg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.html",
+          "hash": "Xh4jH+lSi2dmvio1FCb/0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.IntegrationTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.html",
+          "hash": "f1BdH7XcT5zxL1OiW0fm7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.LogLevel.html",
+          "hash": "yL2RzojdwxDgX55FhE5+2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.ResourcesExhaustedBehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.ResourcesExhaustedBehavior.html",
+          "hash": "bRHSsghSk6dfvkRppehIng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerCommand.html",
+          "hash": "cVGFh7ML4hk4rvGWh33Hzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.html",
+          "hash": "BJh117LmsgMCFdMiozqJdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerCommandType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerCommandType.html",
+          "hash": "zKz5CZ8cepPgXBdkcCb/8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerConnection.html",
+          "hash": "lPZDWqbTP/VFtfzS/0JflQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html",
+          "hash": "5y8okEJIuYFsw4ANarsIBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerDataAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerDataAdapter.html",
+          "hash": "JNgffncZAl3TK2vAFflzIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerDataReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerDataReader.html",
+          "hash": "+4ZHwvjX0xXzcEWEU0hKGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerDbType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerDbType.html",
+          "hash": "qXRCO00skbgvfxosGs4zfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerException.html",
+          "hash": "JNJOFLYvXqvEINYBa0Ko0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerOptions.html",
+          "hash": "2LSKg7KAYtFrUOj47Ii7dA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerParameter.html",
+          "hash": "a3ihKShWziRgWKkHspkBvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerParameterCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerParameterCollection.html",
+          "hash": "UaxxjHwraxU4WUq07RnE6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerProviderFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerProviderFactory.html",
+          "hash": "qMhdUp32Jfj/hoizQGvDtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerRowUpdatedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerRowUpdatedEventArgs.html",
+          "hash": "3qTqF5L8Wzn6JS3LrXc1iQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerRowUpdatingEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerRowUpdatingEventArgs.html",
+          "hash": "mhbW/gBVDhUgY5OmCKvFDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.SpannerTransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.SpannerTransaction.html",
+          "hash": "2NI+/qcSqoVX0q8Epu4u6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.TimestampBound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.TimestampBound.html",
+          "hash": "H9RZFOU/RLig+Zq/XiC4Xg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.TimestampBoundMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.TimestampBoundMode.html",
+          "hash": "0beluLqo8fqQh+oVAoIAbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.TransactionMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.TransactionMode.html",
+          "hash": "SODBbNevbBkLN4rh75FesQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.TransientFaultDetector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.TransientFaultDetector.html",
+          "hash": "m5QwQlxZlH073/HjVrxlUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.Data.html",
+          "hash": "lLZGs1aWf2iqF2Gdz1CZdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.BeginTransactionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.BeginTransactionRequest.html",
+          "hash": "kD3AhyvLRbSH4hrkQJaQeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.CommitRequest.TransactionOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.CommitRequest.TransactionOneofCase.html",
+          "hash": "ACbRx0IoOqOj27/jqdCsHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.CommitRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.CommitRequest.html",
+          "hash": "7JKmhl1Mn1cOzToXBZ5+tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.CommitResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.CommitResponse.html",
+          "hash": "nDUlJmga8FxGzEh7eTKaEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.CreateSessionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.CreateSessionRequest.html",
+          "hash": "AcnSWr6UMpdxVkfKfam9HQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.DatabaseName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.DatabaseName.html",
+          "hash": "7l2W9pPp2wlu3ralwsVErw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.DeleteSessionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.DeleteSessionRequest.html",
+          "hash": "GerZOtHQnT7Lkw4Zz0+gnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode.html",
+          "hash": "rE2el7JkWh+keQzRMOhEBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.html",
+          "hash": "pwjHio92CTBvMnvaZi2v+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.ExecuteSqlRequest.html",
+          "hash": "wP5lh0A5bVRC+sXg9g6vRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.GetSessionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.GetSessionRequest.html",
+          "hash": "BdxUVQcsWwsRbNAj25G42Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Internal.ExecuteHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Internal.ExecuteHelper.html",
+          "hash": "tnZ5VwMIB63KyR6au8vkGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Internal.IPriorityListItem-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Internal.IPriorityListItem-1.html",
+          "hash": "Ga+cWnYBpYKh45c0MSzDnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Internal.Logging.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Internal.Logging.LogLevel.html",
+          "hash": "VDqVaxmM1yxrAE/EG2nqLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html",
+          "hash": "MmfNbX2jOE4WGjbGRYphbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Internal.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Internal.Logging.html",
+          "hash": "/SjOytoDM9Q6Y8DbXqWQZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Internal.PriorityList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Internal.PriorityList-1.html",
+          "hash": "uWXobZ10/JwDpNXXI6C1Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Internal.html",
+          "hash": "oZOsTcyQwnTkGDtagpzXTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.KeyRange.EndKeyTypeOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.KeyRange.EndKeyTypeOneofCase.html",
+          "hash": "+jFF46p3c2nMF4g4eA33EQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.KeyRange.StartKeyTypeOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.KeyRange.StartKeyTypeOneofCase.html",
+          "hash": "9ssmROcYUj5/JJIG0Em2XA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.KeyRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.KeyRange.html",
+          "hash": "Re+Cp3M3IsP3eteg7brPUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.KeySet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.KeySet.html",
+          "hash": "spWoKYwNDkyWcFo2Ufv1YQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Mutation.OperationOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Mutation.OperationOneofCase.html",
+          "hash": "aKiKRxcLOubnx1XSaCwQLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Mutation.Types.Delete.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Mutation.Types.Delete.html",
+          "hash": "JAJBfQSzZwdlBnAg7OSarw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Mutation.Types.Write.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Mutation.Types.Write.html",
+          "hash": "r1SZhI5vViDWq5NwIaeKEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Mutation.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Mutation.Types.html",
+          "hash": "ZqWyFqFDpKOKw+/f2hQwkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Mutation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Mutation.html",
+          "hash": "L4StmpLMXjftALjTuaC29A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.PartialResultSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.PartialResultSet.html",
+          "hash": "GK4Ob3vxNlwW4ycljgtZow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink.html",
+          "hash": "Dh7vf+9N8SZ7HgMtN1x5Rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.PlanNode.Types.Kind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.PlanNode.Types.Kind.html",
+          "hash": "GYH3IX3FjN1c3/dVTDerDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation.html",
+          "hash": "BaDf8KazFtVq2cvy4AeHbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.PlanNode.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.PlanNode.Types.html",
+          "hash": "xCiY+Y0A8n61m12wkHrmJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.PlanNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.PlanNode.html",
+          "hash": "vXnKmed5i+XCQipg62hfCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.QueryPlan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.QueryPlan.html",
+          "hash": "lzzrbnFNm5RIL0sMJXAFZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.ReadRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.ReadRequest.html",
+          "hash": "UKNLrKLcGTumV6qoemSymw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.ReliableStreamReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.ReliableStreamReader.html",
+          "hash": "Ri7jnwmd2Cy0N4jEnc+4Pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.ResultSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.ResultSet.html",
+          "hash": "nxpql92dpi/z5dFpW6HriA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.ResultSetMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.ResultSetMetadata.html",
+          "hash": "2O6hk77nQT4RjXWOa8XCAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.ResultSetStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.ResultSetStats.html",
+          "hash": "JguKcsZ3ypZYC0CYx3jB2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.RollbackRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.RollbackRequest.html",
+          "hash": "5EimWoD8fjIATo89eF1PHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Session.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Session.html",
+          "hash": "QYCn2krz9WLRre6BZgyoxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.SessionName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.SessionName.html",
+          "hash": "7ONgjlx6SbjsOT3p72p+6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.SessionPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.SessionPool.html",
+          "hash": "gdIiuczpxezkAKC3L7XhGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.SessionPoolOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.SessionPoolOptions.html",
+          "hash": "8WHPYdindxZyZz/UuxI9Cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Spanner.SpannerBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Spanner.SpannerBase.html",
+          "hash": "Zy8sdcOyLHZ6oR0+tfMMUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.html",
+          "hash": "fulrrnsvttG88NwNwb9Bcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Spanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Spanner.html",
+          "hash": "uxE8TxQPKyK3DVFduEFE3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSqlStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSqlStream.html",
+          "hash": "ZeavmuWtLXb4I6vFYxVhOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.SpannerClient.StreamingReadStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.SpannerClient.StreamingReadStream.html",
+          "hash": "y7E9X2mcnwWJYL5Yr2I3eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.SpannerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.SpannerClient.html",
+          "hash": "5qkkRYG5rZslpNAxERtbmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.SpannerClientImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.SpannerClientImpl.html",
+          "hash": "3XuLNLrkx6AnsJ5TT912pA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.SpannerSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.SpannerSettings.html",
+          "hash": "QW4TxC+9uWR+/8+SHeuO4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.StreamClosedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.StreamClosedEventArgs.html",
+          "hash": "iwmkqhaL7ql3e1rxkGlICQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.StructType.Types.Field.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.StructType.Types.Field.html",
+          "hash": "k6bIGN45Tuk8nxtAutrweg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.StructType.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.StructType.Types.html",
+          "hash": "cSRhwmgKgOdS+RmHbsXRQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.StructType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.StructType.html",
+          "hash": "N9jyg346vWDyfe+6x/Z3OA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TestExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TestExtensions.html",
+          "hash": "kBdygETJZrMuYiP6zZxFjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Transaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Transaction.html",
+          "hash": "DLvS57qLsR7puFLMEon81g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TransactionOptions.ModeOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TransactionOptions.ModeOneofCase.html",
+          "hash": "LznGMBL+5Nsl4KDXrSGZMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.TimestampBoundOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.TimestampBoundOneofCase.html",
+          "hash": "bSX2Pi67R0BuJz08kU3kRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.html",
+          "hash": "CbDoyzmB00r0hbxWUtJYPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.html",
+          "hash": "3yweuUUTFFakfKK5BHBjLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TransactionOptions.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TransactionOptions.Types.html",
+          "hash": "F2ITaQKTi54Pf2iCkX+o1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TransactionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TransactionOptions.html",
+          "hash": "yPLVMRyjZfSOW6ShuJ7Iig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TransactionPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TransactionPool.html",
+          "hash": "DTxI3oySEyAy2GXStNGSsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TransactionSelector.SelectorOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TransactionSelector.SelectorOneofCase.html",
+          "hash": "vz7chXuOVV5CuwMl/L4Oow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TransactionSelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TransactionSelector.html",
+          "hash": "rIX2WMAxZKmAf6TcPMFNCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Type.html",
+          "hash": "p8+e+FXGjgVX/yiRmOtJkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TypeCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TypeCode.html",
+          "hash": "D0s4uvTYnvE34OztoIHwtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.html",
+          "hash": "hSlaW1bYPVGFS57AMtzFyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AsyncAuthInterceptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AsyncAuthInterceptor.html",
+          "hash": "Rqxdn3WqZiLnUDcSXnTQcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AsyncClientStreamingCall-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AsyncClientStreamingCall-2.html",
+          "hash": "a1yQvY8yp7BqMpFi4S3Kcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AsyncDuplexStreamingCall-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AsyncDuplexStreamingCall-2.html",
+          "hash": "Zo6YeeEYZEAXVfqEjnuvrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AsyncServerStreamingCall-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AsyncServerStreamingCall-1.html",
+          "hash": "JJ3/Xbvkoa3rfwVpuUxLmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AsyncUnaryCall-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AsyncUnaryCall-1.html",
+          "hash": "D3dGJkrGiihj+Tew8IPF5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AuthContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AuthContext.html",
+          "hash": "bhTI2SSIiEudlARMDAlJZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AuthInterceptorContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AuthInterceptorContext.html",
+          "hash": "BsApAP6Q4L7MJODWm7mmYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AuthProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AuthProperty.html",
+          "hash": "pZPGqoZEK7dsV+GHi4LibQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.CallCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.CallCredentials.html",
+          "hash": "APQ7zYKaC3iPVZqTP7Q9IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.CallInvocationDetails-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.CallInvocationDetails-2.html",
+          "hash": "N77G8fWWhY6kC4V6q9jfFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.CallInvoker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.CallInvoker.html",
+          "hash": "ItQqa79PGySZ4q6qRfAF/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.CallOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.CallOptions.html",
+          "hash": "vfCEEwCBBCEPN/fy3hynqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Calls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Calls.html",
+          "hash": "k24rlgrNT7o9uJsbLOQI4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Channel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Channel.html",
+          "hash": "O4LUCGSZfskkbHJa9RfkGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ChannelCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ChannelCredentials.html",
+          "hash": "UUsW8ZI6YC6QozJAYpO+rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ChannelOption.OptionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ChannelOption.OptionType.html",
+          "hash": "DNlgL4x6nJEniFIt83AX/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ChannelOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ChannelOption.html",
+          "hash": "t5ywVBGLYqbH6nO+XUmjGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ChannelOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ChannelOptions.html",
+          "hash": "xRw86VCzIg4e9DkUdveXXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ChannelState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ChannelState.html",
+          "hash": "wJHTjcJ/tMC6ONMk3/WXqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ClientBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ClientBase-1.html",
+          "hash": "7H7eCfnnMPqbpyeM0uW3Cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ClientBase.ClientBaseConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ClientBase.ClientBaseConfiguration.html",
+          "hash": "K7X1aJL/RjrfwEGUHVgIJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ClientBase.html",
+          "hash": "oQeaYUhNybSyzbudbYpN7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ClientStreamingServerMethod-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ClientStreamingServerMethod-2.html",
+          "hash": "6H1c9laDyC+1hxngQxHelQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.CompressionLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.CompressionLevel.html",
+          "hash": "2OQnoxn6ir9IvczO3S5z2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ContextPropagationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ContextPropagationOptions.html",
+          "hash": "ODMsbMY63H2EQ35/Qiz+Jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ContextPropagationToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ContextPropagationToken.html",
+          "hash": "dzbI5wgU/QJ/3m7n2X3iaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.DefaultCallInvoker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.DefaultCallInvoker.html",
+          "hash": "cl7oW0Rk4Z77A3dBBRWfxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.DuplexStreamingServerMethod-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.DuplexStreamingServerMethod-2.html",
+          "hash": "MXXvQZ1mpELq1Ly2dEk74A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.GrpcEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.GrpcEnvironment.html",
+          "hash": "vJn9S+OlW55OMe7ebfwkuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IAsyncStreamReader-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IAsyncStreamReader-1.html",
+          "hash": "KpAhVvwzlanVC9seUGW7Jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IAsyncStreamWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IAsyncStreamWriter-1.html",
+          "hash": "VL/vPP1ELMj4xdPFaNxlhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IClientStreamWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IClientStreamWriter-1.html",
+          "hash": "Adn9DbXOijA3KFun/E0Hlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IHasWriteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IHasWriteOptions.html",
+          "hash": "hfD0d+JskddTwG+ZRT8Q+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IMethod.html",
+          "hash": "6IEqs5IZ1FIosWmBK5zuYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IServerStreamWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IServerStreamWriter-1.html",
+          "hash": "Q74Nzk5migZGaOJpdAZaRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.KeyCertificatePair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.KeyCertificatePair.html",
+          "hash": "x8e0o7mtyi2oVS6swXf+wQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.ConsoleLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.ConsoleLogger.html",
+          "hash": "mmh8pQZbKLTe4vUntiBFkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.ILogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.ILogger.html",
+          "hash": "CpDKYN2RYIw0zvI6ft1o0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.LogLevel.html",
+          "hash": "1XB+nS11GPAbIW1cBxHrnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.LogLevelFilterLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.LogLevelFilterLogger.html",
+          "hash": "WCK8zxd8qg3N+rrAUpRnjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.NullLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.NullLogger.html",
+          "hash": "6QVfMhJPdUVshd+fQFPYow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.TextWriterLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.TextWriterLogger.html",
+          "hash": "gNuDWmrvV19No9v380kmLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.html",
+          "hash": "TV0EOpkbvc51Xtfclyqfxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Marshaller-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Marshaller-1.html",
+          "hash": "lIBzZL4dUB9kAnbiGwxJSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Marshallers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Marshallers.html",
+          "hash": "+sibShshAyx9I3vz6ymJSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Metadata.Entry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Metadata.Entry.html",
+          "hash": "vT48lzkCF4TWtPeIlMdhrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Metadata.html",
+          "hash": "RmGOcgVcILZTU1kYHfHMOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Method-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Method-2.html",
+          "hash": "jAhuZEppre0fpQajRcRWAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.MethodType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.MethodType.html",
+          "hash": "HcTucvI1RalozRdL6wr5jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.RpcException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.RpcException.html",
+          "hash": "Owrwb8RGH5NuieETVSHNQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Server.ServerPortCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Server.ServerPortCollection.html",
+          "hash": "6bsYs7/ZU010eXT458PObg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Server.ServiceDefinitionCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Server.ServiceDefinitionCollection.html",
+          "hash": "sazWylfQaxx/6WBiv1UA7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Server.html",
+          "hash": "hmXAVVXZxRK533D8UDluYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerCallContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerCallContext.html",
+          "hash": "yBzK593reFI6bCeS5dp/bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerCredentials.html",
+          "hash": "eYjxB/I2Kvdp8xuHG5WWVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerPort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerPort.html",
+          "hash": "8AL8fQhNARe0a3XwF/COhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerServiceDefinition.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerServiceDefinition.Builder.html",
+          "hash": "wqXdvET6EtSv3jdTB0jkgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerServiceDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerServiceDefinition.html",
+          "hash": "ODax7NxhhP3wwoYy+KJGVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerStreamingServerMethod-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerStreamingServerMethod-2.html",
+          "hash": "1mRLXyip5nYikGtxxtoyrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.SslCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.SslCredentials.html",
+          "hash": "tLUJq2VPpUiZ/9Ad2LaP+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.SslServerCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.SslServerCredentials.html",
+          "hash": "VRGd9QBTTp2XnGSkc7FyQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Status.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Status.html",
+          "hash": "uBYw4UcJxnwjzAUjr1DwjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.StatusCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.StatusCode.html",
+          "hash": "afol05ahtgdV1c5rPKBjaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.UnaryServerMethod-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.UnaryServerMethod-2.html",
+          "hash": "/EsPKQf68qw10H5WL4KYmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Utils.AsyncStreamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Utils.AsyncStreamExtensions.html",
+          "hash": "NxsEao60A2LFDjjX32qeow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Utils.BenchmarkUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Utils.BenchmarkUtil.html",
+          "hash": "UsbhY5kxXl98qgeM5tIkFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Utils.GrpcPreconditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Utils.GrpcPreconditions.html",
+          "hash": "q76AQ3/ko/fvYPe1CZ3aFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Utils.TaskUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Utils.TaskUtils.html",
+          "hash": "5++rxv/sxfcVJXM6K4FzGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Utils.html",
+          "hash": "xp+iqy/7XG9b0/UajHT+Eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.VersionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.VersionInfo.html",
+          "hash": "6m41CF9hLQCFta0jlVCG6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.WriteFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.WriteFlags.html",
+          "hash": "kg+yG74NYxkKvUk12cjdKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.WriteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.WriteOptions.html",
+          "hash": "NFkbD00T7mUcRSeunrhr1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.html",
+          "hash": "b0tfaJmi1KKpXALJpNkd6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "FKAxHMu6WwUSM/hlpFbhQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "XrCw8m7T4FkO/nDPugvaPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

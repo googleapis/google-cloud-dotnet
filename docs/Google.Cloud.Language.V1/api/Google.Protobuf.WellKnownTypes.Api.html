@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Api
    | Google.Cloud.Language.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -72,13 +73,27 @@
   
   <h1 id="Google_Protobuf_WellKnownTypes_Api" data-uid="Google.Protobuf.WellKnownTypes.Api" class="text-break">Class Api
   </h1>
-  <div class="markdown level0 summary"><p>Api is a light-weight descriptor for a protocol buffer service.</p>
+  <div class="markdown level0 summary"><p>Api is a light-weight descriptor for an API Interface.</p>
+<p>Interfaces are also described as &quot;protocol buffer services&quot; in some contexts,
+such as by the &quot;service&quot; keyword in a .proto file, but they are different
+from API Services, which represent a concrete implementation of an interface
+as opposed to simply a description of methods and bindings. They are also
+sometimes simply referred to as &quot;APIs&quot; in other contexts, such as the name of
+this message itself. See <a href="https://cloud.google.com/apis/design/glossary">https://cloud.google.com/apis/design/glossary</a> for
+detailed terminology.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Api</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Api.html">Api</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Api.html">Api</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Api.html">Api</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -326,7 +341,7 @@
   </table>
   <a id="Google_Protobuf_WellKnownTypes_Api_Methods_" data-uid="Google.Protobuf.WellKnownTypes.Api.Methods*"></a>
   <h4 id="Google_Protobuf_WellKnownTypes_Api_Methods" data-uid="Google.Protobuf.WellKnownTypes.Api.Methods">Methods</h4>
-  <div class="markdown level1 summary"><p>The methods of this api, in unspecified order.</p>
+  <div class="markdown level1 summary"><p>The methods of this interface, in unspecified order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -350,7 +365,7 @@
   </table>
   <a id="Google_Protobuf_WellKnownTypes_Api_Mixins_" data-uid="Google.Protobuf.WellKnownTypes.Api.Mixins*"></a>
   <h4 id="Google_Protobuf_WellKnownTypes_Api_Mixins" data-uid="Google.Protobuf.WellKnownTypes.Api.Mixins">Mixins</h4>
-  <div class="markdown level1 summary"><p>Included APIs. See [Mixin][].</p>
+  <div class="markdown level1 summary"><p>Included interfaces. See [Mixin][].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -374,8 +389,8 @@
   </table>
   <a id="Google_Protobuf_WellKnownTypes_Api_Name_" data-uid="Google.Protobuf.WellKnownTypes.Api.Name*"></a>
   <h4 id="Google_Protobuf_WellKnownTypes_Api_Name" data-uid="Google.Protobuf.WellKnownTypes.Api.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The fully qualified name of this api, including package name
-followed by the api&apos;s simple name.</p>
+  <div class="markdown level1 summary"><p>The fully qualified name of this interface, including package name
+followed by the interface&apos;s simple name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -399,7 +414,7 @@ followed by the api&apos;s simple name.</p>
   </table>
   <a id="Google_Protobuf_WellKnownTypes_Api_Options_" data-uid="Google.Protobuf.WellKnownTypes.Api.Options*"></a>
   <h4 id="Google_Protobuf_WellKnownTypes_Api_Options" data-uid="Google.Protobuf.WellKnownTypes.Api.Options">Options</h4>
-  <div class="markdown level1 summary"><p>Any metadata attached to the API.</p>
+  <div class="markdown level1 summary"><p>Any metadata attached to the interface.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -495,13 +510,12 @@ message.</p>
   </table>
   <a id="Google_Protobuf_WellKnownTypes_Api_Version_" data-uid="Google.Protobuf.WellKnownTypes.Api.Version*"></a>
   <h4 id="Google_Protobuf_WellKnownTypes_Api_Version" data-uid="Google.Protobuf.WellKnownTypes.Api.Version">Version</h4>
-  <div class="markdown level1 summary"><p>A version string for this api. If specified, must have the form
-<code>major-version.minor-version</code>, as in <code>1.10</code>. If the minor version
-is omitted, it defaults to zero. If the entire version field is
-empty, the major version is derived from the package name, as
-outlined below. If the field is not empty, the version in the
-package name will be verified to be consistent with what is
-provided here.</p>
+  <div class="markdown level1 summary"><p>A version string for this interface. If specified, must have the form
+<code>major-version.minor-version</code>, as in <code>1.10</code>. If the minor version is
+omitted, it defaults to zero. If the entire version field is empty, the
+major version is derived from the package name, as outlined below. If the
+field is not empty, the version in the package name will be verified to be
+consistent with what is provided here.</p>
 <p>The versioning schema uses <a href="http://semver.org">semantic
 versioning</a> where the major version number
 indicates a breaking change and the minor version an additive,
@@ -509,10 +523,10 @@ non-breaking change. Both version numbers are signals to users
 what to expect from different versions, and should be carefully
 chosen based on the product plan.</p>
 <p>The major version is also reflected in the package name of the
-API, which must end in <code>v&amp;lt;major-version&gt;</code>, as in
+interface, which must end in <code>v&amp;lt;major-version&gt;</code>, as in
 <code>google.feature.v1</code>. For major versions 0 and 1, the suffix can
 be omitted. Zero major versions must only be used for
-experimental, none-GA apis.</p>
+experimental, non-GA interfaces.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ExplainQueryStage
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,38 +80,62 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ExplainQueryStage</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
   <h5 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ExplainQueryStage : IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class ExplainQueryStage : Requests.IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ComputeMsAvg_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ComputeMsAvg*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ComputeMsAvg" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ComputeMsAvg">ComputeMsAvg</h4>
+  <div class="markdown level1 summary"><p>Milliseconds the average shard spent on CPU-bound tasks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ? ComputeMsAvg { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ComputeMsMax_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ComputeMsMax*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ComputeMsMax" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ComputeMsMax">ComputeMsMax</h4>
+  <div class="markdown level1 summary"><p>Milliseconds the slowest shard spent on CPU-bound tasks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ? ComputeMsMax { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ComputeRatioAvg_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ComputeRatioAvg*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ComputeRatioAvg" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ComputeRatioAvg">ComputeRatioAvg</h4>
   <div class="markdown level1 summary"><p>Relative amount of time the average shard spent on CPU-bound tasks.</p>
@@ -118,8 +143,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;computeRatioAvg&quot;)]
-public virtual double ? ComputeRatioAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual double ? ComputeRatioAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,8 +167,7 @@ public virtual double ? ComputeRatioAvg { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;computeRatioMax&quot;)]
-public virtual double ? ComputeRatioMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual double ? ComputeRatioMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,8 +208,6 @@ public virtual double ? ComputeRatioMax { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_Id_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.Id*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_Id" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.Id">Id</h4>
   <div class="markdown level1 summary"><p>Unique ID for stage within plan.</p>
@@ -194,8 +215,7 @@ public virtual double ? ComputeRatioMax { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
-public virtual long ? Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual long ? Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -219,8 +239,7 @@ public virtual long ? Id { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;name&quot;)]
-public virtual string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,6 +256,54 @@ public virtual string Name { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ReadMsAvg_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ReadMsAvg*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ReadMsAvg" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ReadMsAvg">ReadMsAvg</h4>
+  <div class="markdown level1 summary"><p>Milliseconds the average shard spent reading input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ? ReadMsAvg { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ReadMsMax_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ReadMsMax*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ReadMsMax" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ReadMsMax">ReadMsMax</h4>
+  <div class="markdown level1 summary"><p>Milliseconds the slowest shard spent reading input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ? ReadMsMax { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ReadRatioAvg_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ReadRatioAvg*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ReadRatioAvg" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ReadRatioAvg">ReadRatioAvg</h4>
   <div class="markdown level1 summary"><p>Relative amount of time the average shard spent reading input.</p>
@@ -244,8 +311,7 @@ public virtual string Name { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;readRatioAvg&quot;)]
-public virtual double ? ReadRatioAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual double ? ReadRatioAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -269,8 +335,7 @@ public virtual double ? ReadRatioAvg { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;readRatioMax&quot;)]
-public virtual double ? ReadRatioMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual double ? ReadRatioMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,8 +359,7 @@ public virtual double ? ReadRatioMax { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;recordsRead&quot;)]
-public virtual long ? RecordsRead { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual long ? RecordsRead { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -319,8 +383,55 @@ public virtual long ? RecordsRead { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;recordsWritten&quot;)]
-public virtual long ? RecordsWritten { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual long ? RecordsWritten { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ShuffleOutputBytes_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ShuffleOutputBytes*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ShuffleOutputBytes" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ShuffleOutputBytes">ShuffleOutputBytes</h4>
+  <div class="markdown level1 summary"><p>Total number of bytes written to shuffle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ? ShuffleOutputBytes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ShuffleOutputBytesSpilled_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ShuffleOutputBytesSpilled*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_ShuffleOutputBytesSpilled" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.ShuffleOutputBytesSpilled">ShuffleOutputBytesSpilled</h4>
+  <div class="markdown level1 summary"><p>Total number of bytes written to shuffle and spilled to disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ? ShuffleOutputBytesSpilled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,8 +455,7 @@ public virtual long ? RecordsWritten { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;status&quot;)]
-public virtual string Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Status { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,8 +479,7 @@ public virtual string Status { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;steps&quot;)]
-public virtual IList&lt;ExplainQueryStep&gt; Steps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;ExplainQueryStep&gt; Steps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -387,6 +496,54 @@ public virtual IList&lt;ExplainQueryStep&gt; Steps { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WaitMsAvg_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WaitMsAvg*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WaitMsAvg" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WaitMsAvg">WaitMsAvg</h4>
+  <div class="markdown level1 summary"><p>Milliseconds the average shard spent waiting to be scheduled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ? WaitMsAvg { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WaitMsMax_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WaitMsMax*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WaitMsMax" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WaitMsMax">WaitMsMax</h4>
+  <div class="markdown level1 summary"><p>Milliseconds the slowest shard spent waiting to be scheduled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ? WaitMsMax { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WaitRatioAvg_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WaitRatioAvg*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WaitRatioAvg" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WaitRatioAvg">WaitRatioAvg</h4>
   <div class="markdown level1 summary"><p>Relative amount of time the average shard spent waiting to be scheduled.</p>
@@ -394,8 +551,7 @@ public virtual IList&lt;ExplainQueryStep&gt; Steps { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;waitRatioAvg&quot;)]
-public virtual double ? WaitRatioAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual double ? WaitRatioAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,8 +575,7 @@ public virtual double ? WaitRatioAvg { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;waitRatioMax&quot;)]
-public virtual double ? WaitRatioMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual double ? WaitRatioMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -437,6 +592,54 @@ public virtual double ? WaitRatioMax { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WriteMsAvg_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WriteMsAvg*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WriteMsAvg" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WriteMsAvg">WriteMsAvg</h4>
+  <div class="markdown level1 summary"><p>Milliseconds the average shard spent on writing output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ? WriteMsAvg { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WriteMsMax_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WriteMsMax*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WriteMsMax" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WriteMsMax">WriteMsMax</h4>
+  <div class="markdown level1 summary"><p>Milliseconds the slowest shard spent on writing output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ? WriteMsMax { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WriteRatioAvg_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WriteRatioAvg*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_WriteRatioAvg" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.WriteRatioAvg">WriteRatioAvg</h4>
   <div class="markdown level1 summary"><p>Relative amount of time the average shard spent on writing output.</p>
@@ -444,8 +647,7 @@ public virtual double ? WaitRatioMax { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeRatioAvg&quot;)]
-public virtual double ? WriteRatioAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual double ? WriteRatioAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -469,8 +671,7 @@ public virtual double ? WriteRatioAvg { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeRatioMax&quot;)]
-public virtual double ? WriteRatioMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual double ? WriteRatioMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

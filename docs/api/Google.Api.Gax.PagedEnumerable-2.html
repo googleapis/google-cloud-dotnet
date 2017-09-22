@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PagedEnumerable&lt;TResponse, TResource&gt;
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -82,6 +83,11 @@ a page at a time, potentially with additional information.</p>
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PagedEnumerable&lt;TResponse, TResource&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TResource&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -185,8 +191,6 @@ resources to this sequence.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
   <a id="Google_Api_Gax_PagedEnumerable_2_ReadPage_" data-uid="Google.Api.Gax.PagedEnumerable`2.ReadPage*"></a>
   <h4 id="Google_Api_Gax_PagedEnumerable_2_ReadPage_System_Int32_" data-uid="Google.Api.Gax.PagedEnumerable`2.ReadPage(System.Int32)">ReadPage(Int32)</h4>
   <div class="markdown level1 summary"><p>Eagerly reads a single page of results with a fixed maximum size. The returned page is guaranteed
@@ -265,8 +269,13 @@ multiple times will not make any further requests.)</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
 </article>
           </div>
           

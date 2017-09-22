@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TimestampBound
    | Google.Cloud.Spanner.Data ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -214,7 +215,7 @@ are visible.</p>
   </h3>
   <a id="Google_Cloud_Spanner_Data_TimestampBound_OfExactStaleness_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfExactStaleness*"></a>
   <h4 id="Google_Cloud_Spanner_Data_TimestampBound_OfExactStaleness_System_TimeSpan_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfExactStaleness(System.TimeSpan)">OfExactStaleness(TimeSpan)</h4>
-  <div class="markdown level1 summary"><p>Executes all reads at a timestamp that is <span class="paramref">duration</span>
+  <div class="markdown level1 summary"><p>Executes all reads at a timestamp that is <code data-dev-comment-type="paramref" class="paramref">duration</code>
 old. The timestamp is chosen soon after the read is started.</p>
 <p>Guarantees that all writes that have committed more than the
 specified number of seconds ago are visible. Because Cloud Spanner
@@ -265,7 +266,7 @@ timestamp negotiation overhead of <a class="xref" href="Google.Cloud.Spanner.Dat
   </table>
   <a id="Google_Cloud_Spanner_Data_TimestampBound_OfMaxStaleness_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfMaxStaleness*"></a>
   <h4 id="Google_Cloud_Spanner_Data_TimestampBound_OfMaxStaleness_System_TimeSpan_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfMaxStaleness(System.TimeSpan)">OfMaxStaleness(TimeSpan)</h4>
-  <div class="markdown level1 summary"><p>Read data at a timestamp &gt;= <code>NOW - &lt;span class=&quot;paramref&quot;&gt;duration&lt;/span&gt;</code>. Guarantees that all
+  <div class="markdown level1 summary"><p>Read data at a timestamp &gt;= <code>NOW - &lt;code data-dev-comment-type=&quot;paramref&quot; class=&quot;paramref&quot;&gt;duration&lt;/code&gt;</code>. Guarantees that all
 writes that have committed more than the specified number of seconds ago are
 visible.
 Because Cloud Spanner chooses the exact timestamp, this mode works even if
@@ -318,7 +319,7 @@ transactions.</p>
   </table>
   <a id="Google_Cloud_Spanner_Data_TimestampBound_OfMinReadTimestamp_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfMinReadTimestamp*"></a>
   <h4 id="Google_Cloud_Spanner_Data_TimestampBound_OfMinReadTimestamp_System_DateTime_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfMinReadTimestamp(System.DateTime)">OfMinReadTimestamp(DateTime)</h4>
-  <div class="markdown level1 summary"><p>Executes all reads at a timestamp &gt;= <span class="paramref">minReadTimestamp</span>.</p>
+  <div class="markdown level1 summary"><p>Executes all reads at a timestamp &gt;= <code data-dev-comment-type="paramref" class="paramref">minReadTimestamp</code>.</p>
 <p>This is useful for requesting fresher data than some previous
 read, or data that is fresh enough to observe the effects of some
 previously committed transaction whose timestamp is known.</p>

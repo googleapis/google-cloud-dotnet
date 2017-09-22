@@ -1,0 +1,601 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Quota
+   | Google.Cloud.VideoIntelligence.V1Beta2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Quota
+   | Google.Cloud.VideoIntelligence.V1Beta2 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Api.Quota">
+  
+  
+  <h1 id="Google_Api_Quota" data-uid="Google.Api.Quota" class="text-break">Class Quota
+  </h1>
+  <div class="markdown level0 summary"><p>Quota configuration helps to achieve fairness and budgeting in service
+usage.</p>
+<p>The quota configuration works this way:</p>
+<ul>
+<li>The service configuration defines a set of metrics.</li>
+<li>For API calls, the quota.metric_rules maps methods to metrics with
+corresponding costs.</li>
+<li>The quota.limits defines limits on the metrics, which will be used for
+quota checks at runtime.</li>
+</ul>
+<p>An example quota configuration in yaml format:</p>
+<p>quota:
+limits:</p>
+<ul>
+<li>name: apiWriteQpsPerProject
+metric: library.googleapis.com/write_calls
+unit: &quot;1/min/{project}&quot;  # rate limit for consumer projects
+values:
+  STANDARD: 10000</li>
+</ul>
+<h1 id="the-metric-rules-bind-all-methods-to-the-readcalls-metric">The metric rules bind all methods to the read_calls metric,</h1>
+<h1 id="except-for-the-updatebook-and-deletebook-methods-these-two-methods">except for the UpdateBook and DeleteBook methods. These two methods</h1>
+<h1 id="are-mapped-to-the-writecalls-metric-with-the-updatebook-method">are mapped to the write_calls metric, with the UpdateBook method</h1>
+<h1 id="consuming-at-twice-rate-as-the-deletebook-method">consuming at twice rate as the DeleteBook method.</h1>
+<p>metric_rules:</p>
+<ul>
+<li>selector: &quot;*&quot;
+metric_costs:
+  library.googleapis.com/read_calls: 1</li>
+<li>selector: google.example.library.v1.LibraryService.UpdateBook
+metric_costs:
+  library.googleapis.com/write_calls: 2</li>
+<li>selector: google.example.library.v1.LibraryService.DeleteBook
+metric_costs:
+  library.googleapis.com/write_calls: 1</li>
+</ul>
+<p>Corresponding Metric definition:</p>
+<p>metrics:</p>
+<ul>
+<li><p>name: library.googleapis.com/read_calls
+display_name: Read requests
+metric_kind: DELTA
+value_type: INT64</p>
+</li>
+<li><p>name: library.googleapis.com/write_calls
+display_name: Write requests
+metric_kind: DELTA
+value_type: INT64</p>
+</li>
+</ul>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Quota</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.html">Google.Api</a></h6>
+  <h6><strong>Assembly</strong>: Google.Api.CommonProtos.dll</h6>
+  <h5 id="Google_Api_Quota_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Quota : Protobuf.IMessage&lt;Quota&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Api_Quota__ctor_" data-uid="Google.Api.Quota.#ctor*"></a>
+  <h4 id="Google_Api_Quota__ctor" data-uid="Google.Api.Quota.#ctor">Quota()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quota()</code></pre>
+  </div>
+  <a id="Google_Api_Quota__ctor_" data-uid="Google.Api.Quota.#ctor*"></a>
+  <h4 id="Google_Api_Quota__ctor_Google_Api_Quota_" data-uid="Google.Api.Quota.#ctor(Google.Api.Quota)">Quota(Quota)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quota(Quota other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Quota.html">Quota</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Google_Api_Quota_LimitsFieldNumber" data-uid="Google.Api.Quota.LimitsFieldNumber">LimitsFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;limits&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int LimitsFieldNumber = 3</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Api_Quota_MetricRulesFieldNumber" data-uid="Google.Api.Quota.MetricRulesFieldNumber">MetricRulesFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;metric_rules&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MetricRulesFieldNumber = 4</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Api_Quota_Descriptor_" data-uid="Google.Api.Quota.Descriptor*"></a>
+  <h4 id="Google_Api_Quota_Descriptor" data-uid="Google.Api.Quota.Descriptor">Descriptor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Protobuf.Reflection.MessageDescriptor Descriptor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">Protobuf.Reflection.MessageDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_Limits_" data-uid="Google.Api.Quota.Limits*"></a>
+  <h4 id="Google_Api_Quota_Limits" data-uid="Google.Api.Quota.Limits">Limits</h4>
+  <div class="markdown level1 summary"><p>List of <code>QuotaLimit</code> definitions for the service.</p>
+<p>Used by metric-based quotas only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Protobuf.Collections.RepeatedField&lt;QuotaLimit&gt; Limits { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">Protobuf.Collections.RepeatedField</a>&lt;<a class="xref" href="Google.Api.QuotaLimit.html">QuotaLimit</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_MetricRules_" data-uid="Google.Api.Quota.MetricRules*"></a>
+  <h4 id="Google_Api_Quota_MetricRules" data-uid="Google.Api.Quota.MetricRules">MetricRules</h4>
+  <div class="markdown level1 summary"><p>List of <code>MetricRule</code> definitions, each one mapping a selected method to one
+or more metrics.</p>
+<p>Used by metric-based quotas only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Protobuf.Collections.RepeatedField&lt;MetricRule&gt; MetricRules { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">Protobuf.Collections.RepeatedField</a>&lt;<a class="xref" href="Google.Api.MetricRule.html">MetricRule</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_Parser_" data-uid="Google.Api.Quota.Parser*"></a>
+  <h4 id="Google_Api_Quota_Parser" data-uid="Google.Api.Quota.Parser">Parser</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Protobuf.MessageParser&lt;Quota&gt; Parser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.MessageParser-1.html">Protobuf.MessageParser</a>&lt;<a class="xref" href="Google.Api.Quota.html">Quota</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Api_Quota_CalculateSize_" data-uid="Google.Api.Quota.CalculateSize*"></a>
+  <h4 id="Google_Api_Quota_CalculateSize" data-uid="Google.Api.Quota.CalculateSize">CalculateSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_Clone_" data-uid="Google.Api.Quota.Clone*"></a>
+  <h4 id="Google_Api_Quota_Clone" data-uid="Google.Api.Quota.Clone">Clone()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quota Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Quota.html">Quota</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_Equals_" data-uid="Google.Api.Quota.Equals*"></a>
+  <h4 id="Google_Api_Quota_Equals_Google_Api_Quota_" data-uid="Google.Api.Quota.Equals(Google.Api.Quota)">Equals(Quota)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Quota other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Quota.html">Quota</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_Equals_" data-uid="Google.Api.Quota.Equals*"></a>
+  <h4 id="Google_Api_Quota_Equals_System_Object_" data-uid="Google.Api.Quota.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_GetHashCode_" data-uid="Google.Api.Quota.GetHashCode*"></a>
+  <h4 id="Google_Api_Quota_GetHashCode" data-uid="Google.Api.Quota.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_MergeFrom_" data-uid="Google.Api.Quota.MergeFrom*"></a>
+  <h4 id="Google_Api_Quota_MergeFrom_Google_Api_Quota_" data-uid="Google.Api.Quota.MergeFrom(Google.Api.Quota)">MergeFrom(Quota)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MergeFrom(Quota other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Quota.html">Quota</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_MergeFrom_" data-uid="Google.Api.Quota.MergeFrom*"></a>
+  <h4 id="Google_Api_Quota_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Quota.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(Protobuf.CodedInputStream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MergeFrom(Protobuf.CodedInputStream input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">Protobuf.CodedInputStream</a></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_ToString_" data-uid="Google.Api.Quota.ToString*"></a>
+  <h4 id="Google_Api_Quota_ToString" data-uid="Google.Api.Quota.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Quota_WriteTo_" data-uid="Google.Api.Quota.WriteTo*"></a>
+  <h4 id="Google_Api_Quota_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Quota.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(Protobuf.CodedOutputStream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteTo(Protobuf.CodedOutputStream output)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">Protobuf.CodedOutputStream</a></td>
+        <td><span class="parametername">output</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

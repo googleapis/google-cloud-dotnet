@@ -1,0 +1,1394 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BigtableInstanceAdminClientImpl
+   | Google.Cloud.Bigtable.Admin.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BigtableInstanceAdminClientImpl
+   | Google.Cloud.Bigtable.Admin.V2 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl">
+  
+  
+  <h1 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl" class="text-break">Class BigtableInstanceAdminClientImpl
+  </h1>
+  <div class="markdown level0 summary"><p>BigtableInstanceAdmin client wrapper implementation, for convenient use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html">BigtableInstanceAdminClient</a></div>
+    <div class="level2"><span class="xref">BigtableInstanceAdminClientImpl</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DefaultEndpoint">BigtableInstanceAdminClient.DefaultEndpoint</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DefaultScopes">BigtableInstanceAdminClient.DefaultScopes</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminSettings_">BigtableInstanceAdminClient.CreateAsync(ServiceEndpoint, BigtableInstanceAdminSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminSettings_">BigtableInstanceAdminClient.Create(ServiceEndpoint, BigtableInstanceAdminSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_Create_Grpc_Core_Channel_Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminSettings_">BigtableInstanceAdminClient.Create(Channel, BigtableInstanceAdminSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ShutdownDefaultChannelsAsync">BigtableInstanceAdminClient.ShutdownDefaultChannelsAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateInstanceAsync_Google_Cloud_Bigtable_Admin_V2_ProjectName_System_String_Google_Cloud_Bigtable_Admin_V2_Instance_System_Collections_Generic_IDictionary_System_String_Google_Cloud_Bigtable_Admin_V2_Cluster__Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.CreateInstanceAsync(ProjectName, String, Instance, IDictionary&lt;String, Cluster&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateInstanceAsync_Google_Cloud_Bigtable_Admin_V2_ProjectName_System_String_Google_Cloud_Bigtable_Admin_V2_Instance_System_Collections_Generic_IDictionary_System_String_Google_Cloud_Bigtable_Admin_V2_Cluster__System_Threading_CancellationToken_">BigtableInstanceAdminClient.CreateInstanceAsync(ProjectName, String, Instance, IDictionary&lt;String, Cluster&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateInstance_Google_Cloud_Bigtable_Admin_V2_ProjectName_System_String_Google_Cloud_Bigtable_Admin_V2_Instance_System_Collections_Generic_IDictionary_System_String_Google_Cloud_Bigtable_Admin_V2_Cluster__Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.CreateInstance(ProjectName, String, Instance, IDictionary&lt;String, Cluster&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_PollOnceCreateInstanceAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.PollOnceCreateInstanceAsync(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_PollOnceCreateInstance_System_String_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.PollOnceCreateInstance(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GetInstanceAsync_Google_Cloud_Bigtable_Admin_V2_InstanceName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.GetInstanceAsync(InstanceName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GetInstanceAsync_Google_Cloud_Bigtable_Admin_V2_InstanceName_System_Threading_CancellationToken_">BigtableInstanceAdminClient.GetInstanceAsync(InstanceName, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GetInstance_Google_Cloud_Bigtable_Admin_V2_InstanceName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.GetInstance(InstanceName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ListInstancesAsync_Google_Cloud_Bigtable_Admin_V2_ProjectName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.ListInstancesAsync(ProjectName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ListInstancesAsync_Google_Cloud_Bigtable_Admin_V2_ProjectName_System_Threading_CancellationToken_">BigtableInstanceAdminClient.ListInstancesAsync(ProjectName, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ListInstances_Google_Cloud_Bigtable_Admin_V2_ProjectName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.ListInstances(ProjectName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateInstanceAsync_Google_Cloud_Bigtable_Admin_V2_InstanceName_System_String_Google_Cloud_Bigtable_Admin_V2_Instance_Types_Type_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.UpdateInstanceAsync(InstanceName, String, Instance.Types.Type, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateInstanceAsync_Google_Cloud_Bigtable_Admin_V2_InstanceName_System_String_Google_Cloud_Bigtable_Admin_V2_Instance_Types_Type_System_Threading_CancellationToken_">BigtableInstanceAdminClient.UpdateInstanceAsync(InstanceName, String, Instance.Types.Type, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateInstance_Google_Cloud_Bigtable_Admin_V2_InstanceName_System_String_Google_Cloud_Bigtable_Admin_V2_Instance_Types_Type_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.UpdateInstance(InstanceName, String, Instance.Types.Type, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DeleteInstanceAsync_Google_Cloud_Bigtable_Admin_V2_InstanceName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.DeleteInstanceAsync(InstanceName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DeleteInstanceAsync_Google_Cloud_Bigtable_Admin_V2_InstanceName_System_Threading_CancellationToken_">BigtableInstanceAdminClient.DeleteInstanceAsync(InstanceName, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DeleteInstance_Google_Cloud_Bigtable_Admin_V2_InstanceName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.DeleteInstance(InstanceName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateClusterAsync_Google_Cloud_Bigtable_Admin_V2_InstanceName_System_String_Google_Cloud_Bigtable_Admin_V2_Cluster_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.CreateClusterAsync(InstanceName, String, Cluster, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateClusterAsync_Google_Cloud_Bigtable_Admin_V2_InstanceName_System_String_Google_Cloud_Bigtable_Admin_V2_Cluster_System_Threading_CancellationToken_">BigtableInstanceAdminClient.CreateClusterAsync(InstanceName, String, Cluster, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateCluster_Google_Cloud_Bigtable_Admin_V2_InstanceName_System_String_Google_Cloud_Bigtable_Admin_V2_Cluster_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.CreateCluster(InstanceName, String, Cluster, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_PollOnceCreateClusterAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.PollOnceCreateClusterAsync(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_PollOnceCreateCluster_System_String_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.PollOnceCreateCluster(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GetClusterAsync_Google_Cloud_Bigtable_Admin_V2_ClusterName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.GetClusterAsync(ClusterName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GetClusterAsync_Google_Cloud_Bigtable_Admin_V2_ClusterName_System_Threading_CancellationToken_">BigtableInstanceAdminClient.GetClusterAsync(ClusterName, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GetCluster_Google_Cloud_Bigtable_Admin_V2_ClusterName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.GetCluster(ClusterName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ListClustersAsync_Google_Cloud_Bigtable_Admin_V2_InstanceName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.ListClustersAsync(InstanceName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ListClustersAsync_Google_Cloud_Bigtable_Admin_V2_InstanceName_System_Threading_CancellationToken_">BigtableInstanceAdminClient.ListClustersAsync(InstanceName, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ListClusters_Google_Cloud_Bigtable_Admin_V2_InstanceName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.ListClusters(InstanceName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateClusterAsync_Google_Cloud_Bigtable_Admin_V2_ClusterName_Google_Cloud_Bigtable_Admin_V2_LocationName_System_Int32_Google_Cloud_Bigtable_Admin_V2_StorageType_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.UpdateClusterAsync(ClusterName, LocationName, Int32, StorageType, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateClusterAsync_Google_Cloud_Bigtable_Admin_V2_ClusterName_Google_Cloud_Bigtable_Admin_V2_LocationName_System_Int32_Google_Cloud_Bigtable_Admin_V2_StorageType_System_Threading_CancellationToken_">BigtableInstanceAdminClient.UpdateClusterAsync(ClusterName, LocationName, Int32, StorageType, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateCluster_Google_Cloud_Bigtable_Admin_V2_ClusterName_Google_Cloud_Bigtable_Admin_V2_LocationName_System_Int32_Google_Cloud_Bigtable_Admin_V2_StorageType_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.UpdateCluster(ClusterName, LocationName, Int32, StorageType, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_PollOnceUpdateClusterAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.PollOnceUpdateClusterAsync(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_PollOnceUpdateCluster_System_String_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.PollOnceUpdateCluster(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DeleteClusterAsync_Google_Cloud_Bigtable_Admin_V2_ClusterName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.DeleteClusterAsync(ClusterName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DeleteClusterAsync_Google_Cloud_Bigtable_Admin_V2_ClusterName_System_Threading_CancellationToken_">BigtableInstanceAdminClient.DeleteClusterAsync(ClusterName, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DeleteCluster_Google_Cloud_Bigtable_Admin_V2_ClusterName_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.DeleteCluster(ClusterName, CallSettings)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.html">Google.Cloud.Bigtable.Admin.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Bigtable.Admin.V2.dll</h6>
+  <h5 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class BigtableInstanceAdminClientImpl : BigtableInstanceAdminClient</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl__ctor_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.#ctor*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl__ctor_Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.#ctor(Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient,Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminSettings)">BigtableInstanceAdminClientImpl(BigtableInstanceAdmin.BigtableInstanceAdminClient, BigtableInstanceAdminSettings)</h4>
+  <div class="markdown level1 summary"><p>Constructs a client wrapper for the BigtableInstanceAdmin service, with the specified gRPC client and settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BigtableInstanceAdminClientImpl(BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient, BigtableInstanceAdminSettings settings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.html">BigtableInstanceAdmin.BigtableInstanceAdminClient</a></td>
+        <td><span class="parametername">grpcClient</span></td>
+        <td><p>The underlying gRPC client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminSettings.html">BigtableInstanceAdminSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>The base <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminSettings.html">BigtableInstanceAdminSettings</a> used within this client </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateClusterOperationsClient_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateClusterOperationsClient*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateClusterOperationsClient" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateClusterOperationsClient">CreateClusterOperationsClient</h4>
+  <div class="markdown level1 summary"><p>The long-running operations client for <code>CreateCluster</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override OperationsClient CreateClusterOperationsClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateClusterOperationsClient">BigtableInstanceAdminClient.CreateClusterOperationsClient</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateInstanceOperationsClient_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateInstanceOperationsClient*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateInstanceOperationsClient" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateInstanceOperationsClient">CreateInstanceOperationsClient</h4>
+  <div class="markdown level1 summary"><p>The long-running operations client for <code>CreateInstance</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override OperationsClient CreateInstanceOperationsClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateInstanceOperationsClient">BigtableInstanceAdminClient.CreateInstanceOperationsClient</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_GrpcClient_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.GrpcClient*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_GrpcClient" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.GrpcClient">GrpcClient</h4>
+  <div class="markdown level1 summary"><p>The underlying gRPC BigtableInstanceAdmin client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override BigtableInstanceAdmin.BigtableInstanceAdminClient GrpcClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.html">BigtableInstanceAdmin.BigtableInstanceAdminClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GrpcClient">BigtableInstanceAdminClient.GrpcClient</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_UpdateClusterOperationsClient_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.UpdateClusterOperationsClient*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_UpdateClusterOperationsClient" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.UpdateClusterOperationsClient">UpdateClusterOperationsClient</h4>
+  <div class="markdown level1 summary"><p>The long-running operations client for <code>UpdateCluster</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override OperationsClient UpdateClusterOperationsClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateClusterOperationsClient">BigtableInstanceAdminClient.UpdateClusterOperationsClient</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateCluster*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateCluster_Google_Cloud_Bigtable_Admin_V2_CreateClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateCluster(Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest,Google.Api.Gax.Grpc.CallSettings)">CreateCluster(CreateClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a cluster within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation&lt;Cluster, CreateClusterMetadata&gt; CreateCluster(CreateClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest.html">CreateClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a>, <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata.html">CreateClusterMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateCluster_Google_Cloud_Bigtable_Admin_V2_CreateClusterRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.CreateCluster(CreateClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateClusterAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateClusterAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateClusterAsync_Google_Cloud_Bigtable_Admin_V2_CreateClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateClusterAsync(Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest,Google.Api.Gax.Grpc.CallSettings)">CreateClusterAsync(CreateClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a cluster within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&lt;Cluster, CreateClusterMetadata&gt;&gt; CreateClusterAsync(CreateClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest.html">CreateClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a>, <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata.html">CreateClusterMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateClusterAsync_Google_Cloud_Bigtable_Admin_V2_CreateClusterRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.CreateClusterAsync(CreateClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateInstance_Google_Cloud_Bigtable_Admin_V2_CreateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateInstance(Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">CreateInstance(CreateInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Create an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation&lt;Instance, CreateInstanceMetadata&gt; CreateInstance(CreateInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest.html">CreateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a>, <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata.html">CreateInstanceMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateInstance_Google_Cloud_Bigtable_Admin_V2_CreateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.CreateInstance(CreateInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateInstanceAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateInstanceAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_CreateInstanceAsync_Google_Cloud_Bigtable_Admin_V2_CreateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.CreateInstanceAsync(Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">CreateInstanceAsync(CreateInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Create an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&lt;Instance, CreateInstanceMetadata&gt;&gt; CreateInstanceAsync(CreateInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest.html">CreateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a>, <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata.html">CreateInstanceMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_CreateInstanceAsync_Google_Cloud_Bigtable_Admin_V2_CreateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.CreateInstanceAsync(CreateInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_DeleteCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.DeleteCluster*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_DeleteCluster_Google_Cloud_Bigtable_Admin_V2_DeleteClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.DeleteCluster(Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteCluster(DeleteClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a cluster from an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DeleteCluster(DeleteClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.html">DeleteClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DeleteCluster_Google_Cloud_Bigtable_Admin_V2_DeleteClusterRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.DeleteCluster(DeleteClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_DeleteClusterAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.DeleteClusterAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_DeleteClusterAsync_Google_Cloud_Bigtable_Admin_V2_DeleteClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.DeleteClusterAsync(Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteClusterAsync(DeleteClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a cluster from an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task DeleteClusterAsync(DeleteClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.html">DeleteClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DeleteClusterAsync_Google_Cloud_Bigtable_Admin_V2_DeleteClusterRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.DeleteClusterAsync(DeleteClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_DeleteInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.DeleteInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_DeleteInstance_Google_Cloud_Bigtable_Admin_V2_DeleteInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.DeleteInstance(Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteInstance(DeleteInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Delete an instance from a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DeleteInstance(DeleteInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest.html">DeleteInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DeleteInstance_Google_Cloud_Bigtable_Admin_V2_DeleteInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.DeleteInstance(DeleteInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_DeleteInstanceAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.DeleteInstanceAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_DeleteInstanceAsync_Google_Cloud_Bigtable_Admin_V2_DeleteInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.DeleteInstanceAsync(Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteInstanceAsync(DeleteInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Delete an instance from a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task DeleteInstanceAsync(DeleteInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest.html">DeleteInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_DeleteInstanceAsync_Google_Cloud_Bigtable_Admin_V2_DeleteInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.DeleteInstanceAsync(DeleteInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_GetCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.GetCluster*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_GetCluster_Google_Cloud_Bigtable_Admin_V2_GetClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.GetCluster(Google.Cloud.Bigtable.Admin.V2.GetClusterRequest,Google.Api.Gax.Grpc.CallSettings)">GetCluster(GetClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets information about a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Cluster GetCluster(GetClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetClusterRequest.html">GetClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GetCluster_Google_Cloud_Bigtable_Admin_V2_GetClusterRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.GetCluster(GetClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_GetClusterAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.GetClusterAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_GetClusterAsync_Google_Cloud_Bigtable_Admin_V2_GetClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.GetClusterAsync(Google.Cloud.Bigtable.Admin.V2.GetClusterRequest,Google.Api.Gax.Grpc.CallSettings)">GetClusterAsync(GetClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets information about a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Cluster&gt; GetClusterAsync(GetClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetClusterRequest.html">GetClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GetClusterAsync_Google_Cloud_Bigtable_Admin_V2_GetClusterRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.GetClusterAsync(GetClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_GetInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.GetInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_GetInstance_Google_Cloud_Bigtable_Admin_V2_GetInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.GetInstance(Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">GetInstance(GetInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets information about an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Instance GetInstance(GetInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest.html">GetInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GetInstance_Google_Cloud_Bigtable_Admin_V2_GetInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.GetInstance(GetInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_GetInstanceAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.GetInstanceAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_GetInstanceAsync_Google_Cloud_Bigtable_Admin_V2_GetInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.GetInstanceAsync(Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">GetInstanceAsync(GetInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets information about an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Instance&gt; GetInstanceAsync(GetInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest.html">GetInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_GetInstanceAsync_Google_Cloud_Bigtable_Admin_V2_GetInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.GetInstanceAsync(GetInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_ListClusters_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.ListClusters*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_ListClusters_Google_Cloud_Bigtable_Admin_V2_ListClustersRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.ListClusters(Google.Cloud.Bigtable.Admin.V2.ListClustersRequest,Google.Api.Gax.Grpc.CallSettings)">ListClusters(ListClustersRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists information about clusters in an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ListClustersResponse ListClusters(ListClustersRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListClustersRequest.html">ListClustersRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListClustersResponse.html">ListClustersResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ListClusters_Google_Cloud_Bigtable_Admin_V2_ListClustersRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.ListClusters(ListClustersRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_ListClustersAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.ListClustersAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_ListClustersAsync_Google_Cloud_Bigtable_Admin_V2_ListClustersRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.ListClustersAsync(Google.Cloud.Bigtable.Admin.V2.ListClustersRequest,Google.Api.Gax.Grpc.CallSettings)">ListClustersAsync(ListClustersRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists information about clusters in an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ListClustersResponse&gt; ListClustersAsync(ListClustersRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListClustersRequest.html">ListClustersRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListClustersResponse.html">ListClustersResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ListClustersAsync_Google_Cloud_Bigtable_Admin_V2_ListClustersRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.ListClustersAsync(ListClustersRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_ListInstances_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.ListInstances*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_ListInstances_Google_Cloud_Bigtable_Admin_V2_ListInstancesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.ListInstances(Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest,Google.Api.Gax.Grpc.CallSettings)">ListInstances(ListInstancesRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists information about instances in a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ListInstancesResponse ListInstances(ListInstancesRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest.html">ListInstancesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.html">ListInstancesResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ListInstances_Google_Cloud_Bigtable_Admin_V2_ListInstancesRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.ListInstances(ListInstancesRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_ListInstancesAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.ListInstancesAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_ListInstancesAsync_Google_Cloud_Bigtable_Admin_V2_ListInstancesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.ListInstancesAsync(Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest,Google.Api.Gax.Grpc.CallSettings)">ListInstancesAsync(ListInstancesRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists information about instances in a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ListInstancesResponse&gt; ListInstancesAsync(ListInstancesRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest.html">ListInstancesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.html">ListInstancesResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_ListInstancesAsync_Google_Cloud_Bigtable_Admin_V2_ListInstancesRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.ListInstancesAsync(ListInstancesRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_UpdateCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.UpdateCluster*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_UpdateCluster_Google_Cloud_Bigtable_Admin_V2_Cluster_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.UpdateCluster(Google.Cloud.Bigtable.Admin.V2.Cluster,Google.Api.Gax.Grpc.CallSettings)">UpdateCluster(Cluster, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates a cluster within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation&lt;Cluster, UpdateClusterMetadata&gt; UpdateCluster(Cluster request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a>, <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata.html">UpdateClusterMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateCluster_Google_Cloud_Bigtable_Admin_V2_Cluster_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.UpdateCluster(Cluster, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_UpdateClusterAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.UpdateClusterAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_UpdateClusterAsync_Google_Cloud_Bigtable_Admin_V2_Cluster_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.UpdateClusterAsync(Google.Cloud.Bigtable.Admin.V2.Cluster,Google.Api.Gax.Grpc.CallSettings)">UpdateClusterAsync(Cluster, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates a cluster within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&lt;Cluster, UpdateClusterMetadata&gt;&gt; UpdateClusterAsync(Cluster request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a>, <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata.html">UpdateClusterMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateClusterAsync_Google_Cloud_Bigtable_Admin_V2_Cluster_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.UpdateClusterAsync(Cluster, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_UpdateInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.UpdateInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_UpdateInstance_Google_Cloud_Bigtable_Admin_V2_Instance_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.UpdateInstance(Google.Cloud.Bigtable.Admin.V2.Instance,Google.Api.Gax.Grpc.CallSettings)">UpdateInstance(Instance, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Instance UpdateInstance(Instance request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateInstance_Google_Cloud_Bigtable_Admin_V2_Instance_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.UpdateInstance(Instance, CallSettings)</a></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_UpdateInstanceAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.UpdateInstanceAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClientImpl_UpdateInstanceAsync_Google_Cloud_Bigtable_Admin_V2_Instance_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClientImpl.UpdateInstanceAsync(Google.Cloud.Bigtable.Admin.V2.Instance,Google.Api.Gax.Grpc.CallSettings)">UpdateInstanceAsync(Instance, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Instance&gt; UpdateInstanceAsync(Instance request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.html#Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdminClient_UpdateInstanceAsync_Google_Cloud_Bigtable_Admin_V2_Instance_Google_Api_Gax_Grpc_CallSettings_">BigtableInstanceAdminClient.UpdateInstanceAsync(Instance, CallSettings)</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

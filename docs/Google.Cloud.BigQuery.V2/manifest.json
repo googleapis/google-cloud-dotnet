@@ -1,1 +1,2374 @@
-{"homepages":[],"source_base_path":"C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.BigQuery.V2","xrefmap":"xrefmap.yml","files":[{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.Job.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.Job.html","hash":"AAnagRfY0iTkGn0wd77YLA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobList.JobsData.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobList.JobsData.html","hash":"CPoH1nNFTfw9jC5Elvx+7g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobList.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobList.html","hash":"rFG2zUNwl+VerjKLw81+fA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.ProjectList.ProjectsData.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.ProjectList.ProjectsData.html","hash":"0Ahj6Q9MGkPxPtt7mqcxHg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.ProjectList.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.ProjectList.html","hash":"kXsoxRiu5U5qnvaJ1ZRQHQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.QueryParameterValue.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.QueryParameterValue.html","hash":"qet+kHHGk0ksbIFQXC1Z4A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.QueryRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.QueryRequest.html","hash":"liBmjJsawy2bvTwCDrVKmQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest.RowsData.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest.RowsData.html","hash":"mpiEhmIsdsfzjw6aa9UgOw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest.html","hash":"J/5wRMXelbdTqImRer6TFg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableList.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableList.html","hash":"QS4Wpq87KZ4RA9iBTNvfOw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableReference.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableReference.html","hash":"gI5KeFlXl61fZTgTVepPbw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest.html","hash":"tgEClxzAjqb+IRfGRd3PQA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.DatasetsResource.ListRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.DatasetsResource.ListRequest.html","hash":"HnhYVPzcCFtvv/cuh9sByA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest.html","hash":"y/6u2zJVkUvVDJiuTeEGFw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest.html","hash":"D5iWrn2HjvBo5LYEbvzUiw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest.html","hash":"UDeIqRRtr6fdKT/5eS53DQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.TabledataResource.ListRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.TabledataResource.ListRequest.html","hash":"4+6hjI1Ou5yANuSJMRlXtA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.TabledataResource.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.TabledataResource.html","hash":"nmYFq7YoNqCm7zOAQncJ0g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.TablesResource.DeleteRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.TablesResource.DeleteRequest.html","hash":"AWSQwYrcjskyen/5s/eNZQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryDbType.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryDbType.html","hash":"Gcyk2CR3aPEZmlYPBIg6QQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryFieldMode.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryFieldMode.html","hash":"Ckfy0xydVtvDJFJ4acb0kg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryInsertRow.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryInsertRow.html","hash":"x48LaaTocN90Ai3JT1K54A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryJob.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryJob.html","hash":"JdGiLm3Q+WotKw/jUe2a7Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.CreateDisposition.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.CreateDisposition.html","hash":"ylhxRY89P5KK98+GeZ3K4Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html","hash":"1JiIflw7ZJlaG46CLQOA4g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html","hash":"8OGZfmNqLtxKMFg6Z0LgIg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.CreateTableOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.CreateTableOptions.html","hash":"X2jhwFATTrq+1dWaqiC2hQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.ListJobsOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.ListJobsOptions.html","hash":"WBlWpwpUkIsxqSAx6ttfOg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.ListProjectsOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.ListProjectsOptions.html","hash":"Cpxq20xk2rMsgmU+84JWww=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.ListRowsOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.ListRowsOptions.html","hash":"DOGPf4b/5pFxk6GskoA0kQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.ListTablesOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.ListTablesOptions.html","hash":"88B0fHJaez41qm/nNIWwyw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.UploadAvroOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html","hash":"pvJt56A3ClrG40irKxt29A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.UploadCsvOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.UploadCsvOptions.html","hash":"vN29b4H6D7rhdZxVujt38w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.Expiration.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.Expiration.html","hash":"RRVNOTiWYLJbR756mug9DQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.GkePlatformDetails.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.GkePlatformDetails.html","hash":"Araekm0MGHeqLgg31uku4Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.Page-1.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.Page-1.html","hash":"04SG0XUf+PWP8gsEzD/hMQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.Platform.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.Platform.html","hash":"oIQzwJjbN467lNTRTMCyrg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.ResourceMismatchException.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.ResourceMismatchException.html","hash":"gYgVH1btbSXI1Jnv4746zA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.Rest.IPageManager-3.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.Rest.IPageManager-3.html","hash":"d4Q0Rd2NEkATErFi7esRrA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.Rest.UserAgentHelper.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.Rest.UserAgentHelper.html","hash":"jxhGksbbQy8sW57IHQmMyg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.SystemScheduler.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.SystemScheduler.html","hash":"mfGVgkoM2D/5i41IrJrG+Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.AltEnum.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.AltEnum.html","hash":"IR7T756OewukQt/9fWtwsg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.html","hash":"19QHsyR625Sd4HHu2wpc9Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.DatasetList.DatasetsData.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.DatasetList.DatasetsData.html","hash":"PnsSVGBkbNwp209eyCpmgA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.DatasetList.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.DatasetList.html","hash":"8pwifs4H9QYODUsAska8Sg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.GoogleSheetsOptions.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.GoogleSheetsOptions.html","hash":"eNTmXNo2CujDDDWxaRzoyQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.EmptyDictionary-2.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.EmptyDictionary-2.html","hash":"gzWuzkrnw6S22mmTkGhw0g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.GcePlatformDetails.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.GcePlatformDetails.html","hash":"3AkeWF6N/oLDe11/D+T9Lg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.IScheduler.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.IScheduler.html","hash":"F0RryBL1Vq7BDAKP9Hw1WA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.PathTemplate.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.PathTemplate.html","hash":"5FdYhBEh98AF9sSk2lHJEw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.PollSettings.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.PollSettings.html","hash":"LAhgYuAHGorY6JTHUSQTpA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.Rest.RestPagedAsyncEnumerable-3.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.Rest.RestPagedAsyncEnumerable-3.html","hash":"zgNHbz0zZ27jgo+YbJxEkA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.SchedulerExtensions.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.SchedulerExtensions.html","hash":"DnznHDIf+M21bykgmMHvsQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.UnknownResourceName.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.UnknownResourceName.html","hash":"lYWg5mcMdDZaNemPDED4CQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.BigqueryService.Scope.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.BigqueryService.Scope.html","hash":"blymrFMmNUrjHGscpHYOrg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.BigqueryService.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.BigqueryService.html","hash":"D1r0B1zR7Go7HXiVujXqTQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.Dataset.AccessData.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.Dataset.AccessData.html","hash":"suZRKaZNkql9UJaDHDBycQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.Dataset.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.Dataset.html","hash":"lhubdRCzXS+NRk+CBzW3kQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.ExplainQueryStage.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.ExplainQueryStage.html","hash":"LH6Pvmh/aF+m9ElUW8qqdA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.ExplainQueryStep.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.ExplainQueryStep.html","hash":"W+2RvSvz4TqXdWBevTQdQA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobConfigurationExtract.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobConfigurationExtract.html","hash":"2bODXuvGjXQQmZW9A0AuAQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.html","hash":"U4TRwkkWvSxBt6bUIwqhXA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobStatistics2.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobStatistics2.html","hash":"Njq/KtCY0Juol2AdizZH9A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobStatistics3.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobStatistics3.html","hash":"XQPP4/0vluoh7MvTtb6ECg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.ProjectReference.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.ProjectReference.html","hash":"iSYZoayeMe5cZ+fJ0VWWOA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.QueryParameter.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.QueryParameter.html","hash":"EhNQ67EA4rheOLDrzeeZwg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.Table.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.Table.html","hash":"GcGTOwm9Y+7NsekDmoLymQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableCell.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableCell.html","hash":"AhFx+M1OZkuHXHFCv7NSbQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableList.TablesData.ViewData.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableList.TablesData.ViewData.html","hash":"mRC227soeU3QzsF8iirMnA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableList.TablesData.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableList.TablesData.html","hash":"5VLDJqyG6Z7YKhJ5LTiRDw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.ViewDefinition.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.ViewDefinition.html","hash":"UdiNMWISSRr0kWmDUz+PqA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.html","hash":"3JMkMLg06kPHbonsoAvncw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.html","hash":"EDi1X9kzO/LE567n4xTL8w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.DatasetsResource.GetRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.DatasetsResource.GetRequest.html","hash":"p3rabY4RWFPw6BOzmlw3+w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.QueryRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.QueryRequest.html","hash":"kpwlebpWQAbbmIQ4taax5w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.html","hash":"NkZxmD4iJRuR1faKRsfWlg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.ProjectsResource.ListRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.ProjectsResource.ListRequest.html","hash":"2QGL1Xxx+/18Bx4zpGuZ5w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.ProjectsResource.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.ProjectsResource.html","hash":"23XKK4ixfQHgJvzx5OHZVA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html","hash":"SbdRqwx793lLwZyX01fikw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryCommand.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryCommand.html","hash":"PJnHHJ0QG0xRGlH7RAazQQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryDataset.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryDataset.html","hash":"GNmt71SYJLYA2GphrsAjFw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryDateTimeExtensions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryDateTimeExtensions.html","hash":"pol6UnAtmZv4VEMMW9dSVQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.CloudProject.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.CloudProject.html","hash":"aaoZyDrTBu3xjYtn0inoIw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.CompressionType.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.CompressionType.html","hash":"bVh7AAMwtqIRG3Ds1Cq/tg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.CreateCopyJobOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.CreateCopyJobOptions.html","hash":"S7N13Z6z9ZlCRVkeO1gn2g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.CreateDatasetOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.CreateDatasetOptions.html","hash":"Yb+5OL5xBb6VWsR30JqSmQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.GetDatasetOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.GetDatasetOptions.html","hash":"4s2WMCuGnmOgUzaRnc0pJg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.GetJobOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.GetJobOptions.html","hash":"O4WRNR3phxa66Ka3XJANzA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.GetQueryResultsOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.GetQueryResultsOptions.html","hash":"B8AtHqpHuXoEGhBQGOtvjQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.GetTableOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.GetTableOptions.html","hash":"YaMcsf4gCEZ4Gumw9Xi3Aw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.QueryPriority.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.QueryPriority.html","hash":"7h49aKIzv/Dpcu9GZej9iQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.TableSchemaBuilder.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.TableSchemaBuilder.html","hash":"+TMsCZtcVqy//utD22u1iQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.TableSchemaExtensions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.TableSchemaExtensions.html","hash":"wIZ71uZ2nEpPsn/jatVnvg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.TimePartitionType.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.TimePartitionType.html","hash":"59KrfjA/tDj+ZtRlG8N+gA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.GaePlatformDetails.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.GaePlatformDetails.html","hash":"Wd8lGu1OgISZDvaZPfMLkQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.GaxPreconditions.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.GaxPreconditions.html","hash":"D0cl+NsNAbo3Wk6aRGZvqA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.IResourceName.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.IResourceName.html","hash":"JDdMvIo55Yocgtby3QjXBQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.PagedEnumerable-2.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.PagedEnumerable-2.html","hash":"MnS7gfHgfGBx1iOYvzvpqA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.Polling.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.Polling.html","hash":"BZzcHR29jT9H6pyNA6O1lw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.ResourceNameKind.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.ResourceNameKind.html","hash":"dHrDu+aQ8mANJxYpR+j4jw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.Rest.RestPagedEnumerable-3.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.Rest.RestPagedEnumerable-3.html","hash":"X2pYH1ZKqq8A+OLZBDiMMQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.Rest.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.Rest.html","hash":"9J2KVWvPCQP77XgIkYEWbQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.TaskExtensions.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.TaskExtensions.html","hash":"NkJfGWUGdh/b9lkjV183xg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.TemplatedResourceName.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.TemplatedResourceName.html","hash":"Rggy5/GxW17If/J0rPCenQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.BigtableColumn.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.BigtableColumn.html","hash":"XaX/M/SetXNgZTWDI0w4VQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.BigtableColumnFamily.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.BigtableColumnFamily.html","hash":"Pv6UUgXJX8tS37x6ENF+zw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.DatasetReference.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.DatasetReference.html","hash":"5Ir7t/kOgF1rx16Tq1NxmA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.ErrorProto.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.ErrorProto.html","hash":"/sbv7LWD/jOq1CH9u16KRA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobCancelResponse.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobCancelResponse.html","hash":"L269Ctk08z6VpNNoglv1Iw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobConfiguration.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobConfiguration.html","hash":"3WqwWdZF5joEvhodOT+z0A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobStatistics4.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobStatistics4.html","hash":"tKvjRHIpRlE3HyEFiaQxCg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobStatus.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobStatus.html","hash":"E2AfbNzZ9SpBMMTB/dfBAA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.QueryResponse.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.QueryResponse.html","hash":"K56j98C9he5rPu4mJ8wZ7w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.Streamingbuffer.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.Streamingbuffer.html","hash":"beyqoXehzWn+nCOZ1KjZ9g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllResponse.InsertErrorsData.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllResponse.InsertErrorsData.html","hash":"wGbebBvuynPPS8XbaEt9Xw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllResponse.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllResponse.html","hash":"0DiGnjDerPoUuJKsTqjSlw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableRow.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableRow.html","hash":"8+FGBmT9yNLrrLfrBwG8JA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableSchema.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableSchema.html","hash":"/rKRfhxLgMYmWBK2EJauzA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.html","hash":"G+ZtHd8q8hwQTNG6m7Tf9Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.GetRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.GetRequest.html","hash":"Oh24Q6Sr8an7fXRFtZ450w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.AltEnum.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.AltEnum.html","hash":"+jnbL27ul/gvVlU6sIBCzg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.html","hash":"Un+hxnhZ6YjhYFmyhzreBA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.TablesResource.GetRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.TablesResource.GetRequest.html","hash":"ZCdvO0OJef3M+30zcn+QMw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.TablesResource.InsertRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.TablesResource.InsertRequest.html","hash":"sKx3A0uI2DSJ2vae8Mg8Bw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.TablesResource.ListRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.TablesResource.ListRequest.html","hash":"7N5dPjmHo1H08oUPaRM+TQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.TablesResource.PatchRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.TablesResource.PatchRequest.html","hash":"0wUzgqFpfVLfGFyK89qZDQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryPage.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryPage.html","hash":"tOrDOW4u3QY5PLinuCNqEg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryParameter.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryParameter.html","hash":"ypcvBibfNpzyXIbo1w215w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryParameterCollection.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryParameterCollection.html","hash":"/mqPJdU2gkKyJ5hOzInT8Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryParameterMode.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryParameterMode.html","hash":"c1DTo//skH5s99CAI0QWJA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.DeleteDatasetOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.DeleteDatasetOptions.html","hash":"t6QX01oPKry3C0hIg7/VNQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.DeleteTableOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.DeleteTableOptions.html","hash":"G8OdcoB6Y2/e2AEHCQyAUg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.FileFormat.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.FileFormat.html","hash":"NbaJutm/bQstyJ4iAdhfQw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.Filters.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.Filters.html","hash":"qgtztwAvtF7yimQDmerQuA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.ModifyLabelsOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.ModifyLabelsOptions.html","hash":"THOSIKNZBXqciq5H3joFww=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.PatchDatasetOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.PatchDatasetOptions.html","hash":"zHSYiZ6ta6ztuIW3ceYA4w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.PatchTableOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.PatchTableOptions.html","hash":"WNbAmbtJjdDKG1nZ62IhAQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.QueryOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.QueryOptions.html","hash":"xPBQr/VyiyBpZ/Tw8ljl7Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.UploadJsonOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.UploadJsonOptions.html","hash":"AHgSSaEGwiHJ3vmPEFET3w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.WriteDisposition.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.WriteDisposition.html","hash":"Ca7dM+4UVVmyztCiIfWl+A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.html","hash":"BUjmBRNbUaNyPjwb2XVh0g=="}},"is_incremental":false,"version":""},{"type":"Conceptual","source_relative_path":"design.md","output":{".html":{"relative_path":"design.html","hash":"y+QvtCgvEFqSFWFaMf/Xvg=="}},"is_incremental":false,"version":""},{"type":"Conceptual","source_relative_path":"index.md","output":{".html":{"relative_path":"index.html","hash":"c5YpvtlL93b+YpMgki5dFw=="}},"is_incremental":false,"version":""},{"log_codes":["InvalidFileLink"],"type":"Toc","source_relative_path":"toc.yml","output":{".html":{"relative_path":"toc.html","hash":"QePl+yersdbqLrzPBx3yYA=="}},"is_incremental":false,"version":""},{"type":"Toc","source_relative_path":"obj/api/toc.yml","output":{".html":{"relative_path":"api/toc.html","hash":"0xVXuqRS/G8XtiL0Yjg+zQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.ExpirationType.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.ExpirationType.html","hash":"S5KhrZO/Gl2KdTPzy794qw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.IClock.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.IClock.html","hash":"RkY9472lyaPwRgSN1gEYTg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.PagedAsyncEnumerable-2.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.PagedAsyncEnumerable-2.html","hash":"YkfuUjUmgFkE3G9W9ElTkA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.PlatformType.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.PlatformType.html","hash":"0EJugqdLkwnjxxEFHfe8tA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.ResourceNameList-1.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.ResourceNameList-1.html","hash":"lNqO8fPLQDn7uzITx3R2Mg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.Rest.ScopedCredentialProvider.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.Rest.ScopedCredentialProvider.html","hash":"OxlColukpahZUkx/RSyXRw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.SystemClock.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.SystemClock.html","hash":"w/P2fl6dTW3L21f6eYW2OA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Api.Gax.yml","output":{".html":{"relative_path":"api/Google.Api.Gax.html","hash":"JPS/flJJRIDSusYHwu59jQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.BigtableOptions.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.BigtableOptions.html","hash":"zyWxA+l9uPtxxEEei/c6wg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.CsvOptions.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.CsvOptions.html","hash":"6cW2xiDpln70D0rDr9tWbA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration.html","hash":"tHSpWRI1LjroN7KD8GPwIw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.html","hash":"4iKxDaTffz1hdynGZy3gHQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.html","hash":"BqPULPfosI2Lq9fRa4DjeQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobConfigurationTableCopy.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobConfigurationTableCopy.html","hash":"WvwC9jsTVpRAVnb5hM8GOg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobReference.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobReference.html","hash":"pEStJE/e4FWNRxZH3Cbl3w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.JobStatistics.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.JobStatistics.html","hash":"KXnWzX1u/u+AJAlVpVPF1A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.QueryParameterType.StructTypesData.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.QueryParameterType.StructTypesData.html","hash":"Je40o4q3lplSl/rSfJg73g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.QueryParameterType.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.QueryParameterType.html","hash":"YLRUmVQCHXM8K8WYImcS9w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableDataList.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableDataList.html","hash":"hRqfQ2GK7mbKJXER1y1RxA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TableFieldSchema.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TableFieldSchema.html","hash":"YXjoPMTaprQoz+1VIu1qWQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.TimePartitioning.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.TimePartitioning.html","hash":"4rATTev/jqN+j9NC2lPI6A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.Data.UserDefinedFunctionResource.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.Data.UserDefinedFunctionResource.html","hash":"CdK5oHo3v5b446LvCAeAlg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.DatasetsResource.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.DatasetsResource.html","hash":"ZRWbgXvH/TXEvMBK7ZfuIg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.CancelRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.CancelRequest.html","hash":"059ufwdldmZnMl8nxkGQzA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.InsertRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.InsertRequest.html","hash":"zQ7KAbdalSf3UTFwVREhmg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.ProjectionEnum.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.ProjectionEnum.html","hash":"lFRGfJSdqCcpv7Qi1eYwfA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.StateFilterEnum.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.StateFilterEnum.html","hash":"CQ8ScpR+UVvSlarw7A7Cmw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.html","hash":"Vf3XjWY0XsGC/r2/EW02hg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.TablesResource.UpdateRequest.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.TablesResource.UpdateRequest.html","hash":"q68SnyU8WQLKP4qoiHyEDg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.TablesResource.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.TablesResource.html","hash":"SA8gKN8EVjpd60iEtsjBAw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Apis.Bigquery.v2.yml","output":{".html":{"relative_path":"api/Google.Apis.Bigquery.v2.html","hash":"F/EVJ2sVjK+D8yBSFtkkXQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryClient.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryClient.html","hash":"zmilfgfrmvAEyUNfZaXoHw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryResults.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryResults.html","hash":"/0O7gOD3Qs2Opxrky6XzlA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryRow.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryRow.html","hash":"8fbwclNfTPGZPVcrXSDkhQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.BigQueryTable.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.BigQueryTable.html","hash":"l7BZb5F7JyLrRGYeK/HBKw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.CancelJobOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.CancelJobOptions.html","hash":"aJpbGYugOz0VGBM5qdXCng=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.InsertOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.InsertOptions.html","hash":"KsHzLCF2mP8Jy7C8kCFLhQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.JobCreationOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.JobCreationOptions.html","hash":"oivodcde14YuhwtmX9pnrA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.JobState.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.JobState.html","hash":"SZ/AqsCJC+fXetIxImBptw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.ListDatasetsOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.ListDatasetsOptions.html","hash":"KROq5EyaoZUK0XkrbzFAng=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.UpdateDatasetOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.UpdateDatasetOptions.html","hash":"GbRWa21OZpA3nQ/IacbSGQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Google.Cloud.BigQuery.V2.UpdateTableOptions.yml","output":{".html":{"relative_path":"api/Google.Cloud.BigQuery.V2.UpdateTableOptions.html","hash":"V5zuF0ktVSWHcSWWRPZR9g=="}},"is_incremental":false,"version":""}],"incremental_info":[{"status":{"can_incremental":false,"details":"Cannot build incrementally because last build info is missing.","incrementalPhase":"build"},"processors":{"ResourceDocumentProcessor":{"can_incremental":false,"details":"Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.","incrementalPhase":"build"},"ConceptualDocumentProcessor":{"can_incremental":false,"incrementalPhase":"build"},"ManagedReferenceDocumentProcessor":{"can_incremental":false,"incrementalPhase":"build"},"RestApiDocumentProcessor":{"can_incremental":false,"details":"Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.","incrementalPhase":"build"},"TocDocumentProcessor":{"can_incremental":false,"details":"Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.","incrementalPhase":"build"}}},{"status":{"can_incremental":false,"details":"Cannot support incremental post processing, the reason is: last post processor info is null.","incrementalPhase":"postProcessing"},"processors":{}}],"version_info":{}}
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.BigQuery.V2",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "design.md",
+      "output": {
+        ".html": {
+          "relative_path": "design.html",
+          "hash": "dPxf5Jv+pD/xmSKJM4eGCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "9KEDlr3fral8W/sBBIhDSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.BatchingSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.BatchingSettings.html",
+          "hash": "Z4Iz5CWIoYVv3DNy+0c9Rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.EmptyDictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.EmptyDictionary-2.html",
+          "hash": "EePLzxktQMJy8mugloeM6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Expiration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Expiration.html",
+          "hash": "Q7uz75aviUF8lqO+UEzvKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.ExpirationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.ExpirationExtensions.html",
+          "hash": "fSmPXYaZAFJbq3UE6kSHrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.ExpirationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.ExpirationType.html",
+          "hash": "pUx84ASt/JSOkRcT5/s7Bw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.FlowControlSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.FlowControlSettings.html",
+          "hash": "amqik6qzYd6idsrf3rKclQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.GaePlatformDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.GaePlatformDetails.html",
+          "hash": "D8wtfw7WJXxcA57KMt72RA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.GaxPreconditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.GaxPreconditions.html",
+          "hash": "0HSPWyb3lwaK/tuOnVlxeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.GcePlatformDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.GcePlatformDetails.html",
+          "hash": "IpcUwkINaFlGiS4DvzE4Sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.GkePlatformDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.GkePlatformDetails.html",
+          "hash": "5MUnRJC1M2EkbIOrnlY7HQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.IClock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.IClock.html",
+          "hash": "BSSGZpMAIdt6ruZmoCt4Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.IResourceName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.IResourceName.html",
+          "hash": "1DtJK1hbA1+Bga6wf6I/mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.IScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.IScheduler.html",
+          "hash": "XHyyT+3OQmQVFQRPFVBBQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Page-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Page-1.html",
+          "hash": "8v2a1wQ/SsQUOlSIGr9nvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.PagedAsyncEnumerable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.PagedAsyncEnumerable-2.html",
+          "hash": "V/CP407GeV4j17hVoErNxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.PagedEnumerable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.PagedEnumerable-2.html",
+          "hash": "aL91juSh9tgBS2Rj86kv8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.PathTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.PathTemplate.html",
+          "hash": "43a1dt/sKh6qHvXOAmv7DQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Platform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Platform.html",
+          "hash": "uLFOpkzEnZOZhpAwtFN+0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.PlatformType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.PlatformType.html",
+          "hash": "9DlLks6h+lQ+aiwXbQn/Ww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.PollSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.PollSettings.html",
+          "hash": "6c29fEAN2JpRccJmJGQGNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Polling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Polling.html",
+          "hash": "/D5xk4R9zwjhrb6DvMToeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.ResourceMismatchException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.ResourceMismatchException.html",
+          "hash": "NxfmzxgzVHQrgyY7r+/pxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.ResourceNameKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.ResourceNameKind.html",
+          "hash": "o4lRWw/6vBoDQnrKgmSoHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.ResourceNameList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.ResourceNameList-1.html",
+          "hash": "8ORoPhMYSUX8j8kMR+J8Gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Rest.IPageManager-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Rest.IPageManager-3.html",
+          "hash": "gAcWo3lTX7hWsnVjYuMnmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Rest.RestPagedAsyncEnumerable-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Rest.RestPagedAsyncEnumerable-3.html",
+          "hash": "FCDKf4T6TpxSL/yRlJgVRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Rest.RestPagedEnumerable-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Rest.RestPagedEnumerable-3.html",
+          "hash": "67mEg9jKcFM4xSQ1nSQlyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Rest.ScopedCredentialProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Rest.ScopedCredentialProvider.html",
+          "hash": "tnukKLmUnGq5GUQyc7/pRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Rest.UserAgentHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Rest.UserAgentHelper.html",
+          "hash": "fhAjUeEuX9gtuPQr/KbAwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Rest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Rest.html",
+          "hash": "hebe1h0suEUF/WyaW0+gIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.SchedulerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.SchedulerExtensions.html",
+          "hash": "XEgMXSRRYLag3UfRutGrGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.SystemClock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.SystemClock.html",
+          "hash": "hZO4u7vthB2/zrN7bTO3cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.SystemScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.SystemScheduler.html",
+          "hash": "wkd8TbYw5O+AthJf3n+Crw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.TaskExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.TaskExtensions.html",
+          "hash": "3SveK5lEKEVooqnRZvdDfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.TemplatedResourceName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.TemplatedResourceName.html",
+          "hash": "GJgDHEqEGm+mI6vH08Ey3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.UnknownResourceName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.UnknownResourceName.html",
+          "hash": "UJrtEqT1i6Y/OFKjxjEacw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.VersionHeaderBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.VersionHeaderBuilder.html",
+          "hash": "yJ+qybSeTMiHii6L4YIeAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.html",
+          "hash": "UxD2D2R3NK4d3U0bi/0b5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.AltEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.AltEnum.html",
+          "hash": "qu1u8iy0JgBPMbxMc5KYmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.html",
+          "hash": "2N3p4lJ8pdjnmrqqzucNNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.BigqueryService.Scope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.BigqueryService.Scope.html",
+          "hash": "ZsrmHxSxqahNhVWGszllgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.BigqueryService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.BigqueryService.html",
+          "hash": "VOtUnwyg8XRjn9N4+gKtIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.BigtableColumn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.BigtableColumn.html",
+          "hash": "IVfKUtCujy38xgqvq1/ncw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.BigtableColumnFamily.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.BigtableColumnFamily.html",
+          "hash": "RbZiYxoszHIrFV7IAP3kQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.BigtableOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.BigtableOptions.html",
+          "hash": "5YDTBC2tyiIeF76EZR7ZEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.CsvOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.CsvOptions.html",
+          "hash": "3Y+IinBgNF2XFmKjdKeupQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.Dataset.AccessData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.Dataset.AccessData.html",
+          "hash": "/bA+DOCP9Fve6D+ZyokxUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.Dataset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.Dataset.html",
+          "hash": "xX/3GS7a63F7HFGxyfRF4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.DatasetList.DatasetsData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.DatasetList.DatasetsData.html",
+          "hash": "jWYGQmShho/OGfebfXSpbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.DatasetList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.DatasetList.html",
+          "hash": "uI18+0PYZSSIEneDGeaVGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.DatasetReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.DatasetReference.html",
+          "hash": "ovTz076epd+1rKCu8b1rSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.EncryptionConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.EncryptionConfiguration.html",
+          "hash": "Fs9ylOy5naUfQ5JTJchH7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.ErrorProto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.ErrorProto.html",
+          "hash": "T/TXIyao+B7UaO6vEwALLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.ExplainQueryStage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.ExplainQueryStage.html",
+          "hash": "ZYFi9Jrv5Rwo+szLXGMFlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.ExplainQueryStep.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.ExplainQueryStep.html",
+          "hash": "0jNQ1Cy0L/QT7lNCoLpWUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration.html",
+          "hash": "i/HqQegUOsUqWrRM3V2BdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.html",
+          "hash": "/ABOvNA5rAvlM8jdsuGXbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.GetServiceAccountResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.GetServiceAccountResponse.html",
+          "hash": "NJIBnbMuCScai2itFfN7QA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.GoogleSheetsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.GoogleSheetsOptions.html",
+          "hash": "2NSYN+P/V8P0Ojey88N4rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.Job.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.Job.html",
+          "hash": "q1r1J2l5C+8p4JjUzwWXqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobCancelResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobCancelResponse.html",
+          "hash": "rIvM5kdVVloUbTLTqnovHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobConfiguration.html",
+          "hash": "9gfcvPgohucWnNaGKeALXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobConfigurationExtract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobConfigurationExtract.html",
+          "hash": "H4xuNxNydz+TVgu4deGbYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.html",
+          "hash": "pz3J4RNAgme+UCBjxAlIKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.html",
+          "hash": "Hz6W7UsUCVG9KWZRDByk5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobConfigurationTableCopy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobConfigurationTableCopy.html",
+          "hash": "yyp/0VdyWTGJlOtp7yfiXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobList.JobsData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobList.JobsData.html",
+          "hash": "NP+GudhTdE/l99Ba9Qe15Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobList.html",
+          "hash": "mppnjk1wXHkg0Fa4Z78k0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobReference.html",
+          "hash": "/McUqT8oW/X+9DUkT4QF1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobStatistics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobStatistics.html",
+          "hash": "raFEcsfgbxDWtseYF2WChA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobStatistics2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobStatistics2.html",
+          "hash": "6rjEa+7UDqKJDGy8YzbSYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobStatistics3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobStatistics3.html",
+          "hash": "OTS5gTJtXJYczvsXPPItyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobStatistics4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobStatistics4.html",
+          "hash": "bDwmhnPNqM/V9xLd9QgCxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.JobStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.JobStatus.html",
+          "hash": "AtbmXZ+G2SyADnUZoZKzlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.ProjectList.ProjectsData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.ProjectList.ProjectsData.html",
+          "hash": "SwObzPRHmnKwrce758P1HA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.ProjectList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.ProjectList.html",
+          "hash": "V41iucBef75jFODaLwJypw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.ProjectReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.ProjectReference.html",
+          "hash": "RVhv1cNv43moUUrsbi4kFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.QueryParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.QueryParameter.html",
+          "hash": "1RzlJFrJJOt9ovgzxuLuqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.QueryParameterType.StructTypesData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.QueryParameterType.StructTypesData.html",
+          "hash": "pSw8T2i+vdyY5vAmS1pAew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.QueryParameterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.QueryParameterType.html",
+          "hash": "nELr1R5zUEuZ0Um/Gs1cxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.QueryParameterValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.QueryParameterValue.html",
+          "hash": "HRAi66+KvOzGe7mqDZ2M7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.QueryRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.QueryRequest.html",
+          "hash": "VMOUn0sutbdXv6lEsaoe6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.QueryResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.QueryResponse.html",
+          "hash": "AW0Ja1ZEzl2oK+wt5A2Tpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.Streamingbuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.Streamingbuffer.html",
+          "hash": "q9l7S0VA8vXsejAilVLJrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.Table.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.Table.html",
+          "hash": "jUDwpj3KsKY64mZ33ELAHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableCell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableCell.html",
+          "hash": "wiHSOoKEmYa45hMzXQizDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest.RowsData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest.RowsData.html",
+          "hash": "IsoK+wCL9sVBYYsE1wd8dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest.html",
+          "hash": "Tq88UFVkcc/L7klfPUgMkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllResponse.InsertErrorsData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllResponse.InsertErrorsData.html",
+          "hash": "wegZQlWlk5SJn8kkbqTjNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableDataInsertAllResponse.html",
+          "hash": "okey/+cZ9dxn93FiAOm7qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableDataList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableDataList.html",
+          "hash": "qaKBt+58VqIHzihXrU8cgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableFieldSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableFieldSchema.html",
+          "hash": "7/wmu3nKGqarsyKQOmnq+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableList.TablesData.ViewData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableList.TablesData.ViewData.html",
+          "hash": "LCciRxVvQJjTPkURqaAstQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableList.TablesData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableList.TablesData.html",
+          "hash": "rxHxg+uLoQh3pOqAyISKSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableList.html",
+          "hash": "rbmsLzJ6buVag78O96z6bg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableReference.html",
+          "hash": "r/Xtjug001CPB5oqDNQYVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableRow.html",
+          "hash": "Fd01ruR4kznfWlJdn3Zurw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TableSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TableSchema.html",
+          "hash": "fcDl/Tad8hcfREoUP9VWyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.TimePartitioning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.TimePartitioning.html",
+          "hash": "UGNf2EYuw7Mi9+TIm/CzPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.UserDefinedFunctionResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.UserDefinedFunctionResource.html",
+          "hash": "9DGhmgwj78/9Tm9OH+N7/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.ViewDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.ViewDefinition.html",
+          "hash": "j6E4J15Bk11Tgw478jWY6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.Data.html",
+          "hash": "rJlQN0VuF/O7w5PYNY7nnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.html",
+          "hash": "A7lF/sKjmor5KNU+tMIIqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.DatasetsResource.GetRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.DatasetsResource.GetRequest.html",
+          "hash": "LY2qEPqK0tJ/bHkAdH+EXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest.html",
+          "hash": "ZHuMQfNad0LDu9HUNrs05A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.DatasetsResource.ListRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.DatasetsResource.ListRequest.html",
+          "hash": "jCde00b6EMdfZRm5eS2n2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest.html",
+          "hash": "PF/gJVq48Rz+ttgnmzvMVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest.html",
+          "hash": "Bhm5hjmR310tka0SuKMSIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.DatasetsResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.DatasetsResource.html",
+          "hash": "j2Jnt1opd4UaXNBYK2Cpjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.CancelRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.CancelRequest.html",
+          "hash": "OResPHOB/+v34rMj/rjevw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.html",
+          "hash": "aqvoneoX+z50r/uqslzT9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.GetRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.GetRequest.html",
+          "hash": "bpWmTnWQF7qLtD640Ecajg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.AltEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.AltEnum.html",
+          "hash": "qDgKB72NVK1naNV/BXv9xA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.html",
+          "hash": "y/PDlzpa1dKttOEHSNFS0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.InsertRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.InsertRequest.html",
+          "hash": "RR5lwDae+E2GL+ovFbfXdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.ProjectionEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.ProjectionEnum.html",
+          "hash": "eScvE6hHT4+eU0VLrYCdcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.StateFilterEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.StateFilterEnum.html",
+          "hash": "WhULuKsIHumLGhFVSJLfxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.html",
+          "hash": "73T4B84cdXIBOfH6FN4eRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.QueryRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.QueryRequest.html",
+          "hash": "V+q3HrjWCiYgViAOL3j78Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.JobsResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.JobsResource.html",
+          "hash": "u8D838D32tqddiFdDbR8vg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.ProjectsResource.GetServiceAccountRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.ProjectsResource.GetServiceAccountRequest.html",
+          "hash": "E1C7EDCvgmdzd7dhGVaSHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.ProjectsResource.ListRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.ProjectsResource.ListRequest.html",
+          "hash": "bmdGz7ekAEwpo2DDKlHiCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.ProjectsResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.ProjectsResource.html",
+          "hash": "OiD63j9BmpqjRgsHlsVfgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest.html",
+          "hash": "BZVZBaaYsjYcNTD+Xr7wfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.TabledataResource.ListRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.TabledataResource.ListRequest.html",
+          "hash": "AaJMmdY5uwIv13+GTbOZtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.TabledataResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.TabledataResource.html",
+          "hash": "awpnXtqH2deodhBHy4su8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.TablesResource.DeleteRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.TablesResource.DeleteRequest.html",
+          "hash": "5OcPJJX/XxMHEguyshsIDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.TablesResource.GetRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.TablesResource.GetRequest.html",
+          "hash": "kUKU2gZBZ3WJMKDijwwTOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.TablesResource.InsertRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.TablesResource.InsertRequest.html",
+          "hash": "RwW7Y0sx2geSLwlAYDbuoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.TablesResource.ListRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.TablesResource.ListRequest.html",
+          "hash": "3ntkOexOWpUV0vSzLL2uqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.TablesResource.PatchRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.TablesResource.PatchRequest.html",
+          "hash": "sH0NYvC3vxCKKejDoSXVfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.TablesResource.UpdateRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.TablesResource.UpdateRequest.html",
+          "hash": "dQNBRm0jF31WE6aKzwHbQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.TablesResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.TablesResource.html",
+          "hash": "eQeTnxQMnAL+c9pa5TwIjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Apis.Bigquery.v2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Apis.Bigquery.v2.html",
+          "hash": "38lewWdm2AxGJaaTqBFi5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryClient.html",
+          "hash": "GmQQ0XG9Mc3H9QxrZPWJdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html",
+          "hash": "XSpJShhidk1K0hkBJDICJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryCommand.html",
+          "hash": "BBUHZXiFhFJ0Rcdhh8qg3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryDataset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryDataset.html",
+          "hash": "S8hTsFcwgJMs6hPFKFztYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryDateTimeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryDateTimeExtensions.html",
+          "hash": "PJoA15KD1+jvFMxMGGRKkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryDbType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryDbType.html",
+          "hash": "HEGmArEpL967F6GTK30UuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryFieldMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryFieldMode.html",
+          "hash": "p8KuM72ekNxKt/B830VwIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryInsertRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryInsertRow.html",
+          "hash": "vbzqZg8P6dUIgtfUc+HG5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryJob.html",
+          "hash": "zdxcKCO3SHt1I8DEPOEeFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryPage.html",
+          "hash": "PovrO6h9c+QAJvuDQPeqZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryParameter.html",
+          "hash": "MK4X4itPibljuDPpl/UQMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryParameterCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryParameterCollection.html",
+          "hash": "V9W9NBeMds6p3f9ALh4BHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryParameterMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryParameterMode.html",
+          "hash": "8SxMFly4RGZ0HT0zHiapIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryResults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryResults.html",
+          "hash": "VPfVBbqFyZ98N1fhx1MW2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryRow.html",
+          "hash": "/qS9VZYUePG398N54xqwuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryTable.html",
+          "hash": "JF+jmxhj8O+j1nTsIYE8Cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.CancelJobOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.CancelJobOptions.html",
+          "hash": "aBts5uMjpyzN4WWlik8QQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.CloudProject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.CloudProject.html",
+          "hash": "6aicHKW8PD5m0v9vQ41zoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.CompressionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.CompressionType.html",
+          "hash": "mk+dmfmQTELmMvBnNVdbpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.CreateCopyJobOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.CreateCopyJobOptions.html",
+          "hash": "FNhjBAVvyknoLf9GsbNDqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.CreateDatasetOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.CreateDatasetOptions.html",
+          "hash": "Rr/H/Z6JUn8kIu/qUBIbTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.CreateDisposition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.CreateDisposition.html",
+          "hash": "dZ3H+yR6KkOFNLRmbhezpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html",
+          "hash": "UJRzRBc3fBTSYhPmdQvX/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html",
+          "hash": "3O/UiHqly4ldap5wtuJz2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.CreateTableOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.CreateTableOptions.html",
+          "hash": "hzEMS2/dZ/IZu4oGGXMELg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.DeleteDatasetOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.DeleteDatasetOptions.html",
+          "hash": "e4CqUqG9rNocAZb9UwffZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.DeleteTableOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.DeleteTableOptions.html",
+          "hash": "33yuSRoPfXbozmkoU6KMDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.FileFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.FileFormat.html",
+          "hash": "bPwfIIJp2EeQ8NYZkGOiog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.Filters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.Filters.html",
+          "hash": "UhlDqMc0Ai9lPLV4vonjQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.GetDatasetOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.GetDatasetOptions.html",
+          "hash": "SbPxK+62Yl7SWWUZszhWAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.GetJobOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.GetJobOptions.html",
+          "hash": "ErVJScMMRAP+Vi0B6dnUOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.GetQueryResultsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.GetQueryResultsOptions.html",
+          "hash": "x6Ar6sqVZcV/3iE5RFPyMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.GetTableOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.GetTableOptions.html",
+          "hash": "LxuFX3fwgk+gUqYVA3caAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.InsertOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.InsertOptions.html",
+          "hash": "/OUP0GDIuaxAKfFZQ6iu8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.JobCreationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.JobCreationOptions.html",
+          "hash": "tvlHS3STtGJQmaJ7i70kyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.JobState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.JobState.html",
+          "hash": "MXL5CTbPLTh3j25EIMN5Qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.ListDatasetsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.ListDatasetsOptions.html",
+          "hash": "rLHMDbVqqpEFCzv7/F/MIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.ListJobsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.ListJobsOptions.html",
+          "hash": "v6wH8AUeNpbY8DOiTiLaCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.ListProjectsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.ListProjectsOptions.html",
+          "hash": "kWES4UwOIFUYTtqvppsQUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.ListRowsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.ListRowsOptions.html",
+          "hash": "M+np+3m1D0VBPr3fjTrrMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.ListTablesOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.ListTablesOptions.html",
+          "hash": "WeA1ujDIBA8n0BP2U327nA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.ModifyLabelsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.ModifyLabelsOptions.html",
+          "hash": "PdU2Ex6OqoTZLdcsrbqwxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.PatchDatasetOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.PatchDatasetOptions.html",
+          "hash": "V+G3etWBOixuXibPTjgYMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.PatchTableOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.PatchTableOptions.html",
+          "hash": "rbfyaHQbEkdrUGt3oXnsUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.QueryOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.QueryOptions.html",
+          "hash": "furSxoAtApt2UFgb/wMMGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.QueryPriority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.QueryPriority.html",
+          "hash": "7Kbmp+KIT6w9JPHvtHk0VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.TableSchemaBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.TableSchemaBuilder.html",
+          "hash": "Auemnh79T1gaGW14NRfwtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.TimePartitionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.TimePartitionType.html",
+          "hash": "z1q64dBZzYYsQfsAIHHqkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.UpdateDatasetOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.UpdateDatasetOptions.html",
+          "hash": "m1+TcT6Zk6k1qIC+SQbyaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.UpdateTableOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.UpdateTableOptions.html",
+          "hash": "DJwbRQ/V1R5FjxY0MKPjbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.UploadAvroOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html",
+          "hash": "nYbjPZNXWJkKrSHk7KGtkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.UploadCsvOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.UploadCsvOptions.html",
+          "hash": "IgMTso+6p54Vlo8Or54XKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.UploadJsonOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.UploadJsonOptions.html",
+          "hash": "LZW83BvPmeDk79gXBhncXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.WriteDisposition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.WriteDisposition.html",
+          "hash": "5dEaXdPeyjdxHAuV76/K0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.BigQuery.V2.html",
+          "hash": "1IFWN5D1Y7NkLjNayjvzGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "42MV1LR1v6dSJMKAFrzolw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "LhkrAEZAlLbeo2fR2o6j8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

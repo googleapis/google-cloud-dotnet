@@ -7,6 +7,63 @@ references:
   commentId: N:Google.Api.Gax
   fullName: Google.Api.Gax
   nameWithType: Google.Api.Gax
+- uid: Google.Api.Gax.BatchingSettings
+  name: BatchingSettings
+  href: api/Google.Api.Gax.BatchingSettings.html
+  commentId: T:Google.Api.Gax.BatchingSettings
+  fullName: Google.Api.Gax.BatchingSettings
+  nameWithType: BatchingSettings
+- uid: Google.Api.Gax.BatchingSettings.#ctor(System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.TimeSpan})
+  name: BatchingSettings(Nullable<Int64>, Nullable<Int64>, Nullable<TimeSpan>)
+  href: api/Google.Api.Gax.BatchingSettings.html#Google_Api_Gax_BatchingSettings__ctor_System_Nullable_System_Int64__System_Nullable_System_Int64__System_Nullable_System_TimeSpan__
+  commentId: M:Google.Api.Gax.BatchingSettings.#ctor(System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.TimeSpan})
+  name.vb: BatchingSettings(Nullable(Of Int64), Nullable(Of Int64), Nullable(Of TimeSpan))
+  fullName: Google.Api.Gax.BatchingSettings.BatchingSettings(System.Nullable<System.Int64>, System.Nullable<System.Int64>, System.Nullable<System.TimeSpan>)
+  fullName.vb: Google.Api.Gax.BatchingSettings.BatchingSettings(System.Nullable(Of System.Int64), System.Nullable(Of System.Int64), System.Nullable(Of System.TimeSpan))
+  nameWithType: BatchingSettings.BatchingSettings(Nullable<Int64>, Nullable<Int64>, Nullable<TimeSpan>)
+  nameWithType.vb: BatchingSettings.BatchingSettings(Nullable(Of Int64), Nullable(Of Int64), Nullable(Of TimeSpan))
+- uid: Google.Api.Gax.BatchingSettings.#ctor*
+  name: BatchingSettings
+  href: api/Google.Api.Gax.BatchingSettings.html#Google_Api_Gax_BatchingSettings__ctor_
+  commentId: Overload:Google.Api.Gax.BatchingSettings.#ctor
+  fullName: Google.Api.Gax.BatchingSettings.BatchingSettings
+  nameWithType: BatchingSettings.BatchingSettings
+- uid: Google.Api.Gax.BatchingSettings.ByteCountThreshold
+  name: ByteCountThreshold
+  href: api/Google.Api.Gax.BatchingSettings.html#Google_Api_Gax_BatchingSettings_ByteCountThreshold
+  commentId: P:Google.Api.Gax.BatchingSettings.ByteCountThreshold
+  fullName: Google.Api.Gax.BatchingSettings.ByteCountThreshold
+  nameWithType: BatchingSettings.ByteCountThreshold
+- uid: Google.Api.Gax.BatchingSettings.ByteCountThreshold*
+  name: ByteCountThreshold
+  href: api/Google.Api.Gax.BatchingSettings.html#Google_Api_Gax_BatchingSettings_ByteCountThreshold_
+  commentId: Overload:Google.Api.Gax.BatchingSettings.ByteCountThreshold
+  fullName: Google.Api.Gax.BatchingSettings.ByteCountThreshold
+  nameWithType: BatchingSettings.ByteCountThreshold
+- uid: Google.Api.Gax.BatchingSettings.DelayThreshold
+  name: DelayThreshold
+  href: api/Google.Api.Gax.BatchingSettings.html#Google_Api_Gax_BatchingSettings_DelayThreshold
+  commentId: P:Google.Api.Gax.BatchingSettings.DelayThreshold
+  fullName: Google.Api.Gax.BatchingSettings.DelayThreshold
+  nameWithType: BatchingSettings.DelayThreshold
+- uid: Google.Api.Gax.BatchingSettings.DelayThreshold*
+  name: DelayThreshold
+  href: api/Google.Api.Gax.BatchingSettings.html#Google_Api_Gax_BatchingSettings_DelayThreshold_
+  commentId: Overload:Google.Api.Gax.BatchingSettings.DelayThreshold
+  fullName: Google.Api.Gax.BatchingSettings.DelayThreshold
+  nameWithType: BatchingSettings.DelayThreshold
+- uid: Google.Api.Gax.BatchingSettings.ElementCountThreshold
+  name: ElementCountThreshold
+  href: api/Google.Api.Gax.BatchingSettings.html#Google_Api_Gax_BatchingSettings_ElementCountThreshold
+  commentId: P:Google.Api.Gax.BatchingSettings.ElementCountThreshold
+  fullName: Google.Api.Gax.BatchingSettings.ElementCountThreshold
+  nameWithType: BatchingSettings.ElementCountThreshold
+- uid: Google.Api.Gax.BatchingSettings.ElementCountThreshold*
+  name: ElementCountThreshold
+  href: api/Google.Api.Gax.BatchingSettings.html#Google_Api_Gax_BatchingSettings_ElementCountThreshold_
+  commentId: Overload:Google.Api.Gax.BatchingSettings.ElementCountThreshold
+  fullName: Google.Api.Gax.BatchingSettings.ElementCountThreshold
+  nameWithType: BatchingSettings.ElementCountThreshold
 - uid: Google.Api.Gax.EmptyDictionary`2
   name: EmptyDictionary<TKey, TValue>
   href: api/Google.Api.Gax.EmptyDictionary-2.html
@@ -110,6 +167,24 @@ references:
   commentId: Overload:Google.Api.Gax.Expiration.Type
   fullName: Google.Api.Gax.Expiration.Type
   nameWithType: Expiration.Type
+- uid: Google.Api.Gax.ExpirationExtensions
+  name: ExpirationExtensions
+  href: api/Google.Api.Gax.ExpirationExtensions.html
+  commentId: T:Google.Api.Gax.ExpirationExtensions
+  fullName: Google.Api.Gax.ExpirationExtensions
+  nameWithType: ExpirationExtensions
+- uid: Google.Api.Gax.ExpirationExtensions.CalculateDeadline(Google.Api.Gax.Expiration,Google.Api.Gax.IClock)
+  name: CalculateDeadline(Expiration, IClock)
+  href: api/Google.Api.Gax.ExpirationExtensions.html#Google_Api_Gax_ExpirationExtensions_CalculateDeadline_Google_Api_Gax_Expiration_Google_Api_Gax_IClock_
+  commentId: M:Google.Api.Gax.ExpirationExtensions.CalculateDeadline(Google.Api.Gax.Expiration,Google.Api.Gax.IClock)
+  fullName: Google.Api.Gax.ExpirationExtensions.CalculateDeadline(Google.Api.Gax.Expiration, Google.Api.Gax.IClock)
+  nameWithType: ExpirationExtensions.CalculateDeadline(Expiration, IClock)
+- uid: Google.Api.Gax.ExpirationExtensions.CalculateDeadline*
+  name: CalculateDeadline
+  href: api/Google.Api.Gax.ExpirationExtensions.html#Google_Api_Gax_ExpirationExtensions_CalculateDeadline_
+  commentId: Overload:Google.Api.Gax.ExpirationExtensions.CalculateDeadline
+  fullName: Google.Api.Gax.ExpirationExtensions.CalculateDeadline
+  nameWithType: ExpirationExtensions.CalculateDeadline
 - uid: Google.Api.Gax.ExpirationType
   name: ExpirationType
   href: api/Google.Api.Gax.ExpirationType.html
@@ -134,6 +209,51 @@ references:
   commentId: F:Google.Api.Gax.ExpirationType.Timeout
   fullName: Google.Api.Gax.ExpirationType.Timeout
   nameWithType: ExpirationType.Timeout
+- uid: Google.Api.Gax.FlowControlSettings
+  name: FlowControlSettings
+  href: api/Google.Api.Gax.FlowControlSettings.html
+  commentId: T:Google.Api.Gax.FlowControlSettings
+  fullName: Google.Api.Gax.FlowControlSettings
+  nameWithType: FlowControlSettings
+- uid: Google.Api.Gax.FlowControlSettings.#ctor(System.Nullable{System.Int64},System.Nullable{System.Int64})
+  name: FlowControlSettings(Nullable<Int64>, Nullable<Int64>)
+  href: api/Google.Api.Gax.FlowControlSettings.html#Google_Api_Gax_FlowControlSettings__ctor_System_Nullable_System_Int64__System_Nullable_System_Int64__
+  commentId: M:Google.Api.Gax.FlowControlSettings.#ctor(System.Nullable{System.Int64},System.Nullable{System.Int64})
+  name.vb: FlowControlSettings(Nullable(Of Int64), Nullable(Of Int64))
+  fullName: Google.Api.Gax.FlowControlSettings.FlowControlSettings(System.Nullable<System.Int64>, System.Nullable<System.Int64>)
+  fullName.vb: Google.Api.Gax.FlowControlSettings.FlowControlSettings(System.Nullable(Of System.Int64), System.Nullable(Of System.Int64))
+  nameWithType: FlowControlSettings.FlowControlSettings(Nullable<Int64>, Nullable<Int64>)
+  nameWithType.vb: FlowControlSettings.FlowControlSettings(Nullable(Of Int64), Nullable(Of Int64))
+- uid: Google.Api.Gax.FlowControlSettings.#ctor*
+  name: FlowControlSettings
+  href: api/Google.Api.Gax.FlowControlSettings.html#Google_Api_Gax_FlowControlSettings__ctor_
+  commentId: Overload:Google.Api.Gax.FlowControlSettings.#ctor
+  fullName: Google.Api.Gax.FlowControlSettings.FlowControlSettings
+  nameWithType: FlowControlSettings.FlowControlSettings
+- uid: Google.Api.Gax.FlowControlSettings.MaxOutstandingByteCount
+  name: MaxOutstandingByteCount
+  href: api/Google.Api.Gax.FlowControlSettings.html#Google_Api_Gax_FlowControlSettings_MaxOutstandingByteCount
+  commentId: P:Google.Api.Gax.FlowControlSettings.MaxOutstandingByteCount
+  fullName: Google.Api.Gax.FlowControlSettings.MaxOutstandingByteCount
+  nameWithType: FlowControlSettings.MaxOutstandingByteCount
+- uid: Google.Api.Gax.FlowControlSettings.MaxOutstandingByteCount*
+  name: MaxOutstandingByteCount
+  href: api/Google.Api.Gax.FlowControlSettings.html#Google_Api_Gax_FlowControlSettings_MaxOutstandingByteCount_
+  commentId: Overload:Google.Api.Gax.FlowControlSettings.MaxOutstandingByteCount
+  fullName: Google.Api.Gax.FlowControlSettings.MaxOutstandingByteCount
+  nameWithType: FlowControlSettings.MaxOutstandingByteCount
+- uid: Google.Api.Gax.FlowControlSettings.MaxOutstandingElementCount
+  name: MaxOutstandingElementCount
+  href: api/Google.Api.Gax.FlowControlSettings.html#Google_Api_Gax_FlowControlSettings_MaxOutstandingElementCount
+  commentId: P:Google.Api.Gax.FlowControlSettings.MaxOutstandingElementCount
+  fullName: Google.Api.Gax.FlowControlSettings.MaxOutstandingElementCount
+  nameWithType: FlowControlSettings.MaxOutstandingElementCount
+- uid: Google.Api.Gax.FlowControlSettings.MaxOutstandingElementCount*
+  name: MaxOutstandingElementCount
+  href: api/Google.Api.Gax.FlowControlSettings.html#Google_Api_Gax_FlowControlSettings_MaxOutstandingElementCount_
+  commentId: Overload:Google.Api.Gax.FlowControlSettings.MaxOutstandingElementCount
+  fullName: Google.Api.Gax.FlowControlSettings.MaxOutstandingElementCount
+  nameWithType: FlowControlSettings.MaxOutstandingElementCount
 - uid: Google.Api.Gax.GaePlatformDetails
   name: GaePlatformDetails
   href: api/Google.Api.Gax.GaePlatformDetails.html
@@ -344,6 +464,18 @@ references:
   commentId: Overload:Google.Api.Gax.GaxPreconditions.CheckNonNegative
   fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative
   nameWithType: GaxPreconditions.CheckNonNegative
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegativeDelay(System.TimeSpan,System.String)
+  name: CheckNonNegativeDelay(TimeSpan, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegativeDelay_System_TimeSpan_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegativeDelay(System.TimeSpan,System.String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegativeDelay(System.TimeSpan, System.String)
+  nameWithType: GaxPreconditions.CheckNonNegativeDelay(TimeSpan, String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegativeDelay*
+  name: CheckNonNegativeDelay
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegativeDelay_
+  commentId: Overload:Google.Api.Gax.GaxPreconditions.CheckNonNegativeDelay
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegativeDelay
+  nameWithType: GaxPreconditions.CheckNonNegativeDelay
 - uid: Google.Api.Gax.GaxPreconditions.CheckNotNull*
   name: CheckNotNull
   href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNotNull_
@@ -1188,6 +1320,12 @@ references:
   commentId: M:Google.Api.Gax.PollSettings.#ctor(Google.Api.Gax.Expiration,System.TimeSpan)
   fullName: Google.Api.Gax.PollSettings.PollSettings(Google.Api.Gax.Expiration, System.TimeSpan)
   nameWithType: PollSettings.PollSettings(Expiration, TimeSpan)
+- uid: Google.Api.Gax.PollSettings.#ctor(Google.Api.Gax.Expiration,System.TimeSpan,System.Double,System.TimeSpan)
+  name: PollSettings(Expiration, TimeSpan, Double, TimeSpan)
+  href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings__ctor_Google_Api_Gax_Expiration_System_TimeSpan_System_Double_System_TimeSpan_
+  commentId: M:Google.Api.Gax.PollSettings.#ctor(Google.Api.Gax.Expiration,System.TimeSpan,System.Double,System.TimeSpan)
+  fullName: Google.Api.Gax.PollSettings.PollSettings(Google.Api.Gax.Expiration, System.TimeSpan, System.Double, System.TimeSpan)
+  nameWithType: PollSettings.PollSettings(Expiration, TimeSpan, Double, TimeSpan)
 - uid: Google.Api.Gax.PollSettings.#ctor*
   name: PollSettings
   href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings__ctor_
@@ -1206,6 +1344,18 @@ references:
   commentId: Overload:Google.Api.Gax.PollSettings.Delay
   fullName: Google.Api.Gax.PollSettings.Delay
   nameWithType: PollSettings.Delay
+- uid: Google.Api.Gax.PollSettings.DelayMultiplier
+  name: DelayMultiplier
+  href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings_DelayMultiplier
+  commentId: P:Google.Api.Gax.PollSettings.DelayMultiplier
+  fullName: Google.Api.Gax.PollSettings.DelayMultiplier
+  nameWithType: PollSettings.DelayMultiplier
+- uid: Google.Api.Gax.PollSettings.DelayMultiplier*
+  name: DelayMultiplier
+  href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings_DelayMultiplier_
+  commentId: Overload:Google.Api.Gax.PollSettings.DelayMultiplier
+  fullName: Google.Api.Gax.PollSettings.DelayMultiplier
+  nameWithType: PollSettings.DelayMultiplier
 - uid: Google.Api.Gax.PollSettings.Expiration
   name: Expiration
   href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings_Expiration
@@ -1218,6 +1368,18 @@ references:
   commentId: Overload:Google.Api.Gax.PollSettings.Expiration
   fullName: Google.Api.Gax.PollSettings.Expiration
   nameWithType: PollSettings.Expiration
+- uid: Google.Api.Gax.PollSettings.MaxDelay
+  name: MaxDelay
+  href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings_MaxDelay
+  commentId: P:Google.Api.Gax.PollSettings.MaxDelay
+  fullName: Google.Api.Gax.PollSettings.MaxDelay
+  nameWithType: PollSettings.MaxDelay
+- uid: Google.Api.Gax.PollSettings.MaxDelay*
+  name: MaxDelay
+  href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings_MaxDelay_
+  commentId: Overload:Google.Api.Gax.PollSettings.MaxDelay
+  fullName: Google.Api.Gax.PollSettings.MaxDelay
+  nameWithType: PollSettings.MaxDelay
 - uid: Google.Api.Gax.ResourceMismatchException
   name: ResourceMismatchException
   href: api/Google.Api.Gax.ResourceMismatchException.html
@@ -1767,11 +1929,11 @@ references:
   commentId: Overload:Google.Api.Gax.Rest.ScopedCredentialProvider.#ctor
   fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.ScopedCredentialProvider
   nameWithType: ScopedCredentialProvider.ScopedCredentialProvider
-- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(Google.Apis.Auth.OAuth2.GoogleCredential)
+- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(GoogleCredential)
   name: GetCredentials(GoogleCredential)
-  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentials_Google_Apis_Auth_OAuth2_GoogleCredential_
-  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(Google.Apis.Auth.OAuth2.GoogleCredential)
-  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(Google.Apis.Auth.OAuth2.GoogleCredential)
+  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentials_GoogleCredential_
+  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(GoogleCredential)
+  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(GoogleCredential)
   nameWithType: ScopedCredentialProvider.GetCredentials(GoogleCredential)
 - uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials*
   name: GetCredentials
@@ -1779,11 +1941,11 @@ references:
   commentId: Overload:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials
   fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials
   nameWithType: ScopedCredentialProvider.GetCredentials
-- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential)
+- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
   name: GetCredentialsAsync(GoogleCredential)
-  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentialsAsync_Google_Apis_Auth_OAuth2_GoogleCredential_
-  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential)
-  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential)
+  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentialsAsync_GoogleCredential_
+  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
+  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
   nameWithType: ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
 - uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync*
   name: GetCredentialsAsync
@@ -2214,6 +2376,66 @@ references:
   commentId: Overload:Google.Api.Gax.UnknownResourceName.TryParse
   fullName: Google.Api.Gax.UnknownResourceName.TryParse
   nameWithType: UnknownResourceName.TryParse
+- uid: Google.Api.Gax.VersionHeaderBuilder
+  name: VersionHeaderBuilder
+  href: api/Google.Api.Gax.VersionHeaderBuilder.html
+  commentId: T:Google.Api.Gax.VersionHeaderBuilder
+  fullName: Google.Api.Gax.VersionHeaderBuilder
+  nameWithType: VersionHeaderBuilder
+- uid: Google.Api.Gax.VersionHeaderBuilder.AppendAssemblyVersion(System.String,System.Type)
+  name: AppendAssemblyVersion(String, Type)
+  href: api/Google.Api.Gax.VersionHeaderBuilder.html#Google_Api_Gax_VersionHeaderBuilder_AppendAssemblyVersion_System_String_System_Type_
+  commentId: M:Google.Api.Gax.VersionHeaderBuilder.AppendAssemblyVersion(System.String,System.Type)
+  fullName: Google.Api.Gax.VersionHeaderBuilder.AppendAssemblyVersion(System.String, System.Type)
+  nameWithType: VersionHeaderBuilder.AppendAssemblyVersion(String, Type)
+- uid: Google.Api.Gax.VersionHeaderBuilder.AppendAssemblyVersion*
+  name: AppendAssemblyVersion
+  href: api/Google.Api.Gax.VersionHeaderBuilder.html#Google_Api_Gax_VersionHeaderBuilder_AppendAssemblyVersion_
+  commentId: Overload:Google.Api.Gax.VersionHeaderBuilder.AppendAssemblyVersion
+  fullName: Google.Api.Gax.VersionHeaderBuilder.AppendAssemblyVersion
+  nameWithType: VersionHeaderBuilder.AppendAssemblyVersion
+- uid: Google.Api.Gax.VersionHeaderBuilder.AppendDotNetEnvironment
+  name: AppendDotNetEnvironment()
+  href: api/Google.Api.Gax.VersionHeaderBuilder.html#Google_Api_Gax_VersionHeaderBuilder_AppendDotNetEnvironment
+  commentId: M:Google.Api.Gax.VersionHeaderBuilder.AppendDotNetEnvironment
+  fullName: Google.Api.Gax.VersionHeaderBuilder.AppendDotNetEnvironment()
+  nameWithType: VersionHeaderBuilder.AppendDotNetEnvironment()
+- uid: Google.Api.Gax.VersionHeaderBuilder.AppendDotNetEnvironment*
+  name: AppendDotNetEnvironment
+  href: api/Google.Api.Gax.VersionHeaderBuilder.html#Google_Api_Gax_VersionHeaderBuilder_AppendDotNetEnvironment_
+  commentId: Overload:Google.Api.Gax.VersionHeaderBuilder.AppendDotNetEnvironment
+  fullName: Google.Api.Gax.VersionHeaderBuilder.AppendDotNetEnvironment
+  nameWithType: VersionHeaderBuilder.AppendDotNetEnvironment
+- uid: Google.Api.Gax.VersionHeaderBuilder.AppendVersion(System.String,System.String)
+  name: AppendVersion(String, String)
+  href: api/Google.Api.Gax.VersionHeaderBuilder.html#Google_Api_Gax_VersionHeaderBuilder_AppendVersion_System_String_System_String_
+  commentId: M:Google.Api.Gax.VersionHeaderBuilder.AppendVersion(System.String,System.String)
+  fullName: Google.Api.Gax.VersionHeaderBuilder.AppendVersion(System.String, System.String)
+  nameWithType: VersionHeaderBuilder.AppendVersion(String, String)
+- uid: Google.Api.Gax.VersionHeaderBuilder.AppendVersion*
+  name: AppendVersion
+  href: api/Google.Api.Gax.VersionHeaderBuilder.html#Google_Api_Gax_VersionHeaderBuilder_AppendVersion_
+  commentId: Overload:Google.Api.Gax.VersionHeaderBuilder.AppendVersion
+  fullName: Google.Api.Gax.VersionHeaderBuilder.AppendVersion
+  nameWithType: VersionHeaderBuilder.AppendVersion
+- uid: Google.Api.Gax.VersionHeaderBuilder.HeaderName
+  name: HeaderName
+  href: api/Google.Api.Gax.VersionHeaderBuilder.html#Google_Api_Gax_VersionHeaderBuilder_HeaderName
+  commentId: F:Google.Api.Gax.VersionHeaderBuilder.HeaderName
+  fullName: Google.Api.Gax.VersionHeaderBuilder.HeaderName
+  nameWithType: VersionHeaderBuilder.HeaderName
+- uid: Google.Api.Gax.VersionHeaderBuilder.ToString
+  name: ToString()
+  href: api/Google.Api.Gax.VersionHeaderBuilder.html#Google_Api_Gax_VersionHeaderBuilder_ToString
+  commentId: M:Google.Api.Gax.VersionHeaderBuilder.ToString
+  fullName: Google.Api.Gax.VersionHeaderBuilder.ToString()
+  nameWithType: VersionHeaderBuilder.ToString()
+- uid: Google.Api.Gax.VersionHeaderBuilder.ToString*
+  name: ToString
+  href: api/Google.Api.Gax.VersionHeaderBuilder.html#Google_Api_Gax_VersionHeaderBuilder_ToString_
+  commentId: Overload:Google.Api.Gax.VersionHeaderBuilder.ToString
+  fullName: Google.Api.Gax.VersionHeaderBuilder.ToString
+  nameWithType: VersionHeaderBuilder.ToString
 - uid: Google.Cloud.Translation.V2
   name: Google.Cloud.Translation.V2
   href: api/Google.Cloud.Translation.V2.html

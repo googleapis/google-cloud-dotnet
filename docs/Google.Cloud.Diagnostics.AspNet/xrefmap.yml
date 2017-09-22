@@ -3578,6 +3578,18 @@ references:
   commentId: Overload:Grpc.Core.GrpcEnvironment.SetCompletionQueueCount
   fullName: Grpc.Core.GrpcEnvironment.SetCompletionQueueCount
   nameWithType: GrpcEnvironment.SetCompletionQueueCount
+- uid: Grpc.Core.GrpcEnvironment.SetHandlerInlining(System.Boolean)
+  name: SetHandlerInlining(Boolean)
+  href: api/Grpc.Core.GrpcEnvironment.html#Grpc_Core_GrpcEnvironment_SetHandlerInlining_System_Boolean_
+  commentId: M:Grpc.Core.GrpcEnvironment.SetHandlerInlining(System.Boolean)
+  fullName: Grpc.Core.GrpcEnvironment.SetHandlerInlining(System.Boolean)
+  nameWithType: GrpcEnvironment.SetHandlerInlining(Boolean)
+- uid: Grpc.Core.GrpcEnvironment.SetHandlerInlining*
+  name: SetHandlerInlining
+  href: api/Grpc.Core.GrpcEnvironment.html#Grpc_Core_GrpcEnvironment_SetHandlerInlining_
+  commentId: Overload:Grpc.Core.GrpcEnvironment.SetHandlerInlining
+  fullName: Grpc.Core.GrpcEnvironment.SetHandlerInlining
+  nameWithType: GrpcEnvironment.SetHandlerInlining
 - uid: Grpc.Core.GrpcEnvironment.SetLogger(Grpc.Core.Logging.ILogger)
   name: SetLogger(ILogger)
   href: api/Grpc.Core.GrpcEnvironment.html#Grpc_Core_GrpcEnvironment_SetLogger_Grpc_Core_Logging_ILogger_
@@ -3614,6 +3626,12 @@ references:
   commentId: Overload:Grpc.Core.GrpcEnvironment.ShutdownChannelsAsync
   fullName: Grpc.Core.GrpcEnvironment.ShutdownChannelsAsync
   nameWithType: GrpcEnvironment.ShutdownChannelsAsync
+- uid: Grpc.Core.GrpcEnvironment.ShuttingDown
+  name: ShuttingDown
+  href: api/Grpc.Core.GrpcEnvironment.html#Grpc_Core_GrpcEnvironment_ShuttingDown
+  commentId: E:Grpc.Core.GrpcEnvironment.ShuttingDown
+  fullName: Grpc.Core.GrpcEnvironment.ShuttingDown
+  nameWithType: GrpcEnvironment.ShuttingDown
 - uid: Grpc.Core.IAsyncStreamReader`1
   name: IAsyncStreamReader<T>
   href: api/Grpc.Core.IAsyncStreamReader-1.html
@@ -4956,6 +4974,12 @@ references:
   commentId: M:Grpc.Core.RpcException.#ctor(Grpc.Core.Status)
   fullName: Grpc.Core.RpcException.RpcException(Grpc.Core.Status)
   nameWithType: RpcException.RpcException(Status)
+- uid: Grpc.Core.RpcException.#ctor(Grpc.Core.Status,Grpc.Core.Metadata)
+  name: RpcException(Status, Metadata)
+  href: api/Grpc.Core.RpcException.html#Grpc_Core_RpcException__ctor_Grpc_Core_Status_Grpc_Core_Metadata_
+  commentId: M:Grpc.Core.RpcException.#ctor(Grpc.Core.Status,Grpc.Core.Metadata)
+  fullName: Grpc.Core.RpcException.RpcException(Grpc.Core.Status, Grpc.Core.Metadata)
+  nameWithType: RpcException.RpcException(Status, Metadata)
 - uid: Grpc.Core.RpcException.#ctor(Grpc.Core.Status,System.String)
   name: RpcException(Status, String)
   href: api/Grpc.Core.RpcException.html#Grpc_Core_RpcException__ctor_Grpc_Core_Status_System_String_
@@ -4980,6 +5004,18 @@ references:
   commentId: Overload:Grpc.Core.RpcException.Status
   fullName: Grpc.Core.RpcException.Status
   nameWithType: RpcException.Status
+- uid: Grpc.Core.RpcException.Trailers
+  name: Trailers
+  href: api/Grpc.Core.RpcException.html#Grpc_Core_RpcException_Trailers
+  commentId: P:Grpc.Core.RpcException.Trailers
+  fullName: Grpc.Core.RpcException.Trailers
+  nameWithType: RpcException.Trailers
+- uid: Grpc.Core.RpcException.Trailers*
+  name: Trailers
+  href: api/Grpc.Core.RpcException.html#Grpc_Core_RpcException_Trailers_
+  commentId: Overload:Grpc.Core.RpcException.Trailers
+  fullName: Grpc.Core.RpcException.Trailers
+  nameWithType: RpcException.Trailers
 - uid: Grpc.Core.Server
   name: Server
   href: api/Grpc.Core.Server.html

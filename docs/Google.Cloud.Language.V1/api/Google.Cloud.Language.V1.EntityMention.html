@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EntityMention
    | Google.Cloud.Language.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -81,6 +82,13 @@ mentions are supported.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EntityMention</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Language.V1.EntityMention.html">EntityMention</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.EntityMention.html">EntityMention</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Language.V1.EntityMention.html">EntityMention</a>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -104,6 +112,33 @@ mentions are supported.</p>
   </div>
   <h3 id="properties">Properties
   </h3>
+  <a id="Google_Cloud_Language_V1_EntityMention_Sentiment_" data-uid="Google.Cloud.Language.V1.EntityMention.Sentiment*"></a>
+  <h4 id="Google_Cloud_Language_V1_EntityMention_Sentiment" data-uid="Google.Cloud.Language.V1.EntityMention.Sentiment">Sentiment</h4>
+  <div class="markdown level1 summary"><p>For calls to [AnalyzeEntitySentiment][] or if
+[AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
+true, this field will contain the sentiment expressed for this mention of
+the entity in the provided document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sentiment Sentiment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.Sentiment.html">Sentiment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Language_V1_EntityMention_Text_" data-uid="Google.Cloud.Language.V1.EntityMention.Text*"></a>
   <h4 id="Google_Cloud_Language_V1_EntityMention_Text" data-uid="Google.Cloud.Language.V1.EntityMention.Text">Text</h4>
   <div class="markdown level1 summary"><p>The mention text.</p>

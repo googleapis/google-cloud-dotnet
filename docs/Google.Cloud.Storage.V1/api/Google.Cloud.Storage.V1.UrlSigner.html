@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UrlSigner
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -234,7 +235,7 @@ well or signature validation will fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.InvalidOperationException</span></td>
-        <td><p>The <span class="paramref">credentialData</span> does not contain valid JSON service account key data.</p>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">credentialData</code> does not contain valid JSON service account key data.</p>
 </td>
       </tr>
     </tbody>
@@ -292,7 +293,7 @@ well or signature validation will fail.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.InvalidOperationException</span></td>
-        <td><p>The <span class="paramref">credentialFilePath</span> does not refer to a valid JSON service account key file.</p>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">credentialFilePath</code> does not refer to a valid JSON service account key file.</p>
 </td>
       </tr>
     </tbody>
@@ -391,11 +392,11 @@ Note that if the entity is encrypted with customer-supplied encryption keys (see
 <a href="https://cloud.google.com/storage/docs/encryption">https://cloud.google.com/storage/docs/encryption</a> for more information), the <strong>x-goog-encryption-algorithm</strong>,
 <strong>x-goog-encryption-key</strong>, and <strong>x-goog-encryption-key-sha256</strong> headers will be required when making the
 request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
-So the <span class="paramref">requestHeaders</span> specified only need to have the x-goog-encryption-algorithm header.
+So the <code data-dev-comment-type="paramref" class="paramref">requestHeaders</code> specified only need to have the x-goog-encryption-algorithm header.
 The other headers can be included, but will be ignored.
 </p>
 <p>
-Note that when GET is specified as the <span class="paramref">requestMethod</span> (or it is null, in which case GET is
+Note that when GET is specified as the <code data-dev-comment-type="paramref" class="paramref">requestMethod</code> (or it is null, in which case GET is
 used), both GET and HEAD requests can be made with the created signed URL.
 </p>
 <p>
@@ -473,12 +474,12 @@ case the signed URL never expires.</p>
   </table>
   <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-When the <span class="paramref">request</span> is specified, some of its headers will be included in the signed URL&apos;s
+When the <code data-dev-comment-type="paramref" class="paramref">request</code> is specified, some of its headers will be included in the signed URL&apos;s
 signature, and therefore must be included in requests made with the created URL. These are the Content-MD5 and
 Content-Type content headers as well as any content or request header with a name starting with &quot;x-goog-&quot;.
 </p>
 <p>
-If <span class="paramref">request</span> is null, no headers are included in the signed URL&apos;s signature, so any requests
+If <code data-dev-comment-type="paramref" class="paramref">request</code> is null, no headers are included in the signed URL&apos;s signature, so any requests
 made with the created URL must not contain Content-MD5, Content-Type, or any header starting with &quot;x-goog-&quot;.
 </p>
 <p>
@@ -486,11 +487,11 @@ Note that if the entity is encrypted with customer-supplied encryption keys (see
 <a href="https://cloud.google.com/storage/docs/encryption">https://cloud.google.com/storage/docs/encryption</a> for more information), the <strong>x-goog-encryption-algorithm</strong>,
 <strong>x-goog-encryption-key</strong>, and <strong>x-goog-encryption-key-sha256</strong> headers will be required when making the
 request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
-So the sample <span class="paramref">request</span> specified only needs to have the x-goog-encryption-algorithm request
+So the sample <code data-dev-comment-type="paramref" class="paramref">request</code> specified only needs to have the x-goog-encryption-algorithm request
 header. The other headers can be included, but will be ignored.
 </p>
 <p>
-Note that when GET is specified as the <span class="paramref">request</span>, both GET and HEAD requests can be made with
+Note that when GET is specified as the <code data-dev-comment-type="paramref" class="paramref">request</code>, both GET and HEAD requests can be made with
 the created signed URL.
 </p>
 <p>
@@ -595,11 +596,11 @@ Note that if the entity is encrypted with customer-supplied encryption keys (see
 <a href="https://cloud.google.com/storage/docs/encryption">https://cloud.google.com/storage/docs/encryption</a> for more information), the <strong>x-goog-encryption-algorithm</strong>,
 <strong>x-goog-encryption-key</strong>, and <strong>x-goog-encryption-key-sha256</strong> headers will be required when making the
 request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
-So the <span class="paramref">requestHeaders</span> specified only need to have the x-goog-encryption-algorithm header.
+So the <code data-dev-comment-type="paramref" class="paramref">requestHeaders</code> specified only need to have the x-goog-encryption-algorithm header.
 The other headers can be included, but will be ignored.
 </p>
 <p>
-Note that when GET is specified as the <span class="paramref">requestMethod</span> (or it is null, in which case GET is
+Note that when GET is specified as the <code data-dev-comment-type="paramref" class="paramref">requestMethod</code> (or it is null, in which case GET is
 used), both GET and HEAD requests can be made with the created signed URL.
 </p>
 <p>
@@ -686,12 +687,12 @@ will refer to the bucket instead of an object.</p>
   </table>
   <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-When the <span class="paramref">request</span> is specified, some of its headers will be included in the signed URL&apos;s
+When the <code data-dev-comment-type="paramref" class="paramref">request</code> is specified, some of its headers will be included in the signed URL&apos;s
 signature, and therefore must be included in requests made with the created URL. These are the Content-MD5 and
 Content-Type content headers as well as any content or request header with a name starting with &quot;x-goog-&quot;.
 </p>
 <p>
-If <span class="paramref">request</span> is null, no headers are included in the signed URL&apos;s signature, so any requests
+If <code data-dev-comment-type="paramref" class="paramref">request</code> is null, no headers are included in the signed URL&apos;s signature, so any requests
 made with the created URL must not contain Content-MD5, Content-Type, or any header starting with &quot;x-goog-&quot;.
 </p>
 <p>
@@ -699,11 +700,11 @@ Note that if the entity is encrypted with customer-supplied encryption keys (see
 <a href="https://cloud.google.com/storage/docs/encryption">https://cloud.google.com/storage/docs/encryption</a> for more information), the <strong>x-goog-encryption-algorithm</strong>,
 <strong>x-goog-encryption-key</strong>, and <strong>x-goog-encryption-key-sha256</strong> headers will be required when making the
 request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
-So the sample <span class="paramref">request</span> specified only needs to have the x-goog-encryption-algorithm request
+So the sample <code data-dev-comment-type="paramref" class="paramref">request</code> specified only needs to have the x-goog-encryption-algorithm request
 header. The other headers can be included, but will be ignored.
 </p>
 <p>
-Note that when GET is specified as the <span class="paramref">request</span>, both GET and HEAD requests can be made with
+Note that when GET is specified as the <code data-dev-comment-type="paramref" class="paramref">request</code>, both GET and HEAD requests can be made with
 the created signed URL.
 </p>
 <p>

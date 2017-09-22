@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DlpServiceClient
    | Google.Cloud.Dlp.V2Beta1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,8 +80,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DlpServiceClient</span></div>
-  </div>
       <div class="level2"><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.html">DlpServiceClientImpl</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -414,8 +415,25 @@ DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
 CreateInspectOperationRequest request = new CreateInspectOperationRequest
 {
-    InspectConfig = new InspectConfig(),
-    StorageConfig = new StorageConfig(),
+    InspectConfig = new InspectConfig
+                    {
+                        InfoTypes = {
+                                        new InfoType
+                                        {
+                                            Name = &quot;EMAIL_ADDRESS&quot;,
+                                        },
+                                    },
+                    },
+    StorageConfig = new StorageConfig
+                    {
+                        CloudStorageOptions = new CloudStorageOptions
+                                              {
+                                                  FileSet = new CloudStorageOptions.Types.FileSet
+                                                            {
+                                                                Url = &quot;gs://example_bucket/example_file.png&quot;,
+                                                            },
+                                              },
+                    },
     OutputConfig = new OutputStorageConfig(),
 };
 // Make the request
@@ -523,8 +541,25 @@ following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;inf
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
-InspectConfig inspectConfig = new InspectConfig();
-StorageConfig storageConfig = new StorageConfig();
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+StorageConfig storageConfig = new StorageConfig
+{
+    CloudStorageOptions = new CloudStorageOptions
+                          {
+                              FileSet = new CloudStorageOptions.Types.FileSet
+                                        {
+                                            Url = &quot;gs://example_bucket/example_file.png&quot;,
+                                        },
+                          },
+};
 OutputStorageConfig outputConfig = new OutputStorageConfig();
 // Make the request
 Operation&lt;InspectOperationResult, InspectOperationMetadata&gt; response =
@@ -606,8 +641,25 @@ DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
 CreateInspectOperationRequest request = new CreateInspectOperationRequest
 {
-    InspectConfig = new InspectConfig(),
-    StorageConfig = new StorageConfig(),
+    InspectConfig = new InspectConfig
+                    {
+                        InfoTypes = {
+                                        new InfoType
+                                        {
+                                            Name = &quot;EMAIL_ADDRESS&quot;,
+                                        },
+                                    },
+                    },
+    StorageConfig = new StorageConfig
+                    {
+                        CloudStorageOptions = new CloudStorageOptions
+                                              {
+                                                  FileSet = new CloudStorageOptions.Types.FileSet
+                                                            {
+                                                                Url = &quot;gs://example_bucket/example_file.png&quot;,
+                                                            },
+                                              },
+                    },
     OutputConfig = new OutputStorageConfig(),
 };
 // Make the request
@@ -715,8 +767,25 @@ following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;inf
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-InspectConfig inspectConfig = new InspectConfig();
-StorageConfig storageConfig = new StorageConfig();
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+StorageConfig storageConfig = new StorageConfig
+{
+    CloudStorageOptions = new CloudStorageOptions
+                          {
+                              FileSet = new CloudStorageOptions.Types.FileSet
+                                        {
+                                            Url = &quot;gs://example_bucket/example_file.png&quot;,
+                                        },
+                          },
+};
 OutputStorageConfig outputConfig = new OutputStorageConfig();
 // Make the request
 Operation&lt;InspectOperationResult, InspectOperationMetadata&gt; response =
@@ -823,8 +892,25 @@ following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;inf
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-InspectConfig inspectConfig = new InspectConfig();
-StorageConfig storageConfig = new StorageConfig();
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+StorageConfig storageConfig = new StorageConfig
+{
+    CloudStorageOptions = new CloudStorageOptions
+                          {
+                              FileSet = new CloudStorageOptions.Types.FileSet
+                                        {
+                                            Url = &quot;gs://example_bucket/example_file.png&quot;,
+                                        },
+                          },
+};
 OutputStorageConfig outputConfig = new OutputStorageConfig();
 // Make the request
 Operation&lt;InspectOperationResult, InspectOperationMetadata&gt; response =
@@ -912,8 +998,23 @@ Up to 100 are allowed per request.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
-InspectConfig inspectConfig = new InspectConfig();
-IEnumerable&lt;ContentItem&gt; items = new List&lt;ContentItem&gt;();
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+IEnumerable&lt;ContentItem&gt; items = new[]
+{
+    new ContentItem
+    {
+        Type = &quot;text/plain&quot;,
+        Value = &quot;My email is example@example.com.&quot;,
+    },
+};
 // Make the request
 InspectContentResponse response = dlpServiceClient.InspectContent(inspectConfig, items);
 </code></pre></div>
@@ -975,8 +1076,22 @@ DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
 InspectContentRequest request = new InspectContentRequest
 {
-    InspectConfig = new InspectConfig(),
-    Items = { },
+    InspectConfig = new InspectConfig
+                    {
+                        InfoTypes = {
+                                        new InfoType
+                                        {
+                                            Name = &quot;EMAIL_ADDRESS&quot;,
+                                        },
+                                    },
+                    },
+    Items = {
+                new ContentItem
+                {
+                    Type = &quot;text/plain&quot;,
+                    Value = &quot;My email is example@example.com.&quot;,
+                },
+            },
 };
 // Make the request
 InspectContentResponse response = dlpServiceClient.InspectContent(request);
@@ -1045,8 +1160,23 @@ Up to 100 are allowed per request.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-InspectConfig inspectConfig = new InspectConfig();
-IEnumerable&lt;ContentItem&gt; items = new List&lt;ContentItem&gt;();
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+IEnumerable&lt;ContentItem&gt; items = new[]
+{
+    new ContentItem
+    {
+        Type = &quot;text/plain&quot;,
+        Value = &quot;My email is example@example.com.&quot;,
+    },
+};
 // Make the request
 InspectContentResponse response = await dlpServiceClient.InspectContentAsync(inspectConfig, items);
 </code></pre></div>
@@ -1114,8 +1244,23 @@ Up to 100 are allowed per request.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-InspectConfig inspectConfig = new InspectConfig();
-IEnumerable&lt;ContentItem&gt; items = new List&lt;ContentItem&gt;();
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+IEnumerable&lt;ContentItem&gt; items = new[]
+{
+    new ContentItem
+    {
+        Type = &quot;text/plain&quot;,
+        Value = &quot;My email is example@example.com.&quot;,
+    },
+};
 // Make the request
 InspectContentResponse response = await dlpServiceClient.InspectContentAsync(inspectConfig, items);
 </code></pre></div>
@@ -1177,8 +1322,22 @@ DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
 InspectContentRequest request = new InspectContentRequest
 {
-    InspectConfig = new InspectConfig(),
-    Items = { },
+    InspectConfig = new InspectConfig
+                    {
+                        InfoTypes = {
+                                        new InfoType
+                                        {
+                                            Name = &quot;EMAIL_ADDRESS&quot;,
+                                        },
+                                    },
+                    },
+    Items = {
+                new ContentItem
+                {
+                    Type = &quot;text/plain&quot;,
+                    Value = &quot;My email is example@example.com.&quot;,
+                },
+            },
 };
 // Make the request
 InspectContentResponse response = await dlpServiceClient.InspectContentAsync(request);
@@ -1240,8 +1399,8 @@ DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
 ListInfoTypesRequest request = new ListInfoTypesRequest
 {
-    Category = &quot;&quot;,
-    LanguageCode = &quot;&quot;,
+    Category = &quot;PII&quot;,
+    LanguageCode = &quot;en&quot;,
 };
 // Make the request
 ListInfoTypesResponse response = dlpServiceClient.ListInfoTypes(request);
@@ -1309,8 +1468,8 @@ en-US strings will be returned.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
-string category = &quot;&quot;;
-string languageCode = &quot;&quot;;
+string category = &quot;PII&quot;;
+string languageCode = &quot;en&quot;;
 // Make the request
 ListInfoTypesResponse response = dlpServiceClient.ListInfoTypes(category, languageCode);
 </code></pre></div>
@@ -1371,8 +1530,8 @@ DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
 ListInfoTypesRequest request = new ListInfoTypesRequest
 {
-    Category = &quot;&quot;,
-    LanguageCode = &quot;&quot;,
+    Category = &quot;PII&quot;,
+    LanguageCode = &quot;en&quot;,
 };
 // Make the request
 ListInfoTypesResponse response = await dlpServiceClient.ListInfoTypesAsync(request);
@@ -1440,8 +1599,8 @@ en-US strings will be returned.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-string category = &quot;&quot;;
-string languageCode = &quot;&quot;;
+string category = &quot;PII&quot;;
+string languageCode = &quot;en&quot;;
 // Make the request
 ListInfoTypesResponse response = await dlpServiceClient.ListInfoTypesAsync(category, languageCode);
 </code></pre></div>
@@ -1508,8 +1667,8 @@ en-US strings will be returned.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-string category = &quot;&quot;;
-string languageCode = &quot;&quot;;
+string category = &quot;PII&quot;;
+string languageCode = &quot;en&quot;;
 // Make the request
 ListInfoTypesResponse response = await dlpServiceClient.ListInfoTypesAsync(category, languageCode);
 </code></pre></div>
@@ -1877,7 +2036,7 @@ DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
 ListRootCategoriesRequest request = new ListRootCategoriesRequest
 {
-    LanguageCode = &quot;&quot;,
+    LanguageCode = &quot;en&quot;,
 };
 // Make the request
 ListRootCategoriesResponse response = dlpServiceClient.ListRootCategories(request);
@@ -1999,7 +2158,7 @@ DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
 ListRootCategoriesRequest request = new ListRootCategoriesRequest
 {
-    LanguageCode = &quot;&quot;,
+    LanguageCode = &quot;en&quot;,
 };
 // Make the request
 ListRootCategoriesResponse response = await dlpServiceClient.ListRootCategoriesAsync(request);
@@ -2061,7 +2220,7 @@ en-US strings will be returned.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-string languageCode = &quot;&quot;;
+string languageCode = &quot;en&quot;;
 // Make the request
 ListRootCategoriesResponse response = await dlpServiceClient.ListRootCategoriesAsync(languageCode);
 </code></pre></div>
@@ -2122,7 +2281,7 @@ en-US strings will be returned.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-string languageCode = &quot;&quot;;
+string languageCode = &quot;en&quot;;
 // Make the request
 ListRootCategoriesResponse response = await dlpServiceClient.ListRootCategoriesAsync(languageCode);
 </code></pre></div>
@@ -2293,9 +2452,34 @@ one of these or one ImageRedactionConfig if redacting images.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
-InspectConfig inspectConfig = new InspectConfig();
-IEnumerable&lt;ContentItem&gt; items = new List&lt;ContentItem&gt;();
-IEnumerable&lt;RedactContentRequest.Types.ReplaceConfig&gt; replaceConfigs = new List&lt;RedactContentRequest.Types.ReplaceConfig&gt;();
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+IEnumerable&lt;ContentItem&gt; items = new[]
+{
+    new ContentItem
+    {
+        Type = &quot;text/plain&quot;,
+        Value = &quot;My email is example@example.com.&quot;,
+    },
+};
+IEnumerable&lt;RedactContentRequest.Types.ReplaceConfig&gt; replaceConfigs = new[]
+{
+    new RedactContentRequest.Types.ReplaceConfig
+    {
+        InfoType = new InfoType
+                   {
+                       Name = &quot;EMAIL_ADDRESS&quot;,
+                   },
+        ReplaceWith = &quot;REDACTED&quot;,
+    },
+};
 // Make the request
 RedactContentResponse response = dlpServiceClient.RedactContent(inspectConfig, items, replaceConfigs);
 </code></pre></div>
@@ -2357,9 +2541,32 @@ DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
 RedactContentRequest request = new RedactContentRequest
 {
-    InspectConfig = new InspectConfig(),
-    Items = { },
-    ReplaceConfigs = { },
+    InspectConfig = new InspectConfig
+                    {
+                        InfoTypes = {
+                                        new InfoType
+                                        {
+                                            Name = &quot;EMAIL_ADDRESS&quot;,
+                                        },
+                                    },
+                    },
+    Items = {
+                new ContentItem
+                {
+                    Type = &quot;text/plain&quot;,
+                    Value = &quot;My email is example@example.com.&quot;,
+                },
+            },
+    ReplaceConfigs = {
+                         new RedactContentRequest.Types.ReplaceConfig
+                         {
+                             InfoType = new InfoType
+                                        {
+                                            Name = &quot;EMAIL_ADDRESS&quot;,
+                                        },
+                             ReplaceWith = &quot;REDACTED&quot;,
+                         },
+                     },
 };
 // Make the request
 RedactContentResponse response = dlpServiceClient.RedactContent(request);
@@ -2433,9 +2640,34 @@ one of these or one ImageRedactionConfig if redacting images.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-InspectConfig inspectConfig = new InspectConfig();
-IEnumerable&lt;ContentItem&gt; items = new List&lt;ContentItem&gt;();
-IEnumerable&lt;RedactContentRequest.Types.ReplaceConfig&gt; replaceConfigs = new List&lt;RedactContentRequest.Types.ReplaceConfig&gt;();
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+IEnumerable&lt;ContentItem&gt; items = new[]
+{
+    new ContentItem
+    {
+        Type = &quot;text/plain&quot;,
+        Value = &quot;My email is example@example.com.&quot;,
+    },
+};
+IEnumerable&lt;RedactContentRequest.Types.ReplaceConfig&gt; replaceConfigs = new[]
+{
+    new RedactContentRequest.Types.ReplaceConfig
+    {
+        InfoType = new InfoType
+                   {
+                       Name = &quot;EMAIL_ADDRESS&quot;,
+                   },
+        ReplaceWith = &quot;REDACTED&quot;,
+    },
+};
 // Make the request
 RedactContentResponse response = await dlpServiceClient.RedactContentAsync(inspectConfig, items, replaceConfigs);
 </code></pre></div>
@@ -2508,9 +2740,34 @@ one of these or one ImageRedactionConfig if redacting images.</p>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-InspectConfig inspectConfig = new InspectConfig();
-IEnumerable&lt;ContentItem&gt; items = new List&lt;ContentItem&gt;();
-IEnumerable&lt;RedactContentRequest.Types.ReplaceConfig&gt; replaceConfigs = new List&lt;RedactContentRequest.Types.ReplaceConfig&gt;();
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+IEnumerable&lt;ContentItem&gt; items = new[]
+{
+    new ContentItem
+    {
+        Type = &quot;text/plain&quot;,
+        Value = &quot;My email is example@example.com.&quot;,
+    },
+};
+IEnumerable&lt;RedactContentRequest.Types.ReplaceConfig&gt; replaceConfigs = new[]
+{
+    new RedactContentRequest.Types.ReplaceConfig
+    {
+        InfoType = new InfoType
+                   {
+                       Name = &quot;EMAIL_ADDRESS&quot;,
+                   },
+        ReplaceWith = &quot;REDACTED&quot;,
+    },
+};
 // Make the request
 RedactContentResponse response = await dlpServiceClient.RedactContentAsync(inspectConfig, items, replaceConfigs);
 </code></pre></div>
@@ -2572,9 +2829,32 @@ DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
 RedactContentRequest request = new RedactContentRequest
 {
-    InspectConfig = new InspectConfig(),
-    Items = { },
-    ReplaceConfigs = { },
+    InspectConfig = new InspectConfig
+                    {
+                        InfoTypes = {
+                                        new InfoType
+                                        {
+                                            Name = &quot;EMAIL_ADDRESS&quot;,
+                                        },
+                                    },
+                    },
+    Items = {
+                new ContentItem
+                {
+                    Type = &quot;text/plain&quot;,
+                    Value = &quot;My email is example@example.com.&quot;,
+                },
+            },
+    ReplaceConfigs = {
+                         new RedactContentRequest.Types.ReplaceConfig
+                         {
+                             InfoType = new InfoType
+                                        {
+                                            Name = &quot;EMAIL_ADDRESS&quot;,
+                                        },
+                             ReplaceWith = &quot;REDACTED&quot;,
+                         },
+                     },
 };
 // Make the request
 RedactContentResponse response = await dlpServiceClient.RedactContentAsync(request);

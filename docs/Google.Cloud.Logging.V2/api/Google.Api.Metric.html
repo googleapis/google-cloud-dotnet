@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Metric
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -81,26 +82,11 @@ labels of a [<code>MetricDescriptor</code>][google.api.MetricDescriptor].</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Metric</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.html">Google.Api</a></h6>
   <h6><strong>Assembly</strong>: Google.Api.CommonProtos.dll</h6>
   <h5 id="Google_Api_Metric_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Metric : IMessage&lt;Metric&gt;, IMessage, IEquatable&lt;Metric&gt;, IDeepCloneable&lt;Metric&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Metric : Protobuf.IMessage&lt;Metric&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -193,7 +179,7 @@ labels of a [<code>MetricDescriptor</code>][google.api.MetricDescriptor].</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static Protobuf.Reflection.MessageDescriptor Descriptor { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +191,7 @@ labels of a [<code>MetricDescriptor</code>][google.api.MetricDescriptor].</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+        <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">Protobuf.Reflection.MessageDescriptor</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -218,7 +204,7 @@ labels listed in the <code>MetricDescriptor</code> must be assigned values.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Protobuf.Collections.MapField&lt;string, string&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,7 +216,7 @@ labels listed in the <code>MetricDescriptor</code> must be assigned values.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">Protobuf.Collections.MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -241,7 +227,7 @@ labels listed in the <code>MetricDescriptor</code> must be assigned values.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MessageParser&lt;Metric&gt; Parser { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static Protobuf.MessageParser&lt;Metric&gt; Parser { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,7 +239,7 @@ labels listed in the <code>MetricDescriptor</code> must be assigned values.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Protobuf.MessageParser-1.html">MessageParser</a>&lt;<a class="xref" href="Google.Api.Metric.html">Metric</a>&gt;</td>
+        <td><a class="xref" href="Google.Protobuf.MessageParser-1.html">Protobuf.MessageParser</a>&lt;<a class="xref" href="Google.Api.Metric.html">Metric</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -308,8 +294,6 @@ For example, <code>custom.googleapis.com/invoice/paid/amount</code>.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
   <a id="Google_Api_Metric_Clone_" data-uid="Google.Api.Metric.Clone*"></a>
   <h4 id="Google_Api_Metric_Clone" data-uid="Google.Api.Metric.Clone">Clone()</h4>
   <div class="markdown level1 summary"></div>
@@ -333,8 +317,6 @@ For example, <code>custom.googleapis.com/invoice/paid/amount</code>.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;T&gt;.Clone()</a></div>
   <a id="Google_Api_Metric_Equals_" data-uid="Google.Api.Metric.Equals*"></a>
   <h4 id="Google_Api_Metric_Equals_Google_Api_Metric_" data-uid="Google.Api.Metric.Equals(Google.Api.Metric)">Equals(Metric)</h4>
   <div class="markdown level1 summary"></div>
@@ -375,8 +357,6 @@ For example, <code>custom.googleapis.com/invoice/paid/amount</code>.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">System.IEquatable&lt;T&gt;.Equals(T)</span></div>
   <a id="Google_Api_Metric_Equals_" data-uid="Google.Api.Metric.Equals*"></a>
   <h4 id="Google_Api_Metric_Equals_System_Object_" data-uid="Google.Api.Metric.Equals(System.Object)">Equals(Object)</h4>
   <div class="markdown level1 summary"></div>
@@ -417,8 +397,6 @@ For example, <code>custom.googleapis.com/invoice/paid/amount</code>.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
   <a id="Google_Api_Metric_GetHashCode_" data-uid="Google.Api.Metric.GetHashCode*"></a>
   <h4 id="Google_Api_Metric_GetHashCode" data-uid="Google.Api.Metric.GetHashCode">GetHashCode()</h4>
   <div class="markdown level1 summary"></div>
@@ -442,8 +420,6 @@ For example, <code>custom.googleapis.com/invoice/paid/amount</code>.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Object.GetHashCode()</span></div>
   <a id="Google_Api_Metric_MergeFrom_" data-uid="Google.Api.Metric.MergeFrom*"></a>
   <h4 id="Google_Api_Metric_MergeFrom_Google_Api_Metric_" data-uid="Google.Api.Metric.MergeFrom(Google.Api.Metric)">MergeFrom(Metric)</h4>
   <div class="markdown level1 summary"></div>
@@ -469,15 +445,13 @@ For example, <code>custom.googleapis.com/invoice/paid/amount</code>.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;T&gt;.MergeFrom(T)</a></div>
   <a id="Google_Api_Metric_MergeFrom_" data-uid="Google.Api.Metric.MergeFrom*"></a>
-  <h4 id="Google_Api_Metric_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Metric.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
+  <h4 id="Google_Api_Metric_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Metric.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(Protobuf.CodedInputStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
+    <pre><code class="lang-csharp hljs">public void MergeFrom(Protobuf.CodedInputStream input)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -490,14 +464,12 @@ For example, <code>custom.googleapis.com/invoice/paid/amount</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></td>
+        <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">Protobuf.CodedInputStream</a></td>
         <td><span class="parametername">input</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
   <a id="Google_Api_Metric_ToString_" data-uid="Google.Api.Metric.ToString*"></a>
   <h4 id="Google_Api_Metric_ToString" data-uid="Google.Api.Metric.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
@@ -521,15 +493,13 @@ For example, <code>custom.googleapis.com/invoice/paid/amount</code>.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Object.ToString()</span></div>
   <a id="Google_Api_Metric_WriteTo_" data-uid="Google.Api.Metric.WriteTo*"></a>
-  <h4 id="Google_Api_Metric_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Metric.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
+  <h4 id="Google_Api_Metric_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Metric.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(Protobuf.CodedOutputStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WriteTo(Protobuf.CodedOutputStream output)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -542,41 +512,12 @@ For example, <code>custom.googleapis.com/invoice/paid/amount</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a></td>
+        <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">Protobuf.CodedOutputStream</a></td>
         <td><span class="parametername">output</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  <a id="Google_Api_Metric_Google_Protobuf_IMessage_Descriptor_" data-uid="Google.Api.Metric.Google#Protobuf#IMessage#Descriptor*"></a>
-  <h4 id="Google_Api_Metric_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Api.Metric.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_Descriptor">IMessage.Descriptor</a></div>
 </article>
           </div>
           

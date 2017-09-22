@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StressTestBase
    | Google.Cloud.Spanner.Data ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -78,29 +79,13 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">StressTestBase</span></div>
-  </div>
-      <div class="level2"><a class="xref" href="Google.Cloud.Spanner.Data.IntegrationTests.MySqlStressTests.html">MySqlStressTests</a></div>
       <div class="level2"><a class="xref" href="Google.Cloud.Spanner.Data.IntegrationTests.SpannerStressTests.html">SpannerStressTests</a></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Data.IntegrationTests.html">Google.Cloud.Spanner.Data.IntegrationTests</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Data.IntegrationTests.dll</h6>
   <h5 id="Google_Cloud_Spanner_Data_IntegrationTests_StressTestBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class StressTestBase</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class StressTestBase : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -109,7 +94,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected const int TargetQps = 100</code></pre>
+    <pre><code class="lang-csharp hljs">protected const int TargetQps = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,7 +128,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -151,7 +136,7 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Google_Cloud_Spanner_Data_IntegrationTests_StressTestBase_TestWriteLatencyWithQps_" data-uid="Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_IntegrationTests_StressTestBase_TestWriteLatencyWithQps_System_Double_System_TimeSpan_System_Func_System_Diagnostics_Stopwatch_System_Threading_Tasks_Task_System_TimeSpan___" data-uid="Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps(System.Double,System.TimeSpan,System.Func{System.Diagnostics.Stopwatch,System.Threading.Tasks.Task{System.TimeSpan}})">TestWriteLatencyWithQps(Double, TimeSpan, Func&lt;Stopwatch, Task&lt;TimeSpan&gt;&gt;)</h4>
+  <h4 id="Google_Cloud_Spanner_Data_IntegrationTests_StressTestBase_TestWriteLatencyWithQps_System_Double_TimeSpan_Func_Stopwatch_Task_TimeSpan___" data-uid="Google.Cloud.Spanner.Data.IntegrationTests.StressTestBase.TestWriteLatencyWithQps(System.Double,TimeSpan,Func{Stopwatch,Task{TimeSpan}})">TestWriteLatencyWithQps(Double, TimeSpan, Func&lt;Stopwatch, Task&lt;TimeSpan&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>These perf statistics are gathered when LogPerformanceTraces = true.
 Important statistics here are:
 SpannerTransaction.Commit.Duration: The duration to call spanner server for a commit transaction.
@@ -185,12 +170,12 @@ Right now the return value is the average latency. TODO(benwu):switch to 90th pe
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">testTime</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Diagnostics.Stopwatch</span>, <span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.TimeSpan</span>&gt;&gt;</td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Stopwatch</span>, <span class="xref">Task</span>&lt;<span class="xref">TimeSpan</span>&gt;&gt;</td>
         <td><span class="parametername">writeFunc</span></td>
         <td></td>
       </tr>
@@ -206,7 +191,7 @@ Right now the return value is the average latency. TODO(benwu):switch to 90th pe
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

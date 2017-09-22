@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PagedAsyncEnumerable&lt;TResponse, TResource&gt;
    | Google.Cloud.Language.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -83,30 +84,6 @@ one API response at a time, potentially with additional information.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.Gax.html">Google.Api.Gax</a></h6>
   <h6><strong>Assembly</strong>: Google.Api.Gax.dll</h6>
   <h5 id="Google_Api_Gax_PagedAsyncEnumerable_2_syntax">Syntax</h5>
@@ -156,7 +133,7 @@ resources to this sequence.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;TResponse&gt;</td>
+        <td><span class="xref">IAsyncEnumerable</span>&lt;TResponse&gt;</td>
         <td><p>An asynchronous sequence of raw API responses, each containing a page of resources.</p>
 </td>
       </tr>
@@ -180,13 +157,11 @@ resources to this sequence.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IAsyncEnumerator</span>&lt;TResource&gt;</td>
+        <td><span class="xref">IAsyncEnumerator</span>&lt;TResource&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;T&gt;.GetEnumerator()</span></div>
   <a id="Google_Api_Gax_PagedAsyncEnumerable_2_ReadPageAsync_" data-uid="Google.Api.Gax.PagedAsyncEnumerable`2.ReadPageAsync*"></a>
   <h4 id="Google_Api_Gax_PagedAsyncEnumerable_2_ReadPageAsync_System_Int32_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.PagedAsyncEnumerable`2.ReadPageAsync(System.Int32,System.Threading.CancellationToken)">ReadPageAsync(Int32, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Eagerly (but asynchronously) reads a single page of results with a fixed maximum size. The returned page is guaranteed
@@ -195,7 +170,7 @@ to have that many results, unless there is no more data available.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Page&lt;TResource&gt;&gt; ReadPageAsync(int pageSize, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Page&lt;TResource&gt;&gt; ReadPageAsync(int pageSize, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

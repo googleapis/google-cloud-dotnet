@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SpannerConnectionStringBuilder
    | Google.Cloud.Spanner.Data ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -82,6 +83,13 @@ Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">System.Data.Common.DbConnectionStringBuilder</span></div>
     <div class="level2"><span class="xref">SpannerConnectionStringBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.IDictionary</span></div>
+    <div><span class="xref">System.Collections.ICollection</span></div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><span class="xref">System.ComponentModel.ICustomTypeDescriptor</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -276,17 +284,15 @@ See Google Cloud documentation for more information. May be null.</p>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_Credential_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.Credential*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_Credential" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.Credential">Credential</h4>
-  <div class="markdown level1 summary"><p>The <span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span> credential used to communicate with Spanner.
-If not set, then default application credentials will be used.
-Credentials can be retrieved from a file or obtained interactively.
-See Google Cloud documentation for more information.</p>
+  <a id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_CredentialFile_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.CredentialFile*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_CredentialFile" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.CredentialFile">CredentialFile</h4>
+  <div class="markdown level1 summary"><p>Optional path to a JSON Credential file. If a Credential is not supplied, Cloud Spanner
+will use Default Application Credentials.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ITokenAccess Credential { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string CredentialFile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -298,7 +304,7 @@ See Google Cloud documentation for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -512,6 +518,35 @@ port will be used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_GetCredential_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredential*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_GetCredential" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredential">GetCredential()</h4>
+  <div class="markdown level1 summary"><p>The <span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span> credential used to communicate with Spanner.
+If not set, then default application credentials will be used.
+Credentials can be retrieved from a file or obtained interactively.
+See Google Cloud documentation for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITokenAccess GetCredential()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span></td>
         <td></td>
       </tr>
     </tbody>

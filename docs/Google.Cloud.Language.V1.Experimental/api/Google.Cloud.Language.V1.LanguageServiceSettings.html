@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LanguageServiceSettings
    | Google.Cloud.Language.V1.Experimental ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -280,6 +281,38 @@ Retry will be attempted on the following response status codes:</p>
   <h5 id="Google_Cloud_Language_V1_LanguageServiceSettings_AnnotateTextSettings_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The default <code>LanguageServiceClient.AnnotateText</code> and
 <code>LanguageServiceClient.AnnotateTextAsync</code> <a class="xref" href="Google.Api.Gax.Grpc.RetrySettings.html">RetrySettings</a> are:
+<ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
+Retry will be attempted on the following response status codes:</p>
+<p>Default RPC expiration is 600000 milliseconds.</p>
+</div>
+  <a id="Google_Cloud_Language_V1_LanguageServiceSettings_ClassifyTextSettings_" data-uid="Google.Cloud.Language.V1.LanguageServiceSettings.ClassifyTextSettings*"></a>
+  <h4 id="Google_Cloud_Language_V1_LanguageServiceSettings_ClassifyTextSettings" data-uid="Google.Cloud.Language.V1.LanguageServiceSettings.ClassifyTextSettings">ClassifyTextSettings</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> for synchronous and asynchronous calls to
+<code>LanguageServiceClient.ClassifyText</code> and <code>LanguageServiceClient.ClassifyTextAsync</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CallSettings ClassifyTextSettings { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Language_V1_LanguageServiceSettings_ClassifyTextSettings_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The default <code>LanguageServiceClient.ClassifyText</code> and
+<code>LanguageServiceClient.ClassifyTextAsync</code> <a class="xref" href="Google.Api.Gax.Grpc.RetrySettings.html">RetrySettings</a> are:
 <ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
 <p>Default RPC expiration is 600000 milliseconds.</p>

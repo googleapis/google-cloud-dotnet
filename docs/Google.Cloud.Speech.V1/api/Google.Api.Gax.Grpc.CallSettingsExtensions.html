@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CallSettingsExtensions
    | Google.Cloud.Speech.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -115,8 +116,8 @@ All methods accept a null first parameter as valid unless stated otherwise.</p>
   </h3>
   <a id="Google_Api_Gax_Grpc_CallSettingsExtensions_MergedWith_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.MergedWith*"></a>
   <h4 id="Google_Api_Gax_Grpc_CallSettingsExtensions_MergedWith_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.MergedWith(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.CallSettings)">MergedWith(CallSettings, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>This method merges the settings in <span class="paramref">overlaid</span> with those in
-<span class="paramref">original</span>, with <span class="paramref">overlaid</span> taking priority.
+  <div class="markdown level1 summary"><p>This method merges the settings in <code data-dev-comment-type="paramref" class="paramref">overlaid</code> with those in
+<code data-dev-comment-type="paramref" class="paramref">original</code>, with <code data-dev-comment-type="paramref" class="paramref">overlaid</code> taking priority.
 If both arguments are null, the result is null. If one argument is null,
 the other argument is returned. Otherwise, a new object is created with a property-wise
 overlay, where null values do not override non-null values.
@@ -169,9 +170,9 @@ performed, then the mutation in the overlay.</p>
     </tbody>
   </table>
   <a id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallCredentials_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithCallCredentials*"></a>
-  <h4 id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallCredentials_Google_Api_Gax_Grpc_CallSettings_Grpc_Core_CallCredentials_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithCallCredentials(Google.Api.Gax.Grpc.CallSettings,Grpc.Core.CallCredentials)">WithCallCredentials(CallSettings, CallCredentials)</h4>
+  <h4 id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallCredentials_Google_Api_Gax_Grpc_CallSettings_CallCredentials_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithCallCredentials(Google.Api.Gax.Grpc.CallSettings,CallCredentials)">WithCallCredentials(CallSettings, CallCredentials)</h4>
   <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> with the specified call credentials,
-merged with the (optional) original settings specified by <span class="paramref">settings</span>.</p>
+merged with the (optional) original settings specified by <code data-dev-comment-type="paramref" class="paramref">settings</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -196,11 +197,11 @@ will only contain call credentials.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallCredentials.html">CallCredentials</a></td>
+        <td><span class="xref">CallCredentials</span></td>
         <td><span class="parametername">credentials</span></td>
         <td><p>Call credentials for the new call settings.
-This may be null, in which case any call credentials in <span class="paramref">settings</span> are
-not present in the new call settings. If both this and <span class="paramref">settings</span> are null,
+This may be null, in which case any call credentials in <code data-dev-comment-type="paramref" class="paramref">settings</code> are
+not present in the new call settings. If both this and <code data-dev-comment-type="paramref" class="paramref">settings</code> are null,
 the return value is null.</p>
 </td>
       </tr>
@@ -225,7 +226,7 @@ the return value is null.</p>
   <a id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallTiming_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithCallTiming*"></a>
   <h4 id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallTiming_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_CallTiming_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithCallTiming(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.CallTiming)">WithCallTiming(CallSettings, CallTiming)</h4>
   <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> with the specified call timing,
-merged with the (optional) original settings specified by <span class="paramref">settings</span>.</p>
+merged with the (optional) original settings specified by <code data-dev-comment-type="paramref" class="paramref">settings</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -253,8 +254,8 @@ will only contain call timing.</p>
         <td><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html">CallTiming</a></td>
         <td><span class="parametername">timing</span></td>
         <td><p>Call timing for the new call settings.
-This may be null, in which case any call timing in <span class="paramref">settings</span> are
-not present in the new call settings. If both this and <span class="paramref">settings</span> are null,
+This may be null, in which case any call timing in <code data-dev-comment-type="paramref" class="paramref">settings</code> are
+not present in the new call settings. If both this and <code data-dev-comment-type="paramref" class="paramref">settings</code> are null,
 the return value is null.</p>
 </td>
       </tr>
@@ -279,7 +280,7 @@ the return value is null.</p>
   <a id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithCancellationToken_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithCancellationToken*"></a>
   <h4 id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithCancellationToken_Google_Api_Gax_Grpc_CallSettings_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithCancellationToken(Google.Api.Gax.Grpc.CallSettings,System.Threading.CancellationToken)">WithCancellationToken(CallSettings, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> with the specified cancellation token,
-merged with the (optional) original settings specified by <span class="paramref">settings</span>.</p>
+merged with the (optional) original settings specified by <code data-dev-comment-type="paramref" class="paramref">settings</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -329,9 +330,9 @@ will only contain the cancellation token.</p>
   </table>
   <a id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithEarlierDeadline_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithEarlierDeadline*"></a>
   <h4 id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithEarlierDeadline_Google_Api_Gax_Grpc_CallSettings_System_Nullable_System_DateTime__Google_Api_Gax_IClock_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithEarlierDeadline(Google.Api.Gax.Grpc.CallSettings,System.Nullable{System.DateTime},Google.Api.Gax.IClock)">WithEarlierDeadline(CallSettings, Nullable&lt;DateTime&gt;, IClock)</h4>
-  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> which will have an effective deadline of at least <span class="paramref">deadline</span>.
-If <span class="paramref">settings</span> already observes an earlier deadline (with respect to <span class="paramref">clock</span>),
-or if <span class="paramref">deadline</span> is null, the original settings will be returned.</p>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> which will have an effective deadline of at least <code data-dev-comment-type="paramref" class="paramref">deadline</code>.
+If <code data-dev-comment-type="paramref" class="paramref">settings</code> already observes an earlier deadline (with respect to <code data-dev-comment-type="paramref" class="paramref">clock</code>),
+or if <code data-dev-comment-type="paramref" class="paramref">deadline</code> is null, the original settings will be returned.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -384,10 +385,62 @@ or if <span class="paramref">deadline</span> is null, the original settings will
       </tr>
     </tbody>
   </table>
+  <a id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithExpiration_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithExpiration*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithExpiration_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Expiration_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithExpiration(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Expiration)">WithExpiration(CallSettings, Expiration)</h4>
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> with the given the expiration, merged with the (optional) original settings specified by <code data-dev-comment-type="paramref" class="paramref">settings</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CallSettings WithExpiration(this CallSettings settings, Expiration expiration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Existing settings. May be null, meaning there are currently no settings.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Expiration.html">Expiration</a></td>
+        <td><span class="parametername">expiration</span></td>
+        <td><p>Expiration to use in the returned settings, possibly as part of a retry. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithExpiration_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Expiration__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <code data-dev-comment-type="paramref" class="paramref">settings</code> is non-null and has retry-based timing, the returned settings will have the same timing, but with the specified
+expiration. Otherwise, the returned settings will have a simple expiration.</p>
+</div>
   <a id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithHeader_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithHeader*"></a>
   <h4 id="Google_Api_Gax_Grpc_CallSettingsExtensions_WithHeader_Google_Api_Gax_Grpc_CallSettings_System_String_System_String_" data-uid="Google.Api.Gax.Grpc.CallSettingsExtensions.WithHeader(Google.Api.Gax.Grpc.CallSettings,System.String,System.String)">WithHeader(CallSettings, String, String)</h4>
   <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> with the specified header,
-merged with the (optional) original settings specified by <span class="paramref">settings</span>.</p>
+merged with the (optional) original settings specified by <code data-dev-comment-type="paramref" class="paramref">settings</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

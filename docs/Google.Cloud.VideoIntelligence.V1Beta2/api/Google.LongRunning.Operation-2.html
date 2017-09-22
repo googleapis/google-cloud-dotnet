@@ -1,0 +1,1196 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Operation&lt;TResponse, TMetadata&gt;
+   | Google.Cloud.VideoIntelligence.V1Beta2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Operation&lt;TResponse, TMetadata&gt;
+   | Google.Cloud.VideoIntelligence.V1Beta2 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.LongRunning.Operation`2">
+  
+  
+  <h1 id="Google_LongRunning_Operation_2" data-uid="Google.LongRunning.Operation`2" class="text-break">Class Operation&lt;TResponse, TMetadata&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A long-running operation with an associated client, and which knows the expected response type.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Operation&lt;TResponse, TMetadata&gt;</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.LongRunning.html">Google.LongRunning</a></h6>
+  <h6><strong>Assembly</strong>: Google.LongRunning.dll</h6>
+  <h5 id="Google_LongRunning_Operation_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Operation&lt;TResponse, TMetadata&gt;
+    where TResponse : class, IMessage&lt;TResponse&gt;, new ()where TMetadata : class, IMessage&lt;TMetadata&gt;, new ()</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResponse</span></td>
+        <td><p>The response message type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TMetadata</span></td>
+        <td><p>The metata message type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+For simplicity, no methods on this type modify the proto message. Instead, to get up-to-date
+information you can use Refresh to obtain a new instance.
+</p>
+<p>
+If the operation was created with a different major version of the service API than expected,
+the metadata and response values may not be of the expected type. There are three approaches to handling this:
+<ul><li>To fail with an exception if an unexpected type of value is present, use the <a class="xref" href="Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_Result">Result</a>
+    and <a class="xref" href="Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_Metadata">Metadata</a> properties.</li><li>To receive a null reference if an unexpected type of value is present, use the <a class="xref" href="Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_GetResultOrNull">GetResultOrNull()</a>
+    and <a class="xref" href="Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_GetMetadataOrNull">GetMetadataOrNull()</a> methods. You can then check the returned value and ignore nulls.</li><li>To handle multiple types, use the <a class="xref" href="Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_RpcMessage">RpcMessage</a> property and its <a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation_Response">Response</a> and <a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation_Metadata">Metadata</a>
+    properties, of type <a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a>. You can then use <a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html#Google_Protobuf_WellKnownTypes_Any_TypeUrl">TypeUrl</a> to determine the type of the value to unpack, or
+<a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html#Google_Protobuf_WellKnownTypes_Any_TryUnpack__1___0__">TryUnpack&lt;T&gt;(out T)</a> with each type you support.</li></ul>
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_LongRunning_Operation_2__ctor_" data-uid="Google.LongRunning.Operation`2.#ctor*"></a>
+  <h4 id="Google_LongRunning_Operation_2__ctor_Google_LongRunning_Operation_Google_LongRunning_OperationsClient_" data-uid="Google.LongRunning.Operation`2.#ctor(Google.LongRunning.Operation,Google.LongRunning.OperationsClient)">Operation(Operation, OperationsClient)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new instance from the given RPC message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Operation(Operation rpcMessage, OperationsClient client)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td><span class="parametername">rpcMessage</span></td>
+        <td><p>The RPC message describing the operation. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The client to use for further calls. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_LongRunning_Operation_2_Client_" data-uid="Google.LongRunning.Operation`2.Client*"></a>
+  <h4 id="Google_LongRunning_Operation_2_Client" data-uid="Google.LongRunning.Operation`2.Client">Client</h4>
+  <div class="markdown level1 summary"><p>The client to use when making RPCs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OperationsClient Client { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_Exception_" data-uid="Google.LongRunning.Operation`2.Exception*"></a>
+  <h4 id="Google_LongRunning_Operation_2_Exception" data-uid="Google.LongRunning.Operation`2.Exception">Exception</h4>
+  <div class="markdown level1 summary"><p>The error associated with the operation, as an <a class="xref" href="Google.LongRunning.OperationFailedException.html">OperationFailedException</a>, or <code>null</code>
+if the operation is not in an error state (either because it completed successfully, or because it
+has not yet completed).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OperationFailedException Exception { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationFailedException.html">OperationFailedException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_Exception_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.</p>
+</div>
+  <a id="Google_LongRunning_Operation_2_IsCompleted_" data-uid="Google.LongRunning.Operation`2.IsCompleted*"></a>
+  <h4 id="Google_LongRunning_Operation_2_IsCompleted" data-uid="Google.LongRunning.Operation`2.IsCompleted">IsCompleted</h4>
+  <div class="markdown level1 summary"><p>Whether the operation has completed, where &quot;complete&quot; can include &quot;failed&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCompleted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_IsCompleted_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.</p>
+</div>
+  <a id="Google_LongRunning_Operation_2_IsFaulted_" data-uid="Google.LongRunning.Operation`2.IsFaulted*"></a>
+  <h4 id="Google_LongRunning_Operation_2_IsFaulted" data-uid="Google.LongRunning.Operation`2.IsFaulted">IsFaulted</h4>
+  <div class="markdown level1 summary"><p>Whether the operation has completed with a failure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFaulted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_Metadata_" data-uid="Google.LongRunning.Operation`2.Metadata*"></a>
+  <h4 id="Google_LongRunning_Operation_2_Metadata" data-uid="Google.LongRunning.Operation`2.Metadata">Metadata</h4>
+  <div class="markdown level1 summary"><p>Retrieves the metadata associated with this operation, or <code>null</code> if there is no
+metadata in the underlying response message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TMetadata Metadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMetadata</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_Metadata_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.
+See the <a class="xref" href="Google.LongRunning.Operation.html">Operation</a> documentation for information about dealing with different metadata type versions.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>Metadata is present, but is not of the expected type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_Name_" data-uid="Google.LongRunning.Operation`2.Name*"></a>
+  <h4 id="Google_LongRunning_Operation_2_Name" data-uid="Google.LongRunning.Operation`2.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Returns the name of the operation, which can be persisted and used to poll for the latest
+results at a later time or in a different program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_Name_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.</p>
+</div>
+  <a id="Google_LongRunning_Operation_2_Result_" data-uid="Google.LongRunning.Operation`2.Result*"></a>
+  <h4 id="Google_LongRunning_Operation_2_Result" data-uid="Google.LongRunning.Operation`2.Result">Result</h4>
+  <div class="markdown level1 summary"><p>Retrieves the result of the operation, throwing an exception if the operation failed, hasn&apos;t completed,
+or has an unexpected result type. Unlike <span class="xref">System.Threading.Tasks.Task`1.Result</span>, this does not block.
+If the operation has completed but the result is not present (for example due to being excluded by
+a field mask) this returns null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TResponse Result { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResponse</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_Result_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.
+See the <a class="xref" href="Google.LongRunning.Operation.html">Operation</a> documentation for information about dealing with different response type versions.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationFailedException.html">OperationFailedException</a></td>
+        <td><p>The operation completed with an error.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The operation has not completed yet, or the result is present but
+not of the expected result type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_RpcMessage_" data-uid="Google.LongRunning.Operation`2.RpcMessage*"></a>
+  <h4 id="Google_LongRunning_Operation_2_RpcMessage" data-uid="Google.LongRunning.Operation`2.RpcMessage">RpcMessage</h4>
+  <div class="markdown level1 summary"><p>The protobuf message associated with the long-running operation, containing the name (for
+further retrieval) and any error/result already computed. This should not be mutated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Operation RpcMessage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_LongRunning_Operation_2_Cancel_" data-uid="Google.LongRunning.Operation`2.Cancel*"></a>
+  <h4 id="Google_LongRunning_Operation_2_Cancel_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.Operation`2.Cancel(Google.Api.Gax.Grpc.CallSettings)">Cancel(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Attempts to cancel the long-running operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Cancel(CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>Any overriding call settings to apply to the RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_CancelAsync_" data-uid="Google.LongRunning.Operation`2.CancelAsync*"></a>
+  <h4 id="Google_LongRunning_Operation_2_CancelAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.Operation`2.CancelAsync(Google.Api.Gax.Grpc.CallSettings)">CancelAsync(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously attempts to cancel the long-running operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task CancelAsync(CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>Any overriding call settings to apply to the RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the asynchronous cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_CancelAsync_" data-uid="Google.LongRunning.Operation`2.CancelAsync*"></a>
+  <h4 id="Google_LongRunning_Operation_2_CancelAsync_System_Threading_CancellationToken_" data-uid="Google.LongRunning.Operation`2.CancelAsync(System.Threading.CancellationToken)">CancelAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously attempts to cancel the long-running operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task CancelAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token for the cancel RPC.
+Note that this is not a cancellation token for the long-running operation itself.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the asynchronous cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_Delete_" data-uid="Google.LongRunning.Operation`2.Delete*"></a>
+  <h4 id="Google_LongRunning_Operation_2_Delete_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.Operation`2.Delete(Google.Api.Gax.Grpc.CallSettings)">Delete(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes the long-running operation. This does not cancel it; it
+only indicates that the client is no longer interested in the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete(CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>Any overriding call settings to apply to the RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_DeleteAsync_" data-uid="Google.LongRunning.Operation`2.DeleteAsync*"></a>
+  <h4 id="Google_LongRunning_Operation_2_DeleteAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.Operation`2.DeleteAsync(Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously deletes the long-running operation. This does not cancel it; it
+only indicates that the client is no longer interested in the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task DeleteAsync(CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>Any overriding call settings to apply to the RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the asynchronous deletion operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_DeleteAsync_" data-uid="Google.LongRunning.Operation`2.DeleteAsync*"></a>
+  <h4 id="Google_LongRunning_Operation_2_DeleteAsync_System_Threading_CancellationToken_" data-uid="Google.LongRunning.Operation`2.DeleteAsync(System.Threading.CancellationToken)">DeleteAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously deletes the long-running operation. This does not cancel it; it
+only indicates that the client is no longer interested in the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task DeleteAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token for the cancel RPC.
+Note that this is not a cancellation token for the long-running operation itself.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the asynchronous deletion operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_GetMetadataOrNull_" data-uid="Google.LongRunning.Operation`2.GetMetadataOrNull*"></a>
+  <h4 id="Google_LongRunning_Operation_2_GetMetadataOrNull" data-uid="Google.LongRunning.Operation`2.GetMetadataOrNull">GetMetadataOrNull()</h4>
+  <div class="markdown level1 summary"><p>Retrieves the metadata associated with this operation, or <code>null</code> if either there is no
+metadata in the underlying response message, or it does not have the expected type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TMetadata GetMetadataOrNull()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMetadata</span></td>
+        <td><p>The metadata of the operation if possible, or null otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_GetMetadataOrNull_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.
+See the <a class="xref" href="Google.LongRunning.Operation.html">Operation</a> documentation for information about dealing with different metadata type versions.</p>
+</div>
+  <a id="Google_LongRunning_Operation_2_GetResultOrNull_" data-uid="Google.LongRunning.Operation`2.GetResultOrNull*"></a>
+  <h4 id="Google_LongRunning_Operation_2_GetResultOrNull" data-uid="Google.LongRunning.Operation`2.GetResultOrNull">GetResultOrNull()</h4>
+  <div class="markdown level1 summary"><p>Retrieves the result of the operation, or null if the operation failed, hasn&apos;t completed, has an
+unexpected result type, or didn&apos;t contain a result at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TResponse GetResultOrNull()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResponse</span></td>
+        <td><p>The result of the operation if possible, or null otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_GetResultOrNull_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.
+See the <a class="xref" href="Google.LongRunning.Operation.html">Operation</a> documentation for information about dealing with different response type versions.</p>
+</div>
+  <a id="Google_LongRunning_Operation_2_PollOnce_" data-uid="Google.LongRunning.Operation`2.PollOnce*"></a>
+  <h4 id="Google_LongRunning_Operation_2_PollOnce_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.Operation`2.PollOnce(Google.Api.Gax.Grpc.CallSettings)">PollOnce(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns a new instance reflecting the most recent state of the operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Operation&lt;TResponse, TMetadata&gt; PollOnce(CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>Any overriding call settings to apply to the RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;TResponse, TMetadata&gt;</td>
+        <td><p>The most recent state of the operation, or a reference to the same
+object if the operation has already completed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_PollOnceAsync_" data-uid="Google.LongRunning.Operation`2.PollOnceAsync*"></a>
+  <h4 id="Google_LongRunning_Operation_2_PollOnceAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.Operation`2.PollOnceAsync(Google.Api.Gax.Grpc.CallSettings)">PollOnceAsync(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously returns a new instance reflecting the most recent state of the operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Operation&lt;TResponse, TMetadata&gt;&gt; PollOnceAsync(CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>Any overriding call settings to apply to the RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;TResponse, TMetadata&gt;&gt;</td>
+        <td><p>A task representing the asynchronous poll operation. The result of the task is 
+the most recent state of the operation, or a reference to the same
+object if the operation has already completed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_PollOnceAsync_" data-uid="Google.LongRunning.Operation`2.PollOnceAsync*"></a>
+  <h4 id="Google_LongRunning_Operation_2_PollOnceAsync_System_Threading_CancellationToken_" data-uid="Google.LongRunning.Operation`2.PollOnceAsync(System.Threading.CancellationToken)">PollOnceAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously returns a new instance reflecting the most recent state of the operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Operation&lt;TResponse, TMetadata&gt;&gt; PollOnceAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token for the poll operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;TResponse, TMetadata&gt;&gt;</td>
+        <td><p>A task representing the asynchronous poll operation. The result of the task is 
+the most recent state of the operation, or a reference to the same
+object if the operation has already completed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_PollOnceFromName_" data-uid="Google.LongRunning.Operation`2.PollOnceFromName*"></a>
+  <h4 id="Google_LongRunning_Operation_2_PollOnceFromName_System_String_Google_LongRunning_OperationsClient_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.Operation`2.PollOnceFromName(System.String,Google.LongRunning.OperationsClient,Google.Api.Gax.Grpc.CallSettings)">PollOnceFromName(String, OperationsClient, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance reflecting the most recent state of the operation with the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Operation&lt;TResponse, TMetadata&gt; PollOnceFromName(string name, OperationsClient client, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the operation, as returned when it was created. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The client to make the RPC call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>Any overriding call settings to apply to the RPC. May be null, in which case
+the default settings are used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;TResponse, TMetadata&gt;</td>
+        <td><p>The current state of the operation identified by <code data-dev-comment-type="paramref" class="paramref">name</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_PollOnceFromNameAsync_" data-uid="Google.LongRunning.Operation`2.PollOnceFromNameAsync*"></a>
+  <h4 id="Google_LongRunning_Operation_2_PollOnceFromNameAsync_System_String_Google_LongRunning_OperationsClient_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.Operation`2.PollOnceFromNameAsync(System.String,Google.LongRunning.OperationsClient,Google.Api.Gax.Grpc.CallSettings)">PollOnceFromNameAsync(String, OperationsClient, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a new instance reflecting the most recent state of the operation with the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Operation&lt;TResponse, TMetadata&gt;&gt; PollOnceFromNameAsync(string name, OperationsClient client, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the operation, as returned when it was created. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The client to make the RPC call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>Any overriding call settings to apply to the RPC. May be null, in which case
+the default settings are used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;TResponse, TMetadata&gt;&gt;</td>
+        <td><p>A task representing the asynchronous &quot;fetch&quot; operation. The result of the task is
+the current state of the operation identified by <code data-dev-comment-type="paramref" class="paramref">name</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_PollOnceFromNameAsync_" data-uid="Google.LongRunning.Operation`2.PollOnceFromNameAsync*"></a>
+  <h4 id="Google_LongRunning_Operation_2_PollOnceFromNameAsync_System_String_Google_LongRunning_OperationsClient_System_Threading_CancellationToken_" data-uid="Google.LongRunning.Operation`2.PollOnceFromNameAsync(System.String,Google.LongRunning.OperationsClient,System.Threading.CancellationToken)">PollOnceFromNameAsync(String, OperationsClient, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a new instance reflecting the most recent state of the operation with the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Operation&lt;TResponse, TMetadata&gt;&gt; PollOnceFromNameAsync(string name, OperationsClient client, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the operation, as returned when it was created. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The client to make the RPC call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token for the &quot;fetch&quot; operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;TResponse, TMetadata&gt;&gt;</td>
+        <td><p>A task representing the asynchronous &quot;fetch&quot; operation. The result of the task is
+the current state of the operation identified by <code data-dev-comment-type="paramref" class="paramref">name</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_LongRunning_Operation_2_PollUntilCompleted_" data-uid="Google.LongRunning.Operation`2.PollUntilCompleted*"></a>
+  <h4 id="Google_LongRunning_Operation_2_PollUntilCompleted_Google_Api_Gax_PollSettings_Google_Api_Gax_Grpc_CallSettings_System_Action__1__" data-uid="Google.LongRunning.Operation`2.PollUntilCompleted(Google.Api.Gax.PollSettings,Google.Api.Gax.Grpc.CallSettings,System.Action{`1})">PollUntilCompleted(PollSettings, CallSettings, Action&lt;TMetadata&gt;)</h4>
+  <div class="markdown level1 summary"><p>Polls the operation until it is complete, returning the completed operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Operation&lt;TResponse, TMetadata&gt; PollUntilCompleted(PollSettings pollSettings = null, CallSettings callSettings = null, Action&lt;TMetadata&gt; metadataCallback = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
+        <td><span class="parametername">pollSettings</span></td>
+        <td><p>The settings to use for repeated polling, or null
+to use the default poll settings (poll once every 10 seconds, forever).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>The call settings to apply on each call, or null for default settings.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TMetadata&gt;</td>
+        <td><span class="parametername">metadataCallback</span></td>
+        <td><p>The callback to invoke with the metadata from each poll operation, even if the metadata is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;TResponse, TMetadata&gt;</td>
+        <td><p>The completed operation, which can then be checked for errors or a result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_PollUntilCompleted_Google_Api_Gax_PollSettings_Google_Api_Gax_Grpc_CallSettings_System_Action__1___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+If this object already represents a completed operation, it is returned with no further RPCs.
+If <code data-dev-comment-type="paramref" class="paramref">metadataCallback</code> is non-null, the callback will be called with any metadata
+present before the result is returned.
+</p>
+<p>
+Each callback is performed synchronously: this method waits for the callback to complete before the operation is next polled.
+This guarantees that for a single call, metadata callbacks will never occur in parallel.
+</p>
+</div>
+  <a id="Google_LongRunning_Operation_2_PollUntilCompletedAsync_" data-uid="Google.LongRunning.Operation`2.PollUntilCompletedAsync*"></a>
+  <h4 id="Google_LongRunning_Operation_2_PollUntilCompletedAsync_Google_Api_Gax_PollSettings_Google_Api_Gax_Grpc_CallSettings_System_Action__1__" data-uid="Google.LongRunning.Operation`2.PollUntilCompletedAsync(Google.Api.Gax.PollSettings,Google.Api.Gax.Grpc.CallSettings,System.Action{`1})">PollUntilCompletedAsync(PollSettings, CallSettings, Action&lt;TMetadata&gt;)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously polls the operation until it is complete, returning the completed operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Operation&lt;TResponse, TMetadata&gt;&gt; PollUntilCompletedAsync(PollSettings pollSettings = null, CallSettings callSettings = null, Action&lt;TMetadata&gt; metadataCallback = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
+        <td><span class="parametername">pollSettings</span></td>
+        <td><p>The settings to use for repeated polling, or null
+to use the default poll settings (poll once every 10 seconds, forever).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>The call settings to apply on each call, or null for default settings.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TMetadata&gt;</td>
+        <td><span class="parametername">metadataCallback</span></td>
+        <td><p>The callback to invoke with the metadata from each poll operation, even if the metadata is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;TResponse, TMetadata&gt;&gt;</td>
+        <td><p>The completed operation, which can then be checked for errors or a result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_PollUntilCompletedAsync_Google_Api_Gax_PollSettings_Google_Api_Gax_Grpc_CallSettings_System_Action__1___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+If this object already represents a completed operation, it is returned with no further RPCs.
+If <code data-dev-comment-type="paramref" class="paramref">metadataCallback</code> is non-null, the callback will be called with any metadata
+present before the result is returned.
+</p>
+<p>
+No guarantee is made as to which thread is used for metadata callbacks. However, each callback is
+performed synchronously: this method waits for the callback to complete before the operation is next polled.
+This guarantees that for a single call, metadata callbacks will never occur in parallel.
+</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

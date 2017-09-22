@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CodedInputStream
    | Google.Cloud.Language.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,6 +80,10 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">CodedInputStream</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -241,7 +246,7 @@ when the returned object is disposed.</p>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">leaveOpen</span></td>
-        <td><p><code>true</code> to leave <span class="paramref">input</span> open when the returned
+        <td><p><code>true</code> to leave <code data-dev-comment-type="paramref" class="paramref">input</code> open when the returned
 <code></code> is disposed; <code>false</code> to dispose of the given stream when the
 returned object is disposed.</p>
 </td>
@@ -412,7 +417,7 @@ from an input stream.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></td>
-        <td><p>A <code>CodedInputStream</code> reading from <span class="paramref">input</span> with the specified size
+        <td><p>A <code>CodedInputStream</code> reading from <code data-dev-comment-type="paramref" class="paramref">input</code> with the specified size
 and recursion limits.</p>
 </td>
       </tr>
@@ -441,7 +446,7 @@ was constructed to read from a byte array) has no effect.</p>
 </div>
   <a id="Google_Protobuf_CodedInputStream_MaybeConsumeTag_" data-uid="Google.Protobuf.CodedInputStream.MaybeConsumeTag*"></a>
   <h4 id="Google_Protobuf_CodedInputStream_MaybeConsumeTag_System_UInt32_" data-uid="Google.Protobuf.CodedInputStream.MaybeConsumeTag(System.UInt32)">MaybeConsumeTag(UInt32)</h4>
-  <div class="markdown level1 summary"><p>Peeks at the next tag in the stream. If it matches <span class="paramref">tag</span>,
+  <div class="markdown level1 summary"><p>Peeks at the next tag in the stream. If it matches <code data-dev-comment-type="paramref" class="paramref">tag</code>,
 the tag is consumed and the method returns <code>true</code>; otherwise, the
 stream is left in the original position and the method returns <code>false</code>.</p>
 </div>

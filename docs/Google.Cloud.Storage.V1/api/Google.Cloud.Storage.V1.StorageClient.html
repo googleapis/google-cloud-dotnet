@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StorageClient
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,8 +80,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">StorageClient</span></div>
-  </div>
       <div class="level2"><a class="xref" href="Google.Cloud.Storage.V1.StorageClientImpl.html">StorageClientImpl</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -238,7 +239,7 @@ Console.WriteLine($&quot;Number of labels before clearing: {oldLabels.Count}&quo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -379,7 +380,7 @@ client.CopyObject(sourceBucket, sourceName, destinationBucket, destinationName);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; CopyObjectAsync(string sourceBucket, string sourceObjectName, string destinationBucket = null, string destinationObjectName = null, CopyObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; CopyObjectAsync(string sourceBucket, string sourceObjectName, string destinationBucket = null, string destinationObjectName = null, CopyObjectOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -693,7 +694,7 @@ var bucket = client.CreateBucket(projectId, bucketName);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; CreateBucketAsync(string projectId, Bucket bucket, CreateBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; CreateBucketAsync(string projectId, Bucket bucket, CreateBucketOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -761,7 +762,7 @@ resource representation of the newly-created bucket.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; CreateBucketAsync(string projectId, string bucket, CreateBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; CreateBucketAsync(string projectId, string bucket, CreateBucketOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1043,7 +1044,7 @@ client.DeleteBucket(bucketName);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DeleteBucketAsync(Bucket bucket, DeleteBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteBucketAsync(Bucket bucket, DeleteBucketOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1104,7 +1105,7 @@ defaults will be used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DeleteBucketAsync(string bucket, DeleteBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteBucketAsync(string bucket, DeleteBucketOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1196,8 +1197,8 @@ defaults will be used.</p>
   <div class="markdown level1 remarks"><p>
 By default this will delete the latest version of the object, but this can be
 controlled using <a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions_Generation">Generation</a>. Note that any generation information
-contained within <span class="paramref">obj</span> is ignored; the generation to delete is only controlled
-via <span class="paramref">options</span>. For buckets that support
+contained within <code data-dev-comment-type="paramref" class="paramref">obj</code> is ignored; the generation to delete is only controlled
+via <code data-dev-comment-type="paramref" class="paramref">options</code>. For buckets that support
 multiple versions, implicitly deleting the latest version only archives
 it so the object is still available and can be listed by specifying <a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_Versions">Versions</a>.
 If the version is explicitly specified, the object is permanently deleted.
@@ -1290,7 +1291,7 @@ client.DeleteObject(bucketName, objectName);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1343,8 +1344,8 @@ defaults will be used.</p>
   <div class="markdown level1 remarks"><p>
 By default this will delete the latest version of the object, but this can be
 controlled using <a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions_Generation">Generation</a>. Note that any generation information
-contained within <span class="paramref">obj</span> is ignored; the generation to delete is only controlled
-via <span class="paramref">options</span>. For buckets that support
+contained within <code data-dev-comment-type="paramref" class="paramref">obj</code> is ignored; the generation to delete is only controlled
+via <code data-dev-comment-type="paramref" class="paramref">options</code>. For buckets that support
 multiple versions, implicitly deleting the latest version only archives
 it so the object is still available and can be listed by specifying <a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_Versions">Versions</a>.
 If the version is explicitly specified, the object is permanently deleted.
@@ -1371,7 +1372,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DeleteObjectAsync(string bucket, string objectName, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteObjectAsync(string bucket, string objectName, DeleteObjectOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1496,7 +1497,7 @@ defaults will be used.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_Storage_V1_StorageClient_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The generation number within <span class="paramref">source</span> is ignored by this method.
+  <div class="markdown level1 remarks"><p>The generation number within <code data-dev-comment-type="paramref" class="paramref">source</code> is ignored by this method.
 To download a specific generation, use <a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_Generation">Generation</a>.</p>
 </div>
   <div>
@@ -1581,7 +1582,7 @@ using (var stream = File.Create(destination))
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DownloadObjectAsync(Object source, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DownloadObjectAsync(Object source, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = default (CancellationToken), IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1643,7 +1644,7 @@ defaults will be used.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The generation number within <span class="paramref">source</span> is ignored by this method.
+  <div class="markdown level1 remarks"><p>The generation number within <code data-dev-comment-type="paramref" class="paramref">source</code> is ignored by this method.
 To download a specific generation, use <a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_Generation">Generation</a>.</p>
 </div>
   <div>
@@ -1658,7 +1659,7 @@ To download a specific generation, use <a class="xref" href="Google.Cloud.Storag
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task DownloadObjectAsync(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task DownloadObjectAsync(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = default (CancellationToken), IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1796,7 +1797,7 @@ Console.WriteLine($&quot;TimeCreated: {bucket.TimeCreated}&quot;);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; GetBucketAsync(string bucket, GetBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; GetBucketAsync(string bucket, GetBucketOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1923,7 +1924,7 @@ foreach (Policy.BindingsData binding in policy.Bindings)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; GetBucketIamPolicyAsync(string bucket, GetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; GetBucketIamPolicyAsync(string bucket, GetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2057,7 +2058,7 @@ Console.WriteLine($&quot;TimeCreated: {obj.TimeCreated}&quot;);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; GetObjectAsync(string bucket, string objectName, GetObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; GetObjectAsync(string bucket, string objectName, GetObjectOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2429,7 +2430,7 @@ may be (indicating label removal).</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><p>A dictionary with the same keys as <span class="paramref">labels</span>, and values indicating the corresponding label value
+        <td><p>A dictionary with the same keys as <code data-dev-comment-type="paramref" class="paramref">labels</code>, and values indicating the corresponding label value
 before this operation completed. Labels which weren&apos;t present on the bucket before the modification have corresponding
 null values in the returned dictionary.</p>
 </td>
@@ -2437,7 +2438,7 @@ null values in the returned dictionary.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_Storage_V1_StorageClient_ModifyBucketLabels_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each entry in <span class="paramref">labels</span> is treated as a label to set or remove. If the value is null,
+  <div class="markdown level1 remarks"><p>Each entry in <code data-dev-comment-type="paramref" class="paramref">labels</code> is treated as a label to set or remove. If the value is null,
 it will be removed from the bucket; otherwise, it will be set/added. Labels which do not have an entry
 in the dictionary will be ignored.</p>
 </div>
@@ -2473,7 +2474,7 @@ foreach (KeyValuePair&lt;string, string&gt; entry in allLabels)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ModifyBucketLabelsAsync(string bucket, IDictionary&lt;string, string&gt; labels, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDictionary&lt;string, string&gt;&gt; ModifyBucketLabelsAsync(string bucket, IDictionary&lt;string, string&gt; labels, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2523,7 +2524,7 @@ may be (indicating label removal).</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
-        <td><p>A dictionary with the same keys as <span class="paramref">labels</span>, and values indicating the corresponding label value
+        <td><p>A dictionary with the same keys as <code data-dev-comment-type="paramref" class="paramref">labels</code>, and values indicating the corresponding label value
 before this operation completed. Labels which weren&apos;t present on the bucket before the modification have corresponding
 null values in the returned dictionary.</p>
 </td>
@@ -2531,7 +2532,7 @@ null values in the returned dictionary.</p>
     </tbody>
   </table>
   <h5 id="Google_Cloud_Storage_V1_StorageClient_ModifyBucketLabelsAsync_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each entry in <span class="paramref">labels</span> is treated as a label to set or remove. If the value is null,
+  <div class="markdown level1 remarks"><p>Each entry in <code data-dev-comment-type="paramref" class="paramref">labels</code> is treated as a label to set or remove. If the value is null,
 it will be removed from the bucket; otherwise, it will be set/added. Labels which do not have an entry
 in the dictionary will be ignored.</p>
 </div>
@@ -2614,7 +2615,7 @@ client.PatchBucket(bucket);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; PatchBucketAsync(Bucket bucket, PatchBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; PatchBucketAsync(Bucket bucket, PatchBucketOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2761,7 +2762,7 @@ client.PatchObject(patchObject);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; PatchObjectAsync(Object obj, PatchObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; PatchObjectAsync(Object obj, PatchObjectOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2898,7 +2899,7 @@ attempt to remove a label that doesn&apos;t already exist.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; RemoveBucketLabelAsync(string bucket, string labelName, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; RemoveBucketLabelAsync(string bucket, string labelName, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3059,7 +3060,7 @@ Console.WriteLine($&quot;Response code after setting policy: {response2.StatusCo
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; SetBucketIamPolicyAsync(string bucket, Policy policy, SetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; SetBucketIamPolicyAsync(string bucket, Policy policy, SetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3208,7 +3209,7 @@ not exist, or updated if it already exists.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; SetBucketLabelAsync(string bucket, string labelName, string labelValue, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; SetBucketLabelAsync(string bucket, string labelName, string labelValue, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3353,7 +3354,7 @@ foreach (string permission in permissions)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;string&gt;&gt; TestBucketIamPermissionsAsync(string bucket, IEnumerable&lt;string&gt; permissions, TestBucketIamPermissionsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;string&gt;&gt; TestBucketIamPermissionsAsync(string bucket, IEnumerable&lt;string&gt; permissions, TestBucketIamPermissionsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3466,7 +3467,7 @@ defaults will be used.</p>
   </table>
   <h5 id="Google_Cloud_Storage_V1_StorageClient_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-If no preconditions are explicitly set in <span class="paramref">options</span>, the metageneration of <span class="paramref">bucket</span>
+If no preconditions are explicitly set in <code data-dev-comment-type="paramref" class="paramref">options</code>, the metageneration of <code data-dev-comment-type="paramref" class="paramref">bucket</code>
 is used as a precondition for the update, unless <a class="xref" href="Google.Cloud.Storage.V1.UpdateBucketOptions.html#Google_Cloud_Storage_V1_UpdateBucketOptions_ForceNoPreconditions">ForceNoPreconditions</a> is
 set to <code>true</code>.
 </p>
@@ -3490,7 +3491,7 @@ client.UpdateBucket(bucket);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; UpdateBucketAsync(Bucket bucket, UpdateBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; UpdateBucketAsync(Bucket bucket, UpdateBucketOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3542,7 +3543,7 @@ defaults will be used.</p>
   </table>
   <h5 id="Google_Cloud_Storage_V1_StorageClient_UpdateBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-If no preconditions are explicitly set in <span class="paramref">options</span>, the metageneration of <span class="paramref">bucket</span>
+If no preconditions are explicitly set in <code data-dev-comment-type="paramref" class="paramref">options</code>, the metageneration of <code data-dev-comment-type="paramref" class="paramref">bucket</code>
 is used as a precondition for the update, unless <a class="xref" href="Google.Cloud.Storage.V1.UpdateBucketOptions.html#Google_Cloud_Storage_V1_UpdateBucketOptions_ForceNoPreconditions">ForceNoPreconditions</a> is
 set to <code>true</code>.
 </p>
@@ -3605,8 +3606,8 @@ defaults will be used.</p>
   </table>
   <h5 id="Google_Cloud_Storage_V1_StorageClient_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-If no preconditions are explicitly set in <span class="paramref">options</span>, the generation and
-metageneration of <span class="paramref">obj</span> are used as a precondition for the update,
+If no preconditions are explicitly set in <code data-dev-comment-type="paramref" class="paramref">options</code>, the generation and
+metageneration of <code data-dev-comment-type="paramref" class="paramref">obj</code> are used as a precondition for the update,
 unless <a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html#Google_Cloud_Storage_V1_UpdateObjectOptions_ForceNoPreconditions">ForceNoPreconditions</a> is
 set to <code>true</code>.
 </p>
@@ -3642,7 +3643,7 @@ client.UpdateObject(obj);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UpdateObjectAsync(Object obj, UpdateObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UpdateObjectAsync(Object obj, UpdateObjectOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3695,8 +3696,8 @@ defaults will be used.</p>
   </table>
   <h5 id="Google_Cloud_Storage_V1_StorageClient_UpdateObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-If no preconditions are explicitly set in <span class="paramref">options</span>, the generation and
-metageneration of <span class="paramref">obj</span> are used as a precondition for the update,
+If no preconditions are explicitly set in <code data-dev-comment-type="paramref" class="paramref">options</code>, the generation and
+metageneration of <code data-dev-comment-type="paramref" class="paramref">obj</code> are used as a precondition for the update,
 unless <a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html#Google_Cloud_Storage_V1_UpdateObjectOptions_ForceNoPreconditions">ForceNoPreconditions</a> is
 set to <code>true</code>.
 </p>
@@ -3877,7 +3878,7 @@ using (var stream = File.OpenRead(source))
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(Object destination, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(Object destination, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = default (CancellationToken), IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3952,7 +3953,7 @@ defaults will be used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = default (CancellationToken), IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

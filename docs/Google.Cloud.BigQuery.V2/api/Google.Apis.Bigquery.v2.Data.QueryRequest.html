@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QueryRequest
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -79,35 +80,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">QueryRequest</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
   <h5 id="Google_Apis_Bigquery_v2_Data_QueryRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QueryRequest : IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class QueryRequest : Requests.IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -120,8 +97,7 @@ in the query. If not set, all table names in the query string must be qualified 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;defaultDataset&quot;)]
-public virtual DatasetReference DefaultDataset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual DatasetReference DefaultDataset { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,8 +123,7 @@ error returns. The default value is false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;dryRun&quot;)]
-public virtual bool ? DryRun { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool ? DryRun { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,8 +164,6 @@ public virtual bool ? DryRun { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Bigquery_v2_Data_QueryRequest_Kind_" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest.Kind*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_QueryRequest_Kind" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>The resource type of the request.</p>
@@ -198,8 +171,7 @@ public virtual bool ? DryRun { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
-public virtual string Kind { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,8 +198,7 @@ row count, and only the byte limit applies.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;maxResults&quot;)]
-public virtual long ? MaxResults { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual long ? MaxResults { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -252,8 +223,7 @@ named (@myparam) query parameters in this query.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;parameterMode&quot;)]
-public virtual string ParameterMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string ParameterMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -277,8 +247,7 @@ public virtual string ParameterMode { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;preserveNulls&quot;)]
-public virtual bool ? PreserveNulls { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool ? PreserveNulls { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,8 +272,7 @@ public virtual bool ? PreserveNulls { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;query&quot;)]
-public virtual string Query { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string Query { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,8 +296,7 @@ public virtual string Query { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;queryParameters&quot;)]
-public virtual IList&lt;QueryParameter&gt; QueryParameters { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IList&lt;QueryParameter&gt; QueryParameters { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,8 +324,7 @@ value is 10000 milliseconds (10 seconds).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;timeoutMs&quot;)]
-public virtual long ? TimeoutMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual long ? TimeoutMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -379,14 +345,13 @@ public virtual long ? TimeoutMs { get; set; }</code></pre>
   <h4 id="Google_Apis_Bigquery_v2_Data_QueryRequest_UseLegacySql" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest.UseLegacySql">UseLegacySql</h4>
   <div class="markdown level1 summary"><p>Specifies whether to use BigQuery&apos;s legacy SQL dialect for this query. The default value is true.
 If set to false, the query will use BigQuery&apos;s standard SQL: <a href="https://cloud.google.com/bigquery/sql-">https://cloud.google.com/bigquery/sql-</a>
-reference/ When useLegacySql is set to false, the values of allowLargeResults and flattenResults are
-ignored; query will be run as if allowLargeResults is true and flattenResults is false.</p>
+reference/ When useLegacySql is set to false, the value of flattenResults is ignored; query will be run as
+if flattenResults is false.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;useLegacySql&quot;)]
-public virtual bool ? UseLegacySql { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool ? UseLegacySql { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,8 +376,7 @@ cache that will be flushed whenever tables in the query are modified. The defaul
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;useQueryCache&quot;)]
-public virtual bool ? UseQueryCache { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool ? UseQueryCache { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

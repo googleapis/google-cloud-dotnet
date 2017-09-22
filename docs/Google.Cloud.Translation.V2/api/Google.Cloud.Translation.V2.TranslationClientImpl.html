@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TranslationClientImpl
    | Google.Cloud.Translation.V2 ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
     
   </head>
@@ -304,7 +305,7 @@ application naming etc).</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.Detection.html">Detection</a>&gt;</td>
-        <td><p>A list of detected languages. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+        <td><p>A list of detected languages. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">textItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
@@ -318,7 +319,7 @@ application naming etc).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;Detection&gt;&gt; DetectLanguagesAsync(IEnumerable&lt;string&gt; textItems, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;Detection&gt;&gt; DetectLanguagesAsync(IEnumerable&lt;string&gt; textItems, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,7 +356,7 @@ application naming etc).</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.Detection.html">Detection</a>&gt;&gt;</td>
-        <td><p>A list of detected languages. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+        <td><p>A list of detected languages. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">textItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
@@ -369,7 +370,7 @@ application naming etc).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IList&lt;Language&gt; ListLanguages(string target = null, TranslationModel? model = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override IList&lt;Language&gt; ListLanguages(string target = null, TranslationModel? model = default (TranslationModel? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -422,7 +423,7 @@ used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;Language&gt;&gt; ListLanguagesAsync(string target = null, TranslationModel? model = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;Language&gt;&gt; ListLanguagesAsync(string target = null, TranslationModel? model = default (TranslationModel? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -481,7 +482,7 @@ used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IList&lt;TranslationResult&gt; TranslateHtml(IEnumerable&lt;string&gt; htmlItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override IList&lt;TranslationResult&gt; TranslateHtml(IEnumerable&lt;string&gt; htmlItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -532,7 +533,7 @@ used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;</td>
-        <td><p>A list of translations. This will be the same size as <span class="paramref">htmlItems</span>, in the same order.</p>
+        <td><p>A list of translations. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">htmlItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
@@ -550,7 +551,7 @@ on how to translate HTML and the terms of service.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;TranslationResult&gt;&gt; TranslateHtmlAsync(IEnumerable&lt;string&gt; htmlItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;TranslationResult&gt;&gt; TranslateHtmlAsync(IEnumerable&lt;string&gt; htmlItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -607,7 +608,7 @@ used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;&gt;</td>
-        <td><p>A list of translations. This will be the same size as <span class="paramref">htmlItems</span>, in the same order.</p>
+        <td><p>A list of translations. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">htmlItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
@@ -625,7 +626,7 @@ on how to translate HTML and the terms of service.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IList&lt;TranslationResult&gt; TranslateText(IEnumerable&lt;string&gt; textItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override IList&lt;TranslationResult&gt; TranslateText(IEnumerable&lt;string&gt; textItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -676,7 +677,7 @@ used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;</td>
-        <td><p>A list of translations. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+        <td><p>A list of translations. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">textItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
@@ -690,7 +691,7 @@ used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;TranslationResult&gt;&gt; TranslateTextAsync(IEnumerable&lt;string&gt; textItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;TranslationResult&gt;&gt; TranslateTextAsync(IEnumerable&lt;string&gt; textItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = default (TranslationModel? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -747,7 +748,7 @@ used.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;&gt;</td>
-        <td><p>A list of translations. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+        <td><p>A list of translations. This will be the same size as <code data-dev-comment-type="paramref" class="paramref">textItems</code>, in the same order.</p>
 </td>
       </tr>
     </tbody>
