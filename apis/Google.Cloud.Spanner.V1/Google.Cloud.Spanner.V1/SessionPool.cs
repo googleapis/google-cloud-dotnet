@@ -69,13 +69,7 @@ namespace Google.Cloud.Spanner.V1
 
         static SessionPool()
         {
-#if !NETSTANDARD1_5
-            AppDomain.CurrentDomain.DomainUnload += (sender, args) =>
-#endif
-#if NETSTANDARD1_5
-            System.Runtime.Loader.AssemblyLoadContext.Default.Unloading += context =>
-#endif
-                Default.Dispose();
+            GrpcEnvironment.ShuttingDown += (o, e) => Default.Dispose();
         }
 
         // ReSharper disable once UnusedMember.Global
