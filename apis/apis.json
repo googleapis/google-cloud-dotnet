@@ -304,10 +304,14 @@
     "id": "Google.Cloud.Monitoring.V3",
     "productName": "Stackdriver Monitoring",
     "productUrl": "https://cloud.google.com/monitoring/api/v3/",
-    "version": "1.0.0-beta08",
+    "version": "1.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Stackdriver Monitoring API, which manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages.",
     "tags": [ "Monitoring", "Stackdriver" ],
+    "dependencies": {
+      "Google.Api.Gax.Grpc": "2.1.0",
+      "Grpc.Core": "1.6.1"
+    }
   },
 
   {
