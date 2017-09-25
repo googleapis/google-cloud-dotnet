@@ -53,7 +53,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, string projectId = null,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
-            options = options ?? LoggerOptions.Create();
             projectId = Project.GetAndCheckProjectId(projectId, options.MonitoredResource);
             return factory.AddGoogle(LogTarget.ForProject(projectId), options, client);
         }
@@ -68,16 +67,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, LogTarget logTarget,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
-            // Check params and set defaults if unset.
-            GaxPreconditions.CheckNotNull(factory, nameof(factory));
-            GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
-            client = client ?? LoggingServiceV2Client.Create();
-            options = options ?? LoggerOptions.Create();
-
-            // Get the proper consumer from the options and add a logger provider.
-            IConsumer<LogEntry> consumer = LogConsumer.Create(client, options.BufferOptions, options.RetryOptions);
-            GoogleLoggerProvider provider = new GoogleLoggerProvider(consumer, logTarget, options);
-            factory.AddProvider(provider);
+            factory.AddProvider(GoogleLoggerProvider.Create(logTarget, options, client));
             return factory;
         }
     }

@@ -47,6 +47,40 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
+        /// Create an <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
+        /// </summary>
+        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
+        ///     The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
+        ///     detected from the platform.</param>
+        /// <param name="options">Optional, options for the logger.</param>
+        /// <param name="client">Optional, logging client.</param>
+        public static GoogleLoggerProvider Create(string projectId,
+            LoggerOptions options = null, LoggingServiceV2Client client = null)
+        {
+            projectId = Project.GetAndCheckProjectId(projectId, options.MonitoredResource);
+            return Create(LogTarget.ForProject(projectId), options, client);
+        }
+
+        /// <summary>
+        /// Create an <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
+        /// </summary>
+        /// <param name="logTarget">Where to log to. Cannot be null.</param>
+        /// <param name="options">Optional, options for the logger.</param>
+        /// <param name="client">Optional, logging client.</param>
+        public static GoogleLoggerProvider Create(LogTarget logTarget,
+            LoggerOptions options = null, LoggingServiceV2Client client = null)
+        {
+            // Check params and set defaults if unset.
+            GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
+            client = client ?? LoggingServiceV2Client.Create();
+            options = options ?? LoggerOptions.Create();
+
+            // Get the proper consumer from the options and add a logger provider.
+            IConsumer<LogEntry> consumer = LogConsumer.Create(client, options.BufferOptions, options.RetryOptions);
+            return new GoogleLoggerProvider(consumer, logTarget, options);
+        }
+
+        /// <summary>
         /// Creates a <see cref="GoogleLogger"/> with the given log name.
         /// </summary>
         /// <param name="logName">The name of the log.  This will be combined with the log location
