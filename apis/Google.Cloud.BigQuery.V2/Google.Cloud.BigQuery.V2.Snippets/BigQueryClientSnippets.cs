@@ -1403,7 +1403,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             {
                 { "message", BigQueryDbType.String }
             }.Build();
-            CreateTableOptions options = new CreateTableOptions { TimePartitionType = TimePartitionType.Day };
+            CreateTableOptions options = new CreateTableOptions { TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null) };
             BigQueryTable table = client.CreateTable(datasetId, tableId, schema, options);
             // Upload a single row to the table, using JSON rather than the streaming buffer, as
             // the _PARTITIONTIME column will be null while it's being served from the streaming buffer.

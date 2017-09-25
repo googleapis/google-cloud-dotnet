@@ -30,8 +30,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 Expiration = new DateTimeOffset(1970, 1, 1, 0, 0, 5, 0, TimeSpan.Zero),
                 Description = "A description",
                 FriendlyName = "A friendly name",
-                TimePartitionType = TimePartitionType.Day,
-                TimePartitionExpiration = TimeSpan.FromDays(10),
+                TimePartitioning = TimePartition.CreateDailyPartitioning(TimeSpan.FromDays(10)),
                 ExternalDataConfiguration = new ExternalDataConfiguration(),
             };
             Table table = new Table();
@@ -45,12 +44,28 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Same(options.ExternalDataConfiguration, table.ExternalDataConfiguration);
         }
 
+#pragma warning disable CS0618 // Type or member is obsolete
+        [Fact]
+        public void ObsoleteTimePartitioning()
+        {
+            var options = new CreateTableOptions
+            {
+                TimePartitionType = TimePartitionType.Day,
+                TimePartitionExpiration = TimeSpan.FromDays(10),
+            };
+            Table table = new Table();
+            InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
+            options.ModifyRequest(table, request);
+            Assert.Equal("DAY", table.TimePartitioning.Type);
+            Assert.Equal(10 * 24 * 60 * 60 * 1000L, table.TimePartitioning.ExpirationMs);
+        }
+
         [Fact]
         public void InvalidTimePartitioningType()
         {
             var options = new CreateTableOptions
             {
-                TimePartitionType = (TimePartitionType) 2
+                TimePartitionType = (TimePartitionType)2
             };
             Table table = new Table();
             InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
@@ -68,6 +83,20 @@ namespace Google.Cloud.BigQuery.V2.Tests
             InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
             Assert.Throws<ArgumentException>(() => options.ModifyRequest(table, request));
         }
+
+        [Fact]
+        public void TimePartitioningAndTimePartitionType()
+        {
+            var options = new CreateTableOptions
+            {
+                TimePartitioning = new TimePartitioning(),
+                TimePartitionType = TimePartitionType.Day
+            };
+            Table table = new Table();
+            InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
+            Assert.Throws<ArgumentException>(() => options.ModifyRequest(table, request));
+        }
+#pragma warning restore CS0618 // Type or member is obsolete
 
         [Fact]
         public void ExternalConfigurationAndViewInvalid()

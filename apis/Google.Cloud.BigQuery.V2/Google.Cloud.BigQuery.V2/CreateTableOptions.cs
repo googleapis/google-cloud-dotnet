@@ -46,13 +46,20 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// The expiration duration for each partition in a table.
         /// </summary>
+        [Obsolete("This property will be removed before final release. Please use TimePartition to create a TimePartitioning and set CreateTableOptions.TimePartitioning.")]
         public TimeSpan? TimePartitionExpiration { get; set; }
 
         /// <summary>
         /// The time partition type for the table, if the table should be created with
         /// time-based partitioning.
         /// </summary>
+        [Obsolete("This property will be removed before final release. Please use TimePartition to create a TimePartitioning and set CreateTableOptions.TimePartitioning.")]
         public TimePartitionType? TimePartitionType { get; set; }
+
+        /// <summary>
+        /// The time partitioning for the table. See <see cref="TimePartition"/> to create instances of <see cref="TimePartitioning"/>.
+        /// </summary>
+        public TimePartitioning TimePartitioning { get; set; }
 
         /// <summary>
         /// The external data configuration, if the table should be created to use external data.
@@ -78,6 +85,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 table.ExpirationTime = (long) (Expiration.Value - UnixEpoch).TotalMilliseconds;
             }
+#pragma warning disable CS0618 // Type or member is obsolete
             if (TimePartitionType != null)
             {
                 if (TimePartitionType.Value == V2.TimePartitionType.None)
@@ -97,6 +105,17 @@ namespace Google.Cloud.BigQuery.V2
                 }
                 table.TimePartitioning.ExpirationMs = (long) TimePartitionExpiration.Value.TotalMilliseconds;
             }
+            // TODO: There's currently no way of forcing table.TimePartitioning to be set to null. Not a problem at the moment,
+            // but we may want a sentinel value at some point.
+            if (TimePartitioning != null)
+            {
+                if (TimePartitionType != null)
+                {
+                    throw new ArgumentException($"Cannot specify {nameof(TimePartitioning)} and {nameof(TimePartitionType)} together.");
+                }
+                table.TimePartitioning = TimePartitioning;
+            }
+#pragma warning restore CS0618 // Type or member is obsolete
             if (ExternalDataConfiguration != null && View != null)
             {
                 throw new ArgumentException($"Cannot specify both {nameof(ExternalDataConfiguration)} and {nameof(View)}");
