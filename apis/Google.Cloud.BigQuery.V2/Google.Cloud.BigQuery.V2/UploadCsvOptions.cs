@@ -85,7 +85,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Specifies a string that represents a null value in a CSV file.
         /// If not set, this is effectively the empty string.
         /// </summary>
-        public string NullMarker { get; set; }        
+        public string NullMarker { get; set; }
+
+        /// <summary>
+        /// The time partitioning to apply, if any. See <see cref="TimePartition"/> to create instances of <see cref="TimePartitioning"/>.
+        /// </summary>
+        public TimePartitioning TimePartitioning { get; set; }
 
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
@@ -132,6 +137,10 @@ namespace Google.Cloud.BigQuery.V2
             if (NullMarker != null)
             {
                 loadRequest.NullMarker = NullMarker;
+            }
+            if (TimePartitioning != null)
+            {
+                loadRequest.TimePartitioning = TimePartitioning;
             }
             // TODO: Encoding? Only UTF-8 and ISO-8859-1 are supported... unsure what to do with this.
         }

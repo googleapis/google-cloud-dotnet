@@ -46,6 +46,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public WriteDisposition? WriteDisposition { get; set; }
 
+        /// <summary>
+        /// The time partitioning to apply, if any. See <see cref="TimePartition"/> to create instances of <see cref="TimePartitioning"/>.
+        /// </summary>
+        public TimePartitioning TimePartitioning { get; set; }
+
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
             if (AllowUnknownFields != null)
@@ -63,6 +68,10 @@ namespace Google.Cloud.BigQuery.V2
             if (WriteDisposition != null)
             {
                 loadRequest.WriteDisposition = EnumMap.ToApiValue(WriteDisposition.Value);
+            }
+            if (TimePartitioning != null)
+            {
+                loadRequest.TimePartitioning = TimePartitioning;
             }
         }
     }

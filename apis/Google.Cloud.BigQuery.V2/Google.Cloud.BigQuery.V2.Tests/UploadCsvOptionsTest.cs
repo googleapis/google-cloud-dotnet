@@ -34,7 +34,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 SkipLeadingRows = 5,
                 WriteDisposition = WriteDisposition.WriteAppend,
                 Autodetect = true,
-                NullMarker = "custom-null"
+                NullMarker = "custom-null",
+                TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null)
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
@@ -50,6 +51,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("WRITE_APPEND", config.WriteDisposition);
             Assert.True(config.Autodetect);
             Assert.Equal("custom-null", config.NullMarker);
+            Assert.Equal("DAY", config.TimePartitioning.Type);
+            Assert.Null(config.TimePartitioning.ExpirationMs);
         }
     }
 }

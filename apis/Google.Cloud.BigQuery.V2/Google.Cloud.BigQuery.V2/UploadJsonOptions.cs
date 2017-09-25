@@ -52,6 +52,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? Autodetect { get; set; }
 
+        /// <summary>
+        /// The time partitioning to apply, if any. See <see cref="TimePartition"/> to create instances of <see cref="TimePartitioning"/>.
+        /// </summary>
+        public TimePartitioning TimePartitioning { get; set; }
+
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
             if (AllowUnknownFields != null)
@@ -73,6 +78,10 @@ namespace Google.Cloud.BigQuery.V2
             if (Autodetect != null)
             {
                 loadRequest.Autodetect = Autodetect;
+            }
+            if (TimePartitioning != null)
+            {
+                loadRequest.TimePartitioning = TimePartitioning;
             }
         }
     }

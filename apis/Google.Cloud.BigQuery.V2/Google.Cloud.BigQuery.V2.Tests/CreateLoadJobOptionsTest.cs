@@ -36,6 +36,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 Quote = "q",
                 SkipLeadingRows = 10,
                 SourceFormat = FileFormat.DatastoreBackup,
+                TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
                 WriteDisposition = WriteDisposition.WriteAppend
             };
 
@@ -54,6 +55,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(10, load.SkipLeadingRows);
             Assert.Equal("DATASTORE_BACKUP", load.SourceFormat);
             Assert.Equal("WRITE_APPEND", load.WriteDisposition);
+            Assert.Equal("DAY", load.TimePartitioning.Type);
+            Assert.Null(load.TimePartitioning.ExpirationMs);
         }
     }
 }

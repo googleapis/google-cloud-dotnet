@@ -28,7 +28,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 CreateDisposition = CreateDisposition.CreateIfNeeded,
                 MaxBadRecords = 10,
                 WriteDisposition = WriteDisposition.WriteAppend,
-                Autodetect = true
+                Autodetect = true,
+                TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null)
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
@@ -38,6 +39,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(10, config.MaxBadRecords);
             Assert.Equal("WRITE_APPEND", config.WriteDisposition);
             Assert.True(config.Autodetect);
+            Assert.Equal("DAY", config.TimePartitioning.Type);
+            Assert.Null(config.TimePartitioning.ExpirationMs);
         }
     }
 }
