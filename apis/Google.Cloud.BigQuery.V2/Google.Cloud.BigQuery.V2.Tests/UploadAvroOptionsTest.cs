@@ -27,7 +27,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 AllowUnknownFields = true,
                 CreateDisposition = CreateDisposition.CreateIfNeeded,
                 MaxBadRecords = 10,
-                WriteDisposition = WriteDisposition.WriteAppend                
+                TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
+                WriteDisposition = WriteDisposition.WriteAppend
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
@@ -36,6 +37,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("CREATE_IF_NEEDED", config.CreateDisposition);
             Assert.Equal(10, config.MaxBadRecords);
             Assert.Equal("WRITE_APPEND", config.WriteDisposition);
+            Assert.Equal("DAY", config.TimePartitioning.Type);
+            Assert.Null(config.TimePartitioning.ExpirationMs);
         }
     }
 }

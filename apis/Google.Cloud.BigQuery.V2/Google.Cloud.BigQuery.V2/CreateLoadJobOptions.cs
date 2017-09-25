@@ -105,6 +105,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public FileFormat? SourceFormat { get; set; }
 
+        /// <summary>
+        /// The time partitioning to apply, if any. See <see cref="TimePartition"/> to create instances of <see cref="TimePartitioning"/>.
+        /// </summary>
+        public TimePartitioning TimePartitioning { get; set; }
+
         internal void ModifyRequest(JobConfigurationLoad load)
         {
             if (SkipLeadingRows != null)
@@ -158,6 +163,10 @@ namespace Google.Cloud.BigQuery.V2
             if (SourceFormat != null)
             {
                 load.SourceFormat = EnumMap.ToApiValue(SourceFormat.Value);
+            }
+            if (TimePartitioning != null)
+            {
+                load.TimePartitioning = TimePartitioning;
             }
         }
     }
