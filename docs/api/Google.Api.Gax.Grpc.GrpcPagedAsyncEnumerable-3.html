@@ -82,6 +82,10 @@
     <div class="level1"><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;TResponse, TResource&gt;</div>
     <div class="level2"><span class="xref">GrpcPagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt;</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;TResource&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -93,12 +97,33 @@
     <div>
       <a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html#Google_Api_Gax_PagedAsyncEnumerable_2_GetEnumerator">PagedAsyncEnumerable&lt;TResponse, TResource&gt;.GetEnumerator()</a>
     </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.Gax.Grpc.html">Google.Api.Gax.Grpc</a></h6>
   <h6><strong>Assembly</strong>: Google.Api.Gax.Grpc.dll</h6>
   <h5 id="Google_Api_Gax_Grpc_GrpcPagedAsyncEnumerable_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GrpcPagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt; : PagedAsyncEnumerable&lt;TResponse, TResource&gt; where TRequest : class, IPageRequest, IMessage&lt;TRequest&gt; where TResponse : class, IPageResponse&lt;TResource&gt;, IMessage&lt;TResponse&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GrpcPagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt; : PagedAsyncEnumerable&lt;TResponse, TResource&gt;, IAsyncEnumerable&lt;TResource&gt; where TRequest : class, IPageRequest, IMessage&lt;TRequest&gt; where TResponse : class, IPageResponse&lt;TResource&gt;, IMessage&lt;TResponse&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,7 +215,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IAsyncEnumerable</span>&lt;TResponse&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;TResponse&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -215,7 +240,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IAsyncEnumerator</span>&lt;TResource&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IAsyncEnumerator</span>&lt;TResource&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -269,6 +294,10 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Google.Api.Gax.PagedAsyncEnumerable&lt;TResponse, TResource&gt;.ReadPageAsync(System.Int32, System.Threading.CancellationToken)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;T&gt;</span>
+  </div>
 </article>
           </div>
           

@@ -79,8 +79,14 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
-    <div class="level2"><span class="xref">ObjectsResource.PatchRequest</span></div>
+    <div class="level1"><span class="xref">Google.Apis.Requests.ClientServiceRequest</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
+    <div class="level2"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
+    <div class="level3"><span class="xref">ObjectsResource.PatchRequest</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Apis.Requests.IClientServiceRequest</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
+    <div><span class="xref">Google.Apis.Requests.IClientServiceRequest</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,23 +111,83 @@
     <div>
       <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_UserIp">StorageBaseServiceRequest&lt;Object&gt;.UserIp</a>
     </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.Execute()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsStream()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsync()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsStreamAsync()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsStreamAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.CreateRequest(System.Nullable&lt;System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.GenerateRequestUri()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.GetDefaultETagAction(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ETagAction</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ModifyRequest</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.RequestParameters</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.Service</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Storage.v1.html">Google.Apis.Storage.v1</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Storage.v1.dll</h6>
   <h5 id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PatchRequest : StorageBaseServiceRequest&lt;Object&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class PatchRequest : StorageBaseServiceRequest&lt;Object&gt;, IClientServiceRequest&lt;Object&gt;, IClientServiceRequest</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <a id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest__ctor_" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.#ctor*"></a>
-  <h4 id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String)">PatchRequest(Services.IClientService, Object, String, String)</h4>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String)">PatchRequest(IClientService, Object, String, String)</h4>
   <div class="markdown level1 summary"><p>Constructs a new Patch request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PatchRequest(Services.IClientService service, Object body, string bucket, string storageObject)</code></pre>
+    <pre><code class="lang-csharp hljs">public PatchRequest(IClientService service, Object body, string bucket, string storageObject)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,7 +230,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Bucket { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;bucket&quot;, RequestParameterType.Path)]
+public virtual string Bucket { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,7 +256,8 @@ default).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? Generation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;generation&quot;, RequestParameterType.Query)]
+public virtual long ? Generation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,6 +298,8 @@ default).</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.HttpMethod</span></div>
   <a id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest_IfGenerationMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.IfGenerationMatch*"></a>
   <h4 id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest_IfGenerationMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.IfGenerationMatch">IfGenerationMatch</h4>
   <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&apos;s current generation matches the given
@@ -239,7 +309,8 @@ object.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? IfGenerationMatch { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifGenerationMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfGenerationMatch { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,7 +336,8 @@ only if there is a live version of the object.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? IfGenerationNotMatch { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifGenerationNotMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfGenerationNotMatch { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,7 +362,8 @@ given value.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? IfMetagenerationMatch { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfMetagenerationMatch { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,7 +388,8 @@ the given value.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? IfMetagenerationNotMatch { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationNotMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfMetagenerationNotMatch { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -356,6 +430,8 @@ the given value.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.MethodName</span></div>
   <a id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest_Object_" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.Object*"></a>
   <h4 id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest_Object" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.Object">Object</h4>
   <div class="markdown level1 summary"><p>Name of the object. For information about how to URL encode object names to be path safe, see
@@ -364,7 +440,8 @@ Encoding URI Path Parts.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Object { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;object&quot;, RequestParameterType.Path)]
+public virtual string Object { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -388,7 +465,8 @@ Encoding URI Path Parts.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ObjectsResource.PatchRequest.PredefinedAclEnum? PredefinedAcl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;predefinedAcl&quot;, RequestParameterType.Query)]
+public virtual ObjectsResource.PatchRequest.PredefinedAclEnum? PredefinedAcl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -412,7 +490,8 @@ Encoding URI Path Parts.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ObjectsResource.PatchRequest.ProjectionEnum? Projection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;projection&quot;, RequestParameterType.Query)]
+public virtual ObjectsResource.PatchRequest.ProjectionEnum? Projection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -453,6 +532,8 @@ Encoding URI Path Parts.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.RestPath</span></div>
   <a id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest_UserProject_" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.UserProject*"></a>
   <h4 id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest_UserProject" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.UserProject">UserProject</h4>
   <div class="markdown level1 summary"><p>The project to be billed for this request, for Requester Pays buckets.</p>
@@ -460,7 +541,8 @@ Encoding URI Path Parts.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string UserProject { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;userProject&quot;, RequestParameterType.Query)]
+public virtual string UserProject { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -503,6 +585,8 @@ Encoding URI Path Parts.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.GetBody()</span></div>
   <a id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest_InitParameters_" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.InitParameters*"></a>
   <h4 id="Google_Apis_Storage_v1_ObjectsResource_PatchRequest_InitParameters" data-uid="Google.Apis.Storage.v1.ObjectsResource.PatchRequest.InitParameters">InitParameters()</h4>
   <div class="markdown level1 summary"><p>Initializes Patch parameter list.</p>

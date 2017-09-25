@@ -1929,11 +1929,11 @@ references:
   commentId: Overload:Google.Api.Gax.Rest.ScopedCredentialProvider.#ctor
   fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.ScopedCredentialProvider
   nameWithType: ScopedCredentialProvider.ScopedCredentialProvider
-- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(GoogleCredential)
+- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(Google.Apis.Auth.OAuth2.GoogleCredential)
   name: GetCredentials(GoogleCredential)
-  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentials_GoogleCredential_
-  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(GoogleCredential)
-  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(GoogleCredential)
+  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentials_Google_Apis_Auth_OAuth2_GoogleCredential_
+  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(Google.Apis.Auth.OAuth2.GoogleCredential)
+  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(Google.Apis.Auth.OAuth2.GoogleCredential)
   nameWithType: ScopedCredentialProvider.GetCredentials(GoogleCredential)
 - uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials*
   name: GetCredentials
@@ -1941,11 +1941,11 @@ references:
   commentId: Overload:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials
   fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials
   nameWithType: ScopedCredentialProvider.GetCredentials
-- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
+- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential)
   name: GetCredentialsAsync(GoogleCredential)
-  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentialsAsync_GoogleCredential_
-  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
-  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
+  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentialsAsync_Google_Apis_Auth_OAuth2_GoogleCredential_
+  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential)
+  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential)
   nameWithType: ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
 - uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync*
   name: GetCredentialsAsync
@@ -2452,13 +2452,13 @@ references:
   nameWithType: BigqueryBaseServiceRequest<TResponse>
   nameWithType.vb: BigqueryBaseServiceRequest(Of TResponse)
 - uid: Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)
-  name: BigqueryBaseServiceRequest(Services.IClientService)
+  name: BigqueryBaseServiceRequest(IClientService)
   href: api/Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.html#Google_Apis_Bigquery_v2_BigqueryBaseServiceRequest_1__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest<TResponse>.BigqueryBaseServiceRequest(Google.Apis.Services.IClientService)
   fullName.vb: Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest(Of TResponse).BigqueryBaseServiceRequest(Google.Apis.Services.IClientService)
-  nameWithType: BigqueryBaseServiceRequest<TResponse>.BigqueryBaseServiceRequest(Services.IClientService)
-  nameWithType.vb: BigqueryBaseServiceRequest(Of TResponse).BigqueryBaseServiceRequest(Services.IClientService)
+  nameWithType: BigqueryBaseServiceRequest<TResponse>.BigqueryBaseServiceRequest(IClientService)
+  nameWithType.vb: BigqueryBaseServiceRequest(Of TResponse).BigqueryBaseServiceRequest(IClientService)
 - uid: Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest`1.#ctor*
   name: BigqueryBaseServiceRequest
   href: api/Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.html#Google_Apis_Bigquery_v2_BigqueryBaseServiceRequest_1__ctor_
@@ -2625,11 +2625,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.BigqueryService.BigqueryService()
   nameWithType: BigqueryService.BigqueryService()
 - uid: Google.Apis.Bigquery.v2.BigqueryService.#ctor(Google.Apis.Services.BaseClientService.Initializer)
-  name: BigqueryService(Services.BaseClientService.Initializer)
+  name: BigqueryService(BaseClientService.Initializer)
   href: api/Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService__ctor_Google_Apis_Services_BaseClientService_Initializer_
   commentId: M:Google.Apis.Bigquery.v2.BigqueryService.#ctor(Google.Apis.Services.BaseClientService.Initializer)
   fullName: Google.Apis.Bigquery.v2.BigqueryService.BigqueryService(Google.Apis.Services.BaseClientService.Initializer)
-  nameWithType: BigqueryService.BigqueryService(Services.BaseClientService.Initializer)
+  nameWithType: BigqueryService.BigqueryService(BaseClientService.Initializer)
 - uid: Google.Apis.Bigquery.v2.BigqueryService.#ctor*
   name: BigqueryService
   href: api/Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService__ctor_
@@ -7755,11 +7755,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.DatasetsResource
   nameWithType: DatasetsResource
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.#ctor(Google.Apis.Services.IClientService)
-  name: DatasetsResource(Services.IClientService)
+  name: DatasetsResource(IClientService)
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.html#Google_Apis_Bigquery_v2_DatasetsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Bigquery.v2.DatasetsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.DatasetsResource(Google.Apis.Services.IClientService)
-  nameWithType: DatasetsResource.DatasetsResource(Services.IClientService)
+  nameWithType: DatasetsResource.DatasetsResource(IClientService)
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.#ctor*
   name: DatasetsResource
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.html#Google_Apis_Bigquery_v2_DatasetsResource__ctor_
@@ -7785,11 +7785,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest
   nameWithType: DatasetsResource.DeleteRequest
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: DeleteRequest(Services.IClientService, String, String)
+  name: DeleteRequest(IClientService, String, String)
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.DeleteRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: DatasetsResource.DeleteRequest.DeleteRequest(Services.IClientService, String, String)
+  nameWithType: DatasetsResource.DeleteRequest.DeleteRequest(IClientService, String, String)
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.#ctor*
   name: DeleteRequest
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest__ctor_
@@ -7899,11 +7899,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.GetRequest
   nameWithType: DatasetsResource.GetRequest
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: GetRequest(Services.IClientService, String, String)
+  name: GetRequest(IClientService, String, String)
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.GetRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.DatasetsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: DatasetsResource.GetRequest.GetRequest(Services.IClientService, String, String)
+  nameWithType: DatasetsResource.GetRequest.GetRequest(IClientService, String, String)
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.GetRequest.#ctor*
   name: GetRequest
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.GetRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_GetRequest__ctor_
@@ -8001,11 +8001,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest
   nameWithType: DatasetsResource.InsertRequest
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Dataset,System.String)
-  name: InsertRequest(Services.IClientService, Dataset, String)
+  name: InsertRequest(IClientService, Dataset, String)
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_InsertRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Bigquery_v2_Data_Dataset_System_String_
   commentId: M:Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Dataset,System.String)
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest.InsertRequest(Google.Apis.Services.IClientService, Google.Apis.Bigquery.v2.Data.Dataset, System.String)
-  nameWithType: DatasetsResource.InsertRequest.InsertRequest(Services.IClientService, Dataset, String)
+  nameWithType: DatasetsResource.InsertRequest.InsertRequest(IClientService, Dataset, String)
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest.#ctor*
   name: InsertRequest
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.InsertRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_InsertRequest__ctor_
@@ -8103,11 +8103,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.ListRequest
   nameWithType: DatasetsResource.ListRequest
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: ListRequest(Services.IClientService, String)
+  name: ListRequest(IClientService, String)
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.ListRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Bigquery.v2.DatasetsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: DatasetsResource.ListRequest.ListRequest(Services.IClientService, String)
+  nameWithType: DatasetsResource.ListRequest.ListRequest(IClientService, String)
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.ListRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_ListRequest__ctor_
@@ -8241,11 +8241,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest
   nameWithType: DatasetsResource.PatchRequest
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Dataset,System.String,System.String)
-  name: PatchRequest(Services.IClientService, Dataset, String, String)
+  name: PatchRequest(IClientService, Dataset, String, String)
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_PatchRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Bigquery_v2_Data_Dataset_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Dataset,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest.PatchRequest(Google.Apis.Services.IClientService, Google.Apis.Bigquery.v2.Data.Dataset, System.String, System.String)
-  nameWithType: DatasetsResource.PatchRequest.PatchRequest(Services.IClientService, Dataset, String, String)
+  nameWithType: DatasetsResource.PatchRequest.PatchRequest(IClientService, Dataset, String, String)
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest.#ctor*
   name: PatchRequest
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.PatchRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_PatchRequest__ctor_
@@ -8355,11 +8355,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest
   nameWithType: DatasetsResource.UpdateRequest
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Dataset,System.String,System.String)
-  name: UpdateRequest(Services.IClientService, Dataset, String, String)
+  name: UpdateRequest(IClientService, Dataset, String, String)
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_UpdateRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Bigquery_v2_Data_Dataset_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Dataset,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest.UpdateRequest(Google.Apis.Services.IClientService, Google.Apis.Bigquery.v2.Data.Dataset, System.String, System.String)
-  nameWithType: DatasetsResource.UpdateRequest.UpdateRequest(Services.IClientService, Dataset, String, String)
+  nameWithType: DatasetsResource.UpdateRequest.UpdateRequest(IClientService, Dataset, String, String)
 - uid: Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest.#ctor*
   name: UpdateRequest
   href: api/Google.Apis.Bigquery.v2.DatasetsResource.UpdateRequest.html#Google_Apis_Bigquery_v2_DatasetsResource_UpdateRequest__ctor_
@@ -8457,11 +8457,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.JobsResource
   nameWithType: JobsResource
 - uid: Google.Apis.Bigquery.v2.JobsResource.#ctor(Google.Apis.Services.IClientService)
-  name: JobsResource(Services.IClientService)
+  name: JobsResource(IClientService)
   href: api/Google.Apis.Bigquery.v2.JobsResource.html#Google_Apis_Bigquery_v2_JobsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Bigquery.v2.JobsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Bigquery.v2.JobsResource.JobsResource(Google.Apis.Services.IClientService)
-  nameWithType: JobsResource.JobsResource(Services.IClientService)
+  nameWithType: JobsResource.JobsResource(IClientService)
 - uid: Google.Apis.Bigquery.v2.JobsResource.#ctor*
   name: JobsResource
   href: api/Google.Apis.Bigquery.v2.JobsResource.html#Google_Apis_Bigquery_v2_JobsResource__ctor_
@@ -8487,11 +8487,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.JobsResource.CancelRequest
   nameWithType: JobsResource.CancelRequest
 - uid: Google.Apis.Bigquery.v2.JobsResource.CancelRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: CancelRequest(Services.IClientService, String, String)
+  name: CancelRequest(IClientService, String, String)
   href: api/Google.Apis.Bigquery.v2.JobsResource.CancelRequest.html#Google_Apis_Bigquery_v2_JobsResource_CancelRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.JobsResource.CancelRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.JobsResource.CancelRequest.CancelRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: JobsResource.CancelRequest.CancelRequest(Services.IClientService, String, String)
+  nameWithType: JobsResource.CancelRequest.CancelRequest(IClientService, String, String)
 - uid: Google.Apis.Bigquery.v2.JobsResource.CancelRequest.#ctor*
   name: CancelRequest
   href: api/Google.Apis.Bigquery.v2.JobsResource.CancelRequest.html#Google_Apis_Bigquery_v2_JobsResource_CancelRequest__ctor_
@@ -8601,11 +8601,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest
   nameWithType: JobsResource.GetQueryResultsRequest
 - uid: Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: GetQueryResultsRequest(Services.IClientService, String, String)
+  name: GetQueryResultsRequest(IClientService, String, String)
   href: api/Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.html#Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.GetQueryResultsRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: JobsResource.GetQueryResultsRequest.GetQueryResultsRequest(Services.IClientService, String, String)
+  nameWithType: JobsResource.GetQueryResultsRequest.GetQueryResultsRequest(IClientService, String, String)
 - uid: Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.#ctor*
   name: GetQueryResultsRequest
   href: api/Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.html#Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest__ctor_
@@ -8739,11 +8739,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.JobsResource.GetRequest
   nameWithType: JobsResource.GetRequest
 - uid: Google.Apis.Bigquery.v2.JobsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: GetRequest(Services.IClientService, String, String)
+  name: GetRequest(IClientService, String, String)
   href: api/Google.Apis.Bigquery.v2.JobsResource.GetRequest.html#Google_Apis_Bigquery_v2_JobsResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.JobsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.JobsResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: JobsResource.GetRequest.GetRequest(Services.IClientService, String, String)
+  nameWithType: JobsResource.GetRequest.GetRequest(IClientService, String, String)
 - uid: Google.Apis.Bigquery.v2.JobsResource.GetRequest.#ctor*
   name: GetRequest
   href: api/Google.Apis.Bigquery.v2.JobsResource.GetRequest.html#Google_Apis_Bigquery_v2_JobsResource_GetRequest__ctor_
@@ -8847,11 +8847,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload
   nameWithType: JobsResource.InsertMediaUpload
 - uid: Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Job,System.String,System.IO.Stream,System.String)
-  name: InsertMediaUpload(Services.IClientService, Job, String, Stream, String)
+  name: InsertMediaUpload(IClientService, Job, String, Stream, String)
   href: api/Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.html#Google_Apis_Bigquery_v2_JobsResource_InsertMediaUpload__ctor_Google_Apis_Services_IClientService_Google_Apis_Bigquery_v2_Data_Job_System_String_System_IO_Stream_System_String_
   commentId: M:Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Job,System.String,System.IO.Stream,System.String)
   fullName: Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.InsertMediaUpload(Google.Apis.Services.IClientService, Google.Apis.Bigquery.v2.Data.Job, System.String, System.IO.Stream, System.String)
-  nameWithType: JobsResource.InsertMediaUpload.InsertMediaUpload(Services.IClientService, Job, String, Stream, String)
+  nameWithType: JobsResource.InsertMediaUpload.InsertMediaUpload(IClientService, Job, String, Stream, String)
 - uid: Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.#ctor*
   name: InsertMediaUpload
   href: api/Google.Apis.Bigquery.v2.JobsResource.InsertMediaUpload.html#Google_Apis_Bigquery_v2_JobsResource_InsertMediaUpload__ctor_
@@ -8973,11 +8973,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.JobsResource.InsertRequest
   nameWithType: JobsResource.InsertRequest
 - uid: Google.Apis.Bigquery.v2.JobsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Job,System.String)
-  name: InsertRequest(Services.IClientService, Job, String)
+  name: InsertRequest(IClientService, Job, String)
   href: api/Google.Apis.Bigquery.v2.JobsResource.InsertRequest.html#Google_Apis_Bigquery_v2_JobsResource_InsertRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Bigquery_v2_Data_Job_System_String_
   commentId: M:Google.Apis.Bigquery.v2.JobsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Job,System.String)
   fullName: Google.Apis.Bigquery.v2.JobsResource.InsertRequest.InsertRequest(Google.Apis.Services.IClientService, Google.Apis.Bigquery.v2.Data.Job, System.String)
-  nameWithType: JobsResource.InsertRequest.InsertRequest(Services.IClientService, Job, String)
+  nameWithType: JobsResource.InsertRequest.InsertRequest(IClientService, Job, String)
 - uid: Google.Apis.Bigquery.v2.JobsResource.InsertRequest.#ctor*
   name: InsertRequest
   href: api/Google.Apis.Bigquery.v2.JobsResource.InsertRequest.html#Google_Apis_Bigquery_v2_JobsResource_InsertRequest__ctor_
@@ -9075,11 +9075,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.JobsResource.ListRequest
   nameWithType: JobsResource.ListRequest
 - uid: Google.Apis.Bigquery.v2.JobsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: ListRequest(Services.IClientService, String)
+  name: ListRequest(IClientService, String)
   href: api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.html#Google_Apis_Bigquery_v2_JobsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Bigquery.v2.JobsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Bigquery.v2.JobsResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: JobsResource.ListRequest.ListRequest(Services.IClientService, String)
+  nameWithType: JobsResource.ListRequest.ListRequest(IClientService, String)
 - uid: Google.Apis.Bigquery.v2.JobsResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Bigquery.v2.JobsResource.ListRequest.html#Google_Apis_Bigquery_v2_JobsResource_ListRequest__ctor_
@@ -9267,11 +9267,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.JobsResource.QueryRequest
   nameWithType: JobsResource.QueryRequest
 - uid: Google.Apis.Bigquery.v2.JobsResource.QueryRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.QueryRequest,System.String)
-  name: QueryRequest(Services.IClientService, QueryRequest, String)
+  name: QueryRequest(IClientService, QueryRequest, String)
   href: api/Google.Apis.Bigquery.v2.JobsResource.QueryRequest.html#Google_Apis_Bigquery_v2_JobsResource_QueryRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Bigquery_v2_Data_QueryRequest_System_String_
   commentId: M:Google.Apis.Bigquery.v2.JobsResource.QueryRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.QueryRequest,System.String)
   fullName: Google.Apis.Bigquery.v2.JobsResource.QueryRequest.QueryRequest(Google.Apis.Services.IClientService, Google.Apis.Bigquery.v2.Data.QueryRequest, System.String)
-  nameWithType: JobsResource.QueryRequest.QueryRequest(Services.IClientService, QueryRequest, String)
+  nameWithType: JobsResource.QueryRequest.QueryRequest(IClientService, QueryRequest, String)
 - uid: Google.Apis.Bigquery.v2.JobsResource.QueryRequest.#ctor*
   name: QueryRequest
   href: api/Google.Apis.Bigquery.v2.JobsResource.QueryRequest.html#Google_Apis_Bigquery_v2_JobsResource_QueryRequest__ctor_
@@ -9357,11 +9357,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.ProjectsResource
   nameWithType: ProjectsResource
 - uid: Google.Apis.Bigquery.v2.ProjectsResource.#ctor(Google.Apis.Services.IClientService)
-  name: ProjectsResource(Services.IClientService)
+  name: ProjectsResource(IClientService)
   href: api/Google.Apis.Bigquery.v2.ProjectsResource.html#Google_Apis_Bigquery_v2_ProjectsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Bigquery.v2.ProjectsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Bigquery.v2.ProjectsResource.ProjectsResource(Google.Apis.Services.IClientService)
-  nameWithType: ProjectsResource.ProjectsResource(Services.IClientService)
+  nameWithType: ProjectsResource.ProjectsResource(IClientService)
 - uid: Google.Apis.Bigquery.v2.ProjectsResource.#ctor*
   name: ProjectsResource
   href: api/Google.Apis.Bigquery.v2.ProjectsResource.html#Google_Apis_Bigquery_v2_ProjectsResource__ctor_
@@ -9387,11 +9387,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.ProjectsResource.GetServiceAccountRequest
   nameWithType: ProjectsResource.GetServiceAccountRequest
 - uid: Google.Apis.Bigquery.v2.ProjectsResource.GetServiceAccountRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: GetServiceAccountRequest(Services.IClientService, String)
+  name: GetServiceAccountRequest(IClientService, String)
   href: api/Google.Apis.Bigquery.v2.ProjectsResource.GetServiceAccountRequest.html#Google_Apis_Bigquery_v2_ProjectsResource_GetServiceAccountRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Bigquery.v2.ProjectsResource.GetServiceAccountRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Bigquery.v2.ProjectsResource.GetServiceAccountRequest.GetServiceAccountRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: ProjectsResource.GetServiceAccountRequest.GetServiceAccountRequest(Services.IClientService, String)
+  nameWithType: ProjectsResource.GetServiceAccountRequest.GetServiceAccountRequest(IClientService, String)
 - uid: Google.Apis.Bigquery.v2.ProjectsResource.GetServiceAccountRequest.#ctor*
   name: GetServiceAccountRequest
   href: api/Google.Apis.Bigquery.v2.ProjectsResource.GetServiceAccountRequest.html#Google_Apis_Bigquery_v2_ProjectsResource_GetServiceAccountRequest__ctor_
@@ -9477,11 +9477,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.ProjectsResource.ListRequest
   nameWithType: ProjectsResource.ListRequest
 - uid: Google.Apis.Bigquery.v2.ProjectsResource.ListRequest.#ctor(Google.Apis.Services.IClientService)
-  name: ListRequest(Services.IClientService)
+  name: ListRequest(IClientService)
   href: api/Google.Apis.Bigquery.v2.ProjectsResource.ListRequest.html#Google_Apis_Bigquery_v2_ProjectsResource_ListRequest__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Bigquery.v2.ProjectsResource.ListRequest.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Bigquery.v2.ProjectsResource.ListRequest.ListRequest(Google.Apis.Services.IClientService)
-  nameWithType: ProjectsResource.ListRequest.ListRequest(Services.IClientService)
+  nameWithType: ProjectsResource.ListRequest.ListRequest(IClientService)
 - uid: Google.Apis.Bigquery.v2.ProjectsResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Bigquery.v2.ProjectsResource.ListRequest.html#Google_Apis_Bigquery_v2_ProjectsResource_ListRequest__ctor_
@@ -9567,11 +9567,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.TabledataResource
   nameWithType: TabledataResource
 - uid: Google.Apis.Bigquery.v2.TabledataResource.#ctor(Google.Apis.Services.IClientService)
-  name: TabledataResource(Services.IClientService)
+  name: TabledataResource(IClientService)
   href: api/Google.Apis.Bigquery.v2.TabledataResource.html#Google_Apis_Bigquery_v2_TabledataResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Bigquery.v2.TabledataResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Bigquery.v2.TabledataResource.TabledataResource(Google.Apis.Services.IClientService)
-  nameWithType: TabledataResource.TabledataResource(Services.IClientService)
+  nameWithType: TabledataResource.TabledataResource(IClientService)
 - uid: Google.Apis.Bigquery.v2.TabledataResource.#ctor*
   name: TabledataResource
   href: api/Google.Apis.Bigquery.v2.TabledataResource.html#Google_Apis_Bigquery_v2_TabledataResource__ctor_
@@ -9597,11 +9597,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest
   nameWithType: TabledataResource.InsertAllRequest
 - uid: Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest,System.String,System.String,System.String)
-  name: InsertAllRequest(Services.IClientService, TableDataInsertAllRequest, String, String, String)
+  name: InsertAllRequest(IClientService, TableDataInsertAllRequest, String, String, String)
   href: api/Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest.html#Google_Apis_Bigquery_v2_TabledataResource_InsertAllRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Bigquery_v2_Data_TableDataInsertAllRequest_System_String_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest,System.String,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest.InsertAllRequest(Google.Apis.Services.IClientService, Google.Apis.Bigquery.v2.Data.TableDataInsertAllRequest, System.String, System.String, System.String)
-  nameWithType: TabledataResource.InsertAllRequest.InsertAllRequest(Services.IClientService, TableDataInsertAllRequest, String, String, String)
+  nameWithType: TabledataResource.InsertAllRequest.InsertAllRequest(IClientService, TableDataInsertAllRequest, String, String, String)
 - uid: Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest.#ctor*
   name: InsertAllRequest
   href: api/Google.Apis.Bigquery.v2.TabledataResource.InsertAllRequest.html#Google_Apis_Bigquery_v2_TabledataResource_InsertAllRequest__ctor_
@@ -9723,11 +9723,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.TabledataResource.ListRequest
   nameWithType: TabledataResource.ListRequest
 - uid: Google.Apis.Bigquery.v2.TabledataResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)
-  name: ListRequest(Services.IClientService, String, String, String)
+  name: ListRequest(IClientService, String, String, String)
   href: api/Google.Apis.Bigquery.v2.TabledataResource.ListRequest.html#Google_Apis_Bigquery_v2_TabledataResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.TabledataResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.TabledataResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String, System.String, System.String)
-  nameWithType: TabledataResource.ListRequest.ListRequest(Services.IClientService, String, String, String)
+  nameWithType: TabledataResource.ListRequest.ListRequest(IClientService, String, String, String)
 - uid: Google.Apis.Bigquery.v2.TabledataResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Bigquery.v2.TabledataResource.ListRequest.html#Google_Apis_Bigquery_v2_TabledataResource_ListRequest__ctor_
@@ -9873,11 +9873,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.TablesResource
   nameWithType: TablesResource
 - uid: Google.Apis.Bigquery.v2.TablesResource.#ctor(Google.Apis.Services.IClientService)
-  name: TablesResource(Services.IClientService)
+  name: TablesResource(IClientService)
   href: api/Google.Apis.Bigquery.v2.TablesResource.html#Google_Apis_Bigquery_v2_TablesResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Bigquery.v2.TablesResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Bigquery.v2.TablesResource.TablesResource(Google.Apis.Services.IClientService)
-  nameWithType: TablesResource.TablesResource(Services.IClientService)
+  nameWithType: TablesResource.TablesResource(IClientService)
 - uid: Google.Apis.Bigquery.v2.TablesResource.#ctor*
   name: TablesResource
   href: api/Google.Apis.Bigquery.v2.TablesResource.html#Google_Apis_Bigquery_v2_TablesResource__ctor_
@@ -9903,11 +9903,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.TablesResource.DeleteRequest
   nameWithType: TablesResource.DeleteRequest
 - uid: Google.Apis.Bigquery.v2.TablesResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)
-  name: DeleteRequest(Services.IClientService, String, String, String)
+  name: DeleteRequest(IClientService, String, String, String)
   href: api/Google.Apis.Bigquery.v2.TablesResource.DeleteRequest.html#Google_Apis_Bigquery_v2_TablesResource_DeleteRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.TablesResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.TablesResource.DeleteRequest.DeleteRequest(Google.Apis.Services.IClientService, System.String, System.String, System.String)
-  nameWithType: TablesResource.DeleteRequest.DeleteRequest(Services.IClientService, String, String, String)
+  nameWithType: TablesResource.DeleteRequest.DeleteRequest(IClientService, String, String, String)
 - uid: Google.Apis.Bigquery.v2.TablesResource.DeleteRequest.#ctor*
   name: DeleteRequest
   href: api/Google.Apis.Bigquery.v2.TablesResource.DeleteRequest.html#Google_Apis_Bigquery_v2_TablesResource_DeleteRequest__ctor_
@@ -10017,11 +10017,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.TablesResource.GetRequest
   nameWithType: TablesResource.GetRequest
 - uid: Google.Apis.Bigquery.v2.TablesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)
-  name: GetRequest(Services.IClientService, String, String, String)
+  name: GetRequest(IClientService, String, String, String)
   href: api/Google.Apis.Bigquery.v2.TablesResource.GetRequest.html#Google_Apis_Bigquery_v2_TablesResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.TablesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.TablesResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String, System.String, System.String)
-  nameWithType: TablesResource.GetRequest.GetRequest(Services.IClientService, String, String, String)
+  nameWithType: TablesResource.GetRequest.GetRequest(IClientService, String, String, String)
 - uid: Google.Apis.Bigquery.v2.TablesResource.GetRequest.#ctor*
   name: GetRequest
   href: api/Google.Apis.Bigquery.v2.TablesResource.GetRequest.html#Google_Apis_Bigquery_v2_TablesResource_GetRequest__ctor_
@@ -10143,11 +10143,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.TablesResource.InsertRequest
   nameWithType: TablesResource.InsertRequest
 - uid: Google.Apis.Bigquery.v2.TablesResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Table,System.String,System.String)
-  name: InsertRequest(Services.IClientService, Table, String, String)
+  name: InsertRequest(IClientService, Table, String, String)
   href: api/Google.Apis.Bigquery.v2.TablesResource.InsertRequest.html#Google_Apis_Bigquery_v2_TablesResource_InsertRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Bigquery_v2_Data_Table_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.TablesResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Table,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.TablesResource.InsertRequest.InsertRequest(Google.Apis.Services.IClientService, Google.Apis.Bigquery.v2.Data.Table, System.String, System.String)
-  nameWithType: TablesResource.InsertRequest.InsertRequest(Services.IClientService, Table, String, String)
+  nameWithType: TablesResource.InsertRequest.InsertRequest(IClientService, Table, String, String)
 - uid: Google.Apis.Bigquery.v2.TablesResource.InsertRequest.#ctor*
   name: InsertRequest
   href: api/Google.Apis.Bigquery.v2.TablesResource.InsertRequest.html#Google_Apis_Bigquery_v2_TablesResource_InsertRequest__ctor_
@@ -10257,11 +10257,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.TablesResource.ListRequest
   nameWithType: TablesResource.ListRequest
 - uid: Google.Apis.Bigquery.v2.TablesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: ListRequest(Services.IClientService, String, String)
+  name: ListRequest(IClientService, String, String)
   href: api/Google.Apis.Bigquery.v2.TablesResource.ListRequest.html#Google_Apis_Bigquery_v2_TablesResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.TablesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.TablesResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: TablesResource.ListRequest.ListRequest(Services.IClientService, String, String)
+  nameWithType: TablesResource.ListRequest.ListRequest(IClientService, String, String)
 - uid: Google.Apis.Bigquery.v2.TablesResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Bigquery.v2.TablesResource.ListRequest.html#Google_Apis_Bigquery_v2_TablesResource_ListRequest__ctor_
@@ -10383,11 +10383,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.TablesResource.PatchRequest
   nameWithType: TablesResource.PatchRequest
 - uid: Google.Apis.Bigquery.v2.TablesResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Table,System.String,System.String,System.String)
-  name: PatchRequest(Services.IClientService, Table, String, String, String)
+  name: PatchRequest(IClientService, Table, String, String, String)
   href: api/Google.Apis.Bigquery.v2.TablesResource.PatchRequest.html#Google_Apis_Bigquery_v2_TablesResource_PatchRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Bigquery_v2_Data_Table_System_String_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.TablesResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Table,System.String,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.TablesResource.PatchRequest.PatchRequest(Google.Apis.Services.IClientService, Google.Apis.Bigquery.v2.Data.Table, System.String, System.String, System.String)
-  nameWithType: TablesResource.PatchRequest.PatchRequest(Services.IClientService, Table, String, String, String)
+  nameWithType: TablesResource.PatchRequest.PatchRequest(IClientService, Table, String, String, String)
 - uid: Google.Apis.Bigquery.v2.TablesResource.PatchRequest.#ctor*
   name: PatchRequest
   href: api/Google.Apis.Bigquery.v2.TablesResource.PatchRequest.html#Google_Apis_Bigquery_v2_TablesResource_PatchRequest__ctor_
@@ -10509,11 +10509,11 @@ references:
   fullName: Google.Apis.Bigquery.v2.TablesResource.UpdateRequest
   nameWithType: TablesResource.UpdateRequest
 - uid: Google.Apis.Bigquery.v2.TablesResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Table,System.String,System.String,System.String)
-  name: UpdateRequest(Services.IClientService, Table, String, String, String)
+  name: UpdateRequest(IClientService, Table, String, String, String)
   href: api/Google.Apis.Bigquery.v2.TablesResource.UpdateRequest.html#Google_Apis_Bigquery_v2_TablesResource_UpdateRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Bigquery_v2_Data_Table_System_String_System_String_System_String_
   commentId: M:Google.Apis.Bigquery.v2.TablesResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Bigquery.v2.Data.Table,System.String,System.String,System.String)
   fullName: Google.Apis.Bigquery.v2.TablesResource.UpdateRequest.UpdateRequest(Google.Apis.Services.IClientService, Google.Apis.Bigquery.v2.Data.Table, System.String, System.String, System.String)
-  nameWithType: TablesResource.UpdateRequest.UpdateRequest(Services.IClientService, Table, String, String, String)
+  nameWithType: TablesResource.UpdateRequest.UpdateRequest(IClientService, Table, String, String, String)
 - uid: Google.Apis.Bigquery.v2.TablesResource.UpdateRequest.#ctor*
   name: UpdateRequest
   href: api/Google.Apis.Bigquery.v2.TablesResource.UpdateRequest.html#Google_Apis_Bigquery_v2_TablesResource_UpdateRequest__ctor_

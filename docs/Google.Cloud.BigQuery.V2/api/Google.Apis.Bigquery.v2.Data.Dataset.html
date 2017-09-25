@@ -80,11 +80,39 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Dataset</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
   <h5 id="Google_Apis_Bigquery_v2_Data_Dataset_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Dataset : Requests.IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class Dataset : IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -100,7 +128,8 @@ access.role: OWNER;</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IList&lt;Dataset.AccessData&gt; Access { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;access&quot;)]
+public virtual IList&lt;Dataset.AccessData&gt; Access { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +153,8 @@ access.role: OWNER;</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? CreationTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;creationTime&quot;)]
+public virtual long ? CreationTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,7 +178,8 @@ access.role: OWNER;</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual DatasetReference DatasetReference { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;datasetReference&quot;)]
+public virtual DatasetReference DatasetReference { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,7 +209,8 @@ precedence over the default expiration time indicated by this property.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? DefaultTableExpirationMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;defaultTableExpirationMs&quot;)]
+public virtual long ? DefaultTableExpirationMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,7 +234,8 @@ precedence over the default expiration time indicated by this property.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;description&quot;)]
+public virtual string Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,7 +259,8 @@ precedence over the default expiration time indicated by this property.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ETag { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;etag&quot;)]
+public virtual string ETag { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -243,6 +277,8 @@ precedence over the default expiration time indicated by this property.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Bigquery_v2_Data_Dataset_FriendlyName_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.FriendlyName*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_FriendlyName" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.FriendlyName">FriendlyName</h4>
   <div class="markdown level1 summary"><p>[Optional] A descriptive name for the dataset.</p>
@@ -250,7 +286,8 @@ precedence over the default expiration time indicated by this property.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string FriendlyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;friendlyName&quot;)]
+public virtual string FriendlyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,7 +313,8 @@ this field blank, and instead specify the datasetId field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
+public virtual string Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -300,7 +338,8 @@ this field blank, and instead specify the datasetId field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
+public virtual string Kind { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -326,7 +365,8 @@ information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IDictionary&lt;string, string&gt; Labels { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;labels&quot;)]
+public virtual IDictionary&lt;string, string&gt; Labels { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,7 +391,8 @@ since the epoch.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? LastModifiedTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;lastModifiedTime&quot;)]
+public virtual long ? LastModifiedTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,7 +417,8 @@ default value is US.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;location&quot;)]
+public virtual string Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -401,7 +443,8 @@ Update requests to the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string SelfLink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;selfLink&quot;)]
+public virtual string SelfLink { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

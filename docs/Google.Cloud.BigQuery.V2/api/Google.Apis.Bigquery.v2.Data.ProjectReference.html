@@ -80,11 +80,39 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ProjectReference</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
   <h5 id="Google_Apis_Bigquery_v2_Data_ProjectReference_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProjectReference : Requests.IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProjectReference : IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -112,6 +140,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Bigquery_v2_Data_ProjectReference_ProjectId_" data-uid="Google.Apis.Bigquery.v2.Data.ProjectReference.ProjectId*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_ProjectReference_ProjectId" data-uid="Google.Apis.Bigquery.v2.Data.ProjectReference.ProjectId">ProjectId</h4>
   <div class="markdown level1 summary"><p>[Required] ID of the project. Can be either the numeric ID or the assigned ID of the
@@ -120,7 +150,8 @@ project.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ProjectId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;projectId&quot;)]
+public virtual string ProjectId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

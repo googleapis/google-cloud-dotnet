@@ -80,11 +80,39 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Table</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
   <h5 id="Google_Apis_Bigquery_v2_Data_Table_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Table : Requests.IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class Table : IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -95,7 +123,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? CreationTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;creationTime&quot;)]
+public virtual long ? CreationTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +148,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;description&quot;)]
+public virtual string Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,7 +173,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual EncryptionConfiguration EncryptionConfiguration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;encryptionConfiguration&quot;)]
+public virtual EncryptionConfiguration EncryptionConfiguration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,7 +198,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ETag { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;etag&quot;)]
+public virtual string ETag { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,6 +216,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Bigquery_v2_Data_Table_ExpirationTime_" data-uid="Google.Apis.Bigquery.v2.Data.Table.ExpirationTime*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_Table_ExpirationTime" data-uid="Google.Apis.Bigquery.v2.Data.Table.ExpirationTime">ExpirationTime</h4>
   <div class="markdown level1 summary"><p>[Optional] The time when this table expires, in milliseconds since the epoch. If not present, the
@@ -192,7 +226,8 @@ table will persist indefinitely. Expired tables will be deleted and their storag
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? ExpirationTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;expirationTime&quot;)]
+public virtual long ? ExpirationTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -218,7 +253,8 @@ BigQuery table.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ExternalDataConfiguration ExternalDataConfiguration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;externalDataConfiguration&quot;)]
+public virtual ExternalDataConfiguration ExternalDataConfiguration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,7 +278,8 @@ BigQuery table.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string FriendlyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;friendlyName&quot;)]
+public virtual string FriendlyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -266,7 +303,8 @@ BigQuery table.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
+public virtual string Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,7 +328,8 @@ BigQuery table.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
+public virtual string Kind { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -317,7 +356,8 @@ Label keys must start with a letter and each label in the list must have a diffe
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IDictionary&lt;string, string&gt; Labels { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;labels&quot;)]
+public virtual IDictionary&lt;string, string&gt; Labels { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,7 +382,8 @@ epoch.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ulong ? LastModifiedTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;lastModifiedTime&quot;)]
+public virtual ulong ? LastModifiedTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,7 +408,8 @@ dataset.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;location&quot;)]
+public virtual string Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,7 +434,8 @@ buffer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? NumBytes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;numBytes&quot;)]
+public virtual long ? NumBytes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -416,7 +459,8 @@ buffer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? NumLongTermBytes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;numLongTermBytes&quot;)]
+public virtual long ? NumLongTermBytes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -441,7 +485,8 @@ buffer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ulong ? NumRows { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;numRows&quot;)]
+public virtual ulong ? NumRows { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -465,7 +510,8 @@ buffer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TableSchema Schema { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;schema&quot;)]
+public virtual TableSchema Schema { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -489,7 +535,8 @@ buffer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string SelfLink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;selfLink&quot;)]
+public virtual string SelfLink { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -515,7 +562,8 @@ buffer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Streamingbuffer StreamingBuffer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;streamingBuffer&quot;)]
+public virtual Streamingbuffer StreamingBuffer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -539,7 +587,8 @@ buffer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TableReference TableReference { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;tableReference&quot;)]
+public virtual TableReference TableReference { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -563,7 +612,8 @@ buffer.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TimePartitioning TimePartitioning { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;timePartitioning&quot;)]
+public virtual TimePartitioning TimePartitioning { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -589,7 +639,8 @@ in an external storage system, such as Google Cloud Storage. The default value i
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;type&quot;)]
+public virtual string Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -613,7 +664,8 @@ in an external storage system, such as Google Cloud Storage. The default value i
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ViewDefinition View { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;view&quot;)]
+public virtual ViewDefinition View { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

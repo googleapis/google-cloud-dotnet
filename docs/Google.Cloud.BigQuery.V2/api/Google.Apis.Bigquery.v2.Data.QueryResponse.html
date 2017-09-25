@@ -80,11 +80,39 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">QueryResponse</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
   <h5 id="Google_Apis_Bigquery_v2_Data_QueryResponse_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QueryResponse : Requests.IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class QueryResponse : IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -95,7 +123,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool ? CacheHit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;cacheHit&quot;)]
+public virtual bool ? CacheHit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +150,8 @@ that the job has completed or was unsuccessful.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IList&lt;ErrorProto&gt; Errors { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;errors&quot;)]
+public virtual IList&lt;ErrorProto&gt; Errors { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,6 +192,8 @@ that the job has completed or was unsuccessful.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Bigquery_v2_Data_QueryResponse_JobComplete_" data-uid="Google.Apis.Bigquery.v2.Data.QueryResponse.JobComplete*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_QueryResponse_JobComplete" data-uid="Google.Apis.Bigquery.v2.Data.QueryResponse.JobComplete">JobComplete</h4>
   <div class="markdown level1 summary"><p>Whether the query has completed or not. If rows or totalRows are present, this will always be true.
@@ -170,7 +202,8 @@ If this is false, totalRows will not be available.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool ? JobComplete { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;jobComplete&quot;)]
+public virtual bool ? JobComplete { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -197,7 +230,8 @@ same mechanism (GetQueryResults).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual JobReference JobReference { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;jobReference&quot;)]
+public virtual JobReference JobReference { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,7 +255,8 @@ same mechanism (GetQueryResults).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
+public virtual string Kind { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -246,7 +281,8 @@ INSERT, UPDATE or DELETE.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? NumDmlAffectedRows { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;numDmlAffectedRows&quot;)]
+public virtual long ? NumDmlAffectedRows { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -270,7 +306,8 @@ INSERT, UPDATE or DELETE.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string PageToken { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;pageToken&quot;)]
+public virtual string PageToken { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -295,7 +332,8 @@ any additional rows, you can call GetQueryResults and specify the jobReference r
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IList&lt;TableRow&gt; Rows { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;rows&quot;)]
+public virtual IList&lt;TableRow&gt; Rows { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -319,7 +357,8 @@ any additional rows, you can call GetQueryResults and specify the jobReference r
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TableSchema Schema { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;schema&quot;)]
+public virtual TableSchema Schema { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,7 +383,8 @@ of bytes that would be processed if the query were run.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? TotalBytesProcessed { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;totalBytesProcessed&quot;)]
+public virtual long ? TotalBytesProcessed { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,7 +409,8 @@ rows in this single page of results.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ulong ? TotalRows { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;totalRows&quot;)]
+public virtual ulong ? TotalRows { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

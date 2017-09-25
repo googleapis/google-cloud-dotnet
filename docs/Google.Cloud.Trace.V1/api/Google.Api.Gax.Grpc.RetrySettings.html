@@ -154,7 +154,7 @@ jitter.</p>
     </tbody>
   </table>
   <a id="Google_Api_Gax_Grpc_RetrySettings__ctor_" data-uid="Google.Api.Gax.Grpc.RetrySettings.#ctor*"></a>
-  <h4 id="Google_Api_Gax_Grpc_RetrySettings__ctor_Google_Api_Gax_Grpc_BackoffSettings_Google_Api_Gax_Grpc_BackoffSettings_Google_Api_Gax_Expiration_System_Predicate_RpcException__" data-uid="Google.Api.Gax.Grpc.RetrySettings.#ctor(Google.Api.Gax.Grpc.BackoffSettings,Google.Api.Gax.Grpc.BackoffSettings,Google.Api.Gax.Expiration,System.Predicate{RpcException})">RetrySettings(BackoffSettings, BackoffSettings, Expiration, Predicate&lt;RpcException&gt;)</h4>
+  <h4 id="Google_Api_Gax_Grpc_RetrySettings__ctor_Google_Api_Gax_Grpc_BackoffSettings_Google_Api_Gax_Grpc_BackoffSettings_Google_Api_Gax_Expiration_System_Predicate_Grpc_Core_RpcException__" data-uid="Google.Api.Gax.Grpc.RetrySettings.#ctor(Google.Api.Gax.Grpc.BackoffSettings,Google.Api.Gax.Grpc.BackoffSettings,Google.Api.Gax.Expiration,System.Predicate{Grpc.Core.RpcException})">RetrySettings(BackoffSettings, BackoffSettings, Expiration, Predicate&lt;RpcException&gt;)</h4>
   <div class="markdown level1 summary"><p>Constructs an instance with the given configuration, and the default jitter.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -191,7 +191,7 @@ jitter.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html">RpcException</a>&gt;</td>
         <td><span class="parametername">retryFilter</span></td>
         <td><p>A predicate to determine whether or not a particular exception should cause the operation to be retried,
 or null for the default filter.</p>
@@ -200,7 +200,7 @@ or null for the default filter.</p>
     </tbody>
   </table>
   <a id="Google_Api_Gax_Grpc_RetrySettings__ctor_" data-uid="Google.Api.Gax.Grpc.RetrySettings.#ctor*"></a>
-  <h4 id="Google_Api_Gax_Grpc_RetrySettings__ctor_Google_Api_Gax_Grpc_BackoffSettings_Google_Api_Gax_Grpc_BackoffSettings_Google_Api_Gax_Expiration_System_Predicate_RpcException__Google_Api_Gax_Grpc_RetrySettings_IJitter_" data-uid="Google.Api.Gax.Grpc.RetrySettings.#ctor(Google.Api.Gax.Grpc.BackoffSettings,Google.Api.Gax.Grpc.BackoffSettings,Google.Api.Gax.Expiration,System.Predicate{RpcException},Google.Api.Gax.Grpc.RetrySettings.IJitter)">RetrySettings(BackoffSettings, BackoffSettings, Expiration, Predicate&lt;RpcException&gt;, RetrySettings.IJitter)</h4>
+  <h4 id="Google_Api_Gax_Grpc_RetrySettings__ctor_Google_Api_Gax_Grpc_BackoffSettings_Google_Api_Gax_Grpc_BackoffSettings_Google_Api_Gax_Expiration_System_Predicate_Grpc_Core_RpcException__Google_Api_Gax_Grpc_RetrySettings_IJitter_" data-uid="Google.Api.Gax.Grpc.RetrySettings.#ctor(Google.Api.Gax.Grpc.BackoffSettings,Google.Api.Gax.Grpc.BackoffSettings,Google.Api.Gax.Expiration,System.Predicate{Grpc.Core.RpcException},Google.Api.Gax.Grpc.RetrySettings.IJitter)">RetrySettings(BackoffSettings, BackoffSettings, Expiration, Predicate&lt;RpcException&gt;, RetrySettings.IJitter)</h4>
   <div class="markdown level1 summary"><p>Constructs an instance with the given configuration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -237,7 +237,7 @@ or null for the default filter.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html">RpcException</a>&gt;</td>
         <td><span class="parametername">retryFilter</span></td>
         <td><p>A predicate to determine whether or not a particular exception should cause the operation to be retried,
 or null for the default filter.</p>
@@ -272,7 +272,7 @@ or null for the default filter.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html">RpcException</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -401,7 +401,7 @@ Usually this is simply a matter of checking the status codes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html">RpcException</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -462,7 +462,7 @@ the timeout will also be adjusted to accommodate <a class="xref" href="Google.Ap
   <h3 id="methods">Methods
   </h3>
   <a id="Google_Api_Gax_Grpc_RetrySettings_FilterForStatusCodes_" data-uid="Google.Api.Gax.Grpc.RetrySettings.FilterForStatusCodes*"></a>
-  <h4 id="Google_Api_Gax_Grpc_RetrySettings_FilterForStatusCodes_StatusCode___" data-uid="Google.Api.Gax.Grpc.RetrySettings.FilterForStatusCodes(StatusCode[])">FilterForStatusCodes(StatusCode[])</h4>
+  <h4 id="Google_Api_Gax_Grpc_RetrySettings_FilterForStatusCodes_Grpc_Core_StatusCode___" data-uid="Google.Api.Gax.Grpc.RetrySettings.FilterForStatusCodes(Grpc.Core.StatusCode[])">FilterForStatusCodes(StatusCode[])</h4>
   <div class="markdown level1 summary"><p>Creates a retry filter based on status codes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -481,7 +481,7 @@ the timeout will also be adjusted to accommodate <a class="xref" href="Google.Ap
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">StatusCode</span>[]</td>
+        <td><a class="xref" href="Grpc.Core.StatusCode.html">StatusCode</a>[]</td>
         <td><span class="parametername">statusCodes</span></td>
         <td><p>The status codes to retry. Must not be null.</p>
 </td>
@@ -498,14 +498,14 @@ the timeout will also be adjusted to accommodate <a class="xref" href="Google.Ap
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html">RpcException</a>&gt;</td>
         <td><p>A retry filter based on status codes.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Api_Gax_Grpc_RetrySettings_FilterForStatusCodes_" data-uid="Google.Api.Gax.Grpc.RetrySettings.FilterForStatusCodes*"></a>
-  <h4 id="Google_Api_Gax_Grpc_RetrySettings_FilterForStatusCodes_System_Collections_Generic_IEnumerable_StatusCode__" data-uid="Google.Api.Gax.Grpc.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable{StatusCode})">FilterForStatusCodes(IEnumerable&lt;StatusCode&gt;)</h4>
+  <h4 id="Google_Api_Gax_Grpc_RetrySettings_FilterForStatusCodes_System_Collections_Generic_IEnumerable_Grpc_Core_StatusCode__" data-uid="Google.Api.Gax.Grpc.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable{Grpc.Core.StatusCode})">FilterForStatusCodes(IEnumerable&lt;StatusCode&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a retry filter based on status codes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -524,7 +524,7 @@ the timeout will also be adjusted to accommodate <a class="xref" href="Google.Ap
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">StatusCode</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Grpc.Core.StatusCode.html">StatusCode</a>&gt;</td>
         <td><span class="parametername">statusCodes</span></td>
         <td><p>The status codes to retry. Must not be null.</p>
 </td>
@@ -541,7 +541,7 @@ the timeout will also be adjusted to accommodate <a class="xref" href="Google.Ap
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html">RpcException</a>&gt;</td>
         <td><p>A retry filter based on status codes.</p>
 </td>
       </tr>

@@ -139,7 +139,7 @@
   <div class="markdown level1 summary"><p>The underlying gRPC duplex streaming call.
 Warning: DO NOT USE <code>GrpcCall.RequestStream</code> at all if using
 <a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html#Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_TryWriteAsync__0_">TryWriteAsync(TRequest)</a>, <a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html#Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_WriteAsync__0_">WriteAsync(TRequest)</a>,
-<a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html#Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_TryWriteAsync__0_WriteOptions_">TryWriteAsync(TRequest, WriteOptions)</a> , or <a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html#Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_WriteAsync__0_WriteOptions_">WriteAsync(TRequest, WriteOptions)</a>.
+<a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html#Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_TryWriteAsync__0_Grpc_Core_WriteOptions_">TryWriteAsync(TRequest, WriteOptions)</a> , or <a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html#Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_WriteAsync__0_Grpc_Core_WriteOptions_">WriteAsync(TRequest, WriteOptions)</a>.
 Doing so will cause conflict with the write-buffer used within the <code>[Try]WriteAsync</code> methods.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -157,7 +157,7 @@ Doing so will cause conflict with the write-buffer used within the <code>[Try]Wr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">AsyncDuplexStreamingCall</span>&lt;TRequest, TResponse&gt;</td>
+        <td><span class="xref">Grpc.Core.AsyncDuplexStreamingCall</span>&lt;TRequest, TResponse&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -181,7 +181,7 @@ Doing so will cause conflict with the write-buffer used within the <code>[Try]Wr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IAsyncEnumerator</span>&lt;TResponse&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IAsyncEnumerator</span>&lt;TResponse&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -234,7 +234,7 @@ hasn&apos;t already been called. The same write options will be used as for the 
     </tbody>
   </table>
   <a id="Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_TryWriteAsync_" data-uid="Google.Api.Gax.Grpc.BidirectionalStreamingBase`2.TryWriteAsync*"></a>
-  <h4 id="Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_TryWriteAsync__0_WriteOptions_" data-uid="Google.Api.Gax.Grpc.BidirectionalStreamingBase`2.TryWriteAsync(`0,WriteOptions)">TryWriteAsync(TRequest, WriteOptions)</h4>
+  <h4 id="Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_TryWriteAsync__0_Grpc_Core_WriteOptions_" data-uid="Google.Api.Gax.Grpc.BidirectionalStreamingBase`2.TryWriteAsync(`0,Grpc.Core.WriteOptions)">TryWriteAsync(TRequest, WriteOptions)</h4>
   <div class="markdown level1 summary"><p>Writes a message to the stream, if there is enough space in the buffer and <a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html#Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_WriteCompleteAsync">WriteCompleteAsync()</a>
 hasn&apos;t already been called.</p>
 </div>
@@ -260,7 +260,7 @@ hasn&apos;t already been called.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">WriteOptions</span></td>
+        <td><span class="xref">Grpc.Core.WriteOptions</span></td>
         <td><span class="parametername">options</span></td>
         <td><p>The write options to use for this message.</p>
 </td>
@@ -373,7 +373,7 @@ or <a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html#G
     </tbody>
   </table>
   <a id="Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_WriteAsync_" data-uid="Google.Api.Gax.Grpc.BidirectionalStreamingBase`2.WriteAsync*"></a>
-  <h4 id="Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_WriteAsync__0_WriteOptions_" data-uid="Google.Api.Gax.Grpc.BidirectionalStreamingBase`2.WriteAsync(`0,WriteOptions)">WriteAsync(TRequest, WriteOptions)</h4>
+  <h4 id="Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_WriteAsync__0_Grpc_Core_WriteOptions_" data-uid="Google.Api.Gax.Grpc.BidirectionalStreamingBase`2.WriteAsync(`0,Grpc.Core.WriteOptions)">WriteAsync(TRequest, WriteOptions)</h4>
   <div class="markdown level1 summary"><p>Writes a message to the stream, if there is enough space in the buffer and <a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html#Google_Api_Gax_Grpc_BidirectionalStreamingBase_2_WriteCompleteAsync">WriteCompleteAsync()</a>
 hasn&apos;t already been called.</p>
 </div>
@@ -399,7 +399,7 @@ hasn&apos;t already been called.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">WriteOptions</span></td>
+        <td><span class="xref">Grpc.Core.WriteOptions</span></td>
         <td><span class="parametername">options</span></td>
         <td><p>The write options to use for this message.</p>
 </td>

@@ -1929,11 +1929,11 @@ references:
   commentId: Overload:Google.Api.Gax.Rest.ScopedCredentialProvider.#ctor
   fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.ScopedCredentialProvider
   nameWithType: ScopedCredentialProvider.ScopedCredentialProvider
-- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(GoogleCredential)
+- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(Google.Apis.Auth.OAuth2.GoogleCredential)
   name: GetCredentials(GoogleCredential)
-  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentials_GoogleCredential_
-  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(GoogleCredential)
-  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(GoogleCredential)
+  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentials_Google_Apis_Auth_OAuth2_GoogleCredential_
+  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(Google.Apis.Auth.OAuth2.GoogleCredential)
+  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials(Google.Apis.Auth.OAuth2.GoogleCredential)
   nameWithType: ScopedCredentialProvider.GetCredentials(GoogleCredential)
 - uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials*
   name: GetCredentials
@@ -1941,11 +1941,11 @@ references:
   commentId: Overload:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials
   fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentials
   nameWithType: ScopedCredentialProvider.GetCredentials
-- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
+- uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential)
   name: GetCredentialsAsync(GoogleCredential)
-  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentialsAsync_GoogleCredential_
-  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
-  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
+  href: api/Google.Api.Gax.Rest.ScopedCredentialProvider.html#Google_Api_Gax_Rest_ScopedCredentialProvider_GetCredentialsAsync_Google_Apis_Auth_OAuth2_GoogleCredential_
+  commentId: M:Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential)
+  fullName: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync(Google.Apis.Auth.OAuth2.GoogleCredential)
   nameWithType: ScopedCredentialProvider.GetCredentialsAsync(GoogleCredential)
 - uid: Google.Api.Gax.Rest.ScopedCredentialProvider.GetCredentialsAsync*
   name: GetCredentialsAsync

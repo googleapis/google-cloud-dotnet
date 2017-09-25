@@ -81,11 +81,39 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RewriteResponse</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Storage.v1.Data.html">Google.Apis.Storage.v1.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Storage.v1.dll</h6>
   <h5 id="Google_Apis_Storage_v1_Data_RewriteResponse_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RewriteResponse : Requests.IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class RewriteResponse : IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -97,7 +125,8 @@ present in the response.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool ? Done { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;done&quot;)]
+public virtual bool ? Done { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,6 +167,8 @@ present in the response.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Storage_v1_Data_RewriteResponse_Kind_" data-uid="Google.Apis.Storage.v1.Data.RewriteResponse.Kind*"></a>
   <h4 id="Google_Apis_Storage_v1_Data_RewriteResponse_Kind" data-uid="Google.Apis.Storage.v1.Data.RewriteResponse.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>The kind of item this is.</p>
@@ -145,7 +176,8 @@ present in the response.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
+public virtual string Kind { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +202,8 @@ response.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? ObjectSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;objectSize&quot;)]
+public virtual long ? ObjectSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -195,7 +228,8 @@ response only when copying completes.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Object Resource { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;resource&quot;)]
+public virtual Object Resource { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,7 +254,8 @@ response only when there is more data to copy.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string RewriteToken { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;rewriteToken&quot;)]
+public virtual string RewriteToken { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,7 +280,8 @@ indicator. This property is always present in the response.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? TotalBytesRewritten { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;totalBytesRewritten&quot;)]
+public virtual long ? TotalBytesRewritten { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

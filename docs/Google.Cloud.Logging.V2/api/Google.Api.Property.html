@@ -88,11 +88,33 @@ define and set these properties.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Property</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Api.Property.html">Property</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Api.Property.html">Property</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Api.Property.html">Property</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.html">Google.Api</a></h6>
   <h6><strong>Assembly</strong>: Google.Api.CommonProtos.dll</h6>
   <h5 id="Google_Api_Property_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Property : Protobuf.IMessage&lt;Property&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Property : IMessage&lt;Property&gt;, IMessage, IEquatable&lt;Property&gt;, IDeepCloneable&lt;Property&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -232,7 +254,7 @@ define and set these properties.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Protobuf.Reflection.MessageDescriptor Descriptor { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,7 +266,7 @@ define and set these properties.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">Protobuf.Reflection.MessageDescriptor</a></td>
+        <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -279,7 +301,7 @@ define and set these properties.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Protobuf.MessageParser&lt;Property&gt; Parser { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static MessageParser&lt;Property&gt; Parser { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,7 +313,7 @@ define and set these properties.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Protobuf.MessageParser-1.html">Protobuf.MessageParser</a>&lt;<a class="xref" href="Google.Api.Property.html">Property</a>&gt;</td>
+        <td><a class="xref" href="Google.Protobuf.MessageParser-1.html">MessageParser</a>&lt;<a class="xref" href="Google.Api.Property.html">Property</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -345,6 +367,8 @@ define and set these properties.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
   <a id="Google_Api_Property_Clone_" data-uid="Google.Api.Property.Clone*"></a>
   <h4 id="Google_Api_Property_Clone" data-uid="Google.Api.Property.Clone">Clone()</h4>
   <div class="markdown level1 summary"></div>
@@ -368,6 +392,8 @@ define and set these properties.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;T&gt;.Clone()</a></div>
   <a id="Google_Api_Property_Equals_" data-uid="Google.Api.Property.Equals*"></a>
   <h4 id="Google_Api_Property_Equals_Google_Api_Property_" data-uid="Google.Api.Property.Equals(Google.Api.Property)">Equals(Property)</h4>
   <div class="markdown level1 summary"></div>
@@ -408,6 +434,8 @@ define and set these properties.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.IEquatable&lt;T&gt;.Equals(T)</span></div>
   <a id="Google_Api_Property_Equals_" data-uid="Google.Api.Property.Equals*"></a>
   <h4 id="Google_Api_Property_Equals_System_Object_" data-uid="Google.Api.Property.Equals(System.Object)">Equals(Object)</h4>
   <div class="markdown level1 summary"></div>
@@ -448,6 +476,8 @@ define and set these properties.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
   <a id="Google_Api_Property_GetHashCode_" data-uid="Google.Api.Property.GetHashCode*"></a>
   <h4 id="Google_Api_Property_GetHashCode" data-uid="Google.Api.Property.GetHashCode">GetHashCode()</h4>
   <div class="markdown level1 summary"></div>
@@ -471,6 +501,8 @@ define and set these properties.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
   <a id="Google_Api_Property_MergeFrom_" data-uid="Google.Api.Property.MergeFrom*"></a>
   <h4 id="Google_Api_Property_MergeFrom_Google_Api_Property_" data-uid="Google.Api.Property.MergeFrom(Google.Api.Property)">MergeFrom(Property)</h4>
   <div class="markdown level1 summary"></div>
@@ -496,13 +528,15 @@ define and set these properties.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;T&gt;.MergeFrom(T)</a></div>
   <a id="Google_Api_Property_MergeFrom_" data-uid="Google.Api.Property.MergeFrom*"></a>
-  <h4 id="Google_Api_Property_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Property.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(Protobuf.CodedInputStream)</h4>
+  <h4 id="Google_Api_Property_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Property.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void MergeFrom(Protobuf.CodedInputStream input)</code></pre>
+    <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -515,12 +549,14 @@ define and set these properties.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">Protobuf.CodedInputStream</a></td>
+        <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></td>
         <td><span class="parametername">input</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
   <a id="Google_Api_Property_ToString_" data-uid="Google.Api.Property.ToString*"></a>
   <h4 id="Google_Api_Property_ToString" data-uid="Google.Api.Property.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
@@ -544,13 +580,15 @@ define and set these properties.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <a id="Google_Api_Property_WriteTo_" data-uid="Google.Api.Property.WriteTo*"></a>
-  <h4 id="Google_Api_Property_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Property.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(Protobuf.CodedOutputStream)</h4>
+  <h4 id="Google_Api_Property_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Property.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WriteTo(Protobuf.CodedOutputStream output)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -563,12 +601,41 @@ define and set these properties.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">Protobuf.CodedOutputStream</a></td>
+        <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a></td>
         <td><span class="parametername">output</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Google_Api_Property_Google_Protobuf_IMessage_Descriptor_" data-uid="Google.Api.Property.Google#Protobuf#IMessage#Descriptor*"></a>
+  <h4 id="Google_Api_Property_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Api.Property.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_Descriptor">IMessage.Descriptor</a></div>
 </article>
           </div>
           

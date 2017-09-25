@@ -81,11 +81,39 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Notification</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Storage.v1.Data.html">Google.Apis.Storage.v1.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Storage.v1.dll</h6>
   <h5 id="Google_Apis_Storage_v1_Data_Notification_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Notification : Requests.IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class Notification : IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -97,7 +125,8 @@ notification subscription.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IDictionary&lt;string, string&gt; CustomAttributes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;custom_attributes&quot;)]
+public virtual IDictionary&lt;string, string&gt; CustomAttributes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +150,8 @@ notification subscription.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ETag { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;etag&quot;)]
+public virtual string ETag { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,6 +168,8 @@ notification subscription.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Storage_v1_Data_Notification_EventTypes_" data-uid="Google.Apis.Storage.v1.Data.Notification.EventTypes*"></a>
   <h4 id="Google_Apis_Storage_v1_Data_Notification_EventTypes" data-uid="Google.Apis.Storage.v1.Data.Notification.EventTypes">EventTypes</h4>
   <div class="markdown level1 summary"><p>If present, only send notifications about listed event types. If empty, sent notifications for all
@@ -146,7 +178,8 @@ event types.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IList&lt;string&gt; EventTypes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;event_types&quot;)]
+public virtual IList&lt;string&gt; EventTypes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +203,8 @@ event types.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
+public virtual string Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,7 +228,8 @@ event types.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
+public virtual string Kind { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -219,7 +254,8 @@ prefix.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ObjectNamePrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;object_name_prefix&quot;)]
+public virtual string ObjectNamePrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -243,7 +279,8 @@ prefix.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string PayloadFormat { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;payload_format&quot;)]
+public virtual string PayloadFormat { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,7 +304,8 @@ prefix.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string SelfLink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;selfLink&quot;)]
+public virtual string SelfLink { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +330,8 @@ prefix.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Topic { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;topic&quot;)]
+public virtual string Topic { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/root",
+  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/root",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -292,7 +292,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.ApiBidirectionalStreamingCall-2.html",
-          "hash": "xODyXAkyjhnor+rwAJzRHA=="
+          "hash": "WggD6W5UWBxF6oVswEQZaA=="
         }
       },
       "is_incremental": false,
@@ -316,7 +316,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.ApiServerStreamingCall-2.html",
-          "hash": "4m3nl5wQH7XFnHGUa6RG1Q=="
+          "hash": "A2vTjpz3A/eCNe4zgZp+sw=="
         }
       },
       "is_incremental": false,
@@ -340,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html",
-          "hash": "knrIYXdrNP5DAeP7aiZ1Fg=="
+          "hash": "eQVqM4uObdHgQBBlvtPVyw=="
         }
       },
       "is_incremental": false,
@@ -364,7 +364,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.BufferedClientStreamWriter-1.html",
-          "hash": "ymWGOL8uo6/cPJ5c8GEmbQ=="
+          "hash": "FqYs2oahbZjk7KgDPj28HA=="
         }
       },
       "is_incremental": false,
@@ -376,7 +376,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.CallSettings.html",
-          "hash": "mXYVKErxVKnrlnrV1JSnNw=="
+          "hash": "isZjAnRludylDyOmHU62yQ=="
         }
       },
       "is_incremental": false,
@@ -388,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.CallSettingsExtensions.html",
-          "hash": "ajSUSiMitiPytLSVQa7xwA=="
+          "hash": "hkMbDy+YZlwfbDpTawCKaw=="
         }
       },
       "is_incremental": false,
@@ -424,7 +424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.ChannelPool.html",
-          "hash": "YNOn54EFJbz8+eHYpTQing=="
+          "hash": "QY7zGBLyA1kokcDcdd+QjQ=="
         }
       },
       "is_incremental": false,
@@ -436,7 +436,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.ClientHelper.html",
-          "hash": "MY5O28X5MoteYgPnqoVzHQ=="
+          "hash": "BXK6sAig+b36C6uy9FLcog=="
         }
       },
       "is_incremental": false,
@@ -448,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.GrpcPagedAsyncEnumerable-3.html",
-          "hash": "/BRsJkx0v57UxqOVEfwO/w=="
+          "hash": "QMoaJYYLgwb+jk0A4MjFQg=="
         }
       },
       "is_incremental": false,
@@ -520,7 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.RetrySettings.html",
-          "hash": "rd5CvhHS4bF79uGEx5QRvQ=="
+          "hash": "7Oayox1+DAYyM7x9vC99sg=="
         }
       },
       "is_incremental": false,
@@ -532,7 +532,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.ServerStreamingBase-1.html",
-          "hash": "lbK4rGHG4s5iR4KH/wsp3w=="
+          "hash": "+CixG9Sjv+iD9V5FIOKJzA=="
         }
       },
       "is_incremental": false,
@@ -568,7 +568,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Grpc.html",
-          "hash": "vAJBAzigy6+hHaNcehLYWg=="
+          "hash": "Vo+pK+CLtgshEmF+zEGT3w=="
         }
       },
       "is_incremental": false,
@@ -628,7 +628,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.PagedAsyncEnumerable-2.html",
-          "hash": "ljddJtYfp0Rb0zmLxDxLCA=="
+          "hash": "uTgksS8xfspb7RgUmLoQEQ=="
         }
       },
       "is_incremental": false,
@@ -760,7 +760,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Rest.RestPagedAsyncEnumerable-3.html",
-          "hash": "OdsaZGXJbzeDYqJQ6fVzfw=="
+          "hash": "VoEmkEKa8wr6/uNMgBRNzw=="
         }
       },
       "is_incremental": false,
@@ -784,7 +784,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Rest.ScopedCredentialProvider.html",
-          "hash": "qmstBGELnOYm4hhzUAKaNA=="
+          "hash": "2b7yiVECBOVTIMyWIhacnQ=="
         }
       },
       "is_incremental": false,
@@ -796,7 +796,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Api.Gax.Rest.UserAgentHelper.html",
-          "hash": "GNyQYoMKDF5S8rhY5C/LGQ=="
+          "hash": "98YyXi77E05MUwZs+13HrQ=="
         }
       },
       "is_incremental": false,
@@ -948,11 +948,6 @@
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -964,6 +959,11 @@
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

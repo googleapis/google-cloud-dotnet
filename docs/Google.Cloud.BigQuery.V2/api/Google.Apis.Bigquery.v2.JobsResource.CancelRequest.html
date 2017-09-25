@@ -81,8 +81,14 @@ costs.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.html">BigqueryBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.JobCancelResponse.html">JobCancelResponse</a>&gt;</div>
-    <div class="level2"><span class="xref">JobsResource.CancelRequest</span></div>
+    <div class="level1"><span class="xref">Google.Apis.Requests.ClientServiceRequest</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.JobCancelResponse.html">JobCancelResponse</a>&gt;</div>
+    <div class="level2"><a class="xref" href="Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.html">BigqueryBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.JobCancelResponse.html">JobCancelResponse</a>&gt;</div>
+    <div class="level3"><span class="xref">JobsResource.CancelRequest</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Apis.Requests.IClientServiceRequest</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.JobCancelResponse.html">JobCancelResponse</a>&gt;</div>
+    <div><span class="xref">Google.Apis.Requests.IClientServiceRequest</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -107,23 +113,86 @@ costs.</p>
     <div>
       <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.html#Google_Apis_Bigquery_v2_BigqueryBaseServiceRequest_1_UserIp">BigqueryBaseServiceRequest&lt;JobCancelResponse&gt;.UserIp</a>
     </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.Execute()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.ExecuteAsStream()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.ExecuteAsync()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.ExecuteAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.ExecuteAsStreamAsync()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.ExecuteAsStreamAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.CreateRequest(System.Nullable&lt;System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.GenerateRequestUri()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.GetBody()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.GetDefaultETagAction(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.ETagAction</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.ModifyRequest</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.RequestParameters</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.Service</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.html">Google.Apis.Bigquery.v2</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
   <h5 id="Google_Apis_Bigquery_v2_JobsResource_CancelRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CancelRequest : BigqueryBaseServiceRequest&lt;JobCancelResponse&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class CancelRequest : BigqueryBaseServiceRequest&lt;JobCancelResponse&gt;, IClientServiceRequest&lt;JobCancelResponse&gt;, IClientServiceRequest</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <a id="Google_Apis_Bigquery_v2_JobsResource_CancelRequest__ctor_" data-uid="Google.Apis.Bigquery.v2.JobsResource.CancelRequest.#ctor*"></a>
-  <h4 id="Google_Apis_Bigquery_v2_JobsResource_CancelRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_" data-uid="Google.Apis.Bigquery.v2.JobsResource.CancelRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">CancelRequest(Services.IClientService, String, String)</h4>
+  <h4 id="Google_Apis_Bigquery_v2_JobsResource_CancelRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_" data-uid="Google.Apis.Bigquery.v2.JobsResource.CancelRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">CancelRequest(IClientService, String, String)</h4>
   <div class="markdown level1 summary"><p>Constructs a new Cancel request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CancelRequest(Services.IClientService service, string projectId, string jobId)</code></pre>
+    <pre><code class="lang-csharp hljs">public CancelRequest(IClientService service, string projectId, string jobId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,6 +247,8 @@ costs.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.HttpMethod</span></div>
   <a id="Google_Apis_Bigquery_v2_JobsResource_CancelRequest_JobId_" data-uid="Google.Apis.Bigquery.v2.JobsResource.CancelRequest.JobId*"></a>
   <h4 id="Google_Apis_Bigquery_v2_JobsResource_CancelRequest_JobId" data-uid="Google.Apis.Bigquery.v2.JobsResource.CancelRequest.JobId">JobId</h4>
   <div class="markdown level1 summary"><p>[Required] Job ID of the job to cancel</p>
@@ -185,7 +256,8 @@ costs.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string JobId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;jobId&quot;, RequestParameterType.Path)]
+public virtual string JobId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,6 +298,8 @@ costs.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.MethodName</span></div>
   <a id="Google_Apis_Bigquery_v2_JobsResource_CancelRequest_ProjectId_" data-uid="Google.Apis.Bigquery.v2.JobsResource.CancelRequest.ProjectId*"></a>
   <h4 id="Google_Apis_Bigquery_v2_JobsResource_CancelRequest_ProjectId" data-uid="Google.Apis.Bigquery.v2.JobsResource.CancelRequest.ProjectId">ProjectId</h4>
   <div class="markdown level1 summary"><p>[Required] Project ID of the job to cancel</p>
@@ -233,7 +307,8 @@ costs.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ProjectId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;projectId&quot;, RequestParameterType.Path)]
+public virtual string ProjectId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -274,6 +349,8 @@ costs.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.JobCancelResponse&gt;.RestPath</span></div>
   <h3 id="methods">Methods
   </h3>
   <a id="Google_Apis_Bigquery_v2_JobsResource_CancelRequest_InitParameters_" data-uid="Google.Apis.Bigquery.v2.JobsResource.CancelRequest.InitParameters*"></a>

@@ -80,11 +80,39 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ExplainQueryStage</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
   <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
   <h5 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ExplainQueryStage : Requests.IDirectResponseSchema</code></pre>
+    <pre><code class="lang-csharp hljs">public class ExplainQueryStage : IDirectResponseSchema</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -95,7 +123,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? ComputeMsAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;computeMsAvg&quot;)]
+public virtual long ? ComputeMsAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +148,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? ComputeMsMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;computeMsMax&quot;)]
+public virtual long ? ComputeMsMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,7 +173,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual double ? ComputeRatioAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;computeRatioAvg&quot;)]
+public virtual double ? ComputeRatioAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,7 +198,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual double ? ComputeRatioMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;computeRatioMax&quot;)]
+public virtual double ? ComputeRatioMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,6 +240,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
   <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_Id_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.Id*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_Id" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.Id">Id</h4>
   <div class="markdown level1 summary"><p>Unique ID for stage within plan.</p>
@@ -215,7 +249,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
+public virtual long ? Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,7 +274,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;name&quot;)]
+public virtual string Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,7 +299,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? ReadMsAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;readMsAvg&quot;)]
+public virtual long ? ReadMsAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -287,7 +324,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? ReadMsMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;readMsMax&quot;)]
+public virtual long ? ReadMsMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,7 +349,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual double ? ReadRatioAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;readRatioAvg&quot;)]
+public virtual double ? ReadRatioAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -335,7 +374,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual double ? ReadRatioMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;readRatioMax&quot;)]
+public virtual double ? ReadRatioMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,7 +399,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? RecordsRead { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;recordsRead&quot;)]
+public virtual long ? RecordsRead { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,7 +424,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? RecordsWritten { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;recordsWritten&quot;)]
+public virtual long ? RecordsWritten { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -407,7 +449,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? ShuffleOutputBytes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;shuffleOutputBytes&quot;)]
+public virtual long ? ShuffleOutputBytes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -431,7 +474,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? ShuffleOutputBytesSpilled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;shuffleOutputBytesSpilled&quot;)]
+public virtual long ? ShuffleOutputBytesSpilled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -455,7 +499,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;status&quot;)]
+public virtual string Status { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -479,7 +524,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IList&lt;ExplainQueryStep&gt; Steps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;steps&quot;)]
+public virtual IList&lt;ExplainQueryStep&gt; Steps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -503,7 +549,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? WaitMsAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;waitMsAvg&quot;)]
+public virtual long ? WaitMsAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -527,7 +574,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? WaitMsMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;waitMsMax&quot;)]
+public virtual long ? WaitMsMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -551,7 +599,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual double ? WaitRatioAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;waitRatioAvg&quot;)]
+public virtual double ? WaitRatioAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -575,7 +624,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual double ? WaitRatioMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;waitRatioMax&quot;)]
+public virtual double ? WaitRatioMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -599,7 +649,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? WriteMsAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeMsAvg&quot;)]
+public virtual long ? WriteMsAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -623,7 +674,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ? WriteMsMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeMsMax&quot;)]
+public virtual long ? WriteMsMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -647,7 +699,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual double ? WriteRatioAvg { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeRatioAvg&quot;)]
+public virtual double ? WriteRatioAvg { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -671,7 +724,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual double ? WriteRatioMax { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeRatioMax&quot;)]
+public virtual double ? WriteRatioMax { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
