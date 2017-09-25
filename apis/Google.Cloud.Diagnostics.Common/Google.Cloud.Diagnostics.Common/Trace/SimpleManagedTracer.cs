@@ -171,7 +171,7 @@ namespace Google.Cloud.Diagnostics.Common
                 catch (Exception e) when (SetStackTraceAndReturnFalse(e))
                 {
                     // This will never return as the condition above will always be false.
-                    return default;
+                    return default(T);
                 }
             }
         }
@@ -188,7 +188,7 @@ namespace Google.Cloud.Diagnostics.Common
                 catch (Exception e) when (SetStackTraceAndReturnFalse(e))
                 {
                     // This will never return as the condition above will always be false.
-                    return default;
+                    return default(T);
                 }
             }
         }
