@@ -28,7 +28,8 @@ cp dependencies-docfx/docfx-grpc.json dependencies/grpc/docfx.json
 cp dependencies-docfx/docfx-google-api-dotnet-client.json dependencies/google-api-dotnet-client/docfx.json
 
 # Restore packages and build metadata
-(cd dependencies/gax-dotnet; 
+(cd dependencies/gax-dotnet;
+ dotnet restore Gax.sln
  $DOCFX metadata)
 
 (cd dependencies/protobuf;
@@ -39,6 +40,11 @@ cp dependencies-docfx/docfx-google-api-dotnet-client.json dependencies/google-ap
 
 (cd dependencies/google-api-dotnet-client;
  rm NuGet.config;
+ dotnet restore Src/Support/GoogleApisClient.sln;
+ dotnet new sln --name Generated;
+ dotnet sln Generated.sln add Src/Generated/Google.Apis.Bigquery.v2/*.csproj;
+ dotnet sln Generated.sln add Src/Generated/Google.Apis.Storage.v1/*.csproj;
+ dotnet restore Generated.sln;
  $DOCFX metadata)
 
 # Copy the metadata into a single api directory, one subdirectory per package
