@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
@@ -21,6 +23,7 @@ namespace Google.Cloud.BigQuery.V2
     /// https://cloud.google.com/bigquery/docs/creating-partitioned-tables for
     /// more details on partitioned tables.
     /// </summary>
+    [Obsolete("This enum will be removed before final release. Please use TimePartition to create a TimePartitioning for options.")]
     public enum TimePartitionType
     {
         /// <summary>
