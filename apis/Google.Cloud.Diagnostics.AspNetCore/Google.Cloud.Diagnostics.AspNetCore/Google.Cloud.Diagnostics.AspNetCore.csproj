@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>1.0.0</Version>
-    <TargetFrameworks>netstandard1.5</TargetFrameworks>
+    <TargetFrameworks>netstandard1.5;net46</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
@@ -39,6 +39,10 @@
     <Content Include="$(OutputPath)netstandard1.5\$(PackageId).pdb">
       <Pack>true</Pack>
       <PackagePath>lib/netstandard1.5</PackagePath>
+    </Content>
+    <Content Include="$(OutputPath)net46\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/net46</PackagePath>
     </Content>
   </ItemGroup>
 </Project>

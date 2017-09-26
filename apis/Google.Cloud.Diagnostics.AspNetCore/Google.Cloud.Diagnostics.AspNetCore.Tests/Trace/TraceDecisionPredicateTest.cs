@@ -12,30 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Internal;
 using System;
 using Xunit;
 
-#if NET452
-using System.Web;
-#else
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
-#endif
-
-namespace Google.Cloud.Diagnostics.Common.Tests
+namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class TraceDecisionPredicateTest
     {
         private HttpRequest CreateRequest(string path)
         {
-#if NET452
-            return new HttpRequest("somefile", $"https://www.google.com{path}", "");
-#else
             return new DefaultHttpRequest(new DefaultHttpContext())
             {
                 Path = path
             };
-#endif
         }
 
         [Fact]

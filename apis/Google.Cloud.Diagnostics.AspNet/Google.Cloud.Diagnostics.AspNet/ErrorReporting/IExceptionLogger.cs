@@ -15,14 +15,9 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-
-#if NET45
 using System.Web;
-#else
-using Microsoft.AspNetCore.Http;
-#endif
 
-namespace Google.Cloud.Diagnostics.Common
+namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
     /// A generic exception logger.

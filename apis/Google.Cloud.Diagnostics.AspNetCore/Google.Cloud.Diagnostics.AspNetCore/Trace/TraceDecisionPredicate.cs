@@ -12,16 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
+
 using Google.Api.Gax;
-
-#if NET45
-using System.Web;
-#else
 using Microsoft.AspNetCore.Http;
-#endif
+using System;
 
-namespace Google.Cloud.Diagnostics.Common
+namespace Google.Cloud.Diagnostics.AspNetCore
 {
     /// <summary>
     /// Used to determine if an <see cref="HttpRequest"/> should be traced. This will not override
