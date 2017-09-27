@@ -22,6 +22,7 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
@@ -77,6 +78,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         }
         // End sample
 
+#if NETCOREAPP2_0
+        private class Startup { }
+        public void Configure()
+        {
+            // Sample: RegisterGoogleLogger2
+            string projectId = "[Google Cloud Platform project ID]";
+            var webHost = new WebHostBuilder()
+                .ConfigureLogging((hostingContext, logging) =>
+                    logging.AddProvider(GoogleLoggerProvider.Create(projectId)))
+                .UseStartup<Startup>()
+                .Build();
+            // End sample
+        }
+#endif
         // Sample: UseGoogleLogger
         public void LogMessage(ILoggerFactory loggerFactory)
         {
