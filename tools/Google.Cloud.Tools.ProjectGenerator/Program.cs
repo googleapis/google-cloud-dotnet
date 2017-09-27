@@ -313,7 +313,7 @@ TODO: Add snippet references here.
                 new XElement("RepositoryType", "git"),
                 new XElement("RepositoryUrl", "https://github.com/GoogleCloudPlatform/google-cloud-dotnet")
             );
-            if (api.Type == "grpc")
+            if (dependencies.ContainsKey(GrpcPackage))
             {
                 propertyGroup.Add(new XElement("CodeAnalysisRuleSet", "..\\..\\..\\grpc.ruleset"));
             }
