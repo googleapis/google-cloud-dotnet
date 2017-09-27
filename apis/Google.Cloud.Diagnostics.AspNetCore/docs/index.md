@@ -26,7 +26,7 @@ and Stackdriver Trace.
 
 ## Initializing Logging (AspNetCore 2.0)
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore2.AspNetCore.txt#RegisterGoogleLogger)]
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#RegisterGoogleLogger2)]
 
 ## Log
 
