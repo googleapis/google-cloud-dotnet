@@ -41,7 +41,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var table = GetTable();
             var client = BigQueryClient.Create(_fixture.ProjectId);
-            var rows = client.ExecuteQuery($"SELECT * FROM {table}").ToList();
+            var rows = client.ExecuteQuery($"SELECT * FROM {table}", parameters: null).ToList();
             ValidateRows(rows);
         }
 
@@ -139,12 +139,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
         private void AssertParameterRoundTrip(BigQueryClient client, BigQueryParameter parameter)
         {
-            var command = new BigQueryCommand($"SELECT ? AS value")
-            {
-                Parameters = { parameter },
-                ParameterMode = BigQueryParameterMode.Positional
-            };
-            var results = client.ExecuteQuery(command).ToList();
+            var results = client.ExecuteQuery(
+                "SELECT ? AS value",
+                new[] { parameter },
+                new QueryOptions { ParameterMode = BigQueryParameterMode.Positional }).ToList();
             Assert.Equal(1, results.Count);
             Assert.Equal(parameter.Value, results[0]["value"]);
             if (parameter.Value is DateTime)

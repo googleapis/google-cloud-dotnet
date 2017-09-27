@@ -38,7 +38,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryClient client = BigQueryClient.Create(projectId);
 
             string sql = $"This is a broken query";
-            BigQueryJob query = client.CreateQueryJob(sql).PollUntilCompleted();
+            BigQueryJob query = client.CreateQueryJob(sql, parameters: null).PollUntilCompleted();
             try
             {
                 // Usually this method is called in a chain. It returns the same job
