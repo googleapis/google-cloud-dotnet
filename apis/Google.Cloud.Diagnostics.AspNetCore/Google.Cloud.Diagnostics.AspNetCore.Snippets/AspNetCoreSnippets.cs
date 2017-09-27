@@ -78,6 +78,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         }
         // End sample
 
+#if NETCOREAPP2_0
         private class Startup { }
         public void Configure()
         {
@@ -90,7 +91,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 .Build();
             // End sample
         }
-
+#endif
         // Sample: UseGoogleLogger
         public void LogMessage(ILoggerFactory loggerFactory)
         {
