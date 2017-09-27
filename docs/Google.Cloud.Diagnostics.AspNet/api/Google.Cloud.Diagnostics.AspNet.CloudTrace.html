@@ -214,7 +214,7 @@ in Http requests.
   <h5 class="implements">Implements</h5>
       <div><span class="xref">System.IDisposable.Dispose()</span></div>
   <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize*"></a>
-  <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_Web_HttpApplication_System_String_Google_Cloud_Diagnostics_Common_TraceOptions_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceOptions,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)">Initialize(HttpApplication, String, TraceOptions, TraceServiceClient, TraceDecisionPredicate)</h4>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_Web_HttpApplication_System_String_Google_Cloud_Diagnostics_Common_TraceOptions_TraceServiceClient_Google_Cloud_Diagnostics_AspNet_TraceDecisionPredicate_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceOptions,TraceServiceClient,Google.Cloud.Diagnostics.AspNet.TraceDecisionPredicate)">Initialize(HttpApplication, String, TraceOptions, TraceServiceClient, TraceDecisionPredicate)</h4>
   <div class="markdown level1 summary"><p>Initialize tracing for this application.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -253,13 +253,13 @@ in Http requests.
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Google.Cloud.Trace.V1.TraceServiceClient</span></td>
+        <td><span class="xref">TraceServiceClient</span></td>
         <td><span class="parametername">client</span></td>
         <td><p>Optional trace client, if unset the default will be used.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html">TraceDecisionPredicate</a></td>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.AspNet.TraceDecisionPredicate.html">TraceDecisionPredicate</a></td>
         <td><span class="parametername">traceFallbackPredicate</span></td>
         <td><p>Optional function to trace requests. If the trace header is not set
     then this function will be called to determine if a given request should be traced.  This will

@@ -69,7 +69,10 @@ and Stackdriver Trace.</p>
 <h1 id="installation">Installation</h1>
 <p>Install the <code>Google.Cloud.Diagnostics.AspNetCore</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
-project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).</p>
+project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
+Please ensure you enable pre-release packages(for example, in the
+Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
+box).</p>
 <h1 id="authentication">Authentication</h1>
 <p>When running on Google Cloud Platform, no action needs to be taken to authenticate.</p>
 <p>Otherwise, the simplest way of authenticating your API calls is to
@@ -119,6 +122,13 @@ public void ReadFile(IExceptionLogger exceptionLogger)
     string projectId = &quot;[Google Cloud Platform project ID]&quot;;
     loggerFactory.AddGoogle(projectId);
 }
+</code></pre><h2 id="initializing-logging-aspnetcore-20">Initializing Logging (AspNetCore 2.0)</h2>
+<pre><code class="lang-cs">string projectId = &quot;[Google Cloud Platform project ID]&quot;;
+var webHost = new WebHostBuilder()
+    .ConfigureLogging((hostingContext, logging) =&gt;
+        logging.AddProvider(GoogleLoggerProvider.Create(projectId)))
+    .UseStartup&lt;Startup&gt;()
+    .Build();
 </code></pre><h2 id="log">Log</h2>
 <pre><code class="lang-cs">public void LogMessage(ILoggerFactory loggerFactory)
 {

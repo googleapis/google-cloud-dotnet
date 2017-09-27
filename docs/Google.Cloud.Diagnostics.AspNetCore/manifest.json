@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/Google.Cloud.Diagnostics.AspNetCore",
+  "source_base_path": "C:/Users/talarico/Desktop/google-cloud-dotnet/docs/output/Google.Cloud.Diagnostics.AspNetCore",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "rkP4JjXNaooISyra8Vb2hQ=="
+          "hash": "7kWBEzU+gS+X+KPzSbDqZQ=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html",
-          "hash": "D8XwmbWTkzpS0woRjHU9eg=="
+          "hash": "T/31HNkq0IAPp4Bjx5LbVA=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html",
-          "hash": "RPCZ9vCfmsN0cr1Z6JSsfQ=="
+          "hash": "Q5ca/YHGTE8/3q4BQSinrQ=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html",
-          "hash": "Bsm+AlDXfi93fsgR7MAZGQ=="
+          "hash": "EzXxz6TaRBIi9RgVju4X9w=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html",
-          "hash": "lpdEM3PuNEf1kcch3t4SCA=="
+          "hash": "/35RvYlPsmaV8nyFlM39Og=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html",
-          "hash": "DiAoXfo9oBRVmLqnWNyRjA=="
+          "hash": "B6R2qGFW/MwuThzYTVEohw=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.html",
-          "hash": "sekr4qu2ovYK3rcTpIdUYw=="
+          "hash": "8Ln1q6M4AmEFpA5oADV8Aw=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html",
-          "hash": "HD57GLnj4EjJ8NnfMO3gBA=="
+          "hash": "8wpl50Eb0lvMFEhTXA07Hg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Diagnostics.AspNetCore.IExceptionLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.IExceptionLogger.html",
+          "hash": "PVKkAskBzjiO2LQgDkrpmQ=="
         }
       },
       "is_incremental": false,
@@ -105,7 +117,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html",
-          "hash": "rpxPcO2AdWp/JmSuBD+hsg=="
+          "hash": "0276ZXl+lNdXcmF9yxsBrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Diagnostics.AspNetCore.TraceDecisionPredicate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.TraceDecisionPredicate.html",
+          "hash": "Ev5mpDdmMavzlY53h/7IhA=="
         }
       },
       "is_incremental": false,
@@ -117,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html",
-          "hash": "UEeBptLo+bDKM69JAKZEZA=="
+          "hash": "lyrEsP2dB9/dku7YypEtaw=="
         }
       },
       "is_incremental": false,
@@ -129,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.AspNetCore.html",
-          "hash": "Dd7bXE2nnFi3XVQvKyqOZA=="
+          "hash": "Ew8bv3LJcYLe74cpFBWOKg=="
         }
       },
       "is_incremental": false,
@@ -141,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.BufferOptions.html",
-          "hash": "koF23+JjbyY55B4096S+pQ=="
+          "hash": "05LfMHocWbzAyiu1FhtEEg=="
         }
       },
       "is_incremental": false,
@@ -177,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.ContextExceptionLogger.html",
-          "hash": "wI95pP6mwuPCkz+nfgS5Lg=="
+          "hash": "sya1AqhuGtxuy3GUMHDh5Q=="
         }
       },
       "is_incremental": false,
@@ -189,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.ErrorReportingOptions.html",
-          "hash": "r9KqCZeUW+YCIc3m7ihb+g=="
+          "hash": "JaEmBdAidRdeAQLCkVOjyQ=="
         }
       },
       "is_incremental": false,
@@ -201,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.EventTarget.html",
-          "hash": "e/f5+LCLpmZmtujgaUCWKw=="
+          "hash": "IRQbP8pu2bal+BkROkSTTg=="
         }
       },
       "is_incremental": false,
@@ -237,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.IConsumer-1.html",
-          "hash": "2q5O7xvTqyr/K6Z6qmnA0w=="
+          "hash": "a+Cg7Aqq1siN+Lhv7Zjtew=="
         }
       },
       "is_incremental": false,
@@ -249,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.IContextExceptionLogger.html",
-          "hash": "DfUPHvfa35mecLG9zCJ8KQ=="
+          "hash": "0yTvzEtGesyUawV+Ssjw6Q=="
         }
       },
       "is_incremental": false,
@@ -261,19 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.IContextWrapper.html",
-          "hash": "QnAA18b9hrsPBn/PDpEdeA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Google.Cloud.Diagnostics.Common.IExceptionLogger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.Cloud.Diagnostics.Common.IExceptionLogger.html",
-          "hash": "3saW5DuzuVq/T0kRrRQJZg=="
+          "hash": "5NsIRbjy8dJmI+2ND46FVA=="
         }
       },
       "is_incremental": false,
@@ -285,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.IManagedTracer.html",
-          "hash": "8nYr2g+UOYszqYaTnuzcWA=="
+          "hash": "iNMpIL+MZWSBnWaX6lX06w=="
         }
       },
       "is_incremental": false,
@@ -297,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.ISpan.html",
-          "hash": "y1MNnRgZ7al21Gyc7xQNSQ=="
+          "hash": "LNwEoI52BvDCLsJ+DE43Fg=="
         }
       },
       "is_incremental": false,
@@ -309,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.LogConsumer.html",
-          "hash": "SVckFOW56ZsdZZiSV/KWEg=="
+          "hash": "daOXqBXsm5BWe+Ao1erj8w=="
         }
       },
       "is_incremental": false,
@@ -321,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.LogTarget.html",
-          "hash": "pZ5GCXvnI3Uj2s5Rg6D01A=="
+          "hash": "NvXmy7Zm5Gkii0maKvItmg=="
         }
       },
       "is_incremental": false,
@@ -345,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.ManagedTracer.html",
-          "hash": "vvW6RtIuV5Nrsd7j/ScD5Q=="
+          "hash": "ZG/Vh3rPBvmvnaZC9Fy0TA=="
         }
       },
       "is_incremental": false,
@@ -357,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.NullManagedTracer.html",
-          "hash": "XvLDdT9zI0G0PXXq/CniVw=="
+          "hash": "bszMyQknkyHaa/D8frNg2A=="
         }
       },
       "is_incremental": false,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.Project.html",
-          "hash": "0Pt0h9MVxLbRAfG7nyrtBQ=="
+          "hash": "a+8ryz0D0p+cPlFpf+ZHZA=="
         }
       },
       "is_incremental": false,
@@ -381,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.RetryOptions.html",
-          "hash": "cF80C2Ml3Zo2A/+nRmzZEA=="
+          "hash": "+66aLAQVLHqPsadxozR88g=="
         }
       },
       "is_incremental": false,
@@ -417,19 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.StartSpanOptions.html",
-          "hash": "l8zg7sHHe2JN7Qu5NLlWwA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html",
-          "hash": "684hflGc46DaUa72pWxkqA=="
+          "hash": "1pOvzEX0QRdcNt5HmhKuIA=="
         }
       },
       "is_incremental": false,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html",
-          "hash": "KQNh6ciclk1Cg4KRcG04kg=="
+          "hash": "f0ilJkLpxGA8wzJIiGWV0w=="
         }
       },
       "is_incremental": false,
@@ -453,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html",
-          "hash": "UGYyujHwjlAG1ikMElfwmA=="
+          "hash": "/B0nWrQVYUW3k5sthqjafg=="
         }
       },
       "is_incremental": false,
@@ -465,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.TraceLabels.html",
-          "hash": "kfsxCUAZ5yDOIc4dOrYVzA=="
+          "hash": "UtlZG0ocHKXXcFD5R/0cLA=="
         }
       },
       "is_incremental": false,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.TraceOptions.html",
-          "hash": "2zelFD6AbR7kOZg8EFRKhQ=="
+          "hash": "bfymq9GQEKAvptY3WN/CbA=="
         }
       },
       "is_incremental": false,
@@ -489,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Diagnostics.Common.html",
-          "hash": "9hY+xedBhCZ9dg3ULWbx5g=="
+          "hash": "ygiwXczRn1hIaVIswj/v3g=="
         }
       },
       "is_incremental": false,
@@ -501,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.AsyncAuthInterceptor.html",
-          "hash": "kw2PunFbe7mCOf5DI7jjuQ=="
+          "hash": "3DLKyJEh0SnxhqfTlpnjSA=="
         }
       },
       "is_incremental": false,
@@ -513,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.AsyncClientStreamingCall-2.html",
-          "hash": "cowBXrViivJR1r+GbFyczg=="
+          "hash": "k0w5xb/r7nS0R3uG8sR2KA=="
         }
       },
       "is_incremental": false,
@@ -525,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.AsyncDuplexStreamingCall-2.html",
-          "hash": "RCwmxGcPtpaHaOuPXlbSqg=="
+          "hash": "LkvNDKgssN1RDiH4+40hdA=="
         }
       },
       "is_incremental": false,
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.AsyncServerStreamingCall-1.html",
-          "hash": "qWXRAo4USYGls3fUd11bLA=="
+          "hash": "e/yje7xqzxrjLx2riX5Zvg=="
         }
       },
       "is_incremental": false,
@@ -549,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.AsyncUnaryCall-1.html",
-          "hash": "LJ1neSVbA9JadLPsrpZJ1w=="
+          "hash": "211ov9aZLRNXn53AiAZaOg=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.AuthContext.html",
-          "hash": "ZONwn5ALQczxjbBP9VthNw=="
+          "hash": "PMPrKzhOP/PX37A2+Rt/3A=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.AuthInterceptorContext.html",
-          "hash": "iz3TxvpmOHBiQK4BywYI1g=="
+          "hash": "5pMSyIRsRNB7abQFpyybpQ=="
         }
       },
       "is_incremental": false,
@@ -585,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.AuthProperty.html",
-          "hash": "jaQaQRUF0nKX349nrZjYlA=="
+          "hash": "OtaQBDGApO7CT9AV51HPkQ=="
         }
       },
       "is_incremental": false,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.CallCredentials.html",
-          "hash": "xkrIWftXiw4vZclv1j421A=="
+          "hash": "mfmpjUujbvT4NeZ4qaN+Bw=="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.CallInvocationDetails-2.html",
-          "hash": "5+DOy7UJ3CJcPfhUdnIn1Q=="
+          "hash": "JJcrYAyxZQwOTv6WsX773Q=="
         }
       },
       "is_incremental": false,
@@ -621,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.CallInvoker.html",
-          "hash": "LU+xp5CQ9HcLwlcAhqxf0Q=="
+          "hash": "zeVJPGs3620p3YjpOYo+Nw=="
         }
       },
       "is_incremental": false,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.CallOptions.html",
-          "hash": "6ID/lMtO1hyMwDW+mEkDRA=="
+          "hash": "Fm7wRdokBcoJlNj3LiR1lw=="
         }
       },
       "is_incremental": false,
@@ -645,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Calls.html",
-          "hash": "wNQ4m1b4WjhtoATrScjNiQ=="
+          "hash": "oF89kC2Mr495RJxJzta0tA=="
         }
       },
       "is_incremental": false,
@@ -657,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Channel.html",
-          "hash": "F0+seJBL/r4RRI3YkGU8Sw=="
+          "hash": "bhZkzdlp/bXiMI+YiaUaIQ=="
         }
       },
       "is_incremental": false,
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ChannelCredentials.html",
-          "hash": "B/YEwDm871AIveTeROPGqQ=="
+          "hash": "yNxMfrU76uweq46oWqX20A=="
         }
       },
       "is_incremental": false,
@@ -693,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ChannelOption.html",
-          "hash": "aZkpAzYfAtTV9tgrAF9iKA=="
+          "hash": "lFwSGK69MNd+pUyFTJaatg=="
         }
       },
       "is_incremental": false,
@@ -705,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ChannelOptions.html",
-          "hash": "R6sVYx8CVD0bMHgdP/+iow=="
+          "hash": "KdjuY311Z+bj3O+L3+H0Ng=="
         }
       },
       "is_incremental": false,
@@ -729,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ClientBase-1.html",
-          "hash": "7Px37iqCxz+k20q7ejvsHw=="
+          "hash": "0FtrdJa5wXJ53FLQz7dnSg=="
         }
       },
       "is_incremental": false,
@@ -741,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ClientBase.ClientBaseConfiguration.html",
-          "hash": "/C9nc6dvsYKPW7+w4OJUqg=="
+          "hash": "TS5iPchxnmZnnr1gp/n3Xw=="
         }
       },
       "is_incremental": false,
@@ -753,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ClientBase.html",
-          "hash": "wopPBeYlpvIOO8ZHywFwkg=="
+          "hash": "p7e1GcWFnppGY8ncvI6dPQ=="
         }
       },
       "is_incremental": false,
@@ -765,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ClientStreamingServerMethod-2.html",
-          "hash": "hf3shSWFwq/gzCJiZppw7Q=="
+          "hash": "IuG5+yUDGicB234ZT+iRhg=="
         }
       },
       "is_incremental": false,
@@ -789,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ContextPropagationOptions.html",
-          "hash": "eX++hLcI4c5Sgo6uZ6ABTg=="
+          "hash": "Mxb7Km7xFhao75TyJMcXqg=="
         }
       },
       "is_incremental": false,
@@ -801,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ContextPropagationToken.html",
-          "hash": "PROCx504yvPOEdLmZLwHKA=="
+          "hash": "h+Po6jmSX8DJalUvU3mCLA=="
         }
       },
       "is_incremental": false,
@@ -813,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.DefaultCallInvoker.html",
-          "hash": "ZvQaDL1bQoROh/sjYgSdrw=="
+          "hash": "buiiWj+vQTBDZf6b2ut19A=="
         }
       },
       "is_incremental": false,
@@ -825,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.DuplexStreamingServerMethod-2.html",
-          "hash": "HmjgmmiypKQSiqw7PJeUlQ=="
+          "hash": "/d5euLMwTEWxcKom6hW3/Q=="
         }
       },
       "is_incremental": false,
@@ -837,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.GrpcEnvironment.html",
-          "hash": "PPqPalTVMt27XR6Zds10Yg=="
+          "hash": "wPG2EsGpmHOnco4SXiJ5Rg=="
         }
       },
       "is_incremental": false,
@@ -849,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.IAsyncStreamReader-1.html",
-          "hash": "4X4Pivpa3cXjTO291fAhiA=="
+          "hash": "mBblZgc20R+JvPnZTWZFbg=="
         }
       },
       "is_incremental": false,
@@ -861,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.IAsyncStreamWriter-1.html",
-          "hash": "awNxvyOUnsT6fKBx/xM4ZQ=="
+          "hash": "x5/OZfhJwZdzjbHO1TifTg=="
         }
       },
       "is_incremental": false,
@@ -873,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.IClientStreamWriter-1.html",
-          "hash": "IW/VmvKad53ElhwFfMNDQA=="
+          "hash": "UUT9IaTFYRcBG6zwBvTkYA=="
         }
       },
       "is_incremental": false,
@@ -885,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.IHasWriteOptions.html",
-          "hash": "vi72nLlTw7XBqa+8Q94Ezg=="
+          "hash": "FDG1MfnLHDJROm4iMS6o2g=="
         }
       },
       "is_incremental": false,
@@ -897,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.IMethod.html",
-          "hash": "nVLePRFT3+v7HaXy4/JQvw=="
+          "hash": "8t1UX/c0dg/D4dkBfkHiPQ=="
         }
       },
       "is_incremental": false,
@@ -909,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.IServerStreamWriter-1.html",
-          "hash": "5YUKEM2LVd5mrPT9422DuQ=="
+          "hash": "PRS5ROPP55YfL2cK/zDoWA=="
         }
       },
       "is_incremental": false,
@@ -921,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.KeyCertificatePair.html",
-          "hash": "FwZ8E4HE/qYsO8Hal+3Jww=="
+          "hash": "Yc3y1FURCaXDhKz4r4F4lQ=="
         }
       },
       "is_incremental": false,
@@ -933,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Logging.ConsoleLogger.html",
-          "hash": "1g/RIEkElD114tkT+MFaCw=="
+          "hash": "uoCxCUKb4+chWMnN5ffZZQ=="
         }
       },
       "is_incremental": false,
@@ -945,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Logging.ILogger.html",
-          "hash": "zfw0ZWNIycSJipzcVKM3/A=="
+          "hash": "EWqzb/59R6NqGwa2e+NFUQ=="
         }
       },
       "is_incremental": false,
@@ -969,7 +969,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Logging.LogLevelFilterLogger.html",
-          "hash": "HgxHYG4rBLf1D60qKw3KnA=="
+          "hash": "1or8J8ifoiti15XClJSFmA=="
         }
       },
       "is_incremental": false,
@@ -981,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Logging.NullLogger.html",
-          "hash": "nPUdhPWBPEb1v90sZhOmIQ=="
+          "hash": "zkBiqeYSrZ9BC7r3thBmgw=="
         }
       },
       "is_incremental": false,
@@ -993,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Logging.TextWriterLogger.html",
-          "hash": "73wt2BwFpejCzp6dj9rDhQ=="
+          "hash": "ZwlMAN8tOZAprwAzgfyB2g=="
         }
       },
       "is_incremental": false,
@@ -1017,7 +1017,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Marshaller-1.html",
-          "hash": "whq+Jx4g1BWH7q0RhyRrVQ=="
+          "hash": "MlztgW8ToqQFpWl6vwR/CA=="
         }
       },
       "is_incremental": false,
@@ -1029,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Marshallers.html",
-          "hash": "DNGBSwtHAGwL4e+02Lg99g=="
+          "hash": "DyBb/sRhldU00/VUnl1QNg=="
         }
       },
       "is_incremental": false,
@@ -1041,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Metadata.Entry.html",
-          "hash": "cZpLUOpjiE30dfcJxVcUBA=="
+          "hash": "iA3pQd5/UJmeb2s9o3Gj/w=="
         }
       },
       "is_incremental": false,
@@ -1053,7 +1053,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Metadata.html",
-          "hash": "KJt41a3OyO7+sdsoa8FSTQ=="
+          "hash": "m515hUSQ8c/I9I06XjY4Uw=="
         }
       },
       "is_incremental": false,
@@ -1065,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Method-2.html",
-          "hash": "GqbA10ugUcyB2fiNhqUfhQ=="
+          "hash": "RA+CICHn12d+u87FiGEhtw=="
         }
       },
       "is_incremental": false,
@@ -1089,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.RpcException.html",
-          "hash": "7tzSN8VL1mWR2NbpaKhFFA=="
+          "hash": "mXWfcaFrnVaRbBn2cpntGQ=="
         }
       },
       "is_incremental": false,
@@ -1101,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Server.ServerPortCollection.html",
-          "hash": "ShyqQzMy/BFfaE2ykLfILg=="
+          "hash": "JpwYgww22A5eVd77aDfiaQ=="
         }
       },
       "is_incremental": false,
@@ -1113,7 +1113,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Server.ServiceDefinitionCollection.html",
-          "hash": "zEuXnz7lI7yhLOKObNP2kA=="
+          "hash": "Ah6tq28KFRdTG2TEE5SmNg=="
         }
       },
       "is_incremental": false,
@@ -1125,7 +1125,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Server.html",
-          "hash": "jwykLc+lyABV7+i0P7vwFQ=="
+          "hash": "7iBs34HLP2Arjrx9PkjfzA=="
         }
       },
       "is_incremental": false,
@@ -1137,7 +1137,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ServerCallContext.html",
-          "hash": "YhLnOYGDWfwRRyN83GQlww=="
+          "hash": "h+8iTolrXKLuZalR7hsOpg=="
         }
       },
       "is_incremental": false,
@@ -1149,7 +1149,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ServerCredentials.html",
-          "hash": "YLVwgR5Vf8jS9yh2s27lGQ=="
+          "hash": "uHTYHmbwNePbpXQgUP+SFA=="
         }
       },
       "is_incremental": false,
@@ -1161,7 +1161,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ServerPort.html",
-          "hash": "scuPzVSSMai46wRJONJecA=="
+          "hash": "+Xbm3eJEqStPAgbY/6lCdA=="
         }
       },
       "is_incremental": false,
@@ -1173,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ServerServiceDefinition.Builder.html",
-          "hash": "OicJ0N7CF/C7AJGux1TykA=="
+          "hash": "iqpSSZhHFbY1cV57qZUdXA=="
         }
       },
       "is_incremental": false,
@@ -1185,7 +1185,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ServerServiceDefinition.html",
-          "hash": "fudL7wo0tnnbJbai2ueiPQ=="
+          "hash": "honadOwv2U6QHuHwQJL/5g=="
         }
       },
       "is_incremental": false,
@@ -1197,7 +1197,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.ServerStreamingServerMethod-2.html",
-          "hash": "ha1phRZPzY6NCL27ldsDDA=="
+          "hash": "RV+BoGhLR25LHB8rZ/ACQg=="
         }
       },
       "is_incremental": false,
@@ -1209,7 +1209,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.SslCredentials.html",
-          "hash": "grCZT59lBD1K71Aiht+Olg=="
+          "hash": "rxAnw7UHT0hzTdMrr+6a0A=="
         }
       },
       "is_incremental": false,
@@ -1221,7 +1221,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.SslServerCredentials.html",
-          "hash": "hQTg5QCPN2RDX1G2kSVg3g=="
+          "hash": "EEtJw4cRh0s0fKPEh3RVgQ=="
         }
       },
       "is_incremental": false,
@@ -1233,7 +1233,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Status.html",
-          "hash": "Qsv98Nu0MJf+ma/1PUsYtQ=="
+          "hash": "uJrLZS9kTOKRKWTrQ2tF6w=="
         }
       },
       "is_incremental": false,
@@ -1257,7 +1257,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.UnaryServerMethod-2.html",
-          "hash": "trCgvE7xOs683N5UPUgmvA=="
+          "hash": "6ytV8AAttYCGrb0edzyw1w=="
         }
       },
       "is_incremental": false,
@@ -1269,7 +1269,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Utils.AsyncStreamExtensions.html",
-          "hash": "s3HkLs1C+CVw2oSOdt6PvA=="
+          "hash": "pvCPee22//L5L3N1P8DoZQ=="
         }
       },
       "is_incremental": false,
@@ -1281,7 +1281,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Utils.BenchmarkUtil.html",
-          "hash": "TwCZj3qnPezIWOlSwN/k2Q=="
+          "hash": "9sK4CWXfpLb3Ku5L53gcig=="
         }
       },
       "is_incremental": false,
@@ -1293,7 +1293,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Utils.GrpcPreconditions.html",
-          "hash": "ZI646hCOvJIO7fhEfLO2sw=="
+          "hash": "VWoMvN4/fuBR5tn+VWscig=="
         }
       },
       "is_incremental": false,
@@ -1305,7 +1305,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.Utils.TaskUtils.html",
-          "hash": "EE6AsYS+xlB2/+TsXlTPYQ=="
+          "hash": "7vuIKlDesbmlfkURR143VQ=="
         }
       },
       "is_incremental": false,
@@ -1329,7 +1329,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.VersionInfo.html",
-          "hash": "XaBNkvyKsceOxEALbVn8ew=="
+          "hash": "22CbQEQLw9IgmH+XhDc9+Q=="
         }
       },
       "is_incremental": false,
@@ -1353,7 +1353,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Grpc.Core.WriteOptions.html",
-          "hash": "fz+nCcDN+ycWI11wc9ccIA=="
+          "hash": "sHvFOLRDnhfeoFfcyJsITQ=="
         }
       },
       "is_incremental": false,
@@ -1377,7 +1377,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "8GldjbBblxFO7AhngnWHsA=="
+          "hash": "50ST2jmv/vPbBh9aWa1OAA=="
         }
       },
       "is_incremental": false,
@@ -1407,14 +1407,19 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
@@ -1423,11 +1428,6 @@
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

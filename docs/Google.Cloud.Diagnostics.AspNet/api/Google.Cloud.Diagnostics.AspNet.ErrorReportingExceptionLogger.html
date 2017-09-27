@@ -73,43 +73,23 @@
   
   <h1 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger" class="text-break">Class ErrorReportingExceptionLogger
   </h1>
-  <div class="markdown level0 summary"><p>Google Cloud Error Reporting <span class="xref">System.Web.Http.ExceptionHandling.ExceptionLogger</span>.</p>
+  <div class="markdown level0 summary"><p>Google Cloud Error Reporting <see cref="!:ExceptionLogger"></see>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">System.Web.Http.ExceptionHandling.ExceptionLogger</span></div>
-    <div class="level2"><span class="xref">ErrorReportingExceptionLogger</span></div>
+    <div class="level1"><span class="xref">ErrorReportingExceptionLogger</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.Web.Http.ExceptionHandling.IExceptionLogger</span></div>
     <div><span class="xref">System.IDisposable</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Web.Http.ExceptionHandling.ExceptionLogger.System.Web.Http.ExceptionHandling.IExceptionLogger.LogAsync(System.Web.Http.ExceptionHandling.ExceptionLoggerContext, System.Threading.CancellationToken)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Diagnostics.AspNet.html">Google.Cloud.Diagnostics.AspNet</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.Diagnostics.AspNet.dll</h6>
   <h5 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ErrorReportingExceptionLogger : ExceptionLogger, IExceptionLogger, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ErrorReportingExceptionLogger : ExceptionLogger, IDisposable</code></pre>
   </div>
   <h5 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Reports unhandled exceptions to Google Cloud Error Reporting.
@@ -132,7 +112,7 @@ Docs: <a href="https://cloud.google.com/error-reporting/docs/">https://cloud.goo
   <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_Create_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.Create*"></a>
   <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_Create_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.Create(System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)">Create(String, String, ErrorReportingOptions)</h4>
   <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.html">ErrorReportingExceptionLogger</a> using credentials as
-defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplicationDefaultAsync</span>.
+defined by <see cref="!:GoogleCredential.GetApplicationDefaultAsync"></see>.
 <p>
 Can be used when running on Google App Engine or Google Compute Engine.
 The Google Cloud Platform project to report errors to will detected from the
@@ -192,7 +172,7 @@ current platform.
   <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_Create_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.Create*"></a>
   <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_Create_System_String_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.Create(System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)">Create(String, String, String, ErrorReportingOptions)</h4>
   <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.html">ErrorReportingExceptionLogger</a> using credentials as
-defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplicationDefaultAsync</span>.</p>
+defined by <see cref="!:GoogleCredential.GetApplicationDefaultAsync"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -261,7 +241,7 @@ defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplic
   <h5 class="implements">Implements</h5>
       <div><span class="xref">System.IDisposable.Dispose()</span></div>
   <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_Log_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.Log*"></a>
-  <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_Log_System_Web_Http_ExceptionHandling_ExceptionLoggerContext_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.Log(System.Web.Http.ExceptionHandling.ExceptionLoggerContext)">Log(ExceptionLoggerContext)</h4>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_Log_ExceptionLoggerContext_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.Log(ExceptionLoggerContext)">Log(ExceptionLoggerContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -279,16 +259,14 @@ defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplic
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Web.Http.ExceptionHandling.ExceptionLoggerContext</span></td>
+        <td><span class="xref">ExceptionLoggerContext</span></td>
         <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Web.Http.ExceptionHandling.ExceptionLogger.Log(System.Web.Http.ExceptionHandling.ExceptionLoggerContext)</span></div>
   <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_LogAsync_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.LogAsync*"></a>
-  <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_LogAsync_System_Web_Http_ExceptionHandling_ExceptionLoggerContext_System_Threading_CancellationToken_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.LogAsync(System.Web.Http.ExceptionHandling.ExceptionLoggerContext,System.Threading.CancellationToken)">LogAsync(ExceptionLoggerContext, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_LogAsync_ExceptionLoggerContext_System_Threading_CancellationToken_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.LogAsync(ExceptionLoggerContext,System.Threading.CancellationToken)">LogAsync(ExceptionLoggerContext, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -306,7 +284,7 @@ defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplic
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Web.Http.ExceptionHandling.ExceptionLoggerContext</span></td>
+        <td><span class="xref">ExceptionLoggerContext</span></td>
         <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
@@ -332,10 +310,8 @@ defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplic
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Web.Http.ExceptionHandling.ExceptionLogger.LogAsync(System.Web.Http.ExceptionHandling.ExceptionLoggerContext, System.Threading.CancellationToken)</span></div>
   <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_ShouldLog_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.ShouldLog*"></a>
-  <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_ShouldLog_System_Web_Http_ExceptionHandling_ExceptionLoggerContext_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.ShouldLog(System.Web.Http.ExceptionHandling.ExceptionLoggerContext)">ShouldLog(ExceptionLoggerContext)</h4>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger_ShouldLog_ExceptionLoggerContext_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger.ShouldLog(ExceptionLoggerContext)">ShouldLog(ExceptionLoggerContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -353,7 +329,7 @@ defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplic
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Web.Http.ExceptionHandling.ExceptionLoggerContext</span></td>
+        <td><span class="xref">ExceptionLoggerContext</span></td>
         <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
@@ -374,8 +350,6 @@ defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplic
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Web.Http.ExceptionHandling.ExceptionLogger.ShouldLog(System.Web.Http.ExceptionHandling.ExceptionLoggerContext)</span></div>
 </article>
           </div>
           
