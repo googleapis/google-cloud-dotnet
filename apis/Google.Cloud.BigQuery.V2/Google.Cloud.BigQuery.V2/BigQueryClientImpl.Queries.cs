@@ -51,6 +51,15 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        public override BigQueryJob CreateQueryJob(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options = null)
+        {
+            var request = CreateInsertQueryJobRequest(sql, parameters, options);
+            var job = request.Execute();
+            return new BigQueryJob(this, job);
+        }
+
+        /// <inheritdoc />
+        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
         public override BigQueryJob CreateQueryJob(string sql, QueryOptions options = null)
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
@@ -60,6 +69,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
         public override BigQueryJob CreateQueryJob(BigQueryCommand command, QueryOptions options = null)
         {
             GaxPreconditions.CheckNotNull(command, nameof(command));
@@ -118,6 +128,15 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateInsertQueryJobRequest(sql, parameters, options);
+            var job = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigQueryJob(this, job);
+        }
+
+        /// <inheritdoc />
+        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
         public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
@@ -127,6 +146,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
         public override async Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(command, nameof(command));
@@ -188,6 +208,37 @@ namespace Google.Cloud.BigQuery.V2
         {
             options?.ModifyRequest(query);
             return CreateInsertJobRequest(new JobConfiguration { Query = query, DryRun = options?.DryRun }, options);
+        }
+
+        private JobsResource.InsertRequest CreateInsertQueryJobRequest(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options)
+        {
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
+            if (parameters != null)
+            {
+                parameters = parameters.ToList();
+                GaxPreconditions.CheckArgument(!parameters.Contains(null), nameof(parameters), "Parameter list must not contain null elements");
+            }
+            var jobConfigurationQuery = new JobConfigurationQuery
+            {
+                Query = sql,
+                UseLegacySql = false,
+                ParameterMode = "named",
+                QueryParameters = parameters?.Select(p => p.ToQueryParameter()).ToList()
+            };
+            options?.ModifyRequest(jobConfigurationQuery);
+            // If there aren't any parameters, set ParameterMode to null - otherwise legacy SQL queries fail,
+            // even if haven't set any parameters.
+            if (parameters == null)
+            {
+                jobConfigurationQuery.ParameterMode = null;
+            }
+            // Now we've definitely set the parameter mode, validate that all parameters have names if appropriate.
+            if (jobConfigurationQuery.ParameterMode == "named")
+            {
+                GaxPreconditions.CheckArgument(parameters.All(p => !string.IsNullOrEmpty(p.Name)), nameof(parameters),
+                    $"When using a parameter mode of '{nameof(BigQueryParameterMode.Named)}', all parameters must have names");
+            }
+            return CreateInsertJobRequest(new JobConfiguration { Query = jobConfigurationQuery, DryRun = options?.DryRun }, options);
         }
 
         private static readonly long s_maxGetQueryResultsRequestTimeout = (long) TimeSpan.FromMinutes(1).TotalMilliseconds;

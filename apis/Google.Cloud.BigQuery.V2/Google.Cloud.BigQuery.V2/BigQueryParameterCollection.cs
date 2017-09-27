@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -21,6 +22,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// A collection of <see cref="BigQueryParameter"/> elements, as part of a <see cref="BigQueryCommand"/>.
     /// </summary>
+    [Obsolete("This type will be removed before final release. Please migrate to query overloads accepting an IEnumerable<BigQueryParameter>.")]
     public sealed class BigQueryParameterCollection : IReadOnlyList<BigQueryParameter>
     {
         private readonly List<BigQueryParameter> _parameters = new List<BigQueryParameter>();

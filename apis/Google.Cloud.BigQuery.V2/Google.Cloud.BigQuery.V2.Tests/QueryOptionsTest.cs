@@ -34,7 +34,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 Priority = QueryPriority.Batch, 
                 UseQueryCache = false,
                 WriteDisposition = WriteDisposition.WriteIfEmpty,
-                UseLegacySql = true
+                UseLegacySql = true,
+                ParameterMode = BigQueryParameterMode.Positional
             };
 
             JobConfigurationQuery query = new JobConfigurationQuery();
@@ -50,6 +51,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(false, query.UseQueryCache);
             Assert.Equal("WRITE_EMPTY", query.WriteDisposition);
             Assert.Equal(true, query.UseLegacySql);
+            Assert.Equal("positional", query.ParameterMode);
         }
     }
 }

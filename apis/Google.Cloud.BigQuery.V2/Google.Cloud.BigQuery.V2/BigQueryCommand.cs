@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Linq;
 
 namespace Google.Cloud.BigQuery.V2
@@ -22,6 +23,7 @@ namespace Google.Cloud.BigQuery.V2
     /// A SQL query (or DML command) to be sent to BigQuery, optionally
     /// including parameters.
     /// </summary>
+    [Obsolete("This type will be removed before final release. Please migrate to query overloads accepting an IEnumerable<BigQueryParameter>.")]
     public sealed class BigQueryCommand
     {
         /// <summary>

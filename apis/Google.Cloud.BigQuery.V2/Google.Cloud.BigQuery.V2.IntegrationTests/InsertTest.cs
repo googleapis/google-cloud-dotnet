@@ -109,11 +109,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             };
 
             _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
-            var command = new BigQueryCommand($"SELECT guid, position.x, position.y FROM {table} WHERE guid=@guid")
-            {
-                Parameters = { { "guid", BigQueryDbType.String, guid } }
-            };
-            var resultRows = client.ExecuteQuery(command)
+            string sql = $"SELECT guid, position.x, position.y FROM {table} WHERE guid=@guid";
+            var parameters = new[] { new BigQueryParameter("guid", BigQueryDbType.String, guid) };
+            var resultRows = client.ExecuteQuery(sql, parameters)
                 .Select(r => new { Guid = (string)r["guid"], X = (long)r["x"], Y = (long)r["y"] })
                 .ToList();
             var expectedResults = new[]
@@ -137,11 +135,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             };
             _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
 
-            var command = new BigQueryCommand($"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid=@guid ORDER BY tag")
-            {
-                Parameters = { { "guid", BigQueryDbType.String, guid } }
-            };
-            var resultRows = client.ExecuteQuery(command)
+            string sql = $"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid=@guid ORDER BY tag";
+            var parameters = new[] { new BigQueryParameter("guid", BigQueryDbType.String, guid) };
+            var resultRows = client.ExecuteQuery(sql, parameters)
                 .Select(r => new { Guid = (string)r["guid"], Tag = (string)r["tag"] })
                 .ToList();
             var expectedResults = new[]
@@ -171,11 +167,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
 
             // Fetch flattened fields
-            var command = new BigQueryCommand($"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid=@guid ORDER BY name.first")
-            {
-                Parameters = { { "guid", BigQueryDbType.String, guid } }
-            };
-            var resultRows = client.ExecuteQuery(command)
+            string sql = $"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid=@guid ORDER BY name.first";
+            var parameters = new[] { new BigQueryParameter("guid", BigQueryDbType.String, guid) };
+            var resultRows = client.ExecuteQuery(sql, parameters)
                 .Select(r => new { Guid = (string)r["guid"], FirstName = (string)r["first"], LastName = (string)r["last"] })
                 .ToList();
             var expectedResults = new[]
@@ -185,11 +179,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             };
             Assert.Equal(expectedResults, resultRows);
             // Fetch unflattened
-            command = new BigQueryCommand($"SELECT names FROM {table} WHERE guid=@guid")
-            {
-                Parameters = { { "guid", BigQueryDbType.String, guid } }
-            };
-            var resultRow = client.ExecuteQuery(command)
+            sql = $"SELECT names FROM {table} WHERE guid=@guid";
+            var resultRow = client.ExecuteQuery(sql, parameters)
                 .Single();
             var fetchedNames = (Dictionary<string, object>[]) resultRow["names"];
             Assert.Equal(2, fetchedNames.Length);
@@ -212,11 +203,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
 
-            var command = new BigQueryCommand($"SELECT job FROM {table} WHERE guid=@guid")
-            {
-                Parameters = { { "guid", BigQueryDbType.String, guid } }
-            };
-            var fetchedRow = client.ExecuteQuery(command)
+            string sql = $"SELECT job FROM {table} WHERE guid=@guid";
+            var parameters = new[] { new BigQueryParameter("guid", BigQueryDbType.String, guid) };
+            var fetchedRow = client.ExecuteQuery(sql, parameters)
                     .Single();
             var job = (Dictionary<string, object>) fetchedRow["job"];
             Assert.Equal("Pet Store", (string) job["company"]);

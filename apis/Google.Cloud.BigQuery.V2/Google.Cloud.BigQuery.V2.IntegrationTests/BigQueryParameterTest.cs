@@ -28,8 +28,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             _fixture = fixture;
         }
 
+#pragma warning disable CS0618 // Type or member is obsolete
         [Fact]
-        public void IntegerParameter()
+        public void IntegerParameter_Legacy()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var command = new BigQueryCommand("SELECT value FROM UNNEST([0, 1, 2, 3, 4]) AS value WHERE value > @value ORDER BY value")
@@ -41,7 +42,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
-        public void IntegerArrayParameter()
+        public void IntegerArrayParameter_Legacy()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var command = new BigQueryCommand("SELECT value FROM UNNEST([0, 1, 2, 3, 4]) AS value WHERE value IN UNNEST(@p) ORDER BY value")
@@ -53,7 +54,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
-        public void TimestampParameter()
+        public void TimestampParameter_Legacy()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
@@ -76,7 +77,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
-        public void NullParameter()
+        public void NullParameter_Legacy()
         {
             // Assumption: no other test inserts a row with a null player name.
             var client = BigQueryClient.Create(_fixture.ProjectId);
@@ -99,21 +100,98 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(1, (long)resultSet.Rows[0]["score"]);
         }
 
-        [Fact]
-        public void BytesParameter()
-        {
-            var command = new BigQueryCommand($"SELECT BYTE_LENGTH(@p) AS length")
-            {
-                Parameters = { { "p", BigQueryDbType.Bytes, new byte[] { 1, 3 } } }
-            };
-            var row = GetSingleRow(command);
-            Assert.Equal(2, (long)row["length"]);
-        }
-
         private BigQueryRow GetSingleRow(BigQueryCommand command)
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var results = client.ExecuteQuery(command).ReadPage(10);
+            Assert.Equal(1, results.Rows.Count);
+            return results.Rows[0];
+        }
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        [Fact]
+        public void BytesParameter_Legacy()
+        {
+            var row = GetSingleRow("SELECT BYTE_LENGTH(@p) AS length",
+                new BigQueryParameter("p", BigQueryDbType.Bytes, new byte[] { 1, 3 }));
+            Assert.Equal(2, (long)row["length"]);
+        }
+
+        [Fact]
+        public void IntegerParameter()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var results = client.ExecuteQuery("SELECT value FROM UNNEST([0, 1, 2, 3, 4]) AS value WHERE value > @value ORDER BY value",
+                new[] { new BigQueryParameter("value", BigQueryDbType.Int64, 2) }).ReadPage(10);
+            Assert.Equal(new[] { 3L, 4L }, results.Rows.Select(r => (long)r["value"]));
+        }
+
+        [Fact]
+        public void IntegerArrayParameter()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var results = client.ExecuteQuery("SELECT value FROM UNNEST([0, 1, 2, 3, 4]) AS value WHERE value IN UNNEST(@p) ORDER BY value",
+                new[] { new BigQueryParameter("p", BigQueryDbType.Array, new[] { 1, 3, 5 }) }).ReadPage(10);
+            Assert.Equal(new[] { 1L, 3L }, results.Rows.Select(r => (long)r["value"]));
+        }
+
+        [Fact]
+        public void TimestampParameter()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            string sql = $"SELECT score FROM {table} WHERE player=@player AND gameStarted > @start";
+            var parameters = new[]
+            {
+                new BigQueryParameter("player", BigQueryDbType.String, "Angela"),
+                new BigQueryParameter("start", BigQueryDbType.Timestamp, new DateTime(2001, 12, 31, 23, 59, 59, DateTimeKind.Utc))
+            };
+            // Find the value when we've provided a timestamp smaller than the actual value
+            var results = client.ExecuteQuery(sql, parameters).ReadPage(10);
+            Assert.Equal(1, results.Rows.Count);
+
+            // We shouldn't find it now. (Angela's game started at 2002-01-01T00:00:00Z)
+            parameters[1].Value = new DateTime(2002, 1, 1, 0, 0, 1, DateTimeKind.Utc);
+            results = client.ExecuteQuery(sql, parameters).ReadPage(10);
+            Assert.Equal(0, results.Rows.Count);
+        }
+
+        [Fact]
+        public void NullParameter()
+        {
+            // Assumption: no other test inserts a row with a null player name.
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var parameter = new BigQueryParameter("player", BigQueryDbType.String, "Angela");
+            string sql = $"SELECT score FROM {table} WHERE player=@player";
+            var resultSet = client.ExecuteQuery(sql, new[] { parameter }).ReadPage(5);
+            Assert.Equal(1, resultSet.Rows.Count);
+            Assert.Equal(95, (long)resultSet.Rows[0]["score"]);
+
+            // SQL rules: nothing equals null
+            parameter.Value = null;
+            resultSet = client.ExecuteQuery(sql, new[] { parameter }).ReadPage(5);
+            Assert.Equal(0, resultSet.Rows.Count);
+
+            // But we should be able to find the null value this way.
+            sql = $"SELECT score FROM {table} WHERE player=@player OR (player IS NULL AND @player IS NULL)";
+            resultSet = client.ExecuteQuery(sql, new[] { parameter }).ReadPage(5);
+            Assert.Equal(1, resultSet.Rows.Count);
+            Assert.Equal(1, (long)resultSet.Rows[0]["score"]);
+        }
+
+        [Fact]
+        public void BytesParameter()
+        {
+            var row = GetSingleRow("SELECT BYTE_LENGTH(@p) AS length",
+                new BigQueryParameter("p", BigQueryDbType.Bytes, new byte[] { 1, 3 }));
+            Assert.Equal(2, (long)row["length"]);
+        }
+
+        private BigQueryRow GetSingleRow(string sql, params BigQueryParameter[] parameters)
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var results = client.ExecuteQuery(sql, parameters).ReadPage(10);
             Assert.Equal(1, results.Rows.Count);
             return results.Rows[0];
         }

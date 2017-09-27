@@ -100,6 +100,15 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// If set, determines whether parameters are named or positional. If not set,
+        /// this will default to named parameters. When named parameters are used, all parameters
+        /// must have a name. When positional parameters are used, parameters may still have names,
+        /// but don't have to.
+        /// </summary>
+        /// <remarks>This property is not used by the legacy query overloads using <see cref="BigQueryCommand"/>.</remarks>
+        public BigQueryParameterMode? ParameterMode { get; set; }
+
         internal void ModifyRequest(JobConfigurationQuery query)
         {
             // Note: no validation of combinations (flatten results etc). Leave this to the server,
@@ -147,6 +156,11 @@ namespace Google.Cloud.BigQuery.V2
             if (UseLegacySql != null)
             {
                 query.UseLegacySql = UseLegacySql;
+            }
+            if (ParameterMode != null)
+            {
+                // Safe for now; we only have "named" or "positional". This is unlikely to change.
+                query.ParameterMode = ParameterMode.ToString().ToLowerInvariant();
             }
         }
     }

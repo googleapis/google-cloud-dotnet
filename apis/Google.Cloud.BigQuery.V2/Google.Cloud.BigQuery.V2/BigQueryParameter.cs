@@ -212,12 +212,20 @@ namespace Google.Cloud.BigQuery.V2
             Value = value;
         }
 
+        /// <summary>
+        /// TODO: Remove when <see cref="BigQueryCommand"/> is removed.
+        /// </summary>
         internal QueryParameter ToQueryParameter(BigQueryParameterMode parameterMode)
         {
             if (parameterMode == BigQueryParameterMode.Named && string.IsNullOrEmpty(Name))
             {
                 throw new InvalidOperationException("Unnamed parameters cannot be used in command using BigQueryParameterMode.Named");
             }
+            return ToQueryParameter();
+        }
+
+        internal QueryParameter ToQueryParameter()
+        {
             var value = Value;
             if (Type == null && value == null)
             {

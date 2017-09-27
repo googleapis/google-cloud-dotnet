@@ -39,7 +39,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
 
             var table = client.GetTable(_fixture.ProjectId, _fixture.DatasetId, _fixture.HighScoreTableId);
-            var jobToFind = client.CreateQueryJob("SELECT * FROM {table}");
+            var jobToFind = client.CreateQueryJob("SELECT * FROM {table}", parameters: null);
 
             var oneMinuteAgo = ToMillisecondsSinceEpoch(DateTime.UtcNow.AddMinutes(-1));
 
