@@ -133,7 +133,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.True(File.Exists(jsonFile));
             using (var connection = new SpannerConnection($"CredentialFile={jsonFile}"))
             {
-                Assert.NotNull(connection.GetCredential());
+                Assert.NotNull(connection.GetCredentials());
             }
         }
 
@@ -142,7 +142,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             using (var connection = new SpannerConnection("CredentialFile=SpannerEF-8dfc036f6000.json"))
             {
-                Assert.NotNull(connection.GetCredential());
+                Assert.NotNull(connection.GetCredentials());
             }
         }
 
@@ -151,7 +151,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             using (var connection = new SpannerConnection("CredentialFile=SpannerEF-8dfc036f6000.p12"))
             {
-                Assert.Throws<InvalidOperationException>(() => connection.GetCredential());
+                Assert.Throws<InvalidOperationException>(() => connection.GetCredentials());
             }
         }
 
@@ -160,7 +160,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             using (var connection = new SpannerConnection("CredentialFile=..\\BadFilePath.json"))
             {
-                Assert.Throws<FileNotFoundException>(() => connection.GetCredential());
+                Assert.Throws<FileNotFoundException>(() => connection.GetCredentials());
             }
         }
     }

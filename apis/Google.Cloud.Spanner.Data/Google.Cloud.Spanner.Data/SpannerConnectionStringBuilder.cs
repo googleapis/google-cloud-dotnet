@@ -20,6 +20,8 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Util;
 using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.V1;
+using Grpc.Auth;
+using Grpc.Core;
 using DatabaseName = Google.Cloud.Spanner.V1.DatabaseName;
 
 // ReSharper disable UnusedParameter.Local
@@ -38,12 +40,12 @@ namespace Google.Cloud.Spanner.Data
         private DatabaseName _databaseName;
 
         /// <summary>
-        /// The <see cref="ITokenAccess"/> credential used to communicate with Spanner.
+        /// The <see cref="ChannelCredentials"/> credential used to communicate with Spanner.
         /// If not set, then default application credentials will be used.
         /// Credentials can be retrieved from a file or obtained interactively.
         /// See Google Cloud documentation for more information.
         /// </summary>
-        public ITokenAccess GetCredential()
+        public ChannelCredentials GetCredentials()
         {
             // Check the ctor override.
             if (CredentialOverride != null)
@@ -52,7 +54,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             //Calculate it from the CredentialFile argument in the connection string.
-            GoogleCredential credential = null;
+            GoogleCredential credentials = null;
             string jsonFile = CredentialFile;
             if (!string.IsNullOrEmpty(jsonFile))
             {
@@ -71,14 +73,9 @@ namespace Google.Cloud.Spanner.Data
                     //throw a meaningful error that tells the developer where we looked.
                     throw new FileNotFoundException($"Could not find {nameof(CredentialFile)}. Also looked in {jsonFile}.");
                 }
-
-                //TODO(benwu) replace with GoogleCredential.FromFile
-                using (var credStream = File.OpenRead(jsonFile))
-                {
-                    credential = GoogleCredential.FromStream(credStream).CreateScoped(SpannerClient.DefaultScopes);
-                }
+                credentials = GoogleCredential.FromFile(jsonFile).CreateScoped(SpannerClient.DefaultScopes);
             }
-            return credential;
+            return credentials?.ToChannelCredentials();
         }
 
         /// <summary>
@@ -200,7 +197,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        internal ITokenAccess CredentialOverride { get; }
+        internal ChannelCredentials CredentialOverride { get; }
 
         /// <summary>
         /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
@@ -210,15 +207,15 @@ namespace Google.Cloud.Spanner.Data
         /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}].
         /// Must not be null.
         /// </param>
-        /// <param name="credential">Optionally supplied credential to use for the connection.
+        /// <param name="credentials">Optionally supplied credential to use for the connection.
         /// If not set, then default application credentials will be used.
         /// Credentials can be retrieved from a file or obtained interactively.
         /// See Google Cloud documentation for more information. May be null.
         /// </param>
-        public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential = null)
+        public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials = null)
         {
             connectionString.ThrowIfNullOrEmpty(nameof(connectionString));
-            CredentialOverride = credential;
+            CredentialOverride = credentials;
             ConnectionString = connectionString;
         }
 
