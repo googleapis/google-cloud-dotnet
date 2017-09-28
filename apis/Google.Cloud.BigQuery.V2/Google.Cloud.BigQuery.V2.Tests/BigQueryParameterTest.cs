@@ -251,7 +251,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void ExplicitlyTypedArrayType()
         {
             var parameter = new BigQueryParameter(BigQueryDbType.Array, new[] { new DateTimeOffset(new DateTime(2016, 10, 31), new TimeSpan(8, 30, 0)) });
-            parameter.ArrayType = BigQueryDbType.DateTime;
+            parameter.ArrayElementType = BigQueryDbType.DateTime;
             string actualJson = JsonConvert.SerializeObject(parameter.ToQueryParameter(BigQueryParameterMode.Positional));
 
             var expectedResult = new QueryParameter

@@ -129,14 +129,24 @@ namespace Google.Cloud.BigQuery.V2
             set { _type = value == null ? default : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
         }
 
-        private BigQueryDbType? _arrayType;
+        private BigQueryDbType? _arrayElementType;
         /// <summary>
         /// The type of the nested elements, for array parameters. If this is null, the type is inferred from the value.
         /// </summary>
+        public BigQueryDbType? ArrayElementType
+        {
+            get { return _arrayElementType; }
+            set { _arrayElementType = value == null ? default : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
+        }
+
+        /// <summary>
+        /// The type of the nested elements, for array parameters. If this is null, the type is inferred from the value.
+        /// </summary>
+        [Obsolete("This property has been renamed to ArrayElementType. Please migrate your code to use that.")]
         public BigQueryDbType? ArrayType
         {
-            get { return _arrayType; }
-            set { _arrayType = value == null ? default : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
+            get => ArrayElementType;
+            set => ArrayElementType = value;
         }
 
         private object _value;
@@ -240,7 +250,7 @@ namespace Google.Cloud.BigQuery.V2
             switch (type)
             {
                 case BigQueryDbType.Array:
-                    return PopulateArrayParameter(parameter, value, ArrayType);
+                    return PopulateArrayParameter(parameter, value, ArrayElementType);
                 case BigQueryDbType.Bool:
                     return parameter.PopulateScalar<bool>(value, x => x ? "TRUE" : "FALSE")
                         ?? parameter.PopulateScalar<string>(value, x => x)
