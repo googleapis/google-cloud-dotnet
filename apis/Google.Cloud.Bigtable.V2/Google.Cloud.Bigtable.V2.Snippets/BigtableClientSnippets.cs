@@ -12,12 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
+    [SnippetOutputCollector]
     public class BigtableClientSnippets
     {
         public void CheckAndMutateRow()
@@ -279,32 +283,36 @@ namespace Google.Cloud.Bigtable.V2.Snippets
 
         public async Task ReadRows()
         {
+            var cts = new CancellationTokenSource();
+            var cancellationToken = cts.Token;
+
             // Snippet: ReadRows(TableName,RowSet,RowFilter,long,CallSettings)
             // Create client
             BigtableClient bigtableClient = BigtableClient.Create();
             // Initialize request argument(s)
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+
+            // Read rows whose keys are greater than or equal to 'a' and less than 'b'.
             RowSet rows = RowSet.FromRowRanges(
-                RowRange.Open("a", "z"),
-                RowRange.Closed(null, new RowKey(9, 128, 4)));
+                RowRange.ClosedOpen("a", "b"));
+            // Only read cells from the "A" column family and only take the most recent cell from each column.
             RowFilter filter = RowFilters.Chain(
                 RowFilters.FamilyNameRegex("A"),
-                RowFilters.Interleave(
-                    RowFilters.PassAllFilter(),
-                    RowFilters.Chain(
-                        RowFilters.ApplyLabelTransformer("foo"),
-                        RowFilters.Sink())),
-                RowFilters.ColumnQualifierRegex("B"));
+                RowFilters.CellsPerColumnLimit(1));
+            // Just read the first 10 rows.
             long rowsLimit = 10;
+
             // Make the request
             BigtableClient.ReadRowsStream streamingResponse = bigtableClient.ReadRows(
                 tableName,
                 rows,
                 filter,
-                rowsLimit);
+                rowsLimit,
+                CallSettings.FromCancellationToken(cancellationToken));
+
             // Read streaming responses from server until complete
-            IAsyncEnumerator<Row> responseStream = streamingResponse.GetRowsAsync().GetEnumerator();
-            while (await responseStream.MoveNext())
+            IAsyncEnumerator<Row> responseStream = streamingResponse.GetRowsAsync(cancellationToken).GetEnumerator();
+            while (await responseStream.MoveNext(cancellationToken))
             {
                 Row row = responseStream.Current;
 
@@ -322,12 +330,6 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                             Console.WriteLine($"      Labels: {string.Join(", ", cell.Labels)}");
                         }
                     }
-                }
-
-                if (row.Key.ToStringUtf8() == "done")
-                {
-                    // Cancel the request after reading a certain row.
-                    streamingResponse.Cancel();
                 }
             }
             // The response stream has completed

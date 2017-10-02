@@ -20,7 +20,7 @@ namespace Google.Cloud.Bigtable.V2
     /// <summary>
     /// The key of a row.
     /// </summary>
-    public sealed class RowKey : IEquatable<RowKey>
+    public sealed class RowKey : IComparable, IComparable<RowKey>, IEquatable<RowKey>
     {
         /// <summary>
         /// Creates a new <see cref="RowKey"/> instance from the UTF8 encoding of a string.
@@ -37,6 +37,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="key">The bytes making up the key.</param>
         public RowKey(params byte[] key)
         {
+            // TODO: Validation
             ByteString = ByteString.CopyFrom(key);
         }
 
@@ -46,6 +47,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="key">The byte string making up the key.</param>
         public RowKey(ByteString key)
         {
+            // TODO: Validation
             ByteString = key;
         }
 
@@ -55,6 +57,38 @@ namespace Google.Cloud.Bigtable.V2
         public ByteString ByteString { get; }
 
         // TODO: Docs
+
+        // TODO: Make sure making RowKey comparable is useful.
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static int Compare(RowKey x, RowKey y)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public int CompareTo(object obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public int CompareTo(RowKey other)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// 
@@ -100,10 +134,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        public static bool operator ==(RowKey x, RowKey y)
-        {
-            throw new NotImplementedException();
-        }
+        public static bool operator <(RowKey x, RowKey y) => Compare(x, y) < 0;
 
         /// <summary>
         /// 
@@ -111,11 +142,39 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        public static bool operator !=(RowKey x, RowKey y)
-        {
-            throw new NotImplementedException();
-        }
+        public static bool operator <=(RowKey x, RowKey y) => Compare(x, y) <= 0;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static bool operator ==(RowKey x, RowKey y) => Compare(x, y) == 0;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static bool operator !=(RowKey x, RowKey y) => Compare(x, y) != 0;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static bool operator >=(RowKey x, RowKey y) => Compare(x, y) >= 0;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static bool operator >(RowKey x, RowKey y) => Compare(x, y) > 0;
 
         /// <summary>
         /// 
@@ -124,6 +183,15 @@ namespace Google.Cloud.Bigtable.V2
         public static implicit operator RowKey(string keyAsUtf8)
         {
             return new RowKey(keyAsUtf8);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="key"></param>
+        public static implicit operator string(RowKey key)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -139,9 +207,27 @@ namespace Google.Cloud.Bigtable.V2
         /// 
         /// </summary>
         /// <param name="key"></param>
+        public static implicit operator byte[](RowKey key)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="key"></param>
         public static implicit operator RowKey(ByteString key)
         {
             return new RowKey(key);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="key"></param>
+        public static implicit operator ByteString(RowKey key)
+        {
+            throw new NotImplementedException();
         }
     }
 }

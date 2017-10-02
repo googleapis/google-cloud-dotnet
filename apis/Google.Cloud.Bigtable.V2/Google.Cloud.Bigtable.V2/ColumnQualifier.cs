@@ -17,6 +17,8 @@ using System;
 
 namespace Google.Cloud.Bigtable.V2
 {
+    // TODO: Should this be comparable like RowKey?
+
     /// <summary>
     /// A column qualifier.
     /// </summary>
@@ -116,7 +118,6 @@ namespace Google.Cloud.Bigtable.V2
             throw new NotImplementedException();
         }
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -124,6 +125,15 @@ namespace Google.Cloud.Bigtable.V2
         public static implicit operator ColumnQualifier(string qualifierAsUtf8)
         {
             return new ColumnQualifier(qualifierAsUtf8);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="qualifier"></param>
+        public static implicit operator string(ColumnQualifier qualifier)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -139,9 +149,27 @@ namespace Google.Cloud.Bigtable.V2
         /// 
         /// </summary>
         /// <param name="qualifier"></param>
+        public static implicit operator byte[](ColumnQualifier qualifier)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="qualifier"></param>
         public static implicit operator ColumnQualifier(ByteString qualifier)
         {
             return new ColumnQualifier(qualifier);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="qualifier"></param>
+        public static implicit operator ByteString(ColumnQualifier qualifier)
+        {
+            throw new NotImplementedException();
         }
     }
 }

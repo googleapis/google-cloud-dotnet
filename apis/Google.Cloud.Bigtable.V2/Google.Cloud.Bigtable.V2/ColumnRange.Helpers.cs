@@ -20,10 +20,15 @@ namespace Google.Cloud.Bigtable.V2
 {
     public partial class ColumnRange
     {
-
         /// <summary>
         /// Creates a <see cref="ColumnRange"/> instance with inclusive bounds.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="ColumnQualifier"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="familyName">
         /// The name of the column family within which this range falls.
         /// </param>
@@ -34,7 +39,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The inclusive lower bound for the range. If null, it is interpreted as the empty string.
         /// </param>
         /// <returns>The created range.</returns>
-        public static RowFilter Closed(
+        public static ColumnRange Closed(
             string familyName, ColumnQualifier startQualifierClosed, ColumnQualifier endQualifierClosed)
         {
             throw new InvalidOperationException();
@@ -43,6 +48,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="RowRange"/> instance with an inclusive lower bound and an exclusive upper bound.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="ColumnQualifier"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="familyName">
         /// The name of the column family within which this range falls.
         /// </param>
@@ -53,7 +64,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The exclusive upper bound for the range. If null, it is interpreted as the infinite row key.
         /// </param>
         /// <returns>The created range.</returns>
-        public static RowFilter ClosedOpen(
+        public static ColumnRange ClosedOpen(
             string familyName, ColumnQualifier startQualifierClosed, ColumnQualifier endQualifierOpen)
         {
             throw new InvalidOperationException();
@@ -62,6 +73,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="RowRange"/> instance with exclusive bounds.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="ColumnQualifier"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="familyName">
         /// The name of the column family within which this range falls.
         /// </param>
@@ -72,7 +89,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The exclusive upper bound for the range. If null, it is interpreted as the infinite row key.
         /// </param>
         /// <returns>The created range.</returns>
-        public static RowFilter Open(
+        public static ColumnRange Open(
             string familyName, ColumnQualifier startQualifierOpen, ColumnQualifier endQualifierOpen)
         {
             // TODO: The missing start key is the empty string, inclusive, so we must explicitly set the start key open to the empty string here when it is null.
@@ -82,6 +99,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="RowRange"/> instance with an exclusive lower bound and an inclusive upper bound.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="ColumnQualifier"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="familyName">
         /// The name of the column family within which this range falls.
         /// </param>
@@ -92,7 +115,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The inclusive lower bound for the range. If null, it is interpreted as the empty string.
         /// </param>
         /// <returns>The created range.</returns>
-        public static RowFilter OpenClosed(
+        public static ColumnRange OpenClosed(
             string familyName, ColumnQualifier startQualifierOpen, ColumnQualifier endQualifierClosed)
         {
             // TODO: The missing start key is the empty string, inclusive, so we must explicitly set the start key open to the empty string here when it is null.

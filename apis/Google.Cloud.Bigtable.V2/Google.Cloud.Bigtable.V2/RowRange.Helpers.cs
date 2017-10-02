@@ -21,6 +21,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="RowRange"/> instance with inclusive bounds.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="startKeyClosed">
         /// The inclusive lower bound for the range. If null, it is interpreted as the empty string.
         /// </param>
@@ -36,6 +42,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="RowRange"/> instance with an inclusive lower bound and an exclusive upper bound.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="startKeyClosed">
         /// The inclusive lower bound for the range. If null, it is interpreted as the empty string.
         /// </param>
@@ -51,6 +63,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="RowRange"/> instance with exclusive bounds.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="startKeyOpen">
         /// The exclusive lower bound for the range. If null, it is interpreted as the empty string.
         /// </param>
@@ -67,6 +85,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="RowRange"/> instance with an exclusive lower bound and an inclusive upper bound.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="startKeyOpen">
         /// The exclusive lower bound for the range. If null, it is interpreted as the empty string.
         /// </param>

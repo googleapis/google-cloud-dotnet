@@ -19,8 +19,8 @@ namespace Google.Cloud.Bigtable.V2
     public partial class Cell
     {
         /// <summary>
-        /// Gets the version of the 
+        /// Gets the version of the cell, which uniquely identifies it within its column.
         /// </summary>
-        public BigtableVersion Version { get => new BigtableVersion(TimestampMicros); }
+        public BigtableVersion Version => new BigtableVersion(TimestampMicros);
     }
 }

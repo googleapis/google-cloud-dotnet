@@ -15,6 +15,7 @@
 using Google.Api.Gax.Grpc;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Google.Cloud.Bigtable.V2
 {
@@ -24,6 +25,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
         /// <para>
         /// This method simply delegates to <see cref="CheckAndMutateRow(CheckAndMutateRowRequest, CallSettings)"/>.
         /// </para>
@@ -77,6 +82,10 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
+        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
         /// This method simply delegates to <see cref="CheckAndMutateRow(CheckAndMutateRowRequest, CallSettings)"/>.
         /// </para>
         /// </remarks>
@@ -116,6 +125,10 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
+        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
         /// This method simply delegates to <see cref="MutateRow(MutateRowRequest, CallSettings)"/>.
         /// </para>
         /// </remarks>
@@ -150,6 +163,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by <paramref name="mutations"/>.
         /// </summary>
         /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
         /// <para>
         /// This method simply delegates to <see cref="MutateRow(MutateRowRequest, CallSettings)"/>.
         /// </para>
@@ -249,6 +266,10 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
+        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
         /// This method simply delegates to <see cref="ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)"/>.
         /// </para>
         /// </remarks>
@@ -287,6 +308,10 @@ namespace Google.Cloud.Bigtable.V2
         /// returns the new contents of all modified cells.
         /// </summary>
         /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
         /// <para>
         /// This method simply delegates to <see cref="ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)"/>.
         /// </para>
@@ -356,18 +381,13 @@ namespace Google.Cloud.Bigtable.V2
         public partial class ReadRowsStream
         {
             /// <summary>
-            /// Cancels the process of gathering chunk responses into full rows and disposes the underlying gRPC call.
-            /// </summary>
-            public void Cancel()
-            {
-                throw new NotImplementedException();
-            }
-
-            /// <summary>
             /// Returns an asynchronous sequence of rows from this set of results.
             /// </summary>
+            /// <param name="cancellationToken">
+            /// The token to monitor for cancellation requests.
+            /// </param>
             /// <returns>An asynchronous sequence of rows from this set of results.</returns>
-            public IAsyncEnumerable<Row> GetRowsAsync()
+            public IAsyncEnumerable<Row> GetRowsAsync(CancellationToken cancellationToken = default)
             {
                 throw new NotImplementedException();
             }
