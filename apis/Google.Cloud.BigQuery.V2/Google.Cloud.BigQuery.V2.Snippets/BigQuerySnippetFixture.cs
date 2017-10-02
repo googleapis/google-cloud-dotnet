@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Storage.V1;
-using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +25,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
     /// Fixture which is set up at the start of the test run, and torn down at the end.
     /// All entities use the same partition, which is then wiped at the end of the run.
     /// </summary>
-    [SnippetOutputCollector]
     [CollectionDefinition(nameof(BigQuerySnippetFixture))]
     public sealed class BigQuerySnippetFixture : IDisposable, ICollectionFixture<BigQuerySnippetFixture>
     {
