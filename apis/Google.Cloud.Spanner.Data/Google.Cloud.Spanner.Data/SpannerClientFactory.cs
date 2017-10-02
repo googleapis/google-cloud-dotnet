@@ -15,7 +15,6 @@
 using System;
 using System.Collections;
 using System.Threading.Tasks;
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
@@ -27,7 +26,7 @@ namespace Google.Cloud.Spanner.Data
 {
     internal interface ISpannerClientFactory
     {
-        Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ITokenAccess credential, IDictionary additionalOptions);
+        Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ChannelCredentials credentials, IDictionary additionalOptions);
     }
 
     /// <summary>
@@ -52,9 +51,8 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public async Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ITokenAccess credential, IDictionary additionalOptions)
+        public async Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ChannelCredentials credentials, IDictionary additionalOptions)
         {
-            ChannelCredentials channelCredentials;
             var allowImmediateTimeout = false;
 
             if (additionalOptions.Contains(nameof(SpannerSettings.AllowImmediateTimeouts)))
@@ -62,19 +60,15 @@ namespace Google.Cloud.Spanner.Data
                 allowImmediateTimeout = Convert.ToBoolean(additionalOptions[nameof(SpannerSettings.AllowImmediateTimeouts)]);
             }
 
-            if (credential == null)
+            if (credentials == null)
             {
-                channelCredentials = await CreateDefaultChannelCredentialsAsync().ConfigureAwait(false);
-            }
-            else
-            {
-                channelCredentials = credential.ToChannelCredentials();
+                credentials = await CreateDefaultChannelCredentialsAsync().ConfigureAwait(false);
             }
 
             var channel = new Channel(
                 endpoint.Host,
                 endpoint.Port,
-                channelCredentials);
+                credentials);
             Logger.LogPerformanceCounterFn("SpannerClient.RawCreateCount", x => x + 1);
 
             //Pull the timeout from spanner options.

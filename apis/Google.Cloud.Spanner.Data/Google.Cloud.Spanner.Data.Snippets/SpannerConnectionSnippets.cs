@@ -46,7 +46,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         [Fact]
         public void CreateConnection()
         {
-            // Snippet: #ctor(string, ITokenAccess)
+            // Snippet: #ctor(string, ChannelCredentials)
             string connectionString = "Data Source=projects/my-project/instances/my-instance/databases/my-db";
             SpannerConnection connection = new SpannerConnection(connectionString);
             Console.WriteLine(connection.Project);

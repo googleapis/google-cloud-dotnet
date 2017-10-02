@@ -20,10 +20,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Grpc.Core;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -43,7 +43,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         public async Task<SpannerClient> AcquireClientAsync(
-            ITokenAccess credentials = null,
+            ChannelCredentials credentials = null,
             ServiceEndpoint endpoint = null,
             IDictionary additionalOptions = null)
         {
@@ -74,7 +74,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         public void ReleaseClient(SpannerClient spannerClient,
-            ITokenAccess credentials = null,
+            ChannelCredentials credentials = null,
             ServiceEndpoint endpoint = null,
             IDictionary additionalOptions = null)
         {
@@ -95,20 +95,20 @@ namespace Google.Cloud.Spanner.Data
 
         private struct ClientCredentialKey : IEquatable<ClientCredentialKey>
         {
-            public ITokenAccess Credential { get; }
+            public ChannelCredentials Credentials { get; }
             public IDictionary AdditionalOptions { get; }
             public ServiceEndpoint Endpoint { get; }
 
-            public ClientCredentialKey(ITokenAccess tokenAccess, ServiceEndpoint serviceEndpoint,
+            public ClientCredentialKey(ChannelCredentials credentials, ServiceEndpoint serviceEndpoint,
                 IDictionary additionalOptions) : this()
             {
-                Credential = tokenAccess;
+                Credentials = credentials;
                 AdditionalOptions = additionalOptions;
                 Endpoint = serviceEndpoint ?? SpannerClient.DefaultEndpoint;
             }
 
             public bool Equals(ClientCredentialKey other) =>
-                Equals(Credential, other.Credential)
+                Equals(Credentials, other.Credentials)
                 && Equals(Endpoint, other.Endpoint)
                 && TypeUtil.DictionaryEquals(AdditionalOptions, other.AdditionalOptions);
 
@@ -119,7 +119,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 unchecked
                 {
-                    return ((Credential?.GetHashCode() ?? 0) * 397) ^
+                    return ((Credentials?.GetHashCode() ?? 0) * 397) ^
                         (Endpoint?.GetHashCode() ?? 0) ^
                         (AdditionalOptions?.Count.GetHashCode() ?? 0);
                 }
@@ -127,7 +127,7 @@ namespace Google.Cloud.Spanner.Data
             /// <inheritdoc />
             public override string ToString()
             {
-                return $"Credential:{Credential?.ToString() ?? "null"} EndPoint:{Endpoint}";
+                return $"Credential:{Credentials?.ToString() ?? "null"} EndPoint:{Endpoint}";
             }
         }
 
@@ -222,7 +222,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     //retry an already failed task.
                     _creationTask = new Lazy<Task<SpannerClient>>(
-                        () => clientFactory.CreateClientAsync(_parentKey.Endpoint, _parentKey.Credential, _parentKey.AdditionalOptions));
+                        () => clientFactory.CreateClientAsync(_parentKey.Endpoint, _parentKey.Credentials, _parentKey.AdditionalOptions));
                 }
 
                 var spannerClient = await _creationTask.Value.ConfigureAwait(false);

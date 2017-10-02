@@ -20,11 +20,11 @@ using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
-using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 
 #if !NETSTANDARD1_5
 using Transaction = System.Transactions.Transaction;
@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.Data
         /// If credentials are not specified, then application default credentials are used instead.
         /// See gcloud documentation on how to set up application default credentials.
         /// </summary>
-        public ITokenAccess GetCredential() => _connectionStringBuilder?.GetCredential();
+        public ChannelCredentials GetCredentials() => _connectionStringBuilder?.GetCredentials();
 
         /// <inheritdoc />
         public override string Database => _connectionStringBuilder?.SpannerDatabase;
@@ -142,9 +142,9 @@ namespace Google.Cloud.Spanner.Data
         /// A Spanner formatted connection string. This is usually of the form
         /// `Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]`
         /// </param>
-        /// <param name="credential">An optional credential for operations to be performed on the Spanner database.  May be null.</param>
-        public SpannerConnection(string connectionString, ITokenAccess credential = null)
-            : this(new SpannerConnectionStringBuilder(connectionString, credential)) { }
+        /// <param name="credentials">An optional credential for operations to be performed on the Spanner database.  May be null.</param>
+        public SpannerConnection(string connectionString, ChannelCredentials credentials = null)
+            : this(new SpannerConnectionStringBuilder(connectionString, credentials)) { }
 
         /// <summary>
         /// Creates a SpannerConnection with a datasource contained in connectionString.
@@ -294,7 +294,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 ClientPool.Default.ReleaseClient(
                     client,
-                    _connectionStringBuilder.GetCredential(),
+                    _connectionStringBuilder.GetCredentials(),
                     _connectionStringBuilder.EndPoint,
                     _connectionStringBuilder);
             }
@@ -442,7 +442,7 @@ namespace Google.Cloud.Spanner.Data
                     try
                     {
                         localClient = await ClientPool.Default.AcquireClientAsync(
-                                _connectionStringBuilder.GetCredential(),
+                                _connectionStringBuilder.GetCredentials(),
                                 _connectionStringBuilder.EndPoint,
                                 _connectionStringBuilder)
                             .ConfigureAwait(false);

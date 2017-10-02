@@ -21,6 +21,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
+using Grpc.Auth;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -422,7 +423,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             using (var connection =
                                 new SpannerConnection(
                                     $"{_testFixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true",
-                                    new CredentialWrapper(appDefaultCredentials)))
+                                    new CredentialWrapper(appDefaultCredentials).ToChannelCredentials()))
                             {
                                 var cmd =
                                     connection.CreateSelectCommand("SELECT 1");

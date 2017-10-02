@@ -126,13 +126,13 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Date/DateTime/Timestamp arrays need to be given the types explicitly.
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
                 new[] { new DateTime(2017, 2, 14), new DateTime(2017, 2, 15) })
-                { ArrayType = BigQueryDbType.Date });
+                { ArrayElementType = BigQueryDbType.Date });
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
                 new[] { new DateTime(2017, 2, 14, 17, 25, 30, DateTimeKind.Unspecified), new DateTime(2017, 2, 15, 17, 25, 30, DateTimeKind.Unspecified) })
-                { ArrayType = BigQueryDbType.DateTime });
+                { ArrayElementType = BigQueryDbType.DateTime });
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
                 new[] { new DateTime(2017, 2, 14, 17, 25, 30, DateTimeKind.Utc), new DateTime(2017, 2, 15, 17, 25, 30, DateTimeKind.Utc) })
-                { ArrayType = BigQueryDbType.Timestamp });
+                { ArrayElementType = BigQueryDbType.Timestamp });
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
                 new[] { new TimeSpan(0, 1, 2, 3, 456), new TimeSpan(0, 23, 59, 59, 987) }));
         }
