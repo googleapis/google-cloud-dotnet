@@ -371,6 +371,7 @@ namespace Google.Cloud.Bigtable.V2
             throw new NotImplementedException();
         }
 
+        // TODO: Create PR in toolkit to add 'partial' keyword here.
         /// <summary>
         /// Server streaming methods for <c>ReadRows</c>.
         /// </summary>
