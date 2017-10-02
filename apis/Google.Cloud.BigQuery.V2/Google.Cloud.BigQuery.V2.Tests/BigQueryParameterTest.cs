@@ -181,7 +181,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void ToQueryParameter_Valid(string name, BigQueryParameter parameter, QueryParameter expectedResult)
         {
             // Positional vs named mode difference is only in validation, tested elsewhere.
-            string actualJson = JsonConvert.SerializeObject(parameter.ToQueryParameter(BigQueryParameterMode.Positional));
+            string actualJson = JsonConvert.SerializeObject(parameter.ToQueryParameter());
             string expectedJson = JsonConvert.SerializeObject(expectedResult);
             Assert.Equal(actualJson, expectedJson);
         }
@@ -191,7 +191,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void ToQueryParameter_Invalid(string name, BigQueryDbType? type, object value)
         {
             var parameter = new BigQueryParameter(type, value);
-            Assert.Throws<InvalidOperationException>(() => parameter.ToQueryParameter(BigQueryParameterMode.Positional));
+            Assert.Throws<InvalidOperationException>(() => parameter.ToQueryParameter());
         }
 
         [Theory]
@@ -200,7 +200,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var parameter = new BigQueryParameter();
             parameter.Value = value;
-            var queryParameter = parameter.ToQueryParameter(BigQueryParameterMode.Positional);
+            var queryParameter = parameter.ToQueryParameter();
             var actualType = EnumMap<BigQueryDbType>.ToValue(queryParameter.ParameterType.Type);
             Assert.Equal(expectedType, actualType);
         }
@@ -211,7 +211,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var parameter = new BigQueryParameter();
             parameter.Value = value;
-            var queryParameter = parameter.ToQueryParameter(BigQueryParameterMode.Positional);
+            var queryParameter = parameter.ToQueryParameter();
             Assert.Equal(BigQueryDbType.Array.ToParameterApiType(), queryParameter.ParameterType.Type);
             var actualArrayType = EnumMap<BigQueryDbType>.ToValue(queryParameter.ParameterType.ArrayType.Type);
             Assert.Equal(expectedArrayType, actualArrayType);
@@ -232,19 +232,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void UnnamedParameterCannotBeConvertedWithNamedMode()
-        {
-            var parameter = new BigQueryParameter(BigQueryDbType.String, "foo");
-            // Prove that it's fine for a positional parameter
-            parameter.ToQueryParameter(BigQueryParameterMode.Positional);
-            Assert.Throws<InvalidOperationException>(() => parameter.ToQueryParameter(BigQueryParameterMode.Named));
-        }
-
-        [Fact]
         public void StructParametersNotImplemented()
         {
             var parameter = new BigQueryParameter(BigQueryDbType.Struct, null);
-            Assert.Throws<NotImplementedException>(() => parameter.ToQueryParameter(BigQueryParameterMode.Positional));
+            Assert.Throws<NotImplementedException>(() => parameter.ToQueryParameter());
         }
 
         [Fact]
@@ -252,7 +243,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var parameter = new BigQueryParameter(BigQueryDbType.Array, new[] { new DateTimeOffset(new DateTime(2016, 10, 31), new TimeSpan(8, 30, 0)) });
             parameter.ArrayElementType = BigQueryDbType.DateTime;
-            string actualJson = JsonConvert.SerializeObject(parameter.ToQueryParameter(BigQueryParameterMode.Positional));
+            string actualJson = JsonConvert.SerializeObject(parameter.ToQueryParameter());
 
             var expectedResult = new QueryParameter
             {

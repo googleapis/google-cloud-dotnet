@@ -27,7 +27,7 @@ namespace Google.Cloud.BigQuery.V2
     // TODO: Support struct parameters.
 
     /// <summary>
-    /// A parameter within the <see cref="BigQueryParameterCollection"/> of a <see cref="BigQueryCommand"/>.
+    /// A parameter within a SQL query.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -51,7 +51,7 @@ namespace Google.Cloud.BigQuery.V2
     ///   <item><description><c>DateTime</c>: <c>System.DateTime</c>, <c>System.DateTimeOffset</c></description></item>
     ///   <item><description><c>Time</c>: <c>System.DateTime</c>, <c>System.DateTimeOffset</c>, <c>System.TimeSpan</c></description></item>
     ///   <item><description><c>Timestamp</c>: <c>System.DateTime</c>, <c>System.DateTimeOffset</c></description></item>
-    ///   <item><description><c>Array</c>: An <c>IReadOnlyList&lt;T&gt;</c> of any of the above types corresponding to the <see cref="ArrayType"/>,
+    ///   <item><description><c>Array</c>: An <c>IReadOnlyList&lt;T&gt;</c> of any of the above types corresponding to the <see cref="ArrayElementType"/>,
     ///   which will be inferred from the value's element type if not otherwise specified.</description></item>
     /// </list>
     /// <para>
@@ -139,16 +139,6 @@ namespace Google.Cloud.BigQuery.V2
             set { _arrayElementType = value == null ? default : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
         }
 
-        /// <summary>
-        /// The type of the nested elements, for array parameters. If this is null, the type is inferred from the value.
-        /// </summary>
-        [Obsolete("This property has been renamed to ArrayElementType. Please migrate your code to use that.")]
-        public BigQueryDbType? ArrayType
-        {
-            get => ArrayElementType;
-            set => ArrayElementType = value;
-        }
-
         private object _value;
         /// <summary>
         /// The value of the parameter. If this is null, the type of the parameter must be specified
@@ -220,18 +210,6 @@ namespace Google.Cloud.BigQuery.V2
             }
             ValidateValue(value, nameof(value)); // Proof against refactoring of parameter name...
             Value = value;
-        }
-
-        /// <summary>
-        /// TODO: Remove when <see cref="BigQueryCommand"/> is removed.
-        /// </summary>
-        internal QueryParameter ToQueryParameter(BigQueryParameterMode parameterMode)
-        {
-            if (parameterMode == BigQueryParameterMode.Named && string.IsNullOrEmpty(Name))
-            {
-                throw new InvalidOperationException("Unnamed parameters cannot be used in command using BigQueryParameterMode.Named");
-            }
-            return ToQueryParameter();
         }
 
         internal QueryParameter ToQueryParameter()
@@ -351,7 +329,7 @@ namespace Google.Cloud.BigQuery.V2
                 ArrayType = new QueryParameterType { Type = actualArrayType.ToParameterApiType() }
             };
             var parameterValues = values
-                .Select(p => new BigQueryParameter(actualArrayType, p).ToQueryParameter(BigQueryParameterMode.Positional).ParameterValue)
+                .Select(p => new BigQueryParameter(actualArrayType, p).ToQueryParameter().ParameterValue)
                 .ToList();
 
             parameter.ParameterValue = new QueryParameterValue { ArrayValues = parameterValues };

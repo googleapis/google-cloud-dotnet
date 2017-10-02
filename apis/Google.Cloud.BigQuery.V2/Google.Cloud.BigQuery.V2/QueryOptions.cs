@@ -106,7 +106,6 @@ namespace Google.Cloud.BigQuery.V2
         /// must have a name. When positional parameters are used, parameters may still have names,
         /// but don't have to.
         /// </summary>
-        /// <remarks>This property is not used by the legacy query overloads using <see cref="BigQueryCommand"/>.</remarks>
         public BigQueryParameterMode? ParameterMode { get; set; }
 
         internal void ModifyRequest(JobConfigurationQuery query)

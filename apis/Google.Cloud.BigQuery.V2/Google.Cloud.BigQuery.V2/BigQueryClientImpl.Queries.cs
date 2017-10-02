@@ -67,48 +67,6 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public override BigQueryJob CreateQueryJob(string sql, QueryOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(sql, nameof(sql));
-            var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
-            var job = CreateInsertQueryJobRequest(query, options).Execute();
-            return new BigQueryJob(this, job);
-        }
-
-        /// <inheritdoc />
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default)
-        {
-            GaxPreconditions.CheckNotNull(sql, nameof(sql));
-            var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
-            var job = await CreateInsertQueryJobRequest(query, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            return new BigQueryJob(this, job);
-        }
-
-        /// <inheritdoc />
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public override BigQueryJob CreateQueryJob(BigQueryCommand command, QueryOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(command, nameof(command));
-            var query = new JobConfigurationQuery { UseLegacySql = false };
-            command.PopulateJobConfigurationQuery(query);
-            var job = CreateInsertQueryJobRequest(query, options).Execute();
-            return new BigQueryJob(this, job);
-        }
-
-        /// <inheritdoc />
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public override async Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default)
-        {
-            GaxPreconditions.CheckNotNull(command, nameof(command));
-            var query = new JobConfigurationQuery { UseLegacySql = false };
-            command.PopulateJobConfigurationQuery(query);
-            var job = await CreateInsertQueryJobRequest(query, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            return new BigQueryJob(this, job);
-        }
-
-        /// <inheritdoc />
         public override BigQueryResults GetQueryResults(JobReference jobReference, GetQueryResultsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
