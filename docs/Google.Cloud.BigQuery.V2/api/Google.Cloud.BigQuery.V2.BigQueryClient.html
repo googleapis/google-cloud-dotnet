@@ -2833,13 +2833,13 @@ if (job.Status.ErrorResult != null)
   </div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions)">CreateQueryJob(BigQueryCommand, QueryOptions)</h4>
-  <div class="markdown level1 summary"><p>Creates a job for a query/command. This overload allows query parameterization, and is preferred over
-<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_Google_Cloud_BigQuery_V2_QueryOptions_">CreateQueryJob(String, QueryOptions)</a> when values need to be passed in.</p>
+  <div class="markdown level1 summary"><p>Creates a job for a query/command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual BigQueryJob CreateQueryJob(BigQueryCommand command, QueryOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
+public virtual BigQueryJob CreateQueryJob(BigQueryCommand command, QueryOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2889,7 +2889,8 @@ the results of the query.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual BigQueryJob CreateQueryJob(string sql, QueryOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
+public virtual BigQueryJob CreateQueryJob(string sql, QueryOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2932,8 +2933,64 @@ the results of the query.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions)">CreateQueryJob(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a job for a SQL query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BigQueryJob CreateQueryJob(string sql, IEnumerable&lt;BigQueryParameter&gt; parameters, QueryOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td><p>The SQL query. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameter.html">BigQueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p>The parameters for the query. May be null, which is equivalent to specifying an empty list of parameters. Must not contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html">QueryOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a></td>
+        <td><p>The query job created. Use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetQueryResults_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">GetQueryResults(JobReference, GetQueryResultsOptions)</a> to retrieve
+the results of the query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <div>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_Google_Cloud_BigQuery_V2_QueryOptions__snippet">Sample code</h5>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions__snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
 BigQueryTable table = client.GetTable(datasetId, historyTableId);
 TableReference destination = client.GetTableReference(datasetId, queryTableId);
@@ -2944,6 +3001,7 @@ BigQueryJob job = client.CreateQueryJob(
        FROM {table}
        GROUP BY player
        ORDER BY score DESC&quot;,
+    null, // No parameters
     new QueryOptions { DestinationTable = destination });
 
 // Wait for the job to complete.
@@ -2960,13 +3018,13 @@ foreach (BigQueryRow row in result)
   </div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)">CreateQueryJobAsync(BigQueryCommand, QueryOptions, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Asynchronously creates a job for a query/command. This overload allows query parameterization, and is preferred over
-<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_">CreateQueryJobAsync(String, QueryOptions, CancellationToken)</a> when values need to be passed in.</p>
+  <div class="markdown level1 summary"><p>Asynchronously creates a job for a query/command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
+public virtual Task&lt;BigQueryJob&gt; CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3023,7 +3081,8 @@ the results of the query.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
+public virtual Task&lt;BigQueryJob&gt; CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3073,8 +3132,71 @@ the results of the query.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)">CreateQueryJobAsync(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a job for a SQL query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateQueryJobAsync(string sql, IEnumerable&lt;BigQueryParameter&gt; parameters, QueryOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td><p>The SQL query. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameter.html">BigQueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p>The parameters for the query. May be null, which is equivalent to specifying an empty list of parameters. Must not contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html">QueryOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation. When complete, the result is
+the query job created. Use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetQueryResultsAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">GetQueryResultsAsync(JobReference, GetQueryResultsOptions, CancellationToken)</a> to retrieve
+the results of the query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <div>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
 BigQueryTable table = await client.GetTableAsync(datasetId, historyTableId);
 TableReference destination = client.GetTableReference(datasetId, queryTableId);
@@ -3085,6 +3207,7 @@ BigQueryJob job = await client.CreateQueryJobAsync(
        FROM {table}
        GROUP BY player
        ORDER BY score DESC&quot;,
+    null, // No parameters
     new QueryOptions { DestinationTable = destination });
 
 // Wait for the job to complete.
@@ -4126,13 +4249,13 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
   </table>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions)">ExecuteQuery(BigQueryCommand, QueryOptions, GetQueryResultsOptions)</h4>
-  <div class="markdown level1 summary"><p>Executes a command. This overload allows query parameterization, and is preferred over
-<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">ExecuteQuery(String, QueryOptions, GetQueryResultsOptions)</a> when values need to be passed in.</p>
+  <div class="markdown level1 summary"><p>Executes a command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual BigQueryResults ExecuteQuery(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
+public virtual BigQueryResults ExecuteQuery(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4186,21 +4309,6 @@ This method will only return when the query has completed. It simply delegates t
 and then <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_GetQueryResults_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">GetQueryResults(GetQueryResultsOptions)</a>.
 </p>
 </div>
-  <div>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions__snippet">Sample code</h5>
-  <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-BigQueryTable table = client.GetTable(datasetId, tableId);
-BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
-// Note: could also use a collection initializer to populate the parameters.
-command.Parameters.Add(&quot;level&quot;, BigQueryDbType.Int64).Value = 2;
-command.Parameters.Add(&quot;score&quot;, BigQueryDbType.Int64).Value = 1500;
-BigQueryResults results = client.ExecuteQuery(command);
-foreach (BigQueryRow row in results)
-{
-    Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
-}
-</code></pre></div>
-  </div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions)">ExecuteQuery(String, QueryOptions, GetQueryResultsOptions)</h4>
   <div class="markdown level1 summary"><p>Executes a query.</p>
@@ -4208,7 +4316,8 @@ foreach (BigQueryRow row in results)
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual BigQueryResults ExecuteQuery(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
+public virtual BigQueryResults ExecuteQuery(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4262,15 +4371,83 @@ This method will only return when the query has completed. It simply delegates t
 and then <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_GetQueryResults_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">GetQueryResults(GetQueryResultsOptions)</a>.
 </p>
 </div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions)">ExecuteQuery(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions, GetQueryResultsOptions)</h4>
+  <div class="markdown level1 summary"><p>Executes a query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BigQueryResults ExecuteQuery(string sql, IEnumerable&lt;BigQueryParameter&gt; parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td><p>The SQL query. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameter.html">BigQueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p>The parameters for the query. May be null, which is equivalent to specifying an empty list of parameters. Must not contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html">QueryOptions</a></td>
+        <td><span class="parametername">queryOptions</span></td>
+        <td><p>The options for the query. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.GetQueryResultsOptions.html">GetQueryResultsOptions</a></td>
+        <td><span class="parametername">resultsOptions</span></td>
+        <td><p>The options for retrieving query results. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQueryResults</a></td>
+        <td><p>The result of the query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This method will only return when the query has completed. It simply delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_">CreateQueryJob(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions)</a>
+and then <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_GetQueryResults_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">GetQueryResults(GetQueryResultsOptions)</a>.
+</p>
+</div>
   <div>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions__snippet">Sample code</h5>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions__snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
 BigQueryTable table = client.GetTable(datasetId, historyTableId);
 BigQueryResults result = client.ExecuteQuery(
     $@&quot;SELECT player, MAX(score) AS score
        FROM {table}
        GROUP BY player
-       ORDER BY score DESC&quot;);
+       ORDER BY score DESC&quot;,
+    parameters: null);
 foreach (BigQueryRow row in result)
 {
     Console.WriteLine($&quot;{row[&quot;player&quot;]}: {row[&quot;score&quot;]}&quot;);
@@ -4279,13 +4456,13 @@ foreach (BigQueryRow row in result)
   </div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)">ExecuteQueryAsync(BigQueryCommand, QueryOptions, GetQueryResultsOptions, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Asynchronously executes a command. This overload allows query parameterization, and is preferred over
-<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">ExecuteQueryAsync(String, QueryOptions, GetQueryResultsOptions, CancellationToken)</a> when values need to be passed in.</p>
+  <div class="markdown level1 summary"><p>Asynchronously executes a command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
+public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4347,22 +4524,6 @@ This method simply delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.B
 and then <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_GetQueryResultsAsync_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">GetQueryResultsAsync(GetQueryResultsOptions, CancellationToken)</a>.
 </p>
 </div>
-  <div>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
-  <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-BigQueryTable table = await client.GetTableAsync(datasetId, tableId);
-BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
-// Note: could also use a collection initializer to populate the parameters.
-command.Parameters.Add(&quot;level&quot;, BigQueryDbType.Int64).Value = 2;
-command.Parameters.Add(&quot;score&quot;, BigQueryDbType.Int64).Value = 1500;
-BigQueryResults queryJob = await client.ExecuteQueryAsync(command);
-IAsyncEnumerable&lt;BigQueryRow&gt; resultRows = queryJob.GetRowsAsync();
-await resultRows.ForEachAsync(row =&gt;
-{
-    Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
-});
-</code></pre></div>
-  </div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)">ExecuteQueryAsync(String, QueryOptions, GetQueryResultsOptions, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Asynchronously executes a query.</p>
@@ -4370,7 +4531,8 @@ await resultRows.ForEachAsync(row =&gt;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
+public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4432,15 +4594,91 @@ This method simply delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.B
 and then <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_GetQueryResultsAsync_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">GetQueryResultsAsync(GetQueryResultsOptions, CancellationToken)</a>.
 </p>
 </div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)">ExecuteQueryAsync(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions, GetQueryResultsOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously executes a query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(string sql, IEnumerable&lt;BigQueryParameter&gt; parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td><p>The SQL query. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameter.html">BigQueryParameter</a>&gt;</td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p>The parameters for the query. May be null, which is equivalent to specifying an empty list of parameters. Must not contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html">QueryOptions</a></td>
+        <td><span class="parametername">queryOptions</span></td>
+        <td><p>The options for the query. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.GetQueryResultsOptions.html">GetQueryResultsOptions</a></td>
+        <td><span class="parametername">resultsOptions</span></td>
+        <td><p>The options for retrieving query results. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQueryResults</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation. When complete, the result is
+the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQueryResults</a> representing the query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The task returned by this method will only complete when the query has completed.
+This method simply delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_">CreateQueryJobAsync(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions, CancellationToken)</a>
+and then <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_GetQueryResultsAsync_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">GetQueryResultsAsync(GetQueryResultsOptions, CancellationToken)</a>.
+</p>
+</div>
   <div>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
 BigQueryTable table = await client.GetTableAsync(datasetId, historyTableId);
 BigQueryResults result = await client.ExecuteQueryAsync(
     $@&quot;SELECT player, MAX(score) AS score
        FROM {table}
        GROUP BY player
-       ORDER BY score DESC&quot;);
+       ORDER BY score DESC&quot;,
+    parameters: null);
 await result.GetRowsAsync().ForEachAsync(row =&gt;
 {
     Console.WriteLine($&quot;{row[&quot;player&quot;]}: {row[&quot;score&quot;]}&quot;);

@@ -88,7 +88,8 @@ with datasets, tables and query results simpler.</p>
 BigQueryTable table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);
 
 string sql = $&quot;SELECT corpus AS title, COUNT(word) AS unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10&quot;;
-BigQueryResults results = client.ExecuteQuery(sql);
+BigQueryParameter[] parameters = null;
+BigQueryResults results = client.ExecuteQuery(sql, parameters);
 
 foreach (BigQueryRow row in results)
 {
@@ -99,11 +100,13 @@ foreach (BigQueryRow row in results)
 default):</p>
 <pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
 BigQueryTable table = client.GetTable(datasetId, tableId);
-BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
-// Note: could also use a collection initializer to populate the parameters.
-command.Parameters.Add(&quot;level&quot;, BigQueryDbType.Int64).Value = 2;
-command.Parameters.Add(&quot;score&quot;, BigQueryDbType.Int64).Value = 1500;
-BigQueryResults results = client.ExecuteQuery(command);
+string sql = $&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;;
+BigQueryParameter[] parameters = new[]
+{
+    new BigQueryParameter(&quot;level&quot;, BigQueryDbType.Int64, 2),
+    new BigQueryParameter(&quot;score&quot;, BigQueryDbType.Int64, 1500)
+};
+BigQueryResults results = client.ExecuteQuery(sql, parameters);
 foreach (BigQueryRow row in results)
 {
     Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
@@ -111,11 +114,14 @@ foreach (BigQueryRow row in results)
 </code></pre><p>Or using positional parameters:</p>
 <pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
 BigQueryTable table = client.GetTable(datasetId, tableId);
-BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= ? AND level &gt;= ?&quot;);
-command.ParameterMode = BigQueryParameterMode.Positional;
-command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
-command.Parameters.Add(BigQueryDbType.Int64, 2); // For level
-BigQueryResults results = client.ExecuteQuery(command);
+string sql = $&quot;SELECT player, score, level FROM {table} WHERE score &gt;= ? AND level &gt;= ?&quot;;
+BigQueryParameter[] parameters = new[]
+{
+    new BigQueryParameter(BigQueryDbType.Int64, 1500), // For score
+    new BigQueryParameter(BigQueryDbType.Int64, 2), // For level
+};
+QueryOptions queryOptions = new QueryOptions { ParameterMode = BigQueryParameterMode.Positional };
+BigQueryResults results = client.ExecuteQuery(sql, parameters, queryOptions);
 foreach (BigQueryRow row in results)
 {
     Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
@@ -131,7 +137,8 @@ below.</p>
 BigQueryTable table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);
 
 string sql = $&quot;SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}&quot;;
-BigQueryResults results = client.ExecuteQuery(sql, new QueryOptions { UseLegacySql = true });
+BigQueryParameter[] parameters = null;
+BigQueryResults results = client.ExecuteQuery(sql, parameters, new QueryOptions { UseLegacySql = true });
 
 foreach (BigQueryRow row in results)
 {
@@ -165,14 +172,16 @@ TableSchema schema = new TableSchemaBuilder
 {
     { &quot;message&quot;, BigQueryDbType.String }
 }.Build();
-CreateTableOptions options = new CreateTableOptions { TimePartitionType = TimePartitionType.Day };
+CreateTableOptions options = new CreateTableOptions { TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null) };
 BigQueryTable table = client.CreateTable(datasetId, tableId, schema, options);
 // Upload a single row to the table, using JSON rather than the streaming buffer, as
 // the _PARTITIONTIME column will be null while it&#39;s being served from the streaming buffer.
 // This code assumes the upload succeeds; normally, you should check the job results.
 table.UploadJson(new[] { &quot;{ \&quot;message\&quot;: \&quot;Sample message\&quot; }&quot; }).PollUntilCompleted();
 
-BigQueryResults results = client.ExecuteQuery($&quot;SELECT message, _PARTITIONTIME AS pt FROM {table}&quot;);
+BigQueryResults results = client.ExecuteQuery(
+    $&quot;SELECT message, _PARTITIONTIME AS pt FROM {table}&quot;,
+    parameters: null);
 List&lt;BigQueryRow&gt; rows = results.ToList();
 foreach (BigQueryRow row in rows)
 {
@@ -200,7 +209,8 @@ CreateTableOptions options = new CreateTableOptions
     }
 };
 BigQueryTable table = client.CreateTable(datasetId, tableId, schema, options);
-List&lt;BigQueryRow&gt; rows = client.ExecuteQuery($&quot;SELECT name, score FROM {table} ORDER BY score&quot;).ToList();
+BigQueryParameter[] parameters = null;
+List&lt;BigQueryRow&gt; rows = client.ExecuteQuery($&quot;SELECT name, score FROM {table} ORDER BY score&quot;, parameters).ToList();
 foreach (BigQueryRow row in rows)
 {
     Console.WriteLine($&quot;{row[&quot;name&quot;]} - {row[&quot;score&quot;]}&quot;);

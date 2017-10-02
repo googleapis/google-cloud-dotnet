@@ -11006,6 +11006,15 @@ references:
   commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.QueryOptions)
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String, Google.Cloud.BigQuery.V2.QueryOptions)
   nameWithType: BigQueryClient.CreateQueryJob(String, QueryOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions)
+  name: CreateQueryJob(String, IEnumerable<BigQueryParameter>, QueryOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions)
+  name.vb: CreateQueryJob(String, IEnumerable(Of BigQueryParameter), QueryOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryParameter>, Google.Cloud.BigQuery.V2.QueryOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryParameter), Google.Cloud.BigQuery.V2.QueryOptions)
+  nameWithType: BigQueryClient.CreateQueryJob(String, IEnumerable<BigQueryParameter>, QueryOptions)
+  nameWithType.vb: BigQueryClient.CreateQueryJob(String, IEnumerable(Of BigQueryParameter), QueryOptions)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob*
   name: CreateQueryJob
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_
@@ -11024,6 +11033,15 @@ references:
   commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String, Google.Cloud.BigQuery.V2.QueryOptions, System.Threading.CancellationToken)
   nameWithType: BigQueryClient.CreateQueryJobAsync(String, QueryOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  name: CreateQueryJobAsync(String, IEnumerable<BigQueryParameter>, QueryOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  name.vb: CreateQueryJobAsync(String, IEnumerable(Of BigQueryParameter), QueryOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryParameter>, Google.Cloud.BigQuery.V2.QueryOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryParameter), Google.Cloud.BigQuery.V2.QueryOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateQueryJobAsync(String, IEnumerable<BigQueryParameter>, QueryOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.CreateQueryJobAsync(String, IEnumerable(Of BigQueryParameter), QueryOptions, CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync*
   name: CreateQueryJobAsync
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_
@@ -11186,6 +11204,15 @@ references:
   commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String, Google.Cloud.BigQuery.V2.QueryOptions, Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
   nameWithType: BigQueryClient.ExecuteQuery(String, QueryOptions, GetQueryResultsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
+  name: ExecuteQuery(String, IEnumerable<BigQueryParameter>, QueryOptions, GetQueryResultsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
+  name.vb: ExecuteQuery(String, IEnumerable(Of BigQueryParameter), QueryOptions, GetQueryResultsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryParameter>, Google.Cloud.BigQuery.V2.QueryOptions, Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryParameter), Google.Cloud.BigQuery.V2.QueryOptions, Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
+  nameWithType: BigQueryClient.ExecuteQuery(String, IEnumerable<BigQueryParameter>, QueryOptions, GetQueryResultsOptions)
+  nameWithType.vb: BigQueryClient.ExecuteQuery(String, IEnumerable(Of BigQueryParameter), QueryOptions, GetQueryResultsOptions)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery*
   name: ExecuteQuery
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_
@@ -11204,6 +11231,15 @@ references:
   commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String, Google.Cloud.BigQuery.V2.QueryOptions, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, System.Threading.CancellationToken)
   nameWithType: BigQueryClient.ExecuteQueryAsync(String, QueryOptions, GetQueryResultsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)
+  name: ExecuteQueryAsync(String, IEnumerable<BigQueryParameter>, QueryOptions, GetQueryResultsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)
+  name.vb: ExecuteQueryAsync(String, IEnumerable(Of BigQueryParameter), QueryOptions, GetQueryResultsOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryParameter>, Google.Cloud.BigQuery.V2.QueryOptions, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryParameter), Google.Cloud.BigQuery.V2.QueryOptions, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.ExecuteQueryAsync(String, IEnumerable<BigQueryParameter>, QueryOptions, GetQueryResultsOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.ExecuteQueryAsync(String, IEnumerable(Of BigQueryParameter), QueryOptions, GetQueryResultsOptions, CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync*
   name: ExecuteQueryAsync
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_
@@ -12782,6 +12818,15 @@ references:
   commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.QueryOptions)
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String, Google.Cloud.BigQuery.V2.QueryOptions)
   nameWithType: BigQueryClientImpl.CreateQueryJob(String, QueryOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions)
+  name: CreateQueryJob(String, IEnumerable<BigQueryParameter>, QueryOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions)
+  name.vb: CreateQueryJob(String, IEnumerable(Of BigQueryParameter), QueryOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryParameter>, Google.Cloud.BigQuery.V2.QueryOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryParameter), Google.Cloud.BigQuery.V2.QueryOptions)
+  nameWithType: BigQueryClientImpl.CreateQueryJob(String, IEnumerable<BigQueryParameter>, QueryOptions)
+  nameWithType.vb: BigQueryClientImpl.CreateQueryJob(String, IEnumerable(Of BigQueryParameter), QueryOptions)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob*
   name: CreateQueryJob
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_
@@ -12800,6 +12845,15 @@ references:
   commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String, Google.Cloud.BigQuery.V2.QueryOptions, System.Threading.CancellationToken)
   nameWithType: BigQueryClientImpl.CreateQueryJobAsync(String, QueryOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  name: CreateQueryJobAsync(String, IEnumerable<BigQueryParameter>, QueryOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  name.vb: CreateQueryJobAsync(String, IEnumerable(Of BigQueryParameter), QueryOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryParameter>, Google.Cloud.BigQuery.V2.QueryOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryParameter), Google.Cloud.BigQuery.V2.QueryOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.CreateQueryJobAsync(String, IEnumerable<BigQueryParameter>, QueryOptions, CancellationToken)
+  nameWithType.vb: BigQueryClientImpl.CreateQueryJobAsync(String, IEnumerable(Of BigQueryParameter), QueryOptions, CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync*
   name: CreateQueryJobAsync
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_
@@ -14352,6 +14406,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryParameter.#ctor
   fullName: Google.Cloud.BigQuery.V2.BigQueryParameter.BigQueryParameter
   nameWithType: BigQueryParameter.BigQueryParameter
+- uid: Google.Cloud.BigQuery.V2.BigQueryParameter.ArrayElementType
+  name: ArrayElementType
+  href: api/Google.Cloud.BigQuery.V2.BigQueryParameter.html#Google_Cloud_BigQuery_V2_BigQueryParameter_ArrayElementType
+  commentId: P:Google.Cloud.BigQuery.V2.BigQueryParameter.ArrayElementType
+  fullName: Google.Cloud.BigQuery.V2.BigQueryParameter.ArrayElementType
+  nameWithType: BigQueryParameter.ArrayElementType
+- uid: Google.Cloud.BigQuery.V2.BigQueryParameter.ArrayElementType*
+  name: ArrayElementType
+  href: api/Google.Cloud.BigQuery.V2.BigQueryParameter.html#Google_Cloud_BigQuery_V2_BigQueryParameter_ArrayElementType_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryParameter.ArrayElementType
+  fullName: Google.Cloud.BigQuery.V2.BigQueryParameter.ArrayElementType
+  nameWithType: BigQueryParameter.ArrayElementType
 - uid: Google.Cloud.BigQuery.V2.BigQueryParameter.ArrayType
   name: ArrayType
   href: api/Google.Cloud.BigQuery.V2.BigQueryParameter.html#Google_Cloud_BigQuery_V2_BigQueryParameter_ArrayType
@@ -15524,6 +15590,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SourceFormat
   fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SourceFormat
   nameWithType: CreateLoadJobOptions.SourceFormat
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.TimePartitioning
+  name: TimePartitioning
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_TimePartitioning
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.TimePartitioning
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.TimePartitioning
+  nameWithType: CreateLoadJobOptions.TimePartitioning
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.TimePartitioning*
+  name: TimePartitioning
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_TimePartitioning_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.TimePartitioning
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.TimePartitioning
+  nameWithType: CreateLoadJobOptions.TimePartitioning
 - uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.WriteDisposition
   name: WriteDisposition
   href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_WriteDisposition
@@ -15602,6 +15680,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionExpiration
   fullName: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionExpiration
   nameWithType: CreateTableOptions.TimePartitionExpiration
+- uid: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitioning
+  name: TimePartitioning
+  href: api/Google.Cloud.BigQuery.V2.CreateTableOptions.html#Google_Cloud_BigQuery_V2_CreateTableOptions_TimePartitioning
+  commentId: P:Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitioning
+  fullName: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitioning
+  nameWithType: CreateTableOptions.TimePartitioning
+- uid: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitioning*
+  name: TimePartitioning
+  href: api/Google.Cloud.BigQuery.V2.CreateTableOptions.html#Google_Cloud_BigQuery_V2_CreateTableOptions_TimePartitioning_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitioning
+  fullName: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitioning
+  nameWithType: CreateTableOptions.TimePartitioning
 - uid: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionType
   name: TimePartitionType
   href: api/Google.Cloud.BigQuery.V2.CreateTableOptions.html#Google_Cloud_BigQuery_V2_CreateTableOptions_TimePartitionType
@@ -16187,6 +16277,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.MaximumBytesBilled
   fullName: Google.Cloud.BigQuery.V2.QueryOptions.MaximumBytesBilled
   nameWithType: QueryOptions.MaximumBytesBilled
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.ParameterMode
+  name: ParameterMode
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_ParameterMode
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.ParameterMode
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.ParameterMode
+  nameWithType: QueryOptions.ParameterMode
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.ParameterMode*
+  name: ParameterMode
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_ParameterMode_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.ParameterMode
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.ParameterMode
+  nameWithType: QueryOptions.ParameterMode
 - uid: Google.Cloud.BigQuery.V2.QueryOptions.Priority
   name: Priority
   href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_Priority
@@ -16317,6 +16419,27 @@ references:
   fullName: Google.Cloud.BigQuery.V2.TableSchemaBuilder.System.Collections.IEnumerable.GetEnumerator
   nameWithType: TableSchemaBuilder.IEnumerable.GetEnumerator
   nameWithType.vb: TableSchemaBuilder.System.Collections.IEnumerable.GetEnumerator
+- uid: Google.Cloud.BigQuery.V2.TimePartition
+  name: TimePartition
+  href: api/Google.Cloud.BigQuery.V2.TimePartition.html
+  commentId: T:Google.Cloud.BigQuery.V2.TimePartition
+  fullName: Google.Cloud.BigQuery.V2.TimePartition
+  nameWithType: TimePartition
+- uid: Google.Cloud.BigQuery.V2.TimePartition.CreateDailyPartitioning(System.Nullable{System.TimeSpan})
+  name: CreateDailyPartitioning(Nullable<TimeSpan>)
+  href: api/Google.Cloud.BigQuery.V2.TimePartition.html#Google_Cloud_BigQuery_V2_TimePartition_CreateDailyPartitioning_System_Nullable_System_TimeSpan__
+  commentId: M:Google.Cloud.BigQuery.V2.TimePartition.CreateDailyPartitioning(System.Nullable{System.TimeSpan})
+  name.vb: CreateDailyPartitioning(Nullable(Of TimeSpan))
+  fullName: Google.Cloud.BigQuery.V2.TimePartition.CreateDailyPartitioning(System.Nullable<System.TimeSpan>)
+  fullName.vb: Google.Cloud.BigQuery.V2.TimePartition.CreateDailyPartitioning(System.Nullable(Of System.TimeSpan))
+  nameWithType: TimePartition.CreateDailyPartitioning(Nullable<TimeSpan>)
+  nameWithType.vb: TimePartition.CreateDailyPartitioning(Nullable(Of TimeSpan))
+- uid: Google.Cloud.BigQuery.V2.TimePartition.CreateDailyPartitioning*
+  name: CreateDailyPartitioning
+  href: api/Google.Cloud.BigQuery.V2.TimePartition.html#Google_Cloud_BigQuery_V2_TimePartition_CreateDailyPartitioning_
+  commentId: Overload:Google.Cloud.BigQuery.V2.TimePartition.CreateDailyPartitioning
+  fullName: Google.Cloud.BigQuery.V2.TimePartition.CreateDailyPartitioning
+  nameWithType: TimePartition.CreateDailyPartitioning
 - uid: Google.Cloud.BigQuery.V2.TimePartitionType
   name: TimePartitionType
   href: api/Google.Cloud.BigQuery.V2.TimePartitionType.html
@@ -16389,6 +16512,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.UploadAvroOptions.MaxBadRecords
   fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.MaxBadRecords
   nameWithType: UploadAvroOptions.MaxBadRecords
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.TimePartitioning
+  name: TimePartitioning
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_TimePartitioning
+  commentId: P:Google.Cloud.BigQuery.V2.UploadAvroOptions.TimePartitioning
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.TimePartitioning
+  nameWithType: UploadAvroOptions.TimePartitioning
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.TimePartitioning*
+  name: TimePartitioning
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_TimePartitioning_
+  commentId: Overload:Google.Cloud.BigQuery.V2.UploadAvroOptions.TimePartitioning
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.TimePartitioning
+  nameWithType: UploadAvroOptions.TimePartitioning
 - uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.WriteDisposition
   name: WriteDisposition
   href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_WriteDisposition
@@ -16527,6 +16662,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.UploadCsvOptions.SkipLeadingRows
   fullName: Google.Cloud.BigQuery.V2.UploadCsvOptions.SkipLeadingRows
   nameWithType: UploadCsvOptions.SkipLeadingRows
+- uid: Google.Cloud.BigQuery.V2.UploadCsvOptions.TimePartitioning
+  name: TimePartitioning
+  href: api/Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_TimePartitioning
+  commentId: P:Google.Cloud.BigQuery.V2.UploadCsvOptions.TimePartitioning
+  fullName: Google.Cloud.BigQuery.V2.UploadCsvOptions.TimePartitioning
+  nameWithType: UploadCsvOptions.TimePartitioning
+- uid: Google.Cloud.BigQuery.V2.UploadCsvOptions.TimePartitioning*
+  name: TimePartitioning
+  href: api/Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_TimePartitioning_
+  commentId: Overload:Google.Cloud.BigQuery.V2.UploadCsvOptions.TimePartitioning
+  fullName: Google.Cloud.BigQuery.V2.UploadCsvOptions.TimePartitioning
+  nameWithType: UploadCsvOptions.TimePartitioning
 - uid: Google.Cloud.BigQuery.V2.UploadCsvOptions.WriteDisposition
   name: WriteDisposition
   href: api/Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_WriteDisposition
@@ -16593,6 +16740,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.UploadJsonOptions.MaxBadRecords
   fullName: Google.Cloud.BigQuery.V2.UploadJsonOptions.MaxBadRecords
   nameWithType: UploadJsonOptions.MaxBadRecords
+- uid: Google.Cloud.BigQuery.V2.UploadJsonOptions.TimePartitioning
+  name: TimePartitioning
+  href: api/Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_TimePartitioning
+  commentId: P:Google.Cloud.BigQuery.V2.UploadJsonOptions.TimePartitioning
+  fullName: Google.Cloud.BigQuery.V2.UploadJsonOptions.TimePartitioning
+  nameWithType: UploadJsonOptions.TimePartitioning
+- uid: Google.Cloud.BigQuery.V2.UploadJsonOptions.TimePartitioning*
+  name: TimePartitioning
+  href: api/Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_TimePartitioning_
+  commentId: Overload:Google.Cloud.BigQuery.V2.UploadJsonOptions.TimePartitioning
+  fullName: Google.Cloud.BigQuery.V2.UploadJsonOptions.TimePartitioning
+  nameWithType: UploadJsonOptions.TimePartitioning
 - uid: Google.Cloud.BigQuery.V2.UploadJsonOptions.WriteDisposition
   name: WriteDisposition
   href: api/Google.Cloud.BigQuery.V2.UploadJsonOptions.html#Google_Cloud_BigQuery_V2_UploadJsonOptions_WriteDisposition
