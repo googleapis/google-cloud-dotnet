@@ -39,41 +39,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
         public virtual BigQueryResults ExecuteQuery(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null) =>
-            CreateQueryJob(sql, parameters, queryOptions).GetQueryResults(resultsOptions);
-
-        /// <summary>
-        /// Executes a query.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// This method will only return when the query has completed. It simply delegates to <see cref="CreateQueryJob(string, QueryOptions)"/>
-        /// and then <see cref="BigQueryJob.GetQueryResults(GetQueryResultsOptions)"/>.
-        /// </para>
-        /// </remarks>
-        /// <param name="sql">The SQL query. Must not be null.</param>
-        /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
-        /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The result of the query.</returns>
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public virtual BigQueryResults ExecuteQuery(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null) =>
-            CreateQueryJob(sql, queryOptions).GetQueryResults(resultsOptions);
-
-        /// <summary>
-        /// Executes a command.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// This method will only return when the query has completed. It simply delegates to <see cref="CreateQueryJob(BigQueryCommand, QueryOptions)"/>
-        /// and then <see cref="BigQueryJob.GetQueryResults(GetQueryResultsOptions)"/>.
-        /// </para>
-        /// </remarks>
-        /// <param name="command">The command to execute. Must not be null.</param>
-        /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
-        /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The result of the query.</returns>
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public virtual BigQueryResults ExecuteQuery(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null) =>
-            CreateQueryJob(command, queryOptions).GetQueryResults(resultsOptions);
+            CreateQueryJob(sql, parameters, queryOptions).GetQueryResults(resultsOptions);        
 
         /// <summary>
         /// Asynchronously executes a query.
@@ -96,53 +62,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             var job = await CreateQueryJobAsync(sql, parameters, queryOptions, cancellationToken).ConfigureAwait(false);
             return await job.GetQueryResultsAsync(resultsOptions, cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// Asynchronously executes a query.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// The task returned by this method will only complete when the query has completed.
-        /// This method simply delegates to <see cref="CreateQueryJobAsync(string, QueryOptions, CancellationToken)"/>
-        /// and then <see cref="BigQueryJob.GetQueryResultsAsync(GetQueryResultsOptions, CancellationToken)"/>.
-        /// </para>
-        /// </remarks>
-        /// <param name="sql">The SQL query. Must not be null.</param>
-        /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
-        /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the <see cref="BigQueryResults"/> representing the query.</returns>
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public virtual async Task<BigQueryResults> ExecuteQueryAsync(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default)
-        {
-            var job = await CreateQueryJobAsync(sql, queryOptions, cancellationToken).ConfigureAwait(false);
-            return await job.GetQueryResultsAsync(resultsOptions, cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// Asynchronously executes a command.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// The task returned by this method will only complete when the query has completed.
-        /// This method simply delegates to <see cref="CreateQueryJobAsync(BigQueryCommand, QueryOptions, CancellationToken)"/>
-        /// and then <see cref="BigQueryJob.GetQueryResultsAsync(GetQueryResultsOptions, CancellationToken)"/>.
-        /// </para>
-        /// </remarks>
-        /// <param name="command">The command to execute. Must not be null.</param>
-        /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
-        /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the <see cref="BigQueryResults"/> representing the query.</returns>
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public virtual async Task<BigQueryResults> ExecuteQueryAsync(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default)
-        {
-            var job = await CreateQueryJobAsync(command, queryOptions, cancellationToken).ConfigureAwait(false);
-            return await job.GetQueryResultsAsync(resultsOptions, cancellationToken).ConfigureAwait(false);
-        }
+        }        
         #endregion
 
         #region CreateQueryJob
@@ -160,32 +80,6 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
-        /// Creates a job for a SQL query.
-        /// </summary>
-        /// <param name="sql">The SQL query. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The query job created. Use <see cref="GetQueryResults(JobReference,GetQueryResultsOptions)"/> to retrieve
-        /// the results of the query.</returns>
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public virtual BigQueryJob CreateQueryJob(string sql, QueryOptions options = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates a job for a query/command.
-        /// </summary>
-        /// <param name="command">The command to execute. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The query job created. Use <see cref="GetQueryResults(JobReference,GetQueryResultsOptions)"/> to retrieve
-        /// the results of the query.</returns>
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public virtual BigQueryJob CreateQueryJob(BigQueryCommand command, QueryOptions options = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Asynchronously creates a job for a SQL query.
         /// </summary>
         /// <param name="sql">The SQL query. Must not be null.</param>
@@ -196,36 +90,6 @@ namespace Google.Cloud.BigQuery.V2
         /// the query job created. Use <see cref="GetQueryResultsAsync(JobReference,GetQueryResultsOptions,CancellationToken)"/> to retrieve
         /// the results of the query.</returns>
         public virtual Task<BigQueryJob> CreateQueryJobAsync(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options = null, CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Asynchronously creates a job for a SQL query.
-        /// </summary>
-        /// <param name="sql">The SQL query. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the query job created. Use <see cref="GetQueryResultsAsync(JobReference,GetQueryResultsOptions,CancellationToken)"/> to retrieve
-        /// the results of the query.</returns>
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public virtual Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Asynchronously creates a job for a query/command.
-        /// </summary>
-        /// <param name="command">The command to execute. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the query job created. Use <see cref="GetQueryResultsAsync(JobReference,GetQueryResultsOptions,CancellationToken)"/> to retrieve
-        /// the results of the query.</returns>
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public virtual Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
