@@ -54,6 +54,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             GaxPreconditions.CheckNotNull(factory, nameof(factory));
+            options = options ?? LoggerOptions.Create();
             projectId = Project.GetAndCheckProjectId(projectId, options.MonitoredResource);
             return factory.AddGoogle(LogTarget.ForProject(projectId), options, client);
         }
@@ -69,6 +70,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             GaxPreconditions.CheckNotNull(factory, nameof(factory));
+            GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             factory.AddProvider(GoogleLoggerProvider.Create(logTarget, options, client));
             return factory;
         }
