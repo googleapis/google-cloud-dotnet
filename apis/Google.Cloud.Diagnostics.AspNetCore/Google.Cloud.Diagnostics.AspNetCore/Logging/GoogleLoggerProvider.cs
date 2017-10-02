@@ -54,9 +54,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     detected from the platform.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        public static GoogleLoggerProvider Create(string projectId,
+        public static GoogleLoggerProvider Create(string projectId = null,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
+            options = options ?? LoggerOptions.Create();
             projectId = Project.GetAndCheckProjectId(projectId, options.MonitoredResource);
             return Create(LogTarget.ForProject(projectId), options, client);
         }
