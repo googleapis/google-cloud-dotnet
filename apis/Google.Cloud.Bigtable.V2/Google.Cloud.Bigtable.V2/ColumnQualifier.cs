@@ -104,6 +104,10 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns></returns>
         public static bool operator ==(ColumnQualifier x, ColumnQualifier y)
         {
+            if (x?.ByteString.Length != y?.ByteString.Length)
+            {
+                return false;
+            }
             throw new NotImplementedException();
         }
 
@@ -115,6 +119,10 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns></returns>
         public static bool operator !=(ColumnQualifier x, ColumnQualifier y)
         {
+            if (x?.ByteString.Length != y?.ByteString.Length)
+            {
+                return true;
+            }
             throw new NotImplementedException();
         }
 
@@ -131,8 +139,9 @@ namespace Google.Cloud.Bigtable.V2
         /// 
         /// </summary>
         /// <param name="qualifier"></param>
-        public static implicit operator string(ColumnQualifier qualifier)
+        public static explicit operator string(ColumnQualifier qualifier)
         {
+            // TODO: throw if not a valid UTF8 string
             throw new NotImplementedException();
         }
 
@@ -149,7 +158,7 @@ namespace Google.Cloud.Bigtable.V2
         /// 
         /// </summary>
         /// <param name="qualifier"></param>
-        public static implicit operator byte[](ColumnQualifier qualifier)
+        public static explicit operator byte[](ColumnQualifier qualifier)
         {
             throw new NotImplementedException();
         }
@@ -167,7 +176,7 @@ namespace Google.Cloud.Bigtable.V2
         /// 
         /// </summary>
         /// <param name="qualifier"></param>
-        public static implicit operator ByteString(ColumnQualifier qualifier)
+        public static explicit operator ByteString(ColumnQualifier qualifier)
         {
             throw new NotImplementedException();
         }

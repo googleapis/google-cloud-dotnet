@@ -17,6 +17,8 @@ using System;
 
 namespace Google.Cloud.Bigtable.V2
 {
+    // TODO: Make this and ColumnQualifier a struct instead?
+
     /// <summary>
     /// The key of a row.
     /// </summary>
@@ -150,7 +152,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        public static bool operator ==(RowKey x, RowKey y) => Compare(x, y) == 0;
+        public static bool operator ==(RowKey x, RowKey y) => x?.ByteString.Length == y?.ByteString.Length && Compare(x, y) == 0;
 
         /// <summary>
         /// 
@@ -158,7 +160,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        public static bool operator !=(RowKey x, RowKey y) => Compare(x, y) != 0;
+        public static bool operator !=(RowKey x, RowKey y) => x?.ByteString.Length != y?.ByteString.Length || Compare(x, y) != 0;
 
         /// <summary>
         /// 
@@ -189,8 +191,9 @@ namespace Google.Cloud.Bigtable.V2
         /// 
         /// </summary>
         /// <param name="key"></param>
-        public static implicit operator string(RowKey key)
+        public static explicit operator string(RowKey key)
         {
+            // TODO: throw if not a valid UTF8 string
             throw new NotImplementedException();
         }
 
@@ -207,7 +210,7 @@ namespace Google.Cloud.Bigtable.V2
         /// 
         /// </summary>
         /// <param name="key"></param>
-        public static implicit operator byte[](RowKey key)
+        public static explicit operator byte[](RowKey key)
         {
             throw new NotImplementedException();
         }
@@ -225,7 +228,7 @@ namespace Google.Cloud.Bigtable.V2
         /// 
         /// </summary>
         /// <param name="key"></param>
-        public static implicit operator ByteString(RowKey key)
+        public static explicit operator ByteString(RowKey key)
         {
             throw new NotImplementedException();
         }

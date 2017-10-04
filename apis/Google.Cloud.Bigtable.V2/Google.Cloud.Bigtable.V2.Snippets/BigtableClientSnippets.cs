@@ -71,30 +71,28 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Snippet: CheckAndMutateRow(TableName,RowKey,RowFilter,Mutation[])
             // Create client
             BigtableClient bigtableClient = BigtableClient.Create();
-            // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            RowKey rowKey = "r1";
-            RowFilter predicateFilter = RowFilters.Chain(
-                RowFilters.FamilyNameRegex(@"cf\d"),
-                RowFilters.ColumnQualifierRegex(@"[a-z]\d"),
-                RowFilters.CellsPerRowLimit(1),
-                RowFilters.VersionRange(new BigtableVersion(1), new BigtableVersion(25)));
-            Mutation trueMutation1 = Mutations.DeleteFromFamily("cf1");
-            Mutation trueMutation2 = Mutations.SetCell("cf1", "c1", "test-value2", new BigtableVersion(2));
             // Make the request
             CheckAndMutateRowResponse response = bigtableClient.CheckAndMutateRow(
-                tableName,
-                rowKey,
-                predicateFilter,
-                trueMutation1, trueMutation2);
+                new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                "r1",
+                // If the latest value in the "name:missing" column is "yes"...
+                RowFilters.Chain(
+                    RowFilters.FamilyNameRegex(@"name"),
+                    RowFilters.ColumnQualifierRegex(@"missing"),
+                    RowFilters.CellsPerRowLimit(1),
+                    RowFilters.ValueRegex("yes")),
+                // ...remove that marker value and insert the name.
+                Mutations.DeleteFromColumn("name", "missing"),
+                Mutations.SetCell("name", "first_name", "Alex", new BigtableVersion(1)),
+                Mutations.SetCell("name", "last_name", "Trebek", new BigtableVersion(1)));
 
             if (response.PredicateMatched)
             {
-                // The true mutations were applied...
+                Console.WriteLine("The name has been set");
             }
             else
             {
-                // The true mutations were not applied...
+                Console.WriteLine("The name was already present");
             }
             // End snippet
 
@@ -129,17 +127,18 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Snippet: MutateRow(TableName,RowKey,Mutation[])
             // Create client
             BigtableClient bigtableClient = BigtableClient.Create();
-            // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            RowKey rowKey = new RowKey(12, 255, 0, 17, 1);
-            Mutation mutation1 = Mutations.DeleteFromFamily("cf1");
-            Mutation mutation2 =
-                Mutations.DeleteFromColumn("cf2", "c1", new BigtableVersionRange(null, new BigtableVersion(DateTime.UtcNow)));
             // Make the request
             MutateRowResponse response = bigtableClient.MutateRow(
-                tableName,
-                rowKey,
-                mutation1, mutation2);
+                new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                new byte[] { 12, 255, 0, 17 },
+                // Delete all cells from the column family "history",
+                Mutations.DeleteFromFamily("history"),
+                // and all cells from the "metrics:clicks" column which are older than a day (assuming UTC
+                // timestamp micros have been used as version values in this column).
+                Mutations.DeleteFromColumn(
+                    "metrics",
+                    "clicks",
+                    new BigtableVersionRange(null, new BigtableVersion(DateTime.UtcNow.AddDays(-1)))));
             // End snippet
 
             // TODO: Verifications
@@ -170,7 +169,20 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             while (await responseStream.MoveNext())
             {
                 MutateRowsResponse response = responseStream.Current;
-                // Do something with streamed response
+                foreach (MutateRowsResponse.Types.Entry entry in response.Entries)
+                {
+                    switch (entry.Index)
+                    {
+                        case 0:
+                            Console.WriteLine($"The mutations to row 'r1' finished with status code {entry.Status.Code}");
+                            break;
+                        case 1:
+                            Console.WriteLine($"The mutations to row 'r2' finished with status code {entry.Status.Code}");
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                }
             }
             // The response stream has completed
             // End snippet
@@ -183,24 +195,41 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Snippet: MutateRows(TableName,MutateRowsRequest.Types.Entry[])
             // Create client
             BigtableClient bigtableClient = BigtableClient.Create();
-            // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            MutateRowsRequest.Types.Entry entry1 = Mutations.CreateEntry("r1",
-                Mutations.DeleteFromFamily("cf1"),
-                Mutations.DeleteFromColumn("cf2", "c1", new BigtableVersionRange(null, new BigtableVersion(DateTime.UtcNow))));
-            MutateRowsRequest.Types.Entry entry2 = Mutations.CreateEntry("r2",
-                Mutations.DeleteFromRow());
             // Make the request
             BigtableClient.MutateRowsStream streamingResponse = bigtableClient.MutateRows(
-                tableName,
-                entry1, entry2);
+                new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                // From row 'r1'...
+                Mutations.CreateEntry("r1",
+                    // delete all cells from the column family "history",
+                    Mutations.DeleteFromFamily("history"),
+                    // and all cells from the "metrics:clicks" column which are older than a day (assuming UTC
+                    // timestamp micros have been used as version values in this column).
+                    Mutations.DeleteFromColumn(
+                        "metrics",
+                        "clicks",
+                        new BigtableVersionRange(null, new BigtableVersion(DateTime.UtcNow.AddDays(-1))))),
+                // Delete all cells from row 'r2'
+                Mutations.CreateEntry("r2", Mutations.DeleteFromRow()));
 
             // Read streaming responses from server until complete
             IAsyncEnumerator<MutateRowsResponse> responseStream = streamingResponse.ResponseStream;
             while (await responseStream.MoveNext())
             {
                 MutateRowsResponse response = responseStream.Current;
-                // Do something with streamed response
+                foreach (MutateRowsResponse.Types.Entry entry in response.Entries)
+                {
+                    switch (entry.Index)
+                    {
+                        case 0:
+                            Console.WriteLine($"The mutations to row 'r1' finished with status code {entry.Status.Code}");
+                            break;
+                        case 1:
+                            Console.WriteLine($"The mutations to row 'r2' finished with status code {entry.Status.Code}");
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                }
             }
             // The response stream has completed
             // End snippet
@@ -251,16 +280,13 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Snippet: ReadModifyWriteRow(TableName,RowKey,ReadModifyWriteRule[])
             // Create client
             BigtableClient bigtableClient = BigtableClient.Create();
-            // Initialize request argument(s)
-            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            RowKey rowKey = new RowKey(12, 255, 0, 17, 1);
-            ReadModifyWriteRule rule1 = ReadModifyWriteRules.Append("cf1", "c1", "_original");
-            ReadModifyWriteRule rule2 = ReadModifyWriteRules.Increment("cf1", "c2", 1);
             // Make the request
             ReadModifyWriteRowResponse response = bigtableClient.ReadModifyWriteRow(
-                tableName,
-                rowKey,
-                rule1, rule2);
+                new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                "user12345",
+                ReadModifyWriteRules.Append("save_data", "name", "_previous"),
+                ReadModifyWriteRules.Increment("metrics", "saves", 1));
+
             Console.WriteLine($"Row key: {response.Row.Key.ToStringUtf8()}");
             foreach (Family family in response.Row.Families)
             {
@@ -331,6 +357,42 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                         }
                     }
                 }
+            }
+            // The response stream has completed
+            // End snippet
+
+            // TODO: Verifications
+        }
+
+        public async Task SampleRowKeys()
+        {
+            var cts = new CancellationTokenSource();
+            var cancellationToken = cts.Token;
+
+            // Snippet: ReadRows(TableName,RowSet,RowFilter,long,CallSettings)
+            // Create client
+            BigtableClient bigtableClient = BigtableClient.Create();
+            // Initialize request argument(s)
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
+
+            // Make the request
+            BigtableClient.SampleRowKeysStream streamingResponse = bigtableClient.SampleRowKeys(
+                tableName,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+            // Read streaming responses from server until complete
+            IAsyncEnumerator<SampleRowKeysResponse> responseStream = streamingResponse.ResponseStream;
+            long previousRowOffsetBytes = 0;
+            while (await responseStream.MoveNext(cancellationToken))
+            {
+                SampleRowKeysResponse response = responseStream.Current;
+
+                long appoxStorageBetweenPreviousSample = response.OffsetBytes - previousRowOffsetBytes;
+
+                Console.WriteLine($"Row key: {response.RowKey}, at offset ${response.OffsetBytes}");
+                Console.WriteLine($"  Approximate bytes since previous row sample: ${appoxStorageBetweenPreviousSample}"); 
+
+                previousRowOffsetBytes = response.OffsetBytes;
             }
             // The response stream has completed
             // End snippet

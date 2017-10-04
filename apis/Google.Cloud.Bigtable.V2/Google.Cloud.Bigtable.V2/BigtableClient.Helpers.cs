@@ -349,7 +349,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </para>
         /// </remarks>
         /// <param name="tableName">
-        /// /// The unique name of the table from which to read.
+        /// The unique name of the table from which to read.
         /// </param>
         /// <param name="rows">
         /// The row keys and/or ranges to read. If not specified, reads from all rows.
@@ -373,6 +373,33 @@ namespace Google.Cloud.Bigtable.V2
             RowSet rows = null,
             RowFilter filter = null,
             long rowsLimit = 0,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns a sample of row keys in the table. The returned row keys will
+        /// delimit contiguous sections of the table of approximately equal size,
+        /// which can be used to break up the data for distributed tasks like
+        /// mapreduces.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="SampleRowKeys(SampleRowKeysRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table from which to sample row keys.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream with the row key samples.
+        /// </returns>
+        public virtual SampleRowKeysStream SampleRowKeys(
+            TableName tableName,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
