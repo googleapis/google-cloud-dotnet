@@ -100,7 +100,14 @@ generator:
 EOF
   
   pushd toolkit > /dev/null
-  ./gradlew -q runCodeGen -Pclargs=--descriptor_set=../$OUTDIR/protos.desc,--service_yaml=../$API_YAML,--gapic_yaml=../$API_TMP_DIR/gapic.yaml,--output=../$API_TMP_DIR
+  args=()
+  args+=(--descriptor_set=../$OUTDIR/protos.desc)
+  args+=(--service_yaml=../$API_YAML)
+  args+=(--gapic_yaml=../$API_TMP_DIR/gapic.yaml)
+  args+=(--package_yaml=../$OUTDIR/package.yaml)
+  args+=(--output=../$API_TMP_DIR)  
+  
+  ./gradlew -q runCodeGen -Pclargs=$(IFS=','; echo "${args[*]}")
   popd > /dev/null
 
   for f in `find $API_TMP_DIR -type f -name '*.cs'`
@@ -118,6 +125,35 @@ install_dependencies
 OUTDIR=tmp
 rm -rf $OUTDIR
 mkdir $OUTDIR
+
+# Fake package.yaml file that's just enough to make Toolkit happy.
+# We don't use this project file for anything (we don't even move it into place)
+# but Toolkit doesn't have an option to not generate it.
+
+cat > $OUTDIR/package.yaml <<END_OF_FILE
+package_type: grpc_client
+short_name: fake
+package_name: {default: fake}
+gax_version: {csharp: {lower: 0.0.0}}
+grpc_version: {csharp: {lower: 0.0.0}}
+proto_version: {csharp: {lower: 0.0.0}}
+gax_grpc_version: {csharp: {lower: 0.0.0}}
+auth_version: {csharp: {lower: 0.0.0}}
+generated_package_version: {csharp: {lower: 0.0.0}}
+generated_ga_package_version: {csharp: {lower: 0.0.0}}
+api_common_version: {csharp: {lower: 0.0.0}}
+release_level: {csharp: alpha}
+proto_deps: []
+major_version: v0
+proto_path: fake
+author: fake
+homepage: fake
+license: fake
+email: fake
+gapic_config_name: fake
+END_OF_FILE
+
+
 # Generate a single descriptor file for all protos we may care about.
 # We can then reuse that for all APIs.
 $PROTOC \
@@ -143,12 +179,13 @@ $PROTOC \
   --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
   googleapis/google/iam/v1/*.proto
 
-# Now the per-API codegen  
+# Now the per-API codegen
+# Commented out lines indicate known config problems that should be fixed, then uncommented.
 generate_api Google.Cloud.Bigtable.Admin.V2 google/bigtable/admin/v2 bigtableadmin.yaml
 generate_api Google.Cloud.Bigtable.V2 google/bigtable/v2 bigtable.yaml
 generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
 generate_api Google.Cloud.Debugger.V2 google/devtools/clouddebugger/v2 clouddebugger.yaml
-generate_api Google.Cloud.Dlp.V2Beta1 google/privacy/dlp/v2beta1 dlp.yaml
+# generate_api Google.Cloud.Dlp.V2Beta1 google/privacy/dlp/v2beta1 dlp.yaml
 generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
 generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language_v1.yaml
 generate_api Google.Cloud.Language.V1.Experimental google/cloud/language/v1beta2 language_v1beta2.yaml
