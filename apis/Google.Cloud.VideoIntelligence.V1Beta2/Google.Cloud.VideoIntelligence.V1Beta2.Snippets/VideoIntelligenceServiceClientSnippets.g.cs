@@ -112,11 +112,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2.Snippets
             // Create client
             VideoIntelligenceServiceClient videoIntelligenceServiceClient = await VideoIntelligenceServiceClient.CreateAsync();
             // Initialize request argument(s)
-            AnnotateVideoRequest request = new AnnotateVideoRequest
-            {
-                InputUri = "",
-                Features = { },
-            };
+            AnnotateVideoRequest request = new AnnotateVideoRequest();
             // Make the request
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
                 await videoIntelligenceServiceClient.AnnotateVideoAsync(request);
@@ -147,11 +143,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2.Snippets
             // Create client
             VideoIntelligenceServiceClient videoIntelligenceServiceClient = VideoIntelligenceServiceClient.Create();
             // Initialize request argument(s)
-            AnnotateVideoRequest request = new AnnotateVideoRequest
-            {
-                InputUri = "",
-                Features = { },
-            };
+            AnnotateVideoRequest request = new AnnotateVideoRequest();
             // Make the request
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
                 videoIntelligenceServiceClient.AnnotateVideo(request);
