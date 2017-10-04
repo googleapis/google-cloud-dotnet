@@ -117,14 +117,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        public static bool operator !=(ColumnQualifier x, ColumnQualifier y)
-        {
-            if (x?.ByteString.Length != y?.ByteString.Length)
-            {
-                return true;
-            }
-            throw new NotImplementedException();
-        }
+        public static bool operator !=(ColumnQualifier x, ColumnQualifier y) => !(x == y);
 
         /// <summary>
         /// 
