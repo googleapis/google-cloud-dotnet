@@ -323,11 +323,21 @@ namespace Google.Cloud.Spanner.Data
             if (spannerCommandTextBuilder.IsCreateDatabaseCommand)
             {
                 var parent = new InstanceName(spannerConnection.Project, spannerConnection.SpannerInstance);
-                var response = await databaseAdminClient.CreateDatabaseAsync(parent, commandText).ConfigureAwait(false);
+                var response = await databaseAdminClient.CreateDatabaseAsync(
+                    new CreateDatabaseRequest
+                    {
+                        ParentAsInstanceName = parent,
+                        CreateStatement = commandText,
+                        ExtraStatements = { spannerCommandTextBuilder.ExtraStatements }
+                    }).ConfigureAwait(false);
                 await response.PollUntilCompletedAsync().ConfigureAwait(false);
             }
             else if (spannerCommandTextBuilder.IsDropDatabaseCommand)
             {
+                if (spannerCommandTextBuilder.ExtraStatements?.Length > 0)
+                {
+                    throw new InvalidOperationException("Drop database commands do not support additional ddl statements");
+                }
                 var dbName = new DatabaseName(spannerConnection.Project,
                     spannerConnection.SpannerInstance,
                     spannerCommandTextBuilder.DatabaseToDrop);
@@ -335,11 +345,20 @@ namespace Google.Cloud.Spanner.Data
             }
             else
             {
+                var ddlStatements = new List<string> {commandText};
+                if (spannerCommandTextBuilder.ExtraStatements != null)
+                {
+                    ddlStatements.AddRange(spannerCommandTextBuilder.ExtraStatements);
+                }
+
                 var response =
                     await databaseAdminClient.UpdateDatabaseDdlAsync(
-                        new DatabaseName(
-                            spannerConnection.Project, spannerConnection.SpannerInstance, spannerConnection.Database),
-                        new[] { commandText }).ConfigureAwait(false);
+                        new UpdateDatabaseDdlRequest
+                        {
+                            DatabaseAsDatabaseName = new DatabaseName(
+                                spannerConnection.Project, spannerConnection.SpannerInstance, spannerConnection.Database),
+                            Statements = { ddlStatements }
+                        }).ConfigureAwait(false);
                 await response.PollUntilCompletedAsync().ConfigureAwait(false);
             }
             return 0;

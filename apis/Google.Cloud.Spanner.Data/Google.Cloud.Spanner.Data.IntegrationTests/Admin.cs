@@ -53,5 +53,121 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await dropCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
             }
         }
+
+        [Fact]
+        public async Task CreateWithExtrasDrop()
+        {
+            string dbName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+
+            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            {
+                const string tableCreate = @"CREATE TABLE TX (
+                              K                   STRING(MAX) NOT NULL,
+                              StringValue         STRING(MAX),
+                            ) PRIMARY KEY (K)";
+
+                var createCmd = connection.CreateDdlCommand(
+                    $"CREATE DATABASE {dbName}",
+                    tableCreate);
+
+                await createCmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+
+            using (var connection = new SpannerConnection($"{_testFixture.NoDbConnectionString}/databases/{dbName}"))
+            {
+                var cmd = connection.CreateInsertCommand("TX", new SpannerParameterCollection
+                {
+                    {"K", SpannerDbType.String, "key" },
+                    {"StringValue", SpannerDbType.String, "value"}
+                });
+                await cmd.ExecuteNonQueryAsync();
+                cmd = connection.CreateSelectCommand("SELECT * FROM TX");
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    await reader.ReadAsync();
+                    Assert.Equal("key", reader.GetFieldValue<string>("K"));
+                    Assert.Equal("value", reader.GetFieldValue<string>("StringValue"));
+                }
+            }
+
+            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            {
+                var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
+                await dropCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+        [Fact]
+        public async Task CreateWithExtrasDrop2()
+        {
+            string dbName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+
+            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            {
+                var createCmd = connection.CreateDdlCommand(
+                    $"CREATE DATABASE {dbName}");
+
+                await createCmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+
+            using (var connection = new SpannerConnection($"{_testFixture.NoDbConnectionString}/databases/{dbName}"))
+            {
+                const string tableCreate1 = @"CREATE TABLE TX1 (
+                              K                   STRING(MAX) NOT NULL,
+                              StringValue         STRING(MAX),
+                            ) PRIMARY KEY (K)";
+                const string tableCreate2 = @"CREATE TABLE TX2 (
+                              K                   STRING(MAX) NOT NULL,
+                              StringValue         STRING(MAX),
+                            ) PRIMARY KEY (K)";
+                var updateCmd = connection.CreateDdlCommand(tableCreate1, tableCreate2);
+                await updateCmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+
+                var cmd = connection.CreateInsertCommand("TX2", new SpannerParameterCollection
+                {
+                    {"K", SpannerDbType.String, "key" },
+                    {"StringValue", SpannerDbType.String, "value"}
+                });
+                await cmd.ExecuteNonQueryAsync();
+                cmd = connection.CreateSelectCommand("SELECT * FROM TX2");
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    await reader.ReadAsync();
+                    Assert.Equal("key", reader.GetFieldValue<string>("K"));
+                    Assert.Equal("value", reader.GetFieldValue<string>("StringValue"));
+                }
+            }
+
+            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            {
+                var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
+                await dropCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+        [Fact]
+        public async Task DropDoesntSupportExtra()
+        {
+            string dbName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            {
+                var createCmd = connection.CreateDdlCommand(
+                    $"CREATE DATABASE {dbName}");
+                await createCmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+
+            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            {
+                const string tableCreate1 = @"CREATE TABLE TX1 (
+                              K                   STRING(MAX) NOT NULL,
+                              StringValue         STRING(MAX),
+                            ) PRIMARY KEY (K)";
+
+                var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}", tableCreate1);
+                await Assert.ThrowsAsync<InvalidOperationException>(() => dropCommand.ExecuteNonQueryAsync());
+                dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
+                await dropCommand.ExecuteNonQueryAsync();
+            }
+        }
     }
 }

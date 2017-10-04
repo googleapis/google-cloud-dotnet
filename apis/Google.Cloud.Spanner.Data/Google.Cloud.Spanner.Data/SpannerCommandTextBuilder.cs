@@ -255,15 +255,23 @@ namespace Google.Cloud.Spanner.Data
         /// for executing a DDL statement.
         /// </summary>
         /// <param name="ddlStatement">The full DDL statement. Must not be null.</param>
+        /// <param name="extraDdlStatements">An optional set of additional DDL statements to execute after
+        /// the first statement.  Extra Ddl statements cannot be used to create additional databases.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Ddl"/> Spanner command.</returns>
-        public static SpannerCommandTextBuilder CreateDdlTextBuilder(string ddlStatement)
+        public static SpannerCommandTextBuilder CreateDdlTextBuilder(string ddlStatement, params string[] extraDdlStatements)
         {
             return new SpannerCommandTextBuilder
             {
                 SpannerCommandType = SpannerCommandType.Ddl,
-                CommandText = ddlStatement
+                CommandText = ddlStatement,
+                ExtraStatements = extraDdlStatements
             };
         }
+
+        /// <summary>
+        /// A set of additional statements to execute if supported by the command.
+        /// </summary>
+        public string[] ExtraStatements { get; private set; }
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance by parsing existing command text.
