@@ -26,7 +26,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
         /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// <para>
@@ -68,7 +68,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual CheckAndMutateRowResponse CheckAndMutateRow(
             TableName tableName,
-            RowKey rowKey,
+            BigtableByteString rowKey,
             RowFilter predicateFilter,
             IEnumerable<Mutation> trueMutations,
             IEnumerable<Mutation> falseMutations,
@@ -82,7 +82,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
         /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// <para>
@@ -112,7 +112,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual CheckAndMutateRowResponse CheckAndMutateRow(
             TableName tableName,
-            RowKey rowKey,
+            BigtableByteString rowKey,
             RowFilter predicateFilter,
             params Mutation[] trueMutations)
         {
@@ -125,7 +125,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
         /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// <para>
@@ -151,7 +151,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual MutateRowResponse MutateRow(
             TableName tableName,
-            RowKey rowKey,
+            BigtableByteString rowKey,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null)
         {
@@ -164,7 +164,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
         /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// <para>
@@ -187,7 +187,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual MutateRowResponse MutateRow(
             TableName tableName,
-            RowKey rowKey,
+            BigtableByteString rowKey,
             params Mutation[] mutations)
         {
             throw new NotImplementedException();
@@ -266,7 +266,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
         /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// <para>
@@ -293,7 +293,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(
             TableName tableName,
-            RowKey rowKey,
+            BigtableByteString rowKey,
             IEnumerable<ReadModifyWriteRule> rules,
             CallSettings callSettings = null)
         {
@@ -309,7 +309,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so <paramref name="rowKey"/> can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
         /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// <para>
@@ -333,7 +333,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(
             TableName tableName,
-            RowKey rowKey,
+            BigtableByteString rowKey,
             params ReadModifyWriteRule[] rules)
         {
             throw new NotImplementedException();
@@ -351,11 +351,45 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="tableName">
         /// The unique name of the table from which to read.
         /// </param>
-        /// <param name="rows">
-        /// The row keys and/or ranges to read. If not specified, reads from all rows.
+        /// <param name="rowKey">
+        /// The key of the row to read.
         /// </param>
         /// <param name="filter">
-        /// The filter to apply to the contents of the specified row(s). If unset,
+        /// The filter to apply to the contents of the specified row(s). If null,
+        /// reads the entirety of each row.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The row from the server or null if it does not exist.
+        /// </returns>
+        public virtual Row ReadRow(
+            TableName tableName,
+            BigtableByteString rowKey,
+            RowFilter filter,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Streams back the contents of all requested rows in key order, optionally
+        /// applying the same Reader filter to each.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="ReadRows(ReadRowsRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table from which to read.
+        /// </param>
+        /// <param name="rows">
+        /// The row keys and/or ranges to read. If null, reads from all rows.
+        /// </param>
+        /// <param name="filter">
+        /// The filter to apply to the contents of the specified row(s). If null,
         /// reads the entirety of each row.
         /// </param>
         /// <param name="rowsLimit">
@@ -370,8 +404,8 @@ namespace Google.Cloud.Bigtable.V2
         /// </returns>
         public virtual ReadRowsStream ReadRows(
             TableName tableName,
-            RowSet rows = null,
-            RowFilter filter = null,
+            RowSet rows,
+            RowFilter filter,
             long rowsLimit = 0,
             CallSettings callSettings = null)
         {

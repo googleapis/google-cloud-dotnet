@@ -26,7 +26,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The keys of single rows included in the set.
         /// </param>
         /// <returns>The created set.</returns>
-        public static RowSet FromRowKeys(params RowKey[] rowKeys)
+        public static RowSet FromRowKeys(params BigtableByteString[] rowKeys)
         {
             throw new NotImplementedException();
         }

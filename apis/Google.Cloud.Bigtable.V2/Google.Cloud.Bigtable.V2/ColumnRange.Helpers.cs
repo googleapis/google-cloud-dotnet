@@ -25,7 +25,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="ColumnQualifier"/>, so the ranges can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
         /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
         /// </para>
         /// </remarks>
@@ -40,7 +40,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <returns>The created range.</returns>
         public static ColumnRange Closed(
-            string familyName, ColumnQualifier startQualifierClosed, ColumnQualifier endQualifierClosed)
+            string familyName, BigtableByteString? startQualifierClosed, BigtableByteString? endQualifierClosed)
         {
             throw new InvalidOperationException();
         }
@@ -50,7 +50,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="ColumnQualifier"/>, so the ranges can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
         /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
         /// </para>
         /// </remarks>
@@ -65,7 +65,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <returns>The created range.</returns>
         public static ColumnRange ClosedOpen(
-            string familyName, ColumnQualifier startQualifierClosed, ColumnQualifier endQualifierOpen)
+            string familyName, BigtableByteString? startQualifierClosed, BigtableByteString? endQualifierOpen)
         {
             throw new InvalidOperationException();
         }
@@ -75,7 +75,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="ColumnQualifier"/>, so the ranges can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
         /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
         /// </para>
         /// </remarks>
@@ -90,7 +90,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <returns>The created range.</returns>
         public static ColumnRange Open(
-            string familyName, ColumnQualifier startQualifierOpen, ColumnQualifier endQualifierOpen)
+            string familyName, BigtableByteString? startQualifierOpen, BigtableByteString? endQualifierOpen)
         {
             // TODO: The missing start key is the empty string, inclusive, so we must explicitly set the start key open to the empty string here when it is null.
             throw new InvalidOperationException();
@@ -101,7 +101,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="ColumnQualifier"/>, so the ranges can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
         /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
         /// </para>
         /// </remarks>
@@ -116,7 +116,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <returns>The created range.</returns>
         public static ColumnRange OpenClosed(
-            string familyName, ColumnQualifier startQualifierOpen, ColumnQualifier endQualifierClosed)
+            string familyName, BigtableByteString? startQualifierOpen, BigtableByteString? endQualifierClosed)
         {
             // TODO: The missing start key is the empty string, inclusive, so we must explicitly set the start key open to the empty string here when it is null.
             throw new InvalidOperationException();

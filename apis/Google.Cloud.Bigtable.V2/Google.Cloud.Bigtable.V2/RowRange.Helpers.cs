@@ -23,7 +23,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so the ranges can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
         /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
         /// </para>
         /// </remarks>
@@ -34,7 +34,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The inclusive upper bound for the range. If null, it is interpreted as the infinite row key.
         /// </param>
         /// <returns>The created range.</returns>
-        public static RowRange Closed(RowKey startKeyClosed, RowKey endKeyClosed)
+        public static RowRange Closed(BigtableByteString? startKeyClosed, BigtableByteString? endKeyClosed)
         {
             throw new NotImplementedException();
         }
@@ -44,7 +44,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so the ranges can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
         /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
         /// </para>
         /// </remarks>
@@ -55,7 +55,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The exclusive upper bound for the range. If null, it is interpreted as the infinite row key.
         /// </param>
         /// <returns>The created range.</returns>
-        public static RowRange ClosedOpen(RowKey startKeyClosed, RowKey endKeyOpen)
+        public static RowRange ClosedOpen(BigtableByteString? startKeyClosed, BigtableByteString? endKeyOpen)
         {
             throw new NotImplementedException();
         }
@@ -65,7 +65,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so the ranges can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
         /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
         /// </para>
         /// </remarks>
@@ -76,7 +76,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The exclusive upper bound for the range. If null, it is interpreted as the infinite row key.
         /// </param>
         /// <returns>The created range.</returns>
-        public static RowRange Open(RowKey startKeyOpen, RowKey endKeyOpen)
+        public static RowRange Open(BigtableByteString? startKeyOpen, BigtableByteString? endKeyOpen)
         {
             // TODO: The missing start key is the empty string, inclusive, so we must explicitly set the start key open to the empty string here when it is null.
             throw new NotImplementedException();
@@ -87,7 +87,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that string is implicitly convertible to <see cref="RowKey"/>, so the ranges can
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
         /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
         /// </para>
         /// </remarks>
@@ -98,7 +98,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The inclusive upper bound for the range. If null, it is interpreted as the infinite row key.
         /// </param>
         /// <returns>The created range.</returns>
-        public static RowRange OpenClosed(RowKey startKeyOpen, RowKey endKeyClosed)
+        public static RowRange OpenClosed(BigtableByteString? startKeyOpen, BigtableByteString? endKeyClosed)
         {
             // TODO: The missing start key is the empty string, inclusive, so we must explicitly set the start key open to the empty string here when it is null.
             throw new NotImplementedException();

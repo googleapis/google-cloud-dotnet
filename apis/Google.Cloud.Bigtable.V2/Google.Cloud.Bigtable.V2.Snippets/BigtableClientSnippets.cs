@@ -31,7 +31,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableClient bigtableClient = BigtableClient.Create();
             // Initialize request argument(s)
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            RowKey rowKey = "r1";
+            BigtableByteString rowKey = "r1";
             RowFilter predicateFilter = RowFilters.Chain(
                 RowFilters.FamilyNameRegex(@"cf\d"),
                 RowFilters.ColumnQualifierRegex(@"[a-z]\d"),
@@ -106,7 +106,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableClient bigtableClient = BigtableClient.Create();
             // Initialize request argument(s)
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            RowKey rowKey = new RowKey(12, 255, 0, 17, 1);
+            BigtableByteString rowKey = new BigtableByteString(12, 255, 0, 17, 1);
             IEnumerable<Mutation> mutations = new Mutation[]
             {
                 Mutations.DeleteFromFamily("cf1"),
@@ -244,7 +244,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableClient bigtableClient = BigtableClient.Create();
             // Initialize request argument(s)
             TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
-            RowKey rowKey = new RowKey(12, 255, 0, 17, 1);
+            BigtableByteString rowKey = new BigtableByteString(12, 255, 0, 17, 1);
             IEnumerable<ReadModifyWriteRule> rules = new ReadModifyWriteRule[]
             {
                 ReadModifyWriteRules.Append("cf1", "c1", "_original"),
@@ -302,6 +302,46 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                     }
                 }
             }
+            // End snippet
+
+            // TODO: Verifications
+        }
+
+        public void ReadRow()
+        {
+            var cts = new CancellationTokenSource();
+            var cancellationToken = cts.Token;
+
+            // Snippet: ReadRows(TableName,RowSet,RowFilter,long,CallSettings)
+            // Create client
+            BigtableClient bigtableClient = BigtableClient.Create();
+
+            // Make the request
+            Row row = bigtableClient.ReadRow(
+                new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                "r1",
+                // Only read cells from the "A0" through "A9" column families and only take the
+                // most recent cell from each column.
+                RowFilters.Chain(
+                    RowFilters.FamilyNameRegex(@"A\d"),
+                    RowFilters.CellsPerColumnLimit(1)),
+                CallSettings.FromCancellationToken(cancellationToken));
+
+            foreach (Family family in row.Families)
+            {
+                Console.WriteLine($"  Family name: {family.Name}");
+                foreach (Column column in family.Columns)
+                {
+                    Console.WriteLine($"    Column qualifier: {column.Qualifier.ToStringUtf8()}");
+                    foreach (Cell cell in column.Cells)
+                    {
+                        Console.WriteLine($"      Cell value: {cell.Value.ToStringUtf8()}");
+                        Console.WriteLine($"      Timestamp: {cell.Version.ToDateTime()}");
+                        Console.WriteLine($"      Labels: {string.Join(", ", cell.Labels)}");
+                    }
+                }
+            }
+            // The response stream has completed
             // End snippet
 
             // TODO: Verifications

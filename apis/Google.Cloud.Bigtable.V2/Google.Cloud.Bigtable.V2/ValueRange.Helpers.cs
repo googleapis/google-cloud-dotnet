@@ -22,6 +22,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="ValueRange"/> instance with inclusive bounds.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="startKeyClosed">
         /// The inclusive lower bound for the range. If null, it is interpreted as the empty string.
         /// </param>
@@ -29,7 +35,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The inclusive upper bound for the range. If null, it is interpreted as the infinite row key.
         /// </param>
         /// <returns>The created range.</returns>
-        public static ValueRange Closed(string startKeyClosed, string endKeyClosed)
+        public static ValueRange Closed(BigtableByteString? startKeyClosed, BigtableByteString? endKeyClosed)
         {
             throw new NotImplementedException();
         }
@@ -37,6 +43,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="ValueRange"/> instance with an inclusive lower bound and an exclusive upper bound.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="startKeyClosed">
         /// The inclusive lower bound for the range. If null, it is interpreted as the empty string.
         /// </param>
@@ -44,7 +56,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The exclusive upper bound for the range. If null, it is interpreted as the infinite row key.
         /// </param>
         /// <returns>The created range.</returns>
-        public static ValueRange ClosedOpen(string startKeyClosed, string endKeyOpen)
+        public static ValueRange ClosedOpen(BigtableByteString? startKeyClosed, BigtableByteString? endKeyOpen)
         {
             throw new NotImplementedException();
         }
@@ -52,6 +64,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="ValueRange"/> instance with exclusive bounds.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="startKeyOpen">
         /// The exclusive lower bound for the range. If null, it is interpreted as the empty string.
         /// </param>
@@ -59,7 +77,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The exclusive upper bound for the range. If null, it is interpreted as the infinite row key.
         /// </param>
         /// <returns>The created range.</returns>
-        public static ValueRange Open(string startKeyOpen, string endKeyOpen)
+        public static ValueRange Open(BigtableByteString? startKeyOpen, BigtableByteString? endKeyOpen)
         {
             // TODO: The missing start key is the empty string, inclusive, so we must explicitly set the start key open to the empty string here when it is null.
             throw new NotImplementedException();
@@ -68,6 +86,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a <see cref="ValueRange"/> instance with an exclusive lower bound and an inclusive upper bound.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so the ranges can
+        /// be specified using strings as well and their UTF-8 representations will be used for the qualifier.
+        /// </para>
+        /// </remarks>
         /// <param name="startKeyOpen">
         /// The exclusive lower bound for the range. If null, it is interpreted as the empty string.
         /// </param>
@@ -75,69 +99,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The inclusive upper bound for the range. If null, it is interpreted as the infinite row key.
         /// </param>
         /// <returns>The created range.</returns>
-        public static ValueRange OpenClosed(string startKeyOpen, string endKeyClosed)
-        {
-            // TODO: The missing start key is the empty string, inclusive, so we must explicitly set the start key open to the empty string here when it is null.
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates a <see cref="ValueRange"/> instance with inclusive bounds.
-        /// </summary>
-        /// <param name="startKeyClosed">
-        /// The inclusive lower bound for the range. If null, it is interpreted as the empty string.
-        /// </param>
-        /// <param name="endKeyClosed">
-        /// The inclusive upper bound for the range. If null, it is interpreted as the infinite row key.
-        /// </param>
-        /// <returns>The created range.</returns>
-        public static ValueRange Closed(ByteString startKeyClosed, ByteString endKeyClosed)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates a <see cref="ValueRange"/> instance with an inclusive lower bound and an exclusive upper bound.
-        /// </summary>
-        /// <param name="startKeyClosed">
-        /// The inclusive lower bound for the range. If null, it is interpreted as the empty string.
-        /// </param>
-        /// <param name="endKeyOpen">
-        /// The exclusive upper bound for the range. If null, it is interpreted as the infinite row key.
-        /// </param>
-        /// <returns>The created range.</returns>
-        public static ValueRange ClosedOpen(ByteString startKeyClosed, ByteString endKeyOpen)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates a <see cref="ValueRange"/> instance with exclusive bounds.
-        /// </summary>
-        /// <param name="startKeyOpen">
-        /// The exclusive lower bound for the range. If null, it is interpreted as the empty string.
-        /// </param>
-        /// <param name="endKeyOpen">
-        /// The exclusive upper bound for the range. If null, it is interpreted as the infinite row key.
-        /// </param>
-        /// <returns>The created range.</returns>
-        public static ValueRange Open(ByteString startKeyOpen, ByteString endKeyOpen)
-        {
-            // TODO: The missing start key is the empty string, inclusive, so we must explicitly set the start key open to the empty string here when it is null.
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates a <see cref="ValueRange"/> instance with an exclusive lower bound and an inclusive upper bound.
-        /// </summary>
-        /// <param name="startKeyOpen">
-        /// The exclusive lower bound for the range. If null, it is interpreted as the empty string.
-        /// </param>
-        /// <param name="endKeyClosed">
-        /// The inclusive upper bound for the range. If null, it is interpreted as the infinite row key.
-        /// </param>
-        /// <returns>The created range.</returns>
-        public static ValueRange OpenClosed(ByteString startKeyOpen, ByteString endKeyClosed)
+        public static ValueRange OpenClosed(BigtableByteString? startKeyOpen, BigtableByteString? endKeyClosed)
         {
             // TODO: The missing start key is the empty string, inclusive, so we must explicitly set the start key open to the empty string here when it is null.
             throw new NotImplementedException();
