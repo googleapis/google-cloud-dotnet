@@ -389,10 +389,12 @@ namespace Google.Cloud.Spanner.Data
         /// This method is thread safe.
         /// </summary>
         /// <param name="ddlStatement">The DDL statement (eg 'CREATE TABLE MYTABLE ...').  Must not be null.</param>
+        /// <param name="extraDdlStatements">An optional set of additional DDL statements to execute after
+        /// the first statement.  Extra Ddl statements cannot be used to create additional databases.</param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateDdlCommand(
-            string ddlStatement) => new SpannerCommand(
-            SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement), this);
+            string ddlStatement, params string[] extraDdlStatements) => new SpannerCommand(
+            SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement, extraDdlStatements), this);
 
         /// <inheritdoc />
         public override void Open()
