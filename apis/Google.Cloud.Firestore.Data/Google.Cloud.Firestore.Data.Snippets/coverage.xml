@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CoverageParams>
+  <TargetExecutable>/Program Files/dotnet/dotnet.exe</TargetExecutable>
+  <TargetArguments>test --no-build -f net452 -c Release</TargetArguments>
+  <Filters>
+    <IncludeFilters>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Firestore.Data</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Firestore.V1Beta1</ModuleMask>
+      </FilterEntry>
+    </IncludeFilters>
+  </Filters>
+  <AttributeFilters>
+    <AttributeFilterEntry>System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute</AttributeFilterEntry>
+    <AttributeFilterEntry>System.Diagnostics.DebuggerNonUserCodeAttribute</AttributeFilterEntry>
+  </AttributeFilters>
+  <TargetWorkingDir>.</TargetWorkingDir>
+  <Output>../../../coverage/Google.Cloud.Firestore.Data.Snippets.dvcr</Output>
+</CoverageParams>

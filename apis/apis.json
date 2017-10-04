@@ -202,6 +202,38 @@
   },
 
   {
+    "id": "Google.Cloud.Firestore.Data",
+    "productName": "Firestore",
+    "productUrl": "https://firebase.google.com",
+    "version": "1.0.0-alpha00",
+    "type": "other",
+    "targetFrameworks": "netstandard1.5;net45",
+    "testTargetFrameworks": "netcoreapp1.0;net452",
+    "description": "Recommended Google client library to access the Firestore API.", 
+    "tags": [ "firestore", "firebase" ],
+    "dependencies": {
+      "Google.Cloud.Firestore.V1Beta1": "project",
+      "Grpc.Core": "default"
+    },
+    "testDependencies": {
+      "System.ValueTuple": "4.4.0"
+    }
+  },
+
+  {
+    "id": "Google.Cloud.Firestore.V1Beta1",
+    "productName": "Firestore",
+    "productUrl": "https://firebase.google.com",
+    "version": "1.0.0-alpha00",
+    "type": "grpc",
+    "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore.Data package instead.",
+    "tags": [ "firestore", "firebase" ],
+    "dependencies": {
+      "Google.LongRunning": "1.0.0"
+    }
+  },
+
+  {
     "id": "Google.Cloud.Iam.V1",
     "version": "1.0.0-beta12",
     "type": "grpc",
