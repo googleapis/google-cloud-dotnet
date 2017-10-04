@@ -24,6 +24,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -328,8 +329,8 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2
             CallSettings callSettings = null) => AnnotateVideoAsync(
                 new AnnotateVideoRequest
                 {
-                    InputUri = GaxPreconditions.CheckNotNullOrEmpty(inputUri, nameof(inputUri)),
-                    Features = { GaxPreconditions.CheckNotNull(features, nameof(features)) },
+                    InputUri = inputUri ?? "", // Optional
+                    Features = { features ?? Enumerable.Empty<Feature>() }, // Optional
                     InputContent = inputContent ?? ByteString.Empty, // Optional
                     VideoContext = videoContext, // Optional
                     OutputUri = outputUri ?? "", // Optional
@@ -457,8 +458,8 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2
             CallSettings callSettings = null) => AnnotateVideo(
                 new AnnotateVideoRequest
                 {
-                    InputUri = GaxPreconditions.CheckNotNullOrEmpty(inputUri, nameof(inputUri)),
-                    Features = { GaxPreconditions.CheckNotNull(features, nameof(features)) },
+                    InputUri = inputUri ?? "", // Optional
+                    Features = { features ?? Enumerable.Empty<Feature>() }, // Optional
                     InputContent = inputContent ?? ByteString.Empty, // Optional
                     VideoContext = videoContext, // Optional
                     OutputUri = outputUri ?? "", // Optional
