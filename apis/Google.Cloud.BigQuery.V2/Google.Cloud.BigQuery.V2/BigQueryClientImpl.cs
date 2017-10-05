@@ -89,6 +89,7 @@ namespace Google.Cloud.BigQuery.V2
         {            
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             Service = GaxPreconditions.CheckNotNull(service, nameof(service));
+            RetryHandler.Install(Service);
         }
 
         /// <summary>
