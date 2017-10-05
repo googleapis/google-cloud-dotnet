@@ -14,7 +14,10 @@
 
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Requests;
+using Google.Apis.Util;
 using Google.Cloud.ClientTesting;
+using System.Net;
+using System.Net.Http;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
@@ -32,7 +35,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             GZipEnabled = false
         })
         {
-            handler = (ReplayingMessageHandler) HttpClient.MessageHandler;
+            handler = (ReplayingMessageHandler) HttpClient.MessageHandler.InnerHandler;
         }
 
         public void ExpectRequest<TResponse>(ClientServiceRequest<TResponse> request, TResponse response)
@@ -42,5 +45,16 @@ namespace Google.Cloud.BigQuery.V2.Tests
             string responseContent = SerializeObject(response);            
             handler.ExpectRequest(httpRequest.RequestUri, httpRequest.Content?.ReadAsStringAsync()?.Result, responseContent);
         }
+
+        public void ExpectRequest<TResponse>(ClientServiceRequest<TResponse> request, HttpStatusCode statusCode, RequestError error)
+        {
+            string requestContent = SerializeObject(request);
+            var httpRequest = request.CreateRequest();
+            string responseContent = SerializeObject(new StandardResponse<object> { Error = error });
+            var responseMessage = new HttpResponseMessage(statusCode) { Content = new StringContent(responseContent) };
+            handler.ExpectRequest(httpRequest.RequestUri, httpRequest.Content?.ReadAsStringAsync()?.Result, responseMessage);
+        }
+
+        public void Verify() => handler.Verify();
     }
 }

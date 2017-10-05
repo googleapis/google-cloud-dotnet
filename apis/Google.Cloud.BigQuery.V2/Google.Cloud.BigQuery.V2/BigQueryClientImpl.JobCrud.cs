@@ -196,6 +196,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
 
@@ -204,6 +205,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Jobs.List(projectReference.ProjectId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
 
@@ -213,6 +215,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
 
@@ -258,6 +261,9 @@ namespace Google.Cloud.BigQuery.V2
             var job = CreateJob(configuration, options);
             var request = Service.Jobs.Insert(job, job.JobReference.ProjectId);
             request.ModifyRequest += _versionHeaderAction;
+
+            // It's safe to retry job inserts when they include a job ID, which ours always do.
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
     }

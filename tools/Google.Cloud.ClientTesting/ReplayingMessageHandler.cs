@@ -28,13 +28,10 @@ namespace Google.Cloud.ClientTesting
     /// We may well want to put this into Google.Api.Gax.Rest.Testing at some point.
     /// Additionally, it could do with being able to return non-OK results...
     /// </summary>
-    public class ReplayingMessageHandler : ConfigurableMessageHandler
+    public class ReplayingMessageHandler : HttpMessageHandler
     {
-        private readonly Queue<Tuple<Uri, string, string>> _requestResponses = new Queue<Tuple<Uri, string, string>>();
-
-        public ReplayingMessageHandler() : base(new HttpClientHandler())
-        {
-        }
+        private readonly Queue<Tuple<Uri, string, HttpResponseMessage>> _requestResponses =
+            new Queue<Tuple<Uri, string, HttpResponseMessage>>();
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
@@ -43,16 +40,27 @@ namespace Google.Cloud.ClientTesting
             var requestResponse = _requestResponses.Dequeue();
             Uri expectedRequestUri = requestResponse.Item1;
             string expectedRequestContent = requestResponse.Item2;
-            string providedResponse = requestResponse.Item3;
+            HttpResponseMessage providedResponse = requestResponse.Item3;
             Assert.Equal(expectedRequestUri, request.RequestUri);
             string body = await (request.Content?.ReadAsStringAsync() ?? Task.FromResult<string>(null));
             Assert.Equal(expectedRequestContent, body);
-            return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(providedResponse) };
+            return providedResponse;
         }
 
         public void ExpectRequest(Uri requestUri, string requestContent, string responseContent)
         {
-            _requestResponses.Enqueue(Tuple.Create(requestUri, requestContent, responseContent));
+            var responseMessage = new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(responseContent) };
+            _requestResponses.Enqueue(Tuple.Create(requestUri, requestContent, responseMessage));
+        }
+
+        public void ExpectRequest(Uri requestUri, string requestContent, HttpResponseMessage responseMessage)
+        {
+            _requestResponses.Enqueue(Tuple.Create(requestUri, requestContent, responseMessage));
+        }
+
+        public void Verify()
+        {
+            Assert.Empty(_requestResponses);
         }
     }
 }

@@ -13,9 +13,11 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using Google.Apis.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Apis.Bigquery.v2.Data.DatasetList;
@@ -71,6 +73,43 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var result = client.GetDataset(reference);
             Assert.Equal(projectId, result.Reference.ProjectId);
             Assert.Equal(datasetId, result.Reference.DatasetId);
+        }
+
+        [Fact]
+        public void GetDataset_FailThenRetry()
+        {
+            var projectId = "project";
+            var datasetId = "dataset";
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            var reference = client.GetDatasetReference(projectId, datasetId);
+            service.ExpectRequest(
+                service.Datasets.Get(projectId, datasetId),
+                HttpStatusCode.InternalServerError,
+                new RequestError { Errors = new[] { new SingleError { Reason = "backendError" } } });
+            service.ExpectRequest(
+                service.Datasets.Get(projectId, datasetId),
+                new Dataset { DatasetReference = reference });
+            var result = client.GetDataset(reference);
+            service.Verify();
+            Assert.Equal(projectId, result.Reference.ProjectId);
+            Assert.Equal(datasetId, result.Reference.DatasetId);
+        }
+
+        [Fact]
+        public void GetDataset_NonRetriableFailure()
+        {
+            var projectId = "project";
+            var datasetId = "dataset";
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            var reference = client.GetDatasetReference(projectId, datasetId);
+            service.ExpectRequest(
+                service.Datasets.Get(projectId, datasetId),
+                HttpStatusCode.BadRequest,
+                new RequestError { Errors = new[] { new SingleError { Reason = "youCan'tRetryThis" } } });
+            Assert.Throws<GoogleApiException>(() => client.GetDataset(reference));
+            service.Verify();
         }
 
         [Fact]

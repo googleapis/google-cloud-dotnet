@@ -198,6 +198,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Tables.Get(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
 
@@ -207,6 +208,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Tables.List(datasetReference.ProjectId, datasetReference.DatasetId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
 
@@ -237,6 +239,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Tables.Update(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
+            RetryIfETagPresent(request, resource);
             return request;
         }
 
@@ -247,6 +250,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Tables.Patch(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
+            RetryIfETagPresent(request, resource);
             return request;
         }
     }

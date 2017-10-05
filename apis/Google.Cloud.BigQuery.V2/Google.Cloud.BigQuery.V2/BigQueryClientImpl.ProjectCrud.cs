@@ -63,6 +63,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Projects.List();
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
     }

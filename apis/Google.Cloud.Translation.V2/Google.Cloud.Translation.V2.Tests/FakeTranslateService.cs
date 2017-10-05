@@ -34,7 +34,7 @@ namespace Google.Cloud.Translation.V2.Tests
             GZipEnabled = false
         })
         {
-            handler = (ReplayingMessageHandler)HttpClient.MessageHandler;
+            handler = (ReplayingMessageHandler)HttpClient.MessageHandler.InnerHandler;
         }
 
         public void ExpectRequest<TResponse>(ClientServiceRequest<TResponse> request, TResponse response)

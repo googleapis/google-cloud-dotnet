@@ -231,6 +231,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
 
@@ -253,6 +254,7 @@ namespace Google.Cloud.BigQuery.V2
             request.ModifyRequest += _versionHeaderAction;
             request.TimeoutMs = requestTimeoutMs;
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
     }
