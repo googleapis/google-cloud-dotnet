@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Cloud.ClientTesting;
 using Moq;
@@ -1113,6 +1114,28 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.CreateCopyJobAsync(MatchesWhenSerialized(new[] { sourceTableReference }), MatchesWhenSerialized(destinationTableReference), options, token),
                 client => client.CreateCopyJobAsync(sourceTableReference, destinationTableReference, options, token),
                 client => new BigQueryTable(client, GetTable(sourceTableReference)).CreateCopyJobAsync(destinationTableReference, options, token));
+        }
+
+        [Fact]
+        public void RetryIfETagPresent_Present()
+        {
+            var service = new BigqueryService();
+            var table = new Table { ETag = "\"etag\"" };
+            var request = service.Tables.Update(table, "project", "dataset", "table");
+            BigQueryClient.RetryIfETagPresent(request, table);
+            var httpRequest = request.CreateRequest();
+            Assert.True(RetryHandler.IsRetriableRequest(httpRequest));
+        }
+
+        [Fact]
+        public void RetryIfETagPresent_Absent()
+        {
+            var service = new BigqueryService();
+            var table = new Table();
+            var request = service.Tables.Update(table, "project", "dataset", "table");
+            BigQueryClient.RetryIfETagPresent(request, table);
+            var httpRequest = request.CreateRequest();
+            Assert.False(RetryHandler.IsRetriableRequest(httpRequest));
         }
 
         // TODO: Equivalents for GetQueryResults. That's currently a two-stage process (fetch job, fetch results) which we don't have

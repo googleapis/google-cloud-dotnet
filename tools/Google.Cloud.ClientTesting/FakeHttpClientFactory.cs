@@ -26,9 +26,23 @@ namespace Google.Cloud.ClientTesting
     {
         private readonly ConfigurableMessageHandler _handler;
 
+        /// <summary>
+        /// Constructor to use when you want to bypass the REST support library code
+        /// by implementing SendAsync directly.
+        /// </summary>
         public FakeHttpClientFactory(ConfigurableMessageHandler handler)
         {
             _handler = handler;
+        }
+
+        /// <summary>
+        /// Constructor to use when you want to keep the REST support library HTTP handling
+        /// code (for error handling etc), creating a ConfigurableMessageHandler that delegates
+        /// to <paramref name="handler"/>.
+        /// </summary>
+        public FakeHttpClientFactory(HttpMessageHandler handler)
+        {
+            _handler = new ConfigurableMessageHandler(handler);
         }
 
         /// <summary>

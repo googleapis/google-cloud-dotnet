@@ -254,17 +254,22 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(rows, nameof(rows));
 
+            var insertRows = rows.Select(row =>
+            {
+                GaxPreconditions.CheckArgument(row != null, nameof(rows), "Entries must not be null");
+                return row.ToRowsData();
+            }).ToList();
             var body = new TableDataInsertAllRequest
             {
-                Rows = rows.Select(row =>
-                {
-                    GaxPreconditions.CheckArgument(row != null, nameof(rows), "Entries must not be null");
-                    return row.ToRowsData();
-                }).ToList()
+                Rows = insertRows
             };
             options?.ModifyRequest(body);
             var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             request.ModifyRequest += _versionHeaderAction;
+            if (insertRows.All(ir => ir.InsertId != null))
+            {
+                RetryHandler.MarkAsRetriable(request);
+            }
             return request;
         }
     }

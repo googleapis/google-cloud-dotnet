@@ -222,5 +222,13 @@ namespace Google.Cloud.BigQuery.V2
             ? resource
             : throw new GoogleApiException(Service.Name, "ETag didn't match") { HttpStatusCode = HttpStatusCode.PreconditionFailed };
 
+        static internal void RetryIfETagPresent<TResource, TResponse>(BigqueryBaseServiceRequest<TResponse> request, TResource resource)
+            where TResource : IDirectResponseSchema
+        {
+            if (resource.ETag != null)
+            {
+                RetryHandler.MarkAsRetriable(request);
+            }
+        }
     }
 }
