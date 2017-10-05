@@ -377,7 +377,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 CallSettings.FromCancellationToken(cancellationToken));
 
             // Read streaming responses from server until complete
-            IAsyncEnumerator<Row> responseStream = streamingResponse.GetRowsAsync(cancellationToken).GetEnumerator();
+            IAsyncEnumerator<Row> responseStream = streamingResponse.AsAsyncEnumerable().GetEnumerator();
             while (await responseStream.MoveNext(cancellationToken))
             {
                 Row row = responseStream.Current;
