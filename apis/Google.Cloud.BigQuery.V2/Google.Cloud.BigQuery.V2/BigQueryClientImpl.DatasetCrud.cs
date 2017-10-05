@@ -44,11 +44,15 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override BigQueryDataset GetDataset(DatasetReference datasetReference, GetDatasetOptions options = null)
         {
-            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
+            var request = CreateGetDatasetRequest(datasetReference, options);
             return new BigQueryDataset(this, CheckETag(request.Execute(), options?.ETag));
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryDataset> GetDatasetAsync(DatasetReference datasetReference, GetDatasetOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateGetDatasetRequest(datasetReference, options);
+            return new BigQueryDataset(this, CheckETag(await request.ExecuteAsync(cancellationToken).ConfigureAwait(false), options?.ETag));
         }
 
         /// <inheritdoc />
@@ -62,23 +66,29 @@ namespace Google.Cloud.BigQuery.V2
                 pageManager);
         }
 
-        private ListRequest CreateListDatasetsRequest(ProjectReference projectReference, ListDatasetsOptions options)
+        /// <inheritdoc />
+        public override PagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(ProjectReference projectReference, ListDatasetsOptions options = null)
         {
-            var request = Service.Datasets.List(projectReference.ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
-            return request;
+            GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference));
+
+            var pageManager = new DatasetPageManager(this);
+            return new RestPagedAsyncEnumerable<ListRequest, DatasetList, BigQueryDataset>(
+                () => CreateListDatasetsRequest(projectReference, options),
+                pageManager);
         }
 
         /// <inheritdoc />
         public override BigQueryDataset CreateDataset(DatasetReference datasetReference, CreateDatasetOptions options = null)
         {
-            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            var dataset = new Dataset { DatasetReference = datasetReference };
-            var request = Service.Datasets.Insert(dataset, datasetReference.ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(dataset, request);
+            var request = CreateInsertDatasetRequest(datasetReference, options);
             return new BigQueryDataset(this, request.Execute());
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryDataset> CreateDatasetAsync(DatasetReference datasetReference, CreateDatasetOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateInsertDatasetRequest(datasetReference, options);
+            return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
         }
 
         /// <inheritdoc />
@@ -96,70 +106,6 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override void DeleteDataset(DatasetReference datasetReference, DeleteDatasetOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            var request = Service.Datasets.Delete(datasetReference.ProjectId, datasetReference.DatasetId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
-            request.Execute();
-        }
-
-        /// <inheritdoc />
-        public override BigQueryDataset UpdateDataset(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            GaxPreconditions.CheckNotNull(resource, nameof(resource));
-            var request = Service.Datasets.Update(resource, datasetReference.ProjectId, datasetReference.DatasetId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
-            return new BigQueryDataset(this, request.Execute());
-        }
-
-        /// <inheritdoc />
-        public override BigQueryDataset PatchDataset(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            GaxPreconditions.CheckNotNull(resource, nameof(resource));
-            var request = Service.Datasets.Patch(resource, datasetReference.ProjectId, datasetReference.DatasetId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
-            return new BigQueryDataset(this, request.Execute());
-        }
-
-        /// <inheritdoc />
-        public override async Task<BigQueryDataset> GetDatasetAsync(DatasetReference datasetReference, GetDatasetOptions options = null, CancellationToken cancellationToken = default)
-        {
-            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
-            return new BigQueryDataset(this, CheckETag(await request.ExecuteAsync(cancellationToken).ConfigureAwait(false), options?.ETag));
-        }
-
-        /// <inheritdoc />
-        public override PagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(ProjectReference projectReference, ListDatasetsOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference));
-
-            var pageManager = new DatasetPageManager(this);
-            return new RestPagedAsyncEnumerable<ListRequest, DatasetList, BigQueryDataset>(
-                () => CreateListDatasetsRequest(projectReference, options),
-                pageManager);
-        }
-
-        /// <inheritdoc />
-        public override async Task<BigQueryDataset> CreateDatasetAsync(DatasetReference datasetReference, CreateDatasetOptions options = null, CancellationToken cancellationToken = default)
-        {
-            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            var dataset = new Dataset { DatasetReference = datasetReference };
-            var request = Service.Datasets.Insert(dataset, datasetReference.ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(dataset, request);
-            return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
-        }
-
-        /// <inheritdoc />
         public override async Task<BigQueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
@@ -174,35 +120,102 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        public override void DeleteDataset(DatasetReference datasetReference, DeleteDatasetOptions options = null)
+        {
+            var request = CreateDeleteDatasetRequest(datasetReference, options);
+            request.Execute();
+        }
+
+        /// <inheritdoc />
         public override async Task DeleteDatasetAsync(DatasetReference datasetReference, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateDeleteDatasetRequest(datasetReference, options);
+            await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <inheritdoc />
+        public override BigQueryDataset UpdateDataset(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null)
+        {
+            var request = CreateUpdateDatasetRequest(datasetReference, resource, options);
+            return new BigQueryDataset(this, request.Execute());
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryDataset> UpdateDatasetAsync(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateUpdateDatasetRequest(datasetReference, resource, options);
+            return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
+        }
+
+        /// <inheritdoc />
+        public override BigQueryDataset PatchDataset(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null)
+        {
+            var request = CreatePatchDatasetRequest(datasetReference, resource, options);
+            return new BigQueryDataset(this, request.Execute());
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryDataset> PatchDatasetAsync(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreatePatchDatasetRequest(datasetReference, resource, options);
+            return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
+        }
+
+        // Request creation
+        private GetRequest CreateGetDatasetRequest(DatasetReference datasetReference, GetDatasetOptions options)
+        {
+            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return request;
+        }
+
+        private ListRequest CreateListDatasetsRequest(ProjectReference projectReference, ListDatasetsOptions options)
+        {
+            var request = Service.Datasets.List(projectReference.ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return request;
+        }
+
+        private InsertRequest CreateInsertDatasetRequest(DatasetReference datasetReference, CreateDatasetOptions options)
+        {
+            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            var dataset = new Dataset { DatasetReference = datasetReference };
+            var request = Service.Datasets.Insert(dataset, datasetReference.ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(dataset, request);
+            return request;
+        }
+
+        private DeleteRequest CreateDeleteDatasetRequest(DatasetReference datasetReference, DeleteDatasetOptions options)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Delete(datasetReference.ProjectId, datasetReference.DatasetId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
-            await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return request;
         }
 
-        /// <inheritdoc />
-        public override async Task<BigQueryDataset> UpdateDatasetAsync(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default)
+        private UpdateRequest CreateUpdateDatasetRequest(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             GaxPreconditions.CheckNotNull(resource, nameof(resource));
             var request = Service.Datasets.Update(resource, datasetReference.ProjectId, datasetReference.DatasetId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
-            return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
+            return request;
         }
 
-        /// <inheritdoc />
-        public override async Task<BigQueryDataset> PatchDatasetAsync(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default)
+        private PatchRequest CreatePatchDatasetRequest(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             GaxPreconditions.CheckNotNull(resource, nameof(resource));
             var request = Service.Datasets.Patch(resource, datasetReference.ProjectId, datasetReference.DatasetId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
-            return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
+            return request;
         }
     }
 }

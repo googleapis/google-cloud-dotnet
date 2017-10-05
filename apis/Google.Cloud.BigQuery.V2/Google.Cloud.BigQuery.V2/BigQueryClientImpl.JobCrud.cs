@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Rest;
-using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
@@ -55,46 +54,6 @@ namespace Google.Cloud.BigQuery.V2
                 pageManager);
         }
 
-        private ListRequest CreateListJobsRequest(ProjectReference projectReference, ListJobsOptions options = null)
-        {
-            var request = Service.Jobs.List(projectReference.ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
-            return request;
-        }
-
-        /// <inheritdoc />
-        public override BigQueryJob PollJobUntilCompleted(JobReference jobReference, GetJobOptions options = null, PollSettings pollSettings = null)
-        {
-            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            return Polling.PollRepeatedly(ignoredDeadline => GetJob(jobReference, options),
-                job => job.State == JobState.Done,
-                Clock, Scheduler, pollSettings ?? s_defaultPollSettings, CancellationToken.None);
-        }
-
-        /// <inheritdoc />
-        public override BigQueryJob GetJob(JobReference jobReference, GetJobOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-
-            var request = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
-            var job = request.Execute();
-            return new BigQueryJob(this, job);
-        }
-
-        /// <inheritdoc />
-        public override BigQueryJob CancelJob(JobReference jobReference, CancelJobOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
-            var result = request.Execute();
-            return new BigQueryJob(this, result.Job);
-        }
-
         /// <inheritdoc />
         public override PagedAsyncEnumerable<JobList, BigQueryJob> ListJobsAsync(ProjectReference projectReference, ListJobsOptions options = null)
         {
@@ -104,6 +63,15 @@ namespace Google.Cloud.BigQuery.V2
             return new RestPagedAsyncEnumerable<ListRequest, JobList, BigQueryJob>(
                 () => CreateListJobsRequest(projectReference, options),
                 pageManager);
+        }
+
+        /// <inheritdoc />
+        public override BigQueryJob PollJobUntilCompleted(JobReference jobReference, GetJobOptions options = null, PollSettings pollSettings = null)
+        {
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            return Polling.PollRepeatedly(ignoredDeadline => GetJob(jobReference, options),
+                job => job.State == JobState.Done,
+                Clock, Scheduler, pollSettings ?? s_defaultPollSettings, CancellationToken.None);
         }
 
         /// <inheritdoc />
@@ -117,26 +85,35 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        public override BigQueryJob GetJob(JobReference jobReference, GetJobOptions options = null)
+        {
+            var request = CreateGetJobRequest(jobReference, options);
+            var job = request.Execute();
+            return new BigQueryJob(this, job);
+        }
+
+        /// <inheritdoc />
         public override async Task<BigQueryJob> GetJobAsync(JobReference jobReference, GetJobOptions options = null,
             CancellationToken cancellationToken = default)
         {
-            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-
-            var request = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
+            var request = CreateGetJobRequest(jobReference, options);
             var job = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);
+        }
+
+        /// <inheritdoc />
+        public override BigQueryJob CancelJob(JobReference jobReference, CancelJobOptions options = null)
+        {
+            var request = CreateCancelJobRequest(jobReference, options);
+            var result = request.Execute();
+            return new BigQueryJob(this, result.Job);
         }
 
         /// <inheritdoc />
         public override async Task<BigQueryJob> CancelJobAsync(JobReference jobReference, CancelJobOptions options = null,
             CancellationToken cancellationToken = default)
         {
-            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
+            var request = CreateCancelJobRequest(jobReference, options);
             var result = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, result.Job);
         }
@@ -154,18 +131,6 @@ namespace Google.Cloud.BigQuery.V2
             var job = await CreateExtractJobRequest(tableReference, destinationUris, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);
         }
-
-        private InsertRequest CreateExtractJobRequest(TableReference tableReference, IEnumerable<string> destinationUris, CreateExtractJobOptions options)
-        {
-            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            GaxPreconditions.CheckNotNull(destinationUris, nameof(destinationUris));
-            List<string> destinationUriList = destinationUris.ToList();
-            GaxPreconditions.CheckArgument(destinationUriList.Count != 0, nameof(destinationUris), "Destination URIs cannot be empty");
-
-            var extract = new JobConfigurationExtract { DestinationUris = destinationUriList, SourceTable = tableReference };
-            options?.ModifyRequest(extract);
-            return CreateInsertJobRequest(new JobConfiguration { Extract = extract }, options);
-        }
         
         /// <inheritdoc />
         public override BigQueryJob CreateCopyJob(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options = null)
@@ -181,18 +146,6 @@ namespace Google.Cloud.BigQuery.V2
             return new BigQueryJob(this, job);
         }
 
-        private InsertRequest CreateCopyJobRequest(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options)
-        {
-            GaxPreconditions.CheckNotNull(sources, nameof(sources));
-            GaxPreconditions.CheckNotNull(destination, nameof(destination));
-            List<TableReference> sourceList = sources.ToList();
-            GaxPreconditions.CheckArgument(sourceList.Count != 0, nameof(sources), "Sources cannot be empty");
-
-            var copy = new JobConfigurationTableCopy { SourceTables = sourceList, DestinationTable = destination };
-            options?.ModifyRequest(copy);
-            return CreateInsertJobRequest(new JobConfiguration { Copy = copy }, options);
-        }
-
         /// <inheritdoc />
         public override BigQueryJob CreateLoadJob(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null)
         {
@@ -205,27 +158,6 @@ namespace Google.Cloud.BigQuery.V2
         {
             var job = await CreateLoadJobRequest(sourceUris, destination, schema, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);
-        }
-
-        private InsertRequest CreateLoadJobRequest(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options)
-        {
-            GaxPreconditions.CheckNotNull(sourceUris, nameof(sourceUris));
-            GaxPreconditions.CheckNotNull(destination, nameof(destination));
-            List<string> sourceList = sourceUris.ToList();
-            GaxPreconditions.CheckArgument(sourceList.Count != 0, nameof(sourceUris), "Source URIs collection cannot be empty");
-
-            var load = new JobConfigurationLoad { SourceUris = sourceList, DestinationTable = destination, Schema = schema };
-            options?.ModifyRequest(load);
-            var request = CreateInsertJobRequest(new JobConfiguration { Load = load }, options);
-            return request;
-        }
-
-        private InsertRequest CreateInsertJobRequest(JobConfiguration configuration, JobCreationOptions options)
-        {
-            var job = CreateJob(configuration, options);
-            var request = Service.Jobs.Insert(job, job.JobReference.ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            return request;
         }
 
         internal const string DefaultJobIdPrefix = "job_";
@@ -254,6 +186,79 @@ namespace Google.Cloud.BigQuery.V2
                 jobId = prefix + Guid.NewGuid().ToString().Replace("-", "_");
             }
             return new Job { Configuration = configuration, JobReference = GetJobReference(projectId, jobId) };
+        }
+
+        // Request creation
+        private GetRequest CreateGetJobRequest(JobReference jobReference, GetJobOptions options)
+        {
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+
+            var request = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return request;
+        }
+
+        private ListRequest CreateListJobsRequest(ProjectReference projectReference, ListJobsOptions options)
+        {
+            var request = Service.Jobs.List(projectReference.ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return request;
+        }
+
+        private CancelRequest CreateCancelJobRequest(JobReference jobReference, CancelJobOptions options)
+        {
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return request;
+        }
+
+        private InsertRequest CreateExtractJobRequest(TableReference tableReference, IEnumerable<string> destinationUris, CreateExtractJobOptions options)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(destinationUris, nameof(destinationUris));
+            List<string> destinationUriList = destinationUris.ToList();
+            GaxPreconditions.CheckArgument(destinationUriList.Count != 0, nameof(destinationUris), "Destination URIs cannot be empty");
+
+            var extract = new JobConfigurationExtract { DestinationUris = destinationUriList, SourceTable = tableReference };
+            options?.ModifyRequest(extract);
+            return CreateInsertJobRequest(new JobConfiguration { Extract = extract }, options);
+        }
+
+        private InsertRequest CreateCopyJobRequest(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options)
+        {
+            GaxPreconditions.CheckNotNull(sources, nameof(sources));
+            GaxPreconditions.CheckNotNull(destination, nameof(destination));
+            List<TableReference> sourceList = sources.ToList();
+            GaxPreconditions.CheckArgument(sourceList.Count != 0, nameof(sources), "Sources cannot be empty");
+
+            var copy = new JobConfigurationTableCopy { SourceTables = sourceList, DestinationTable = destination };
+            options?.ModifyRequest(copy);
+            return CreateInsertJobRequest(new JobConfiguration { Copy = copy }, options);
+        }
+
+        private InsertRequest CreateLoadJobRequest(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options)
+        {
+            GaxPreconditions.CheckNotNull(sourceUris, nameof(sourceUris));
+            GaxPreconditions.CheckNotNull(destination, nameof(destination));
+            List<string> sourceList = sourceUris.ToList();
+            GaxPreconditions.CheckArgument(sourceList.Count != 0, nameof(sourceUris), "Source URIs collection cannot be empty");
+
+            var load = new JobConfigurationLoad { SourceUris = sourceList, DestinationTable = destination, Schema = schema };
+            options?.ModifyRequest(load);
+            var request = CreateInsertJobRequest(new JobConfiguration { Load = load }, options);
+            return request;
+        }
+
+        private InsertRequest CreateInsertJobRequest(JobConfiguration configuration, JobCreationOptions options)
+        {
+            var job = CreateJob(configuration, options);
+            var request = Service.Jobs.Insert(job, job.JobReference.ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
+            return request;
         }
     }
 }

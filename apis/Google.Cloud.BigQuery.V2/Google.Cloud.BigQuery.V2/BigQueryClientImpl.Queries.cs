@@ -59,6 +59,14 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var request = CreateInsertQueryJobRequest(sql, parameters, options);
+            var job = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigQueryJob(this, job);
+        }
+
+        /// <inheritdoc />
         [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
         public override BigQueryJob CreateQueryJob(string sql, QueryOptions options = null)
         {
@@ -70,12 +78,33 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
+        public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
+            var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
+            var job = await CreateInsertQueryJobRequest(query, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigQueryJob(this, job);
+        }
+
+        /// <inheritdoc />
+        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
         public override BigQueryJob CreateQueryJob(BigQueryCommand command, QueryOptions options = null)
         {
             GaxPreconditions.CheckNotNull(command, nameof(command));
             var query = new JobConfigurationQuery { UseLegacySql = false };
             command.PopulateJobConfigurationQuery(query);
             var job = CreateInsertQueryJobRequest(query, options).Execute();
+            return new BigQueryJob(this, job);
+        }
+
+        /// <inheritdoc />
+        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
+        public override async Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(command, nameof(command));
+            var query = new JobConfigurationQuery { UseLegacySql = false };
+            command.PopulateJobConfigurationQuery(query);
+            var job = await CreateInsertQueryJobRequest(query, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);
         }
 
@@ -108,55 +137,6 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override PagedEnumerable<TableDataList, BigQueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            schema = schema ?? GetSchema(tableReference);
-
-            var pageManager = new TableRowPageManager(this, schema);
-
-            Func<TabledataResource.ListRequest> requestProvider = () =>
-            {
-                var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-                request.ModifyRequest += _versionHeaderAction;
-                options?.ModifyRequest(request);
-                return request;
-            };
-            return new RestPagedEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
-                requestProvider,
-                pageManager);
-        }
-
-        /// <inheritdoc />
-        public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options = null, CancellationToken cancellationToken = default)
-        {
-            var request = CreateInsertQueryJobRequest(sql, parameters, options);
-            var job = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            return new BigQueryJob(this, job);
-        }
-
-        /// <inheritdoc />
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default)
-        {
-            GaxPreconditions.CheckNotNull(sql, nameof(sql));
-            var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
-            var job = await CreateInsertQueryJobRequest(query, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            return new BigQueryJob(this, job);
-        }
-
-        /// <inheritdoc />
-        [Obsolete("This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable<BigQueryParameter>")]
-        public override async Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default)
-        {
-            GaxPreconditions.CheckNotNull(command, nameof(command));
-            var query = new JobConfigurationQuery { UseLegacySql = false };
-            command.PopulateJobConfigurationQuery(query);
-            var job = await CreateInsertQueryJobRequest(query, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            return new BigQueryJob(this, job);
-        }
-
-        /// <inheritdoc />
         public override async Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
@@ -185,25 +165,30 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override PagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
+        public override PagedEnumerable<TableDataList, BigQueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             schema = schema ?? GetSchema(tableReference);
 
             var pageManager = new TableRowPageManager(this, schema);
-
-            Func<TabledataResource.ListRequest> requestProvider = () =>
-            {
-                var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-                request.ModifyRequest += _versionHeaderAction;
-                options?.ModifyRequest(request);
-                return request;
-            };
-            return new RestPagedAsyncEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
-                requestProvider,
-                pageManager);
+            return new RestPagedEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
+                () => CreateListRequest(tableReference, options), pageManager);
         }
 
+        /// <inheritdoc />
+        public override PagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            // TODO: This is a synchronous call. We can't easily make this part asynchronous - we don't have a cancellation token, and we're returning
+            // a non-task value. We could defer until the first MoveNext call, but that's tricky.
+            schema = schema ?? GetSchema(tableReference);
+
+            var pageManager = new TableRowPageManager(this, schema);
+            return new RestPagedAsyncEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
+                () => CreateListRequest(tableReference, options), pageManager);
+        }
+
+        // Request creation
         private JobsResource.InsertRequest CreateInsertQueryJobRequest(JobConfigurationQuery query, QueryOptions options)
         {
             options?.ModifyRequest(query);
@@ -239,6 +224,14 @@ namespace Google.Cloud.BigQuery.V2
                     $"When using a parameter mode of '{nameof(BigQueryParameterMode.Named)}', all parameters must have names");
             }
             return CreateInsertJobRequest(new JobConfiguration { Query = jobConfigurationQuery, DryRun = options?.DryRun }, options);
+        }
+
+        private TabledataResource.ListRequest CreateListRequest(TableReference tableReference, ListRowsOptions options)
+        {
+            var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return request;
         }
 
         private static readonly long s_maxGetQueryResultsRequestTimeout = (long) TimeSpan.FromMinutes(1).TotalMilliseconds;

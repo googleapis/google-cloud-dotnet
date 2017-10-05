@@ -20,6 +20,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Apis.Bigquery.v2.TabledataResource;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -108,20 +109,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override void InsertRows(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null)
         {
-            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            GaxPreconditions.CheckNotNull(rows, nameof(rows));
-
-            var body = new TableDataInsertAllRequest
-            {
-                Rows = rows.Select(row =>
-                {
-                    GaxPreconditions.CheckArgument(row != null, nameof(rows), "Entries must not be null");
-                    return row.ToRowsData();
-                }).ToList()
-            };
-            options?.ModifyRequest(body);
-            var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-            request.ModifyRequest += _versionHeaderAction;
+            var request = CreateInsertAllRequest(tableReference, rows, options);
             var response = request.Execute();
             HandleInsertAllResponse(response);
         }
@@ -233,20 +221,7 @@ namespace Google.Cloud.BigQuery.V2
         public override async Task InsertRowsAsync(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows,
             InsertOptions options = null, CancellationToken cancellationToken = default)
         {
-            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            GaxPreconditions.CheckNotNull(rows, nameof(rows));
-
-            var body = new TableDataInsertAllRequest
-            {
-                Rows = rows.Select(row =>
-                {
-                    GaxPreconditions.CheckArgument(row != null, nameof(rows), "Entries must not be null");
-                    return row.ToRowsData();
-                }).ToList()
-            };
-            options?.ModifyRequest(body);
-            var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-            request.ModifyRequest += _versionHeaderAction;
+            var request = CreateInsertAllRequest(tableReference, rows, options);
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             HandleInsertAllResponse(response);
         }
@@ -272,6 +247,25 @@ namespace Google.Cloud.BigQuery.V2
             writer.Flush();
             stream.Position = 0;
             return stream;
+        }
+
+        private InsertAllRequest CreateInsertAllRequest(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(rows, nameof(rows));
+
+            var body = new TableDataInsertAllRequest
+            {
+                Rows = rows.Select(row =>
+                {
+                    GaxPreconditions.CheckArgument(row != null, nameof(rows), "Entries must not be null");
+                    return row.ToRowsData();
+                }).ToList()
+            };
+            options?.ModifyRequest(body);
+            var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
+            return request;
         }
     }
 }
