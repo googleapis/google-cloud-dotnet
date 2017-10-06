@@ -87,23 +87,10 @@ namespace Google.Cloud.Firestore.Data.Tests
         [Fact]
         public void Equality()
         {
-            var path1 = new FieldPath("a", "b");
-            var path2 = new FieldPath("a", "b");
-            var path3 = FieldPath.FromDotSeparatedString("a.b");
-            var path4 = new FieldPath("a", "c");
-            // Equals(FieldPath)
-            Assert.True(path1.Equals(path2));
-            Assert.True(path1.Equals(path3));
-            Assert.False(path1.Equals(path4));
-
-            // Equals(object)
-            Assert.True(path1.Equals((object) path2));
-            Assert.True(path1.Equals((object) path3));
-            Assert.False(path1.Equals((object) path4));
-
-            Assert.Equal(path1.GetHashCode(), path2.GetHashCode());
-            Assert.Equal(path1.GetHashCode(), path3.GetHashCode());
-            Assert.NotEqual(path1.GetHashCode(), path4.GetHashCode());
+            var control = new FieldPath("a", "b");
+            var equal = new[] { new FieldPath("a", "b"), FieldPath.FromDotSeparatedString("a.b") };
+            var unequal = new[] { new FieldPath("a", "c") };
+            EqualityTester.AssertEqual(control, equal, unequal);
         }
     }
 }

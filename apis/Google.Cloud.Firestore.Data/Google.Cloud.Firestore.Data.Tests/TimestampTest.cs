@@ -23,34 +23,11 @@ namespace Google.Cloud.Firestore.Data.Tests
         [Fact]
         public void Equality()
         {
-            Timestamp t1 = new Timestamp(1, 2);
-            // Equal
-            Timestamp t2 = new Timestamp(1, 2);
-            // Difference in seconds
-            Timestamp t3 = new Timestamp(2, 2);
-            // Difference in nanoseconds
-            Timestamp t4 = new Timestamp(2, 3);
-
-            // Equals(Timestamp)
-            Assert.True(t1.Equals(t2));
-            Assert.False(t1.Equals(t3));
-            Assert.False(t1.Equals(t4));
-
-            // Equals(object)
-            Assert.True(t1.Equals((object) t2));
-            Assert.False(t1.Equals((object) t3));
-            Assert.False(t1.Equals((object) t4));
-
-            Assert.True(t1 == t2);
-            Assert.False(t1 == t3);
-            Assert.False(t1 == t4);
-
-            Assert.False(t1 != t2);
-            Assert.True(t1 != t3);
-
-            Assert.Equal(t1.GetHashCode(), t2.GetHashCode());
-            Assert.NotEqual(t1.GetHashCode(), t3.GetHashCode());
-            Assert.NotEqual(t1.GetHashCode(), t4.GetHashCode());
+            var control = new Timestamp(1, 2);
+            var equal = new[] { new Timestamp(1, 2) };
+            var unequal = new[] { new Timestamp(2, 2), new Timestamp(1, 3) };
+            EqualityTester.AssertEqual(control, equal, unequal);
+            EqualityTester.AssertEqualityOperators(control, equal, unequal);
         }
 
         [Fact]

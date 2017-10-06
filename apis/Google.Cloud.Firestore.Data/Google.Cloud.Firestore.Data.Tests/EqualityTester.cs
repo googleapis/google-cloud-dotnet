@@ -14,6 +14,7 @@
 
 using System;
 using System.Linq;
+using System.Reflection;
 using Xunit;
 
 namespace Google.Cloud.Firestore.Data.Tests
@@ -46,6 +47,32 @@ namespace Google.Cloud.Firestore.Data.Tests
             if (default(T) == null)
             {
                 Assert.False(control.Equals(default(T)));
+            }
+        }
+
+        internal static void AssertEqualityOperators<T>(T control, T[] equal, T[] unequal)
+        {
+            var typeInfo = typeof(T).GetTypeInfo();
+            var equalityMethodInfo = typeInfo.GetMethod("op_Equality", new[] { typeof(T), typeof(T) });
+            var inequalityMethodInfo = typeInfo.GetMethod("op_Inequality", new[] { typeof(T), typeof(T) });
+
+            Func<T, T, bool> equality = (lhs, rhs) => (bool) equalityMethodInfo.Invoke(null, new object[] { lhs, rhs });
+            Func<T, T, bool> inequality = (lhs, rhs) => (bool) inequalityMethodInfo.Invoke(null, new object[] { lhs, rhs });
+
+            foreach (var candidate in new[] { control }.Concat(equal)) // Check that control equals itself too
+            {
+                Assert.True(equality(control, candidate));
+                Assert.True(equality(candidate, control));
+                Assert.False(inequality(control, candidate));
+                Assert.False(inequality(candidate, control));
+            }
+
+            foreach (var candidate in unequal)
+            {
+                Assert.False(equality(control, candidate));
+                Assert.False(equality(candidate, control));
+                Assert.True(inequality(control, candidate));
+                Assert.True(inequality(candidate, control));
             }
         }
     }

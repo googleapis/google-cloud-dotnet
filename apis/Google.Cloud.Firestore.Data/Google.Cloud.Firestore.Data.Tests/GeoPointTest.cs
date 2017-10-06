@@ -61,37 +61,16 @@ namespace Google.Cloud.Firestore.Data.Tests
         [Fact]
         public void Equality()
         {
-            GeoPoint g1 = new GeoPoint(1.5, 2.5);
+            var control = new GeoPoint(1.5, 2.5);
             // Equal
-            GeoPoint g2 = new GeoPoint(1.5, 2.5);
-            // Difference in latitude
-            GeoPoint g3 = new GeoPoint(2.5, 2.5);
-            // Difference in longitude
-            GeoPoint g4 = new GeoPoint(1.5, 3.5);
-
-            // Equals(GeoPoint)
-            Assert.True(g1.Equals(g2));
-            Assert.False(g1.Equals(g3));
-            Assert.False(g1.Equals(g4));
-
-            // Equals(object)
-            Assert.True(g1.Equals((object) g2));
-            Assert.False(g1.Equals((object) g3));
-            Assert.False(g1.Equals((object) g4));
-
-            Assert.True(g1 == g2);
-            Assert.False(g1 == g3);
-            Assert.False(g1 == g4);
-            Assert.False(g1 == null);
-
-            Assert.False(g1 != g2);
-            Assert.True(g1 != g3);
-            Assert.True(g1 != g4);
-            Assert.True(g1 != null);
-
-            Assert.Equal(g1.GetHashCode(), g2.GetHashCode());
-            Assert.NotEqual(g1.GetHashCode(), g3.GetHashCode());
-            Assert.NotEqual(g1.GetHashCode(), g4.GetHashCode());
+            var equal = new[] { new GeoPoint(1.5, 2.5) };
+            var unequal = new[]
+            {
+                new GeoPoint(2.5, 2.5), // Difference in latitude
+                new GeoPoint(1.5, 3.5)  // Difference in longitude
+            };
+            EqualityTester.AssertEqual(control, equal, unequal);
+            EqualityTester.AssertEqualityOperators(control, equal, unequal);
         }
 
         [Fact]

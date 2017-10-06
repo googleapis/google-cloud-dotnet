@@ -23,26 +23,11 @@ namespace Google.Cloud.Firestore.Data.Tests
         [Fact]
         public void Equality()
         {
-            Blob b1 = Blob.CopyFrom(new byte[] { 1, 2, 3, 4, 5 });
-            Blob b2 = Blob.CopyFrom(new byte[] { 1, 2, 3, 4, 5 });
-            Blob b3 = Blob.CopyFrom(new byte[] { 1, 2, 3, 4, 5, 6 });
-
-            // Equals(Blob)
-            Assert.True(b1.Equals(b2));
-            Assert.False(b1.Equals(b3));
-
-            // Equals(object)
-            Assert.True(b1.Equals((object) b2));
-            Assert.False(b1.Equals((object) b3));
-
-            Assert.True(b1 == b2);
-            Assert.False(b1 == b3);
-
-            Assert.False(b1 != b2);
-            Assert.True(b1 != b3);
-
-            Assert.Equal(b1.GetHashCode(), b2.GetHashCode());
-            Assert.NotEqual(b1.GetHashCode(), b3.GetHashCode());
+            var control = Blob.CopyFrom(new byte[] { 1, 2, 3, 4, 5 });
+            var equal = new[] { Blob.CopyFrom(new byte[] { 1, 2, 3, 4, 5 }) };
+            var unequal = new[] { Blob.CopyFrom(new byte[] { 1, 2, 3, 4, 5, 6 }) };
+            EqualityTester.AssertEqual(control, equal, unequal);
+            EqualityTester.AssertEqualityOperators(control, equal, unequal);
         }
 
         [Fact]
