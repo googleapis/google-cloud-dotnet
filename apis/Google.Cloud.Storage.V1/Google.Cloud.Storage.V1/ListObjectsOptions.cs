@@ -52,7 +52,7 @@ namespace Google.Cloud.Storage.V1
         public Projection? Projection { get; set; }
 
         /// <summary>
-        /// If set, this is the ID of the project which will be billed for the request, for requester-pays buckets.
+        /// If set, this is the ID of the project which will be billed for the request.
         /// The caller must have suitable permissions for the project being billed.
         /// </summary>
         public string UserProject { get; set; }
