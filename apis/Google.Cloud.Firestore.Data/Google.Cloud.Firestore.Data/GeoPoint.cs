@@ -15,22 +15,34 @@
 using Google.Api.Gax;
 using Google.Type;
 using System;
+using System.Runtime.InteropServices;
 
 namespace Google.Cloud.Firestore.Data
 {
     /// <summary>
     /// Immutable struct representing a geographic location in Firestore.
     /// </summary>
+    [StructLayout(LayoutKind.Explicit)]
     public struct GeoPoint : IEquatable<GeoPoint>
     {
+        // Specify field offsets explicitly to work around .NET Core 1.0 bug.
+        // (Trying to find a reference issue to make sure the fix is okay,
+        // and isn't needed elsewhere.)
+        // We can't currently apply a field attribute to an automatically
+        // implemented property, so it's all explicit now.
+        [field: FieldOffset(0)]
+        private readonly double _latitude;
+        [field: FieldOffset(8)]
+        private readonly double _longitude;
+
         /// <summary>
         /// The latitude, in degrees, in the range -90 to 90 inclusive.
         /// </summary>
-        public double Latitude { get; }
+        public double Latitude => _latitude;
         /// <summary>
         /// The longitude, in degrees, in the range -180 to 180 inclusive.
         /// </summary>
-        public double Longitude { get; }
+        public double Longitude => _longitude;
 
         /// <summary>
         /// Creates a new value using the provided latitude and longitude values.
@@ -39,8 +51,8 @@ namespace Google.Cloud.Firestore.Data
         /// <param name="longitude">The longitude of the point in degrees, between -180 and 180 inclusive.</param>
         public GeoPoint(double latitude, double longitude)
         {
-            Latitude = GaxPreconditions.CheckArgumentRange(latitude, nameof(latitude), -90d, 90d);
-            Longitude = GaxPreconditions.CheckArgumentRange(longitude, nameof(longitude), -180d, 180d);
+            _latitude = GaxPreconditions.CheckArgumentRange(latitude, nameof(latitude), -90d, 90d);
+            _longitude = GaxPreconditions.CheckArgumentRange(longitude, nameof(longitude), -180d, 180d);
         }
 
         /// <summary>
@@ -66,7 +78,7 @@ namespace Google.Cloud.Firestore.Data
         public override bool Equals(object obj) => obj is GeoPoint gp && Equals(gp);
 
         /// <inheritdoc />
-        public override int GetHashCode() => unchecked (31* Latitude.GetHashCode() + Longitude.GetHashCode());
+        public override int GetHashCode() => unchecked (31 * Latitude.GetHashCode() + Longitude.GetHashCode());
 
         /// <inheritdoc />
         public bool Equals(GeoPoint other) => Latitude == other.Latitude && Longitude == other.Longitude;
