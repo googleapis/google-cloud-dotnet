@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using Xunit;
 using BclType = System.Type;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
@@ -80,7 +81,10 @@ namespace Google.Cloud.Firestore.Data.Tests
             { new Value { MapValue = new MapValue() }, typeof(string) },
             // Invalid original value
             { new Value(), typeof(object) },
-            { ValueSerializer.Serialize(new { Missing = "Surprise!" }), typeof(SerializationTestData.GameResult) }
+            { ValueSerializer.Serialize(new { Missing = "Surprise!" }), typeof(SerializationTestData.GameResult) },
+            { new Value { NullValue = wkt::NullValue.NullValue }, typeof(int) },
+            { new Value { NullValue = wkt::NullValue.NullValue }, typeof(Guid) },
+            { new Value { NullValue = wkt::NullValue.NullValue }, typeof(Blob) }
         };
 
         [Theory]
@@ -99,7 +103,17 @@ namespace Google.Cloud.Firestore.Data.Tests
             Assert.Equal(new List<object> { 1L, 2L }, deserialized);
         }
 
-        // Just a convenience method to avoid having specify all of this on each call.
+        [Theory]
+        [InlineData(typeof(int?))]
+        [InlineData(typeof(string))]
+        [InlineData(typeof(SerializationTestData.GameResult))]
+        public void DeserializeNull(BclType targetType)
+        {
+            var value = new Value { NullValue = wkt::NullValue.NullValue };
+            Assert.Null(DeserializeDefault(value, targetType));
+        }        
+
+        // Just a convenience method to avoid having to specify all of this on each call.
         private static object DeserializeDefault(Value value, BclType targetType) =>
             ValueDeserializer.Default.Deserialize(SerializationTestData.Database, value, targetType);
     }

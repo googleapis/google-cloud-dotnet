@@ -35,12 +35,12 @@ namespace Google.Cloud.Firestore.Data
         internal static bool IsFirestoreAttributedType(System.Type type) => type.GetTypeInfo().IsDefined(typeof(FirestoreDataAttribute));
 
         /// <summary>
-        /// Creates a map value from BCL dictionary.
+        /// Creates a map value from a BCL dictionary.
         /// </summary>
         internal static Value CreateMapValue(IDictionary<string, Value> values) => new Value { MapValue = new MapValue { Fields = { values } } };
 
         /// <summary>
-        /// Creates an array value from BCL sequence.
+        /// Creates an array value from a BCL sequence.
         /// </summary>
         internal static Value CreateArrayValue(IEnumerable<Value> values) => new Value { ArrayValue = new ArrayValue { Values = { values } } };
     }

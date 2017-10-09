@@ -11,21 +11,25 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+using Google.Api.Gax;
 using Google.Cloud.Firestore.V1Beta1;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
-using System.Reflection;
-using static Google.Cloud.Firestore.V1Beta1.Value.ValueTypeOneofCase;
-using static Google.Cloud.Firestore.Data.SerializationHelpers;
-using BclType = System.Type;
 using System.Linq;
-using System.Collections;
-using Google.Api.Gax;
+using System.Reflection;
+using static Google.Cloud.Firestore.Data.SerializationHelpers;
+using static Google.Cloud.Firestore.V1Beta1.Value.ValueTypeOneofCase;
+using BclType = System.Type;
 
 namespace Google.Cloud.Firestore.Data
 {
+    // TODO: A lot of optimization of this and ValueSerializer, *after* writing comprehensive benchmarks.
+    // We may be able to avoid a lot of boxing by a combination of making methods generic and building
+    // delegates for serialization/deserialization of specific types using expression trees. The initial
+    // aim is just to work out the functionality required, and optimize later.
+
     /// <summary>
     /// Provides conversions from Firestore Value protos to .NET types.
     /// </summary>
@@ -91,8 +95,8 @@ namespace Google.Cloud.Firestore.Data
                             ?? ConvertSpecific(v => (sbyte) v.IntegerValue)
                             ?? NoConversion();
                     case NullValue:
-                        // FIXME: What if it's a value type?
-                        return null;
+                        return targetType.GetTypeInfo().IsValueType && Nullable.GetUnderlyingType(targetType) == null
+                            ? NoConversion() : null;
                     case StringValue:
                         return ConvertDefault(v => v.StringValue)
                             ?? NoConversion();
@@ -122,12 +126,12 @@ namespace Google.Cloud.Firestore.Data
             // Converts the value using the converter if the target type is either object (so general)
             // or T, or T?.
             object ConvertDefault<T>(Func<Value, T> conversion) =>
-                targetType == typeof(T) || targetType == Nullable.GetUnderlyingType(typeof(T)) || targetType == typeof(object)
+                targetType == typeof(T) || Nullable.GetUnderlyingType(targetType) == typeof(T) || targetType == typeof(object)
                 ? (object) conversion(value) : null;
 
             // Converts the value using the converter only if the target type is exactly T or T?.
             object ConvertSpecific<T>(Func<Value, T> conversion) =>
-                targetType == typeof(T) || targetType == Nullable.GetUnderlyingType(typeof(T))
+                targetType == typeof(T) || Nullable.GetUnderlyingType(targetType) == typeof(T)
                 ? (object) conversion(value) : null;
 
             // Always throws - useful at the end of a chain of attempts.
@@ -165,7 +169,7 @@ namespace Google.Cloud.Firestore.Data
                 var ret = Activator.CreateInstance(targetType);
                 // TODO(optimization): We almost certainly want to cache this.
                 var setterMap = new Dictionary<string, PropertyInfo>();
-                foreach (var property in targetType.GetTypeInfo().DeclaredProperties.Where(p => p.CanRead && p.GetSetMethod().IsPublic && !p.GetSetMethod().IsStatic))
+                foreach (var property in targetType.GetTypeInfo().DeclaredProperties.Where(p => p.CanWrite && p.GetSetMethod().IsPublic && !p.GetSetMethod().IsStatic))
                 {
                     var attribute = property.GetCustomAttribute<FirestorePropertyAttribute>();
                     if (attribute != null)

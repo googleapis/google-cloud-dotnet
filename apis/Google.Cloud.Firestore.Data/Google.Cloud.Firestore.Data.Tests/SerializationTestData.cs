@@ -41,7 +41,32 @@ namespace Google.Cloud.Firestore.Data.Tests
             { 1L, new Value { IntegerValue = 1L } },
             { 1UL, new Value { IntegerValue = 1L } },
             { 1.5F, new Value { DoubleValue = 1.5D } },
+            { float.PositiveInfinity, new Value { DoubleValue = double.PositiveInfinity } },
+            { float.NegativeInfinity, new Value { DoubleValue = double.NegativeInfinity } },
+            { float.NaN, new Value { DoubleValue = double.NaN } },
             { 1.5D, new Value { DoubleValue = 1.5D } },
+            { double.PositiveInfinity, new Value { DoubleValue = double.PositiveInfinity } },
+            { double.NegativeInfinity, new Value { DoubleValue = double.NegativeInfinity } },
+            { double.NaN, new Value { DoubleValue = double.NaN } },
+
+            // Min/max values of each integer type
+            { byte.MinValue, new Value { IntegerValue = byte.MinValue } },
+            { byte.MaxValue, new Value { IntegerValue = byte.MaxValue } },
+            { sbyte.MinValue, new Value { IntegerValue = sbyte.MinValue } },
+            { sbyte.MaxValue, new Value { IntegerValue = sbyte.MaxValue } },
+            { short.MinValue, new Value { IntegerValue = short.MinValue } },
+            { short.MaxValue, new Value { IntegerValue = short.MaxValue } },
+            { ushort.MinValue, new Value { IntegerValue = ushort.MinValue } },
+            { ushort.MaxValue, new Value { IntegerValue = ushort.MaxValue } },
+            { int.MinValue, new Value { IntegerValue = int.MinValue } },
+            { int.MaxValue, new Value { IntegerValue = int.MaxValue } },
+            { uint.MinValue, new Value { IntegerValue = uint.MinValue } },
+            { uint.MaxValue, new Value { IntegerValue = uint.MaxValue } },
+            { long.MinValue, new Value { IntegerValue = long.MinValue } },
+            { long.MaxValue, new Value { IntegerValue = long.MaxValue } },
+            // We don't cover the whole range of ulong
+            { (ulong) 0, new Value { IntegerValue = 0 } },
+            { (ulong) long.MaxValue, new Value { IntegerValue = long.MaxValue } },
             
             // Timestamps
             { new Timestamp(1, 500),
@@ -85,6 +110,11 @@ namespace Google.Cloud.Firestore.Data.Tests
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "Score", new Value { IntegerValue = 10L } } } } } },
             { () => { dynamic d = new ExpandoObject(); d.name = "Jon"; d.score = 10L; return d; },
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } } },
+            // Nullable type handling
+            { new NullableContainer { NullableValue = null },
+                new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt.NullValue.NullValue } } } } } },
+            { new NullableContainer { NullableValue = 10 },
+                new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { IntegerValue = 10L } } } } } },
 
             // Document references
             { Database.Document("a/b"),
@@ -105,6 +135,19 @@ namespace Google.Cloud.Firestore.Data.Tests
             public override bool Equals(object obj) => Equals(obj as GameResult);
 
             public bool Equals(GameResult other) => other != null && other.Name == Name && other.Score == Score;
+        }
+
+        [FirestoreData]
+        internal class NullableContainer : IEquatable<NullableContainer>
+        {
+            [FirestoreProperty]
+            public int? NullableValue { get; set; }
+
+            public override int GetHashCode() => NullableValue ?? 0;
+
+            public override bool Equals(object obj) => Equals(obj as NullableContainer);
+
+            public bool Equals(NullableContainer other) => other != null && other.NullableValue == NullableValue;
         }
     }
 }

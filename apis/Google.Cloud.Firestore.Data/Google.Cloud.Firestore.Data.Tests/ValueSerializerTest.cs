@@ -24,7 +24,7 @@ namespace Google.Cloud.Firestore.Data.Tests
     {
         // Data that can only be serialized: we're passing in int values for the score; when we deserialize, we get back long values.
         // Likewise we can't deserialize anonymous types.
-        public static IEnumerable<object[]> SerializeOnlyData{ get; } = new List<object[]>
+        public static IEnumerable<object[]> SerializeOnlyData { get; } = new List<object[]>
         {
             { new Dictionary<string, object> { { "name", "Jon" }, { "score", 10 } },
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } } },
@@ -52,7 +52,17 @@ namespace Google.Cloud.Firestore.Data.Tests
         public void Serialize(object input, Value expectedOutput)
         {
             var actual = ValueSerializer.Serialize(input);
-            Assert.Equal(expectedOutput, actual);
+            // Protobuf doesn't compare double.NaN values as equal. See
+            // https://github.com/google/protobuf/issues/3725
+            // Use an explicit test for this for the moment.
+            if (double.IsNaN(expectedOutput.DoubleValue))
+            {
+                Assert.True(double.IsNaN(actual.DoubleValue));
+            }
+            else
+            {
+                Assert.Equal(expectedOutput, actual);
+            }
         }
 
         [Fact]
