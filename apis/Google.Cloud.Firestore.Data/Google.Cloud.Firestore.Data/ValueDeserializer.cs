@@ -95,8 +95,7 @@ namespace Google.Cloud.Firestore.Data
                             ?? ConvertSpecific(v => (sbyte) v.IntegerValue)
                             ?? NoConversion();
                     case NullValue:
-                        return targetType.GetTypeInfo().IsValueType && Nullable.GetUnderlyingType(targetType) == null
-                            ? NoConversion() : null;
+                        return IsNonNullableValueType(targetType) ? NoConversion() : null;
                     case StringValue:
                         return ConvertDefault(v => v.StringValue)
                             ?? NoConversion();
@@ -146,23 +145,16 @@ namespace Google.Cloud.Firestore.Data
             {
                 targetType = _defaultMapType;
             }
-            if (targetType == typeof(Dictionary<string, object>))
+
+            // Shortcut to avoid reflection
+            if (targetType == typeof(Dictionary<string, object>) || targetType == typeof(ExpandoObject))
             {
-                var ret = new Dictionary<string, object>();
-                foreach (var pair in values)
-                {
-                    ret[pair.Key] = Deserialize(db, pair.Value, typeof(object));
-                }
-                return ret;
+                return PopulateDictionary<object>(db, values, targetType);
             }
-            if (targetType == typeof(ExpandoObject))
+            if (TryGetStringDictionaryValueType(targetType, out var dictionaryElementType))
             {
-                IDictionary<string, object> ret = new ExpandoObject();
-                foreach (var pair in values)
-                {
-                    ret[pair.Key] = Deserialize(db, pair.Value, typeof(object));
-                }
-                return ret;
+                var method = typeof(ValueDeserializer).GetTypeInfo().GetMethod(nameof(PopulateDictionary), BindingFlags.Instance | BindingFlags.NonPublic);
+                return method.MakeGenericMethod(dictionaryElementType).Invoke(this, new object[] { db, values, targetType });
             }
             if (IsFirestoreAttributedType(targetType))
             {
@@ -190,6 +182,17 @@ namespace Google.Cloud.Firestore.Data
                 return ret;
             }
             throw new ArgumentException($"Unable to deserialize map to {targetType}");
+        }
+
+        // Helper method called directly and via reflection
+        private IDictionary<string, TValue> PopulateDictionary<TValue>(FirestoreDb db, IDictionary<string, Value> values, BclType targetType)
+        {
+            var ret = (IDictionary<string, TValue>) Activator.CreateInstance(targetType);
+            foreach (var pair in values)
+            {
+                ret.Add(pair.Key, (TValue) Deserialize(db, pair.Value, typeof(TValue)));
+            }
+            return ret;
         }
 
         private object DeserializeArray(FirestoreDb db, IList<Value> values, BclType targetType)
