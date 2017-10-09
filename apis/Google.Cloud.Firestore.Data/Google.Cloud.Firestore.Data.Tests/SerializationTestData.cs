@@ -106,6 +106,8 @@ namespace Google.Cloud.Firestore.Data.Tests
             // Map values (that can be deserialized again): dictionaries, attributed types, expandos (which are just dictionaries)
             { new Dictionary<string, object> { { "name", "Jon" }, { "score", 10L } },
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } } },
+            { new Dictionary<string, int> { { "A", 10 }, { "B", 20 } },
+                new Value { MapValue = new MapValue { Fields = { { "A", new Value { IntegerValue = 10L } }, { "B", new Value { IntegerValue = 20L } } } } } },
             { new GameResult { Name = "Jon", Score = 10 },
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "Score", new Value { IntegerValue = 10L } } } } } },
             { () => { dynamic d = new ExpandoObject(); d.name = "Jon"; d.score = 10L; return d; },

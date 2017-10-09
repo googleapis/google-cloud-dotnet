@@ -13,9 +13,12 @@
 // limitations under the License.
 
 using Google.Cloud.Firestore.V1Beta1;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using BclType = System.Type;
 
 namespace Google.Cloud.Firestore.Data
 {
@@ -27,12 +30,43 @@ namespace Google.Cloud.Firestore.Data
         /// <summary>
         /// Checks whether <paramref name="type"/> refers to an anonymous type.
         /// </summary>
-        internal static bool IsAnonymousType(System.Type type) => type.GetTypeInfo().IsDefined(typeof(CompilerGeneratedAttribute));
+        internal static bool IsAnonymousType(BclType type) => type.GetTypeInfo().IsDefined(typeof(CompilerGeneratedAttribute));
 
         /// <summary>
         /// Checks whether <paramref name="type"/> refers to a type annotated with <see cref="FirestoreDataAttribute"/>.
         /// </summary>
-        internal static bool IsFirestoreAttributedType(System.Type type) => type.GetTypeInfo().IsDefined(typeof(FirestoreDataAttribute));
+        internal static bool IsFirestoreAttributedType(BclType type) => type.GetTypeInfo().IsDefined(typeof(FirestoreDataAttribute));
+
+        /// <summary>
+        /// Checks whether <paramref name="type"/> refers to a non-nullable type (so a null value is invalid).
+        /// </summary>
+        internal static bool IsNonNullableValueType(BclType type) => type.GetTypeInfo().IsValueType && Nullable.GetUnderlyingType(type) == null;
+
+        /// <summary>
+        /// If <paramref name="type"/> implements <see cref="IDictionary{TKey, TValue}"/> with TKey equal to string, returns true and sets
+        /// <paramref name="elementType"/> to TValue. Otherwise, returns false and sets <paramref name="elementType"/> to null.
+        /// </summary>
+        internal static bool TryGetStringDictionaryValueType(BclType type, out BclType elementType)
+        {
+            elementType = type.GetTypeInfo().GetInterfaces().Select(MapInterfaceToDictionaryValueTypeArgument).FirstOrDefault(t => t != null);
+            return elementType != null;
+
+            BclType MapInterfaceToDictionaryValueTypeArgument(BclType iface)
+            {
+                var ifaceInfo = iface.GetTypeInfo();
+                if (!ifaceInfo.IsGenericType)
+                {
+                    return null;
+                }
+                var generic = ifaceInfo.GetGenericTypeDefinition();
+                if (generic != typeof(IDictionary<,>))
+                {
+                    return null;
+                }
+                var typeArguments = ifaceInfo.GenericTypeArguments;
+                return typeArguments[0] == typeof(string) ? typeArguments[1] : null;
+            }
+        }
 
         /// <summary>
         /// Creates a map value from a BCL dictionary.

@@ -85,9 +85,13 @@ namespace Google.Cloud.Firestore.Data
             }
             switch (value)
             {
-                // TODO: What about other dictionary types (e.g Dictionary<string, string>)?
+                // Shortcut to avoid reflection for a common case
                 case IDictionary<string, object> map:
-                    return CreateMapValue(map.ToDictionary(pair => pair.Key, pair => Serialize(pair.Value)));
+                    return ExtractDictionary(map);
+                // Now all other IDictionary<string,*> types, invoking our helper with reflection.
+                case object dict when TryGetStringDictionaryValueType(value.GetType(), out var dictionaryElementType):
+                    var method = typeof(ValueSerializer).GetTypeInfo().GetMethod(nameof(ExtractDictionary), BindingFlags.Static | BindingFlags.NonPublic);
+                    return (Value) method.MakeGenericMethod(dictionaryElementType).Invoke(null, new object[] { value });
                 case object anon when IsAnonymousType(anon.GetType()):
                     return CreateMapValue(ConvertAnonymousType(anon));
                 case object attributed when IsFirestoreAttributedType(attributed.GetType()):
@@ -98,6 +102,10 @@ namespace Google.Cloud.Firestore.Data
                     throw new ArgumentException($"Unable to convert value of type {value.GetType()}");
             }
         }
+
+        // Helper method called directly and via reflection
+        private static Value ExtractDictionary<TValue>(IDictionary<string, TValue> map) =>
+            CreateMapValue(map.ToDictionary(pair => pair.Key, pair => Serialize(pair.Value)));
 
         /// <summary>
         /// Serializes a map-based input to a dictionary of fields to values.
