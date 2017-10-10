@@ -17,6 +17,7 @@ using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Linq;
 using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Data.Tests
@@ -112,6 +113,10 @@ namespace Google.Cloud.Firestore.Data.Tests
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "Score", new Value { IntegerValue = 10L } } } } } },
             { () => { dynamic d = new ExpandoObject(); d.name = "Jon"; d.score = 10L; return d; },
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } } },
+            { new DictionaryInterfaceContainer { Integers = new Dictionary<string, int> { { "A", 10 }, { "B", 20 } } },
+                new Value { MapValue = new MapValue { Fields =
+                    { { "Integers", new Value { MapValue = new MapValue { Fields = { { "A", new Value { IntegerValue = 10L } }, { "B", new Value { IntegerValue = 20L } } } } } } }
+                } } },
             // Nullable type handling
             { new NullableContainer { NullableValue = null },
                 new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt.NullValue.NullValue } } } } } },
@@ -150,6 +155,38 @@ namespace Google.Cloud.Firestore.Data.Tests
             public override bool Equals(object obj) => Equals(obj as NullableContainer);
 
             public bool Equals(NullableContainer other) => other != null && other.NullableValue == NullableValue;
+        }
+
+        [FirestoreData]
+        internal class DictionaryInterfaceContainer : IEquatable<DictionaryInterfaceContainer>
+        {
+            [FirestoreProperty]
+            public IDictionary<string, int> Integers { get; set; }
+
+            public override int GetHashCode() => Integers.Sum(pair => pair.Key.GetHashCode() + pair.Value);
+
+            public override bool Equals(object obj) => Equals(obj as DictionaryInterfaceContainer);
+
+            public bool Equals(DictionaryInterfaceContainer other)
+            {
+                if (other == null)
+                {
+                    return false;
+                }
+                if (Integers == other.Integers)
+                {
+                    return true;
+                }
+                if (Integers == null || other.Integers == null)
+                {
+                    return false;
+                }
+                if (Integers.Count != other.Integers.Count)
+                {
+                    return false;
+                }
+                return Integers.All(pair => other.Integers.TryGetValue(pair.Key, out var otherValue) && pair.Value == otherValue);
+            }
         }
     }
 }

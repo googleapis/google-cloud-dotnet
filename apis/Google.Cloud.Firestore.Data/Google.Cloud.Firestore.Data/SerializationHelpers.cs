@@ -43,18 +43,21 @@ namespace Google.Cloud.Firestore.Data
         internal static bool IsNonNullableValueType(BclType type) => type.GetTypeInfo().IsValueType && Nullable.GetUnderlyingType(type) == null;
 
         /// <summary>
-        /// If <paramref name="type"/> implements <see cref="IDictionary{TKey, TValue}"/> with TKey equal to string, returns true and sets
+        /// If <paramref name="type"/> implements (or is) <see cref="IDictionary{TKey, TValue}"/> with TKey equal to string, returns true and sets
         /// <paramref name="elementType"/> to TValue. Otherwise, returns false and sets <paramref name="elementType"/> to null.
         /// </summary>
         internal static bool TryGetStringDictionaryValueType(BclType type, out BclType elementType)
         {
-            elementType = type.GetTypeInfo().GetInterfaces().Select(MapInterfaceToDictionaryValueTypeArgument).FirstOrDefault(t => t != null);
+            elementType = type.GetTypeInfo()
+                .GetInterfaces()
+                .Concat(new[] { type }) // Make this method handle IDictionary<,> as an input; GetInterfaces doesn't return the type you call it on
+                .Select(MapInterfaceToDictionaryValueTypeArgument).FirstOrDefault(t => t != null);
             return elementType != null;
 
             BclType MapInterfaceToDictionaryValueTypeArgument(BclType iface)
             {
                 var ifaceInfo = iface.GetTypeInfo();
-                if (!ifaceInfo.IsGenericType)
+                if (!ifaceInfo.IsGenericType || ifaceInfo.IsGenericTypeDefinition)
                 {
                     return null;
                 }

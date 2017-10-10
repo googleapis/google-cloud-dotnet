@@ -79,6 +79,7 @@ namespace Google.Cloud.Firestore.Data.Tests
             { new Value { IntegerValue = 10L }, typeof(string) },
             { new Value { ArrayValue = new ArrayValue() }, typeof(string) },
             { new Value { MapValue = new MapValue() }, typeof(string) },
+            { new Value { MapValue = new MapValue() }, typeof(IUnsupportedDictionary) }, // See below
             // Invalid original value
             { new Value(), typeof(object) },
             { ValueSerializer.Serialize(new { Missing = "Surprise!" }), typeof(SerializationTestData.GameResult) },
@@ -111,10 +112,15 @@ namespace Google.Cloud.Firestore.Data.Tests
         {
             var value = new Value { NullValue = wkt::NullValue.NullValue };
             Assert.Null(DeserializeDefault(value, targetType));
-        }        
+        }
 
         // Just a convenience method to avoid having to specify all of this on each call.
         private static object DeserializeDefault(Value value, BclType targetType) =>
             ValueDeserializer.Default.Deserialize(SerializationTestData.Database, value, targetType);
+
+        /// <summary>
+        /// An interface that we can't deserialize to, because Dictionary{,} doesn't implement it.
+        /// </summary>
+        public interface IUnsupportedDictionary : IDictionary<string, string> { }
     }
 }
