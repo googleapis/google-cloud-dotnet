@@ -140,7 +140,7 @@ namespace Google.Cloud.Firestore.Data
 
         private object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values, BclType targetType)
         {
-            // TODO: Support deserializatoin to IReadOnlyDictionary<,> as well? (It becomes somewhat awkward, for limited benefit.)
+            // TODO: Support deserialization to IReadOnlyDictionary<,> as well? (It becomes somewhat awkward, for limited benefit.)
             if (targetType == typeof(object) || targetType == typeof(IDictionary<string, object>))
             {
                 targetType = _defaultMapType;
