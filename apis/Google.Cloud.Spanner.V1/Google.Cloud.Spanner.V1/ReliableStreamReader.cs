@@ -105,7 +105,8 @@ namespace Google.Cloud.Spanner.V1 {
 
                 for (int i = 0; i <= _resumeSkipCount; i++) {
                     //This calls a simple movenext on purpose.  If we get an error here, we'll fail out.
-                    _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken).WithSessionChecking(() => _session).ConfigureAwait(false);
+                    //TODO(benwu): Fix cancel on MoveNext in a subsequent change targeting spanner GA
+                    _isReading = await _currentCall.ResponseStream.MoveNext(CancellationToken.None).WithSessionChecking(() => _session).ConfigureAwait(false);
                     if (!_isReading || _currentCall.ResponseStream.Current == null)
                     {
                         return false;
@@ -125,7 +126,8 @@ namespace Google.Cloud.Spanner.V1 {
                 //we increment our skip count before calling MoveNext so that a reconnect operation
                 //will fast forward to the proper place.
                 _resumeSkipCount++;
-                _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
+                //TODO(benwu): Fix cancel on MoveNext in a subsequent change targeting spanner GA
+                _isReading = await _currentCall.ResponseStream.MoveNext(CancellationToken.None)
                     .WithSessionChecking(() => _session).ConfigureAwait(false);
             }
             catch (Exception e) 

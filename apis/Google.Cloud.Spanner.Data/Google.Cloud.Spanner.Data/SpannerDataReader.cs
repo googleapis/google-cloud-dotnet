@@ -177,7 +177,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="i">The index of the column whose value will be returned.</param>
         /// <returns>The raw protobuf as a <see cref="Value"/>.</returns>
-        public Value GetJsonValue(int i) => _innerList[i].ConvertToClrType<Value>(GetSpannerFieldType(i));
+        public Value GetJsonValue(int i) => _innerList[i];
 
         /// <inheritdoc />
         public override string GetName(int i) => _resultSet.GetMetadataAsync(CancellationToken.None)
