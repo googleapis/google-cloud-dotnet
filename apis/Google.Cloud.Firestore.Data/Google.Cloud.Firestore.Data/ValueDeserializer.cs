@@ -140,7 +140,7 @@ namespace Google.Cloud.Firestore.Data
 
         private object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values, BclType targetType)
         {
-            // TODO: Handle dictionaries where TValue isn't object
+            // TODO: Support deserializatoin to IReadOnlyDictionary<,> as well? (It becomes somewhat awkward, for limited benefit.)
             if (targetType == typeof(object) || targetType == typeof(IDictionary<string, object>))
             {
                 targetType = _defaultMapType;
@@ -153,6 +153,20 @@ namespace Google.Cloud.Firestore.Data
             }
             if (TryGetStringDictionaryValueType(targetType, out var dictionaryElementType))
             {
+                // If we've been asked to deserialize to an interface, let's just see if Dictionary<,>
+                // would work, but otherwise give up.
+                if (targetType.GetTypeInfo().IsInterface)
+                {
+                    var candidateType = typeof(Dictionary<,>).MakeGenericType(typeof(string), dictionaryElementType);
+                    if (targetType.IsAssignableFrom(candidateType))
+                    {
+                        targetType = candidateType;
+                    }
+                    else
+                    {
+                        throw new ArgumentException($"Unable to deserialize map to {targetType}");
+                    }
+                }
                 var method = typeof(ValueDeserializer).GetTypeInfo().GetMethod(nameof(PopulateDictionary), BindingFlags.Instance | BindingFlags.NonPublic);
                 return method.MakeGenericMethod(dictionaryElementType).Invoke(this, new object[] { db, values, targetType });
             }

@@ -11,11 +11,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Dynamic;
 using Xunit;
-
 using BclType = System.Type;
 
 namespace Google.Cloud.Firestore.Data.Tests
@@ -24,6 +24,7 @@ namespace Google.Cloud.Firestore.Data.Tests
     {
         [Theory]
         [InlineData(typeof(Dictionary<string, int>), typeof(int))]
+        [InlineData(typeof(IDictionary<string, int>), typeof(int))]
         [InlineData(typeof(Dictionary<string, string>), typeof(string))]
         [InlineData(typeof(ConcurrentDictionary<string, string>), typeof(string))]
         [InlineData(typeof(ExpandoObject), typeof(object))]
