@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -78,6 +79,6 @@ namespace Google.Cloud.Firestore.Data
         /// The fields to merge. This property is never null; if the mask is empty,
         /// all fields will be merged or overwritten.
         /// </summary>
-        public ReadOnlyCollection<FieldPath> FieldMask { get; }
+        public IReadOnlyList<FieldPath> FieldMask { get; }
     }
 }
