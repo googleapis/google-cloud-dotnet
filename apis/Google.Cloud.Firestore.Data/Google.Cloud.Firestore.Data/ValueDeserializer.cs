@@ -138,7 +138,7 @@ namespace Google.Cloud.Firestore.Data
                 throw new ArgumentException($"Unable to convert value type {value.ValueTypeCase} to {targetType}");
         }
 
-        private object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values, BclType targetType)
+        internal object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values, BclType targetType)
         {
             // TODO: Support deserialization to IReadOnlyDictionary<,> as well? (It becomes somewhat awkward, for limited benefit.)
             if (targetType == typeof(object) || targetType == typeof(IDictionary<string, object>))
