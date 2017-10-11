@@ -16,7 +16,7 @@ using Google.Cloud.Firestore.V1Beta1;
 using System;
 using System.Collections.Generic;
 using Xunit;
-using wkt = Google.Protobuf.WellKnownTypes;
+using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
@@ -51,8 +51,8 @@ namespace Google.Cloud.Firestore.Data.Tests
             var readTime = new Timestamp(10, 2);
             var proto = new Document
             {
-                CreateTime = new wkt::Timestamp { Seconds = 1, Nanos = 10 },
-                UpdateTime = new wkt::Timestamp { Seconds = 2, Nanos = 20 },
+                CreateTime = CreateProtoTimestamp(1, 10),
+                UpdateTime = CreateProtoTimestamp(2, 20),
                 Name = "projects/proj/databases/db/documents/col1/doc1/col2/doc2"                
             };
             var document = DocumentSnapshot.ForDocument(db, proto, readTime);
@@ -130,8 +130,8 @@ namespace Google.Cloud.Firestore.Data.Tests
             var readTime = new Timestamp(10, 2);
             var proto = new Document
             {
-                CreateTime = new wkt::Timestamp { Seconds = 1, Nanos = 10 },
-                UpdateTime = new wkt::Timestamp { Seconds = 2, Nanos = 20 },
+                CreateTime = CreateProtoTimestamp(1, 10),
+                UpdateTime = CreateProtoTimestamp(2, 20),
                 Name = "projects/proj/databases/db/documents/col1/doc1/col2/doc2",
                 Fields = { ValueSerializer.SerializeMap(poco) }
             };

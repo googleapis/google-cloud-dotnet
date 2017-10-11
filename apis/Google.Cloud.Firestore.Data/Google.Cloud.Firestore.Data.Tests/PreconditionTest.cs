@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Xunit;
-using wkt = Google.Protobuf.WellKnownTypes;
+using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
@@ -53,7 +53,7 @@ namespace Google.Cloud.Firestore.Data.Tests
             var precondition = Precondition.LastUpdated(timestamp);
             Assert.Null(precondition.Exists);
             Assert.Equal(timestamp, precondition.LastUpdateTime);
-            Assert.Equal(new V1Beta1.Precondition { UpdateTime = new wkt::Timestamp { Seconds = 1, Nanos = 5 } }, precondition.Proto);
+            Assert.Equal(new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 5) }, precondition.Proto);
         }
     }
 }

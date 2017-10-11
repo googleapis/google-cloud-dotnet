@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using wkt = Google.Protobuf.WellKnownTypes;
+using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
@@ -71,14 +72,14 @@ namespace Google.Cloud.Firestore.Data.Tests
             
             // Timestamps
             { new Timestamp(1, 500),
-                new Value { TimestampValue = new wkt::Timestamp { Seconds = 1, Nanos = 500 } } },
+                new Value { TimestampValue = CreateProtoTimestamp(1, 500) } },
             { new DateTime(1970, 1, 1, 0, 0, 1, DateTimeKind.Utc).AddTicks(5),
-                new Value { TimestampValue = new wkt::Timestamp { Seconds = 1, Nanos = 500 } } },
+                new Value { TimestampValue = CreateProtoTimestamp(1, 500) } },
             // If the local time is 1 hour ahead of UTC, the timestamp is an hour before the Unix epoch
             { new DateTimeOffset(1970, 1, 1, 0, 0, 1, TimeSpan.FromHours(1)).AddTicks(5),
-                new Value { TimestampValue = new wkt::Timestamp { Seconds = 1 - 3600, Nanos = 500 } } },
-            { new wkt::Timestamp { Seconds = 1, Nanos = 500 },
-                new Value { TimestampValue = new wkt::Timestamp { Seconds = 1, Nanos = 500 } } },
+                new Value { TimestampValue = CreateProtoTimestamp(1 - 3600, 500) } },
+            { CreateProtoTimestamp(1, 500),
+                new Value { TimestampValue = CreateProtoTimestamp(1, 500) } },
 
             // Blobs
             { new byte[] { 1, 2, 3, 4 },
@@ -119,7 +120,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                 } } },
             // Nullable type handling
             { new NullableContainer { NullableValue = null },
-                new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt.NullValue.NullValue } } } } } },
+                new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt::NullValue.NullValue } } } } } },
             { new NullableContainer { NullableValue = 10 },
                 new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { IntegerValue = 10L } } } } } },
 
