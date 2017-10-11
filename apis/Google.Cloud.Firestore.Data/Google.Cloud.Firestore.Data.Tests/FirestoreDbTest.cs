@@ -14,15 +14,15 @@
 
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1Beta1;
+using Google.Protobuf;
 using Moq;
 using System;
-using System.Threading.Tasks;
-using Xunit;
-using static Google.Cloud.Firestore.V1Beta1.FirestoreClient;
 using System.Collections.Generic;
 using System.Linq;
-using Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
+using System.Threading.Tasks;
+using Xunit;
+using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
+using static Google.Cloud.Firestore.V1Beta1.FirestoreClient;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
@@ -234,8 +234,5 @@ namespace Google.Cloud.Firestore.Data.Tests
             public override IAsyncEnumerator<BatchGetDocumentsResponse> ResponseStream =>
                 _responses.ToAsyncEnumerable().GetEnumerator();
         }
-
-        private static wkt::Timestamp CreateProtoTimestamp(long seconds, int nanos) =>
-            new wkt.Timestamp { Seconds = seconds, Nanos = nanos };
     }
 }
