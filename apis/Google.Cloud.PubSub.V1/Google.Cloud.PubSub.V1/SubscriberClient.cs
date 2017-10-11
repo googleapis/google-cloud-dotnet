@@ -2024,7 +2024,7 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Bidirectional streaming methods for <c>StreamingPull</c>.
         /// </summary>
-        public abstract class StreamingPullStream : BidirectionalStreamingBase<StreamingPullRequest, StreamingPullResponse>
+        public abstract partial class StreamingPullStream : BidirectionalStreamingBase<StreamingPullRequest, StreamingPullResponse>
         {
         }
 
@@ -3597,7 +3597,7 @@ namespace Google.Cloud.PubSub.V1
             return new StreamingPullStreamImpl(this, call, writeBuffer);
         }
 
-        internal sealed class StreamingPullStreamImpl : StreamingPullStream
+        internal sealed partial class StreamingPullStreamImpl : StreamingPullStream
         {
             /// <summary>
             /// Construct the bidirectional streaming method for <c>StreamingPull</c>.
