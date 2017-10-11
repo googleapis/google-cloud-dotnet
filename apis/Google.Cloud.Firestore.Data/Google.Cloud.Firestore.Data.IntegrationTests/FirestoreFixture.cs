@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Threading;
 using Xunit;
 
 namespace Google.Cloud.Firestore.Data.IntegrationTests
@@ -35,6 +36,8 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
         /// </summary>
         public CollectionReference NonQueryCollection { get; }
 
+        private int _uniqueCollectionCounter = 0;
+
         public FirestoreFixture()
         {
             string projectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
@@ -49,7 +52,17 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
             CollectionPrefix = Guid.NewGuid().ToString();
             FirestoreDb = FirestoreDb.Create(projectId);
             NonQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-non-query");
-        }        
+        }
+
+        /// <summary>
+        /// Creates a collection reference that will not have been used by other tests (except maliciously).
+        /// No documents are added to the collection, so it doesn't exist on the server.
+        /// </summary>
+        public CollectionReference CreateUniqueCollection()
+        {
+            int counter = Interlocked.Increment(ref _uniqueCollectionCounter);
+            return FirestoreDb.Collection($"{CollectionPrefix}-unique-{counter}");
+        }
 
         public void Dispose()
         {

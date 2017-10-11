@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Protobuf;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -105,5 +106,15 @@ namespace Google.Cloud.Firestore.Data
             var multiple = await Database.GetDocumentSnapshotsAsync(new[] { this }, null, cancellationToken).ConfigureAwait(false);
             return multiple.Single();
         }
+
+        // TODO: Consider adding GetCollectionsAsync which returns a Task<IList<CollectionReference>>,
+        // basically just calling ListCollectionsAsync().ToList(cancellationToken).
+        // That would be more convenient for users who don't know about async enumerables.
+
+        /// <summary>
+        /// Retrieves the collections within this document.
+        /// </summary>
+        /// <returns>A lazily-iterated sequence of collection references within this document.</returns>
+        public IAsyncEnumerable<CollectionReference> ListCollectionsAsync() => Database.ListCollectionsAsync(this);
     }
 }

@@ -201,5 +201,19 @@ namespace Google.Cloud.Firestore.Data
                 return documentReference.Path;
             }
         }
+
+        // TODO: Consider adding GetRootCollectionsAsync which returns a Task<IList<CollectionReference>>,
+        // basically just calling ListRootCollectionsAsync().ToList(cancellationToken).
+        // That would be more convenient for users who don't know about async enumerables.
+
+        /// <summary>
+        /// Asynchronously retrieves the root collection IDs from the server.
+        /// </summary>
+        /// <returns>All the root collection references, in a lazily-iterated sequence.</returns>
+        public IAsyncEnumerable<CollectionReference> ListRootCollectionsAsync() => ListCollectionsAsync(null);
+
+        internal IAsyncEnumerable<CollectionReference> ListCollectionsAsync(DocumentReference parent) =>
+            Client.ListCollectionIdsAsync(parent?.Path ?? RootPath)
+                .Select(id => new CollectionReference(this, parent, id));
     }
 }
