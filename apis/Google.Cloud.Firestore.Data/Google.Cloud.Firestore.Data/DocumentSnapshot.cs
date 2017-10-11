@@ -15,7 +15,6 @@ using Google.Api.Gax;
 using Google.Cloud.Firestore.V1Beta1;
 using System;
 using System.Collections.Generic;
-using System.Dynamic;
 
 namespace Google.Cloud.Firestore.Data
 {
@@ -82,10 +81,10 @@ namespace Google.Cloud.Firestore.Data
             new DocumentSnapshot(db, name, null, readTime);
 
         /// <summary>
-        /// Returns the document data as an <see cref="IDictionary{String, Object}"/>.
+        /// Returns the document data as a <see cref="Dictionary{String, Object}"/>.
         /// </summary>
         /// <exception cref="InvalidOperationException">This snapshot represents a missing document, i.e. <see cref="Exists"/> is false.</exception>
-        /// <returns>An <see cref="ExpandoObject"/> containing the document data.</returns>
+        /// <returns>A <see cref="Dictionary{String, Object}"/> containing the document data.</returns>
         public Dictionary<string, object> ToDictionary() => Deserialize<Dictionary<string, object>>();
 
         /// <summary>
