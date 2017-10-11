@@ -16,6 +16,8 @@
 using Google.Api.Gax;
 using Google.Cloud.Firestore.V1Beta1;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Firestore.Data
 {
@@ -64,7 +66,24 @@ namespace Google.Cloud.Firestore.Data
         /// <returns>A <see cref="CollectionReference"/> for the specified collection.</returns>
         public DocumentReference Document(string documentId) =>
             new DocumentReference(Database, this,
-                documentId == null ? PathUtilities.GenerateId() : PathUtilities.ValidateId(documentId, nameof(documentId)));        
+                documentId == null ? PathUtilities.GenerateId() : PathUtilities.ValidateId(documentId, nameof(documentId)));
+
+        /// <summary>
+        /// Asynchronously creates a document with the given data in this collection. The document has a randomly generated ID.
+        /// </summary>
+        /// <remarks>
+        /// If the <see cref="WriteResult"/> for the operation is required, use <see cref="DocumentReference.CreateAsync(object, CancellationToken)"/>
+        /// instead of this method.
+        /// </remarks>
+        /// <param name="documentData">The data for the document. Must not be null.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The reference for the newly-created document.</returns>
+        public async Task<DocumentReference> AddAsync(object documentData, CancellationToken cancellationToken = default)
+        {
+            var docRef = Document(null);
+            var result = await docRef.CreateAsync(documentData, cancellationToken).ConfigureAwait(false);
+            return docRef;
+        }
 
         /// <inheritdoc />
         public override int GetHashCode() => Path.GetHashCode();
