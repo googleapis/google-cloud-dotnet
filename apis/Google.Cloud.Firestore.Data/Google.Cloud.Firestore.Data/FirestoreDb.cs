@@ -130,7 +130,13 @@ namespace Google.Cloud.Firestore.Data
                 documentRef = new DocumentReference(this, collectionRef, elements[i + 1]);
             }
             return documentRef;
-        }        
+        }
+
+        /// <summary>
+        /// Creates a write batch, which can be used to commit multiple mutations atomically.
+        /// </summary>
+        /// <returns>A write batch for this database.</returns>
+        public WriteBatch CreateWriteBatch() => new WriteBatch(this);
 
         internal DocumentReference GetDocumentReferenceFromResourceName(string referenceValue)
         {
