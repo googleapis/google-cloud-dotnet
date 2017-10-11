@@ -13,8 +13,13 @@
 // limitations under the License.using System;
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1Beta1;
+using Google.Protobuf;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Firestore.Data
@@ -147,6 +152,54 @@ namespace Google.Cloud.Firestore.Data
                 && referenceValue[DocumentsPath.Length] == '/',
                 nameof(referenceValue), "Reference {0} is not part of database {1}", referenceValue, RootPath);
             return Document(referenceValue.Substring(DocumentsPath.Length + 1));
+        }
+
+        /// <summary>
+        /// Fetches document snapshots from the server, based on an optional transaction ID.
+        /// </summary>
+        /// <param name="documents">The document references to fetch. Must not be null, or contain null references.</param>
+        /// <param name="transactionId">A transaction ID, or null to not include any transaction ID.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation.</param>
+        /// <returns>The document snapshots, in the order they are provided in the response. (This may not be the order of <paramref name="documents"/>.)</returns>
+        internal async Task<IList<DocumentSnapshot>> GetDocumentSnapshotsAsync(IEnumerable<DocumentReference> documents, ByteString transactionId, CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckNotNull(documents, nameof(documents));
+            var request = new BatchGetDocumentsRequest { Database = RootPath, Documents = { documents.Select(ExtractPath) } };
+            if (transactionId != null)
+            {
+                request.Transaction = transactionId;
+            }
+            var stream = Client.BatchGetDocuments(request, CallSettings.FromCancellationToken(cancellationToken));
+            using (var responseStream = stream.ResponseStream)
+            {
+                List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
+
+                // Note: no need to worry about passing the cancellation token in here, as we've passed it into the overall call.
+                // If the token is cancelled, the call will be aborted.
+                while (await responseStream.MoveNext().ConfigureAwait(false))
+                {
+                    var response = responseStream.Current;
+                    var readTime = Timestamp.FromProto(response.ReadTime);
+                    switch (response.ResultCase)
+                    {
+                        case BatchGetDocumentsResponse.ResultOneofCase.Found:
+                            snapshots.Add(DocumentSnapshot.ForDocument(this, response.Found, readTime));
+                            break;
+                        case BatchGetDocumentsResponse.ResultOneofCase.Missing:
+                            snapshots.Add(DocumentSnapshot.ForMissingDocument(this, response.Missing, readTime));
+                            break;
+                        default:
+                            throw new InvalidOperationException($"Unknown response type: {response.ResultCase}");
+                    }
+                }
+                return snapshots;
+            }
+
+            string ExtractPath(DocumentReference documentReference)
+            {
+                GaxPreconditions.CheckArgument(documentReference != null, nameof(documents), "DocumentReference sequence must not contain null elements.");
+                return documentReference.Path;
+            }
         }
     }
 }

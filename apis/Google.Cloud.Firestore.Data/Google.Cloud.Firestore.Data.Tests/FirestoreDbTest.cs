@@ -12,9 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
+using Google.Cloud.Firestore.V1Beta1;
+using Google.Protobuf;
+using Moq;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
+using static Google.Cloud.Firestore.V1Beta1.FirestoreClient;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
@@ -126,6 +134,105 @@ namespace Google.Cloud.Firestore.Data.Tests
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
             Assert.Throws<ArgumentException>(() => db.GetDocumentReferenceFromResourceName(path));
+        }
+
+        [Fact]
+        public async Task GetDocumentSnapshotsAsync()
+        {
+            string docName1 = "projects/proj/databases/db/documents/col1/doc1";
+            string docName2 = "projects/proj/databases/db/documents/col2/doc2";
+            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var request = new BatchGetDocumentsRequest
+            {
+                Database = "projects/proj/databases/db",
+                Documents = { docName1, docName2 }
+            };
+            var responses = new[]
+            {
+                // Deliberately not in the requested order
+                new BatchGetDocumentsResponse
+                {
+                    Found = new Document
+                    {
+                        Name = docName2, CreateTime = CreateProtoTimestamp(0, 1), UpdateTime = CreateProtoTimestamp(0, 2),
+                        Fields = { { "Name", new Value { StringValue = "Test" } } }
+                    },
+                    ReadTime = CreateProtoTimestamp(1, 3)
+                },
+                new BatchGetDocumentsResponse { Missing = docName1, ReadTime = CreateProtoTimestamp(1, 2) },
+            };
+            mock.Setup(c => c.BatchGetDocuments(request, It.IsAny<CallSettings>())).Returns(new FakeDocumentStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            var docRef1 = db.Document("col1/doc1");
+            var docRef2 = db.Document("col2/doc2");
+            var results = await db.GetDocumentSnapshotsAsync(new[] { docRef1, docRef2 }, null, default);
+            Assert.Equal(2, results.Count);
+            // Note that this is the second result, not the first - we get them back in response order, not request order.
+            // (If we need to ensure request order, that can be done as a separate method layered on this one.)
+            var snapshot1 = results[1];
+            Assert.False(snapshot1.Exists);
+            Assert.Equal(new Timestamp(1, 2), snapshot1.ReadTime);
+            Assert.Equal(docRef1, snapshot1.Reference);
+
+            var snapshot2 = results[0];
+            Assert.True(snapshot2.Exists);
+            Assert.Equal(new Timestamp(0, 1), snapshot2.CreateTime);
+            Assert.Equal(new Timestamp(0, 2), snapshot2.UpdateTime);
+            Assert.Equal(new Timestamp(1, 3), snapshot2.ReadTime);
+            Assert.Equal(docRef2, snapshot2.Reference);
+            Assert.Equal("Test", snapshot2.GetField<string>("Name"));
+            mock.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetDocumentSnapshotsAsync_WithTransaction()
+        {
+            // This test is about checking the transaction is copied...
+            var transactionId = ByteString.CopyFrom(1, 2, 3, 4);
+            string docName = "projects/proj/databases/db/documents/col1/doc1";
+            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var request = new BatchGetDocumentsRequest
+            {
+                Database = "projects/proj/databases/db",
+                Documents = { docName },
+                Transaction = transactionId
+            };
+            var responses = new[]
+            {
+                new BatchGetDocumentsResponse { Missing = docName, ReadTime = CreateProtoTimestamp(1, 2) },
+            };
+            mock.Setup(c => c.BatchGetDocuments(request, It.IsAny<CallSettings>())).Returns(new FakeDocumentStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            var results = await db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, transactionId, default);
+            mock.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetDocumentSnapshotsAsync_UnknownResponseCase()
+        {
+            string docName = "projects/proj/databases/db/documents/col1/doc1";
+            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var request = new BatchGetDocumentsRequest
+            {
+                Database = "projects/proj/databases/db",
+                Documents = { docName },
+            };
+            var responses = new[] { new BatchGetDocumentsResponse { ReadTime = CreateProtoTimestamp(1, 2) } };
+            mock.Setup(c => c.BatchGetDocuments(request, It.IsAny<CallSettings>())).Returns(new FakeDocumentStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            await Assert.ThrowsAsync<InvalidOperationException>(() => db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, null, default));
+            mock.VerifyAll();
+        }
+
+        private class FakeDocumentStream : BatchGetDocumentsStream
+        {
+            private readonly IEnumerable<BatchGetDocumentsResponse> _responses;
+
+            internal FakeDocumentStream(IEnumerable<BatchGetDocumentsResponse> responses) =>
+                _responses = responses;
+
+            public override IAsyncEnumerator<BatchGetDocumentsResponse> ResponseStream =>
+                _responses.ToAsyncEnumerable().GetEnumerator();
         }
     }
 }

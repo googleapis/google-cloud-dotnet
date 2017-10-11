@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Xunit;
-using wkt = Google.Protobuf.WellKnownTypes;
+using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
@@ -22,8 +22,8 @@ namespace Google.Cloud.Firestore.Data.Tests
         [Fact]
         public void FromProto_TimestampInProto()
         {
-            var commitTime = new wkt.Timestamp { Seconds = 20, Nanos = 30 };
-            var proto = new V1Beta1.WriteResult { UpdateTime = new wkt.Timestamp { Seconds = 10, Nanos = 20 } };
+            var commitTime = CreateProtoTimestamp(20, 30);
+            var proto = new V1Beta1.WriteResult { UpdateTime = CreateProtoTimestamp(10, 20) };
             var result = WriteResult.FromProto(proto, commitTime);
             Assert.Equal(new Timestamp(10, 20), result.UpdateTime);
         }
@@ -31,7 +31,7 @@ namespace Google.Cloud.Firestore.Data.Tests
         [Fact]
         public void FromProto_TimestampNotInProto()
         {
-            var commitTime = new wkt.Timestamp { Seconds = 20, Nanos = 30 };
+            var commitTime = CreateProtoTimestamp(20, 30);
             var proto = new V1Beta1.WriteResult();
             var result = WriteResult.FromProto(proto, commitTime);
             Assert.Equal(new Timestamp(20, 30), result.UpdateTime);

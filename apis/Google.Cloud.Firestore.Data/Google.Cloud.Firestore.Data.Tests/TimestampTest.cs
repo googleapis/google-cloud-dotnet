@@ -14,7 +14,7 @@
 
 using System;
 using Xunit;
-using wkt = Google.Protobuf.WellKnownTypes;
+using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
@@ -73,7 +73,7 @@ namespace Google.Cloud.Firestore.Data.Tests
         public void FromProto()
         {
             var direct = new Timestamp(1, 100);
-            var fromProto = Timestamp.FromProto(new wkt::Timestamp { Seconds = 1, Nanos = 100 });
+            var fromProto = Timestamp.FromProto(CreateProtoTimestamp(1, 100));
             Assert.Equal(direct, fromProto);
         }
 
@@ -81,7 +81,7 @@ namespace Google.Cloud.Firestore.Data.Tests
         public void ToProto()
         {
             var timestamp = new Timestamp(1, 100);
-            var proto = new wkt::Timestamp { Seconds = 1, Nanos = 100 };
+            var proto = CreateProtoTimestamp(1, 100);
             Assert.Equal(proto, timestamp.ToProto());
         }
 
@@ -151,7 +151,7 @@ namespace Google.Cloud.Firestore.Data.Tests
         [Fact]
         public void FromProtoOrNull_NonNull()
         {
-            var proto = new wkt::Timestamp { Seconds = 1, Nanos = 100 };
+            var proto = CreateProtoTimestamp(1, 100);
             var timestamp = Timestamp.FromProtoOrNull(proto).Value;
             var expected = new Timestamp(1, 100);
             Assert.Equal(expected, timestamp);

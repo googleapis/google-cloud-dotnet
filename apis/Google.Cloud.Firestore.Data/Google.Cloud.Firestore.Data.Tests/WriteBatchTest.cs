@@ -18,7 +18,7 @@ using Moq;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
-using wkt = Google.Protobuf.WellKnownTypes;
+using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
@@ -93,8 +93,5 @@ namespace Google.Cloud.Firestore.Data.Tests
 
         private void AssertWrites(WriteBatch batch, params Write[] writes) =>
             Assert.Equal(writes, batch.Writes);
-
-        private static wkt::Timestamp CreateProtoTimestamp(long seconds, int nanos) =>
-            new wkt.Timestamp { Seconds = seconds, Nanos = nanos };
     }
 }
