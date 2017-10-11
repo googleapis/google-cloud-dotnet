@@ -13,7 +13,11 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Protobuf;
 using System;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Firestore.Data
 {
@@ -71,5 +75,35 @@ namespace Google.Cloud.Firestore.Data
 
         /// <inheritdoc />
         public override string ToString() => Path;
+
+        /// <summary>
+        /// Asynchronously creates a document on the server with the given data. The document must not exist beforehand.
+        /// </summary>
+        /// <param name="documentData">The data for the document. Must not be null.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public async Task<WriteResult> CreateAsync(object documentData, CancellationToken cancellationToken = default)
+        {
+            var batch = Database.CreateWriteBatch();
+            var results = await batch.Create(this, documentData).CommitAsync(cancellationToken).ConfigureAwait(false);
+            return results.Single();
+        }
+
+        // TODO: Check naming. Other languages just have "get", but that feels a bit odd in .NET.
+        // Options:
+        // - Get
+        // - GetSnapshot
+        // - Snapshot
+        // (All with an Async suffix, presumably.)
+
+        /// <summary>
+        /// Asynchronously fetches a snapshot of the document.
+        /// </summary>
+        /// <returns>A snapshot of the document. The snapshot may represent a missing document.</returns>
+        public async Task<DocumentSnapshot> SnapshotAsync(CancellationToken cancellationToken = default)
+        {
+            var multiple = await Database.GetDocumentSnapshotsAsync(new[] { this }, null, cancellationToken).ConfigureAwait(false);
+            return multiple.Single();
+        }
     }
 }
