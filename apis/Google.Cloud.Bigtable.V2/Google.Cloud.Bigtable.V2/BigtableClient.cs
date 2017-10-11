@@ -374,7 +374,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Server streaming methods for <c>ReadRows</c>.
         /// </summary>
-        public abstract class ReadRowsStream : ServerStreamingBase<ReadRowsResponse>
+        public abstract partial class ReadRowsStream : ServerStreamingBase<ReadRowsResponse>
         {
         }
 
@@ -403,7 +403,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Server streaming methods for <c>SampleRowKeys</c>.
         /// </summary>
-        public abstract class SampleRowKeysStream : ServerStreamingBase<SampleRowKeysResponse>
+        public abstract partial class SampleRowKeysStream : ServerStreamingBase<SampleRowKeysResponse>
         {
         }
 
@@ -576,7 +576,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Server streaming methods for <c>MutateRows</c>.
         /// </summary>
-        public abstract class MutateRowsStream : ServerStreamingBase<MutateRowsResponse>
+        public abstract partial class MutateRowsStream : ServerStreamingBase<MutateRowsResponse>
         {
         }
 
@@ -997,7 +997,7 @@ namespace Google.Cloud.Bigtable.V2
             return new ReadRowsStreamImpl(_callReadRows.Call(request, callSettings));
         }
 
-        internal sealed class ReadRowsStreamImpl : ReadRowsStream
+        internal sealed partial class ReadRowsStreamImpl : ReadRowsStream
         {
             /// <summary>
             /// Construct the server-streaming method for <c>ReadRows</c>.
@@ -1038,7 +1038,7 @@ namespace Google.Cloud.Bigtable.V2
             return new SampleRowKeysStreamImpl(_callSampleRowKeys.Call(request, callSettings));
         }
 
-        internal sealed class SampleRowKeysStreamImpl : SampleRowKeysStream
+        internal sealed partial class SampleRowKeysStreamImpl : SampleRowKeysStream
         {
             /// <summary>
             /// Construct the server-streaming method for <c>SampleRowKeys</c>.
@@ -1120,7 +1120,7 @@ namespace Google.Cloud.Bigtable.V2
             return new MutateRowsStreamImpl(_callMutateRows.Call(request, callSettings));
         }
 
-        internal sealed class MutateRowsStreamImpl : MutateRowsStream
+        internal sealed partial class MutateRowsStreamImpl : MutateRowsStream
         {
             /// <summary>
             /// Construct the server-streaming method for <c>MutateRows</c>.

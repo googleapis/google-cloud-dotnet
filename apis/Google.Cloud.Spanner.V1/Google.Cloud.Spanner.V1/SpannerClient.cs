@@ -1017,7 +1017,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Server streaming methods for <c>ExecuteStreamingSql</c>.
         /// </summary>
-        public abstract class ExecuteStreamingSqlStream : ServerStreamingBase<PartialResultSet>
+        public abstract partial class ExecuteStreamingSqlStream : ServerStreamingBase<PartialResultSet>
         {
         }
 
@@ -1109,7 +1109,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Server streaming methods for <c>StreamingRead</c>.
         /// </summary>
-        public abstract class StreamingReadStream : ServerStreamingBase<PartialResultSet>
+        public abstract partial class StreamingReadStream : ServerStreamingBase<PartialResultSet>
         {
         }
 
@@ -2011,7 +2011,7 @@ namespace Google.Cloud.Spanner.V1
             return new ExecuteStreamingSqlStreamImpl(_callExecuteStreamingSql.Call(request, callSettings));
         }
 
-        internal sealed class ExecuteStreamingSqlStreamImpl : ExecuteStreamingSqlStream
+        internal sealed partial class ExecuteStreamingSqlStreamImpl : ExecuteStreamingSqlStream
         {
             /// <summary>
             /// Construct the server-streaming method for <c>ExecuteStreamingSql</c>.
@@ -2117,7 +2117,7 @@ namespace Google.Cloud.Spanner.V1
             return new StreamingReadStreamImpl(_callStreamingRead.Call(request, callSettings));
         }
 
-        internal sealed class StreamingReadStreamImpl : StreamingReadStream
+        internal sealed partial class StreamingReadStreamImpl : StreamingReadStream
         {
             /// <summary>
             /// Construct the server-streaming method for <c>StreamingRead</c>.

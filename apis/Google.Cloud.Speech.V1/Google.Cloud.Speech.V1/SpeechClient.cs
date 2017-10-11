@@ -630,7 +630,7 @@ namespace Google.Cloud.Speech.V1
         /// <summary>
         /// Bidirectional streaming methods for <c>StreamingRecognize</c>.
         /// </summary>
-        public abstract class StreamingRecognizeStream : BidirectionalStreamingBase<StreamingRecognizeRequest, StreamingRecognizeResponse>
+        public abstract partial class StreamingRecognizeStream : BidirectionalStreamingBase<StreamingRecognizeRequest, StreamingRecognizeResponse>
         {
         }
 
@@ -802,7 +802,7 @@ namespace Google.Cloud.Speech.V1
             return new StreamingRecognizeStreamImpl(this, call, writeBuffer);
         }
 
-        internal sealed class StreamingRecognizeStreamImpl : StreamingRecognizeStream
+        internal sealed partial class StreamingRecognizeStreamImpl : StreamingRecognizeStream
         {
             /// <summary>
             /// Construct the bidirectional streaming method for <c>StreamingRecognize</c>.

@@ -1011,7 +1011,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <summary>
         /// Server streaming methods for <c>BatchGetDocuments</c>.
         /// </summary>
-        public abstract class BatchGetDocumentsStream : ServerStreamingBase<BatchGetDocumentsResponse>
+        public abstract partial class BatchGetDocumentsStream : ServerStreamingBase<BatchGetDocumentsResponse>
         {
         }
 
@@ -1376,7 +1376,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <summary>
         /// Server streaming methods for <c>RunQuery</c>.
         /// </summary>
-        public abstract class RunQueryStream : ServerStreamingBase<RunQueryResponse>
+        public abstract partial class RunQueryStream : ServerStreamingBase<RunQueryResponse>
         {
         }
 
@@ -1402,7 +1402,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <summary>
         /// Bidirectional streaming methods for <c>Write</c>.
         /// </summary>
-        public abstract class WriteStream : BidirectionalStreamingBase<WriteRequest, WriteResponse>
+        public abstract partial class WriteStream : BidirectionalStreamingBase<WriteRequest, WriteResponse>
         {
         }
 
@@ -1428,7 +1428,7 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <summary>
         /// Bidirectional streaming methods for <c>Listen</c>.
         /// </summary>
-        public abstract class ListenStream : BidirectionalStreamingBase<ListenRequest, ListenResponse>
+        public abstract partial class ListenStream : BidirectionalStreamingBase<ListenRequest, ListenResponse>
         {
         }
 
@@ -1849,7 +1849,7 @@ namespace Google.Cloud.Firestore.V1Beta1
             return new BatchGetDocumentsStreamImpl(_callBatchGetDocuments.Call(request, callSettings));
         }
 
-        internal sealed class BatchGetDocumentsStreamImpl : BatchGetDocumentsStream
+        internal sealed partial class BatchGetDocumentsStreamImpl : BatchGetDocumentsStream
         {
             /// <summary>
             /// Construct the server-streaming method for <c>BatchGetDocuments</c>.
@@ -2007,7 +2007,7 @@ namespace Google.Cloud.Firestore.V1Beta1
             return new RunQueryStreamImpl(_callRunQuery.Call(request, callSettings));
         }
 
-        internal sealed class RunQueryStreamImpl : RunQueryStream
+        internal sealed partial class RunQueryStreamImpl : RunQueryStream
         {
             /// <summary>
             /// Construct the server-streaming method for <c>RunQuery</c>.
@@ -2052,7 +2052,7 @@ namespace Google.Cloud.Firestore.V1Beta1
             return new WriteStreamImpl(this, call, writeBuffer);
         }
 
-        internal sealed class WriteStreamImpl : WriteStream
+        internal sealed partial class WriteStreamImpl : WriteStream
         {
             /// <summary>
             /// Construct the bidirectional streaming method for <c>Write</c>.
@@ -2139,7 +2139,7 @@ namespace Google.Cloud.Firestore.V1Beta1
             return new ListenStreamImpl(this, call, writeBuffer);
         }
 
-        internal sealed class ListenStreamImpl : ListenStream
+        internal sealed partial class ListenStreamImpl : ListenStream
         {
             /// <summary>
             /// Construct the bidirectional streaming method for <c>Listen</c>.
