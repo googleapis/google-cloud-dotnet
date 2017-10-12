@@ -27,22 +27,17 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         partial void Modify_GetTableRequest(ref GetTableRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
+            ApplyResourcePrefixHeader(ref settings, request.Name);
 
         partial void Modify_DeleteTableRequest(ref DeleteTableRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
+            ApplyResourcePrefixHeader(ref settings, request.Name);
 
         partial void Modify_ModifyColumnFamiliesRequest(ref ModifyColumnFamiliesRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
+            ApplyResourcePrefixHeader(ref settings, request.Name);
 
         partial void Modify_DropRowRangeRequest(ref DropRowRangeRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
+            ApplyResourcePrefixHeader(ref settings, request.Name);
 
-        private static void ApplyResourcePrefixHeader(ref CallSettings settings, TableName tableName)
-        {
-            ApplyResourcePrefixHeader(ref settings, tableName.ToString());
-        }
-        
         private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
         {
             settings = settings.WithHeader(ResourcePrefixHeader, resource);

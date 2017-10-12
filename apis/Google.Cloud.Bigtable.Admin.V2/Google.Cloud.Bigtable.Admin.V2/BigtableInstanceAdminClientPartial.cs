@@ -24,43 +24,33 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.InstanceName);
+            ApplyResourcePrefixHeader(ref settings, request.Name);
 
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         // TODO: Determine why this generated as Instance instead of UpdateInstanceRequest
         partial void Modify_Instance(ref Instance request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.InstanceName);
+            ApplyResourcePrefixHeader(ref settings, request.Name);
 
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.InstanceName);
+            ApplyResourcePrefixHeader(ref settings, request.Name);
 
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         partial void Modify_GetClusterRequest(ref GetClusterRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.ClusterName);
+            ApplyResourcePrefixHeader(ref settings, request.Name);
 
         partial void Modify_ListClustersRequest(ref ListClustersRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         // TODO: Determine why this generated as Cluster instead of UpdateClusterRequest
         partial void Modify_Cluster(ref Cluster request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.ClusterName);
+            ApplyResourcePrefixHeader(ref settings, request.Name);
 
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.ClusterName);
-
-        private static void ApplyResourcePrefixHeader(ref CallSettings settings, InstanceName instanceName)
-        {
-            ApplyResourcePrefixHeader(ref settings, instanceName.ToString());
-        }
-
-        private static void ApplyResourcePrefixHeader(ref CallSettings settings, ClusterName clusterName)
-        {
-            ApplyResourcePrefixHeader(ref settings, clusterName.ToString());
-        }
+            ApplyResourcePrefixHeader(ref settings, request.Name);
 
         private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
         {
