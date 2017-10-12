@@ -12,8 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Firestore.Data.IntegrationTests.Models;
 using System;
+using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Firestore.Data.IntegrationTests
@@ -30,6 +33,11 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
         /// A randomly generated prefix for collections.
         /// </summary>
         public string CollectionPrefix { get; }
+
+        /// <summary>
+        /// A collection with <see cref="HighScore"/> data in. Don't modify in tests!
+        /// </summary>
+        public CollectionReference HighScoreCollection { get; }
 
         /// <summary>
         /// A collection intended for tests to create and fetch documents in. Don't query in tests!
@@ -52,7 +60,25 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
             CollectionPrefix = Guid.NewGuid().ToString();
             FirestoreDb = FirestoreDb.Create(projectId);
             NonQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-non-query");
+            HighScoreCollection = FirestoreDb.Collection(CollectionPrefix + "-high-scores");
+            Task.Run(PopulateCollections).Wait();
         }
+
+        private async Task PopulateCollections()
+        {
+            await PopulateCollection(HighScoreCollection, HighScore.Data);
+        }
+
+        private async Task PopulateCollection(CollectionReference collection, IEnumerable<object> documents)
+        {
+            var batch = FirestoreDb.CreateWriteBatch();
+            foreach (var doc in documents)
+            {
+                batch.Create(collection.Document(null), doc);
+            }
+            await batch.CommitAsync();
+        }
+
 
         /// <summary>
         /// Creates a collection reference that will not have been used by other tests (except maliciously).
