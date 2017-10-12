@@ -38,9 +38,9 @@ namespace Google.Cloud.Bigtable.V2
         partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.TableName);
 
-        private static void ApplyResourcePrefixHeader(ref CallSettings settings, string tableName)
+        private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
         {
-            settings = settings.WithHeader(ResourcePrefixHeader, TableName.Parse(tableName).ToString());
+            settings = settings.WithHeader(ResourcePrefixHeader, resource);
         }
     }
 }

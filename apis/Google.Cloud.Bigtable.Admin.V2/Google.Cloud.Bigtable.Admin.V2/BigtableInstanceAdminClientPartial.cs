@@ -21,13 +21,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         private const string ResourcePrefixHeader = "google-cloud-resource-prefix";
 
         partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeaderForProject(ref settings, request.Parent);
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.InstanceName);
 
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeaderForProject(ref settings, request.Parent);
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         // TODO: Determine why this generated as Instance instead of UpdateInstanceRequest
         partial void Modify_Instance(ref Instance request, ref CallSettings settings) =>
@@ -37,13 +37,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ApplyResourcePrefixHeader(ref settings, request.InstanceName);
 
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeaderForInstance(ref settings, request.Parent);
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         partial void Modify_GetClusterRequest(ref GetClusterRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.ClusterName);
 
         partial void Modify_ListClustersRequest(ref ListClustersRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeaderForInstance(ref settings, request.Parent);
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         // TODO: Determine why this generated as Cluster instead of UpdateClusterRequest
         partial void Modify_Cluster(ref Cluster request, ref CallSettings settings) =>
@@ -54,22 +54,17 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private static void ApplyResourcePrefixHeader(ref CallSettings settings, InstanceName instanceName)
         {
-            settings = settings.WithHeader(ResourcePrefixHeader, instanceName.ToString());
+            ApplyResourcePrefixHeader(ref settings, instanceName.ToString());
         }
 
         private static void ApplyResourcePrefixHeader(ref CallSettings settings, ClusterName clusterName)
         {
-            settings = settings.WithHeader(ResourcePrefixHeader, clusterName.ToString());
+            ApplyResourcePrefixHeader(ref settings, clusterName.ToString());
         }
 
-        private static void ApplyResourcePrefixHeaderForInstance(ref CallSettings settings, string instanceName)
+        private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
         {
-            ApplyResourcePrefixHeader(ref settings, InstanceName.Parse(instanceName));
-        }
-
-        private static void ApplyResourcePrefixHeaderForProject(ref CallSettings settings, string projectName)
-        {
-            settings = settings.WithHeader(ResourcePrefixHeader, ProjectName.Parse(projectName).ToString());
+            settings = settings.WithHeader(ResourcePrefixHeader, resource);
         }
     }
 }

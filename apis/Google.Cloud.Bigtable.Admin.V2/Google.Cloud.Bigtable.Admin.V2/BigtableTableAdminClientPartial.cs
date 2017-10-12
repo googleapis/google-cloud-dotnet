@@ -21,10 +21,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         private const string ResourcePrefixHeader = "google-cloud-resource-prefix";
 
         partial void Modify_CreateTableRequest(ref CreateTableRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeaderForInstance(ref settings, request.Parent);
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         partial void Modify_ListTablesRequest(ref ListTablesRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeaderForInstance(ref settings, request.Parent);
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         partial void Modify_GetTableRequest(ref GetTableRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.TableName);
@@ -40,12 +40,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private static void ApplyResourcePrefixHeader(ref CallSettings settings, TableName tableName)
         {
-            settings = settings.WithHeader(ResourcePrefixHeader, tableName.ToString());
+            ApplyResourcePrefixHeader(ref settings, tableName.ToString());
         }
         
-        private static void ApplyResourcePrefixHeaderForInstance(ref CallSettings settings, string instanceName)
+        private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
         {
-            settings = settings.WithHeader(ResourcePrefixHeader, InstanceName.Parse(instanceName).ToString());
+            settings = settings.WithHeader(ResourcePrefixHeader, resource);
         }
     }
 }
