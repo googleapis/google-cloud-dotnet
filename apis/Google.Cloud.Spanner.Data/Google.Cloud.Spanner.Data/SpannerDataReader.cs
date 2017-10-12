@@ -226,7 +226,13 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override bool Read() => ReadAsync(CancellationToken.None).ResultWithUnwrappedExceptions();
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Reads the next row of values from Cloud Spanner.
+        /// Important: Cloud Spanner supports limited cancellation of this task.
+        /// </summary>
+        /// <param name="cancellationToken">A cancellation token to cancel the read. Cloud Spanner currently
+        /// supports limited cancellation while advancing the read to the next row.</param>
+        /// <returns>True if another row was read.</returns>
         public override Task<bool> ReadAsync(CancellationToken cancellationToken)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(

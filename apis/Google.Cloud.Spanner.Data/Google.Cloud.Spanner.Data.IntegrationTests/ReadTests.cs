@@ -69,6 +69,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 var cmd = connection.CreateSelectCommand(sql);
                 var result = await cmd.ExecuteScalarAsync<T>();
+
+                //ensure the synchronous method returns the same as the async.
+                Assert.Equal(await cmd.ExecuteScalarAsync<object>(),
+                    cmd.ExecuteScalar());
+
                 return result;
             }
         }
