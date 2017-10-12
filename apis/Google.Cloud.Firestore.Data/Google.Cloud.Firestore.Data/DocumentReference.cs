@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Protobuf;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -88,6 +89,24 @@ namespace Google.Cloud.Firestore.Data
             var batch = Database.CreateWriteBatch();
             var results = await batch.Create(this, documentData).CommitAsync(cancellationToken).ConfigureAwait(false);
             return results.Single();
+        }
+
+        /// <summary>
+        /// Asynchronously deletes the document referred to by this path, with an optional precondition.
+        /// </summary>
+        /// <remarks>
+        /// If no precondition is specified and the document doesn't exist, this returned task will succeed. If a precondition
+        /// is specified and not met, the returned task will fail with an <see cref="RpcException"/>.
+        /// </remarks>
+        /// <param name="precondition">Optional precondition for deletion. May be null, in which case the deletion is unconditional.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public async Task<WriteResult> DeleteAsync(Precondition precondition = null, CancellationToken cancellationToken = default)
+        {
+            var batch = Database.CreateWriteBatch();
+            batch.Delete(this, precondition);
+            var results = await batch.CommitAsync(cancellationToken).ConfigureAwait(false);
+            return results[0];
         }
 
         // TODO: Check naming. Other languages just have "get", but that feels a bit odd in .NET.

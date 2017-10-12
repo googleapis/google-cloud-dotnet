@@ -70,6 +70,24 @@ namespace Google.Cloud.Firestore.Data
         }
 
         /// <summary>
+        /// Adds a write operation that deletes the specified document, with an optional precondition.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to delete. Must not be null.</param>
+        /// <param name="precondition">Optional precondition for deletion. May be null, in which case the deletion is unconditional.</param>
+        /// <returns>This batch, for the purposes of method chaining.</returns>
+        public WriteBatch Delete(DocumentReference documentReference, Precondition precondition = null)
+        {
+            GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
+            var write = new Write
+            {
+                CurrentDocument = precondition?.Proto,
+                Delete = documentReference.Path
+            };
+            Writes.Add(write);
+            return this;
+        }
+
+        /// <summary>
         /// Commits the batch on the server.
         /// </summary>
         /// <returns>The write results from the commit.</returns>

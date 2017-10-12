@@ -49,6 +49,34 @@ namespace Google.Cloud.Firestore.Data.Tests
         }
 
         [Fact]
+        public void Delete_NoPrecondition()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            batch.Delete(doc);
+
+            var expectedWrite = new Write { Delete = doc.Path };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Fact]
+        public void Delete_WithPrecondition()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            batch.Delete(doc, Precondition.LastUpdated(new Timestamp(1 ,2)));
+
+            var expectedWrite = new Write
+            {
+                Delete = doc.Path,
+                CurrentDocument = new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) }
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Fact]
         public async Task CommitAsync()
         {
             var mock = new Mock<FirestoreClient> { CallBase = true };
