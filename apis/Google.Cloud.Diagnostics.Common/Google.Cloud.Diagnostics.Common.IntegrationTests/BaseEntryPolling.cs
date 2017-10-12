@@ -24,11 +24,27 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
     /// </summary>
     internal abstract class BaseEntryPolling<T>
     {
+        /// <summary>Default total time to spend sleeping when looking for entries.</summary>
+        private static readonly TimeSpan _defaultTimeout = TimeSpan.FromSeconds(10);
+
+        /// <summary>Default time to sleep between checks for entries.</summary>
+        private static readonly TimeSpan _defaultSleepInterval = TimeSpan.FromSeconds(5);
+
         /// <summary>Total time to spend sleeping when looking for entries.</summary>
-        private static readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
+        private readonly TimeSpan _timeout;
 
         /// <summary>Time to sleep between checks for entries.</summary>
-        private static readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(5);
+        private readonly TimeSpan _sleepInterval;
+
+        /// <param name="timeout">Optional, total time to spend sleeping when looking for entries.
+        ///     Defaults to <see cref="_defaultTimeout"/>.</param>
+        /// <param name="sleepInterval">Optional, time to sleep between checks for entries.
+        ///     Defaults to <see cref="_defaultSleepInterval"/></param>
+        protected BaseEntryPolling(TimeSpan timeout = default, TimeSpan sleepInterval = default)
+        {
+            _timeout = timeout == default ? _defaultTimeout : timeout;
+            _sleepInterval = sleepInterval == default ?  _defaultSleepInterval : sleepInterval;
+        }
 
         /// <summary>
         /// Polls for entries of type <see cref="T"/>.  Will continue to poll until
