@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0-beta06</Version>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard2.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Features>IOperation</Features>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <Deterministic>true</Deterministic>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Description>Google EntityFrameworkCore Provider for Google Cloud Spanner.</Description>
+    <PackageTags>Spanner;ADO;EntityFramework;Google;Cloud</PackageTags>
+    <Copyright>Copyright 2017 Google Inc.</Copyright>
+    <Authors>Google Inc.</Authors>
+    <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</RepositoryUrl>
+    <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4" PrivateAssets="All" />
+    <ProjectReference Include="..\..\Google.Cloud.Spanner.Admin.Database.V1\Google.Cloud.Spanner.Admin.Database.V1\Google.Cloud.Spanner.Admin.Database.V1.csproj" />
+    <ProjectReference Include="..\..\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1.csproj" />
+    <ProjectReference Include="..\..\Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj" />
+    <ProjectReference Include="..\..\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1.csproj" />
+    <PackageReference Include="Grpc.Core" Version="1.6.1" PrivateAssets="None" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.0" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.1.2" PrivateAssets="All" />
+    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup Label="dotnet pack instructions">
+    <Content Include="$(OutputPath)netstandard2.0\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/netstandard2.0</PackagePath>
+    </Content>
+  </ItemGroup>
+</Project>

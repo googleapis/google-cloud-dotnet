@@ -495,7 +495,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        protected override DbCommand CreateDbCommand() => new SpannerCommand();
+        protected override DbCommand CreateDbCommand() => new SpannerCommand() { Connection = this};
 
         /// <inheritdoc />
         protected override void Dispose(bool disposing)

@@ -14,6 +14,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using Google.Cloud.Spanner.V1;
@@ -89,6 +90,21 @@ namespace Google.Cloud.Spanner.Data
                 StructMembers[field.Name] = FromProtobufType(field.Type);
             }
         }
+
+        /// <summary>
+        /// The string name of this type in Cloud Spanner.
+        /// </summary>
+        public string DatabaseTypeName => this.TypeCode.GetOriginalName();
+
+        /// <summary>
+        /// The corresponding <see cref="DbType"/> for this Cloud Spanner type.
+        /// </summary>
+        public DbType DbType => TypeCode.GetDbType();
+
+        /// <summary>
+        /// The default <see cref="System.Type"/> for this Cloud Spanner type.
+        /// </summary>
+        public System.Type DefaultClrType => TypeCode.GetDefaultClrTypeFromSpannerType();
 
         /// <inheritdoc />
         public override string ToString()
