@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Firestore.Data.IntegrationTests.Models;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -32,7 +33,7 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
             var query = _fixture.HighScoreCollection;
             var snapshot = await query.SnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
-            Assert.Equal(HighScore.Data, items.OrderBy(x => x.Name));
+            Assert.Equal(HighScore.Data, items.OrderBy(x => x.Name, StringComparer.Ordinal));
         }
 
         [Fact]
@@ -41,7 +42,7 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
             var query = _fixture.HighScoreCollection.Where("Score", QueryOperator.GreaterThan, 100);
             var snapshot = await query.SnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
-            Assert.Equal(HighScore.Data.Where(x => x.Score > 100), items.OrderBy(x => x.Name));
+            Assert.Equal(HighScore.Data.Where(x => x.Score > 100), items.OrderBy(x => x.Name, StringComparer.Ordinal));
         }
 
         [Fact]
@@ -60,12 +61,13 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
             var snapshot = await query.SnapshotAsync();
 
             // Check that we got the documents we expected
-            var names = snapshot.Documents.Select(doc => doc.GetField<string>("Name")).OrderBy(x => x);
+            var names = snapshot.Documents.Select(doc => doc.GetField<string>("Name")).OrderBy(x => x, StringComparer.Ordinal);
             Assert.Equal(HighScore.Data.Select(x => x.Name), names);
 
             // Check that the ordering is actually by document reference
-            var orderedByReference = snapshot.Documents.OrderBy(doc => doc.Reference.Path);
-            Assert.Equal(orderedByReference, snapshot.Documents);
+            // (Select just the ID to make it much easier to understand failures.)
+            var orderedByReference = snapshot.Documents.Select(doc => doc.Id).OrderBy(x => x, StringComparer.Ordinal);
+            Assert.Equal(orderedByReference, snapshot.Documents.Select(x => x.Id));
         }
 
         [Fact(Skip = "Requires CreateIndex support")]
@@ -95,7 +97,7 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
             Assert.Equal(
                 // Create the equivalent results by creating new objects
                 HighScore.Data.Select(x => new HighScore { Name = x.Name, Score = x.Score }),
-                items.OrderBy(x => x.Name));
+                items.OrderBy(x => x.Name, StringComparer.Ordinal));
         }
 
         [Fact]
