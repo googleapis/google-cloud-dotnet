@@ -15,6 +15,7 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1Beta1;
 using Moq;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -22,7 +23,7 @@ using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
-    public class WriteBatchTest
+    public partial class WriteBatchTest
     {
         [Fact]
         public void Create()
@@ -77,6 +78,63 @@ namespace Google.Cloud.Firestore.Data.Tests
         }
 
         [Fact]
+        public void Update()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var updates = new Dictionary<FieldPath, object>
+            {
+                { new FieldPath("a.b", "f.g"), 7 },
+                { FieldPath.FromDotSeparatedString("h.m"), new Dictionary<string, object> { { "n.o", 7 } } }
+            };
+
+            batch.Update(doc, updates);
+
+            var expectedWrite = new Write
+            {
+                CurrentDocument = new V1Beta1.Precondition { Exists = true },
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields =
+                    {
+                        { "a.b", CreateMap("f.g", CreateValue(7)) },
+                        { "h", CreateMap("m", CreateMap("n.o", CreateValue(7))) }
+                    }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "`a.b`.`f.g`", "h.m" } }
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Fact]
+        public void Update_WithPrecondition()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var updates = new Dictionary<FieldPath, object>
+            {
+                { new FieldPath("x"), "y" }
+            };
+
+            batch.Update(doc, updates, Precondition.LastUpdated(new Timestamp(1, 2)));
+
+            var expectedWrite = new Write
+            {
+                CurrentDocument = new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) },
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields = { { "x", CreateValue("y") } }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "x" } }
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Fact]
         public async Task CommitAsync()
         {
             var mock = new Mock<FirestoreClient> { CallBase = true };
@@ -118,8 +176,5 @@ namespace Google.Cloud.Firestore.Data.Tests
             batch.Create(db.Document("col/doc"), new { Name = "Test" });
             Assert.False(batch.IsEmpty);
         }
-
-        private void AssertWrites(WriteBatch batch, params Write[] writes) =>
-            Assert.Equal(writes, batch.Writes);
     }
 }
