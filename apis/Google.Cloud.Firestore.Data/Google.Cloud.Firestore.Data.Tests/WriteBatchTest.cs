@@ -40,8 +40,8 @@ namespace Google.Cloud.Firestore.Data.Tests
                     Name = doc.Path,
                     Fields =
                     {
-                        { "Name", new Value { StringValue = "Test" } },
-                        { "Score", new Value { IntegerValue = 20L } }
+                        { "Name", CreateValue("Test") },
+                        { "Score", CreateValue(20) }
                     }
                 }
             };

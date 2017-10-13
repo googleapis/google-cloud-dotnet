@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Firestore.V1Beta1;
 using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Data.Tests
@@ -24,5 +25,11 @@ namespace Google.Cloud.Firestore.Data.Tests
     {
         internal static wkt::Timestamp CreateProtoTimestamp(long seconds, int nanos) =>
             new wkt::Timestamp { Seconds = seconds, Nanos = nanos };
+
+        internal static Value CreateValue(long integer) => new Value { IntegerValue = integer };
+
+        internal static Value CreateValue(string text) => new Value { StringValue = text };
+
+        internal static Value CreateNullValue() => new Value { NullValue = wkt.NullValue.NullValue };
     }
 }
