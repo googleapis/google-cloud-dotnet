@@ -39,7 +39,9 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var unequal = new[]
             {
                 new BigtableByteString(0),
-                new BigtableByteString(0L)
+                new BigtableByteString(0L),
+                new BigtableByteString("a"),
+                new BigtableByteString(ByteString.CopyFrom(1, 2, 3))
             };
             ComparisonTester.AssertEqual(control, equal, unequal);
             ComparisonTester.AssertEqualityOperators(control, equal, unequal);
@@ -144,13 +146,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [InlineData("BigtableByteString: Length=0; UTF-8 String=")]
+        [InlineData("BigtableByteString: Length=0; Hex=")]
         [InlineData("BigtableByteString: Length=6; Hex=00 01 02 03 0A 10", 0, 1, 2, 3, 10, 16)]
         [InlineData("BigtableByteString: Length=32; Hex=00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F",
             0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31)]
         [InlineData("BigtableByteString: Length=33; Hex (first 32 bytes only)=00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F",
             0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)]
-        [InlineData("BigtableByteString: Length=8; UTF-8 String=Bigtable", 66, 105, 103, 116, 97, 98, 108, 101)]
+        [InlineData("BigtableByteString: Length=8; Hex=42 69 67 74 61 62 6C 65", 66, 105, 103, 116, 97, 98, 108, 101)]
         public void Formatting(string expectedText, params int[] data)
         {
             // xUnit isn't happy if the parameter type is actually byte[].

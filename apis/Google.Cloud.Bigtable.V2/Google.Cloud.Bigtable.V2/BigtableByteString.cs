@@ -20,7 +20,7 @@ using System.Text;
 namespace Google.Cloud.Bigtable.V2
 {
     /// <summary>
-    /// The bytes string which can be used for a row key, column qualifier, or cell value.
+    /// A sequence of bytes which can be used for a row key, column qualifier, or cell value.
     /// </summary>
     public struct BigtableByteString : IComparable, IComparable<BigtableByteString>, IEquatable<BigtableByteString>
     {
@@ -103,38 +103,19 @@ namespace Google.Cloud.Bigtable.V2
         public override string ToString()
         {
             var value = Value;
-            var builder = new StringBuilder($"{nameof(BigtableByteString)}: Length={value.Length}; ");
-            int initialLength = builder.Length;
-
-            // For short byte strings which can be interpreted as simple strings, display them that way.
-            if (value.Length <= 32)
-            {
-                // TODO: See if there's something better we can do here
-                builder.Append($"UTF-8 String=");
-                for (int i = 0; i < Math.Min(value.Length, 32); i++)
-                {
-                    byte b = value[i];
-                    if (b < 32 || 127 < b)
-                    {
-                        builder.Length = initialLength;
-                        break;
-                    }
-
-                    builder.Append((char)b);
-                }
+            var x = BitConverter.ToString(value.ToByteArray());
+            var builder = new StringBuilder($"{nameof(BigtableByteString)}: Length={value.Length}; Hex");
+            if (value.Length > 32) {
+                builder.Append(" (first 32 bytes only)");
             }
-
-            if (builder.Length == initialLength)
+            builder.Append('=');
+            for (int i = 0; i < Math.Min(value.Length, 32); i++)
             {
-                builder.Append(value.Length > 32 ? "Hex (first 32 bytes only)=" : "Hex=");
-                for (int i = 0; i < Math.Min(value.Length, 32); i++)
+                if (i != 0)
                 {
-                    if (i != 0)
-                    {
-                        builder.Append(" ");
-                    }
-                    builder.Append(value[i].ToString("X2"));
+                    builder.Append(" ");
                 }
+                builder.Append(value[i].ToString("X2"));
             }
             return builder.ToString();
         }
