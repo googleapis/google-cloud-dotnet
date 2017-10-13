@@ -21,7 +21,8 @@ using wkt = Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.Firestore.Data
 {
     /// <summary>
-    /// A nanosecond-precision immutable timestamp.
+    /// A nanosecond-precision immutable timestamp. When this is stored as part of a document in Firestore,
+    /// it is truncated to the microsecond, towards the start of time.
     /// </summary>
     public struct Timestamp : IEquatable<Timestamp>, IComparable, IComparable<Timestamp>
     {
