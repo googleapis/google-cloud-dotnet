@@ -22,6 +22,8 @@ using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
+    // Note: deliberately not using the CreateValue helper to make the protos absolutely clear.
+
     public class ValueDeserializerTest
     {
         [Theory]

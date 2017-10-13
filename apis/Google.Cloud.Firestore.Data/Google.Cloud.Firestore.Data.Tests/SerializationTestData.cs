@@ -23,6 +23,9 @@ using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
+    // Note: deliberately not using the CreateValue helper to make the protos absolutely clear.
+    // (CreateProtoTimestamp is more reasonable though.)
+
     internal static class SerializationTestData
     {
         internal static FirestoreDb Database { get; } = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());

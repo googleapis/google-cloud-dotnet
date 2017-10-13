@@ -54,7 +54,7 @@ namespace Google.Cloud.Firestore.Data.Tests
             var query = GetEmptyQuery().Where("a.b", QueryOperator.LessThan, "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThan, Value = new Value { StringValue = "x" } }),
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThan, Value = CreateValue("x") }),
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.QueryProto);
@@ -96,9 +96,9 @@ namespace Google.Cloud.Firestore.Data.Tests
             var expected = new StructuredQuery
             {
                 Where = CompositeFilter(
-                    Filter(new FieldFilter { Field = Field("a"), Op = FieldFilter.Types.Operator.GreaterThanOrEqual, Value = new Value { StringValue = "x" } }),
-                    Filter(new FieldFilter { Field = Field("b"), Op = FieldFilter.Types.Operator.Equal, Value = new Value { StringValue = "y" } }),
-                    Filter(new FieldFilter { Field = Field("c"), Op = FieldFilter.Types.Operator.Equal, Value = new Value { StringValue = "z" } })
+                    Filter(new FieldFilter { Field = Field("a"), Op = FieldFilter.Types.Operator.GreaterThanOrEqual, Value = CreateValue("x") }),
+                    Filter(new FieldFilter { Field = Field("b"), Op = FieldFilter.Types.Operator.Equal, Value = CreateValue("y") }),
+                    Filter(new FieldFilter { Field = Field("c"), Op = FieldFilter.Types.Operator.Equal, Value = CreateValue("z") })
                 ),
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
@@ -136,8 +136,8 @@ namespace Google.Cloud.Firestore.Data.Tests
             {
                 Select = new Projection { Fields = { Field("x") } },
                 OrderBy = { new Order { Field = Field("foo"), Direction = Direction.Ascending } },
-                StartAt = new Cursor { Before = false, Values = { new Value { StringValue = "a" } } },
-                EndAt = new Cursor { Before = true, Values = { new Value { StringValue = "b" } } },
+                StartAt = new Cursor { Before = false, Values = { CreateValue("a") } },
+                EndAt = new Cursor { Before = true, Values = { CreateValue("b") } },
                 Offset = 5,
                 Limit = 10,
                 From = { new CollectionSelector { CollectionId = "col" } }
@@ -215,7 +215,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                     new Order { Field = Field("bar"), Direction = Direction.Ascending },
                     new Order { Field = Field("baz"), Direction = Direction.Ascending },
                 },
-                StartAt = new Cursor { Before = true, Values = { new Value { IntegerValue = 1 }, new Value { StringValue = "x" } } },
+                StartAt = new Cursor { Before = true, Values = { CreateValue(1), CreateValue("x") } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.QueryProto);
@@ -233,7 +233,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                     new Order { Field = Field("bar"), Direction = Direction.Ascending },
                     new Order { Field = Field("baz"), Direction = Direction.Ascending },
                 },
-                StartAt = new Cursor { Before = false, Values = { new Value { IntegerValue = 1 }, new Value { StringValue = "x" } } },
+                StartAt = new Cursor { Before = false, Values = { CreateValue(1), CreateValue("x") } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.QueryProto);
@@ -251,7 +251,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                     new Order { Field = Field("bar"), Direction = Direction.Ascending },
                     new Order { Field = Field("baz"), Direction = Direction.Ascending },
                 },
-                EndAt = new Cursor { Before = false, Values = { new Value { IntegerValue = 1 }, new Value { StringValue = "x" } } },
+                EndAt = new Cursor { Before = false, Values = { CreateValue(1), CreateValue("x") } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.QueryProto);
@@ -269,7 +269,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                     new Order { Field = Field("bar"), Direction = Direction.Ascending },
                     new Order { Field = Field("baz"), Direction = Direction.Ascending },
                 },
-                EndAt = new Cursor { Before = true, Values = { new Value { IntegerValue = 1 }, new Value { StringValue = "x" } } },
+                EndAt = new Cursor { Before = true, Values = { CreateValue(1), CreateValue("x") } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.QueryProto);
@@ -323,15 +323,15 @@ namespace Google.Cloud.Firestore.Data.Tests
                 Select = new Projection { Fields = { Field("a.b"), Field("c.d") } },
                 Where = CompositeFilter(
                     Filter(new UnaryFilter { Field = Field("a"), Op = UnaryFilter.Types.Operator.IsNull }),
-                    Filter(new FieldFilter { Field = Field("b"), Op = FieldFilter.Types.Operator.GreaterThan, Value = new Value { IntegerValue = 10L } })
+                    Filter(new FieldFilter { Field = Field("b"), Op = FieldFilter.Types.Operator.GreaterThan, Value = CreateValue(10) })
                 ),
                 OrderBy =
                 {
                     new Order { Field = Field("foo"), Direction = Direction.Ascending },
                     new Order { Field = Field("bar"), Direction = Direction.Descending }
                 },
-                StartAt = new Cursor { Before = true, Values = { new Value { StringValue = "x" }, new Value { IntegerValue = 10 } } },
-                EndAt = new Cursor { Before = false, Values = { new Value { StringValue = "y" } } },
+                StartAt = new Cursor { Before = true, Values = { CreateValue("x"), CreateValue(10) } },
+                EndAt = new Cursor { Before = false, Values = { CreateValue("y") } },
                 Offset = 3,
                 Limit = 2,
                 From = { new CollectionSelector { CollectionId = "col" } }
@@ -392,7 +392,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                         CreateTime = CreateProtoTimestamp(0, 1),
                         UpdateTime = CreateProtoTimestamp(0, 2),
                         Name = "projects/proj/databases/db/documents/col/doc1",
-                        Fields = { { "Name", new Value { StringValue = "x" } } }
+                        Fields = { { "Name", CreateValue("x") } }
                     }                    
                 },
                 new RunQueryResponse
@@ -403,7 +403,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                         CreateTime = CreateProtoTimestamp(0, 3),
                         UpdateTime = CreateProtoTimestamp(0, 4),
                         Name = "projects/proj/databases/db/documents/col/doc2",
-                        Fields = { { "Name", new Value { StringValue = "y" } } }
+                        Fields = { { "Name", CreateValue("y") } }
                     }
                 }
             };
@@ -479,7 +479,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                         CreateTime = CreateProtoTimestamp(0, 1),
                         UpdateTime = CreateProtoTimestamp(0, 2),
                         Name = "projects/proj/databases/db/documents/col/doc1",
-                        Fields = { { "Name", new Value { StringValue = "x" } } }
+                        Fields = { { "Name", CreateValue("x") } }
                     }
                 },
                 new RunQueryResponse
@@ -490,7 +490,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                         CreateTime = CreateProtoTimestamp(0, 3),
                         UpdateTime = CreateProtoTimestamp(0, 4),
                         Name = "projects/proj/databases/db/documents/col/doc2",
-                        Fields = { { "Name", new Value { StringValue = "y" } } }
+                        Fields = { { "Name", CreateValue("y") } }
                     }
                 }
             };
