@@ -109,6 +109,21 @@ namespace Google.Cloud.Firestore.Data
             return results[0];
         }
 
+        /// <summary>
+        /// Asynchronously performs a set of updates on the document referred to by this path, with an optional precondition.
+        /// </summary>
+        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null.</param>
+        /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public async Task<WriteResult> UpdateAsync(IDictionary<FieldPath, object> updates, Precondition precondition = null, CancellationToken cancellationToken = default)
+        {
+            var batch = Database.CreateWriteBatch();
+            batch.Update(this, updates, precondition);
+            var results = await batch.CommitAsync(cancellationToken).ConfigureAwait(false);
+            return results[0];
+        }
+
         // TODO: Check naming. Other languages just have "get", but that feels a bit odd in .NET.
         // Options:
         // - Get
