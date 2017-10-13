@@ -103,9 +103,9 @@ namespace Google.Cloud.Bigtable.V2
         public override string ToString()
         {
             var value = Value;
-            var x = BitConverter.ToString(value.ToByteArray());
             var builder = new StringBuilder($"{nameof(BigtableByteString)}: Length={value.Length}; Hex");
-            if (value.Length > 32) {
+            if (value.Length > 32)
+            {
                 builder.Append(" (first 32 bytes only)");
             }
             builder.Append('=');
