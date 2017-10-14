@@ -13,10 +13,7 @@
 // limitations under the License.
 
 using Google.Protobuf;
-using System;
 using System.Linq;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace Google.Cloud.Bigtable.V2.Tests
