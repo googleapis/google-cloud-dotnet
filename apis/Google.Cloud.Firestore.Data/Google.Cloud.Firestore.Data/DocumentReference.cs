@@ -124,6 +124,21 @@ namespace Google.Cloud.Firestore.Data
             return results[0];
         }
 
+        /// <summary>
+        /// Asynchronously sets data in the document, either replacing it completely or merging fields.
+        /// </summary>
+        /// <param name="documentData">The data to store in the document. Must not be null.</param>
+        /// <param name="options">The options to use when updating the document. May be null, which is equivalent to <see cref="SetOptions.Overwrite"/>.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The write result of the server operation.</returns>
+        public async Task<WriteResult> SetAsync(object documentData, SetOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var batch = Database.CreateWriteBatch();
+            batch.Set(this, documentData, options);
+            var results = await batch.CommitAsync(cancellationToken).ConfigureAwait(false);
+            return results[0];
+        }
+
         // TODO: Check naming. Other languages just have "get", but that feels a bit odd in .NET.
         // Options:
         // - Get

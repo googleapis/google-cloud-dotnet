@@ -15,6 +15,7 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1Beta1;
 using Moq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -134,6 +135,87 @@ namespace Google.Cloud.Firestore.Data.Tests
             AssertWrites(batch, expectedWrite);
         }
 
+        [Theory]
+        [InlineData(false)]
+        [InlineData(true)]
+        public void Set_Overwrite(bool explicitOptions)
+        {
+            var options = explicitOptions ? SetOptions.Overwrite : null;
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var data = new { Name = "Test", Nested = new { Value1 = 10, Value2 = 20 }, Score = 30 };
+            batch.Set(doc, data, options);
+
+            var expectedWrite = new Write
+            {
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields =
+                    {
+                        { "Name", CreateValue("Test") },
+                        { "Nested", CreateMap(("Value1", CreateValue(10)), ("Value2", CreateValue(20))) },
+                        { "Score", CreateValue(30) }
+                    }
+                }
+                // No UpdateMask
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Fact]
+        public void Set_MergeAll()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var data = new { Name = "Test", Nested = new { Value1 = 10, Value2 = 20 }, Score = 30 };
+            batch.Set(doc, data, SetOptions.MergeAll);
+
+            var expectedWrite = new Write
+            {
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields =
+                    {
+                        { "Name", CreateValue("Test") },
+                        { "Nested", CreateMap(("Value1", CreateValue(10)), ("Value2", CreateValue(20))) },
+                        { "Score", CreateValue(30) }
+                    }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "Name", "Nested.Value1", "Nested.Value2", "Score" } }
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Fact]
+        public void Set_MergeFields()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var data = new { Name = "Test", Nested = new { Value1 = 10, Value2 = 20 }, Score = 30 };
+            batch.Set(doc, data, SetOptions.MergeFields("Name", "Nested.Value2"));
+
+            var expectedWrite = new Write
+            {
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    // Only specified fields are included
+                    Fields =
+                    {
+                        { "Name", CreateValue("Test") },
+                        { "Nested", CreateMap("Value2", CreateValue(20)) }
+                    }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "Name", "Nested.Value2" } }
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
         [Fact]
         public async Task CommitAsync()
         {
@@ -175,6 +257,23 @@ namespace Google.Cloud.Firestore.Data.Tests
             Assert.True(batch.IsEmpty);
             batch.Create(db.Document("col/doc"), new { Name = "Test" });
             Assert.False(batch.IsEmpty);
+        }
+
+        private static void AssertWrites(WriteBatch batch, params Write[] writes) =>
+            Assert.Equal(writes, batch.Writes.Select(CanonicalizeWrite));
+
+        /// <summary>
+        /// Creates a canonical representation of a Write just by ordering lists predictably.
+        /// </summary>
+        private static Write CanonicalizeWrite(Write input)
+        {
+            var clone = input.Clone();
+            if (clone.UpdateMask != null)
+            {
+                clone.UpdateMask.FieldPaths.Clear();
+                clone.UpdateMask.FieldPaths.AddRange(input.UpdateMask.FieldPaths.OrderBy(x => x, StringComparer.Ordinal));
+            }
+            return clone;
         }
     }
 }

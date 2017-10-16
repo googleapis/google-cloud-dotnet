@@ -22,6 +22,7 @@ using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
+    // Just tests for WriteBatch.ExpandObject
     public partial class WriteBatchTest
     {
         [Fact]
@@ -148,9 +149,6 @@ namespace Google.Cloud.Firestore.Data.Tests
             Assert.Throws<InvalidOperationException>(() => WriteBatch.ExpandObject(input));
             Assert.Throws<InvalidOperationException>(() => WriteBatch.ExpandObject(input.InReverseOrder()));
         }
-
-        private void AssertWrites(WriteBatch batch, params Write[] writes) =>
-            Assert.Equal(writes, batch.Writes);
 
         /// <summary>
         /// Dictionary that preserves insertion order. Far from production ready, but it allows us to test more robustly here.

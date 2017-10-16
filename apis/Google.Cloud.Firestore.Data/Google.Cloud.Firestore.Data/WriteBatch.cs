@@ -96,6 +96,9 @@ namespace Google.Cloud.Firestore.Data
         /// <returns>This batch, for the purposes of method chaining.</returns>
         public WriteBatch Update(DocumentReference documentReference, IDictionary<FieldPath, object> updates, Precondition precondition = null)
         {
+            GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
+            GaxPreconditions.CheckNotNull(updates, nameof(updates));
+
             var serializedUpdates = updates.ToDictionary(pair => pair.Key, pair => ValueSerializer.Serialize(pair.Value));
             var deconstructed = ExpandObject(serializedUpdates);
 
@@ -112,6 +115,44 @@ namespace Google.Cloud.Firestore.Data
             };
             Writes.Add(write);
 
+            return this;
+        }
+
+        /// <summary>
+        /// Adds an operation that sets data in a document, either replacing it completely or merging fields.
+        /// </summary>
+        /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
+        /// <param name="documentData">The data to store in the document. Must not be null.</param>
+        /// <param name="options">The options to use when setting data in the document. May be null, which is equivalent to <see cref="SetOptions.Overwrite"/>.</param>
+        /// <returns>This batch, for the purposes of method chaining.</returns>
+        public WriteBatch Set(DocumentReference documentReference, object documentData, SetOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
+            GaxPreconditions.CheckNotNull(documentData, nameof(documentData));
+
+            var fields = ValueSerializer.SerializeMap(documentData);
+            options = options ?? SetOptions.Overwrite;
+            var mask = options.FieldMask;
+
+            // TODO: Check it's okay to do this *after* serialization. The Java code is somewhat different.
+            var fieldPaths = mask.Count == 0
+                ? fields.ToDictionary(pair => new FieldPath(pair.Key), pair => pair.Value)
+                : ApplyFieldMask(fields, mask);
+
+            var write = new Write
+            {
+                Update = new Document
+                {
+                    Fields = { ExpandObject(fieldPaths) },
+                    Name = documentReference.Path
+                }
+            };
+            if (options.Merge)
+            {
+                var paths = mask.Count == 0 ? ExtractDocumentMask(fields) : mask;
+                write.UpdateMask = new DocumentMask { FieldPaths = { paths.Select(fp => fp.EncodedPath) } };
+            }
+            Writes.Add(write);
             return this;
         }
 
@@ -200,6 +241,66 @@ namespace Google.Cloud.Firestore.Data
                     else
                     {
                         destination.Fields.Add(pair.Key, pair.Value);
+                    }
+                }
+            }
+        }
+
+        // Visible for testing
+        /// <summary>
+        /// Applies a field mask to the specified dictionary of values, returning a set of fields limited to the given field mask.
+        /// </summary>
+        /// <param name="fields">The field/value map.</param>
+        /// <param name="fieldMask">The field mask to apply.</param>
+        /// <returns>A filtered view of fields.</returns>
+        internal static Dictionary<FieldPath, Value> ApplyFieldMask(IDictionary<string, Value> fields, IEnumerable<FieldPath> fieldMask)
+        {
+            var result = new Dictionary<FieldPath, Value>();
+            var fieldPathSet = new HashSet<FieldPath>(fieldMask);
+            ApplyFieldMaskImpl(fields, FieldPath.Empty);
+            return result;
+
+            void ApplyFieldMaskImpl(IDictionary<string, Value> currentFields, FieldPath parentPath)
+            {
+                foreach (var pair in currentFields)
+                {
+                    FieldPath childPath = parentPath.Append(new FieldPath(pair.Key));
+                    if (fieldPathSet.Contains(childPath))
+                    {
+                        result[childPath] = pair.Value;
+                    }
+                    else if (pair.Value.MapValue != null)
+                    {
+                        // Even if the whole field isn't in the mask, a nested field might be. Recurse, populating the same result dictionary.
+                        ApplyFieldMaskImpl(pair.Value.MapValue.Fields, childPath);                        
+                    }
+                }
+            }
+        }
+
+        // Visible for testing
+        /// <summary>
+        /// Returns all a list of all the field paths to non-map values within a set of values.
+        /// An empty map value does not create any entries.
+        /// </summary>
+        internal static IReadOnlyList<FieldPath> ExtractDocumentMask(IDictionary<string, Value> fields)
+        {
+            var result = new List<FieldPath>();
+            AppendDocumentMask(fields, FieldPath.Empty);
+            return result;
+
+            void AppendDocumentMask(IDictionary<string, Value> currentFields, FieldPath parentPath)
+            {
+                foreach (var pair in currentFields)
+                {
+                    var childPath = parentPath.Append(new FieldPath(pair.Key));
+                    if (pair.Value.MapValue != null)
+                    {
+                        AppendDocumentMask(pair.Value.MapValue.Fields, childPath);
+                    }
+                    else
+                    {
+                        result.Add(childPath);
                     }
                 }
             }
