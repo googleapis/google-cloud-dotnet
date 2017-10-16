@@ -98,12 +98,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [InlineData("BigtableVersion: 1507852800000000", "2017-10-13 00:00:00Z")]
+        [InlineData("BigtableVersion: 1507852800000000", "2017-10-13")]
         public void FormattingDateTime(string expectedText, string dateTimeText)
         {
             var dateTime = DateTime.ParseExact(
                 dateTimeText,
-                "u",
+                "yyyy-MM-dd",
                 CultureInfo.InvariantCulture,
                 DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
             var version = new BigtableVersion(dateTime);
