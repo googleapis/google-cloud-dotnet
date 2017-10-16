@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 using Xunit;
 
@@ -45,6 +46,36 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
+        public void MicrosScaleFromDateTime()
+        {
+            var utcNow = DateTime.UtcNow;
+            var v1 = new BigtableVersion(utcNow);
+            var v2 = new BigtableVersion(utcNow + TimeSpan.FromSeconds(1));
+            var diff = v2.Value - v1.Value;
+            Assert.Equal(1_000_000, diff);
+        }
+
+        [Fact]
+        public void MicrosScaleToDateTime()
+        {
+            var utcNow = DateTime.UtcNow;
+            var v1 = new BigtableVersion(12345);
+            var v2 = new BigtableVersion(12345 + 1_000_000);
+            var timespanDiff = v2.ToDateTime() - v1.ToDateTime();
+            Assert.Equal(TimeSpan.FromSeconds(1), timespanDiff);
+        }
+
+        [Fact]
+        public void NegativeOneIsUtcNow()
+        {
+            var negativeOne = new BigtableVersion(-1);
+            var utcNow = new BigtableVersion(DateTime.UtcNow);
+
+            // Verify they are not more than 1 second apart
+            Assert.True(utcNow.Value - negativeOne.Value < 1_000_000);
+        }
+
+        [Fact]
         public void RoundTripDateTime()
         {
             var dateTime = DateTime.UtcNow;
@@ -67,10 +98,14 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [InlineData("BigtableVersion: 1507852800000000", "2017-10-13Z")]
+        [InlineData("BigtableVersion: 1507852800000000", "2017-10-13 00:00:00Z")]
         public void FormattingDateTime(string expectedText, string dateTimeText)
         {
-            var dateTime = DateTime.Parse(dateTimeText).ToUniversalTime();
+            var dateTime = DateTime.ParseExact(
+                dateTimeText,
+                "u",
+                CultureInfo.InvariantCulture,
+                DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
             var version = new BigtableVersion(dateTime);
             Assert.Equal(expectedText, version.ToString());
         }

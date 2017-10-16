@@ -52,7 +52,7 @@ namespace Google.Cloud.Bigtable.V2
         public BigtableVersion(long value)
         {
             GaxPreconditions.CheckArgumentRange(value, nameof(value), -1, long.MaxValue);
-            Value = value == -1 ? DateTime.UtcNow.Ticks / TicksPerMicro : value;
+            Value = value == -1 ? ValueFromTimestamp(DateTime.UtcNow) : value;
         }
 
         /// <summary>
@@ -76,8 +76,10 @@ namespace Google.Cloud.Bigtable.V2
                 nameof(timestamp),
                 $"The {nameof(BigtableVersion)} timestamp must be specified in UTC.");
 
-            Value = (timestamp.Ticks - UnixEpoch.Ticks) / TicksPerMicro;
+            Value = ValueFromTimestamp(timestamp);
         }
+
+        private static long ValueFromTimestamp(DateTime timestamp) => (timestamp.Ticks - UnixEpoch.Ticks) / TicksPerMicro;
 
         /// <summary>
         /// Gets the version value. Greater version values indicate newer cell values.
