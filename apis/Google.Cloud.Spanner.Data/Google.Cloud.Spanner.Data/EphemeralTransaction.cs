@@ -30,11 +30,17 @@ namespace Google.Cloud.Spanner.Data
     {
         private readonly SpannerConnection _connection;
 
-        public EphemeralTransaction(SpannerConnection connection)
+        public EphemeralTransaction(SpannerConnection connection, Logger logger)
         {
             GaxPreconditions.CheckNotNull(connection, nameof(connection));
             _connection = connection;
+            Logger = logger ?? Logger.DefaultLogger;
         }
+
+        /// <summary>
+        /// This property is intended for internal use only.
+        /// </summary>
+        private Logger Logger { get; }
 
         /// <summary>
         /// Acquires a read/write transaction from Spannerconnection and releases the transaction back into the pool
@@ -68,7 +74,7 @@ namespace Google.Cloud.Spanner.Data
                         await transaction.CommitAsync().ConfigureAwait(false);
                     }
                     return count;
-                }, "EphemeralTransaction.ExecuteMutations");
+                }, "EphemeralTransaction.ExecuteMutations", Logger);
         }
 
         public Task<ReliableStreamReader> ExecuteQueryAsync(
@@ -93,7 +99,7 @@ namespace Google.Cloud.Spanner.Data
 
                         return streamReader;
                     }
-                }, "EphemeralTransaction.ExecuteQuery");
+                }, "EphemeralTransaction.ExecuteQuery", Logger);
         }
     }
 }

@@ -65,6 +65,11 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         /// <summary>
+        /// This property is intended for internal use only.
+        /// </summary>
+        public Logger Logger { get; set; } = Logger.DefaultLogger;
+
+        /// <summary>
         /// </summary>
         public bool IsClosed { get; private set; }
 

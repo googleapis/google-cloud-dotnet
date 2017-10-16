@@ -18,7 +18,7 @@ using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    internal class TestLogger : DefaultLogger
+    internal class TestLogger : Logger
     {
         private static readonly TestLogger s_instance = new TestLogger();
 
@@ -28,7 +28,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public static void Install()
         {
-            SetLogger(s_instance);
+            SetDefaultLogger(s_instance);
         }
 
         // ReSharper disable once MemberCanBePrivate.Global

@@ -145,9 +145,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerOptions.Instance.MaximumPooledSessions = Math.Max(countToPreWarm + 50, 400);
             SpannerOptions.Instance.MaximumGrpcChannels = Math.Max(4, 8 * TargetQps / 2000);
 
-            Logger.Instance.Info(
+            Logger.DefaultLogger.Info(() =>
                 $"SpannerOptions.Instance.MaximumActiveSessions:{SpannerOptions.Instance.MaximumActiveSessions}");
-            Logger.Instance.Info(
+            Logger.DefaultLogger.Info(() =>
                 $"SpannerOptions.Instance.MaximumGrpcChannels:{SpannerOptions.Instance.MaximumGrpcChannels}");
 
             //prewarm step.
@@ -159,7 +159,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     var prewarm = new List<SpannerConnection>();
                     var localCount = Math.Min(increment, countToPreWarm);
-                    Logger.Instance.Info($"prewarming {localCount} spanner sessions");
+                    Logger.DefaultLogger.Info(() => $"prewarming {localCount} spanner sessions");
                     for (var i = 0; i < localCount; i++)
                     {
                         prewarm.Add(new SpannerConnection(_testFixture.ConnectionString));
@@ -178,7 +178,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             //now run the test.
             double result = await TestWriteLatencyWithQps(TargetQps, TestDuration, writeFunc);
-            Logger.Instance.Info($"Spanner latency= {result}ms");
+            Logger.DefaultLogger.Info(() => $"Spanner latency= {result}ms");
 
             ValidatePoolInfo();
 

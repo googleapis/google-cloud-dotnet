@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Update;
 
@@ -21,17 +23,24 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Update.Internal
     /// </summary>
     public class SpannerModificationCommandBatchFactory : IModificationCommandBatchFactory
     {
+        private readonly IDiagnosticsLogger<DbLoggerCategory.Database.Command> _logger;
         private readonly IRelationalTypeMapper _typeMapper;
 
         /// <summary>
         /// </summary>
         /// <param name="typeMapper"></param>
-        public SpannerModificationCommandBatchFactory(IRelationalTypeMapper typeMapper) => _typeMapper = typeMapper;
+        /// <param name="logger"></param>
+        public SpannerModificationCommandBatchFactory(IRelationalTypeMapper typeMapper,
+            IDiagnosticsLogger<DbLoggerCategory.Database.Command> logger)
+        {
+            _typeMapper = typeMapper;
+            _logger = logger;
+        }
 
         /// <summary>
         /// </summary>
         /// <returns></returns>
         public virtual ModificationCommandBatch Create()
-            => new SpannerModificationCommandBatch(_typeMapper);
+            => new SpannerModificationCommandBatch(_typeMapper, _logger);
     }
 }

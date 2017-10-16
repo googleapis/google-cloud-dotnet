@@ -26,7 +26,8 @@ namespace Google.Cloud.Spanner.Data
 {
     internal interface ISpannerClientFactory
     {
-        Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ChannelCredentials credentials, IDictionary additionalOptions);
+        Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ChannelCredentials credentials,
+            IDictionary additionalOptions, Logger logger);
     }
 
     /// <summary>
@@ -51,7 +52,8 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public async Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ChannelCredentials credentials, IDictionary additionalOptions)
+        public async Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ChannelCredentials credentials,
+            IDictionary additionalOptions, Logger logger)
         {
             var allowImmediateTimeout = false;
 
@@ -69,7 +71,7 @@ namespace Google.Cloud.Spanner.Data
                 endpoint.Host,
                 endpoint.Port,
                 credentials);
-            Logger.LogPerformanceCounterFn("SpannerClient.RawCreateCount", x => x + 1);
+            logger.LogPerformanceCounterFn("SpannerClient.RawCreateCount", x => x + 1);
 
             //Pull the timeout from spanner options.
             //The option must be set before OpenAsync is called.

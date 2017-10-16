@@ -13,7 +13,9 @@
 // limitations under the License.
 
 using System.Data.Common;
+using Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics;
 using Google.Cloud.Spanner.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
@@ -34,6 +36,11 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
         public override bool IsMultipleActiveResultSetsEnabled => true;
 
         /// <inheritdoc />
-        protected override DbConnection CreateDbConnection() => new SpannerConnection(ConnectionString);
+        protected override DbConnection CreateDbConnection()
+            => new SpannerConnection(ConnectionString)
+            {
+                //This will route all contextual logs through the EF logger to give a consistent logging experience.
+                Logger = new SpannerLogBridge<DbLoggerCategory.Database.Connection>(Dependencies.ConnectionLogger)
+            };
     }
 }

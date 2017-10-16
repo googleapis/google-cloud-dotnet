@@ -13,172 +13,308 @@
 // limitations under the License.
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.V1.Internal.Logging
 {
     /// <summary>
-    /// Provides diagnostic information on Cloud Spanner.
-    /// By default, diagnostic logs will be sent to Trace.WriteLine for .Net desktop
-    /// and stderr for .Net Core.
-    /// The default LogLevel is LogLevel.Error which will only log error information.
-    /// Performance logging can be turned on by setting LogPerformanceTraces = true.
-    /// TODO: examine https://github.com/grpc/grpc/tree/master/src/csharp/Grpc.Core/Logging
-    /// to determine if it should be used instead.
+    /// This is an internal class and is not intended to be used by external code.
     /// </summary>
     public abstract class Logger
     {
         private static Logger s_instance;
+        private int _perfLoggingTaskEnabled;
+        private readonly Dictionary<string, PerformanceTimeEntry> _perfCounterDictionary
+            = new Dictionary<string, PerformanceTimeEntry>();
 
         /// <summary>
-        /// 
+        /// This is an internal property and is not intended to be used by external code.
         /// </summary>
-        public static Logger Instance
+        public static Logger DefaultLogger
         {
-            get { return s_instance ?? (s_instance = new DefaultLogger()); }
-            private set { s_instance = value; }
+            get => s_instance ?? (s_instance = new DefaultLogger());
+            private set => s_instance = value;
         }
 
         /// <summary>
-        /// 
+        /// This is an internal property and is not intended to be used by external code.
         /// </summary>
-        /// <param name="instance"></param>
-        public static void SetLogger(Logger instance)
+        public static void SetDefaultLogger(Logger instance)
         {
-            Instance = instance;
+            DefaultLogger = instance;
         }
 
         /// <summary>
-        /// 
+        /// This is an internal property and is not intended to be used by external code.
         /// </summary>
-        /// <param name="message"></param>
-        public abstract void Debug(string message);
+        public LogLevel LogLevel { get; set; } = LogLevel.Error;
 
         /// <summary>
-        /// 
+        /// This is an internal property and is not intended to be used by external code.
         /// </summary>
-        /// <param name="message"></param>
-        public abstract void Info(string message);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="message"></param>
-        public abstract void Warn(string message);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="message"></param>
-        /// <param name="exception"></param>
-        public abstract void Error(string message, Exception exception = null);
+        public bool LogPerformanceTraces { get; set; }
 
         /// <summary>
-        /// 
+        /// This is an internal property and is not intended to be used by external code.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="valueFunc"></param>
-        /// 
-        public abstract void LogPerformanceCounter(string name, Func<double, double> valueFunc);
+        public virtual bool EnableSensitiveDataLogging { get; set; }
 
         /// <summary>
-        /// 
+        /// This is an internal property and is not intended to be used by external code.
         /// </summary>
-        public static LogLevel LogLevel { get; set; } = LogLevel.Error;
+        public TimeSpan PerformanceTraceLogInterval { get; set; } = TimeSpan.Zero;
 
         /// <summary>
-        /// 
+        /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public static bool LogPerformanceTraces { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static TimeSpan PerformanceTraceLogInterval { get; set; } = TimeSpan.Zero;
-
-        /// <summary>
-        /// Logs performance data if performance logging is enabled.
-        /// </summary>
-        public static void LogPerformanceData()
+        public void LogPerformanceData()
         {
             if (LogPerformanceTraces)
             {
-                Instance.LogPerformanceDataImpl();
+                LogPerformanceDataImpl();
             }
         }
 
         /// <summary>
         /// Performs the real performance logging.
         /// </summary>
-        protected virtual void LogPerformanceDataImpl()
+        private void LogPerformanceDataImpl()
         {
+            lock (_perfCounterDictionary)
+            {
+                if (_perfCounterDictionary.Count == 0)
+                {
+                    return;
+                }
+                var message = new StringBuilder();
+                var metricList = new SortedList();
+                message.AppendLine("Spanner performance metrics:");
+
+                foreach (var kvp in _perfCounterDictionary)
+                {
+                    //to make the tavg correct, we re-record the last value at the current timestamp.
+                    UpdateTimeWeightedAvg(kvp.Value, DateTime.UtcNow);
+
+                    //log it.
+                    metricList.Add(
+                        kvp.Key,
+                        $" {kvp.Key}({kvp.Value.Instances}) tavg={kvp.Value.TimeWeightedAverage} " +
+                        $"avg={kvp.Value.Average} max={kvp.Value.Maximum} min={kvp.Value.Minimum}" +
+                        $" last={kvp.Value.Last}");
+
+                    //now reset to last.
+                    if (ResetPerformanceTracesEachInterval)
+                    {
+                        lock (kvp.Value)
+                        {
+                            kvp.Value.Last = 0;
+                            kvp.Value.Instances = 0;
+                            kvp.Value.TotalTime = default(TimeSpan);
+                            kvp.Value.LastMeasureTime = DateTime.UtcNow;
+                            kvp.Value.Maximum = 0;
+                            kvp.Value.Minimum = 0;
+                            kvp.Value.Average = 0;
+                            kvp.Value.TimeWeightedAverage = 0;
+                        }
+                    }
+                }
+
+                foreach (string s in metricList.GetValueList())
+                {
+                    message.AppendLine(s);
+                }
+
+                LogPerformanceMessage(message.ToString());
+            }
         }
 
         /// <summary>
-        /// 
+        /// This is an internal property and is not intended to be used by external code.
         /// </summary>
-        public static bool ResetPerformanceTracesEachInterval { get; set; } = true;
+        public bool ResetPerformanceTracesEachInterval { get; set; } = true;
 
         /// <summary>
-        /// Logs a debug message.
+        /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public static void Debug(Func<string> messageFunc)
+        public virtual void LogPerformanceMessage(string message) => WriteLine(message);
+
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        public virtual void Debug(Func<string> messageFunc)
         {
             if (LogLevel >= LogLevel.Debug)
             {
-                Instance.Debug(messageFunc());
+                WriteLine(messageFunc());
             }
         }
 
         /// <summary>
-        /// Logs an information message.
+        /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public static void Info(Func<string> messageFunc)
+        public virtual void Info(Func<string> messageFunc)
         {
             if (LogLevel >= LogLevel.Info)
             {
-                Instance.Debug(messageFunc());
+                WriteLine(messageFunc());
             }
         }
 
         /// <summary>
-        /// Logs a warning.
+        /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public static void Warn(Func<string> messageFunc)
+        public void Sensitive_Info(Func<string> messageFunc)
+        {
+            if (EnableSensitiveDataLogging)
+            {
+                Info(messageFunc);
+            }
+        }
+
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        public virtual void Warn(Func<string> messageFunc)
         {
             if (LogLevel >= LogLevel.Warn)
             {
-                Instance.Debug(messageFunc());
+                WriteLine(messageFunc());
             }
         }
 
         /// <summary>
-        /// Logs an error.
+        /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public static void Error(Func<string> messageFunc, Exception exception = null)
+        public virtual void Error(Func<string> messageFunc, Exception exception = null)
         {
             if (LogLevel >= LogLevel.Error)
             {
-                Instance.Debug(messageFunc());
+                WriteLine(messageFunc());
             }
         }
 
         /// <summary>
-        /// Logs a performance counter.
+        /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public static void LogPerformanceCounter(string name, Func<double> valueFunc)
+        public void LogPerformanceCounter(string name, Func<double> valueFunc)
         {
             if (LogPerformanceTraces)
             {
-                Instance.LogPerformanceCounter(name, x => valueFunc());
+                LogPerformanceCounter(name, x => valueFunc());
             }
         }
 
         /// <summary>
-        /// Logs a performance counter.
+        /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public static void LogPerformanceCounterFn(string name, Func<double, double> valueFunc)
+        public void LogPerformanceCounterFn(string name, Func<double, double> valueFunc)
         {
             if (LogPerformanceTraces)
             {
-                Instance.LogPerformanceCounter(name, valueFunc);
+                LogPerformanceCounter(name, valueFunc);
+            }
+        }
+
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        protected abstract void WriteLine(string message);
+
+        private async Task PerformanceLogAsync()
+        {
+            while (true)
+            {
+                //while this method is only started once performance logging is turned on,
+                //we also allow performance logging to be turned off
+                //If that happens, we'll just poll every second to see if it was turned back on.
+                //TODO(benwu): if/when we expose profile stats publicly, we should end and restart
+                // the task properly.
+                await Task.Delay(PerformanceTraceLogInterval != TimeSpan.Zero ?
+                    PerformanceTraceLogInterval
+                    : TimeSpan.FromSeconds(1)
+                ).ConfigureAwait(false);
+                if (PerformanceTraceLogInterval.TotalMilliseconds > 0)
+                {
+                    LogPerformanceDataImpl();
+                }
+            }
+            // ReSharper disable once FunctionNeverReturns
+        }
+
+        private void RecordEntryValue(PerformanceTimeEntry entry, Func<double, double> valueFunc)
+        {
+            lock (entry)
+            {
+                var value = valueFunc(entry.Last);
+                var total = entry.Instances * entry.Average;
+                entry.Instances++;
+                entry.Average = (total + value) / entry.Instances;
+                entry.Maximum = entry.LastMeasureTime == default(DateTime) ? value : Math.Max(entry.Minimum, value);
+                entry.Minimum = entry.LastMeasureTime == default(DateTime) ? value : Math.Min(entry.Minimum, value);
+                var now = DateTime.UtcNow;
+                UpdateTimeWeightedAvg(entry, now);
+                entry.LastMeasureTime = now;
+                entry.Last = value;
+            }
+        }
+
+        private void UpdateTimeWeightedAvg(PerformanceTimeEntry entry, DateTime now)
+        {
+            lock (entry)
+            {
+                if (entry.LastMeasureTime != default(DateTime))
+                {
+                    double milliSoFar = 0;
+                    var deltaTime = (now - entry.LastMeasureTime).TotalMilliseconds;
+                    milliSoFar += entry.TotalTime.TotalMilliseconds;
+                    entry.TotalTime = entry.TotalTime.Add(TimeSpan.FromMilliseconds(deltaTime));
+                    entry.TimeWeightedAverage = (milliSoFar * entry.TimeWeightedAverage + entry.Last * deltaTime) /
+                                                entry.TotalTime.TotalMilliseconds;
+                }
+            }
+        }
+
+        /// <summary>
+        /// This class is for internal use and not meant to be consumed directly.
+        /// </summary>
+        private void LogPerformanceCounter(string name, Func<double, double> valueFunc)
+        {
+            if (Interlocked.CompareExchange(ref _perfLoggingTaskEnabled, 1, 0) == 0)
+            {
+                //kick off perf logging.
+                Task.Run(PerformanceLogAsync);
+            }
+
+            lock (_perfCounterDictionary)
+            {
+                if (!_perfCounterDictionary.TryGetValue(name, out PerformanceTimeEntry entry))
+                {
+                    entry = new PerformanceTimeEntry();
+                    _perfCounterDictionary[name] = entry;
+                }
+                RecordEntryValue(entry, valueFunc);
+            }
+        }
+
+        private class PerformanceTimeEntry
+        {
+            public int Instances { get; set; }
+            public double Average { get; set; }
+            public double TimeWeightedAverage { get; set; }
+            public TimeSpan TotalTime { get; set; }
+            public double Maximum { get; set; }
+            public double Minimum { get; set; }
+            public double Last { get; set; }
+            public DateTime LastMeasureTime { get; set; }
+
+            /// <inheritdoc />
+            public override string ToString()
+            {
+                return $"Recordings({Instances}) Average({Average}) TAvg({TimeWeightedAverage})";
             }
         }
     }

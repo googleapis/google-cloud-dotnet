@@ -22,14 +22,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests {
         /// <inheritdoc />
         public override void Before(MethodInfo methodUnderTest)
         {
-            Logger.LogPerformanceData();
+            Logger.DefaultLogger.LogPerformanceData();
             base.Before(methodUnderTest);
         }
 
         /// <inheritdoc />
         public override void After(MethodInfo methodUnderTest)
         {
-            Logger.LogPerformanceData();
+            Logger.DefaultLogger.LogPerformanceData();
             base.After(methodUnderTest);
         }
     }

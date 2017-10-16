@@ -86,13 +86,13 @@ namespace Google.Cloud.Spanner.Data
         {
             get
             {
-                var underlyingLevel = (int) Logger.LogLevel;
+                var underlyingLevel = (int) Logger.DefaultLogger.LogLevel;
                 return GaxPreconditions.CheckEnumValue((LogLevel) underlyingLevel, nameof(LogLevel));
             }
             set
             {
                 var underlyingLevel = (int) value;
-                Logger.LogLevel = GaxPreconditions.CheckEnumValue((V1.Internal.Logging.LogLevel) underlyingLevel,
+                Logger.DefaultLogger.LogLevel = GaxPreconditions.CheckEnumValue((V1.Internal.Logging.LogLevel) underlyingLevel,
                     nameof(LogLevel));
             }
         }
@@ -104,8 +104,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal bool LogPerformanceTraces
         {
-            get => Logger.LogPerformanceTraces;
-            set => Logger.LogPerformanceTraces = value;
+            get => Logger.DefaultLogger.LogPerformanceTraces;
+            set => Logger.DefaultLogger.LogPerformanceTraces = value;
         }
 
         /// <summary>
@@ -113,8 +113,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal TimeSpan PerformanceTraceLogInterval
         {
-            get => Logger.PerformanceTraceLogInterval;
-            set => Logger.PerformanceTraceLogInterval = value;
+            get => Logger.DefaultLogger.PerformanceTraceLogInterval;
+            set => Logger.DefaultLogger.PerformanceTraceLogInterval = value;
         }
 
         /// <summary>
@@ -131,8 +131,8 @@ namespace Google.Cloud.Spanner.Data
 
         internal bool ResetPerformanceTracesEachInterval
         {
-            get => Logger.ResetPerformanceTracesEachInterval;
-            set => Logger.ResetPerformanceTracesEachInterval = value;
+            get => Logger.DefaultLogger.ResetPerformanceTracesEachInterval;
+            set => Logger.DefaultLogger.ResetPerformanceTracesEachInterval = value;
         }
 
         /// <summary>

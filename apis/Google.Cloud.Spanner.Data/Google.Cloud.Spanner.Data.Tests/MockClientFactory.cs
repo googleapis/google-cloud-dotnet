@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Grpc.Core;
 using Moq;
 
@@ -30,7 +31,8 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         public MockClientFactory(SpannerClient firstClient) => _currentClient = firstClient;
 
-        public Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ChannelCredentials credentials, IDictionary additionalOptions)
+        public Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ChannelCredentials credentials, 
+            IDictionary additionalOptions, Logger logger)
         {
             Invocations++;
             var result = _currentClient;

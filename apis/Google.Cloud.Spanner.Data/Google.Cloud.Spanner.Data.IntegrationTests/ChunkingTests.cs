@@ -104,7 +104,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task TestChunking()
         {
-            Logger.Instance.Info($"Seed={_seed}");
+            Logger.DefaultLogger.Info(() => $"Seed={_seed}");
             var rowsRead = 0;
             int rowsToWrite = _random.Next(1, 6);
 

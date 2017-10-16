@@ -43,6 +43,8 @@ namespace Google.Cloud.Spanner.V1
 
         public SessionPoolKey Key { get; }
 
+        private Logger Logger { get; } = Logger.DefaultLogger;
+
         internal SessionPoolImpl(SessionPoolKey key, SessionPoolOptions options)
         {
             _options = GaxPreconditions.CheckNotNull(options, nameof(options));
@@ -92,7 +94,7 @@ namespace Google.Cloud.Spanner.V1
             }, null, cancellationToken);
         }
 
-        private static void LogSessionsPooled()
+        private void LogSessionsPooled()
         {
             Logger.LogPerformanceCounter("Session.PooledCount", () => s_activeSessionsPooled);
         }
@@ -121,7 +123,18 @@ namespace Google.Cloud.Spanner.V1
             }
             if (entry.Session != null)
             {
-                await Key.Client.DeleteSessionAsync(entry.Session.GetSessionName(), cancellationToken).ConfigureAwait(false);
+                try
+                {
+                    await Key.Client.DeleteSessionAsync(entry.Session.GetSessionName(), cancellationToken)
+                        .ConfigureAwait(false);
+                }
+                catch (Exception e)
+                {
+                    //The session delete is best effort, but we will log an error if needed
+                    //Note that this error can happen if a test deletes it's database and a later test clears
+                    //out the session pool.
+                    Logger.Error(() => "Unable to delete a pooled session.", e);
+                }
             }
         }
 

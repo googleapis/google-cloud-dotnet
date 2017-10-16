@@ -31,5 +31,15 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Query.Sql.Internal
             : base(dependencies, selectExpression)
         {
         }
+
+        /// <summary>
+        ///     The default true literal SQL.
+        /// </summary>
+        protected override string TypedTrueLiteral => "TRUE";
+
+        /// <summary>
+        ///     The default false literal SQL.
+        /// </summary>
+        protected override string TypedFalseLiteral => "FALSE";
     }
 }

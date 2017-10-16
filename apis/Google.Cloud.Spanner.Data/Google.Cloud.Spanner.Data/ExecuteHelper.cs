@@ -22,13 +22,13 @@ namespace Google.Cloud.Spanner.Data
 {
     internal static class ExecuteHelper
     {
-        internal static void WithErrorTranslationAndProfiling(Action t, string name)
+        internal static void WithErrorTranslationAndProfiling(Action t, string name, Logger logger)
         {
             SpannerException translatedException;
             try
             {
                 Stopwatch sw = null;
-                if (Logger.LogPerformanceTraces)
+                if (logger.LogPerformanceTraces)
                 {
                     sw = Stopwatch.StartNew();
                 }
@@ -36,7 +36,7 @@ namespace Google.Cloud.Spanner.Data
                 t();
                 if (sw != null)
                 {
-                    Logger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
+                    logger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
                 }
             }
             catch (Exception e) when ((translatedException = SpannerException.TryTranslateRpcException(e)) != null)
@@ -45,24 +45,24 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        internal static Task WithErrorTranslationAndProfiling(Func<Task> t, string name)
+        internal static Task WithErrorTranslationAndProfiling(Func<Task> t, string name, Logger logger)
         {
             return WithErrorTranslationAndProfiling(
                 async () =>
                 {
                     await t().ConfigureAwait(false);
                     return 0;
-                }, name);
+                }, name, logger);
         }
 
-        internal static async Task<T> WithErrorTranslationAndProfiling<T>(Func<Task<T>> t, string name)
+        internal static async Task<T> WithErrorTranslationAndProfiling<T>(Func<Task<T>> t, string name, Logger logger)
         {
             SpannerException translatedException;
 
             try
             {
                 Stopwatch sw = null;
-                if (Logger.LogPerformanceTraces)
+                if (logger.LogPerformanceTraces)
                 {
                     sw = Stopwatch.StartNew();
                 }
@@ -70,7 +70,7 @@ namespace Google.Cloud.Spanner.Data
                 var result = await t().ConfigureAwait(false);
                 if (sw != null)
                 {
-                    Logger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
+                    logger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
                 }
 
                 return result;
