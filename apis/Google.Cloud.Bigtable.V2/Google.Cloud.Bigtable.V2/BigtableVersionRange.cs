@@ -85,7 +85,7 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc />
         public override string ToString() =>
-            $"{nameof(BigtableVersionRange)}: Start={Start?.Value.ToString() ?? " "}; End={End?.Value.ToString() ?? " "}";
+            $"{nameof(BigtableVersionRange)}: Start={Start?.Value.ToString() ?? "(none)"}; End={End?.Value.ToString() ?? "(none)"}";
 
         internal TimestampRange ToTimestampRange() =>
             new TimestampRange

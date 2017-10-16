@@ -32,6 +32,9 @@ namespace Google.Cloud.Bigtable.V2
     {
         private const long TicksPerMicro = 10;
 
+        // Visible for testing
+        internal static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
         /// <summary>
         /// Creates a new <see cref="BigtableVersion"/> value from a 64-bit value.
         /// </summary>
@@ -53,7 +56,7 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// Creates a new <see cref="BigtableVersion"/> value from the microseconds of a timestamp.
+        /// Creates a new <see cref="BigtableVersion"/> value from the microseconds of a timestamp since the Unix epoch.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -64,7 +67,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </para>
         /// </remarks>
         /// <param name="timestamp">
-        /// The timestamp whose microseconds should be used as the version value. It must be specified in UTC.
+        /// The timestamp whose microseconds since the Unix epoch should be used as the version value. It must be specified in UTC.
         /// </param>
         public BigtableVersion(DateTime timestamp)
         {
@@ -73,7 +76,7 @@ namespace Google.Cloud.Bigtable.V2
                 nameof(timestamp),
                 $"The {nameof(BigtableVersion)} timestamp must be specified in UTC.");
 
-            Value = timestamp.Ticks / TicksPerMicro;
+            Value = (timestamp.Ticks - UnixEpoch.Ticks) / TicksPerMicro;
         }
 
         /// <summary>
@@ -82,10 +85,10 @@ namespace Google.Cloud.Bigtable.V2
         public long Value { get; }
 
         /// <summary>
-        /// Gets the DateTime equivalent to the version assuming the value is a timestamp micros value.
+        /// Gets the DateTime equivalent to the version assuming the value is a timestamp micros value since the Unix epoch.
         /// </summary>
         /// <returns>The DateTime representing the version timestamp.</returns>
-        public DateTime ToDateTime() => new DateTime(Value * TicksPerMicro, DateTimeKind.Utc);
+        public DateTime ToDateTime() => new DateTime((Value * TicksPerMicro) + UnixEpoch.Ticks, DateTimeKind.Utc);
 
         /// <inheritdoc />
         public int CompareTo(object obj)

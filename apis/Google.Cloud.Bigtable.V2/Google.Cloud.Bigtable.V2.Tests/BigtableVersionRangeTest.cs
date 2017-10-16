@@ -29,18 +29,64 @@ namespace Google.Cloud.Bigtable.V2.Tests
             {
                 new BigtableVersionRange(0, 10),
                 new BigtableVersionRange(new BigtableVersion(0), new BigtableVersion(10)),
-                new BigtableVersionRange(new DateTime(0, DateTimeKind.Utc), new DateTime(100, DateTimeKind.Utc))
+                new BigtableVersionRange(
+                    BigtableVersion.UnixEpoch,
+                    BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100))
             };
             var unequal = new[]
             {
                 new BigtableVersionRange(null, 10),
                 new BigtableVersionRange(null, new BigtableVersion(10)),
-                new BigtableVersionRange(null, new DateTime(100, DateTimeKind.Utc)),
+                new BigtableVersionRange(null, BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100)),
                 new BigtableVersionRange(0, null),
                 new BigtableVersionRange(new BigtableVersion(0), null),
-                new BigtableVersionRange(new DateTime(0, DateTimeKind.Utc), null),
+                new BigtableVersionRange(BigtableVersion.UnixEpoch, null),
                 new BigtableVersionRange(1, 10),
                 new BigtableVersionRange(0, 11)
+            };
+            ComparisonTester.AssertEqual(control, equal, unequal);
+        }
+
+        [Fact]
+        public void EqualityNullStart()
+        {
+            var control = new BigtableVersionRange(null, 10);
+            var equal = new[]
+            {
+                new BigtableVersionRange(null, 10),
+                new BigtableVersionRange(null, new BigtableVersion(10)),
+                new BigtableVersionRange(null, BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100))
+            };
+            var unequal = new[]
+            {
+                new BigtableVersionRange(0, 10),
+                new BigtableVersionRange(new BigtableVersion(0), new BigtableVersion(10)),
+                new BigtableVersionRange(
+                    BigtableVersion.UnixEpoch,
+                    BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100)),
+                new BigtableVersionRange(null, 11)
+            };
+            ComparisonTester.AssertEqual(control, equal, unequal);
+        }
+
+        [Fact]
+        public void EqualityNullEnd()
+        {
+            var control = new BigtableVersionRange(0, null);
+            var equal = new[]
+            {
+                new BigtableVersionRange(0, null),
+                new BigtableVersionRange(new BigtableVersion(0), null),
+                new BigtableVersionRange(BigtableVersion.UnixEpoch, null)
+            };
+            var unequal = new[]
+            {
+                new BigtableVersionRange(0, 10),
+                new BigtableVersionRange(new BigtableVersion(0), new BigtableVersion(10)),
+                new BigtableVersionRange(
+                    BigtableVersion.UnixEpoch,
+                    BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100)),
+                new BigtableVersionRange(1, null)
             };
             ComparisonTester.AssertEqual(control, equal, unequal);
         }
@@ -48,8 +94,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Theory]
         [InlineData("BigtableVersionRange: Start=0; End=1", 0, 1)]
         [InlineData("BigtableVersionRange: Start=1; End=10", 1, 10)]
-        [InlineData("BigtableVersionRange: Start= ; End=10", null, 10)]
-        [InlineData("BigtableVersionRange: Start=12345; End= ", 12345, null)]
+        [InlineData("BigtableVersionRange: Start=(none); End=10", null, 10)]
+        [InlineData("BigtableVersionRange: Start=12345; End=(none)", 12345, null)]
         public void Formatting(string expectedText, long? start, long? end)
         {
             var version = new BigtableVersionRange(start, end);
