@@ -20,6 +20,8 @@ using Xunit;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
+    // Note: deliberately not using the CreateValue helper to make the protos absolutely clear.
+
     public class ValueSerializerTest
     {
         // Data that can only be serialized: we're passing in int values for the score; when we deserialize, we get back long values.

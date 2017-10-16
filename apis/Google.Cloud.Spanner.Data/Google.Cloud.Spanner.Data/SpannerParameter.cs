@@ -33,7 +33,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override DbType DbType
         {
-            get => (SpannerDbType?.TypeCode.GetDbType()).GetValueOrDefault(DbType.Object);
+            get => (SpannerDbType?.DbType).GetValueOrDefault(DbType.Object);
             set
             {
                 switch (value)

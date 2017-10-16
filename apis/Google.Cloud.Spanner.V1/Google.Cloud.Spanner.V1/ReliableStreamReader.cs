@@ -92,6 +92,19 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         /// <summary>
+        /// This helper ensures we invalidate the _currentCall state if we want to throw canceled.
+        /// </summary>
+        private void ThrowIfCancellationRequested(CancellationToken cancellationToken)
+        {
+            if (cancellationToken.IsCancellationRequested)
+            {
+                _currentCall?.Dispose();
+                _currentCall = null;
+                cancellationToken.ThrowIfCancellationRequested();
+            }
+        }
+
+        /// <summary>
         ///     Connects or reconnects to Spanner, fast forwarding to where we left off based on
         ///     our _resumeToken and _resumeSkipCount.
         /// </summary>
@@ -99,13 +112,14 @@ namespace Google.Cloud.Spanner.V1 {
         private async Task<bool> ReliableConnectAsync(CancellationToken cancellationToken) {
             if (_currentCall == null) {
                 await ConnectAsync().ConfigureAwait(false);
-
                 Debug.Assert(_currentCall != null, "_currentCall != null");
-                cancellationToken.ThrowIfCancellationRequested();
 
                 for (int i = 0; i <= _resumeSkipCount; i++) {
+                    ThrowIfCancellationRequested(cancellationToken);
+
                     //This calls a simple movenext on purpose.  If we get an error here, we'll fail out.
-                    _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken).WithSessionChecking(() => _session).ConfigureAwait(false);
+                    //TODO(benwu): Fix cancel on MoveNext in a subsequent change targeting spanner GA
+                    _isReading = await _currentCall.ResponseStream.MoveNext(CancellationToken.None).WithSessionChecking(() => _session).ConfigureAwait(false);
                     if (!_isReading || _currentCall.ResponseStream.Current == null)
                     {
                         return false;
@@ -122,29 +136,58 @@ namespace Google.Cloud.Spanner.V1 {
         private async Task<bool> ReliableMoveNextAsync(CancellationToken cancellationToken) {
             try {
                 Logger.LogPerformanceCounterFn("StreamReader.MoveNextCount", x => x + 1);
-                //we increment our skip count before calling MoveNext so that a reconnect operation
-                //will fast forward to the proper place.
-                _resumeSkipCount++;
-                _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
+                _isReading = await _currentCall.ResponseStream.MoveNext(CancellationToken.None)
                     .WithSessionChecking(() => _session).ConfigureAwait(false);
+
+                //we only increment our skip count after we know the MoveNext has succeeded
+                _resumeSkipCount++;
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
-                _currentCall = null;
-
-                //reconnect on failure which will call reliableconnect and respect resumetoken and resumeskip
-                cancellationToken.ThrowIfCancellationRequested();
-
-                Logger.Warn(
-                    () =>
-                            $"An error occurred attemping to iterate through the sql query.  Attempting to recover. Exception:{e}");
-
-                //when we reconnect, we purposely do not do a *reliable*movenext.  If we fail to fast forward on the reconnect
-                //we bail out completely and surface the error.
-                return await ReliableConnectAsync(cancellationToken).ConfigureAwait(false);
+                // execution here means the movenext failed and _resumeSkipCount has not yet been increased.
+                await TryRecoverOnFailureAsync(cancellationToken, e).ConfigureAwait(false);
             }
             RecordResumeToken();
             return _isReading;
+        }
+
+        private async Task TryRecoverOnFailureAsync(CancellationToken cancellationToken, Exception exception)
+        {
+            _currentCall?.Dispose();
+            _currentCall = null;
+
+            //reconnect on failure which will call reliableconnect and respect resumetoken and resumeskip
+            cancellationToken.ThrowIfCancellationRequested();
+
+            Logger.Warn(
+                () =>
+                    $"An error occurred attemping to iterate through the sql query.  Attempting to recover. Exception:{exception}");
+
+            //when we reconnect, we purposely do not do a *reliable*movenext.  If we fail to fast forward on the reconnect
+            //we bail out completely and surface the error.
+            _isReading = await ReliableConnectAsync(cancellationToken).ConfigureAwait(false);
+            if (_isReading)
+            {
+                // we try one more time to advance. Note that we should have done an exponential backoff retry
+                // on the initial connect -- but MoveNext is not idempotent, so all we can do if it fails is start
+                // from scratch.  But in case something is going horribly awry, we don't want to spin indefinitely,
+                // so we bail if the recovery isn't successful in moving to the next item.
+                try
+                {
+                    _isReading = await _currentCall.ResponseStream.MoveNext(CancellationToken.None)
+                        .WithSessionChecking(() => _session).ConfigureAwait(false);
+                    _resumeSkipCount++;
+                }
+                catch (Exception e)
+                {
+                    Logger.Warn(() => $"An error occurred attemping to recover. Exception:{e}");
+                    //At this point, we give up, rethrowing and setting state such that it will
+                    //need to reconnect if the user calls MoveNext again.
+                    _currentCall?.Dispose();
+                    _currentCall = null;
+                    throw;
+                }
+            }
         }
 
         private void RecordResumeToken() {

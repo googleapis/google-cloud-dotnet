@@ -31,13 +31,14 @@ namespace Google.Cloud.Storage.V1.Tests
     public class UploadObjectOptionsTest
     {
         [Theory]
+        [InlineData(null)]
         [InlineData(UploadObjectOptions.MinimumChunkSize)]
         [InlineData(UploadObjectOptions.MinimumChunkSize * 2)]
         [InlineData(UploadObjectOptions.MinimumChunkSize * 1000)]
-        public void ValidChunkSize(int chunkSize)
+        public void ValidChunkSize(int? chunkSize)
         {
-            // ToString call used as a constructor call isn't a statement expression
-            new UploadObjectOptions { ChunkSize = chunkSize }.ToString();
+            var options = new UploadObjectOptions { ChunkSize = chunkSize };
+            Assert.Equal(chunkSize, options.ChunkSize);
         }
 
         [Theory]

@@ -155,7 +155,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                     Found = new Document
                     {
                         Name = docName2, CreateTime = CreateProtoTimestamp(0, 1), UpdateTime = CreateProtoTimestamp(0, 2),
-                        Fields = { { "Name", new Value { StringValue = "Test" } } }
+                        Fields = { { "Name", CreateValue("Test") } }
                     },
                     ReadTime = CreateProtoTimestamp(1, 3)
                 },

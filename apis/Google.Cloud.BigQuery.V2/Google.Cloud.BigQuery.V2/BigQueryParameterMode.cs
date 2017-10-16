@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// The mode for all the parameters in a <see cref="BigQueryCommand"/>.
+    /// The mode for all the parameters in a query, specified by <see cref="QueryOptions.ParameterMode"/>.
     /// Parameters can be named within the query (<c>@parameterName</c>), or positional (<c>?</c>).
     /// </summary>
     public enum BigQueryParameterMode

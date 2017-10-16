@@ -15,6 +15,8 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1Beta1;
 using Moq;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -22,7 +24,7 @@ using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
-    public class WriteBatchTest
+    public partial class WriteBatchTest
     {
         [Fact]
         public void Create()
@@ -40,8 +42,8 @@ namespace Google.Cloud.Firestore.Data.Tests
                     Name = doc.Path,
                     Fields =
                     {
-                        { "Name", new Value { StringValue = "Test" } },
-                        { "Score", new Value { IntegerValue = 20L } }
+                        { "Name", CreateValue("Test") },
+                        { "Score", CreateValue(20) }
                     }
                 }
             };
@@ -72,6 +74,144 @@ namespace Google.Cloud.Firestore.Data.Tests
             {
                 Delete = doc.Path,
                 CurrentDocument = new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) }
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Fact]
+        public void Update()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var updates = new Dictionary<FieldPath, object>
+            {
+                { new FieldPath("a.b", "f.g"), 7 },
+                { FieldPath.FromDotSeparatedString("h.m"), new Dictionary<string, object> { { "n.o", 7 } } }
+            };
+
+            batch.Update(doc, updates);
+
+            var expectedWrite = new Write
+            {
+                CurrentDocument = new V1Beta1.Precondition { Exists = true },
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields =
+                    {
+                        { "a.b", CreateMap("f.g", CreateValue(7)) },
+                        { "h", CreateMap("m", CreateMap("n.o", CreateValue(7))) }
+                    }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "`a.b`.`f.g`", "h.m" } }
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Fact]
+        public void Update_WithPrecondition()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var updates = new Dictionary<FieldPath, object>
+            {
+                { new FieldPath("x"), "y" }
+            };
+
+            batch.Update(doc, updates, Precondition.LastUpdated(new Timestamp(1, 2)));
+
+            var expectedWrite = new Write
+            {
+                CurrentDocument = new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) },
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields = { { "x", CreateValue("y") } }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "x" } }
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Theory]
+        [InlineData(false)]
+        [InlineData(true)]
+        public void Set_Overwrite(bool explicitOptions)
+        {
+            var options = explicitOptions ? SetOptions.Overwrite : null;
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var data = new { Name = "Test", Nested = new { Value1 = 10, Value2 = 20 }, Score = 30 };
+            batch.Set(doc, data, options);
+
+            var expectedWrite = new Write
+            {
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields =
+                    {
+                        { "Name", CreateValue("Test") },
+                        { "Nested", CreateMap(("Value1", CreateValue(10)), ("Value2", CreateValue(20))) },
+                        { "Score", CreateValue(30) }
+                    }
+                }
+                // No UpdateMask
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Fact]
+        public void Set_MergeAll()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var data = new { Name = "Test", Nested = new { Value1 = 10, Value2 = 20 }, Score = 30 };
+            batch.Set(doc, data, SetOptions.MergeAll);
+
+            var expectedWrite = new Write
+            {
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields =
+                    {
+                        { "Name", CreateValue("Test") },
+                        { "Nested", CreateMap(("Value1", CreateValue(10)), ("Value2", CreateValue(20))) },
+                        { "Score", CreateValue(30) }
+                    }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "Name", "Nested.Value1", "Nested.Value2", "Score" } }
+            };
+            AssertWrites(batch, expectedWrite);
+        }
+
+        [Fact]
+        public void Set_MergeFields()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var data = new { Name = "Test", Nested = new { Value1 = 10, Value2 = 20 }, Score = 30 };
+            batch.Set(doc, data, SetOptions.MergeFields("Name", "Nested.Value2"));
+
+            var expectedWrite = new Write
+            {
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    // Only specified fields are included
+                    Fields =
+                    {
+                        { "Name", CreateValue("Test") },
+                        { "Nested", CreateMap("Value2", CreateValue(20)) }
+                    }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "Name", "Nested.Value2" } }
             };
             AssertWrites(batch, expectedWrite);
         }
@@ -119,7 +259,21 @@ namespace Google.Cloud.Firestore.Data.Tests
             Assert.False(batch.IsEmpty);
         }
 
-        private void AssertWrites(WriteBatch batch, params Write[] writes) =>
-            Assert.Equal(writes, batch.Writes);
+        private static void AssertWrites(WriteBatch batch, params Write[] writes) =>
+            Assert.Equal(writes, batch.Writes.Select(CanonicalizeWrite));
+
+        /// <summary>
+        /// Creates a canonical representation of a Write just by ordering lists predictably.
+        /// </summary>
+        private static Write CanonicalizeWrite(Write input)
+        {
+            var clone = input.Clone();
+            if (clone.UpdateMask != null)
+            {
+                clone.UpdateMask.FieldPaths.Clear();
+                clone.UpdateMask.FieldPaths.AddRange(input.UpdateMask.FieldPaths.OrderBy(x => x, StringComparer.Ordinal));
+            }
+            return clone;
+        }
     }
 }

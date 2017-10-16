@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using System;
 using System.Linq;
 using System.Text;
+using static Google.Cloud.Firestore.V1Beta1.StructuredQuery.Types;
 
 namespace Google.Cloud.Firestore.Data
 {
@@ -159,5 +160,10 @@ namespace Google.Cloud.Firestore.Data
 
         /// <inheritdoc />
         public bool Equals(FieldPath other) => EncodedPath == other?.EncodedPath;
+
+        /// <summary>
+        /// Conversion from FieldPath to FieldReference.
+        /// </summary>
+        internal FieldReference ToFieldReference() => new FieldReference { FieldPath = EncodedPath };
     }
 }
