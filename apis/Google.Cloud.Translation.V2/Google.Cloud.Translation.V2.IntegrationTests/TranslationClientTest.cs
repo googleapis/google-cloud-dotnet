@@ -36,7 +36,7 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
         {
             var client = TranslationClient.Create();
             var translation = client.TranslateText(LargeText, LanguageCodes.French);
-            Assert.StartsWith("Quand, au cours des", translation.TranslatedText);
+            Assert.StartsWith("Lorsque, au cours d", translation.TranslatedText);
             Assert.Equal(LargeText, translation.OriginalText);
             Assert.Equal(LanguageCodes.French, translation.TargetLanguage);
             Assert.Equal(LanguageCodes.English, translation.DetectedSourceLanguage);
