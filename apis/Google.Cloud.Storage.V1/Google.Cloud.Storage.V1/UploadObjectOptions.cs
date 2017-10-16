@@ -70,7 +70,8 @@ namespace Google.Cloud.Storage.V1
                     value == null || (value.Value % MinimumChunkSize == 0 && value.Value >= 1),
                     nameof(value),
                     "Requested chunk size {0} is not a positive multiple of {1}",
-                    value.Value, MinimumChunkSize);
+                    // Don't use value.Value - we don't want to break if value is null!
+                    value ?? 0, MinimumChunkSize);
                 _chunkSize = value;
             }
         }
