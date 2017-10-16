@@ -134,7 +134,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             // Clear current session pool to eliminate the chance of a previous
             // test altering the pool state (which is validated at end)
-            Task.Run(SessionPool.Default.ReleaseAll).Wait(SessionPool.Default.ShutDownTimeout);
+            Task.Run(SessionPool.Default.ReleaseAllAsync).Wait(SessionPool.Default.ShutDownTimeout);
 
             //prewarm
             // The maximum roundtrip time for spanner (and mysql) is about 200ms per
