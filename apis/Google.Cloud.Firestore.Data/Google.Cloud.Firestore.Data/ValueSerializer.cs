@@ -85,6 +85,8 @@ namespace Google.Cloud.Firestore.Data
             }
             switch (value)
             {
+                case SentinelValue sentinel:
+                    return sentinel.ToProtoValue();
                 // Shortcut to avoid reflection for a common case
                 case IDictionary<string, object> map:
                     return ExtractDictionary(map);
@@ -149,7 +151,9 @@ namespace Google.Cloud.Firestore.Data
                 var attribute = property.GetCustomAttribute<FirestorePropertyAttribute>();
                 if (attribute != null)
                 {
-                    ret[attribute.Name ?? property.Name] = Serialize(property.GetValue(value));
+                    var sentinel = attribute.SentinelValue;
+                    Value protoValue = sentinel == SentinelValue.None ? Serialize(property.GetValue(value)) : sentinel.ToProtoValue();
+                    ret[attribute.Name ?? property.Name] = protoValue;
                 }
             }
             return ret;

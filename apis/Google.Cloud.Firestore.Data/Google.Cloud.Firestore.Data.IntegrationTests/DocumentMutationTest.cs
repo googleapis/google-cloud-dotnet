@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -62,6 +63,26 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
             });
             snapshot = await doc.SnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Changed again", Level = 2, Score = new { CustomTime = timestamp, Value = 40 } });
+        }
+
+        [Fact]
+        public async Task Update_SentinelValues()
+        {
+            var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original", DeleteMe = "Present" });
+            // Delete the DeleteMe field, add a field with a server timestamp
+            await doc.UpdateAsync(new Dictionary<FieldPath, object>
+            {
+                { new FieldPath("DeleteMe"), SentinelValue.Delete },
+                { new FieldPath("Timestamp"), SentinelValue.ServerTimestamp }
+            });
+            var snapshot = await doc.SnapshotAsync();
+            Assert.Equal("Original", snapshot.GetField<string>("Name"));
+            Assert.False(snapshot.Contains("DeleteMe"));
+            var timestamp = snapshot.GetField<Timestamp>("Timestamp");
+            // Assume the machine we're running tests on isn't more than 5 minutes out of sync with the server.
+            // If we're getting "roughly the right time" then that must have come from the server.
+            var absDifferenceMinutes = Math.Abs((timestamp.ToDateTime() - DateTime.UtcNow).TotalMinutes);
+            Assert.True(absDifferenceMinutes < 5);
         }
 
         [Fact]

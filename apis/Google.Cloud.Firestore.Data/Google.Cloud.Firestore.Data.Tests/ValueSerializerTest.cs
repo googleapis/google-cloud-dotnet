@@ -34,6 +34,12 @@ namespace Google.Cloud.Firestore.Data.Tests
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } } },
             { new { name = "Jon", score = 10 },
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } } },
+
+            // Sentinel values
+            { new { name = "Jon", lastUpdate = SentinelValue.ServerTimestamp, score = SentinelValue.Delete },
+                new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValues.ServerTimestampSentinel }, { "score", SentinelValues.DeleteSentinel } } } } },
+            { new SentinelModel { Name = "Jon", LastUpdate = new Timestamp(99, 99), Score = 10 },
+                new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValues.ServerTimestampSentinel }, { "score", SentinelValues.DeleteSentinel } } } } },
         };
 
         public static IEnumerable<object[]> SerializeMapTestData { get; } = new List<object[]>
@@ -46,6 +52,12 @@ namespace Google.Cloud.Firestore.Data.Tests
                 new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "Score", new Value { IntegerValue = 10L } } } },
             { () => { dynamic d = new ExpandoObject(); d.name = "Jon"; d.score = 10; return d; },
                 new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } },
+
+            // Sentinel values
+            { new { name = "Jon", lastUpdate = SentinelValue.ServerTimestamp, score = SentinelValue.Delete },
+                new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValues.ServerTimestampSentinel }, { "score", SentinelValues.DeleteSentinel } } },
+            { new SentinelModel { Name = "Jon", LastUpdate = new Timestamp(99, 99), Score = 10 },
+                new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValues.ServerTimestampSentinel }, { "score", SentinelValues.DeleteSentinel } } },
         };
 
         [Theory]
@@ -104,6 +116,33 @@ namespace Google.Cloud.Firestore.Data.Tests
         {
             var date = new DateTime(2017, 10, 6, 1, 2, 3, kind);
             Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(date));
+        }
+
+        [Fact]
+        public void BadSentinelValueInAttribute()
+        {
+            var broken = new BadSentinelModel();
+            Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(broken));
+        }
+        
+        [FirestoreData]
+        private class BadSentinelModel
+        {
+            [FirestoreProperty("broken", SentinelValue = (SentinelValue) int.MaxValue)]
+            public string Name { get; set; }
+        }
+
+        [FirestoreData]
+        private class SentinelModel
+        {
+            [FirestoreProperty("name")]
+            public string Name { get; set; }
+
+            [FirestoreProperty("lastUpdate", SentinelValue = SentinelValue.ServerTimestamp)]
+            public Timestamp LastUpdate { get; set; }
+
+            [FirestoreProperty("score", SentinelValue = SentinelValue.Delete)]
+            public int Score { get; set; }
         }
     }
 }
