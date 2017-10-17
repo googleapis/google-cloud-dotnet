@@ -65,6 +65,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var dropCommand = connection.CreateDdlCommand("DROP DATABASE " + DatabaseName);
                 dropCommand.ExecuteNonQueryAsync().ResultWithUnwrappedExceptions();
             }
+            SpannerConnection.ClearPooledResourcesAsync().WaitWithUnwrappedExceptions();
         }
 
         public async Task<SpannerConnection> GetTestDatabaseConnectionAsync()

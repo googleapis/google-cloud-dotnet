@@ -369,11 +369,10 @@ namespace Google.Cloud.Spanner.V1
         /// Releases all pooled sessions and frees resources on the server.
         /// </summary>
         /// <returns></returns>
-        public Task ReleaseAll()
+        public Task ReleaseAllAsync()
         {
             var entries = _poolByClientAndDatabase.Values;
-            _poolByClientAndDatabase.Clear();
-                // ReleaseAll should not be called while other operations are starting.
+            // ReleaseAll can be called while other operations are starting.
             return Task.WhenAll(entries.Select(sessionpool => sessionpool.ReleaseAllImpl()));
         }
 
@@ -404,7 +403,7 @@ namespace Google.Cloud.Spanner.V1
         /// <inheritdoc />
         public void Dispose()
         {
-            Task.Run(ReleaseAll).Wait(ShutDownTimeout);
+            Task.Run(ReleaseAllAsync).Wait(ShutDownTimeout);
         }
     }
 }

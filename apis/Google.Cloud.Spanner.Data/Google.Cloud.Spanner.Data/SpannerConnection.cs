@@ -83,6 +83,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerOptions SpannerOptions => SpannerOptions.Instance;
 
+        /// <summary>
+        /// Releases all pooled Cloud Spanner sessions.
+        /// </summary>
+        public static Task ClearPooledResourcesAsync() => SessionPool.Default.ReleaseAllAsync();
+
         /// <inheritdoc />
         public override string ConnectionString
         {

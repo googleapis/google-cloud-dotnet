@@ -210,6 +210,19 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public async Task CanClearResources()
+        {
+            var client1 = CreateMockClient();
+            var session = await SessionPool.Default.CreateSessionFromPoolAsync(
+                        client1.Object, s_defaultName.ProjectId,
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)
+                    .ConfigureAwait(false);
+            SessionPool.Default.ReleaseToPool(client1.Object, session);
+            await SpannerConnection.ClearPooledResourcesAsync();
+            Assert.Equal(0, SessionPool.Default.CurrentPooledSessions);
+        }
+
+        [Fact]
         public async Task DatabasesHaveDifferentPools()
         {
             using (var pool = new SessionPool())

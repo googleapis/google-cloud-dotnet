@@ -79,6 +79,8 @@ namespace Google.Cloud.Spanner.V1
             {
                 entries = _sessionMruStack.ToArray();
             }
+            // *Try* to evict the sessions. If a session has been acquired and is no longer in the pool
+            // by the time evict runs, it will result in a no-op.
             return Task.WhenAll(entries.Select(sessionpoolentry => EvictImmediatelyAsync(sessionpoolentry.Session, CancellationToken.None)).ToArray());
         }
 
