@@ -260,7 +260,10 @@ namespace Google.Cloud.Firestore.Data.Tests
         }
 
         private static void AssertWrites(WriteBatch batch, params Write[] writes) =>
-            Assert.Equal(writes, batch.Writes.Select(CanonicalizeWrite));
+            // The ToList calls aren't strictly necessary, but make the failure output easier to read.
+            Assert.Equal(
+                writes.Select(CanonicalizeWrite).ToList(),
+                batch.Writes.Select(CanonicalizeWrite).ToList());
 
         /// <summary>
         /// Creates a canonical representation of a Write just by ordering lists predictably.
@@ -272,6 +275,11 @@ namespace Google.Cloud.Firestore.Data.Tests
             {
                 clone.UpdateMask.FieldPaths.Clear();
                 clone.UpdateMask.FieldPaths.AddRange(input.UpdateMask.FieldPaths.OrderBy(x => x, StringComparer.Ordinal));
+            }
+            if (clone.Transform != null)
+            {
+                clone.Transform.FieldTransforms.Clear();
+                clone.Transform.FieldTransforms.AddRange(input.Transform.FieldTransforms.OrderBy(ft => ft.FieldPath, StringComparer.Ordinal));
             }
             return clone;
         }

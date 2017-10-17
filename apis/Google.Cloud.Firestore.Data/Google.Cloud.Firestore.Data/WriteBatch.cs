@@ -22,11 +22,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types;
+using static Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform.Types;
 
 namespace Google.Cloud.Firestore.Data
 {
-    // TODO: Sentinel fields on all operations
-
     /// <summary>
     /// A batch of write operations, to be applied in a single commit.
     /// </summary>
@@ -64,8 +64,7 @@ namespace Google.Cloud.Firestore.Data
                     Name = documentReference.Path
                 }
             };
-            Writes.Add(write);
-
+            AddUpdate(write);
             return this;
         }
 
@@ -83,7 +82,7 @@ namespace Google.Cloud.Firestore.Data
                 CurrentDocument = precondition?.Proto,
                 Delete = documentReference.Path
             };
-            Writes.Add(write);
+            Writes.Add(write); // No sentinel values to worry about here
             return this;
         }
 
@@ -113,8 +112,7 @@ namespace Google.Cloud.Firestore.Data
                 },
                 UpdateMask = new DocumentMask { FieldPaths = { serializedUpdates.Keys.Select(fp => fp.EncodedPath) } }
             };
-            Writes.Add(write);
-
+            AddUpdate(write);
             return this;
         }
 
@@ -152,7 +150,7 @@ namespace Google.Cloud.Firestore.Data
                 var paths = mask.Count == 0 ? ExtractDocumentMask(fields) : mask;
                 write.UpdateMask = new DocumentMask { FieldPaths = { paths.Select(fp => fp.EncodedPath) } };
             }
-            Writes.Add(write);
+            AddUpdate(write);
             return this;
         }
 
@@ -168,6 +166,93 @@ namespace Google.Cloud.Firestore.Data
             var request = new CommitRequest { Database = _db.RootPath, Writes = { Writes }, Transaction = transactionId };
             var response = await _db.Client.CommitAsync(request, CallSettings.FromCancellationToken(cancellationToken)).ConfigureAwait(false);
             return response.WriteResults.Select(wr => WriteResult.FromProto(wr, response.CommitTime)).ToList();
+        }
+
+        /// <summary>
+        /// Adds a Write with an Update field to the list of writes, having first removed all sentinel values.
+        /// If any sentinel values are server timestamps, they are transformed into a new write, which is also added.
+        /// All methods creating an update should call this method rather than calling Writes.Add(write) themselves.
+        /// </summary>
+        private void AddUpdate(Write writeWithUpdate)
+        {
+            var transform = new DocumentTransform { Document = writeWithUpdate.Update.Name };
+            ProcessSentinelValues(writeWithUpdate.Update.Fields, FieldPath.Empty);
+            Writes.Add(writeWithUpdate);
+            if (transform.FieldTransforms.Count != 0)
+            {
+                Writes.Add(new Write { Transform = transform });
+            }
+
+            // Processes the sentinel values within a map of fields, recursively.
+            // - Dictionary entries will be removed for sentinel fields
+            // - The transform will be updated 
+            void ProcessSentinelValues(IDictionary<string, Value> fields, FieldPath parentPath)
+            {
+                List<string> removals = null;
+                foreach (var pair in fields)
+                {
+                    Value value = pair.Value;
+                    string key = pair.Key;
+                    if (value.IsServerTimestampSentinel())
+                    {
+                        transform.FieldTransforms.Add(new FieldTransform
+                        {
+                            // TODO: FieldPath.Append is always used with a freshly-constructed single segment.
+                            // Let's change it...
+                            FieldPath = parentPath.Append(new FieldPath(key)).EncodedPath,
+                            SetToServerValue = ServerValue.RequestTime
+                        });
+                        removals = AddOrCreate(removals, key);
+                    }
+                    else if (value.IsDeleteSentinel())
+                    {
+                        removals = AddOrCreate(removals, key);
+                    }
+                    else if (value.MapValue != null)
+                    {
+                        ProcessSentinelValues(value.MapValue.Fields, parentPath.Append(new FieldPath(key)));
+                    }
+                    else if (value.ArrayValue != null)
+                    {
+                        ValidateNoSentinelValues(value.ArrayValue.Values);
+                    }
+                }
+                removals?.ForEach(key => fields.Remove(key));
+            }
+
+            // Adds an item to an existing list, or creates a new list containing the item if there's currently no
+            // list. This allows us to avoid creating lots of lists redundantly.
+            List<string> AddOrCreate(List<string> list, string item)
+            {
+                if (list == null)
+                {
+                    list = new List<string>();
+                }
+                list.Add(item);
+                return list;
+            }
+
+            // Validates that the given sequence of values contains no sentinel values, recursing
+            // as required to validate in a "deep" way.
+            void ValidateNoSentinelValues(IEnumerable<Value> values)
+            {
+                foreach (var value in values)
+                {
+                    if (value.IsServerTimestampSentinel() || value.IsDeleteSentinel())
+                    {
+                        // We don't know what parameter name to use here
+                        throw new ArgumentException("Sentinel values must not appear directly or indirectly within array values");
+                    }
+                    else if (value.MapValue != null)
+                    {
+                        ValidateNoSentinelValues(value.MapValue.Fields.Values);
+                    }
+                    else if (value.ArrayValue != null)
+                    {
+                        ValidateNoSentinelValues(value.ArrayValue.Values);
+                    }
+                }
+            }
         }
 
         // Visible for testing
