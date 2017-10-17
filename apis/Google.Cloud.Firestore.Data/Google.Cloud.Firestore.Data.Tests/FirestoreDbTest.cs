@@ -17,16 +17,13 @@ using Google.Cloud.Firestore.V1Beta1;
 using Google.Protobuf;
 using Moq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
-using static Google.Cloud.Firestore.V1Beta1.FirestoreClient;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
-    public class FirestoreDbTest
+    public partial class FirestoreDbTest
     {
         [Fact]
         public void Create()
@@ -222,17 +219,6 @@ namespace Google.Cloud.Firestore.Data.Tests
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             await Assert.ThrowsAsync<InvalidOperationException>(() => db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, null, default));
             mock.VerifyAll();
-        }
-
-        private class FakeDocumentStream : BatchGetDocumentsStream
-        {
-            private readonly IEnumerable<BatchGetDocumentsResponse> _responses;
-
-            internal FakeDocumentStream(IEnumerable<BatchGetDocumentsResponse> responses) =>
-                _responses = responses;
-
-            public override IAsyncEnumerator<BatchGetDocumentsResponse> ResponseStream =>
-                _responses.ToAsyncEnumerable().GetEnumerator();
         }
     }
 }

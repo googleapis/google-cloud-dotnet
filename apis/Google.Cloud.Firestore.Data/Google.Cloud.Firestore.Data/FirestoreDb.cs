@@ -16,11 +16,13 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1Beta1;
 using Google.Protobuf;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Firestore.V1Beta1.TransactionOptions.Types;
 
 namespace Google.Cloud.Firestore.Data
 {
@@ -215,5 +217,130 @@ namespace Google.Cloud.Firestore.Data
         internal IAsyncEnumerable<CollectionReference> ListCollectionsAsync(DocumentReference parent) =>
             Client.ListCollectionIdsAsync(parent?.Path ?? RootPath)
                 .Select(id => new CollectionReference(this, parent, id));
+
+        // TODO: Is it appropriate to use ConfigureAwait(false) here? Should the caller be able to specify the context for executing their callback?
+        // TODO: Collect up all the exceptions we've retried?
+        // TODO: Is it nice to have all these overloads?
+
+        // Note: the overloads accepting synchronous callbacks run those callbacks synchronously, so any exceptions will be thrown synchronously.
+        // That's okay, as we'd just be awaiting the task anyway.
+
+        /// <summary>
+        /// Runs a transaction asynchronously, with a synchronous callback that returns a value.
+        /// The specified callback is executed for a newly-created transaction. If committing the transaction
+        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// </summary>
+        /// <typeparam name="T">The result type of the callback.</typeparam>
+        /// <param name="callback">The callback to execute. Must not be null.</param>
+        /// <param name="options">The options for the transaction. May be null, in which case default options will be used.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
+        /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
+        /// <returns>A task which completes when the transaction has committed. The result of the task then contains the result of the callback.</returns>
+        public Task<T> RunTransactionAsync<T>(Func<Transaction, T> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(callback, nameof(callback));
+            return RunTransactionAsync(transaction => Task.FromResult(callback(transaction)), options, cancellationToken);
+        }
+
+        /// <summary>
+        /// Runs a transaction asynchronously, with a synchronous callback that doesn't return a value.
+        /// The specified callback is executed for a newly-created transaction. If committing the transaction
+        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// </summary>
+        /// <param name="callback">The callback to execute. Must not be null.</param>
+        /// <param name="options">The options for the transaction. May be null, in which case default options will be used.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
+        /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
+        /// <returns>A task which completes when the transaction has committed.</returns>
+        public Task RunTransactionAsync(Action<Transaction> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(callback, nameof(callback));
+            return RunTransactionAsync(transaction => { callback(transaction); return Task.FromResult(0); }, options, cancellationToken);
+        }
+
+        /// <summary>
+        /// Runs a transaction asynchronously, with an asynchronous callback that doesn't return a value.
+        /// The specified callback is executed for a newly-created transaction. If committing the transaction
+        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// </summary>
+        /// <param name="callback">The callback to execute. Must not be null.</param>
+        /// <param name="options">The options for the transaction. May be null, in which case default options will be used.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
+        /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
+        /// <returns>A task which completes when the transaction has committed.</returns>
+        public Task RunTransactionAsync(Func<Transaction, Task> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(callback, nameof(callback));
+            return RunTransactionAsync(
+                async transaction => { await callback(transaction).ConfigureAwait(false); return 0; },
+                options, cancellationToken);
+        }
+
+        /// <summary>
+        /// Runs a transaction asynchronously, with an asynchronous callback that returns a value.
+        /// The specified callback is executed for a newly-created transaction. If committing the transaction
+        /// fails, the whole operation is retried based on <see cref="TransactionOptions.MaxAttempts"/>.
+        /// </summary>
+        /// <typeparam name="T">The result type of the callback.</typeparam>
+        /// <param name="callback">The callback to execute. Must not be null.</param>
+        /// <param name="options">The options for the transaction. May be null, in which case default options will be used.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation. This is exposed to the callback through <see cref="Transaction.CancellationToken"/>
+        /// and applied to all RPCs to begin, rollback or commit the transaction.</param>
+        /// <returns>A task which completes when the transaction has committed. The result of the task then contains the result of the callback.</returns>
+        public async Task<T> RunTransactionAsync<T>(Func<Transaction, Task<T>> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
+        {
+
+            ByteString previousTransactionId = null;
+            options = options ?? TransactionOptions.Default;
+            var attemptsLeft = options.MaxAttempts;
+            TimeSpan backoff = TimeSpan.FromSeconds(1);
+
+            while (true)
+            {
+                attemptsLeft--;
+                var transaction = await Transaction.BeginAsync(this, previousTransactionId, cancellationToken).ConfigureAwait(false);
+                previousTransactionId = transaction.TransactionId;
+                bool rollback = true;
+                try
+                {
+                    T result = await callback(transaction).ConfigureAwait(false);
+                    try
+                    {
+                        rollback = false;
+                        await transaction.CommitAsync().ConfigureAwait(false);
+                        return result;
+                    }
+                    catch (RpcException e) when (CheckRetry(e, ref rollback))
+                    {
+                        // On to the next iteration...
+                    }
+                }
+                finally
+                {
+                    if (rollback)
+                    {
+                        await transaction.RollbackAsync().ConfigureAwait(false);
+                    }
+                }
+            }
+
+            bool CheckRetry(RpcException e, ref bool rollback)
+            {
+                switch (e.Status.StatusCode)
+                {
+                    case StatusCode.Aborted:
+                        // Definitely rollback, retry if we have any attempts left.
+                        rollback = true;
+                        return attemptsLeft > 0;
+                    case StatusCode.DeadlineExceeded:
+                    case StatusCode.Cancelled:
+                        // No retry, but we do want to roll back.
+                        rollback = true;
+                        return false;
+                    default:
+                        return false;
+                }
+            }
+        }
     }
 }

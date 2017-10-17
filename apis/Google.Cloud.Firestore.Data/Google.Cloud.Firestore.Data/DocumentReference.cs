@@ -150,9 +150,16 @@ namespace Google.Cloud.Firestore.Data
         /// Asynchronously fetches a snapshot of the document.
         /// </summary>
         /// <returns>A snapshot of the document. The snapshot may represent a missing document.</returns>
-        public async Task<DocumentSnapshot> SnapshotAsync(CancellationToken cancellationToken = default)
+        public Task<DocumentSnapshot> SnapshotAsync(CancellationToken cancellationToken = default) =>
+            SnapshotAsync(null, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously fetches a snapshot of the document.
+        /// </summary>
+        /// <returns>A snapshot of the document. The snapshot may represent a missing document.</returns>
+        internal async Task<DocumentSnapshot> SnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
-            var multiple = await Database.GetDocumentSnapshotsAsync(new[] { this }, null, cancellationToken).ConfigureAwait(false);
+            var multiple = await Database.GetDocumentSnapshotsAsync(new[] { this }, transactionId, cancellationToken).ConfigureAwait(false);
             return multiple.Single();
         }
 

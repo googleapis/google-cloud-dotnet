@@ -544,16 +544,5 @@ namespace Google.Cloud.Firestore.Data.Tests
         private static Filter Filter(FieldFilter filter) => new Filter { FieldFilter = filter };
         private static Filter CompositeFilter(params Filter[] filters) =>
             new Filter { CompositeFilter = new CompositeFilter { Op = StructuredQuery.Types.CompositeFilter.Types.Operator.And, Filters = { filters } } };
-
-        private class FakeQueryStream : RunQueryStream
-        {
-            private readonly IEnumerable<RunQueryResponse> _responses;
-
-            internal FakeQueryStream(IEnumerable<RunQueryResponse> responses) =>
-                _responses = responses;
-
-            public override IAsyncEnumerator<RunQueryResponse> ResponseStream =>
-                _responses.ToAsyncEnumerable().GetEnumerator();
-        }
     }
 }
