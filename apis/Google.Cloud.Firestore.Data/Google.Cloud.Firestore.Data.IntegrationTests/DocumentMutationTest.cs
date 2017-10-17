@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Firestore.Data.IntegrationTests.FirestoreAssert;
 
 namespace Google.Cloud.Firestore.Data.IntegrationTests
 {
@@ -159,16 +160,5 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
         private Dictionary<string, object> Map(string name, object value) => new Dictionary<string, object> { { name, value } };
         private Dictionary<string, object> Map(params (string name, object value)[] fields) =>
             fields.ToDictionary(field => field.name, field => field.value);
-
-        /// <summary>
-        /// Asserts that the document in snapshot is the serialized form of the expected value.
-        /// Note that the actual snapshot is the first parameter, somewhat unconventionally, as the expected value
-        /// is usually wordier in code, and works better as the final argument.
-        /// </summary>
-        private void AssertSerialized(DocumentSnapshot snapshot, object expectedValue)
-        {
-            var serialized = ValueSerializer.SerializeMap(expectedValue);
-            Assert.Equal(serialized, snapshot.Document.Fields);
-        }
     }
 }
