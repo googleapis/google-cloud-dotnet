@@ -28,5 +28,8 @@
     <Compile Update="WriteBatchTest.*.cs">
       <DependentUpon>WriteBatchTest.cs</DependentUpon>
     </Compile>
+    <Compile Update="FirestoreDbTest.*.cs">
+      <DependentUpon>FirestoreDbTest.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
