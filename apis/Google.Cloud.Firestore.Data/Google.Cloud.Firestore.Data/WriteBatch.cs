@@ -197,9 +197,7 @@ namespace Google.Cloud.Firestore.Data
                     {
                         transform.FieldTransforms.Add(new FieldTransform
                         {
-                            // TODO: FieldPath.Append is always used with a freshly-constructed single segment.
-                            // Let's change it...
-                            FieldPath = parentPath.Append(new FieldPath(key)).EncodedPath,
+                            FieldPath = parentPath.Append(pair.Key).EncodedPath,
                             SetToServerValue = ServerValue.RequestTime
                         });
                         removals = AddOrCreate(removals, key);
@@ -210,7 +208,7 @@ namespace Google.Cloud.Firestore.Data
                     }
                     else if (value.MapValue != null)
                     {
-                        ProcessSentinelValues(value.MapValue.Fields, parentPath.Append(new FieldPath(key)));
+                        ProcessSentinelValues(value.MapValue.Fields, parentPath.Append(pair.Key));
                     }
                     else if (value.ArrayValue != null)
                     {
@@ -349,7 +347,7 @@ namespace Google.Cloud.Firestore.Data
             {
                 foreach (var pair in currentFields)
                 {
-                    FieldPath childPath = parentPath.Append(new FieldPath(pair.Key));
+                    FieldPath childPath = parentPath.Append(pair.Key);
                     if (fieldPathSet.Contains(childPath))
                     {
                         result[childPath] = pair.Value;
@@ -378,7 +376,7 @@ namespace Google.Cloud.Firestore.Data
             {
                 foreach (var pair in currentFields)
                 {
-                    var childPath = parentPath.Append(new FieldPath(pair.Key));
+                    var childPath = parentPath.Append(pair.Key);
                     if (pair.Value.MapValue != null)
                     {
                         AppendDocumentMask(pair.Value.MapValue.Fields, childPath);

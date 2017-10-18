@@ -93,12 +93,16 @@ namespace Google.Cloud.Firestore.Data
             return new FieldPath(elements, true);
         }
 
-        internal FieldPath Append(FieldPath fieldPath)
+        /// <summary>
+        /// Creates a new path from this one, with the specified segment appended.
+        /// </summary>
+        /// <param name="segment">The segment to append. Must not be null or empty.</param>
+        internal FieldPath Append(string segment)
         {
-            GaxPreconditions.CheckNotNull(fieldPath, nameof(fieldPath));
-            var newFields = new string[Segments.Length + fieldPath.Segments.Length];
+            GaxPreconditions.CheckNotNullOrEmpty(segment, nameof(segment));
+            var newFields = new string[Segments.Length + 1];
             Array.Copy(Segments, newFields, Segments.Length);
-            Array.Copy(fieldPath.Segments, 0, newFields, Segments.Length, fieldPath.Segments.Length);
+            newFields[Segments.Length] = segment;
             return new FieldPath(newFields, true);
         }
 
