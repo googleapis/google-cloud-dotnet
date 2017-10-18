@@ -60,9 +60,10 @@ namespace Google.Cloud.Firestore.Data.Tests
         [Fact]
         public void Append()
         {
-            FieldPath path1 = new FieldPath("a", "b.c");
-            FieldPath path2 = new FieldPath("d.e", "f");
-            Assert.Equal(new FieldPath("a", "b.c", "d.e", "f"), path1.Append(path2));
+            FieldPath original = new FieldPath("a", "b.c");
+            FieldPath expected = new FieldPath("a", "b.c", "d.e");
+            FieldPath actual = original.Append("d.e");
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
