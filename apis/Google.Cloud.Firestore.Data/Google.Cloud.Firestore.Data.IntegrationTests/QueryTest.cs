@@ -166,6 +166,23 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
             Assert.Equal(HighScore.Data.Where(x => x.Level < 20).OrderBy(x => x.Level), items);
         }
 
-        // TODO: Filtering by DocumentId.
+        [Fact]
+        public async Task RangeByDocumentId()
+        {
+            var allDocs = await _fixture.HighScoreCollection.StreamAsync()
+                .Select(doc => doc.Reference)
+                .OrderBy(x => x.Path, StringComparer.Ordinal)
+                .ToList();
+            var startInclusive = allDocs[1];
+            var endExclusive = allDocs[4];
+            var query = _fixture.HighScoreCollection.OrderBy(FieldPath.DocumentId)
+                .StartAt(startInclusive)
+                .EndBefore(endExclusive);
+            var results = await query.StreamAsync()
+                .Select(doc => doc.Reference)
+                .OrderBy(x => x.Path, StringComparer.Ordinal)
+                .ToList();
+            Assert.Equal(allDocs.Skip(1).Take(3), results);
+        }
     }
 }
