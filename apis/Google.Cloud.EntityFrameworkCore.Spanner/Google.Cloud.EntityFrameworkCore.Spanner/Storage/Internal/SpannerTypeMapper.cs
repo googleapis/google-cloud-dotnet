@@ -50,11 +50,14 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
         private static readonly Dictionary<System.Type, RelationalTypeMapping> s_clrTypeMappings
             = new Dictionary<System.Type, RelationalTypeMapping>
             {
-                {SpannerDbType.Int64.DefaultClrType, s_long},
-                {SpannerDbType.Bool.DefaultClrType, s_bool},
-                {SpannerDbType.Timestamp.DefaultClrType, s_datetime},
-                {SpannerDbType.Float64.DefaultClrType, s_double},
-                {SpannerDbType.String.DefaultClrType, s_defaultString}
+                {typeof(int), s_long},
+                {typeof(long), s_long},
+                {typeof(uint), s_long},
+                {typeof(bool), s_long},
+                {typeof(DateTime), s_long},
+                {typeof(float), s_double},
+                {typeof(double), s_double},
+                {typeof(string), s_defaultString}
             };
 
         /// <summary>

@@ -20,7 +20,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Data;
-using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 #endregion
@@ -154,34 +153,10 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             }
         }
 
-        public async Task<TestTableContext> CreateContextAsync()
+        public async Task<TestTableContext> CreateContextAsync(Predicate<string> logFilter)
         {
             await EnsureTestDatabaseAsync();
-            return new TestTableContext(this);
+            return new TestTableContext(this, logFilter);
         }
-    }
-
-    public class TestTableContext : DbContext
-    {
-        private readonly TestDatabaseFixture _fixture;
-
-        public TestTableContext(TestDatabaseFixture fixture)
-        {
-            _fixture = fixture;
-        }
-
-        public virtual DbSet<StringEntry> StringTable { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSpanner(_fixture.ConnectionString);
-        }
-    }
-
-    public class StringEntry
-    {
-        [Key]
-        public string Key { get; set; }
-        public string StringValue { get; set; }
     }
 }

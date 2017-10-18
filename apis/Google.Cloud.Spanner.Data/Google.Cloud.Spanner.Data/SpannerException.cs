@@ -88,13 +88,13 @@ namespace Google.Cloud.Spanner.Data
         internal SpannerException(ErrorCode code, RpcException innerException)
             : base(GetMessageFromErrorCode(code), innerException)
         {
-            Logger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
+            Logger.DefaultLogger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
             ErrorCode = innerException.IsSessionExpiredError() ? ErrorCode.Aborted : code;
         }
 
         internal SpannerException(ErrorCode code, string message) : base(message)
         {
-            Logger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
+            Logger.DefaultLogger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
             ErrorCode = code;
         }
 

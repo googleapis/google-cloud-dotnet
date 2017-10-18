@@ -18,8 +18,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
+using Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics;
 using Google.Cloud.Spanner.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Update;
 
@@ -29,13 +31,20 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Update.Internal
     /// </summary>
     public class SpannerModificationCommandBatch : ModificationCommandBatch
     {
+        private readonly IDiagnosticsLogger<DbLoggerCategory.Database.Command> _logger;
         private readonly List<ModificationCommand> _modificationCommands = new List<ModificationCommand>();
         private readonly IRelationalTypeMapper _typeMapper;
 
         /// <summary>
         /// </summary>
         /// <param name="typeMapper"></param>
-        public SpannerModificationCommandBatch(IRelationalTypeMapper typeMapper) => _typeMapper = typeMapper;
+        /// <param name="logger"></param>
+        public SpannerModificationCommandBatch(IRelationalTypeMapper typeMapper,
+            IDiagnosticsLogger<DbLoggerCategory.Database.Command> logger)
+        {
+            _typeMapper = typeMapper;
+            _logger = logger;
+        }
 
         /// <summary>
         /// </summary>
@@ -102,6 +111,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Update.Internal
                     throw new NotSupportedException(
                         $"Modification type {modificationCommand.EntityState} is not supported.");
             }
+            cmd.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(_logger);
             cmd.Transaction = transaction;
             foreach (var columnModification in modificationCommand.ColumnModifications)
             {

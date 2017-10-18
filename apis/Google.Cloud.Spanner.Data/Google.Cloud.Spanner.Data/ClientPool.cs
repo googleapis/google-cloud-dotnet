@@ -42,14 +42,20 @@ namespace Google.Cloud.Spanner.Data
             _clientFactory = clientFactory ?? SpannerClientFactory.Default;
         }
 
+        /// <summary>
+        /// This property is intended for internal use only.
+        /// </summary>
+        private Logger Logger { get; } = Logger.DefaultLogger;
+
         public async Task<SpannerClient> AcquireClientAsync(
+            Logger logger,
             ChannelCredentials credentials = null,
             ServiceEndpoint endpoint = null,
             IDictionary additionalOptions = null)
         {
             var key = new ClientCredentialKey(credentials, endpoint, additionalOptions);
             var poolEntry = _clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(k));
-            var result = await poolEntry.AcquireClientAsync(_clientFactory).ConfigureAwait(false);
+            var result = await poolEntry.AcquireClientAsync(_clientFactory, logger).ConfigureAwait(false);
             Logger.LogPerformanceCounter("SpannerClient.TotalCount", () => _clientPoolByCredential.Count);
             return result;
         }
@@ -158,7 +164,7 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
 
-            public Task<SpannerClient> AcquireClientAsync(ISpannerClientFactory clientFactory)
+            public Task<SpannerClient> AcquireClientAsync(ISpannerClientFactory clientFactory, Logger logger)
             {
                 Task<SpannerClient> result;
 
@@ -179,7 +185,7 @@ namespace Google.Cloud.Spanner.Data
                     //now grab the first item in the sorted list, increment refcnt, re-sort and return.
                     //The re-sorting will happen as a consequence of AcquireClientAsync changing its
                     //state and firing an event the prioritylist listens to.
-                    result = _clientPriorityList.GetTop().AcquireClientAsync(clientFactory);
+                    result = _clientPriorityList.GetTop().AcquireClientAsync(clientFactory, logger);
                 }
                 return result;
             }
@@ -216,13 +222,14 @@ namespace Google.Cloud.Spanner.Data
                 && !_creationTask.Value.IsFaulted
                 && ReferenceEquals(_creationTask.Value.ResultWithUnwrappedExceptions(), client);
 
-            public async Task<SpannerClient> AcquireClientAsync(ISpannerClientFactory clientFactory)
+            public async Task<SpannerClient> AcquireClientAsync(ISpannerClientFactory clientFactory, Logger logger)
             {
                 if (_creationTask == null || _creationTask.Value.IsFaulted)
                 {
                     //retry an already failed task.
                     _creationTask = new Lazy<Task<SpannerClient>>(
-                        () => clientFactory.CreateClientAsync(_parentKey.Endpoint, _parentKey.Credentials, _parentKey.AdditionalOptions));
+                        () => clientFactory.CreateClientAsync(_parentKey.Endpoint, _parentKey.Credentials,
+                        _parentKey.AdditionalOptions, logger));
                 }
 
                 var spannerClient = await _creationTask.Value.ConfigureAwait(false);

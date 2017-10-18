@@ -57,7 +57,7 @@ namespace Google.Cloud.Spanner.Data
                     request.Transaction = new TransactionSelector {SingleUse = _options};
                     return Task.FromResult(_spannerConnection.SpannerClient.GetSqlStreamReader(request, _session, timeoutSeconds));
                 },
-                "SingleUseTransaction.ExecuteQuery");
+                "SingleUseTransaction.ExecuteQuery", _spannerConnection.Logger);
         }
     }
 }

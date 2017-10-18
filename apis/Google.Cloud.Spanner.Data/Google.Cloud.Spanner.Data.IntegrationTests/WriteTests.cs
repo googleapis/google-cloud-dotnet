@@ -202,7 +202,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }).ConfigureAwait(false);
 
-            Logger.Instance.Debug($"BadColumnName: Caught error code:{e.ErrorCode}");
+            Logger.DefaultLogger.Debug(() => $"BadColumnName: Caught error code:{e.ErrorCode}");
             Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
             Assert.False(e.IsTransientSpannerFault());
             Assert.Equal(0, rowsWritten);
@@ -227,7 +227,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }).ConfigureAwait(false);
 
-            Logger.Instance.Debug($"BadColumnType: Caught error code:{e.ErrorCode}");
+            Logger.DefaultLogger.Debug(() => $"BadColumnType: Caught error code:{e.ErrorCode}");
             Assert.Equal(ErrorCode.FailedPrecondition, e.ErrorCode);
             Assert.False(e.IsTransientSpannerFault());
             Assert.Equal(0, rowsWritten);
@@ -252,7 +252,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }).ConfigureAwait(false);
 
-            Logger.Instance.Debug($"BadTableName: Caught error code:{e.ErrorCode}");
+            Logger.DefaultLogger.Debug(() => $"BadTableName: Caught error code:{e.ErrorCode}");
             Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
             Assert.False(e.IsTransientSpannerFault());
             Assert.Equal(0, rowsWritten);

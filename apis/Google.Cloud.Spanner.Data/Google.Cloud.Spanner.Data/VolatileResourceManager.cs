@@ -37,6 +37,8 @@ namespace Google.Cloud.Spanner.Data
             _timestampBound = timestampBound;
         }
 
+        private Logger Logger => _spannerConnection?.Logger ?? Logger.DefaultLogger;
+
         public void Dispose()
         {
             _transaction?.Dispose();
@@ -100,7 +102,7 @@ namespace Google.Cloud.Spanner.Data
             try
             {
                 ExecuteHelper.WithErrorTranslationAndProfiling(() =>
-                    _transaction?.Rollback(), "VolatileResourceManager.Rollback");
+                    _transaction?.Rollback(), "VolatileResourceManager.Rollback", Logger);
                 enlistment.Done();
             }
             catch (Exception e)
@@ -145,7 +147,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 ExecuteHelper.WithErrorTranslationAndProfiling(
                     () =>
-                        _transaction?.Commit(), "VolatileResourceManager.Commit");
+                        _transaction?.Commit(), "VolatileResourceManager.Commit", Logger);
             }
         }
 

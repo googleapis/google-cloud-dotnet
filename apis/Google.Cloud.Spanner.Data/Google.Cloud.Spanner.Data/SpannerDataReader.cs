@@ -48,11 +48,13 @@ namespace Google.Cloud.Spanner.Data
         private readonly SingleUseTransaction _txToClose;
 
         internal SpannerDataReader(
+            Logger logger,
             ReliableStreamReader resultSet,
             SpannerConnection connectionToClose = null,
             SingleUseTransaction singleUseTransaction = null)
         {
             GaxPreconditions.CheckNotNull(resultSet, nameof(resultSet));
+            Logger = logger;
             Logger.LogPerformanceCounter(
                 "SpannerDataReader.ActiveCount",
                 () => Interlocked.Increment(ref s_readerCount));
@@ -60,6 +62,8 @@ namespace Google.Cloud.Spanner.Data
             _connectionToClose = connectionToClose;
             _txToClose = singleUseTransaction;
         }
+
+        private Logger Logger { get; }
 
         // Nesting is not supported, so we return 0.
         /// <inheritdoc />
@@ -256,7 +260,7 @@ namespace Google.Cloud.Spanner.Data
 
                     return true;
                 },
-                "SpannerDataReader.Read");
+                "SpannerDataReader.Read", Logger);
         }
 
         /// <inheritdoc />
@@ -296,7 +300,7 @@ namespace Google.Cloud.Spanner.Data
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async ()
                     => _metadata ?? (_metadata = await _resultSet.GetMetadataAsync(cancellationToken)
-                        .ConfigureAwait(false)), "SpannerDataReader.GetMetadata");
+                        .ConfigureAwait(false)), "SpannerDataReader.GetMetadata", Logger);
         }
 
         private V1.Type GetSpannerFieldType(int i)

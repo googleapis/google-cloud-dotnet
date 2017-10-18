@@ -39,6 +39,8 @@ namespace Google.Cloud.Spanner.V1
         // Holds a list of all active transactions with back pointers to the owning session.
         static readonly ConcurrentDictionary<ByteString, Session> s_activeTransactionTable = new ConcurrentDictionary<ByteString, Session>();
 
+        private static Logger Logger { get; } = Logger.DefaultLogger;
+
         /// <summary>
         /// Creates a transaction with the given transaction options.
         /// Depending on the state of the session, this may or may not result in a request

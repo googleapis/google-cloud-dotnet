@@ -22,6 +22,7 @@ using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
 using DatabaseName = Google.Cloud.Spanner.Admin.Database.V1.DatabaseName;
 
@@ -51,6 +52,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly CancellationTokenSource _synchronousCancellationTokenSource = new CancellationTokenSource();
         private int _commandTimeout;
         private SpannerTransaction _transaction;
+        private Logger _logger;
 
         /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>.
@@ -128,6 +130,15 @@ namespace Google.Cloud.Spanner.Data
             set => SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value);
         }
 
+
+        /// <summary>
+        /// This property is for internal use only.
+        /// </summary>
+        public Logger Logger
+        {
+            get => _logger ?? SpannerConnection?.Logger;
+            set => _logger = value;
+        }
 
         /// <summary>
         /// Gets or sets the wait time before terminating the attempt to execute a command and generating an error.
@@ -240,6 +251,7 @@ namespace Google.Cloud.Spanner.Data
                 GetSpannerTransaction(),
                 Transaction,
                 singleUseReadSettings,
+                Logger,
                 cancellationToken
                 );
 
@@ -250,6 +262,7 @@ namespace Google.Cloud.Spanner.Data
             ISpannerTransaction spannerTransaction,
             DbTransaction transaction,
             TimestampBound singleUseReadSettings,
+            Logger logger,
             CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(singleUseReadSettings, nameof(singleUseReadSettings));
@@ -276,6 +289,7 @@ namespace Google.Cloud.Spanner.Data
                 spannerTransaction,
                 CommandBehavior.Default,
                 singleUseTransaction,
+                logger,
                 cancellationToken).ConfigureAwait(false);
         }
 
@@ -474,6 +488,7 @@ namespace Google.Cloud.Spanner.Data
                 CommandTimeout,
                 GetSpannerTransaction(),
                 Transaction,
+                Logger,
                 cancellationToken
                 );
 
@@ -483,6 +498,7 @@ namespace Google.Cloud.Spanner.Data
             int commandTimeout,
             ISpannerTransaction spannerTransaction,
             DbTransaction transaction,
+            Logger logger,
             CancellationToken cancellationToken)
         {
             using (var reader = await ExecuteDbDataReaderImplAsync(
@@ -492,6 +508,7 @@ namespace Google.Cloud.Spanner.Data
                 spannerTransaction,
                 CommandBehavior.SingleRow,
                 null,
+                logger,
                 cancellationToken)
                 .ConfigureAwait(false))
             {
@@ -566,6 +583,7 @@ namespace Google.Cloud.Spanner.Data
                 GetSpannerTransaction(),
                 behavior,
                 null,
+                Logger,
                 _synchronousCancellationTokenSource.Token)
                 .ResultWithUnwrappedExceptions();
         }
@@ -580,6 +598,7 @@ namespace Google.Cloud.Spanner.Data
                 GetSpannerTransaction(),
                 behavior,
                 null,
+                Logger,
                 cancellationToken);
 
         private static async Task<DbDataReader> ExecuteDbDataReaderImplAsync(
@@ -589,6 +608,7 @@ namespace Google.Cloud.Spanner.Data
             ISpannerTransaction spannerTransaction,
             CommandBehavior behavior,
             SingleUseTransaction singleUseTransaction,
+            Logger logger,
             CancellationToken cancellationToken)
         {
             // There must be a valid and open connection.
@@ -610,16 +630,18 @@ namespace Google.Cloud.Spanner.Data
 
             var tx = singleUseTransaction ?? spannerTransaction;
 
+            logger.Sensitive_Info(() => $"SpannerCommand.ExecuteReader.Query={request.Sql}");
+
             // Execute the command.
             var resultSet = await tx.ExecuteQueryAsync(request, cancellationToken, commandTimeout)
                 .ConfigureAwait(false);
 
             if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
             {
-                return new SpannerDataReader(resultSet, spannerConnection);
+                return new SpannerDataReader(logger, resultSet, spannerConnection);
             }
 
-            return new SpannerDataReader(resultSet, null, singleUseTransaction);
+            return new SpannerDataReader(logger, resultSet, null, singleUseTransaction);
         }
 
         private ExecuteSqlRequest GetExecuteSqlRequest()

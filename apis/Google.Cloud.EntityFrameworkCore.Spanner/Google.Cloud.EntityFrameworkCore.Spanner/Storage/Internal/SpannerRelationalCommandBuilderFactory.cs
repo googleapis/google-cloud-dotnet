@@ -20,6 +20,8 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
+using Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics;
+using Google.Cloud.Spanner.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Internal;
@@ -291,7 +293,8 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
                         parameterValues = AdjustParameters(parameterValues);
                     }
 
-                    var command = connection.DbConnection.CreateCommand();
+                    var command = (SpannerCommand)connection.DbConnection.CreateCommand();
+                    command.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(Logger);
                     command.CommandText = CommandText;
 
                     if (connection.CurrentTransaction != null)

@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             TestLogger.TestOutputHelper = outputHelper;
             TestLogger.Install();
-            Logger.LogLevel = V1.Internal.Logging.LogLevel.Debug;
+            Logger.DefaultLogger.LogLevel = V1.Internal.Logging.LogLevel.Debug;
         }
 
         private static MockClientFactory SetupMockClientFactory(Mock<SpannerClient> firstClient = null)
@@ -46,7 +46,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             //immediately yield to increase contention for stress testing.
             await Task.Yield();
-            return await pool.AcquireClientAsync();
+            return await pool.AcquireClientAsync(Logger.DefaultLogger);
         }
 
         [Fact]
@@ -56,13 +56,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             var mockClientFactory = SetupMockClientFactory();
 
             var testPool = new ClientPool(mockClientFactory);
-            var clientAcquired = await testPool.AcquireClientAsync();
+            var clientAcquired = await testPool.AcquireClientAsync(Logger.DefaultLogger);
             testPool.ReleaseClient(clientAcquired);
 
             Assert.Equal(1, mockClientFactory.Invocations);
             var s = new StringBuilder();
             Assert.Equal(0, testPool.GetPoolInfo(s));
-            Logger.Instance.Info(s.ToString());
+            Logger.DefaultLogger.Info(() => s.ToString());
         }
 
         [Fact]
@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
             var s = new StringBuilder();
             Assert.Equal(0, testPool.GetPoolInfo(s));
-            Logger.Instance.Info(s.ToString());
+            Logger.DefaultLogger.Info(() => s.ToString());
         }
 
         [Fact]
@@ -109,13 +109,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             var clientList = new List<SpannerClient>();
             for (var i = 0; i < SpannerOptions.Instance.MaximumGrpcChannels; i++)
             {
-                var newClient = await testPool.AcquireClientAsync();
+                var newClient = await testPool.AcquireClientAsync(Logger.DefaultLogger);
                 Assert.DoesNotContain(newClient, clientList);
                 clientList.Add(newClient);
             }
 
             //now we wrap around.
-            var firstReusedClient = await testPool.AcquireClientAsync();
+            var firstReusedClient = await testPool.AcquireClientAsync(Logger.DefaultLogger);
             Assert.Same(clientList[0], firstReusedClient);
             testPool.ReleaseClient(firstReusedClient);
 
@@ -125,11 +125,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
             var s = new StringBuilder();
             Assert.Equal(0, testPool.GetPoolInfo(s));
-            Logger.Instance.Info(s.ToString());
+            Logger.DefaultLogger.Info(() => s.ToString());
 
             //now that everything got released, lets ensure the client order is preserved so
             //that we again get the first client.
-            Assert.Same(firstReusedClient, await testPool.AcquireClientAsync());
+            Assert.Same(firstReusedClient, await testPool.AcquireClientAsync(Logger.DefaultLogger));
             testPool.ReleaseClient(firstReusedClient);
 
             Assert.Equal(SpannerOptions.Instance.MaximumGrpcChannels, mockClientFactory.Invocations);
@@ -151,18 +151,18 @@ namespace Google.Cloud.Spanner.Data.Tests
             var testPool = new ClientPool(mockClientFactory);
             var expectedClient = firstReturnedClient.Object;
 
-            Assert.Same(expectedClient, await testPool.AcquireClientAsync());
+            Assert.Same(expectedClient, await testPool.AcquireClientAsync(Logger.DefaultLogger));
             testPool.ReleaseClient(expectedClient);
 
-            Assert.Same(expectedClient, await testPool.AcquireClientAsync());
+            Assert.Same(expectedClient, await testPool.AcquireClientAsync(Logger.DefaultLogger));
             testPool.ReleaseClient(expectedClient);
 
-            Assert.Same(expectedClient, await testPool.AcquireClientAsync());
+            Assert.Same(expectedClient, await testPool.AcquireClientAsync(Logger.DefaultLogger));
             testPool.ReleaseClient(expectedClient);
 
             var s = new StringBuilder();
             Assert.Equal(0, testPool.GetPoolInfo(s));
-            Logger.Instance.Info(s.ToString());
+            Logger.DefaultLogger.Info(() => s.ToString());
             Assert.Equal(1, mockClientFactory.Invocations);
         }
     }

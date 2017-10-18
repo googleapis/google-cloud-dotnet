@@ -124,6 +124,11 @@ namespace Google.Cloud.Spanner.Data
         [Category("Data")]
         public string SpannerInstance => _connectionStringBuilder?.SpannerInstance;
 
+        /// <summary>
+        /// This property is intended for internal use only.
+        /// </summary>
+        public Logger Logger { get; set; } = Logger.DefaultLogger;
+
         /// <inheritdoc />
         public override ConnectionState State => _state;
 
@@ -449,6 +454,7 @@ namespace Google.Cloud.Spanner.Data
                     try
                     {
                         localClient = await ClientPool.Default.AcquireClientAsync(
+                                Logger,
                                 _connectionStringBuilder.GetCredentials(),
                                 _connectionStringBuilder.EndPoint,
                                 _connectionStringBuilder)
@@ -484,7 +490,7 @@ namespace Google.Cloud.Spanner.Data
                         }
 #endif
                     }
-                }, "SpannerConnection.OpenAsync");
+                }, "SpannerConnection.OpenAsync", Logger);
         }
 
         /// <inheritdoc />
@@ -519,7 +525,7 @@ namespace Google.Cloud.Spanner.Data
                 return _volatileResourceManager;
             }
 #endif
-            return new EphemeralTransaction(this);
+            return new EphemeralTransaction(this, Logger);
         }
 
         internal void ReleaseSession(Session session)
@@ -669,7 +675,7 @@ namespace Google.Cloud.Spanner.Data
                     }
 
                     return session;
-                }, "SpannerConnection.AllocateSession");
+                }, "SpannerConnection.AllocateSession", Logger);
         }
 
         private void AssertClosed(string message)
@@ -704,7 +710,7 @@ namespace Google.Cloud.Spanner.Data
                         await sessionHolder.Session.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
                         return new SingleUseTransaction(this, sessionHolder.TakeOwnership(), options);
                     }
-                }, "SpannerConnection.BeginSingleUseTransaction");
+                }, "SpannerConnection.BeginSingleUseTransaction", Logger);
         }
 
         private Task<SpannerTransaction> BeginTransactionImplAsync(
@@ -726,7 +732,7 @@ namespace Google.Cloud.Spanner.Data
                             this, transactionMode, sessionHolder.TakeOwnership(),
                             transaction, targetReadTimestamp);
                     }
-                }, "SpannerConnection.BeginTransaction");
+                }, "SpannerConnection.BeginTransaction", Logger);
         }
 
         private Task KeepAlive(CancellationToken cancellationToken)

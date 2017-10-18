@@ -106,16 +106,18 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(session, nameof(session));
             GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
 
-            Logger.LogPerformanceCounter(
-                "Transactions.ActiveCount",
-                () => Interlocked.Increment(ref s_transactionCount));
-
             Session = session;
             TimestampBound = timestampBound;
             WireTransaction = transaction;
             _connection = connection;
             Mode = mode;
+
+            Logger.LogPerformanceCounter(
+                "Transactions.ActiveCount",
+                () => Interlocked.Increment(ref s_transactionCount));
         }
+
+        private Logger Logger => _connection?.Logger ?? Logger.DefaultLogger;
 
         Task<int> ISpannerTransaction.ExecuteMutationsAsync(
             List<Mutation> mutations,
@@ -135,7 +137,7 @@ namespace Google.Cloud.Spanner.Data
                     }
                     taskCompletionSource.SetResult(mutations.Count);
                     return taskCompletionSource.Task;
-                }, "SpannerTransaction.ExecuteMutations");
+                }, "SpannerTransaction.ExecuteMutations", Logger);
         }
 
         Task<ReliableStreamReader> ISpannerTransaction.ExecuteQueryAsync(
@@ -153,7 +155,7 @@ namespace Google.Cloud.Spanner.Data
                     taskCompletionSource.SetResult(_connection.SpannerClient.GetSqlStreamReader(request, Session, timeoutSeconds));
 
                     return taskCompletionSource.Task;
-                }, "SpannerTransaction.ExecuteQuery");
+                }, "SpannerTransaction.ExecuteQuery", Logger);
         }
 
         /// <inheritdoc />
@@ -178,7 +180,7 @@ namespace Google.Cloud.Spanner.Data
                     var response = await WireTransaction
                         .CommitAsync(Session, _mutations, CommitTimeout).ConfigureAwait(false);
                     return response.CommitTimestamp?.ToDateTime();
-                }, "SpannerTransaction.Commit");
+                }, "SpannerTransaction.Commit", Logger);
         }
 
         /// <inheritdoc />
@@ -198,7 +200,7 @@ namespace Google.Cloud.Spanner.Data
                     GaxPreconditions.CheckState(
                         Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
                     return WireTransaction.RollbackAsync(Session, CommitTimeout);
-                }, "SpannerTransaction.Rollback");
+                }, "SpannerTransaction.Rollback", Logger);
         }
 
         /// <inheritdoc />

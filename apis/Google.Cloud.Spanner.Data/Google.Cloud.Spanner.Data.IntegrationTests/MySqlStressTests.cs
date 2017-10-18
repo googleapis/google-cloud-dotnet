@@ -78,7 +78,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             //now run the test.
             double result = await TestWriteLatencyWithQps(TargetQps, TestDuration, TestWriteOneRow);
-            Logger.Instance.Info($"MySql latency= {result}ms");
+            Logger.DefaultLogger.Info(() => $"MySql latency= {result}ms");
 
             ValidatePoolInfo();
 
