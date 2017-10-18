@@ -79,6 +79,16 @@ namespace Google.Cloud.Firestore.Data
         /// <summary>
         /// Creates an array value from a BCL sequence.
         /// </summary>
-        internal static Value CreateArrayValue(IEnumerable<Value> values) => new Value { ArrayValue = new ArrayValue { Values = { values } } };
+        internal static Value CreateArrayValue(IEnumerable<Value> values) =>
+            new Value { ArrayValue = new ArrayValue { Values = { values.Select(value => ValidateNotArray(value)) } } };
+
+        private static Value ValidateNotArray(Value input)
+        {
+            if (input.ArrayValue != null)
+            {
+                throw new ArgumentException("Array values cannot directly contain other array values");
+            }
+            return input;
+        }
     }
 }

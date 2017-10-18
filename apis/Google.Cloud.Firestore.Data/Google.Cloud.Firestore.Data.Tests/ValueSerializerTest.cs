@@ -124,6 +124,13 @@ namespace Google.Cloud.Firestore.Data.Tests
             var broken = new BadSentinelModel();
             Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(broken));
         }
+
+        [Fact]
+        public void ArrayInArray()
+        {
+            var badArray = new[] { new int[10] };
+            Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(badArray));
+        }
         
         [FirestoreData]
         private class BadSentinelModel
