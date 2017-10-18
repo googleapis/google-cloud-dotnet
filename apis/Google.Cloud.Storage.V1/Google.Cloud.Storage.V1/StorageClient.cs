@@ -99,6 +99,15 @@ namespace Google.Cloud.Storage.V1
             return CreateImpl(scopedCredentials, encryptionKey);
         }
 
+        /// <summary>
+        /// Creates a <see cref="StorageClient"/> with no credentials. This can only be used in limited
+        /// situations (where authentication isn't required), primarily downloading public data.
+        /// </summary>
+        /// <returns>The created <see cref="StorageClient"/>.</returns>
+        public static StorageClient CreateUnauthenticated()
+        {
+            return CreateImpl(null, null);
+        }
 
         private static StorageClient CreateImpl(GoogleCredential scopedCredentials, EncryptionKey encryptionKey)
         {
