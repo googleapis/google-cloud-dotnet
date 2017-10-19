@@ -97,7 +97,8 @@ namespace Google.Cloud.BigQuery.V2
         /// To help ensure data consistency, you can supply an <see cref="InsertId" /> for each inserted row.
         /// BigQuery remembers this ID for at least one minute. If you try to stream the same set of rows within
         /// that time period and the insertId property is set, BigQuery uses the property to de-duplicate
-        /// your data on a best effort basis.
+        /// your data on a best effort basis. If no ID is specified, one will be generated to allow all
+        /// insert operations to be retried.
         /// </summary>
         public string InsertId { get; set; }
 
@@ -182,7 +183,9 @@ namespace Google.Cloud.BigQuery.V2
         internal TableDataInsertAllRequest.RowsData ToRowsData()
             => new TableDataInsertAllRequest.RowsData
             {
-                InsertId = InsertId,
+                // Always provide an insert ID. If this logic is changed, the CreateInsertAllRequest() method
+                // will need to be changed, as we now assume every insert has an ID.
+                InsertId = InsertId ?? Guid.NewGuid().ToString(),
                 Json = GetJsonValues()
             };
 

@@ -266,10 +266,8 @@ namespace Google.Cloud.BigQuery.V2
             options?.ModifyRequest(body);
             var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             request.ModifyRequest += _versionHeaderAction;
-            if (insertRows.All(ir => ir.InsertId != null))
-            {
-                RetryHandler.MarkAsRetriable(request);
-            }
+            // We ensure that every row has an insert ID, so we can always retry.
+            RetryHandler.MarkAsRetriable(request);
             return request;
         }
     }

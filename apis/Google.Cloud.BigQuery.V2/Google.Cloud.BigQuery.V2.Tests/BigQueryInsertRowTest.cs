@@ -54,7 +54,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void SimpleSuccess()
+        public void ToRowsData_NoSpecifiedInsertId()
         {
             var row = new BigQueryInsertRow
             {
@@ -67,6 +67,20 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("value1", rowData.Json["field1"]);
             Assert.Null(rowData.Json["field2"]);
             Assert.Equal(2, rowData.Json["field3"]);
+            // The insert ID should be populated automatically if not supplied by the user.
+            Assert.NotNull(rowData.InsertId);
+        }
+
+        [Fact]
+        public void ToRowsData_WithInsertId()
+        {
+            var row = new BigQueryInsertRow("my-id")
+            {
+                { "field1", "value1" },
+            };
+            var rowData = row.ToRowsData();
+            Assert.Equal("value1", rowData.Json["field1"]);
+            Assert.Equal("my-id", rowData.InsertId);
         }
 
         [Fact]
