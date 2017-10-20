@@ -63,8 +63,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
             { "Microsoft.NET.Test.Sdk", "15.3.0" },
-            { "xunit", "2.3.0" },
-            { "xunit.runner.visualstudio", "2.3.0" },
+            { "xunit", "2.3.1-rc2-build3844" },
+            { "xunit.runner.visualstudio", "2.3.1-rc2-build3844" },
             { "Moq", "4.7.99" }
         };
 
