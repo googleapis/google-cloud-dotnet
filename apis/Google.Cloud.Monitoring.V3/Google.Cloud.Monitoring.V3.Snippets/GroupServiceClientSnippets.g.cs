@@ -31,8 +31,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Monitoring.V3.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedGroupServiceClientSnippets
     {
+        /// <summary>Snippet for ListGroupsAsync</summary>
         public async Task ListGroupsAsync_RequestObject()
         {
             // Snippet: ListGroupsAsync(ListGroupsRequest,CallSettings)
@@ -79,6 +81,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListGroups</summary>
         public void ListGroups_RequestObject()
         {
             // Snippet: ListGroups(ListGroupsRequest,CallSettings)
@@ -125,6 +128,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetGroupAsync</summary>
         public async Task GetGroupAsync()
         {
             // Snippet: GetGroupAsync(GroupName,CallSettings)
@@ -138,6 +142,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetGroup</summary>
         public void GetGroup()
         {
             // Snippet: GetGroup(GroupName,CallSettings)
@@ -150,6 +155,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetGroupAsync</summary>
         public async Task GetGroupAsync_RequestObject()
         {
             // Snippet: GetGroupAsync(GetGroupRequest,CallSettings)
@@ -165,6 +171,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetGroup</summary>
         public void GetGroup_RequestObject()
         {
             // Snippet: GetGroup(GetGroupRequest,CallSettings)
@@ -180,6 +187,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateGroupAsync</summary>
         public async Task CreateGroupAsync()
         {
             // Snippet: CreateGroupAsync(ProjectName,Group,CallSettings)
@@ -194,6 +202,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateGroup</summary>
         public void CreateGroup()
         {
             // Snippet: CreateGroup(ProjectName,Group,CallSettings)
@@ -207,6 +216,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateGroupAsync</summary>
         public async Task CreateGroupAsync_RequestObject()
         {
             // Snippet: CreateGroupAsync(CreateGroupRequest,CallSettings)
@@ -223,6 +233,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateGroup</summary>
         public void CreateGroup_RequestObject()
         {
             // Snippet: CreateGroup(CreateGroupRequest,CallSettings)
@@ -239,6 +250,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGroupAsync</summary>
         public async Task UpdateGroupAsync()
         {
             // Snippet: UpdateGroupAsync(Group,CallSettings)
@@ -252,6 +264,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGroup</summary>
         public void UpdateGroup()
         {
             // Snippet: UpdateGroup(Group,CallSettings)
@@ -264,6 +277,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGroupAsync</summary>
         public async Task UpdateGroupAsync_RequestObject()
         {
             // Snippet: UpdateGroupAsync(UpdateGroupRequest,CallSettings)
@@ -279,6 +293,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGroup</summary>
         public void UpdateGroup_RequestObject()
         {
             // Snippet: UpdateGroup(UpdateGroupRequest,CallSettings)
@@ -294,6 +309,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteGroupAsync</summary>
         public async Task DeleteGroupAsync()
         {
             // Snippet: DeleteGroupAsync(GroupName,CallSettings)
@@ -307,6 +323,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteGroup</summary>
         public void DeleteGroup()
         {
             // Snippet: DeleteGroup(GroupName,CallSettings)
@@ -319,6 +336,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteGroupAsync</summary>
         public async Task DeleteGroupAsync_RequestObject()
         {
             // Snippet: DeleteGroupAsync(DeleteGroupRequest,CallSettings)
@@ -334,6 +352,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteGroup</summary>
         public void DeleteGroup_RequestObject()
         {
             // Snippet: DeleteGroup(DeleteGroupRequest,CallSettings)
@@ -349,6 +368,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListGroupMembersAsync</summary>
         public async Task ListGroupMembersAsync()
         {
             // Snippet: ListGroupMembersAsync(GroupName,string,int?,CallSettings)
@@ -392,6 +412,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListGroupMembers</summary>
         public void ListGroupMembers()
         {
             // Snippet: ListGroupMembers(GroupName,string,int?,CallSettings)
@@ -435,6 +456,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListGroupMembersAsync</summary>
         public async Task ListGroupMembersAsync_RequestObject()
         {
             // Snippet: ListGroupMembersAsync(ListGroupMembersRequest,CallSettings)
@@ -481,6 +503,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListGroupMembers</summary>
         public void ListGroupMembers_RequestObject()
         {
             // Snippet: ListGroupMembers(ListGroupMembersRequest,CallSettings)

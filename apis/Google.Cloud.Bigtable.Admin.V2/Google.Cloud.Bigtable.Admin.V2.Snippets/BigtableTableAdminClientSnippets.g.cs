@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.Admin.V2.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedBigtableTableAdminClientSnippets
     {
+        /// <summary>Snippet for CreateTableAsync</summary>
         public async Task CreateTableAsync()
         {
             // Snippet: CreateTableAsync(InstanceName,string,Table,CallSettings)
@@ -47,6 +49,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTable</summary>
         public void CreateTable()
         {
             // Snippet: CreateTable(InstanceName,string,Table,CallSettings)
@@ -61,6 +64,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTableAsync</summary>
         public async Task CreateTableAsync_RequestObject()
         {
             // Snippet: CreateTableAsync(CreateTableRequest,CallSettings)
@@ -78,6 +82,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTable</summary>
         public void CreateTable_RequestObject()
         {
             // Snippet: CreateTable(CreateTableRequest,CallSettings)
@@ -95,6 +100,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTablesAsync</summary>
         public async Task ListTablesAsync()
         {
             // Snippet: ListTablesAsync(InstanceName,string,int?,CallSettings)
@@ -138,6 +144,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTables</summary>
         public void ListTables()
         {
             // Snippet: ListTables(InstanceName,string,int?,CallSettings)
@@ -181,6 +188,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTablesAsync</summary>
         public async Task ListTablesAsync_RequestObject()
         {
             // Snippet: ListTablesAsync(ListTablesRequest,CallSettings)
@@ -227,6 +235,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTables</summary>
         public void ListTables_RequestObject()
         {
             // Snippet: ListTables(ListTablesRequest,CallSettings)
@@ -273,6 +282,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTableAsync</summary>
         public async Task GetTableAsync()
         {
             // Snippet: GetTableAsync(TableName,CallSettings)
@@ -286,6 +296,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTable</summary>
         public void GetTable()
         {
             // Snippet: GetTable(TableName,CallSettings)
@@ -298,6 +309,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTableAsync</summary>
         public async Task GetTableAsync_RequestObject()
         {
             // Snippet: GetTableAsync(GetTableRequest,CallSettings)
@@ -313,6 +325,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTable</summary>
         public void GetTable_RequestObject()
         {
             // Snippet: GetTable(GetTableRequest,CallSettings)
@@ -328,6 +341,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteTableAsync</summary>
         public async Task DeleteTableAsync()
         {
             // Snippet: DeleteTableAsync(TableName,CallSettings)
@@ -341,6 +355,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteTable</summary>
         public void DeleteTable()
         {
             // Snippet: DeleteTable(TableName,CallSettings)
@@ -353,6 +368,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteTableAsync</summary>
         public async Task DeleteTableAsync_RequestObject()
         {
             // Snippet: DeleteTableAsync(DeleteTableRequest,CallSettings)
@@ -368,6 +384,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteTable</summary>
         public void DeleteTable_RequestObject()
         {
             // Snippet: DeleteTable(DeleteTableRequest,CallSettings)
@@ -383,6 +400,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyColumnFamiliesAsync</summary>
         public async Task ModifyColumnFamiliesAsync()
         {
             // Snippet: ModifyColumnFamiliesAsync(TableName,IEnumerable<ModifyColumnFamiliesRequest.Types.Modification>,CallSettings)
@@ -397,6 +415,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyColumnFamilies</summary>
         public void ModifyColumnFamilies()
         {
             // Snippet: ModifyColumnFamilies(TableName,IEnumerable<ModifyColumnFamiliesRequest.Types.Modification>,CallSettings)
@@ -410,6 +429,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyColumnFamiliesAsync</summary>
         public async Task ModifyColumnFamiliesAsync_RequestObject()
         {
             // Snippet: ModifyColumnFamiliesAsync(ModifyColumnFamiliesRequest,CallSettings)
@@ -426,6 +446,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyColumnFamilies</summary>
         public void ModifyColumnFamilies_RequestObject()
         {
             // Snippet: ModifyColumnFamilies(ModifyColumnFamiliesRequest,CallSettings)
@@ -442,6 +463,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DropRowRangeAsync</summary>
         public async Task DropRowRangeAsync()
         {
             // Snippet: DropRowRangeAsync(string,ByteString,CallSettings)
@@ -456,6 +478,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DropRowRange</summary>
         public void DropRowRange()
         {
             // Snippet: DropRowRange(string,ByteString,CallSettings)
@@ -469,6 +492,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DropRowRangeAsync</summary>
         public async Task DropRowRangeAsync_RequestObject()
         {
             // Snippet: DropRowRangeAsync(DropRowRangeRequest,CallSettings)
@@ -484,6 +508,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DropRowRange</summary>
         public void DropRowRange_RequestObject()
         {
             // Snippet: DropRowRange(DropRowRangeRequest,CallSettings)

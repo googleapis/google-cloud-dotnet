@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Debugger.V2.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedController2ClientSnippets
     {
+        /// <summary>Snippet for RegisterDebuggeeAsync</summary>
         public async Task RegisterDebuggeeAsync()
         {
             // Snippet: RegisterDebuggeeAsync(Debuggee,CallSettings)
@@ -45,6 +47,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RegisterDebuggee</summary>
         public void RegisterDebuggee()
         {
             // Snippet: RegisterDebuggee(Debuggee,CallSettings)
@@ -57,6 +60,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RegisterDebuggeeAsync</summary>
         public async Task RegisterDebuggeeAsync_RequestObject()
         {
             // Snippet: RegisterDebuggeeAsync(RegisterDebuggeeRequest,CallSettings)
@@ -72,6 +76,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RegisterDebuggee</summary>
         public void RegisterDebuggee_RequestObject()
         {
             // Snippet: RegisterDebuggee(RegisterDebuggeeRequest,CallSettings)
@@ -87,6 +92,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListActiveBreakpointsAsync</summary>
         public async Task ListActiveBreakpointsAsync()
         {
             // Snippet: ListActiveBreakpointsAsync(string,CallSettings)
@@ -100,6 +106,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListActiveBreakpoints</summary>
         public void ListActiveBreakpoints()
         {
             // Snippet: ListActiveBreakpoints(string,CallSettings)
@@ -112,6 +119,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListActiveBreakpointsAsync</summary>
         public async Task ListActiveBreakpointsAsync_RequestObject()
         {
             // Snippet: ListActiveBreakpointsAsync(ListActiveBreakpointsRequest,CallSettings)
@@ -127,6 +135,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListActiveBreakpoints</summary>
         public void ListActiveBreakpoints_RequestObject()
         {
             // Snippet: ListActiveBreakpoints(ListActiveBreakpointsRequest,CallSettings)
@@ -142,6 +151,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateActiveBreakpointAsync</summary>
         public async Task UpdateActiveBreakpointAsync()
         {
             // Snippet: UpdateActiveBreakpointAsync(string,Breakpoint,CallSettings)
@@ -156,6 +166,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateActiveBreakpoint</summary>
         public void UpdateActiveBreakpoint()
         {
             // Snippet: UpdateActiveBreakpoint(string,Breakpoint,CallSettings)
@@ -169,6 +180,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateActiveBreakpointAsync</summary>
         public async Task UpdateActiveBreakpointAsync_RequestObject()
         {
             // Snippet: UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest,CallSettings)
@@ -185,6 +197,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateActiveBreakpoint</summary>
         public void UpdateActiveBreakpoint_RequestObject()
         {
             // Snippet: UpdateActiveBreakpoint(UpdateActiveBreakpointRequest,CallSettings)

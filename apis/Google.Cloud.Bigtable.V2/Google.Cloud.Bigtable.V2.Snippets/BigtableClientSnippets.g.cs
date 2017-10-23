@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedBigtableClientSnippets
     {
+        /// <summary>Snippet for ReadRows</summary>
         public async Task ReadRows()
         {
             // Snippet: ReadRows(ReadRowsRequest,CallSettings)
@@ -56,6 +58,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SampleRowKeys</summary>
         public async Task SampleRowKeys()
         {
             // Snippet: SampleRowKeys(SampleRowKeysRequest,CallSettings)
@@ -80,6 +83,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for MutateRowAsync</summary>
         public async Task MutateRowAsync()
         {
             // Snippet: MutateRowAsync(string,ByteString,IEnumerable<Mutation>,CallSettings)
@@ -95,6 +99,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for MutateRow</summary>
         public void MutateRow()
         {
             // Snippet: MutateRow(string,ByteString,IEnumerable<Mutation>,CallSettings)
@@ -109,6 +114,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for MutateRowAsync</summary>
         public async Task MutateRowAsync_RequestObject()
         {
             // Snippet: MutateRowAsync(MutateRowRequest,CallSettings)
@@ -126,6 +132,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for MutateRow</summary>
         public void MutateRow_RequestObject()
         {
             // Snippet: MutateRow(MutateRowRequest,CallSettings)
@@ -143,6 +150,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for MutateRows</summary>
         public async Task MutateRows()
         {
             // Snippet: MutateRows(MutateRowsRequest,CallSettings)
@@ -168,6 +176,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CheckAndMutateRowAsync</summary>
         public async Task CheckAndMutateRowAsync()
         {
             // Snippet: CheckAndMutateRowAsync(string,ByteString,IEnumerable<Mutation>,IEnumerable<Mutation>,CallSettings)
@@ -184,6 +193,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CheckAndMutateRow</summary>
         public void CheckAndMutateRow()
         {
             // Snippet: CheckAndMutateRow(string,ByteString,IEnumerable<Mutation>,IEnumerable<Mutation>,CallSettings)
@@ -199,6 +209,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CheckAndMutateRowAsync</summary>
         public async Task CheckAndMutateRowAsync_RequestObject()
         {
             // Snippet: CheckAndMutateRowAsync(CheckAndMutateRowRequest,CallSettings)
@@ -215,6 +226,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CheckAndMutateRow</summary>
         public void CheckAndMutateRow_RequestObject()
         {
             // Snippet: CheckAndMutateRow(CheckAndMutateRowRequest,CallSettings)
@@ -231,6 +243,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ReadModifyWriteRowAsync</summary>
         public async Task ReadModifyWriteRowAsync()
         {
             // Snippet: ReadModifyWriteRowAsync(string,ByteString,IEnumerable<ReadModifyWriteRule>,CallSettings)
@@ -246,6 +259,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ReadModifyWriteRow</summary>
         public void ReadModifyWriteRow()
         {
             // Snippet: ReadModifyWriteRow(string,ByteString,IEnumerable<ReadModifyWriteRule>,CallSettings)
@@ -260,6 +274,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ReadModifyWriteRowAsync</summary>
         public async Task ReadModifyWriteRowAsync_RequestObject()
         {
             // Snippet: ReadModifyWriteRowAsync(ReadModifyWriteRowRequest,CallSettings)
@@ -277,6 +292,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ReadModifyWriteRow</summary>
         public void ReadModifyWriteRow_RequestObject()
         {
             // Snippet: ReadModifyWriteRow(ReadModifyWriteRowRequest,CallSettings)

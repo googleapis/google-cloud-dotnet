@@ -31,8 +31,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Monitoring.V3.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedMetricServiceClientSnippets
     {
+        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
         public async Task ListMonitoredResourceDescriptorsAsync()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(ProjectName,string,int?,CallSettings)
@@ -76,6 +78,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
         public void ListMonitoredResourceDescriptors()
         {
             // Snippet: ListMonitoredResourceDescriptors(ProjectName,string,int?,CallSettings)
@@ -119,6 +122,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
         public async Task ListMonitoredResourceDescriptorsAsync_RequestObject()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest,CallSettings)
@@ -165,6 +169,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
         public void ListMonitoredResourceDescriptors_RequestObject()
         {
             // Snippet: ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest,CallSettings)
@@ -211,6 +216,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetMonitoredResourceDescriptorAsync</summary>
         public async Task GetMonitoredResourceDescriptorAsync()
         {
             // Snippet: GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName,CallSettings)
@@ -224,6 +230,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetMonitoredResourceDescriptor</summary>
         public void GetMonitoredResourceDescriptor()
         {
             // Snippet: GetMonitoredResourceDescriptor(MonitoredResourceDescriptorName,CallSettings)
@@ -236,6 +243,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetMonitoredResourceDescriptorAsync</summary>
         public async Task GetMonitoredResourceDescriptorAsync_RequestObject()
         {
             // Snippet: GetMonitoredResourceDescriptorAsync(GetMonitoredResourceDescriptorRequest,CallSettings)
@@ -251,6 +259,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetMonitoredResourceDescriptor</summary>
         public void GetMonitoredResourceDescriptor_RequestObject()
         {
             // Snippet: GetMonitoredResourceDescriptor(GetMonitoredResourceDescriptorRequest,CallSettings)
@@ -266,6 +275,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListMetricDescriptorsAsync</summary>
         public async Task ListMetricDescriptorsAsync()
         {
             // Snippet: ListMetricDescriptorsAsync(ProjectName,string,int?,CallSettings)
@@ -309,6 +319,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListMetricDescriptors</summary>
         public void ListMetricDescriptors()
         {
             // Snippet: ListMetricDescriptors(ProjectName,string,int?,CallSettings)
@@ -352,6 +363,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListMetricDescriptorsAsync</summary>
         public async Task ListMetricDescriptorsAsync_RequestObject()
         {
             // Snippet: ListMetricDescriptorsAsync(ListMetricDescriptorsRequest,CallSettings)
@@ -398,6 +410,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListMetricDescriptors</summary>
         public void ListMetricDescriptors_RequestObject()
         {
             // Snippet: ListMetricDescriptors(ListMetricDescriptorsRequest,CallSettings)
@@ -444,6 +457,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetMetricDescriptorAsync</summary>
         public async Task GetMetricDescriptorAsync()
         {
             // Snippet: GetMetricDescriptorAsync(MetricDescriptorName,CallSettings)
@@ -457,6 +471,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetMetricDescriptor</summary>
         public void GetMetricDescriptor()
         {
             // Snippet: GetMetricDescriptor(MetricDescriptorName,CallSettings)
@@ -469,6 +484,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetMetricDescriptorAsync</summary>
         public async Task GetMetricDescriptorAsync_RequestObject()
         {
             // Snippet: GetMetricDescriptorAsync(GetMetricDescriptorRequest,CallSettings)
@@ -484,6 +500,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetMetricDescriptor</summary>
         public void GetMetricDescriptor_RequestObject()
         {
             // Snippet: GetMetricDescriptor(GetMetricDescriptorRequest,CallSettings)
@@ -499,6 +516,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateMetricDescriptorAsync</summary>
         public async Task CreateMetricDescriptorAsync()
         {
             // Snippet: CreateMetricDescriptorAsync(ProjectName,MetricDescriptor,CallSettings)
@@ -513,6 +531,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateMetricDescriptor</summary>
         public void CreateMetricDescriptor()
         {
             // Snippet: CreateMetricDescriptor(ProjectName,MetricDescriptor,CallSettings)
@@ -526,6 +545,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateMetricDescriptorAsync</summary>
         public async Task CreateMetricDescriptorAsync_RequestObject()
         {
             // Snippet: CreateMetricDescriptorAsync(CreateMetricDescriptorRequest,CallSettings)
@@ -542,6 +562,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateMetricDescriptor</summary>
         public void CreateMetricDescriptor_RequestObject()
         {
             // Snippet: CreateMetricDescriptor(CreateMetricDescriptorRequest,CallSettings)
@@ -558,6 +579,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteMetricDescriptorAsync</summary>
         public async Task DeleteMetricDescriptorAsync()
         {
             // Snippet: DeleteMetricDescriptorAsync(MetricDescriptorName,CallSettings)
@@ -571,6 +593,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteMetricDescriptor</summary>
         public void DeleteMetricDescriptor()
         {
             // Snippet: DeleteMetricDescriptor(MetricDescriptorName,CallSettings)
@@ -583,6 +606,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteMetricDescriptorAsync</summary>
         public async Task DeleteMetricDescriptorAsync_RequestObject()
         {
             // Snippet: DeleteMetricDescriptorAsync(DeleteMetricDescriptorRequest,CallSettings)
@@ -598,6 +622,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteMetricDescriptor</summary>
         public void DeleteMetricDescriptor_RequestObject()
         {
             // Snippet: DeleteMetricDescriptor(DeleteMetricDescriptorRequest,CallSettings)
@@ -613,6 +638,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTimeSeriesAsync</summary>
         public async Task ListTimeSeriesAsync()
         {
             // Snippet: ListTimeSeriesAsync(ProjectName,string,TimeInterval,ListTimeSeriesRequest.Types.TimeSeriesView,string,int?,CallSettings)
@@ -659,6 +685,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTimeSeries</summary>
         public void ListTimeSeries()
         {
             // Snippet: ListTimeSeries(ProjectName,string,TimeInterval,ListTimeSeriesRequest.Types.TimeSeriesView,string,int?,CallSettings)
@@ -705,6 +732,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTimeSeriesAsync</summary>
         public async Task ListTimeSeriesAsync_RequestObject()
         {
             // Snippet: ListTimeSeriesAsync(ListTimeSeriesRequest,CallSettings)
@@ -754,6 +782,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTimeSeries</summary>
         public void ListTimeSeries_RequestObject()
         {
             // Snippet: ListTimeSeries(ListTimeSeriesRequest,CallSettings)
@@ -803,6 +832,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTimeSeriesAsync</summary>
         public async Task CreateTimeSeriesAsync()
         {
             // Snippet: CreateTimeSeriesAsync(ProjectName,IEnumerable<TimeSeries>,CallSettings)
@@ -817,6 +847,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTimeSeries</summary>
         public void CreateTimeSeries()
         {
             // Snippet: CreateTimeSeries(ProjectName,IEnumerable<TimeSeries>,CallSettings)
@@ -830,6 +861,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTimeSeriesAsync</summary>
         public async Task CreateTimeSeriesAsync_RequestObject()
         {
             // Snippet: CreateTimeSeriesAsync(CreateTimeSeriesRequest,CallSettings)
@@ -846,6 +878,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTimeSeries</summary>
         public void CreateTimeSeries_RequestObject()
         {
             // Snippet: CreateTimeSeries(CreateTimeSeriesRequest,CallSettings)

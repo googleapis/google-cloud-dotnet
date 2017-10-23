@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Vision.V1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedImageAnnotatorClientSnippets
     {
+        /// <summary>Snippet for BatchAnnotateImagesAsync</summary>
         public async Task BatchAnnotateImagesAsync()
         {
             // Snippet: BatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>,CallSettings)
@@ -45,6 +47,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchAnnotateImages</summary>
         public void BatchAnnotateImages()
         {
             // Snippet: BatchAnnotateImages(IEnumerable<AnnotateImageRequest>,CallSettings)
@@ -57,6 +60,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchAnnotateImagesAsync</summary>
         public async Task BatchAnnotateImagesAsync_RequestObject()
         {
             // Snippet: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest,CallSettings)
@@ -72,6 +76,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchAnnotateImages</summary>
         public void BatchAnnotateImages_RequestObject()
         {
             // Snippet: BatchAnnotateImages(BatchAnnotateImagesRequest,CallSettings)

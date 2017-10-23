@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedReportErrorsServiceClientSnippets
     {
+        /// <summary>Snippet for ReportErrorEventAsync</summary>
         public async Task ReportErrorEventAsync()
         {
             // Snippet: ReportErrorEventAsync(ProjectName,ReportedErrorEvent,CallSettings)
@@ -46,6 +48,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ReportErrorEvent</summary>
         public void ReportErrorEvent()
         {
             // Snippet: ReportErrorEvent(ProjectName,ReportedErrorEvent,CallSettings)
@@ -59,6 +62,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ReportErrorEventAsync</summary>
         public async Task ReportErrorEventAsync_RequestObject()
         {
             // Snippet: ReportErrorEventAsync(ReportErrorEventRequest,CallSettings)
@@ -75,6 +79,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ReportErrorEvent</summary>
         public void ReportErrorEvent_RequestObject()
         {
             // Snippet: ReportErrorEvent(ReportErrorEventRequest,CallSettings)
