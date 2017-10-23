@@ -56,5 +56,27 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             Assert.Throws<GoogleApiException>(() => query.ThrowOnAnyError());
         }
+
+        // See-also: BigQueryClient.PollJobUntilCompleted(string, *, *)
+        // Member: PollUntilCompleted(*, *)
+        // Member: PollUntilCompletedAsync(*, *, *)
+        // See [BigQueryClient.PollJobUntilCompleted](ref) for an example using BigQueryClient.
+        // End see-also
+
+        // See-also: BigQueryClient.CancelJob(string, *)
+        // Member: Cancel(*)
+        // Member: CancelAsync(*, *)
+        // See [BigQueryClient.CancelJob](ref) for an example using BigQueryClient.
+        // End see-also
+
+        // See-also: BigQueryClient.GetQueryResults(JobReference, *)
+        // Member: GetQueryResults(*)
+        // See [BigQueryClient.GetQueryResults](ref) for an example using BigQueryClient.
+        // End see-also
+
+        // See-also: BigQueryClient.GetQueryResultsAsync(JobReference, *, *)
+        // Member: GetQueryResultsAsync(*, *)
+        // See [BigQueryClient.GetQueryResultsAsync](ref) for an example using BigQueryClient.
+        // End see-also
     }
 }
