@@ -25,17 +25,19 @@ namespace Google.Cloud.Bigtable.V2.Tests
 {
     public class BigtableClientTest
     {
+        private class TestBigtableClient : BigtableClient { }
+
         [Fact]
         public async Task MutateRow_Validate_TableName()
         {
-            var client = BigtableClient.Create();
+            var client = new TestBigtableClient();
             await MutateRow_ValidateArguments<ArgumentNullException>(null, "abc", new[] { Mutations.DeleteFromRow() });
         }
 
         [Fact]
         public async Task MutateRow_Validate_RowKey()
         {
-            var client = BigtableClient.Create();
+            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await MutateRow_ValidateArguments<ArgumentException>(tableName, "", new[] { Mutations.DeleteFromRow() });
             await MutateRow_ValidateArguments<ArgumentException>(tableName, new byte[0], new[] { Mutations.DeleteFromRow() });
@@ -46,7 +48,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task MutateRow_Validate_Mutations()
         {
-            var client = BigtableClient.Create();
+            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await MutateRow_ValidateArguments<ArgumentNullException>(tableName, "abc", null);
             await MutateRow_ValidateArguments<ArgumentException>(tableName, "abc", new Mutation[0]);
@@ -59,7 +61,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             IEnumerable<Mutation> mutations)
             where TException : Exception
         {
-            var client = BigtableClient.Create();
+            var client = new TestBigtableClient();
             Assert.Throws<TException>(
                 () => client.MutateRow(tableName, rowKey, mutations.ToArray()));
             Assert.Throws<TException>(
