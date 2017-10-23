@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.VideoIntelligence.V1beta2;
 using Google.LongRunning;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;

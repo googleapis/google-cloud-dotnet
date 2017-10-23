@@ -664,6 +664,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
         /// new database.  The database ID must conform to the regular expression
         /// `[a-z][a-z0-9_\-]*[a-z0-9]` and be between 2 and 30 characters in length.
+        /// If the database ID is a reserved word or if it contains a hyphen, the
+        /// database ID must be enclosed in backticks (`` ` ``).
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -700,6 +702,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
         /// new database.  The database ID must conform to the regular expression
         /// `[a-z][a-z0-9_\-]*[a-z0-9]` and be between 2 and 30 characters in length.
+        /// If the database ID is a reserved word or if it contains a hyphen, the
+        /// database ID must be enclosed in backticks (`` ` ``).
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -733,6 +737,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
         /// new database.  The database ID must conform to the regular expression
         /// `[a-z][a-z0-9_\-]*[a-z0-9]` and be between 2 and 30 characters in length.
+        /// If the database ID is a reserved word or if it contains a hyphen, the
+        /// database ID must be enclosed in backticks (`` ` ``).
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

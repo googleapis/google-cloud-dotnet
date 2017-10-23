@@ -48,6 +48,8 @@ namespace Google.Cloud.Datastore.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RollbackResponse> __Marshaller_RollbackResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.RollbackResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.AllocateIdsRequest> __Marshaller_AllocateIdsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.AllocateIdsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> __Marshaller_AllocateIdsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.AllocateIdsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.ReserveIdsRequest> __Marshaller_ReserveIdsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.ReserveIdsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> __Marshaller_ReserveIdsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.V1.ReserveIdsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Datastore.V1.LookupRequest, global::Google.Cloud.Datastore.V1.LookupResponse> __Method_Lookup = new grpc::Method<global::Google.Cloud.Datastore.V1.LookupRequest, global::Google.Cloud.Datastore.V1.LookupResponse>(
         grpc::MethodType.Unary,
@@ -90,6 +92,13 @@ namespace Google.Cloud.Datastore.V1 {
         "AllocateIds",
         __Marshaller_AllocateIdsRequest,
         __Marshaller_AllocateIdsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Datastore.V1.ReserveIdsRequest, global::Google.Cloud.Datastore.V1.ReserveIdsResponse> __Method_ReserveIds = new grpc::Method<global::Google.Cloud.Datastore.V1.ReserveIdsRequest, global::Google.Cloud.Datastore.V1.ReserveIdsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReserveIds",
+        __Marshaller_ReserveIdsRequest,
+        __Marshaller_ReserveIdsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -164,6 +173,18 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> AllocateIds(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+      /// Datastore.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> ReserveIds(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -465,6 +486,54 @@ namespace Google.Cloud.Datastore.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_AllocateIds, null, options, request);
       }
+      /// <summary>
+      /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+      /// Datastore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Datastore.V1.ReserveIdsResponse ReserveIds(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ReserveIds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+      /// Datastore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Datastore.V1.ReserveIdsResponse ReserveIds(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReserveIds, null, options, request);
+      }
+      /// <summary>
+      /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+      /// Datastore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> ReserveIdsAsync(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ReserveIdsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+      /// Datastore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> ReserveIdsAsync(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReserveIds, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override DatastoreClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -482,7 +551,8 @@ namespace Google.Cloud.Datastore.V1 {
           .AddMethod(__Method_BeginTransaction, serviceImpl.BeginTransaction)
           .AddMethod(__Method_Commit, serviceImpl.Commit)
           .AddMethod(__Method_Rollback, serviceImpl.Rollback)
-          .AddMethod(__Method_AllocateIds, serviceImpl.AllocateIds).Build();
+          .AddMethod(__Method_AllocateIds, serviceImpl.AllocateIds)
+          .AddMethod(__Method_ReserveIds, serviceImpl.ReserveIds).Build();
     }
 
   }

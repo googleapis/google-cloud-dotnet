@@ -106,13 +106,13 @@ namespace Google.Cloud.PubSub.V1
         /// <list type="bullet">
         /// <item><description><see cref="StatusCode.Cancelled"/></description></item>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
         public static Predicate<RpcException> PullRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Cancelled, StatusCode.DeadlineExceeded, StatusCode.ResourceExhausted, StatusCode.Internal, StatusCode.Unavailable);
+            RetrySettings.FilterForStatusCodes(StatusCode.Cancelled, StatusCode.DeadlineExceeded, StatusCode.Internal, StatusCode.ResourceExhausted, StatusCode.Unavailable);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods.
@@ -461,8 +461,8 @@ namespace Google.Cloud.PubSub.V1
         /// <list>
         /// <item><description><see cref="StatusCode.Cancelled"/></description></item>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.

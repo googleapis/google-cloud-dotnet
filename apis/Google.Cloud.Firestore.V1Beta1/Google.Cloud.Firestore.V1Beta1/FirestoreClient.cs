@@ -174,46 +174,6 @@ namespace Google.Cloud.Firestore.V1Beta1
         );
 
         /// <summary>
-        /// "Listen" retry backoff for <see cref="FirestoreClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "Listen" retry backoff for <see cref="FirestoreClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "Listen" retry backoff for <see cref="FirestoreClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
-        /// </list>
-        /// </remarks>
-        public static BackoffSettings GetListenRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 1.3
-        );
-
-        /// <summary>
-        /// "Listen" timeout backoff for <see cref="FirestoreClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "Listen" timeout backoff for <see cref="FirestoreClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "Listen" timeout backoff for <see cref="FirestoreClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial timeout: 86400000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 86400000 milliseconds</description></item>
-        /// </list>
-        /// </remarks>
-        public static BackoffSettings GetListenTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(86400000),
-            maxDelay: TimeSpan.FromMilliseconds(86400000),
-            delayMultiplier: 1.0
-        );
-
-        /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreClient.GetDocument</c> and <c>FirestoreClient.GetDocumentAsync</c>.
         /// </summary>
@@ -491,10 +451,10 @@ namespace Google.Cloud.Firestore.V1Beta1
         /// <see cref="CallSettings"/> for calls to <c>FirestoreClient.Listen</c>.
         /// </summary>
         /// <remarks>
-        /// Default RPC expiration is 86400000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings ListenSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(86400000)));
+            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="BidirectionalStreamingSettings"/> for calls to
