@@ -206,19 +206,29 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         {
             // We assume that we at least have one snippet/see-also for each type we're interested in.
             var types = snippets.Select(x => x.Key).Union(seeAlsos.Select(x => x.Key)).OrderBy(x => x).ToList();
+            var uncoveredCounts = new Dictionary<string, int>();
             foreach (var type in types)
             {
-                writer.WriteLine($"Type {type}: {snippets[type].Count()} snippets; {seeAlsos[type].Count()} see-alsos");
+                writer.WriteLine($"Type {type}:");
                 var coveredUids = new HashSet<string>(snippets[type].SelectMany(s => s.MetadataUids)
                     .Union(seeAlsos[type].SelectMany(s => s.MetadataUids)));
 
+                int missing = 0;
                 foreach (var member in members[type].Where(m => m.Type == "Method"))
                 {
                     if (!coveredUids.Contains(member.Uid))
                     {
                         writer.WriteLine($"  Uncovered member: {member.Id}");
+                        missing++;
                     }
                 }
+                uncoveredCounts[type] = missing;
+            }
+            writer.WriteLine();
+            writer.WriteLine("Summary");
+            foreach (var type in types)
+            {
+                writer.WriteLine($"{type}: {snippets[type].Count()} snippets; {seeAlsos[type].Count()} see-alsos; {uncoveredCounts[type]} uncovered");
             }
         }
 
