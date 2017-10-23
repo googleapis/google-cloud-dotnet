@@ -31,8 +31,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.PubSub.V1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedSubscriberClientSnippets
     {
+        /// <summary>Snippet for CreateSubscriptionAsync</summary>
         public async Task CreateSubscriptionAsync()
         {
             // Snippet: CreateSubscriptionAsync(SubscriptionName,TopicName,PushConfig,int?,CallSettings)
@@ -49,6 +51,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSubscription</summary>
         public void CreateSubscription()
         {
             // Snippet: CreateSubscription(SubscriptionName,TopicName,PushConfig,int?,CallSettings)
@@ -64,6 +67,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSubscriptionAsync</summary>
         public async Task CreateSubscriptionAsync_RequestObject()
         {
             // Snippet: CreateSubscriptionAsync(Subscription,CallSettings)
@@ -80,6 +84,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSubscription</summary>
         public void CreateSubscription_RequestObject()
         {
             // Snippet: CreateSubscription(Subscription,CallSettings)
@@ -96,6 +101,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSubscriptionAsync</summary>
         public async Task GetSubscriptionAsync()
         {
             // Snippet: GetSubscriptionAsync(SubscriptionName,CallSettings)
@@ -109,6 +115,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSubscription</summary>
         public void GetSubscription()
         {
             // Snippet: GetSubscription(SubscriptionName,CallSettings)
@@ -121,6 +128,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSubscriptionAsync</summary>
         public async Task GetSubscriptionAsync_RequestObject()
         {
             // Snippet: GetSubscriptionAsync(GetSubscriptionRequest,CallSettings)
@@ -136,6 +144,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSubscription</summary>
         public void GetSubscription_RequestObject()
         {
             // Snippet: GetSubscription(GetSubscriptionRequest,CallSettings)
@@ -151,6 +160,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateSubscriptionAsync</summary>
         public async Task UpdateSubscriptionAsync_RequestObject()
         {
             // Snippet: UpdateSubscriptionAsync(UpdateSubscriptionRequest,CallSettings)
@@ -167,6 +177,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateSubscription</summary>
         public void UpdateSubscription_RequestObject()
         {
             // Snippet: UpdateSubscription(UpdateSubscriptionRequest,CallSettings)
@@ -183,6 +194,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSubscriptionsAsync</summary>
         public async Task ListSubscriptionsAsync()
         {
             // Snippet: ListSubscriptionsAsync(ProjectName,string,int?,CallSettings)
@@ -226,6 +238,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSubscriptions</summary>
         public void ListSubscriptions()
         {
             // Snippet: ListSubscriptions(ProjectName,string,int?,CallSettings)
@@ -269,6 +282,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSubscriptionsAsync</summary>
         public async Task ListSubscriptionsAsync_RequestObject()
         {
             // Snippet: ListSubscriptionsAsync(ListSubscriptionsRequest,CallSettings)
@@ -315,6 +329,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSubscriptions</summary>
         public void ListSubscriptions_RequestObject()
         {
             // Snippet: ListSubscriptions(ListSubscriptionsRequest,CallSettings)
@@ -361,6 +376,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSubscriptionAsync</summary>
         public async Task DeleteSubscriptionAsync()
         {
             // Snippet: DeleteSubscriptionAsync(SubscriptionName,CallSettings)
@@ -374,6 +390,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSubscription</summary>
         public void DeleteSubscription()
         {
             // Snippet: DeleteSubscription(SubscriptionName,CallSettings)
@@ -386,6 +403,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSubscriptionAsync</summary>
         public async Task DeleteSubscriptionAsync_RequestObject()
         {
             // Snippet: DeleteSubscriptionAsync(DeleteSubscriptionRequest,CallSettings)
@@ -401,6 +419,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSubscription</summary>
         public void DeleteSubscription_RequestObject()
         {
             // Snippet: DeleteSubscription(DeleteSubscriptionRequest,CallSettings)
@@ -416,6 +435,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyAckDeadlineAsync</summary>
         public async Task ModifyAckDeadlineAsync()
         {
             // Snippet: ModifyAckDeadlineAsync(SubscriptionName,IEnumerable<string>,int,CallSettings)
@@ -431,6 +451,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyAckDeadline</summary>
         public void ModifyAckDeadline()
         {
             // Snippet: ModifyAckDeadline(SubscriptionName,IEnumerable<string>,int,CallSettings)
@@ -445,6 +466,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyAckDeadlineAsync</summary>
         public async Task ModifyAckDeadlineAsync_RequestObject()
         {
             // Snippet: ModifyAckDeadlineAsync(ModifyAckDeadlineRequest,CallSettings)
@@ -462,6 +484,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyAckDeadline</summary>
         public void ModifyAckDeadline_RequestObject()
         {
             // Snippet: ModifyAckDeadline(ModifyAckDeadlineRequest,CallSettings)
@@ -479,6 +502,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for AcknowledgeAsync</summary>
         public async Task AcknowledgeAsync()
         {
             // Snippet: AcknowledgeAsync(SubscriptionName,IEnumerable<string>,CallSettings)
@@ -493,6 +517,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Acknowledge</summary>
         public void Acknowledge()
         {
             // Snippet: Acknowledge(SubscriptionName,IEnumerable<string>,CallSettings)
@@ -506,6 +531,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for AcknowledgeAsync</summary>
         public async Task AcknowledgeAsync_RequestObject()
         {
             // Snippet: AcknowledgeAsync(AcknowledgeRequest,CallSettings)
@@ -522,6 +548,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Acknowledge</summary>
         public void Acknowledge_RequestObject()
         {
             // Snippet: Acknowledge(AcknowledgeRequest,CallSettings)
@@ -538,6 +565,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PullAsync</summary>
         public async Task PullAsync()
         {
             // Snippet: PullAsync(SubscriptionName,bool?,int,CallSettings)
@@ -553,6 +581,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Pull</summary>
         public void Pull()
         {
             // Snippet: Pull(SubscriptionName,bool?,int,CallSettings)
@@ -567,6 +596,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PullAsync</summary>
         public async Task PullAsync_RequestObject()
         {
             // Snippet: PullAsync(PullRequest,CallSettings)
@@ -583,6 +613,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Pull</summary>
         public void Pull_RequestObject()
         {
             // Snippet: Pull(PullRequest,CallSettings)
@@ -599,6 +630,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for StreamingPull</summary>
         public async Task StreamingPull()
         {
             // Snippet: StreamingPull(CallSettings,BidirectionalStreamingSettings)
@@ -645,6 +677,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyPushConfigAsync</summary>
         public async Task ModifyPushConfigAsync()
         {
             // Snippet: ModifyPushConfigAsync(SubscriptionName,PushConfig,CallSettings)
@@ -659,6 +692,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyPushConfig</summary>
         public void ModifyPushConfig()
         {
             // Snippet: ModifyPushConfig(SubscriptionName,PushConfig,CallSettings)
@@ -672,6 +706,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyPushConfigAsync</summary>
         public async Task ModifyPushConfigAsync_RequestObject()
         {
             // Snippet: ModifyPushConfigAsync(ModifyPushConfigRequest,CallSettings)
@@ -688,6 +723,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyPushConfig</summary>
         public void ModifyPushConfig_RequestObject()
         {
             // Snippet: ModifyPushConfig(ModifyPushConfigRequest,CallSettings)
@@ -704,6 +740,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSnapshotsAsync</summary>
         public async Task ListSnapshotsAsync()
         {
             // Snippet: ListSnapshotsAsync(ProjectName,string,int?,CallSettings)
@@ -747,6 +784,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSnapshots</summary>
         public void ListSnapshots()
         {
             // Snippet: ListSnapshots(ProjectName,string,int?,CallSettings)
@@ -790,6 +828,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSnapshotsAsync</summary>
         public async Task ListSnapshotsAsync_RequestObject()
         {
             // Snippet: ListSnapshotsAsync(ListSnapshotsRequest,CallSettings)
@@ -836,6 +875,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSnapshots</summary>
         public void ListSnapshots_RequestObject()
         {
             // Snippet: ListSnapshots(ListSnapshotsRequest,CallSettings)
@@ -882,6 +922,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSnapshotAsync</summary>
         public async Task CreateSnapshotAsync()
         {
             // Snippet: CreateSnapshotAsync(SnapshotName,SubscriptionName,CallSettings)
@@ -896,6 +937,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSnapshot</summary>
         public void CreateSnapshot()
         {
             // Snippet: CreateSnapshot(SnapshotName,SubscriptionName,CallSettings)
@@ -909,6 +951,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSnapshotAsync</summary>
         public async Task CreateSnapshotAsync_RequestObject()
         {
             // Snippet: CreateSnapshotAsync(CreateSnapshotRequest,CallSettings)
@@ -925,6 +968,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSnapshot</summary>
         public void CreateSnapshot_RequestObject()
         {
             // Snippet: CreateSnapshot(CreateSnapshotRequest,CallSettings)
@@ -941,6 +985,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateSnapshotAsync</summary>
         public async Task UpdateSnapshotAsync_RequestObject()
         {
             // Snippet: UpdateSnapshotAsync(UpdateSnapshotRequest,CallSettings)
@@ -957,6 +1002,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateSnapshot</summary>
         public void UpdateSnapshot_RequestObject()
         {
             // Snippet: UpdateSnapshot(UpdateSnapshotRequest,CallSettings)
@@ -973,6 +1019,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSnapshotAsync</summary>
         public async Task DeleteSnapshotAsync()
         {
             // Snippet: DeleteSnapshotAsync(SnapshotName,CallSettings)
@@ -986,6 +1033,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSnapshot</summary>
         public void DeleteSnapshot()
         {
             // Snippet: DeleteSnapshot(SnapshotName,CallSettings)
@@ -998,6 +1046,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSnapshotAsync</summary>
         public async Task DeleteSnapshotAsync_RequestObject()
         {
             // Snippet: DeleteSnapshotAsync(DeleteSnapshotRequest,CallSettings)
@@ -1013,6 +1062,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSnapshot</summary>
         public void DeleteSnapshot_RequestObject()
         {
             // Snippet: DeleteSnapshot(DeleteSnapshotRequest,CallSettings)
@@ -1028,6 +1078,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SeekAsync</summary>
         public async Task SeekAsync_RequestObject()
         {
             // Snippet: SeekAsync(SeekRequest,CallSettings)
@@ -1043,6 +1094,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Seek</summary>
         public void Seek_RequestObject()
         {
             // Snippet: Seek(SeekRequest,CallSettings)
@@ -1058,6 +1110,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync()
         {
             // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
@@ -1072,6 +1125,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicy()
         {
             // Snippet: SetIamPolicy(string,Policy,CallSettings)
@@ -1085,6 +1139,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync_RequestObject()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
@@ -1101,6 +1156,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicy_RequestObject()
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
@@ -1117,6 +1173,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync()
         {
             // Snippet: GetIamPolicyAsync(string,CallSettings)
@@ -1130,6 +1187,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicy()
         {
             // Snippet: GetIamPolicy(string,CallSettings)
@@ -1142,6 +1200,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync_RequestObject()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
@@ -1157,6 +1216,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicy_RequestObject()
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
@@ -1172,6 +1232,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync()
         {
             // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
@@ -1186,6 +1247,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissions()
         {
             // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
@@ -1199,6 +1261,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync_RequestObject()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
@@ -1215,6 +1278,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissions_RequestObject()
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)

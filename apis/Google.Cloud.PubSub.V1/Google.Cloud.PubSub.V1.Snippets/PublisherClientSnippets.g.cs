@@ -31,8 +31,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.PubSub.V1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedPublisherClientSnippets
     {
+        /// <summary>Snippet for CreateTopicAsync</summary>
         public async Task CreateTopicAsync()
         {
             // Snippet: CreateTopicAsync(TopicName,CallSettings)
@@ -46,6 +48,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTopic</summary>
         public void CreateTopic()
         {
             // Snippet: CreateTopic(TopicName,CallSettings)
@@ -58,6 +61,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTopicAsync</summary>
         public async Task CreateTopicAsync_RequestObject()
         {
             // Snippet: CreateTopicAsync(Topic,CallSettings)
@@ -73,6 +77,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateTopic</summary>
         public void CreateTopic_RequestObject()
         {
             // Snippet: CreateTopic(Topic,CallSettings)
@@ -88,6 +93,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateTopicAsync</summary>
         public async Task UpdateTopicAsync_RequestObject()
         {
             // Snippet: UpdateTopicAsync(UpdateTopicRequest,CallSettings)
@@ -104,6 +110,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateTopic</summary>
         public void UpdateTopic_RequestObject()
         {
             // Snippet: UpdateTopic(UpdateTopicRequest,CallSettings)
@@ -120,6 +127,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PublishAsync</summary>
         public async Task PublishAsync()
         {
             // Snippet: PublishAsync(TopicName,IEnumerable<PubsubMessage>,CallSettings)
@@ -140,6 +148,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Publish</summary>
         public void Publish()
         {
             // Snippet: Publish(TopicName,IEnumerable<PubsubMessage>,CallSettings)
@@ -159,6 +168,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PublishAsync</summary>
         public async Task PublishAsync_RequestObject()
         {
             // Snippet: PublishAsync(PublishRequest,CallSettings)
@@ -180,6 +190,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Publish</summary>
         public void Publish_RequestObject()
         {
             // Snippet: Publish(PublishRequest,CallSettings)
@@ -201,6 +212,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTopicAsync</summary>
         public async Task GetTopicAsync()
         {
             // Snippet: GetTopicAsync(TopicName,CallSettings)
@@ -214,6 +226,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTopic</summary>
         public void GetTopic()
         {
             // Snippet: GetTopic(TopicName,CallSettings)
@@ -226,6 +239,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTopicAsync</summary>
         public async Task GetTopicAsync_RequestObject()
         {
             // Snippet: GetTopicAsync(GetTopicRequest,CallSettings)
@@ -241,6 +255,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTopic</summary>
         public void GetTopic_RequestObject()
         {
             // Snippet: GetTopic(GetTopicRequest,CallSettings)
@@ -256,6 +271,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTopicsAsync</summary>
         public async Task ListTopicsAsync()
         {
             // Snippet: ListTopicsAsync(ProjectName,string,int?,CallSettings)
@@ -299,6 +315,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTopics</summary>
         public void ListTopics()
         {
             // Snippet: ListTopics(ProjectName,string,int?,CallSettings)
@@ -342,6 +359,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTopicsAsync</summary>
         public async Task ListTopicsAsync_RequestObject()
         {
             // Snippet: ListTopicsAsync(ListTopicsRequest,CallSettings)
@@ -388,6 +406,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTopics</summary>
         public void ListTopics_RequestObject()
         {
             // Snippet: ListTopics(ListTopicsRequest,CallSettings)
@@ -434,6 +453,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTopicSubscriptionsAsync</summary>
         public async Task ListTopicSubscriptionsAsync()
         {
             // Snippet: ListTopicSubscriptionsAsync(TopicName,string,int?,CallSettings)
@@ -477,6 +497,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTopicSubscriptions</summary>
         public void ListTopicSubscriptions()
         {
             // Snippet: ListTopicSubscriptions(TopicName,string,int?,CallSettings)
@@ -520,6 +541,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTopicSubscriptionsAsync</summary>
         public async Task ListTopicSubscriptionsAsync_RequestObject()
         {
             // Snippet: ListTopicSubscriptionsAsync(ListTopicSubscriptionsRequest,CallSettings)
@@ -566,6 +588,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTopicSubscriptions</summary>
         public void ListTopicSubscriptions_RequestObject()
         {
             // Snippet: ListTopicSubscriptions(ListTopicSubscriptionsRequest,CallSettings)
@@ -612,6 +635,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteTopicAsync</summary>
         public async Task DeleteTopicAsync()
         {
             // Snippet: DeleteTopicAsync(TopicName,CallSettings)
@@ -625,6 +649,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteTopic</summary>
         public void DeleteTopic()
         {
             // Snippet: DeleteTopic(TopicName,CallSettings)
@@ -637,6 +662,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteTopicAsync</summary>
         public async Task DeleteTopicAsync_RequestObject()
         {
             // Snippet: DeleteTopicAsync(DeleteTopicRequest,CallSettings)
@@ -652,6 +678,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteTopic</summary>
         public void DeleteTopic_RequestObject()
         {
             // Snippet: DeleteTopic(DeleteTopicRequest,CallSettings)
@@ -667,6 +694,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync()
         {
             // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
@@ -681,6 +709,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicy()
         {
             // Snippet: SetIamPolicy(string,Policy,CallSettings)
@@ -694,6 +723,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync_RequestObject()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
@@ -710,6 +740,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicy_RequestObject()
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
@@ -726,6 +757,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync()
         {
             // Snippet: GetIamPolicyAsync(string,CallSettings)
@@ -739,6 +771,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicy()
         {
             // Snippet: GetIamPolicy(string,CallSettings)
@@ -751,6 +784,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync_RequestObject()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
@@ -766,6 +800,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicy_RequestObject()
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
@@ -781,6 +816,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync()
         {
             // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
@@ -795,6 +831,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissions()
         {
             // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
@@ -808,6 +845,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync_RequestObject()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
@@ -824,6 +862,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissions_RequestObject()
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)

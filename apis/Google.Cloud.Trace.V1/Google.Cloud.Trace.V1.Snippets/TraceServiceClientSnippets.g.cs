@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Trace.V1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedTraceServiceClientSnippets
     {
+        /// <summary>Snippet for PatchTracesAsync</summary>
         public async Task PatchTracesAsync()
         {
             // Snippet: PatchTracesAsync(string,Traces,CallSettings)
@@ -46,6 +48,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PatchTraces</summary>
         public void PatchTraces()
         {
             // Snippet: PatchTraces(string,Traces,CallSettings)
@@ -59,6 +62,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PatchTracesAsync</summary>
         public async Task PatchTracesAsync_RequestObject()
         {
             // Snippet: PatchTracesAsync(PatchTracesRequest,CallSettings)
@@ -75,6 +79,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PatchTraces</summary>
         public void PatchTraces_RequestObject()
         {
             // Snippet: PatchTraces(PatchTracesRequest,CallSettings)
@@ -91,6 +96,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTraceAsync</summary>
         public async Task GetTraceAsync()
         {
             // Snippet: GetTraceAsync(string,string,CallSettings)
@@ -105,6 +111,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTrace</summary>
         public void GetTrace()
         {
             // Snippet: GetTrace(string,string,CallSettings)
@@ -118,6 +125,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTraceAsync</summary>
         public async Task GetTraceAsync_RequestObject()
         {
             // Snippet: GetTraceAsync(GetTraceRequest,CallSettings)
@@ -134,6 +142,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetTrace</summary>
         public void GetTrace_RequestObject()
         {
             // Snippet: GetTrace(GetTraceRequest,CallSettings)
@@ -150,6 +159,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTracesAsync</summary>
         public async Task ListTracesAsync()
         {
             // Snippet: ListTracesAsync(string,string,int?,CallSettings)
@@ -193,6 +203,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTraces</summary>
         public void ListTraces()
         {
             // Snippet: ListTraces(string,string,int?,CallSettings)
@@ -236,6 +247,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTracesAsync</summary>
         public async Task ListTracesAsync_RequestObject()
         {
             // Snippet: ListTracesAsync(ListTracesRequest,CallSettings)
@@ -282,6 +294,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTraces</summary>
         public void ListTraces_RequestObject()
         {
             // Snippet: ListTraces(ListTracesRequest,CallSettings)

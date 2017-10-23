@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedErrorStatsServiceClientSnippets
     {
+        /// <summary>Snippet for ListGroupStatsAsync</summary>
         public async Task ListGroupStatsAsync()
         {
             // Snippet: ListGroupStatsAsync(ProjectName,QueryTimeRange,string,int?,CallSettings)
@@ -76,6 +78,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListGroupStats</summary>
         public void ListGroupStats()
         {
             // Snippet: ListGroupStats(ProjectName,QueryTimeRange,string,int?,CallSettings)
@@ -120,6 +123,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListGroupStatsAsync</summary>
         public async Task ListGroupStatsAsync_RequestObject()
         {
             // Snippet: ListGroupStatsAsync(ListGroupStatsRequest,CallSettings)
@@ -167,6 +171,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListGroupStats</summary>
         public void ListGroupStats_RequestObject()
         {
             // Snippet: ListGroupStats(ListGroupStatsRequest,CallSettings)
@@ -214,6 +219,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListEventsAsync</summary>
         public async Task ListEventsAsync()
         {
             // Snippet: ListEventsAsync(ProjectName,string,string,int?,CallSettings)
@@ -258,6 +264,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListEvents</summary>
         public void ListEvents()
         {
             // Snippet: ListEvents(ProjectName,string,string,int?,CallSettings)
@@ -302,6 +309,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListEventsAsync</summary>
         public async Task ListEventsAsync_RequestObject()
         {
             // Snippet: ListEventsAsync(ListEventsRequest,CallSettings)
@@ -349,6 +357,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListEvents</summary>
         public void ListEvents_RequestObject()
         {
             // Snippet: ListEvents(ListEventsRequest,CallSettings)
@@ -396,6 +405,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteEventsAsync</summary>
         public async Task DeleteEventsAsync()
         {
             // Snippet: DeleteEventsAsync(ProjectName,CallSettings)
@@ -409,6 +419,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteEvents</summary>
         public void DeleteEvents()
         {
             // Snippet: DeleteEvents(ProjectName,CallSettings)
@@ -421,6 +432,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteEventsAsync</summary>
         public async Task DeleteEventsAsync_RequestObject()
         {
             // Snippet: DeleteEventsAsync(DeleteEventsRequest,CallSettings)
@@ -436,6 +448,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteEvents</summary>
         public void DeleteEvents_RequestObject()
         {
             // Snippet: DeleteEvents(DeleteEventsRequest,CallSettings)

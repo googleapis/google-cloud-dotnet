@@ -31,8 +31,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.VideoIntelligence.V1Beta2.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedVideoIntelligenceServiceClientSnippets
     {
+        /// <summary>Snippet for AnnotateVideoAsync</summary>
         public async Task AnnotateVideoAsync()
         {
             // Snippet: AnnotateVideoAsync(string,IEnumerable<Feature>,ByteString,VideoContext,string,string,CallSettings)
@@ -70,6 +72,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for AnnotateVideo</summary>
         public void AnnotateVideo()
         {
             // Snippet: AnnotateVideo(string,IEnumerable<Feature>,ByteString,VideoContext,string,string,CallSettings)
@@ -106,6 +109,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for AnnotateVideoAsync</summary>
         public async Task AnnotateVideoAsync_RequestObject()
         {
             // Snippet: AnnotateVideoAsync(AnnotateVideoRequest,CallSettings)
@@ -137,6 +141,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for AnnotateVideo</summary>
         public void AnnotateVideo_RequestObject()
         {
             // Snippet: AnnotateVideo(AnnotateVideoRequest,CallSettings)

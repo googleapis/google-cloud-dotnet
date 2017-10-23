@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Debugger.V2.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedDebugger2ClientSnippets
     {
+        /// <summary>Snippet for SetBreakpointAsync</summary>
         public async Task SetBreakpointAsync()
         {
             // Snippet: SetBreakpointAsync(string,Breakpoint,string,CallSettings)
@@ -47,6 +49,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetBreakpoint</summary>
         public void SetBreakpoint()
         {
             // Snippet: SetBreakpoint(string,Breakpoint,string,CallSettings)
@@ -61,6 +64,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetBreakpointAsync</summary>
         public async Task SetBreakpointAsync_RequestObject()
         {
             // Snippet: SetBreakpointAsync(SetBreakpointRequest,CallSettings)
@@ -78,6 +82,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetBreakpoint</summary>
         public void SetBreakpoint_RequestObject()
         {
             // Snippet: SetBreakpoint(SetBreakpointRequest,CallSettings)
@@ -95,6 +100,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetBreakpointAsync</summary>
         public async Task GetBreakpointAsync()
         {
             // Snippet: GetBreakpointAsync(string,string,string,CallSettings)
@@ -110,6 +116,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetBreakpoint</summary>
         public void GetBreakpoint()
         {
             // Snippet: GetBreakpoint(string,string,string,CallSettings)
@@ -124,6 +131,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetBreakpointAsync</summary>
         public async Task GetBreakpointAsync_RequestObject()
         {
             // Snippet: GetBreakpointAsync(GetBreakpointRequest,CallSettings)
@@ -141,6 +149,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetBreakpoint</summary>
         public void GetBreakpoint_RequestObject()
         {
             // Snippet: GetBreakpoint(GetBreakpointRequest,CallSettings)
@@ -158,6 +167,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteBreakpointAsync</summary>
         public async Task DeleteBreakpointAsync()
         {
             // Snippet: DeleteBreakpointAsync(string,string,string,CallSettings)
@@ -173,6 +183,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteBreakpoint</summary>
         public void DeleteBreakpoint()
         {
             // Snippet: DeleteBreakpoint(string,string,string,CallSettings)
@@ -187,6 +198,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteBreakpointAsync</summary>
         public async Task DeleteBreakpointAsync_RequestObject()
         {
             // Snippet: DeleteBreakpointAsync(DeleteBreakpointRequest,CallSettings)
@@ -204,6 +216,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteBreakpoint</summary>
         public void DeleteBreakpoint_RequestObject()
         {
             // Snippet: DeleteBreakpoint(DeleteBreakpointRequest,CallSettings)
@@ -221,6 +234,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListBreakpointsAsync</summary>
         public async Task ListBreakpointsAsync()
         {
             // Snippet: ListBreakpointsAsync(string,string,CallSettings)
@@ -235,6 +249,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListBreakpoints</summary>
         public void ListBreakpoints()
         {
             // Snippet: ListBreakpoints(string,string,CallSettings)
@@ -248,6 +263,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListBreakpointsAsync</summary>
         public async Task ListBreakpointsAsync_RequestObject()
         {
             // Snippet: ListBreakpointsAsync(ListBreakpointsRequest,CallSettings)
@@ -264,6 +280,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListBreakpoints</summary>
         public void ListBreakpoints_RequestObject()
         {
             // Snippet: ListBreakpoints(ListBreakpointsRequest,CallSettings)
@@ -280,6 +297,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListDebuggeesAsync</summary>
         public async Task ListDebuggeesAsync()
         {
             // Snippet: ListDebuggeesAsync(string,string,CallSettings)
@@ -294,6 +312,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListDebuggees</summary>
         public void ListDebuggees()
         {
             // Snippet: ListDebuggees(string,string,CallSettings)
@@ -307,6 +326,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListDebuggeesAsync</summary>
         public async Task ListDebuggeesAsync_RequestObject()
         {
             // Snippet: ListDebuggeesAsync(ListDebuggeesRequest,CallSettings)
@@ -323,6 +343,7 @@ namespace Google.Cloud.Debugger.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListDebuggees</summary>
         public void ListDebuggees_RequestObject()
         {
             // Snippet: ListDebuggees(ListDebuggeesRequest,CallSettings)

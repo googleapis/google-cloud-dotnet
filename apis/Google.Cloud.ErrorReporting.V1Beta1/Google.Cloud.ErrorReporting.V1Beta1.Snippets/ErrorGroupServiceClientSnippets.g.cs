@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedErrorGroupServiceClientSnippets
     {
+        /// <summary>Snippet for GetGroupAsync</summary>
         public async Task GetGroupAsync()
         {
             // Snippet: GetGroupAsync(GroupName,CallSettings)
@@ -45,6 +47,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetGroup</summary>
         public void GetGroup()
         {
             // Snippet: GetGroup(GroupName,CallSettings)
@@ -57,6 +60,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetGroupAsync</summary>
         public async Task GetGroupAsync_RequestObject()
         {
             // Snippet: GetGroupAsync(GetGroupRequest,CallSettings)
@@ -72,6 +76,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetGroup</summary>
         public void GetGroup_RequestObject()
         {
             // Snippet: GetGroup(GetGroupRequest,CallSettings)
@@ -87,6 +92,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGroupAsync</summary>
         public async Task UpdateGroupAsync()
         {
             // Snippet: UpdateGroupAsync(ErrorGroup,CallSettings)
@@ -100,6 +106,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGroup</summary>
         public void UpdateGroup()
         {
             // Snippet: UpdateGroup(ErrorGroup,CallSettings)
@@ -112,6 +119,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGroupAsync</summary>
         public async Task UpdateGroupAsync_RequestObject()
         {
             // Snippet: UpdateGroupAsync(UpdateGroupRequest,CallSettings)
@@ -127,6 +135,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGroup</summary>
         public void UpdateGroup_RequestObject()
         {
             // Snippet: UpdateGroup(UpdateGroupRequest,CallSettings)

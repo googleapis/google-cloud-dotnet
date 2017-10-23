@@ -31,8 +31,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.Admin.V2.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedBigtableInstanceAdminClientSnippets
     {
+        /// <summary>Snippet for CreateInstanceAsync</summary>
         public async Task CreateInstanceAsync()
         {
             // Snippet: CreateInstanceAsync(ProjectName,string,Instance,IDictionary<string, Cluster>,CallSettings)
@@ -68,6 +70,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInstance</summary>
         public void CreateInstance()
         {
             // Snippet: CreateInstance(ProjectName,string,Instance,IDictionary<string, Cluster>,CallSettings)
@@ -102,6 +105,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInstanceAsync</summary>
         public async Task CreateInstanceAsync_RequestObject()
         {
             // Snippet: CreateInstanceAsync(CreateInstanceRequest,CallSettings)
@@ -139,6 +143,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInstance</summary>
         public void CreateInstance_RequestObject()
         {
             // Snippet: CreateInstance(CreateInstanceRequest,CallSettings)
@@ -176,6 +181,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstanceAsync</summary>
         public async Task GetInstanceAsync()
         {
             // Snippet: GetInstanceAsync(InstanceName,CallSettings)
@@ -189,6 +195,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstance</summary>
         public void GetInstance()
         {
             // Snippet: GetInstance(InstanceName,CallSettings)
@@ -201,6 +208,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstanceAsync</summary>
         public async Task GetInstanceAsync_RequestObject()
         {
             // Snippet: GetInstanceAsync(GetInstanceRequest,CallSettings)
@@ -216,6 +224,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstance</summary>
         public void GetInstance_RequestObject()
         {
             // Snippet: GetInstance(GetInstanceRequest,CallSettings)
@@ -231,6 +240,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstancesAsync</summary>
         public async Task ListInstancesAsync()
         {
             // Snippet: ListInstancesAsync(ProjectName,CallSettings)
@@ -244,6 +254,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstances</summary>
         public void ListInstances()
         {
             // Snippet: ListInstances(ProjectName,CallSettings)
@@ -256,6 +267,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstancesAsync</summary>
         public async Task ListInstancesAsync_RequestObject()
         {
             // Snippet: ListInstancesAsync(ListInstancesRequest,CallSettings)
@@ -271,6 +283,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstances</summary>
         public void ListInstances_RequestObject()
         {
             // Snippet: ListInstances(ListInstancesRequest,CallSettings)
@@ -286,6 +299,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateInstanceAsync</summary>
         public async Task UpdateInstanceAsync()
         {
             // Snippet: UpdateInstanceAsync(InstanceName,string,Instance.Types.Type,CallSettings)
@@ -301,6 +315,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateInstance</summary>
         public void UpdateInstance()
         {
             // Snippet: UpdateInstance(InstanceName,string,Instance.Types.Type,CallSettings)
@@ -315,6 +330,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateInstanceAsync</summary>
         public async Task UpdateInstanceAsync_RequestObject()
         {
             // Snippet: UpdateInstanceAsync(Instance,CallSettings)
@@ -332,6 +348,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateInstance</summary>
         public void UpdateInstance_RequestObject()
         {
             // Snippet: UpdateInstance(Instance,CallSettings)
@@ -349,6 +366,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteInstanceAsync</summary>
         public async Task DeleteInstanceAsync()
         {
             // Snippet: DeleteInstanceAsync(InstanceName,CallSettings)
@@ -362,6 +380,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteInstance</summary>
         public void DeleteInstance()
         {
             // Snippet: DeleteInstance(InstanceName,CallSettings)
@@ -374,6 +393,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteInstanceAsync</summary>
         public async Task DeleteInstanceAsync_RequestObject()
         {
             // Snippet: DeleteInstanceAsync(DeleteInstanceRequest,CallSettings)
@@ -389,6 +409,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteInstance</summary>
         public void DeleteInstance_RequestObject()
         {
             // Snippet: DeleteInstance(DeleteInstanceRequest,CallSettings)
@@ -404,6 +425,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateClusterAsync</summary>
         public async Task CreateClusterAsync()
         {
             // Snippet: CreateClusterAsync(InstanceName,string,Cluster,CallSettings)
@@ -438,6 +460,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateCluster</summary>
         public void CreateCluster()
         {
             // Snippet: CreateCluster(InstanceName,string,Cluster,CallSettings)
@@ -471,6 +494,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateClusterAsync</summary>
         public async Task CreateClusterAsync_RequestObject()
         {
             // Snippet: CreateClusterAsync(CreateClusterRequest,CallSettings)
@@ -507,6 +531,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateCluster</summary>
         public void CreateCluster_RequestObject()
         {
             // Snippet: CreateCluster(CreateClusterRequest,CallSettings)
@@ -543,6 +568,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetClusterAsync</summary>
         public async Task GetClusterAsync()
         {
             // Snippet: GetClusterAsync(ClusterName,CallSettings)
@@ -556,6 +582,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetCluster</summary>
         public void GetCluster()
         {
             // Snippet: GetCluster(ClusterName,CallSettings)
@@ -568,6 +595,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetClusterAsync</summary>
         public async Task GetClusterAsync_RequestObject()
         {
             // Snippet: GetClusterAsync(GetClusterRequest,CallSettings)
@@ -583,6 +611,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetCluster</summary>
         public void GetCluster_RequestObject()
         {
             // Snippet: GetCluster(GetClusterRequest,CallSettings)
@@ -598,6 +627,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListClustersAsync</summary>
         public async Task ListClustersAsync()
         {
             // Snippet: ListClustersAsync(InstanceName,CallSettings)
@@ -611,6 +641,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListClusters</summary>
         public void ListClusters()
         {
             // Snippet: ListClusters(InstanceName,CallSettings)
@@ -623,6 +654,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListClustersAsync</summary>
         public async Task ListClustersAsync_RequestObject()
         {
             // Snippet: ListClustersAsync(ListClustersRequest,CallSettings)
@@ -638,6 +670,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListClusters</summary>
         public void ListClusters_RequestObject()
         {
             // Snippet: ListClusters(ListClustersRequest,CallSettings)
@@ -653,6 +686,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateClusterAsync</summary>
         public async Task UpdateClusterAsync()
         {
             // Snippet: UpdateClusterAsync(ClusterName,LocationName,int,StorageType,CallSettings)
@@ -688,6 +722,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateCluster</summary>
         public void UpdateCluster()
         {
             // Snippet: UpdateCluster(ClusterName,LocationName,int,StorageType,CallSettings)
@@ -722,6 +757,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateClusterAsync</summary>
         public async Task UpdateClusterAsync_RequestObject()
         {
             // Snippet: UpdateClusterAsync(Cluster,CallSettings)
@@ -759,6 +795,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateCluster</summary>
         public void UpdateCluster_RequestObject()
         {
             // Snippet: UpdateCluster(Cluster,CallSettings)
@@ -796,6 +833,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteClusterAsync</summary>
         public async Task DeleteClusterAsync()
         {
             // Snippet: DeleteClusterAsync(ClusterName,CallSettings)
@@ -809,6 +847,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteCluster</summary>
         public void DeleteCluster()
         {
             // Snippet: DeleteCluster(ClusterName,CallSettings)
@@ -821,6 +860,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteClusterAsync</summary>
         public async Task DeleteClusterAsync_RequestObject()
         {
             // Snippet: DeleteClusterAsync(DeleteClusterRequest,CallSettings)
@@ -836,6 +876,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteCluster</summary>
         public void DeleteCluster_RequestObject()
         {
             // Snippet: DeleteCluster(DeleteClusterRequest,CallSettings)

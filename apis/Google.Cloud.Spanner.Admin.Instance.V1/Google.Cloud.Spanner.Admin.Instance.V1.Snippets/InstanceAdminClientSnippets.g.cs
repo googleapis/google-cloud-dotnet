@@ -32,8 +32,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedInstanceAdminClientSnippets
     {
+        /// <summary>Snippet for ListInstanceConfigsAsync</summary>
         public async Task ListInstanceConfigsAsync()
         {
             // Snippet: ListInstanceConfigsAsync(ProjectName,string,int?,CallSettings)
@@ -77,6 +79,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstanceConfigs</summary>
         public void ListInstanceConfigs()
         {
             // Snippet: ListInstanceConfigs(ProjectName,string,int?,CallSettings)
@@ -120,6 +123,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstanceConfigsAsync</summary>
         public async Task ListInstanceConfigsAsync_RequestObject()
         {
             // Snippet: ListInstanceConfigsAsync(ListInstanceConfigsRequest,CallSettings)
@@ -166,6 +170,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstanceConfigs</summary>
         public void ListInstanceConfigs_RequestObject()
         {
             // Snippet: ListInstanceConfigs(ListInstanceConfigsRequest,CallSettings)
@@ -212,6 +217,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstanceConfigAsync</summary>
         public async Task GetInstanceConfigAsync()
         {
             // Snippet: GetInstanceConfigAsync(InstanceConfigName,CallSettings)
@@ -225,6 +231,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstanceConfig</summary>
         public void GetInstanceConfig()
         {
             // Snippet: GetInstanceConfig(InstanceConfigName,CallSettings)
@@ -237,6 +244,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstanceConfigAsync</summary>
         public async Task GetInstanceConfigAsync_RequestObject()
         {
             // Snippet: GetInstanceConfigAsync(GetInstanceConfigRequest,CallSettings)
@@ -252,6 +260,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstanceConfig</summary>
         public void GetInstanceConfig_RequestObject()
         {
             // Snippet: GetInstanceConfig(GetInstanceConfigRequest,CallSettings)
@@ -267,6 +276,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstancesAsync</summary>
         public async Task ListInstancesAsync()
         {
             // Snippet: ListInstancesAsync(ProjectName,string,int?,CallSettings)
@@ -310,6 +320,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstances</summary>
         public void ListInstances()
         {
             // Snippet: ListInstances(ProjectName,string,int?,CallSettings)
@@ -353,6 +364,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstancesAsync</summary>
         public async Task ListInstancesAsync_RequestObject()
         {
             // Snippet: ListInstancesAsync(ListInstancesRequest,CallSettings)
@@ -399,6 +411,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInstances</summary>
         public void ListInstances_RequestObject()
         {
             // Snippet: ListInstances(ListInstancesRequest,CallSettings)
@@ -445,6 +458,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstanceAsync</summary>
         public async Task GetInstanceAsync()
         {
             // Snippet: GetInstanceAsync(InstanceName,CallSettings)
@@ -458,6 +472,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstance</summary>
         public void GetInstance()
         {
             // Snippet: GetInstance(InstanceName,CallSettings)
@@ -470,6 +485,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstanceAsync</summary>
         public async Task GetInstanceAsync_RequestObject()
         {
             // Snippet: GetInstanceAsync(GetInstanceRequest,CallSettings)
@@ -485,6 +501,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetInstance</summary>
         public void GetInstance_RequestObject()
         {
             // Snippet: GetInstance(GetInstanceRequest,CallSettings)
@@ -500,6 +517,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInstanceAsync</summary>
         public async Task CreateInstanceAsync()
         {
             // Snippet: CreateInstanceAsync(ProjectName,InstanceName,Instance,CallSettings)
@@ -534,6 +552,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInstance</summary>
         public void CreateInstance()
         {
             // Snippet: CreateInstance(ProjectName,InstanceName,Instance,CallSettings)
@@ -567,6 +586,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInstanceAsync</summary>
         public async Task CreateInstanceAsync_RequestObject()
         {
             // Snippet: CreateInstanceAsync(CreateInstanceRequest,CallSettings)
@@ -603,6 +623,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInstance</summary>
         public void CreateInstance_RequestObject()
         {
             // Snippet: CreateInstance(CreateInstanceRequest,CallSettings)
@@ -639,6 +660,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateInstanceAsync</summary>
         public async Task UpdateInstanceAsync()
         {
             // Snippet: UpdateInstanceAsync(Instance,FieldMask,CallSettings)
@@ -672,6 +694,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateInstance</summary>
         public void UpdateInstance()
         {
             // Snippet: UpdateInstance(Instance,FieldMask,CallSettings)
@@ -704,6 +727,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateInstanceAsync</summary>
         public async Task UpdateInstanceAsync_RequestObject()
         {
             // Snippet: UpdateInstanceAsync(UpdateInstanceRequest,CallSettings)
@@ -739,6 +763,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateInstance</summary>
         public void UpdateInstance_RequestObject()
         {
             // Snippet: UpdateInstance(UpdateInstanceRequest,CallSettings)
@@ -774,6 +799,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteInstanceAsync</summary>
         public async Task DeleteInstanceAsync()
         {
             // Snippet: DeleteInstanceAsync(InstanceName,CallSettings)
@@ -787,6 +813,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteInstance</summary>
         public void DeleteInstance()
         {
             // Snippet: DeleteInstance(InstanceName,CallSettings)
@@ -799,6 +826,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteInstanceAsync</summary>
         public async Task DeleteInstanceAsync_RequestObject()
         {
             // Snippet: DeleteInstanceAsync(DeleteInstanceRequest,CallSettings)
@@ -814,6 +842,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteInstance</summary>
         public void DeleteInstance_RequestObject()
         {
             // Snippet: DeleteInstance(DeleteInstanceRequest,CallSettings)
@@ -829,6 +858,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync()
         {
             // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
@@ -843,6 +873,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicy()
         {
             // Snippet: SetIamPolicy(string,Policy,CallSettings)
@@ -856,6 +887,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync_RequestObject()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
@@ -872,6 +904,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicy_RequestObject()
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
@@ -888,6 +921,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync()
         {
             // Snippet: GetIamPolicyAsync(string,CallSettings)
@@ -901,6 +935,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicy()
         {
             // Snippet: GetIamPolicy(string,CallSettings)
@@ -913,6 +948,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync_RequestObject()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
@@ -928,6 +964,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicy_RequestObject()
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
@@ -943,6 +980,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync()
         {
             // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
@@ -957,6 +995,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissions()
         {
             // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
@@ -970,6 +1009,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync_RequestObject()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
@@ -986,6 +1026,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissions_RequestObject()
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)

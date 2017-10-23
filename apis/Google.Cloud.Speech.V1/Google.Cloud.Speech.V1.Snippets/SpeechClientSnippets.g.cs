@@ -31,8 +31,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Speech.V1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedSpeechClientSnippets
     {
+        /// <summary>Snippet for RecognizeAsync</summary>
         public async Task RecognizeAsync()
         {
             // Snippet: RecognizeAsync(RecognitionConfig,RecognitionAudio,CallSettings)
@@ -55,6 +57,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Recognize</summary>
         public void Recognize()
         {
             // Snippet: Recognize(RecognitionConfig,RecognitionAudio,CallSettings)
@@ -76,6 +79,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RecognizeAsync</summary>
         public async Task RecognizeAsync_RequestObject()
         {
             // Snippet: RecognizeAsync(RecognizeRequest,CallSettings)
@@ -100,6 +104,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Recognize</summary>
         public void Recognize_RequestObject()
         {
             // Snippet: Recognize(RecognizeRequest,CallSettings)
@@ -124,6 +129,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for LongRunningRecognizeAsync</summary>
         public async Task LongRunningRecognizeAsync()
         {
             // Snippet: LongRunningRecognizeAsync(RecognitionConfig,RecognitionAudio,CallSettings)
@@ -165,6 +171,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for LongRunningRecognize</summary>
         public void LongRunningRecognize()
         {
             // Snippet: LongRunningRecognize(RecognitionConfig,RecognitionAudio,CallSettings)
@@ -205,6 +212,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for LongRunningRecognizeAsync</summary>
         public async Task LongRunningRecognizeAsync_RequestObject()
         {
             // Snippet: LongRunningRecognizeAsync(LongRunningRecognizeRequest,CallSettings)
@@ -248,6 +256,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for LongRunningRecognize</summary>
         public void LongRunningRecognize_RequestObject()
         {
             // Snippet: LongRunningRecognize(LongRunningRecognizeRequest,CallSettings)
@@ -291,6 +300,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for StreamingRecognize</summary>
         public async Task StreamingRecognize()
         {
             // Snippet: StreamingRecognize(CallSettings,BidirectionalStreamingSettings)

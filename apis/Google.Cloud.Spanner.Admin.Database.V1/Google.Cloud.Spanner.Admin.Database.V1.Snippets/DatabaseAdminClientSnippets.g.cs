@@ -32,8 +32,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedDatabaseAdminClientSnippets
     {
+        /// <summary>Snippet for ListDatabasesAsync</summary>
         public async Task ListDatabasesAsync()
         {
             // Snippet: ListDatabasesAsync(InstanceName,string,int?,CallSettings)
@@ -77,6 +79,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListDatabases</summary>
         public void ListDatabases()
         {
             // Snippet: ListDatabases(InstanceName,string,int?,CallSettings)
@@ -120,6 +123,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListDatabasesAsync</summary>
         public async Task ListDatabasesAsync_RequestObject()
         {
             // Snippet: ListDatabasesAsync(ListDatabasesRequest,CallSettings)
@@ -166,6 +170,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListDatabases</summary>
         public void ListDatabases_RequestObject()
         {
             // Snippet: ListDatabases(ListDatabasesRequest,CallSettings)
@@ -212,6 +217,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
         public async Task CreateDatabaseAsync()
         {
             // Snippet: CreateDatabaseAsync(InstanceName,string,CallSettings)
@@ -245,6 +251,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDatabase</summary>
         public void CreateDatabase()
         {
             // Snippet: CreateDatabase(InstanceName,string,CallSettings)
@@ -277,6 +284,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
         public async Task CreateDatabaseAsync_RequestObject()
         {
             // Snippet: CreateDatabaseAsync(CreateDatabaseRequest,CallSettings)
@@ -312,6 +320,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDatabase</summary>
         public void CreateDatabase_RequestObject()
         {
             // Snippet: CreateDatabase(CreateDatabaseRequest,CallSettings)
@@ -347,6 +356,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetDatabaseAsync</summary>
         public async Task GetDatabaseAsync()
         {
             // Snippet: GetDatabaseAsync(DatabaseName,CallSettings)
@@ -360,6 +370,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetDatabase</summary>
         public void GetDatabase()
         {
             // Snippet: GetDatabase(DatabaseName,CallSettings)
@@ -372,6 +383,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetDatabaseAsync</summary>
         public async Task GetDatabaseAsync_RequestObject()
         {
             // Snippet: GetDatabaseAsync(GetDatabaseRequest,CallSettings)
@@ -387,6 +399,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetDatabase</summary>
         public void GetDatabase_RequestObject()
         {
             // Snippet: GetDatabase(GetDatabaseRequest,CallSettings)
@@ -402,6 +415,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDatabaseDdlAsync</summary>
         public async Task UpdateDatabaseDdlAsync()
         {
             // Snippet: UpdateDatabaseDdlAsync(DatabaseName,IEnumerable<string>,CallSettings)
@@ -433,6 +447,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDatabaseDdl</summary>
         public void UpdateDatabaseDdl()
         {
             // Snippet: UpdateDatabaseDdl(DatabaseName,IEnumerable<string>,CallSettings)
@@ -463,6 +478,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDatabaseDdlAsync</summary>
         public async Task UpdateDatabaseDdlAsync_RequestObject()
         {
             // Snippet: UpdateDatabaseDdlAsync(UpdateDatabaseDdlRequest,CallSettings)
@@ -496,6 +512,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDatabaseDdl</summary>
         public void UpdateDatabaseDdl_RequestObject()
         {
             // Snippet: UpdateDatabaseDdl(UpdateDatabaseDdlRequest,CallSettings)
@@ -529,6 +546,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DropDatabaseAsync</summary>
         public async Task DropDatabaseAsync()
         {
             // Snippet: DropDatabaseAsync(DatabaseName,CallSettings)
@@ -542,6 +560,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DropDatabase</summary>
         public void DropDatabase()
         {
             // Snippet: DropDatabase(DatabaseName,CallSettings)
@@ -554,6 +573,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DropDatabaseAsync</summary>
         public async Task DropDatabaseAsync_RequestObject()
         {
             // Snippet: DropDatabaseAsync(DropDatabaseRequest,CallSettings)
@@ -569,6 +589,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DropDatabase</summary>
         public void DropDatabase_RequestObject()
         {
             // Snippet: DropDatabase(DropDatabaseRequest,CallSettings)
@@ -584,6 +605,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetDatabaseDdlAsync</summary>
         public async Task GetDatabaseDdlAsync()
         {
             // Snippet: GetDatabaseDdlAsync(DatabaseName,CallSettings)
@@ -597,6 +619,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetDatabaseDdl</summary>
         public void GetDatabaseDdl()
         {
             // Snippet: GetDatabaseDdl(DatabaseName,CallSettings)
@@ -609,6 +632,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetDatabaseDdlAsync</summary>
         public async Task GetDatabaseDdlAsync_RequestObject()
         {
             // Snippet: GetDatabaseDdlAsync(GetDatabaseDdlRequest,CallSettings)
@@ -624,6 +648,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetDatabaseDdl</summary>
         public void GetDatabaseDdl_RequestObject()
         {
             // Snippet: GetDatabaseDdl(GetDatabaseDdlRequest,CallSettings)
@@ -639,6 +664,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync()
         {
             // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
@@ -653,6 +679,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicy()
         {
             // Snippet: SetIamPolicy(string,Policy,CallSettings)
@@ -666,6 +693,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync_RequestObject()
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
@@ -682,6 +710,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicy_RequestObject()
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
@@ -698,6 +727,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync()
         {
             // Snippet: GetIamPolicyAsync(string,CallSettings)
@@ -711,6 +741,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicy()
         {
             // Snippet: GetIamPolicy(string,CallSettings)
@@ -723,6 +754,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync_RequestObject()
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
@@ -738,6 +770,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicy_RequestObject()
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
@@ -753,6 +786,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync()
         {
             // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
@@ -767,6 +801,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissions()
         {
             // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
@@ -780,6 +815,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync_RequestObject()
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
@@ -796,6 +832,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissions_RequestObject()
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)

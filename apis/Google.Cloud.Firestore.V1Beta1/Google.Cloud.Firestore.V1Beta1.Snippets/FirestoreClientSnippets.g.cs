@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Firestore.V1Beta1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedFirestoreClientSnippets
     {
+        /// <summary>Snippet for GetDocumentAsync</summary>
         public async Task GetDocumentAsync_RequestObject()
         {
             // Snippet: GetDocumentAsync(GetDocumentRequest,CallSettings)
@@ -47,6 +49,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetDocument</summary>
         public void GetDocument_RequestObject()
         {
             // Snippet: GetDocument(GetDocumentRequest,CallSettings)
@@ -62,6 +65,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListDocumentsAsync</summary>
         public async Task ListDocumentsAsync_RequestObject()
         {
             // Snippet: ListDocumentsAsync(ListDocumentsRequest,CallSettings)
@@ -109,6 +113,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListDocuments</summary>
         public void ListDocuments_RequestObject()
         {
             // Snippet: ListDocuments(ListDocumentsRequest,CallSettings)
@@ -156,6 +161,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDocumentAsync</summary>
         public async Task CreateDocumentAsync_RequestObject()
         {
             // Snippet: CreateDocumentAsync(CreateDocumentRequest,CallSettings)
@@ -174,6 +180,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDocument</summary>
         public void CreateDocument_RequestObject()
         {
             // Snippet: CreateDocument(CreateDocumentRequest,CallSettings)
@@ -192,6 +199,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDocumentAsync</summary>
         public async Task UpdateDocumentAsync()
         {
             // Snippet: UpdateDocumentAsync(Document,DocumentMask,CallSettings)
@@ -206,6 +214,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDocument</summary>
         public void UpdateDocument()
         {
             // Snippet: UpdateDocument(Document,DocumentMask,CallSettings)
@@ -219,6 +228,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDocumentAsync</summary>
         public async Task UpdateDocumentAsync_RequestObject()
         {
             // Snippet: UpdateDocumentAsync(UpdateDocumentRequest,CallSettings)
@@ -235,6 +245,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDocument</summary>
         public void UpdateDocument_RequestObject()
         {
             // Snippet: UpdateDocument(UpdateDocumentRequest,CallSettings)
@@ -251,6 +262,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteDocumentAsync</summary>
         public async Task DeleteDocumentAsync()
         {
             // Snippet: DeleteDocumentAsync(string,CallSettings)
@@ -264,6 +276,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteDocument</summary>
         public void DeleteDocument()
         {
             // Snippet: DeleteDocument(string,CallSettings)
@@ -276,6 +289,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteDocumentAsync</summary>
         public async Task DeleteDocumentAsync_RequestObject()
         {
             // Snippet: DeleteDocumentAsync(DeleteDocumentRequest,CallSettings)
@@ -291,6 +305,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteDocument</summary>
         public void DeleteDocument_RequestObject()
         {
             // Snippet: DeleteDocument(DeleteDocumentRequest,CallSettings)
@@ -306,6 +321,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchGetDocuments</summary>
         public async Task BatchGetDocuments()
         {
             // Snippet: BatchGetDocuments(BatchGetDocumentsRequest,CallSettings)
@@ -331,6 +347,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BeginTransactionAsync</summary>
         public async Task BeginTransactionAsync()
         {
             // Snippet: BeginTransactionAsync(string,CallSettings)
@@ -344,6 +361,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BeginTransaction</summary>
         public void BeginTransaction()
         {
             // Snippet: BeginTransaction(string,CallSettings)
@@ -356,6 +374,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BeginTransactionAsync</summary>
         public async Task BeginTransactionAsync_RequestObject()
         {
             // Snippet: BeginTransactionAsync(BeginTransactionRequest,CallSettings)
@@ -371,6 +390,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BeginTransaction</summary>
         public void BeginTransaction_RequestObject()
         {
             // Snippet: BeginTransaction(BeginTransactionRequest,CallSettings)
@@ -386,6 +406,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CommitAsync</summary>
         public async Task CommitAsync()
         {
             // Snippet: CommitAsync(string,IEnumerable<Write>,CallSettings)
@@ -400,6 +421,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Commit</summary>
         public void Commit()
         {
             // Snippet: Commit(string,IEnumerable<Write>,CallSettings)
@@ -413,6 +435,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CommitAsync</summary>
         public async Task CommitAsync_RequestObject()
         {
             // Snippet: CommitAsync(CommitRequest,CallSettings)
@@ -429,6 +452,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Commit</summary>
         public void Commit_RequestObject()
         {
             // Snippet: Commit(CommitRequest,CallSettings)
@@ -445,6 +469,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RollbackAsync</summary>
         public async Task RollbackAsync()
         {
             // Snippet: RollbackAsync(string,ByteString,CallSettings)
@@ -459,6 +484,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Rollback</summary>
         public void Rollback()
         {
             // Snippet: Rollback(string,ByteString,CallSettings)
@@ -472,6 +498,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RollbackAsync</summary>
         public async Task RollbackAsync_RequestObject()
         {
             // Snippet: RollbackAsync(RollbackRequest,CallSettings)
@@ -488,6 +515,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Rollback</summary>
         public void Rollback_RequestObject()
         {
             // Snippet: Rollback(RollbackRequest,CallSettings)
@@ -504,6 +532,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RunQuery</summary>
         public async Task RunQuery()
         {
             // Snippet: RunQuery(RunQueryRequest,CallSettings)
@@ -528,6 +557,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Write</summary>
         public async Task Write()
         {
             // Snippet: Write(CallSettings,BidirectionalStreamingSettings)
@@ -573,6 +603,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for Listen</summary>
         public async Task Listen()
         {
             // Snippet: Listen(CallSettings,BidirectionalStreamingSettings)
@@ -618,6 +649,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListCollectionIdsAsync</summary>
         public async Task ListCollectionIdsAsync()
         {
             // Snippet: ListCollectionIdsAsync(string,string,int?,CallSettings)
@@ -661,6 +693,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListCollectionIds</summary>
         public void ListCollectionIds()
         {
             // Snippet: ListCollectionIds(string,string,int?,CallSettings)
@@ -704,6 +737,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListCollectionIdsAsync</summary>
         public async Task ListCollectionIdsAsync_RequestObject()
         {
             // Snippet: ListCollectionIdsAsync(ListCollectionIdsRequest,CallSettings)
@@ -750,6 +784,7 @@ namespace Google.Cloud.Firestore.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListCollectionIds</summary>
         public void ListCollectionIds_RequestObject()
         {
             // Snippet: ListCollectionIds(ListCollectionIdsRequest,CallSettings)
