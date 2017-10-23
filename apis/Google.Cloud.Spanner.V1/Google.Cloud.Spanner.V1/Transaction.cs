@@ -479,7 +479,8 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Options for read-write transactions.
+      /// Message type to initiate a read-write transaction. Currently this
+      /// transaction type has no options.
       /// </summary>
       public sealed partial class ReadWrite : pb::IMessage<ReadWrite> {
         private static readonly pb::MessageParser<ReadWrite> _parser = new pb::MessageParser<ReadWrite>(() => new ReadWrite());
@@ -571,7 +572,7 @@ namespace Google.Cloud.Spanner.V1 {
       }
 
       /// <summary>
-      /// Options for read-only transactions.
+      /// Message type to initiate a read-only transaction.
       /// </summary>
       public sealed partial class ReadOnly : pb::IMessage<ReadOnly> {
         private static readonly pb::MessageParser<ReadOnly> _parser = new pb::MessageParser<ReadOnly>(() => new ReadOnly());
@@ -648,6 +649,9 @@ namespace Google.Cloud.Spanner.V1 {
         /// previously committed transaction whose timestamp is known.
         ///
         /// Note that this option can only be used in single-use transactions.
+        ///
+        /// A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds.
+        /// Example: `"2014-10-02T15:01:23.045123456Z"`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Protobuf.WellKnownTypes.Timestamp MinReadTimestamp {
@@ -696,6 +700,9 @@ namespace Google.Cloud.Spanner.V1 {
         /// Useful for large scale consistent reads such as mapreduces, or
         /// for coordinating many reads against a consistent snapshot of the
         /// data.
+        ///
+        /// A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds.
+        /// Example: `"2014-10-02T15:01:23.045123456Z"`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Protobuf.WellKnownTypes.Timestamp ReadTimestamp {
@@ -1015,6 +1022,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// For snapshot read-only transactions, the read timestamp chosen
     /// for the transaction. Not returned by default: see
     /// [TransactionOptions.ReadOnly.return_read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.return_read_timestamp].
+    ///
+    /// A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds.
+    /// Example: `"2014-10-02T15:01:23.045123456Z"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ReadTimestamp {

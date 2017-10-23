@@ -23,86 +23,102 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvc3Bhbm5lci92MS9zcGFubmVyLnByb3RvEhFnb29nbGUuc3Bh",
-            "bm5lci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoVZ29vZ2xl",
-            "L2FwaS9hdXRoLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8a",
-            "HGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9zcGFubmVyL3YxL2tleXMucHJv",
-            "dG8aIGdvb2dsZS9zcGFubmVyL3YxL211dGF0aW9uLnByb3RvGiJnb29nbGUv",
-            "c3Bhbm5lci92MS9yZXN1bHRfc2V0LnByb3RvGiNnb29nbGUvc3Bhbm5lci92",
-            "MS90cmFuc2FjdGlvbi5wcm90bxocZ29vZ2xlL3NwYW5uZXIvdjEvdHlwZS5w",
-            "cm90byIoChRDcmVhdGVTZXNzaW9uUmVxdWVzdBIQCghkYXRhYmFzZRgBIAEo",
-            "CSIXCgdTZXNzaW9uEgwKBG5hbWUYASABKAkiIQoRR2V0U2Vzc2lvblJlcXVl",
-            "c3QSDAoEbmFtZRgBIAEoCSIkChREZWxldGVTZXNzaW9uUmVxdWVzdBIMCgRu",
-            "YW1lGAEgASgJIrgDChFFeGVjdXRlU3FsUmVxdWVzdBIPCgdzZXNzaW9uGAEg",
-            "ASgJEjsKC3RyYW5zYWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEu",
-            "VHJhbnNhY3Rpb25TZWxlY3RvchILCgNzcWwYAyABKAkSJwoGcGFyYW1zGAQg",
-            "ASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBJJCgtwYXJhbV90eXBlcxgF",
-            "IAMoCzI0Lmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1dGVTcWxSZXF1ZXN0LlBh",
-            "cmFtVHlwZXNFbnRyeRIUCgxyZXN1bWVfdG9rZW4YBiABKAwSQgoKcXVlcnlf",
-            "bW9kZRgHIAEoDjIuLmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1dGVTcWxSZXF1",
-            "ZXN0LlF1ZXJ5TW9kZRpKCg9QYXJhbVR5cGVzRW50cnkSCwoDa2V5GAEgASgJ",
-            "EiYKBXZhbHVlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZToCOAEi",
-            "LgoJUXVlcnlNb2RlEgoKBk5PUk1BTBAAEggKBFBMQU4QARILCgdQUk9GSUxF",
-            "EAIi2wEKC1JlYWRSZXF1ZXN0Eg8KB3Nlc3Npb24YASABKAkSOwoLdHJhbnNh",
-            "Y3Rpb24YAiABKAsyJi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvblNl",
-            "bGVjdG9yEg0KBXRhYmxlGAMgASgJEg0KBWluZGV4GAQgASgJEg8KB2NvbHVt",
-            "bnMYBSADKAkSKgoHa2V5X3NldBgGIAEoCzIZLmdvb2dsZS5zcGFubmVyLnYx",
-            "LktleVNldBINCgVsaW1pdBgIIAEoAxIUCgxyZXN1bWVfdG9rZW4YCSABKAwi",
-            "YgoXQmVnaW5UcmFuc2FjdGlvblJlcXVlc3QSDwoHc2Vzc2lvbhgBIAEoCRI2",
-            "CgdvcHRpb25zGAIgASgLMiUuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rp",
-            "b25PcHRpb25zIsIBCg1Db21taXRSZXF1ZXN0Eg8KB3Nlc3Npb24YASABKAkS",
-            "GAoOdHJhbnNhY3Rpb25faWQYAiABKAxIABJHChZzaW5nbGVfdXNlX3RyYW5z",
-            "YWN0aW9uGAMgASgLMiUuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25P",
-            "cHRpb25zSAASLgoJbXV0YXRpb25zGAQgAygLMhsuZ29vZ2xlLnNwYW5uZXIu",
-            "djEuTXV0YXRpb25CDQoLdHJhbnNhY3Rpb24iRgoOQ29tbWl0UmVzcG9uc2US",
-            "NAoQY29tbWl0X3RpbWVzdGFtcBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXAiOgoPUm9sbGJhY2tSZXF1ZXN0Eg8KB3Nlc3Npb24YASABKAkS",
-            "FgoOdHJhbnNhY3Rpb25faWQYAiABKAwy6QwKB1NwYW5uZXISmAEKDUNyZWF0",
-            "ZVNlc3Npb24SJy5nb29nbGUuc3Bhbm5lci52MS5DcmVhdGVTZXNzaW9uUmVx",
-            "dWVzdBoaLmdvb2dsZS5zcGFubmVyLnYxLlNlc3Npb24iQoLT5JMCPCI6L3Yx",
-            "L3tkYXRhYmFzZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8q",
-            "fS9zZXNzaW9ucxKQAQoKR2V0U2Vzc2lvbhIkLmdvb2dsZS5zcGFubmVyLnYx",
-            "LkdldFNlc3Npb25SZXF1ZXN0GhouZ29vZ2xlLnNwYW5uZXIudjEuU2Vzc2lv",
-            "biJAgtPkkwI6EjgvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9k",
-            "YXRhYmFzZXMvKi9zZXNzaW9ucy8qfRKSAQoNRGVsZXRlU2Vzc2lvbhInLmdv",
-            "b2dsZS5zcGFubmVyLnYxLkRlbGV0ZVNlc3Npb25SZXF1ZXN0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IkCC0+STAjoqOC92MS97bmFtZT1wcm9qZWN0cy8q",
-            "L2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9EqMBCgpFeGVj",
-            "dXRlU3FsEiQuZ29vZ2xlLnNwYW5uZXIudjEuRXhlY3V0ZVNxbFJlcXVlc3Qa",
-            "HC5nb29nbGUuc3Bhbm5lci52MS5SZXN1bHRTZXQiUYLT5JMCSyJGL3YxL3tz",
+            "bm5lci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29vZ2xl",
+            "L3Byb3RvYnVmL2VtcHR5LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29n",
+            "bGUvc3Bhbm5lci92MS9rZXlzLnByb3RvGiBnb29nbGUvc3Bhbm5lci92MS9t",
+            "dXRhdGlvbi5wcm90bxoiZ29vZ2xlL3NwYW5uZXIvdjEvcmVzdWx0X3NldC5w",
+            "cm90bxojZ29vZ2xlL3NwYW5uZXIvdjEvdHJhbnNhY3Rpb24ucHJvdG8aHGdv",
+            "b2dsZS9zcGFubmVyL3YxL3R5cGUucHJvdG8iVQoUQ3JlYXRlU2Vzc2lvblJl",
+            "cXVlc3QSEAoIZGF0YWJhc2UYASABKAkSKwoHc2Vzc2lvbhgCIAEoCzIaLmdv",
+            "b2dsZS5zcGFubmVyLnYxLlNlc3Npb24i7gEKB1Nlc3Npb24SDAoEbmFtZRgB",
+            "IAEoCRI2CgZsYWJlbHMYAiADKAsyJi5nb29nbGUuc3Bhbm5lci52MS5TZXNz",
+            "aW9uLkxhYmVsc0VudHJ5Ei8KC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBI9ChlhcHByb3hpbWF0ZV9sYXN0X3VzZV90",
+            "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBotCgtMYWJl",
+            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIiEKEUdl",
+            "dFNlc3Npb25SZXF1ZXN0EgwKBG5hbWUYASABKAkiXgoTTGlzdFNlc3Npb25z",
+            "UmVxdWVzdBIQCghkYXRhYmFzZRgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUS",
+            "EgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkiXQoUTGlzdFNl",
+            "c3Npb25zUmVzcG9uc2USLAoIc2Vzc2lvbnMYASADKAsyGi5nb29nbGUuc3Bh",
+            "bm5lci52MS5TZXNzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIkChRE",
+            "ZWxldGVTZXNzaW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJIrgDChFFeGVjdXRl",
+            "U3FsUmVxdWVzdBIPCgdzZXNzaW9uGAEgASgJEjsKC3RyYW5zYWN0aW9uGAIg",
+            "ASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25TZWxlY3RvchIL",
+            "CgNzcWwYAyABKAkSJwoGcGFyYW1zGAQgASgLMhcuZ29vZ2xlLnByb3RvYnVm",
+            "LlN0cnVjdBJJCgtwYXJhbV90eXBlcxgFIAMoCzI0Lmdvb2dsZS5zcGFubmVy",
+            "LnYxLkV4ZWN1dGVTcWxSZXF1ZXN0LlBhcmFtVHlwZXNFbnRyeRIUCgxyZXN1",
+            "bWVfdG9rZW4YBiABKAwSQgoKcXVlcnlfbW9kZRgHIAEoDjIuLmdvb2dsZS5z",
+            "cGFubmVyLnYxLkV4ZWN1dGVTcWxSZXF1ZXN0LlF1ZXJ5TW9kZRpKCg9QYXJh",
+            "bVR5cGVzRW50cnkSCwoDa2V5GAEgASgJEiYKBXZhbHVlGAIgASgLMhcuZ29v",
+            "Z2xlLnNwYW5uZXIudjEuVHlwZToCOAEiLgoJUXVlcnlNb2RlEgoKBk5PUk1B",
+            "TBAAEggKBFBMQU4QARILCgdQUk9GSUxFEAIi2wEKC1JlYWRSZXF1ZXN0Eg8K",
+            "B3Nlc3Npb24YASABKAkSOwoLdHJhbnNhY3Rpb24YAiABKAsyJi5nb29nbGUu",
+            "c3Bhbm5lci52MS5UcmFuc2FjdGlvblNlbGVjdG9yEg0KBXRhYmxlGAMgASgJ",
+            "Eg0KBWluZGV4GAQgASgJEg8KB2NvbHVtbnMYBSADKAkSKgoHa2V5X3NldBgG",
+            "IAEoCzIZLmdvb2dsZS5zcGFubmVyLnYxLktleVNldBINCgVsaW1pdBgIIAEo",
+            "AxIUCgxyZXN1bWVfdG9rZW4YCSABKAwiYgoXQmVnaW5UcmFuc2FjdGlvblJl",
+            "cXVlc3QSDwoHc2Vzc2lvbhgBIAEoCRI2CgdvcHRpb25zGAIgASgLMiUuZ29v",
+            "Z2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zIsIBCg1Db21taXRS",
+            "ZXF1ZXN0Eg8KB3Nlc3Npb24YASABKAkSGAoOdHJhbnNhY3Rpb25faWQYAiAB",
+            "KAxIABJHChZzaW5nbGVfdXNlX3RyYW5zYWN0aW9uGAMgASgLMiUuZ29vZ2xl",
+            "LnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zSAASLgoJbXV0YXRpb25z",
+            "GAQgAygLMhsuZ29vZ2xlLnNwYW5uZXIudjEuTXV0YXRpb25CDQoLdHJhbnNh",
+            "Y3Rpb24iRgoOQ29tbWl0UmVzcG9uc2USNAoQY29tbWl0X3RpbWVzdGFtcBgB",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiOgoPUm9sbGJhY2tS",
+            "ZXF1ZXN0Eg8KB3Nlc3Npb24YASABKAkSFgoOdHJhbnNhY3Rpb25faWQYAiAB",
+            "KAwykg4KB1NwYW5uZXISmwEKDUNyZWF0ZVNlc3Npb24SJy5nb29nbGUuc3Bh",
+            "bm5lci52MS5DcmVhdGVTZXNzaW9uUmVxdWVzdBoaLmdvb2dsZS5zcGFubmVy",
+            "LnYxLlNlc3Npb24iRYLT5JMCPyI6L3YxL3tkYXRhYmFzZT1wcm9qZWN0cy8q",
+            "L2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qfS9zZXNzaW9uczoBKhKQAQoKR2V0",
+            "U2Vzc2lvbhIkLmdvb2dsZS5zcGFubmVyLnYxLkdldFNlc3Npb25SZXF1ZXN0",
+            "GhouZ29vZ2xlLnNwYW5uZXIudjEuU2Vzc2lvbiJAgtPkkwI6EjgvdjEve25h",
+            "bWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9u",
+            "cy8qfRKjAQoMTGlzdFNlc3Npb25zEiYuZ29vZ2xlLnNwYW5uZXIudjEuTGlz",
+            "dFNlc3Npb25zUmVxdWVzdBonLmdvb2dsZS5zcGFubmVyLnYxLkxpc3RTZXNz",
+            "aW9uc1Jlc3BvbnNlIkKC0+STAjwSOi92MS97ZGF0YWJhc2U9cHJvamVjdHMv",
+            "Ki9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKn0vc2Vzc2lvbnMSkgEKDURlbGV0",
+            "ZVNlc3Npb24SJy5nb29nbGUuc3Bhbm5lci52MS5EZWxldGVTZXNzaW9uUmVx",
+            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJAgtPkkwI6KjgvdjEve25h",
+            "bWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9u",
+            "cy8qfRKjAQoKRXhlY3V0ZVNxbBIkLmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1",
+            "dGVTcWxSZXF1ZXN0GhwuZ29vZ2xlLnNwYW5uZXIudjEuUmVzdWx0U2V0IlGC",
+            "0+STAksiRi92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2Rh",
+            "dGFiYXNlcy8qL3Nlc3Npb25zLyp9OmV4ZWN1dGVTcWw6ASoSvgEKE0V4ZWN1",
+            "dGVTdHJlYW1pbmdTcWwSJC5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlU3Fs",
+            "UmVxdWVzdBojLmdvb2dsZS5zcGFubmVyLnYxLlBhcnRpYWxSZXN1bHRTZXQi",
+            "WoLT5JMCVCJPL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyov",
+            "ZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06ZXhlY3V0ZVN0cmVhbWluZ1NxbDoB",
+            "KjABEpEBCgRSZWFkEh4uZ29vZ2xlLnNwYW5uZXIudjEuUmVhZFJlcXVlc3Qa",
+            "HC5nb29nbGUuc3Bhbm5lci52MS5SZXN1bHRTZXQiS4LT5JMCRSJAL3YxL3tz",
             "ZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vz",
-            "c2lvbnMvKn06ZXhlY3V0ZVNxbDoBKhK+AQoTRXhlY3V0ZVN0cmVhbWluZ1Nx",
-            "bBIkLmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1dGVTcWxSZXF1ZXN0GiMuZ29v",
-            "Z2xlLnNwYW5uZXIudjEuUGFydGlhbFJlc3VsdFNldCJagtPkkwJUIk8vdjEv",
-            "e3Nlc3Npb249cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9z",
-            "ZXNzaW9ucy8qfTpleGVjdXRlU3RyZWFtaW5nU3FsOgEqMAESkQEKBFJlYWQS",
-            "Hi5nb29nbGUuc3Bhbm5lci52MS5SZWFkUmVxdWVzdBocLmdvb2dsZS5zcGFu",
-            "bmVyLnYxLlJlc3VsdFNldCJLgtPkkwJFIkAvdjEve3Nlc3Npb249cHJvamVj",
-            "dHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfTpyZWFk",
-            "OgEqEqwBCg1TdHJlYW1pbmdSZWFkEh4uZ29vZ2xlLnNwYW5uZXIudjEuUmVh",
-            "ZFJlcXVlc3QaIy5nb29nbGUuc3Bhbm5lci52MS5QYXJ0aWFsUmVzdWx0U2V0",
-            "IlSC0+STAk4iSS92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
-            "L2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OnN0cmVhbWluZ1JlYWQ6ASowARK3",
-            "AQoQQmVnaW5UcmFuc2FjdGlvbhIqLmdvb2dsZS5zcGFubmVyLnYxLkJlZ2lu",
-            "VHJhbnNhY3Rpb25SZXF1ZXN0Gh4uZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNh",
-            "Y3Rpb24iV4LT5JMCUSJML3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFu",
-            "Y2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06YmVnaW5UcmFuc2FjdGlv",
-            "bjoBKhKcAQoGQ29tbWl0EiAuZ29vZ2xlLnNwYW5uZXIudjEuQ29tbWl0UmVx",
-            "dWVzdBohLmdvb2dsZS5zcGFubmVyLnYxLkNvbW1pdFJlc3BvbnNlIk2C0+ST",
-            "AkciQi92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFi",
-            "YXNlcy8qL3Nlc3Npb25zLyp9OmNvbW1pdDoBKhKXAQoIUm9sbGJhY2sSIi5n",
-            "b29nbGUuc3Bhbm5lci52MS5Sb2xsYmFja1JlcXVlc3QaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiT4LT5JMCSSJEL3YxL3tzZXNzaW9uPXByb2plY3RzLyov",
-            "aW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06cm9sbGJhY2s6",
-            "ASpCewoVY29tLmdvb2dsZS5zcGFubmVyLnYxQgxTcGFubmVyUHJvdG9QAVo4",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9zcGFubmVy",
-            "L3YxO3NwYW5uZXKqAhdHb29nbGUuQ2xvdWQuU3Bhbm5lci5WMWIGcHJvdG8z"));
+            "c2lvbnMvKn06cmVhZDoBKhKsAQoNU3RyZWFtaW5nUmVhZBIeLmdvb2dsZS5z",
+            "cGFubmVyLnYxLlJlYWRSZXF1ZXN0GiMuZ29vZ2xlLnNwYW5uZXIudjEuUGFy",
+            "dGlhbFJlc3VsdFNldCJUgtPkkwJOIkkvdjEve3Nlc3Npb249cHJvamVjdHMv",
+            "Ki9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfTpzdHJlYW1p",
+            "bmdSZWFkOgEqMAEStwEKEEJlZ2luVHJhbnNhY3Rpb24SKi5nb29nbGUuc3Bh",
+            "bm5lci52MS5CZWdpblRyYW5zYWN0aW9uUmVxdWVzdBoeLmdvb2dsZS5zcGFu",
+            "bmVyLnYxLlRyYW5zYWN0aW9uIleC0+STAlEiTC92MS97c2Vzc2lvbj1wcm9q",
+            "ZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OmJl",
+            "Z2luVHJhbnNhY3Rpb246ASoSnAEKBkNvbW1pdBIgLmdvb2dsZS5zcGFubmVy",
+            "LnYxLkNvbW1pdFJlcXVlc3QaIS5nb29nbGUuc3Bhbm5lci52MS5Db21taXRS",
+            "ZXNwb25zZSJNgtPkkwJHIkIvdjEve3Nlc3Npb249cHJvamVjdHMvKi9pbnN0",
+            "YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfTpjb21taXQ6ASoSlwEK",
+            "CFJvbGxiYWNrEiIuZ29vZ2xlLnNwYW5uZXIudjEuUm9sbGJhY2tSZXF1ZXN0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ik+C0+STAkkiRC92MS97c2Vzc2lv",
+            "bj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25z",
+            "Lyp9OnJvbGxiYWNrOgEqQnsKFWNvbS5nb29nbGUuc3Bhbm5lci52MUIMU3Bh",
+            "bm5lclByb3RvUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvc3Bhbm5lci92MTtzcGFubmVyqgIXR29vZ2xlLkNsb3VkLlNwYW5u",
+            "ZXIuVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.AuthReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, global::Google.Cloud.Spanner.V1.MutationReflection.Descriptor, global::Google.Cloud.Spanner.V1.ResultSetReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, global::Google.Cloud.Spanner.V1.MutationReflection.Descriptor, global::Google.Cloud.Spanner.V1.ResultSetReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CreateSessionRequest), global::Google.Cloud.Spanner.V1.CreateSessionRequest.Parser, new[]{ "Database" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Session), global::Google.Cloud.Spanner.V1.Session.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CreateSessionRequest), global::Google.Cloud.Spanner.V1.CreateSessionRequest.Parser, new[]{ "Database", "Session" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Session), global::Google.Cloud.Spanner.V1.Session.Parser, new[]{ "Name", "Labels", "CreateTime", "ApproximateLastUseTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.GetSessionRequest), global::Google.Cloud.Spanner.V1.GetSessionRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ListSessionsRequest), global::Google.Cloud.Spanner.V1.ListSessionsRequest.Parser, new[]{ "Database", "PageSize", "PageToken", "Filter" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ListSessionsResponse), global::Google.Cloud.Spanner.V1.ListSessionsResponse.Parser, new[]{ "Sessions", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.DeleteSessionRequest), global::Google.Cloud.Spanner.V1.DeleteSessionRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest), global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Parser, new[]{ "Session", "Transaction", "Sql", "Params", "ParamTypes", "ResumeToken", "QueryMode" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode) }, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ReadRequest), global::Google.Cloud.Spanner.V1.ReadRequest.Parser, new[]{ "Session", "Transaction", "Table", "Index", "Columns", "KeySet", "Limit", "ResumeToken" }, null, null, null),
@@ -144,6 +160,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateSessionRequest(CreateSessionRequest other) : this() {
       database_ = other.database_;
+      Session = other.session_ != null ? other.Session.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -165,6 +182,20 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "session" field.</summary>
+    public const int SessionFieldNumber = 2;
+    private global::Google.Cloud.Spanner.V1.Session session_;
+    /// <summary>
+    /// The session to create.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Spanner.V1.Session Session {
+      get { return session_; }
+      set {
+        session_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CreateSessionRequest);
@@ -179,6 +210,7 @@ namespace Google.Cloud.Spanner.V1 {
         return true;
       }
       if (Database != other.Database) return false;
+      if (!object.Equals(Session, other.Session)) return false;
       return true;
     }
 
@@ -186,6 +218,7 @@ namespace Google.Cloud.Spanner.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Database.Length != 0) hash ^= Database.GetHashCode();
+      if (session_ != null) hash ^= Session.GetHashCode();
       return hash;
     }
 
@@ -200,6 +233,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(10);
         output.WriteString(Database);
       }
+      if (session_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Session);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -207,6 +244,9 @@ namespace Google.Cloud.Spanner.V1 {
       int size = 0;
       if (Database.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Database);
+      }
+      if (session_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Session);
       }
       return size;
     }
@@ -218,6 +258,12 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (other.Database.Length != 0) {
         Database = other.Database;
+      }
+      if (other.session_ != null) {
+        if (session_ == null) {
+          session_ = new global::Google.Cloud.Spanner.V1.Session();
+        }
+        Session.MergeFrom(other.Session);
       }
     }
 
@@ -231,6 +277,13 @@ namespace Google.Cloud.Spanner.V1 {
             break;
           case 10: {
             Database = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (session_ == null) {
+              session_ = new global::Google.Cloud.Spanner.V1.Session();
+            }
+            input.ReadMessage(session_);
             break;
           }
         }
@@ -267,6 +320,9 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Session(Session other) : this() {
       name_ = other.name_;
+      labels_ = other.labels_.Clone();
+      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
+      ApproximateLastUseTime = other.approximateLastUseTime_ != null ? other.ApproximateLastUseTime.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -278,13 +334,63 @@ namespace Google.Cloud.Spanner.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the session.
+    /// The name of the session.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 2;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// The labels for the session.
+    ///
+    ///  * Label keys must be between 1 and 63 characters long and must conform to
+    ///    the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
+    ///  * Label values must be between 0 and 63 characters long and must conform
+    ///    to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+    ///  * No more than 64 labels can be associated with a given session.
+    ///
+    /// See https://goo.gl/xmQnxf for more information on and examples of labels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The timestamp when the session is created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "approximate_last_use_time" field.</summary>
+    public const int ApproximateLastUseTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp approximateLastUseTime_;
+    /// <summary>
+    /// Output only. The approximate timestamp when the session is last used. It is
+    /// typically earlier than the actual last use time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ApproximateLastUseTime {
+      get { return approximateLastUseTime_; }
+      set {
+        approximateLastUseTime_ = value;
       }
     }
 
@@ -302,6 +408,9 @@ namespace Google.Cloud.Spanner.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (!Labels.Equals(other.Labels)) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(ApproximateLastUseTime, other.ApproximateLastUseTime)) return false;
       return true;
     }
 
@@ -309,6 +418,9 @@ namespace Google.Cloud.Spanner.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= Labels.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (approximateLastUseTime_ != null) hash ^= ApproximateLastUseTime.GetHashCode();
       return hash;
     }
 
@@ -323,6 +435,15 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      labels_.WriteTo(output, _map_labels_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (approximateLastUseTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ApproximateLastUseTime);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -330,6 +451,13 @@ namespace Google.Cloud.Spanner.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += labels_.CalculateSize(_map_labels_codec);
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (approximateLastUseTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApproximateLastUseTime);
       }
       return size;
     }
@@ -341,6 +469,19 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      labels_.Add(other.labels_);
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.approximateLastUseTime_ != null) {
+        if (approximateLastUseTime_ == null) {
+          approximateLastUseTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ApproximateLastUseTime.MergeFrom(other.ApproximateLastUseTime);
       }
     }
 
@@ -354,6 +495,24 @@ namespace Google.Cloud.Spanner.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(createTime_);
+            break;
+          }
+          case 34: {
+            if (approximateLastUseTime_ == null) {
+              approximateLastUseTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(approximateLastUseTime_);
             break;
           }
         }
@@ -486,6 +645,382 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
+  /// The request for [ListSessions][google.spanner.v1.Spanner.ListSessions].
+  /// </summary>
+  public sealed partial class ListSessionsRequest : pb::IMessage<ListSessionsRequest> {
+    private static readonly pb::MessageParser<ListSessionsRequest> _parser = new pb::MessageParser<ListSessionsRequest>(() => new ListSessionsRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListSessionsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSessionsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSessionsRequest(ListSessionsRequest other) : this() {
+      database_ = other.database_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSessionsRequest Clone() {
+      return new ListSessionsRequest(this);
+    }
+
+    /// <summary>Field number for the "database" field.</summary>
+    public const int DatabaseFieldNumber = 1;
+    private string database_ = "";
+    /// <summary>
+    /// Required. The database in which to list sessions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Database {
+      get { return database_; }
+      set {
+        database_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Number of sessions to be returned in the response. If 0 or less, defaults
+    /// to the server's maximum allowed page size.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// If non-empty, `page_token` should contain a
+    /// [next_page_token][google.spanner.v1.ListSessionsResponse.next_page_token] from a previous
+    /// [ListSessionsResponse][google.spanner.v1.ListSessionsResponse].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// An expression for filtering the results of the request. Filter rules are
+    /// case insensitive. The fields eligible for filtering are:
+    ///
+    ///   * `labels.key` where key is the name of a label
+    ///
+    /// Some examples of using filters are:
+    ///
+    ///   * `labels.env:*` --> The session has the label "env".
+    ///   * `labels.env:dev` --> The session has the label "env" and the value of
+    ///                        the label contains the string "dev".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListSessionsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListSessionsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Database != other.Database) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Database.Length != 0) hash ^= Database.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Database.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Database);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Database.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Database);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListSessionsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Database.Length != 0) {
+        Database = other.Database;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Database = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The response for [ListSessions][google.spanner.v1.Spanner.ListSessions].
+  /// </summary>
+  public sealed partial class ListSessionsResponse : pb::IMessage<ListSessionsResponse> {
+    private static readonly pb::MessageParser<ListSessionsResponse> _parser = new pb::MessageParser<ListSessionsResponse>(() => new ListSessionsResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListSessionsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSessionsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSessionsResponse(ListSessionsResponse other) : this() {
+      sessions_ = other.sessions_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSessionsResponse Clone() {
+      return new ListSessionsResponse(this);
+    }
+
+    /// <summary>Field number for the "sessions" field.</summary>
+    public const int SessionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Spanner.V1.Session> _repeated_sessions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Spanner.V1.Session.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.Session> sessions_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.Session>();
+    /// <summary>
+    /// The list of requested sessions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.Session> Sessions {
+      get { return sessions_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// `next_page_token` can be sent in a subsequent
+    /// [ListSessions][google.spanner.v1.Spanner.ListSessions] call to fetch more of the matching
+    /// sessions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListSessionsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListSessionsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!sessions_.Equals(other.sessions_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= sessions_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      sessions_.WriteTo(output, _repeated_sessions_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += sessions_.CalculateSize(_repeated_sessions_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListSessionsResponse other) {
+      if (other == null) {
+        return;
+      }
+      sessions_.Add(other.sessions_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            sessions_.AddEntriesFrom(input, _repeated_sessions_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// The request for [DeleteSession][google.spanner.v1.Spanner.DeleteSession].
   /// </summary>
   public sealed partial class DeleteSessionRequest : pb::IMessage<DeleteSessionRequest> {
@@ -495,7 +1030,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -619,7 +1154,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -988,7 +1523,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1351,7 +1886,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1511,7 +2046,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1765,7 +2300,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1894,7 +2429,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -37,6 +37,8 @@ namespace Google.Cloud.Spanner.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CreateSessionRequest> __Marshaller_CreateSessionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.CreateSessionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.Session> __Marshaller_Session = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.Session.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.GetSessionRequest> __Marshaller_GetSessionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.GetSessionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ListSessionsRequest> __Marshaller_ListSessionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ListSessionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ListSessionsResponse> __Marshaller_ListSessionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ListSessionsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.DeleteSessionRequest> __Marshaller_DeleteSessionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.DeleteSessionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteSqlRequest> __Marshaller_ExecuteSqlRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Parser.ParseFrom);
@@ -62,6 +64,13 @@ namespace Google.Cloud.Spanner.V1 {
         "GetSession",
         __Marshaller_GetSessionRequest,
         __Marshaller_Session);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.V1.ListSessionsRequest, global::Google.Cloud.Spanner.V1.ListSessionsResponse> __Method_ListSessions = new grpc::Method<global::Google.Cloud.Spanner.V1.ListSessionsRequest, global::Google.Cloud.Spanner.V1.ListSessionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSessions",
+        __Marshaller_ListSessionsRequest,
+        __Marshaller_ListSessionsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.DeleteSessionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSession = new grpc::Method<global::Google.Cloud.Spanner.V1.DeleteSessionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
@@ -166,6 +175,17 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.Session> GetSession(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all sessions in a given database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.ListSessionsResponse> ListSessions(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -499,6 +519,50 @@ namespace Google.Cloud.Spanner.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> GetSessionAsync(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSession, null, options, request);
+      }
+      /// <summary>
+      /// Lists all sessions in a given database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.V1.ListSessionsResponse ListSessions(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListSessions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all sessions in a given database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.V1.ListSessionsResponse ListSessions(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSessions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all sessions in a given database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ListSessionsResponse> ListSessionsAsync(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListSessionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all sessions in a given database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ListSessionsResponse> ListSessionsAsync(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSessions, null, options, request);
       }
       /// <summary>
       /// Ends a session, releasing server resources associated with it.
@@ -994,6 +1058,7 @@ namespace Google.Cloud.Spanner.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateSession, serviceImpl.CreateSession)
           .AddMethod(__Method_GetSession, serviceImpl.GetSession)
+          .AddMethod(__Method_ListSessions, serviceImpl.ListSessions)
           .AddMethod(__Method_DeleteSession, serviceImpl.DeleteSession)
           .AddMethod(__Method_ExecuteSql, serviceImpl.ExecuteSql)
           .AddMethod(__Method_ExecuteStreamingSql, serviceImpl.ExecuteStreamingSql)

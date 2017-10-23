@@ -85,17 +85,17 @@ namespace Google.Cloud.PubSub.V1
         /// <remarks>
         /// The eligible RPC <see cref="StatusCode"/>s for retry for "OnePlusDelivery" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.Cancelled"/></description></item>
-        /// <item><description><see cref="StatusCode.Unknown"/></description></item>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
         /// <item><description><see cref="StatusCode.Aborted"/></description></item>
+        /// <item><description><see cref="StatusCode.Cancelled"/></description></item>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="StatusCode.Unknown"/></description></item>
         /// </list>
         /// </remarks>
         public static Predicate<RpcException> OnePlusDeliveryRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Cancelled, StatusCode.Unknown, StatusCode.DeadlineExceeded, StatusCode.ResourceExhausted, StatusCode.Aborted, StatusCode.Internal, StatusCode.Unavailable);
+            RetrySettings.FilterForStatusCodes(StatusCode.Aborted, StatusCode.Cancelled, StatusCode.DeadlineExceeded, StatusCode.Internal, StatusCode.ResourceExhausted, StatusCode.Unavailable, StatusCode.Unknown);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -264,13 +264,13 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Cancelled"/></description></item>
-        /// <item><description><see cref="StatusCode.Unknown"/></description></item>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
         /// <item><description><see cref="StatusCode.Aborted"/></description></item>
+        /// <item><description><see cref="StatusCode.Cancelled"/></description></item>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="StatusCode.Unknown"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>

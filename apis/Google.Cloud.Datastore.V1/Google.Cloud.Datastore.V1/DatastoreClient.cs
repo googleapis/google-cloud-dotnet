@@ -55,6 +55,7 @@ namespace Google.Cloud.Datastore.V1
             CommitSettings = existing.CommitSettings;
             RollbackSettings = existing.RollbackSettings;
             AllocateIdsSettings = existing.AllocateIdsSettings;
+            ReserveIdsSettings = existing.ReserveIdsSettings;
             OnCopy(existing);
         }
 
@@ -298,6 +299,36 @@ namespace Google.Cloud.Datastore.V1
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatastoreClient.ReserveIds</c> and <c>DatastoreClient.ReserveIdsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DatastoreClient.ReserveIds</c> and
+        /// <c>DatastoreClient.ReserveIdsAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings ReserveIdsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
@@ -1221,6 +1252,127 @@ namespace Google.Cloud.Datastore.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+        /// Datastore.
+        /// </summary>
+        /// <param name="projectId">
+        /// The ID of the project against which to make the request.
+        /// </param>
+        /// <param name="keys">
+        /// A list of keys with complete key paths whose numeric IDs should not be
+        /// auto-allocated.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ReserveIdsResponse> ReserveIdsAsync(
+            string projectId,
+            IEnumerable<Key> keys,
+            CallSettings callSettings = null) => ReserveIdsAsync(
+                new ReserveIdsRequest
+                {
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+        /// Datastore.
+        /// </summary>
+        /// <param name="projectId">
+        /// The ID of the project against which to make the request.
+        /// </param>
+        /// <param name="keys">
+        /// A list of keys with complete key paths whose numeric IDs should not be
+        /// auto-allocated.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ReserveIdsResponse> ReserveIdsAsync(
+            string projectId,
+            IEnumerable<Key> keys,
+            CancellationToken cancellationToken) => ReserveIdsAsync(
+                projectId,
+                keys,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+        /// Datastore.
+        /// </summary>
+        /// <param name="projectId">
+        /// The ID of the project against which to make the request.
+        /// </param>
+        /// <param name="keys">
+        /// A list of keys with complete key paths whose numeric IDs should not be
+        /// auto-allocated.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReserveIdsResponse ReserveIds(
+            string projectId,
+            IEnumerable<Key> keys,
+            CallSettings callSettings = null) => ReserveIds(
+                new ReserveIdsRequest
+                {
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+        /// Datastore.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ReserveIdsResponse> ReserveIdsAsync(
+            ReserveIdsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+        /// Datastore.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReserveIdsResponse ReserveIds(
+            ReserveIdsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -1234,6 +1386,7 @@ namespace Google.Cloud.Datastore.V1
         private readonly ApiCall<CommitRequest, CommitResponse> _callCommit;
         private readonly ApiCall<RollbackRequest, RollbackResponse> _callRollback;
         private readonly ApiCall<AllocateIdsRequest, AllocateIdsResponse> _callAllocateIds;
+        private readonly ApiCall<ReserveIdsRequest, ReserveIdsResponse> _callReserveIds;
 
         /// <summary>
         /// Constructs a client wrapper for the Datastore service, with the specified gRPC client and settings.
@@ -1257,6 +1410,8 @@ namespace Google.Cloud.Datastore.V1
                 GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings);
             _callAllocateIds = clientHelper.BuildApiCall<AllocateIdsRequest, AllocateIdsResponse>(
                 GrpcClient.AllocateIdsAsync, GrpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings);
+            _callReserveIds = clientHelper.BuildApiCall<ReserveIdsRequest, ReserveIdsResponse>(
+                GrpcClient.ReserveIdsAsync, GrpcClient.ReserveIds, effectiveSettings.ReserveIdsSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1274,6 +1429,7 @@ namespace Google.Cloud.Datastore.V1
         partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings);
         partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings);
         partial void Modify_AllocateIdsRequest(ref AllocateIdsRequest request, ref CallSettings settings);
+        partial void Modify_ReserveIdsRequest(ref ReserveIdsRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Looks up entities by key.
@@ -1517,6 +1673,48 @@ namespace Google.Cloud.Datastore.V1
         {
             Modify_AllocateIdsRequest(ref request, ref callSettings);
             return _callAllocateIds.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+        /// Datastore.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<ReserveIdsResponse> ReserveIdsAsync(
+            ReserveIdsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ReserveIdsRequest(ref request, ref callSettings);
+            return _callReserveIds.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Prevents the supplied keys' IDs from being auto-allocated by Cloud
+        /// Datastore.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ReserveIdsResponse ReserveIds(
+            ReserveIdsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ReserveIdsRequest(ref request, ref callSettings);
+            return _callReserveIds.Sync(request, callSettings);
         }
 
     }

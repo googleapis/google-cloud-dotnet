@@ -51,6 +51,7 @@ namespace Google.Cloud.Spanner.V1
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateSessionSettings = existing.CreateSessionSettings;
             GetSessionSettings = existing.GetSessionSettings;
+            ListSessionsSettings = existing.ListSessionsSettings;
             DeleteSessionSettings = existing.DeleteSessionSettings;
             ExecuteSqlSettings = existing.ExecuteSqlSettings;
             ExecuteStreamingSqlSettings = existing.ExecuteStreamingSqlSettings;
@@ -234,6 +235,36 @@ namespace Google.Cloud.Spanner.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings GetSessionSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpannerClient.ListSessions</c> and <c>SpannerClient.ListSessionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>SpannerClient.ListSessions</c> and
+        /// <c>SpannerClient.ListSessionsAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings ListSessionsSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -830,6 +861,110 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual Session GetSession(
             GetSessionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists all sessions in a given database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database in which to list sessions.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Session"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(
+            string database,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => ListSessionsAsync(
+                new ListSessionsRequest
+                {
+                    Database = GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all sessions in a given database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database in which to list sessions.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Session"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListSessionsResponse, Session> ListSessions(
+            string database,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => ListSessions(
+                new ListSessionsRequest
+                {
+                    Database = GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all sessions in a given database.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Session"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(
+            ListSessionsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists all sessions in a given database.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Session"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListSessionsResponse, Session> ListSessions(
+            ListSessionsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1708,6 +1843,7 @@ namespace Google.Cloud.Spanner.V1
     {
         private readonly ApiCall<CreateSessionRequest, Session> _callCreateSession;
         private readonly ApiCall<GetSessionRequest, Session> _callGetSession;
+        private readonly ApiCall<ListSessionsRequest, ListSessionsResponse> _callListSessions;
         private readonly ApiCall<DeleteSessionRequest, Empty> _callDeleteSession;
         private readonly ApiCall<ExecuteSqlRequest, ResultSet> _callExecuteSql;
         private readonly ApiServerStreamingCall<ExecuteSqlRequest, PartialResultSet> _callExecuteStreamingSql;
@@ -1731,6 +1867,8 @@ namespace Google.Cloud.Spanner.V1
                 GrpcClient.CreateSessionAsync, GrpcClient.CreateSession, effectiveSettings.CreateSessionSettings);
             _callGetSession = clientHelper.BuildApiCall<GetSessionRequest, Session>(
                 GrpcClient.GetSessionAsync, GrpcClient.GetSession, effectiveSettings.GetSessionSettings);
+            _callListSessions = clientHelper.BuildApiCall<ListSessionsRequest, ListSessionsResponse>(
+                GrpcClient.ListSessionsAsync, GrpcClient.ListSessions, effectiveSettings.ListSessionsSettings);
             _callDeleteSession = clientHelper.BuildApiCall<DeleteSessionRequest, Empty>(
                 GrpcClient.DeleteSessionAsync, GrpcClient.DeleteSession, effectiveSettings.DeleteSessionSettings);
             _callExecuteSql = clientHelper.BuildApiCall<ExecuteSqlRequest, ResultSet>(
@@ -1760,6 +1898,7 @@ namespace Google.Cloud.Spanner.V1
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_CreateSessionRequest(ref CreateSessionRequest request, ref CallSettings settings);
         partial void Modify_GetSessionRequest(ref GetSessionRequest request, ref CallSettings settings);
+        partial void Modify_ListSessionsRequest(ref ListSessionsRequest request, ref CallSettings settings);
         partial void Modify_DeleteSessionRequest(ref DeleteSessionRequest request, ref CallSettings settings);
         partial void Modify_ExecuteSqlRequest(ref ExecuteSqlRequest request, ref CallSettings settings);
         partial void Modify_ReadRequest(ref ReadRequest request, ref CallSettings settings);
@@ -1885,6 +2024,46 @@ namespace Google.Cloud.Spanner.V1
         {
             Modify_GetSessionRequest(ref request, ref callSettings);
             return _callGetSession.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all sessions in a given database.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Session"/> resources.
+        /// </returns>
+        public override PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(
+            ListSessionsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListSessionsRequest(ref request, ref callSettings);
+            return new GrpcPagedAsyncEnumerable<ListSessionsRequest, ListSessionsResponse, Session>(_callListSessions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all sessions in a given database.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Session"/> resources.
+        /// </returns>
+        public override PagedEnumerable<ListSessionsResponse, Session> ListSessions(
+            ListSessionsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListSessionsRequest(ref request, ref callSettings);
+            return new GrpcPagedEnumerable<ListSessionsRequest, ListSessionsResponse, Session>(_callListSessions, request, callSettings);
         }
 
         /// <summary>
@@ -2292,6 +2471,18 @@ namespace Google.Cloud.Spanner.V1
     }
 
     // Partial classes to enable page-streaming
+
+    public partial class ListSessionsRequest : IPageRequest { }
+    public partial class ListSessionsResponse : IPageResponse<Session>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public IEnumerator<Session> GetEnumerator() => Sessions.GetEnumerator();
+
+        /// <inheritdoc/>
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
 
 
 }
