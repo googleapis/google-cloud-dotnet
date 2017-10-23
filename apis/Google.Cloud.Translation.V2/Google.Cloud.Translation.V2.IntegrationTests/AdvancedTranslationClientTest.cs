@@ -33,7 +33,7 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
         {
             var client = AdvancedTranslationClient.Create();
             var translation = client.TranslateText(LargeText, LanguageCodes.French);
-            Assert.StartsWith("Lorsque, au cours d", translation.TranslatedText);
+            Assert.Contains("au cours d", translation.TranslatedText);
         }
 
         [Fact]
