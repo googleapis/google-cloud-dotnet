@@ -40,7 +40,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // This table has the same original data as HistoryTableId, but
         // is not used for copying, so is suitable for inserts.
         public string HistoryTableWithInsertsId => "game_history_for_inserts";
-        public string LevelsTableId => "levels";
         /// <summary>
         /// A GCS bucket created for this fixture.
         /// </summary>

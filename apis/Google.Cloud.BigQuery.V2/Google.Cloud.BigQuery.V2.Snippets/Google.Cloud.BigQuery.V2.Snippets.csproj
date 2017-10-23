@@ -28,4 +28,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.BigQuery.V2.IntegrationTests\Google.Cloud.BigQuery.V2.IntegrationTests.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="one_complex.avro" />
+  </ItemGroup>
 </Project>

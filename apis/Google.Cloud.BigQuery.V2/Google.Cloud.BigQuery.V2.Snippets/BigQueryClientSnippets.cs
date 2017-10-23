@@ -25,6 +25,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using System.Reflection;
 
 namespace Google.Cloud.BigQuery.V2.Snippets
 {
@@ -194,6 +195,34 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             _fixture.RegisterDatasetToDelete(datasetId);
         }
 
+        // See-also: CreateDataset(string,CreateDatasetOptions)
+        // Member: CreateDataset(DatasetReference, *)
+        // Member: CreateDataset(string, string, *)
+        // See [CreateDataset](ref) for an example using an alternative overload.
+        // End see-also
+
+        [Fact]
+        public void GetOrCreateDataset()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GenerateDatasetId();
+
+            // Snippet: GetOrCreateDataset(string, GetDatasetOptions, CreateDatasetOptions)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            // If the dataset isn't found, it will be created.
+            BigQueryDataset dataset = client.GetOrCreateDataset(datasetId);
+            // Now populate tables in the dataset...
+            // End snippet
+
+            _fixture.RegisterDatasetToDelete(datasetId);
+        }
+
+        // See-also: GetOrCreateDataset(string, GetDatasetOptions, CreateDatasetOptions)
+        // Member: GetOrCreateDataset(DatasetReference, *, *)
+        // Member: GetOrCreateDataset(string, string, *, *)
+        // See [GetOrCreateDataset](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public void ListDatasets()
         {
@@ -213,6 +242,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Contains(_fixture.GameDatasetId, ids);
         }
 
+        // See-also: ListDatasets(*)
+        // Member: ListDatasets(ProjectReference, *)
+        // Member: ListDatasets(string, *)
+        // See [ListDatasets](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public void ListTables()
         {
@@ -231,6 +266,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             List<string> ids = tables.Select(ds => ds.Reference.TableId).ToList();
             Assert.Contains(_fixture.HistoryTableId, ids);
         }
+
+        // See-also: ListTables(string, *)
+        // Member: ListTables(DatasetReference, *)
+        // Member: ListTables(string, string, *)
+        // See [ListTables](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public void CreateTable()
@@ -256,6 +297,43 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Contains(tableId, ids);
         }
 
+        // See-also: CreateTable(string, string, *, *)
+        // Member: CreateTable(TableReference, *, *)
+        // Member: CreateTable(string, string, string, *, *)
+        // See [CreateTable](ref) for an example using an alternative overload.
+        // End see-also
+
+        [Fact]
+        public void GetOrCreateTable()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.GenerateTableId();
+
+            // Snippet: GetOrCreateTable(string,string,*,*,*)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            TableSchema schema = new TableSchemaBuilder
+            {
+                { "from_player", BigQueryDbType.String },
+                { "to_player", BigQueryDbType.String },
+                { "message", BigQueryDbType.String }
+            }.Build();
+            // If the table isn't found, it will be created.
+            BigQueryTable table = client.GetOrCreateTable(datasetId, tableId, schema);
+            // Now populate the table with data...
+            // End snippet
+
+            PagedEnumerable<TableList, BigQueryTable> tables = client.ListTables(datasetId);
+            List<string> ids = tables.Select(ds => ds.Reference.TableId).ToList();
+            Assert.Contains(tableId, ids);
+        }
+
+        // See-also: GetOrCreateTable(string, string, *, *, *)
+        // Member: GetOrCreateTable(TableReference, *, *, *)
+        // Member: GetOrCreateTable(string, string, string, *, *, *)
+        // See [GetOrCreateTable](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public void ListRows()
         {
@@ -263,7 +341,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = _fixture.HistoryTableId;
 
-            // Snippet: ListRows(*,*,*)
+            // Snippet: ListRows(string, string, *, *)
             BigQueryClient client = BigQueryClient.Create(projectId);
             PagedEnumerable<TableDataList, BigQueryRow> result = client.ListRows(datasetId, tableId);
             foreach (BigQueryRow row in result)
@@ -280,6 +358,52 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.True(result.Count() >= 7);
         }
 
+        // See-also: ListRows(string, string, *, *)
+        // Member: ListRows(string, string, string, *, *)
+        // Member: ListRows(TableReference, *, *)
+        // See [ListRows](ref) for an example using an alternative overload.
+        // End see-also
+
+        [Fact]
+        public void InsertRow()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableWithInsertsId;
+
+            BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
+            int rowsBefore = table.ListRows().Count();
+
+            // Snippet: InsertRow(string, string, *, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            // The insert ID is optional; it is autogenerated if not specified.
+            BigQueryInsertRow row = new BigQueryInsertRow("row-single")
+            {
+                { "player", "Jane" },
+                { "level", 3 },
+                { "score", 3600 },
+                { "game_started", DateTime.UtcNow }
+            };
+            client.InsertRow(datasetId, tableId, row);
+            // End snippet
+
+            int actualCount = table.PollUntilRowCountIsAtLeast(rowsBefore + 1);
+            Assert.Equal(rowsBefore + 1, actualCount);
+        }
+
+        // See-also: InsertRow(string, string, *, *)
+        // Member: InsertRow(string, string, string, *, *)
+        // Member: InsertRow(TableReference, *, *)
+        // See [InsertRow](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: InsertRow(string, string, *, *)
+        // Member: InsertRowAsync(string, string, string, *, *, *)
+        // Member: InsertRowAsync(TableReference, *, *, *)
+        // Member: InsertRowAsync(string, string, *, *, *)
+        // See [InsertRow](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void InsertRows()
         {
@@ -290,10 +414,9 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
 
-            // Snippet: InsertRows(string,string,*)
+            // Snippet: InsertRows(string, string, *)
             BigQueryClient client = BigQueryClient.Create(projectId);
-            // The insert ID is optional, but can avoid duplicate data
-            // when retrying inserts.
+            // The insert ID is optional; it is autogenerated if not specified.
             BigQueryInsertRow row1 = new BigQueryInsertRow("row1")
             {
                 { "player", "Jane" },
@@ -315,6 +438,15 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(rowsBefore + 2, actualCount);
         }
 
+        // See-also: InsertRows(string, string, *)
+        // Member: InsertRows(string, string, string, *)
+        // Member: InsertRows(TableReference, *)
+        // Member: InsertRows(string, string, IEnumerable<BigQueryInsertRow>, *)
+        // Member: InsertRows(string, string, string, IEnumerable<BigQueryInsertRow>, *)
+        // Member: InsertRows(TableReference, IEnumerable<BigQueryInsertRow>, *)
+        // See [InsertRows](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public void UploadCsv()
         {
@@ -325,7 +457,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
 
-            // Snippet: UploadCsv(*,*,*,*,*)
+            // Snippet: UploadCsv(string, string, TableSchema, Stream, *)
             BigQueryClient client = BigQueryClient.Create(projectId);
             string[] csvRows =
             {
@@ -364,6 +496,61 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             int rowsAfter = table.ListRows().Count();
             Assert.Equal(rowsBefore + 3, rowsAfter);
         }
+
+        // See-also: UploadCsv(string, string, TableSchema, Stream, *)
+        // Member: UploadCsv(string, string, string, TableSchema, Stream, *)
+        // Member: UploadCsv(TableReference, TableSchema, Stream, *)
+        // See [UploadCsv](ref) for an example using an alternative overload.
+        // End see-also
+
+        [Fact]
+        public void UploadAvro()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.GenerateTableId();
+
+            var typeInfo = GetType().GetTypeInfo();
+            string resourceName = typeInfo.Namespace + ".one_complex.avro";
+            var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName);
+            // Snippet: UploadAvro(string, string, TableSchema, Stream, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            // This example creates a new table. If the upload doesn't need to create a new table, you
+            // can pass null as the schema value.
+            TableSchema schema = new TableSchemaBuilder
+            {
+                { "re", BigQueryDbType.Int64 },
+                { "im", BigQueryDbType.Int64 }
+            }.Build();
+            BigQueryJob job = client.UploadAvro(datasetId, tableId, schema, stream);
+            // Use the job to find out when the data has finished being inserted into the table,
+            // report errors etc.
+            // End snippet
+
+            BigQueryJob result = job.PollUntilCompleted();
+            // If there are any errors, display them *then* fail.
+            if (result.Status.ErrorResult != null)
+            {
+                foreach (ErrorProto error in result.Status.Errors)
+                {
+                    Console.WriteLine(error.Message);
+                }
+            }
+            Assert.Null(result.Status.ErrorResult);
+        }
+
+        // See-also: UploadAvro(string, string, TableSchema, Stream, *)
+        // Member: UploadAvro(TableReference, *, *, *)
+        // Member: UploadAvro(string, string, string, *, *, *)
+        // See [UploadAvro](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: UploadAvro(string, string, *, *, *)
+        // Member: UploadAvroAsync(TableReference, *, *, *, *)
+        // Member: UploadAvroAsync(string, string, string, *, *, *, *)
+        // Member: UploadAvroAsync(string, string, *, *, *, *)
+        // See [UploadAvro](ref) for a synchronous example.
+        // End see-also
 
         [Fact]
         public void UploadJson_Stream()
@@ -411,6 +598,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(rowsBefore + 2, rowsAfter);
         }
 
+        // See-also: UploadJson(string, string, *, Stream, *)
+        // Member: UploadJson(TableReference, *, Stream, *)
+        // Member: UploadJson(string, string, string, *, Stream, *)
+        // See [UploadJson](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public void UploadJson_Strings()
         {
@@ -454,6 +647,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(rowsBefore + 2, rowsAfter);
         }
 
+        // See-also: UploadJson(string, string, *, IEnumerable<string>, *)
+        // Member: UploadJson(TableReference, *, IEnumerable<string>, *)
+        // Member: UploadJson(string, string, string, *, IEnumerable<string>, *)
+        // See [UploadJson](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public void CreateQueryJob()
         {
@@ -463,6 +662,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string queryTableId = _fixture.GenerateTableId();
 
             // Snippet: CreateQueryJob(string,IEnumerable<BigQueryParameter>,*)
+            // Additional: GetQueryResults(JobReference, *)
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryTable table = client.GetTable(datasetId, historyTableId);
             TableReference destination = client.GetTableReference(datasetId, queryTableId);
@@ -494,6 +694,91 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Contains("Tim", players);
         }
 
+        // See-also: GetQueryResults(JobReference, *)
+        // Member: GetQueryResults(string, *)
+        // Member: GetQueryResults(string, string, *)
+        // See [GetQueryResults](ref) for an example using an alternative overload.
+        // End see-also
+
+        [Fact]
+        public void PollJobUntilCompleted()
+        {
+            string bucket = _fixture.StorageBucketName;
+            string objectName = _fixture.GenerateStorageObjectName();
+
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
+            // Snippet: PollJobUntilCompleted(string, *, *)
+            // Just an example of a job: extracting data to Google Cloud Storage.
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            string destinationUri = $"gs://{bucket}/{objectName}";
+
+            // Start the job running...
+            BigQueryJob job = client.CreateExtractJob(projectId, datasetId, tableId, destinationUri);
+            string jobId = job.Reference.JobId;
+            // Imagine code here to store the ID somewhere, e.g. a database.
+            // We later come back and want to wait for the job to complete.
+
+            BigQueryJob completedJob = client.PollJobUntilCompleted(jobId);
+            Console.WriteLine(completedJob.State);
+            // End snippet
+
+            completedJob.ThrowOnAnyError();
+        }
+
+        // See-also: PollJobUntilCompleted(string, *, *)
+        // Member: PollJobUntilCompleted(JobReference, *, *)
+        // Member: PollJobUntilCompleted(string, string, *, *)
+        // See [PollJobUntilCompleted](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: PollJobUntilCompleted(string, *, *)
+        // Member: PollJobUntilCompletedAsync(JobReference, *, *, *)
+        // Member: PollJobUntilCompletedAsync(string, string, *, *, *)
+        // Member: PollJobUntilCompletedAsync(string, *, *, *)
+        // See [PollJobUntilCompleted](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void CancelJob()
+        {
+            string bucket = _fixture.StorageBucketName;
+            string objectName = _fixture.GenerateStorageObjectName();
+
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
+            // Snippet: CancelJob(string, *)
+            // Just an example of a job: extracting data to Google Cloud Storage.
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            string destinationUri = $"gs://{bucket}/{objectName}";
+
+            // Start the job running...
+            BigQueryJob job = client.CreateExtractJob(projectId, datasetId, tableId, destinationUri);
+
+            // Now cancel it by ID. (Equivalent to calling job.Cancel().)
+            string jobId = job.Reference.JobId;
+            BigQueryJob canceledJob = client.CancelJob(jobId);
+            Console.WriteLine(canceledJob.State);
+            // End snippet
+        }
+
+        // See-also: CancelJob(string, *)
+        // Member: CancelJob(JobReference, *)
+        // Member: CancelJob(string, string, *)
+        // See [CancelJob](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: CancelJob(string, *)
+        // Member: CancelJobAsync(JobReference, *, *)
+        // Member: CancelJobAsync(string, string, *, *)
+        // Member: CancelJobAsync(string, *, *)
+        // See [CancelJob](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void ListJobs()
         {
@@ -510,6 +795,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             Assert.NotEmpty(jobs);
         }
+
+        // See-also: ListJobs(*)
+        // Member: ListJobs(string, *)
+        // Member: ListJobs(ProjectReference, *)
+        // See [ListJobs](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public void CreateExtractJob()
@@ -546,6 +837,15 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             job.ThrowOnAnyError();
         }
 
+        // See-also: CreateExtractJob(string, string, string, string, *)
+        // Member: CreateExtractJob(string, string, string, *)
+        // Member: CreateExtractJob(TableReference, string, *)
+        // Member: CreateExtractJob(string, string, string, IEnumerable<string>, *)
+        // Member: CreateExtractJob(string, string, IEnumerable<string>, *)
+        // Member: CreateExtractJob(TableReference, IEnumerable<string>, *)
+        // See [CreateExtractJob](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public void CreateCopyJob()
         {
@@ -579,6 +879,11 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             var destinationRows = destinationTable.ListRows().Count();
             Assert.Equal(sourceRows, destinationRows);
         }
+
+        // See-also: CreateCopyJob(TableReference, TableReference, *)
+        // Member: CreateCopyJob(IEnumerable<TableReference>, TableReference, *)
+        // See [CreateCopyJob](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public void CreateLoadJob()
@@ -629,6 +934,11 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(sourceRows, newTableRows);
         }
 
+        // See-also: CreateLoadJob(string, TableReference, TableSchema, *)
+        // Member: CreateLoadJob(IEnumerable<string>, TableReference, TableSchema, *)
+        // See [CreateLoadJob](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public void DeleteTable()
         {
@@ -653,6 +963,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.DoesNotContain(tableId, ids);
         }
 
+        // See-also: DeleteTable(string, string, *)
+        // Member: DeleteTable(string, string, string, *)
+        // Member: DeleteTable(TableReference, *)
+        // See [DeleteTable](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public void DeleteDataset()
         {
@@ -668,6 +984,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             List<string> ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
             Assert.DoesNotContain(datasetId, ids);
         }
+
+        // See-also: DeleteDataset(string, DeleteDatasetOptions)
+        // Member: DeleteDataset(DatasetReference, *)
+        // Member: DeleteDataset(string, string, *)
+        // See [DeleteDataset](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public void ListProjects()
@@ -866,6 +1188,34 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             _fixture.RegisterDatasetToDelete(datasetId);
         }
 
+        // See-also: CreateDatasetAsync(string, CreateDatasetOptions, *)
+        // Member: CreateDatasetAsync(DatasetReference, *, *)
+        // Member: CreateDatasetAsync(string, string, *, *)
+        // See [CreateDataset](ref) for an example using an alternative overload.
+        // End see-also
+
+        [Fact]
+        public async Task GetOrCreateDatasetAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GenerateDatasetId();
+
+            // Snippet: GetOrCreateDatasetAsync(string, GetDatasetOptions, CreateDatasetOptions, *)
+            BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+            // If the dataset isn't found, it will be created.
+            BigQueryDataset dataset = await client.GetOrCreateDatasetAsync(datasetId);
+            // Now populate tables in the dataset...
+            // End snippet
+
+            _fixture.RegisterDatasetToDelete(datasetId);
+        }
+
+        // See-also: GetOrCreateDatasetAsync(string, GetDatasetOptions, CreateDatasetOptions, *)
+        // Member: GetOrCreateDatasetAsync(DatasetReference, *, *, *)
+        // Member: GetOrCreateDatasetAsync(string, string, *, *, *)
+        // See [GetOrCreateDataset](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task ListDatasetsAsync()
         {
@@ -885,6 +1235,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Contains(_fixture.GameDatasetId, ids);
         }
 
+        // See-also: ListDatasetsAsync(*)
+        // Member: ListDatasetsAsync(ProjectReference, *)
+        // Member: ListDatasetsAsync(string, *)
+        // See [ListDatasetsAsync](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task ListTablesAsync()
         {
@@ -903,6 +1259,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             List<string> ids = tables.Select(ds => ds.Reference.TableId).ToList();
             Assert.Contains(_fixture.HistoryTableId, ids);
         }
+
+        // See-also: ListTablesAsync(string, *)
+        // Member: ListTablesAsync(DatasetReference, *)
+        // Member: ListTablesAsync(string, string, *)
+        // See [ListTablesAsync](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public async Task CreateTableAsync()
@@ -928,6 +1290,43 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Contains(tableId, ids);
         }
 
+        // See-also: CreateTableAsync(string, string, *, *, *)
+        // Member: CreateTableAsync(TableReference, *, *, *)
+        // Member: CreateTableAsync(string, string, string, *, *, *)
+        // See [CreateTableAsync](ref) for an example using an alternative overload.
+        // End see-also
+
+        [Fact]
+        public async Task GetOrCreateTableAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.GenerateTableId();
+
+            // Snippet: GetOrCreateTableAsync(string,string,*,*,*,*)
+            BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+            TableSchema schema = new TableSchemaBuilder
+            {
+                { "from_player", BigQueryDbType.String },
+                { "to_player", BigQueryDbType.String },
+                { "message", BigQueryDbType.String }
+            }.Build();
+            // If the table isn't found, it will be created.
+            BigQueryTable table = await client.GetOrCreateTableAsync(datasetId, tableId, schema);
+            // Now populate the table with data...
+            // End snippet
+
+            PagedEnumerable<TableList, BigQueryTable> tables = client.ListTables(datasetId);
+            List<string> ids = tables.Select(ds => ds.Reference.TableId).ToList();
+            Assert.Contains(tableId, ids);
+        }
+
+        // See-also: GetOrCreateTableAsync(string, string, *, *, *, *)
+        // Member: GetOrCreateTableAsync(TableReference, *, *, *, *)
+        // Member: GetOrCreateTableAsync(string, string, string, *, *, *, *)
+        // See [GetOrCreateTableAsync](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task ListRowsAsync()
         {
@@ -935,7 +1334,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = _fixture.HistoryTableId;
 
-            // Snippet: ListRowsAsync(*,*,*,*)
+            // Snippet: ListRowsAsync(string, string, *, *)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             PagedAsyncEnumerable<TableDataList, BigQueryRow> result = client.ListRowsAsync(datasetId, tableId);
             await result.ForEachAsync(row =>
@@ -952,6 +1351,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.True(await result.Count() >= 7);
         }
 
+        // See-also: ListRowsAsync(string, string, *, *)
+        // Member: ListRowsAsync(string, string, string, *, *)
+        // Member: ListRowsAsync(TableReference, *, *)
+        // See [ListRowsAsync](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task InsertRowsAsync()
         {
@@ -962,10 +1367,9 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
 
-            // Snippet: InsertRowsAsync(string,string,*,*)
+            // Snippet: InsertRowsAsync(string,string,*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-            // The insert ID is optional, but can avoid duplicate data
-            // when retrying inserts.
+            // The insert ID is optional; it is autogenerated if not specified.
             BigQueryInsertRow row1 = new BigQueryInsertRow("row1-async")
             {
                 { "player", "Jane" },
@@ -986,6 +1390,15 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(rowsBefore + 2, actualCount);
         }
 
+        // See-also: InsertRowsAsync(string, string, *) 
+        // Member: InsertRowsAsync(string, string, string, *)
+        // Member: InsertRowsAsync(TableReference, *)
+        // Member: InsertRowsAsync(string, string, IEnumerable<BigQueryInsertRow>, *, CancellationToken)
+        // Member: InsertRowsAsync(string, string, string, IEnumerable<BigQueryInsertRow>, *, CancellationToken)
+        // Member: InsertRowsAsync(TableReference, IEnumerable<BigQueryInsertRow>, *, CancellationToken)
+        // See [InsertRowsAsync](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task UploadCsvAsync()
         {
@@ -996,7 +1409,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
 
-            // Snippet: UploadCsvAsync(*,*,*,*,*,*)
+            // Snippet: UploadCsvAsync(string, string, TableSchema, Stream, *, *)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             string[] csvRows =
             {
@@ -1035,6 +1448,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(rowsBefore + 3, rowsAfter);
         }
 
+        // See-also: UploadCsvAsync(string, string, TableSchema, Stream, *, *)
+        // Member: UploadCsvAsync(string, string, string, TableSchema, Stream, *, *)
+        // Member: UploadCsvAsync(TableReference, TableSchema, Stream, *, *)
+        // See [UploadCsvAsync](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task UploadJsonAsync_Stream()
         {
@@ -1045,7 +1464,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
 
-            // Snippet: UploadJsonAsync(*,*,*,*,Stream,*,*)
+            // Snippet: UploadJsonAsync(string, string, TableSchema, Stream, *, *)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             // Note that there's a single line per JSON object. This is not a JSON array.
             IEnumerable<string> jsonRows = new string[]
@@ -1081,6 +1500,13 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(rowsBefore + 2, rowsAfter);
         }
 
+
+        // See-also: UploadJsonAsync(string, string, TableSchema, Stream, *, *)
+        // Member: UploadJsonAsync(TableReference, *, Stream, *, *)
+        // Member: UploadJsonAsync(string, string, string, *, Stream, *, *)
+        // See [UploadJson](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task UploadJsonAsync_Strings()
         {
@@ -1091,7 +1517,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
 
-            // Snippet: UploadJsonAsync(*,*,*,*,IEnumerable<string>,*,*)
+            // Snippet: UploadJsonAsync(string, string, TableSchema,IEnumerable<string>, *, *)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             // Note that there's a single line per JSON object. This is not a JSON array.
             IEnumerable<string> jsonRows = new string[]
@@ -1124,6 +1550,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(rowsBefore + 2, rowsAfter);
         }
 
+        // See-also: UploadJsonAsync(string, string, TableSchema,IEnumerable<string>, *, *)
+        // Member: UploadJsonAsync(TableReference, *, IEnumerable<string>, *, *)
+        // Member: UploadJsonAsync(string, string, string, *, IEnumerable<string>, *, *)
+        // See [UploadJson](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task CreateQueryJobAsync()
         {
@@ -1133,6 +1565,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string queryTableId = _fixture.GenerateTableId();
 
             // Snippet: CreateQueryJobAsync(string,IEnumerable<BigQueryParameter>,*,*)
+            // Additional: GetQueryResultsAsync(JobReference, *, *)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             BigQueryTable table = await client.GetTableAsync(datasetId, historyTableId);
             TableReference destination = client.GetTableReference(datasetId, queryTableId);
@@ -1164,6 +1597,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Contains("Tim", players);
         }
 
+        // See-also: GetQueryResultsAsync(JobReference, *, *)
+        // Member: GetQueryResultsAsync(string, *, *)
+        // Member: GetQueryResultsAsync(string, string, *, *)
+        // See [GetQueryResults](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task ListJobsAsync()
         {
@@ -1180,6 +1619,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             Assert.NotEmpty(jobs);
         }
+
+        // See-also: ListJobsAsync(*)
+        // Member: ListJobsAsync(string, *)
+        // Member: ListJobsAsync(ProjectReference, *)
+        // See [ListJobs](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public async Task CreateExtractJobAsync()
@@ -1216,6 +1661,15 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             job.ThrowOnAnyError();
         }
 
+        // See-also: CreateExtractJobAsync(string, string, string, string, *, *)
+        // Member: CreateExtractJobAsync(string, string, string, *, *)
+        // Member: CreateExtractJobAsync(TableReference, string, *, *)
+        // Member: CreateExtractJobAsync(string, string, string, IEnumerable<string>, *, *)
+        // Member: CreateExtractJobAsync(string, string, IEnumerable<string>, *, *)
+        // Member: CreateExtractJobAsync(TableReference, IEnumerable<string>, *, *)
+        // See [CreateExtractJobAsync](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task CreateCopyJobAsync()
         {
@@ -1250,6 +1704,11 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             var destinationRows = destinationTable.ListRows().Count();
             Assert.Equal(sourceRows, destinationRows);
         }
+
+        // See-also: CreateCopyJobAsync(TableReference, TableReference, *, *)
+        // Member: CreateCopyJobAsync(IEnumerable<TableReference>, TableReference, *, *)
+        // See [CreateCopyJob](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public async Task CreateLoadJobAsync()
@@ -1302,6 +1761,11 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(sourceRows, newTableRows);
         }
 
+        // See-also: CreateLoadJobAsync(string, TableReference, TableSchema, *, *)
+        // Member: CreateLoadJobAsync(IEnumerable<string>, TableReference, TableSchema, *, *)
+        // See [CreateLoadJob](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task DeleteTableAsync()
         {
@@ -1326,6 +1790,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.DoesNotContain(tableId, ids);
         }
 
+        // See-also: DeleteTableAsync(string, string, *, *)
+        // Member: DeleteTableAsync(string, string, string, *, *)
+        // Member: DeleteTableAsync(TableReference, *, *)
+        // See [DeleteTableAsync](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task DeleteDatasetAsync()
         {
@@ -1341,6 +1811,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             List<string> ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
             Assert.DoesNotContain(datasetId, ids);
         }
+
+        // See-also: DeleteDatasetAsync(string, DeleteDatasetOptions, *)
+        // Member: DeleteDatasetAsync(DatasetReference, *, *)
+        // Member: DeleteDatasetAsync(string, string, *, *)
+        // See [DeleteDatasetAsync](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public async Task ListProjectsAsync()
@@ -1561,17 +2037,17 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal("Patched dataset", fetched.Resource.FriendlyName);
         }
 
-        // See-also: PatchTable(string, string, Table, *)
-        // Member: PatchTable(TableReference, Table, *)
-        // Member: PatchTable(string, string, string, Table, *)
-        // See [PatchTable](ref) for an example using an alternative overload.
+        // See-also: PatchDataset(string, Dataset, *)
+        // Member: PatchDataset(DatasetReference, Dataset, *)
+        // Member: PatchDataset(string, string, Dataset, *)
+        // See [PatchDataset](ref) for an example using an alternative overload.
         // End see-also
 
-        // See-also: PatchTable(string, string, Table, *)
-        // Member: PatchTableAsync(TableReference, Table, *, *)
-        // Member: PatchTableAsync(string, string, Table, *, *)
-        // Member: PatchTableAsync(string, string, string, Table, *, *)
-        // See [PatchTable](ref) for a synchronous example.
+        // See-also: PatchDataset(string, Dataset, *)
+        // Member: PatchDatasetAsync(DatasetReference, Dataset, *, *)
+        // Member: PatchDatasetAsync(string, Dataset, *, *)
+        // Member: PatchDatasetAsync(string, string, Dataset, *, *)
+        // See [PatchDataset](ref) for a synchronous example.
         // End see-also
 
         [Fact]
@@ -1701,7 +2177,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // See-also: SetDatasetLabel(string, string, string, *)
         // Member: SetDatasetLabel(string, string, string, string, *)
         // Member: SetDatasetLabel(DatasetReference, string, string, *)
-        // See [ClearDatasetLabels](ref) for an example using an alternative overload.
+        // See [SetDatasetLabel](ref) for an example using an alternative overload.
         // End see-also
 
         // See-also: SetDatasetLabel(string, string, string, *)
@@ -1730,7 +2206,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // See-also: RemoveDatasetLabel(string, string, *)
         // Member: RemoveDatasetLabel(string, string, string, *)
         // Member: RemoveDatasetLabel(DatasetReference, string, *)
-        // See [ClearDatasetLabels](ref) for an example using an alternative overload.
+        // See [RemoveDatasetLabel](ref) for an example using an alternative overload.
         // End see-also
 
         // See-also: RemoveDatasetLabel(string, string, *)
@@ -1769,7 +2245,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // See-also: ModifyDatasetLabels(string, IDictionary<string, string>, *)
         // Member: ModifyDatasetLabels(string, string, IDictionary<string, string>, *)
         // Member: ModifyDatasetLabels(DatasetReference, IDictionary<string, string>, *)
-        // See [ClearDatasetLabels](ref) for an example using an alternative overload.
+        // See [ModifyDatasetLabels](ref) for an example using an alternative overload.
         // End see-also
 
         // See-also: ModifyDatasetLabels(string, IDictionary<string, string>, *)
@@ -1777,6 +2253,198 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // Member: ModifyDatasetLabelsAsync(string, string, IDictionary<string, string>, *, *)
         // Member: ModifyDatasetLabelsAsync(DatasetReference, IDictionary<string, string>, *, *)
         // See [ModifyDatasetLabels](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void GetTableReference_NoProject()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Snippet: GetTableReference(string, string)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            TableReference reference = client.GetTableReference("dataset", "table");
+            // ProjectId is defaulted from the client in this overload
+            Console.WriteLine(reference.ProjectId);
+            // End snippet
+
+            Assert.Equal(projectId, reference.ProjectId);
+            Assert.Equal("dataset", reference.DatasetId);
+            Assert.Equal("table", reference.TableId);
+        }
+
+        [Fact]
+        public void GetTableReference_WithProject()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Snippet: GetTableReference(string, string, string)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            TableReference reference = client.GetTableReference("other-project", "dataset", "table");
+            // ProjectId is as specified in the call, not the client's project
+            Console.WriteLine(reference.ProjectId);
+            // End snippet
+
+            Assert.Equal("other-project", reference.ProjectId);
+            Assert.Equal("dataset", reference.DatasetId);
+            Assert.Equal("table", reference.TableId);
+        }
+
+        [Fact]
+        public void GetDatasetReference_NoProject()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Snippet: GetDatasetReference(string)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            DatasetReference reference = client.GetDatasetReference("dataset");
+            // ProjectId is defaulted from the client in this overload
+            Console.WriteLine(reference.ProjectId);
+            // End snippet
+
+            Assert.Equal(projectId, reference.ProjectId);
+            Assert.Equal("dataset", reference.DatasetId);
+        }
+
+        [Fact]
+        public void GetDatasetReference_WithProject()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Snippet: GetDatasetReference(string, string)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            DatasetReference reference = client.GetDatasetReference("other-project", "dataset");
+            // ProjectId is as specified in the call, not the client's project
+            Console.WriteLine(reference.ProjectId);
+            // End snippet
+
+            Assert.Equal("other-project", reference.ProjectId);
+            Assert.Equal("dataset", reference.DatasetId);
+        }
+
+        [Fact]
+        public void GetJobReference_NoProject()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Snippet: GetJobReference(string)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            JobReference reference = client.GetJobReference("job");
+            // ProjectId is defaulted from the client in this overload
+            Console.WriteLine(reference.ProjectId);
+            // End snippet
+
+            Assert.Equal(projectId, reference.ProjectId);
+            Assert.Equal("job", reference.JobId);
+        }
+
+        [Fact]
+        public void GetJobReference_WithProject()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Snippet: GetJobReference(string, string)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            JobReference reference = client.GetJobReference("other-project", "job");
+            // ProjectId is as specified in the call, not the client's project
+            Console.WriteLine(reference.ProjectId);
+            // End snippet
+
+            Assert.Equal("other-project", reference.ProjectId);
+            Assert.Equal("job", reference.JobId);
+        }
+
+        [Fact]
+        public void GetProjectReference()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Snippet: GetProjectReference(string)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            ProjectReference reference = client.GetProjectReference("other-project");
+            Console.WriteLine(reference.ProjectId);
+            // End snippet
+
+            Assert.Equal("other-project", reference.ProjectId);
+        }
+
+        [Fact]
+        public void GetDataset()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+
+            // Snippet: GetDataset(string, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            BigQueryDataset dataset = client.GetDataset(datasetId);
+            Console.WriteLine(dataset.FullyQualifiedId);
+            // End snippet
+        }
+
+        // See-also: GetDataset(string, *)
+        // Member: GetDataset(string, string, *)
+        // Member: GetDataset(DatasetReference, *)
+        // See [GetDataset](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: GetDataset(string, *)
+        // Member: GetDatasetAsync(string, *, *)
+        // Member: GetDatasetAsync(string, string, *, *)
+        // Member: GetDatasetAsync(DatasetReference, *, *)
+        // See [GetDataset](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void GetTable()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
+            // Snippet: GetTable(string, string, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            BigQueryTable table = client.GetTable(datasetId, tableId);
+            Console.WriteLine(table.FullyQualifiedId);
+            // End snippet
+        }
+
+        // See-also: GetTable(string, string, *)
+        // Member: GetTable(string, string, string, *)
+        // Member: GetTable(TableReference, *)
+        // See [GetTable](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: GetTable(string, string, *)
+        // Member: GetTableAsync(string, string, *, *)
+        // Member: GetTableAsync(string, string, string, *, *)
+        // Member: GetTableAsync(TableReference, *, *)
+        // See [GetTable](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void GetJob()
+        {
+            string projectId = _fixture.ProjectId;
+            // Just fetch any job ID...
+            string jobId = BigQueryClient.Create(projectId).ListJobs().First().Reference.JobId;
+
+            // Snippet: GetJob(string, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            BigQueryJob job = client.GetJob(jobId);
+            Console.WriteLine(job.State);
+            // End snippet
+        }
+
+        // See-also: GetJob(string, *)
+        // Member: GetJob(string, string, *)
+        // Member: GetJob(JobReference, *)
+        // See [GetJob](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: GetJob(string, *)
+        // Member: GetJobAsync(string, *, *)
+        // Member: GetJobAsync(string, string, *, *)
+        // Member: GetJobAsync(JobReference, *, *)
+        // See [GetJob](ref) for a synchronous example.
         // End see-also
     }
 }
