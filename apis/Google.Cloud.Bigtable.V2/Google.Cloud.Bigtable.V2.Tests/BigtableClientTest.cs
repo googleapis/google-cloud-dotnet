@@ -15,6 +15,8 @@
 using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -27,14 +29,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public async Task MutateRow_Validate_TableName()
         {
             var client = BigtableClient.Create();
-            Assert.Throws<ArgumentNullException>(
-                () => client.MutateRow(null, "abc", Mutations.DeleteFromRow()));
-            Assert.Throws<ArgumentNullException>(
-                () => client.MutateRow(null, "abc", new[] { Mutations.DeleteFromRow() }, CallSettings.FromCancellationToken(default)));
-            await Assert.ThrowsAsync<ArgumentNullException>(
-                () => client.MutateRowAsync(null, "abc", new[] { Mutations.DeleteFromRow() }, CancellationToken.None));
-            await Assert.ThrowsAsync<ArgumentNullException>(
-                () => client.MutateRowAsync(null, "abc", new[] { Mutations.DeleteFromRow() }, CallSettings.FromCancellationToken(default)));
+            await MutateRow_ValidateArguments<ArgumentNullException>(null, "abc", new[] { Mutations.DeleteFromRow() });
         }
 
         [Fact]
@@ -42,14 +37,10 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var client = BigtableClient.Create();
             var tableName = new TableName("project", "instance", "table");
-            Assert.Throws<ArgumentException>(
-                () => client.MutateRow(tableName, "", Mutations.DeleteFromRow()));
-            Assert.Throws<ArgumentException>(
-                () => client.MutateRow(tableName, new byte[0], new[] { Mutations.DeleteFromRow() }, CallSettings.FromCancellationToken(default)));
-            await Assert.ThrowsAsync<ArgumentException>(
-                () => client.MutateRowAsync(tableName, ByteString.Empty, new[] { Mutations.DeleteFromRow() }, CancellationToken.None));
-            await Assert.ThrowsAsync<ArgumentException>(
-                () => client.MutateRowAsync(tableName, "", new[] { Mutations.DeleteFromRow() }, CallSettings.FromCancellationToken(default)));
+            await MutateRow_ValidateArguments<ArgumentException>(tableName, "", new[] { Mutations.DeleteFromRow() });
+            await MutateRow_ValidateArguments<ArgumentException>(tableName, new byte[0], new[] { Mutations.DeleteFromRow() });
+            await MutateRow_ValidateArguments<ArgumentException>(tableName, ByteString.Empty, new[] { Mutations.DeleteFromRow() });
+            await MutateRow_ValidateArguments<ArgumentException>(tableName, default, new[] { Mutations.DeleteFromRow() });
         }
 
         [Fact]
@@ -57,29 +48,26 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var client = BigtableClient.Create();
             var tableName = new TableName("project", "instance", "table");
-            Assert.Throws<ArgumentNullException>(
-                () => client.MutateRow(tableName, "abc", null));
-            Assert.Throws<ArgumentNullException>(
-                () => client.MutateRow(tableName, "abc", null, CallSettings.FromCancellationToken(default)));
-            await Assert.ThrowsAsync<ArgumentNullException>(
-                () => client.MutateRowAsync(tableName, "abc", null, CancellationToken.None));
-            await Assert.ThrowsAsync<ArgumentNullException>(
-                () => client.MutateRowAsync(tableName, "abc", null, CallSettings.FromCancellationToken(default)));
+            await MutateRow_ValidateArguments<ArgumentNullException>(tableName, "abc", null);
+            await MutateRow_ValidateArguments<ArgumentException>(tableName, "abc", new Mutation[0]);
+            await MutateRow_ValidateArguments<ArgumentException>(tableName, "abc", new Mutation[] { null });
         }
 
-        [Fact]
-        public async Task MutateRow_Validate_Mutations_Entry()
+        private async Task MutateRow_ValidateArguments<TException>(
+            TableName tableName,
+            BigtableByteString rowKey,
+            IEnumerable<Mutation> mutations)
+            where TException : Exception
         {
             var client = BigtableClient.Create();
-            var tableName = new TableName("project", "instance", "table");
-            Assert.Throws<ArgumentException>(
-                () => client.MutateRow(tableName, "abc", new Mutation[] { null }));
-            Assert.Throws<ArgumentException>(
-                () => client.MutateRow(tableName, "abc", new Mutation[] { null }, CallSettings.FromCancellationToken(default)));
-            await Assert.ThrowsAsync<ArgumentException>(
-                () => client.MutateRowAsync(tableName, "abc", new Mutation[] { null }, CancellationToken.None));
-            await Assert.ThrowsAsync<ArgumentException>(
-                () => client.MutateRowAsync(tableName, "abc", new Mutation[] { null }, CallSettings.FromCancellationToken(default)));
+            Assert.Throws<TException>(
+                () => client.MutateRow(tableName, rowKey, mutations.ToArray()));
+            Assert.Throws<TException>(
+                () => client.MutateRow(tableName, rowKey, mutations, CallSettings.FromCancellationToken(default)));
+            await Assert.ThrowsAsync<TException>(
+                () => client.MutateRowAsync(tableName, rowKey, mutations, CancellationToken.None));
+            await Assert.ThrowsAsync<TException>(
+                () => client.MutateRowAsync(tableName, rowKey, mutations, CallSettings.FromCancellationToken(default)));
         }
     }
 }

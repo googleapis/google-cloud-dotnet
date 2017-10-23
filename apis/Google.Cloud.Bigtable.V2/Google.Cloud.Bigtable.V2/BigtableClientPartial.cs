@@ -190,12 +190,16 @@ namespace Google.Cloud.Bigtable.V2
                 return mutation;
             });
 
-            return new MutateRowRequest
+            var request = new MutateRowRequest
             {
                 TableName = tableName.ToString(),
                 RowKey = rowKey,
                 Mutations = { mutationsChecked }
             };
+
+            GaxPreconditions.CheckArgument(
+                request.Mutations.Count != 0, nameof(mutations), "There must be at least one entry.");
+            return request;
         }
     }
 
