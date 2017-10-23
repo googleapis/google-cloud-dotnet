@@ -37,11 +37,13 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="start">
         /// Inclusive lower bound non-negative version value, or -1 to initialize from the
-        /// microseconds of DateTime.UtcNow. If null, interpreted as 0.
+        /// milliseconds of DateTime.UtcNow. Must be less than or equal to 9223372036854775.
+        /// If null, interpreted as 0. 
         /// </param>
         /// <param name="end">
         /// Exclusive upper bound non-negative version value, or -1 to initialize from the
-        /// microseconds of DateTime.UtcNow. If null, interpreted as infinity.
+        /// milliseconds of DateTime.UtcNow. Must be less than or equal to 9223372036854775.
+        /// If null, interpreted as infinity.
         /// </param>
         public BigtableVersionRange(long? start, long? end)
             : this(start.ToVersion(), end.ToVersion()) { }
@@ -51,11 +53,11 @@ namespace Google.Cloud.Bigtable.V2
         /// Creates a new <see cref="BigtableVersionRange"/>.
         /// </summary>
         /// <param name="startTimestamp">
-        /// Inclusive lower bound timestamp whose microseconds should be used as the version value.
+        /// Inclusive lower bound timestamp whose milliseconds since the Unix epoch should be used as the version value.
         /// If null, interpreted as 0.  It must be specified in UTC.
         /// </param>
         /// <param name="endTimestamp">
-        /// Exclusive upper bound timestamp whose microseconds should be used as the version value.
+        /// Exclusive upper bound timestamp whose milliseconds since the Unix epoch should be used as the version value.
         /// If null, interpreted as infinity.  It must be specified in UTC.
         /// </param>
         public BigtableVersionRange(DateTime? startTimestamp, DateTime? endTimestamp)

@@ -23,17 +23,21 @@ namespace Google.Cloud.Bigtable.V2
     /// <remarks>
     /// <para>
     /// Note: when using ReadModifyWriteRow, modified columns automatically use a server version, which
-    /// is based on the current timestamp micros. For those columns, other reads and writes should
+    /// is based on the current timestamp millis. For those columns, other reads and writes should
     /// use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed to using
     /// a custom versioning scheme with 64-bit values.
     /// </para>
     /// </remarks>
     public struct BigtableVersion : IComparable, IComparable<BigtableVersion>, IEquatable<BigtableVersion>
     {
+        private const long MillisPerMicro = 1000;
         private const long TicksPerMicro = 10;
+        private const long TicksPerMilli = TicksPerMicro * MillisPerMicro;
 
         // Visible for testing
         internal static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
+        private long _micros;
 
         /// <summary>
         /// Creates a new <see cref="BigtableVersion"/> value from a 64-bit value.
@@ -41,33 +45,34 @@ namespace Google.Cloud.Bigtable.V2
         /// <remarks>
         /// <para>
         /// Note: when using ReadModifyWriteRow, modified columns automatically use a server version, which
-        /// is based on the current timestamp micros. For those columns, other reads and writes should
+        /// is based on the current timestamp millis. For those columns, other reads and writes should
         /// use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed to using
         /// a custom versioning scheme with 64-bit values.
         /// </para>
         /// </remarks>
         /// <param name="value">
-        /// The non-negative version value, or -1 to initialize from the microseconds of DateTime.UtcNow.
+        /// The non-negative version value, or -1 to initialize from the milliseconds of DateTime.UtcNow.
+        /// Must be less than or equal to 9223372036854775.
         /// </param>
         public BigtableVersion(long value)
         {
-            GaxPreconditions.CheckArgumentRange(value, nameof(value), -1, long.MaxValue);
-            Value = value == -1 ? ValueFromTimestamp(DateTime.UtcNow) : value;
+            GaxPreconditions.CheckArgumentRange(value, nameof(value), -1, long.MaxValue / MillisPerMicro);
+            _micros = value == -1 ? MicrosFromTimestamp(DateTime.UtcNow) : value * MillisPerMicro;
         }
 
         /// <summary>
-        /// Creates a new <see cref="BigtableVersion"/> value from the microseconds of a timestamp since the Unix epoch.
+        /// Creates a new <see cref="BigtableVersion"/> value from the milliseconds of a timestamp since the Unix epoch.
         /// </summary>
         /// <remarks>
         /// <para>
         /// Note: when using ReadModifyWriteRow, modified columns automatically use a server version, which
-        /// is based on the current timestamp micros. For those columns, other reads and writes should
+        /// is based on the current timestamp millis. For those columns, other reads and writes should
         /// use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed to using
         /// a custom versioning scheme with 64-bit values.
         /// </para>
         /// </remarks>
         /// <param name="timestamp">
-        /// The timestamp whose microseconds since the Unix epoch should be used as the version value. It must be specified in UTC.
+        /// The timestamp whose milliseconds since the Unix epoch should be used as the version value. It must be specified in UTC.
         /// </param>
         public BigtableVersion(DateTime timestamp)
         {
@@ -75,22 +80,36 @@ namespace Google.Cloud.Bigtable.V2
                 timestamp.Kind == DateTimeKind.Utc,
                 nameof(timestamp),
                 $"The {nameof(BigtableVersion)} timestamp must be specified in UTC.");
+            GaxPreconditions.CheckArgumentRange(
+                timestamp,
+                nameof(timestamp),
+                UnixEpoch,
+                DateTime.MaxValue);
 
-            Value = ValueFromTimestamp(timestamp);
+            _micros = MicrosFromTimestamp(timestamp);
         }
 
-        private static long ValueFromTimestamp(DateTime timestamp) => (timestamp.Ticks - UnixEpoch.Ticks) / TicksPerMicro;
+        private static long MicrosFromTimestamp(DateTime timestamp) => ((timestamp.Ticks - UnixEpoch.Ticks) / TicksPerMilli) * MillisPerMicro;
+
+        /// <summary>
+        /// Gets the version value interpreted as microseconds of a timestamp since the Unix epoch.
+        /// Greater version values indicate newer cell values.
+        /// </summary>
+        public long Micros => _micros;
 
         /// <summary>
         /// Gets the version value. Greater version values indicate newer cell values.
         /// </summary>
-        public long Value { get; }
+        /// <remarks>
+        /// If timestamps are used as versions, this would be the milliseconds since the Unix epoch.
+        /// </remarks>
+        public long Value => _micros / 1000;
 
         /// <summary>
-        /// Gets the DateTime equivalent to the version assuming the value is a timestamp micros value since the Unix epoch.
+        /// Gets the DateTime equivalent to the version assuming the value is a timestamp milliseconds value since the Unix epoch.
         /// </summary>
         /// <returns>The DateTime representing the version timestamp.</returns>
-        public DateTime ToDateTime() => new DateTime((Value * TicksPerMicro) + UnixEpoch.Ticks, DateTimeKind.Utc);
+        public DateTime ToDateTime() => new DateTime((_micros * TicksPerMicro) + UnixEpoch.Ticks, DateTimeKind.Utc);
 
         /// <inheritdoc />
         public int CompareTo(object obj)
@@ -103,7 +122,7 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <inheritdoc />
-        public int CompareTo(BigtableVersion other) => Value.CompareTo(other.Value);
+        public int CompareTo(BigtableVersion other) => _micros.CompareTo(other._micros);
 
         /// <summary>
         /// Compares two nullable <see cref="BigtableVersion"/> values.
@@ -132,7 +151,7 @@ namespace Google.Cloud.Bigtable.V2
         public override bool Equals(object obj) => obj is BigtableVersion other && Equals(other);
 
         /// <inheritdoc />
-        public override int GetHashCode() => Value.GetHashCode();
+        public override int GetHashCode() => _micros.GetHashCode();
 
         /// <inheritdoc />
         public override string ToString() => $"{nameof(BigtableVersion)}: {Value}";
@@ -143,7 +162,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x">Left value to compare</param>
         /// <param name="y">Right value to compare</param>
         /// <returns>true if <paramref name="x"/> is less than <paramref name="y"/>; otherwise false.</returns>
-        public static bool operator <(BigtableVersion x, BigtableVersion y) => x.Value < y.Value;
+        public static bool operator <(BigtableVersion x, BigtableVersion y) => x._micros < y._micros;
 
         /// <summary>
         /// Operator overload to compare two <see cref="BigtableVersion"/> values.
@@ -151,7 +170,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x">Left value to compare</param>
         /// <param name="y">Right value to compare</param>
         /// <returns>true if <paramref name="x"/> is less than or equal <paramref name="y"/>; otherwise false.</returns>
-        public static bool operator <=(BigtableVersion x, BigtableVersion y) => x.Value <= y.Value;
+        public static bool operator <=(BigtableVersion x, BigtableVersion y) => x._micros <= y._micros;
 
         /// <summary>
         /// Operator overload to compare two <see cref="BigtableVersion"/> values for equality.
@@ -159,7 +178,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x">Left value to compare</param>
         /// <param name="y">Right value to compare</param>
         /// <returns>true if <paramref name="x"/> is equal to <paramref name="y"/>; otherwise false.</returns>
-        public static bool operator ==(BigtableVersion x, BigtableVersion y) => x.Value == y.Value;
+        public static bool operator ==(BigtableVersion x, BigtableVersion y) => x._micros == y._micros;
 
         /// <summary>
         /// Operator overload to compare two <see cref="BigtableVersion"/> values for inequality.
@@ -167,7 +186,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x">Left value to compare</param>
         /// <param name="y">Right value to compare</param>
         /// <returns>true if <paramref name="x"/> is not equal to <paramref name="y"/>; otherwise false.</returns>
-        public static bool operator !=(BigtableVersion x, BigtableVersion y) => x.Value != y.Value;
+        public static bool operator !=(BigtableVersion x, BigtableVersion y) => x._micros != y._micros;
 
         /// <summary>
         /// Operator overload to compare two <see cref="BigtableVersion"/> values.
@@ -175,7 +194,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x">Left value to compare</param>
         /// <param name="y">Right value to compare</param>
         /// <returns>true if <paramref name="x"/> is greater than or equal <paramref name="y"/>; otherwise false.</returns>
-        public static bool operator >=(BigtableVersion x, BigtableVersion y) => x.Value >= y.Value;
+        public static bool operator >=(BigtableVersion x, BigtableVersion y) => x._micros >= y._micros;
 
         /// <summary>
         /// Operator overload to compare two <see cref="BigtableVersion"/> values.
@@ -183,18 +202,18 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="x">Left value to compare</param>
         /// <param name="y">Right value to compare</param>
         /// <returns>true if <paramref name="x"/> is greater than <paramref name="y"/>; otherwise false.</returns>
-        public static bool operator >(BigtableVersion x, BigtableVersion y) => x.Value > y.Value;
+        public static bool operator >(BigtableVersion x, BigtableVersion y) => x._micros > y._micros;
     }
 
     internal static class BigtableVersionExtensions
     {
         public static long ToTimestampMicros(this BigtableVersion? version) =>
-            version == null ? 0 : version.Value.Value;
+            version == null ? 0 : version.Value.Micros;
 
-        public static BigtableVersion? ToVersion(this long? timestampMicros) =>
-            timestampMicros == null ?
+        public static BigtableVersion? ToVersion(this long? timestampMillis) =>
+            timestampMillis == null ?
                 default(BigtableVersion?) :
-                new BigtableVersion(timestampMicros.Value);
+                new BigtableVersion(timestampMillis.Value);
 
         public static BigtableVersion? ToVersion(this DateTime? timestamp) =>
             timestamp == null ?
