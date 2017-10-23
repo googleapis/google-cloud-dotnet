@@ -69,23 +69,13 @@ install_dependencies() {
 
 generate_api() {
   API_TMP_DIR=$OUTDIR/$1
-  API_OUT_DIR=apis/$1
+  API_OUT_DIR=apis
   API_SRC_DIR=googleapis/$2
   API_YAML=$API_SRC_DIR/../$3
   [[ "$4" != "" ]] && EXTRA_PROTOS=googleapis/$4/*.proto || EXTRA_PROTOS=
   
   echo Generating $1
   mkdir $API_TMP_DIR
-  
-  # Generate the C# protos/gRPC
-  $PROTOC \
-    --csharp_out=$API_TMP_DIR \
-    --grpc_out=$API_TMP_DIR \
-    -I googleapis \
-    -I $CORE_PROTOS_ROOT \
-    --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
-    $API_SRC_DIR/*.proto \
-    $EXTRA_PROTOS
   
   # There should be only one gapic yaml file...
   for i in $API_SRC_DIR/*_gapic.yaml
@@ -105,17 +95,28 @@ EOF
   args+=(--service_yaml=../$API_YAML)
   args+=(--gapic_yaml=../$API_TMP_DIR/gapic.yaml)
   args+=(--package_yaml=../$OUTDIR/package.yaml)
-  args+=(--output=../$API_TMP_DIR)  
+  args+=(--output=../$API_TMP_DIR)
   
   ./gradlew -q runCodeGen -Pclargs=$(IFS=','; echo "${args[*]}")
   popd > /dev/null
+  
+  # We don't want to copy the snippet/prod project files,
+  # but the smoke test project file is okay, as we don't
+  # customize that.
+  rm -f `find $API_TMP_DIR -type f -name $1.Snippets.csproj`
+  rm -f `find $API_TMP_DIR -type f -name $1.csproj`
+  cp -r $API_TMP_DIR/$1 $API_OUT_DIR
 
-  for f in `find $API_TMP_DIR -type f -name '*.cs'`
-  do
-    ns=`grep '^namespace' $f | cut -d ' ' -f 2`
-    mkdir -p $API_OUT_DIR/$ns
-    mv $f $API_OUT_DIR/$ns
-  done
+  # Generate the C# protos/gRPC directly into the right directory
+  # This assumes they all belong to the same API, and are in the same namespace...
+  $PROTOC \
+    --csharp_out=$API_OUT_DIR/$1/$1 \
+    --grpc_out=$API_OUT_DIR/$1/$1 \
+    -I googleapis \
+    -I $CORE_PROTOS_ROOT \
+    --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
+    $API_SRC_DIR/*.proto \
+    $EXTRA_PROTOS  
 }
 
 # Entry point
@@ -189,7 +190,8 @@ generate_api Google.Cloud.Debugger.V2 google/devtools/clouddebugger/v2 clouddebu
 generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
 generate_api Google.Cloud.Firestore.V1Beta1 google/firestore/v1beta1 firestore.yaml
 generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language_v1.yaml
-generate_api Google.Cloud.Language.V1.Experimental google/cloud/language/v1beta2 language_v1beta2.yaml
+
+# generate_api Google.Cloud.Language.V1.Experimental google/cloud/language/v1beta2 language_v1beta2.yaml
 # generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml google/logging/type
 generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
 generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
