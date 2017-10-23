@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -35,15 +37,16 @@ namespace Google.Cloud.Bigtable.V2
         /// </para>
         /// </remarks>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutation should be applied.
+        /// The unique name of the table to which the mutation should be applied. Must not be null.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the mutation should be applied.
+        /// The key of the row to which the mutation should be applied. Must not be empty.
         /// </param>
         /// <param name="mutations">
         /// Changes to be atomically applied to the specified row. Entries are applied
         /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Must contain at least one entry and at most 100000. Must not be null, or contain null
+        /// elements.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -57,12 +60,7 @@ namespace Google.Cloud.Bigtable.V2
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) =>
             MutateRow(
-                new MutateRowRequest
-                {
-                    TableName = tableName.ToString(),
-                    RowKey = rowKey,
-                    Mutations = { mutations }
-                },
+                CreateMutateRowRequest(tableName, rowKey, mutations),
                 callSettings);
 
         /// <summary>
@@ -79,15 +77,16 @@ namespace Google.Cloud.Bigtable.V2
         /// </para>
         /// </remarks>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutation should be applied.
+        /// The unique name of the table to which the mutation should be applied. Must not be null.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the mutation should be applied.
+        /// The key of the row to which the mutation should be applied. Must not be empty.
         /// </param>
         /// <param name="mutations">
         /// Changes to be atomically applied to the specified row. Entries are applied
         /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Must contain at least one entry and at most 100000. Must not be null, or contain null
+        /// elements.
         /// </param>
         /// <returns>
         /// The response from mutating the row.
@@ -97,12 +96,7 @@ namespace Google.Cloud.Bigtable.V2
             BigtableByteString rowKey,
             params Mutation[] mutations) =>
             MutateRow(
-                new MutateRowRequest
-                {
-                    TableName = tableName.ToString(),
-                    RowKey = rowKey,
-                    Mutations = { mutations }
-                });
+                CreateMutateRowRequest(tableName, rowKey, mutations));
 
         /// <summary>
         /// Asynchronously mutates a row atomically. Cells already present in the row are left
@@ -118,15 +112,16 @@ namespace Google.Cloud.Bigtable.V2
         /// </para>
         /// </remarks>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutation should be applied.
+        /// The unique name of the table to which the mutation should be applied. Must not be null.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the mutation should be applied.
+        /// The key of the row to which the mutation should be applied. Must not be empty.
         /// </param>
         /// <param name="mutations">
         /// Changes to be atomically applied to the specified row. Entries are applied
         /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Must contain at least one entry and at most 100000. Must not be null, or contain null
+        /// elements.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -140,12 +135,7 @@ namespace Google.Cloud.Bigtable.V2
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) =>
             MutateRowAsync(
-                new MutateRowRequest
-                {
-                    TableName = tableName.ToString(),
-                    RowKey = rowKey,
-                    Mutations = { mutations }
-                },
+                CreateMutateRowRequest(tableName, rowKey, mutations),
                 callSettings);
 
         /// <summary>
@@ -162,15 +152,16 @@ namespace Google.Cloud.Bigtable.V2
         /// </para>
         /// </remarks>
         /// <param name="tableName">
-        /// The unique name of the table to which the mutation should be applied.
+        /// The unique name of the table to which the mutation should be applied. Must not be null.
         /// </param>
         /// <param name="rowKey">
-        /// The key of the row to which the mutation should be applied.
+        /// The key of the row to which the mutation should be applied. Must not be empty.
         /// </param>
         /// <param name="mutations">
         /// Changes to be atomically applied to the specified row. Entries are applied
         /// in order, meaning that earlier mutations can be masked by later ones.
-        /// Must contain at least one entry and at most 100000.
+        /// Must contain at least one entry and at most 100000. Must not be null, or contain null
+        /// elements.
         /// </param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>
@@ -182,13 +173,30 @@ namespace Google.Cloud.Bigtable.V2
             IEnumerable<Mutation> mutations,
             CancellationToken cancellationToken) =>
             MutateRowAsync(
-                new MutateRowRequest
-                {
-                    TableName = tableName.ToString(),
-                    RowKey = rowKey,
-                    Mutations = { mutations }
-                },
+                CreateMutateRowRequest(tableName, rowKey, mutations),
                 CallSettings.FromCancellationToken(cancellationToken));
+
+        private static MutateRowRequest CreateMutateRowRequest(
+            TableName tableName,
+            BigtableByteString rowKey,
+            IEnumerable<Mutation> mutations)
+        {
+            GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
+            GaxPreconditions.CheckArgument(rowKey.Length != 0, nameof(rowKey), "The row key must not empty");
+            GaxPreconditions.CheckNotNull(mutations, nameof(mutations));
+            var mutationsChecked = mutations.Select(mutation =>
+            {
+                GaxPreconditions.CheckArgument(mutation != null, nameof(mutations), "Entries must not be null");
+                return mutation;
+            });
+
+            return new MutateRowRequest
+            {
+                TableName = tableName.ToString(),
+                RowKey = rowKey,
+                Mutations = { mutationsChecked }
+            };
+        }
     }
 
     public partial class BigtableClientImpl

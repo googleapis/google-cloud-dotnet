@@ -84,7 +84,39 @@ namespace Google.Cloud.Bigtable.V2.Tests
 
         [Theory]
         [MemberData(nameof(ValidFamilyNames))]
-        public void SetCell(string familyName)
+        public void SetCell_Bytes(string familyName)
+        {
+            var mutation =
+                Mutations.SetCell(familyName, "cq1", new BigtableByteString(1, 2, 3, 4, 5), new BigtableVersion(3));
+            Assert.NotNull(mutation.SetCell);
+            Assert.Equal(familyName, mutation.SetCell.FamilyName);
+            Assert.Equal("cq1", mutation.SetCell.ColumnQualifier.ToStringUtf8());
+            var bytes = mutation.SetCell.Value.ToByteArray();
+            Assert.Equal(new byte[] { 1, 2, 3, 4, 5 }, bytes);
+            Assert.Equal(3, mutation.SetCell.TimestampMicros);
+        }
+
+        [Theory]
+        [MemberData(nameof(ValidFamilyNames))]
+        public void SetCell_Long(string familyName)
+        {
+            var mutation =
+                Mutations.SetCell(familyName, "cq1", 12345, new BigtableVersion(3));
+            Assert.NotNull(mutation.SetCell);
+            Assert.Equal(familyName, mutation.SetCell.FamilyName);
+            Assert.Equal("cq1", mutation.SetCell.ColumnQualifier.ToStringUtf8());
+            var bytes = mutation.SetCell.Value.ToByteArray();
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(bytes);
+            }
+            Assert.Equal(12345, BitConverter.ToInt64(bytes, 0));
+            Assert.Equal(3, mutation.SetCell.TimestampMicros);
+        }
+
+        [Theory]
+        [MemberData(nameof(ValidFamilyNames))]
+        public void SetCell_String(string familyName)
         {
             var mutation =
                 Mutations.SetCell(familyName, "cq1", "value", new BigtableVersion(3));

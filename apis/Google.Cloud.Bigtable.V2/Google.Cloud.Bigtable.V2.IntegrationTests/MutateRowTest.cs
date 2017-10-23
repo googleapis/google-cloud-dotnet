@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Grpc.Core;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -48,12 +49,6 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 "column_name",
                 "test12345",
                 new BigtableVersion(1000));
-
-            // Cleanup
-            client.MutateRow(
-                tableName,
-                rowKey,
-                Mutations.DeleteFromRow());
         }
 
         [Fact]
@@ -82,12 +77,92 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 "column_name",
                 "test12345",
                 new BigtableVersion(1000));
+        }
+        
+        [Fact]
+        public async Task ModifyRow()
+        {
+            var tableName = _fixture.DefaultTableName;
+            var client = _fixture.DefaultTableClient;
+            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1000));
 
-            // Cleanup
             client.MutateRow(
                 tableName,
                 rowKey,
-                Mutations.DeleteFromRow());
+                Mutations.SetCell(
+                    BigtableFixture.ColumnFamily1,
+                    "modify_row_column",
+                    "new_cell_value",
+                    new BigtableVersion(1000)));
+
+            // TODO: Use cleaner API when available
+            var response = client.ReadRows(new ReadRowsRequest
+            {
+                TableName = tableName.ToString(),
+                Rows = new RowSet { RowKeys = { rowKey } }
+            });
+
+            await ModifyRow_VerifyResponse(rowKey, response);
+        }
+
+        [Fact]
+        public async Task ModifyRowAsync()
+        {
+            var tableName = _fixture.DefaultTableName;
+            var client = _fixture.DefaultTableClient;
+            BigtableByteString rowKey = Guid.NewGuid().ToString();
+            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1000));
+
+            await client.MutateRowAsync(
+                tableName,
+                rowKey,
+                new[]
+                {
+                    Mutations.SetCell(
+                        BigtableFixture.ColumnFamily1,
+                        "modify_row_column",
+                        "new_cell_value",
+                        new BigtableVersion(1000))
+                });
+
+            // TODO: Use cleaner API when available
+            var response = client.ReadRows(new ReadRowsRequest
+            {
+                TableName = tableName.ToString(),
+                Rows = new RowSet { RowKeys = { rowKey } }
+            });
+
+            await ModifyRow_VerifyResponse(rowKey, response);
+        }
+
+        private static async Task ModifyRow_VerifyResponse(
+            BigtableByteString rowKey, BigtableClient.ReadRowsStream response)
+        {
+            while (await response.ResponseStream.MoveNext(default))
+            {
+                var current = response.ResponseStream.Current;
+                BigtableByteString currentRowKey;
+                string currentColumnFamily = null;
+                foreach (var chunk in current.Chunks)
+                {
+                    if (!chunk.RowKey.IsEmpty)
+                    {
+                        currentRowKey = chunk.RowKey;
+                    }
+                    if (chunk.FamilyName != null)
+                    {
+                        currentColumnFamily = chunk.FamilyName;
+                    }
+                    Assert.Equal(rowKey, currentRowKey);
+                    Assert.Equal(BigtableFixture.ColumnFamily1, currentColumnFamily);
+                    if ((BigtableByteString)chunk.Qualifier == "modify_row_column")
+                    {
+                        Assert.Equal("new_cell_value", (BigtableByteString)chunk.Value);
+                        Assert.Equal(1000, chunk.TimestampMicros);
+                    }
+                }
+            }
         }
 
         [Fact]
@@ -122,12 +197,6 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 "column_name",
                 "abcd",
                 new BigtableVersion(2000));
-
-            // Cleanup
-            client.MutateRow(
-                tableName,
-                rowKey,
-                Mutations.DeleteFromRow());
         }
 
         [Fact]
@@ -165,12 +234,6 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 "column_name",
                 "abcd",
                 new BigtableVersion(2000));
-
-            // Cleanup
-            client.MutateRow(
-                tableName,
-                rowKey,
-                Mutations.DeleteFromRow());
         }
 
         [Fact]
@@ -202,12 +265,6 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 "last_name",
                 "Smith",
                 new BigtableVersion(3000));
-
-            // Cleanup
-            client.MutateRow(
-                tableName,
-                rowKey,
-                Mutations.DeleteFromRow());
         }
 
         [Fact]
@@ -239,12 +296,6 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 "last_name",
                 "Smith",
                 new BigtableVersion(3000));
-
-            // Cleanup
-            client.MutateRow(
-                tableName,
-                rowKey,
-                Mutations.DeleteFromRow());
         }
 
         [Fact]
