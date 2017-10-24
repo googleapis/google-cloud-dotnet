@@ -23,7 +23,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
-namespace Google.Cloud.VideoIntelligence.V1beta2 {
+namespace Google.Cloud.VideoIntelligence.V1Beta2 {
   /// <summary>
   /// Service that implements Google Cloud Video Intelligence API.
   /// </summary>
@@ -31,10 +31,10 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
   {
     static readonly string __ServiceName = "google.cloud.videointelligence.v1beta2.VideoIntelligenceService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest> __Marshaller_AnnotateVideoRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest> __Marshaller_AnnotateVideoRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest, global::Google.LongRunning.Operation> __Method_AnnotateVideo = new grpc::Method<global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest, global::Google.LongRunning.Operation>(
+    static readonly grpc::Method<global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest, global::Google.LongRunning.Operation> __Method_AnnotateVideo = new grpc::Method<global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "AnnotateVideo",
@@ -44,7 +44,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.Services[0]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of VideoIntelligenceService</summary>
@@ -59,7 +59,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AnnotateVideo(global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AnnotateVideo(global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -100,7 +100,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation AnnotateVideo(global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation AnnotateVideo(global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AnnotateVideo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -113,7 +113,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation AnnotateVideo(global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest request, grpc::CallOptions options)
+      public virtual global::Google.LongRunning.Operation AnnotateVideo(global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnnotateVideo, null, options, request);
       }
@@ -128,7 +128,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnnotateVideoAsync(global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnnotateVideoAsync(global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AnnotateVideoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -141,7 +141,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnnotateVideoAsync(global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnnotateVideoAsync(global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnnotateVideo, null, options, request);
       }

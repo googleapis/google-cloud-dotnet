@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Cloud.VideoIntelligence.V1beta2 {
+namespace Google.Cloud.VideoIntelligence.V1Beta2 {
 
   /// <summary>Holder for reflection information generated from google/cloud/videointelligence/v1beta2/video_intelligence.proto</summary>
   public static partial class VideoIntelligenceReflection {
@@ -123,31 +123,31 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
             "ZVNlcnZpY2VQcm90b1ABWldnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
             "b29nbGVhcGlzL2Nsb3VkL3ZpZGVvaW50ZWxsaWdlbmNlL3YxYmV0YTI7dmlk",
             "ZW9pbnRlbGxpZ2VuY2WqAiZHb29nbGUuQ2xvdWQuVmlkZW9JbnRlbGxpZ2Vu",
-            "Y2UuVjFiZXRhMmIGcHJvdG8z"));
+            "Y2UuVjFCZXRhMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VideoIntelligence.V1beta2.Feature), typeof(global::Google.Cloud.VideoIntelligence.V1beta2.LabelDetectionMode), typeof(global::Google.Cloud.VideoIntelligence.V1beta2.Likelihood), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest), global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoRequest.Parser, new[]{ "InputUri", "InputContent", "Features", "VideoContext", "OutputUri", "LocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.VideoContext), global::Google.Cloud.VideoIntelligence.V1beta2.VideoContext.Parser, new[]{ "Segments", "LabelDetectionConfig", "ShotChangeDetectionConfig", "ExplicitContentDetectionConfig", "FaceDetectionConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.LabelDetectionConfig), global::Google.Cloud.VideoIntelligence.V1beta2.LabelDetectionConfig.Parser, new[]{ "LabelDetectionMode", "StationaryCamera", "Model" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.ShotChangeDetectionConfig), global::Google.Cloud.VideoIntelligence.V1beta2.ShotChangeDetectionConfig.Parser, new[]{ "Model" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentDetectionConfig), global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentDetectionConfig.Parser, new[]{ "Model" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.FaceDetectionConfig), global::Google.Cloud.VideoIntelligence.V1beta2.FaceDetectionConfig.Parser, new[]{ "Model", "IncludeBoundingBoxes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment), global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment.Parser, new[]{ "StartTimeOffset", "EndTimeOffset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.LabelSegment), global::Google.Cloud.VideoIntelligence.V1beta2.LabelSegment.Parser, new[]{ "Segment", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.LabelFrame), global::Google.Cloud.VideoIntelligence.V1beta2.LabelFrame.Parser, new[]{ "TimeOffset", "Confidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.Entity), global::Google.Cloud.VideoIntelligence.V1beta2.Entity.Parser, new[]{ "EntityId", "Description", "LanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation), global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation.Parser, new[]{ "Entity", "CategoryEntities", "Segments", "Frames" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentFrame), global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentFrame.Parser, new[]{ "TimeOffset", "PornographyLikelihood" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentAnnotation), global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentAnnotation.Parser, new[]{ "Frames" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.NormalizedBoundingBox), global::Google.Cloud.VideoIntelligence.V1beta2.NormalizedBoundingBox.Parser, new[]{ "Left", "Top", "Right", "Bottom" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.FaceSegment), global::Google.Cloud.VideoIntelligence.V1beta2.FaceSegment.Parser, new[]{ "Segment" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.FaceFrame), global::Google.Cloud.VideoIntelligence.V1beta2.FaceFrame.Parser, new[]{ "NormalizedBoundingBoxes", "TimeOffset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.FaceAnnotation), global::Google.Cloud.VideoIntelligence.V1beta2.FaceAnnotation.Parser, new[]{ "Thumbnail", "Segments", "Frames" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationResults), global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationResults.Parser, new[]{ "InputUri", "SegmentLabelAnnotations", "ShotLabelAnnotations", "FrameLabelAnnotations", "FaceAnnotations", "ShotAnnotations", "ExplicitAnnotation", "Error" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoResponse), global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoResponse.Parser, new[]{ "AnnotationResults" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationProgress), global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationProgress.Parser, new[]{ "InputUri", "ProgressPercent", "StartTime", "UpdateTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoProgress), global::Google.Cloud.VideoIntelligence.V1beta2.AnnotateVideoProgress.Parser, new[]{ "AnnotationProgress" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.Feature), typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.LabelDetectionMode), typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.Likelihood), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest), global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoRequest.Parser, new[]{ "InputUri", "InputContent", "Features", "VideoContext", "OutputUri", "LocationId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.VideoContext), global::Google.Cloud.VideoIntelligence.V1Beta2.VideoContext.Parser, new[]{ "Segments", "LabelDetectionConfig", "ShotChangeDetectionConfig", "ExplicitContentDetectionConfig", "FaceDetectionConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.LabelDetectionConfig), global::Google.Cloud.VideoIntelligence.V1Beta2.LabelDetectionConfig.Parser, new[]{ "LabelDetectionMode", "StationaryCamera", "Model" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.ShotChangeDetectionConfig), global::Google.Cloud.VideoIntelligence.V1Beta2.ShotChangeDetectionConfig.Parser, new[]{ "Model" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentDetectionConfig), global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentDetectionConfig.Parser, new[]{ "Model" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.FaceDetectionConfig), global::Google.Cloud.VideoIntelligence.V1Beta2.FaceDetectionConfig.Parser, new[]{ "Model", "IncludeBoundingBoxes" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment), global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment.Parser, new[]{ "StartTimeOffset", "EndTimeOffset" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.LabelSegment), global::Google.Cloud.VideoIntelligence.V1Beta2.LabelSegment.Parser, new[]{ "Segment", "Confidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.LabelFrame), global::Google.Cloud.VideoIntelligence.V1Beta2.LabelFrame.Parser, new[]{ "TimeOffset", "Confidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.Entity), global::Google.Cloud.VideoIntelligence.V1Beta2.Entity.Parser, new[]{ "EntityId", "Description", "LanguageCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation), global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation.Parser, new[]{ "Entity", "CategoryEntities", "Segments", "Frames" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentFrame), global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentFrame.Parser, new[]{ "TimeOffset", "PornographyLikelihood" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentAnnotation), global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentAnnotation.Parser, new[]{ "Frames" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.NormalizedBoundingBox), global::Google.Cloud.VideoIntelligence.V1Beta2.NormalizedBoundingBox.Parser, new[]{ "Left", "Top", "Right", "Bottom" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.FaceSegment), global::Google.Cloud.VideoIntelligence.V1Beta2.FaceSegment.Parser, new[]{ "Segment" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.FaceFrame), global::Google.Cloud.VideoIntelligence.V1Beta2.FaceFrame.Parser, new[]{ "NormalizedBoundingBoxes", "TimeOffset" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.FaceAnnotation), global::Google.Cloud.VideoIntelligence.V1Beta2.FaceAnnotation.Parser, new[]{ "Thumbnail", "Segments", "Frames" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationResults), global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationResults.Parser, new[]{ "InputUri", "SegmentLabelAnnotations", "ShotLabelAnnotations", "FrameLabelAnnotations", "FaceAnnotations", "ShotAnnotations", "ExplicitAnnotation", "Error" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoResponse), global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoResponse.Parser, new[]{ "AnnotationResults" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationProgress), global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationProgress.Parser, new[]{ "InputUri", "ProgressPercent", "StartTime", "UpdateTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoProgress), global::Google.Cloud.VideoIntelligence.V1Beta2.AnnotateVideoProgress.Parser, new[]{ "AnnotationProgress" }, null, null, null)
           }));
     }
     #endregion
@@ -245,7 +245,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -315,25 +315,25 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "features" field.</summary>
     public const int FeaturesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.Feature> _repeated_features_codec
-        = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.VideoIntelligence.V1beta2.Feature) x);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.Feature> features_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.Feature>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.Feature> _repeated_features_codec
+        = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.VideoIntelligence.V1Beta2.Feature) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.Feature> features_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.Feature>();
     /// <summary>
     /// Requested video annotation features.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.Feature> Features {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.Feature> Features {
       get { return features_; }
     }
 
     /// <summary>Field number for the "video_context" field.</summary>
     public const int VideoContextFieldNumber = 3;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.VideoContext videoContext_;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.VideoContext videoContext_;
     /// <summary>
     /// Additional video context and/or feature-specific parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.VideoContext VideoContext {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.VideoContext VideoContext {
       get { return videoContext_; }
       set {
         videoContext_ = value;
@@ -475,7 +475,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       features_.Add(other.features_);
       if (other.videoContext_ != null) {
         if (videoContext_ == null) {
-          videoContext_ = new global::Google.Cloud.VideoIntelligence.V1beta2.VideoContext();
+          videoContext_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.VideoContext();
         }
         VideoContext.MergeFrom(other.VideoContext);
       }
@@ -506,7 +506,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
           }
           case 26: {
             if (videoContext_ == null) {
-              videoContext_ = new global::Google.Cloud.VideoIntelligence.V1beta2.VideoContext();
+              videoContext_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.VideoContext();
             }
             input.ReadMessage(videoContext_);
             break;
@@ -539,7 +539,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -570,27 +570,27 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "segments" field.</summary>
     public const int SegmentsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment> _repeated_segments_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment> segments_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment> _repeated_segments_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment> segments_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment>();
     /// <summary>
     /// Video segments to annotate. The segments may overlap and are not required
     /// to be contiguous or span the whole video. If unspecified, each video
     /// is treated as a single segment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment> Segments {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment> Segments {
       get { return segments_; }
     }
 
     /// <summary>Field number for the "label_detection_config" field.</summary>
     public const int LabelDetectionConfigFieldNumber = 2;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.LabelDetectionConfig labelDetectionConfig_;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.LabelDetectionConfig labelDetectionConfig_;
     /// <summary>
     /// Config for LABEL_DETECTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.LabelDetectionConfig LabelDetectionConfig {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.LabelDetectionConfig LabelDetectionConfig {
       get { return labelDetectionConfig_; }
       set {
         labelDetectionConfig_ = value;
@@ -599,12 +599,12 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "shot_change_detection_config" field.</summary>
     public const int ShotChangeDetectionConfigFieldNumber = 3;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.ShotChangeDetectionConfig shotChangeDetectionConfig_;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.ShotChangeDetectionConfig shotChangeDetectionConfig_;
     /// <summary>
     /// Config for SHOT_CHANGE_DETECTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.ShotChangeDetectionConfig ShotChangeDetectionConfig {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.ShotChangeDetectionConfig ShotChangeDetectionConfig {
       get { return shotChangeDetectionConfig_; }
       set {
         shotChangeDetectionConfig_ = value;
@@ -613,12 +613,12 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "explicit_content_detection_config" field.</summary>
     public const int ExplicitContentDetectionConfigFieldNumber = 4;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentDetectionConfig explicitContentDetectionConfig_;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentDetectionConfig explicitContentDetectionConfig_;
     /// <summary>
     /// Config for EXPLICIT_CONTENT_DETECTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentDetectionConfig ExplicitContentDetectionConfig {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentDetectionConfig ExplicitContentDetectionConfig {
       get { return explicitContentDetectionConfig_; }
       set {
         explicitContentDetectionConfig_ = value;
@@ -627,12 +627,12 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "face_detection_config" field.</summary>
     public const int FaceDetectionConfigFieldNumber = 5;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.FaceDetectionConfig faceDetectionConfig_;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.FaceDetectionConfig faceDetectionConfig_;
     /// <summary>
     /// Config for FACE_DETECTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.FaceDetectionConfig FaceDetectionConfig {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.FaceDetectionConfig FaceDetectionConfig {
       get { return faceDetectionConfig_; }
       set {
         faceDetectionConfig_ = value;
@@ -724,25 +724,25 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       segments_.Add(other.segments_);
       if (other.labelDetectionConfig_ != null) {
         if (labelDetectionConfig_ == null) {
-          labelDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1beta2.LabelDetectionConfig();
+          labelDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.LabelDetectionConfig();
         }
         LabelDetectionConfig.MergeFrom(other.LabelDetectionConfig);
       }
       if (other.shotChangeDetectionConfig_ != null) {
         if (shotChangeDetectionConfig_ == null) {
-          shotChangeDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1beta2.ShotChangeDetectionConfig();
+          shotChangeDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.ShotChangeDetectionConfig();
         }
         ShotChangeDetectionConfig.MergeFrom(other.ShotChangeDetectionConfig);
       }
       if (other.explicitContentDetectionConfig_ != null) {
         if (explicitContentDetectionConfig_ == null) {
-          explicitContentDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentDetectionConfig();
+          explicitContentDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentDetectionConfig();
         }
         ExplicitContentDetectionConfig.MergeFrom(other.ExplicitContentDetectionConfig);
       }
       if (other.faceDetectionConfig_ != null) {
         if (faceDetectionConfig_ == null) {
-          faceDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1beta2.FaceDetectionConfig();
+          faceDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.FaceDetectionConfig();
         }
         FaceDetectionConfig.MergeFrom(other.FaceDetectionConfig);
       }
@@ -762,28 +762,28 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
           }
           case 18: {
             if (labelDetectionConfig_ == null) {
-              labelDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1beta2.LabelDetectionConfig();
+              labelDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.LabelDetectionConfig();
             }
             input.ReadMessage(labelDetectionConfig_);
             break;
           }
           case 26: {
             if (shotChangeDetectionConfig_ == null) {
-              shotChangeDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1beta2.ShotChangeDetectionConfig();
+              shotChangeDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.ShotChangeDetectionConfig();
             }
             input.ReadMessage(shotChangeDetectionConfig_);
             break;
           }
           case 34: {
             if (explicitContentDetectionConfig_ == null) {
-              explicitContentDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentDetectionConfig();
+              explicitContentDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentDetectionConfig();
             }
             input.ReadMessage(explicitContentDetectionConfig_);
             break;
           }
           case 42: {
             if (faceDetectionConfig_ == null) {
-              faceDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1beta2.FaceDetectionConfig();
+              faceDetectionConfig_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.FaceDetectionConfig();
             }
             input.ReadMessage(faceDetectionConfig_);
             break;
@@ -804,7 +804,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -833,14 +833,14 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "label_detection_mode" field.</summary>
     public const int LabelDetectionModeFieldNumber = 1;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.LabelDetectionMode labelDetectionMode_ = 0;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.LabelDetectionMode labelDetectionMode_ = 0;
     /// <summary>
     /// What labels should be detected with LABEL_DETECTION, in addition to
     /// video-level labels or segment-level labels.
     /// If unspecified, defaults to `SHOT_MODE`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.LabelDetectionMode LabelDetectionMode {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.LabelDetectionMode LabelDetectionMode {
       get { return labelDetectionMode_; }
       set {
         labelDetectionMode_ = value;
@@ -968,7 +968,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
             input.SkipLastField();
             break;
           case 8: {
-            labelDetectionMode_ = (global::Google.Cloud.VideoIntelligence.V1beta2.LabelDetectionMode) input.ReadEnum();
+            labelDetectionMode_ = (global::Google.Cloud.VideoIntelligence.V1Beta2.LabelDetectionMode) input.ReadEnum();
             break;
           }
           case 16: {
@@ -995,7 +995,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1120,7 +1120,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1245,7 +1245,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1401,7 +1401,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1569,7 +1569,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1597,12 +1597,12 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "segment" field.</summary>
     public const int SegmentFieldNumber = 1;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment segment_;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment segment_;
     /// <summary>
     /// Video segment where a label was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment Segment {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment Segment {
       get { return segment_; }
       set {
         segment_ = value;
@@ -1685,7 +1685,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       }
       if (other.segment_ != null) {
         if (segment_ == null) {
-          segment_ = new global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment();
+          segment_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment();
         }
         Segment.MergeFrom(other.Segment);
       }
@@ -1704,7 +1704,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
             break;
           case 10: {
             if (segment_ == null) {
-              segment_ = new global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment();
+              segment_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment();
             }
             input.ReadMessage(segment_);
             break;
@@ -1729,7 +1729,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1890,7 +1890,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2077,7 +2077,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2107,12 +2107,12 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 1;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.Entity entity_;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.Entity entity_;
     /// <summary>
     /// Detected entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.Entity Entity {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.Entity Entity {
       get { return entity_; }
       set {
         entity_ = value;
@@ -2121,9 +2121,9 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "category_entities" field.</summary>
     public const int CategoryEntitiesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.Entity> _repeated_categoryEntities_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.VideoIntelligence.V1beta2.Entity.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.Entity> categoryEntities_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.Entity>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.Entity> _repeated_categoryEntities_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.VideoIntelligence.V1Beta2.Entity.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.Entity> categoryEntities_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.Entity>();
     /// <summary>
     /// Common categories for the detected entity.
     /// E.g. when the label is `Terrier` the category is likely `dog`. And in some
@@ -2131,33 +2131,33 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
     /// a `pet`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.Entity> CategoryEntities {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.Entity> CategoryEntities {
       get { return categoryEntities_; }
     }
 
     /// <summary>Field number for the "segments" field.</summary>
     public const int SegmentsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.LabelSegment> _repeated_segments_codec
-        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.VideoIntelligence.V1beta2.LabelSegment.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelSegment> segments_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelSegment>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelSegment> _repeated_segments_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.VideoIntelligence.V1Beta2.LabelSegment.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelSegment> segments_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelSegment>();
     /// <summary>
     /// All video segments where a label was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelSegment> Segments {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelSegment> Segments {
       get { return segments_; }
     }
 
     /// <summary>Field number for the "frames" field.</summary>
     public const int FramesFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.LabelFrame> _repeated_frames_codec
-        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.VideoIntelligence.V1beta2.LabelFrame.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelFrame> frames_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelFrame>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelFrame> _repeated_frames_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.VideoIntelligence.V1Beta2.LabelFrame.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelFrame> frames_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelFrame>();
     /// <summary>
     /// All video frames where a label was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelFrame> Frames {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelFrame> Frames {
       get { return frames_; }
     }
 
@@ -2226,7 +2226,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       }
       if (other.entity_ != null) {
         if (entity_ == null) {
-          entity_ = new global::Google.Cloud.VideoIntelligence.V1beta2.Entity();
+          entity_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.Entity();
         }
         Entity.MergeFrom(other.Entity);
       }
@@ -2245,7 +2245,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
             break;
           case 10: {
             if (entity_ == null) {
-              entity_ = new global::Google.Cloud.VideoIntelligence.V1beta2.Entity();
+              entity_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.Entity();
             }
             input.ReadMessage(entity_);
             break;
@@ -2278,7 +2278,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2321,12 +2321,12 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "pornography_likelihood" field.</summary>
     public const int PornographyLikelihoodFieldNumber = 2;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.Likelihood pornographyLikelihood_ = 0;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.Likelihood pornographyLikelihood_ = 0;
     /// <summary>
     /// Likelihood of the pornography content..
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.Likelihood PornographyLikelihood {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.Likelihood PornographyLikelihood {
       get { return pornographyLikelihood_; }
       set {
         pornographyLikelihood_ = value;
@@ -2420,7 +2420,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
             break;
           }
           case 16: {
-            pornographyLikelihood_ = (global::Google.Cloud.VideoIntelligence.V1beta2.Likelihood) input.ReadEnum();
+            pornographyLikelihood_ = (global::Google.Cloud.VideoIntelligence.V1Beta2.Likelihood) input.ReadEnum();
             break;
           }
         }
@@ -2441,7 +2441,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2468,14 +2468,14 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "frames" field.</summary>
     public const int FramesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentFrame> _repeated_frames_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentFrame.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentFrame> frames_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentFrame>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentFrame> _repeated_frames_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentFrame.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentFrame> frames_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentFrame>();
     /// <summary>
     /// All video frames where explicit content was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentFrame> Frames {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentFrame> Frames {
       get { return frames_; }
     }
 
@@ -2558,7 +2558,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2774,7 +2774,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2801,12 +2801,12 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "segment" field.</summary>
     public const int SegmentFieldNumber = 1;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment segment_;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment segment_;
     /// <summary>
     /// Video segment where a face was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment Segment {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment Segment {
       get { return segment_; }
       set {
         segment_ = value;
@@ -2866,7 +2866,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       }
       if (other.segment_ != null) {
         if (segment_ == null) {
-          segment_ = new global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment();
+          segment_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment();
         }
         Segment.MergeFrom(other.Segment);
       }
@@ -2882,7 +2882,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
             break;
           case 10: {
             if (segment_ == null) {
-              segment_ = new global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment();
+              segment_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment();
             }
             input.ReadMessage(segment_);
             break;
@@ -2903,7 +2903,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2931,16 +2931,16 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "normalized_bounding_boxes" field.</summary>
     public const int NormalizedBoundingBoxesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.NormalizedBoundingBox> _repeated_normalizedBoundingBoxes_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1beta2.NormalizedBoundingBox.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.NormalizedBoundingBox> normalizedBoundingBoxes_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.NormalizedBoundingBox>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.NormalizedBoundingBox> _repeated_normalizedBoundingBoxes_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1Beta2.NormalizedBoundingBox.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.NormalizedBoundingBox> normalizedBoundingBoxes_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.NormalizedBoundingBox>();
     /// <summary>
     /// Normalized Bounding boxes in a frame.
     /// There can be more than one boxes if the same face is detected in multiple
     /// locations within the current frame.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.NormalizedBoundingBox> NormalizedBoundingBoxes {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.NormalizedBoundingBox> NormalizedBoundingBoxes {
       get { return normalizedBoundingBoxes_; }
     }
 
@@ -3058,7 +3058,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3101,27 +3101,27 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "segments" field.</summary>
     public const int SegmentsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.FaceSegment> _repeated_segments_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.VideoIntelligence.V1beta2.FaceSegment.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.FaceSegment> segments_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.FaceSegment>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceSegment> _repeated_segments_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.VideoIntelligence.V1Beta2.FaceSegment.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceSegment> segments_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceSegment>();
     /// <summary>
     /// All video segments where a face was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.FaceSegment> Segments {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceSegment> Segments {
       get { return segments_; }
     }
 
     /// <summary>Field number for the "frames" field.</summary>
     public const int FramesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.FaceFrame> _repeated_frames_codec
-        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.VideoIntelligence.V1beta2.FaceFrame.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.FaceFrame> frames_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.FaceFrame>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceFrame> _repeated_frames_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.VideoIntelligence.V1Beta2.FaceFrame.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceFrame> frames_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceFrame>();
     /// <summary>
     /// All video frames where a face was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.FaceFrame> Frames {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceFrame> Frames {
       get { return frames_; }
     }
 
@@ -3227,7 +3227,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3276,80 +3276,80 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "segment_label_annotations" field.</summary>
     public const int SegmentLabelAnnotationsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation> _repeated_segmentLabelAnnotations_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation> segmentLabelAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation> _repeated_segmentLabelAnnotations_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation> segmentLabelAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation>();
     /// <summary>
     /// Label annotations on video level or user specified segment level.
     /// There is exactly one element for each unique label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation> SegmentLabelAnnotations {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation> SegmentLabelAnnotations {
       get { return segmentLabelAnnotations_; }
     }
 
     /// <summary>Field number for the "shot_label_annotations" field.</summary>
     public const int ShotLabelAnnotationsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation> _repeated_shotLabelAnnotations_codec
-        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation> shotLabelAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation> _repeated_shotLabelAnnotations_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation> shotLabelAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation>();
     /// <summary>
     /// Label annotations on shot level.
     /// There is exactly one element for each unique label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation> ShotLabelAnnotations {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation> ShotLabelAnnotations {
       get { return shotLabelAnnotations_; }
     }
 
     /// <summary>Field number for the "frame_label_annotations" field.</summary>
     public const int FrameLabelAnnotationsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation> _repeated_frameLabelAnnotations_codec
-        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation> frameLabelAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation> _repeated_frameLabelAnnotations_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation> frameLabelAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation>();
     /// <summary>
     /// Label annotations on frame level.
     /// There is exactly one element for each unique label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.LabelAnnotation> FrameLabelAnnotations {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.LabelAnnotation> FrameLabelAnnotations {
       get { return frameLabelAnnotations_; }
     }
 
     /// <summary>Field number for the "face_annotations" field.</summary>
     public const int FaceAnnotationsFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.FaceAnnotation> _repeated_faceAnnotations_codec
-        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.VideoIntelligence.V1beta2.FaceAnnotation.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.FaceAnnotation> faceAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.FaceAnnotation>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceAnnotation> _repeated_faceAnnotations_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.VideoIntelligence.V1Beta2.FaceAnnotation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceAnnotation> faceAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceAnnotation>();
     /// <summary>
     /// Face annotations. There is exactly one element for each unique face.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.FaceAnnotation> FaceAnnotations {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.FaceAnnotation> FaceAnnotations {
       get { return faceAnnotations_; }
     }
 
     /// <summary>Field number for the "shot_annotations" field.</summary>
     public const int ShotAnnotationsFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment> _repeated_shotAnnotations_codec
-        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment> shotAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment> _repeated_shotAnnotations_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment> shotAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment>();
     /// <summary>
     /// Shot annotations. Each shot is represented as a video segment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoSegment> ShotAnnotations {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoSegment> ShotAnnotations {
       get { return shotAnnotations_; }
     }
 
     /// <summary>Field number for the "explicit_annotation" field.</summary>
     public const int ExplicitAnnotationFieldNumber = 7;
-    private global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentAnnotation explicitAnnotation_;
+    private global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentAnnotation explicitAnnotation_;
     /// <summary>
     /// Explicit content annotation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentAnnotation ExplicitAnnotation {
+    public global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentAnnotation ExplicitAnnotation {
       get { return explicitAnnotation_; }
       set {
         explicitAnnotation_ = value;
@@ -3470,7 +3470,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
       shotAnnotations_.Add(other.shotAnnotations_);
       if (other.explicitAnnotation_ != null) {
         if (explicitAnnotation_ == null) {
-          explicitAnnotation_ = new global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentAnnotation();
+          explicitAnnotation_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentAnnotation();
         }
         ExplicitAnnotation.MergeFrom(other.ExplicitAnnotation);
       }
@@ -3516,7 +3516,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
           }
           case 58: {
             if (explicitAnnotation_ == null) {
-              explicitAnnotation_ = new global::Google.Cloud.VideoIntelligence.V1beta2.ExplicitContentAnnotation();
+              explicitAnnotation_ = new global::Google.Cloud.VideoIntelligence.V1Beta2.ExplicitContentAnnotation();
             }
             input.ReadMessage(explicitAnnotation_);
             break;
@@ -3546,7 +3546,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3573,14 +3573,14 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "annotation_results" field.</summary>
     public const int AnnotationResultsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationResults> _repeated_annotationResults_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationResults.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationResults> annotationResults_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationResults>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationResults> _repeated_annotationResults_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationResults.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationResults> annotationResults_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationResults>();
     /// <summary>
     /// Annotation results for all videos specified in `AnnotateVideoRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationResults> AnnotationResults {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationResults> AnnotationResults {
       get { return annotationResults_; }
     }
 
@@ -3661,7 +3661,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3893,7 +3893,7 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1Beta2.VideoIntelligenceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3920,14 +3920,14 @@ namespace Google.Cloud.VideoIntelligence.V1beta2 {
 
     /// <summary>Field number for the "annotation_progress" field.</summary>
     public const int AnnotationProgressFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationProgress> _repeated_annotationProgress_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationProgress.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationProgress> annotationProgress_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationProgress>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationProgress> _repeated_annotationProgress_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationProgress.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationProgress> annotationProgress_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationProgress>();
     /// <summary>
     /// Progress metadata for all videos specified in `AnnotateVideoRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1beta2.VideoAnnotationProgress> AnnotationProgress {
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1Beta2.VideoAnnotationProgress> AnnotationProgress {
       get { return annotationProgress_; }
     }
 
