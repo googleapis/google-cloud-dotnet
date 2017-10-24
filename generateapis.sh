@@ -72,7 +72,6 @@ generate_api() {
   API_OUT_DIR=apis
   API_SRC_DIR=googleapis/$2
   API_YAML=$API_SRC_DIR/../$3
-  [[ "$4" != "" ]] && EXTRA_PROTOS=googleapis/$4/*.proto || EXTRA_PROTOS=
   
   echo Generating $1
   mkdir $API_TMP_DIR
@@ -115,8 +114,7 @@ EOF
     -I googleapis \
     -I $CORE_PROTOS_ROOT \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
-    $API_SRC_DIR/*.proto \
-    $EXTRA_PROTOS  
+    $API_SRC_DIR/*.proto
 }
 
 # Entry point
@@ -180,19 +178,23 @@ $PROTOC \
   --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
   googleapis/google/iam/v1/*.proto
 
+# Logging version-agnostic types
+$PROTOC \
+  --csharp_out=apis/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type \
+  -I googleapis \
+  -I $CORE_PROTOS_ROOT \
+  googleapis/google/logging/type/*.proto
+
 # Now the per-API codegen
-# Commented out lines indicate known config problems that should be fixed, then uncommented.
 generate_api Google.Cloud.Bigtable.Admin.V2 google/bigtable/admin/v2 bigtableadmin.yaml
 generate_api Google.Cloud.Bigtable.V2 google/bigtable/v2 bigtable.yaml
 generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
 generate_api Google.Cloud.Debugger.V2 google/devtools/clouddebugger/v2 clouddebugger.yaml
-# generate_api Google.Cloud.Dlp.V2Beta1 google/privacy/dlp/v2beta1 dlp.yaml
+generate_api Google.Cloud.Dlp.V2Beta1 google/privacy/dlp/v2beta1 dlp.yaml
 generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
 generate_api Google.Cloud.Firestore.V1Beta1 google/firestore/v1beta1 firestore.yaml
 generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language_v1.yaml
-
-# generate_api Google.Cloud.Language.V1.Experimental google/cloud/language/v1beta2 language_v1beta2.yaml
-# generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml google/logging/type
+generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml
 generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
 generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
 generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml
@@ -204,6 +206,6 @@ generate_api Google.Cloud.VideoIntelligence.V1Beta1 google/cloud/videointelligen
 generate_api Google.Cloud.VideoIntelligence.V1Beta2 google/cloud/videointelligence/v1beta2 videointelligence_v1beta2.yaml
 generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision.yaml
 
-# Cleanup for the logging API's version-agnostic protos (in their own top-level directory)
-# mv apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Type/*.cs apis/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type
-# rmdir apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Type
+# Language.V1.Experimental is laid out oddly; only regenerate when we know we need to,
+# then fix up manually.
+# generate_api Google.Cloud.Language.V1.Experimental google/cloud/language/v1beta2 language_v1beta2.yaml
