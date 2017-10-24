@@ -53,5 +53,137 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(spannerType1.GetHashCode(), spannerType2.GetHashCode());
             Assert.True(spannerType1.Equals(spannerType2));
         }
+
+        public static IEnumerable<object[]> GetSpannerStringConversions()
+        {
+            yield return new object[] { "STRING", SpannerDbType.String };
+            yield return new object[] { "STRING(MAX)", SpannerDbType.String };
+            yield return new object[] { "BOOL", SpannerDbType.Bool };
+            yield return new object[] { "BYTES", SpannerDbType.Bytes };
+            yield return new object[] { "DATE", SpannerDbType.Date };
+            yield return new object[] { "FLOAT64", SpannerDbType.Float64 };
+            yield return new object[] { "INT64", SpannerDbType.Int64 };
+            yield return new object[] { "TIMESTAMP", SpannerDbType.Timestamp };
+
+            yield return new object[] { " STRING  ", SpannerDbType.String };
+            yield return new object[] { "  BOOL  ", SpannerDbType.Bool };
+            yield return new object[] { "  BYTES  ", SpannerDbType.Bytes };
+            yield return new object[] { "  DATE  ", SpannerDbType.Date };
+            yield return new object[] { "  FLOAT64  ", SpannerDbType.Float64 };
+            yield return new object[] { "  INT64  ", SpannerDbType.Int64 };
+            yield return new object[] { "  TIMESTAMP  ", SpannerDbType.Timestamp };
+
+            yield return new object[] { "STRING(2)", SpannerDbType.String.WithSize(2) };
+            yield return new object[] { "STRING(100)", SpannerDbType.String.WithSize(100) };
+            yield return new object[] { " STRING ( 100  )  ", SpannerDbType.String.WithSize(100) };
+            yield return new object[] { "STRING (  MAX )", SpannerDbType.String };
+            yield return new object[] { "STRING(100)", SpannerDbType.String, false };
+            yield return new object[] { "BYTES(100)", SpannerDbType.Bytes.WithSize(100) };
+            yield return new object[] { "BYTES(100)", SpannerDbType.Bytes, false };
+            yield return new object[] { " BYTES ( 100  )  ", SpannerDbType.Bytes.WithSize(100) };
+
+            //some common array types.
+            yield return new object[] { "ARRAY<STRING>", SpannerDbType.ArrayOf(SpannerDbType.String) };
+            yield return new object[] { "ARRAY<STRING(MAX)>", SpannerDbType.ArrayOf(SpannerDbType.String) };
+            yield return new object[] { "ARRAY<STRING(5)>", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
+            yield return new object[] { "ARRAY<STRING>", SpannerDbType.ArrayOf(SpannerDbType.String) };
+            yield return new object[] { "ARRAY<BOOL>", SpannerDbType.ArrayOf(SpannerDbType.Bool) };
+            yield return new object[] { "ARRAY<BYTES>", SpannerDbType.ArrayOf(SpannerDbType.Bytes) };
+            yield return new object[] { "ARRAY<BYTES(100)>", SpannerDbType.ArrayOf(SpannerDbType.Bytes.WithSize(100)) };
+            yield return new object[] { "ARRAY<DATE>", SpannerDbType.ArrayOf(SpannerDbType.Date) };
+            yield return new object[] { "ARRAY<FLOAT64>", SpannerDbType.ArrayOf(SpannerDbType.Float64) };
+            yield return new object[] { "ARRAY<INT64>", SpannerDbType.ArrayOf(SpannerDbType.Int64) };
+            yield return new object[] { "ARRAY<TIMESTAMP>", SpannerDbType.ArrayOf(SpannerDbType.Timestamp) };
+
+            yield return new object[] { "ARRAY<STRING(5)>", SpannerDbType.ArrayOf(SpannerDbType.String), false };
+            yield return new object[] { "ARRAY<BYTES(5)>", SpannerDbType.ArrayOf(SpannerDbType.Bytes), false };
+
+            yield return new object[] { "ARRAY <  STRING (   5 )>", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
+            yield return new object[] { "ARRAY<  STRING (   5 )  > ", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
+
+            //simple structs
+            yield return new object[] { "STRUCT<F1:STRING,F2:INT64>", SpannerDbType.StructOf(
+                new Dictionary<string, SpannerDbType>
+                {
+                    { "F1", SpannerDbType.String },
+                    { "F2", SpannerDbType.Int64 },
+                }) };
+
+            yield return new object[] { "STRUCT< F1 : STRING , F2  : INT64 >", SpannerDbType.StructOf(
+                new Dictionary<string, SpannerDbType>
+                {
+                    { "F1", SpannerDbType.String },
+                    { "F2", SpannerDbType.Int64 },
+                }) };
+
+            yield return new object[] { "STRUCT<F1:STRING,F2:INT64,F3:BOOL,F4:BYTES,F5:DATE,F6:FLOAT64,F7:TIMESTAMP>",
+                SpannerDbType.StructOf( new Dictionary<string, SpannerDbType>
+                {
+                    { "F1", SpannerDbType.String },
+                    { "F2", SpannerDbType.Int64 },
+                    { "F3", SpannerDbType.Bool },
+                    { "F4", SpannerDbType.Bytes },
+                    { "F5", SpannerDbType.Date },
+                    { "F6", SpannerDbType.Float64 },
+                    { "F7", SpannerDbType.Timestamp },
+                }) };
+
+            yield return new object[] { "STRUCT<F1: STRING(100), F2: BYTES(200)>" ,
+                SpannerDbType.StructOf( new Dictionary<string, SpannerDbType>
+                {
+                    { "F1", SpannerDbType.String.WithSize(100) },
+                    { "F2", SpannerDbType.Bytes.WithSize(200) }
+                }) };
+
+            //struct of struct
+            yield return new object[] { "STRUCT<F1:STRUCT<F2:INT64>>", SpannerDbType.StructOf(
+                new Dictionary<string, SpannerDbType>
+                {
+                    { "F1", SpannerDbType.StructOf(
+                            new Dictionary<string, SpannerDbType>
+                            {
+                                { "F2", SpannerDbType.Int64 },
+                            }
+                        ) },
+                }) };
+
+            //struct of array
+            yield return new object[] { "STRUCT<F1:ARRAY<INT64>>", SpannerDbType.StructOf(
+                new Dictionary<string, SpannerDbType>
+                {
+                    { "F1", SpannerDbType.ArrayOf(SpannerDbType.Int64) }
+                }) };
+
+            //array of struct
+            yield return new object[]
+            {
+                "ARRAY<STRUCT<F1:INT64>>", SpannerDbType.ArrayOf(
+                    SpannerDbType.StructOf(
+                        new Dictionary<string, SpannerDbType>
+                        {
+                            {"F1", SpannerDbType.Int64}
+                        }))
+            };
+        }
+
+        [Theory]
+        [MemberData(nameof(GetSpannerStringConversions))]
+        public void StringConversions(string stringFormat, SpannerDbType spannerType, bool shouldEqual = true)
+        {
+            Assert.True(SpannerDbType.TryParse(stringFormat, out SpannerDbType result));
+            if (shouldEqual)
+            {
+                Assert.Equal(spannerType, result);
+            }
+            else
+            {
+                Assert.NotEqual(spannerType, result);
+            }
+
+            //roundtrip test.
+            Assert.True(SpannerDbType.TryParse(result.ToString(), out SpannerDbType result2));
+            Assert.Equal(result, result2);
+        }
+
     }
 }

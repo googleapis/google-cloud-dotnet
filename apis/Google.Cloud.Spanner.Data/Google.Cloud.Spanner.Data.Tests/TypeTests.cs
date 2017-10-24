@@ -439,7 +439,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 try
                 {
                     string expected = expectedJsonValue;
-                    var jsonValue = ValueConversion.ToValue(clrValue, spannerDbType);
+                    var jsonValue = spannerDbType.ToProtobufValue(clrValue);
                     string actual = jsonValue.ToString();
                     if (expected != actual)
                     {
@@ -483,7 +483,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 {
                     var wireValue = JsonParser.Default.Parse<Value>(inputJson);
                     var targetClrType = expected?.GetType() ?? typeof(object);
-                    var actual = wireValue.ConvertToClrType(spannerDbType.ToProtobufType(), targetClrType);
+                    var actual = spannerDbType.ConvertToClrType(wireValue, targetClrType);
                     Assert.Equal(expected, actual);
                 }
                 catch (Exception e)
@@ -510,7 +510,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var exceptionCaught = false;
             try
             {
-                ValueConversion.ToValue(value, type);
+                type.ToProtobufValue(value);
             }
             catch (Exception e) when (e is OverflowException || e is InvalidCastException || e is FormatException)
             {
