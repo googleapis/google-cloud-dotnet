@@ -15,6 +15,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+#pragma warning disable 1591
 #region Designer generated code
 
 using System;
@@ -39,8 +40,11 @@ namespace Google.Cloud.Dlp.V2Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2Beta1.InspectContentResponse> __Marshaller_InspectContentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2Beta1.InspectContentResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2Beta1.RedactContentRequest> __Marshaller_RedactContentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2Beta1.RedactContentResponse> __Marshaller_RedactContentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2Beta1.RedactContentResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest> __Marshaller_DeidentifyContentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse> __Marshaller_DeidentifyContentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest> __Marshaller_CreateInspectOperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest> __Marshaller_AnalyzeDataSourceRiskRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest> __Marshaller_ListInspectFindingsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2Beta1.ListInspectFindingsResponse> __Marshaller_ListInspectFindingsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2Beta1.ListInspectFindingsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2Beta1.ListInfoTypesRequest> __Marshaller_ListInfoTypesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2Beta1.ListInfoTypesRequest.Parser.ParseFrom);
@@ -62,11 +66,25 @@ namespace Google.Cloud.Dlp.V2Beta1 {
         __Marshaller_RedactContentRequest,
         __Marshaller_RedactContentResponse);
 
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest, global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse> __Method_DeidentifyContent = new grpc::Method<global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest, global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeidentifyContent",
+        __Marshaller_DeidentifyContentRequest,
+        __Marshaller_DeidentifyContentResponse);
+
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest, global::Google.LongRunning.Operation> __Method_CreateInspectOperation = new grpc::Method<global::Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateInspectOperation",
         __Marshaller_CreateInspectOperationRequest,
+        __Marshaller_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest, global::Google.LongRunning.Operation> __Method_AnalyzeDataSourceRisk = new grpc::Method<global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AnalyzeDataSourceRisk",
+        __Marshaller_AnalyzeDataSourceRiskRequest,
         __Marshaller_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest, global::Google.Cloud.Dlp.V2Beta1.ListInspectFindingsResponse> __Method_ListInspectFindings = new grpc::Method<global::Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest, global::Google.Cloud.Dlp.V2Beta1.ListInspectFindingsResponse>(
@@ -124,6 +142,18 @@ namespace Google.Cloud.Dlp.V2Beta1 {
       }
 
       /// <summary>
+      /// De-identifies potentially sensitive info from a list of strings.
+      /// This method has limits on input size and output size.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse> DeidentifyContent(global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Schedules a job scanning content in a Google Cloud Platform data
       /// repository.
       /// </summary>
@@ -131,6 +161,18 @@ namespace Google.Cloud.Dlp.V2Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateInspectOperation(global::Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Schedules a job to compute risk analysis metrics over content in a Google
+      /// Cloud Platform repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AnalyzeDataSourceRisk(global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -290,6 +332,54 @@ namespace Google.Cloud.Dlp.V2Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_RedactContent, null, options, request);
       }
       /// <summary>
+      /// De-identifies potentially sensitive info from a list of strings.
+      /// This method has limits on input size and output size.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse DeidentifyContent(global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return DeidentifyContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// De-identifies potentially sensitive info from a list of strings.
+      /// This method has limits on input size and output size.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse DeidentifyContent(global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeidentifyContent, null, options, request);
+      }
+      /// <summary>
+      /// De-identifies potentially sensitive info from a list of strings.
+      /// This method has limits on input size and output size.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse> DeidentifyContentAsync(global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return DeidentifyContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// De-identifies potentially sensitive info from a list of strings.
+      /// This method has limits on input size and output size.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse> DeidentifyContentAsync(global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeidentifyContent, null, options, request);
+      }
+      /// <summary>
       /// Schedules a job scanning content in a Google Cloud Platform data
       /// repository.
       /// </summary>
@@ -336,6 +426,54 @@ namespace Google.Cloud.Dlp.V2Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInspectOperationAsync(global::Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateInspectOperation, null, options, request);
+      }
+      /// <summary>
+      /// Schedules a job to compute risk analysis metrics over content in a Google
+      /// Cloud Platform repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation AnalyzeDataSourceRisk(global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return AnalyzeDataSourceRisk(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Schedules a job to compute risk analysis metrics over content in a Google
+      /// Cloud Platform repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation AnalyzeDataSourceRisk(global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AnalyzeDataSourceRisk, null, options, request);
+      }
+      /// <summary>
+      /// Schedules a job to compute risk analysis metrics over content in a Google
+      /// Cloud Platform repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnalyzeDataSourceRiskAsync(global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return AnalyzeDataSourceRiskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Schedules a job to compute risk analysis metrics over content in a Google
+      /// Cloud Platform repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnalyzeDataSourceRiskAsync(global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AnalyzeDataSourceRisk, null, options, request);
       }
       /// <summary>
       /// Returns list of results for given inspect operation result set id.
@@ -483,7 +621,9 @@ namespace Google.Cloud.Dlp.V2Beta1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_InspectContent, serviceImpl.InspectContent)
           .AddMethod(__Method_RedactContent, serviceImpl.RedactContent)
+          .AddMethod(__Method_DeidentifyContent, serviceImpl.DeidentifyContent)
           .AddMethod(__Method_CreateInspectOperation, serviceImpl.CreateInspectOperation)
+          .AddMethod(__Method_AnalyzeDataSourceRisk, serviceImpl.AnalyzeDataSourceRisk)
           .AddMethod(__Method_ListInspectFindings, serviceImpl.ListInspectFindings)
           .AddMethod(__Method_ListInfoTypes, serviceImpl.ListInfoTypes)
           .AddMethod(__Method_ListRootCategories, serviceImpl.ListRootCategories).Build();

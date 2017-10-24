@@ -53,6 +53,11 @@ namespace Google.Cloud.Logging.V2
             CreateSinkSettings = existing.CreateSinkSettings;
             UpdateSinkSettings = existing.UpdateSinkSettings;
             DeleteSinkSettings = existing.DeleteSinkSettings;
+            ListExclusionsSettings = existing.ListExclusionsSettings;
+            GetExclusionSettings = existing.GetExclusionSettings;
+            CreateExclusionSettings = existing.CreateExclusionSettings;
+            UpdateExclusionSettings = existing.UpdateExclusionSettings;
+            DeleteExclusionSettings = existing.DeleteExclusionSettings;
             OnCopy(existing);
         }
 
@@ -112,14 +117,54 @@ namespace Google.Cloud.Logging.V2
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="ConfigServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(2000),
-            maxDelay: TimeSpan.FromMilliseconds(30000),
+            delay: TimeSpan.FromMilliseconds(30000),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.5
+        );
+
+        /// <summary>
+        /// "WriteSink" retry backoff for <see cref="ConfigServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "WriteSink" retry backoff for <see cref="ConfigServiceV2Client"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "WriteSink" retry backoff for <see cref="ConfigServiceV2Client"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetWriteSinkRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(1000),
+            delayMultiplier: 1.2
+        );
+
+        /// <summary>
+        /// "WriteSink" timeout backoff for <see cref="ConfigServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "WriteSink" timeout backoff for <see cref="ConfigServiceV2Client"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "WriteSink" timeout backoff for <see cref="ConfigServiceV2Client"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetWriteSinkTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(30000),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.5
         );
 
@@ -134,9 +179,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -144,13 +189,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings ListSinksSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -165,9 +210,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -175,13 +220,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings GetSinkSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -196,21 +241,21 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings CreateSinkSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -225,21 +270,21 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings UpdateSinkSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -254,9 +299,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -264,13 +309,164 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings DeleteSinkSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.ListExclusions</c> and <c>ConfigServiceV2Client.ListExclusionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ConfigServiceV2Client.ListExclusions</c> and
+        /// <c>ConfigServiceV2Client.ListExclusionsAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 90000 milliseconds.
+        /// </remarks>
+        public CallSettings ListExclusionsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.GetExclusion</c> and <c>ConfigServiceV2Client.GetExclusionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ConfigServiceV2Client.GetExclusion</c> and
+        /// <c>ConfigServiceV2Client.GetExclusionAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 90000 milliseconds.
+        /// </remarks>
+        public CallSettings GetExclusionSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.CreateExclusion</c> and <c>ConfigServiceV2Client.CreateExclusionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ConfigServiceV2Client.CreateExclusion</c> and
+        /// <c>ConfigServiceV2Client.CreateExclusionAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 90000 milliseconds.
+        /// </remarks>
+        public CallSettings CreateExclusionSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.UpdateExclusion</c> and <c>ConfigServiceV2Client.UpdateExclusionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ConfigServiceV2Client.UpdateExclusion</c> and
+        /// <c>ConfigServiceV2Client.UpdateExclusionAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 90000 milliseconds.
+        /// </remarks>
+        public CallSettings UpdateExclusionSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.DeleteExclusion</c> and <c>ConfigServiceV2Client.DeleteExclusionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ConfigServiceV2Client.DeleteExclusion</c> and
+        /// <c>ConfigServiceV2Client.DeleteExclusionAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 30000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 90000 milliseconds.
+        /// </remarks>
+        public CallSettings DeleteExclusionSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -772,13 +968,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a sink. If the named sink doesn't exist, then this method is
-        /// identical to
-        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-        /// If the named sink does exist, then this method replaces the following
-        /// fields in the existing sink with values from the new sink: `destination`,
-        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-        /// The updated filter might also have a new `writer_identity`; see the
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, `filter`,
+        /// `output_version_format`, `start_time`, and `end_time`.
+        /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
@@ -794,8 +987,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears
-        /// as part of `sink_name`.  If `sink_name` does not exist, then
-        /// this method creates a new sink.
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -815,13 +1007,10 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates a sink. If the named sink doesn't exist, then this method is
-        /// identical to
-        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-        /// If the named sink does exist, then this method replaces the following
-        /// fields in the existing sink with values from the new sink: `destination`,
-        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-        /// The updated filter might also have a new `writer_identity`; see the
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, `filter`,
+        /// `output_version_format`, `start_time`, and `end_time`.
+        /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
@@ -837,8 +1026,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears
-        /// as part of `sink_name`.  If `sink_name` does not exist, then
-        /// this method creates a new sink.
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -855,13 +1043,10 @@ namespace Google.Cloud.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a sink. If the named sink doesn't exist, then this method is
-        /// identical to
-        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-        /// If the named sink does exist, then this method replaces the following
-        /// fields in the existing sink with values from the new sink: `destination`,
-        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-        /// The updated filter might also have a new `writer_identity`; see the
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, `filter`,
+        /// `output_version_format`, `start_time`, and `end_time`.
+        /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
@@ -877,8 +1062,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears
-        /// as part of `sink_name`.  If `sink_name` does not exist, then
-        /// this method creates a new sink.
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -898,13 +1082,10 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates a sink. If the named sink doesn't exist, then this method is
-        /// identical to
-        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-        /// If the named sink does exist, then this method replaces the following
-        /// fields in the existing sink with values from the new sink: `destination`,
-        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-        /// The updated filter might also have a new `writer_identity`; see the
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, `filter`,
+        /// `output_version_format`, `start_time`, and `end_time`.
+        /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="request">
@@ -924,13 +1105,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a sink. If the named sink doesn't exist, then this method is
-        /// identical to
-        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-        /// If the named sink does exist, then this method replaces the following
-        /// fields in the existing sink with values from the new sink: `destination`,
-        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-        /// The updated filter might also have a new `writer_identity`; see the
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, `filter`,
+        /// `output_version_format`, `start_time`, and `end_time`.
+        /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="request">
@@ -1076,6 +1254,675 @@ namespace Google.Cloud.Logging.V2
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Lists all the exclusions in a parent resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource whose exclusions are to be listed.
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+        ///     "folders/[FOLDER_ID]"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(
+            ParentNameOneof parent,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => ListExclusionsAsync(
+                new ListExclusionsRequest
+                {
+                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all the exclusions in a parent resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource whose exclusions are to be listed.
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+        ///     "folders/[FOLDER_ID]"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="LogExclusion"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(
+            ParentNameOneof parent,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => ListExclusions(
+                new ListExclusionsRequest
+                {
+                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all the exclusions in a parent resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(
+            ListExclusionsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists all the exclusions in a parent resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="LogExclusion"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(
+            ListExclusionsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the description of an exclusion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of an existing exclusion:
+        ///
+        ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+        ///
+        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> GetExclusionAsync(
+            ExclusionNameOneof name,
+            CallSettings callSettings = null) => GetExclusionAsync(
+                new GetExclusionRequest
+                {
+                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the description of an exclusion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of an existing exclusion:
+        ///
+        ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+        ///
+        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> GetExclusionAsync(
+            ExclusionNameOneof name,
+            CancellationToken cancellationToken) => GetExclusionAsync(
+                name,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the description of an exclusion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of an existing exclusion:
+        ///
+        ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+        ///
+        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogExclusion GetExclusion(
+            ExclusionNameOneof name,
+            CallSettings callSettings = null) => GetExclusion(
+                new GetExclusionRequest
+                {
+                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the description of an exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> GetExclusionAsync(
+            GetExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the description of an exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogExclusion GetExclusion(
+            GetExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a new exclusion in a specified parent resource.
+        /// Only log entries belonging to that resource can be excluded.
+        /// You can have up to 10 exclusions in a resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource in which to create the exclusion:
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+        ///     "folders/[FOLDER_ID]"
+        ///
+        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// </param>
+        /// <param name="exclusion">
+        /// Required. The new exclusion, whose `name` parameter is an exclusion name
+        /// that is not already used in the parent resource.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> CreateExclusionAsync(
+            ParentNameOneof parent,
+            LogExclusion exclusion,
+            CallSettings callSettings = null) => CreateExclusionAsync(
+                new CreateExclusionRequest
+                {
+                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Exclusion = GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new exclusion in a specified parent resource.
+        /// Only log entries belonging to that resource can be excluded.
+        /// You can have up to 10 exclusions in a resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource in which to create the exclusion:
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+        ///     "folders/[FOLDER_ID]"
+        ///
+        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// </param>
+        /// <param name="exclusion">
+        /// Required. The new exclusion, whose `name` parameter is an exclusion name
+        /// that is not already used in the parent resource.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> CreateExclusionAsync(
+            ParentNameOneof parent,
+            LogExclusion exclusion,
+            CancellationToken cancellationToken) => CreateExclusionAsync(
+                parent,
+                exclusion,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new exclusion in a specified parent resource.
+        /// Only log entries belonging to that resource can be excluded.
+        /// You can have up to 10 exclusions in a resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource in which to create the exclusion:
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+        ///     "folders/[FOLDER_ID]"
+        ///
+        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+        /// </param>
+        /// <param name="exclusion">
+        /// Required. The new exclusion, whose `name` parameter is an exclusion name
+        /// that is not already used in the parent resource.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogExclusion CreateExclusion(
+            ParentNameOneof parent,
+            LogExclusion exclusion,
+            CallSettings callSettings = null) => CreateExclusion(
+                new CreateExclusionRequest
+                {
+                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Exclusion = GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new exclusion in a specified parent resource.
+        /// Only log entries belonging to that resource can be excluded.
+        /// You can have up to 10 exclusions in a resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> CreateExclusionAsync(
+            CreateExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a new exclusion in a specified parent resource.
+        /// Only log entries belonging to that resource can be excluded.
+        /// You can have up to 10 exclusions in a resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogExclusion CreateExclusion(
+            CreateExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Changes one or more properties of an existing exclusion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the exclusion to update:
+        ///
+        ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+        ///
+        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// </param>
+        /// <param name="exclusion">
+        /// Required. New values for the existing exclusion. Only the fields specified
+        /// in `update_mask` are relevant.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A nonempty list of fields to change in the existing exclusion.
+        /// New values for the fields are taken from the corresponding fields in the
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+        /// `update_mask` are not changed and are ignored in the request.
+        ///
+        /// For example, to change the filter and description of an exclusion,
+        /// specify an `update_mask` of `"filter,description"`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> UpdateExclusionAsync(
+            ExclusionNameOneof name,
+            LogExclusion exclusion,
+            FieldMask updateMask,
+            CallSettings callSettings = null) => UpdateExclusionAsync(
+                new UpdateExclusionRequest
+                {
+                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Exclusion = GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
+                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Changes one or more properties of an existing exclusion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the exclusion to update:
+        ///
+        ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+        ///
+        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// </param>
+        /// <param name="exclusion">
+        /// Required. New values for the existing exclusion. Only the fields specified
+        /// in `update_mask` are relevant.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A nonempty list of fields to change in the existing exclusion.
+        /// New values for the fields are taken from the corresponding fields in the
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+        /// `update_mask` are not changed and are ignored in the request.
+        ///
+        /// For example, to change the filter and description of an exclusion,
+        /// specify an `update_mask` of `"filter,description"`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> UpdateExclusionAsync(
+            ExclusionNameOneof name,
+            LogExclusion exclusion,
+            FieldMask updateMask,
+            CancellationToken cancellationToken) => UpdateExclusionAsync(
+                name,
+                exclusion,
+                updateMask,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Changes one or more properties of an existing exclusion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the exclusion to update:
+        ///
+        ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+        ///
+        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// </param>
+        /// <param name="exclusion">
+        /// Required. New values for the existing exclusion. Only the fields specified
+        /// in `update_mask` are relevant.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A nonempty list of fields to change in the existing exclusion.
+        /// New values for the fields are taken from the corresponding fields in the
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+        /// `update_mask` are not changed and are ignored in the request.
+        ///
+        /// For example, to change the filter and description of an exclusion,
+        /// specify an `update_mask` of `"filter,description"`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogExclusion UpdateExclusion(
+            ExclusionNameOneof name,
+            LogExclusion exclusion,
+            FieldMask updateMask,
+            CallSettings callSettings = null) => UpdateExclusion(
+                new UpdateExclusionRequest
+                {
+                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Exclusion = GaxPreconditions.CheckNotNull(exclusion, nameof(exclusion)),
+                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Changes one or more properties of an existing exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogExclusion> UpdateExclusionAsync(
+            UpdateExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Changes one or more properties of an existing exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogExclusion UpdateExclusion(
+            UpdateExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes an exclusion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of an existing exclusion to delete:
+        ///
+        ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+        ///
+        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteExclusionAsync(
+            ExclusionNameOneof name,
+            CallSettings callSettings = null) => DeleteExclusionAsync(
+                new DeleteExclusionRequest
+                {
+                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an exclusion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of an existing exclusion to delete:
+        ///
+        ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+        ///
+        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteExclusionAsync(
+            ExclusionNameOneof name,
+            CancellationToken cancellationToken) => DeleteExclusionAsync(
+                name,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an exclusion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of an existing exclusion to delete:
+        ///
+        ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+        ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+        ///
+        /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteExclusion(
+            ExclusionNameOneof name,
+            CallSettings callSettings = null) => DeleteExclusion(
+                new DeleteExclusionRequest
+                {
+                    ExclusionNameOneof = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteExclusionAsync(
+            DeleteExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes an exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteExclusion(
+            DeleteExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -1088,6 +1935,11 @@ namespace Google.Cloud.Logging.V2
         private readonly ApiCall<CreateSinkRequest, LogSink> _callCreateSink;
         private readonly ApiCall<UpdateSinkRequest, LogSink> _callUpdateSink;
         private readonly ApiCall<DeleteSinkRequest, Empty> _callDeleteSink;
+        private readonly ApiCall<ListExclusionsRequest, ListExclusionsResponse> _callListExclusions;
+        private readonly ApiCall<GetExclusionRequest, LogExclusion> _callGetExclusion;
+        private readonly ApiCall<CreateExclusionRequest, LogExclusion> _callCreateExclusion;
+        private readonly ApiCall<UpdateExclusionRequest, LogExclusion> _callUpdateExclusion;
+        private readonly ApiCall<DeleteExclusionRequest, Empty> _callDeleteExclusion;
 
         /// <summary>
         /// Constructs a client wrapper for the ConfigServiceV2 service, with the specified gRPC client and settings.
@@ -1109,6 +1961,16 @@ namespace Google.Cloud.Logging.V2
                 GrpcClient.UpdateSinkAsync, GrpcClient.UpdateSink, effectiveSettings.UpdateSinkSettings);
             _callDeleteSink = clientHelper.BuildApiCall<DeleteSinkRequest, Empty>(
                 GrpcClient.DeleteSinkAsync, GrpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings);
+            _callListExclusions = clientHelper.BuildApiCall<ListExclusionsRequest, ListExclusionsResponse>(
+                GrpcClient.ListExclusionsAsync, GrpcClient.ListExclusions, effectiveSettings.ListExclusionsSettings);
+            _callGetExclusion = clientHelper.BuildApiCall<GetExclusionRequest, LogExclusion>(
+                GrpcClient.GetExclusionAsync, GrpcClient.GetExclusion, effectiveSettings.GetExclusionSettings);
+            _callCreateExclusion = clientHelper.BuildApiCall<CreateExclusionRequest, LogExclusion>(
+                GrpcClient.CreateExclusionAsync, GrpcClient.CreateExclusion, effectiveSettings.CreateExclusionSettings);
+            _callUpdateExclusion = clientHelper.BuildApiCall<UpdateExclusionRequest, LogExclusion>(
+                GrpcClient.UpdateExclusionAsync, GrpcClient.UpdateExclusion, effectiveSettings.UpdateExclusionSettings);
+            _callDeleteExclusion = clientHelper.BuildApiCall<DeleteExclusionRequest, Empty>(
+                GrpcClient.DeleteExclusionAsync, GrpcClient.DeleteExclusion, effectiveSettings.DeleteExclusionSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1125,6 +1987,11 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_CreateSinkRequest(ref CreateSinkRequest request, ref CallSettings settings);
         partial void Modify_UpdateSinkRequest(ref UpdateSinkRequest request, ref CallSettings settings);
         partial void Modify_DeleteSinkRequest(ref DeleteSinkRequest request, ref CallSettings settings);
+        partial void Modify_ListExclusionsRequest(ref ListExclusionsRequest request, ref CallSettings settings);
+        partial void Modify_GetExclusionRequest(ref GetExclusionRequest request, ref CallSettings settings);
+        partial void Modify_CreateExclusionRequest(ref CreateExclusionRequest request, ref CallSettings settings);
+        partial void Modify_UpdateExclusionRequest(ref UpdateExclusionRequest request, ref CallSettings settings);
+        partial void Modify_DeleteExclusionRequest(ref DeleteExclusionRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Lists sinks.
@@ -1255,13 +2122,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a sink. If the named sink doesn't exist, then this method is
-        /// identical to
-        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-        /// If the named sink does exist, then this method replaces the following
-        /// fields in the existing sink with values from the new sink: `destination`,
-        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-        /// The updated filter might also have a new `writer_identity`; see the
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, `filter`,
+        /// `output_version_format`, `start_time`, and `end_time`.
+        /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="request">
@@ -1282,13 +2146,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a sink. If the named sink doesn't exist, then this method is
-        /// identical to
-        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-        /// If the named sink does exist, then this method replaces the following
-        /// fields in the existing sink with values from the new sink: `destination`,
-        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-        /// The updated filter might also have a new `writer_identity`; see the
+        /// Updates a sink.  This method replaces the following fields in the existing
+        /// sink with values from the new sink: `destination`, `filter`,
+        /// `output_version_format`, `start_time`, and `end_time`.
+        /// The updated sink might also have a new `writer_identity`; see the
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="request">
@@ -1350,6 +2211,210 @@ namespace Google.Cloud.Logging.V2
             _callDeleteSink.Sync(request, callSettings);
         }
 
+        /// <summary>
+        /// Lists all the exclusions in a parent resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.
+        /// </returns>
+        public override PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(
+            ListExclusionsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListExclusionsRequest(ref request, ref callSettings);
+            return new GrpcPagedAsyncEnumerable<ListExclusionsRequest, ListExclusionsResponse, LogExclusion>(_callListExclusions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the exclusions in a parent resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="LogExclusion"/> resources.
+        /// </returns>
+        public override PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(
+            ListExclusionsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListExclusionsRequest(ref request, ref callSettings);
+            return new GrpcPagedEnumerable<ListExclusionsRequest, ListExclusionsResponse, LogExclusion>(_callListExclusions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the description of an exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<LogExclusion> GetExclusionAsync(
+            GetExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GetExclusionRequest(ref request, ref callSettings);
+            return _callGetExclusion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the description of an exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override LogExclusion GetExclusion(
+            GetExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GetExclusionRequest(ref request, ref callSettings);
+            return _callGetExclusion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new exclusion in a specified parent resource.
+        /// Only log entries belonging to that resource can be excluded.
+        /// You can have up to 10 exclusions in a resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<LogExclusion> CreateExclusionAsync(
+            CreateExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_CreateExclusionRequest(ref request, ref callSettings);
+            return _callCreateExclusion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new exclusion in a specified parent resource.
+        /// Only log entries belonging to that resource can be excluded.
+        /// You can have up to 10 exclusions in a resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override LogExclusion CreateExclusion(
+            CreateExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_CreateExclusionRequest(ref request, ref callSettings);
+            return _callCreateExclusion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Changes one or more properties of an existing exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<LogExclusion> UpdateExclusionAsync(
+            UpdateExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_UpdateExclusionRequest(ref request, ref callSettings);
+            return _callUpdateExclusion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Changes one or more properties of an existing exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override LogExclusion UpdateExclusion(
+            UpdateExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_UpdateExclusionRequest(ref request, ref callSettings);
+            return _callUpdateExclusion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task DeleteExclusionAsync(
+            DeleteExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_DeleteExclusionRequest(ref request, ref callSettings);
+            return _callDeleteExclusion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an exclusion.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override void DeleteExclusion(
+            DeleteExclusionRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_DeleteExclusionRequest(ref request, ref callSettings);
+            _callDeleteExclusion.Sync(request, callSettings);
+        }
+
     }
 
     // Partial classes to enable page-streaming
@@ -1361,6 +2426,18 @@ namespace Google.Cloud.Logging.V2
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
         public IEnumerator<LogSink> GetEnumerator() => Sinks.GetEnumerator();
+
+        /// <inheritdoc/>
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListExclusionsRequest : IPageRequest { }
+    public partial class ListExclusionsResponse : IPageResponse<LogExclusion>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public IEnumerator<LogExclusion> GetEnumerator() => Exclusions.GetEnumerator();
 
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

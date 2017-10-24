@@ -112,14 +112,14 @@ namespace Google.Cloud.Logging.V2
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="MetricsServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(2000),
-            maxDelay: TimeSpan.FromMilliseconds(30000),
+            delay: TimeSpan.FromMilliseconds(20000),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.5
         );
 
@@ -134,9 +134,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -144,13 +144,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings ListLogMetricsSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -165,9 +165,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -175,13 +175,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings GetLogMetricSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -196,21 +196,21 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings CreateLogMetricSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -225,21 +225,21 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings UpdateLogMetricSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -254,9 +254,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -264,13 +264,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings DeleteLogMetricSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 

@@ -335,21 +335,27 @@ namespace Google.Cloud.Logging.V2 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Logging.V2.LogEntry.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogEntry> entries_ = new pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogEntry>();
     /// <summary>
-    /// Required.  The log entries to write. Values supplied for the fields
-    /// `log_name`, `resource`, and `labels` in this `entries.write` request are
-    /// inserted into those log entries in this list that do not provide their own
-    /// values.
+    /// Required. The log entries to send to Stackdriver Logging. The order of log
+    /// entries in this list does not matter. Values supplied in this method's
+    /// `log_name`, `resource`, and `labels` fields are copied into those log
+    /// entries in this list that do not include values for their corresponding
+    /// fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
     ///
-    /// Stackdriver Logging also creates and inserts values for `timestamp` and
-    /// `insert_id` if the entries do not provide them. The created `insert_id` for
-    /// the N'th entry in this list will be greater than earlier entries and less
-    /// than later entries.  Otherwise, the order of log entries in this list does
-    /// not matter.
+    /// If the `timestamp` or `insert_id` fields are missing in log entries, then
+    /// this method supplies the current time or a unique identifier, respectively.
+    /// The supplied values are chosen so that, among the log entries that did not
+    /// supply their own values, the entries earlier in the list will sort before
+    /// the entries later in the list. See the `entries.list` method.
+    ///
+    /// Log entries with timestamps that are more than the
+    /// [logs retention period](/logging/quota-policy) in the past or more than
+    /// 24 hours in the future might be discarded. Discarding does not return
+    /// an error.
     ///
     /// To improve throughput and to avoid exceeding the
     /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
-    /// you should write multiple log entries at once rather than
-    /// calling this method for each individual log entry.
+    /// you should try to include several log entries in this list,
+    /// rather than calling this method for each individual log entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogEntry> Entries {
@@ -1049,7 +1055,9 @@ namespace Google.Cloud.Logging.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Logging.V2.LogEntry.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogEntry> entries_ = new pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogEntry>();
     /// <summary>
-    /// A list of log entries.
+    /// A list of log entries.  If `entries` is empty, `nextPageToken` may still be
+    /// returned, indicating that more entries may exist.  See `nextPageToken` for
+    /// more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogEntry> Entries {
