@@ -24,45 +24,75 @@ namespace Google.Cloud.Logging.V2 {
           string.Concat(
             "CiZnb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nX2NvbmZpZy5wcm90bxIRZ29v",
             "Z2xlLmxvZ2dpbmcudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
-            "G2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90byLXAgoHTG9nU2luaxIMCgRuYW1lGAEgASgJEhMK",
-            "C2Rlc3RpbmF0aW9uGAMgASgJEg4KBmZpbHRlchgFIAEoCRJHChVvdXRwdXRf",
-            "dmVyc2lvbl9mb3JtYXQYBiABKA4yKC5nb29nbGUubG9nZ2luZy52Mi5Mb2dT",
-            "aW5rLlZlcnNpb25Gb3JtYXQSFwoPd3JpdGVyX2lkZW50aXR5GAggASgJEhgK",
-            "EGluY2x1ZGVfY2hpbGRyZW4YCSABKAgSLgoKc3RhcnRfdGltZRgKIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYCyABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIj8KDVZlcnNpb25Gb3JtYXQS",
-            "HgoaVkVSU0lPTl9GT1JNQVRfVU5TUEVDSUZJRUQQABIGCgJWMhABEgYKAlYx",
-            "EAIiSQoQTGlzdFNpbmtzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEgoKcGFn",
-            "ZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiVwoRTGlzdFNpbmtz",
-            "UmVzcG9uc2USKQoFc2lua3MYASADKAsyGi5nb29nbGUubG9nZ2luZy52Mi5M",
-            "b2dTaW5rEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIjCg5HZXRTaW5rUmVx",
-            "dWVzdBIRCglzaW5rX25hbWUYASABKAkibQoRQ3JlYXRlU2lua1JlcXVlc3QS",
-            "DgoGcGFyZW50GAEgASgJEigKBHNpbmsYAiABKAsyGi5nb29nbGUubG9nZ2lu",
-            "Zy52Mi5Mb2dTaW5rEh4KFnVuaXF1ZV93cml0ZXJfaWRlbnRpdHkYAyABKAgi",
-            "cAoRVXBkYXRlU2lua1JlcXVlc3QSEQoJc2lua19uYW1lGAEgASgJEigKBHNp",
-            "bmsYAiABKAsyGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rEh4KFnVuaXF1",
-            "ZV93cml0ZXJfaWRlbnRpdHkYAyABKAgiJgoRRGVsZXRlU2lua1JlcXVlc3QS",
-            "EQoJc2lua19uYW1lGAEgASgJMv4ECg9Db25maWdTZXJ2aWNlVjISfQoJTGlz",
-            "dFNpbmtzEiMuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdFNpbmtzUmVxdWVzdBok",
-            "Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RTaW5rc1Jlc3BvbnNlIiWC0+STAh8S",
-            "HS92Mi97cGFyZW50PXByb2plY3RzLyp9L3NpbmtzEnQKB0dldFNpbmsSIS5n",
-            "b29nbGUubG9nZ2luZy52Mi5HZXRTaW5rUmVxdWVzdBoaLmdvb2dsZS5sb2dn",
-            "aW5nLnYyLkxvZ1NpbmsiKoLT5JMCJBIiL3YyL3tzaW5rX25hbWU9cHJvamVj",
-            "dHMvKi9zaW5rcy8qfRJ7CgpDcmVhdGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcu",
-            "djIuQ3JlYXRlU2lua1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dT",
-            "aW5rIiuC0+STAiUiHS92Mi97cGFyZW50PXByb2plY3RzLyp9L3NpbmtzOgRz",
-            "aW5rEoABCgpVcGRhdGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuVXBkYXRl",
-            "U2lua1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIjCC0+ST",
-            "AioaIi92Mi97c2lua19uYW1lPXByb2plY3RzLyovc2lua3MvKn06BHNpbmsS",
-            "dgoKRGVsZXRlU2luaxIkLmdvb2dsZS5sb2dnaW5nLnYyLkRlbGV0ZVNpbmtS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiqC0+STAiQqIi92Mi97",
-            "c2lua19uYW1lPXByb2plY3RzLyovc2lua3MvKn1CgQEKFWNvbS5nb29nbGUu",
-            "bG9nZ2luZy52MkISTG9nZ2luZ0NvbmZpZ1Byb3RvUAFaOGdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbG9nZ2luZy92Mjtsb2dnaW5n",
-            "qgIXR29vZ2xlLkNsb3VkLkxvZ2dpbmcuVjJiBnByb3RvMw=="));
+            "G2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
+            "L2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
+            "cHJvdG8i1wIKB0xvZ1NpbmsSDAoEbmFtZRgBIAEoCRITCgtkZXN0aW5hdGlv",
+            "bhgDIAEoCRIOCgZmaWx0ZXIYBSABKAkSRwoVb3V0cHV0X3ZlcnNpb25fZm9y",
+            "bWF0GAYgASgOMiguZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luay5WZXJzaW9u",
+            "Rm9ybWF0EhcKD3dyaXRlcl9pZGVudGl0eRgIIAEoCRIYChBpbmNsdWRlX2No",
+            "aWxkcmVuGAkgASgIEi4KCnN0YXJ0X3RpbWUYCiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAsgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcCI/Cg1WZXJzaW9uRm9ybWF0Eh4KGlZFUlNJT05f",
+            "Rk9STUFUX1VOU1BFQ0lGSUVEEAASBgoCVjIQARIGCgJWMRACIkkKEExpc3RT",
+            "aW5rc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhIKCnBhZ2VfdG9rZW4YAiAB",
+            "KAkSEQoJcGFnZV9zaXplGAMgASgFIlcKEUxpc3RTaW5rc1Jlc3BvbnNlEikK",
+            "BXNpbmtzGAEgAygLMhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luaxIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiIwoOR2V0U2lua1JlcXVlc3QSEQoJc2lu",
+            "a19uYW1lGAEgASgJIm0KEUNyZWF0ZVNpbmtSZXF1ZXN0Eg4KBnBhcmVudBgB",
+            "IAEoCRIoCgRzaW5rGAIgASgLMhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2lu",
+            "axIeChZ1bmlxdWVfd3JpdGVyX2lkZW50aXR5GAMgASgIInAKEVVwZGF0ZVNp",
+            "bmtSZXF1ZXN0EhEKCXNpbmtfbmFtZRgBIAEoCRIoCgRzaW5rGAIgASgLMhou",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luaxIeChZ1bmlxdWVfd3JpdGVyX2lk",
+            "ZW50aXR5GAMgASgIIiYKEURlbGV0ZVNpbmtSZXF1ZXN0EhEKCXNpbmtfbmFt",
+            "ZRgBIAEoCSJTCgxMb2dFeGNsdXNpb24SDAoEbmFtZRgBIAEoCRITCgtkZXNj",
+            "cmlwdGlvbhgCIAEoCRIOCgZmaWx0ZXIYAyABKAkSEAoIZGlzYWJsZWQYBCAB",
+            "KAgiTgoVTGlzdEV4Y2x1c2lvbnNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIS",
+            "CgpwYWdlX3Rva2VuGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBSJmChZMaXN0",
+            "RXhjbHVzaW9uc1Jlc3BvbnNlEjMKCmV4Y2x1c2lvbnMYASADKAsyHy5nb29n",
+            "bGUubG9nZ2luZy52Mi5Mb2dFeGNsdXNpb24SFwoPbmV4dF9wYWdlX3Rva2Vu",
+            "GAIgASgJIiMKE0dldEV4Y2x1c2lvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSJc",
+            "ChZDcmVhdGVFeGNsdXNpb25SZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIyCgll",
+            "eGNsdXNpb24YAiABKAsyHy5nb29nbGUubG9nZ2luZy52Mi5Mb2dFeGNsdXNp",
+            "b24iiwEKFlVwZGF0ZUV4Y2x1c2lvblJlcXVlc3QSDAoEbmFtZRgBIAEoCRIy",
+            "CglleGNsdXNpb24YAiABKAsyHy5nb29nbGUubG9nZ2luZy52Mi5Mb2dFeGNs",
+            "dXNpb24SLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "RmllbGRNYXNrIiYKFkRlbGV0ZUV4Y2x1c2lvblJlcXVlc3QSDAoEbmFtZRgB",
+            "IAEoCTLJCgoPQ29uZmlnU2VydmljZVYyEn0KCUxpc3RTaW5rcxIjLmdvb2ds",
+            "ZS5sb2dnaW5nLnYyLkxpc3RTaW5rc1JlcXVlc3QaJC5nb29nbGUubG9nZ2lu",
+            "Zy52Mi5MaXN0U2lua3NSZXNwb25zZSIlgtPkkwIfEh0vdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9zaW5rcxJ0CgdHZXRTaW5rEiEuZ29vZ2xlLmxvZ2dpbmcu",
+            "djIuR2V0U2lua1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5r",
+            "IiqC0+STAiQSIi92Mi97c2lua19uYW1lPXByb2plY3RzLyovc2lua3MvKn0S",
+            "ewoKQ3JlYXRlU2luaxIkLmdvb2dsZS5sb2dnaW5nLnYyLkNyZWF0ZVNpbmtS",
+            "ZXF1ZXN0GhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luayIrgtPkkwIlIh0v",
+            "djIve3BhcmVudD1wcm9qZWN0cy8qfS9zaW5rczoEc2luaxKAAQoKVXBkYXRl",
+            "U2luaxIkLmdvb2dsZS5sb2dnaW5nLnYyLlVwZGF0ZVNpbmtSZXF1ZXN0Ghou",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luayIwgtPkkwIqGiIvdjIve3Npbmtf",
+            "bmFtZT1wcm9qZWN0cy8qL3NpbmtzLyp9OgRzaW5rEnYKCkRlbGV0ZVNpbmsS",
+            "JC5nb29nbGUubG9nZ2luZy52Mi5EZWxldGVTaW5rUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSIqgtPkkwIkKiIvdjIve3NpbmtfbmFtZT1wcm9q",
+            "ZWN0cy8qL3NpbmtzLyp9EpEBCg5MaXN0RXhjbHVzaW9ucxIoLmdvb2dsZS5s",
+            "b2dnaW5nLnYyLkxpc3RFeGNsdXNpb25zUmVxdWVzdBopLmdvb2dsZS5sb2dn",
+            "aW5nLnYyLkxpc3RFeGNsdXNpb25zUmVzcG9uc2UiKoLT5JMCJBIiL3YyL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKn0vZXhjbHVzaW9ucxKDAQoMR2V0RXhjbHVzaW9u",
+            "EiYuZ29vZ2xlLmxvZ2dpbmcudjIuR2V0RXhjbHVzaW9uUmVxdWVzdBofLmdv",
+            "b2dsZS5sb2dnaW5nLnYyLkxvZ0V4Y2x1c2lvbiIqgtPkkwIkEiIvdjIve25h",
+            "bWU9cHJvamVjdHMvKi9leGNsdXNpb25zLyp9EpQBCg9DcmVhdGVFeGNsdXNp",
+            "b24SKS5nb29nbGUubG9nZ2luZy52Mi5DcmVhdGVFeGNsdXNpb25SZXF1ZXN0",
+            "Gh8uZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRXhjbHVzaW9uIjWC0+STAi8iIi92",
+            "Mi97cGFyZW50PXByb2plY3RzLyp9L2V4Y2x1c2lvbnM6CWV4Y2x1c2lvbhKU",
+            "AQoPVXBkYXRlRXhjbHVzaW9uEikuZ29vZ2xlLmxvZ2dpbmcudjIuVXBkYXRl",
+            "RXhjbHVzaW9uUmVxdWVzdBofLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0V4Y2x1",
+            "c2lvbiI1gtPkkwIvMiIvdjIve25hbWU9cHJvamVjdHMvKi9leGNsdXNpb25z",
+            "Lyp9OglleGNsdXNpb24SgAEKD0RlbGV0ZUV4Y2x1c2lvbhIpLmdvb2dsZS5s",
+            "b2dnaW5nLnYyLkRlbGV0ZUV4Y2x1c2lvblJlcXVlc3QaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiKoLT5JMCJCoiL3YyL3tuYW1lPXByb2plY3RzLyovZXhj",
+            "bHVzaW9ucy8qfUKEAQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQhJMb2dnaW5n",
+            "Q29uZmlnUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29nbGUuQ2xvdWQu",
+            "TG9nZ2luZy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogSink), global::Google.Cloud.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat", "WriterIdentity", "IncludeChildren", "StartTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksRequest), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
@@ -70,7 +100,14 @@ namespace Google.Cloud.Logging.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetSinkRequest), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateSinkRequest), global::Google.Cloud.Logging.V2.CreateSinkRequest.Parser, new[]{ "Parent", "Sink", "UniqueWriterIdentity" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateSinkRequest), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink", "UniqueWriterIdentity" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteSinkRequest), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteSinkRequest), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogExclusion), global::Google.Cloud.Logging.V2.LogExclusion.Parser, new[]{ "Name", "Description", "Filter", "Disabled" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsRequest), global::Google.Cloud.Logging.V2.ListExclusionsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListExclusionsResponse), global::Google.Cloud.Logging.V2.ListExclusionsResponse.Parser, new[]{ "Exclusions", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetExclusionRequest), global::Google.Cloud.Logging.V2.GetExclusionRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.CreateExclusionRequest), global::Google.Cloud.Logging.V2.CreateExclusionRequest.Parser, new[]{ "Parent", "Exclusion" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.UpdateExclusionRequest), global::Google.Cloud.Logging.V2.UpdateExclusionRequest.Parser, new[]{ "Name", "Exclusion", "UpdateMask" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.DeleteExclusionRequest), global::Google.Cloud.Logging.V2.DeleteExclusionRequest.Parser, new[]{ "Name" }, null, null, null)
           }));
     }
     #endregion
@@ -188,11 +225,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int OutputVersionFormatFieldNumber = 6;
     private global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = 0;
     /// <summary>
-    /// Optional. The log entry format to use for this sink's exported log
-    /// entries.  The v2 format is used by default.
-    /// **The v1 format is deprecated** and should be used only as part of a
-    /// migration effort to v2.
-    /// See [Migration to the v2 API](/logging/docs/api/v2/migration-to-v2).
+    /// Deprecated. The log entry format to use for this sink's exported log
+    /// entries.  The v2 format is used by default and cannot be changed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat OutputVersionFormat {
@@ -1261,8 +1295,7 @@ namespace Google.Cloud.Logging.V2 {
     private global::Google.Cloud.Logging.V2.LogSink sink_;
     /// <summary>
     /// Required. The updated sink, whose name is the same identifier that appears
-    /// as part of `sink_name`.  If `sink_name` does not exist, then
-    /// this method creates a new sink.
+    /// as part of `sink_name`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogSink Sink {
@@ -1286,7 +1319,8 @@ namespace Google.Cloud.Logging.V2 {
     ///     then there is no change to the sink's `writer_identity`.
     /// +   If the old value is false and the new value is true, then
     ///     `writer_identity` is changed to a unique service account.
-    /// +   It is an error if the old value is true and the new value is false.
+    /// +   It is an error if the old value is true and the new value is
+    ///     set to false or defaulted to false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool UniqueWriterIdentity {
@@ -1531,6 +1565,1222 @@ namespace Google.Cloud.Logging.V2 {
             break;
           case 10: {
             SinkName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Specifies a set of log entries that are not to be stored in Stackdriver
+  /// Logging. If your project receives a large volume of logs, you might be able
+  /// to use exclusions to reduce your chargeable logs. Exclusions are processed
+  /// after log sinks, so you can export log entries before they are excluded.
+  /// Audit log entries and log entries from Amazon Web Services are never
+  /// excluded.
+  /// </summary>
+  public sealed partial class LogExclusion : pb::IMessage<LogExclusion> {
+    private static readonly pb::MessageParser<LogExclusion> _parser = new pb::MessageParser<LogExclusion>(() => new LogExclusion());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<LogExclusion> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LogExclusion() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LogExclusion(LogExclusion other) : this() {
+      name_ = other.name_;
+      description_ = other.description_;
+      filter_ = other.filter_;
+      disabled_ = other.disabled_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LogExclusion Clone() {
+      return new LogExclusion(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. A client-assigned identifier, such as
+    /// `"load-balancer-exclusion"`. Identifiers are limited to 100 characters and
+    /// can include only letters, digits, underscores, hyphens, and periods.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    /// <summary>
+    /// Optional. A description of this exclusion.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 3;
+    private string filter_ = "";
+    /// <summary>
+    /// Required.
+    /// An [advanced logs filter](/logging/docs/view/advanced_filters)
+    /// that matches the log entries to be excluded. By using the
+    /// [sample function](/logging/docs/view/advanced_filters#sample),
+    /// you can exclude less than 100% of the matching log entries.
+    /// For example, the following filter matches 99% of low-severity log
+    /// entries from load balancers:
+    ///
+    ///     "resource.type=http_load_balancer severity&lt;ERROR sample(insertId, 0.99)"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "disabled" field.</summary>
+    public const int DisabledFieldNumber = 4;
+    private bool disabled_;
+    /// <summary>
+    /// Optional. If set to True, then this exclusion is disabled and it does not
+    /// exclude any log entries. You can use
+    /// [exclusions.patch](/logging/docs/alpha-exclusion/docs/reference/v2/rest/v2/projects.exclusions/patch)
+    /// to change the value of this field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Disabled {
+      get { return disabled_; }
+      set {
+        disabled_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as LogExclusion);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(LogExclusion other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Description != other.Description) return false;
+      if (Filter != other.Filter) return false;
+      if (Disabled != other.Disabled) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (Disabled != false) hash ^= Disabled.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filter);
+      }
+      if (Disabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Disabled);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (Disabled != false) {
+        size += 1 + 1;
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(LogExclusion other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.Disabled != false) {
+        Disabled = other.Disabled;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 32: {
+            Disabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The parameters to `ListExclusions`.
+  /// </summary>
+  public sealed partial class ListExclusionsRequest : pb::IMessage<ListExclusionsRequest> {
+    private static readonly pb::MessageParser<ListExclusionsRequest> _parser = new pb::MessageParser<ListExclusionsRequest>(() => new ListExclusionsRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListExclusionsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListExclusionsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListExclusionsRequest(ListExclusionsRequest other) : this() {
+      parent_ = other.parent_;
+      pageToken_ = other.pageToken_;
+      pageSize_ = other.pageSize_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListExclusionsRequest Clone() {
+      return new ListExclusionsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource whose exclusions are to be listed.
+    ///
+    ///     "projects/[PROJECT_ID]"
+    ///     "organizations/[ORGANIZATION_ID]"
+    ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+    ///     "folders/[FOLDER_ID]"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 2;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. If present, then retrieve the next batch of results from the
+    /// preceding call to this method.  `pageToken` must be the value of
+    /// `nextPageToken` from the previous response.  The values of other method
+    /// parameters should be identical to those in the previous call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of results to return from this request.
+    /// Non-positive values are ignored.  The presence of `nextPageToken` in the
+    /// response indicates that more results might be available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListExclusionsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListExclusionsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageToken != other.PageToken) return false;
+      if (PageSize != other.PageSize) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PageToken);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListExclusionsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Result returned from `ListExclusions`.
+  /// </summary>
+  public sealed partial class ListExclusionsResponse : pb::IMessage<ListExclusionsResponse> {
+    private static readonly pb::MessageParser<ListExclusionsResponse> _parser = new pb::MessageParser<ListExclusionsResponse>(() => new ListExclusionsResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListExclusionsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListExclusionsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListExclusionsResponse(ListExclusionsResponse other) : this() {
+      exclusions_ = other.exclusions_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListExclusionsResponse Clone() {
+      return new ListExclusionsResponse(this);
+    }
+
+    /// <summary>Field number for the "exclusions" field.</summary>
+    public const int ExclusionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Logging.V2.LogExclusion> _repeated_exclusions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Logging.V2.LogExclusion.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogExclusion> exclusions_ = new pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogExclusion>();
+    /// <summary>
+    /// A list of exclusions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogExclusion> Exclusions {
+      get { return exclusions_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// If there might be more results than appear in this response, then
+    /// `nextPageToken` is included.  To get the next set of results, call the same
+    /// method again using the value of `nextPageToken` as `pageToken`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListExclusionsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListExclusionsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!exclusions_.Equals(other.exclusions_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= exclusions_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      exclusions_.WriteTo(output, _repeated_exclusions_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += exclusions_.CalculateSize(_repeated_exclusions_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListExclusionsResponse other) {
+      if (other == null) {
+        return;
+      }
+      exclusions_.Add(other.exclusions_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            exclusions_.AddEntriesFrom(input, _repeated_exclusions_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The parameters to `GetExclusion`.
+  /// </summary>
+  public sealed partial class GetExclusionRequest : pb::IMessage<GetExclusionRequest> {
+    private static readonly pb::MessageParser<GetExclusionRequest> _parser = new pb::MessageParser<GetExclusionRequest>(() => new GetExclusionRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetExclusionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetExclusionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetExclusionRequest(GetExclusionRequest other) : this() {
+      name_ = other.name_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetExclusionRequest Clone() {
+      return new GetExclusionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of an existing exclusion:
+    ///
+    ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+    ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+    ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+    ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+    ///
+    /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetExclusionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetExclusionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetExclusionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The parameters to `CreateExclusion`.
+  /// </summary>
+  public sealed partial class CreateExclusionRequest : pb::IMessage<CreateExclusionRequest> {
+    private static readonly pb::MessageParser<CreateExclusionRequest> _parser = new pb::MessageParser<CreateExclusionRequest>(() => new CreateExclusionRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateExclusionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateExclusionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateExclusionRequest(CreateExclusionRequest other) : this() {
+      parent_ = other.parent_;
+      Exclusion = other.exclusion_ != null ? other.Exclusion.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateExclusionRequest Clone() {
+      return new CreateExclusionRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource in which to create the exclusion:
+    ///
+    ///     "projects/[PROJECT_ID]"
+    ///     "organizations/[ORGANIZATION_ID]"
+    ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+    ///     "folders/[FOLDER_ID]"
+    ///
+    /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "exclusion" field.</summary>
+    public const int ExclusionFieldNumber = 2;
+    private global::Google.Cloud.Logging.V2.LogExclusion exclusion_;
+    /// <summary>
+    /// Required. The new exclusion, whose `name` parameter is an exclusion name
+    /// that is not already used in the parent resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Logging.V2.LogExclusion Exclusion {
+      get { return exclusion_; }
+      set {
+        exclusion_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateExclusionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateExclusionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(Exclusion, other.Exclusion)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (exclusion_ != null) hash ^= Exclusion.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (exclusion_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Exclusion);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (exclusion_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Exclusion);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateExclusionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.exclusion_ != null) {
+        if (exclusion_ == null) {
+          exclusion_ = new global::Google.Cloud.Logging.V2.LogExclusion();
+        }
+        Exclusion.MergeFrom(other.Exclusion);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (exclusion_ == null) {
+              exclusion_ = new global::Google.Cloud.Logging.V2.LogExclusion();
+            }
+            input.ReadMessage(exclusion_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The parameters to `UpdateExclusion`.
+  /// </summary>
+  public sealed partial class UpdateExclusionRequest : pb::IMessage<UpdateExclusionRequest> {
+    private static readonly pb::MessageParser<UpdateExclusionRequest> _parser = new pb::MessageParser<UpdateExclusionRequest>(() => new UpdateExclusionRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateExclusionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateExclusionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateExclusionRequest(UpdateExclusionRequest other) : this() {
+      name_ = other.name_;
+      Exclusion = other.exclusion_ != null ? other.Exclusion.Clone() : null;
+      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateExclusionRequest Clone() {
+      return new UpdateExclusionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the exclusion to update:
+    ///
+    ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+    ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+    ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+    ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+    ///
+    /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "exclusion" field.</summary>
+    public const int ExclusionFieldNumber = 2;
+    private global::Google.Cloud.Logging.V2.LogExclusion exclusion_;
+    /// <summary>
+    /// Required. New values for the existing exclusion. Only the fields specified
+    /// in `update_mask` are relevant.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Logging.V2.LogExclusion Exclusion {
+      get { return exclusion_; }
+      set {
+        exclusion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Required. A nonempty list of fields to change in the existing exclusion.
+    /// New values for the fields are taken from the corresponding fields in the
+    /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+    /// `update_mask` are not changed and are ignored in the request.
+    ///
+    /// For example, to change the filter and description of an exclusion,
+    /// specify an `update_mask` of `"filter,description"`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateExclusionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateExclusionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(Exclusion, other.Exclusion)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (exclusion_ != null) hash ^= Exclusion.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (exclusion_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Exclusion);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateMask);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (exclusion_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Exclusion);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateExclusionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.exclusion_ != null) {
+        if (exclusion_ == null) {
+          exclusion_ = new global::Google.Cloud.Logging.V2.LogExclusion();
+        }
+        Exclusion.MergeFrom(other.Exclusion);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (exclusion_ == null) {
+              exclusion_ = new global::Google.Cloud.Logging.V2.LogExclusion();
+            }
+            input.ReadMessage(exclusion_);
+            break;
+          }
+          case 26: {
+            if (updateMask_ == null) {
+              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(updateMask_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The parameters to `DeleteExclusion`.
+  /// </summary>
+  public sealed partial class DeleteExclusionRequest : pb::IMessage<DeleteExclusionRequest> {
+    private static readonly pb::MessageParser<DeleteExclusionRequest> _parser = new pb::MessageParser<DeleteExclusionRequest>(() => new DeleteExclusionRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteExclusionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteExclusionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteExclusionRequest(DeleteExclusionRequest other) : this() {
+      name_ = other.name_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteExclusionRequest Clone() {
+      return new DeleteExclusionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of an existing exclusion to delete:
+    ///
+    ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
+    ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
+    ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
+    ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
+    ///
+    /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteExclusionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteExclusionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteExclusionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
             break;
           }
         }

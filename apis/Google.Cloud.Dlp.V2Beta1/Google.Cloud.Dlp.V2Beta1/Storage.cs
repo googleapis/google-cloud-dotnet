@@ -60,10 +60,12 @@ namespace Google.Cloud.Dlp.V2Beta1 {
             "ZXlIABJBCg1kYXRhc3RvcmVfa2V5GAIgASgLMiguZ29vZ2xlLnByaXZhY3ku",
             "ZGxwLnYyYmV0YTEuRGF0YXN0b3JlS2V5SABCBgoEdHlwZSJJCg1CaWdRdWVy",
             "eVRhYmxlEhIKCnByb2plY3RfaWQYASABKAkSEgoKZGF0YXNldF9pZBgCIAEo",
-            "CRIQCgh0YWJsZV9pZBgDIAEoCUKIAQoeY29tLmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52MmJldGExQgpEbHBTdG9yYWdlUAFaPWdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvcHJpdmFjeS9kbHAvdjJiZXRhMTtkbHCqAhhH",
-            "b29nbGUuQ2xvdWQuRGxwLlYyQmV0YTFiBnByb3RvMw=="));
+            "CRIQCgh0YWJsZV9pZBgDIAEoCSI+CghFbnRpdHlJZBIyCgVmaWVsZBgBIAEo",
+            "CzIjLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkZpZWxkSWRCiAEKHmNv",
+            "bS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMUIKRGxwU3RvcmFnZVABWj1n",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL3ByaXZhY3kv",
+            "ZGxwL3YyYmV0YTE7ZGxwqgIYR29vZ2xlLkNsb3VkLkRscC5WMkJldGExYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,7 +84,8 @@ namespace Google.Cloud.Dlp.V2Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.DatastoreKey), global::Google.Cloud.Dlp.V2Beta1.DatastoreKey.Parser, new[]{ "EntityKey" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.Key), global::Google.Cloud.Dlp.V2Beta1.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.Key.Types.PathElement), global::Google.Cloud.Dlp.V2Beta1.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RecordKey), global::Google.Cloud.Dlp.V2Beta1.RecordKey.Parser, new[]{ "CloudStorageKey", "DatastoreKey" }, new[]{ "Type" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.BigQueryTable), global::Google.Cloud.Dlp.V2Beta1.BigQueryTable.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.BigQueryTable), global::Google.Cloud.Dlp.V2Beta1.BigQueryTable.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.EntityId), global::Google.Cloud.Dlp.V2Beta1.EntityId.Parser, new[]{ "Field" }, null, null, null)
           }));
     }
     #endregion
@@ -2882,6 +2885,139 @@ namespace Google.Cloud.Dlp.V2Beta1 {
           }
           case 26: {
             TableId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// An entity in a dataset is a field or set of fields that correspond to a
+  /// single person. For example, in medical records the `EntityId` might be
+  /// a patient identifier, or for financial records it might be an account
+  /// identifier. This message is used when generalizations or analysis must be
+  /// consistent across multiple rows pertaining to the same entity.
+  /// </summary>
+  public sealed partial class EntityId : pb::IMessage<EntityId> {
+    private static readonly pb::MessageParser<EntityId> _parser = new pb::MessageParser<EntityId>(() => new EntityId());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<EntityId> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EntityId() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EntityId(EntityId other) : this() {
+      Field = other.field_ != null ? other.Field.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EntityId Clone() {
+      return new EntityId(this);
+    }
+
+    /// <summary>Field number for the "field" field.</summary>
+    public const int FieldFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.FieldId field_;
+    /// <summary>
+    /// Composite key indicating which field contains the entity identifier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.FieldId Field {
+      get { return field_; }
+      set {
+        field_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as EntityId);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(EntityId other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Field, other.Field)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (field_ != null) hash ^= Field.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (field_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Field);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (field_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Field);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(EntityId other) {
+      if (other == null) {
+        return;
+      }
+      if (other.field_ != null) {
+        if (field_ == null) {
+          field_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+        }
+        Field.MergeFrom(other.Field);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (field_ == null) {
+              field_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+            }
+            input.ReadMessage(field_);
             break;
           }
         }

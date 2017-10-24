@@ -49,6 +49,9 @@ namespace Google.Cloud.Dlp.V2Beta1
         private DlpServiceSettings(DlpServiceSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            DeidentifyContentSettings = existing.DeidentifyContentSettings;
+            AnalyzeDataSourceRiskSettings = existing.AnalyzeDataSourceRiskSettings;
+            AnalyzeDataSourceRiskOperationsSettings = existing.AnalyzeDataSourceRiskOperationsSettings?.Clone();
             InspectContentSettings = existing.InspectContentSettings;
             RedactContentSettings = existing.RedactContentSettings;
             CreateInspectOperationSettings = existing.CreateInspectOperationSettings;
@@ -124,6 +127,87 @@ namespace Google.Cloud.Dlp.V2Beta1
             maxDelay: TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.DeidentifyContent</c> and <c>DlpServiceClient.DeidentifyContentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.DeidentifyContent</c> and
+        /// <c>DlpServiceClient.DeidentifyContentAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings DeidentifyContentSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.AnalyzeDataSourceRisk</c> and <c>DlpServiceClient.AnalyzeDataSourceRiskAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.AnalyzeDataSourceRisk</c> and
+        /// <c>DlpServiceClient.AnalyzeDataSourceRiskAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings AnalyzeDataSourceRiskSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DlpServiceClient.AnalyzeDataSourceRisk</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings AnalyzeDataSourceRiskOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
+                TimeSpan.FromMilliseconds(20000L),
+                1.5,
+                TimeSpan.FromMilliseconds(45000L))
+        };
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -423,6 +507,294 @@ namespace Google.Cloud.Dlp.V2Beta1
         }
 
         /// <summary>
+        /// De-identifies potentially sensitive info from a list of strings.
+        /// This method has limits on input size and output size.
+        /// </summary>
+        /// <param name="deidentifyConfig">
+        /// Configuration for the de-identification of the list of content items.
+        /// </param>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Up to 100 are allowed per request.
+        /// All items will be treated as text/*.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DeidentifyContentResponse> DeidentifyContentAsync(
+            DeidentifyConfig deidentifyConfig,
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            CallSettings callSettings = null) => DeidentifyContentAsync(
+                new DeidentifyContentRequest
+                {
+                    DeidentifyConfig = GaxPreconditions.CheckNotNull(deidentifyConfig, nameof(deidentifyConfig)),
+                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
+                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// De-identifies potentially sensitive info from a list of strings.
+        /// This method has limits on input size and output size.
+        /// </summary>
+        /// <param name="deidentifyConfig">
+        /// Configuration for the de-identification of the list of content items.
+        /// </param>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Up to 100 are allowed per request.
+        /// All items will be treated as text/*.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DeidentifyContentResponse> DeidentifyContentAsync(
+            DeidentifyConfig deidentifyConfig,
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            CancellationToken cancellationToken) => DeidentifyContentAsync(
+                deidentifyConfig,
+                inspectConfig,
+                items,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// De-identifies potentially sensitive info from a list of strings.
+        /// This method has limits on input size and output size.
+        /// </summary>
+        /// <param name="deidentifyConfig">
+        /// Configuration for the de-identification of the list of content items.
+        /// </param>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Up to 100 are allowed per request.
+        /// All items will be treated as text/*.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual DeidentifyContentResponse DeidentifyContent(
+            DeidentifyConfig deidentifyConfig,
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            CallSettings callSettings = null) => DeidentifyContent(
+                new DeidentifyContentRequest
+                {
+                    DeidentifyConfig = GaxPreconditions.CheckNotNull(deidentifyConfig, nameof(deidentifyConfig)),
+                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
+                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// De-identifies potentially sensitive info from a list of strings.
+        /// This method has limits on input size and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DeidentifyContentResponse> DeidentifyContentAsync(
+            DeidentifyContentRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// De-identifies potentially sensitive info from a list of strings.
+        /// This method has limits on input size and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual DeidentifyContentResponse DeidentifyContent(
+            DeidentifyContentRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Schedules a job to compute risk analysis metrics over content in a Google
+        /// Cloud Platform repository.
+        /// </summary>
+        /// <param name="privacyMetric">
+        /// Privacy metric to compute.
+        /// </param>
+        /// <param name="sourceTable">
+        /// Input dataset to compute metrics over.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata>> AnalyzeDataSourceRiskAsync(
+            PrivacyMetric privacyMetric,
+            BigQueryTable sourceTable,
+            CallSettings callSettings = null) => AnalyzeDataSourceRiskAsync(
+                new AnalyzeDataSourceRiskRequest
+                {
+                    PrivacyMetric = GaxPreconditions.CheckNotNull(privacyMetric, nameof(privacyMetric)),
+                    SourceTable = GaxPreconditions.CheckNotNull(sourceTable, nameof(sourceTable)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Schedules a job to compute risk analysis metrics over content in a Google
+        /// Cloud Platform repository.
+        /// </summary>
+        /// <param name="privacyMetric">
+        /// Privacy metric to compute.
+        /// </param>
+        /// <param name="sourceTable">
+        /// Input dataset to compute metrics over.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata>> AnalyzeDataSourceRiskAsync(
+            PrivacyMetric privacyMetric,
+            BigQueryTable sourceTable,
+            CancellationToken cancellationToken) => AnalyzeDataSourceRiskAsync(
+                privacyMetric,
+                sourceTable,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Schedules a job to compute risk analysis metrics over content in a Google
+        /// Cloud Platform repository.
+        /// </summary>
+        /// <param name="privacyMetric">
+        /// Privacy metric to compute.
+        /// </param>
+        /// <param name="sourceTable">
+        /// Input dataset to compute metrics over.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> AnalyzeDataSourceRisk(
+            PrivacyMetric privacyMetric,
+            BigQueryTable sourceTable,
+            CallSettings callSettings = null) => AnalyzeDataSourceRisk(
+                new AnalyzeDataSourceRiskRequest
+                {
+                    PrivacyMetric = GaxPreconditions.CheckNotNull(privacyMetric, nameof(privacyMetric)),
+                    SourceTable = GaxPreconditions.CheckNotNull(sourceTable, nameof(sourceTable)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Schedules a job to compute risk analysis metrics over content in a Google
+        /// Cloud Platform repository.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata>> AnalyzeDataSourceRiskAsync(
+            AnalyzeDataSourceRiskRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AnalyzeDataSourceRiskAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual Task<Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata>> PollOnceAnalyzeDataSourceRiskAsync(
+            string operationName,
+            CallSettings callSettings = null) => Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata>.PollOnceFromNameAsync(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                AnalyzeDataSourceRiskOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Schedules a job to compute risk analysis metrics over content in a Google
+        /// Cloud Platform repository.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> AnalyzeDataSourceRisk(
+            AnalyzeDataSourceRiskRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>AnalyzeDataSourceRisk</c>.
+        /// </summary>
+        public virtual OperationsClient AnalyzeDataSourceRiskOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AnalyzeDataSourceRisk</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> PollOnceAnalyzeDataSourceRisk(
+            string operationName,
+            CallSettings callSettings = null) => Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata>.PollOnceFromName(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                AnalyzeDataSourceRiskOperationsClient,
+                callSettings);
+
+        /// <summary>
         /// Finds potentially sensitive info in a list of strings.
         /// This method has limits on input size, processing time, and output size.
         /// </summary>
@@ -693,22 +1065,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// Specification of the data set to process.
         /// </param>
         /// <param name="outputConfig">
-        /// Optional location to store findings. The bucket must already exist and
-        /// the Google APIs service account for DLP must have write permission to
-        /// write to the given bucket.
-        /// &lt;p&gt;Results are split over multiple csv files with each file name matching
-        /// the pattern "[operation_id]_[count].csv", for example
-        /// `3094877188788974909_1.csv`. The `operation_id` matches the
-        /// identifier for the Operation, and the `count` is a counter used for
-        /// tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
-        /// following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-        /// &lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
-        /// &lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
-        /// &lt;li&gt;start_offset&lt;br/&gt;
-        /// &lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-        /// &lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
-        /// &lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
-        /// &lt;li&gt;dataset_id &lt;li&gt;table_id
+        /// Optional location to store findings.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -740,22 +1097,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// Specification of the data set to process.
         /// </param>
         /// <param name="outputConfig">
-        /// Optional location to store findings. The bucket must already exist and
-        /// the Google APIs service account for DLP must have write permission to
-        /// write to the given bucket.
-        /// &lt;p&gt;Results are split over multiple csv files with each file name matching
-        /// the pattern "[operation_id]_[count].csv", for example
-        /// `3094877188788974909_1.csv`. The `operation_id` matches the
-        /// identifier for the Operation, and the `count` is a counter used for
-        /// tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
-        /// following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-        /// &lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
-        /// &lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
-        /// &lt;li&gt;start_offset&lt;br/&gt;
-        /// &lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-        /// &lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
-        /// &lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
-        /// &lt;li&gt;dataset_id &lt;li&gt;table_id
+        /// Optional location to store findings.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -784,22 +1126,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// Specification of the data set to process.
         /// </param>
         /// <param name="outputConfig">
-        /// Optional location to store findings. The bucket must already exist and
-        /// the Google APIs service account for DLP must have write permission to
-        /// write to the given bucket.
-        /// &lt;p&gt;Results are split over multiple csv files with each file name matching
-        /// the pattern "[operation_id]_[count].csv", for example
-        /// `3094877188788974909_1.csv`. The `operation_id` matches the
-        /// identifier for the Operation, and the `count` is a counter used for
-        /// tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
-        /// following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-        /// &lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
-        /// &lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
-        /// &lt;li&gt;start_offset&lt;br/&gt;
-        /// &lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-        /// &lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
-        /// &lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
-        /// &lt;li&gt;dataset_id &lt;li&gt;table_id
+        /// Optional location to store findings.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -899,7 +1226,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Identifier of the results set returned as metadata of
-        /// the longrunning operation created by a call to CreateInspectOperation.
+        /// the longrunning operation created by a call to InspectDataSource.
         /// Should be in the format of `inspect/results/{id}`.
         /// </param>
         /// <param name="callSettings">
@@ -922,7 +1249,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Identifier of the results set returned as metadata of
-        /// the longrunning operation created by a call to CreateInspectOperation.
+        /// the longrunning operation created by a call to InspectDataSource.
         /// Should be in the format of `inspect/results/{id}`.
         /// </param>
         /// <param name="cancellationToken">
@@ -942,7 +1269,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// </summary>
         /// <param name="name">
         /// Identifier of the results set returned as metadata of
-        /// the longrunning operation created by a call to CreateInspectOperation.
+        /// the longrunning operation created by a call to InspectDataSource.
         /// Should be in the format of `inspect/results/{id}`.
         /// </param>
         /// <param name="callSettings">
@@ -1228,6 +1555,8 @@ namespace Google.Cloud.Dlp.V2Beta1
     /// </summary>
     public sealed partial class DlpServiceClientImpl : DlpServiceClient
     {
+        private readonly ApiCall<DeidentifyContentRequest, DeidentifyContentResponse> _callDeidentifyContent;
+        private readonly ApiCall<AnalyzeDataSourceRiskRequest, Operation> _callAnalyzeDataSourceRisk;
         private readonly ApiCall<InspectContentRequest, InspectContentResponse> _callInspectContent;
         private readonly ApiCall<RedactContentRequest, RedactContentResponse> _callRedactContent;
         private readonly ApiCall<CreateInspectOperationRequest, Operation> _callCreateInspectOperation;
@@ -1245,8 +1574,14 @@ namespace Google.Cloud.Dlp.V2Beta1
             GrpcClient = grpcClient;
             DlpServiceSettings effectiveSettings = settings ?? DlpServiceSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            AnalyzeDataSourceRiskOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.AnalyzeDataSourceRiskOperationsSettings);
             CreateInspectOperationOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateInspectOperationOperationsSettings);
+            _callDeidentifyContent = clientHelper.BuildApiCall<DeidentifyContentRequest, DeidentifyContentResponse>(
+                GrpcClient.DeidentifyContentAsync, GrpcClient.DeidentifyContent, effectiveSettings.DeidentifyContentSettings);
+            _callAnalyzeDataSourceRisk = clientHelper.BuildApiCall<AnalyzeDataSourceRiskRequest, Operation>(
+                GrpcClient.AnalyzeDataSourceRiskAsync, GrpcClient.AnalyzeDataSourceRisk, effectiveSettings.AnalyzeDataSourceRiskSettings);
             _callInspectContent = clientHelper.BuildApiCall<InspectContentRequest, InspectContentResponse>(
                 GrpcClient.InspectContentAsync, GrpcClient.InspectContent, effectiveSettings.InspectContentSettings);
             _callRedactContent = clientHelper.BuildApiCall<RedactContentRequest, RedactContentResponse>(
@@ -1270,12 +1605,105 @@ namespace Google.Cloud.Dlp.V2Beta1
         public override DlpService.DlpServiceClient GrpcClient { get; }
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_DeidentifyContentRequest(ref DeidentifyContentRequest request, ref CallSettings settings);
+        partial void Modify_AnalyzeDataSourceRiskRequest(ref AnalyzeDataSourceRiskRequest request, ref CallSettings settings);
         partial void Modify_InspectContentRequest(ref InspectContentRequest request, ref CallSettings settings);
         partial void Modify_RedactContentRequest(ref RedactContentRequest request, ref CallSettings settings);
         partial void Modify_CreateInspectOperationRequest(ref CreateInspectOperationRequest request, ref CallSettings settings);
         partial void Modify_ListInspectFindingsRequest(ref ListInspectFindingsRequest request, ref CallSettings settings);
         partial void Modify_ListInfoTypesRequest(ref ListInfoTypesRequest request, ref CallSettings settings);
         partial void Modify_ListRootCategoriesRequest(ref ListRootCategoriesRequest request, ref CallSettings settings);
+
+        /// <summary>
+        /// De-identifies potentially sensitive info from a list of strings.
+        /// This method has limits on input size and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<DeidentifyContentResponse> DeidentifyContentAsync(
+            DeidentifyContentRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_DeidentifyContentRequest(ref request, ref callSettings);
+            return _callDeidentifyContent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// De-identifies potentially sensitive info from a list of strings.
+        /// This method has limits on input size and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override DeidentifyContentResponse DeidentifyContent(
+            DeidentifyContentRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_DeidentifyContentRequest(ref request, ref callSettings);
+            return _callDeidentifyContent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Schedules a job to compute risk analysis metrics over content in a Google
+        /// Cloud Platform repository.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async Task<Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata>> AnalyzeDataSourceRiskAsync(
+            AnalyzeDataSourceRiskRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_AnalyzeDataSourceRiskRequest(ref request, ref callSettings);
+            return new Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata>(
+                await _callAnalyzeDataSourceRisk.Async(request, callSettings).ConfigureAwait(false), AnalyzeDataSourceRiskOperationsClient);
+        }
+
+        /// <summary>
+        /// Schedules a job to compute risk analysis metrics over content in a Google
+        /// Cloud Platform repository.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> AnalyzeDataSourceRisk(
+            AnalyzeDataSourceRiskRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_AnalyzeDataSourceRiskRequest(ref request, ref callSettings);
+            return new Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata>(
+                _callAnalyzeDataSourceRisk.Sync(request, callSettings), AnalyzeDataSourceRiskOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>AnalyzeDataSourceRisk</c>.
+        /// </summary>
+        public override OperationsClient AnalyzeDataSourceRiskOperationsClient { get; }
 
         /// <summary>
         /// Finds potentially sensitive info in a list of strings.

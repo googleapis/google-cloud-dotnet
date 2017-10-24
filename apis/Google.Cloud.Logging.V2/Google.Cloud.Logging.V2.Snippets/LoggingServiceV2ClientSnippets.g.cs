@@ -31,8 +31,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Logging.V2.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedLoggingServiceV2ClientSnippets
     {
+        /// <summary>Snippet for DeleteLogAsync</summary>
         public async Task DeleteLogAsync()
         {
             // Snippet: DeleteLogAsync(LogNameOneof,CallSettings)
@@ -46,6 +48,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteLog</summary>
         public void DeleteLog()
         {
             // Snippet: DeleteLog(LogNameOneof,CallSettings)
@@ -58,6 +61,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteLogAsync</summary>
         public async Task DeleteLogAsync_RequestObject()
         {
             // Snippet: DeleteLogAsync(DeleteLogRequest,CallSettings)
@@ -73,6 +77,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteLog</summary>
         public void DeleteLog_RequestObject()
         {
             // Snippet: DeleteLog(DeleteLogRequest,CallSettings)
@@ -88,6 +93,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for WriteLogEntriesAsync</summary>
         public async Task WriteLogEntriesAsync()
         {
             // Snippet: WriteLogEntriesAsync(LogNameOneof,MonitoredResource,IDictionary<string, string>,IEnumerable<LogEntry>,CallSettings)
@@ -104,6 +110,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for WriteLogEntries</summary>
         public void WriteLogEntries()
         {
             // Snippet: WriteLogEntries(LogNameOneof,MonitoredResource,IDictionary<string, string>,IEnumerable<LogEntry>,CallSettings)
@@ -119,6 +126,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for WriteLogEntriesAsync</summary>
         public async Task WriteLogEntriesAsync_RequestObject()
         {
             // Snippet: WriteLogEntriesAsync(WriteLogEntriesRequest,CallSettings)
@@ -134,6 +142,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for WriteLogEntries</summary>
         public void WriteLogEntries_RequestObject()
         {
             // Snippet: WriteLogEntries(WriteLogEntriesRequest,CallSettings)
@@ -149,6 +158,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogEntriesAsync</summary>
         public async Task ListLogEntriesAsync()
         {
             // Snippet: ListLogEntriesAsync(IEnumerable<string>,string,string,string,int?,CallSettings)
@@ -194,6 +204,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogEntries</summary>
         public void ListLogEntries()
         {
             // Snippet: ListLogEntries(IEnumerable<string>,string,string,string,int?,CallSettings)
@@ -239,6 +250,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogEntriesAsync</summary>
         public async Task ListLogEntriesAsync_RequestObject()
         {
             // Snippet: ListLogEntriesAsync(ListLogEntriesRequest,CallSettings)
@@ -285,6 +297,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogEntries</summary>
         public void ListLogEntries_RequestObject()
         {
             // Snippet: ListLogEntries(ListLogEntriesRequest,CallSettings)
@@ -331,6 +344,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
         public async Task ListMonitoredResourceDescriptorsAsync_RequestObject()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest,CallSettings)
@@ -374,6 +388,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
         public void ListMonitoredResourceDescriptors_RequestObject()
         {
             // Snippet: ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest,CallSettings)
@@ -417,6 +432,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogsAsync</summary>
         public async Task ListLogsAsync()
         {
             // Snippet: ListLogsAsync(ParentNameOneof,string,int?,CallSettings)
@@ -460,6 +476,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogs</summary>
         public void ListLogs()
         {
             // Snippet: ListLogs(ParentNameOneof,string,int?,CallSettings)
@@ -503,6 +520,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogsAsync</summary>
         public async Task ListLogsAsync_RequestObject()
         {
             // Snippet: ListLogsAsync(ListLogsRequest,CallSettings)
@@ -549,6 +567,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogs</summary>
         public void ListLogs_RequestObject()
         {
             // Snippet: ListLogs(ListLogsRequest,CallSettings)

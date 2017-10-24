@@ -80,89 +80,311 @@ namespace Google.Cloud.Dlp.V2Beta1 {
             "bGUucHJpdmFjeS5kbHAudjJiZXRhMS5Db2xvckIICgZ0YXJnZXQiMQoFQ29s",
             "b3ISCwoDcmVkGAEgASgCEg0KBWdyZWVuGAIgASgCEgwKBGJsdWUYAyABKAIi",
             "TwoVUmVkYWN0Q29udGVudFJlc3BvbnNlEjYKBWl0ZW1zGAEgAygLMicuZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuQ29udGVudEl0ZW0ikgEKFUluc3Bl",
-            "Y3RDb250ZW50UmVxdWVzdBJBCg5pbnNwZWN0X2NvbmZpZxgBIAEoCzIpLmdv",
-            "b2dsZS5wcml2YWN5LmRscC52MmJldGExLkluc3BlY3RDb25maWcSNgoFaXRl",
-            "bXMYAiADKAsyJy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5Db250ZW50",
-            "SXRlbSJUChZJbnNwZWN0Q29udGVudFJlc3BvbnNlEjoKB3Jlc3VsdHMYASAD",
-            "KAsyKS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5JbnNwZWN0UmVzdWx0",
-            "IrQCCh1DcmVhdGVJbnNwZWN0T3BlcmF0aW9uUmVxdWVzdBJBCg5pbnNwZWN0",
-            "X2NvbmZpZxgBIAEoCzIpLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLklu",
-            "c3BlY3RDb25maWcSQQoOc3RvcmFnZV9jb25maWcYAiABKAsyKS5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjJiZXRhMS5TdG9yYWdlQ29uZmlnEkYKDW91dHB1dF9j",
-            "b25maWcYAyABKAsyLy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5PdXRw",
-            "dXRTdG9yYWdlQ29uZmlnEkUKEG9wZXJhdGlvbl9jb25maWcYBSABKAsyKy5n",
-            "b29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5PcGVyYXRpb25Db25maWcinwEK",
-            "E091dHB1dFN0b3JhZ2VDb25maWcSOgoFdGFibGUYASABKAsyKS5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjJiZXRhMS5CaWdRdWVyeVRhYmxlSAASRAoMc3RvcmFn",
-            "ZV9wYXRoGAIgASgLMiwuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuQ2xv",
-            "dWRTdG9yYWdlUGF0aEgAQgYKBHR5cGUiXAoSSW5mb1R5cGVTdGF0aXN0aWNz",
-            "EjcKCWluZm9fdHlwZRgBIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52MmJl",
-            "dGExLkluZm9UeXBlEg0KBWNvdW50GAIgASgDIrIDChhJbnNwZWN0T3BlcmF0",
-            "aW9uTWV0YWRhdGESFwoPcHJvY2Vzc2VkX2J5dGVzGAEgASgDEh0KFXRvdGFs",
-            "X2VzdGltYXRlZF9ieXRlcxgEIAEoAxJHCg9pbmZvX3R5cGVfc3RhdHMYAiAD",
-            "KAsyLi5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5JbmZvVHlwZVN0YXRp",
-            "c3RpY3MSLwoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEkkKFnJlcXVlc3RfaW5zcGVjdF9jb25maWcYBSABKAsyKS5n",
-            "b29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5JbnNwZWN0Q29uZmlnEkkKFnJl",
-            "cXVlc3Rfc3RvcmFnZV9jb25maWcYBiABKAsyKS5nb29nbGUucHJpdmFjeS5k",
-            "bHAudjJiZXRhMS5TdG9yYWdlQ29uZmlnEk4KFXJlcXVlc3Rfb3V0cHV0X2Nv",
-            "bmZpZxgHIAEoCzIvLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLk91dHB1",
-            "dFN0b3JhZ2VDb25maWciJgoWSW5zcGVjdE9wZXJhdGlvblJlc3VsdBIMCgRu",
-            "YW1lGAEgASgJImEKGkxpc3RJbnNwZWN0RmluZGluZ3NSZXF1ZXN0EgwKBG5h",
-            "bWUYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
-            "KAkSDgoGZmlsdGVyGAQgASgJInEKG0xpc3RJbnNwZWN0RmluZGluZ3NSZXNw",
-            "b25zZRI5CgZyZXN1bHQYASABKAsyKS5nb29nbGUucHJpdmFjeS5kbHAudjJi",
-            "ZXRhMS5JbnNwZWN0UmVzdWx0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJ+",
-            "ChNJbmZvVHlwZURlc2NyaXB0aW9uEgwKBG5hbWUYASABKAkSFAoMZGlzcGxh",
-            "eV9uYW1lGAIgASgJEkMKCmNhdGVnb3JpZXMYAyADKAsyLy5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjJiZXRhMS5DYXRlZ29yeURlc2NyaXB0aW9uIj8KFExpc3RJ",
-            "bmZvVHlwZXNSZXF1ZXN0EhAKCGNhdGVnb3J5GAEgASgJEhUKDWxhbmd1YWdl",
-            "X2NvZGUYAiABKAkiXAoVTGlzdEluZm9UeXBlc1Jlc3BvbnNlEkMKCmluZm9f",
-            "dHlwZXMYASADKAsyLy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5JbmZv",
-            "VHlwZURlc2NyaXB0aW9uIjkKE0NhdGVnb3J5RGVzY3JpcHRpb24SDAoEbmFt",
-            "ZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkiMgoZTGlzdFJvb3RDYXRl",
-            "Z29yaWVzUmVxdWVzdBIVCg1sYW5ndWFnZV9jb2RlGAEgASgJImEKGkxpc3RS",
-            "b290Q2F0ZWdvcmllc1Jlc3BvbnNlEkMKCmNhdGVnb3JpZXMYASADKAsyLy5n",
-            "b29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5DYXRlZ29yeURlc2NyaXB0aW9u",
-            "Iv4BCgVWYWx1ZRIXCg1pbnRlZ2VyX3ZhbHVlGAEgASgDSAASFQoLZmxvYXRf",
-            "dmFsdWUYAiABKAFIABIWCgxzdHJpbmdfdmFsdWUYAyABKAlIABIXCg1ib29s",
-            "ZWFuX3ZhbHVlGAQgASgISAASNQoPdGltZXN0YW1wX3ZhbHVlGAUgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEiwKCnRpbWVfdmFsdWUYBiAB",
-            "KAsyFi5nb29nbGUudHlwZS5UaW1lT2ZEYXlIABInCgpkYXRlX3ZhbHVlGAcg",
-            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUgAQgYKBHR5cGUqdAoKTGlrZWxpaG9v",
-            "ZBIaChZMSUtFTElIT09EX1VOU1BFQ0lGSUVEEAASEQoNVkVSWV9VTkxJS0VM",
-            "WRABEgwKCFVOTElLRUxZEAISDAoIUE9TU0lCTEUQAxIKCgZMSUtFTFkQBBIP",
-            "CgtWRVJZX0xJS0VMWRAFMvYHCgpEbHBTZXJ2aWNlEpwBCg5JbnNwZWN0Q29u",
-            "dGVudBIxLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkluc3BlY3RDb250",
-            "ZW50UmVxdWVzdBoyLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkluc3Bl",
-            "Y3RDb250ZW50UmVzcG9uc2UiI4LT5JMCHSIYL3YyYmV0YTEvY29udGVudDpp",
-            "bnNwZWN0OgEqEpgBCg1SZWRhY3RDb250ZW50EjAuZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyYmV0YTEuUmVkYWN0Q29udGVudFJlcXVlc3QaMS5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjJiZXRhMS5SZWRhY3RDb250ZW50UmVzcG9uc2UiIoLT5JMC",
-            "HCIXL3YyYmV0YTEvY29udGVudDpyZWRhY3Q6ASoSmgEKFkNyZWF0ZUluc3Bl",
-            "Y3RPcGVyYXRpb24SOS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5DcmVh",
-            "dGVJbnNwZWN0T3BlcmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
-            "Zy5PcGVyYXRpb24iJoLT5JMCICIbL3YyYmV0YTEvaW5zcGVjdC9vcGVyYXRp",
-            "b25zOgEqEroBChNMaXN0SW5zcGVjdEZpbmRpbmdzEjYuZ29vZ2xlLnByaXZh",
-            "Y3kuZGxwLnYyYmV0YTEuTGlzdEluc3BlY3RGaW5kaW5nc1JlcXVlc3QaNy5n",
-            "b29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5MaXN0SW5zcGVjdEZpbmRpbmdz",
-            "UmVzcG9uc2UiMoLT5JMCLBIqL3YyYmV0YTEve25hbWU9aW5zcGVjdC9yZXN1",
-            "bHRzLyp9L2ZpbmRpbmdzEqwBCg1MaXN0SW5mb1R5cGVzEjAuZ29vZ2xlLnBy",
-            "aXZhY3kuZGxwLnYyYmV0YTEuTGlzdEluZm9UeXBlc1JlcXVlc3QaMS5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjJiZXRhMS5MaXN0SW5mb1R5cGVzUmVzcG9uc2Ui",
-            "NoLT5JMCMBIuL3YyYmV0YTEvcm9vdENhdGVnb3JpZXMve2NhdGVnb3J5PSp9",
-            "L2luZm9UeXBlcxKkAQoSTGlzdFJvb3RDYXRlZ29yaWVzEjUuZ29vZ2xlLnBy",
-            "aXZhY3kuZGxwLnYyYmV0YTEuTGlzdFJvb3RDYXRlZ29yaWVzUmVxdWVzdBo2",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkxpc3RSb290Q2F0ZWdvcmll",
-            "c1Jlc3BvbnNlIh+C0+STAhkSFy92MmJldGExL3Jvb3RDYXRlZ29yaWVzQoYB",
-            "Ch5jb20uZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTFCCERscFByb3RvUAFa",
-            "PWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvcHJpdmFj",
-            "eS9kbHAvdjJiZXRhMTtkbHCqAhhHb29nbGUuQ2xvdWQuRGxwLlYyQmV0YTFi",
-            "BnByb3RvMw=="));
+            "Z2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuQ29udGVudEl0ZW0i3gEKGERlaWRl",
+            "bnRpZnlDb250ZW50UmVxdWVzdBJHChFkZWlkZW50aWZ5X2NvbmZpZxgBIAEo",
+            "CzIsLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkRlaWRlbnRpZnlDb25m",
+            "aWcSQQoOaW5zcGVjdF9jb25maWcYAiABKAsyKS5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjJiZXRhMS5JbnNwZWN0Q29uZmlnEjYKBWl0ZW1zGAMgAygLMicuZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuQ29udGVudEl0ZW0imwEKGURlaWRl",
+            "bnRpZnlDb250ZW50UmVzcG9uc2USNgoFaXRlbXMYASADKAsyJy5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjJiZXRhMS5Db250ZW50SXRlbRJGCglzdW1tYXJpZXMY",
+            "AiADKAsyMy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5EZWlkZW50aWZp",
+            "Y2F0aW9uU3VtbWFyeSKSAQoVSW5zcGVjdENvbnRlbnRSZXF1ZXN0EkEKDmlu",
+            "c3BlY3RfY29uZmlnGAEgASgLMikuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0",
+            "YTEuSW5zcGVjdENvbmZpZxI2CgVpdGVtcxgCIAMoCzInLmdvb2dsZS5wcml2",
+            "YWN5LmRscC52MmJldGExLkNvbnRlbnRJdGVtIlQKFkluc3BlY3RDb250ZW50",
+            "UmVzcG9uc2USOgoHcmVzdWx0cxgBIAMoCzIpLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52MmJldGExLkluc3BlY3RSZXN1bHQitAIKHUNyZWF0ZUluc3BlY3RPcGVy",
+            "YXRpb25SZXF1ZXN0EkEKDmluc3BlY3RfY29uZmlnGAEgASgLMikuZ29vZ2xl",
+            "LnByaXZhY3kuZGxwLnYyYmV0YTEuSW5zcGVjdENvbmZpZxJBCg5zdG9yYWdl",
+            "X2NvbmZpZxgCIAEoCzIpLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLlN0",
+            "b3JhZ2VDb25maWcSRgoNb3V0cHV0X2NvbmZpZxgDIAEoCzIvLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52MmJldGExLk91dHB1dFN0b3JhZ2VDb25maWcSRQoQb3Bl",
+            "cmF0aW9uX2NvbmZpZxgFIAEoCzIrLmdvb2dsZS5wcml2YWN5LmRscC52MmJl",
+            "dGExLk9wZXJhdGlvbkNvbmZpZyKfAQoTT3V0cHV0U3RvcmFnZUNvbmZpZxI6",
+            "CgV0YWJsZRgBIAEoCzIpLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkJp",
+            "Z1F1ZXJ5VGFibGVIABJECgxzdG9yYWdlX3BhdGgYAiABKAsyLC5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjJiZXRhMS5DbG91ZFN0b3JhZ2VQYXRoSABCBgoEdHlw",
+            "ZSJcChJJbmZvVHlwZVN0YXRpc3RpY3MSNwoJaW5mb190eXBlGAEgASgLMiQu",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuSW5mb1R5cGUSDQoFY291bnQY",
+            "AiABKAMisgMKGEluc3BlY3RPcGVyYXRpb25NZXRhZGF0YRIXCg9wcm9jZXNz",
+            "ZWRfYnl0ZXMYASABKAMSHQoVdG90YWxfZXN0aW1hdGVkX2J5dGVzGAQgASgD",
+            "EkcKD2luZm9fdHlwZV9zdGF0cxgCIAMoCzIuLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52MmJldGExLkluZm9UeXBlU3RhdGlzdGljcxIvCgtjcmVhdGVfdGltZRgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASSQoWcmVxdWVzdF9p",
+            "bnNwZWN0X2NvbmZpZxgFIAEoCzIpLmdvb2dsZS5wcml2YWN5LmRscC52MmJl",
+            "dGExLkluc3BlY3RDb25maWcSSQoWcmVxdWVzdF9zdG9yYWdlX2NvbmZpZxgG",
+            "IAEoCzIpLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLlN0b3JhZ2VDb25m",
+            "aWcSTgoVcmVxdWVzdF9vdXRwdXRfY29uZmlnGAcgASgLMi8uZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyYmV0YTEuT3V0cHV0U3RvcmFnZUNvbmZpZyImChZJbnNw",
+            "ZWN0T3BlcmF0aW9uUmVzdWx0EgwKBG5hbWUYASABKAkiYQoaTGlzdEluc3Bl",
+            "Y3RGaW5kaW5nc1JlcXVlc3QSDAoEbmFtZRgBIAEoCRIRCglwYWdlX3NpemUY",
+            "AiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkicQob",
+            "TGlzdEluc3BlY3RGaW5kaW5nc1Jlc3BvbnNlEjkKBnJlc3VsdBgBIAEoCzIp",
+            "Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkluc3BlY3RSZXN1bHQSFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJIn4KE0luZm9UeXBlRGVzY3JpcHRpb24S",
+            "DAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSQwoKY2F0ZWdv",
+            "cmllcxgDIAMoCzIvLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkNhdGVn",
+            "b3J5RGVzY3JpcHRpb24iPwoUTGlzdEluZm9UeXBlc1JlcXVlc3QSEAoIY2F0",
+            "ZWdvcnkYASABKAkSFQoNbGFuZ3VhZ2VfY29kZRgCIAEoCSJcChVMaXN0SW5m",
+            "b1R5cGVzUmVzcG9uc2USQwoKaW5mb190eXBlcxgBIAMoCzIvLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52MmJldGExLkluZm9UeXBlRGVzY3JpcHRpb24iOQoTQ2F0",
+            "ZWdvcnlEZXNjcmlwdGlvbhIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFt",
+            "ZRgCIAEoCSIyChlMaXN0Um9vdENhdGVnb3JpZXNSZXF1ZXN0EhUKDWxhbmd1",
+            "YWdlX2NvZGUYASABKAkiYQoaTGlzdFJvb3RDYXRlZ29yaWVzUmVzcG9uc2US",
+            "QwoKY2F0ZWdvcmllcxgBIAMoCzIvLmdvb2dsZS5wcml2YWN5LmRscC52MmJl",
+            "dGExLkNhdGVnb3J5RGVzY3JpcHRpb24iogEKHEFuYWx5emVEYXRhU291cmNl",
+            "Umlza1JlcXVlc3QSQQoOcHJpdmFjeV9tZXRyaWMYASABKAsyKS5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjJiZXRhMS5Qcml2YWN5TWV0cmljEj8KDHNvdXJjZV90",
+            "YWJsZRgDIAEoCzIpLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkJpZ1F1",
+            "ZXJ5VGFibGUiwgYKDVByaXZhY3lNZXRyaWMSYAoWbnVtZXJpY2FsX3N0YXRz",
+            "X2NvbmZpZxgBIAEoCzI+Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLlBy",
+            "aXZhY3lNZXRyaWMuTnVtZXJpY2FsU3RhdHNDb25maWdIABJkChhjYXRlZ29y",
+            "aWNhbF9zdGF0c19jb25maWcYAiABKAsyQC5nb29nbGUucHJpdmFjeS5kbHAu",
+            "djJiZXRhMS5Qcml2YWN5TWV0cmljLkNhdGVnb3JpY2FsU3RhdHNDb25maWdI",
+            "ABJYChJrX2Fub255bWl0eV9jb25maWcYAyABKAsyOi5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjJiZXRhMS5Qcml2YWN5TWV0cmljLktBbm9ueW1pdHlDb25maWdI",
+            "ABJYChJsX2RpdmVyc2l0eV9jb25maWcYBCABKAsyOi5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjJiZXRhMS5Qcml2YWN5TWV0cmljLkxEaXZlcnNpdHlDb25maWdI",
+            "ABpKChROdW1lcmljYWxTdGF0c0NvbmZpZxIyCgVmaWVsZBgBIAEoCzIjLmdv",
+            "b2dsZS5wcml2YWN5LmRscC52MmJldGExLkZpZWxkSWQaTAoWQ2F0ZWdvcmlj",
+            "YWxTdGF0c0NvbmZpZxIyCgVmaWVsZBgBIAEoCzIjLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52MmJldGExLkZpZWxkSWQagwEKEEtBbm9ueW1pdHlDb25maWcSNgoJ",
+            "cXVhc2lfaWRzGAEgAygLMiMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEu",
+            "RmllbGRJZBI3CgllbnRpdHlfaWQYAiABKAsyJC5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjJiZXRhMS5FbnRpdHlJZBqMAQoQTERpdmVyc2l0eUNvbmZpZxI2Cglx",
+            "dWFzaV9pZHMYASADKAsyIy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5G",
+            "aWVsZElkEkAKE3NlbnNpdGl2ZV9hdHRyaWJ1dGUYAiABKAsyIy5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjJiZXRhMS5GaWVsZElkQgYKBHR5cGUi6AEKHVJpc2tB",
+            "bmFseXNpc09wZXJhdGlvbk1ldGFkYXRhEi8KC2NyZWF0ZV90aW1lGAEgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJLChhyZXF1ZXN0ZWRfcHJp",
+            "dmFjeV9tZXRyaWMYAiABKAsyKS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRh",
+            "MS5Qcml2YWN5TWV0cmljEkkKFnJlcXVlc3RlZF9zb3VyY2VfdGFibGUYAyAB",
+            "KAsyKS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5CaWdRdWVyeVRhYmxl",
+            "IusRChtSaXNrQW5hbHlzaXNPcGVyYXRpb25SZXN1bHQSbgoWbnVtZXJpY2Fs",
+            "X3N0YXRzX3Jlc3VsdBgDIAEoCzJMLmdvb2dsZS5wcml2YWN5LmRscC52MmJl",
+            "dGExLlJpc2tBbmFseXNpc09wZXJhdGlvblJlc3VsdC5OdW1lcmljYWxTdGF0",
+            "c1Jlc3VsdEgAEnIKGGNhdGVnb3JpY2FsX3N0YXRzX3Jlc3VsdBgEIAEoCzJO",
+            "Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLlJpc2tBbmFseXNpc09wZXJh",
+            "dGlvblJlc3VsdC5DYXRlZ29yaWNhbFN0YXRzUmVzdWx0SAASZgoSa19hbm9u",
+            "eW1pdHlfcmVzdWx0GAUgASgLMkguZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0",
+            "YTEuUmlza0FuYWx5c2lzT3BlcmF0aW9uUmVzdWx0LktBbm9ueW1pdHlSZXN1",
+            "bHRIABJmChJsX2RpdmVyc2l0eV9yZXN1bHQYBiABKAsySC5nb29nbGUucHJp",
+            "dmFjeS5kbHAudjJiZXRhMS5SaXNrQW5hbHlzaXNPcGVyYXRpb25SZXN1bHQu",
+            "TERpdmVyc2l0eVJlc3VsdEgAGr4BChROdW1lcmljYWxTdGF0c1Jlc3VsdBI0",
+            "CgltaW5fdmFsdWUYASABKAsyIS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRh",
+            "MS5WYWx1ZRI0CgltYXhfdmFsdWUYAiABKAsyIS5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjJiZXRhMS5WYWx1ZRI6Cg9xdWFudGlsZV92YWx1ZXMYBCADKAsyIS5n",
+            "b29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5WYWx1ZRr6AgoWQ2F0ZWdvcmlj",
+            "YWxTdGF0c1Jlc3VsdBKZAQohdmFsdWVfZnJlcXVlbmN5X2hpc3RvZ3JhbV9i",
+            "dWNrZXRzGAUgAygLMm4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuUmlz",
+            "a0FuYWx5c2lzT3BlcmF0aW9uUmVzdWx0LkNhdGVnb3JpY2FsU3RhdHNSZXN1",
+            "bHQuQ2F0ZWdvcmljYWxTdGF0c0hpc3RvZ3JhbUJ1Y2tldBrDAQofQ2F0ZWdv",
+            "cmljYWxTdGF0c0hpc3RvZ3JhbUJ1Y2tldBIjCht2YWx1ZV9mcmVxdWVuY3lf",
+            "bG93ZXJfYm91bmQYASABKAMSIwobdmFsdWVfZnJlcXVlbmN5X3VwcGVyX2Jv",
+            "dW5kGAIgASgDEhMKC2J1Y2tldF9zaXplGAMgASgDEkEKDWJ1Y2tldF92YWx1",
+            "ZXMYBCADKAsyKi5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5WYWx1ZUZy",
+            "ZXF1ZW5jeRqmBAoQS0Fub255bWl0eVJlc3VsdBKPAQojZXF1aXZhbGVuY2Vf",
+            "Y2xhc3NfaGlzdG9ncmFtX2J1Y2tldHMYBSADKAsyYi5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjJiZXRhMS5SaXNrQW5hbHlzaXNPcGVyYXRpb25SZXN1bHQuS0Fu",
+            "b255bWl0eVJlc3VsdC5LQW5vbnltaXR5SGlzdG9ncmFtQnVja2V0GnkKGktB",
+            "bm9ueW1pdHlFcXVpdmFsZW5jZUNsYXNzEjsKEHF1YXNpX2lkc192YWx1ZXMY",
+            "ASADKAsyIS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5WYWx1ZRIeChZl",
+            "cXVpdmFsZW5jZV9jbGFzc19zaXplGAIgASgDGoQCChlLQW5vbnltaXR5SGlz",
+            "dG9ncmFtQnVja2V0EioKImVxdWl2YWxlbmNlX2NsYXNzX3NpemVfbG93ZXJf",
+            "Ym91bmQYASABKAMSKgoiZXF1aXZhbGVuY2VfY2xhc3Nfc2l6ZV91cHBlcl9i",
+            "b3VuZBgCIAEoAxITCgtidWNrZXRfc2l6ZRgDIAEoAxJ6Cg1idWNrZXRfdmFs",
+            "dWVzGAQgAygLMmMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuUmlza0Fu",
+            "YWx5c2lzT3BlcmF0aW9uUmVzdWx0LktBbm9ueW1pdHlSZXN1bHQuS0Fub255",
+            "bWl0eUVxdWl2YWxlbmNlQ2xhc3MapgUKEExEaXZlcnNpdHlSZXN1bHQSlwEK",
+            "K3NlbnNpdGl2ZV92YWx1ZV9mcmVxdWVuY3lfaGlzdG9ncmFtX2J1Y2tldHMY",
+            "BSADKAsyYi5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5SaXNrQW5hbHlz",
+            "aXNPcGVyYXRpb25SZXN1bHQuTERpdmVyc2l0eVJlc3VsdC5MRGl2ZXJzaXR5",
+            "SGlzdG9ncmFtQnVja2V0GuoBChpMRGl2ZXJzaXR5RXF1aXZhbGVuY2VDbGFz",
+            "cxI7ChBxdWFzaV9pZHNfdmFsdWVzGAEgAygLMiEuZ29vZ2xlLnByaXZhY3ku",
+            "ZGxwLnYyYmV0YTEuVmFsdWUSHgoWZXF1aXZhbGVuY2VfY2xhc3Nfc2l6ZRgC",
+            "IAEoAxIlCh1udW1fZGlzdGluY3Rfc2Vuc2l0aXZlX3ZhbHVlcxgDIAEoAxJI",
+            "ChR0b3Bfc2Vuc2l0aXZlX3ZhbHVlcxgEIAMoCzIqLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52MmJldGExLlZhbHVlRnJlcXVlbmN5GooCChlMRGl2ZXJzaXR5SGlz",
+            "dG9ncmFtQnVja2V0Ei0KJXNlbnNpdGl2ZV92YWx1ZV9mcmVxdWVuY3lfbG93",
+            "ZXJfYm91bmQYASABKAMSLQolc2Vuc2l0aXZlX3ZhbHVlX2ZyZXF1ZW5jeV91",
+            "cHBlcl9ib3VuZBgCIAEoAxITCgtidWNrZXRfc2l6ZRgDIAEoAxJ6Cg1idWNr",
+            "ZXRfdmFsdWVzGAQgAygLMmMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEu",
+            "Umlza0FuYWx5c2lzT3BlcmF0aW9uUmVzdWx0LkxEaXZlcnNpdHlSZXN1bHQu",
+            "TERpdmVyc2l0eUVxdWl2YWxlbmNlQ2xhc3NCCAoGcmVzdWx0IlEKDlZhbHVl",
+            "RnJlcXVlbmN5EjAKBXZhbHVlGAEgASgLMiEuZ29vZ2xlLnByaXZhY3kuZGxw",
+            "LnYyYmV0YTEuVmFsdWUSDQoFY291bnQYAiABKAMi/gEKBVZhbHVlEhcKDWlu",
+            "dGVnZXJfdmFsdWUYASABKANIABIVCgtmbG9hdF92YWx1ZRgCIAEoAUgAEhYK",
+            "DHN0cmluZ192YWx1ZRgDIAEoCUgAEhcKDWJvb2xlYW5fdmFsdWUYBCABKAhI",
+            "ABI1Cg90aW1lc3RhbXBfdmFsdWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wSAASLAoKdGltZV92YWx1ZRgGIAEoCzIWLmdvb2dsZS50eXBl",
+            "LlRpbWVPZkRheUgAEicKCmRhdGVfdmFsdWUYByABKAsyES5nb29nbGUudHlw",
+            "ZS5EYXRlSABCBgoEdHlwZSLTAQoQRGVpZGVudGlmeUNvbmZpZxJYChlpbmZv",
+            "X3R5cGVfdHJhbnNmb3JtYXRpb25zGAEgASgLMjMuZ29vZ2xlLnByaXZhY3ku",
+            "ZGxwLnYyYmV0YTEuSW5mb1R5cGVUcmFuc2Zvcm1hdGlvbnNIABJTChZyZWNv",
+            "cmRfdHJhbnNmb3JtYXRpb25zGAIgASgLMjEuZ29vZ2xlLnByaXZhY3kuZGxw",
+            "LnYyYmV0YTEuUmVjb3JkVHJhbnNmb3JtYXRpb25zSABCEAoOdHJhbnNmb3Jt",
+            "YXRpb24ihAYKF1ByaW1pdGl2ZVRyYW5zZm9ybWF0aW9uEkgKDnJlcGxhY2Vf",
+            "Y29uZmlnGAEgASgLMi4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuUmVw",
+            "bGFjZVZhbHVlQ29uZmlnSAASQQoNcmVkYWN0X2NvbmZpZxgCIAEoCzIoLmdv",
+            "b2dsZS5wcml2YWN5LmRscC52MmJldGExLlJlZGFjdENvbmZpZ0gAElAKFWNo",
+            "YXJhY3Rlcl9tYXNrX2NvbmZpZxgDIAEoCzIvLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52MmJldGExLkNoYXJhY3Rlck1hc2tDb25maWdIABJeCh1jcnlwdG9fcmVw",
+            "bGFjZV9mZnhfZnBlX2NvbmZpZxgEIAEoCzI1Lmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52MmJldGExLkNyeXB0b1JlcGxhY2VGZnhGcGVDb25maWdIABJbChtmaXhl",
+            "ZF9zaXplX2J1Y2tldGluZ19jb25maWcYBSABKAsyNC5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjJiZXRhMS5GaXhlZFNpemVCdWNrZXRpbmdDb25maWdIABJHChBi",
+            "dWNrZXRpbmdfY29uZmlnGAYgASgLMisuZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
+            "YmV0YTEuQnVja2V0aW5nQ29uZmlnSAASXgodcmVwbGFjZV93aXRoX2luZm9f",
+            "dHlwZV9jb25maWcYByABKAsyNS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRh",
+            "MS5SZXBsYWNlV2l0aEluZm9UeXBlQ29uZmlnSAASRgoQdGltZV9wYXJ0X2Nv",
+            "bmZpZxgIIAEoCzIqLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLlRpbWVQ",
+            "YXJ0Q29uZmlnSAASSgoSY3J5cHRvX2hhc2hfY29uZmlnGAkgASgLMiwuZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuQ3J5cHRvSGFzaENvbmZpZ0gAQhAK",
+            "DnRyYW5zZm9ybWF0aW9uIuEBCg5UaW1lUGFydENvbmZpZxJMCg9wYXJ0X3Rv",
+            "X2V4dHJhY3QYASABKA4yMy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5U",
+            "aW1lUGFydENvbmZpZy5UaW1lUGFydCKAAQoIVGltZVBhcnQSGQoVVElNRV9Q",
+            "QVJUX1VOU1BFQ0lGSUVEEAASCAoEWUVBUhABEgkKBU1PTlRIEAISEAoMREFZ",
+            "X09GX01PTlRIEAMSDwoLREFZX09GX1dFRUsQBBIQCgxXRUVLX09GX1lFQVIQ",
+            "BRIPCgtIT1VSX09GX0RBWRAGIk0KEENyeXB0b0hhc2hDb25maWcSOQoKY3J5",
+            "cHRvX2tleRgBIAEoCzIlLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkNy",
+            "eXB0b0tleSJKChJSZXBsYWNlVmFsdWVDb25maWcSNAoJbmV3X3ZhbHVlGAEg",
+            "ASgLMiEuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuVmFsdWUiGwoZUmVw",
+            "bGFjZVdpdGhJbmZvVHlwZUNvbmZpZyIOCgxSZWRhY3RDb25maWciqgIKDUNo",
+            "YXJzVG9JZ25vcmUSHAoSY2hhcmFjdGVyc190b19za2lwGAEgASgJSAASXwob",
+            "Y29tbW9uX2NoYXJhY3RlcnNfdG9faWdub3JlGAIgASgOMjguZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyYmV0YTEuQ2hhcnNUb0lnbm9yZS5DaGFyYWN0ZXJHcm91",
+            "cEgAIosBCg5DaGFyYWN0ZXJHcm91cBIfChtDSEFSQUNURVJfR1JPVVBfVU5T",
+            "UEVDSUZJRUQQABILCgdOVU1FUklDEAESFAoQQUxQSEFfVVBQRVJfQ0FTRRAC",
+            "EhQKEEFMUEhBX0xPV0VSX0NBU0UQAxIPCgtQVU5DVFVBVElPThAEEg4KCldI",
+            "SVRFU1BBQ0UQBUIMCgpjaGFyYWN0ZXJzIqgBChNDaGFyYWN0ZXJNYXNrQ29u",
+            "ZmlnEhkKEW1hc2tpbmdfY2hhcmFjdGVyGAEgASgJEhYKDm51bWJlcl90b19t",
+            "YXNrGAIgASgFEhUKDXJldmVyc2Vfb3JkZXIYAyABKAgSRwoUY2hhcmFjdGVy",
+            "c190b19pZ25vcmUYBCADKAsyKS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRh",
+            "MS5DaGFyc1RvSWdub3JlIp8BChhGaXhlZFNpemVCdWNrZXRpbmdDb25maWcS",
+            "NgoLbG93ZXJfYm91bmQYASABKAsyIS5nb29nbGUucHJpdmFjeS5kbHAudjJi",
+            "ZXRhMS5WYWx1ZRI2Cgt1cHBlcl9ib3VuZBgCIAEoCzIhLmdvb2dsZS5wcml2",
+            "YWN5LmRscC52MmJldGExLlZhbHVlEhMKC2J1Y2tldF9zaXplGAMgASgBIv8B",
+            "Cg9CdWNrZXRpbmdDb25maWcSQwoHYnVja2V0cxgBIAMoCzIyLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52MmJldGExLkJ1Y2tldGluZ0NvbmZpZy5CdWNrZXQapgEK",
+            "BkJ1Y2tldBIuCgNtaW4YASABKAsyIS5nb29nbGUucHJpdmFjeS5kbHAudjJi",
+            "ZXRhMS5WYWx1ZRIuCgNtYXgYAiABKAsyIS5nb29nbGUucHJpdmFjeS5kbHAu",
+            "djJiZXRhMS5WYWx1ZRI8ChFyZXBsYWNlbWVudF92YWx1ZRgDIAEoCzIhLmdv",
+            "b2dsZS5wcml2YWN5LmRscC52MmJldGExLlZhbHVlIsUDChlDcnlwdG9SZXBs",
+            "YWNlRmZ4RnBlQ29uZmlnEjkKCmNyeXB0b19rZXkYASABKAsyJS5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjJiZXRhMS5DcnlwdG9LZXkSNAoHY29udGV4dBgCIAEo",
+            "CzIjLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkZpZWxkSWQSaAoPY29t",
+            "bW9uX2FscGhhYmV0GAQgASgOMk0uZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0",
+            "YTEuQ3J5cHRvUmVwbGFjZUZmeEZwZUNvbmZpZy5GZnhDb21tb25OYXRpdmVB",
+            "bHBoYWJldEgAEhkKD2N1c3RvbV9hbHBoYWJldBgFIAEoCUgAEg8KBXJhZGl4",
+            "GAYgASgFSAAilAEKF0ZmeENvbW1vbk5hdGl2ZUFscGhhYmV0EioKJkZGWF9D",
+            "T01NT05fTkFUSVZFX0FMUEhBQkVUX1VOU1BFQ0lGSUVEEAASCwoHTlVNRVJJ",
+            "QxABEg8KC0hFWEFERUNJTUFMEAISHAoYVVBQRVJfQ0FTRV9BTFBIQV9OVU1F",
+            "UklDEAMSEQoNQUxQSEFfTlVNRVJJQxAEQgoKCGFscGhhYmV0IucBCglDcnlw",
+            "dG9LZXkSQwoJdHJhbnNpZW50GAEgASgLMi4uZ29vZ2xlLnByaXZhY3kuZGxw",
+            "LnYyYmV0YTEuVHJhbnNpZW50Q3J5cHRvS2V5SAASQwoJdW53cmFwcGVkGAIg",
+            "ASgLMi4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuVW53cmFwcGVkQ3J5",
+            "cHRvS2V5SAASRgoLa21zX3dyYXBwZWQYAyABKAsyLy5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjJiZXRhMS5LbXNXcmFwcGVkQ3J5cHRvS2V5SABCCAoGc291cmNl",
+            "IiIKElRyYW5zaWVudENyeXB0b0tleRIMCgRuYW1lGAEgASgJIiEKElVud3Jh",
+            "cHBlZENyeXB0b0tleRILCgNrZXkYASABKAwiQwoTS21zV3JhcHBlZENyeXB0",
+            "b0tleRITCgt3cmFwcGVkX2tleRgBIAEoDBIXCg9jcnlwdG9fa2V5X25hbWUY",
+            "AiABKAkiqgIKF0luZm9UeXBlVHJhbnNmb3JtYXRpb25zEmMKD3RyYW5zZm9y",
+            "bWF0aW9ucxgBIAMoCzJKLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLklu",
+            "Zm9UeXBlVHJhbnNmb3JtYXRpb25zLkluZm9UeXBlVHJhbnNmb3JtYXRpb24a",
+            "qQEKFkluZm9UeXBlVHJhbnNmb3JtYXRpb24SOAoKaW5mb190eXBlcxgBIAMo",
+            "CzIkLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkluZm9UeXBlElUKGHBy",
+            "aW1pdGl2ZV90cmFuc2Zvcm1hdGlvbhgCIAEoCzIzLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52MmJldGExLlByaW1pdGl2ZVRyYW5zZm9ybWF0aW9uIs8CChNGaWVs",
+            "ZFRyYW5zZm9ybWF0aW9uEjMKBmZpZWxkcxgBIAMoCzIjLmdvb2dsZS5wcml2",
+            "YWN5LmRscC52MmJldGExLkZpZWxkSWQSPgoJY29uZGl0aW9uGAMgASgLMisu",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuUmVjb3JkQ29uZGl0aW9uElcK",
+            "GHByaW1pdGl2ZV90cmFuc2Zvcm1hdGlvbhgEIAEoCzIzLmdvb2dsZS5wcml2",
+            "YWN5LmRscC52MmJldGExLlByaW1pdGl2ZVRyYW5zZm9ybWF0aW9uSAASWAoZ",
+            "aW5mb190eXBlX3RyYW5zZm9ybWF0aW9ucxgFIAEoCzIzLmdvb2dsZS5wcml2",
+            "YWN5LmRscC52MmJldGExLkluZm9UeXBlVHJhbnNmb3JtYXRpb25zSABCEAoO",
+            "dHJhbnNmb3JtYXRpb24iswEKFVJlY29yZFRyYW5zZm9ybWF0aW9ucxJOChVm",
+            "aWVsZF90cmFuc2Zvcm1hdGlvbnMYASADKAsyLy5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjJiZXRhMS5GaWVsZFRyYW5zZm9ybWF0aW9uEkoKE3JlY29yZF9zdXBw",
+            "cmVzc2lvbnMYAiADKAsyLS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5S",
+            "ZWNvcmRTdXBwcmVzc2lvbiJTChFSZWNvcmRTdXBwcmVzc2lvbhI+Cgljb25k",
+            "aXRpb24YASABKAsyKy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5SZWNv",
+            "cmRDb25kaXRpb24i9QQKD1JlY29yZENvbmRpdGlvbhJMCgtleHByZXNzaW9u",
+            "cxgDIAEoCzI3Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLlJlY29yZENv",
+            "bmRpdGlvbi5FeHByZXNzaW9ucxqzAQoJQ29uZGl0aW9uEjIKBWZpZWxkGAEg",
+            "ASgLMiMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuRmllbGRJZBJACghv",
+            "cGVyYXRvchgDIAEoDjIuLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLlJl",
+            "bGF0aW9uYWxPcGVyYXRvchIwCgV2YWx1ZRgEIAEoCzIhLmdvb2dsZS5wcml2",
+            "YWN5LmRscC52MmJldGExLlZhbHVlGlcKCkNvbmRpdGlvbnMSSQoKY29uZGl0",
+            "aW9ucxgBIAMoCzI1Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLlJlY29y",
+            "ZENvbmRpdGlvbi5Db25kaXRpb24ahAIKC0V4cHJlc3Npb25zEmEKEGxvZ2lj",
+            "YWxfb3BlcmF0b3IYASABKA4yRy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRh",
+            "MS5SZWNvcmRDb25kaXRpb24uRXhwcmVzc2lvbnMuTG9naWNhbE9wZXJhdG9y",
+            "EkwKCmNvbmRpdGlvbnMYAyABKAsyNi5nb29nbGUucHJpdmFjeS5kbHAudjJi",
+            "ZXRhMS5SZWNvcmRDb25kaXRpb24uQ29uZGl0aW9uc0gAIjwKD0xvZ2ljYWxP",
+            "cGVyYXRvchIgChxMT0dJQ0FMX09QRVJBVE9SX1VOU1BFQ0lGSUVEEAASBwoD",
+            "QU5EEAFCBgoEdHlwZSKJAQoXRGVpZGVudGlmaWNhdGlvblN1bW1hcnkSGQoR",
+            "dHJhbnNmb3JtZWRfYnl0ZXMYAiABKAMSUwoYdHJhbnNmb3JtYXRpb25fc3Vt",
+            "bWFyaWVzGAMgAygLMjEuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuVHJh",
+            "bnNmb3JtYXRpb25TdW1tYXJ5IqcFChVUcmFuc2Zvcm1hdGlvblN1bW1hcnkS",
+            "NwoJaW5mb190eXBlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0",
+            "YTEuSW5mb1R5cGUSMgoFZmllbGQYAiABKAsyIy5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjJiZXRhMS5GaWVsZElkEksKDnRyYW5zZm9ybWF0aW9uGAMgASgLMjMu",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuUHJpbWl0aXZlVHJhbnNmb3Jt",
+            "YXRpb24STgoVZmllbGRfdHJhbnNmb3JtYXRpb25zGAUgAygLMi8uZ29vZ2xl",
+            "LnByaXZhY3kuZGxwLnYyYmV0YTEuRmllbGRUcmFuc2Zvcm1hdGlvbhJGCg9y",
+            "ZWNvcmRfc3VwcHJlc3MYBiABKAsyLS5nb29nbGUucHJpdmFjeS5kbHAudjJi",
+            "ZXRhMS5SZWNvcmRTdXBwcmVzc2lvbhJQCgdyZXN1bHRzGAQgAygLMj8uZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuVHJhbnNmb3JtYXRpb25TdW1tYXJ5",
+            "LlN1bW1hcnlSZXN1bHQaiQEKDVN1bW1hcnlSZXN1bHQSDQoFY291bnQYASAB",
+            "KAMSWAoEY29kZRgCIAEoDjJKLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGEx",
+            "LlRyYW5zZm9ybWF0aW9uU3VtbWFyeS5UcmFuc2Zvcm1hdGlvblJlc3VsdENv",
+            "ZGUSDwoHZGV0YWlscxgDIAEoCSJeChhUcmFuc2Zvcm1hdGlvblJlc3VsdENv",
+            "ZGUSKgomVFJBTlNGT1JNQVRJT05fUkVTVUxUX0NPREVfVU5TUEVDSUZJRUQQ",
+            "ABILCgdTVUNDRVNTEAESCQoFRVJST1IQAip0CgpMaWtlbGlob29kEhoKFkxJ",
+            "S0VMSUhPT0RfVU5TUEVDSUZJRUQQABIRCg1WRVJZX1VOTElLRUxZEAESDAoI",
+            "VU5MSUtFTFkQAhIMCghQT1NTSUJMRRADEgoKBkxJS0VMWRAEEg8KC1ZFUllf",
+            "TElLRUxZEAUquwEKElJlbGF0aW9uYWxPcGVyYXRvchIjCh9SRUxBVElPTkFM",
+            "X09QRVJBVE9SX1VOU1BFQ0lGSUVEEAASDAoIRVFVQUxfVE8QARIQCgxOT1Rf",
+            "RVFVQUxfVE8QAhIQCgxHUkVBVEVSX1RIQU4QAxINCglMRVNTX1RIQU4QBBIa",
+            "ChZHUkVBVEVSX1RIQU5fT1JfRVFVQUxTEAUSFwoTTEVTU19USEFOX09SX0VR",
+            "VUFMUxAGEgoKBkVYSVNUUxAHMrwKCgpEbHBTZXJ2aWNlEpwBCg5JbnNwZWN0",
+            "Q29udGVudBIxLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkluc3BlY3RD",
+            "b250ZW50UmVxdWVzdBoyLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLklu",
+            "c3BlY3RDb250ZW50UmVzcG9uc2UiI4LT5JMCHSIYL3YyYmV0YTEvY29udGVu",
+            "dDppbnNwZWN0OgEqEpgBCg1SZWRhY3RDb250ZW50EjAuZ29vZ2xlLnByaXZh",
+            "Y3kuZGxwLnYyYmV0YTEuUmVkYWN0Q29udGVudFJlcXVlc3QaMS5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjJiZXRhMS5SZWRhY3RDb250ZW50UmVzcG9uc2UiIoLT",
+            "5JMCHCIXL3YyYmV0YTEvY29udGVudDpyZWRhY3Q6ASoSqAEKEURlaWRlbnRp",
+            "ZnlDb250ZW50EjQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuRGVpZGVu",
+            "dGlmeUNvbnRlbnRSZXF1ZXN0GjUuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0",
+            "YTEuRGVpZGVudGlmeUNvbnRlbnRSZXNwb25zZSImgtPkkwIgIhsvdjJiZXRh",
+            "MS9jb250ZW50OmRlaWRlbnRpZnk6ASoSmgEKFkNyZWF0ZUluc3BlY3RPcGVy",
+            "YXRpb24SOS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5DcmVhdGVJbnNw",
+            "ZWN0T3BlcmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24iJoLT5JMCICIbL3YyYmV0YTEvaW5zcGVjdC9vcGVyYXRpb25zOgEq",
+            "EpgBChVBbmFseXplRGF0YVNvdXJjZVJpc2sSOC5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjJiZXRhMS5BbmFseXplRGF0YVNvdXJjZVJpc2tSZXF1ZXN0Gh0uZ29v",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiImgtPkkwIgIhsvdjJiZXRhMS9k",
+            "YXRhU291cmNlOmFuYWx5emU6ASoSugEKE0xpc3RJbnNwZWN0RmluZGluZ3MS",
+            "Ni5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5MaXN0SW5zcGVjdEZpbmRp",
+            "bmdzUmVxdWVzdBo3Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkxpc3RJ",
+            "bnNwZWN0RmluZGluZ3NSZXNwb25zZSIygtPkkwIsEiovdjJiZXRhMS97bmFt",
+            "ZT1pbnNwZWN0L3Jlc3VsdHMvKn0vZmluZGluZ3MSrAEKDUxpc3RJbmZvVHlw",
+            "ZXMSMC5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5MaXN0SW5mb1R5cGVz",
+            "UmVxdWVzdBoxLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkxpc3RJbmZv",
+            "VHlwZXNSZXNwb25zZSI2gtPkkwIwEi4vdjJiZXRhMS9yb290Q2F0ZWdvcmll",
+            "cy97Y2F0ZWdvcnk9Kn0vaW5mb1R5cGVzEqQBChJMaXN0Um9vdENhdGVnb3Jp",
+            "ZXMSNS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5MaXN0Um9vdENhdGVn",
+            "b3JpZXNSZXF1ZXN0GjYuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuTGlz",
+            "dFJvb3RDYXRlZ29yaWVzUmVzcG9uc2UiH4LT5JMCGRIXL3YyYmV0YTEvcm9v",
+            "dENhdGVnb3JpZXNChgEKHmNvbS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRh",
+            "MUIIRGxwUHJvdG9QAVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9wcml2YWN5L2RscC92MmJldGExO2RscKoCGEdvb2dsZS5DbG91",
+            "ZC5EbHAuVjJCZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2Beta1.Likelihood), }, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2Beta1.Likelihood), typeof(global::Google.Cloud.Dlp.V2Beta1.RelationalOperator), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.InspectConfig), global::Google.Cloud.Dlp.V2Beta1.InspectConfig.Parser, new[]{ "InfoTypes", "MinLikelihood", "MaxFindings", "IncludeQuote", "ExcludeTypes", "InfoTypeLimits" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit), global::Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.Parser, new[]{ "InfoType", "MaxFindings" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.OperationConfig), global::Google.Cloud.Dlp.V2Beta1.OperationConfig.Parser, new[]{ "MaxItemFindings" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.ContentItem), global::Google.Cloud.Dlp.V2Beta1.ContentItem.Parser, new[]{ "Type", "Data", "Value", "Table" }, new[]{ "DataItem" }, null, null),
@@ -177,6 +399,8 @@ namespace Google.Cloud.Dlp.V2Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig), global::Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig.Parser, new[]{ "InfoType", "RedactAllText", "RedactionColor" }, new[]{ "Target" }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.Color), global::Google.Cloud.Dlp.V2Beta1.Color.Parser, new[]{ "Red", "Green", "Blue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RedactContentResponse), global::Google.Cloud.Dlp.V2Beta1.RedactContentResponse.Parser, new[]{ "Items" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest), global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest.Parser, new[]{ "DeidentifyConfig", "InspectConfig", "Items" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse), global::Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.Parser, new[]{ "Items", "Summaries" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.InspectContentRequest), global::Google.Cloud.Dlp.V2Beta1.InspectContentRequest.Parser, new[]{ "InspectConfig", "Items" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.InspectContentResponse), global::Google.Cloud.Dlp.V2Beta1.InspectContentResponse.Parser, new[]{ "Results" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest), global::Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.Parser, new[]{ "InspectConfig", "StorageConfig", "OutputConfig", "OperationConfig" }, null, null, null),
@@ -192,7 +416,45 @@ namespace Google.Cloud.Dlp.V2Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CategoryDescription), global::Google.Cloud.Dlp.V2Beta1.CategoryDescription.Parser, new[]{ "Name", "DisplayName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.ListRootCategoriesRequest), global::Google.Cloud.Dlp.V2Beta1.ListRootCategoriesRequest.Parser, new[]{ "LanguageCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.ListRootCategoriesResponse), global::Google.Cloud.Dlp.V2Beta1.ListRootCategoriesResponse.Parser, new[]{ "Categories" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.Value), global::Google.Cloud.Dlp.V2Beta1.Value.Parser, new[]{ "IntegerValue", "FloatValue", "StringValue", "BooleanValue", "TimestampValue", "TimeValue", "DateValue" }, new[]{ "Type" }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest), global::Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest.Parser, new[]{ "PrivacyMetric", "SourceTable" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric), global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Parser, new[]{ "NumericalStatsConfig", "CategoricalStatsConfig", "KAnonymityConfig", "LDiversityConfig" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.NumericalStatsConfig), global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.NumericalStatsConfig.Parser, new[]{ "Field" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.CategoricalStatsConfig), global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.CategoricalStatsConfig.Parser, new[]{ "Field" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.KAnonymityConfig), global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.KAnonymityConfig.Parser, new[]{ "QuasiIds", "EntityId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.LDiversityConfig), global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.LDiversityConfig.Parser, new[]{ "QuasiIds", "SensitiveAttribute" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.Parser, new[]{ "CreateTime", "RequestedPrivacyMetric", "RequestedSourceTable" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Parser, new[]{ "NumericalStatsResult", "CategoricalStatsResult", "KAnonymityResult", "LDiversityResult" }, new[]{ "Result" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.NumericalStatsResult), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.NumericalStatsResult.Parser, new[]{ "MinValue", "MaxValue", "QuantileValues" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Parser, new[]{ "ValueFrequencyHistogramBuckets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket.Parser, new[]{ "ValueFrequencyLowerBound", "ValueFrequencyUpperBound", "BucketSize", "BucketValues" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Parser, new[]{ "EquivalenceClassHistogramBuckets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass.Parser, new[]{ "QuasiIdsValues", "EquivalenceClassSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket.Parser, new[]{ "EquivalenceClassSizeLowerBound", "EquivalenceClassSizeUpperBound", "BucketSize", "BucketValues" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Parser, new[]{ "SensitiveValueFrequencyHistogramBuckets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass.Parser, new[]{ "QuasiIdsValues", "EquivalenceClassSize", "NumDistinctSensitiveValues", "TopSensitiveValues" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket), global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket.Parser, new[]{ "SensitiveValueFrequencyLowerBound", "SensitiveValueFrequencyUpperBound", "BucketSize", "BucketValues" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.ValueFrequency), global::Google.Cloud.Dlp.V2Beta1.ValueFrequency.Parser, new[]{ "Value", "Count" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.Value), global::Google.Cloud.Dlp.V2Beta1.Value.Parser, new[]{ "IntegerValue", "FloatValue", "StringValue", "BooleanValue", "TimestampValue", "TimeValue", "DateValue" }, new[]{ "Type" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.DeidentifyConfig), global::Google.Cloud.Dlp.V2Beta1.DeidentifyConfig.Parser, new[]{ "InfoTypeTransformations", "RecordTransformations" }, new[]{ "Transformation" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation), global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation.Parser, new[]{ "ReplaceConfig", "RedactConfig", "CharacterMaskConfig", "CryptoReplaceFfxFpeConfig", "FixedSizeBucketingConfig", "BucketingConfig", "ReplaceWithInfoTypeConfig", "TimePartConfig", "CryptoHashConfig" }, new[]{ "Transformation" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.TimePartConfig), global::Google.Cloud.Dlp.V2Beta1.TimePartConfig.Parser, new[]{ "PartToExtract" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2Beta1.TimePartConfig.Types.TimePart) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CryptoHashConfig), global::Google.Cloud.Dlp.V2Beta1.CryptoHashConfig.Parser, new[]{ "CryptoKey" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.ReplaceValueConfig), global::Google.Cloud.Dlp.V2Beta1.ReplaceValueConfig.Parser, new[]{ "NewValue" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.ReplaceWithInfoTypeConfig), global::Google.Cloud.Dlp.V2Beta1.ReplaceWithInfoTypeConfig.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RedactConfig), global::Google.Cloud.Dlp.V2Beta1.RedactConfig.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CharsToIgnore), global::Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Parser, new[]{ "CharactersToSkip", "CommonCharactersToIgnore" }, new[]{ "Characters" }, new[]{ typeof(global::Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Types.CharacterGroup) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CharacterMaskConfig), global::Google.Cloud.Dlp.V2Beta1.CharacterMaskConfig.Parser, new[]{ "MaskingCharacter", "NumberToMask", "ReverseOrder", "CharactersToIgnore" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.FixedSizeBucketingConfig), global::Google.Cloud.Dlp.V2Beta1.FixedSizeBucketingConfig.Parser, new[]{ "LowerBound", "UpperBound", "BucketSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.BucketingConfig), global::Google.Cloud.Dlp.V2Beta1.BucketingConfig.Parser, new[]{ "Buckets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.Bucket), global::Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.Bucket.Parser, new[]{ "Min", "Max", "ReplacementValue" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig), global::Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.Parser, new[]{ "CryptoKey", "Context", "CommonAlphabet", "CustomAlphabet", "Radix" }, new[]{ "Alphabet" }, new[]{ typeof(global::Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CryptoKey), global::Google.Cloud.Dlp.V2Beta1.CryptoKey.Parser, new[]{ "Transient", "Unwrapped", "KmsWrapped" }, new[]{ "Source" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.TransientCryptoKey), global::Google.Cloud.Dlp.V2Beta1.TransientCryptoKey.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.UnwrappedCryptoKey), global::Google.Cloud.Dlp.V2Beta1.UnwrappedCryptoKey.Parser, new[]{ "Key" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.KmsWrappedCryptoKey), global::Google.Cloud.Dlp.V2Beta1.KmsWrappedCryptoKey.Parser, new[]{ "WrappedKey", "CryptoKeyName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations), global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Parser, new[]{ "Transformations" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.InfoTypeTransformation), global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.InfoTypeTransformation.Parser, new[]{ "InfoTypes", "PrimitiveTransformation" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.FieldTransformation), global::Google.Cloud.Dlp.V2Beta1.FieldTransformation.Parser, new[]{ "Fields", "Condition", "PrimitiveTransformation", "InfoTypeTransformations" }, new[]{ "Transformation" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RecordTransformations), global::Google.Cloud.Dlp.V2Beta1.RecordTransformations.Parser, new[]{ "FieldTransformations", "RecordSuppressions" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RecordSuppression), global::Google.Cloud.Dlp.V2Beta1.RecordSuppression.Parser, new[]{ "Condition" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RecordCondition), global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Parser, new[]{ "Expressions" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Condition), global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Condition.Parser, new[]{ "Field", "Operator", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Conditions), global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Conditions.Parser, new[]{ "Conditions_" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions), global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Parser, new[]{ "LogicalOperator", "Conditions" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Types.LogicalOperator) }, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.DeidentificationSummary), global::Google.Cloud.Dlp.V2Beta1.DeidentificationSummary.Parser, new[]{ "TransformedBytes", "TransformationSummaries" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.TransformationSummary), global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Parser, new[]{ "InfoType", "Field", "Transformation", "FieldTransformations", "RecordSuppress", "Results" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.TransformationResultCode) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.SummaryResult), global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.SummaryResult.Parser, new[]{ "Count", "Code", "Details" }, null, null, null)})
           }));
     }
     #endregion
@@ -222,6 +484,41 @@ namespace Google.Cloud.Dlp.V2Beta1 {
     /// Many matching elements.
     /// </summary>
     [pbr::OriginalName("VERY_LIKELY")] VeryLikely = 5,
+  }
+
+  /// <summary>
+  /// Operators available for comparing the value of fields.
+  /// </summary>
+  public enum RelationalOperator {
+    [pbr::OriginalName("RELATIONAL_OPERATOR_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Equal.
+    /// </summary>
+    [pbr::OriginalName("EQUAL_TO")] EqualTo = 1,
+    /// <summary>
+    /// Not equal to.
+    /// </summary>
+    [pbr::OriginalName("NOT_EQUAL_TO")] NotEqualTo = 2,
+    /// <summary>
+    /// Greater than.
+    /// </summary>
+    [pbr::OriginalName("GREATER_THAN")] GreaterThan = 3,
+    /// <summary>
+    /// Less than.
+    /// </summary>
+    [pbr::OriginalName("LESS_THAN")] LessThan = 4,
+    /// <summary>
+    /// Greater than or equals.
+    /// </summary>
+    [pbr::OriginalName("GREATER_THAN_OR_EQUALS")] GreaterThanOrEquals = 5,
+    /// <summary>
+    /// Less than or equals.
+    /// </summary>
+    [pbr::OriginalName("LESS_THAN_OR_EQUALS")] LessThanOrEquals = 6,
+    /// <summary>
+    /// Exists
+    /// </summary>
+    [pbr::OriginalName("EXISTS")] Exists = 7,
   }
 
   #endregion
@@ -3403,6 +3700,331 @@ namespace Google.Cloud.Dlp.V2Beta1 {
   }
 
   /// <summary>
+  /// Request to de-identify a list of items.
+  /// </summary>
+  public sealed partial class DeidentifyContentRequest : pb::IMessage<DeidentifyContentRequest> {
+    private static readonly pb::MessageParser<DeidentifyContentRequest> _parser = new pb::MessageParser<DeidentifyContentRequest>(() => new DeidentifyContentRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeidentifyContentRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentifyContentRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentifyContentRequest(DeidentifyContentRequest other) : this() {
+      DeidentifyConfig = other.deidentifyConfig_ != null ? other.DeidentifyConfig.Clone() : null;
+      InspectConfig = other.inspectConfig_ != null ? other.InspectConfig.Clone() : null;
+      items_ = other.items_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentifyContentRequest Clone() {
+      return new DeidentifyContentRequest(this);
+    }
+
+    /// <summary>Field number for the "deidentify_config" field.</summary>
+    public const int DeidentifyConfigFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.DeidentifyConfig deidentifyConfig_;
+    /// <summary>
+    /// Configuration for the de-identification of the list of content items.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.DeidentifyConfig DeidentifyConfig {
+      get { return deidentifyConfig_; }
+      set {
+        deidentifyConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inspect_config" field.</summary>
+    public const int InspectConfigFieldNumber = 2;
+    private global::Google.Cloud.Dlp.V2Beta1.InspectConfig inspectConfig_;
+    /// <summary>
+    /// Configuration for the inspector.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.InspectConfig InspectConfig {
+      get { return inspectConfig_; }
+      set {
+        inspectConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "items" field.</summary>
+    public const int ItemsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.ContentItem> _repeated_items_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Dlp.V2Beta1.ContentItem.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ContentItem> items_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ContentItem>();
+    /// <summary>
+    /// The list of items to inspect. Up to 100 are allowed per request.
+    /// All items will be treated as text/*.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ContentItem> Items {
+      get { return items_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeidentifyContentRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeidentifyContentRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DeidentifyConfig, other.DeidentifyConfig)) return false;
+      if (!object.Equals(InspectConfig, other.InspectConfig)) return false;
+      if(!items_.Equals(other.items_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (deidentifyConfig_ != null) hash ^= DeidentifyConfig.GetHashCode();
+      if (inspectConfig_ != null) hash ^= InspectConfig.GetHashCode();
+      hash ^= items_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (deidentifyConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DeidentifyConfig);
+      }
+      if (inspectConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InspectConfig);
+      }
+      items_.WriteTo(output, _repeated_items_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (deidentifyConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeidentifyConfig);
+      }
+      if (inspectConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InspectConfig);
+      }
+      size += items_.CalculateSize(_repeated_items_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeidentifyContentRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.deidentifyConfig_ != null) {
+        if (deidentifyConfig_ == null) {
+          deidentifyConfig_ = new global::Google.Cloud.Dlp.V2Beta1.DeidentifyConfig();
+        }
+        DeidentifyConfig.MergeFrom(other.DeidentifyConfig);
+      }
+      if (other.inspectConfig_ != null) {
+        if (inspectConfig_ == null) {
+          inspectConfig_ = new global::Google.Cloud.Dlp.V2Beta1.InspectConfig();
+        }
+        InspectConfig.MergeFrom(other.InspectConfig);
+      }
+      items_.Add(other.items_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (deidentifyConfig_ == null) {
+              deidentifyConfig_ = new global::Google.Cloud.Dlp.V2Beta1.DeidentifyConfig();
+            }
+            input.ReadMessage(deidentifyConfig_);
+            break;
+          }
+          case 18: {
+            if (inspectConfig_ == null) {
+              inspectConfig_ = new global::Google.Cloud.Dlp.V2Beta1.InspectConfig();
+            }
+            input.ReadMessage(inspectConfig_);
+            break;
+          }
+          case 26: {
+            items_.AddEntriesFrom(input, _repeated_items_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Results of de-identifying a list of items.
+  /// </summary>
+  public sealed partial class DeidentifyContentResponse : pb::IMessage<DeidentifyContentResponse> {
+    private static readonly pb::MessageParser<DeidentifyContentResponse> _parser = new pb::MessageParser<DeidentifyContentResponse>(() => new DeidentifyContentResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeidentifyContentResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentifyContentResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentifyContentResponse(DeidentifyContentResponse other) : this() {
+      items_ = other.items_.Clone();
+      summaries_ = other.summaries_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentifyContentResponse Clone() {
+      return new DeidentifyContentResponse(this);
+    }
+
+    /// <summary>Field number for the "items" field.</summary>
+    public const int ItemsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.ContentItem> _repeated_items_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.ContentItem.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ContentItem> items_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ContentItem>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ContentItem> Items {
+      get { return items_; }
+    }
+
+    /// <summary>Field number for the "summaries" field.</summary>
+    public const int SummariesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.DeidentificationSummary> _repeated_summaries_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dlp.V2Beta1.DeidentificationSummary.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.DeidentificationSummary> summaries_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.DeidentificationSummary>();
+    /// <summary>
+    /// A review of the transformations that took place for each item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.DeidentificationSummary> Summaries {
+      get { return summaries_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeidentifyContentResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeidentifyContentResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!items_.Equals(other.items_)) return false;
+      if(!summaries_.Equals(other.summaries_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= items_.GetHashCode();
+      hash ^= summaries_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      items_.WriteTo(output, _repeated_items_codec);
+      summaries_.WriteTo(output, _repeated_summaries_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += items_.CalculateSize(_repeated_items_codec);
+      size += summaries_.CalculateSize(_repeated_summaries_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeidentifyContentResponse other) {
+      if (other == null) {
+        return;
+      }
+      items_.Add(other.items_);
+      summaries_.Add(other.summaries_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            items_.AddEntriesFrom(input, _repeated_items_codec);
+            break;
+          }
+          case 18: {
+            summaries_.AddEntriesFrom(input, _repeated_summaries_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Request to search for potentially sensitive info in a list of items.
   /// </summary>
   public sealed partial class InspectContentRequest : pb::IMessage<InspectContentRequest> {
@@ -3412,7 +4034,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3566,7 +4188,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3683,7 +4305,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3743,22 +4365,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
     public const int OutputConfigFieldNumber = 3;
     private global::Google.Cloud.Dlp.V2Beta1.OutputStorageConfig outputConfig_;
     /// <summary>
-    /// Optional location to store findings. The bucket must already exist and
-    /// the Google APIs service account for DLP must have write permission to
-    /// write to the given bucket.
-    /// &lt;p>Results are split over multiple csv files with each file name matching
-    /// the pattern "[operation_id]_[count].csv", for example
-    /// `3094877188788974909_1.csv`. The `operation_id` matches the
-    /// identifier for the Operation, and the `count` is a counter used for
-    /// tracking the number of files written. &lt;p>The CSV file(s) contain the
-    /// following columns regardless of storage type scanned: &lt;li>id &lt;li>info_type
-    /// &lt;li>likelihood &lt;li>byte size of finding &lt;li>quote &lt;li>timestamp&lt;br/>
-    /// &lt;p>For Cloud Storage the next columns are: &lt;li>file_path
-    /// &lt;li>start_offset&lt;br/>
-    /// &lt;p>For Cloud Datastore the next columns are: &lt;li>project_id
-    /// &lt;li>namespace_id &lt;li>path &lt;li>column_name &lt;li>offset&lt;br/>
-    /// &lt;p>For BigQuery the next columns are: &lt;li>row_number &lt;li>project_id
-    /// &lt;li>dataset_id &lt;li>table_id
+    /// Optional location to store findings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2Beta1.OutputStorageConfig OutputConfig {
@@ -3938,7 +4545,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3989,6 +4596,43 @@ namespace Google.Cloud.Dlp.V2Beta1 {
     public const int StoragePathFieldNumber = 2;
     /// <summary>
     /// The path to a Google Cloud Storage location to store output.
+    /// The bucket must already exist and
+    /// the Google APIs service account for DLP must have write permission to
+    /// write to the given bucket.
+    /// Results are split over multiple csv files with each file name matching
+    /// the pattern "[operation_id]_[count].csv", for example
+    /// `3094877188788974909_1.csv`. The `operation_id` matches the
+    /// identifier for the Operation, and the `count` is a counter used for
+    /// tracking the number of files written.
+    ///
+    /// The CSV file(s) contain the following columns regardless of storage type
+    /// scanned:
+    /// - id
+    /// - info_type
+    /// - likelihood
+    /// - byte size of finding
+    /// - quote
+    /// - timestamp
+    ///
+    /// For Cloud Storage the next columns are:
+    ///
+    /// - file_path
+    /// - start_offset
+    ///
+    /// For Cloud Datastore the next columns are:
+    ///
+    /// - project_id
+    /// - namespace_id
+    /// - path
+    /// - column_name
+    /// - offset
+    ///
+    /// For BigQuery the next columns are:
+    ///
+    /// - row_number
+    /// - project_id
+    /// - dataset_id
+    /// - table_id
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2Beta1.CloudStoragePath StoragePath {
@@ -4133,7 +4777,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4293,7 +4937,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4615,7 +5259,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4740,7 +5384,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4773,7 +5417,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
     private string name_ = "";
     /// <summary>
     /// Identifier of the results set returned as metadata of
-    /// the longrunning operation created by a call to CreateInspectOperation.
+    /// the longrunning operation created by a call to InspectDataSource.
     /// Should be in the format of `inspect/results/{id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4820,12 +5464,14 @@ namespace Google.Cloud.Dlp.V2Beta1 {
     private string filter_ = "";
     /// <summary>
     /// Restricts findings to items that match. Supports info_type and likelihood.
-    /// &lt;p>Examples:&lt;br/>
-    /// &lt;li>info_type=EMAIL_ADDRESS
-    /// &lt;li>info_type=PHONE_NUMBER,EMAIL_ADDRESS
-    /// &lt;li>likelihood=VERY_LIKELY
-    /// &lt;li>likelihood=VERY_LIKELY,LIKELY
-    /// &lt;li>info_type=EMAIL_ADDRESS,likelihood=VERY_LIKELY,LIKELY
+    ///
+    /// Examples:
+    ///
+    /// - info_type=EMAIL_ADDRESS
+    /// - info_type=PHONE_NUMBER,EMAIL_ADDRESS
+    /// - likelihood=VERY_LIKELY
+    /// - likelihood=VERY_LIKELY,LIKELY
+    /// - info_type=EMAIL_ADDRESS,likelihood=VERY_LIKELY,LIKELY
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -4967,7 +5613,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5119,7 +5765,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
   }
 
   /// <summary>
-  /// Info type description.
+  /// Description of the information type (infoType).
   /// </summary>
   public sealed partial class InfoTypeDescription : pb::IMessage<InfoTypeDescription> {
     private static readonly pb::MessageParser<InfoTypeDescription> _parser = new pb::MessageParser<InfoTypeDescription>(() => new InfoTypeDescription());
@@ -5128,7 +5774,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5159,7 +5805,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Internal name of the info type.
+    /// Internal name of the infoType.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -5173,7 +5819,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Human readable form of the info type name.
+    /// Human readable form of the infoType name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {
@@ -5189,7 +5835,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Dlp.V2Beta1.CategoryDescription.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.CategoryDescription> categories_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.CategoryDescription>();
     /// <summary>
-    /// List of categories this info type belongs to.
+    /// List of categories this infoType belongs to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.CategoryDescription> Categories {
@@ -5306,7 +5952,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5462,7 +6108,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5577,7 +6223,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5732,7 +6378,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5857,7 +6503,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5963,6 +6609,3185 @@ namespace Google.Cloud.Dlp.V2Beta1 {
   }
 
   /// <summary>
+  /// Request for creating a risk analysis operation.
+  /// </summary>
+  public sealed partial class AnalyzeDataSourceRiskRequest : pb::IMessage<AnalyzeDataSourceRiskRequest> {
+    private static readonly pb::MessageParser<AnalyzeDataSourceRiskRequest> _parser = new pb::MessageParser<AnalyzeDataSourceRiskRequest>(() => new AnalyzeDataSourceRiskRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AnalyzeDataSourceRiskRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[30]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeDataSourceRiskRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeDataSourceRiskRequest(AnalyzeDataSourceRiskRequest other) : this() {
+      PrivacyMetric = other.privacyMetric_ != null ? other.PrivacyMetric.Clone() : null;
+      SourceTable = other.sourceTable_ != null ? other.SourceTable.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeDataSourceRiskRequest Clone() {
+      return new AnalyzeDataSourceRiskRequest(this);
+    }
+
+    /// <summary>Field number for the "privacy_metric" field.</summary>
+    public const int PrivacyMetricFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric privacyMetric_;
+    /// <summary>
+    /// Privacy metric to compute.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric PrivacyMetric {
+      get { return privacyMetric_; }
+      set {
+        privacyMetric_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "source_table" field.</summary>
+    public const int SourceTableFieldNumber = 3;
+    private global::Google.Cloud.Dlp.V2Beta1.BigQueryTable sourceTable_;
+    /// <summary>
+    /// Input dataset to compute metrics over.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.BigQueryTable SourceTable {
+      get { return sourceTable_; }
+      set {
+        sourceTable_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeDataSourceRiskRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AnalyzeDataSourceRiskRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PrivacyMetric, other.PrivacyMetric)) return false;
+      if (!object.Equals(SourceTable, other.SourceTable)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (privacyMetric_ != null) hash ^= PrivacyMetric.GetHashCode();
+      if (sourceTable_ != null) hash ^= SourceTable.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (privacyMetric_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PrivacyMetric);
+      }
+      if (sourceTable_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SourceTable);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (privacyMetric_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrivacyMetric);
+      }
+      if (sourceTable_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SourceTable);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AnalyzeDataSourceRiskRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.privacyMetric_ != null) {
+        if (privacyMetric_ == null) {
+          privacyMetric_ = new global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric();
+        }
+        PrivacyMetric.MergeFrom(other.PrivacyMetric);
+      }
+      if (other.sourceTable_ != null) {
+        if (sourceTable_ == null) {
+          sourceTable_ = new global::Google.Cloud.Dlp.V2Beta1.BigQueryTable();
+        }
+        SourceTable.MergeFrom(other.SourceTable);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (privacyMetric_ == null) {
+              privacyMetric_ = new global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric();
+            }
+            input.ReadMessage(privacyMetric_);
+            break;
+          }
+          case 26: {
+            if (sourceTable_ == null) {
+              sourceTable_ = new global::Google.Cloud.Dlp.V2Beta1.BigQueryTable();
+            }
+            input.ReadMessage(sourceTable_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Privacy metric to compute for reidentification risk analysis.
+  /// </summary>
+  public sealed partial class PrivacyMetric : pb::IMessage<PrivacyMetric> {
+    private static readonly pb::MessageParser<PrivacyMetric> _parser = new pb::MessageParser<PrivacyMetric>(() => new PrivacyMetric());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PrivacyMetric> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[31]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivacyMetric() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivacyMetric(PrivacyMetric other) : this() {
+      switch (other.TypeCase) {
+        case TypeOneofCase.NumericalStatsConfig:
+          NumericalStatsConfig = other.NumericalStatsConfig.Clone();
+          break;
+        case TypeOneofCase.CategoricalStatsConfig:
+          CategoricalStatsConfig = other.CategoricalStatsConfig.Clone();
+          break;
+        case TypeOneofCase.KAnonymityConfig:
+          KAnonymityConfig = other.KAnonymityConfig.Clone();
+          break;
+        case TypeOneofCase.LDiversityConfig:
+          LDiversityConfig = other.LDiversityConfig.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivacyMetric Clone() {
+      return new PrivacyMetric(this);
+    }
+
+    /// <summary>Field number for the "numerical_stats_config" field.</summary>
+    public const int NumericalStatsConfigFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.NumericalStatsConfig NumericalStatsConfig {
+      get { return typeCase_ == TypeOneofCase.NumericalStatsConfig ? (global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.NumericalStatsConfig) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.NumericalStatsConfig;
+      }
+    }
+
+    /// <summary>Field number for the "categorical_stats_config" field.</summary>
+    public const int CategoricalStatsConfigFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.CategoricalStatsConfig CategoricalStatsConfig {
+      get { return typeCase_ == TypeOneofCase.CategoricalStatsConfig ? (global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.CategoricalStatsConfig) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CategoricalStatsConfig;
+      }
+    }
+
+    /// <summary>Field number for the "k_anonymity_config" field.</summary>
+    public const int KAnonymityConfigFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.KAnonymityConfig KAnonymityConfig {
+      get { return typeCase_ == TypeOneofCase.KAnonymityConfig ? (global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.KAnonymityConfig) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.KAnonymityConfig;
+      }
+    }
+
+    /// <summary>Field number for the "l_diversity_config" field.</summary>
+    public const int LDiversityConfigFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.LDiversityConfig LDiversityConfig {
+      get { return typeCase_ == TypeOneofCase.LDiversityConfig ? (global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.LDiversityConfig) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.LDiversityConfig;
+      }
+    }
+
+    private object type_;
+    /// <summary>Enum of possible cases for the "type" oneof.</summary>
+    public enum TypeOneofCase {
+      None = 0,
+      NumericalStatsConfig = 1,
+      CategoricalStatsConfig = 2,
+      KAnonymityConfig = 3,
+      LDiversityConfig = 4,
+    }
+    private TypeOneofCase typeCase_ = TypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TypeOneofCase TypeCase {
+      get { return typeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearType() {
+      typeCase_ = TypeOneofCase.None;
+      type_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PrivacyMetric);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PrivacyMetric other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(NumericalStatsConfig, other.NumericalStatsConfig)) return false;
+      if (!object.Equals(CategoricalStatsConfig, other.CategoricalStatsConfig)) return false;
+      if (!object.Equals(KAnonymityConfig, other.KAnonymityConfig)) return false;
+      if (!object.Equals(LDiversityConfig, other.LDiversityConfig)) return false;
+      if (TypeCase != other.TypeCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (typeCase_ == TypeOneofCase.NumericalStatsConfig) hash ^= NumericalStatsConfig.GetHashCode();
+      if (typeCase_ == TypeOneofCase.CategoricalStatsConfig) hash ^= CategoricalStatsConfig.GetHashCode();
+      if (typeCase_ == TypeOneofCase.KAnonymityConfig) hash ^= KAnonymityConfig.GetHashCode();
+      if (typeCase_ == TypeOneofCase.LDiversityConfig) hash ^= LDiversityConfig.GetHashCode();
+      hash ^= (int) typeCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (typeCase_ == TypeOneofCase.NumericalStatsConfig) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NumericalStatsConfig);
+      }
+      if (typeCase_ == TypeOneofCase.CategoricalStatsConfig) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CategoricalStatsConfig);
+      }
+      if (typeCase_ == TypeOneofCase.KAnonymityConfig) {
+        output.WriteRawTag(26);
+        output.WriteMessage(KAnonymityConfig);
+      }
+      if (typeCase_ == TypeOneofCase.LDiversityConfig) {
+        output.WriteRawTag(34);
+        output.WriteMessage(LDiversityConfig);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (typeCase_ == TypeOneofCase.NumericalStatsConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NumericalStatsConfig);
+      }
+      if (typeCase_ == TypeOneofCase.CategoricalStatsConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CategoricalStatsConfig);
+      }
+      if (typeCase_ == TypeOneofCase.KAnonymityConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KAnonymityConfig);
+      }
+      if (typeCase_ == TypeOneofCase.LDiversityConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LDiversityConfig);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PrivacyMetric other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.TypeCase) {
+        case TypeOneofCase.NumericalStatsConfig:
+          NumericalStatsConfig = other.NumericalStatsConfig;
+          break;
+        case TypeOneofCase.CategoricalStatsConfig:
+          CategoricalStatsConfig = other.CategoricalStatsConfig;
+          break;
+        case TypeOneofCase.KAnonymityConfig:
+          KAnonymityConfig = other.KAnonymityConfig;
+          break;
+        case TypeOneofCase.LDiversityConfig:
+          LDiversityConfig = other.LDiversityConfig;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.NumericalStatsConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.NumericalStatsConfig();
+            if (typeCase_ == TypeOneofCase.NumericalStatsConfig) {
+              subBuilder.MergeFrom(NumericalStatsConfig);
+            }
+            input.ReadMessage(subBuilder);
+            NumericalStatsConfig = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.CategoricalStatsConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.CategoricalStatsConfig();
+            if (typeCase_ == TypeOneofCase.CategoricalStatsConfig) {
+              subBuilder.MergeFrom(CategoricalStatsConfig);
+            }
+            input.ReadMessage(subBuilder);
+            CategoricalStatsConfig = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.KAnonymityConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.KAnonymityConfig();
+            if (typeCase_ == TypeOneofCase.KAnonymityConfig) {
+              subBuilder.MergeFrom(KAnonymityConfig);
+            }
+            input.ReadMessage(subBuilder);
+            KAnonymityConfig = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.LDiversityConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.LDiversityConfig();
+            if (typeCase_ == TypeOneofCase.LDiversityConfig) {
+              subBuilder.MergeFrom(LDiversityConfig);
+            }
+            input.ReadMessage(subBuilder);
+            LDiversityConfig = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PrivacyMetric message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Compute numerical stats over an individual column, including
+      /// min, max, and quantiles.
+      /// </summary>
+      public sealed partial class NumericalStatsConfig : pb::IMessage<NumericalStatsConfig> {
+        private static readonly pb::MessageParser<NumericalStatsConfig> _parser = new pb::MessageParser<NumericalStatsConfig>(() => new NumericalStatsConfig());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<NumericalStatsConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NumericalStatsConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NumericalStatsConfig(NumericalStatsConfig other) : this() {
+          Field = other.field_ != null ? other.Field.Clone() : null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NumericalStatsConfig Clone() {
+          return new NumericalStatsConfig(this);
+        }
+
+        /// <summary>Field number for the "field" field.</summary>
+        public const int FieldFieldNumber = 1;
+        private global::Google.Cloud.Dlp.V2Beta1.FieldId field_;
+        /// <summary>
+        /// Field to compute numerical stats on. Supported types are
+        /// integer, float, date, datetime, timestamp, time.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.FieldId Field {
+          get { return field_; }
+          set {
+            field_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as NumericalStatsConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(NumericalStatsConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Field, other.Field)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (field_ != null) hash ^= Field.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (field_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Field);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (field_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Field);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(NumericalStatsConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.field_ != null) {
+            if (field_ == null) {
+              field_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+            }
+            Field.MergeFrom(other.Field);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                if (field_ == null) {
+                  field_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+                }
+                input.ReadMessage(field_);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// Compute numerical stats over an individual column, including
+      /// number of distinct values and value count distribution.
+      /// </summary>
+      public sealed partial class CategoricalStatsConfig : pb::IMessage<CategoricalStatsConfig> {
+        private static readonly pb::MessageParser<CategoricalStatsConfig> _parser = new pb::MessageParser<CategoricalStatsConfig>(() => new CategoricalStatsConfig());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<CategoricalStatsConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public CategoricalStatsConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public CategoricalStatsConfig(CategoricalStatsConfig other) : this() {
+          Field = other.field_ != null ? other.Field.Clone() : null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public CategoricalStatsConfig Clone() {
+          return new CategoricalStatsConfig(this);
+        }
+
+        /// <summary>Field number for the "field" field.</summary>
+        public const int FieldFieldNumber = 1;
+        private global::Google.Cloud.Dlp.V2Beta1.FieldId field_;
+        /// <summary>
+        /// Field to compute categorical stats on. All column types are
+        /// supported except for arrays and structs. However, it may be more
+        /// informative to use NumericalStats when the field type is supported,
+        /// depending on the data.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.FieldId Field {
+          get { return field_; }
+          set {
+            field_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as CategoricalStatsConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(CategoricalStatsConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Field, other.Field)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (field_ != null) hash ^= Field.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (field_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Field);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (field_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Field);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(CategoricalStatsConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.field_ != null) {
+            if (field_ == null) {
+              field_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+            }
+            Field.MergeFrom(other.Field);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                if (field_ == null) {
+                  field_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+                }
+                input.ReadMessage(field_);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// k-anonymity metric, used for analysis of reidentification risk.
+      /// </summary>
+      public sealed partial class KAnonymityConfig : pb::IMessage<KAnonymityConfig> {
+        private static readonly pb::MessageParser<KAnonymityConfig> _parser = new pb::MessageParser<KAnonymityConfig>(() => new KAnonymityConfig());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<KAnonymityConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public KAnonymityConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public KAnonymityConfig(KAnonymityConfig other) : this() {
+          quasiIds_ = other.quasiIds_.Clone();
+          EntityId = other.entityId_ != null ? other.EntityId.Clone() : null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public KAnonymityConfig Clone() {
+          return new KAnonymityConfig(this);
+        }
+
+        /// <summary>Field number for the "quasi_ids" field.</summary>
+        public const int QuasiIdsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.FieldId> _repeated_quasiIds_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.FieldId.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId> quasiIds_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId>();
+        /// <summary>
+        /// Set of fields to compute k-anonymity over. When multiple fields are
+        /// specified, they are considered a single composite key. Structs and
+        /// repeated data types are not supported; however, nested fields are
+        /// supported so long as they are not structs themselves or nested within
+        /// a repeated field.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId> QuasiIds {
+          get { return quasiIds_; }
+        }
+
+        /// <summary>Field number for the "entity_id" field.</summary>
+        public const int EntityIdFieldNumber = 2;
+        private global::Google.Cloud.Dlp.V2Beta1.EntityId entityId_;
+        /// <summary>
+        /// Optional message indicating that each distinct `EntityId` should not
+        /// contribute to the k-anonymity count more than once per equivalence class.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.EntityId EntityId {
+          get { return entityId_; }
+          set {
+            entityId_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as KAnonymityConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(KAnonymityConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!quasiIds_.Equals(other.quasiIds_)) return false;
+          if (!object.Equals(EntityId, other.EntityId)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= quasiIds_.GetHashCode();
+          if (entityId_ != null) hash ^= EntityId.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          quasiIds_.WriteTo(output, _repeated_quasiIds_codec);
+          if (entityId_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EntityId);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += quasiIds_.CalculateSize(_repeated_quasiIds_codec);
+          if (entityId_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EntityId);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(KAnonymityConfig other) {
+          if (other == null) {
+            return;
+          }
+          quasiIds_.Add(other.quasiIds_);
+          if (other.entityId_ != null) {
+            if (entityId_ == null) {
+              entityId_ = new global::Google.Cloud.Dlp.V2Beta1.EntityId();
+            }
+            EntityId.MergeFrom(other.EntityId);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                quasiIds_.AddEntriesFrom(input, _repeated_quasiIds_codec);
+                break;
+              }
+              case 18: {
+                if (entityId_ == null) {
+                  entityId_ = new global::Google.Cloud.Dlp.V2Beta1.EntityId();
+                }
+                input.ReadMessage(entityId_);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// l-diversity metric, used for analysis of reidentification risk.
+      /// </summary>
+      public sealed partial class LDiversityConfig : pb::IMessage<LDiversityConfig> {
+        private static readonly pb::MessageParser<LDiversityConfig> _parser = new pb::MessageParser<LDiversityConfig>(() => new LDiversityConfig());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<LDiversityConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public LDiversityConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public LDiversityConfig(LDiversityConfig other) : this() {
+          quasiIds_ = other.quasiIds_.Clone();
+          SensitiveAttribute = other.sensitiveAttribute_ != null ? other.SensitiveAttribute.Clone() : null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public LDiversityConfig Clone() {
+          return new LDiversityConfig(this);
+        }
+
+        /// <summary>Field number for the "quasi_ids" field.</summary>
+        public const int QuasiIdsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.FieldId> _repeated_quasiIds_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.FieldId.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId> quasiIds_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId>();
+        /// <summary>
+        /// Set of quasi-identifiers indicating how equivalence classes are
+        /// defined for the l-diversity computation. When multiple fields are
+        /// specified, they are considered a single composite key.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId> QuasiIds {
+          get { return quasiIds_; }
+        }
+
+        /// <summary>Field number for the "sensitive_attribute" field.</summary>
+        public const int SensitiveAttributeFieldNumber = 2;
+        private global::Google.Cloud.Dlp.V2Beta1.FieldId sensitiveAttribute_;
+        /// <summary>
+        /// Sensitive field for computing the l-value.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.FieldId SensitiveAttribute {
+          get { return sensitiveAttribute_; }
+          set {
+            sensitiveAttribute_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as LDiversityConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(LDiversityConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!quasiIds_.Equals(other.quasiIds_)) return false;
+          if (!object.Equals(SensitiveAttribute, other.SensitiveAttribute)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= quasiIds_.GetHashCode();
+          if (sensitiveAttribute_ != null) hash ^= SensitiveAttribute.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          quasiIds_.WriteTo(output, _repeated_quasiIds_codec);
+          if (sensitiveAttribute_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(SensitiveAttribute);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += quasiIds_.CalculateSize(_repeated_quasiIds_codec);
+          if (sensitiveAttribute_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SensitiveAttribute);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(LDiversityConfig other) {
+          if (other == null) {
+            return;
+          }
+          quasiIds_.Add(other.quasiIds_);
+          if (other.sensitiveAttribute_ != null) {
+            if (sensitiveAttribute_ == null) {
+              sensitiveAttribute_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+            }
+            SensitiveAttribute.MergeFrom(other.SensitiveAttribute);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                quasiIds_.AddEntriesFrom(input, _repeated_quasiIds_codec);
+                break;
+              }
+              case 18: {
+                if (sensitiveAttribute_ == null) {
+                  sensitiveAttribute_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+                }
+                input.ReadMessage(sensitiveAttribute_);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Metadata returned within the
+  /// [`riskAnalysis.operations.get`](/dlp/docs/reference/rest/v2beta1/riskAnalysis.operations/get)
+  /// for risk analysis.
+  /// </summary>
+  public sealed partial class RiskAnalysisOperationMetadata : pb::IMessage<RiskAnalysisOperationMetadata> {
+    private static readonly pb::MessageParser<RiskAnalysisOperationMetadata> _parser = new pb::MessageParser<RiskAnalysisOperationMetadata>(() => new RiskAnalysisOperationMetadata());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RiskAnalysisOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[32]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RiskAnalysisOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RiskAnalysisOperationMetadata(RiskAnalysisOperationMetadata other) : this() {
+      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
+      RequestedPrivacyMetric = other.requestedPrivacyMetric_ != null ? other.RequestedPrivacyMetric.Clone() : null;
+      RequestedSourceTable = other.requestedSourceTable_ != null ? other.RequestedSourceTable.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RiskAnalysisOperationMetadata Clone() {
+      return new RiskAnalysisOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// The time which this request was started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "requested_privacy_metric" field.</summary>
+    public const int RequestedPrivacyMetricFieldNumber = 2;
+    private global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric requestedPrivacyMetric_;
+    /// <summary>
+    /// Privacy metric to compute.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric RequestedPrivacyMetric {
+      get { return requestedPrivacyMetric_; }
+      set {
+        requestedPrivacyMetric_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "requested_source_table" field.</summary>
+    public const int RequestedSourceTableFieldNumber = 3;
+    private global::Google.Cloud.Dlp.V2Beta1.BigQueryTable requestedSourceTable_;
+    /// <summary>
+    /// Input dataset to compute metrics over.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.BigQueryTable RequestedSourceTable {
+      get { return requestedSourceTable_; }
+      set {
+        requestedSourceTable_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RiskAnalysisOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RiskAnalysisOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(RequestedPrivacyMetric, other.RequestedPrivacyMetric)) return false;
+      if (!object.Equals(RequestedSourceTable, other.RequestedSourceTable)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (requestedPrivacyMetric_ != null) hash ^= RequestedPrivacyMetric.GetHashCode();
+      if (requestedSourceTable_ != null) hash ^= RequestedSourceTable.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (createTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CreateTime);
+      }
+      if (requestedPrivacyMetric_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RequestedPrivacyMetric);
+      }
+      if (requestedSourceTable_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RequestedSourceTable);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (requestedPrivacyMetric_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestedPrivacyMetric);
+      }
+      if (requestedSourceTable_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestedSourceTable);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RiskAnalysisOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.requestedPrivacyMetric_ != null) {
+        if (requestedPrivacyMetric_ == null) {
+          requestedPrivacyMetric_ = new global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric();
+        }
+        RequestedPrivacyMetric.MergeFrom(other.RequestedPrivacyMetric);
+      }
+      if (other.requestedSourceTable_ != null) {
+        if (requestedSourceTable_ == null) {
+          requestedSourceTable_ = new global::Google.Cloud.Dlp.V2Beta1.BigQueryTable();
+        }
+        RequestedSourceTable.MergeFrom(other.RequestedSourceTable);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (createTime_ == null) {
+              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(createTime_);
+            break;
+          }
+          case 18: {
+            if (requestedPrivacyMetric_ == null) {
+              requestedPrivacyMetric_ = new global::Google.Cloud.Dlp.V2Beta1.PrivacyMetric();
+            }
+            input.ReadMessage(requestedPrivacyMetric_);
+            break;
+          }
+          case 26: {
+            if (requestedSourceTable_ == null) {
+              requestedSourceTable_ = new global::Google.Cloud.Dlp.V2Beta1.BigQueryTable();
+            }
+            input.ReadMessage(requestedSourceTable_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Result of a risk analysis
+  /// [`Operation`](/dlp/docs/reference/rest/v2beta1/inspect.operations)
+  /// request.
+  /// </summary>
+  public sealed partial class RiskAnalysisOperationResult : pb::IMessage<RiskAnalysisOperationResult> {
+    private static readonly pb::MessageParser<RiskAnalysisOperationResult> _parser = new pb::MessageParser<RiskAnalysisOperationResult>(() => new RiskAnalysisOperationResult());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RiskAnalysisOperationResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[33]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RiskAnalysisOperationResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RiskAnalysisOperationResult(RiskAnalysisOperationResult other) : this() {
+      switch (other.ResultCase) {
+        case ResultOneofCase.NumericalStatsResult:
+          NumericalStatsResult = other.NumericalStatsResult.Clone();
+          break;
+        case ResultOneofCase.CategoricalStatsResult:
+          CategoricalStatsResult = other.CategoricalStatsResult.Clone();
+          break;
+        case ResultOneofCase.KAnonymityResult:
+          KAnonymityResult = other.KAnonymityResult.Clone();
+          break;
+        case ResultOneofCase.LDiversityResult:
+          LDiversityResult = other.LDiversityResult.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RiskAnalysisOperationResult Clone() {
+      return new RiskAnalysisOperationResult(this);
+    }
+
+    /// <summary>Field number for the "numerical_stats_result" field.</summary>
+    public const int NumericalStatsResultFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.NumericalStatsResult NumericalStatsResult {
+      get { return resultCase_ == ResultOneofCase.NumericalStatsResult ? (global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.NumericalStatsResult) result_ : null; }
+      set {
+        result_ = value;
+        resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.NumericalStatsResult;
+      }
+    }
+
+    /// <summary>Field number for the "categorical_stats_result" field.</summary>
+    public const int CategoricalStatsResultFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult CategoricalStatsResult {
+      get { return resultCase_ == ResultOneofCase.CategoricalStatsResult ? (global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult) result_ : null; }
+      set {
+        result_ = value;
+        resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.CategoricalStatsResult;
+      }
+    }
+
+    /// <summary>Field number for the "k_anonymity_result" field.</summary>
+    public const int KAnonymityResultFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult KAnonymityResult {
+      get { return resultCase_ == ResultOneofCase.KAnonymityResult ? (global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult) result_ : null; }
+      set {
+        result_ = value;
+        resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.KAnonymityResult;
+      }
+    }
+
+    /// <summary>Field number for the "l_diversity_result" field.</summary>
+    public const int LDiversityResultFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult LDiversityResult {
+      get { return resultCase_ == ResultOneofCase.LDiversityResult ? (global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult) result_ : null; }
+      set {
+        result_ = value;
+        resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.LDiversityResult;
+      }
+    }
+
+    private object result_;
+    /// <summary>Enum of possible cases for the "result" oneof.</summary>
+    public enum ResultOneofCase {
+      None = 0,
+      NumericalStatsResult = 3,
+      CategoricalStatsResult = 4,
+      KAnonymityResult = 5,
+      LDiversityResult = 6,
+    }
+    private ResultOneofCase resultCase_ = ResultOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ResultOneofCase ResultCase {
+      get { return resultCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearResult() {
+      resultCase_ = ResultOneofCase.None;
+      result_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RiskAnalysisOperationResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RiskAnalysisOperationResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(NumericalStatsResult, other.NumericalStatsResult)) return false;
+      if (!object.Equals(CategoricalStatsResult, other.CategoricalStatsResult)) return false;
+      if (!object.Equals(KAnonymityResult, other.KAnonymityResult)) return false;
+      if (!object.Equals(LDiversityResult, other.LDiversityResult)) return false;
+      if (ResultCase != other.ResultCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (resultCase_ == ResultOneofCase.NumericalStatsResult) hash ^= NumericalStatsResult.GetHashCode();
+      if (resultCase_ == ResultOneofCase.CategoricalStatsResult) hash ^= CategoricalStatsResult.GetHashCode();
+      if (resultCase_ == ResultOneofCase.KAnonymityResult) hash ^= KAnonymityResult.GetHashCode();
+      if (resultCase_ == ResultOneofCase.LDiversityResult) hash ^= LDiversityResult.GetHashCode();
+      hash ^= (int) resultCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (resultCase_ == ResultOneofCase.NumericalStatsResult) {
+        output.WriteRawTag(26);
+        output.WriteMessage(NumericalStatsResult);
+      }
+      if (resultCase_ == ResultOneofCase.CategoricalStatsResult) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CategoricalStatsResult);
+      }
+      if (resultCase_ == ResultOneofCase.KAnonymityResult) {
+        output.WriteRawTag(42);
+        output.WriteMessage(KAnonymityResult);
+      }
+      if (resultCase_ == ResultOneofCase.LDiversityResult) {
+        output.WriteRawTag(50);
+        output.WriteMessage(LDiversityResult);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (resultCase_ == ResultOneofCase.NumericalStatsResult) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NumericalStatsResult);
+      }
+      if (resultCase_ == ResultOneofCase.CategoricalStatsResult) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CategoricalStatsResult);
+      }
+      if (resultCase_ == ResultOneofCase.KAnonymityResult) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KAnonymityResult);
+      }
+      if (resultCase_ == ResultOneofCase.LDiversityResult) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LDiversityResult);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RiskAnalysisOperationResult other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ResultCase) {
+        case ResultOneofCase.NumericalStatsResult:
+          NumericalStatsResult = other.NumericalStatsResult;
+          break;
+        case ResultOneofCase.CategoricalStatsResult:
+          CategoricalStatsResult = other.CategoricalStatsResult;
+          break;
+        case ResultOneofCase.KAnonymityResult:
+          KAnonymityResult = other.KAnonymityResult;
+          break;
+        case ResultOneofCase.LDiversityResult:
+          LDiversityResult = other.LDiversityResult;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 26: {
+            global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.NumericalStatsResult subBuilder = new global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.NumericalStatsResult();
+            if (resultCase_ == ResultOneofCase.NumericalStatsResult) {
+              subBuilder.MergeFrom(NumericalStatsResult);
+            }
+            input.ReadMessage(subBuilder);
+            NumericalStatsResult = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult subBuilder = new global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult();
+            if (resultCase_ == ResultOneofCase.CategoricalStatsResult) {
+              subBuilder.MergeFrom(CategoricalStatsResult);
+            }
+            input.ReadMessage(subBuilder);
+            CategoricalStatsResult = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult subBuilder = new global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult();
+            if (resultCase_ == ResultOneofCase.KAnonymityResult) {
+              subBuilder.MergeFrom(KAnonymityResult);
+            }
+            input.ReadMessage(subBuilder);
+            KAnonymityResult = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult subBuilder = new global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult();
+            if (resultCase_ == ResultOneofCase.LDiversityResult) {
+              subBuilder.MergeFrom(LDiversityResult);
+            }
+            input.ReadMessage(subBuilder);
+            LDiversityResult = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RiskAnalysisOperationResult message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Result of the numerical stats computation.
+      /// </summary>
+      public sealed partial class NumericalStatsResult : pb::IMessage<NumericalStatsResult> {
+        private static readonly pb::MessageParser<NumericalStatsResult> _parser = new pb::MessageParser<NumericalStatsResult>(() => new NumericalStatsResult());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<NumericalStatsResult> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NumericalStatsResult() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NumericalStatsResult(NumericalStatsResult other) : this() {
+          MinValue = other.minValue_ != null ? other.MinValue.Clone() : null;
+          MaxValue = other.maxValue_ != null ? other.MaxValue.Clone() : null;
+          quantileValues_ = other.quantileValues_.Clone();
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public NumericalStatsResult Clone() {
+          return new NumericalStatsResult(this);
+        }
+
+        /// <summary>Field number for the "min_value" field.</summary>
+        public const int MinValueFieldNumber = 1;
+        private global::Google.Cloud.Dlp.V2Beta1.Value minValue_;
+        /// <summary>
+        /// Minimum value appearing in the column.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.Value MinValue {
+          get { return minValue_; }
+          set {
+            minValue_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "max_value" field.</summary>
+        public const int MaxValueFieldNumber = 2;
+        private global::Google.Cloud.Dlp.V2Beta1.Value maxValue_;
+        /// <summary>
+        /// Maximum value appearing in the column.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.Value MaxValue {
+          get { return maxValue_; }
+          set {
+            maxValue_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "quantile_values" field.</summary>
+        public const int QuantileValuesFieldNumber = 4;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.Value> _repeated_quantileValues_codec
+            = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dlp.V2Beta1.Value.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.Value> quantileValues_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.Value>();
+        /// <summary>
+        /// List of 99 values that partition the set of field values into 100 equal
+        /// sized buckets.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.Value> QuantileValues {
+          get { return quantileValues_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as NumericalStatsResult);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(NumericalStatsResult other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(MinValue, other.MinValue)) return false;
+          if (!object.Equals(MaxValue, other.MaxValue)) return false;
+          if(!quantileValues_.Equals(other.quantileValues_)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (minValue_ != null) hash ^= MinValue.GetHashCode();
+          if (maxValue_ != null) hash ^= MaxValue.GetHashCode();
+          hash ^= quantileValues_.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (minValue_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(MinValue);
+          }
+          if (maxValue_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(MaxValue);
+          }
+          quantileValues_.WriteTo(output, _repeated_quantileValues_codec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (minValue_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MinValue);
+          }
+          if (maxValue_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaxValue);
+          }
+          size += quantileValues_.CalculateSize(_repeated_quantileValues_codec);
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(NumericalStatsResult other) {
+          if (other == null) {
+            return;
+          }
+          if (other.minValue_ != null) {
+            if (minValue_ == null) {
+              minValue_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+            }
+            MinValue.MergeFrom(other.MinValue);
+          }
+          if (other.maxValue_ != null) {
+            if (maxValue_ == null) {
+              maxValue_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+            }
+            MaxValue.MergeFrom(other.MaxValue);
+          }
+          quantileValues_.Add(other.quantileValues_);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                if (minValue_ == null) {
+                  minValue_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+                }
+                input.ReadMessage(minValue_);
+                break;
+              }
+              case 18: {
+                if (maxValue_ == null) {
+                  maxValue_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+                }
+                input.ReadMessage(maxValue_);
+                break;
+              }
+              case 34: {
+                quantileValues_.AddEntriesFrom(input, _repeated_quantileValues_codec);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// Result of the categorical stats computation.
+      /// </summary>
+      public sealed partial class CategoricalStatsResult : pb::IMessage<CategoricalStatsResult> {
+        private static readonly pb::MessageParser<CategoricalStatsResult> _parser = new pb::MessageParser<CategoricalStatsResult>(() => new CategoricalStatsResult());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<CategoricalStatsResult> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public CategoricalStatsResult() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public CategoricalStatsResult(CategoricalStatsResult other) : this() {
+          valueFrequencyHistogramBuckets_ = other.valueFrequencyHistogramBuckets_.Clone();
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public CategoricalStatsResult Clone() {
+          return new CategoricalStatsResult(this);
+        }
+
+        /// <summary>Field number for the "value_frequency_histogram_buckets" field.</summary>
+        public const int ValueFrequencyHistogramBucketsFieldNumber = 5;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket> _repeated_valueFrequencyHistogramBuckets_codec
+            = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket> valueFrequencyHistogramBuckets_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket>();
+        /// <summary>
+        /// Histogram of value frequencies in the column.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket> ValueFrequencyHistogramBuckets {
+          get { return valueFrequencyHistogramBuckets_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as CategoricalStatsResult);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(CategoricalStatsResult other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!valueFrequencyHistogramBuckets_.Equals(other.valueFrequencyHistogramBuckets_)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= valueFrequencyHistogramBuckets_.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          valueFrequencyHistogramBuckets_.WriteTo(output, _repeated_valueFrequencyHistogramBuckets_codec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += valueFrequencyHistogramBuckets_.CalculateSize(_repeated_valueFrequencyHistogramBuckets_codec);
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(CategoricalStatsResult other) {
+          if (other == null) {
+            return;
+          }
+          valueFrequencyHistogramBuckets_.Add(other.valueFrequencyHistogramBuckets_);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 42: {
+                valueFrequencyHistogramBuckets_.AddEntriesFrom(input, _repeated_valueFrequencyHistogramBuckets_codec);
+                break;
+              }
+            }
+          }
+        }
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the CategoricalStatsResult message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// Histogram bucket of value frequencies in the column.
+          /// </summary>
+          public sealed partial class CategoricalStatsHistogramBucket : pb::IMessage<CategoricalStatsHistogramBucket> {
+            private static readonly pb::MessageParser<CategoricalStatsHistogramBucket> _parser = new pb::MessageParser<CategoricalStatsHistogramBucket>(() => new CategoricalStatsHistogramBucket());
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pb::MessageParser<CategoricalStatsHistogramBucket> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public CategoricalStatsHistogramBucket() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public CategoricalStatsHistogramBucket(CategoricalStatsHistogramBucket other) : this() {
+              valueFrequencyLowerBound_ = other.valueFrequencyLowerBound_;
+              valueFrequencyUpperBound_ = other.valueFrequencyUpperBound_;
+              bucketSize_ = other.bucketSize_;
+              bucketValues_ = other.bucketValues_.Clone();
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public CategoricalStatsHistogramBucket Clone() {
+              return new CategoricalStatsHistogramBucket(this);
+            }
+
+            /// <summary>Field number for the "value_frequency_lower_bound" field.</summary>
+            public const int ValueFrequencyLowerBoundFieldNumber = 1;
+            private long valueFrequencyLowerBound_;
+            /// <summary>
+            /// Lower bound on the value frequency of the values in this bucket.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long ValueFrequencyLowerBound {
+              get { return valueFrequencyLowerBound_; }
+              set {
+                valueFrequencyLowerBound_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "value_frequency_upper_bound" field.</summary>
+            public const int ValueFrequencyUpperBoundFieldNumber = 2;
+            private long valueFrequencyUpperBound_;
+            /// <summary>
+            /// Upper bound on the value frequency of the values in this bucket.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long ValueFrequencyUpperBound {
+              get { return valueFrequencyUpperBound_; }
+              set {
+                valueFrequencyUpperBound_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "bucket_size" field.</summary>
+            public const int BucketSizeFieldNumber = 3;
+            private long bucketSize_;
+            /// <summary>
+            /// Total number of records in this bucket.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long BucketSize {
+              get { return bucketSize_; }
+              set {
+                bucketSize_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "bucket_values" field.</summary>
+            public const int BucketValuesFieldNumber = 4;
+            private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.ValueFrequency> _repeated_bucketValues_codec
+                = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dlp.V2Beta1.ValueFrequency.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ValueFrequency> bucketValues_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ValueFrequency>();
+            /// <summary>
+            /// Sample of value frequencies in this bucket. The total number of
+            /// values returned per bucket is capped at 20.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ValueFrequency> BucketValues {
+              get { return bucketValues_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override bool Equals(object other) {
+              return Equals(other as CategoricalStatsHistogramBucket);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool Equals(CategoricalStatsHistogramBucket other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (ValueFrequencyLowerBound != other.ValueFrequencyLowerBound) return false;
+              if (ValueFrequencyUpperBound != other.ValueFrequencyUpperBound) return false;
+              if (BucketSize != other.BucketSize) return false;
+              if(!bucketValues_.Equals(other.bucketValues_)) return false;
+              return true;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (ValueFrequencyLowerBound != 0L) hash ^= ValueFrequencyLowerBound.GetHashCode();
+              if (ValueFrequencyUpperBound != 0L) hash ^= ValueFrequencyUpperBound.GetHashCode();
+              if (BucketSize != 0L) hash ^= BucketSize.GetHashCode();
+              hash ^= bucketValues_.GetHashCode();
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void WriteTo(pb::CodedOutputStream output) {
+              if (ValueFrequencyLowerBound != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(ValueFrequencyLowerBound);
+              }
+              if (ValueFrequencyUpperBound != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(ValueFrequencyUpperBound);
+              }
+              if (BucketSize != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(BucketSize);
+              }
+              bucketValues_.WriteTo(output, _repeated_bucketValues_codec);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public int CalculateSize() {
+              int size = 0;
+              if (ValueFrequencyLowerBound != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(ValueFrequencyLowerBound);
+              }
+              if (ValueFrequencyUpperBound != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(ValueFrequencyUpperBound);
+              }
+              if (BucketSize != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(BucketSize);
+              }
+              size += bucketValues_.CalculateSize(_repeated_bucketValues_codec);
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(CategoricalStatsHistogramBucket other) {
+              if (other == null) {
+                return;
+              }
+              if (other.ValueFrequencyLowerBound != 0L) {
+                ValueFrequencyLowerBound = other.ValueFrequencyLowerBound;
+              }
+              if (other.ValueFrequencyUpperBound != 0L) {
+                ValueFrequencyUpperBound = other.ValueFrequencyUpperBound;
+              }
+              if (other.BucketSize != 0L) {
+                BucketSize = other.BucketSize;
+              }
+              bucketValues_.Add(other.bucketValues_);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(pb::CodedInputStream input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    input.SkipLastField();
+                    break;
+                  case 8: {
+                    ValueFrequencyLowerBound = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    ValueFrequencyUpperBound = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    BucketSize = input.ReadInt64();
+                    break;
+                  }
+                  case 34: {
+                    bucketValues_.AddEntriesFrom(input, _repeated_bucketValues_codec);
+                    break;
+                  }
+                }
+              }
+            }
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Result of the k-anonymity computation.
+      /// </summary>
+      public sealed partial class KAnonymityResult : pb::IMessage<KAnonymityResult> {
+        private static readonly pb::MessageParser<KAnonymityResult> _parser = new pb::MessageParser<KAnonymityResult>(() => new KAnonymityResult());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<KAnonymityResult> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public KAnonymityResult() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public KAnonymityResult(KAnonymityResult other) : this() {
+          equivalenceClassHistogramBuckets_ = other.equivalenceClassHistogramBuckets_.Clone();
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public KAnonymityResult Clone() {
+          return new KAnonymityResult(this);
+        }
+
+        /// <summary>Field number for the "equivalence_class_histogram_buckets" field.</summary>
+        public const int EquivalenceClassHistogramBucketsFieldNumber = 5;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket> _repeated_equivalenceClassHistogramBuckets_codec
+            = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket> equivalenceClassHistogramBuckets_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket>();
+        /// <summary>
+        /// Histogram of k-anonymity equivalence classes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket> EquivalenceClassHistogramBuckets {
+          get { return equivalenceClassHistogramBuckets_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as KAnonymityResult);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(KAnonymityResult other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!equivalenceClassHistogramBuckets_.Equals(other.equivalenceClassHistogramBuckets_)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= equivalenceClassHistogramBuckets_.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          equivalenceClassHistogramBuckets_.WriteTo(output, _repeated_equivalenceClassHistogramBuckets_codec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += equivalenceClassHistogramBuckets_.CalculateSize(_repeated_equivalenceClassHistogramBuckets_codec);
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(KAnonymityResult other) {
+          if (other == null) {
+            return;
+          }
+          equivalenceClassHistogramBuckets_.Add(other.equivalenceClassHistogramBuckets_);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 42: {
+                equivalenceClassHistogramBuckets_.AddEntriesFrom(input, _repeated_equivalenceClassHistogramBuckets_codec);
+                break;
+              }
+            }
+          }
+        }
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the KAnonymityResult message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// The set of columns' values that share the same k-anonymity value.
+          /// </summary>
+          public sealed partial class KAnonymityEquivalenceClass : pb::IMessage<KAnonymityEquivalenceClass> {
+            private static readonly pb::MessageParser<KAnonymityEquivalenceClass> _parser = new pb::MessageParser<KAnonymityEquivalenceClass>(() => new KAnonymityEquivalenceClass());
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pb::MessageParser<KAnonymityEquivalenceClass> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public KAnonymityEquivalenceClass() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public KAnonymityEquivalenceClass(KAnonymityEquivalenceClass other) : this() {
+              quasiIdsValues_ = other.quasiIdsValues_.Clone();
+              equivalenceClassSize_ = other.equivalenceClassSize_;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public KAnonymityEquivalenceClass Clone() {
+              return new KAnonymityEquivalenceClass(this);
+            }
+
+            /// <summary>Field number for the "quasi_ids_values" field.</summary>
+            public const int QuasiIdsValuesFieldNumber = 1;
+            private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.Value> _repeated_quasiIdsValues_codec
+                = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.Value.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.Value> quasiIdsValues_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.Value>();
+            /// <summary>
+            /// Set of values defining the equivalence class. One value per
+            /// quasi-identifier column in the original KAnonymity metric message.
+            /// The order is always the same as the original request.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.Value> QuasiIdsValues {
+              get { return quasiIdsValues_; }
+            }
+
+            /// <summary>Field number for the "equivalence_class_size" field.</summary>
+            public const int EquivalenceClassSizeFieldNumber = 2;
+            private long equivalenceClassSize_;
+            /// <summary>
+            /// Size of the equivalence class, for example number of rows with the
+            /// above set of values.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long EquivalenceClassSize {
+              get { return equivalenceClassSize_; }
+              set {
+                equivalenceClassSize_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override bool Equals(object other) {
+              return Equals(other as KAnonymityEquivalenceClass);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool Equals(KAnonymityEquivalenceClass other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!quasiIdsValues_.Equals(other.quasiIdsValues_)) return false;
+              if (EquivalenceClassSize != other.EquivalenceClassSize) return false;
+              return true;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= quasiIdsValues_.GetHashCode();
+              if (EquivalenceClassSize != 0L) hash ^= EquivalenceClassSize.GetHashCode();
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void WriteTo(pb::CodedOutputStream output) {
+              quasiIdsValues_.WriteTo(output, _repeated_quasiIdsValues_codec);
+              if (EquivalenceClassSize != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(EquivalenceClassSize);
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public int CalculateSize() {
+              int size = 0;
+              size += quasiIdsValues_.CalculateSize(_repeated_quasiIdsValues_codec);
+              if (EquivalenceClassSize != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(EquivalenceClassSize);
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(KAnonymityEquivalenceClass other) {
+              if (other == null) {
+                return;
+              }
+              quasiIdsValues_.Add(other.quasiIdsValues_);
+              if (other.EquivalenceClassSize != 0L) {
+                EquivalenceClassSize = other.EquivalenceClassSize;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(pb::CodedInputStream input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    input.SkipLastField();
+                    break;
+                  case 10: {
+                    quasiIdsValues_.AddEntriesFrom(input, _repeated_quasiIdsValues_codec);
+                    break;
+                  }
+                  case 16: {
+                    EquivalenceClassSize = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+
+          }
+
+          /// <summary>
+          /// Histogram bucket of equivalence class sizes in the table.
+          /// </summary>
+          public sealed partial class KAnonymityHistogramBucket : pb::IMessage<KAnonymityHistogramBucket> {
+            private static readonly pb::MessageParser<KAnonymityHistogramBucket> _parser = new pb::MessageParser<KAnonymityHistogramBucket>(() => new KAnonymityHistogramBucket());
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pb::MessageParser<KAnonymityHistogramBucket> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public KAnonymityHistogramBucket() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public KAnonymityHistogramBucket(KAnonymityHistogramBucket other) : this() {
+              equivalenceClassSizeLowerBound_ = other.equivalenceClassSizeLowerBound_;
+              equivalenceClassSizeUpperBound_ = other.equivalenceClassSizeUpperBound_;
+              bucketSize_ = other.bucketSize_;
+              bucketValues_ = other.bucketValues_.Clone();
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public KAnonymityHistogramBucket Clone() {
+              return new KAnonymityHistogramBucket(this);
+            }
+
+            /// <summary>Field number for the "equivalence_class_size_lower_bound" field.</summary>
+            public const int EquivalenceClassSizeLowerBoundFieldNumber = 1;
+            private long equivalenceClassSizeLowerBound_;
+            /// <summary>
+            /// Lower bound on the size of the equivalence classes in this bucket.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long EquivalenceClassSizeLowerBound {
+              get { return equivalenceClassSizeLowerBound_; }
+              set {
+                equivalenceClassSizeLowerBound_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "equivalence_class_size_upper_bound" field.</summary>
+            public const int EquivalenceClassSizeUpperBoundFieldNumber = 2;
+            private long equivalenceClassSizeUpperBound_;
+            /// <summary>
+            /// Upper bound on the size of the equivalence classes in this bucket.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long EquivalenceClassSizeUpperBound {
+              get { return equivalenceClassSizeUpperBound_; }
+              set {
+                equivalenceClassSizeUpperBound_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "bucket_size" field.</summary>
+            public const int BucketSizeFieldNumber = 3;
+            private long bucketSize_;
+            /// <summary>
+            /// Total number of records in this bucket.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long BucketSize {
+              get { return bucketSize_; }
+              set {
+                bucketSize_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "bucket_values" field.</summary>
+            public const int BucketValuesFieldNumber = 4;
+            private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass> _repeated_bucketValues_codec
+                = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass> bucketValues_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass>();
+            /// <summary>
+            /// Sample of equivalence classes in this bucket. The total number of
+            /// classes returned per bucket is capped at 20.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass> BucketValues {
+              get { return bucketValues_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override bool Equals(object other) {
+              return Equals(other as KAnonymityHistogramBucket);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool Equals(KAnonymityHistogramBucket other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (EquivalenceClassSizeLowerBound != other.EquivalenceClassSizeLowerBound) return false;
+              if (EquivalenceClassSizeUpperBound != other.EquivalenceClassSizeUpperBound) return false;
+              if (BucketSize != other.BucketSize) return false;
+              if(!bucketValues_.Equals(other.bucketValues_)) return false;
+              return true;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (EquivalenceClassSizeLowerBound != 0L) hash ^= EquivalenceClassSizeLowerBound.GetHashCode();
+              if (EquivalenceClassSizeUpperBound != 0L) hash ^= EquivalenceClassSizeUpperBound.GetHashCode();
+              if (BucketSize != 0L) hash ^= BucketSize.GetHashCode();
+              hash ^= bucketValues_.GetHashCode();
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void WriteTo(pb::CodedOutputStream output) {
+              if (EquivalenceClassSizeLowerBound != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(EquivalenceClassSizeLowerBound);
+              }
+              if (EquivalenceClassSizeUpperBound != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(EquivalenceClassSizeUpperBound);
+              }
+              if (BucketSize != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(BucketSize);
+              }
+              bucketValues_.WriteTo(output, _repeated_bucketValues_codec);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public int CalculateSize() {
+              int size = 0;
+              if (EquivalenceClassSizeLowerBound != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(EquivalenceClassSizeLowerBound);
+              }
+              if (EquivalenceClassSizeUpperBound != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(EquivalenceClassSizeUpperBound);
+              }
+              if (BucketSize != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(BucketSize);
+              }
+              size += bucketValues_.CalculateSize(_repeated_bucketValues_codec);
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(KAnonymityHistogramBucket other) {
+              if (other == null) {
+                return;
+              }
+              if (other.EquivalenceClassSizeLowerBound != 0L) {
+                EquivalenceClassSizeLowerBound = other.EquivalenceClassSizeLowerBound;
+              }
+              if (other.EquivalenceClassSizeUpperBound != 0L) {
+                EquivalenceClassSizeUpperBound = other.EquivalenceClassSizeUpperBound;
+              }
+              if (other.BucketSize != 0L) {
+                BucketSize = other.BucketSize;
+              }
+              bucketValues_.Add(other.bucketValues_);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(pb::CodedInputStream input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    input.SkipLastField();
+                    break;
+                  case 8: {
+                    EquivalenceClassSizeLowerBound = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    EquivalenceClassSizeUpperBound = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    BucketSize = input.ReadInt64();
+                    break;
+                  }
+                  case 34: {
+                    bucketValues_.AddEntriesFrom(input, _repeated_bucketValues_codec);
+                    break;
+                  }
+                }
+              }
+            }
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Result of the l-diversity computation.
+      /// </summary>
+      public sealed partial class LDiversityResult : pb::IMessage<LDiversityResult> {
+        private static readonly pb::MessageParser<LDiversityResult> _parser = new pb::MessageParser<LDiversityResult>(() => new LDiversityResult());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<LDiversityResult> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public LDiversityResult() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public LDiversityResult(LDiversityResult other) : this() {
+          sensitiveValueFrequencyHistogramBuckets_ = other.sensitiveValueFrequencyHistogramBuckets_.Clone();
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public LDiversityResult Clone() {
+          return new LDiversityResult(this);
+        }
+
+        /// <summary>Field number for the "sensitive_value_frequency_histogram_buckets" field.</summary>
+        public const int SensitiveValueFrequencyHistogramBucketsFieldNumber = 5;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket> _repeated_sensitiveValueFrequencyHistogramBuckets_codec
+            = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket> sensitiveValueFrequencyHistogramBuckets_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket>();
+        /// <summary>
+        /// Histogram of l-diversity equivalence class sensitive value frequencies.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket> SensitiveValueFrequencyHistogramBuckets {
+          get { return sensitiveValueFrequencyHistogramBuckets_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as LDiversityResult);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(LDiversityResult other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!sensitiveValueFrequencyHistogramBuckets_.Equals(other.sensitiveValueFrequencyHistogramBuckets_)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= sensitiveValueFrequencyHistogramBuckets_.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          sensitiveValueFrequencyHistogramBuckets_.WriteTo(output, _repeated_sensitiveValueFrequencyHistogramBuckets_codec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += sensitiveValueFrequencyHistogramBuckets_.CalculateSize(_repeated_sensitiveValueFrequencyHistogramBuckets_codec);
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(LDiversityResult other) {
+          if (other == null) {
+            return;
+          }
+          sensitiveValueFrequencyHistogramBuckets_.Add(other.sensitiveValueFrequencyHistogramBuckets_);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 42: {
+                sensitiveValueFrequencyHistogramBuckets_.AddEntriesFrom(input, _repeated_sensitiveValueFrequencyHistogramBuckets_codec);
+                break;
+              }
+            }
+          }
+        }
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the LDiversityResult message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// The set of columns' values that share the same l-diversity value.
+          /// </summary>
+          public sealed partial class LDiversityEquivalenceClass : pb::IMessage<LDiversityEquivalenceClass> {
+            private static readonly pb::MessageParser<LDiversityEquivalenceClass> _parser = new pb::MessageParser<LDiversityEquivalenceClass>(() => new LDiversityEquivalenceClass());
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pb::MessageParser<LDiversityEquivalenceClass> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public LDiversityEquivalenceClass() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public LDiversityEquivalenceClass(LDiversityEquivalenceClass other) : this() {
+              quasiIdsValues_ = other.quasiIdsValues_.Clone();
+              equivalenceClassSize_ = other.equivalenceClassSize_;
+              numDistinctSensitiveValues_ = other.numDistinctSensitiveValues_;
+              topSensitiveValues_ = other.topSensitiveValues_.Clone();
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public LDiversityEquivalenceClass Clone() {
+              return new LDiversityEquivalenceClass(this);
+            }
+
+            /// <summary>Field number for the "quasi_ids_values" field.</summary>
+            public const int QuasiIdsValuesFieldNumber = 1;
+            private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.Value> _repeated_quasiIdsValues_codec
+                = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.Value.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.Value> quasiIdsValues_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.Value>();
+            /// <summary>
+            /// Quasi-identifier values defining the k-anonymity equivalence
+            /// class. The order is always the same as the original request.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.Value> QuasiIdsValues {
+              get { return quasiIdsValues_; }
+            }
+
+            /// <summary>Field number for the "equivalence_class_size" field.</summary>
+            public const int EquivalenceClassSizeFieldNumber = 2;
+            private long equivalenceClassSize_;
+            /// <summary>
+            /// Size of the k-anonymity equivalence class.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long EquivalenceClassSize {
+              get { return equivalenceClassSize_; }
+              set {
+                equivalenceClassSize_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "num_distinct_sensitive_values" field.</summary>
+            public const int NumDistinctSensitiveValuesFieldNumber = 3;
+            private long numDistinctSensitiveValues_;
+            /// <summary>
+            /// Number of distinct sensitive values in this equivalence class.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long NumDistinctSensitiveValues {
+              get { return numDistinctSensitiveValues_; }
+              set {
+                numDistinctSensitiveValues_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "top_sensitive_values" field.</summary>
+            public const int TopSensitiveValuesFieldNumber = 4;
+            private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.ValueFrequency> _repeated_topSensitiveValues_codec
+                = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dlp.V2Beta1.ValueFrequency.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ValueFrequency> topSensitiveValues_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ValueFrequency>();
+            /// <summary>
+            /// Estimated frequencies of top sensitive values.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.ValueFrequency> TopSensitiveValues {
+              get { return topSensitiveValues_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override bool Equals(object other) {
+              return Equals(other as LDiversityEquivalenceClass);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool Equals(LDiversityEquivalenceClass other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!quasiIdsValues_.Equals(other.quasiIdsValues_)) return false;
+              if (EquivalenceClassSize != other.EquivalenceClassSize) return false;
+              if (NumDistinctSensitiveValues != other.NumDistinctSensitiveValues) return false;
+              if(!topSensitiveValues_.Equals(other.topSensitiveValues_)) return false;
+              return true;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= quasiIdsValues_.GetHashCode();
+              if (EquivalenceClassSize != 0L) hash ^= EquivalenceClassSize.GetHashCode();
+              if (NumDistinctSensitiveValues != 0L) hash ^= NumDistinctSensitiveValues.GetHashCode();
+              hash ^= topSensitiveValues_.GetHashCode();
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void WriteTo(pb::CodedOutputStream output) {
+              quasiIdsValues_.WriteTo(output, _repeated_quasiIdsValues_codec);
+              if (EquivalenceClassSize != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(EquivalenceClassSize);
+              }
+              if (NumDistinctSensitiveValues != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(NumDistinctSensitiveValues);
+              }
+              topSensitiveValues_.WriteTo(output, _repeated_topSensitiveValues_codec);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public int CalculateSize() {
+              int size = 0;
+              size += quasiIdsValues_.CalculateSize(_repeated_quasiIdsValues_codec);
+              if (EquivalenceClassSize != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(EquivalenceClassSize);
+              }
+              if (NumDistinctSensitiveValues != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(NumDistinctSensitiveValues);
+              }
+              size += topSensitiveValues_.CalculateSize(_repeated_topSensitiveValues_codec);
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(LDiversityEquivalenceClass other) {
+              if (other == null) {
+                return;
+              }
+              quasiIdsValues_.Add(other.quasiIdsValues_);
+              if (other.EquivalenceClassSize != 0L) {
+                EquivalenceClassSize = other.EquivalenceClassSize;
+              }
+              if (other.NumDistinctSensitiveValues != 0L) {
+                NumDistinctSensitiveValues = other.NumDistinctSensitiveValues;
+              }
+              topSensitiveValues_.Add(other.topSensitiveValues_);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(pb::CodedInputStream input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    input.SkipLastField();
+                    break;
+                  case 10: {
+                    quasiIdsValues_.AddEntriesFrom(input, _repeated_quasiIdsValues_codec);
+                    break;
+                  }
+                  case 16: {
+                    EquivalenceClassSize = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    NumDistinctSensitiveValues = input.ReadInt64();
+                    break;
+                  }
+                  case 34: {
+                    topSensitiveValues_.AddEntriesFrom(input, _repeated_topSensitiveValues_codec);
+                    break;
+                  }
+                }
+              }
+            }
+
+          }
+
+          /// <summary>
+          /// Histogram bucket of sensitive value frequencies in the table.
+          /// </summary>
+          public sealed partial class LDiversityHistogramBucket : pb::IMessage<LDiversityHistogramBucket> {
+            private static readonly pb::MessageParser<LDiversityHistogramBucket> _parser = new pb::MessageParser<LDiversityHistogramBucket>(() => new LDiversityHistogramBucket());
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pb::MessageParser<LDiversityHistogramBucket> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public LDiversityHistogramBucket() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public LDiversityHistogramBucket(LDiversityHistogramBucket other) : this() {
+              sensitiveValueFrequencyLowerBound_ = other.sensitiveValueFrequencyLowerBound_;
+              sensitiveValueFrequencyUpperBound_ = other.sensitiveValueFrequencyUpperBound_;
+              bucketSize_ = other.bucketSize_;
+              bucketValues_ = other.bucketValues_.Clone();
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public LDiversityHistogramBucket Clone() {
+              return new LDiversityHistogramBucket(this);
+            }
+
+            /// <summary>Field number for the "sensitive_value_frequency_lower_bound" field.</summary>
+            public const int SensitiveValueFrequencyLowerBoundFieldNumber = 1;
+            private long sensitiveValueFrequencyLowerBound_;
+            /// <summary>
+            /// Lower bound on the sensitive value frequencies of the equivalence
+            /// classes in this bucket.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long SensitiveValueFrequencyLowerBound {
+              get { return sensitiveValueFrequencyLowerBound_; }
+              set {
+                sensitiveValueFrequencyLowerBound_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "sensitive_value_frequency_upper_bound" field.</summary>
+            public const int SensitiveValueFrequencyUpperBoundFieldNumber = 2;
+            private long sensitiveValueFrequencyUpperBound_;
+            /// <summary>
+            /// Upper bound on the sensitive value frequencies of the equivalence
+            /// classes in this bucket.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long SensitiveValueFrequencyUpperBound {
+              get { return sensitiveValueFrequencyUpperBound_; }
+              set {
+                sensitiveValueFrequencyUpperBound_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "bucket_size" field.</summary>
+            public const int BucketSizeFieldNumber = 3;
+            private long bucketSize_;
+            /// <summary>
+            /// Total number of records in this bucket.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public long BucketSize {
+              get { return bucketSize_; }
+              set {
+                bucketSize_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "bucket_values" field.</summary>
+            public const int BucketValuesFieldNumber = 4;
+            private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass> _repeated_bucketValues_codec
+                = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass> bucketValues_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass>();
+            /// <summary>
+            /// Sample of equivalence classes in this bucket. The total number of
+            /// classes returned per bucket is capped at 20.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass> BucketValues {
+              get { return bucketValues_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override bool Equals(object other) {
+              return Equals(other as LDiversityHistogramBucket);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool Equals(LDiversityHistogramBucket other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (SensitiveValueFrequencyLowerBound != other.SensitiveValueFrequencyLowerBound) return false;
+              if (SensitiveValueFrequencyUpperBound != other.SensitiveValueFrequencyUpperBound) return false;
+              if (BucketSize != other.BucketSize) return false;
+              if(!bucketValues_.Equals(other.bucketValues_)) return false;
+              return true;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (SensitiveValueFrequencyLowerBound != 0L) hash ^= SensitiveValueFrequencyLowerBound.GetHashCode();
+              if (SensitiveValueFrequencyUpperBound != 0L) hash ^= SensitiveValueFrequencyUpperBound.GetHashCode();
+              if (BucketSize != 0L) hash ^= BucketSize.GetHashCode();
+              hash ^= bucketValues_.GetHashCode();
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void WriteTo(pb::CodedOutputStream output) {
+              if (SensitiveValueFrequencyLowerBound != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(SensitiveValueFrequencyLowerBound);
+              }
+              if (SensitiveValueFrequencyUpperBound != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(SensitiveValueFrequencyUpperBound);
+              }
+              if (BucketSize != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(BucketSize);
+              }
+              bucketValues_.WriteTo(output, _repeated_bucketValues_codec);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public int CalculateSize() {
+              int size = 0;
+              if (SensitiveValueFrequencyLowerBound != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(SensitiveValueFrequencyLowerBound);
+              }
+              if (SensitiveValueFrequencyUpperBound != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(SensitiveValueFrequencyUpperBound);
+              }
+              if (BucketSize != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(BucketSize);
+              }
+              size += bucketValues_.CalculateSize(_repeated_bucketValues_codec);
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(LDiversityHistogramBucket other) {
+              if (other == null) {
+                return;
+              }
+              if (other.SensitiveValueFrequencyLowerBound != 0L) {
+                SensitiveValueFrequencyLowerBound = other.SensitiveValueFrequencyLowerBound;
+              }
+              if (other.SensitiveValueFrequencyUpperBound != 0L) {
+                SensitiveValueFrequencyUpperBound = other.SensitiveValueFrequencyUpperBound;
+              }
+              if (other.BucketSize != 0L) {
+                BucketSize = other.BucketSize;
+              }
+              bucketValues_.Add(other.bucketValues_);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(pb::CodedInputStream input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    input.SkipLastField();
+                    break;
+                  case 8: {
+                    SensitiveValueFrequencyLowerBound = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    SensitiveValueFrequencyUpperBound = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    BucketSize = input.ReadInt64();
+                    break;
+                  }
+                  case 34: {
+                    bucketValues_.AddEntriesFrom(input, _repeated_bucketValues_codec);
+                    break;
+                  }
+                }
+              }
+            }
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A value of a field, including its frequency.
+  /// </summary>
+  public sealed partial class ValueFrequency : pb::IMessage<ValueFrequency> {
+    private static readonly pb::MessageParser<ValueFrequency> _parser = new pb::MessageParser<ValueFrequency>(() => new ValueFrequency());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ValueFrequency> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[34]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ValueFrequency() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ValueFrequency(ValueFrequency other) : this() {
+      Value = other.value_ != null ? other.Value.Clone() : null;
+      count_ = other.count_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ValueFrequency Clone() {
+      return new ValueFrequency(this);
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.Value value_;
+    /// <summary>
+    /// A value contained in the field in question.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.Value Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "count" field.</summary>
+    public const int CountFieldNumber = 2;
+    private long count_;
+    /// <summary>
+    /// How many times the value is contained in the field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Count {
+      get { return count_; }
+      set {
+        count_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ValueFrequency);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ValueFrequency other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Value, other.Value)) return false;
+      if (Count != other.Count) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (value_ != null) hash ^= Value.GetHashCode();
+      if (Count != 0L) hash ^= Count.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (value_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Value);
+      }
+      if (Count != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Count);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (value_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Value);
+      }
+      if (Count != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Count);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ValueFrequency other) {
+      if (other == null) {
+        return;
+      }
+      if (other.value_ != null) {
+        if (value_ == null) {
+          value_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+        }
+        Value.MergeFrom(other.Value);
+      }
+      if (other.Count != 0L) {
+        Count = other.Count;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (value_ == null) {
+              value_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+            }
+            input.ReadMessage(value_);
+            break;
+          }
+          case 16: {
+            Count = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Set of primitive values supported by the system.
   /// </summary>
   public sealed partial class Value : pb::IMessage<Value> {
@@ -5972,7 +9797,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6308,6 +10133,5321 @@ namespace Google.Cloud.Dlp.V2Beta1 {
         }
       }
     }
+
+  }
+
+  /// <summary>
+  /// The configuration that controls how the data will change.
+  /// </summary>
+  public sealed partial class DeidentifyConfig : pb::IMessage<DeidentifyConfig> {
+    private static readonly pb::MessageParser<DeidentifyConfig> _parser = new pb::MessageParser<DeidentifyConfig>(() => new DeidentifyConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeidentifyConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[36]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentifyConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentifyConfig(DeidentifyConfig other) : this() {
+      switch (other.TransformationCase) {
+        case TransformationOneofCase.InfoTypeTransformations:
+          InfoTypeTransformations = other.InfoTypeTransformations.Clone();
+          break;
+        case TransformationOneofCase.RecordTransformations:
+          RecordTransformations = other.RecordTransformations.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentifyConfig Clone() {
+      return new DeidentifyConfig(this);
+    }
+
+    /// <summary>Field number for the "info_type_transformations" field.</summary>
+    public const int InfoTypeTransformationsFieldNumber = 1;
+    /// <summary>
+    /// Treat the dataset as free-form text and apply the same free text
+    /// transformation everywhere.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations InfoTypeTransformations {
+      get { return transformationCase_ == TransformationOneofCase.InfoTypeTransformations ? (global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.InfoTypeTransformations;
+      }
+    }
+
+    /// <summary>Field number for the "record_transformations" field.</summary>
+    public const int RecordTransformationsFieldNumber = 2;
+    /// <summary>
+    /// Treat the dataset as structured. Transformations can be applied to
+    /// specific locations within structured datasets, such as transforming
+    /// a column within a table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.RecordTransformations RecordTransformations {
+      get { return transformationCase_ == TransformationOneofCase.RecordTransformations ? (global::Google.Cloud.Dlp.V2Beta1.RecordTransformations) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.RecordTransformations;
+      }
+    }
+
+    private object transformation_;
+    /// <summary>Enum of possible cases for the "transformation" oneof.</summary>
+    public enum TransformationOneofCase {
+      None = 0,
+      InfoTypeTransformations = 1,
+      RecordTransformations = 2,
+    }
+    private TransformationOneofCase transformationCase_ = TransformationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransformationOneofCase TransformationCase {
+      get { return transformationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearTransformation() {
+      transformationCase_ = TransformationOneofCase.None;
+      transformation_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeidentifyConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeidentifyConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InfoTypeTransformations, other.InfoTypeTransformations)) return false;
+      if (!object.Equals(RecordTransformations, other.RecordTransformations)) return false;
+      if (TransformationCase != other.TransformationCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) hash ^= InfoTypeTransformations.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.RecordTransformations) hash ^= RecordTransformations.GetHashCode();
+      hash ^= (int) transformationCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InfoTypeTransformations);
+      }
+      if (transformationCase_ == TransformationOneofCase.RecordTransformations) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RecordTransformations);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InfoTypeTransformations);
+      }
+      if (transformationCase_ == TransformationOneofCase.RecordTransformations) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RecordTransformations);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeidentifyConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.TransformationCase) {
+        case TransformationOneofCase.InfoTypeTransformations:
+          InfoTypeTransformations = other.InfoTypeTransformations;
+          break;
+        case TransformationOneofCase.RecordTransformations:
+          RecordTransformations = other.RecordTransformations;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations subBuilder = new global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations();
+            if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
+              subBuilder.MergeFrom(InfoTypeTransformations);
+            }
+            input.ReadMessage(subBuilder);
+            InfoTypeTransformations = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2Beta1.RecordTransformations subBuilder = new global::Google.Cloud.Dlp.V2Beta1.RecordTransformations();
+            if (transformationCase_ == TransformationOneofCase.RecordTransformations) {
+              subBuilder.MergeFrom(RecordTransformations);
+            }
+            input.ReadMessage(subBuilder);
+            RecordTransformations = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// A rule for transforming a value.
+  /// </summary>
+  public sealed partial class PrimitiveTransformation : pb::IMessage<PrimitiveTransformation> {
+    private static readonly pb::MessageParser<PrimitiveTransformation> _parser = new pb::MessageParser<PrimitiveTransformation>(() => new PrimitiveTransformation());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PrimitiveTransformation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[37]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrimitiveTransformation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrimitiveTransformation(PrimitiveTransformation other) : this() {
+      switch (other.TransformationCase) {
+        case TransformationOneofCase.ReplaceConfig:
+          ReplaceConfig = other.ReplaceConfig.Clone();
+          break;
+        case TransformationOneofCase.RedactConfig:
+          RedactConfig = other.RedactConfig.Clone();
+          break;
+        case TransformationOneofCase.CharacterMaskConfig:
+          CharacterMaskConfig = other.CharacterMaskConfig.Clone();
+          break;
+        case TransformationOneofCase.CryptoReplaceFfxFpeConfig:
+          CryptoReplaceFfxFpeConfig = other.CryptoReplaceFfxFpeConfig.Clone();
+          break;
+        case TransformationOneofCase.FixedSizeBucketingConfig:
+          FixedSizeBucketingConfig = other.FixedSizeBucketingConfig.Clone();
+          break;
+        case TransformationOneofCase.BucketingConfig:
+          BucketingConfig = other.BucketingConfig.Clone();
+          break;
+        case TransformationOneofCase.ReplaceWithInfoTypeConfig:
+          ReplaceWithInfoTypeConfig = other.ReplaceWithInfoTypeConfig.Clone();
+          break;
+        case TransformationOneofCase.TimePartConfig:
+          TimePartConfig = other.TimePartConfig.Clone();
+          break;
+        case TransformationOneofCase.CryptoHashConfig:
+          CryptoHashConfig = other.CryptoHashConfig.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrimitiveTransformation Clone() {
+      return new PrimitiveTransformation(this);
+    }
+
+    /// <summary>Field number for the "replace_config" field.</summary>
+    public const int ReplaceConfigFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.ReplaceValueConfig ReplaceConfig {
+      get { return transformationCase_ == TransformationOneofCase.ReplaceConfig ? (global::Google.Cloud.Dlp.V2Beta1.ReplaceValueConfig) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.ReplaceConfig;
+      }
+    }
+
+    /// <summary>Field number for the "redact_config" field.</summary>
+    public const int RedactConfigFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.RedactConfig RedactConfig {
+      get { return transformationCase_ == TransformationOneofCase.RedactConfig ? (global::Google.Cloud.Dlp.V2Beta1.RedactConfig) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.RedactConfig;
+      }
+    }
+
+    /// <summary>Field number for the "character_mask_config" field.</summary>
+    public const int CharacterMaskConfigFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.CharacterMaskConfig CharacterMaskConfig {
+      get { return transformationCase_ == TransformationOneofCase.CharacterMaskConfig ? (global::Google.Cloud.Dlp.V2Beta1.CharacterMaskConfig) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.CharacterMaskConfig;
+      }
+    }
+
+    /// <summary>Field number for the "crypto_replace_ffx_fpe_config" field.</summary>
+    public const int CryptoReplaceFfxFpeConfigFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig CryptoReplaceFfxFpeConfig {
+      get { return transformationCase_ == TransformationOneofCase.CryptoReplaceFfxFpeConfig ? (global::Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.CryptoReplaceFfxFpeConfig;
+      }
+    }
+
+    /// <summary>Field number for the "fixed_size_bucketing_config" field.</summary>
+    public const int FixedSizeBucketingConfigFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.FixedSizeBucketingConfig FixedSizeBucketingConfig {
+      get { return transformationCase_ == TransformationOneofCase.FixedSizeBucketingConfig ? (global::Google.Cloud.Dlp.V2Beta1.FixedSizeBucketingConfig) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.FixedSizeBucketingConfig;
+      }
+    }
+
+    /// <summary>Field number for the "bucketing_config" field.</summary>
+    public const int BucketingConfigFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.BucketingConfig BucketingConfig {
+      get { return transformationCase_ == TransformationOneofCase.BucketingConfig ? (global::Google.Cloud.Dlp.V2Beta1.BucketingConfig) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.BucketingConfig;
+      }
+    }
+
+    /// <summary>Field number for the "replace_with_info_type_config" field.</summary>
+    public const int ReplaceWithInfoTypeConfigFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.ReplaceWithInfoTypeConfig ReplaceWithInfoTypeConfig {
+      get { return transformationCase_ == TransformationOneofCase.ReplaceWithInfoTypeConfig ? (global::Google.Cloud.Dlp.V2Beta1.ReplaceWithInfoTypeConfig) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.ReplaceWithInfoTypeConfig;
+      }
+    }
+
+    /// <summary>Field number for the "time_part_config" field.</summary>
+    public const int TimePartConfigFieldNumber = 8;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.TimePartConfig TimePartConfig {
+      get { return transformationCase_ == TransformationOneofCase.TimePartConfig ? (global::Google.Cloud.Dlp.V2Beta1.TimePartConfig) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.TimePartConfig;
+      }
+    }
+
+    /// <summary>Field number for the "crypto_hash_config" field.</summary>
+    public const int CryptoHashConfigFieldNumber = 9;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.CryptoHashConfig CryptoHashConfig {
+      get { return transformationCase_ == TransformationOneofCase.CryptoHashConfig ? (global::Google.Cloud.Dlp.V2Beta1.CryptoHashConfig) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.CryptoHashConfig;
+      }
+    }
+
+    private object transformation_;
+    /// <summary>Enum of possible cases for the "transformation" oneof.</summary>
+    public enum TransformationOneofCase {
+      None = 0,
+      ReplaceConfig = 1,
+      RedactConfig = 2,
+      CharacterMaskConfig = 3,
+      CryptoReplaceFfxFpeConfig = 4,
+      FixedSizeBucketingConfig = 5,
+      BucketingConfig = 6,
+      ReplaceWithInfoTypeConfig = 7,
+      TimePartConfig = 8,
+      CryptoHashConfig = 9,
+    }
+    private TransformationOneofCase transformationCase_ = TransformationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransformationOneofCase TransformationCase {
+      get { return transformationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearTransformation() {
+      transformationCase_ = TransformationOneofCase.None;
+      transformation_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PrimitiveTransformation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PrimitiveTransformation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ReplaceConfig, other.ReplaceConfig)) return false;
+      if (!object.Equals(RedactConfig, other.RedactConfig)) return false;
+      if (!object.Equals(CharacterMaskConfig, other.CharacterMaskConfig)) return false;
+      if (!object.Equals(CryptoReplaceFfxFpeConfig, other.CryptoReplaceFfxFpeConfig)) return false;
+      if (!object.Equals(FixedSizeBucketingConfig, other.FixedSizeBucketingConfig)) return false;
+      if (!object.Equals(BucketingConfig, other.BucketingConfig)) return false;
+      if (!object.Equals(ReplaceWithInfoTypeConfig, other.ReplaceWithInfoTypeConfig)) return false;
+      if (!object.Equals(TimePartConfig, other.TimePartConfig)) return false;
+      if (!object.Equals(CryptoHashConfig, other.CryptoHashConfig)) return false;
+      if (TransformationCase != other.TransformationCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (transformationCase_ == TransformationOneofCase.ReplaceConfig) hash ^= ReplaceConfig.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.RedactConfig) hash ^= RedactConfig.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.CharacterMaskConfig) hash ^= CharacterMaskConfig.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.CryptoReplaceFfxFpeConfig) hash ^= CryptoReplaceFfxFpeConfig.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.FixedSizeBucketingConfig) hash ^= FixedSizeBucketingConfig.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.BucketingConfig) hash ^= BucketingConfig.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.ReplaceWithInfoTypeConfig) hash ^= ReplaceWithInfoTypeConfig.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.TimePartConfig) hash ^= TimePartConfig.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.CryptoHashConfig) hash ^= CryptoHashConfig.GetHashCode();
+      hash ^= (int) transformationCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (transformationCase_ == TransformationOneofCase.ReplaceConfig) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ReplaceConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.RedactConfig) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RedactConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.CharacterMaskConfig) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CharacterMaskConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.CryptoReplaceFfxFpeConfig) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CryptoReplaceFfxFpeConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.FixedSizeBucketingConfig) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FixedSizeBucketingConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.BucketingConfig) {
+        output.WriteRawTag(50);
+        output.WriteMessage(BucketingConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.ReplaceWithInfoTypeConfig) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ReplaceWithInfoTypeConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.TimePartConfig) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TimePartConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.CryptoHashConfig) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CryptoHashConfig);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (transformationCase_ == TransformationOneofCase.ReplaceConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplaceConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.RedactConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RedactConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.CharacterMaskConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CharacterMaskConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.CryptoReplaceFfxFpeConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CryptoReplaceFfxFpeConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.FixedSizeBucketingConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FixedSizeBucketingConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.BucketingConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BucketingConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.ReplaceWithInfoTypeConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplaceWithInfoTypeConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.TimePartConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimePartConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.CryptoHashConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CryptoHashConfig);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PrimitiveTransformation other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.TransformationCase) {
+        case TransformationOneofCase.ReplaceConfig:
+          ReplaceConfig = other.ReplaceConfig;
+          break;
+        case TransformationOneofCase.RedactConfig:
+          RedactConfig = other.RedactConfig;
+          break;
+        case TransformationOneofCase.CharacterMaskConfig:
+          CharacterMaskConfig = other.CharacterMaskConfig;
+          break;
+        case TransformationOneofCase.CryptoReplaceFfxFpeConfig:
+          CryptoReplaceFfxFpeConfig = other.CryptoReplaceFfxFpeConfig;
+          break;
+        case TransformationOneofCase.FixedSizeBucketingConfig:
+          FixedSizeBucketingConfig = other.FixedSizeBucketingConfig;
+          break;
+        case TransformationOneofCase.BucketingConfig:
+          BucketingConfig = other.BucketingConfig;
+          break;
+        case TransformationOneofCase.ReplaceWithInfoTypeConfig:
+          ReplaceWithInfoTypeConfig = other.ReplaceWithInfoTypeConfig;
+          break;
+        case TransformationOneofCase.TimePartConfig:
+          TimePartConfig = other.TimePartConfig;
+          break;
+        case TransformationOneofCase.CryptoHashConfig:
+          CryptoHashConfig = other.CryptoHashConfig;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2Beta1.ReplaceValueConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.ReplaceValueConfig();
+            if (transformationCase_ == TransformationOneofCase.ReplaceConfig) {
+              subBuilder.MergeFrom(ReplaceConfig);
+            }
+            input.ReadMessage(subBuilder);
+            ReplaceConfig = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2Beta1.RedactConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.RedactConfig();
+            if (transformationCase_ == TransformationOneofCase.RedactConfig) {
+              subBuilder.MergeFrom(RedactConfig);
+            }
+            input.ReadMessage(subBuilder);
+            RedactConfig = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2Beta1.CharacterMaskConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.CharacterMaskConfig();
+            if (transformationCase_ == TransformationOneofCase.CharacterMaskConfig) {
+              subBuilder.MergeFrom(CharacterMaskConfig);
+            }
+            input.ReadMessage(subBuilder);
+            CharacterMaskConfig = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig();
+            if (transformationCase_ == TransformationOneofCase.CryptoReplaceFfxFpeConfig) {
+              subBuilder.MergeFrom(CryptoReplaceFfxFpeConfig);
+            }
+            input.ReadMessage(subBuilder);
+            CryptoReplaceFfxFpeConfig = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2Beta1.FixedSizeBucketingConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.FixedSizeBucketingConfig();
+            if (transformationCase_ == TransformationOneofCase.FixedSizeBucketingConfig) {
+              subBuilder.MergeFrom(FixedSizeBucketingConfig);
+            }
+            input.ReadMessage(subBuilder);
+            FixedSizeBucketingConfig = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Dlp.V2Beta1.BucketingConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.BucketingConfig();
+            if (transformationCase_ == TransformationOneofCase.BucketingConfig) {
+              subBuilder.MergeFrom(BucketingConfig);
+            }
+            input.ReadMessage(subBuilder);
+            BucketingConfig = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Dlp.V2Beta1.ReplaceWithInfoTypeConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.ReplaceWithInfoTypeConfig();
+            if (transformationCase_ == TransformationOneofCase.ReplaceWithInfoTypeConfig) {
+              subBuilder.MergeFrom(ReplaceWithInfoTypeConfig);
+            }
+            input.ReadMessage(subBuilder);
+            ReplaceWithInfoTypeConfig = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Dlp.V2Beta1.TimePartConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.TimePartConfig();
+            if (transformationCase_ == TransformationOneofCase.TimePartConfig) {
+              subBuilder.MergeFrom(TimePartConfig);
+            }
+            input.ReadMessage(subBuilder);
+            TimePartConfig = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.Dlp.V2Beta1.CryptoHashConfig subBuilder = new global::Google.Cloud.Dlp.V2Beta1.CryptoHashConfig();
+            if (transformationCase_ == TransformationOneofCase.CryptoHashConfig) {
+              subBuilder.MergeFrom(CryptoHashConfig);
+            }
+            input.ReadMessage(subBuilder);
+            CryptoHashConfig = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// For use with `Date`, `Timestamp`, and `TimeOfDay`, extract or preserve a
+  /// portion of the value.
+  /// </summary>
+  public sealed partial class TimePartConfig : pb::IMessage<TimePartConfig> {
+    private static readonly pb::MessageParser<TimePartConfig> _parser = new pb::MessageParser<TimePartConfig>(() => new TimePartConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TimePartConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[38]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimePartConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimePartConfig(TimePartConfig other) : this() {
+      partToExtract_ = other.partToExtract_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TimePartConfig Clone() {
+      return new TimePartConfig(this);
+    }
+
+    /// <summary>Field number for the "part_to_extract" field.</summary>
+    public const int PartToExtractFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.TimePartConfig.Types.TimePart partToExtract_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.TimePartConfig.Types.TimePart PartToExtract {
+      get { return partToExtract_; }
+      set {
+        partToExtract_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TimePartConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TimePartConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PartToExtract != other.PartToExtract) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PartToExtract != 0) hash ^= PartToExtract.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (PartToExtract != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) PartToExtract);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PartToExtract != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PartToExtract);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TimePartConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PartToExtract != 0) {
+        PartToExtract = other.PartToExtract;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            partToExtract_ = (global::Google.Cloud.Dlp.V2Beta1.TimePartConfig.Types.TimePart) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TimePartConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum TimePart {
+        [pbr::OriginalName("TIME_PART_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// [000-9999]
+        /// </summary>
+        [pbr::OriginalName("YEAR")] Year = 1,
+        /// <summary>
+        /// [1-12]
+        /// </summary>
+        [pbr::OriginalName("MONTH")] Month = 2,
+        /// <summary>
+        /// [1-31]
+        /// </summary>
+        [pbr::OriginalName("DAY_OF_MONTH")] DayOfMonth = 3,
+        /// <summary>
+        /// [1-7]
+        /// </summary>
+        [pbr::OriginalName("DAY_OF_WEEK")] DayOfWeek = 4,
+        /// <summary>
+        /// [1-52]
+        /// </summary>
+        [pbr::OriginalName("WEEK_OF_YEAR")] WeekOfYear = 5,
+        /// <summary>
+        /// [0-24]
+        /// </summary>
+        [pbr::OriginalName("HOUR_OF_DAY")] HourOfDay = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Pseudonymization method that generates surrogates via cryptographic hashing.
+  /// Uses SHA-256.
+  /// Outputs a 32 byte digest as an uppercase hex string
+  /// (for example, 41D1567F7F99F1DC2A5FAB886DEE5BEE).
+  /// Currently, only string and integer values can be hashed.
+  /// </summary>
+  public sealed partial class CryptoHashConfig : pb::IMessage<CryptoHashConfig> {
+    private static readonly pb::MessageParser<CryptoHashConfig> _parser = new pb::MessageParser<CryptoHashConfig>(() => new CryptoHashConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CryptoHashConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[39]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoHashConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoHashConfig(CryptoHashConfig other) : this() {
+      CryptoKey = other.cryptoKey_ != null ? other.CryptoKey.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoHashConfig Clone() {
+      return new CryptoHashConfig(this);
+    }
+
+    /// <summary>Field number for the "crypto_key" field.</summary>
+    public const int CryptoKeyFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.CryptoKey cryptoKey_;
+    /// <summary>
+    /// The key used by the hash function.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.CryptoKey CryptoKey {
+      get { return cryptoKey_; }
+      set {
+        cryptoKey_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CryptoHashConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CryptoHashConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CryptoKey, other.CryptoKey)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (cryptoKey_ != null) hash ^= CryptoKey.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (cryptoKey_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CryptoKey);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (cryptoKey_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CryptoKey);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CryptoHashConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.cryptoKey_ != null) {
+        if (cryptoKey_ == null) {
+          cryptoKey_ = new global::Google.Cloud.Dlp.V2Beta1.CryptoKey();
+        }
+        CryptoKey.MergeFrom(other.CryptoKey);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (cryptoKey_ == null) {
+              cryptoKey_ = new global::Google.Cloud.Dlp.V2Beta1.CryptoKey();
+            }
+            input.ReadMessage(cryptoKey_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Replace each input value with a given `Value`.
+  /// </summary>
+  public sealed partial class ReplaceValueConfig : pb::IMessage<ReplaceValueConfig> {
+    private static readonly pb::MessageParser<ReplaceValueConfig> _parser = new pb::MessageParser<ReplaceValueConfig>(() => new ReplaceValueConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ReplaceValueConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[40]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplaceValueConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplaceValueConfig(ReplaceValueConfig other) : this() {
+      NewValue = other.newValue_ != null ? other.NewValue.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplaceValueConfig Clone() {
+      return new ReplaceValueConfig(this);
+    }
+
+    /// <summary>Field number for the "new_value" field.</summary>
+    public const int NewValueFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.Value newValue_;
+    /// <summary>
+    /// Value to replace it with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.Value NewValue {
+      get { return newValue_; }
+      set {
+        newValue_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ReplaceValueConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ReplaceValueConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(NewValue, other.NewValue)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (newValue_ != null) hash ^= NewValue.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (newValue_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NewValue);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (newValue_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NewValue);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ReplaceValueConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.newValue_ != null) {
+        if (newValue_ == null) {
+          newValue_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+        }
+        NewValue.MergeFrom(other.NewValue);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (newValue_ == null) {
+              newValue_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+            }
+            input.ReadMessage(newValue_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Replace each matching finding with the name of the info_type.
+  /// </summary>
+  public sealed partial class ReplaceWithInfoTypeConfig : pb::IMessage<ReplaceWithInfoTypeConfig> {
+    private static readonly pb::MessageParser<ReplaceWithInfoTypeConfig> _parser = new pb::MessageParser<ReplaceWithInfoTypeConfig>(() => new ReplaceWithInfoTypeConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ReplaceWithInfoTypeConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[41]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplaceWithInfoTypeConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplaceWithInfoTypeConfig(ReplaceWithInfoTypeConfig other) : this() {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplaceWithInfoTypeConfig Clone() {
+      return new ReplaceWithInfoTypeConfig(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ReplaceWithInfoTypeConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ReplaceWithInfoTypeConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ReplaceWithInfoTypeConfig other) {
+      if (other == null) {
+        return;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Redact a given value. For example, if used with an `InfoTypeTransformation`
+  /// transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the
+  /// output would be 'My phone number is '.
+  /// </summary>
+  public sealed partial class RedactConfig : pb::IMessage<RedactConfig> {
+    private static readonly pb::MessageParser<RedactConfig> _parser = new pb::MessageParser<RedactConfig>(() => new RedactConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RedactConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[42]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RedactConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RedactConfig(RedactConfig other) : this() {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RedactConfig Clone() {
+      return new RedactConfig(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RedactConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RedactConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RedactConfig other) {
+      if (other == null) {
+        return;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Characters to skip when doing deidentification of a value. These will be left
+  /// alone and skipped.
+  /// </summary>
+  public sealed partial class CharsToIgnore : pb::IMessage<CharsToIgnore> {
+    private static readonly pb::MessageParser<CharsToIgnore> _parser = new pb::MessageParser<CharsToIgnore>(() => new CharsToIgnore());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CharsToIgnore> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[43]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharsToIgnore() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharsToIgnore(CharsToIgnore other) : this() {
+      switch (other.CharactersCase) {
+        case CharactersOneofCase.CharactersToSkip:
+          CharactersToSkip = other.CharactersToSkip;
+          break;
+        case CharactersOneofCase.CommonCharactersToIgnore:
+          CommonCharactersToIgnore = other.CommonCharactersToIgnore;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharsToIgnore Clone() {
+      return new CharsToIgnore(this);
+    }
+
+    /// <summary>Field number for the "characters_to_skip" field.</summary>
+    public const int CharactersToSkipFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CharactersToSkip {
+      get { return charactersCase_ == CharactersOneofCase.CharactersToSkip ? (string) characters_ : ""; }
+      set {
+        characters_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        charactersCase_ = CharactersOneofCase.CharactersToSkip;
+      }
+    }
+
+    /// <summary>Field number for the "common_characters_to_ignore" field.</summary>
+    public const int CommonCharactersToIgnoreFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Types.CharacterGroup CommonCharactersToIgnore {
+      get { return charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore ? (global::Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Types.CharacterGroup) characters_ : 0; }
+      set {
+        characters_ = value;
+        charactersCase_ = CharactersOneofCase.CommonCharactersToIgnore;
+      }
+    }
+
+    private object characters_;
+    /// <summary>Enum of possible cases for the "characters" oneof.</summary>
+    public enum CharactersOneofCase {
+      None = 0,
+      CharactersToSkip = 1,
+      CommonCharactersToIgnore = 2,
+    }
+    private CharactersOneofCase charactersCase_ = CharactersOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharactersOneofCase CharactersCase {
+      get { return charactersCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearCharacters() {
+      charactersCase_ = CharactersOneofCase.None;
+      characters_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CharsToIgnore);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CharsToIgnore other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CharactersToSkip != other.CharactersToSkip) return false;
+      if (CommonCharactersToIgnore != other.CommonCharactersToIgnore) return false;
+      if (CharactersCase != other.CharactersCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (charactersCase_ == CharactersOneofCase.CharactersToSkip) hash ^= CharactersToSkip.GetHashCode();
+      if (charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore) hash ^= CommonCharactersToIgnore.GetHashCode();
+      hash ^= (int) charactersCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (charactersCase_ == CharactersOneofCase.CharactersToSkip) {
+        output.WriteRawTag(10);
+        output.WriteString(CharactersToSkip);
+      }
+      if (charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) CommonCharactersToIgnore);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (charactersCase_ == CharactersOneofCase.CharactersToSkip) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CharactersToSkip);
+      }
+      if (charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CommonCharactersToIgnore);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CharsToIgnore other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.CharactersCase) {
+        case CharactersOneofCase.CharactersToSkip:
+          CharactersToSkip = other.CharactersToSkip;
+          break;
+        case CharactersOneofCase.CommonCharactersToIgnore:
+          CommonCharactersToIgnore = other.CommonCharactersToIgnore;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            CharactersToSkip = input.ReadString();
+            break;
+          }
+          case 16: {
+            characters_ = input.ReadEnum();
+            charactersCase_ = CharactersOneofCase.CommonCharactersToIgnore;
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CharsToIgnore message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum CharacterGroup {
+        [pbr::OriginalName("CHARACTER_GROUP_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// 0-9
+        /// </summary>
+        [pbr::OriginalName("NUMERIC")] Numeric = 1,
+        /// <summary>
+        /// A-Z
+        /// </summary>
+        [pbr::OriginalName("ALPHA_UPPER_CASE")] AlphaUpperCase = 2,
+        /// <summary>
+        /// a-z
+        /// </summary>
+        [pbr::OriginalName("ALPHA_LOWER_CASE")] AlphaLowerCase = 3,
+        /// <summary>
+        /// US Punctuation, one of !"#$%&amp;'()*+,-./:;&lt;=>?@[\]^_`{|}~
+        /// </summary>
+        [pbr::OriginalName("PUNCTUATION")] Punctuation = 4,
+        /// <summary>
+        /// Whitespace character, one of [ \t\n\x0B\f\r]
+        /// </summary>
+        [pbr::OriginalName("WHITESPACE")] Whitespace = 5,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Partially mask a string by replacing a given number of characters with a
+  /// fixed character. Masking can start from the beginning or end of the string.
+  /// This can be used on data of any type (numbers, longs, and so on) and when
+  /// de-identifying structured data we'll attempt to preserve the original data's
+  /// type. (This allows you to take a long like 123 and modify it to a string like
+  /// **3.
+  /// </summary>
+  public sealed partial class CharacterMaskConfig : pb::IMessage<CharacterMaskConfig> {
+    private static readonly pb::MessageParser<CharacterMaskConfig> _parser = new pb::MessageParser<CharacterMaskConfig>(() => new CharacterMaskConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CharacterMaskConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[44]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharacterMaskConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharacterMaskConfig(CharacterMaskConfig other) : this() {
+      maskingCharacter_ = other.maskingCharacter_;
+      numberToMask_ = other.numberToMask_;
+      reverseOrder_ = other.reverseOrder_;
+      charactersToIgnore_ = other.charactersToIgnore_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharacterMaskConfig Clone() {
+      return new CharacterMaskConfig(this);
+    }
+
+    /// <summary>Field number for the "masking_character" field.</summary>
+    public const int MaskingCharacterFieldNumber = 1;
+    private string maskingCharacter_ = "";
+    /// <summary>
+    /// Character to mask the sensitive values&amp;mdash;for example, "*" for an
+    /// alphabetic string such as name, or "0" for a numeric string such as ZIP
+    /// code or credit card number. String must have length 1. If not supplied, we
+    /// will default to "*" for strings, 0 for digits.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MaskingCharacter {
+      get { return maskingCharacter_; }
+      set {
+        maskingCharacter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "number_to_mask" field.</summary>
+    public const int NumberToMaskFieldNumber = 2;
+    private int numberToMask_;
+    /// <summary>
+    /// Number of characters to mask. If not set, all matching chars will be
+    /// masked. Skipped characters do not count towards this tally.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int NumberToMask {
+      get { return numberToMask_; }
+      set {
+        numberToMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reverse_order" field.</summary>
+    public const int ReverseOrderFieldNumber = 3;
+    private bool reverseOrder_;
+    /// <summary>
+    /// Mask characters in reverse order. For example, if `masking_character` is
+    /// '0', number_to_mask is 14, and `reverse_order` is false, then
+    /// 1234-5678-9012-3456 -> 00000000000000-3456
+    /// If `masking_character` is '*', `number_to_mask` is 3, and `reverse_order`
+    /// is true, then 12345 -> 12***
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ReverseOrder {
+      get { return reverseOrder_; }
+      set {
+        reverseOrder_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "characters_to_ignore" field.</summary>
+    public const int CharactersToIgnoreFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.CharsToIgnore> _repeated_charactersToIgnore_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.CharsToIgnore> charactersToIgnore_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.CharsToIgnore>();
+    /// <summary>
+    /// When masking a string, items in this list will be skipped when replacing.
+    /// For example, if your string is 555-555-5555 and you ask us to skip `-` and
+    /// mask 5 chars with * we would produce ***-*55-5555.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.CharsToIgnore> CharactersToIgnore {
+      get { return charactersToIgnore_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CharacterMaskConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CharacterMaskConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MaskingCharacter != other.MaskingCharacter) return false;
+      if (NumberToMask != other.NumberToMask) return false;
+      if (ReverseOrder != other.ReverseOrder) return false;
+      if(!charactersToIgnore_.Equals(other.charactersToIgnore_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MaskingCharacter.Length != 0) hash ^= MaskingCharacter.GetHashCode();
+      if (NumberToMask != 0) hash ^= NumberToMask.GetHashCode();
+      if (ReverseOrder != false) hash ^= ReverseOrder.GetHashCode();
+      hash ^= charactersToIgnore_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (MaskingCharacter.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MaskingCharacter);
+      }
+      if (NumberToMask != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(NumberToMask);
+      }
+      if (ReverseOrder != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ReverseOrder);
+      }
+      charactersToIgnore_.WriteTo(output, _repeated_charactersToIgnore_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (MaskingCharacter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MaskingCharacter);
+      }
+      if (NumberToMask != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NumberToMask);
+      }
+      if (ReverseOrder != false) {
+        size += 1 + 1;
+      }
+      size += charactersToIgnore_.CalculateSize(_repeated_charactersToIgnore_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CharacterMaskConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MaskingCharacter.Length != 0) {
+        MaskingCharacter = other.MaskingCharacter;
+      }
+      if (other.NumberToMask != 0) {
+        NumberToMask = other.NumberToMask;
+      }
+      if (other.ReverseOrder != false) {
+        ReverseOrder = other.ReverseOrder;
+      }
+      charactersToIgnore_.Add(other.charactersToIgnore_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            MaskingCharacter = input.ReadString();
+            break;
+          }
+          case 16: {
+            NumberToMask = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            ReverseOrder = input.ReadBool();
+            break;
+          }
+          case 34: {
+            charactersToIgnore_.AddEntriesFrom(input, _repeated_charactersToIgnore_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Buckets values based on fixed size ranges. The
+  /// Bucketing transformation can provide all of this functionality,
+  /// but requires more configuration. This message is provided as a convenience to
+  /// the user for simple bucketing strategies.
+  /// The resulting value will be a hyphenated string of
+  /// lower_bound-upper_bound.
+  /// This can be used on data of type: double, long.
+  /// If the bound Value type differs from the type of data
+  /// being transformed, we will first attempt converting the type of the data to
+  /// be transformed to match the type of the bound before comparing.
+  /// </summary>
+  public sealed partial class FixedSizeBucketingConfig : pb::IMessage<FixedSizeBucketingConfig> {
+    private static readonly pb::MessageParser<FixedSizeBucketingConfig> _parser = new pb::MessageParser<FixedSizeBucketingConfig>(() => new FixedSizeBucketingConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FixedSizeBucketingConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[45]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FixedSizeBucketingConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FixedSizeBucketingConfig(FixedSizeBucketingConfig other) : this() {
+      LowerBound = other.lowerBound_ != null ? other.LowerBound.Clone() : null;
+      UpperBound = other.upperBound_ != null ? other.UpperBound.Clone() : null;
+      bucketSize_ = other.bucketSize_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FixedSizeBucketingConfig Clone() {
+      return new FixedSizeBucketingConfig(this);
+    }
+
+    /// <summary>Field number for the "lower_bound" field.</summary>
+    public const int LowerBoundFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.Value lowerBound_;
+    /// <summary>
+    /// Lower bound value of buckets. All values less than `lower_bound` are
+    /// grouped together into a single bucket; for example if `lower_bound` = 10,
+    /// then all values less than 10 are replaced with the value “-10”. [Required].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.Value LowerBound {
+      get { return lowerBound_; }
+      set {
+        lowerBound_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "upper_bound" field.</summary>
+    public const int UpperBoundFieldNumber = 2;
+    private global::Google.Cloud.Dlp.V2Beta1.Value upperBound_;
+    /// <summary>
+    /// Upper bound value of buckets. All values greater than upper_bound are
+    /// grouped together into a single bucket; for example if `upper_bound` = 89,
+    /// then all values greater than 89 are replaced with the value “89+”.
+    /// [Required].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.Value UpperBound {
+      get { return upperBound_; }
+      set {
+        upperBound_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "bucket_size" field.</summary>
+    public const int BucketSizeFieldNumber = 3;
+    private double bucketSize_;
+    /// <summary>
+    /// Size of each bucket (except for minimum and maximum buckets). So if
+    /// `lower_bound` = 10, `upper_bound` = 89, and `bucket_size` = 10, then the
+    /// following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60,
+    /// 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works. [Required].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double BucketSize {
+      get { return bucketSize_; }
+      set {
+        bucketSize_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FixedSizeBucketingConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FixedSizeBucketingConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(LowerBound, other.LowerBound)) return false;
+      if (!object.Equals(UpperBound, other.UpperBound)) return false;
+      if (BucketSize != other.BucketSize) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (lowerBound_ != null) hash ^= LowerBound.GetHashCode();
+      if (upperBound_ != null) hash ^= UpperBound.GetHashCode();
+      if (BucketSize != 0D) hash ^= BucketSize.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (lowerBound_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(LowerBound);
+      }
+      if (upperBound_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpperBound);
+      }
+      if (BucketSize != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(BucketSize);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (lowerBound_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LowerBound);
+      }
+      if (upperBound_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpperBound);
+      }
+      if (BucketSize != 0D) {
+        size += 1 + 8;
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FixedSizeBucketingConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.lowerBound_ != null) {
+        if (lowerBound_ == null) {
+          lowerBound_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+        }
+        LowerBound.MergeFrom(other.LowerBound);
+      }
+      if (other.upperBound_ != null) {
+        if (upperBound_ == null) {
+          upperBound_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+        }
+        UpperBound.MergeFrom(other.UpperBound);
+      }
+      if (other.BucketSize != 0D) {
+        BucketSize = other.BucketSize;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (lowerBound_ == null) {
+              lowerBound_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+            }
+            input.ReadMessage(lowerBound_);
+            break;
+          }
+          case 18: {
+            if (upperBound_ == null) {
+              upperBound_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+            }
+            input.ReadMessage(upperBound_);
+            break;
+          }
+          case 25: {
+            BucketSize = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Generalization function that buckets values based on ranges. The ranges and
+  /// replacement values are dynamically provided by the user for custom behavior,
+  /// such as 1-30 -> LOW 31-65 -> MEDIUM 66-100 -> HIGH
+  /// This can be used on
+  /// data of type: number, long, string, timestamp.
+  /// If the bound `Value` type differs from the type of data being transformed, we
+  /// will first attempt converting the type of the data to be transformed to match
+  /// the type of the bound before comparing.
+  /// </summary>
+  public sealed partial class BucketingConfig : pb::IMessage<BucketingConfig> {
+    private static readonly pb::MessageParser<BucketingConfig> _parser = new pb::MessageParser<BucketingConfig>(() => new BucketingConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BucketingConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[46]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BucketingConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BucketingConfig(BucketingConfig other) : this() {
+      buckets_ = other.buckets_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BucketingConfig Clone() {
+      return new BucketingConfig(this);
+    }
+
+    /// <summary>Field number for the "buckets" field.</summary>
+    public const int BucketsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.Bucket> _repeated_buckets_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.Bucket.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.Bucket> buckets_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.Bucket>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.Bucket> Buckets {
+      get { return buckets_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BucketingConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BucketingConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!buckets_.Equals(other.buckets_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= buckets_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      buckets_.WriteTo(output, _repeated_buckets_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += buckets_.CalculateSize(_repeated_buckets_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BucketingConfig other) {
+      if (other == null) {
+        return;
+      }
+      buckets_.Add(other.buckets_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            buckets_.AddEntriesFrom(input, _repeated_buckets_codec);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the BucketingConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Buckets represented as ranges, along with replacement values. Ranges must
+      /// be non-overlapping.
+      /// </summary>
+      public sealed partial class Bucket : pb::IMessage<Bucket> {
+        private static readonly pb::MessageParser<Bucket> _parser = new pb::MessageParser<Bucket>(() => new Bucket());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Bucket> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.BucketingConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Bucket() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Bucket(Bucket other) : this() {
+          Min = other.min_ != null ? other.Min.Clone() : null;
+          Max = other.max_ != null ? other.Max.Clone() : null;
+          ReplacementValue = other.replacementValue_ != null ? other.ReplacementValue.Clone() : null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Bucket Clone() {
+          return new Bucket(this);
+        }
+
+        /// <summary>Field number for the "min" field.</summary>
+        public const int MinFieldNumber = 1;
+        private global::Google.Cloud.Dlp.V2Beta1.Value min_;
+        /// <summary>
+        /// Lower bound of the range, inclusive. Type should be the same as max if
+        /// used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.Value Min {
+          get { return min_; }
+          set {
+            min_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "max" field.</summary>
+        public const int MaxFieldNumber = 2;
+        private global::Google.Cloud.Dlp.V2Beta1.Value max_;
+        /// <summary>
+        /// Upper bound of the range, exclusive; type must match min.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.Value Max {
+          get { return max_; }
+          set {
+            max_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "replacement_value" field.</summary>
+        public const int ReplacementValueFieldNumber = 3;
+        private global::Google.Cloud.Dlp.V2Beta1.Value replacementValue_;
+        /// <summary>
+        /// Replacement value for this bucket. If not provided
+        /// the default behavior will be to hyphenate the min-max range.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.Value ReplacementValue {
+          get { return replacementValue_; }
+          set {
+            replacementValue_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Bucket);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Bucket other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Min, other.Min)) return false;
+          if (!object.Equals(Max, other.Max)) return false;
+          if (!object.Equals(ReplacementValue, other.ReplacementValue)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (min_ != null) hash ^= Min.GetHashCode();
+          if (max_ != null) hash ^= Max.GetHashCode();
+          if (replacementValue_ != null) hash ^= ReplacementValue.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (min_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Min);
+          }
+          if (max_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Max);
+          }
+          if (replacementValue_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ReplacementValue);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (min_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Min);
+          }
+          if (max_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Max);
+          }
+          if (replacementValue_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplacementValue);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Bucket other) {
+          if (other == null) {
+            return;
+          }
+          if (other.min_ != null) {
+            if (min_ == null) {
+              min_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+            }
+            Min.MergeFrom(other.Min);
+          }
+          if (other.max_ != null) {
+            if (max_ == null) {
+              max_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+            }
+            Max.MergeFrom(other.Max);
+          }
+          if (other.replacementValue_ != null) {
+            if (replacementValue_ == null) {
+              replacementValue_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+            }
+            ReplacementValue.MergeFrom(other.ReplacementValue);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                if (min_ == null) {
+                  min_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+                }
+                input.ReadMessage(min_);
+                break;
+              }
+              case 18: {
+                if (max_ == null) {
+                  max_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+                }
+                input.ReadMessage(max_);
+                break;
+              }
+              case 26: {
+                if (replacementValue_ == null) {
+                  replacementValue_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+                }
+                input.ReadMessage(replacementValue_);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Replaces an identifier with an surrogate using FPE with the FFX
+  /// mode of operation.
+  /// The identifier must be representable by the US-ASCII character set.
+  /// For a given crypto key and context, the same identifier will be
+  /// replaced with the same surrogate.
+  /// Note that a given identifier must be either the empty string or be at
+  /// least two characters long.
+  /// </summary>
+  public sealed partial class CryptoReplaceFfxFpeConfig : pb::IMessage<CryptoReplaceFfxFpeConfig> {
+    private static readonly pb::MessageParser<CryptoReplaceFfxFpeConfig> _parser = new pb::MessageParser<CryptoReplaceFfxFpeConfig>(() => new CryptoReplaceFfxFpeConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CryptoReplaceFfxFpeConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[47]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoReplaceFfxFpeConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoReplaceFfxFpeConfig(CryptoReplaceFfxFpeConfig other) : this() {
+      CryptoKey = other.cryptoKey_ != null ? other.CryptoKey.Clone() : null;
+      Context = other.context_ != null ? other.Context.Clone() : null;
+      switch (other.AlphabetCase) {
+        case AlphabetOneofCase.CommonAlphabet:
+          CommonAlphabet = other.CommonAlphabet;
+          break;
+        case AlphabetOneofCase.CustomAlphabet:
+          CustomAlphabet = other.CustomAlphabet;
+          break;
+        case AlphabetOneofCase.Radix:
+          Radix = other.Radix;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoReplaceFfxFpeConfig Clone() {
+      return new CryptoReplaceFfxFpeConfig(this);
+    }
+
+    /// <summary>Field number for the "crypto_key" field.</summary>
+    public const int CryptoKeyFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.CryptoKey cryptoKey_;
+    /// <summary>
+    /// The key used by the encryption algorithm. [required]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.CryptoKey CryptoKey {
+      get { return cryptoKey_; }
+      set {
+        cryptoKey_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "context" field.</summary>
+    public const int ContextFieldNumber = 2;
+    private global::Google.Cloud.Dlp.V2Beta1.FieldId context_;
+    /// <summary>
+    /// A context may be used for higher security since the same
+    /// identifier in two different contexts likely will be given a distinct
+    /// surrogate. The principle is that the likeliness is inversely related
+    /// to the ratio of the number of distinct identifiers per context over the
+    /// number of possible surrogates: As long as this ratio is small, the
+    /// likehood is large.
+    ///
+    /// If the context is not set, a default tweak will be used.
+    /// If the context is set but:
+    ///
+    /// 1. there is no record present when transforming a given value or
+    /// 1. the field is not present when transforming a given value,
+    ///
+    /// a default tweak will be used.
+    ///
+    /// Note that case (1) is expected when an `InfoTypeTransformation` is
+    /// applied to both structured and non-structured `ContentItem`s.
+    /// Currently, the referenced field may be of value type integer or string.
+    ///
+    /// The tweak is constructed as a sequence of bytes in big endian byte order
+    /// such that:
+    ///
+    /// - a 64 bit integer is encoded followed by a single byte of value 1
+    /// - a string is encoded in UTF-8 format followed by a single byte of value 2
+    ///
+    /// This is also known as the 'tweak', as in tweakable encryption.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.FieldId Context {
+      get { return context_; }
+      set {
+        context_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "common_alphabet" field.</summary>
+    public const int CommonAlphabetFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet CommonAlphabet {
+      get { return alphabetCase_ == AlphabetOneofCase.CommonAlphabet ? (global::Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet) alphabet_ : 0; }
+      set {
+        alphabet_ = value;
+        alphabetCase_ = AlphabetOneofCase.CommonAlphabet;
+      }
+    }
+
+    /// <summary>Field number for the "custom_alphabet" field.</summary>
+    public const int CustomAlphabetFieldNumber = 5;
+    /// <summary>
+    /// This is supported by mapping these to the alphanumeric characters
+    /// that the FFX mode natively supports. This happens before/after
+    /// encryption/decryption.
+    /// Each character listed must appear only once.
+    /// Number of characters must be in the range [2, 62].
+    /// This must be encoded as ASCII.
+    /// The order of characters does not matter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CustomAlphabet {
+      get { return alphabetCase_ == AlphabetOneofCase.CustomAlphabet ? (string) alphabet_ : ""; }
+      set {
+        alphabet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        alphabetCase_ = AlphabetOneofCase.CustomAlphabet;
+      }
+    }
+
+    /// <summary>Field number for the "radix" field.</summary>
+    public const int RadixFieldNumber = 6;
+    /// <summary>
+    /// The native way to select the alphabet. Must be in the range [2, 62].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Radix {
+      get { return alphabetCase_ == AlphabetOneofCase.Radix ? (int) alphabet_ : 0; }
+      set {
+        alphabet_ = value;
+        alphabetCase_ = AlphabetOneofCase.Radix;
+      }
+    }
+
+    private object alphabet_;
+    /// <summary>Enum of possible cases for the "alphabet" oneof.</summary>
+    public enum AlphabetOneofCase {
+      None = 0,
+      CommonAlphabet = 4,
+      CustomAlphabet = 5,
+      Radix = 6,
+    }
+    private AlphabetOneofCase alphabetCase_ = AlphabetOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AlphabetOneofCase AlphabetCase {
+      get { return alphabetCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearAlphabet() {
+      alphabetCase_ = AlphabetOneofCase.None;
+      alphabet_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CryptoReplaceFfxFpeConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CryptoReplaceFfxFpeConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CryptoKey, other.CryptoKey)) return false;
+      if (!object.Equals(Context, other.Context)) return false;
+      if (CommonAlphabet != other.CommonAlphabet) return false;
+      if (CustomAlphabet != other.CustomAlphabet) return false;
+      if (Radix != other.Radix) return false;
+      if (AlphabetCase != other.AlphabetCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (cryptoKey_ != null) hash ^= CryptoKey.GetHashCode();
+      if (context_ != null) hash ^= Context.GetHashCode();
+      if (alphabetCase_ == AlphabetOneofCase.CommonAlphabet) hash ^= CommonAlphabet.GetHashCode();
+      if (alphabetCase_ == AlphabetOneofCase.CustomAlphabet) hash ^= CustomAlphabet.GetHashCode();
+      if (alphabetCase_ == AlphabetOneofCase.Radix) hash ^= Radix.GetHashCode();
+      hash ^= (int) alphabetCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (cryptoKey_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CryptoKey);
+      }
+      if (context_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Context);
+      }
+      if (alphabetCase_ == AlphabetOneofCase.CommonAlphabet) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) CommonAlphabet);
+      }
+      if (alphabetCase_ == AlphabetOneofCase.CustomAlphabet) {
+        output.WriteRawTag(42);
+        output.WriteString(CustomAlphabet);
+      }
+      if (alphabetCase_ == AlphabetOneofCase.Radix) {
+        output.WriteRawTag(48);
+        output.WriteInt32(Radix);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (cryptoKey_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CryptoKey);
+      }
+      if (context_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Context);
+      }
+      if (alphabetCase_ == AlphabetOneofCase.CommonAlphabet) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CommonAlphabet);
+      }
+      if (alphabetCase_ == AlphabetOneofCase.CustomAlphabet) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomAlphabet);
+      }
+      if (alphabetCase_ == AlphabetOneofCase.Radix) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Radix);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CryptoReplaceFfxFpeConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.cryptoKey_ != null) {
+        if (cryptoKey_ == null) {
+          cryptoKey_ = new global::Google.Cloud.Dlp.V2Beta1.CryptoKey();
+        }
+        CryptoKey.MergeFrom(other.CryptoKey);
+      }
+      if (other.context_ != null) {
+        if (context_ == null) {
+          context_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+        }
+        Context.MergeFrom(other.Context);
+      }
+      switch (other.AlphabetCase) {
+        case AlphabetOneofCase.CommonAlphabet:
+          CommonAlphabet = other.CommonAlphabet;
+          break;
+        case AlphabetOneofCase.CustomAlphabet:
+          CustomAlphabet = other.CustomAlphabet;
+          break;
+        case AlphabetOneofCase.Radix:
+          Radix = other.Radix;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (cryptoKey_ == null) {
+              cryptoKey_ = new global::Google.Cloud.Dlp.V2Beta1.CryptoKey();
+            }
+            input.ReadMessage(cryptoKey_);
+            break;
+          }
+          case 18: {
+            if (context_ == null) {
+              context_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+            }
+            input.ReadMessage(context_);
+            break;
+          }
+          case 32: {
+            alphabet_ = input.ReadEnum();
+            alphabetCase_ = AlphabetOneofCase.CommonAlphabet;
+            break;
+          }
+          case 42: {
+            CustomAlphabet = input.ReadString();
+            break;
+          }
+          case 48: {
+            Radix = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CryptoReplaceFfxFpeConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// These are commonly used subsets of the alphabet that the FFX mode
+      /// natively supports. In the algorithm, the alphabet is selected using
+      /// the "radix". Therefore each corresponds to particular radix.
+      /// </summary>
+      public enum FfxCommonNativeAlphabet {
+        [pbr::OriginalName("FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// [0-9] (radix of 10)
+        /// </summary>
+        [pbr::OriginalName("NUMERIC")] Numeric = 1,
+        /// <summary>
+        /// [0-9A-F] (radix of 16)
+        /// </summary>
+        [pbr::OriginalName("HEXADECIMAL")] Hexadecimal = 2,
+        /// <summary>
+        /// [0-9A-Z] (radix of 36)
+        /// </summary>
+        [pbr::OriginalName("UPPER_CASE_ALPHA_NUMERIC")] UpperCaseAlphaNumeric = 3,
+        /// <summary>
+        /// [0-9A-Za-z] (radix of 62)
+        /// </summary>
+        [pbr::OriginalName("ALPHA_NUMERIC")] AlphaNumeric = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// This is a data encryption key (DEK) (as opposed to
+  /// a key encryption key (KEK) stored by KMS).
+  /// When using KMS to wrap/unwrap DEKs, be sure to set an appropriate
+  /// IAM policy on the KMS CryptoKey (KEK) to ensure an attacker cannot
+  /// unwrap the data crypto key.
+  /// </summary>
+  public sealed partial class CryptoKey : pb::IMessage<CryptoKey> {
+    private static readonly pb::MessageParser<CryptoKey> _parser = new pb::MessageParser<CryptoKey>(() => new CryptoKey());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CryptoKey> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[48]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoKey() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoKey(CryptoKey other) : this() {
+      switch (other.SourceCase) {
+        case SourceOneofCase.Transient:
+          Transient = other.Transient.Clone();
+          break;
+        case SourceOneofCase.Unwrapped:
+          Unwrapped = other.Unwrapped.Clone();
+          break;
+        case SourceOneofCase.KmsWrapped:
+          KmsWrapped = other.KmsWrapped.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoKey Clone() {
+      return new CryptoKey(this);
+    }
+
+    /// <summary>Field number for the "transient" field.</summary>
+    public const int TransientFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.TransientCryptoKey Transient {
+      get { return sourceCase_ == SourceOneofCase.Transient ? (global::Google.Cloud.Dlp.V2Beta1.TransientCryptoKey) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.Transient;
+      }
+    }
+
+    /// <summary>Field number for the "unwrapped" field.</summary>
+    public const int UnwrappedFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.UnwrappedCryptoKey Unwrapped {
+      get { return sourceCase_ == SourceOneofCase.Unwrapped ? (global::Google.Cloud.Dlp.V2Beta1.UnwrappedCryptoKey) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.Unwrapped;
+      }
+    }
+
+    /// <summary>Field number for the "kms_wrapped" field.</summary>
+    public const int KmsWrappedFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.KmsWrappedCryptoKey KmsWrapped {
+      get { return sourceCase_ == SourceOneofCase.KmsWrapped ? (global::Google.Cloud.Dlp.V2Beta1.KmsWrappedCryptoKey) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.KmsWrapped;
+      }
+    }
+
+    private object source_;
+    /// <summary>Enum of possible cases for the "source" oneof.</summary>
+    public enum SourceOneofCase {
+      None = 0,
+      Transient = 1,
+      Unwrapped = 2,
+      KmsWrapped = 3,
+    }
+    private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SourceOneofCase SourceCase {
+      get { return sourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSource() {
+      sourceCase_ = SourceOneofCase.None;
+      source_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CryptoKey);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CryptoKey other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Transient, other.Transient)) return false;
+      if (!object.Equals(Unwrapped, other.Unwrapped)) return false;
+      if (!object.Equals(KmsWrapped, other.KmsWrapped)) return false;
+      if (SourceCase != other.SourceCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (sourceCase_ == SourceOneofCase.Transient) hash ^= Transient.GetHashCode();
+      if (sourceCase_ == SourceOneofCase.Unwrapped) hash ^= Unwrapped.GetHashCode();
+      if (sourceCase_ == SourceOneofCase.KmsWrapped) hash ^= KmsWrapped.GetHashCode();
+      hash ^= (int) sourceCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (sourceCase_ == SourceOneofCase.Transient) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Transient);
+      }
+      if (sourceCase_ == SourceOneofCase.Unwrapped) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Unwrapped);
+      }
+      if (sourceCase_ == SourceOneofCase.KmsWrapped) {
+        output.WriteRawTag(26);
+        output.WriteMessage(KmsWrapped);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (sourceCase_ == SourceOneofCase.Transient) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Transient);
+      }
+      if (sourceCase_ == SourceOneofCase.Unwrapped) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Unwrapped);
+      }
+      if (sourceCase_ == SourceOneofCase.KmsWrapped) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KmsWrapped);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CryptoKey other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.SourceCase) {
+        case SourceOneofCase.Transient:
+          Transient = other.Transient;
+          break;
+        case SourceOneofCase.Unwrapped:
+          Unwrapped = other.Unwrapped;
+          break;
+        case SourceOneofCase.KmsWrapped:
+          KmsWrapped = other.KmsWrapped;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2Beta1.TransientCryptoKey subBuilder = new global::Google.Cloud.Dlp.V2Beta1.TransientCryptoKey();
+            if (sourceCase_ == SourceOneofCase.Transient) {
+              subBuilder.MergeFrom(Transient);
+            }
+            input.ReadMessage(subBuilder);
+            Transient = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2Beta1.UnwrappedCryptoKey subBuilder = new global::Google.Cloud.Dlp.V2Beta1.UnwrappedCryptoKey();
+            if (sourceCase_ == SourceOneofCase.Unwrapped) {
+              subBuilder.MergeFrom(Unwrapped);
+            }
+            input.ReadMessage(subBuilder);
+            Unwrapped = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2Beta1.KmsWrappedCryptoKey subBuilder = new global::Google.Cloud.Dlp.V2Beta1.KmsWrappedCryptoKey();
+            if (sourceCase_ == SourceOneofCase.KmsWrapped) {
+              subBuilder.MergeFrom(KmsWrapped);
+            }
+            input.ReadMessage(subBuilder);
+            KmsWrapped = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Use this to have a random data crypto key generated.
+  /// It will be discarded after the operation/request finishes.
+  /// </summary>
+  public sealed partial class TransientCryptoKey : pb::IMessage<TransientCryptoKey> {
+    private static readonly pb::MessageParser<TransientCryptoKey> _parser = new pb::MessageParser<TransientCryptoKey>(() => new TransientCryptoKey());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TransientCryptoKey> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[49]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransientCryptoKey() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransientCryptoKey(TransientCryptoKey other) : this() {
+      name_ = other.name_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransientCryptoKey Clone() {
+      return new TransientCryptoKey(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Name of the key. [required]
+    /// This is an arbitrary string used to differentiate different keys.
+    /// A unique key is generated per name: two separate `TransientCryptoKey`
+    /// protos share the same generated key if their names are the same.
+    /// When the data crypto key is generated, this name is not used in any way
+    /// (repeating the api call will result in a different key being generated).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TransientCryptoKey);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TransientCryptoKey other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TransientCryptoKey other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Using raw keys is prone to security risks due to accidentally
+  /// leaking the key. Choose another type of key if possible.
+  /// </summary>
+  public sealed partial class UnwrappedCryptoKey : pb::IMessage<UnwrappedCryptoKey> {
+    private static readonly pb::MessageParser<UnwrappedCryptoKey> _parser = new pb::MessageParser<UnwrappedCryptoKey>(() => new UnwrappedCryptoKey());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UnwrappedCryptoKey> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[50]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UnwrappedCryptoKey() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UnwrappedCryptoKey(UnwrappedCryptoKey other) : this() {
+      key_ = other.key_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UnwrappedCryptoKey Clone() {
+      return new UnwrappedCryptoKey(this);
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 1;
+    private pb::ByteString key_ = pb::ByteString.Empty;
+    /// <summary>
+    /// The AES 128/192/256 bit key. [required]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Key {
+      get { return key_; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UnwrappedCryptoKey);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UnwrappedCryptoKey other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Key != other.Key) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Key.Length != 0) hash ^= Key.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Key);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Key.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Key);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UnwrappedCryptoKey other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Key.Length != 0) {
+        Key = other.Key;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Key = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Include to use an existing data crypto key wrapped by KMS.
+  /// Authorization requires the following IAM permissions when sending a request
+  /// to perform a crypto transformation using a kms-wrapped crypto key:
+  /// dlp.kms.encrypt
+  /// </summary>
+  public sealed partial class KmsWrappedCryptoKey : pb::IMessage<KmsWrappedCryptoKey> {
+    private static readonly pb::MessageParser<KmsWrappedCryptoKey> _parser = new pb::MessageParser<KmsWrappedCryptoKey>(() => new KmsWrappedCryptoKey());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<KmsWrappedCryptoKey> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[51]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KmsWrappedCryptoKey() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KmsWrappedCryptoKey(KmsWrappedCryptoKey other) : this() {
+      wrappedKey_ = other.wrappedKey_;
+      cryptoKeyName_ = other.cryptoKeyName_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KmsWrappedCryptoKey Clone() {
+      return new KmsWrappedCryptoKey(this);
+    }
+
+    /// <summary>Field number for the "wrapped_key" field.</summary>
+    public const int WrappedKeyFieldNumber = 1;
+    private pb::ByteString wrappedKey_ = pb::ByteString.Empty;
+    /// <summary>
+    /// The wrapped data crypto key. [required]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString WrappedKey {
+      get { return wrappedKey_; }
+      set {
+        wrappedKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "crypto_key_name" field.</summary>
+    public const int CryptoKeyNameFieldNumber = 2;
+    private string cryptoKeyName_ = "";
+    /// <summary>
+    /// The resource name of the KMS CryptoKey to use for unwrapping. [required]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CryptoKeyName {
+      get { return cryptoKeyName_; }
+      set {
+        cryptoKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as KmsWrappedCryptoKey);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(KmsWrappedCryptoKey other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (WrappedKey != other.WrappedKey) return false;
+      if (CryptoKeyName != other.CryptoKeyName) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (WrappedKey.Length != 0) hash ^= WrappedKey.GetHashCode();
+      if (CryptoKeyName.Length != 0) hash ^= CryptoKeyName.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (WrappedKey.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(WrappedKey);
+      }
+      if (CryptoKeyName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CryptoKeyName);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (WrappedKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(WrappedKey);
+      }
+      if (CryptoKeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CryptoKeyName);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(KmsWrappedCryptoKey other) {
+      if (other == null) {
+        return;
+      }
+      if (other.WrappedKey.Length != 0) {
+        WrappedKey = other.WrappedKey;
+      }
+      if (other.CryptoKeyName.Length != 0) {
+        CryptoKeyName = other.CryptoKeyName;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            WrappedKey = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            CryptoKeyName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// A type of transformation that will scan unstructured text and
+  /// apply various `PrimitiveTransformation`s to each finding, where the
+  /// transformation is applied to only values that were identified as a specific
+  /// info_type.
+  /// </summary>
+  public sealed partial class InfoTypeTransformations : pb::IMessage<InfoTypeTransformations> {
+    private static readonly pb::MessageParser<InfoTypeTransformations> _parser = new pb::MessageParser<InfoTypeTransformations>(() => new InfoTypeTransformations());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InfoTypeTransformations> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[52]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InfoTypeTransformations() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InfoTypeTransformations(InfoTypeTransformations other) : this() {
+      transformations_ = other.transformations_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InfoTypeTransformations Clone() {
+      return new InfoTypeTransformations(this);
+    }
+
+    /// <summary>Field number for the "transformations" field.</summary>
+    public const int TransformationsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.InfoTypeTransformation> _repeated_transformations_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.InfoTypeTransformation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.InfoTypeTransformation> transformations_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.InfoTypeTransformation>();
+    /// <summary>
+    /// Transformation for each info type. Cannot specify more than one
+    /// for a given info type. [required]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.InfoTypeTransformation> Transformations {
+      get { return transformations_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as InfoTypeTransformations);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(InfoTypeTransformations other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!transformations_.Equals(other.transformations_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= transformations_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      transformations_.WriteTo(output, _repeated_transformations_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += transformations_.CalculateSize(_repeated_transformations_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(InfoTypeTransformations other) {
+      if (other == null) {
+        return;
+      }
+      transformations_.Add(other.transformations_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            transformations_.AddEntriesFrom(input, _repeated_transformations_codec);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the InfoTypeTransformations message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// A transformation to apply to text that is identified as a specific
+      /// info_type.
+      /// </summary>
+      public sealed partial class InfoTypeTransformation : pb::IMessage<InfoTypeTransformation> {
+        private static readonly pb::MessageParser<InfoTypeTransformation> _parser = new pb::MessageParser<InfoTypeTransformation>(() => new InfoTypeTransformation());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<InfoTypeTransformation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public InfoTypeTransformation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public InfoTypeTransformation(InfoTypeTransformation other) : this() {
+          infoTypes_ = other.infoTypes_.Clone();
+          PrimitiveTransformation = other.primitiveTransformation_ != null ? other.PrimitiveTransformation.Clone() : null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public InfoTypeTransformation Clone() {
+          return new InfoTypeTransformation(this);
+        }
+
+        /// <summary>Field number for the "info_types" field.</summary>
+        public const int InfoTypesFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.InfoType> _repeated_infoTypes_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.InfoType.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.InfoType> infoTypes_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.InfoType>();
+        /// <summary>
+        /// Info types to apply the transformation to. Empty list will match all
+        /// available info types for this transformation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.InfoType> InfoTypes {
+          get { return infoTypes_; }
+        }
+
+        /// <summary>Field number for the "primitive_transformation" field.</summary>
+        public const int PrimitiveTransformationFieldNumber = 2;
+        private global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation primitiveTransformation_;
+        /// <summary>
+        /// Primitive transformation to apply to the info type. [required]
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation PrimitiveTransformation {
+          get { return primitiveTransformation_; }
+          set {
+            primitiveTransformation_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as InfoTypeTransformation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(InfoTypeTransformation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!infoTypes_.Equals(other.infoTypes_)) return false;
+          if (!object.Equals(PrimitiveTransformation, other.PrimitiveTransformation)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= infoTypes_.GetHashCode();
+          if (primitiveTransformation_ != null) hash ^= PrimitiveTransformation.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          infoTypes_.WriteTo(output, _repeated_infoTypes_codec);
+          if (primitiveTransformation_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(PrimitiveTransformation);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += infoTypes_.CalculateSize(_repeated_infoTypes_codec);
+          if (primitiveTransformation_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrimitiveTransformation);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(InfoTypeTransformation other) {
+          if (other == null) {
+            return;
+          }
+          infoTypes_.Add(other.infoTypes_);
+          if (other.primitiveTransformation_ != null) {
+            if (primitiveTransformation_ == null) {
+              primitiveTransformation_ = new global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation();
+            }
+            PrimitiveTransformation.MergeFrom(other.PrimitiveTransformation);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                infoTypes_.AddEntriesFrom(input, _repeated_infoTypes_codec);
+                break;
+              }
+              case 18: {
+                if (primitiveTransformation_ == null) {
+                  primitiveTransformation_ = new global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation();
+                }
+                input.ReadMessage(primitiveTransformation_);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The transformation to apply to the field.
+  /// </summary>
+  public sealed partial class FieldTransformation : pb::IMessage<FieldTransformation> {
+    private static readonly pb::MessageParser<FieldTransformation> _parser = new pb::MessageParser<FieldTransformation>(() => new FieldTransformation());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FieldTransformation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[53]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FieldTransformation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FieldTransformation(FieldTransformation other) : this() {
+      fields_ = other.fields_.Clone();
+      Condition = other.condition_ != null ? other.Condition.Clone() : null;
+      switch (other.TransformationCase) {
+        case TransformationOneofCase.PrimitiveTransformation:
+          PrimitiveTransformation = other.PrimitiveTransformation.Clone();
+          break;
+        case TransformationOneofCase.InfoTypeTransformations:
+          InfoTypeTransformations = other.InfoTypeTransformations.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FieldTransformation Clone() {
+      return new FieldTransformation(this);
+    }
+
+    /// <summary>Field number for the "fields" field.</summary>
+    public const int FieldsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.FieldId> _repeated_fields_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.FieldId.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId> fields_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId>();
+    /// <summary>
+    /// Input field(s) to apply the transformation to. [required]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId> Fields {
+      get { return fields_; }
+    }
+
+    /// <summary>Field number for the "condition" field.</summary>
+    public const int ConditionFieldNumber = 3;
+    private global::Google.Cloud.Dlp.V2Beta1.RecordCondition condition_;
+    /// <summary>
+    /// Only apply the transformation if the condition evaluates to true for the
+    /// given `RecordCondition`. The conditions are allowed to reference fields
+    /// that are not used in the actual transformation. [optional]
+    ///
+    /// Example Use Cases:
+    ///
+    /// - Apply a different bucket transformation to an age column if the zip code
+    /// column for the same record is within a specific range.
+    /// - Redact a field if the date of birth field is greater than 85.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.RecordCondition Condition {
+      get { return condition_; }
+      set {
+        condition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "primitive_transformation" field.</summary>
+    public const int PrimitiveTransformationFieldNumber = 4;
+    /// <summary>
+    /// Apply the transformation to the entire field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation PrimitiveTransformation {
+      get { return transformationCase_ == TransformationOneofCase.PrimitiveTransformation ? (global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.PrimitiveTransformation;
+      }
+    }
+
+    /// <summary>Field number for the "info_type_transformations" field.</summary>
+    public const int InfoTypeTransformationsFieldNumber = 5;
+    /// <summary>
+    /// Treat the contents of the field as free text, and selectively
+    /// transform content that matches an `InfoType`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations InfoTypeTransformations {
+      get { return transformationCase_ == TransformationOneofCase.InfoTypeTransformations ? (global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations) transformation_ : null; }
+      set {
+        transformation_ = value;
+        transformationCase_ = value == null ? TransformationOneofCase.None : TransformationOneofCase.InfoTypeTransformations;
+      }
+    }
+
+    private object transformation_;
+    /// <summary>Enum of possible cases for the "transformation" oneof.</summary>
+    public enum TransformationOneofCase {
+      None = 0,
+      PrimitiveTransformation = 4,
+      InfoTypeTransformations = 5,
+    }
+    private TransformationOneofCase transformationCase_ = TransformationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransformationOneofCase TransformationCase {
+      get { return transformationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearTransformation() {
+      transformationCase_ = TransformationOneofCase.None;
+      transformation_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FieldTransformation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FieldTransformation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!fields_.Equals(other.fields_)) return false;
+      if (!object.Equals(Condition, other.Condition)) return false;
+      if (!object.Equals(PrimitiveTransformation, other.PrimitiveTransformation)) return false;
+      if (!object.Equals(InfoTypeTransformations, other.InfoTypeTransformations)) return false;
+      if (TransformationCase != other.TransformationCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= fields_.GetHashCode();
+      if (condition_ != null) hash ^= Condition.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.PrimitiveTransformation) hash ^= PrimitiveTransformation.GetHashCode();
+      if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) hash ^= InfoTypeTransformations.GetHashCode();
+      hash ^= (int) transformationCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      fields_.WriteTo(output, _repeated_fields_codec);
+      if (condition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Condition);
+      }
+      if (transformationCase_ == TransformationOneofCase.PrimitiveTransformation) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PrimitiveTransformation);
+      }
+      if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InfoTypeTransformations);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += fields_.CalculateSize(_repeated_fields_codec);
+      if (condition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Condition);
+      }
+      if (transformationCase_ == TransformationOneofCase.PrimitiveTransformation) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrimitiveTransformation);
+      }
+      if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InfoTypeTransformations);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FieldTransformation other) {
+      if (other == null) {
+        return;
+      }
+      fields_.Add(other.fields_);
+      if (other.condition_ != null) {
+        if (condition_ == null) {
+          condition_ = new global::Google.Cloud.Dlp.V2Beta1.RecordCondition();
+        }
+        Condition.MergeFrom(other.Condition);
+      }
+      switch (other.TransformationCase) {
+        case TransformationOneofCase.PrimitiveTransformation:
+          PrimitiveTransformation = other.PrimitiveTransformation;
+          break;
+        case TransformationOneofCase.InfoTypeTransformations:
+          InfoTypeTransformations = other.InfoTypeTransformations;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            fields_.AddEntriesFrom(input, _repeated_fields_codec);
+            break;
+          }
+          case 26: {
+            if (condition_ == null) {
+              condition_ = new global::Google.Cloud.Dlp.V2Beta1.RecordCondition();
+            }
+            input.ReadMessage(condition_);
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation subBuilder = new global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation();
+            if (transformationCase_ == TransformationOneofCase.PrimitiveTransformation) {
+              subBuilder.MergeFrom(PrimitiveTransformation);
+            }
+            input.ReadMessage(subBuilder);
+            PrimitiveTransformation = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations subBuilder = new global::Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations();
+            if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
+              subBuilder.MergeFrom(InfoTypeTransformations);
+            }
+            input.ReadMessage(subBuilder);
+            InfoTypeTransformations = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// A type of transformation that is applied over structured data such as a
+  /// table.
+  /// </summary>
+  public sealed partial class RecordTransformations : pb::IMessage<RecordTransformations> {
+    private static readonly pb::MessageParser<RecordTransformations> _parser = new pb::MessageParser<RecordTransformations>(() => new RecordTransformations());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RecordTransformations> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[54]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RecordTransformations() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RecordTransformations(RecordTransformations other) : this() {
+      fieldTransformations_ = other.fieldTransformations_.Clone();
+      recordSuppressions_ = other.recordSuppressions_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RecordTransformations Clone() {
+      return new RecordTransformations(this);
+    }
+
+    /// <summary>Field number for the "field_transformations" field.</summary>
+    public const int FieldTransformationsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.FieldTransformation> _repeated_fieldTransformations_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.FieldTransformation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldTransformation> fieldTransformations_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldTransformation>();
+    /// <summary>
+    /// Transform the record by applying various field transformations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldTransformation> FieldTransformations {
+      get { return fieldTransformations_; }
+    }
+
+    /// <summary>Field number for the "record_suppressions" field.</summary>
+    public const int RecordSuppressionsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.RecordSuppression> _repeated_recordSuppressions_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dlp.V2Beta1.RecordSuppression.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RecordSuppression> recordSuppressions_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RecordSuppression>();
+    /// <summary>
+    /// Configuration defining which records get suppressed entirely. Records that
+    /// match any suppression rule are omitted from the output [optional].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RecordSuppression> RecordSuppressions {
+      get { return recordSuppressions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RecordTransformations);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RecordTransformations other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!fieldTransformations_.Equals(other.fieldTransformations_)) return false;
+      if(!recordSuppressions_.Equals(other.recordSuppressions_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= fieldTransformations_.GetHashCode();
+      hash ^= recordSuppressions_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      fieldTransformations_.WriteTo(output, _repeated_fieldTransformations_codec);
+      recordSuppressions_.WriteTo(output, _repeated_recordSuppressions_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += fieldTransformations_.CalculateSize(_repeated_fieldTransformations_codec);
+      size += recordSuppressions_.CalculateSize(_repeated_recordSuppressions_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RecordTransformations other) {
+      if (other == null) {
+        return;
+      }
+      fieldTransformations_.Add(other.fieldTransformations_);
+      recordSuppressions_.Add(other.recordSuppressions_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            fieldTransformations_.AddEntriesFrom(input, _repeated_fieldTransformations_codec);
+            break;
+          }
+          case 18: {
+            recordSuppressions_.AddEntriesFrom(input, _repeated_recordSuppressions_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Configuration to suppress records whose suppression conditions evaluate to
+  /// true.
+  /// </summary>
+  public sealed partial class RecordSuppression : pb::IMessage<RecordSuppression> {
+    private static readonly pb::MessageParser<RecordSuppression> _parser = new pb::MessageParser<RecordSuppression>(() => new RecordSuppression());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RecordSuppression> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[55]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RecordSuppression() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RecordSuppression(RecordSuppression other) : this() {
+      Condition = other.condition_ != null ? other.Condition.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RecordSuppression Clone() {
+      return new RecordSuppression(this);
+    }
+
+    /// <summary>Field number for the "condition" field.</summary>
+    public const int ConditionFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.RecordCondition condition_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.RecordCondition Condition {
+      get { return condition_; }
+      set {
+        condition_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RecordSuppression);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RecordSuppression other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Condition, other.Condition)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (condition_ != null) hash ^= Condition.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (condition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Condition);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (condition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Condition);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RecordSuppression other) {
+      if (other == null) {
+        return;
+      }
+      if (other.condition_ != null) {
+        if (condition_ == null) {
+          condition_ = new global::Google.Cloud.Dlp.V2Beta1.RecordCondition();
+        }
+        Condition.MergeFrom(other.Condition);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (condition_ == null) {
+              condition_ = new global::Google.Cloud.Dlp.V2Beta1.RecordCondition();
+            }
+            input.ReadMessage(condition_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// A condition for determing whether a transformation should be applied to
+  /// a field.
+  /// </summary>
+  public sealed partial class RecordCondition : pb::IMessage<RecordCondition> {
+    private static readonly pb::MessageParser<RecordCondition> _parser = new pb::MessageParser<RecordCondition>(() => new RecordCondition());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RecordCondition> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[56]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RecordCondition() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RecordCondition(RecordCondition other) : this() {
+      Expressions = other.expressions_ != null ? other.Expressions.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RecordCondition Clone() {
+      return new RecordCondition(this);
+    }
+
+    /// <summary>Field number for the "expressions" field.</summary>
+    public const int ExpressionsFieldNumber = 3;
+    private global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions expressions_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions Expressions {
+      get { return expressions_; }
+      set {
+        expressions_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RecordCondition);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RecordCondition other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Expressions, other.Expressions)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (expressions_ != null) hash ^= Expressions.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (expressions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Expressions);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (expressions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Expressions);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RecordCondition other) {
+      if (other == null) {
+        return;
+      }
+      if (other.expressions_ != null) {
+        if (expressions_ == null) {
+          expressions_ = new global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions();
+        }
+        Expressions.MergeFrom(other.Expressions);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 26: {
+            if (expressions_ == null) {
+              expressions_ = new global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions();
+            }
+            input.ReadMessage(expressions_);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RecordCondition message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// The field type of `value` and `field` do not need to match to be
+      /// considered equal, but not all comparisons are possible.
+      ///
+      /// A `value` of type:
+      ///
+      /// - `string` can be compared against all other types
+      /// - `boolean` can only be compared against other booleans
+      /// - `integer` can be compared against doubles or a string if the string value
+      /// can be parsed as an integer.
+      /// - `double` can be compared against integers or a string if the string can
+      /// be parsed as a double.
+      /// - `Timestamp` can be compared against strings in RFC 3339 date string
+      /// format.
+      /// - `TimeOfDay` can be compared against timestamps and strings in the format
+      /// of 'HH:mm:ss'.
+      ///
+      /// If we fail to compare do to type mismatch, a warning will be given and
+      /// the condition will evaluate to false.
+      /// </summary>
+      public sealed partial class Condition : pb::IMessage<Condition> {
+        private static readonly pb::MessageParser<Condition> _parser = new pb::MessageParser<Condition>(() => new Condition());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Condition> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Condition() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Condition(Condition other) : this() {
+          Field = other.field_ != null ? other.Field.Clone() : null;
+          operator_ = other.operator_;
+          Value = other.value_ != null ? other.Value.Clone() : null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Condition Clone() {
+          return new Condition(this);
+        }
+
+        /// <summary>Field number for the "field" field.</summary>
+        public const int FieldFieldNumber = 1;
+        private global::Google.Cloud.Dlp.V2Beta1.FieldId field_;
+        /// <summary>
+        /// Field within the record this condition is evaluated against. [required]
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.FieldId Field {
+          get { return field_; }
+          set {
+            field_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "operator" field.</summary>
+        public const int OperatorFieldNumber = 3;
+        private global::Google.Cloud.Dlp.V2Beta1.RelationalOperator operator_ = 0;
+        /// <summary>
+        /// Operator used to compare the field or info type to the value. [required]
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.RelationalOperator Operator {
+          get { return operator_; }
+          set {
+            operator_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 4;
+        private global::Google.Cloud.Dlp.V2Beta1.Value value_;
+        /// <summary>
+        /// Value to compare against. [Required, except for `EXISTS` tests.]
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.Value Value {
+          get { return value_; }
+          set {
+            value_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Condition);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Condition other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Field, other.Field)) return false;
+          if (Operator != other.Operator) return false;
+          if (!object.Equals(Value, other.Value)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (field_ != null) hash ^= Field.GetHashCode();
+          if (Operator != 0) hash ^= Operator.GetHashCode();
+          if (value_ != null) hash ^= Value.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (field_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Field);
+          }
+          if (Operator != 0) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) Operator);
+          }
+          if (value_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Value);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (field_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Field);
+          }
+          if (Operator != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Operator);
+          }
+          if (value_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Value);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Condition other) {
+          if (other == null) {
+            return;
+          }
+          if (other.field_ != null) {
+            if (field_ == null) {
+              field_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+            }
+            Field.MergeFrom(other.Field);
+          }
+          if (other.Operator != 0) {
+            Operator = other.Operator;
+          }
+          if (other.value_ != null) {
+            if (value_ == null) {
+              value_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+            }
+            Value.MergeFrom(other.Value);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                if (field_ == null) {
+                  field_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+                }
+                input.ReadMessage(field_);
+                break;
+              }
+              case 24: {
+                operator_ = (global::Google.Cloud.Dlp.V2Beta1.RelationalOperator) input.ReadEnum();
+                break;
+              }
+              case 34: {
+                if (value_ == null) {
+                  value_ = new global::Google.Cloud.Dlp.V2Beta1.Value();
+                }
+                input.ReadMessage(value_);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      public sealed partial class Conditions : pb::IMessage<Conditions> {
+        private static readonly pb::MessageParser<Conditions> _parser = new pb::MessageParser<Conditions>(() => new Conditions());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Conditions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Conditions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Conditions(Conditions other) : this() {
+          conditions_ = other.conditions_.Clone();
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Conditions Clone() {
+          return new Conditions(this);
+        }
+
+        /// <summary>Field number for the "conditions" field.</summary>
+        public const int Conditions_FieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Condition> _repeated_conditions_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Condition.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Condition> conditions_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Condition>();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Condition> Conditions_ {
+          get { return conditions_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Conditions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Conditions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!conditions_.Equals(other.conditions_)) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= conditions_.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          conditions_.WriteTo(output, _repeated_conditions_codec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += conditions_.CalculateSize(_repeated_conditions_codec);
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Conditions other) {
+          if (other == null) {
+            return;
+          }
+          conditions_.Add(other.conditions_);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                conditions_.AddEntriesFrom(input, _repeated_conditions_codec);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// A collection of expressions
+      /// </summary>
+      public sealed partial class Expressions : pb::IMessage<Expressions> {
+        private static readonly pb::MessageParser<Expressions> _parser = new pb::MessageParser<Expressions>(() => new Expressions());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Expressions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Expressions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Expressions(Expressions other) : this() {
+          logicalOperator_ = other.logicalOperator_;
+          switch (other.TypeCase) {
+            case TypeOneofCase.Conditions:
+              Conditions = other.Conditions.Clone();
+              break;
+          }
+
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Expressions Clone() {
+          return new Expressions(this);
+        }
+
+        /// <summary>Field number for the "logical_operator" field.</summary>
+        public const int LogicalOperatorFieldNumber = 1;
+        private global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Types.LogicalOperator logicalOperator_ = 0;
+        /// <summary>
+        /// The operator to apply to the result of conditions. Default and currently
+        /// only supported value is `AND`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Types.LogicalOperator LogicalOperator {
+          get { return logicalOperator_; }
+          set {
+            logicalOperator_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "conditions" field.</summary>
+        public const int ConditionsFieldNumber = 3;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Conditions Conditions {
+          get { return typeCase_ == TypeOneofCase.Conditions ? (global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Conditions) type_ : null; }
+          set {
+            type_ = value;
+            typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.Conditions;
+          }
+        }
+
+        private object type_;
+        /// <summary>Enum of possible cases for the "type" oneof.</summary>
+        public enum TypeOneofCase {
+          None = 0,
+          Conditions = 3,
+        }
+        private TypeOneofCase typeCase_ = TypeOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public TypeOneofCase TypeCase {
+          get { return typeCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void ClearType() {
+          typeCase_ = TypeOneofCase.None;
+          type_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Expressions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Expressions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (LogicalOperator != other.LogicalOperator) return false;
+          if (!object.Equals(Conditions, other.Conditions)) return false;
+          if (TypeCase != other.TypeCase) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (LogicalOperator != 0) hash ^= LogicalOperator.GetHashCode();
+          if (typeCase_ == TypeOneofCase.Conditions) hash ^= Conditions.GetHashCode();
+          hash ^= (int) typeCase_;
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (LogicalOperator != 0) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) LogicalOperator);
+          }
+          if (typeCase_ == TypeOneofCase.Conditions) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Conditions);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (LogicalOperator != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LogicalOperator);
+          }
+          if (typeCase_ == TypeOneofCase.Conditions) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Conditions);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Expressions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.LogicalOperator != 0) {
+            LogicalOperator = other.LogicalOperator;
+          }
+          switch (other.TypeCase) {
+            case TypeOneofCase.Conditions:
+              Conditions = other.Conditions;
+              break;
+          }
+
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 8: {
+                logicalOperator_ = (global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Types.LogicalOperator) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Conditions subBuilder = new global::Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Conditions();
+                if (typeCase_ == TypeOneofCase.Conditions) {
+                  subBuilder.MergeFrom(Conditions);
+                }
+                input.ReadMessage(subBuilder);
+                Conditions = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Expressions message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          public enum LogicalOperator {
+            [pbr::OriginalName("LOGICAL_OPERATOR_UNSPECIFIED")] Unspecified = 0,
+            [pbr::OriginalName("AND")] And = 1,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// High level summary of deidentification.
+  /// </summary>
+  public sealed partial class DeidentificationSummary : pb::IMessage<DeidentificationSummary> {
+    private static readonly pb::MessageParser<DeidentificationSummary> _parser = new pb::MessageParser<DeidentificationSummary>(() => new DeidentificationSummary());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeidentificationSummary> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[57]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentificationSummary() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentificationSummary(DeidentificationSummary other) : this() {
+      transformedBytes_ = other.transformedBytes_;
+      transformationSummaries_ = other.transformationSummaries_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeidentificationSummary Clone() {
+      return new DeidentificationSummary(this);
+    }
+
+    /// <summary>Field number for the "transformed_bytes" field.</summary>
+    public const int TransformedBytesFieldNumber = 2;
+    private long transformedBytes_;
+    /// <summary>
+    /// Total size in bytes that were transformed in some way.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TransformedBytes {
+      get { return transformedBytes_; }
+      set {
+        transformedBytes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "transformation_summaries" field.</summary>
+    public const int TransformationSummariesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.TransformationSummary> _repeated_transformationSummaries_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.TransformationSummary> transformationSummaries_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.TransformationSummary>();
+    /// <summary>
+    /// Transformations applied to the dataset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.TransformationSummary> TransformationSummaries {
+      get { return transformationSummaries_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeidentificationSummary);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeidentificationSummary other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TransformedBytes != other.TransformedBytes) return false;
+      if(!transformationSummaries_.Equals(other.transformationSummaries_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TransformedBytes != 0L) hash ^= TransformedBytes.GetHashCode();
+      hash ^= transformationSummaries_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (TransformedBytes != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(TransformedBytes);
+      }
+      transformationSummaries_.WriteTo(output, _repeated_transformationSummaries_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (TransformedBytes != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TransformedBytes);
+      }
+      size += transformationSummaries_.CalculateSize(_repeated_transformationSummaries_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeidentificationSummary other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TransformedBytes != 0L) {
+        TransformedBytes = other.TransformedBytes;
+      }
+      transformationSummaries_.Add(other.transformationSummaries_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 16: {
+            TransformedBytes = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            transformationSummaries_.AddEntriesFrom(input, _repeated_transformationSummaries_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Summary of a single tranformation.
+  /// </summary>
+  public sealed partial class TransformationSummary : pb::IMessage<TransformationSummary> {
+    private static readonly pb::MessageParser<TransformationSummary> _parser = new pb::MessageParser<TransformationSummary>(() => new TransformationSummary());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TransformationSummary> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.DlpReflection.Descriptor.MessageTypes[58]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransformationSummary() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransformationSummary(TransformationSummary other) : this() {
+      InfoType = other.infoType_ != null ? other.InfoType.Clone() : null;
+      Field = other.field_ != null ? other.Field.Clone() : null;
+      Transformation = other.transformation_ != null ? other.Transformation.Clone() : null;
+      fieldTransformations_ = other.fieldTransformations_.Clone();
+      RecordSuppress = other.recordSuppress_ != null ? other.RecordSuppress.Clone() : null;
+      results_ = other.results_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransformationSummary Clone() {
+      return new TransformationSummary(this);
+    }
+
+    /// <summary>Field number for the "info_type" field.</summary>
+    public const int InfoTypeFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.InfoType infoType_;
+    /// <summary>
+    /// Set if the transformation was limited to a specific info_type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.InfoType InfoType {
+      get { return infoType_; }
+      set {
+        infoType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field" field.</summary>
+    public const int FieldFieldNumber = 2;
+    private global::Google.Cloud.Dlp.V2Beta1.FieldId field_;
+    /// <summary>
+    /// Set if the transformation was limited to a specific FieldId.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.FieldId Field {
+      get { return field_; }
+      set {
+        field_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "transformation" field.</summary>
+    public const int TransformationFieldNumber = 3;
+    private global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation transformation_;
+    /// <summary>
+    /// The specific transformation these stats apply to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation Transformation {
+      get { return transformation_; }
+      set {
+        transformation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_transformations" field.</summary>
+    public const int FieldTransformationsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.FieldTransformation> _repeated_fieldTransformations_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Dlp.V2Beta1.FieldTransformation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldTransformation> fieldTransformations_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldTransformation>();
+    /// <summary>
+    /// The field transformation that was applied. This list will contain
+    /// multiple only in the case of errors.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldTransformation> FieldTransformations {
+      get { return fieldTransformations_; }
+    }
+
+    /// <summary>Field number for the "record_suppress" field.</summary>
+    public const int RecordSuppressFieldNumber = 6;
+    private global::Google.Cloud.Dlp.V2Beta1.RecordSuppression recordSuppress_;
+    /// <summary>
+    /// The specific suppression option these stats apply to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.RecordSuppression RecordSuppress {
+      get { return recordSuppress_; }
+      set {
+        recordSuppress_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "results" field.</summary>
+    public const int ResultsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.SummaryResult> _repeated_results_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.SummaryResult.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.SummaryResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.SummaryResult>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.SummaryResult> Results {
+      get { return results_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TransformationSummary);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TransformationSummary other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InfoType, other.InfoType)) return false;
+      if (!object.Equals(Field, other.Field)) return false;
+      if (!object.Equals(Transformation, other.Transformation)) return false;
+      if(!fieldTransformations_.Equals(other.fieldTransformations_)) return false;
+      if (!object.Equals(RecordSuppress, other.RecordSuppress)) return false;
+      if(!results_.Equals(other.results_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (infoType_ != null) hash ^= InfoType.GetHashCode();
+      if (field_ != null) hash ^= Field.GetHashCode();
+      if (transformation_ != null) hash ^= Transformation.GetHashCode();
+      hash ^= fieldTransformations_.GetHashCode();
+      if (recordSuppress_ != null) hash ^= RecordSuppress.GetHashCode();
+      hash ^= results_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (infoType_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InfoType);
+      }
+      if (field_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Field);
+      }
+      if (transformation_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Transformation);
+      }
+      results_.WriteTo(output, _repeated_results_codec);
+      fieldTransformations_.WriteTo(output, _repeated_fieldTransformations_codec);
+      if (recordSuppress_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RecordSuppress);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (infoType_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InfoType);
+      }
+      if (field_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Field);
+      }
+      if (transformation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Transformation);
+      }
+      size += fieldTransformations_.CalculateSize(_repeated_fieldTransformations_codec);
+      if (recordSuppress_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RecordSuppress);
+      }
+      size += results_.CalculateSize(_repeated_results_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TransformationSummary other) {
+      if (other == null) {
+        return;
+      }
+      if (other.infoType_ != null) {
+        if (infoType_ == null) {
+          infoType_ = new global::Google.Cloud.Dlp.V2Beta1.InfoType();
+        }
+        InfoType.MergeFrom(other.InfoType);
+      }
+      if (other.field_ != null) {
+        if (field_ == null) {
+          field_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+        }
+        Field.MergeFrom(other.Field);
+      }
+      if (other.transformation_ != null) {
+        if (transformation_ == null) {
+          transformation_ = new global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation();
+        }
+        Transformation.MergeFrom(other.Transformation);
+      }
+      fieldTransformations_.Add(other.fieldTransformations_);
+      if (other.recordSuppress_ != null) {
+        if (recordSuppress_ == null) {
+          recordSuppress_ = new global::Google.Cloud.Dlp.V2Beta1.RecordSuppression();
+        }
+        RecordSuppress.MergeFrom(other.RecordSuppress);
+      }
+      results_.Add(other.results_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (infoType_ == null) {
+              infoType_ = new global::Google.Cloud.Dlp.V2Beta1.InfoType();
+            }
+            input.ReadMessage(infoType_);
+            break;
+          }
+          case 18: {
+            if (field_ == null) {
+              field_ = new global::Google.Cloud.Dlp.V2Beta1.FieldId();
+            }
+            input.ReadMessage(field_);
+            break;
+          }
+          case 26: {
+            if (transformation_ == null) {
+              transformation_ = new global::Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation();
+            }
+            input.ReadMessage(transformation_);
+            break;
+          }
+          case 34: {
+            results_.AddEntriesFrom(input, _repeated_results_codec);
+            break;
+          }
+          case 42: {
+            fieldTransformations_.AddEntriesFrom(input, _repeated_fieldTransformations_codec);
+            break;
+          }
+          case 50: {
+            if (recordSuppress_ == null) {
+              recordSuppress_ = new global::Google.Cloud.Dlp.V2Beta1.RecordSuppression();
+            }
+            input.ReadMessage(recordSuppress_);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TransformationSummary message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Possible outcomes of transformations.
+      /// </summary>
+      public enum TransformationResultCode {
+        [pbr::OriginalName("TRANSFORMATION_RESULT_CODE_UNSPECIFIED")] Unspecified = 0,
+        [pbr::OriginalName("SUCCESS")] Success = 1,
+        [pbr::OriginalName("ERROR")] Error = 2,
+      }
+
+      /// <summary>
+      /// A collection that informs the user the number of times a particular
+      /// `TransformationResultCode` and error details occurred.
+      /// </summary>
+      public sealed partial class SummaryResult : pb::IMessage<SummaryResult> {
+        private static readonly pb::MessageParser<SummaryResult> _parser = new pb::MessageParser<SummaryResult>(() => new SummaryResult());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<SummaryResult> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SummaryResult() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SummaryResult(SummaryResult other) : this() {
+          count_ = other.count_;
+          code_ = other.code_;
+          details_ = other.details_;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SummaryResult Clone() {
+          return new SummaryResult(this);
+        }
+
+        /// <summary>Field number for the "count" field.</summary>
+        public const int CountFieldNumber = 1;
+        private long count_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public long Count {
+          get { return count_; }
+          set {
+            count_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "code" field.</summary>
+        public const int CodeFieldNumber = 2;
+        private global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.TransformationResultCode code_ = 0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.TransformationResultCode Code {
+          get { return code_; }
+          set {
+            code_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "details" field.</summary>
+        public const int DetailsFieldNumber = 3;
+        private string details_ = "";
+        /// <summary>
+        /// A place for warnings or errors to show up if a transformation didn't
+        /// work as expected.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Details {
+          get { return details_; }
+          set {
+            details_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as SummaryResult);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(SummaryResult other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Count != other.Count) return false;
+          if (Code != other.Code) return false;
+          if (Details != other.Details) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Count != 0L) hash ^= Count.GetHashCode();
+          if (Code != 0) hash ^= Code.GetHashCode();
+          if (Details.Length != 0) hash ^= Details.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Count != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Count);
+          }
+          if (Code != 0) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Code);
+          }
+          if (Details.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Details);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Count != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Count);
+          }
+          if (Code != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+          }
+          if (Details.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Details);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(SummaryResult other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Count != 0L) {
+            Count = other.Count;
+          }
+          if (other.Code != 0) {
+            Code = other.Code;
+          }
+          if (other.Details.Length != 0) {
+            Details = other.Details;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 8: {
+                Count = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                code_ = (global::Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.TransformationResultCode) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                Details = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
 
   }
 

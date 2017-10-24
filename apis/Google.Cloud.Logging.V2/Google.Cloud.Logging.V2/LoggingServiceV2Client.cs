@@ -113,14 +113,14 @@ namespace Google.Cloud.Logging.V2
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="LoggingServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(2000),
-            maxDelay: TimeSpan.FromMilliseconds(30000),
+            delay: TimeSpan.FromMilliseconds(20000),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.5
         );
 
@@ -153,14 +153,14 @@ namespace Google.Cloud.Logging.V2
         /// <remarks>
         /// The "List" timeout backoff for <see cref="LoggingServiceV2Client"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 7000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 10000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetListTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(7000),
-            maxDelay: TimeSpan.FromMilliseconds(30000),
+            delay: TimeSpan.FromMilliseconds(2000),
+            maxDelay: TimeSpan.FromMilliseconds(10000),
             delayMultiplier: 1.5
         );
 
@@ -175,9 +175,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -185,13 +185,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings DeleteLogSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -206,21 +206,21 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings WriteLogEntriesSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -235,9 +235,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 7000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 10000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -245,13 +245,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 20000 milliseconds.
         /// </remarks>
         public CallSettings ListLogEntriesSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetListRetryBackoff(),
                 timeoutBackoff: GetListTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(20000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -266,9 +266,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -276,13 +276,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -297,9 +297,9 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
         /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -307,13 +307,13 @@ namespace Google.Cloud.Logging.V2
         /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 90000 milliseconds.
         /// </remarks>
         public CallSettings ListLogsSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(90000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -571,7 +571,13 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.
+        /// ## Log entry resources
+        ///
+        /// Writes log entries to Stackdriver Logging. This API method is the
+        /// only way to send log entries to Stackdriver Logging. This method
+        /// is used, directly or indirectly, by the Stackdriver Logging agent
+        /// (fluentd) and all logging libraries configured to use Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
@@ -605,21 +611,27 @@ namespace Google.Cloud.Logging.V2
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
-        /// Required.  The log entries to write. Values supplied for the fields
-        /// `log_name`, `resource`, and `labels` in this `entries.write` request are
-        /// inserted into those log entries in this list that do not provide their own
-        /// values.
+        /// Required. The log entries to send to Stackdriver Logging. The order of log
+        /// entries in this list does not matter. Values supplied in this method's
+        /// `log_name`, `resource`, and `labels` fields are copied into those log
+        /// entries in this list that do not include values for their corresponding
+        /// fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
         ///
-        /// Stackdriver Logging also creates and inserts values for `timestamp` and
-        /// `insert_id` if the entries do not provide them. The created `insert_id` for
-        /// the N'th entry in this list will be greater than earlier entries and less
-        /// than later entries.  Otherwise, the order of log entries in this list does
-        /// not matter.
+        /// If the `timestamp` or `insert_id` fields are missing in log entries, then
+        /// this method supplies the current time or a unique identifier, respectively.
+        /// The supplied values are chosen so that, among the log entries that did not
+        /// supply their own values, the entries earlier in the list will sort before
+        /// the entries later in the list. See the `entries.list` method.
+        ///
+        /// Log entries with timestamps that are more than the
+        /// [logs retention period](/logging/quota-policy) in the past or more than
+        /// 24 hours in the future might be discarded. Discarding does not return
+        /// an error.
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
-        /// you should write multiple log entries at once rather than
-        /// calling this method for each individual log entry.
+        /// you should try to include several log entries in this list,
+        /// rather than calling this method for each individual log entry.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -643,7 +655,13 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.
+        /// ## Log entry resources
+        ///
+        /// Writes log entries to Stackdriver Logging. This API method is the
+        /// only way to send log entries to Stackdriver Logging. This method
+        /// is used, directly or indirectly, by the Stackdriver Logging agent
+        /// (fluentd) and all logging libraries configured to use Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
@@ -677,21 +695,27 @@ namespace Google.Cloud.Logging.V2
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
-        /// Required.  The log entries to write. Values supplied for the fields
-        /// `log_name`, `resource`, and `labels` in this `entries.write` request are
-        /// inserted into those log entries in this list that do not provide their own
-        /// values.
+        /// Required. The log entries to send to Stackdriver Logging. The order of log
+        /// entries in this list does not matter. Values supplied in this method's
+        /// `log_name`, `resource`, and `labels` fields are copied into those log
+        /// entries in this list that do not include values for their corresponding
+        /// fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
         ///
-        /// Stackdriver Logging also creates and inserts values for `timestamp` and
-        /// `insert_id` if the entries do not provide them. The created `insert_id` for
-        /// the N'th entry in this list will be greater than earlier entries and less
-        /// than later entries.  Otherwise, the order of log entries in this list does
-        /// not matter.
+        /// If the `timestamp` or `insert_id` fields are missing in log entries, then
+        /// this method supplies the current time or a unique identifier, respectively.
+        /// The supplied values are chosen so that, among the log entries that did not
+        /// supply their own values, the entries earlier in the list will sort before
+        /// the entries later in the list. See the `entries.list` method.
+        ///
+        /// Log entries with timestamps that are more than the
+        /// [logs retention period](/logging/quota-policy) in the past or more than
+        /// 24 hours in the future might be discarded. Discarding does not return
+        /// an error.
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
-        /// you should write multiple log entries at once rather than
-        /// calling this method for each individual log entry.
+        /// you should try to include several log entries in this list,
+        /// rather than calling this method for each individual log entry.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -712,7 +736,13 @@ namespace Google.Cloud.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.
+        /// ## Log entry resources
+        ///
+        /// Writes log entries to Stackdriver Logging. This API method is the
+        /// only way to send log entries to Stackdriver Logging. This method
+        /// is used, directly or indirectly, by the Stackdriver Logging agent
+        /// (fluentd) and all logging libraries configured to use Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
@@ -746,21 +776,27 @@ namespace Google.Cloud.Logging.V2
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
-        /// Required.  The log entries to write. Values supplied for the fields
-        /// `log_name`, `resource`, and `labels` in this `entries.write` request are
-        /// inserted into those log entries in this list that do not provide their own
-        /// values.
+        /// Required. The log entries to send to Stackdriver Logging. The order of log
+        /// entries in this list does not matter. Values supplied in this method's
+        /// `log_name`, `resource`, and `labels` fields are copied into those log
+        /// entries in this list that do not include values for their corresponding
+        /// fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
         ///
-        /// Stackdriver Logging also creates and inserts values for `timestamp` and
-        /// `insert_id` if the entries do not provide them. The created `insert_id` for
-        /// the N'th entry in this list will be greater than earlier entries and less
-        /// than later entries.  Otherwise, the order of log entries in this list does
-        /// not matter.
+        /// If the `timestamp` or `insert_id` fields are missing in log entries, then
+        /// this method supplies the current time or a unique identifier, respectively.
+        /// The supplied values are chosen so that, among the log entries that did not
+        /// supply their own values, the entries earlier in the list will sort before
+        /// the entries later in the list. See the `entries.list` method.
+        ///
+        /// Log entries with timestamps that are more than the
+        /// [logs retention period](/logging/quota-policy) in the past or more than
+        /// 24 hours in the future might be discarded. Discarding does not return
+        /// an error.
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
-        /// you should write multiple log entries at once rather than
-        /// calling this method for each individual log entry.
+        /// you should try to include several log entries in this list,
+        /// rather than calling this method for each individual log entry.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -784,7 +820,13 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.
+        /// ## Log entry resources
+        ///
+        /// Writes log entries to Stackdriver Logging. This API method is the
+        /// only way to send log entries to Stackdriver Logging. This method
+        /// is used, directly or indirectly, by the Stackdriver Logging agent
+        /// (fluentd) and all logging libraries configured to use Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -803,7 +845,13 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.
+        /// ## Log entry resources
+        ///
+        /// Writes log entries to Stackdriver Logging. This API method is the
+        /// only way to send log entries to Stackdriver Logging. This method
+        /// is used, directly or indirectly, by the Stackdriver Logging agent
+        /// (fluentd) and all logging libraries configured to use Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1246,7 +1294,13 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.
+        /// ## Log entry resources
+        ///
+        /// Writes log entries to Stackdriver Logging. This API method is the
+        /// only way to send log entries to Stackdriver Logging. This method
+        /// is used, directly or indirectly, by the Stackdriver Logging agent
+        /// (fluentd) and all logging libraries configured to use Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1266,7 +1320,13 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.
+        /// ## Log entry resources
+        ///
+        /// Writes log entries to Stackdriver Logging. This API method is the
+        /// only way to send log entries to Stackdriver Logging. This method
+        /// is used, directly or indirectly, by the Stackdriver Logging agent
+        /// (fluentd) and all logging libraries configured to use Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

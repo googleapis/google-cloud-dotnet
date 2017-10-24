@@ -15,6 +15,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+#pragma warning disable 1591
 #region Designer generated code
 
 using System;
@@ -100,7 +101,13 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Writes log entries to Stackdriver Logging.
+      /// ## Log entry resources
+      ///
+      /// Writes log entries to Stackdriver Logging. This API method is the
+      /// only way to send log entries to Stackdriver Logging. This method
+      /// is used, directly or indirectly, by the Stackdriver Logging agent
+      /// (fluentd) and all logging libraries configured to use Stackdriver
+      /// Logging.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -229,7 +236,13 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteLog, null, options, request);
       }
       /// <summary>
-      /// Writes log entries to Stackdriver Logging.
+      /// ## Log entry resources
+      ///
+      /// Writes log entries to Stackdriver Logging. This API method is the
+      /// only way to send log entries to Stackdriver Logging. This method
+      /// is used, directly or indirectly, by the Stackdriver Logging agent
+      /// (fluentd) and all logging libraries configured to use Stackdriver
+      /// Logging.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -241,7 +254,13 @@ namespace Google.Cloud.Logging.V2 {
         return WriteLogEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Writes log entries to Stackdriver Logging.
+      /// ## Log entry resources
+      ///
+      /// Writes log entries to Stackdriver Logging. This API method is the
+      /// only way to send log entries to Stackdriver Logging. This method
+      /// is used, directly or indirectly, by the Stackdriver Logging agent
+      /// (fluentd) and all logging libraries configured to use Stackdriver
+      /// Logging.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -251,7 +270,13 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_WriteLogEntries, null, options, request);
       }
       /// <summary>
-      /// Writes log entries to Stackdriver Logging.
+      /// ## Log entry resources
+      ///
+      /// Writes log entries to Stackdriver Logging. This API method is the
+      /// only way to send log entries to Stackdriver Logging. This method
+      /// is used, directly or indirectly, by the Stackdriver Logging agent
+      /// (fluentd) and all logging libraries configured to use Stackdriver
+      /// Logging.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -263,7 +288,13 @@ namespace Google.Cloud.Logging.V2 {
         return WriteLogEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Writes log entries to Stackdriver Logging.
+      /// ## Log entry resources
+      ///
+      /// Writes log entries to Stackdriver Logging. This API method is the
+      /// only way to send log entries to Stackdriver Logging. This method
+      /// is used, directly or indirectly, by the Stackdriver Logging agent
+      /// (fluentd) and all logging libraries configured to use Stackdriver
+      /// Logging.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

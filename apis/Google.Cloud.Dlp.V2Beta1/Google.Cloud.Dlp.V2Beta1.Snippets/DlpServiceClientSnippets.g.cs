@@ -31,8 +31,216 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Dlp.V2Beta1.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedDlpServiceClientSnippets
     {
+        /// <summary>Snippet for DeidentifyContentAsync</summary>
+        public async Task DeidentifyContentAsync()
+        {
+            // Snippet: DeidentifyContentAsync(DeidentifyConfig,InspectConfig,IEnumerable<ContentItem>,CallSettings)
+            // Additional: DeidentifyContentAsync(DeidentifyConfig,InspectConfig,IEnumerable<ContentItem>,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeidentifyConfig deidentifyConfig = new DeidentifyConfig();
+            InspectConfig inspectConfig = new InspectConfig();
+            IEnumerable<ContentItem> items = new List<ContentItem>();
+            // Make the request
+            DeidentifyContentResponse response = await dlpServiceClient.DeidentifyContentAsync(deidentifyConfig, inspectConfig, items);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeidentifyContent</summary>
+        public void DeidentifyContent()
+        {
+            // Snippet: DeidentifyContent(DeidentifyConfig,InspectConfig,IEnumerable<ContentItem>,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DeidentifyConfig deidentifyConfig = new DeidentifyConfig();
+            InspectConfig inspectConfig = new InspectConfig();
+            IEnumerable<ContentItem> items = new List<ContentItem>();
+            // Make the request
+            DeidentifyContentResponse response = dlpServiceClient.DeidentifyContent(deidentifyConfig, inspectConfig, items);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeidentifyContentAsync</summary>
+        public async Task DeidentifyContentAsync_RequestObject()
+        {
+            // Snippet: DeidentifyContentAsync(DeidentifyContentRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeidentifyContentRequest request = new DeidentifyContentRequest
+            {
+                DeidentifyConfig = new DeidentifyConfig(),
+                InspectConfig = new InspectConfig(),
+                Items = { },
+            };
+            // Make the request
+            DeidentifyContentResponse response = await dlpServiceClient.DeidentifyContentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeidentifyContent</summary>
+        public void DeidentifyContent_RequestObject()
+        {
+            // Snippet: DeidentifyContent(DeidentifyContentRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DeidentifyContentRequest request = new DeidentifyContentRequest
+            {
+                DeidentifyConfig = new DeidentifyConfig(),
+                InspectConfig = new InspectConfig(),
+                Items = { },
+            };
+            // Make the request
+            DeidentifyContentResponse response = dlpServiceClient.DeidentifyContent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeDataSourceRiskAsync</summary>
+        public async Task AnalyzeDataSourceRiskAsync()
+        {
+            // Snippet: AnalyzeDataSourceRiskAsync(PrivacyMetric,BigQueryTable,CallSettings)
+            // Additional: AnalyzeDataSourceRiskAsync(PrivacyMetric,BigQueryTable,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivacyMetric privacyMetric = new PrivacyMetric();
+            BigQueryTable sourceTable = new BigQueryTable();
+            // Make the request
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> response =
+                await dlpServiceClient.AnalyzeDataSourceRiskAsync(privacyMetric, sourceTable);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RiskAnalysisOperationResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> retrievedResponse =
+                await dlpServiceClient.PollOnceAnalyzeDataSourceRiskAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RiskAnalysisOperationResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeDataSourceRisk</summary>
+        public void AnalyzeDataSourceRisk()
+        {
+            // Snippet: AnalyzeDataSourceRisk(PrivacyMetric,BigQueryTable,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            PrivacyMetric privacyMetric = new PrivacyMetric();
+            BigQueryTable sourceTable = new BigQueryTable();
+            // Make the request
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> response =
+                dlpServiceClient.AnalyzeDataSourceRisk(privacyMetric, sourceTable);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            RiskAnalysisOperationResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> retrievedResponse =
+                dlpServiceClient.PollOnceAnalyzeDataSourceRisk(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RiskAnalysisOperationResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeDataSourceRiskAsync</summary>
+        public async Task AnalyzeDataSourceRiskAsync_RequestObject()
+        {
+            // Snippet: AnalyzeDataSourceRiskAsync(AnalyzeDataSourceRiskRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalyzeDataSourceRiskRequest request = new AnalyzeDataSourceRiskRequest
+            {
+                PrivacyMetric = new PrivacyMetric(),
+                SourceTable = new BigQueryTable(),
+            };
+            // Make the request
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> response =
+                await dlpServiceClient.AnalyzeDataSourceRiskAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RiskAnalysisOperationResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> retrievedResponse =
+                await dlpServiceClient.PollOnceAnalyzeDataSourceRiskAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RiskAnalysisOperationResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeDataSourceRisk</summary>
+        public void AnalyzeDataSourceRisk_RequestObject()
+        {
+            // Snippet: AnalyzeDataSourceRisk(AnalyzeDataSourceRiskRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            AnalyzeDataSourceRiskRequest request = new AnalyzeDataSourceRiskRequest
+            {
+                PrivacyMetric = new PrivacyMetric(),
+                SourceTable = new BigQueryTable(),
+            };
+            // Make the request
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> response =
+                dlpServiceClient.AnalyzeDataSourceRisk(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            RiskAnalysisOperationResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RiskAnalysisOperationResult, RiskAnalysisOperationMetadata> retrievedResponse =
+                dlpServiceClient.PollOnceAnalyzeDataSourceRisk(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RiskAnalysisOperationResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InspectContentAsync</summary>
         public async Task InspectContentAsync()
         {
             // Snippet: InspectContentAsync(InspectConfig,IEnumerable<ContentItem>,CallSettings)
@@ -62,6 +270,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for InspectContent</summary>
         public void InspectContent()
         {
             // Snippet: InspectContent(InspectConfig,IEnumerable<ContentItem>,CallSettings)
@@ -90,6 +299,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for InspectContentAsync</summary>
         public async Task InspectContentAsync_RequestObject()
         {
             // Snippet: InspectContentAsync(InspectContentRequest,CallSettings)
@@ -120,6 +330,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for InspectContent</summary>
         public void InspectContent_RequestObject()
         {
             // Snippet: InspectContent(InspectContentRequest,CallSettings)
@@ -150,6 +361,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RedactContentAsync</summary>
         public async Task RedactContentAsync()
         {
             // Snippet: RedactContentAsync(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ReplaceConfig>,CallSettings)
@@ -190,6 +402,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RedactContent</summary>
         public void RedactContent()
         {
             // Snippet: RedactContent(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ReplaceConfig>,CallSettings)
@@ -229,6 +442,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RedactContentAsync</summary>
         public async Task RedactContentAsync_RequestObject()
         {
             // Snippet: RedactContentAsync(RedactContentRequest,CallSettings)
@@ -269,6 +483,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RedactContent</summary>
         public void RedactContent_RequestObject()
         {
             // Snippet: RedactContent(RedactContentRequest,CallSettings)
@@ -309,6 +524,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInspectOperationAsync</summary>
         public async Task CreateInspectOperationAsync()
         {
             // Snippet: CreateInspectOperationAsync(InspectConfig,StorageConfig,OutputStorageConfig,CallSettings)
@@ -360,6 +576,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInspectOperation</summary>
         public void CreateInspectOperation()
         {
             // Snippet: CreateInspectOperation(InspectConfig,StorageConfig,OutputStorageConfig,CallSettings)
@@ -410,6 +627,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInspectOperationAsync</summary>
         public async Task CreateInspectOperationAsync_RequestObject()
         {
             // Snippet: CreateInspectOperationAsync(CreateInspectOperationRequest,CallSettings)
@@ -463,6 +681,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateInspectOperation</summary>
         public void CreateInspectOperation_RequestObject()
         {
             // Snippet: CreateInspectOperation(CreateInspectOperationRequest,CallSettings)
@@ -516,6 +735,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInspectFindingsAsync</summary>
         public async Task ListInspectFindingsAsync()
         {
             // Snippet: ListInspectFindingsAsync(ResultName,CallSettings)
@@ -529,6 +749,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInspectFindings</summary>
         public void ListInspectFindings()
         {
             // Snippet: ListInspectFindings(ResultName,CallSettings)
@@ -541,6 +762,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInspectFindingsAsync</summary>
         public async Task ListInspectFindingsAsync_RequestObject()
         {
             // Snippet: ListInspectFindingsAsync(ListInspectFindingsRequest,CallSettings)
@@ -556,6 +778,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInspectFindings</summary>
         public void ListInspectFindings_RequestObject()
         {
             // Snippet: ListInspectFindings(ListInspectFindingsRequest,CallSettings)
@@ -571,6 +794,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInfoTypesAsync</summary>
         public async Task ListInfoTypesAsync()
         {
             // Snippet: ListInfoTypesAsync(string,string,CallSettings)
@@ -585,6 +809,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInfoTypes</summary>
         public void ListInfoTypes()
         {
             // Snippet: ListInfoTypes(string,string,CallSettings)
@@ -598,6 +823,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInfoTypesAsync</summary>
         public async Task ListInfoTypesAsync_RequestObject()
         {
             // Snippet: ListInfoTypesAsync(ListInfoTypesRequest,CallSettings)
@@ -614,6 +840,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListInfoTypes</summary>
         public void ListInfoTypes_RequestObject()
         {
             // Snippet: ListInfoTypes(ListInfoTypesRequest,CallSettings)
@@ -630,6 +857,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListRootCategoriesAsync</summary>
         public async Task ListRootCategoriesAsync()
         {
             // Snippet: ListRootCategoriesAsync(string,CallSettings)
@@ -643,6 +871,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListRootCategories</summary>
         public void ListRootCategories()
         {
             // Snippet: ListRootCategories(string,CallSettings)
@@ -655,6 +884,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListRootCategoriesAsync</summary>
         public async Task ListRootCategoriesAsync_RequestObject()
         {
             // Snippet: ListRootCategoriesAsync(ListRootCategoriesRequest,CallSettings)
@@ -670,6 +900,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListRootCategories</summary>
         public void ListRootCategories_RequestObject()
         {
             // Snippet: ListRootCategories(ListRootCategoriesRequest,CallSettings)

@@ -24,7 +24,7 @@ namespace Google.Cloud.Logging.Type {
           string.Concat(
             "CiZnb29nbGUvbG9nZ2luZy90eXBlL2h0dHBfcmVxdWVzdC5wcm90bxITZ29v",
             "Z2xlLmxvZ2dpbmcudHlwZRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
-            "bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvIt0CCgtIdHRwUmVx",
+            "bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvIu8CCgtIdHRwUmVx",
             "dWVzdBIWCg5yZXF1ZXN0X21ldGhvZBgBIAEoCRITCgtyZXF1ZXN0X3VybBgC",
             "IAEoCRIUCgxyZXF1ZXN0X3NpemUYAyABKAMSDgoGc3RhdHVzGAQgASgFEhUK",
             "DXJlc3BvbnNlX3NpemUYBSABKAMSEgoKdXNlcl9hZ2VudBgGIAEoCRIRCgly",
@@ -32,14 +32,15 @@ namespace Google.Cloud.Logging.Type {
             "CCABKAkSKgoHbGF0ZW5jeRgOIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
             "dGlvbhIUCgxjYWNoZV9sb29rdXAYCyABKAgSEQoJY2FjaGVfaGl0GAkgASgI",
             "EioKImNhY2hlX3ZhbGlkYXRlZF93aXRoX29yaWdpbl9zZXJ2ZXIYCiABKAgS",
-            "GAoQY2FjaGVfZmlsbF9ieXRlcxgMIAEoA0KDAQoXY29tLmdvb2dsZS5sb2dn",
-            "aW5nLnR5cGVCEEh0dHBSZXF1ZXN0UHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3R5cGU7bHR5cGWqAhlH",
-            "b29nbGUuQ2xvdWQuTG9nZ2luZy5UeXBlYgZwcm90bzM="));
+            "GAoQY2FjaGVfZmlsbF9ieXRlcxgMIAEoAxIQCghwcm90b2NvbBgPIAEoCUKD",
+            "AQoXY29tLmdvb2dsZS5sb2dnaW5nLnR5cGVCEEh0dHBSZXF1ZXN0UHJvdG9Q",
+            "AVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dn",
+            "aW5nL3R5cGU7bHR5cGWqAhlHb29nbGUuQ2xvdWQuTG9nZ2luZy5UeXBlYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.Type.HttpRequest), global::Google.Cloud.Logging.Type.HttpRequest.Parser, new[]{ "RequestMethod", "RequestUrl", "RequestSize", "Status", "ResponseSize", "UserAgent", "RemoteIp", "ServerIp", "Referer", "Latency", "CacheLookup", "CacheHit", "CacheValidatedWithOriginServer", "CacheFillBytes" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.Type.HttpRequest), global::Google.Cloud.Logging.Type.HttpRequest.Parser, new[]{ "RequestMethod", "RequestUrl", "RequestSize", "Status", "ResponseSize", "UserAgent", "RemoteIp", "ServerIp", "Referer", "Latency", "CacheLookup", "CacheHit", "CacheValidatedWithOriginServer", "CacheFillBytes", "Protocol" }, null, null, null)
           }));
     }
     #endregion
@@ -89,6 +90,7 @@ namespace Google.Cloud.Logging.Type {
       cacheHit_ = other.cacheHit_;
       cacheValidatedWithOriginServer_ = other.cacheValidatedWithOriginServer_;
       cacheFillBytes_ = other.cacheFillBytes_;
+      protocol_ = other.protocol_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -306,6 +308,20 @@ namespace Google.Cloud.Logging.Type {
       }
     }
 
+    /// <summary>Field number for the "protocol" field.</summary>
+    public const int ProtocolFieldNumber = 15;
+    private string protocol_ = "";
+    /// <summary>
+    /// Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Protocol {
+      get { return protocol_; }
+      set {
+        protocol_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as HttpRequest);
@@ -333,6 +349,7 @@ namespace Google.Cloud.Logging.Type {
       if (CacheHit != other.CacheHit) return false;
       if (CacheValidatedWithOriginServer != other.CacheValidatedWithOriginServer) return false;
       if (CacheFillBytes != other.CacheFillBytes) return false;
+      if (Protocol != other.Protocol) return false;
       return true;
     }
 
@@ -353,6 +370,7 @@ namespace Google.Cloud.Logging.Type {
       if (CacheHit != false) hash ^= CacheHit.GetHashCode();
       if (CacheValidatedWithOriginServer != false) hash ^= CacheValidatedWithOriginServer.GetHashCode();
       if (CacheFillBytes != 0L) hash ^= CacheFillBytes.GetHashCode();
+      if (Protocol.Length != 0) hash ^= Protocol.GetHashCode();
       return hash;
     }
 
@@ -419,6 +437,10 @@ namespace Google.Cloud.Logging.Type {
         output.WriteRawTag(114);
         output.WriteMessage(Latency);
       }
+      if (Protocol.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Protocol);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -465,6 +487,9 @@ namespace Google.Cloud.Logging.Type {
       }
       if (CacheFillBytes != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CacheFillBytes);
+      }
+      if (Protocol.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Protocol);
       }
       return size;
     }
@@ -518,6 +543,9 @@ namespace Google.Cloud.Logging.Type {
       }
       if (other.CacheFillBytes != 0L) {
         CacheFillBytes = other.CacheFillBytes;
+      }
+      if (other.Protocol.Length != 0) {
+        Protocol = other.Protocol;
       }
     }
 
@@ -586,6 +614,10 @@ namespace Google.Cloud.Logging.Type {
               latency_ = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(latency_);
+            break;
+          }
+          case 122: {
+            Protocol = input.ReadString();
             break;
           }
         }

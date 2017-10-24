@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Logging.V2.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedMetricsServiceV2ClientSnippets
     {
+        /// <summary>Snippet for ListLogMetricsAsync</summary>
         public async Task ListLogMetricsAsync()
         {
             // Snippet: ListLogMetricsAsync(ParentNameOneof,string,int?,CallSettings)
@@ -75,6 +77,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogMetrics</summary>
         public void ListLogMetrics()
         {
             // Snippet: ListLogMetrics(ParentNameOneof,string,int?,CallSettings)
@@ -118,6 +121,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogMetricsAsync</summary>
         public async Task ListLogMetricsAsync_RequestObject()
         {
             // Snippet: ListLogMetricsAsync(ListLogMetricsRequest,CallSettings)
@@ -164,6 +168,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLogMetrics</summary>
         public void ListLogMetrics_RequestObject()
         {
             // Snippet: ListLogMetrics(ListLogMetricsRequest,CallSettings)
@@ -210,6 +215,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetLogMetricAsync</summary>
         public async Task GetLogMetricAsync()
         {
             // Snippet: GetLogMetricAsync(MetricNameOneof,CallSettings)
@@ -223,6 +229,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetLogMetric</summary>
         public void GetLogMetric()
         {
             // Snippet: GetLogMetric(MetricNameOneof,CallSettings)
@@ -235,6 +242,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetLogMetricAsync</summary>
         public async Task GetLogMetricAsync_RequestObject()
         {
             // Snippet: GetLogMetricAsync(GetLogMetricRequest,CallSettings)
@@ -250,6 +258,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetLogMetric</summary>
         public void GetLogMetric_RequestObject()
         {
             // Snippet: GetLogMetric(GetLogMetricRequest,CallSettings)
@@ -265,6 +274,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateLogMetricAsync</summary>
         public async Task CreateLogMetricAsync()
         {
             // Snippet: CreateLogMetricAsync(ParentNameOneof,LogMetric,CallSettings)
@@ -279,6 +289,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateLogMetric</summary>
         public void CreateLogMetric()
         {
             // Snippet: CreateLogMetric(ParentNameOneof,LogMetric,CallSettings)
@@ -292,6 +303,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateLogMetricAsync</summary>
         public async Task CreateLogMetricAsync_RequestObject()
         {
             // Snippet: CreateLogMetricAsync(CreateLogMetricRequest,CallSettings)
@@ -308,6 +320,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateLogMetric</summary>
         public void CreateLogMetric_RequestObject()
         {
             // Snippet: CreateLogMetric(CreateLogMetricRequest,CallSettings)
@@ -324,6 +337,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateLogMetricAsync</summary>
         public async Task UpdateLogMetricAsync()
         {
             // Snippet: UpdateLogMetricAsync(MetricNameOneof,LogMetric,CallSettings)
@@ -338,6 +352,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateLogMetric</summary>
         public void UpdateLogMetric()
         {
             // Snippet: UpdateLogMetric(MetricNameOneof,LogMetric,CallSettings)
@@ -351,6 +366,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateLogMetricAsync</summary>
         public async Task UpdateLogMetricAsync_RequestObject()
         {
             // Snippet: UpdateLogMetricAsync(UpdateLogMetricRequest,CallSettings)
@@ -367,6 +383,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateLogMetric</summary>
         public void UpdateLogMetric_RequestObject()
         {
             // Snippet: UpdateLogMetric(UpdateLogMetricRequest,CallSettings)
@@ -383,6 +400,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteLogMetricAsync</summary>
         public async Task DeleteLogMetricAsync()
         {
             // Snippet: DeleteLogMetricAsync(MetricNameOneof,CallSettings)
@@ -396,6 +414,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteLogMetric</summary>
         public void DeleteLogMetric()
         {
             // Snippet: DeleteLogMetric(MetricNameOneof,CallSettings)
@@ -408,6 +427,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteLogMetricAsync</summary>
         public async Task DeleteLogMetricAsync_RequestObject()
         {
             // Snippet: DeleteLogMetricAsync(DeleteLogMetricRequest,CallSettings)
@@ -423,6 +443,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteLogMetric</summary>
         public void DeleteLogMetric_RequestObject()
         {
             // Snippet: DeleteLogMetric(DeleteLogMetricRequest,CallSettings)

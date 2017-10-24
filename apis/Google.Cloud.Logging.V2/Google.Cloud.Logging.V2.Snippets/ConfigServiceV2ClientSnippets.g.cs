@@ -30,8 +30,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Logging.V2.Snippets
 {
+    /// <summary>Generated snippets</summary>
     public class GeneratedConfigServiceV2ClientSnippets
     {
+        /// <summary>Snippet for ListSinksAsync</summary>
         public async Task ListSinksAsync()
         {
             // Snippet: ListSinksAsync(ParentNameOneof,string,int?,CallSettings)
@@ -75,6 +77,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSinks</summary>
         public void ListSinks()
         {
             // Snippet: ListSinks(ParentNameOneof,string,int?,CallSettings)
@@ -118,6 +121,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSinksAsync</summary>
         public async Task ListSinksAsync_RequestObject()
         {
             // Snippet: ListSinksAsync(ListSinksRequest,CallSettings)
@@ -164,6 +168,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSinks</summary>
         public void ListSinks_RequestObject()
         {
             // Snippet: ListSinks(ListSinksRequest,CallSettings)
@@ -210,6 +215,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSinkAsync</summary>
         public async Task GetSinkAsync()
         {
             // Snippet: GetSinkAsync(SinkNameOneof,CallSettings)
@@ -223,6 +229,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSink</summary>
         public void GetSink()
         {
             // Snippet: GetSink(SinkNameOneof,CallSettings)
@@ -235,6 +242,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSinkAsync</summary>
         public async Task GetSinkAsync_RequestObject()
         {
             // Snippet: GetSinkAsync(GetSinkRequest,CallSettings)
@@ -250,6 +258,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSink</summary>
         public void GetSink_RequestObject()
         {
             // Snippet: GetSink(GetSinkRequest,CallSettings)
@@ -265,6 +274,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSinkAsync</summary>
         public async Task CreateSinkAsync()
         {
             // Snippet: CreateSinkAsync(ParentNameOneof,LogSink,CallSettings)
@@ -279,6 +289,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSink</summary>
         public void CreateSink()
         {
             // Snippet: CreateSink(ParentNameOneof,LogSink,CallSettings)
@@ -292,6 +303,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSinkAsync</summary>
         public async Task CreateSinkAsync_RequestObject()
         {
             // Snippet: CreateSinkAsync(CreateSinkRequest,CallSettings)
@@ -308,6 +320,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSink</summary>
         public void CreateSink_RequestObject()
         {
             // Snippet: CreateSink(CreateSinkRequest,CallSettings)
@@ -324,6 +337,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateSinkAsync</summary>
         public async Task UpdateSinkAsync()
         {
             // Snippet: UpdateSinkAsync(SinkNameOneof,LogSink,CallSettings)
@@ -338,6 +352,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateSink</summary>
         public void UpdateSink()
         {
             // Snippet: UpdateSink(SinkNameOneof,LogSink,CallSettings)
@@ -351,6 +366,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateSinkAsync</summary>
         public async Task UpdateSinkAsync_RequestObject()
         {
             // Snippet: UpdateSinkAsync(UpdateSinkRequest,CallSettings)
@@ -367,6 +383,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateSink</summary>
         public void UpdateSink_RequestObject()
         {
             // Snippet: UpdateSink(UpdateSinkRequest,CallSettings)
@@ -383,6 +400,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSinkAsync</summary>
         public async Task DeleteSinkAsync()
         {
             // Snippet: DeleteSinkAsync(SinkNameOneof,CallSettings)
@@ -396,6 +414,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSink</summary>
         public void DeleteSink()
         {
             // Snippet: DeleteSink(SinkNameOneof,CallSettings)
@@ -408,6 +427,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSinkAsync</summary>
         public async Task DeleteSinkAsync_RequestObject()
         {
             // Snippet: DeleteSinkAsync(DeleteSinkRequest,CallSettings)
@@ -423,6 +443,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSink</summary>
         public void DeleteSink_RequestObject()
         {
             // Snippet: DeleteSink(DeleteSinkRequest,CallSettings)
@@ -435,6 +456,436 @@ namespace Google.Cloud.Logging.V2.Snippets
             };
             // Make the request
             configServiceV2Client.DeleteSink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExclusionsAsync</summary>
+        public async Task ListExclusionsAsync()
+        {
+            // Snippet: ListExclusionsAsync(ParentNameOneof,string,int?,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            // Make the request
+            PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> response =
+                configServiceV2Client.ListExclusionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogExclusion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExclusionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogExclusion item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogExclusion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogExclusion item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExclusions</summary>
+        public void ListExclusions()
+        {
+            // Snippet: ListExclusions(ParentNameOneof,string,int?,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            // Make the request
+            PagedEnumerable<ListExclusionsResponse, LogExclusion> response =
+                configServiceV2Client.ListExclusions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogExclusion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExclusionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogExclusion item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogExclusion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogExclusion item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExclusionsAsync</summary>
+        public async Task ListExclusionsAsync_RequestObject()
+        {
+            // Snippet: ListExclusionsAsync(ListExclusionsRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ListExclusionsRequest request = new ListExclusionsRequest
+            {
+                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> response =
+                configServiceV2Client.ListExclusionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogExclusion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExclusionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogExclusion item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogExclusion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogExclusion item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExclusions</summary>
+        public void ListExclusions_RequestObject()
+        {
+            // Snippet: ListExclusions(ListExclusionsRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            ListExclusionsRequest request = new ListExclusionsRequest
+            {
+                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+            };
+            // Make the request
+            PagedEnumerable<ListExclusionsResponse, LogExclusion> response =
+                configServiceV2Client.ListExclusions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogExclusion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExclusionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogExclusion item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogExclusion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogExclusion item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExclusionAsync</summary>
+        public async Task GetExclusionAsync()
+        {
+            // Snippet: GetExclusionAsync(ExclusionNameOneof,CallSettings)
+            // Additional: GetExclusionAsync(ExclusionNameOneof,CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
+            // Make the request
+            LogExclusion response = await configServiceV2Client.GetExclusionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExclusion</summary>
+        public void GetExclusion()
+        {
+            // Snippet: GetExclusion(ExclusionNameOneof,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
+            // Make the request
+            LogExclusion response = configServiceV2Client.GetExclusion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExclusionAsync</summary>
+        public async Task GetExclusionAsync_RequestObject()
+        {
+            // Snippet: GetExclusionAsync(GetExclusionRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            GetExclusionRequest request = new GetExclusionRequest
+            {
+                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+            };
+            // Make the request
+            LogExclusion response = await configServiceV2Client.GetExclusionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExclusion</summary>
+        public void GetExclusion_RequestObject()
+        {
+            // Snippet: GetExclusion(GetExclusionRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            GetExclusionRequest request = new GetExclusionRequest
+            {
+                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+            };
+            // Make the request
+            LogExclusion response = configServiceV2Client.GetExclusion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExclusionAsync</summary>
+        public async Task CreateExclusionAsync()
+        {
+            // Snippet: CreateExclusionAsync(ParentNameOneof,LogExclusion,CallSettings)
+            // Additional: CreateExclusionAsync(ParentNameOneof,LogExclusion,CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            LogExclusion exclusion = new LogExclusion();
+            // Make the request
+            LogExclusion response = await configServiceV2Client.CreateExclusionAsync(parent, exclusion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExclusion</summary>
+        public void CreateExclusion()
+        {
+            // Snippet: CreateExclusion(ParentNameOneof,LogExclusion,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            LogExclusion exclusion = new LogExclusion();
+            // Make the request
+            LogExclusion response = configServiceV2Client.CreateExclusion(parent, exclusion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExclusionAsync</summary>
+        public async Task CreateExclusionAsync_RequestObject()
+        {
+            // Snippet: CreateExclusionAsync(CreateExclusionRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            CreateExclusionRequest request = new CreateExclusionRequest
+            {
+                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                Exclusion = new LogExclusion(),
+            };
+            // Make the request
+            LogExclusion response = await configServiceV2Client.CreateExclusionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExclusion</summary>
+        public void CreateExclusion_RequestObject()
+        {
+            // Snippet: CreateExclusion(CreateExclusionRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            CreateExclusionRequest request = new CreateExclusionRequest
+            {
+                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                Exclusion = new LogExclusion(),
+            };
+            // Make the request
+            LogExclusion response = configServiceV2Client.CreateExclusion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExclusionAsync</summary>
+        public async Task UpdateExclusionAsync()
+        {
+            // Snippet: UpdateExclusionAsync(ExclusionNameOneof,LogExclusion,FieldMask,CallSettings)
+            // Additional: UpdateExclusionAsync(ExclusionNameOneof,LogExclusion,FieldMask,CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
+            LogExclusion exclusion = new LogExclusion();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            LogExclusion response = await configServiceV2Client.UpdateExclusionAsync(name, exclusion, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExclusion</summary>
+        public void UpdateExclusion()
+        {
+            // Snippet: UpdateExclusion(ExclusionNameOneof,LogExclusion,FieldMask,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
+            LogExclusion exclusion = new LogExclusion();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            LogExclusion response = configServiceV2Client.UpdateExclusion(name, exclusion, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExclusionAsync</summary>
+        public async Task UpdateExclusionAsync_RequestObject()
+        {
+            // Snippet: UpdateExclusionAsync(UpdateExclusionRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            UpdateExclusionRequest request = new UpdateExclusionRequest
+            {
+                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                Exclusion = new LogExclusion(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            LogExclusion response = await configServiceV2Client.UpdateExclusionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExclusion</summary>
+        public void UpdateExclusion_RequestObject()
+        {
+            // Snippet: UpdateExclusion(UpdateExclusionRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            UpdateExclusionRequest request = new UpdateExclusionRequest
+            {
+                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+                Exclusion = new LogExclusion(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            LogExclusion response = configServiceV2Client.UpdateExclusion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExclusionAsync</summary>
+        public async Task DeleteExclusionAsync()
+        {
+            // Snippet: DeleteExclusionAsync(ExclusionNameOneof,CallSettings)
+            // Additional: DeleteExclusionAsync(ExclusionNameOneof,CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
+            // Make the request
+            await configServiceV2Client.DeleteExclusionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExclusion</summary>
+        public void DeleteExclusion()
+        {
+            // Snippet: DeleteExclusion(ExclusionNameOneof,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            ExclusionNameOneof name = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]"));
+            // Make the request
+            configServiceV2Client.DeleteExclusion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExclusionAsync</summary>
+        public async Task DeleteExclusionAsync_RequestObject()
+        {
+            // Snippet: DeleteExclusionAsync(DeleteExclusionRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            DeleteExclusionRequest request = new DeleteExclusionRequest
+            {
+                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+            };
+            // Make the request
+            await configServiceV2Client.DeleteExclusionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExclusion</summary>
+        public void DeleteExclusion_RequestObject()
+        {
+            // Snippet: DeleteExclusion(DeleteExclusionRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            DeleteExclusionRequest request = new DeleteExclusionRequest
+            {
+                ExclusionNameOneof = ExclusionNameOneof.From(new ExclusionName("[PROJECT]", "[EXCLUSION]")),
+            };
+            // Make the request
+            configServiceV2Client.DeleteExclusion(request);
             // End snippet
         }
 

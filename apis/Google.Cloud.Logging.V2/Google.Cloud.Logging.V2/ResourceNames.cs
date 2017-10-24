@@ -382,6 +382,98 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>
+    /// Resource name for the 'exclusion' resource.
+    /// </summary>
+    public sealed partial class ExclusionName : IResourceName, IEquatable<ExclusionName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/exclusions/{exclusion}");
+
+        /// <summary>
+        /// Parses the given exclusion resource name in string form into a new
+        /// <see cref="ExclusionName"/> instance.
+        /// </summary>
+        /// <param name="exclusionName">The exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ExclusionName"/> if successful.</returns>
+        public static ExclusionName Parse(string exclusionName)
+        {
+            GaxPreconditions.CheckNotNull(exclusionName, nameof(exclusionName));
+            TemplatedResourceName resourceName = s_template.ParseName(exclusionName);
+            return new ExclusionName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given exclusion resource name in string form into a new
+        /// <see cref="ExclusionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="exclusionName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="exclusionName">The exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ExclusionName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string exclusionName, out ExclusionName result)
+        {
+            GaxPreconditions.CheckNotNull(exclusionName, nameof(exclusionName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(exclusionName, out resourceName))
+            {
+                result = new ExclusionName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ExclusionName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
+        public ExclusionName(string projectId, string exclusionId)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            ExclusionId = GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The exclusion ID. Never <c>null</c>.
+        /// </summary>
+        public string ExclusionId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, ExclusionId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ExclusionName);
+
+        /// <inheritdoc />
+        public bool Equals(ExclusionName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ExclusionName a, ExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ExclusionName a, ExclusionName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name for the 'organization' resource.
     /// </summary>
     public sealed partial class OrganizationName : IResourceName, IEquatable<OrganizationName>
@@ -648,6 +740,98 @@ namespace Google.Cloud.Logging.V2
 
         /// <inheritdoc />
         public static bool operator !=(OrganizationSinkName a, OrganizationSinkName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'organization_exclusion' resource.
+    /// </summary>
+    public sealed partial class OrganizationExclusionName : IResourceName, IEquatable<OrganizationExclusionName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("organizations/{organization}/exclusions/{exclusion}");
+
+        /// <summary>
+        /// Parses the given organization_exclusion resource name in string form into a new
+        /// <see cref="OrganizationExclusionName"/> instance.
+        /// </summary>
+        /// <param name="organizationExclusionName">The organization_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationExclusionName"/> if successful.</returns>
+        public static OrganizationExclusionName Parse(string organizationExclusionName)
+        {
+            GaxPreconditions.CheckNotNull(organizationExclusionName, nameof(organizationExclusionName));
+            TemplatedResourceName resourceName = s_template.ParseName(organizationExclusionName);
+            return new OrganizationExclusionName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given organization_exclusion resource name in string form into a new
+        /// <see cref="OrganizationExclusionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="organizationExclusionName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="organizationExclusionName">The organization_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OrganizationExclusionName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationExclusionName, out OrganizationExclusionName result)
+        {
+            GaxPreconditions.CheckNotNull(organizationExclusionName, nameof(organizationExclusionName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(organizationExclusionName, out resourceName))
+            {
+                result = new OrganizationExclusionName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="OrganizationExclusionName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
+        public OrganizationExclusionName(string organizationId, string exclusionId)
+        {
+            OrganizationId = GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+            ExclusionId = GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
+        }
+
+        /// <summary>
+        /// The organization ID. Never <c>null</c>.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The exclusion ID. Never <c>null</c>.
+        /// </summary>
+        public string ExclusionId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(OrganizationId, ExclusionId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as OrganizationExclusionName);
+
+        /// <inheritdoc />
+        public bool Equals(OrganizationExclusionName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(OrganizationExclusionName a, OrganizationExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(OrganizationExclusionName a, OrganizationExclusionName b) => !(a == b);
     }
 
     /// <summary>
@@ -920,6 +1104,98 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>
+    /// Resource name for the 'folder_exclusion' resource.
+    /// </summary>
+    public sealed partial class FolderExclusionName : IResourceName, IEquatable<FolderExclusionName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("folders/{folder}/exclusions/{exclusion}");
+
+        /// <summary>
+        /// Parses the given folder_exclusion resource name in string form into a new
+        /// <see cref="FolderExclusionName"/> instance.
+        /// </summary>
+        /// <param name="folderExclusionName">The folder_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FolderExclusionName"/> if successful.</returns>
+        public static FolderExclusionName Parse(string folderExclusionName)
+        {
+            GaxPreconditions.CheckNotNull(folderExclusionName, nameof(folderExclusionName));
+            TemplatedResourceName resourceName = s_template.ParseName(folderExclusionName);
+            return new FolderExclusionName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given folder_exclusion resource name in string form into a new
+        /// <see cref="FolderExclusionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="folderExclusionName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="folderExclusionName">The folder_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="FolderExclusionName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string folderExclusionName, out FolderExclusionName result)
+        {
+            GaxPreconditions.CheckNotNull(folderExclusionName, nameof(folderExclusionName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(folderExclusionName, out resourceName))
+            {
+                result = new FolderExclusionName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="FolderExclusionName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
+        public FolderExclusionName(string folderId, string exclusionId)
+        {
+            FolderId = GaxPreconditions.CheckNotNull(folderId, nameof(folderId));
+            ExclusionId = GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
+        }
+
+        /// <summary>
+        /// The folder ID. Never <c>null</c>.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The exclusion ID. Never <c>null</c>.
+        /// </summary>
+        public string ExclusionId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(FolderId, ExclusionId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as FolderExclusionName);
+
+        /// <inheritdoc />
+        public bool Equals(FolderExclusionName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(FolderExclusionName a, FolderExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(FolderExclusionName a, FolderExclusionName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name for the 'billing' resource.
     /// </summary>
     public sealed partial class BillingName : IResourceName, IEquatable<BillingName>
@@ -1186,6 +1462,98 @@ namespace Google.Cloud.Logging.V2
 
         /// <inheritdoc />
         public static bool operator !=(BillingSinkName a, BillingSinkName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'billing_exclusion' resource.
+    /// </summary>
+    public sealed partial class BillingExclusionName : IResourceName, IEquatable<BillingExclusionName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("billingAccounts/{billing_account}/exclusions/{exclusion}");
+
+        /// <summary>
+        /// Parses the given billing_exclusion resource name in string form into a new
+        /// <see cref="BillingExclusionName"/> instance.
+        /// </summary>
+        /// <param name="billingExclusionName">The billing_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="BillingExclusionName"/> if successful.</returns>
+        public static BillingExclusionName Parse(string billingExclusionName)
+        {
+            GaxPreconditions.CheckNotNull(billingExclusionName, nameof(billingExclusionName));
+            TemplatedResourceName resourceName = s_template.ParseName(billingExclusionName);
+            return new BillingExclusionName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given billing_exclusion resource name in string form into a new
+        /// <see cref="BillingExclusionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="billingExclusionName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="billingExclusionName">The billing_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="BillingExclusionName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string billingExclusionName, out BillingExclusionName result)
+        {
+            GaxPreconditions.CheckNotNull(billingExclusionName, nameof(billingExclusionName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(billingExclusionName, out resourceName))
+            {
+                result = new BillingExclusionName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="BillingExclusionName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="billingAccountId">The billingAccount ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
+        public BillingExclusionName(string billingAccountId, string exclusionId)
+        {
+            BillingAccountId = GaxPreconditions.CheckNotNull(billingAccountId, nameof(billingAccountId));
+            ExclusionId = GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
+        }
+
+        /// <summary>
+        /// The billingAccount ID. Never <c>null</c>.
+        /// </summary>
+        public string BillingAccountId { get; }
+
+        /// <summary>
+        /// The exclusion ID. Never <c>null</c>.
+        /// </summary>
+        public string ExclusionId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(BillingAccountId, ExclusionId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as BillingExclusionName);
+
+        /// <inheritdoc />
+        public bool Equals(BillingExclusionName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(BillingExclusionName a, BillingExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(BillingExclusionName a, BillingExclusionName b) => !(a == b);
     }
 
     /// <summary>
@@ -1730,6 +2098,274 @@ namespace Google.Cloud.Logging.V2
     /// <remarks>
     /// This resource name will contain one of the following:
     /// <list type="bullet">
+    /// <item><description>ExclusionName: A resource of type 'exclusion'.</description></item>
+    /// <item><description>OrganizationExclusionName: A resource of type 'organization_exclusion'.</description></item>
+    /// <item><description>FolderExclusionName: A resource of type 'folder_exclusion'.</description></item>
+    /// <item><description>BillingExclusionName: A resource of type 'billing_exclusion'.</description></item>
+    /// </list>
+    /// </remarks>
+    public sealed partial class ExclusionNameOneof : IResourceName, IEquatable<ExclusionNameOneof>
+    {
+        /// <summary>
+        /// The possible contents of <see cref="ExclusionNameOneof"/>.
+        /// </summary>
+        public enum OneofType
+        {
+            /// <summary>
+            /// A resource of an unknown type.
+            /// </summary>
+            Unknown = 0,
+
+            /// <summary>
+            /// A resource of type 'exclusion'.
+            /// </summary>
+            ExclusionName = 1,
+
+            /// <summary>
+            /// A resource of type 'organization_exclusion'.
+            /// </summary>
+            OrganizationExclusionName = 2,
+
+            /// <summary>
+            /// A resource of type 'folder_exclusion'.
+            /// </summary>
+            FolderExclusionName = 3,
+
+            /// <summary>
+            /// A resource of type 'billing_exclusion'.
+            /// </summary>
+            BillingExclusionName = 4,
+        }
+
+        /// <summary>
+        /// Parses a resource name in string form into a new <see cref="ExclusionNameOneof"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully the resource name must be one of the following:
+        /// <list type="bullet">
+        /// <item><description>ExclusionName: A resource of type 'exclusion'.</description></item>
+        /// <item><description>OrganizationExclusionName: A resource of type 'organization_exclusion'.</description></item>
+        /// <item><description>FolderExclusionName: A resource of type 'folder_exclusion'.</description></item>
+        /// <item><description>BillingExclusionName: A resource of type 'billing_exclusion'.</description></item>
+        /// </list>
+        /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
+        /// into an <see cref="UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="ArgumentException"/> if an unknown resource name is given.</param>
+        /// <returns>The parsed <see cref="ExclusionNameOneof"/> if successful.</returns>
+        public static ExclusionNameOneof Parse(string name, bool allowUnknown)
+        {
+            ExclusionNameOneof result;
+            if (TryParse(name, allowUnknown, out result))
+            {
+                return result;
+            }
+            throw new ArgumentException("Invalid name", nameof(name));
+        }
+
+        /// <summary>
+        /// Tries to parse a resource name in string form into a new <see cref="ExclusionNameOneof"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully the resource name must be one of the following:
+        /// <list type="bullet">
+        /// <item><description>ExclusionName: A resource of type 'exclusion'.</description></item>
+        /// <item><description>OrganizationExclusionName: A resource of type 'organization_exclusion'.</description></item>
+        /// <item><description>FolderExclusionName: A resource of type 'folder_exclusion'.</description></item>
+        /// <item><description>BillingExclusionName: A resource of type 'billing_exclusion'.</description></item>
+        /// </list>
+        /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
+        /// into an <see cref="UnknownResourceName"/>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ExclusionNameOneof"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string name, bool allowUnknown, out ExclusionNameOneof result)
+        {
+            GaxPreconditions.CheckNotNull(name, nameof(name));
+            ExclusionName exclusionName;
+            if (ExclusionName.TryParse(name, out exclusionName))
+            {
+                result = new ExclusionNameOneof(OneofType.ExclusionName, exclusionName);
+                return true;
+            }
+            OrganizationExclusionName organizationExclusionName;
+            if (OrganizationExclusionName.TryParse(name, out organizationExclusionName))
+            {
+                result = new ExclusionNameOneof(OneofType.OrganizationExclusionName, organizationExclusionName);
+                return true;
+            }
+            FolderExclusionName folderExclusionName;
+            if (FolderExclusionName.TryParse(name, out folderExclusionName))
+            {
+                result = new ExclusionNameOneof(OneofType.FolderExclusionName, folderExclusionName);
+                return true;
+            }
+            BillingExclusionName billingExclusionName;
+            if (BillingExclusionName.TryParse(name, out billingExclusionName))
+            {
+                result = new ExclusionNameOneof(OneofType.BillingExclusionName, billingExclusionName);
+                return true;
+            }
+            if (allowUnknown)
+            {
+                UnknownResourceName unknownResourceName;
+                if (UnknownResourceName.TryParse(name, out unknownResourceName))
+                {
+                    result = new ExclusionNameOneof(OneofType.Unknown, unknownResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        /// <summary>
+        /// Construct a new instance of <see cref="ExclusionNameOneof"/> from the provided <see cref="ExclusionName"/>
+        /// </summary>
+        /// <param name="exclusionName">The <see cref="ExclusionName"/> to be contained within
+        /// the returned <see cref="ExclusionNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="ExclusionNameOneof"/>, containing <paramref name="exclusionName"/>.</returns>
+        public static ExclusionNameOneof From(ExclusionName exclusionName) => new ExclusionNameOneof(OneofType.ExclusionName, exclusionName);
+
+        /// <summary>
+        /// Construct a new instance of <see cref="ExclusionNameOneof"/> from the provided <see cref="OrganizationExclusionName"/>
+        /// </summary>
+        /// <param name="organizationExclusionName">The <see cref="OrganizationExclusionName"/> to be contained within
+        /// the returned <see cref="ExclusionNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="ExclusionNameOneof"/>, containing <paramref name="organizationExclusionName"/>.</returns>
+        public static ExclusionNameOneof From(OrganizationExclusionName organizationExclusionName) => new ExclusionNameOneof(OneofType.OrganizationExclusionName, organizationExclusionName);
+
+        /// <summary>
+        /// Construct a new instance of <see cref="ExclusionNameOneof"/> from the provided <see cref="FolderExclusionName"/>
+        /// </summary>
+        /// <param name="folderExclusionName">The <see cref="FolderExclusionName"/> to be contained within
+        /// the returned <see cref="ExclusionNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="ExclusionNameOneof"/>, containing <paramref name="folderExclusionName"/>.</returns>
+        public static ExclusionNameOneof From(FolderExclusionName folderExclusionName) => new ExclusionNameOneof(OneofType.FolderExclusionName, folderExclusionName);
+
+        /// <summary>
+        /// Construct a new instance of <see cref="ExclusionNameOneof"/> from the provided <see cref="BillingExclusionName"/>
+        /// </summary>
+        /// <param name="billingExclusionName">The <see cref="BillingExclusionName"/> to be contained within
+        /// the returned <see cref="ExclusionNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="ExclusionNameOneof"/>, containing <paramref name="billingExclusionName"/>.</returns>
+        public static ExclusionNameOneof From(BillingExclusionName billingExclusionName) => new ExclusionNameOneof(OneofType.BillingExclusionName, billingExclusionName);
+
+        private static bool IsValid(OneofType type, IResourceName name)
+        {
+            switch (type)
+            {
+                case OneofType.Unknown: return true; // Anything goes with Unknown.
+                case OneofType.ExclusionName: return name is ExclusionName;
+                case OneofType.OrganizationExclusionName: return name is OrganizationExclusionName;
+                case OneofType.FolderExclusionName: return name is FolderExclusionName;
+                case OneofType.BillingExclusionName: return name is BillingExclusionName;
+                default: return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ExclusionNameOneof"/> resource name class
+        /// from a suitable <see cref="IResourceName"/> instance.
+        /// </summary>
+        public ExclusionNameOneof(OneofType type, IResourceName name)
+        {
+            Type = GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));
+            Name = GaxPreconditions.CheckNotNull(name, nameof(name));
+            if (!IsValid(type, name))
+            {
+                throw new ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="OneofType"/> of the Name contained in this instance.
+        /// </summary>
+        public OneofType Type { get; }
+
+        /// <summary>
+        /// The <see cref="IResourceName"/> contained in this instance.
+        /// </summary>
+        public IResourceName Name { get; }
+
+        private T CheckAndReturn<T>(OneofType type)
+        {
+            if (Type != type)
+            {
+                throw new InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
+            }
+            return (T)Name;
+        }
+
+        /// <summary>
+        /// Get the contained <see cref="IResourceName"/> as <see cref="ExclusionName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="ExclusionName"/>.
+        /// </remarks>
+        public ExclusionName ExclusionName => CheckAndReturn<ExclusionName>(OneofType.ExclusionName);
+
+        /// <summary>
+        /// Get the contained <see cref="IResourceName"/> as <see cref="OrganizationExclusionName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="OrganizationExclusionName"/>.
+        /// </remarks>
+        public OrganizationExclusionName OrganizationExclusionName => CheckAndReturn<OrganizationExclusionName>(OneofType.OrganizationExclusionName);
+
+        /// <summary>
+        /// Get the contained <see cref="IResourceName"/> as <see cref="FolderExclusionName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="FolderExclusionName"/>.
+        /// </remarks>
+        public FolderExclusionName FolderExclusionName => CheckAndReturn<FolderExclusionName>(OneofType.FolderExclusionName);
+
+        /// <summary>
+        /// Get the contained <see cref="IResourceName"/> as <see cref="BillingExclusionName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="BillingExclusionName"/>.
+        /// </remarks>
+        public BillingExclusionName BillingExclusionName => CheckAndReturn<BillingExclusionName>(OneofType.BillingExclusionName);
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Oneof;
+
+        /// <inheritdoc />
+        public override string ToString() => Name.ToString();
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ExclusionNameOneof);
+
+        /// <inheritdoc />
+        public bool Equals(ExclusionNameOneof other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ExclusionNameOneof a, ExclusionNameOneof b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ExclusionNameOneof a, ExclusionNameOneof b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name which will contain one of a choice of resource names.
+    /// </summary>
+    /// <remarks>
+    /// This resource name will contain one of the following:
+    /// <list type="bullet">
     /// <item><description>LogName: A resource of type 'log'.</description></item>
     /// <item><description>OrganizationLogName: A resource of type 'organization_log'.</description></item>
     /// <item><description>FolderLogName: A resource of type 'folder_log'.</description></item>
@@ -2165,6 +2801,19 @@ namespace Google.Cloud.Logging.V2
     }
 
 
+    public partial class CreateExclusionRequest
+    {
+        /// <summary>
+        /// <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ParentNameOneof ParentAsParentNameOneof
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Logging.V2.ParentNameOneof.Parse(Parent, true); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class CreateLogMetricRequest
     {
         /// <summary>
@@ -2187,6 +2836,19 @@ namespace Google.Cloud.Logging.V2
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Logging.V2.ParentNameOneof.Parse(Parent, true); }
             set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteExclusionRequest
+    {
+        /// <summary>
+        /// <see cref="ExclusionNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public ExclusionNameOneof ExclusionNameOneof
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Logging.V2.ExclusionNameOneof.Parse(Name, true); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2230,6 +2892,19 @@ namespace Google.Cloud.Logging.V2
 
     }
 
+    public partial class GetExclusionRequest
+    {
+        /// <summary>
+        /// <see cref="ExclusionNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public ExclusionNameOneof ExclusionNameOneof
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Logging.V2.ExclusionNameOneof.Parse(Name, true); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class GetLogMetricRequest
     {
         /// <summary>
@@ -2252,6 +2927,19 @@ namespace Google.Cloud.Logging.V2
         {
             get { return string.IsNullOrEmpty(SinkName) ? null : Google.Cloud.Logging.V2.SinkNameOneof.Parse(SinkName, true); }
             set { SinkName = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListExclusionsRequest
+    {
+        /// <summary>
+        /// <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ParentNameOneof ParentAsParentNameOneof
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Logging.V2.ParentNameOneof.Parse(Parent, true); }
+            set { Parent = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2317,6 +3005,19 @@ namespace Google.Cloud.Logging.V2
         {
             get { return string.IsNullOrEmpty(Destination) ? null : UnknownResourceName.Parse(Destination); }
             set { Destination = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class UpdateExclusionRequest
+    {
+        /// <summary>
+        /// <see cref="ExclusionNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public ExclusionNameOneof ExclusionNameOneof
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Logging.V2.ExclusionNameOneof.Parse(Name, true); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }

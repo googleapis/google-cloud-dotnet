@@ -15,6 +15,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+#pragma warning disable 1591
 #region Designer generated code
 
 using System;
@@ -39,6 +40,13 @@ namespace Google.Cloud.Logging.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateSinkRequest> __Marshaller_UpdateSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteSinkRequest> __Marshaller_DeleteSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListExclusionsRequest> __Marshaller_ListExclusionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListExclusionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListExclusionsResponse> __Marshaller_ListExclusionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListExclusionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetExclusionRequest> __Marshaller_GetExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetExclusionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogExclusion> __Marshaller_LogExclusion = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogExclusion.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateExclusionRequest> __Marshaller_CreateExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateExclusionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateExclusionRequest> __Marshaller_UpdateExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateExclusionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteExclusionRequest> __Marshaller_DeleteExclusionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteExclusionRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse> __Method_ListSinks = new grpc::Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse>(
         grpc::MethodType.Unary,
@@ -73,6 +81,41 @@ namespace Google.Cloud.Logging.V2 {
         __ServiceName,
         "DeleteSink",
         __Marshaller_DeleteSinkRequest,
+        __Marshaller_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListExclusionsRequest, global::Google.Cloud.Logging.V2.ListExclusionsResponse> __Method_ListExclusions = new grpc::Method<global::Google.Cloud.Logging.V2.ListExclusionsRequest, global::Google.Cloud.Logging.V2.ListExclusionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListExclusions",
+        __Marshaller_ListExclusionsRequest,
+        __Marshaller_ListExclusionsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.GetExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion> __Method_GetExclusion = new grpc::Method<global::Google.Cloud.Logging.V2.GetExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetExclusion",
+        __Marshaller_GetExclusionRequest,
+        __Marshaller_LogExclusion);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.CreateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion> __Method_CreateExclusion = new grpc::Method<global::Google.Cloud.Logging.V2.CreateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateExclusion",
+        __Marshaller_CreateExclusionRequest,
+        __Marshaller_LogExclusion);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.UpdateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion> __Method_UpdateExclusion = new grpc::Method<global::Google.Cloud.Logging.V2.UpdateExclusionRequest, global::Google.Cloud.Logging.V2.LogExclusion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateExclusion",
+        __Marshaller_UpdateExclusionRequest,
+        __Marshaller_LogExclusion);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.DeleteExclusionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteExclusion = new grpc::Method<global::Google.Cloud.Logging.V2.DeleteExclusionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteExclusion",
+        __Marshaller_DeleteExclusionRequest,
         __Marshaller_Empty);
 
     /// <summary>Service descriptor</summary>
@@ -122,13 +165,10 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Updates a sink. If the named sink doesn't exist, then this method is
-      /// identical to
-      /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-      /// If the named sink does exist, then this method replaces the following
-      /// fields in the existing sink with values from the new sink: `destination`,
-      /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-      /// The updated filter might also have a new `writer_identity`; see the
+      /// Updates a sink.  This method replaces the following fields in the existing
+      /// sink with values from the new sink: `destination`, `filter`,
+      /// `output_version_format`, `start_time`, and `end_time`.
+      /// The updated sink might also have a new `writer_identity`; see the
       /// `unique_writer_identity` field.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -147,6 +187,63 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the exclusions in a parent resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListExclusionsResponse> ListExclusions(global::Google.Cloud.Logging.V2.ListExclusionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the description of an exclusion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogExclusion> GetExclusion(global::Google.Cloud.Logging.V2.GetExclusionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new exclusion in a specified parent resource.
+      /// Only log entries belonging to that resource can be excluded.
+      /// You can have up to 10 exclusions in a resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogExclusion> CreateExclusion(global::Google.Cloud.Logging.V2.CreateExclusionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Changes one or more properties of an existing exclusion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogExclusion> UpdateExclusion(global::Google.Cloud.Logging.V2.UpdateExclusionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an exclusion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExclusion(global::Google.Cloud.Logging.V2.DeleteExclusionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -325,13 +422,10 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSink, null, options, request);
       }
       /// <summary>
-      /// Updates a sink. If the named sink doesn't exist, then this method is
-      /// identical to
-      /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-      /// If the named sink does exist, then this method replaces the following
-      /// fields in the existing sink with values from the new sink: `destination`,
-      /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-      /// The updated filter might also have a new `writer_identity`; see the
+      /// Updates a sink.  This method replaces the following fields in the existing
+      /// sink with values from the new sink: `destination`, `filter`,
+      /// `output_version_format`, `start_time`, and `end_time`.
+      /// The updated sink might also have a new `writer_identity`; see the
       /// `unique_writer_identity` field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -344,13 +438,10 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a sink. If the named sink doesn't exist, then this method is
-      /// identical to
-      /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-      /// If the named sink does exist, then this method replaces the following
-      /// fields in the existing sink with values from the new sink: `destination`,
-      /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-      /// The updated filter might also have a new `writer_identity`; see the
+      /// Updates a sink.  This method replaces the following fields in the existing
+      /// sink with values from the new sink: `destination`, `filter`,
+      /// `output_version_format`, `start_time`, and `end_time`.
+      /// The updated sink might also have a new `writer_identity`; see the
       /// `unique_writer_identity` field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -361,13 +452,10 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSink, null, options, request);
       }
       /// <summary>
-      /// Updates a sink. If the named sink doesn't exist, then this method is
-      /// identical to
-      /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-      /// If the named sink does exist, then this method replaces the following
-      /// fields in the existing sink with values from the new sink: `destination`,
-      /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-      /// The updated filter might also have a new `writer_identity`; see the
+      /// Updates a sink.  This method replaces the following fields in the existing
+      /// sink with values from the new sink: `destination`, `filter`,
+      /// `output_version_format`, `start_time`, and `end_time`.
+      /// The updated sink might also have a new `writer_identity`; see the
       /// `unique_writer_identity` field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -380,13 +468,10 @@ namespace Google.Cloud.Logging.V2 {
         return UpdateSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a sink. If the named sink doesn't exist, then this method is
-      /// identical to
-      /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
-      /// If the named sink does exist, then this method replaces the following
-      /// fields in the existing sink with values from the new sink: `destination`,
-      /// `filter`, `output_version_format`, `start_time`, and `end_time`.
-      /// The updated filter might also have a new `writer_identity`; see the
+      /// Updates a sink.  This method replaces the following fields in the existing
+      /// sink with values from the new sink: `destination`, `filter`,
+      /// `output_version_format`, `start_time`, and `end_time`.
+      /// The updated sink might also have a new `writer_identity`; see the
       /// `unique_writer_identity` field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -444,6 +529,234 @@ namespace Google.Cloud.Logging.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSink, null, options, request);
       }
+      /// <summary>
+      /// Lists all the exclusions in a parent resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.ListExclusionsResponse ListExclusions(global::Google.Cloud.Logging.V2.ListExclusionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListExclusions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the exclusions in a parent resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.ListExclusionsResponse ListExclusions(global::Google.Cloud.Logging.V2.ListExclusionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListExclusions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the exclusions in a parent resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListExclusionsResponse> ListExclusionsAsync(global::Google.Cloud.Logging.V2.ListExclusionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListExclusionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the exclusions in a parent resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListExclusionsResponse> ListExclusionsAsync(global::Google.Cloud.Logging.V2.ListExclusionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListExclusions, null, options, request);
+      }
+      /// <summary>
+      /// Gets the description of an exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.LogExclusion GetExclusion(global::Google.Cloud.Logging.V2.GetExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the description of an exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.LogExclusion GetExclusion(global::Google.Cloud.Logging.V2.GetExclusionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetExclusion, null, options, request);
+      }
+      /// <summary>
+      /// Gets the description of an exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> GetExclusionAsync(global::Google.Cloud.Logging.V2.GetExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the description of an exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> GetExclusionAsync(global::Google.Cloud.Logging.V2.GetExclusionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetExclusion, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new exclusion in a specified parent resource.
+      /// Only log entries belonging to that resource can be excluded.
+      /// You can have up to 10 exclusions in a resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.LogExclusion CreateExclusion(global::Google.Cloud.Logging.V2.CreateExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return CreateExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new exclusion in a specified parent resource.
+      /// Only log entries belonging to that resource can be excluded.
+      /// You can have up to 10 exclusions in a resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.LogExclusion CreateExclusion(global::Google.Cloud.Logging.V2.CreateExclusionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateExclusion, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new exclusion in a specified parent resource.
+      /// Only log entries belonging to that resource can be excluded.
+      /// You can have up to 10 exclusions in a resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> CreateExclusionAsync(global::Google.Cloud.Logging.V2.CreateExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return CreateExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new exclusion in a specified parent resource.
+      /// Only log entries belonging to that resource can be excluded.
+      /// You can have up to 10 exclusions in a resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> CreateExclusionAsync(global::Google.Cloud.Logging.V2.CreateExclusionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateExclusion, null, options, request);
+      }
+      /// <summary>
+      /// Changes one or more properties of an existing exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.LogExclusion UpdateExclusion(global::Google.Cloud.Logging.V2.UpdateExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return UpdateExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Changes one or more properties of an existing exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Logging.V2.LogExclusion UpdateExclusion(global::Google.Cloud.Logging.V2.UpdateExclusionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateExclusion, null, options, request);
+      }
+      /// <summary>
+      /// Changes one or more properties of an existing exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> UpdateExclusionAsync(global::Google.Cloud.Logging.V2.UpdateExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return UpdateExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Changes one or more properties of an existing exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogExclusion> UpdateExclusionAsync(global::Google.Cloud.Logging.V2.UpdateExclusionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateExclusion, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteExclusion(global::Google.Cloud.Logging.V2.DeleteExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return DeleteExclusion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteExclusion(global::Google.Cloud.Logging.V2.DeleteExclusionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteExclusion, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExclusionAsync(global::Google.Cloud.Logging.V2.DeleteExclusionRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return DeleteExclusionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an exclusion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExclusionAsync(global::Google.Cloud.Logging.V2.DeleteExclusionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteExclusion, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override ConfigServiceV2Client NewInstance(ClientBaseConfiguration configuration)
       {
@@ -460,7 +773,12 @@ namespace Google.Cloud.Logging.V2 {
           .AddMethod(__Method_GetSink, serviceImpl.GetSink)
           .AddMethod(__Method_CreateSink, serviceImpl.CreateSink)
           .AddMethod(__Method_UpdateSink, serviceImpl.UpdateSink)
-          .AddMethod(__Method_DeleteSink, serviceImpl.DeleteSink).Build();
+          .AddMethod(__Method_DeleteSink, serviceImpl.DeleteSink)
+          .AddMethod(__Method_ListExclusions, serviceImpl.ListExclusions)
+          .AddMethod(__Method_GetExclusion, serviceImpl.GetExclusion)
+          .AddMethod(__Method_CreateExclusion, serviceImpl.CreateExclusion)
+          .AddMethod(__Method_UpdateExclusion, serviceImpl.UpdateExclusion)
+          .AddMethod(__Method_DeleteExclusion, serviceImpl.DeleteExclusion).Build();
     }
 
   }
