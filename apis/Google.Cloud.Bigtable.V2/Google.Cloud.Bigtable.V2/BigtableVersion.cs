@@ -22,10 +22,18 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     /// <remarks>
     /// <para>
+    /// Note: version values are stored on the server as if they are microseconds since the Unix epoch.
+    /// However, the server only supports millisecond granularity, so the server only allows microseconds
+    /// in multiples of 1,000. <see cref="BigtableVersion"/> attempts to hide this complexity by exposing
+    /// it's underlying <see cref="Value"/> in terms of milliseconds, so if desired, a custom versioning
+    /// scheme of 1, 2, ... can be used rather than 1000, 2000, ... However, access to the underlying
+    /// microsecond value is still provided via <see cref="Micros"/>.
+    /// </para>
+    /// <para>
     /// Note: when using ReadModifyWriteRow, modified columns automatically use a server version, which
-    /// is based on the current timestamp millis. For those columns, other reads and writes should
-    /// use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed to using
-    /// a custom versioning scheme with 64-bit values.
+    /// is based on the current timestamp since the Unix epoch. For those columns, other reads and writes
+    /// should use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed to
+    /// using a custom versioning scheme with 64-bit values.
     /// </para>
     /// </remarks>
     public struct BigtableVersion : IComparable, IComparable<BigtableVersion>, IEquatable<BigtableVersion>
@@ -44,10 +52,18 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
+        /// Note: version values are stored on the server as if they are microseconds since the Unix epoch.
+        /// However, the server only supports millisecond granularity, so the server only allows microseconds
+        /// in multiples of 1,000. <see cref="BigtableVersion"/> attempts to hide this complexity by exposing
+        /// it's underlying <see cref="Value"/> in terms of milliseconds, so if desired, a custom versioning
+        /// scheme of 1, 2, ... can be used rather than 1000, 2000, ... However, access to the underlying
+        /// microsecond value is still provided via <see cref="Micros"/>.
+        /// </para>
+        /// <para>
         /// Note: when using ReadModifyWriteRow, modified columns automatically use a server version, which
-        /// is based on the current timestamp millis. For those columns, other reads and writes should
-        /// use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed to using
-        /// a custom versioning scheme with 64-bit values.
+        /// is based on the current timestamp since the Unix epoch. For those columns, other reads and writes
+        /// should use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed to
+        /// using a custom versioning scheme with 64-bit values.
         /// </para>
         /// </remarks>
         /// <param name="value">
@@ -65,10 +81,18 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
+        /// Note: version values are stored on the server as if they are microseconds since the Unix epoch.
+        /// However, the server only supports millisecond granularity, so the server only allows microseconds
+        /// in multiples of 1,000. <see cref="BigtableVersion"/> attempts to hide this complexity by exposing
+        /// it's underlying <see cref="Value"/> in terms of milliseconds, so if desired, a custom versioning
+        /// scheme of 1, 2, ... can be used rather than 1000, 2000, ... However, access to the underlying
+        /// microsecond value is still provided via <see cref="Micros"/>.
+        /// </para>
+        /// <para>
         /// Note: when using ReadModifyWriteRow, modified columns automatically use a server version, which
-        /// is based on the current timestamp millis. For those columns, other reads and writes should
-        /// use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed to using
-        /// a custom versioning scheme with 64-bit values.
+        /// is based on the current timestamp since the Unix epoch. For those columns, other reads and writes
+        /// should use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed to
+        /// using a custom versioning scheme with 64-bit values.
         /// </para>
         /// </remarks>
         /// <param name="timestamp">

@@ -51,10 +51,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var utcNow = DateTime.UtcNow;
             var v1 = new BigtableVersion(utcNow);
             var v2 = new BigtableVersion(utcNow + TimeSpan.FromSeconds(1));
-            var diff = v2.Value - v1.Value;
-            Assert.Equal(1_000, diff);
-            diff = v2.Micros - v1.Micros;
-            Assert.Equal(1_000_000, diff);
+            Assert.Equal(1_000, v2.Value - v1.Value);
+            Assert.Equal(1_000_000, v2.Micros - v1.Micros);
         }
 
         [Fact]
