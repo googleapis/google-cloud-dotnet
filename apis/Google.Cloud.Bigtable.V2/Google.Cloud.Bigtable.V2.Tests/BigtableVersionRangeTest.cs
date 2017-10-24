@@ -31,13 +31,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 new BigtableVersionRange(new BigtableVersion(0), new BigtableVersion(10)),
                 new BigtableVersionRange(
                     BigtableVersion.UnixEpoch,
-                    BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100))
+                    BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100_000))
             };
             var unequal = new[]
             {
                 new BigtableVersionRange(null, 10),
                 new BigtableVersionRange(null, new BigtableVersion(10)),
-                new BigtableVersionRange(null, BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100)),
+                new BigtableVersionRange(null, BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100_000)),
                 new BigtableVersionRange(0, null),
                 new BigtableVersionRange(new BigtableVersion(0), null),
                 new BigtableVersionRange(BigtableVersion.UnixEpoch, null),
@@ -55,7 +55,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             {
                 new BigtableVersionRange(null, 10),
                 new BigtableVersionRange(null, new BigtableVersion(10)),
-                new BigtableVersionRange(null, BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100))
+                new BigtableVersionRange(null, BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100_000))
             };
             var unequal = new[]
             {
@@ -63,7 +63,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 new BigtableVersionRange(new BigtableVersion(0), new BigtableVersion(10)),
                 new BigtableVersionRange(
                     BigtableVersion.UnixEpoch,
-                    BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100)),
+                    BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100_000)),
                 new BigtableVersionRange(null, 11)
             };
             ComparisonTester.AssertEqual(control, equal, unequal);
@@ -85,10 +85,26 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 new BigtableVersionRange(new BigtableVersion(0), new BigtableVersion(10)),
                 new BigtableVersionRange(
                     BigtableVersion.UnixEpoch,
-                    BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100)),
+                    BigtableVersion.UnixEpoch + TimeSpan.FromTicks(100_000)),
                 new BigtableVersionRange(1, null)
             };
             ComparisonTester.AssertEqual(control, equal, unequal);
+        }
+
+        [Fact]
+        public void Validate_Long()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new BigtableVersionRange(-2, null));
+            Assert.Throws<ArgumentOutOfRangeException>(() => new BigtableVersionRange(null, -2));
+            Assert.Throws<ArgumentOutOfRangeException>(() => new BigtableVersionRange((long.MaxValue / 1000) + 1, null));
+            Assert.Throws<ArgumentOutOfRangeException>(() => new BigtableVersionRange(null, (long.MaxValue / 1000) + 1));
+        }
+
+        [Fact]
+        public void Validate_DateTime()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new BigtableVersionRange(BigtableVersion.UnixEpoch.AddMilliseconds(-1), null));
+            Assert.Throws<ArgumentOutOfRangeException>(() => new BigtableVersionRange(null, BigtableVersion.UnixEpoch.AddMilliseconds(-1)));
         }
 
         [Theory]
@@ -112,8 +128,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var range = new BigtableVersionRange(start, end);
             var expected = new TimestampRange
             {
-                StartTimestampMicros = start ?? 0,
-                EndTimestampMicros = end ?? 0
+                StartTimestampMicros = start * 1000 ?? 0,
+                EndTimestampMicros = end * 1000 ?? 0
             };
             Assert.Equal(expected, range.ToTimestampRange());
         }

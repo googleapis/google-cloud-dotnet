@@ -39,7 +39,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.ColumnFamily1,
                     "column_name",
                     "test12345",
-                    new BigtableVersion(1000)));
+                    new BigtableVersion(1)));
 
             await VerifySingleRowAsync(
                 client,
@@ -48,7 +48,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 BigtableFixture.ColumnFamily1,
                 "column_name",
                 "test12345",
-                new BigtableVersion(1000));
+                new BigtableVersion(1));
         }
 
         [Fact]
@@ -66,7 +66,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         BigtableFixture.ColumnFamily1,
                         "column_name",
                         "test12345",
-                        new BigtableVersion(1000))
+                        new BigtableVersion(1))
                 });
 
             await VerifySingleRowAsync(
@@ -76,7 +76,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 BigtableFixture.ColumnFamily1,
                 "column_name",
                 "test12345",
-                new BigtableVersion(1000));
+                new BigtableVersion(1));
         }
         
         [Fact]
@@ -85,7 +85,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.DefaultTableName;
             var client = _fixture.DefaultTableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
-            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1000));
+            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1));
 
             client.MutateRow(
                 tableName,
@@ -94,7 +94,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.ColumnFamily1,
                     "modify_row_column",
                     "new_cell_value",
-                    new BigtableVersion(1000)));
+                    new BigtableVersion(1)));
 
             // TODO: Use cleaner API when available
             var response = client.ReadRows(new ReadRowsRequest
@@ -112,7 +112,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.DefaultTableName;
             var client = _fixture.DefaultTableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
-            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1000));
+            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1));
 
             await client.MutateRowAsync(
                 tableName,
@@ -123,7 +123,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         BigtableFixture.ColumnFamily1,
                         "modify_row_column",
                         "new_cell_value",
-                        new BigtableVersion(1000))
+                        new BigtableVersion(1))
                 });
 
             // TODO: Use cleaner API when available
@@ -171,7 +171,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.DefaultTableName;
             var client = _fixture.DefaultTableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
-            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1000));
+            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1));
             client.MutateRow(
                 tableName,
                 rowKey,
@@ -179,7 +179,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.ColumnFamily1,
                     "column_name",
                     "abcd",
-                    new BigtableVersion(2000)));
+                    new BigtableVersion(2)));
 
             client.MutateRow(
                 tableName,
@@ -187,7 +187,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 Mutations.DeleteFromColumn(
                     BigtableFixture.ColumnFamily1,
                     "column_name",
-                    new BigtableVersionRange(1000, 2000)));
+                    new BigtableVersionRange(1, 2)));
 
             await VerifySingleRowAsync(
                 client,
@@ -196,7 +196,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 BigtableFixture.ColumnFamily1,
                 "column_name",
                 "abcd",
-                new BigtableVersion(2000));
+                new BigtableVersion(2));
         }
 
         [Fact]
@@ -205,7 +205,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.DefaultTableName;
             var client = _fixture.DefaultTableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
-            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1000));
+            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1));
             client.MutateRow(
                 tableName,
                 rowKey,
@@ -213,7 +213,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.ColumnFamily1,
                     "column_name",
                     "abcd",
-                    new BigtableVersion(2000)));
+                    new BigtableVersion(2)));
 
             await client.MutateRowAsync(
                 tableName,
@@ -223,7 +223,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     Mutations.DeleteFromColumn(
                         BigtableFixture.ColumnFamily1,
                         "column_name",
-                        new BigtableVersionRange(1000, 2000))
+                        new BigtableVersionRange(1, 2))
                 });
 
             await VerifySingleRowAsync(
@@ -233,7 +233,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 BigtableFixture.ColumnFamily1,
                 "column_name",
                 "abcd",
-                new BigtableVersion(2000));
+                new BigtableVersion(2));
         }
 
         [Fact]
@@ -242,7 +242,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.DefaultTableName;
             var client = _fixture.DefaultTableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
-            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1000));
+            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1));
             client.MutateRow(
                 tableName,
                 rowKey,
@@ -250,7 +250,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.OtherColumnFamily,
                     "last_name",
                     "Smith",
-                    new BigtableVersion(3000)));
+                    new BigtableVersion(3)));
 
             client.MutateRow(
                 tableName,
@@ -264,7 +264,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 BigtableFixture.OtherColumnFamily,
                 "last_name",
                 "Smith",
-                new BigtableVersion(3000));
+                new BigtableVersion(3));
         }
 
         [Fact]
@@ -273,7 +273,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.DefaultTableName;
             var client = _fixture.DefaultTableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
-            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1000));
+            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1));
             client.MutateRow(
                 tableName,
                 rowKey,
@@ -281,7 +281,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.OtherColumnFamily,
                     "last_name",
                     "Smith",
-                    new BigtableVersion(3000)));
+                    new BigtableVersion(3)));
 
             await client.MutateRowAsync(
                 tableName,
@@ -295,7 +295,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 BigtableFixture.OtherColumnFamily,
                 "last_name",
                 "Smith",
-                new BigtableVersion(3000));
+                new BigtableVersion(3));
         }
 
         [Fact]
@@ -304,7 +304,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.DefaultTableName;
             var client = _fixture.DefaultTableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
-            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1000));
+            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1));
 
             client.MutateRow(
                 tableName,
@@ -320,7 +320,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.DefaultTableName;
             var client = _fixture.DefaultTableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
-            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1000));
+            await InsertRowAsync(client, tableName, rowKey, new BigtableVersion(1));
 
             await client.MutateRowAsync(
                 tableName,
@@ -343,7 +343,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.ColumnFamily1,
                     "column_name",
                     "test12345",
-                    new BigtableVersion(1000)));
+                    new BigtableVersion(1)));
 
             await VerifySingleRowAsync(
                 client,
@@ -352,7 +352,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 BigtableFixture.ColumnFamily1,
                 "column_name",
                 "test12345",
-                new BigtableVersion(1000));
+                new BigtableVersion(1));
         }
 
         private static async Task VerifyNoRowAsync(
@@ -402,7 +402,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     Assert.Equal(familyName, chunk.FamilyName);
                     Assert.Equal(columnQualifier.Value, chunk.Qualifier);
                     Assert.Equal(value.Value, chunk.Value);
-                    Assert.Equal(version.Value, chunk.TimestampMicros);
+                    Assert.Equal(version.Micros, chunk.TimestampMicros);
                 }
             }
         }

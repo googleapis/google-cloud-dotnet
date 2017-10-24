@@ -47,8 +47,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.NotNull(mutation.DeleteFromColumn);
             Assert.Equal(familyName, mutation.DeleteFromColumn.FamilyName);
             Assert.Equal("cq1", mutation.DeleteFromColumn.ColumnQualifier.ToStringUtf8());
-            Assert.Equal(1, mutation.DeleteFromColumn.TimeRange.StartTimestampMicros);
-            Assert.Equal(2, mutation.DeleteFromColumn.TimeRange.EndTimestampMicros);
+            Assert.Equal(1000, mutation.DeleteFromColumn.TimeRange.StartTimestampMicros);
+            Assert.Equal(2000, mutation.DeleteFromColumn.TimeRange.EndTimestampMicros);
         }
 
         [Theory]
@@ -93,7 +93,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal("cq1", mutation.SetCell.ColumnQualifier.ToStringUtf8());
             var bytes = mutation.SetCell.Value.ToByteArray();
             Assert.Equal(new byte[] { 1, 2, 3, 4, 5 }, bytes);
-            Assert.Equal(3, mutation.SetCell.TimestampMicros);
+            Assert.Equal(3000, mutation.SetCell.TimestampMicros);
         }
 
         [Theory]
@@ -111,7 +111,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 Array.Reverse(bytes);
             }
             Assert.Equal(12345, BitConverter.ToInt64(bytes, 0));
-            Assert.Equal(3, mutation.SetCell.TimestampMicros);
+            Assert.Equal(3000, mutation.SetCell.TimestampMicros);
         }
 
         [Theory]
@@ -124,7 +124,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal(familyName, mutation.SetCell.FamilyName);
             Assert.Equal("cq1", mutation.SetCell.ColumnQualifier.ToStringUtf8());
             Assert.Equal("value", mutation.SetCell.Value.ToStringUtf8());
-            Assert.Equal(3, mutation.SetCell.TimestampMicros);
+            Assert.Equal(3000, mutation.SetCell.TimestampMicros);
         }
 
         [Theory]

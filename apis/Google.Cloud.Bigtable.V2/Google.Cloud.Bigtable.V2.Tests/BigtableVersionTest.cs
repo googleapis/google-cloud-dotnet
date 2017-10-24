@@ -39,28 +39,28 @@ namespace Google.Cloud.Bigtable.V2.Tests
             {
                 new BigtableVersion(6),
                 new BigtableVersion(-1),
-                new BigtableVersion(long.MaxValue)
+                new BigtableVersion(long.MaxValue / 1000)
             };
             ComparisonTester.AssertCompare(control, less, equal, greater);
             ComparisonTester.AssertCompareOperators(control, less, equal, greater);
         }
 
         [Fact]
-        public void MicrosScaleFromDateTime()
+        public void ScaleFromDateTime()
         {
             var utcNow = DateTime.UtcNow;
             var v1 = new BigtableVersion(utcNow);
             var v2 = new BigtableVersion(utcNow + TimeSpan.FromSeconds(1));
-            var diff = v2.Value - v1.Value;
-            Assert.Equal(1_000_000, diff);
+            Assert.Equal(1_000, v2.Value - v1.Value);
+            Assert.Equal(1_000_000, v2.Micros - v1.Micros);
         }
 
         [Fact]
-        public void MicrosScaleToDateTime()
+        public void ScaleToDateTime()
         {
             var utcNow = DateTime.UtcNow;
             var v1 = new BigtableVersion(12345);
-            var v2 = new BigtableVersion(12345 + 1_000_000);
+            var v2 = new BigtableVersion(12345 + 1_000);
             var timespanDiff = v2.ToDateTime() - v1.ToDateTime();
             Assert.Equal(TimeSpan.FromSeconds(1), timespanDiff);
         }
@@ -72,7 +72,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var utcNow = new BigtableVersion(DateTime.UtcNow);
 
             // Verify they are not more than 1 second apart
-            Assert.True(utcNow.Value - negativeOne.Value < 1_000_000);
+            Assert.True(utcNow.Value - negativeOne.Value < 1_000);
         }
 
         [Fact]
@@ -81,16 +81,29 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var dateTime = DateTime.UtcNow;
             var version = new BigtableVersion(dateTime);
 
-            // BigtableVersion stores micros, which is 10s of ticks, so truncate the ticks.
-            var expected = new DateTime(dateTime.Ticks - (dateTime.Ticks % 10), DateTimeKind.Utc);
+            // BigtableVersion stores micros, but aligns to millis, which is 10000s of ticks, so truncate the ticks.
+            var expected = new DateTime(dateTime.Ticks - (dateTime.Ticks % 10000), DateTimeKind.Utc);
             Assert.Equal(expected, version.ToDateTime());
+        }
+
+        [Fact]
+        public void Validate_Long()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new BigtableVersion(-2));
+            Assert.Throws<ArgumentOutOfRangeException>(() => new BigtableVersion((long.MaxValue / 1000) + 1));
+        }
+
+        [Fact]
+        public void Validate_DateTime()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new BigtableVersion(BigtableVersion.UnixEpoch.AddDays(-1)));
         }
 
         [Theory]
         [InlineData(0)]
         [InlineData(1)]
-        [InlineData(long.MaxValue - 1)]
-        [InlineData(long.MaxValue)]
+        [InlineData((long.MaxValue / 1000) - 1)]
+        [InlineData(long.MaxValue / 1000)]
         public void RoundTripLong(long value)
         {
             var version = new BigtableVersion(value);
@@ -98,7 +111,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [InlineData("BigtableVersion: 1507852800000000", "2017-10-13")]
+        [InlineData("BigtableVersion: 1507852800000", "2017-10-13")]
         public void FormattingDateTime(string expectedText, string dateTimeText)
         {
             var dateTime = DateTime.ParseExact(
@@ -113,7 +126,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Theory]
         [InlineData("BigtableVersion: 0", 0)]
         [InlineData("BigtableVersion: 1", 1)]
-        [InlineData("BigtableVersion: 9223372036854775807", long.MaxValue)]
+        [InlineData("BigtableVersion: 9223372036854775", long.MaxValue / 1000)]
         public void FormattingLong(string expectedText, long versionValue)
         {
             var version = new BigtableVersion(versionValue);
