@@ -28,6 +28,113 @@ namespace Google.Cloud.Bigtable.V2.Tests
         private class TestBigtableClient : BigtableClient { }
 
         [Fact]
+        public async Task CheckAndMutateRow_Validate_TableName()
+        {
+            var client = new TestBigtableClient();
+            await CheckAndMutateRow_ValidateArguments<ArgumentNullException>(
+                null,
+                "abc",
+                RowFilters.PassAllFilter(),
+                new[] { Mutations.DeleteFromRow() },
+                new[] { Mutations.DeleteFromRow() });
+        }
+
+        [Fact]
+        public async Task CheckAndMutateRow_Validate_RowKey()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
+                tableName,
+                "",
+                RowFilters.PassAllFilter(),
+                new[] { Mutations.DeleteFromRow() },
+                new[] { Mutations.DeleteFromRow() });
+            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
+                tableName,
+                new byte[0],
+                RowFilters.PassAllFilter(),
+                new[] { Mutations.DeleteFromRow() },
+                new[] { Mutations.DeleteFromRow() });
+            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
+                tableName,
+                ByteString.Empty,
+                RowFilters.PassAllFilter(),
+                new[] { Mutations.DeleteFromRow() },
+                new[] { Mutations.DeleteFromRow() });
+            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
+                tableName,
+                default,
+                RowFilters.PassAllFilter(),
+                new[] { Mutations.DeleteFromRow() },
+                new[] { Mutations.DeleteFromRow() });
+        }
+
+        [Fact]
+        public async Task CheckAndMutateRow_Validate_Mutations()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
+                tableName,
+                "abc",
+                RowFilters.PassAllFilter(),
+                null,
+                null);
+            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
+                tableName,
+                "abc",
+                RowFilters.PassAllFilter(),
+                new Mutation[0],
+                new Mutation[0]);
+            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
+                tableName,
+                "abc",
+                RowFilters.PassAllFilter(),
+                new Mutation[] { null },
+                new[] { Mutations.DeleteFromRow() },
+                callTrueMutationsOnlyOverload: false);
+            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
+                tableName,
+                "abc",
+                RowFilters.PassAllFilter(),
+                new[] { Mutations.DeleteFromRow() },
+                new Mutation[] { null },
+                callTrueMutationsOnlyOverload: false);
+        }
+
+        private async Task CheckAndMutateRow_ValidateArguments<TException>(
+            TableName tableName,
+            BigtableByteString rowKey,
+            RowFilter predicateFilter,
+            IEnumerable<Mutation> trueMutations,
+            IEnumerable<Mutation> falseMutations,
+            bool callTrueMutationsOnlyOverload = true)
+            where TException : Exception
+        {
+            var client = new TestBigtableClient();
+            if (callTrueMutationsOnlyOverload)
+            {
+                Assert.Throws<TException>(
+                    () => client.CheckAndMutateRow(
+                        tableName, rowKey, predicateFilter, trueMutations?.ToArray()));
+            }
+            Assert.Throws<TException>(
+                () => client.CheckAndMutateRow(
+                    tableName, rowKey, predicateFilter, trueMutations, falseMutations, CallSettings.FromCancellationToken(default)));
+
+            if (callTrueMutationsOnlyOverload)
+            {
+                await Assert.ThrowsAsync<TException>(
+                    () => client.CheckAndMutateRowAsync(
+                        tableName, rowKey, predicateFilter, trueMutations, CancellationToken.None));
+            }
+            await Assert.ThrowsAsync<TException>(
+                () => client.CheckAndMutateRowAsync(
+                    tableName, rowKey, predicateFilter, trueMutations, falseMutations, CallSettings.FromCancellationToken(default)));
+        }
+
+        [Fact]
         public async Task MutateRow_Validate_TableName()
         {
             var client = new TestBigtableClient();
@@ -63,7 +170,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var client = new TestBigtableClient();
             Assert.Throws<TException>(
-                () => client.MutateRow(tableName, rowKey, mutations.ToArray()));
+                () => client.MutateRow(tableName, rowKey, mutations?.ToArray()));
             Assert.Throws<TException>(
                 () => client.MutateRow(tableName, rowKey, mutations, CallSettings.FromCancellationToken(default)));
             await Assert.ThrowsAsync<TException>(
