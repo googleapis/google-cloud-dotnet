@@ -88,6 +88,54 @@ public class Options
         }
 
         [Fact]
+        public void CustomTypeLocalDeclaredAtCall()
+        {
+            var test = @"
+public class A
+{
+    public void B()
+    {
+        var options = C();
+    }
+
+    public Options C(Options options = null)
+    {
+        return options;
+    }
+}
+
+public class Options
+{
+}";
+
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
+        public void CustomTypeLocalDeclaredAfterCall()
+        {
+            var test = @"
+public class A
+{
+    public void B()
+    {
+        C();
+        Options options = null;
+    }
+
+    public void C(Options options = null)
+    {
+    }
+}
+
+public class Options
+{
+}";
+
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
         public void PrimitiveTypeNamesMatch()
         {
             var test = @"
@@ -335,6 +383,49 @@ public class A
 
     public void C(Options options = null)
     {
+    }
+}
+
+public class Options
+{
+}";
+            VerifyCSharpFix(test, newSource);
+        }
+
+        [Fact]
+        public void MatchingNameNotPreferredWhenNotAssigned()
+        {
+            var test = @"
+public class A
+{
+    public void B(Options a, Options b, Options c)
+    {
+        var options = C();
+    }
+
+    public Options C(Options options = null)
+    {
+        return options;
+    }
+}
+
+public class Options
+{
+}";
+            var expected = CreateDiagnostic("options", "a", 6, 24);
+            VerifyCSharpDiagnostic(test, expected);
+
+            var newSource = @"
+public class A
+{
+    public void B(Options a, Options b, Options c)
+    {
+        var options = C(a);
+    }
+
+    public Options C(Options options = null)
+    {
+        return options;
     }
 }
 
