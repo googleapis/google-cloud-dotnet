@@ -169,5 +169,71 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await dropCommand.ExecuteNonQueryAsync();
             }
         }
+
+        [Fact]
+        public async Task CreateReturnsErrors()
+        {
+            string dbName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+
+            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            {
+                var createCmd = connection.CreateDdlCommand($"CREATE DATABASE BadName");
+                await Assert.ThrowsAsync<SpannerException>(() => createCmd.ExecuteNonQueryAsync());
+                createCmd = connection.CreateDdlCommand($"CREATE DATABASE {dbName}");
+                await createCmd.ExecuteNonQueryAsync();
+
+                //calling again should throw an error.
+                await Assert.ThrowsAsync<SpannerException>(() => createCmd.ExecuteNonQueryAsync());
+
+                var dropCmd = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
+                await dropCmd.ExecuteNonQueryAsync();
+            }
+        }
+
+        [Fact]
+        public async Task DdlCommandReturnsErrors()
+        {
+            string dbName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+
+            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            {
+                const string tableSingers = @"
+                        CREATE TABLE Singers (
+                          SingerId INT64 NOT NULL,
+                          FirstName STRING(1024),
+                          LastName STRING(1024),
+                          ComposerInfo BYTES(MAX),
+                        ) PRIMARY KEY(SingerId)";
+
+                const string tableAlbums = @"CREATE TABLE Albums (
+                      SingerId INT64 NOT NULL,
+                      AlbumId INT64 NOT NULL,
+                      AlbumTitle STRING(MAX),
+                    ) PRIMARY KEY(SingerId, AlbumId),
+                      INTERLEAVE IN PARENT Singers ON DELETE CASCADE";
+
+                var createCmd = connection.CreateDdlCommand(
+                    $"CREATE DATABASE {dbName}",
+                    tableSingers, tableAlbums);
+
+                await createCmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+
+            using (var connection = new SpannerConnection($"{_testFixture.NoDbConnectionString}/databases/{dbName}"))
+            {
+                var dropSingersCmd = connection.CreateDdlCommand("DROP TABLE Singers");
+                var dropAlbumsCmd = connection.CreateDdlCommand("DROP TABLE Albums");
+
+                await Assert.ThrowsAsync<SpannerException>(() => dropSingersCmd.ExecuteNonQueryAsync());
+                await dropAlbumsCmd.ExecuteNonQueryAsync();
+                await dropSingersCmd.ExecuteNonQueryAsync();
+            }
+
+            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            {
+                var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
+                await dropCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
     }
 }

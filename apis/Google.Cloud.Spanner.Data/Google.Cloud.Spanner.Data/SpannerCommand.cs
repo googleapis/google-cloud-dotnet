@@ -24,6 +24,7 @@ using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using DatabaseName = Google.Cloud.Spanner.Admin.Database.V1.DatabaseName;
 
 // ReSharper disable UnusedParameter.Local
@@ -333,48 +334,67 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken)
         {
             var databaseAdminClient = await DatabaseAdminClient.CreateAsync().ConfigureAwait(false);
-
-            if (spannerCommandTextBuilder.IsCreateDatabaseCommand)
+            try
             {
-                var parent = new InstanceName(spannerConnection.Project, spannerConnection.SpannerInstance);
-                var response = await databaseAdminClient.CreateDatabaseAsync(
-                    new CreateDatabaseRequest
-                    {
-                        ParentAsInstanceName = parent,
-                        CreateStatement = commandText,
-                        ExtraStatements = { spannerCommandTextBuilder.ExtraStatements }
-                    }).ConfigureAwait(false);
-                await response.PollUntilCompletedAsync().ConfigureAwait(false);
-            }
-            else if (spannerCommandTextBuilder.IsDropDatabaseCommand)
-            {
-                if (spannerCommandTextBuilder.ExtraStatements?.Length > 0)
+                if (spannerCommandTextBuilder.IsCreateDatabaseCommand)
                 {
-                    throw new InvalidOperationException("Drop database commands do not support additional ddl statements");
-                }
-                var dbName = new DatabaseName(spannerConnection.Project,
-                    spannerConnection.SpannerInstance,
-                    spannerCommandTextBuilder.DatabaseToDrop);
-                await databaseAdminClient.DropDatabaseAsync(dbName, cancellationToken).ConfigureAwait(false);
-            }
-            else
-            {
-                var ddlStatements = new List<string> {commandText};
-                if (spannerCommandTextBuilder.ExtraStatements != null)
-                {
-                    ddlStatements.AddRange(spannerCommandTextBuilder.ExtraStatements);
-                }
-
-                var response =
-                    await databaseAdminClient.UpdateDatabaseDdlAsync(
-                        new UpdateDatabaseDdlRequest
+                    var parent = new InstanceName(spannerConnection.Project, spannerConnection.SpannerInstance);
+                    var response = await databaseAdminClient.CreateDatabaseAsync(
+                        new CreateDatabaseRequest
                         {
-                            DatabaseAsDatabaseName = new DatabaseName(
-                                spannerConnection.Project, spannerConnection.SpannerInstance, spannerConnection.Database),
-                            Statements = { ddlStatements }
+                            ParentAsInstanceName = parent,
+                            CreateStatement = commandText,
+                            ExtraStatements = {spannerCommandTextBuilder.ExtraStatements}
                         }).ConfigureAwait(false);
-                await response.PollUntilCompletedAsync().ConfigureAwait(false);
+                    response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
+                    if (response.IsFaulted)
+                    {
+                        throw SpannerException.FromOperationFailedException(response.Exception);
+                    }
+                }
+                else if (spannerCommandTextBuilder.IsDropDatabaseCommand)
+                {
+                    if (spannerCommandTextBuilder.ExtraStatements?.Length > 0)
+                    {
+                        throw new InvalidOperationException(
+                            "Drop database commands do not support additional ddl statements");
+                    }
+                    var dbName = new DatabaseName(
+                        spannerConnection.Project,
+                        spannerConnection.SpannerInstance,
+                        spannerCommandTextBuilder.DatabaseToDrop);
+                    await databaseAdminClient.DropDatabaseAsync(dbName, cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    var ddlStatements = new List<string> {commandText};
+                    if (spannerCommandTextBuilder.ExtraStatements != null)
+                    {
+                        ddlStatements.AddRange(spannerCommandTextBuilder.ExtraStatements);
+                    }
+
+                    var response =
+                        await databaseAdminClient.UpdateDatabaseDdlAsync(
+                            new UpdateDatabaseDdlRequest
+                            {
+                                DatabaseAsDatabaseName = new DatabaseName(
+                                    spannerConnection.Project, spannerConnection.SpannerInstance,
+                                    spannerConnection.Database),
+                                Statements = {ddlStatements}
+                            }).ConfigureAwait(false);
+                    response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
+                    if (response.IsFaulted)
+                    {
+                        throw SpannerException.FromOperationFailedException(response.Exception);
+                    }
+                }
             }
+            catch (RpcException gRpcException)
+            {
+                //we translate rpc errors into a spanner exception
+                throw new SpannerException(gRpcException);
+            }
+
             return 0;
         }
 
