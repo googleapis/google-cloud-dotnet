@@ -64,7 +64,7 @@ namespace Google.Cloud.Tools.Analyzers
             }
 
             var variablesInScope =
-                InternalOptionalParametersRequiredAnalyzer.GetVariablesInScope(argumentListExpression, semanticModel);
+                InternalOptionalParametersRequiredAnalyzer.GetUsableVariables(argumentListExpression, semanticModel);
 
             var omittedParameterVariablePairs = new List<Tuple<string, string>>();
             bool useNamedArguments = false;

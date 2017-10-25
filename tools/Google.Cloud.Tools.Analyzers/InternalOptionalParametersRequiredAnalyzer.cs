@@ -61,7 +61,7 @@ namespace Google.Cloud.Tools.Analyzers
                 invocation.ArgumentsInEvaluationOrder.Any(ShouldAnalyzeArgument))
             {
                 var semanticModel = context.Compilation.GetSemanticModel(context.Operation.Syntax.SyntaxTree);
-                var variablesInScope = GetVariablesInScope(context.Operation.Syntax, semanticModel);
+                var variablesInScope = GetUsableVariables(context.Operation.Syntax, semanticModel);
 
                 foreach (var arg in invocation.ArgumentsInEvaluationOrder)
                 {
@@ -89,7 +89,7 @@ namespace Google.Cloud.Tools.Analyzers
                 arg.ArgumentKind == ArgumentKind.DefaultValue && arg.Parameter != null;
         }
 
-        internal static IEnumerable<ISymbol> GetVariablesInScope(SyntaxNode syntaxNode, SemanticModel semanticModel)
+        internal static IEnumerable<ISymbol> GetUsableVariables(SyntaxNode syntaxNode, SemanticModel semanticModel)
         {
             var statementOrExpression =
                 syntaxNode.FirstAncestorOrSelf<SyntaxNode>(node => node is StatementSyntax || node is ExpressionSyntax);
