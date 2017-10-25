@@ -124,6 +124,43 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 });
         }
 
+        public async Task<BigtableByteString> InsertRowAsync(
+            TableName tableName,
+            string familyName = null,
+            BigtableByteString? qualifierName = null,
+            BigtableByteString? value = null,
+            BigtableVersion? version = null)
+        {
+            BigtableByteString rowKey = Guid.NewGuid().ToString();
+
+            familyName = familyName ?? ColumnFamily1;
+            qualifierName = qualifierName ?? "row_exists";
+            value = value ?? "true";
+
+            await DefaultTableClient.MutateRowAsync(
+                tableName,
+                rowKey,
+                new[]
+                {
+                    Mutations.SetCell(
+                        familyName,
+                        qualifierName.Value,
+                        value.Value,
+                        version)
+                });
+
+            await BigtableAssert.HasSingleValueAsync(
+                DefaultTableClient,
+                tableName,
+                rowKey,
+                familyName,
+                qualifierName.Value,
+                value.Value,
+                version);
+
+            return rowKey;
+        }
+
         public void Dispose()
         {
             if (DefaultTableAdminClient != null && DefaultTableName != null)
