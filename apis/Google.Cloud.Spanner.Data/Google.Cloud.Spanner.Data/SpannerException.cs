@@ -17,6 +17,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.LongRunning;
+using Google.Rpc;
 using Grpc.Core;
 
 namespace Google.Cloud.Spanner.Data
@@ -97,6 +99,33 @@ namespace Google.Cloud.Spanner.Data
             Logger.DefaultLogger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
             ErrorCode = code;
         }
+
+        //These values should be the same, but we create a map to be safe.
+        private static readonly Dictionary<int, ErrorCode> s_apiCodeToErrorCodes
+            = new Dictionary<int, ErrorCode>
+            {
+                {(int) Code.Cancelled, ErrorCode.Cancelled},
+                {(int) Code.Unknown, ErrorCode.Unknown},
+                {(int) Code.InvalidArgument, ErrorCode.InvalidArgument},
+                {(int) Code.DeadlineExceeded, ErrorCode.DeadlineExceeded},
+                {(int) Code.NotFound, ErrorCode.NotFound},
+                {(int) Code.AlreadyExists, ErrorCode.AlreadyExists},
+                {(int) Code.PermissionDenied, ErrorCode.PermissionDenied},
+                {(int) Code.Unauthenticated, ErrorCode.Unauthenticated},
+                {(int) Code.ResourceExhausted, ErrorCode.ResourceExhausted},
+                {(int) Code.FailedPrecondition, ErrorCode.FailedPrecondition},
+                {(int) Code.Aborted, ErrorCode.Aborted},
+                {(int) Code.OutOfRange, ErrorCode.OutOfRange},
+                {(int) Code.Unimplemented, ErrorCode.Unimplemented},
+                {(int) Code.Internal, ErrorCode.Internal},
+                {(int) Code.Unavailable, ErrorCode.Unavailable},
+                {(int) Code.DataLoss, ErrorCode.DataLoss}
+            };
+
+        internal static SpannerException FromOperationFailedException(OperationFailedException rpcException)
+            => s_apiCodeToErrorCodes.TryGetValue(rpcException?.Status.Code ?? -1, out ErrorCode errorCode)
+                ? new SpannerException(errorCode, rpcException?.Message ?? "An unknown Rpc error occurred.")
+                : new SpannerException(ErrorCode.Unknown, rpcException?.Message ?? "An unknown Rpc error occurred.");
 
         internal SpannerException(RpcException innerException)
             : this(ConvertFromStatusCode(innerException.Status.StatusCode), innerException) { }
