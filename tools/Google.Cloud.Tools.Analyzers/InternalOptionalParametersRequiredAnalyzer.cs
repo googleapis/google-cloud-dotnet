@@ -52,17 +52,20 @@ namespace Google.Cloud.Tools.Analyzers
         private static void AnalyzeInvocation(OperationAnalysisContext context)
         {
             // Only perform the check on calls to externally visible methods which are defined within the same assembly.
+            // Also, not strictly required, but check that at least some argument is omitted so we don't get a semantic
+            // model and do flow analysis when it isn't necessary.
             var invocation = (IInvocationExpression)context.Operation;
             if (invocation.Syntax is InvocationExpressionSyntax invocationExpression &&
                 invocation.TargetMethod?.IsExternallyVisible() == true &&
-                context.Compilation.Assembly == invocation.TargetMethod.ContainingAssembly)
+                context.Compilation.Assembly == invocation.TargetMethod.ContainingAssembly &&
+                invocation.ArgumentsInEvaluationOrder.Any(ShouldAnalyzeArgument))
             {
                 var semanticModel = context.Compilation.GetSemanticModel(context.Operation.Syntax.SyntaxTree);
                 var variablesInScope = GetVariablesInScope(context.Operation.Syntax, semanticModel);
 
                 foreach (var arg in invocation.ArgumentsInEvaluationOrder)
                 {
-                    if (arg.ArgumentKind != ArgumentKind.DefaultValue || arg.Parameter == null)
+                    if (!ShouldAnalyzeArgument(arg))
                     {
                         continue;
                     }
@@ -81,12 +84,23 @@ namespace Google.Cloud.Tools.Analyzers
                             preferredVariable.Name));
                 }
             }
+
+            bool ShouldAnalyzeArgument(IArgument arg) =>
+                arg.ArgumentKind == ArgumentKind.DefaultValue && arg.Parameter != null;
         }
 
-        internal static IEnumerable<ISymbol> GetVariablesInScope(SyntaxNode syntaxNode, SemanticModel semanticModel) =>
-            from symbol in semanticModel.LookupSymbols(syntaxNode.SpanStart)
-            where symbol.Kind == SymbolKind.Local || symbol.Kind == SymbolKind.Parameter
-            select symbol;
+        internal static IEnumerable<ISymbol> GetVariablesInScope(SyntaxNode syntaxNode, SemanticModel semanticModel)
+        {
+            var statementOrExpression =
+                syntaxNode.FirstAncestorOrSelf<SyntaxNode>(node => node is StatementSyntax || node is ExpressionSyntax);
+            var dataFlowAnalysis = semanticModel.AnalyzeDataFlow(statementOrExpression);
+
+            return from symbol in semanticModel.LookupSymbols(syntaxNode.SpanStart)
+                   where
+                       (symbol.Kind == SymbolKind.Local && dataFlowAnalysis.AlwaysAssigned.Contains(symbol)) ||
+                       symbol.Kind == SymbolKind.Parameter
+                   select symbol;
+        }
 
         internal static ISymbol TryGetVariableForArgument(
             IParameterSymbol parameter, Compilation compilation, IEnumerable<ISymbol> variablesInScope)
