@@ -26,7 +26,7 @@ namespace Google.Cloud.Tools.Analyzers
 {
     /// <summary>
     /// Warns about omitted default arguments for calls to externally visible methods which are defined within the same assembly,
-    /// but only when there is a suitable local variable or parameter available in scope which can be used for the argument.
+    /// but only when there is a suitable local variable or parameter in scope and assigned which can be used for the argument.
     /// </summary>
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public class InternalOptionalParametersRequiredAnalyzer : DiagnosticAnalyzer
@@ -61,7 +61,7 @@ namespace Google.Cloud.Tools.Analyzers
                 invocation.ArgumentsInEvaluationOrder.Any(ShouldAnalyzeArgument))
             {
                 var semanticModel = context.Compilation.GetSemanticModel(context.Operation.Syntax.SyntaxTree);
-                var variablesInScope = GetUsableVariables(context.Operation.Syntax, semanticModel);
+                var usableVariables = GetUsableVariables(context.Operation.Syntax, semanticModel);
 
                 foreach (var arg in invocation.ArgumentsInEvaluationOrder)
                 {
@@ -70,7 +70,7 @@ namespace Google.Cloud.Tools.Analyzers
                         continue;
                     }
 
-                    var preferredVariable = TryGetVariableForArgument(arg.Parameter, context.Compilation, variablesInScope);
+                    var preferredVariable = TryGetVariableForArgument(arg.Parameter, context.Compilation, usableVariables);
                     if (preferredVariable == null)
                     {
                         continue;
@@ -103,10 +103,10 @@ namespace Google.Cloud.Tools.Analyzers
         }
 
         internal static ISymbol TryGetVariableForArgument(
-            IParameterSymbol parameter, Compilation compilation, IEnumerable<ISymbol> variablesInScope)
+            IParameterSymbol parameter, Compilation compilation, IEnumerable<ISymbol> usableVariables)
         {
             var parameterType = parameter.Type;
-            var convertibleVariables = variablesInScope.Where(
+            var convertibleVariables = usableVariables.Where(
                 symbol => compilation.ClassifyConversion(symbol.GetVariableType(), parameterType).IsImplicit).ToList();
             if (convertibleVariables.Count == 0)
             {
@@ -118,7 +118,7 @@ namespace Google.Cloud.Tools.Analyzers
 
             // If the parameter's type is String or any primitive type, only show the diagnostic when there is
             // some variable with the same (case-insensitive) name as the argument. Strings are too common, for
-            // example, to assume that any string in scope should be supplied for a default parameter.
+            // example, to assume that any available string should be supplied for a default parameter.
             if ((parameterType.SpecialType == SpecialType.System_String || parameterType.IsPrimitive()) &&
                 nameMatch == null)
             {

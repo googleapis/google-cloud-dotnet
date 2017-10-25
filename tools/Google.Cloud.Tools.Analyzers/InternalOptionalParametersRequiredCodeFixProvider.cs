@@ -63,7 +63,7 @@ namespace Google.Cloud.Tools.Analyzers
                 return;
             }
 
-            var variablesInScope =
+            var usableVariables =
                 InternalOptionalParametersRequiredAnalyzer.GetUsableVariables(argumentListExpression, semanticModel);
 
             var omittedParameterVariablePairs = new List<Tuple<string, string>>();
@@ -81,7 +81,7 @@ namespace Google.Cloud.Tools.Analyzers
                     case ArgumentKind.DefaultValue:
                     {
                         var preferredVariable = InternalOptionalParametersRequiredAnalyzer.TryGetVariableForArgument(
-                            argument.Parameter, semanticModel.Compilation, variablesInScope);
+                            argument.Parameter, semanticModel.Compilation, usableVariables);
                         if (preferredVariable == null)
                         {
                             return;
