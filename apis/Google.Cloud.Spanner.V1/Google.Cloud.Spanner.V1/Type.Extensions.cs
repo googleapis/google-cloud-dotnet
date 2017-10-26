@@ -12,7 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
+using System.Collections.Generic;
+using Google.Api.Gax;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -20,37 +21,41 @@ namespace Google.Cloud.Spanner.V1
     /// </summary>
     public static class TypeCodeExtensions
     {
+        private static readonly Dictionary<string, TypeCode> s_originalNameToCode
+            = new Dictionary<string, TypeCode>
+            {
+                {TypeCode.Bool.ToString().ToUpperInvariant(), TypeCode.Bool},
+                {TypeCode.Unspecified.ToString().ToUpperInvariant(), TypeCode.Unspecified},
+                {TypeCode.Int64.ToString().ToUpperInvariant(), TypeCode.Int64},
+                {TypeCode.Float64.ToString().ToUpperInvariant(), TypeCode.Float64},
+                {TypeCode.Timestamp.ToString().ToUpperInvariant(), TypeCode.Timestamp},
+                {TypeCode.Date.ToString().ToUpperInvariant(), TypeCode.Date},
+                {TypeCode.String.ToString().ToUpperInvariant(), TypeCode.String},
+                {TypeCode.Bytes.ToString().ToUpperInvariant(), TypeCode.Bytes},
+                {TypeCode.Array.ToString().ToUpperInvariant(), TypeCode.Array},
+                {TypeCode.Struct.ToString().ToUpperInvariant(), TypeCode.Struct},
+            };
+
         /// <summary>
         /// </summary>
         /// <param name="typeCode"></param>
         /// <returns></returns>
         public static string GetOriginalName(this TypeCode typeCode)
         {
-            switch (typeCode)
-            {
-                case TypeCode.Unspecified:
-                    return "UKNOWN";
-                case TypeCode.Bool:
-                    return "BOOL";
-                case TypeCode.Int64:
-                    return "INT64";
-                case TypeCode.Float64:
-                    return "FLOAT64";
-                case TypeCode.Timestamp:
-                    return "TIMESTAMP";
-                case TypeCode.Date:
-                    return "DATE";
-                case TypeCode.String:
-                    return "STRING";
-                case TypeCode.Bytes:
-                    return "BYTES";
-                case TypeCode.Array:
-                    return "ARRAY";
-                case TypeCode.Struct:
-                    return "STRUCT";
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(typeCode), typeCode, null);
-            }
+            return typeCode.ToString().ToUpperInvariant();
+        }
+
+        /// <summary>
+        /// Returns a TypeCode given its original string representation.
+        /// </summary>
+        /// <param name="originalName"></param>
+        /// <returns></returns>
+        public static TypeCode GetTypeCode(string originalName)
+        {
+            GaxPreconditions.CheckNotNull(originalName, nameof(originalName));
+            return s_originalNameToCode.TryGetValue(originalName.Trim(), out var typeCode)
+                ? typeCode
+                : TypeCode.Unspecified;
         }
     }
 }

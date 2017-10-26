@@ -12,20 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
 using Google.Cloud.Spanner.V1;
-using Google.Protobuf.Collections;
+using Google.Protobuf.WellKnownTypes;
+using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
     /// Represents a Type that can be stored in a Spanner column or returned from a query.
     /// </summary>
-    public sealed class SpannerDbType
+    public sealed partial class SpannerDbType
     {
         /// <summary>
         /// Not specified.
@@ -67,71 +68,124 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType Bytes { get; } = new SpannerDbType(TypeCode.Bytes);
 
+        private static readonly Dictionary<TypeCode, SpannerDbType> s_simpleTypes
+            = new Dictionary<TypeCode, SpannerDbType>
+            {
+                {TypeCode.Unspecified, Unspecified },
+                {TypeCode.Bool, Bool },
+                {TypeCode.Int64, Int64 },
+                {TypeCode.Float64, Float64 },
+                {TypeCode.Timestamp, Timestamp },
+                {TypeCode.Date, Date },
+                {TypeCode.String, String },
+                {TypeCode.Bytes, Bytes }
+            };
+
+        internal static SpannerDbType FromTypeCode(TypeCode code) 
+            => s_simpleTypes.TryGetValue(code, out SpannerDbType type) ? type : null;
+
         internal TypeCode TypeCode { get; }
 
         internal SpannerDbType ArrayElementType { get; }
 
         internal IDictionary<string, SpannerDbType> StructMembers { get; }
 
-        private SpannerDbType(TypeCode typeCode) => TypeCode = typeCode;
+        //Preserving the order which struct members are declared is important because some values come back
+        //as list values.
+        internal List<string> StructOrder { get; }
+
+        private SpannerDbType(TypeCode typeCode, int? size = null)
+        {
+            TypeCode = typeCode;
+            Size = size;
+        }
+
+        /// <summary>
+        /// The size of the Type, if set.
+        /// </summary>
+        public int? Size { get; }
 
         private SpannerDbType(TypeCode typeCode, SpannerDbType arrayElementType)
             : this(typeCode) => ArrayElementType = arrayElementType;
 
-        private SpannerDbType(TypeCode typeCode, IDictionary<string, SpannerDbType> structMembers)
-            : this(typeCode) => StructMembers = structMembers;
-
-        private SpannerDbType(TypeCode typeCode, RepeatedField<StructType.Types.Field> structTypeFields)
+        private SpannerDbType(TypeCode typeCode, IEnumerable<Tuple<string, SpannerDbType>> structMembers)
             : this(typeCode)
         {
+            StructOrder = new List<string>();
             StructMembers = new Dictionary<string, SpannerDbType>();
-            foreach (var field in structTypeFields)
+            foreach (var field in structMembers)
             {
-                StructMembers[field.Name] = FromProtobufType(field.Type);
+                StructMembers[field.Item1] = field.Item2;
+                StructOrder.Add(field.Item1);
             }
         }
 
-        /// <summary>
-        /// The string name of this type in Cloud Spanner.
-        /// </summary>
-        public string DatabaseTypeName => this.TypeCode.GetOriginalName();
+        private SpannerDbType(TypeCode typeCode, IEnumerable<StructType.Types.Field> structTypeFields)
+            : this(typeCode, structTypeFields.Select(
+                    x => new Tuple<string, SpannerDbType>(x.Name, FromProtobufType(x.Type))))
+        {
+        }
 
         /// <summary>
         /// The corresponding <see cref="DbType"/> for this Cloud Spanner type.
         /// </summary>
-        public DbType DbType => TypeCode.GetDbType();
+        public DbType DbType
+        {
+            get
+            {
+                switch (TypeCode)
+                {
+                    case TypeCode.Bool:
+                        return DbType.Boolean;
+                    case TypeCode.Int64:
+                        return DbType.Int64;
+                    case TypeCode.Float64:
+                        return DbType.Double;
+                    case TypeCode.Timestamp:
+                        return DbType.DateTime;
+                    case TypeCode.Date:
+                        return DbType.Date;
+                    case TypeCode.String:
+                        return DbType.String;
+                    case TypeCode.Bytes:
+                        return DbType.Binary;
+                    default:
+                        return DbType.Object;
+                }
+            }
+        }
 
         /// <summary>
         /// The default <see cref="System.Type"/> for this Cloud Spanner type.
         /// </summary>
-        public System.Type DefaultClrType => TypeCode.GetDefaultClrTypeFromSpannerType();
-
-        /// <inheritdoc />
-        public override string ToString()
+        public System.Type DefaultClrType
         {
-            if (ArrayElementType != null)
+            get
             {
-                return $"ArrayOf({ArrayElementType})";
-            }
-            if (StructMembers != null)
-            {
-                StringBuilder s = new StringBuilder();
-                foreach (var keyValuePair in StructMembers)
+                switch (TypeCode)
                 {
-                    if (s.Length == 0)
-                    {
-                        s.Append("StructOf(");
-                    }
-                    else
-                    {
-                        s.Append(", ");
-                    }
-                    s.Append($"key:{keyValuePair.Key} type:{keyValuePair.Value}");
+                    case TypeCode.Bool:
+                        return typeof(bool);
+                    case TypeCode.Int64:
+                        return typeof(long);
+                    case TypeCode.Float64:
+                        return typeof(double);
+                    case TypeCode.Timestamp:
+                    case TypeCode.Date:
+                        return typeof(DateTime);
+                    case TypeCode.String:
+                        return typeof(string);
+                    case TypeCode.Bytes:
+                        return typeof(byte[]);
+                    case TypeCode.Array:
+                        return typeof(List<>).MakeGenericType(ArrayElementType.DefaultClrType);
+                    case TypeCode.Struct:
+                        return typeof(Hashtable);
+                    default:
+                        //if we don't recognize it (or its a struct), we use the google native wellknown type.
+                        return typeof(Value);
                 }
-                s.Append(")");
-                return s.ToString();
             }
-            return TypeCode.ToString();
         }
 
         internal static SpannerDbType FromProtobufType(V1.Type type)
@@ -145,7 +199,7 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Struct:
                     return new SpannerDbType(TypeCode.Struct, type.StructType.Fields);
                 default:
-                    return new SpannerDbType(type.Code);
+                    return FromTypeCode(type.Code);
             }
         }
 
@@ -207,13 +261,21 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="structMembers">A dictionary containing the field names and types of each member of the struct.</param>
         /// <returns></returns>
         public static SpannerDbType StructOf(IDictionary<string, SpannerDbType> structMembers) => new SpannerDbType(
-            TypeCode.Struct, structMembers);
+            TypeCode.Struct, structMembers.Select(x => new Tuple<string, SpannerDbType>(x.Key, x.Value)));
+
+        /// <summary>
+        /// Returns a clone of this type with the specified size constraint.
+        /// </summary>
+        /// <param name="size"></param>
+        /// <returns></returns>
+        public SpannerDbType WithSize(int size) => new SpannerDbType(TypeCode, size);
 
         /// <inheritdoc />
         public override bool Equals(object obj) => Equals(obj as SpannerDbType);
 
         private bool Equals(SpannerDbType other) => TypeUtil.DictionaryEquals(StructMembers, other?.StructMembers)
             && TypeCode == other?.TypeCode
+            && Size == other.Size
             && Equals(ArrayElementType, other.ArrayElementType);
 
         /// <inheritdoc />
@@ -222,6 +284,7 @@ namespace Google.Cloud.Spanner.Data
             unchecked
             {
                 int hashCode = StructMembers?.Count ?? 0;
+                hashCode = (hashCode * 397) ^ Size.GetValueOrDefault(0);
                 hashCode = (hashCode * 397) ^ (int)TypeCode;
                 hashCode = (hashCode * 397) ^ (ArrayElementType?.GetHashCode() ?? 0);
                 return hashCode;

@@ -15,7 +15,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using static System.Globalization.CultureInfo;
 using System.Linq;
 using System.Reflection;
@@ -25,18 +24,17 @@ using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data
 {
-    internal static class ValueConversion
+    public sealed partial class SpannerDbType
     {
-        public static object ConvertToClrType(this Value wireValue, V1.Type spannerType) => ConvertToClrType(
-            wireValue, spannerType, typeof(object));
+        internal object ConvertToClrType(Value protobufValue) => ConvertToClrType(
+            protobufValue, typeof(object));
 
-        public static T ConvertToClrType<T>(
-            this Value wireValue,
-            V1.Type spannerType) => (T) ConvertToClrType(wireValue, spannerType, typeof(T));
+        internal T ConvertToClrType<T>(
+            Value protobufValue) => (T) ConvertToClrType(protobufValue, typeof(T));
 
-        public static object ConvertToClrType(this Value wireValue, V1.Type spannerType, System.Type targetClrType)
+        internal object ConvertToClrType(Value protobufValue, System.Type targetClrType)
         {
-            if (wireValue.KindCase == Value.KindOneofCase.NullValue)
+            if (protobufValue.KindCase == Value.KindOneofCase.NullValue)
             {
                 if (targetClrType.GetTypeInfo().IsValueType)
                 {
@@ -48,7 +46,7 @@ namespace Google.Cloud.Spanner.Data
             if (targetClrType == typeof(object))
             {
                 //then we decide the type for you
-                targetClrType = spannerType?.Code.GetDefaultClrTypeFromSpannerType();
+                targetClrType = DefaultClrType;
             }
             var possibleUnderlyingType = Nullable.GetUnderlyingType(targetClrType);
             if (possibleUnderlyingType != null)
@@ -59,109 +57,55 @@ namespace Google.Cloud.Spanner.Data
             //we call the spannerType with the known supported version and cast it down to lose precision.
             if (targetClrType == typeof(int))
             {
-                return Convert.ToInt32(ConvertToClrTypeImpl<long>(wireValue, spannerType));
+                return Convert.ToInt32(ConvertToClrTypeImpl<long>(protobufValue));
             }
 
             if (targetClrType == typeof(uint))
             {
-                return Convert.ToUInt32(ConvertToClrTypeImpl<long>(wireValue, spannerType));
+                return Convert.ToUInt32(ConvertToClrTypeImpl<long>(protobufValue));
             }
 
             if (targetClrType == typeof(short))
             {
-                return Convert.ToInt16(ConvertToClrTypeImpl<long>(wireValue, spannerType));
+                return Convert.ToInt16(ConvertToClrTypeImpl<long>(protobufValue));
             }
 
             if (targetClrType == typeof(ushort))
             {
-                return Convert.ToUInt16(ConvertToClrTypeImpl<long>(wireValue, spannerType));
+                return Convert.ToUInt16(ConvertToClrTypeImpl<long>(protobufValue));
             }
 
             if (targetClrType == typeof(sbyte))
             {
-                return Convert.ToSByte(ConvertToClrTypeImpl<long>(wireValue, spannerType));
+                return Convert.ToSByte(ConvertToClrTypeImpl<long>(protobufValue));
             }
 
             if (targetClrType == typeof(byte))
             {
-                return Convert.ToByte(ConvertToClrTypeImpl<long>(wireValue, spannerType));
+                return Convert.ToByte(ConvertToClrTypeImpl<long>(protobufValue));
             }
 
             if (targetClrType == typeof(float))
             {
-                return Convert.ToSingle(ConvertToClrTypeImpl<double>(wireValue, spannerType));
+                return Convert.ToSingle(ConvertToClrTypeImpl<double>(protobufValue));
             }
 
             if (targetClrType == typeof(Guid))
             {
-                return Guid.Parse(ConvertToClrTypeImpl<string>(wireValue, spannerType));
+                return Guid.Parse(ConvertToClrTypeImpl<string>(protobufValue));
             }
 
-            return ConvertToClrTypeImpl(wireValue, spannerType, targetClrType);
+            return ConvertToClrTypeImpl(protobufValue, targetClrType);
         }
 
-        public static DbType GetDbType(this TypeCode spannerType)
-        {
-            switch (spannerType)
-            {
-                case TypeCode.Bool:
-                    return DbType.Boolean;
-                case TypeCode.Int64:
-                    return DbType.Int64;
-                case TypeCode.Float64:
-                    return DbType.Double;
-                case TypeCode.Timestamp:
-                    return DbType.DateTime;
-                case TypeCode.Date:
-                    return DbType.Date;
-                case TypeCode.String:
-                    return DbType.String;
-                case TypeCode.Bytes:
-                    return DbType.Binary;
-                case TypeCode.Unspecified:
-                case TypeCode.Array:
-                case TypeCode.Struct:
-                    return DbType.Object;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(spannerType), spannerType, null);
-            }
-        }
-
-        public static System.Type GetDefaultClrTypeFromSpannerType(this TypeCode code)
-        {
-            switch (code)
-            {
-                case TypeCode.Bool:
-                    return typeof(bool);
-                case TypeCode.Int64:
-                    return typeof(long);
-                case TypeCode.Float64:
-                    return typeof(double);
-                case TypeCode.Timestamp:
-                case TypeCode.Date:
-                    return typeof(DateTime);
-                case TypeCode.String:
-                    return typeof(string);
-                case TypeCode.Bytes:
-                    return typeof(byte[]);
-                case TypeCode.Array:
-                    return typeof(List<object>);
-                case TypeCode.Struct:
-                    return typeof(Hashtable);
-                default:
-                    //if we don't recognize it (or its a struct), we use the google native wellknown type.
-                    return typeof(Value);
-            }
-        }
-
-        public static Value ToValue(object value, SpannerDbType spannerDbType)
+        internal Value ToProtobufValue(object value)
         {
             if (value == null)
             {
                 return Value.ForNull();
             }
 
-            switch (spannerDbType.TypeCode)
+            switch (TypeCode)
             {
                 case TypeCode.Bytes:
                     if (value is string s)
@@ -206,9 +150,9 @@ namespace Google.Cloud.Spanner.Data
                     {
                         return Value.ForList(
                             enumerable.Cast<object>()
-                                .Select(x => ToValue(x, spannerDbType.ArrayElementType)).ToArray());
+                                .Select(x => ArrayElementType.ToProtobufValue(x)).ToArray());
                     }
-                    throw new ArgumentException("The given array instance needs to implement IEnumerable.", nameof(spannerDbType));
+                    throw new ArgumentException("The given array instance needs to implement IEnumerable.");
                 case TypeCode.Struct:
                     if (value is IDictionary dictionary)
                     {
@@ -216,27 +160,26 @@ namespace Google.Cloud.Spanner.Data
                         foreach (var key in dictionary.Keys)
                         {
                             string keyString = Convert.ToString(key, InvariantCulture);
-                            if (!spannerDbType.StructMembers.ContainsKey(keyString))
+                            if (!StructMembers.ContainsKey(keyString))
                             {
                                 throw new ArgumentException("The given struct instance has members not defined in the Struct.", nameof(value));
                             }
-                            structValue.Fields[keyString] = ToValue(
-                                dictionary[key],
-                                spannerDbType.StructMembers[keyString]);
+                            structValue.Fields[keyString] = StructMembers[keyString].ToProtobufValue(
+                                dictionary[key]);
                         }
                         return Value.ForStruct(structValue);
                     }
-                    throw new ArgumentException("The given struct instance needs to implement IDictionary.", nameof(spannerDbType));
+                    throw new ArgumentException("The given struct instance needs to implement IDictionary.");
 
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(spannerDbType), spannerDbType, null);
+                    throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
             }
         }
 
-        private static T ConvertToClrTypeImpl<T>(Value wireValue, V1.Type spannerType) =>
-            (T)ConvertToClrTypeImpl(wireValue, spannerType, typeof(T));
+        private T ConvertToClrTypeImpl<T>(Value wireValue) =>
+            (T)ConvertToClrTypeImpl(wireValue, typeof(T));
 
-        private static object ConvertToClrTypeImpl(Value wireValue, V1.Type spannerType, System.Type targetClrType)
+        private object ConvertToClrTypeImpl(Value wireValue, System.Type targetClrType)
         {
             //If the wireValue itself is assignable to the target type, just return it
             //This covers both typeof(Value) and typeof(object).
@@ -253,7 +196,7 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.NullValue:
                         return default(bool);
                     case Value.KindOneofCase.StringValue:
-                        if (spannerType.Code == TypeCode.Int64)
+                        if (TypeCode == TypeCode.Int64)
                         {
                             return Convert.ToBoolean(Convert.ToInt64(wireValue.StringValue, InvariantCulture));
                         }
@@ -279,7 +222,7 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.NullValue:
                         return default(char);
                     case Value.KindOneofCase.StringValue:
-                        if (spannerType.Code == TypeCode.Int64)
+                        if (TypeCode == TypeCode.Int64)
                         {
                             return Convert.ToChar(Convert.ToInt64(wireValue.StringValue, InvariantCulture));
                         }
@@ -398,7 +341,7 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.NullValue:
                         return null;
                     case Value.KindOneofCase.StringValue:
-                        return Timestamp.Parser.ParseJson(wireValue.StringValue);
+                        return Protobuf.WellKnownTypes.Timestamp.Parser.ParseJson(wireValue.StringValue);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
@@ -446,22 +389,21 @@ namespace Google.Cloud.Spanner.Data
                 switch (wireValue.KindCase)
                 {
                     case Value.KindOneofCase.StructValue:
-                        foreach (var structField in spannerType.StructType.Fields)
+                        foreach (var structField in StructMembers)
                         {
-                            dictionary[structField.Name] =
-                                wireValue.StructValue.Fields[structField.Name]
-                                    .ConvertToClrType(structField.Type, itemType);
+                            dictionary[structField.Key] = structField.Value.ConvertToClrType(
+                                    wireValue.StructValue.Fields[structField.Key], itemType);
                         }
 
                         return dictionary;
                     case Value.KindOneofCase.ListValue:
-                        if (spannerType.Code == TypeCode.Struct)
+                        if (TypeCode == TypeCode.Struct)
                         {
-                            for (var i = 0; i < spannerType.StructType.Fields.Count; i++)
+                            for (var i = 0; i < StructOrder?.Count; i++)
                             {
-                                dictionary[spannerType.StructType.Fields[i].Name] = wireValue
-                                    .ListValue.Values[i]
-                                    .ConvertToClrType(spannerType.StructType.Fields[i].Type, itemType);
+                                dictionary[StructOrder[i]] =
+                                    StructMembers[StructOrder[i]].ConvertToClrType(wireValue
+                                            .ListValue.Values[i], itemType);
                             }
                         }
                         else
@@ -469,8 +411,7 @@ namespace Google.Cloud.Spanner.Data
                             var i = 0;
                             foreach (var listItemValue in wireValue.ListValue.Values)
                             {
-                                dictionary[i] =
-                                    listItemValue.ConvertToClrType(spannerType.ArrayElementType, itemType);
+                                dictionary[i] = ArrayElementType.ConvertToClrType(listItemValue, itemType);
                                 i++;
                             }
                         }
@@ -492,7 +433,7 @@ namespace Google.Cloud.Spanner.Data
 
                         var i = 0;
                         foreach (var obj in wireValue.ListValue.Values.Select(
-                            x => x.ConvertToClrType(spannerType.ArrayElementType, targetClrType.GetElementType())))
+                            x => ArrayElementType.ConvertToClrType(x, targetClrType.GetElementType())))
                         {
                             newArray.SetValue(obj, i);
                             i++;
@@ -516,7 +457,7 @@ namespace Google.Cloud.Spanner.Data
                         var newList = (IList) Activator.CreateInstance(targetClrType);
                         var itemType = targetClrType.GetGenericArguments().FirstOrDefault() ?? typeof(object);
                         foreach (var obj in wireValue.ListValue.Values.Select(
-                            x => x.ConvertToClrType(spannerType.ArrayElementType, itemType)))
+                            x => ArrayElementType.ConvertToClrType(x, itemType)))
                         {
                             newList.Add(obj);
                         }

@@ -438,7 +438,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             Values =
                             {
-                                Parameters.Select(x => ValueConversion.ToValue(x.GetValidatedValue(), x.SpannerDbType))
+                                Parameters.Select(x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue()))
                             }
                         }
                     }
@@ -473,7 +473,7 @@ namespace Google.Cloud.Spanner.Data
                                     Values =
                                     {
                                         Parameters.Select(
-                                            x => ValueConversion.ToValue(x.GetValidatedValue(), x.SpannerDbType))
+                                            x => x.SpannerDbType.ToProtobufValue(x.GetValidatedValue()))
                                     }
                                 }
                             }

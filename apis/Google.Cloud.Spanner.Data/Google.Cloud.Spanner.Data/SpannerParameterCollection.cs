@@ -226,12 +226,19 @@ namespace Google.Cloud.Spanner.Data
             FillSpannerInternalTypes(requestParamTypes);
         }
 
+        /// <summary>
+        /// This helper removes the leading '@' in case the developer accidentally used
+        /// it in his parameter name.
+        /// </summary>
+        private string GetCorrectedParameterName(string parameterName) 
+            => parameterName?.StartsWith("@") ?? false ? parameterName.Substring(1) : parameterName;
+
         private void FillSpannerInternalValues(MapField<string, Value> valueDictionary)
         {
             foreach (var parameter in _innerList)
             {
-                valueDictionary[parameter.ParameterName] =
-                    ValueConversion.ToValue(parameter.GetValidatedValue(), parameter.SpannerDbType);
+                valueDictionary[GetCorrectedParameterName(parameter.ParameterName)]
+                    = parameter.SpannerDbType.ToProtobufValue(parameter.GetValidatedValue());
             }
         }
 
@@ -239,7 +246,8 @@ namespace Google.Cloud.Spanner.Data
         {
             foreach (var parameter in _innerList)
             {
-                typeDictionary[parameter.ParameterName] = parameter.SpannerDbType.ToProtobufType();
+                typeDictionary[GetCorrectedParameterName(parameter.ParameterName)]
+                    = parameter.SpannerDbType.ToProtobufType();
             }
         }
 
