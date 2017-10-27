@@ -24,7 +24,7 @@
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4" PrivateAssets="All" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0" PrivateAssets="All" />
     <ProjectReference Include="..\..\Google.Cloud.Firestore.V1Beta1\Google.Cloud.Firestore.V1Beta1\Google.Cloud.Firestore.V1Beta1.csproj" />
     <PackageReference Include="Grpc.Core" Version="1.6.1" PrivateAssets="None" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.1.2" PrivateAssets="All" />
