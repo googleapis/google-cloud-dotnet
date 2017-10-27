@@ -74,36 +74,50 @@ namespace Google.Cloud.Firestore.Data.Tests
             Assert.Null(collection.Parent);
         }
 
-        [Fact]
-        public void Document_Specified()
+        [Theory]
+        [InlineData("col1", "doc1", "col1/doc1")]
+        [InlineData("col1/doc1/col2", "doc2", "col1/doc1/col2/doc2")]
+        [InlineData("col1", "doc1/col2/doc2", "col1/doc1/col2/doc2")]
+        [InlineData("col1/doc1/col2", "doc2/col3/doc3", "col1/doc1/col2/doc2/col3/doc3")]
+        public void Document_Valid(string collectionPath, string relativePath, string expectedAbsolutePath)
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
-            var collection = db.Collection("root");
-            var doc = collection.Document("doc");
-            Assert.Equal(doc, db.Document("root/doc"));
+            var collection = db.Collection(collectionPath);
+            var doc = collection.Document(relativePath);
+            Assert.Equal(db.Document(expectedAbsolutePath), doc);
         }
 
         [Fact]
-        public void Document_Generated()
+        public void Document_Null()
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
             var collection = db.Collection("root");
-            var doc = collection.Document(null);
-            Assert.Equal(collection, doc.Parent);
-            // Can't guarantee what it is...
-            Assert.Equal(20, doc.Id.Length);
-            // But we shouldn't get the same one twice
-            Assert.NotEqual(doc.Id, collection.Document(null).Id);
+            Assert.Throws<ArgumentNullException>(() => collection.Document(null));
         }
 
         [Theory]
         [InlineData("")]
-        [InlineData("a/b/c")]
+        [InlineData("a/b")]
+        [InlineData("a//b")]
+        [InlineData("a//b/c")]
         public void Document_Invalid(string id)
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
             var collection = db.Collection("root");
             Assert.Throws<ArgumentException>(() => collection.Document(id));
+        }
+
+        [Fact]
+        public void GenerateDocument()
+        {
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var collection = db.Collection("root");
+            var doc = collection.GenerateDocument();
+            Assert.Equal(collection, doc.Parent);
+            // Can't guarantee what it is...
+            Assert.Equal(20, doc.Id.Length);
+            // But we shouldn't get the same one twice
+            Assert.NotEqual(doc.Id, collection.GenerateDocument().Id);
         }
     }
 }
