@@ -222,10 +222,12 @@ namespace Google.Cloud.Firestore.Data.Tests
             var mock = new Mock<FirestoreClient> { CallBase = true };
             var write1 = new Write { Update = new Document { Name = "irrelevant1" } };
             var write2 = new Write { Update = new Document { Name = "irrelevant2" } };
+            var write3 = new Write { Transform = new DocumentTransform { Document = "irrelevant3" } };
+            var write4 = new Write { Update = new Document { Name = "irrelevant4" } };
             var request = new CommitRequest
             {
                 Database = "projects/proj/databases/db",
-                Writes = { write1, write2 }
+                Writes = { write1, write2, write3, write4 }
             };
             var response = new CommitResponse
             {
@@ -234,7 +236,11 @@ namespace Google.Cloud.Firestore.Data.Tests
                 {
                     new V1Beta1.WriteResult { UpdateTime = CreateProtoTimestamp(10, 0) },
                     // Deliberately no UpdateTime; result should default to CommitTime
-                    new V1Beta1.WriteResult {  }
+                    new V1Beta1.WriteResult {  },
+                    // Not returned, because it corresponds to a transform
+                    new V1Beta1.WriteResult { UpdateTime = CreateProtoTimestamp(100, 0) },
+                    // Returned as the third result
+                    new V1Beta1.WriteResult { UpdateTime = CreateProtoTimestamp(150, 0) },
                 }
             };
 
@@ -242,9 +248,9 @@ namespace Google.Cloud.Firestore.Data.Tests
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var reference = db.Document("col/doc");
             var batch = db.CreateWriteBatch();
-            batch.Writes.AddRange(new[] { write1, write2 });
+            batch.Writes.AddRange(new[] { write1, write2, write3, write4 });
             var actualTimestamps = (await batch.CommitAsync()).Select(x => x.UpdateTime);
-            var expectedTimestamps = new[] { new Timestamp(10, 0), new Timestamp(10, 500) };
+            var expectedTimestamps = new[] { new Timestamp(10, 0), new Timestamp(10, 500), new Timestamp(150, 0) };
             Assert.Equal(expectedTimestamps, actualTimestamps);
             mock.VerifyAll();
         }
