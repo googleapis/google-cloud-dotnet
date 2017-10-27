@@ -445,13 +445,8 @@ namespace Google.Cloud.Firestore.Data
             {
                 request.Transaction = transactionId;
             }
-            Func<CancellationToken, IAsyncEnumerator<RunQueryResponse>> streamProvider = token =>
-            {
-                var settings = CallSettings.FromCancellationToken(cancellationToken);
-                return Database.Client.RunQuery(request, settings).ResponseStream;
-            };
-            return AsyncEnumerable
-                .CreateEnumerable(() => GrpcWorkaround.CreateCancellationWrapper(streamProvider, cancellationToken));
+            var settings = CallSettings.FromCancellationToken(cancellationToken);
+            return AsyncEnumerable.CreateEnumerable(() => Database.Client.RunQuery(request, settings).ResponseStream);
         }
     }
 }
