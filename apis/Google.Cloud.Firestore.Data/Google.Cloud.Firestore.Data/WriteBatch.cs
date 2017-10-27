@@ -165,7 +165,11 @@ namespace Google.Cloud.Firestore.Data
         {
             var request = new CommitRequest { Database = _db.RootPath, Writes = { Writes }, Transaction = transactionId };
             var response = await _db.Client.CommitAsync(request, CallSettings.FromCancellationToken(cancellationToken)).ConfigureAwait(false);
-            return response.WriteResults.Select(wr => WriteResult.FromProto(wr, response.CommitTime)).ToList();
+            return response.WriteResults
+                // Only return write results that correspond to original calls, not transforms.
+                .Where((wr, index) => Writes[index].Transform == null)
+                .Select(wr => WriteResult.FromProto(wr, response.CommitTime))
+                .ToList();
         }
 
         /// <summary>
