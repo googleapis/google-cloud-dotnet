@@ -93,6 +93,7 @@ namespace Google.Cloud.Firestore.Data.Tests
             var doc = GetSampleSnapshot();
             Assert.Equal("Test", doc.GetField<string>("Name"));
             Assert.Equal(20, doc.GetField<int>("Nested.Score"));
+            Assert.Null(doc.GetField<string>("NullField"));
         }
 
         [Fact]
@@ -101,8 +102,10 @@ namespace Google.Cloud.Firestore.Data.Tests
             var doc = GetSampleSnapshot();
             Assert.True(doc.TryGetField("Name", out string name));
             Assert.True(doc.TryGetField("Nested.Score", out int score));
+            Assert.True(doc.TryGetField("NullField", out string shouldBeNull));
             Assert.Equal("Test", name);
             Assert.Equal(20, score);
+            Assert.Null(shouldBeNull);
             Assert.False(doc.TryGetField("Foo", out string foo));
             Assert.False(doc.TryGetField("Nested.Foo", out string nestedFoo));
         }
@@ -114,6 +117,7 @@ namespace Google.Cloud.Firestore.Data.Tests
             Assert.True(doc.Contains("Name"));
             Assert.True(doc.Contains("Nested"));
             Assert.True(doc.Contains("Nested.Score"));
+            Assert.True(doc.Contains("NullField"));
             Assert.False(doc.Contains("Missing"));
             Assert.False(doc.Contains("Nested.Missing"));
             Assert.False(doc.Contains("Nested.Score.Missing"));
@@ -146,6 +150,9 @@ namespace Google.Cloud.Firestore.Data.Tests
 
             [FirestoreProperty]
             public NestedData Nested { get; set; }
+
+            [FirestoreProperty]
+            public string NullField { get; set; }
         }
 
         [FirestoreData]
