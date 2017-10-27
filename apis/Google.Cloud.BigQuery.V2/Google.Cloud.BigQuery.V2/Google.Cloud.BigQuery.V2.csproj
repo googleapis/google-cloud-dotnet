@@ -23,7 +23,7 @@
     <RepositoryUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4" PrivateAssets="All" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.1.0" />
     <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.29.1.990" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.1.2" PrivateAssets="All" />
