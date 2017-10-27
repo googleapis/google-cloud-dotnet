@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -23,6 +22,230 @@ namespace Google.Cloud.Bigtable.V2
 {
     public partial class BigtableClient
     {
+        /// <summary>
+        /// Mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
+        /// This method simply delegates to <see cref="CheckAndMutateRow(CheckAndMutateRowRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the conditional mutation should be
+        /// applied. Must not be null.
+        /// </param>
+        /// <param name="rowKey">
+        /// The key of the row to which the conditional mutation should be applied.
+        /// Must not be empty.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either <paramref name="trueMutations"/> or
+        /// <paramref name="falseMutations"/> will be executed. If null, checks that the row contains
+        /// any values at all.
+        /// </param>
+        /// <param name="trueMutations">
+        /// Changes to be atomically applied to the specified row if <paramref name="predicateFilter"/>
+        /// yields at least one cell when applied to <paramref name="rowKey"/>. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if <paramref name="falseMutations"/> is null or empty, and
+        /// at most 100000. Can be null or empty, but must not contain null elements.
+        /// </param>
+        /// <param name="falseMutations">
+        /// Changes to be atomically applied to the specified row if <paramref name="predicateFilter"/>
+        /// does not yield any cells when applied to <paramref name="rowKey"/>. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if <paramref name="trueMutations"/> is null or empty, and
+        /// at most 100000. Can be null or empty, but must not contain null elements.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The response from trying to mutate the row.
+        /// </returns>
+        public virtual CheckAndMutateRowResponse CheckAndMutateRow(
+            TableName tableName,
+            BigtableByteString rowKey,
+            RowFilter predicateFilter,
+            IEnumerable<Mutation> trueMutations,
+            IEnumerable<Mutation> falseMutations,
+            CallSettings callSettings = null) =>
+            CheckAndMutateRow(
+                CreateCheckAndMutateRowRequest(tableName, rowKey, predicateFilter, trueMutations, falseMutations),
+                callSettings);
+
+        /// <summary>
+        /// Mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
+        /// This method simply delegates to <see cref="CheckAndMutateRow(CheckAndMutateRowRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the conditional mutation should be
+        /// applied. Must not be null.
+        /// </param>
+        /// <param name="rowKey">
+        /// The key of the row to which the conditional mutation should be applied.
+        /// Must not be empty.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, <paramref name="trueMutations"/> may or may not
+        /// be executed. If null, checks that the row contains any values at all.
+        /// </param>
+        /// <param name="trueMutations">
+        /// Changes to be atomically applied to the specified row if <paramref name="predicateFilter"/>
+        /// yields at least one cell when applied to <paramref name="rowKey"/>. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry and at most 100000.  Must not be null, or contain null elements.
+        /// </param>
+        /// <returns>
+        /// The response from trying to mutate the row.
+        /// </returns>
+        public virtual CheckAndMutateRowResponse CheckAndMutateRow(
+            TableName tableName,
+            BigtableByteString rowKey,
+            RowFilter predicateFilter,
+            params Mutation[] trueMutations) =>
+            CheckAndMutateRow(
+                CreateCheckAndMutateRowRequest(tableName, rowKey, predicateFilter, trueMutations, falseMutations: null));
+
+        /// <summary>
+        /// Asynchronously mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
+        /// This method simply delegates to <see cref="CheckAndMutateRowAsync(CheckAndMutateRowRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the conditional mutation should be
+        /// applied. Must not be null.
+        /// </param>
+        /// <param name="rowKey">
+        /// The key of the row to which the conditional mutation should be applied.
+        /// Must not be empty.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either <paramref name="trueMutations"/> or
+        /// <paramref name="falseMutations"/> will be executed. If null, checks that the row contains
+        /// any values at all.
+        /// </param>
+        /// <param name="trueMutations">
+        /// Changes to be atomically applied to the specified row if <paramref name="predicateFilter"/>
+        /// yields at least one cell when applied to <paramref name="rowKey"/>. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if <paramref name="falseMutations"/> is null or empty, and
+        /// at most 100000. Can be null or empty, but must not contain null elements.
+        /// </param>
+        /// <param name="falseMutations">
+        /// Changes to be atomically applied to the specified row if <paramref name="predicateFilter"/>
+        /// does not yield any cells when applied to <paramref name="rowKey"/>. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry if <paramref name="trueMutations"/> is null or empty, and
+        /// at most 100000. Can be null or empty, but must not contain null elements.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The response from trying to mutate the row.
+        /// </returns>
+        public virtual Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
+            TableName tableName,
+            BigtableByteString rowKey,
+            RowFilter predicateFilter,
+            IEnumerable<Mutation> trueMutations,
+            IEnumerable<Mutation> falseMutations,
+            CallSettings callSettings = null) =>
+            CheckAndMutateRowAsync(
+                CreateCheckAndMutateRowRequest(tableName, rowKey, predicateFilter, trueMutations, falseMutations),
+                callSettings);
+
+        /// <summary>
+        /// Asynchronously mutates a row atomically based on the output of a predicate Reader filter.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
+        /// This method simply delegates to <see cref="CheckAndMutateRowAsync(CheckAndMutateRowRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the conditional mutation should be
+        /// applied. Must not be null.
+        /// </param>
+        /// <param name="rowKey">
+        /// The key of the row to which the conditional mutation should be applied.
+        /// Must not be empty.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, <paramref name="trueMutations"/> may or may not
+        /// be executed. If null, checks that the row contains any values at all.
+        /// </param>
+        /// <param name="trueMutations">
+        /// Changes to be atomically applied to the specified row if <paramref name="predicateFilter"/>
+        /// yields at least one cell when applied to <paramref name="rowKey"/>. Entries are applied in
+        /// order, meaning that earlier mutations can be masked by later ones.
+        /// Must contain at least one entry and at most 100000.  Must not be null, or contain null elements.
+        /// </param>
+        /// <returns>
+        /// The response from trying to mutate the row.
+        /// </returns>
+        public virtual Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
+            TableName tableName,
+            BigtableByteString rowKey,
+            RowFilter predicateFilter,
+            params Mutation[] trueMutations) =>
+            CheckAndMutateRowAsync(
+                CreateCheckAndMutateRowRequest(tableName, rowKey, predicateFilter, trueMutations, falseMutations: null));
+
+        private static CheckAndMutateRowRequest CreateCheckAndMutateRowRequest(
+            TableName tableName,
+            BigtableByteString rowKey,
+            RowFilter predicateFilter,
+            IEnumerable<Mutation> trueMutations,
+            IEnumerable<Mutation> falseMutations)
+        {
+            GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
+            GaxPreconditions.CheckArgument(rowKey.Length != 0, nameof(rowKey), "The row key must not empty");
+            
+            var request = new CheckAndMutateRowRequest
+            {
+                TableName = tableName.ToString(),
+                RowKey = rowKey,
+                PredicateFilter = predicateFilter,
+                TrueMutations = { Utilities.ValidateCollection(trueMutations, nameof(trueMutations), canBeEmpty: true) },
+                FalseMutations = { Utilities.ValidateCollection(falseMutations, nameof(falseMutations), canBeEmpty: true) }
+            };
+
+            GaxPreconditions.CheckArgument(
+                request.TrueMutations.Count + request.FalseMutations.Count != 0,
+                nameof(trueMutations),
+                "There must be at least one mutation.");
+            return request;
+        }
+
         /// <summary>
         /// Mutates a row atomically. Cells already present in the row are left
         /// unchanged unless explicitly changed by <paramref name="mutations"/>.
@@ -163,18 +386,15 @@ namespace Google.Cloud.Bigtable.V2
         /// Must contain at least one entry and at most 100000. Must not be null, or contain null
         /// elements.
         /// </param>
-        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>
         /// The response from mutating the row.
         /// </returns>
         public virtual Task<MutateRowResponse> MutateRowAsync(
             TableName tableName,
             BigtableByteString rowKey,
-            IEnumerable<Mutation> mutations,
-            CancellationToken cancellationToken) =>
+            params Mutation[] mutations) =>
             MutateRowAsync(
-                CreateMutateRowRequest(tableName, rowKey, mutations),
-                CallSettings.FromCancellationToken(cancellationToken));
+                CreateMutateRowRequest(tableName, rowKey, mutations));
 
         private static MutateRowRequest CreateMutateRowRequest(
             TableName tableName,
@@ -183,18 +403,12 @@ namespace Google.Cloud.Bigtable.V2
         {
             GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
             GaxPreconditions.CheckArgument(rowKey.Length != 0, nameof(rowKey), "The row key must not empty");
-            GaxPreconditions.CheckNotNull(mutations, nameof(mutations));
-            var mutationsChecked = mutations.Select(mutation =>
-            {
-                GaxPreconditions.CheckArgument(mutation != null, nameof(mutations), "Entries must not be null");
-                return mutation;
-            });
-
+            
             var request = new MutateRowRequest
             {
                 TableName = tableName.ToString(),
                 RowKey = rowKey,
-                Mutations = { mutationsChecked }
+                Mutations = { Utilities.ValidateCollection(mutations, nameof(mutations)) }
             };
 
             GaxPreconditions.CheckArgument(

@@ -24,7 +24,7 @@ namespace Google.Cloud.Bigtable.V2
     /// Note: version values are stored on the server as if they are microseconds since the Unix epoch.
     /// However, the server only supports millisecond granularity, so the server only allows microseconds
     /// in multiples of 1,000. <see cref="BigtableVersion"/> attempts to hide this complexity by exposing
-    /// it's underlying <see cref="BigtableVersion.Value"/> in terms of milliseconds, so if desired, a
+    /// its underlying <see cref="BigtableVersion.Value"/> in terms of milliseconds, so if desired, a
     /// custom versioning scheme of 1, 2, ... can be used rather than 1000, 2000, ... However, access to
     /// the underlying microsecond value is still provided via <see cref="BigtableVersion.Micros"/>.
     /// </para>
@@ -56,7 +56,7 @@ namespace Google.Cloud.Bigtable.V2
         /// Note: version values are stored on the server as if they are microseconds since the Unix epoch.
         /// However, the server only supports millisecond granularity, so the server only allows microseconds
         /// in multiples of 1,000. <see cref="BigtableVersion"/> attempts to hide this complexity by exposing
-        /// it's underlying <see cref="BigtableVersion.Value"/> in terms of milliseconds, so if desired, a
+        /// its underlying <see cref="BigtableVersion.Value"/> in terms of milliseconds, so if desired, a
         /// custom versioning scheme of 1, 2, ... can be used rather than 1000, 2000, ... However, access to
         /// the underlying microsecond value is still provided via <see cref="BigtableVersion.Micros"/>.
         /// </para>
@@ -89,7 +89,7 @@ namespace Google.Cloud.Bigtable.V2
         /// Note: version values are stored on the server as if they are microseconds since the Unix epoch.
         /// However, the server only supports millisecond granularity, so the server only allows microseconds
         /// in multiples of 1,000. <see cref="BigtableVersion"/> attempts to hide this complexity by exposing
-        /// it's underlying <see cref="BigtableVersion.Value"/> in terms of milliseconds, so if desired, a
+        /// its underlying <see cref="BigtableVersion.Value"/> in terms of milliseconds, so if desired, a
         /// custom versioning scheme of 1, 2, ... can be used rather than 1000, 2000, ... However, access to
         /// the underlying microsecond value is still provided via <see cref="BigtableVersion.Micros"/>.
         /// </para>
