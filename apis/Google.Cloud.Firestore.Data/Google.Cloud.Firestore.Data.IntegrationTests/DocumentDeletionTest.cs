@@ -28,7 +28,7 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
         [Fact]
         public async Task Delete_Unconditional_DoesntExist()
         {
-            var doc = _fixture.NonQueryCollection.Document(null);
+            var doc = _fixture.NonQueryCollection.GenerateDocument();
             var result = await doc.DeleteAsync();
             var afterDelete = await doc.SnapshotAsync();
             Assert.False(afterDelete.Exists);
@@ -37,7 +37,7 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
         [Fact]
         public async Task Delete_Unconditional_Existed()
         {
-            var doc = _fixture.NonQueryCollection.Document(null);
+            var doc = _fixture.NonQueryCollection.GenerateDocument();
             var createResult = await doc.CreateAsync(new { Name = "Delete me" });
             var deleteResult = await doc.DeleteAsync();
             var afterDelete = await doc.SnapshotAsync();
@@ -47,7 +47,7 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
         [Fact]
         public async Task Delete_Precondition_Success()
         {
-            var doc = _fixture.NonQueryCollection.Document(null);
+            var doc = _fixture.NonQueryCollection.GenerateDocument();
             var createResult = await doc.CreateAsync(new { Name = "Delete me" });
             var deleteResult = await doc.DeleteAsync(Precondition.LastUpdated(createResult.UpdateTime));
             var afterDelete = await doc.SnapshotAsync();
@@ -57,7 +57,7 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
         [Fact]
         public async Task Delete_Precondition_Failed()
         {
-            var doc = _fixture.NonQueryCollection.Document(null);
+            var doc = _fixture.NonQueryCollection.GenerateDocument();
             var createResult = await doc.CreateAsync(new { Name = "Don't delete me" });
             var otherTimestamp = Timestamp.FromDateTimeOffset(createResult.UpdateTime.ToDateTimeOffset().AddSeconds(-1));
             var exception = await Assert.ThrowsAsync<RpcException>(() => doc.DeleteAsync(Precondition.LastUpdated(otherTimestamp)));
@@ -69,7 +69,7 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
         [Fact]
         public async Task Delete_Precondition_DoesntExist()
         {
-            var doc = _fixture.NonQueryCollection.Document(null);
+            var doc = _fixture.NonQueryCollection.GenerateDocument();
             var exception = await Assert.ThrowsAsync<RpcException>(() => doc.DeleteAsync(Precondition.LastUpdated(new Timestamp(1, 0))));
             Assert.Equal(StatusCode.FailedPrecondition, exception.Status.StatusCode);
             var afterDelete = await doc.SnapshotAsync();

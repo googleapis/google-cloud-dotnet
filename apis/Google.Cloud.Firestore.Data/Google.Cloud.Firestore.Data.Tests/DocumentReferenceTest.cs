@@ -66,6 +66,19 @@ namespace Google.Cloud.Firestore.Data.Tests
             Assert.Equal(db.Collection("col1"), doc.Parent);
         }
 
+        [Theory]
+        [InlineData("col1/doc1", "col2", "col1/doc1/col2")]
+        [InlineData("col1/doc1/col2/doc2", "col3", "col1/doc1/col2/doc2/col3")]
+        [InlineData("col1/doc1", "col2/doc2/col3", "col1/doc1/col2/doc2/col3")]
+        [InlineData("col1/doc1/col2/doc2", "col3/doc3/col4", "col1/doc1/col2/doc2/col3/doc3/col4")]
+        public void Collection_Valid(string documentPath, string relativePath, string expectedAbsolutePath)
+        {
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var document = db.Document(documentPath);
+            var coll = document.Collection(relativePath);
+            Assert.Equal(db.Collection(expectedAbsolutePath), coll);
+        }
+
         [Fact]
         public void Collection_Specified()
         {
@@ -85,7 +98,9 @@ namespace Google.Cloud.Firestore.Data.Tests
 
         [Theory]
         [InlineData("")]
-        [InlineData("a/b/c")]
+        [InlineData("a/b")]
+        [InlineData("a//b")]
+        [InlineData("a//b/c")]
         public void Collection_Invalid(string id)
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());

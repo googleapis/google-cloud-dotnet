@@ -32,8 +32,8 @@ namespace Google.Cloud.Firestore.Data.IntegrationTests
         public async Task SimpleTransaction()
         {
             var db = _fixture.FirestoreDb;
-            var doc1 = _fixture.NonQueryCollection.Document(null);
-            var doc2 = _fixture.NonQueryCollection.Document(null);
+            var doc1 = _fixture.NonQueryCollection.GenerateDocument();
+            var doc2 = _fixture.NonQueryCollection.GenerateDocument();
 
             await db.RunTransactionAsync(transaction =>
             {

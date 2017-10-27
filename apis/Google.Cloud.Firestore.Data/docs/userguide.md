@@ -4,8 +4,8 @@
 
 From `FirestoreDb`, you can create a `DocumentReference` or `CollectionReference` directly by
 their path from the database root. From a `DocumentReference` you can create a `CollectionReference`
-for a direct child collection, and likewise from a `CollectionReference` you can create a `DocumentReference`
-for a direct child document. 
+for a child collection, and likewise from a `CollectionReference` you can create a `DocumentReference`
+for a child document.
 
 [!code-cs[](obj/snippets/Google.Cloud.Firestore.Data.UserGuide.txt#References)]
 

@@ -59,12 +59,23 @@ namespace Google.Cloud.Firestore.Data
         }
 
         /// <summary>
-        /// Creates a <see cref="CollectionReference"/> for a direct child collection of this document.
+        /// Creates a <see cref="CollectionReference"/> for a child collection of this document.
         /// </summary>
-        /// <param name="collectionId">The collection ID. This must not be null or contain a forward slash.</param>
+        /// <param name="path">The path to the collection, relative to this document. Must not be null, and must contain
+        /// an odd number of slash-separated path elements.</param>
         /// <returns>A <see cref="CollectionReference"/> for the specified collection.</returns>
-        public CollectionReference Collection(string collectionId) =>
-            new CollectionReference(Database, this, PathUtilities.ValidateId(collectionId, nameof(collectionId)));
+        public CollectionReference Collection(string path)
+        {
+            string[] elements = PathUtilities.SplitPath(path);
+            GaxPreconditions.CheckArgument((elements.Length & 1) == 1, nameof(path), "Path must have an odd number of elements");
+            CollectionReference collectionRef = new CollectionReference(Database, this, elements[0]);
+            for (int i = 1; i < elements.Length; i += 2)
+            {
+                var documentRef = new DocumentReference(Database, collectionRef, elements[i]);
+                collectionRef = new CollectionReference(Database, documentRef, elements[i + 1]);
+            }
+            return collectionRef;
+        }
 
         /// <inheritdoc />
         public override int GetHashCode() => Path.GetHashCode();

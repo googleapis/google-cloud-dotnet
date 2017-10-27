@@ -58,15 +58,30 @@ namespace Google.Cloud.Firestore.Data
         }
 
         /// <summary>
-        /// Creates a <see cref="DocumentReference"/> for a direct child document of this reference.
-        /// If <paramref name="documentId"/> is null, a random ID will be generated. This operation
-        /// does not check that the generated ID does not represent an existing document.
+        /// Creates a <see cref="DocumentReference"/> for a direct child document of this collection with a random ID.
+        /// This performs no server-side operations; it only generates the appropriate <c>DocumentReference</c>.
         /// </summary>
-        /// <param name="documentId">The document ID. This must not contain a forward slash.</param>
-        /// <returns>A <see cref="CollectionReference"/> for the specified collection.</returns>
-        public DocumentReference Document(string documentId) =>
-            new DocumentReference(Database, this,
-                documentId == null ? PathUtilities.GenerateId() : PathUtilities.ValidateId(documentId, nameof(documentId)));
+        /// <returns>A <see cref="DocumentReference"/> to a child document of this collection with a random ID.</returns>
+        public DocumentReference GenerateDocument() => new DocumentReference(Database, this, PathUtilities.GenerateId());
+
+        /// <summary>
+        /// Creates a <see cref="DocumentReference"/> for a child document of this reference.
+        /// </summary>
+        /// <param name="path">The path to the document, relative to this collection. Must not be null, and must contain
+        /// an odd number of slash-separated path elements.</param>
+        /// <returns>A <see cref="DocumentReference"/> for the specified document.</returns>
+        public DocumentReference Document(string path)
+        {
+            string[] elements = PathUtilities.SplitPath(path);
+            GaxPreconditions.CheckArgument((elements.Length & 1) == 1, nameof(path), "Path must have an odd number of elements");
+            DocumentReference documentRef = new DocumentReference(Database, this, elements[0]);
+            for (int i = 1; i < elements.Length; i += 2)
+            {
+                var collectionRef = new CollectionReference(Database, documentRef, elements[i]);
+                documentRef = new DocumentReference(Database, collectionRef, elements[i + 1]);
+            }
+            return documentRef;
+        }
 
         /// <summary>
         /// Asynchronously creates a document with the given data in this collection. The document has a randomly generated ID.
@@ -80,7 +95,7 @@ namespace Google.Cloud.Firestore.Data
         /// <returns>The reference for the newly-created document.</returns>
         public async Task<DocumentReference> AddAsync(object documentData, CancellationToken cancellationToken = default)
         {
-            var docRef = Document(null);
+            var docRef = GenerateDocument();
             var result = await docRef.CreateAsync(documentData, cancellationToken).ConfigureAwait(false);
             return docRef;
         }
