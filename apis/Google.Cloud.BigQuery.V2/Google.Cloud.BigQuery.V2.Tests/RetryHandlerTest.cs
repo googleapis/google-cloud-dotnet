@@ -12,35 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Bigquery.v2;
 using Google.Apis.Json;
 using Google.Apis.Requests;
 using Google.Apis.Util;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Apis.Bigquery.v2.ProjectsResource;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
     public class RetryHandlerTest
     {
-        [Fact]
-        public void IsRetriableRequest_Marked()
-        {
-            var request = new ListRequest(new BigqueryService());
-            RetryHandler.MarkAsRetriable(request);
-            var httpRequest = request.CreateRequest();
-            Assert.True(RetryHandler.IsRetriableRequest(httpRequest));
-        }
-
-        [Fact]
-        public void IsRetriableRequest_NotMarked()
-        {
-            var request = new ListRequest(new BigqueryService());
-            var httpRequest = request.CreateRequest();
-            Assert.False(RetryHandler.IsRetriableRequest(httpRequest));
-        }
 
         [Fact]
         public async Task IsRetriableResponse_NonRetriableReason()
