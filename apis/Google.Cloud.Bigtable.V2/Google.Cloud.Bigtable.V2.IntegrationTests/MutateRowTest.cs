@@ -59,14 +59,11 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             await client.MutateRowAsync(
                 tableName,
                 rowKey,
-                new[]
-                {
-                    Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
-                        "column_name",
-                        "test12345",
-                        new BigtableVersion(1))
-                });
+                Mutations.SetCell(
+                    BigtableFixture.ColumnFamily1,
+                    "column_name",
+                    "test12345",
+                    new BigtableVersion(1)));
 
             await BigtableAssert.HasSingleValueAsync(
                 client,
@@ -114,14 +111,11 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             await client.MutateRowAsync(
                 tableName,
                 rowKey,
-                new[]
-                {
-                    Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
-                        "modify_row_column",
-                        "new_cell_value",
-                        new BigtableVersion(1))
-                });
+                Mutations.SetCell(
+                    BigtableFixture.ColumnFamily1,
+                    "modify_row_column",
+                    "new_cell_value",
+                    new BigtableVersion(1)));
 
             await BigtableAssert.HasValueAsync(
                 client,
@@ -184,13 +178,10 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             await client.MutateRowAsync(
                 tableName,
                 rowKey,
-                new[]
-                {
-                    Mutations.DeleteFromColumn(
-                        BigtableFixture.ColumnFamily1,
-                        "row_exists",
-                        new BigtableVersionRange(1, 2))
-                });
+                Mutations.DeleteFromColumn(
+                    BigtableFixture.ColumnFamily1,
+                    "row_exists",
+                    new BigtableVersionRange(1, 2)));
 
             await BigtableAssert.HasSingleValueAsync(
                 client,
@@ -250,7 +241,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             await client.MutateRowAsync(
                 tableName,
                 rowKey,
-                new[] { Mutations.DeleteFromFamily(BigtableFixture.ColumnFamily1) });
+                Mutations.DeleteFromFamily(BigtableFixture.ColumnFamily1));
 
             await BigtableAssert.HasSingleValueAsync(
                 client,
@@ -287,7 +278,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             await client.MutateRowAsync(
                 tableName,
                 rowKey,
-                new[] { Mutations.DeleteFromRow() });
+                Mutations.DeleteFromRow());
 
             await BigtableAssert.HasNoValuesAsync(client, tableName, rowKey);
         }

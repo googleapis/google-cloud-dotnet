@@ -209,7 +209,6 @@ namespace Google.Cloud.Bigtable.V2
         /// order, meaning that earlier mutations can be masked by later ones.
         /// Must contain at least one entry and at most 100000.  Must not be null, or contain null elements.
         /// </param>
-        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>
         /// The response from trying to mutate the row.
         /// </returns>
@@ -217,8 +216,7 @@ namespace Google.Cloud.Bigtable.V2
             TableName tableName,
             BigtableByteString rowKey,
             RowFilter predicateFilter,
-            IEnumerable<Mutation> trueMutations,
-            CancellationToken cancellationToken = default) =>
+            params Mutation[] trueMutations) =>
             CheckAndMutateRowAsync(
                 CreateCheckAndMutateRowRequest(tableName, rowKey, predicateFilter, trueMutations, falseMutations: null));
 
@@ -388,18 +386,15 @@ namespace Google.Cloud.Bigtable.V2
         /// Must contain at least one entry and at most 100000. Must not be null, or contain null
         /// elements.
         /// </param>
-        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>
         /// The response from mutating the row.
         /// </returns>
         public virtual Task<MutateRowResponse> MutateRowAsync(
             TableName tableName,
             BigtableByteString rowKey,
-            IEnumerable<Mutation> mutations,
-            CancellationToken cancellationToken) =>
+            params Mutation[] mutations) =>
             MutateRowAsync(
-                CreateMutateRowRequest(tableName, rowKey, mutations),
-                CallSettings.FromCancellationToken(cancellationToken));
+                CreateMutateRowRequest(tableName, rowKey, mutations));
 
         private static MutateRowRequest CreateMutateRowRequest(
             TableName tableName,

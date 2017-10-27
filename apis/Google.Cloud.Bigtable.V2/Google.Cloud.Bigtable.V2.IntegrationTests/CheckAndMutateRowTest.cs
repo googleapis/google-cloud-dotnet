@@ -201,9 +201,9 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     RowFilters.CellsPerColumnLimit(1),
                     RowFilters.ValueRegex(@"^[a-z]\d+$")),
                 Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
-                        "found_recent_value",
-                        "true"));
+                    BigtableFixture.ColumnFamily1,
+                    "found_recent_value",
+                    "true"));
 
             Assert.True(result.PredicateMatched);
             await BigtableAssert.HasValueAsync(
@@ -225,16 +225,13 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var result = await client.CheckAndMutateRowAsync(
                 tableName,
                 rowKey,
-                predicateFilter: RowFilters.Chain(
+                RowFilters.Chain(
                     RowFilters.CellsPerColumnLimit(1),
                     RowFilters.ValueRegex(@"^[a-z]\d+$")),
-                trueMutations: new[]
-                {
-                    Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
-                        "found_recent_value",
-                        "true")
-                });
+                Mutations.SetCell(
+                    BigtableFixture.ColumnFamily1,
+                    "found_recent_value",
+                    "true"));
 
             Assert.True(result.PredicateMatched);
             await BigtableAssert.HasValueAsync(
@@ -261,9 +258,9 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     RowFilters.ValueRegex(@"^[a-z]\d+$"),
                     RowFilters.CellsPerRowOffset(1)),
                 Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
-                        "found_recent_value",
-                        "true"));
+                    BigtableFixture.ColumnFamily1,
+                    "found_recent_value",
+                    "true"));
 
             Assert.False(result.PredicateMatched);
             await BigtableAssert.DoesNotHaveValueAsync(
@@ -285,17 +282,14 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var result = await client.CheckAndMutateRowAsync(
                 tableName,
                 rowKey,
-                predicateFilter: RowFilters.Chain(
+                RowFilters.Chain(
                     RowFilters.CellsPerColumnLimit(2),
                     RowFilters.ValueRegex(@"^[a-z]\d+$"),
                     RowFilters.CellsPerRowOffset(1)),
-                trueMutations: new[]
-                {
-                    Mutations.SetCell(
+                Mutations.SetCell(
                         BigtableFixture.ColumnFamily1,
                         "found_recent_value",
-                        "true")
-                });
+                        "true"));
 
             Assert.False(result.PredicateMatched);
             await BigtableAssert.DoesNotHaveValueAsync(

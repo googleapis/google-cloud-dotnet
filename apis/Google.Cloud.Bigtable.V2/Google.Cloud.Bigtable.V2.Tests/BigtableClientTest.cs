@@ -143,7 +143,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             {
                 await Assert.ThrowsAsync<TException>(
                     () => client.CheckAndMutateRowAsync(
-                        tableName, rowKey, predicateFilter, trueMutations, CancellationToken.None));
+                        tableName, rowKey, predicateFilter, trueMutations?.ToArray()));
             }
             await Assert.ThrowsAsync<TException>(
                 () => client.CheckAndMutateRowAsync(
@@ -201,7 +201,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Throws<TException>(
                 () => client.MutateRow(tableName, rowKey, mutations, CallSettings.FromCancellationToken(default)));
             await Assert.ThrowsAsync<TException>(
-                () => client.MutateRowAsync(tableName, rowKey, mutations, CancellationToken.None));
+                () => client.MutateRowAsync(tableName, rowKey, mutations?.ToArray()));
             await Assert.ThrowsAsync<TException>(
                 () => client.MutateRowAsync(tableName, rowKey, mutations, CallSettings.FromCancellationToken(default)));
         }
