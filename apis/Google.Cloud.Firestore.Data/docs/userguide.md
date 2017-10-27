@@ -96,7 +96,8 @@ The callback will be executed multiple times if the transaction needs to be retr
 modifications.
 
 In this section, we'll deal with a simple document that just has a single counter. We want to keep an up-to-date counter,
-and periodically (once per day, for example) we'll update another counter to match the current value.
+and periodically (once per day, for example) we'll update another counter to match the current value. For more
+details of counters, see the [main Firestore user guide](https://firebase.google.com/docs/firestore/solutions/counters).
 
 ### Creating multiple documents atomically
 
