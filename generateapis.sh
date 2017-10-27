@@ -15,8 +15,8 @@ set -e
 
 # TODO: Use toolversions.sh
 # This script needs to work on Linux machines without nuget, unlike other scripts...
-GRPC_VERSION=1.6.1
-PROTOBUF_VERSION=3.3.0
+GRPC_VERSION=1.7.0
+PROTOBUF_VERSION=3.4.0
 PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/protoc
 GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/grpc_csharp_plugin
 CORE_PROTOS_ROOT=packages/Google.Protobuf.Tools.$PROTOBUF_VERSION/tools
