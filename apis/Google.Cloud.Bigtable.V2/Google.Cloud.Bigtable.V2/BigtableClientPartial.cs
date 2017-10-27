@@ -130,7 +130,7 @@ namespace Google.Cloud.Bigtable.V2
         /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// <para>
-        /// This method simply delegates to <see cref="CheckAndMutateRow(CheckAndMutateRowRequest, CallSettings)"/>.
+        /// This method simply delegates to <see cref="CheckAndMutateRowAsync(CheckAndMutateRowRequest, CallSettings)"/>.
         /// </para>
         /// </remarks>
         /// <param name="tableName">
@@ -187,7 +187,7 @@ namespace Google.Cloud.Bigtable.V2
         /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// <para>
-        /// This method simply delegates to <see cref="CheckAndMutateRow(CheckAndMutateRowRequest, CallSettings)"/>.
+        /// This method simply delegates to <see cref="CheckAndMutateRowAsync(CheckAndMutateRowRequest, CallSettings)"/>.
         /// </para>
         /// </remarks>
         /// <param name="tableName">

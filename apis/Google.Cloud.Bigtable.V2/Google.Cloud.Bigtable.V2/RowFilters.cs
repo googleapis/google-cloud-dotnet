@@ -250,7 +250,7 @@ namespace Google.Cloud.Bigtable.V2
         public static RowFilter RowKeyRegex(BigtableByteString regex) =>
             new RowFilter { RowKeyRegexFilter = regex };
 
-        // TODO: Seems like this is 0-1. Verify and document it.
+        // TODO: Seems like this is 0-1. Verify and document it. Validate too?
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which matches all cells
         /// from a row with probability p, and matches no cells from the row with
@@ -281,7 +281,7 @@ namespace Google.Cloud.Bigtable.V2
         /// Note: version values are stored on the server as if they are microseconds since the Unix epoch.
         /// However, the server only supports millisecond granularity, so the server only allows microseconds
         /// in multiples of 1,000. <see cref="BigtableVersion"/> attempts to hide this complexity by exposing
-        /// it's underlying <see cref="BigtableVersion.Value"/> in terms of milliseconds, so if desired, a
+        /// its underlying <see cref="BigtableVersion.Value"/> in terms of milliseconds, so if desired, a
         /// custom versioning scheme of 1, 2, ... can be used rather than 1000, 2000, ... However, access to
         /// the underlying microsecond value is still provided via <see cref="BigtableVersion.Micros"/>.
         /// </para>
@@ -354,27 +354,6 @@ namespace Google.Cloud.Bigtable.V2
         public static RowFilter VersionRange(BigtableVersionRange range) =>
             new RowFilter { TimestampRangeFilter = GaxPreconditions.CheckNotNull(range, nameof(range)).ToTimestampRange() };
 
-        /// <summary>
-        /// Creates a new <see cref="RowFilter"/> instance which matches only cells
-        /// with versions within the given range.
-        /// </summary>
-        /// <param name="start">
-        /// Inclusive lower bound of the range of versions from which cells should be
-        /// matched. If null, interpreted as 0.
-        /// </param>
-        /// <param name="end">
-        /// Exclusive upper bound of the range of versions from which cells should be
-        /// matched. If null, interpreted as infinity.
-        /// </param>
-        /// <returns>The created row filter.</returns>
-        public static RowFilter VersionRange(BigtableVersion? start, BigtableVersion? end) =>
-            new RowFilter
-            {
-                TimestampRangeFilter = new TimestampRange
-                {
-                    StartTimestampMicros = start.ToTimestampMicros(),
-                    EndTimestampMicros = end.ToTimestampMicros(),
-                }
-            };
+        // TODO: Add additional VersionRange... methods to take start/end values?
     }
 }

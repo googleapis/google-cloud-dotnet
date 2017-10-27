@@ -232,14 +232,5 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             Assert.Throws<ArgumentNullException>(() => RowFilters.VersionRange(null));
         }
-
-        [Fact]
-        public void VersionRange_Versions()
-        {
-            var filter = RowFilters.VersionRange(new BigtableVersion(1), new BigtableVersion(2));
-            Assert.NotNull(filter.TimestampRangeFilter);
-            Assert.Equal(1000, filter.TimestampRangeFilter.StartTimestampMicros);
-            Assert.Equal(2000, filter.TimestampRangeFilter.EndTimestampMicros);
-        }
     }
 }

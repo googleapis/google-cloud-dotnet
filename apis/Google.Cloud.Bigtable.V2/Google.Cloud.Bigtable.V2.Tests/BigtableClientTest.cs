@@ -28,6 +28,22 @@ namespace Google.Cloud.Bigtable.V2.Tests
         private class TestBigtableClient : BigtableClient { }
 
         [Fact]
+        public async Task CheckAndMutateRow_Valid_Request()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+
+            // NotImplementedException means it go through the normal validations and tried to actually
+            // make the request on the TestBigtableClient.
+            await CheckAndMutateRow_ValidateArguments<NotImplementedException>(
+                tableName,
+                "abc",
+                RowFilters.PassAllFilter(),
+                new[] { Mutations.DeleteFromRow() },
+                new[] { Mutations.DeleteFromRow() });
+        }
+
+        [Fact]
         public async Task CheckAndMutateRow_Validate_TableName()
         {
             var client = new TestBigtableClient();
@@ -132,6 +148,17 @@ namespace Google.Cloud.Bigtable.V2.Tests
             await Assert.ThrowsAsync<TException>(
                 () => client.CheckAndMutateRowAsync(
                     tableName, rowKey, predicateFilter, trueMutations, falseMutations, CallSettings.FromCancellationToken(default)));
+        }
+
+        [Fact]
+        public async Task MutateRow_Valid_Request()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+
+            // NotImplementedException means it go through the normal validations and tried to actually
+            // make the request on the TestBigtableClient.
+            await MutateRow_ValidateArguments<NotImplementedException>(tableName, "abc", new[] { Mutations.DeleteFromRow() });
         }
 
         [Fact]

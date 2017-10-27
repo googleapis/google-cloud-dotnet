@@ -37,10 +37,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             while (await response.ResponseStream.MoveNext(default))
             {
                 var current = response.ResponseStream.Current;
-                foreach (var chunk in current.Chunks)
-                {
-                    Assert.True(false, $"No chunks expected for the row at {rowKey.Value.ToStringUtf8()}");
-                }
+                Assert.Empty(current.Chunks);
             }
         }
 
@@ -60,7 +57,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 Rows = new RowSet { RowKeys = { rowKey } }
             });
 
-            bool had_value = false;
+            bool hadValue = false;
             while (await response.ResponseStream.MoveNext(default))
             {
                 var current = response.ResponseStream.Current;
@@ -74,10 +71,11 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     {
                         Assert.Equal(version.Value.Micros, chunk.TimestampMicros);
                     }
-                    had_value = true;
+                    Assert.False(hadValue);
+                    hadValue = true;
                 }
             }
-            Assert.True(had_value, "The value was not present.");
+            Assert.True(hadValue, "The value was not present.");
         }
 
         public static async Task DoesNotHaveValueAsync(
@@ -89,7 +87,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             BigtableByteString value,
             BigtableVersion? version = null)
         {
-            bool has_value = await HasValueHelperAsync(
+            bool hasValue = await HasValueHelperAsync(
                 client,
                 tableName,
                 rowKey,
@@ -97,7 +95,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 columnQualifier,
                 value,
                 version);
-            Assert.False(has_value);
+            Assert.False(hasValue);
         }
 
         public static async Task HasValueAsync(
@@ -109,7 +107,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             BigtableByteString value,
             BigtableVersion? version = null)
         {
-            bool has_value = await HasValueHelperAsync(
+            bool hasValue = await HasValueHelperAsync(
                 client,
                 tableName,
                 rowKey,
@@ -117,7 +115,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 columnQualifier,
                 value,
                 version);
-            Assert.True(has_value);
+            Assert.True(hasValue);
         }
 
         private static async Task<bool> HasValueHelperAsync(
@@ -136,7 +134,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 Rows = new RowSet { RowKeys = { rowKey } }
             });
 
-            bool had_value = false;
+            bool hadValue = false;
             while (await response.ResponseStream.MoveNext(default))
             {
                 var current = response.ResponseStream.Current;
@@ -160,12 +158,12 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         {
                             Assert.Equal(version.Value.Micros, chunk.TimestampMicros);
                         }
-                        had_value = true;
+                        hadValue = true;
                     }
                 }
             }
 
-            return had_value;
+            return hadValue;
         }
     }
 }
