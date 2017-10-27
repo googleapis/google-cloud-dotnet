@@ -96,6 +96,51 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(datasetId, result.Reference.DatasetId);
         }
 
+        // Effectively testing BigQueryClient.RetryIfETagPresent, but it's hard to test that without
+        // making a concrete request via BigQueryClientImpl.
+        [Fact]
+        public void UpdateDataset_RetryIfETagPresent()
+        {
+            var projectId = "project";
+            var datasetId = "dataset";
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            var reference = client.GetDatasetReference(projectId, datasetId);
+            var dataset = new Dataset { FriendlyName = "Foo", ETag = "\"etag\"" };
+
+            service.ExpectRequest(
+                service.Datasets.Update(dataset, projectId, datasetId),
+                HttpStatusCode.InternalServerError,
+                new RequestError { Errors = new[] { new SingleError { Reason = "backendError" } } });
+            service.ExpectRequest(
+                service.Datasets.Update(dataset, projectId, datasetId),
+                new Dataset { DatasetReference = reference });
+            var result = client.UpdateDataset(reference, dataset);
+            service.Verify();
+            Assert.Equal(projectId, result.Reference.ProjectId);
+            Assert.Equal(datasetId, result.Reference.DatasetId);
+        }
+
+        [Fact]
+        public void UpdateDataset_NoRetryIfETagAbsent()
+        {
+            var projectId = "project";
+            var datasetId = "dataset";
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            var reference = client.GetDatasetReference(projectId, datasetId);
+            var dataset = new Dataset { FriendlyName = "Foo" };
+
+            service.ExpectRequest(
+                service.Datasets.Update(dataset, projectId, datasetId),
+                HttpStatusCode.InternalServerError,
+                new RequestError { Errors = new[] { new SingleError { Reason = "backendError" } } });
+            // No second chance...
+            var exception = Assert.Throws<GoogleApiException>(() => client.UpdateDataset(reference, dataset));
+            Assert.Equal("backendError", exception.Error.Errors[0].Reason);
+            service.Verify();
+        }
+
         [Fact]
         public void GetDataset_NonRetriableFailure()
         {

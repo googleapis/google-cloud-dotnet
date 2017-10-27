@@ -25,7 +25,7 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.1.0" />
-    <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.29.1.990" />
+    <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.30.0.1018" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.1.2" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>

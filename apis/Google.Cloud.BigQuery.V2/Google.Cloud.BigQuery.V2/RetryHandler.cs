@@ -30,22 +30,14 @@ namespace Google.Cloud.BigQuery.V2
     /// </summary>
     internal sealed class RetryHandler : IHttpUnsuccessfulResponseHandler
     {
-        private const string RetriablePropertyKey = "Google.Cloud.BigQuery.V2.RetryHelperKey";
-        private const string RetriablePropertyValue = "yes";
         private static readonly string[] s_retriableErrors = { "rateLimitExceeded", "backendError" };
 
         private static RetryHandler s_instance = new RetryHandler();
 
         private RetryHandler() { }
 
-        private static readonly Action<HttpRequestMessage> s_markAsRetriable =
-            message => message.Properties[RetriablePropertyKey] = RetriablePropertyValue;
-
         internal static void MarkAsRetriable<TResponse>(BigqueryBaseServiceRequest<TResponse> request) =>
-            request.ModifyRequest += s_markAsRetriable;
-
-        internal static bool IsRetriableRequest(HttpRequestMessage message) =>
-            message.Properties.TryGetValue(RetriablePropertyKey, out var value) && RetriablePropertyValue.Equals(value);
+            request.AddUnsuccessfulResponseHandler(s_instance);
 
         internal static async Task<bool> IsRetriableResponse(HttpResponseMessage response)
         {
@@ -67,7 +59,6 @@ namespace Google.Cloud.BigQuery.V2
         public async Task<bool> HandleResponseAsync(HandleUnsuccessfulResponseArgs args)
         {
             var retry = args.SupportsRetry && 
-                IsRetriableRequest(args.Request) && 
                 await IsRetriableResponse(args.Response).ConfigureAwait(false);
             if (!retry)
             {
@@ -82,20 +73,6 @@ namespace Google.Cloud.BigQuery.V2
             var delay = TimeSpan.FromSeconds(seconds);
             await Task.Delay(delay, args.CancellationToken).ConfigureAwait(false);
             return true;
-        }
-
-        /// <summary>
-        /// Installs the retry handler into the service, if it doesn't already exist.
-        /// </summary>
-        /// <param name="service"></param>
-        internal static void Install(BigqueryService service)
-        {
-            // TODO: This isn't safe... we could end up removing the handler while it's
-            // in the middle of a request in another thread. It's also inefficient...
-            // We need support in ConfigurableMessageHandler for this.
-            var messageHandler = service.HttpClient.MessageHandler;
-            messageHandler.RemoveUnsuccessfulResponseHandler(s_instance);
-            messageHandler.AddUnsuccessfulResponseHandler(s_instance);
         }
     }
 }
