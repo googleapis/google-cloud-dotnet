@@ -14,6 +14,7 @@
 
 using Google.Apis.Requests;
 using Google.Apis.Translate.v2;
+using Google.Apis.Util;
 using Google.Cloud.ClientTesting;
 
 namespace Google.Cloud.Translation.V2.Tests
@@ -41,7 +42,8 @@ namespace Google.Cloud.Translation.V2.Tests
         {
             string requestContent = SerializeObject(request);
             var httpRequest = request.CreateRequest();
-            string responseContent = SerializeObject(response);
+            // The Translate service uses the old "wrap in data" response style.
+            string responseContent = SerializeObject(new StandardResponse<object> { Data = response });
             handler.ExpectRequest(httpRequest.RequestUri, httpRequest.Content?.ReadAsStringAsync()?.Result, responseContent);
         }
     }
