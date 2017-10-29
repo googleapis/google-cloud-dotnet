@@ -35,6 +35,19 @@ namespace Google.Cloud.Tools.Analyzers
             SpecialType.System_Double
         };
 
+        internal static bool IsNullable(this ITypeSymbol type, out ITypeSymbol underlyingType)
+        {
+            if (type.OriginalDefinition.SpecialType != SpecialType.System_Nullable_T)
+            {
+                underlyingType = null;
+                return false;
+            }
+
+            var namedType = (INamedTypeSymbol)type;
+            underlyingType = namedType.TypeArguments[0];
+            return true;
+        }
+
         internal static ITypeSymbol GetVariableType(this ISymbol symbol)
         {
             switch (symbol)

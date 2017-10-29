@@ -154,8 +154,9 @@ namespace TestHelper
                 .CurrentSolution
                 .AddProject(projectId, TestProjectName, TestProjectName, language)
                 .WithProjectParseOptions(projectId,
-                    CSharpParseOptions.Default.WithFeatures(
-                        new[] { new KeyValuePair<string, string>("IOperation", "true") }))
+                    CSharpParseOptions.Default
+                        .WithLanguageVersion(LanguageVersion.CSharp7_1)
+                        .WithFeatures(new[] { new KeyValuePair<string, string>("IOperation", "true") }))
                 .AddMetadataReference(projectId, CorlibReference)
                 .AddMetadataReference(projectId, SystemCoreReference)
                 .AddMetadataReference(projectId, CSharpSymbolsReference)
