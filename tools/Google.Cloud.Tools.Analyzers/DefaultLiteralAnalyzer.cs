@@ -56,6 +56,19 @@ namespace Google.Cloud.Tools.Analyzers
                 if (underlyingType.IsPrimitive() ||
                     underlyingType.BaseType?.SpecialType == SpecialType.System_Enum)
                 {
+                    // Check to see if https://github.com/dotnet/roslyn/issues/22578 has been fixed so we don't warn unnecessarily on parameters.
+                    // It would be nice to use context.SemanticModel.GetConstantValue instead so we can avoid warning in general, but it doesn't
+                    // seem to work: it always reports no constant value for the default literal.
+                    var parameterNode = context.Node.AncestorsAndSelf().OfType<ParameterSyntax>().FirstOrDefault();
+                    if (parameterNode != null)
+                    {
+                        var parameter = context.SemanticModel.GetDeclaredSymbol(parameterNode, context.CancellationToken);
+                        if (parameter.HasExplicitDefaultValue && parameter.ExplicitDefaultValue == null)
+                        {
+                            return;
+                        }
+                    }
+
                     context.ReportDiagnostic(
                         Diagnostic.Create(
                             Rule,

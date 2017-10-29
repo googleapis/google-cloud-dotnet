@@ -37,6 +37,20 @@ public class A
         }
 
         [Fact]
+        public void DefaultBoolLocal()
+        {
+            var test = @"
+public class A
+{
+    public void B()
+    {
+        bool x = default;
+    }
+}";
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
         public void DefaultEnum()
         {
             var test = @"
@@ -73,6 +87,31 @@ public class A
 public class A
 {
     public void B(bool? x = default(bool?)) { }
+}";
+            VerifyCSharpFix(test, newSource);
+        }
+
+        [Fact]
+        public void DefaultNullableBoolLocal()
+        {
+            var test = @"
+public class A
+{
+    public void B()
+    {
+        bool? x = default;
+    }
+}";
+            var expected = CreateDiagnostic("bool?", 6, 19);
+            VerifyCSharpDiagnostic(test, expected);
+
+            var newSource = @"
+public class A
+{
+    public void B()
+    {
+        bool? x = default(bool?);
+    }
 }";
             VerifyCSharpFix(test, newSource);
         }
