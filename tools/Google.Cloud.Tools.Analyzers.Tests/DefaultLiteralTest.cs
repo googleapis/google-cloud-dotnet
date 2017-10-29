@@ -102,18 +102,7 @@ public class A
         bool? x = default;
     }
 }";
-            var expected = CreateDiagnostic("bool?", 6, 19);
-            VerifyCSharpDiagnostic(test, expected);
-
-            var newSource = @"
-public class A
-{
-    public void B()
-    {
-        bool? x = default(bool?);
-    }
-}";
-            VerifyCSharpFix(test, newSource);
+            VerifyCSharpDiagnostic(test);
         }
 
         [Fact]
