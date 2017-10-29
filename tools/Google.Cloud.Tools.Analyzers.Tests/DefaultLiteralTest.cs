@@ -26,6 +26,39 @@ namespace Google.Cloud.Tools.Analyzers.Tests
     public class DefaultLiteralTest : CodeFixVerifier
     {
         [Fact]
+        public void DefaultBool()
+        {
+            var test = @"
+public class A
+{
+    public void B(bool x = default) { }
+}";
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
+        public void DefaultEnum()
+        {
+            var test = @"
+public class A
+{
+    public void B(System.DateTimeKind x = default) { }
+}";
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
+        public void DefaultInt()
+        {
+            var test = @"
+public class A
+{
+    public void B(int x = default) { }
+}";
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
         public void DefaultNullableBool()
         {
             var test = @"
@@ -53,7 +86,7 @@ public class A
     public void B(object? x = default) { }
 }";
             VerifyCSharpDiagnostic(test);
-        }
+        }    
 
         [Fact]
         public void DefaultNullableEnum()
