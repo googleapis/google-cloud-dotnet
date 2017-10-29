@@ -1,0 +1,126 @@
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CodeFixes;
+using Microsoft.CodeAnalysis.Diagnostics;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using TestHelper;
+using Xunit;
+
+namespace Google.Cloud.Tools.Analyzers.Tests
+{
+    public class DefaultLiteralTest : CodeFixVerifier
+    {
+        [Fact]
+        public void DefaultNullableBool()
+        {
+            var test = @"
+public class A
+{
+    public void B(bool? x = default) { }
+}";
+            var expected = CreateDiagnostic("bool?", 4, 29);
+            VerifyCSharpDiagnostic(test, expected);
+
+            var newSource = @"
+public class A
+{
+    public void B(bool? x = default(bool?)) { }
+}";
+            VerifyCSharpFix(test, newSource);
+        }
+
+        [Fact]
+        public void DefaultNullableClass()
+        {
+            var test = @"
+public class A
+{
+    public void B(object? x = default) { }
+}";
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
+        public void DefaultNullableEnum()
+        {
+            var test = @"
+public class A
+{
+    public void B(System.DateTimeKind? x = default) { }
+}";
+            var expected = CreateDiagnostic("System.DateTimeKind?", 4, 44);
+            VerifyCSharpDiagnostic(test, expected);
+
+            var newSource = @"
+public class A
+{
+    public void B(System.DateTimeKind? x = default(System.DateTimeKind?)) { }
+}";
+            VerifyCSharpFix(test, newSource);
+        }
+
+        [Fact]
+        public void DefaultNullableInt()
+        {
+            var test = @"
+public class A
+{
+    public void B(int? x = default) { }
+}";
+            var expected = CreateDiagnostic("int?", 4, 28);
+            VerifyCSharpDiagnostic(test, expected);
+
+            var newSource = @"
+public class A
+{
+    public void B(int? x = default(int?)) { }
+}";
+            VerifyCSharpFix(test, newSource);
+        }
+
+        [Fact]
+        public void DefaultNullableStruct()
+        {
+            var test = @"
+public class A
+{
+    public void B(System.DateTime? x = default) { }
+}";
+            VerifyCSharpDiagnostic(test);
+        }
+
+        private DiagnosticResult CreateDiagnostic(string typeName, int line, int column) =>
+            new DiagnosticResult
+            {
+                Id = DefaultLiteralAnalyzer.DiagnosticId,
+                Message = $"The default literal expression results in a zero value, not 'null' as likely intended. Use 'default({typeName})' instead.",
+                Severity = DiagnosticSeverity.Warning,
+                Locations = new[] { new DiagnosticResultLocation("Test0.cs", line, column) }
+            };
+
+        protected override DiagnosticAnalyzer GetCSharpDiagnosticAnalyzer()
+        {
+            return new DefaultLiteralAnalyzer();
+        }
+
+        protected override CodeFixProvider GetCSharpCodeFixProvider()
+        {
+            return new DefaultLiteralCodeFixProvider();
+        }
+    }
+}
