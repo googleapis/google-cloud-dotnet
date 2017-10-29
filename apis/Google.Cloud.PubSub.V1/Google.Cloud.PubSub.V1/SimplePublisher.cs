@@ -206,7 +206,7 @@ namespace Google.Cloud.PubSub.V1
         /// <see cref="BatchingSettings.ElementCountThreshold"/> = 1,000;
         /// <see cref="BatchingSettings.ByteCountThreshold"/> = 9,500,000;
         /// </summary>
-        public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 9_500_000L, null);
+        public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 10_000_000L, null);
 
         /// <summary>
         /// Create a <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>.
