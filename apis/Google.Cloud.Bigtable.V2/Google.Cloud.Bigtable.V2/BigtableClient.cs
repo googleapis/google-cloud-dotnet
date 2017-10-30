@@ -431,13 +431,13 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<MutateRowResponse> MutateRowAsync(
-            string tableName,
+            TableName tableName,
             ByteString rowKey,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) => MutateRowAsync(
                 new MutateRowRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
                     RowKey = GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                     Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
@@ -467,7 +467,7 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<MutateRowResponse> MutateRowAsync(
-            string tableName,
+            TableName tableName,
             ByteString rowKey,
             IEnumerable<Mutation> mutations,
             CancellationToken cancellationToken) => MutateRowAsync(
@@ -500,13 +500,13 @@ namespace Google.Cloud.Bigtable.V2
         /// The RPC response.
         /// </returns>
         public virtual MutateRowResponse MutateRow(
-            string tableName,
+            TableName tableName,
             ByteString rowKey,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) => MutateRow(
                 new MutateRowRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
                     RowKey = GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                     Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
@@ -592,6 +592,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="rowKey">
         /// The key of the row to which the conditional mutation should be applied.
         /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either `true_mutations` or
+        /// `false_mutations` will be executed. If unset, checks that the row contains
+        /// any values at all.
+        /// </param>
         /// <param name="trueMutations">
         /// Changes to be atomically applied to the specified row if `predicate_filter`
         /// yields at least one cell when applied to `row_key`. Entries are applied in
@@ -613,15 +619,17 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
-            string tableName,
+            TableName tableName,
             ByteString rowKey,
+            RowFilter predicateFilter,
             IEnumerable<Mutation> trueMutations,
             IEnumerable<Mutation> falseMutations,
             CallSettings callSettings = null) => CheckAndMutateRowAsync(
                 new CheckAndMutateRowRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
                     RowKey = GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    PredicateFilter = predicateFilter, // Optional
                     TrueMutations = { trueMutations ?? Enumerable.Empty<Mutation>() }, // Optional
                     FalseMutations = { falseMutations ?? Enumerable.Empty<Mutation>() }, // Optional
                 },
@@ -638,6 +646,12 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// The key of the row to which the conditional mutation should be applied.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either `true_mutations` or
+        /// `false_mutations` will be executed. If unset, checks that the row contains
+        /// any values at all.
         /// </param>
         /// <param name="trueMutations">
         /// Changes to be atomically applied to the specified row if `predicate_filter`
@@ -660,13 +674,15 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
-            string tableName,
+            TableName tableName,
             ByteString rowKey,
+            RowFilter predicateFilter,
             IEnumerable<Mutation> trueMutations,
             IEnumerable<Mutation> falseMutations,
             CancellationToken cancellationToken) => CheckAndMutateRowAsync(
                 tableName,
                 rowKey,
+                predicateFilter,
                 trueMutations,
                 falseMutations,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -682,6 +698,12 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="rowKey">
         /// The key of the row to which the conditional mutation should be applied.
+        /// </param>
+        /// <param name="predicateFilter">
+        /// The filter to be applied to the contents of the specified row. Depending
+        /// on whether or not any results are yielded, either `true_mutations` or
+        /// `false_mutations` will be executed. If unset, checks that the row contains
+        /// any values at all.
         /// </param>
         /// <param name="trueMutations">
         /// Changes to be atomically applied to the specified row if `predicate_filter`
@@ -704,15 +726,17 @@ namespace Google.Cloud.Bigtable.V2
         /// The RPC response.
         /// </returns>
         public virtual CheckAndMutateRowResponse CheckAndMutateRow(
-            string tableName,
+            TableName tableName,
             ByteString rowKey,
+            RowFilter predicateFilter,
             IEnumerable<Mutation> trueMutations,
             IEnumerable<Mutation> falseMutations,
             CallSettings callSettings = null) => CheckAndMutateRow(
                 new CheckAndMutateRowRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
                     RowKey = GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
+                    PredicateFilter = predicateFilter, // Optional
                     TrueMutations = { trueMutations ?? Enumerable.Empty<Mutation>() }, // Optional
                     FalseMutations = { falseMutations ?? Enumerable.Empty<Mutation>() }, // Optional
                 },
@@ -784,13 +808,13 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
-            string tableName,
+            TableName tableName,
             ByteString rowKey,
             IEnumerable<ReadModifyWriteRule> rules,
             CallSettings callSettings = null) => ReadModifyWriteRowAsync(
                 new ReadModifyWriteRowRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
                     RowKey = GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                     Rules = { GaxPreconditions.CheckNotNull(rules, nameof(rules)) },
                 },
@@ -824,7 +848,7 @@ namespace Google.Cloud.Bigtable.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
-            string tableName,
+            TableName tableName,
             ByteString rowKey,
             IEnumerable<ReadModifyWriteRule> rules,
             CancellationToken cancellationToken) => ReadModifyWriteRowAsync(
@@ -861,13 +885,13 @@ namespace Google.Cloud.Bigtable.V2
         /// The RPC response.
         /// </returns>
         public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(
-            string tableName,
+            TableName tableName,
             ByteString rowKey,
             IEnumerable<ReadModifyWriteRule> rules,
             CallSettings callSettings = null) => ReadModifyWriteRow(
                 new ReadModifyWriteRowRequest
                 {
-                    TableName = GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                    TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
                     RowKey = GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                     Rules = { GaxPreconditions.CheckNotNull(rules, nameof(rules)) },
                 },
