@@ -42,7 +42,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument
             ReadRowsRequest request = new ReadRowsRequest
             {
-                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             // Make the request, returning a streaming response
             BigtableClient.ReadRowsStream streamingResponse = bigtableClient.ReadRows(request);
@@ -67,7 +67,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument
             SampleRowKeysRequest request = new SampleRowKeysRequest
             {
-                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             // Make the request, returning a streaming response
             BigtableClient.SampleRowKeysStream streamingResponse = bigtableClient.SampleRowKeys(request);
@@ -86,31 +86,31 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         /// <summary>Snippet for MutateRowAsync</summary>
         public async Task MutateRowAsync()
         {
-            // Snippet: MutateRowAsync(string,ByteString,IEnumerable<Mutation>,CallSettings)
-            // Additional: MutateRowAsync(string,ByteString,IEnumerable<Mutation>,CancellationToken)
+            // Snippet: MutateRowAsync(TableName,ByteString,IEnumerable<Mutation>,CallSettings)
+            // Additional: MutateRowAsync(TableName,ByteString,IEnumerable<Mutation>,CancellationToken)
             // Create client
             BigtableClient bigtableClient = await BigtableClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.CopyFromUtf8("");
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
-            MutateRowResponse response = await bigtableClient.MutateRowAsync(formattedTableName, rowKey, mutations);
+            MutateRowResponse response = await bigtableClient.MutateRowAsync(tableName, rowKey, mutations);
             // End snippet
         }
 
         /// <summary>Snippet for MutateRow</summary>
         public void MutateRow()
         {
-            // Snippet: MutateRow(string,ByteString,IEnumerable<Mutation>,CallSettings)
+            // Snippet: MutateRow(TableName,ByteString,IEnumerable<Mutation>,CallSettings)
             // Create client
             BigtableClient bigtableClient = BigtableClient.Create();
             // Initialize request argument(s)
-            string formattedTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.CopyFromUtf8("");
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
-            MutateRowResponse response = bigtableClient.MutateRow(formattedTableName, rowKey, mutations);
+            MutateRowResponse response = bigtableClient.MutateRow(tableName, rowKey, mutations);
             // End snippet
         }
 
@@ -123,7 +123,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             MutateRowRequest request = new MutateRowRequest
             {
-                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.CopyFromUtf8(""),
                 Mutations = { },
             };
@@ -141,7 +141,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             MutateRowRequest request = new MutateRowRequest
             {
-                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.CopyFromUtf8(""),
                 Mutations = { },
             };
@@ -159,7 +159,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument
             MutateRowsRequest request = new MutateRowsRequest
             {
-                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 Entries = { },
             };
             // Make the request, returning a streaming response
@@ -179,33 +179,35 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         /// <summary>Snippet for CheckAndMutateRowAsync</summary>
         public async Task CheckAndMutateRowAsync()
         {
-            // Snippet: CheckAndMutateRowAsync(string,ByteString,IEnumerable<Mutation>,IEnumerable<Mutation>,CallSettings)
-            // Additional: CheckAndMutateRowAsync(string,ByteString,IEnumerable<Mutation>,IEnumerable<Mutation>,CancellationToken)
+            // Snippet: CheckAndMutateRowAsync(TableName,ByteString,RowFilter,IEnumerable<Mutation>,IEnumerable<Mutation>,CallSettings)
+            // Additional: CheckAndMutateRowAsync(TableName,ByteString,RowFilter,IEnumerable<Mutation>,IEnumerable<Mutation>,CancellationToken)
             // Create client
             BigtableClient bigtableClient = await BigtableClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.CopyFromUtf8("");
+            RowFilter predicateFilter = new RowFilter();
             IEnumerable<Mutation> trueMutations = new List<Mutation>();
             IEnumerable<Mutation> falseMutations = new List<Mutation>();
             // Make the request
-            CheckAndMutateRowResponse response = await bigtableClient.CheckAndMutateRowAsync(formattedTableName, rowKey, trueMutations, falseMutations);
+            CheckAndMutateRowResponse response = await bigtableClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
             // End snippet
         }
 
         /// <summary>Snippet for CheckAndMutateRow</summary>
         public void CheckAndMutateRow()
         {
-            // Snippet: CheckAndMutateRow(string,ByteString,IEnumerable<Mutation>,IEnumerable<Mutation>,CallSettings)
+            // Snippet: CheckAndMutateRow(TableName,ByteString,RowFilter,IEnumerable<Mutation>,IEnumerable<Mutation>,CallSettings)
             // Create client
             BigtableClient bigtableClient = BigtableClient.Create();
             // Initialize request argument(s)
-            string formattedTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.CopyFromUtf8("");
+            RowFilter predicateFilter = new RowFilter();
             IEnumerable<Mutation> trueMutations = new List<Mutation>();
             IEnumerable<Mutation> falseMutations = new List<Mutation>();
             // Make the request
-            CheckAndMutateRowResponse response = bigtableClient.CheckAndMutateRow(formattedTableName, rowKey, trueMutations, falseMutations);
+            CheckAndMutateRowResponse response = bigtableClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
             // End snippet
         }
 
@@ -218,7 +220,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.CopyFromUtf8(""),
             };
             // Make the request
@@ -235,7 +237,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
             {
-                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.CopyFromUtf8(""),
             };
             // Make the request
@@ -246,31 +248,31 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         /// <summary>Snippet for ReadModifyWriteRowAsync</summary>
         public async Task ReadModifyWriteRowAsync()
         {
-            // Snippet: ReadModifyWriteRowAsync(string,ByteString,IEnumerable<ReadModifyWriteRule>,CallSettings)
-            // Additional: ReadModifyWriteRowAsync(string,ByteString,IEnumerable<ReadModifyWriteRule>,CancellationToken)
+            // Snippet: ReadModifyWriteRowAsync(TableName,ByteString,IEnumerable<ReadModifyWriteRule>,CallSettings)
+            // Additional: ReadModifyWriteRowAsync(TableName,ByteString,IEnumerable<ReadModifyWriteRule>,CancellationToken)
             // Create client
             BigtableClient bigtableClient = await BigtableClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.CopyFromUtf8("");
             IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
             // Make the request
-            ReadModifyWriteRowResponse response = await bigtableClient.ReadModifyWriteRowAsync(formattedTableName, rowKey, rules);
+            ReadModifyWriteRowResponse response = await bigtableClient.ReadModifyWriteRowAsync(tableName, rowKey, rules);
             // End snippet
         }
 
         /// <summary>Snippet for ReadModifyWriteRow</summary>
         public void ReadModifyWriteRow()
         {
-            // Snippet: ReadModifyWriteRow(string,ByteString,IEnumerable<ReadModifyWriteRule>,CallSettings)
+            // Snippet: ReadModifyWriteRow(TableName,ByteString,IEnumerable<ReadModifyWriteRule>,CallSettings)
             // Create client
             BigtableClient bigtableClient = BigtableClient.Create();
             // Initialize request argument(s)
-            string formattedTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString();
+            TableName tableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]");
             ByteString rowKey = ByteString.CopyFromUtf8("");
             IEnumerable<ReadModifyWriteRule> rules = new List<ReadModifyWriteRule>();
             // Make the request
-            ReadModifyWriteRowResponse response = bigtableClient.ReadModifyWriteRow(formattedTableName, rowKey, rules);
+            ReadModifyWriteRowResponse response = bigtableClient.ReadModifyWriteRow(tableName, rowKey, rules);
             // End snippet
         }
 
@@ -283,7 +285,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.CopyFromUtf8(""),
                 Rules = { },
             };
@@ -301,7 +303,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Initialize request argument(s)
             ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
             {
-                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                TableNameAsTableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKey = ByteString.CopyFromUtf8(""),
                 Rules = { },
             };

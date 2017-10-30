@@ -120,5 +120,82 @@ namespace Google.Cloud.Bigtable.V2
     }
 
 
+    public partial class CheckAndMutateRowRequest
+    {
+        /// <summary>
+        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// </summary>
+        public TableName TableNameAsTableName
+        {
+            get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
+            set { TableName = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class MutateRowRequest
+    {
+        /// <summary>
+        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// </summary>
+        public TableName TableNameAsTableName
+        {
+            get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
+            set { TableName = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class MutateRowsRequest
+    {
+        /// <summary>
+        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// </summary>
+        public TableName TableNameAsTableName
+        {
+            get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
+            set { TableName = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ReadModifyWriteRowRequest
+    {
+        /// <summary>
+        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// </summary>
+        public TableName TableNameAsTableName
+        {
+            get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
+            set { TableName = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ReadRowsRequest
+    {
+        /// <summary>
+        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// </summary>
+        public TableName TableNameAsTableName
+        {
+            get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
+            set { TableName = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class SampleRowKeysRequest
+    {
+        /// <summary>
+        /// <see cref="TableName"/>-typed view over the <see cref="TableName"/> resource name property.
+        /// </summary>
+        public TableName TableNameAsTableName
+        {
+            get { return string.IsNullOrEmpty(TableName) ? null : Google.Cloud.Bigtable.V2.TableName.Parse(TableName); }
+            set { TableName = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }
