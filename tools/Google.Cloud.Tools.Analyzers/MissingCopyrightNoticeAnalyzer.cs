@@ -127,7 +127,9 @@ namespace Google.Cloud.Tools.Analyzers
 
         private static Regex CreateCopyrightRegex(string copyrightTemplate)
         {
-            var pattern = Regex.Escape(copyrightTemplate).Replace("____", @"\d{4}\,?");
+            var pattern = Regex.Escape(copyrightTemplate)
+                .Replace("____", @"\d{4}\,?")
+                .Replace(@"Google\ Inc\.", @"Google\ (Inc\.|LLC)");
             pattern = Regex.Replace(pattern, @"(\\r\\n|\\n)", @"\ *\r?\n");
             return new Regex(@"\A\s*" + pattern, RegexOptions.Compiled | RegexOptions.IgnoreCase);
         }
