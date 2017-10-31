@@ -52,6 +52,7 @@ namespace Google.Cloud.Language.V1
             AnalyzeEntitiesSettings = existing.AnalyzeEntitiesSettings;
             AnalyzeEntitySentimentSettings = existing.AnalyzeEntitySentimentSettings;
             AnalyzeSyntaxSettings = existing.AnalyzeSyntaxSettings;
+            ClassifyTextSettings = existing.ClassifyTextSettings;
             AnnotateTextSettings = existing.AnnotateTextSettings;
             OnCopy(existing);
         }
@@ -235,6 +236,36 @@ namespace Google.Cloud.Language.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings AnalyzeSyntaxSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LanguageServiceClient.ClassifyText</c> and <c>LanguageServiceClient.ClassifyTextAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>LanguageServiceClient.ClassifyText</c> and
+        /// <c>LanguageServiceClient.ClassifyTextAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings ClassifyTextSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -834,6 +865,104 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
+        /// Classifies a document into categories.
+        /// </summary>
+        /// <param name="document">
+        /// Input document.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ClassifyTextResponse> ClassifyTextAsync(
+            Document document,
+            CallSettings callSettings = null) => ClassifyTextAsync(
+                new ClassifyTextRequest
+                {
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Classifies a document into categories.
+        /// </summary>
+        /// <param name="document">
+        /// Input document.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ClassifyTextResponse> ClassifyTextAsync(
+            Document document,
+            CancellationToken cancellationToken) => ClassifyTextAsync(
+                document,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Classifies a document into categories.
+        /// </summary>
+        /// <param name="document">
+        /// Input document.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ClassifyTextResponse ClassifyText(
+            Document document,
+            CallSettings callSettings = null) => ClassifyText(
+                new ClassifyTextRequest
+                {
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Classifies a document into categories.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ClassifyTextResponse> ClassifyTextAsync(
+            ClassifyTextRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Classifies a document into categories.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ClassifyTextResponse ClassifyText(
+            ClassifyTextRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// A convenience method that provides all the features that analyzeSentiment,
         /// analyzeEntities, and analyzeSyntax provide in one call.
         /// </summary>
@@ -977,6 +1106,7 @@ namespace Google.Cloud.Language.V1
         private readonly ApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse> _callAnalyzeEntities;
         private readonly ApiCall<AnalyzeEntitySentimentRequest, AnalyzeEntitySentimentResponse> _callAnalyzeEntitySentiment;
         private readonly ApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse> _callAnalyzeSyntax;
+        private readonly ApiCall<ClassifyTextRequest, ClassifyTextResponse> _callClassifyText;
         private readonly ApiCall<AnnotateTextRequest, AnnotateTextResponse> _callAnnotateText;
 
         /// <summary>
@@ -997,6 +1127,8 @@ namespace Google.Cloud.Language.V1
                 GrpcClient.AnalyzeEntitySentimentAsync, GrpcClient.AnalyzeEntitySentiment, effectiveSettings.AnalyzeEntitySentimentSettings);
             _callAnalyzeSyntax = clientHelper.BuildApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse>(
                 GrpcClient.AnalyzeSyntaxAsync, GrpcClient.AnalyzeSyntax, effectiveSettings.AnalyzeSyntaxSettings);
+            _callClassifyText = clientHelper.BuildApiCall<ClassifyTextRequest, ClassifyTextResponse>(
+                GrpcClient.ClassifyTextAsync, GrpcClient.ClassifyText, effectiveSettings.ClassifyTextSettings);
             _callAnnotateText = clientHelper.BuildApiCall<AnnotateTextRequest, AnnotateTextResponse>(
                 GrpcClient.AnnotateTextAsync, GrpcClient.AnnotateText, effectiveSettings.AnnotateTextSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1014,6 +1146,7 @@ namespace Google.Cloud.Language.V1
         partial void Modify_AnalyzeEntitiesRequest(ref AnalyzeEntitiesRequest request, ref CallSettings settings);
         partial void Modify_AnalyzeEntitySentimentRequest(ref AnalyzeEntitySentimentRequest request, ref CallSettings settings);
         partial void Modify_AnalyzeSyntaxRequest(ref AnalyzeSyntaxRequest request, ref CallSettings settings);
+        partial void Modify_ClassifyTextRequest(ref ClassifyTextRequest request, ref CallSettings settings);
         partial void Modify_AnnotateTextRequest(ref AnnotateTextRequest request, ref CallSettings settings);
 
         /// <summary>
@@ -1184,6 +1317,46 @@ namespace Google.Cloud.Language.V1
         {
             Modify_AnalyzeSyntaxRequest(ref request, ref callSettings);
             return _callAnalyzeSyntax.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Classifies a document into categories.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<ClassifyTextResponse> ClassifyTextAsync(
+            ClassifyTextRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ClassifyTextRequest(ref request, ref callSettings);
+            return _callClassifyText.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Classifies a document into categories.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ClassifyTextResponse ClassifyText(
+            ClassifyTextRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ClassifyTextRequest(ref request, ref callSettings);
+            return _callClassifyText.Sync(request, callSettings);
         }
 
         /// <summary>
