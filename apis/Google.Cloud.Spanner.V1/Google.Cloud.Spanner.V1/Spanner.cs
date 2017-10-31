@@ -334,7 +334,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The name of the session.
+    /// The name of the session. This is always system-assigned; values provided
+    /// when creating a session are ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
