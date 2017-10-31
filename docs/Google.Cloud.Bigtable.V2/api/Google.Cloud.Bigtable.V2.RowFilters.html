@@ -1,0 +1,999 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RowFilters
+   | Google.Cloud.Bigtable.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RowFilters
+   | Google.Cloud.Bigtable.V2 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Bigtable.V2.RowFilters">
+  
+  
+  <h1 id="Google_Cloud_Bigtable_V2_RowFilters" data-uid="Google.Cloud.Bigtable.V2.RowFilters" class="text-break">Class RowFilters
+  </h1>
+  <div class="markdown level0 summary"><p>Static class with convenience methods for creating various kinds of <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instances.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">RowFilters</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Bigtable.V2.html">Google.Cloud.Bigtable.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Bigtable.V2.dll</h6>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class RowFilters</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_BlockAllFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.BlockAllFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_BlockAllFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilters.BlockAllFilter">BlockAllFilter()</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which does not match any
+cells, regardless of input. Useful for temporarily disabling just part of
+a filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter BlockAllFilter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_CellsPerColumnLimit_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.CellsPerColumnLimit*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_CellsPerColumnLimit_System_Int32_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.CellsPerColumnLimit(System.Int32)">CellsPerColumnLimit(Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only the most
+recent N cells within each column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter CellsPerColumnLimit(int limit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The maximum number of cells allowed per column.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_CellsPerColumnLimit_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+For example, if N=2, this filter would match column <code>foo:bar</code> at timestamps
+10 and 9, skip all earlier cells in <code>foo:bar</code>, and then begin matching again
+in column <code>foo:bar2</code>.
+</p>
+<p>
+If duplicate cells are present, as is possible when using an Interleave,
+each copy of the cell is counted separately.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_CellsPerRowLimit_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.CellsPerRowLimit*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_CellsPerRowLimit_System_Int32_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.CellsPerRowLimit(System.Int32)">CellsPerRowLimit(Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only the first
+N cells of each row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter CellsPerRowLimit(int limit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The maximum number of cells allowed per row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_CellsPerRowLimit_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+If duplicate cells are present, as is possible when using an Interleave,
+each copy of the cell is counted separately.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_CellsPerRowOffset_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.CellsPerRowOffset*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_CellsPerRowOffset_System_Int32_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.CellsPerRowOffset(System.Int32)">CellsPerRowOffset(Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which skips the first N cells
+of each row, matching all subsequent cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter CellsPerRowOffset(int offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The number of cells to skip per row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_CellsPerRowOffset_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+If duplicate cells are present, as is possible when using an Interleave,
+each copy of the cell is counted separately.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_Chain_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.Chain*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_Chain_Google_Cloud_Bigtable_V2_RowFilter___" data-uid="Google.Cloud.Bigtable.V2.RowFilters.Chain(Google.Cloud.Bigtable.V2.RowFilter[])">Chain(RowFilter[])</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which sends rows through
+several RowFilters in sequence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter Chain(params RowFilter[] filters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a>[]</td>
+        <td><span class="parametername">filters</span></td>
+        <td><p>The elements of &quot;filters&quot; are chained together to process the input row:
+in row -&gt; f(0) -&gt; intermediate row -&gt; f(1) -&gt; ... -&gt; f(N) -&gt; out row
+The full chain is executed atomically.  Must not be null, or contain null
+elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_Google_Cloud_Bigtable_V2_BigtableByteString_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex(Google.Cloud.Bigtable.V2.BigtableByteString)">ColumnQualifierRegex(BigtableByteString)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells from
+columns whose qualifiers satisfy the given RE2 regex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter ColumnQualifierRegex(BigtableByteString regex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">regex</span></td>
+        <td><p>The RE2 regex used to match column qualifiers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_Google_Cloud_Bigtable_V2_BigtableByteString__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that, since column qualifiers can contain arbitrary bytes, the <code>\C</code>
+escape sequence must be used if a true wildcard is desired. The <code>.</code>
+character will not match the new line character <code>\n</code>, which may be
+present in a binary qualifier.
+</p>
+<p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>,
+so <code data-dev-comment-type="paramref" class="paramref">regex</code> can be specified using a string as well and its UTF-8
+representations will be used.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_ColumnRange_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ColumnRange*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_ColumnRange_Google_Cloud_Bigtable_V2_ColumnRange_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ColumnRange(Google.Cloud.Bigtable.V2.ColumnRange)">ColumnRange(ColumnRange)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells from
+columns within the given range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter ColumnRange(ColumnRange range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ColumnRange.html">ColumnRange</a></td>
+        <td><span class="parametername">range</span></td>
+        <td><p>The range of columns from which cells should be matched. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_Condition_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.Condition*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_Condition_Google_Cloud_Bigtable_V2_RowFilter_Google_Cloud_Bigtable_V2_RowFilter_Google_Cloud_Bigtable_V2_RowFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.Condition(Google.Cloud.Bigtable.V2.RowFilter,Google.Cloud.Bigtable.V2.RowFilter,Google.Cloud.Bigtable.V2.RowFilter)">Condition(RowFilter, RowFilter, RowFilter)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which applies one of two
+possible RowFilters to the data based on the output of a predicate
+RowFilter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter Condition(RowFilter predicateFilter, RowFilter trueFilter, RowFilter falseFilter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><span class="parametername">predicateFilter</span></td>
+        <td><p>If <code data-dev-comment-type="paramref" class="paramref">predicateFilter</code> outputs any cells, then
+<code data-dev-comment-type="paramref" class="paramref">trueFilter</code> will be evaluated on the input row.
+Otherwise, <code data-dev-comment-type="paramref" class="paramref">falseFilter</code> will be evaluated.
+Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><span class="parametername">trueFilter</span></td>
+        <td><p>The filter to apply to the input row if <code data-dev-comment-type="paramref" class="paramref">predicateFilter</code>
+returns any results. If null, no results will be returned in the true case.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><span class="parametername">falseFilter</span></td>
+        <td><p>The filter to apply to the input row if <code data-dev-comment-type="paramref" class="paramref">predicateFilter</code>
+does not return any results. If null, no results will be returned in the
+false case.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_FamilyNameRegex_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.FamilyNameRegex*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_FamilyNameRegex_System_String_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.FamilyNameRegex(System.String)">FamilyNameRegex(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells
+from columns whose families satisfy the given RE2 regex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter FamilyNameRegex(string regex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">regex</span></td>
+        <td><p>The RE2 regex used to match column families. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_FamilyNameRegex_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+For technical reasons, the regex must not contain the <code>:</code> character, even
+if it is not being used as a literal. Note that, since column families
+cannot contain the new line character <code>\n</code>, it is sufficient to use <code>.</code>
+as a full wildcard when matching column family names.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_Interleave_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.Interleave*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_Interleave_Google_Cloud_Bigtable_V2_RowFilter___" data-uid="Google.Cloud.Bigtable.V2.RowFilters.Interleave(Google.Cloud.Bigtable.V2.RowFilter[])">Interleave(RowFilter[])</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which applies several
+RowFilters to the data in parallel and combines the results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter Interleave(params RowFilter[] filters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a>[]</td>
+        <td><span class="parametername">filters</span></td>
+        <td><p>The filters to apply in parallel. Must not be null, or contain null elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_PassAllFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.PassAllFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_PassAllFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilters.PassAllFilter">PassAllFilter()</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches all cells,
+regardless of input. Functionally equivalent to leaving <code>filter</code> unset,
+but included for completeness.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter PassAllFilter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_Google_Cloud_Bigtable_V2_BigtableByteString_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex(Google.Cloud.Bigtable.V2.BigtableByteString)">RowKeyRegex(BigtableByteString)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells
+from rows whose keys satisfy the given RE2 regex. In other words, passes
+through the entire row when the key matches, and otherwise produces an
+empty row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter RowKeyRegex(BigtableByteString regex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">regex</span></td>
+        <td><p>The RE2 regex used to match row keys.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_Google_Cloud_Bigtable_V2_BigtableByteString__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that, since row keys can contain arbitrary bytes, the <code>\C</code> escape
+sequence must be used if a true wildcard is desired. The <code>.</code> character
+will not match the new line character <code>\n</code>, which may be present in a
+binary key.
+</p>
+<p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>, so <code data-dev-comment-type="paramref" class="paramref">regex</code> can
+be specified using a string as well and its UTF-8 representations will be used.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_RowSample_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.RowSample*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_RowSample_System_Double_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.RowSample(System.Double)">RowSample(Double)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches all cells
+from a row with probability p, and matches no cells from the row with
+probability 1-p.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter RowSample(double probability)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">probability</span></td>
+        <td><p>The probability with which rows should be matched.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_StripValueTransformer_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.StripValueTransformer*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_StripValueTransformer" data-uid="Google.Cloud.Bigtable.V2.RowFilters.StripValueTransformer">StripValueTransformer()</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which replaces each cell&apos;s
+value with the empty string. This is useful for increasing performance when
+only getting cell counts rather than cell values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter StripValueTransformer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_TimestampRange_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.TimestampRange*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_TimestampRange_System_Nullable_System_DateTime__System_Nullable_System_DateTime__" data-uid="Google.Cloud.Bigtable.V2.RowFilters.TimestampRange(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">TimestampRange(Nullable&lt;DateTime&gt;, Nullable&lt;DateTime&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells
+with versions within the given range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter TimestampRange(DateTime? startTimestamp, DateTime? endTimestamp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">startTimestamp</span></td>
+        <td><p>Of the range of versions from which cells should be matched, inclusive lower bound timestamp
+whose milliseconds since the Unix epoch should be used as the version value. If null, interpreted
+as 0.  It must be specified in UTC.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">endTimestamp</span></td>
+        <td><p>Of the range of versions from which cells should be matched, exclusive upper bound timestamp
+whose milliseconds since the Unix epoch should be used as the version value. If null, interpreted
+as infinity.  It must be specified in UTC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_TimestampRange_System_Nullable_System_DateTime__System_Nullable_System_DateTime___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note: version values are stored on the server as if they are microseconds since the Unix epoch.
+However, the server only supports millisecond granularity, so the server only allows microseconds
+in multiples of 1,000. <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html">BigtableVersion</a> attempts to hide this complexity by exposing
+its underlying <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html#Google_Cloud_Bigtable_V2_BigtableVersion_Value">Value</a> in terms of milliseconds, so if desired, a
+custom versioning scheme of 1, 2, ... can be used rather than 1000, 2000, ... However, access to
+the underlying microsecond value is still provided via <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html#Google_Cloud_Bigtable_V2_BigtableVersion_Micros">Micros</a>.
+</p>
+<p>
+Note: when using ReadModifyWriteRow, modified columns automatically use a server version, which
+is based on the current timestamp since the Unix epoch. For those columns, other reads and writes
+should use <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html">BigtableVersion</a> values constructed from DateTime values, as opposed to
+using a custom versioning scheme with 64-bit values.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_ValueRange_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ValueRange*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_ValueRange_Google_Cloud_Bigtable_V2_ValueRange_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ValueRange(Google.Cloud.Bigtable.V2.ValueRange)">ValueRange(ValueRange)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells
+with values that fall within the given range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter ValueRange(ValueRange range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ValueRange.html">ValueRange</a></td>
+        <td><span class="parametername">range</span></td>
+        <td><p>The range of values to match. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ValueRegex*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_Google_Cloud_Bigtable_V2_BigtableByteString_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ValueRegex(Google.Cloud.Bigtable.V2.BigtableByteString)">ValueRegex(BigtableByteString)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells
+with values that satisfy the given regular expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter ValueRegex(BigtableByteString regex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">regex</span></td>
+        <td><p>The RE2 regex used to match cell values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_Google_Cloud_Bigtable_V2_BigtableByteString__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that, since cell values can contain arbitrary bytes, the <code>\C</code> escape
+sequence must be used if a true wildcard is desired. The <code>.</code> character
+will not match the new line character <code>\n</code>, which may be present in a
+binary value.
+</p>
+<p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>,
+so <code data-dev-comment-type="paramref" class="paramref">regex</code> can be specified using a string as well and its UTF-8
+representations will be used.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_RowFilters_VersionRange_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.VersionRange*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_VersionRange_Google_Cloud_Bigtable_V2_BigtableVersionRange_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.VersionRange(Google.Cloud.Bigtable.V2.BigtableVersionRange)">VersionRange(BigtableVersionRange)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells
+with versions within the given range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowFilter VersionRange(BigtableVersionRange range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersionRange.html">BigtableVersionRange</a></td>
+        <td><span class="parametername">range</span></td>
+        <td><p>The range of versions from which cells should be matched. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><p>The created row filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
