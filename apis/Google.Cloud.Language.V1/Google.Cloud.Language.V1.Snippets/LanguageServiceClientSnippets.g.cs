@@ -275,6 +275,65 @@ namespace Google.Cloud.Language.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ClassifyTextAsync</summary>
+        public async Task ClassifyTextAsync()
+        {
+            // Snippet: ClassifyTextAsync(Document,CallSettings)
+            // Additional: ClassifyTextAsync(Document,CancellationToken)
+            // Create client
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Document document = new Document();
+            // Make the request
+            ClassifyTextResponse response = await languageServiceClient.ClassifyTextAsync(document);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ClassifyText</summary>
+        public void ClassifyText()
+        {
+            // Snippet: ClassifyText(Document,CallSettings)
+            // Create client
+            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            // Initialize request argument(s)
+            Document document = new Document();
+            // Make the request
+            ClassifyTextResponse response = languageServiceClient.ClassifyText(document);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ClassifyTextAsync</summary>
+        public async Task ClassifyTextAsync_RequestObject()
+        {
+            // Snippet: ClassifyTextAsync(ClassifyTextRequest,CallSettings)
+            // Create client
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ClassifyTextRequest request = new ClassifyTextRequest
+            {
+                Document = new Document(),
+            };
+            // Make the request
+            ClassifyTextResponse response = await languageServiceClient.ClassifyTextAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ClassifyText</summary>
+        public void ClassifyText_RequestObject()
+        {
+            // Snippet: ClassifyText(ClassifyTextRequest,CallSettings)
+            // Create client
+            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            // Initialize request argument(s)
+            ClassifyTextRequest request = new ClassifyTextRequest
+            {
+                Document = new Document(),
+            };
+            // Make the request
+            ClassifyTextResponse response = languageServiceClient.ClassifyText(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for AnnotateTextAsync</summary>
         public async Task AnnotateTextAsync()
         {
