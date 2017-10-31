@@ -17,7 +17,6 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.LongRunning;
-using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -293,26 +292,6 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2
         /// <param name="features">
         /// Requested video annotation features.
         /// </param>
-        /// <param name="inputContent">
-        /// The video data bytes. Encoding: base64. If unset, the input video(s)
-        /// should be specified via `input_uri`. If set, `input_uri` should be unset.
-        /// </param>
-        /// <param name="videoContext">
-        /// Additional video context and/or feature-specific parameters.
-        /// </param>
-        /// <param name="outputUri">
-        /// Optional location where the output (in JSON format) should be stored.
-        /// Currently, only [Google Cloud Storage](https://cloud.google.com/storage/)
-        /// URIs are supported, which must be specified in the following format:
-        /// `gs://bucket-id/object-id` (other URI formats return
-        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-        /// [Request URIs](/storage/docs/reference-uris).
-        /// </param>
-        /// <param name="locationId">
-        /// Optional cloud region where annotation should take place. Supported cloud
-        /// regions: `us-east1`, `us-west1`, `europe-west1`, `asia-east1`. If no region
-        /// is specified, a region will be determined based on video file location.
-        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -322,19 +301,11 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2
         public virtual Task<Operation<AnnotateVideoResponse, AnnotateVideoProgress>> AnnotateVideoAsync(
             string inputUri,
             IEnumerable<Feature> features,
-            ByteString inputContent,
-            VideoContext videoContext,
-            string outputUri,
-            string locationId,
             CallSettings callSettings = null) => AnnotateVideoAsync(
                 new AnnotateVideoRequest
                 {
                     InputUri = inputUri ?? "", // Optional
                     Features = { features ?? Enumerable.Empty<Feature>() }, // Optional
-                    InputContent = inputContent ?? ByteString.Empty, // Optional
-                    VideoContext = videoContext, // Optional
-                    OutputUri = outputUri ?? "", // Optional
-                    LocationId = locationId ?? "", // Optional
                 },
                 callSettings);
 
@@ -359,26 +330,6 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2
         /// <param name="features">
         /// Requested video annotation features.
         /// </param>
-        /// <param name="inputContent">
-        /// The video data bytes. Encoding: base64. If unset, the input video(s)
-        /// should be specified via `input_uri`. If set, `input_uri` should be unset.
-        /// </param>
-        /// <param name="videoContext">
-        /// Additional video context and/or feature-specific parameters.
-        /// </param>
-        /// <param name="outputUri">
-        /// Optional location where the output (in JSON format) should be stored.
-        /// Currently, only [Google Cloud Storage](https://cloud.google.com/storage/)
-        /// URIs are supported, which must be specified in the following format:
-        /// `gs://bucket-id/object-id` (other URI formats return
-        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-        /// [Request URIs](/storage/docs/reference-uris).
-        /// </param>
-        /// <param name="locationId">
-        /// Optional cloud region where annotation should take place. Supported cloud
-        /// regions: `us-east1`, `us-west1`, `europe-west1`, `asia-east1`. If no region
-        /// is specified, a region will be determined based on video file location.
-        /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
         /// </param>
@@ -388,17 +339,9 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2
         public virtual Task<Operation<AnnotateVideoResponse, AnnotateVideoProgress>> AnnotateVideoAsync(
             string inputUri,
             IEnumerable<Feature> features,
-            ByteString inputContent,
-            VideoContext videoContext,
-            string outputUri,
-            string locationId,
             CancellationToken cancellationToken) => AnnotateVideoAsync(
                 inputUri,
                 features,
-                inputContent,
-                videoContext,
-                outputUri,
-                locationId,
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -422,26 +365,6 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2
         /// <param name="features">
         /// Requested video annotation features.
         /// </param>
-        /// <param name="inputContent">
-        /// The video data bytes. Encoding: base64. If unset, the input video(s)
-        /// should be specified via `input_uri`. If set, `input_uri` should be unset.
-        /// </param>
-        /// <param name="videoContext">
-        /// Additional video context and/or feature-specific parameters.
-        /// </param>
-        /// <param name="outputUri">
-        /// Optional location where the output (in JSON format) should be stored.
-        /// Currently, only [Google Cloud Storage](https://cloud.google.com/storage/)
-        /// URIs are supported, which must be specified in the following format:
-        /// `gs://bucket-id/object-id` (other URI formats return
-        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-        /// [Request URIs](/storage/docs/reference-uris).
-        /// </param>
-        /// <param name="locationId">
-        /// Optional cloud region where annotation should take place. Supported cloud
-        /// regions: `us-east1`, `us-west1`, `europe-west1`, `asia-east1`. If no region
-        /// is specified, a region will be determined based on video file location.
-        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -451,19 +374,11 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2
         public virtual Operation<AnnotateVideoResponse, AnnotateVideoProgress> AnnotateVideo(
             string inputUri,
             IEnumerable<Feature> features,
-            ByteString inputContent,
-            VideoContext videoContext,
-            string outputUri,
-            string locationId,
             CallSettings callSettings = null) => AnnotateVideo(
                 new AnnotateVideoRequest
                 {
                     InputUri = inputUri ?? "", // Optional
                     Features = { features ?? Enumerable.Empty<Feature>() }, // Optional
-                    InputContent = inputContent ?? ByteString.Empty, // Optional
-                    VideoContext = videoContext, // Optional
-                    OutputUri = outputUri ?? "", // Optional
-                    LocationId = locationId ?? "", // Optional
                 },
                 callSettings);
 

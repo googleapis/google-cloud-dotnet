@@ -37,20 +37,19 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2.Snippets
         /// <summary>Snippet for AnnotateVideoAsync</summary>
         public async Task AnnotateVideoAsync()
         {
-            // Snippet: AnnotateVideoAsync(string,IEnumerable<Feature>,ByteString,VideoContext,string,string,CallSettings)
-            // Additional: AnnotateVideoAsync(string,IEnumerable<Feature>,ByteString,VideoContext,string,string,CancellationToken)
+            // Snippet: AnnotateVideoAsync(string,IEnumerable<Feature>,CallSettings)
+            // Additional: AnnotateVideoAsync(string,IEnumerable<Feature>,CancellationToken)
             // Create client
             VideoIntelligenceServiceClient videoIntelligenceServiceClient = await VideoIntelligenceServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string inputUri = "";
-            IEnumerable<Feature> features = new List<Feature>();
-            ByteString inputContent = ByteString.CopyFromUtf8("");
-            VideoContext videoContext = new VideoContext();
-            string outputUri = "";
-            string locationId = "";
+            string inputUri = "gs://demomaker/cat.mp4";
+            IEnumerable<Feature> features = new[]
+            {
+                Feature.LabelDetection,
+            };
             // Make the request
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
-                await videoIntelligenceServiceClient.AnnotateVideoAsync(inputUri, features, inputContent, videoContext, outputUri, locationId);
+                await videoIntelligenceServiceClient.AnnotateVideoAsync(inputUri, features);
 
             // Poll until the returned long-running operation is complete
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> completedResponse =
@@ -75,19 +74,18 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2.Snippets
         /// <summary>Snippet for AnnotateVideo</summary>
         public void AnnotateVideo()
         {
-            // Snippet: AnnotateVideo(string,IEnumerable<Feature>,ByteString,VideoContext,string,string,CallSettings)
+            // Snippet: AnnotateVideo(string,IEnumerable<Feature>,CallSettings)
             // Create client
             VideoIntelligenceServiceClient videoIntelligenceServiceClient = VideoIntelligenceServiceClient.Create();
             // Initialize request argument(s)
-            string inputUri = "";
-            IEnumerable<Feature> features = new List<Feature>();
-            ByteString inputContent = ByteString.CopyFromUtf8("");
-            VideoContext videoContext = new VideoContext();
-            string outputUri = "";
-            string locationId = "";
+            string inputUri = "gs://demomaker/cat.mp4";
+            IEnumerable<Feature> features = new[]
+            {
+                Feature.LabelDetection,
+            };
             // Make the request
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
-                videoIntelligenceServiceClient.AnnotateVideo(inputUri, features, inputContent, videoContext, outputUri, locationId);
+                videoIntelligenceServiceClient.AnnotateVideo(inputUri, features);
 
             // Poll until the returned long-running operation is complete
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> completedResponse =
