@@ -302,8 +302,9 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2 {
     public const int InputContentFieldNumber = 6;
     private pb::ByteString inputContent_ = pb::ByteString.Empty;
     /// <summary>
-    /// The video data bytes. Encoding: base64. If unset, the input video(s)
-    /// should be specified via `input_uri`. If set, `input_uri` should be unset.
+    /// The video data bytes.
+    /// If unset, the input video(s) should be specified via `input_uri`.
+    /// If set, `input_uri` should be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString InputContent {
@@ -3089,7 +3090,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2 {
     public const int ThumbnailFieldNumber = 1;
     private pb::ByteString thumbnail_ = pb::ByteString.Empty;
     /// <summary>
-    /// Thumbnail of a representative face view (in JPEG format). Encoding: base64.
+    /// Thumbnail of a representative face view (in JPEG format).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Thumbnail {
