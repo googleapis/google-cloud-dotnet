@@ -26,7 +26,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
         public void AnnotateVideo()
         {
             // Sample: AnnotateVideo
-            // Additional: AnnotateVideo(string,IEnumerable<Feature>,VideoContext,string,string,CallSettings)
+            // Additional: AnnotateVideo(string,IEnumerable<Feature>,CallSettings)
             var client = VideoIntelligenceServiceClient.Create();
             var request = new AnnotateVideoRequest {
                 InputUri = "gs://cloudmleap/video/next/gbikes_dinosaur.mp4",
