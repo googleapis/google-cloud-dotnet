@@ -33,7 +33,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
 
-            // NotImplementedException means it go through the normal validations and tried to actually
+            // NotImplementedException means it got through the normal validations and tried to actually
             // make the request on the TestBigtableClient.
             await CheckAndMutateRow_ValidateArguments<NotImplementedException>(
                 tableName,
@@ -156,7 +156,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
 
-            // NotImplementedException means it go through the normal validations and tried to actually
+            // NotImplementedException means it got through the normal validations and tried to actually
             // make the request on the TestBigtableClient.
             await MutateRow_ValidateArguments<NotImplementedException>(tableName, "abc", new[] { Mutations.DeleteFromRow() });
         }
@@ -204,6 +204,101 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 () => client.MutateRowAsync(tableName, rowKey, mutations?.ToArray()));
             await Assert.ThrowsAsync<TException>(
                 () => client.MutateRowAsync(tableName, rowKey, mutations, CallSettings.FromCancellationToken(default)));
+        }
+
+        [Fact]
+        public async Task ReadRow_Valid_Request()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+
+            // NotImplementedException means it got through the normal validations and tried to actually
+            // make the request on the TestBigtableClient.
+            await ReadRow_ValidateArguments<NotImplementedException>(tableName, "abc", null);
+            await ReadRow_ValidateArguments<NotImplementedException>(tableName, "abc", RowFilters.CellsPerColumnLimit(1));
+        }
+
+        [Fact]
+        public async Task ReadRow_Validate_TableName()
+        {
+            var client = new TestBigtableClient();
+            await ReadRow_ValidateArguments<ArgumentNullException>(null, "abc", null);
+        }
+
+        [Fact]
+        public async Task ReadRow_Validare_RowKey()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+            await ReadRow_ValidateArguments<ArgumentException>(tableName, "", null);
+            await ReadRow_ValidateArguments<ArgumentException>(tableName, new byte[0], null);
+            await ReadRow_ValidateArguments<ArgumentException>(tableName, ByteString.Empty, null);
+            await ReadRow_ValidateArguments<ArgumentException>(tableName, default, null);
+        }
+
+        private async Task ReadRow_ValidateArguments<TException>(
+            TableName tableName,
+            BigtableByteString rowKey,
+            RowFilter filter)
+            where TException : Exception
+        {
+            var client = new TestBigtableClient();
+            Assert.Throws<TException>(
+                () => client.ReadRow(tableName, rowKey, filter));
+            await Assert.ThrowsAsync<TException>(
+                () => client.ReadRowAsync(tableName, rowKey, filter));
+        }
+
+        [Fact]
+        public void ReadRows_Valid_Request()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+
+            // NotImplementedException means it got through the normal validations and tried to actually
+            // make the request on the TestBigtableClient.
+            ReadRows_ValidateArguments<NotImplementedException>(tableName, null, null, null);
+            ReadRows_ValidateArguments<NotImplementedException>(
+                tableName,
+                // TODO: Maybe add RowSet helpers to help with this
+                new RowSet { RowKeys = { (BigtableByteString)"abc" } },
+                RowFilters.BlockAllFilter(),
+                0);
+            ReadRows_ValidateArguments<NotImplementedException>(
+                tableName,
+                // TODO: Use RowRange helpers when available.
+                new RowSet { RowRanges = { new RowRange { StartKeyClosed = (BigtableByteString)"", EndKeyOpen = (BigtableByteString)"z" } } },
+                RowFilters.CellsPerRowLimit(1),
+                123);
+        }
+
+        [Fact]
+        public void ReadRows_Validate_TableName()
+        {
+            var client = new TestBigtableClient();
+            var rows = new RowSet { RowKeys = { (BigtableByteString)"abc" } };
+            ReadRows_ValidateArguments<ArgumentNullException>(null, rows, null, null);
+        }
+
+        [Fact]
+        public void ReadRows_Validate_RowsLimit()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+            var rows = new RowSet { RowKeys = { (BigtableByteString)"abc" } };
+            ReadRows_ValidateArguments<ArgumentOutOfRangeException>(tableName, rows, null, -1);
+        }
+
+        private void ReadRows_ValidateArguments<TException>(
+            TableName tableName,
+            RowSet rows,
+            RowFilter filter,
+            long? rowsLimit)
+            where TException : Exception
+        {
+            var client = new TestBigtableClient();
+            Assert.Throws<TException>(
+                () => client.ReadRows(tableName, rows, filter, rowsLimit));
         }
     }
 }

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Protobuf;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,6 +21,24 @@ namespace Google.Cloud.Bigtable.V2
 {
     internal static class Utilities
     {
+        public static ByteString Concat(this ByteString left, ByteString right)
+        {
+            if ((right?.Length).GetValueOrDefault(0) == 0)
+            {
+                return left;
+            }
+
+            if ((left?.Length).GetValueOrDefault(0) == 0)
+            {
+                return right;
+            }
+
+            var buffer = new byte[left.Length + right.Length];
+            left.CopyTo(buffer, 0);
+            right.CopyTo(buffer, left.Length);
+            return ByteString.CopyFrom(buffer);
+        }
+
         public static IEnumerable<T> ValidateCollection<T>(
             IEnumerable<T> items,
             string paramName,

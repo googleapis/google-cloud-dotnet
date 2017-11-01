@@ -277,5 +277,103 @@ namespace Google.Cloud.Bigtable.V2
         /// The BigtableByteString value to convert.
         /// </param>
         public static implicit operator ByteString(BigtableByteString value) => value.Value;
+
+        // Additional operators to prevent ambiguities when comparing BigtableByteString with ByteString
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is less than <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator <(ByteString x, BigtableByteString y) => (BigtableByteString)x < y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is less than or equal <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator <=(ByteString x, BigtableByteString y) => (BigtableByteString)x <= y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values for equality.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is equal to <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator ==(ByteString x, BigtableByteString y) => (BigtableByteString)x == y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values for inequality.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is not equal to <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator !=(ByteString x, BigtableByteString y) => (BigtableByteString)x != y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is greater than or equal <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator >=(ByteString x, BigtableByteString y) => (BigtableByteString)x >= y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is greater than <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator >(ByteString x, BigtableByteString y) => (BigtableByteString)x > y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is less than <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator <(BigtableByteString x, ByteString y) => x < (BigtableByteString)y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is less than or equal <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator <=(BigtableByteString x, ByteString y) => x <= (BigtableByteString)y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values for equality.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is equal to <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator ==(BigtableByteString x, ByteString y) => x == (BigtableByteString)y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values for inequality.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is not equal to <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator !=(BigtableByteString x, ByteString y) => x != (BigtableByteString)y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is greater than or equal <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator >=(BigtableByteString x, ByteString y) => x >= (BigtableByteString)y;
+
+        /// <summary>
+        /// Operator overload to compare two <see cref="BigtableByteString"/> values.
+        /// </summary>
+        /// <param name="x">Left value to compare</param>
+        /// <param name="y">Right value to compare</param>
+        /// <returns>true if <paramref name="x"/> is greater than <paramref name="y"/>; otherwise false.</returns>
+        public static bool operator >(BigtableByteString x, ByteString y) => x > (BigtableByteString)y;
     }
 }

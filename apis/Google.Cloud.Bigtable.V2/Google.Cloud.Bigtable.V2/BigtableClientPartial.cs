@@ -14,8 +14,9 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using System;
 using System.Collections.Generic;
-using System.Threading;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2
@@ -232,7 +233,7 @@ namespace Google.Cloud.Bigtable.V2
             
             var request = new CheckAndMutateRowRequest
             {
-                TableName = tableName.ToString(),
+                TableNameAsTableName = tableName,
                 RowKey = rowKey,
                 PredicateFilter = predicateFilter,
                 TrueMutations = { Utilities.ValidateCollection(trueMutations, nameof(trueMutations), canBeEmpty: true) },
@@ -406,7 +407,7 @@ namespace Google.Cloud.Bigtable.V2
             
             var request = new MutateRowRequest
             {
-                TableName = tableName.ToString(),
+                TableNameAsTableName = tableName,
                 RowKey = rowKey,
                 Mutations = { Utilities.ValidateCollection(mutations, nameof(mutations)) }
             };
@@ -414,6 +415,159 @@ namespace Google.Cloud.Bigtable.V2
             GaxPreconditions.CheckArgument(
                 request.Mutations.Count != 0, nameof(mutations), "There must be at least one entry.");
             return request;
+        }
+
+        /// <summary>
+        /// Returns the contents of the requested row, optionally applying the specified Reader filter.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="ReadRows(ReadRowsRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table from which to read. Must not be null.
+        /// </param>
+        /// <param name="rowKey">
+        /// The key of the row to read. Must not be empty.
+        /// </param>
+        /// <param name="filter">
+        /// The filter to apply to the contents of the specified row. If null,
+        /// reads the entirety of the row.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The row from the server or null if it does not exist.
+        /// </returns>
+        public virtual Row ReadRow(
+            TableName tableName,
+            BigtableByteString rowKey,
+            RowFilter filter = null,
+            CallSettings callSettings = null) =>
+            ReadRowAsync(tableName, rowKey, filter, callSettings).ResultWithUnwrappedExceptions();
+
+        /// <summary>
+        /// Asynchronously returns the contents of the requested row, optionally applying the specified Reader filter.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="ReadRows(ReadRowsRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table from which to read. Must not be null.
+        /// </param>
+        /// <param name="rowKey">
+        /// The key of the row to read. Must not be empty.
+        /// </param>
+        /// <param name="filter">
+        /// The filter to apply to the contents of the specified row. If null,
+        /// reads the entirety of the row.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The row from the server or null if it does not exist.
+        /// </returns>
+        public virtual async Task<Row> ReadRowAsync(
+            TableName tableName,
+            BigtableByteString rowKey,
+            RowFilter filter = null,
+            CallSettings callSettings = null)
+        {
+            GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
+            GaxPreconditions.CheckArgument(rowKey.Length != 0, nameof(rowKey), "The row key must not empty");
+
+            var response = ReadRows(
+                tableName,
+                new RowSet { RowKeys = { rowKey } },
+                filter,
+                callSettings: callSettings);
+
+            return await response.AsAsyncEnumerable().SingleOrDefault().ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Streams back the contents of all requested rows in key order, optionally
+        /// applying the same Reader filter to each.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="ReadRows(ReadRowsRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table from which to read. Must not be null.
+        /// </param>
+        /// <param name="rows">
+        /// The row keys and/or ranges to read. If null, reads from all rows.
+        /// </param>
+        /// <param name="filter">
+        /// The filter to apply to the contents of the specified row(s). If null,
+        /// reads the entirety of each row.
+        /// </param>
+        /// <param name="rowsLimit">
+        /// The read will terminate after committing to N rows' worth of results.
+        /// If null or 0, returns all results.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual ReadRowsStream ReadRows(
+            TableName tableName,
+            RowSet rows = null,
+            RowFilter filter = null,
+            long? rowsLimit = null,
+            CallSettings callSettings = null) =>
+            ReadRows(
+                new ReadRowsRequest
+                {
+                    TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                    Rows = rows,
+                    Filter = filter,
+                    RowsLimit = GaxPreconditions.CheckArgumentRange(rowsLimit ?? 0, nameof(rowsLimit), 0, long.MaxValue)
+                },
+                callSettings);
+
+        public partial class ReadRowsStream
+        {
+            private RowAsyncEnumerable _enumerator;
+
+            /// <summary>
+            /// Returns an asynchronous sequence of rows from this set of results.
+            /// </summary>
+            /// <returns>An asynchronous sequence of rows from this set of results.</returns>
+            public IAsyncEnumerable<Row> AsAsyncEnumerable() =>
+                _enumerator ?? (_enumerator = new RowAsyncEnumerable(this));
+
+            private class RowAsyncEnumerable : IAsyncEnumerable<Row>
+            {
+                private bool _enumeratorCreated;
+                private ReadRowsStream _stream;
+
+                public RowAsyncEnumerable(ReadRowsStream stream)
+                {
+                    _stream = stream;
+                }
+
+                public IAsyncEnumerator<Row> GetEnumerator()
+                {
+                    if (_enumeratorCreated)
+                    {
+                        throw new InvalidOperationException(
+                            $"The result from {nameof(ReadRowsStream)}.{nameof(ReadRowsStream.AsAsyncEnumerable)} can only be iterated once");
+                    }
+
+                    _enumeratorCreated = true;
+                    return new RowAsyncEnumerator(_stream);
+                }
+            }
         }
     }
 
