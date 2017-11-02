@@ -235,7 +235,7 @@ namespace Google.Cloud.Bigtable.V2
             var request = new CheckAndMutateRowRequest
             {
                 TableNameAsTableName = tableName,
-                RowKey = rowKey,
+                RowKey = rowKey.Value,
                 PredicateFilter = predicateFilter,
                 TrueMutations = { Utilities.ValidateCollection(trueMutations, nameof(trueMutations), canBeEmpty: true) },
                 FalseMutations = { Utilities.ValidateCollection(falseMutations, nameof(falseMutations), canBeEmpty: true) }
@@ -409,7 +409,7 @@ namespace Google.Cloud.Bigtable.V2
             var request = new MutateRowRequest
             {
                 TableNameAsTableName = tableName,
-                RowKey = rowKey,
+                RowKey = rowKey.Value,
                 Mutations = { Utilities.ValidateCollection(mutations, nameof(mutations)) }
             };
 
@@ -485,7 +485,7 @@ namespace Google.Cloud.Bigtable.V2
 
             var response = ReadRows(
                 tableName,
-                new RowSet { RowKeys = { rowKey } },
+                new RowSet { RowKeys = { rowKey.Value } },
                 filter,
                 callSettings: callSettings);
 

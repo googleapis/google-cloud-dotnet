@@ -191,13 +191,13 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 {
                     rowKeys.Select(k => new MutateRowsRequest.Types.Entry
                     {
-                        RowKey = k,
+                        RowKey = k.Value,
                         Mutations =
                         {
                             Mutations.SetCell(
                                 familyName,
                                 qualifierName.Value,
-                                valuePrefix.Value.Value.Concat((BigtableByteString)(counter++)),
+                                valuePrefix.Value.Value.Concat(new BigtableByteString(counter++).Value),
                                 version)
                         }
                     })

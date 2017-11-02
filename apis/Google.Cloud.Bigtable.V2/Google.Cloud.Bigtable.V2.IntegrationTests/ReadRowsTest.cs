@@ -55,7 +55,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             {
                 var response = client.ReadRows(
                     tableName,
-                    new RowSet { RowKeys = { rowKey } },
+                    new RowSet { RowKeys = { rowKey.Value } },
                     RowFilters.CellsPerColumnLimit(1));
                 using (var enumerator = (RowAsyncEnumerator)response.AsAsyncEnumerable().GetEnumerator())
                 {
@@ -80,7 +80,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 // TODO: Use cleaner API when available
                 await client.ReadModifyWriteRowAsync(
                     tableName,
-                    rowKey,
+                    rowKey.Value,
                     new[]
                     {
                         new ReadModifyWriteRule
@@ -382,7 +382,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 {
                     RowRanges =
                     {
-                        new RowRange { StartKeyClosed = startRange, EndKeyOpen = endRange }
+                        new RowRange { StartKeyClosed = startRange.Value, EndKeyOpen = endRange.Value }
                     }
                 });
 
@@ -422,7 +422,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 {
                     RowRanges =
                     {
-                    new RowRange { StartKeyClosed = startRange, EndKeyOpen = endRange }
+                    new RowRange { StartKeyClosed = startRange.Value, EndKeyOpen = endRange.Value }
                     }
                 },
                 // Get all values ending in a byte which is a UTF-8 lowercase letter
@@ -464,7 +464,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 {
                     RowRanges =
                     {
-                        new RowRange { StartKeyClosed = startRange, EndKeyOpen = endRange }
+                        new RowRange { StartKeyClosed = startRange.Value, EndKeyOpen = endRange.Value }
                     }
                 },
                 rowsLimit: 37);

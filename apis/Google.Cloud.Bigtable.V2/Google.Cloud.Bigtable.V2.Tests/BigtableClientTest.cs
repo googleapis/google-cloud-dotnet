@@ -261,13 +261,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
             ReadRows_ValidateArguments<NotImplementedException>(
                 tableName,
                 // TODO: Maybe add RowSet helpers to help with this
-                new RowSet { RowKeys = { (BigtableByteString)"abc" } },
+                new RowSet { RowKeys = { ByteString.CopyFromUtf8("abc") } },
                 RowFilters.BlockAllFilter(),
                 0);
             ReadRows_ValidateArguments<NotImplementedException>(
                 tableName,
                 // TODO: Use RowRange helpers when available.
-                new RowSet { RowRanges = { new RowRange { StartKeyClosed = (BigtableByteString)"", EndKeyOpen = (BigtableByteString)"z" } } },
+                new RowSet { RowRanges = { new RowRange {
+                    StartKeyClosed = ByteString.CopyFromUtf8(""),
+                    EndKeyOpen = ByteString.CopyFromUtf8("z") } } },
                 RowFilters.CellsPerRowLimit(1),
                 123);
         }
@@ -276,7 +278,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public void ReadRows_Validate_TableName()
         {
             var client = new TestBigtableClient();
-            var rows = new RowSet { RowKeys = { (BigtableByteString)"abc" } };
+            var rows = new RowSet { RowKeys = { ByteString.CopyFromUtf8("abc") } };
             ReadRows_ValidateArguments<ArgumentNullException>(null, rows, null, null);
         }
 
@@ -285,7 +287,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
-            var rows = new RowSet { RowKeys = { (BigtableByteString)"abc" } };
+            var rows = new RowSet { RowKeys = { ByteString.CopyFromUtf8("abc") } };
             ReadRows_ValidateArguments<ArgumentOutOfRangeException>(tableName, rows, null, -1);
         }
 
