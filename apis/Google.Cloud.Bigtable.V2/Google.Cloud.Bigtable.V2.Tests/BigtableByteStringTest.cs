@@ -104,7 +104,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var expected = new BigtableByteString(data.Select(x => (byte)x).ToArray());
             Assert.Equal(expected, byteString);
 
-            ByteString roundTrip = byteString;
+            ByteString roundTrip = (ByteString)byteString;
             Assert.Equal(value ?? ByteString.Empty, roundTrip);
         }
 

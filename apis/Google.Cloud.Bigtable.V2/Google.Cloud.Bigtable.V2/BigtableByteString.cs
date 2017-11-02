@@ -276,6 +276,6 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="value">
         /// The BigtableByteString value to convert.
         /// </param>
-        public static implicit operator ByteString(BigtableByteString value) => value.Value;
+        public static explicit operator ByteString(BigtableByteString value) => value.Value;
     }
 }

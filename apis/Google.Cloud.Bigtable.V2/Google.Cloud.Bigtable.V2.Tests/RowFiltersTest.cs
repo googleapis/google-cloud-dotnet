@@ -81,8 +81,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var range = new ColumnRange
             {
-                StartQualifierClosed = new BigtableByteString("a"),
-                EndQualifierOpen = new BigtableByteString("z")
+                StartQualifierClosed = ByteString.CopyFromUtf8("a"),
+                EndQualifierOpen = ByteString.CopyFromUtf8("z")
             };
             var filter = RowFilters.ColumnRange(range);
             Assert.Equal(range, filter.ColumnRangeFilter);
@@ -197,8 +197,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var range = new ValueRange
             {
-                StartValueClosed = new BigtableByteString("a"),
-                EndValueOpen = new BigtableByteString("z")
+                StartValueClosed = ByteString.CopyFromUtf8("a"),
+                EndValueOpen = ByteString.CopyFromUtf8("z")
             };
             var filter = RowFilters.ValueRange(range);
             Assert.Equal(range, filter.ValueRangeFilter);
