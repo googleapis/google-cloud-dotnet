@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2
@@ -422,7 +423,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// This method simply delegates to <see cref="ReadRows(ReadRowsRequest, CallSettings)"/>.
+        /// This method simply delegates to <see cref="ReadRowAsync(TableName, BigtableByteString, RowFilter, CallSettings)"/>.
         /// </para>
         /// </remarks>
         /// <param name="tableName">
@@ -446,14 +447,15 @@ namespace Google.Cloud.Bigtable.V2
             BigtableByteString rowKey,
             RowFilter filter = null,
             CallSettings callSettings = null) =>
-            ReadRowAsync(tableName, rowKey, filter, callSettings).ResultWithUnwrappedExceptions();
+            Task.Run(() => ReadRowAsync(tableName, rowKey, filter, callSettings)).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Asynchronously returns the contents of the requested row, optionally applying the specified Reader filter.
         /// </summary>
         /// <remarks>
         /// <para>
-        /// This method simply delegates to <see cref="ReadRows(ReadRowsRequest, CallSettings)"/>.
+        /// This method simply delegates to <see cref="ReadRows(TableName, RowSet, RowFilter, long?, CallSettings)"/>
+        /// and takes the single row result or null if no rows are returned.
         /// </para>
         /// </remarks>
         /// <param name="tableName">
@@ -548,7 +550,7 @@ namespace Google.Cloud.Bigtable.V2
 
             private class RowAsyncEnumerable : IAsyncEnumerable<Row>
             {
-                private bool _enumeratorCreated;
+                private int _enumeratorCount;
                 private ReadRowsStream _stream;
 
                 public RowAsyncEnumerable(ReadRowsStream stream)
@@ -558,13 +560,12 @@ namespace Google.Cloud.Bigtable.V2
 
                 public IAsyncEnumerator<Row> GetEnumerator()
                 {
-                    if (_enumeratorCreated)
+                    if (Interlocked.CompareExchange(ref _enumeratorCount, 1, 0) == 1)
                     {
                         throw new InvalidOperationException(
                             $"The result from {nameof(ReadRowsStream)}.{nameof(ReadRowsStream.AsAsyncEnumerable)} can only be iterated once");
                     }
 
-                    _enumeratorCreated = true;
                     return new RowAsyncEnumerator(_stream);
                 }
             }

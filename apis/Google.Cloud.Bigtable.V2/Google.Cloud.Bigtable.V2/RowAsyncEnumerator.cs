@@ -16,6 +16,7 @@ using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -48,7 +49,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         public bool HadSplitCell { get; private set; }
 
-        public void Dispose() { }
+        public void Dispose() => _stream.GrpcCall.Dispose();
 
         public async Task<bool> MoveNext(CancellationToken cancellationToken)
         {
@@ -70,8 +71,8 @@ namespace Google.Cloud.Bigtable.V2
                 }
             }
 
-            // If we were able to advance on the response's row enumerator, this enumerator is
-            // also able to advance to the same row.
+            // If the current response's enumerator has produced a row, this enumerator should produce
+            // that same row.
             if (_singleResponseRowEnumerator != null)
             {
                 cancellationToken.ThrowIfCancellationRequested();
@@ -113,11 +114,11 @@ namespace Google.Cloud.Bigtable.V2
 
         public bool IsRowInProgress => _rowMergeState != NewRow.Instance;
 
-        private void AddCompletedCellToRow()
+        private void AddCompletedCellToRow(ByteString value)
         {
             var cell = new Cell
             {
-                Value = _currentCell.Value,
+                Value = value,
                 TimestampMicros = _currentCell.Timestamp,
                 Labels = { _currentCell.Labels }
             };
@@ -127,19 +128,12 @@ namespace Google.Cloud.Bigtable.V2
 
         private void Assert(bool condition, string message)
         {
+            Debug.Assert(message != null, "Provide an assert message");
+
             if (!condition)
             {
                 Reset();
-
-                // TODO: Is there something better we should throw here?
-                if (message != null)
-                {
-                    throw new InvalidOperationException(message);
-                }
-                else
-                {
-                    throw new InvalidOperationException();
-                }
+                throw new InvalidOperationException(message);
             }
         }
 
@@ -147,27 +141,34 @@ namespace Google.Cloud.Bigtable.V2
 
         private struct CellInfo
         {
-            public Column Column { get; set; }
-            public Family Family { get; set; }
-            public IEnumerable<string> Labels { get; set; }
-            public Row Row { get; set; }
-            public long Timestamp { get; set; }
-            public ByteString Value { get; set; }
-            public int ValueSizeExpected { get; set; }
-            public int ValueSizeRemaining { get; set; }
+            public Column Column;
+            public Family Family;
+            public IEnumerable<string> Labels;
+            public Row Row;
+            public long Timestamp;
+            public List<byte> ValueAccumulator;
+            public int ValueSizeExpected;
+            public int ValueSizeRemaining;
         }
 
+        /// <summary>
+        /// Base class for all of the state machine's internal states.
+        /// </summary>
         private abstract class RowMergeState
         {
             public abstract RowMergeState HandleChunk(RowAsyncEnumerator owner, CellChunk chunk);
 
             public virtual RowMergeState CommitRow(RowAsyncEnumerator owner)
             {
-                owner.Assert(false, null);
+                owner.Assert(false, $"Cannot commit a row from {GetType().Name}");
                 return this;
             }
         }
 
+        /// <summary>
+        /// The default state when the state machine is awaiting a chunk to start a new row. It will update the current
+        /// cell info for the new row and delegate to <see cref="NewCell"/> to process the first cell.
+        /// </summary>
         private sealed class NewRow : RowMergeState
         {
             public static readonly NewRow Instance = new NewRow();
@@ -183,6 +184,7 @@ namespace Google.Cloud.Bigtable.V2
                     owner._currentCell.Row == null || BigtableByteString.Compare(owner._currentCell.Row.Key, chunk.RowKey) < 0,
                     "NewRow key must be greater than the previous row's");
 
+                // WARNING: owner._currentCell is a struct value. Do not extract as a local (which will make a copy).
                 owner._currentCell.Row = new Row { Key = chunk.RowKey };
                 owner._currentCell.Family = null;
                 owner._currentCell.Column = null;
@@ -194,6 +196,11 @@ namespace Google.Cloud.Bigtable.V2
             }
         }
 
+        /// <summary>
+        /// A state that represents a cell boundary in a row.
+        /// Transitions back to <see cref="NewCell"/> if a processed chunk contains a full cell value or to
+        /// <see cref="CellInProgress"/> if it contains a partial value.
+        /// </summary>
         private sealed class NewCell : RowMergeState
         {
             public static readonly NewCell Instance = new NewCell();
@@ -239,25 +246,40 @@ namespace Google.Cloud.Bigtable.V2
                 // calculate cell size
                 owner._currentCell.ValueSizeExpected = chunk.ValueSize > 0 ? chunk.ValueSize : chunk.Value.Length;
                 owner._currentCell.ValueSizeRemaining = owner._currentCell.ValueSizeExpected - chunk.Value.Length;
-
-                // Start building cell
-                owner._currentCell.Value = chunk.Value;
-
+                
                 if (owner._currentCell.ValueSizeRemaining != 0)
                 {
+                    ref var accumulator = ref owner._currentCell.ValueAccumulator;
+                    if (accumulator == null)
+                    {
+                        accumulator = new List<byte>(owner._currentCell.ValueSizeExpected);
+                    }
+                    else
+                    {
+                        Debug.Assert(accumulator.Count == 0);
+                        accumulator.Capacity = Math.Max(owner._currentCell.ValueSizeExpected, accumulator.Capacity);
+                    }
+
+                    owner._currentCell.ValueAccumulator.AddRange(chunk.Value);
                     return CellInProgress.Instance;
                 }
-
-                owner.AddCompletedCellToRow();
+                
+                owner.AddCompletedCellToRow(chunk.Value);
                 return NewCell.Instance;
             }
             
             public override RowMergeState CommitRow(RowAsyncEnumerator owner)
             {
+                Debug.Assert(owner._currentCell.ValueSizeRemaining == 0);
                 return NewRow.Instance;
             }
         }
 
+        /// <summary>
+        /// A state that represents a continuation value from the previous cell's value, which is incomplete.
+        /// Transitions to <see cref="NewCell"/> if a processed chunk completes the value or back to
+        /// <see cref="CellInProgress"/> if it doesn't.
+        /// </summary>
         private sealed class CellInProgress : RowMergeState
         {
             public static readonly CellInProgress Instance = new CellInProgress();
@@ -283,14 +305,16 @@ namespace Google.Cloud.Bigtable.V2
                         $"CellInProgress is last, but is missing {owner._currentCell.ValueSizeRemaining} bytes");
                 }
 
-                owner._currentCell.Value = owner._currentCell.Value.Concat(chunk.Value);
+                ref var accumulator = ref owner._currentCell.ValueAccumulator;
+                accumulator.AddRange(chunk.Value);
 
                 if (!isLast)
                 {
                     return CellInProgress.Instance;    
                 }
-
-                owner.AddCompletedCellToRow();
+                
+                owner.AddCompletedCellToRow(ByteString.CopyFrom(accumulator.ToArray()));
+                accumulator.Clear();
                 return NewCell.Instance;
             }
         }
