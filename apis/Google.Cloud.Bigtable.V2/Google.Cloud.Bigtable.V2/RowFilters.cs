@@ -248,7 +248,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <returns>The created row filter.</returns>
         public static RowFilter RowKeyRegex(BigtableByteString regex) =>
-            new RowFilter { RowKeyRegexFilter = regex };
+            new RowFilter { RowKeyRegexFilter = regex.Value };
 
         // TODO: Seems like this is 0-1. Verify and document it. Validate too?
         /// <summary>

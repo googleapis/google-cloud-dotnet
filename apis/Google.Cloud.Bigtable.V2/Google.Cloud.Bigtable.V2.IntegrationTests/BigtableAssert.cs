@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -27,18 +25,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             TableName tableName,
             BigtableByteString rowKey)
         {
-            // TODO: Use cleaner API when available
-            var response = client.ReadRows(new ReadRowsRequest
-            {
-                TableName = tableName.ToString(),
-                Rows = new RowSet { RowKeys = { rowKey } }
-            });
-
-            while (await response.ResponseStream.MoveNext(default))
-            {
-                var current = response.ResponseStream.Current;
-                Assert.Empty(current.Chunks);
-            }
+            Assert.Null(await client.ReadRowAsync(tableName, rowKey));
         }
 
         public static async Task HasSingleValueAsync(
@@ -50,32 +37,34 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             BigtableByteString value,
             BigtableVersion? version = null)
         {
-            // TODO: Use cleaner API when available
-            var response = client.ReadRows(new ReadRowsRequest
-            {
-                TableName = tableName.ToString(),
-                Rows = new RowSet { RowKeys = { rowKey } }
-            });
+            var row = await client.ReadRowAsync(tableName, rowKey);
+            Assert.Equal(rowKey.Value, row.Key);
 
-            bool hadValue = false;
-            while (await response.ResponseStream.MoveNext(default))
+            HasSingleValue(row, familyName, columnQualifier, value, version);
+        }
+
+        public static void HasSingleValue(
+            Row row,
+            string familyName,
+            BigtableByteString columnQualifier,
+            BigtableByteString value,
+            BigtableVersion? version = null)
+        {
+            var family = row.Families.SingleOrDefault();
+            Assert.NotNull(family);
+            Assert.Equal(familyName, family.Name);
+            
+            var column = family?.Columns.SingleOrDefault();
+            Assert.NotNull(column);
+            Assert.Equal(columnQualifier.Value, column.Qualifier);
+
+            var cell = column.Cells.SingleOrDefault();
+            Assert.NotNull(cell);
+            Assert.Equal(value.Value, cell.Value);
+            if (version != null)
             {
-                var current = response.ResponseStream.Current;
-                foreach (var chunk in current.Chunks)
-                {
-                    Assert.Equal(rowKey.Value, chunk.RowKey);
-                    Assert.Equal(familyName, chunk.FamilyName);
-                    Assert.Equal(columnQualifier.Value, chunk.Qualifier);
-                    Assert.Equal(value.Value, chunk.Value);
-                    if (version != null)
-                    {
-                        Assert.Equal(version.Value.Micros, chunk.TimestampMicros);
-                    }
-                    Assert.False(hadValue);
-                    hadValue = true;
-                }
+                Assert.Equal(version.Value.Micros, cell.TimestampMicros);
             }
-            Assert.True(hadValue, "The value was not present.");
         }
 
         public static async Task DoesNotHaveValueAsync(
@@ -127,43 +116,17 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             BigtableByteString value,
             BigtableVersion? version)
         {
-            // TODO: Use cleaner API when available
-            var response = client.ReadRows(new ReadRowsRequest
-            {
-                TableName = tableName.ToString(),
-                Rows = new RowSet { RowKeys = { rowKey } }
-            });
+            var row = await client.ReadRowAsync(tableName, rowKey);
+            Assert.Equal(rowKey.Value, row.Key);
 
-            bool hadValue = false;
-            while (await response.ResponseStream.MoveNext(default))
-            {
-                var current = response.ResponseStream.Current;
-                BigtableByteString currentRowKey;
-                string currentColumnFamily = null;
-                foreach (var chunk in current.Chunks)
-                {
-                    if (!chunk.RowKey.IsEmpty)
-                    {
-                        currentRowKey = chunk.RowKey;
-                    }
-                    if (chunk.FamilyName != null)
-                    {
-                        currentColumnFamily = chunk.FamilyName;
-                    }
-                    Assert.Equal(rowKey, currentRowKey);
-                    if (familyName == currentColumnFamily && columnQualifier.Value == chunk.Qualifier)
-                    {
-                        Assert.Equal(value.Value, chunk.Value);
-                        if (version != null)
-                        {
-                            Assert.Equal(version.Value.Micros, chunk.TimestampMicros);
-                        }
-                        hadValue = true;
-                    }
-                }
-            }
-
-            return hadValue;
+            var cells = row
+                .Families.SingleOrDefault(f => f.Name == familyName)
+                ?.Columns.SingleOrDefault(c => c.Qualifier == columnQualifier)
+                ?.Cells;
+            var cell = version != null
+                ? cells?.SingleOrDefault(c => c.TimestampMicros == version.Value.Micros)
+                : cells?.SingleOrDefault();
+            return cell != null && cell.Value == value;
         }
     }
 }

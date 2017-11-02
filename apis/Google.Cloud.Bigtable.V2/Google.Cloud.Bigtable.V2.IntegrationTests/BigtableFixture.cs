@@ -17,6 +17,8 @@ using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Bigtable.Admin.V2;
 using Grpc.Core;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -66,6 +68,22 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             Task.Run(InitBigtableInstanceAndTable).Wait();
         }
 
+        public async Task CreateTable(TableName tableName)
+        {
+            await DefaultTableAdminClient.CreateTableAsync(
+                new InstanceName(tableName.ProjectId, tableName.InstanceId),
+                tableName.TableId,
+                new Table
+                {
+                    Granularity = Table.Types.TimestampGranularity.Millis,
+                    ColumnFamilies =
+                    {
+                        { ColumnFamily1, new ColumnFamily { GcRule = new GcRule { MaxNumVersions = 3 } } },
+                        { OtherColumnFamily, new ColumnFamily { GcRule = new GcRule { MaxNumVersions = 3 } } }
+                    }
+                });
+        }
+
         private async Task InitBigtableInstanceAndTable()
         {
             DefaultInstanceName = new InstanceName(ProjectName.ProjectId, "i" + Guid.NewGuid().ToString("N"));
@@ -108,20 +126,9 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 DefaultTableAdminClient = BigtableTableAdminClient.Create(EmulatorChannel);
                 DefaultTableClient = BigtableClient.Create(EmulatorChannel);
             }
-            
+
             DefaultTableName = new TableName(ProjectName.ProjectId, DefaultInstanceName.InstanceId, "default-table");
-            await DefaultTableAdminClient.CreateTableAsync(
-                DefaultInstanceName,
-                DefaultTableName.TableId,
-                new Table
-                {
-                    Granularity = Table.Types.TimestampGranularity.Millis,
-                    ColumnFamilies =
-                    {
-                        { ColumnFamily1, new ColumnFamily { GcRule = new GcRule { MaxNumVersions = 3 } } },
-                        { OtherColumnFamily, new ColumnFamily { GcRule = new GcRule { MaxNumVersions = 3 } } }
-                    }
-                });
+            await CreateTable(DefaultTableName);
         }
 
         public async Task<BigtableByteString> InsertRowAsync(
@@ -159,6 +166,47 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 version);
 
             return rowKey;
+        }
+
+        public async Task InsertRowsAsync(
+            TableName tableName,
+            IEnumerable<BigtableByteString> rowKeys,
+            string familyName = null,
+            BigtableByteString? qualifierName = null,
+            BigtableByteString? valuePrefix = null,
+            BigtableVersion? version = null)
+        {
+            BigtableByteString rowKey = Guid.NewGuid().ToString();
+
+            familyName = familyName ?? ColumnFamily1;
+            qualifierName = qualifierName ?? "row_index";
+            valuePrefix = valuePrefix ?? "";
+
+            // TODO: Use cleaner API when available.
+            int counter = 0;
+            var request = new MutateRowsRequest
+            {
+                TableNameAsTableName = tableName,
+                Entries =
+                {
+                    rowKeys.Select(k => new MutateRowsRequest.Types.Entry
+                    {
+                        RowKey = k.Value,
+                        Mutations =
+                        {
+                            Mutations.SetCell(
+                                familyName,
+                                qualifierName.Value,
+                                valuePrefix.Value.Value.Concat(new BigtableByteString(counter++).Value),
+                                version)
+                        }
+                    })
+                }
+            };
+
+            var response = DefaultTableClient.MutateRows(request);
+            while (await response.ResponseStream.MoveNext(default))
+                ;
         }
 
         public void Dispose()

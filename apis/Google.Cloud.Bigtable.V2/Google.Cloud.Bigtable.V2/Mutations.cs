@@ -60,7 +60,7 @@ namespace Google.Cloud.Bigtable.V2
                 DeleteFromColumn = new Mutation.Types.DeleteFromColumn
                 {
                     FamilyName = ValidateFamilyName(familyName),
-                    ColumnQualifier = columnQualifier,
+                    ColumnQualifier = columnQualifier.Value,
                     TimeRange = versionRange.ToTimestampRange()
                 }
             };
@@ -128,7 +128,7 @@ namespace Google.Cloud.Bigtable.V2
                 SetCell = new Mutation.Types.SetCell
                 {
                     FamilyName = ValidateFamilyName(familyName),
-                    ColumnQualifier = columnQualifier,
+                    ColumnQualifier = columnQualifier.Value,
                     Value = value.Value,
                     TimestampMicros = version.ToTimestampMicros()
                 }
