@@ -364,7 +364,7 @@
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
     "productName": "Google Cloud Spanner Database Administration",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "1.0.0-beta07",
+    "version": "1.0.0-beta08",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
     "tags": [ "Spanner" ],
@@ -378,7 +378,7 @@
     "id": "Google.Cloud.Spanner.Admin.Instance.V1",
     "productName": "Google Cloud Spanner Instance Administration",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "1.0.0-beta07",
+    "version": "1.0.0-beta08",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [ "Spanner" ],
@@ -390,7 +390,7 @@
 
   {
     "id": "Google.Cloud.Spanner.Data",
-    "version": "1.0.0-beta07",
+    "version": "1.0.0-beta08",
     "type": "other",
     "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.0;net452",
@@ -409,7 +409,7 @@
 
   {
     "id": "Google.Cloud.EntityFrameworkCore.Spanner",
-    "version": "1.0.0-alpha01",
+    "version": "1.0.0-alpha02",
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.0;net461",
@@ -429,7 +429,7 @@
     "id": "Google.Cloud.Spanner.V1",
     "productName": "Google Cloud Spanner",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "1.0.0-beta07",
+    "version": "1.0.0-beta08",
     "type": "grpc",
     "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.0;net452",
