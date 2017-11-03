@@ -147,14 +147,11 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             await DefaultTableClient.MutateRowAsync(
                 tableName,
                 rowKey,
-                new[]
-                {
-                    Mutations.SetCell(
-                        familyName,
-                        qualifierName.Value,
-                        value.Value,
-                        version)
-                });
+                Mutations.SetCell(
+                    familyName,
+                    qualifierName.Value,
+                    value.Value,
+                    version));
 
             await BigtableAssert.HasSingleValueAsync(
                 DefaultTableClient,
