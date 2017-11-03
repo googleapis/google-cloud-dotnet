@@ -162,20 +162,16 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             await client.MutateRowAsync(
                 tableName,
                 rowKey,
-                new[]
-                {
-                    Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
-                        "row_index",
-                        "0",
-                        new BigtableVersion(1)),
-                    Mutations.SetCell(
-                        BigtableFixture.OtherColumnFamily,
-                        "row_exists",
-                        "true",
-                        new BigtableVersion(2))
-
-                });
+                Mutations.SetCell(
+                    BigtableFixture.ColumnFamily1,
+                    "row_index",
+                    "0",
+                    new BigtableVersion(1)),
+                Mutations.SetCell(
+                    BigtableFixture.OtherColumnFamily,
+                    "row_exists",
+                    "true",
+                    new BigtableVersion(2)));
 
             var row = client.ReadRow(tableName, rowKey, RowFilters.ValueRegex("true"));
             Assert.Equal(rowKey.Value, row.Key);
@@ -197,20 +193,16 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             await client.MutateRowAsync(
                 tableName,
                 rowKey,
-                new[]
-                {
-                    Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
-                        "row_index",
-                        "0",
-                        new BigtableVersion(1)),
-                    Mutations.SetCell(
-                        BigtableFixture.OtherColumnFamily,
-                        "row_exists",
-                        "true",
-                        new BigtableVersion(2))
-
-                });
+                Mutations.SetCell(
+                    BigtableFixture.ColumnFamily1,
+                    "row_index",
+                    "0",
+                    new BigtableVersion(1)),
+                Mutations.SetCell(
+                    BigtableFixture.OtherColumnFamily,
+                    "row_exists",
+                    "true",
+                    new BigtableVersion(2)));
 
             var row = await client.ReadRowAsync(tableName, rowKey, RowFilters.ValueRegex("true"));
             Assert.Equal(rowKey.Value, row.Key);
