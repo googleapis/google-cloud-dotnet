@@ -539,14 +539,14 @@ namespace Google.Cloud.Bigtable.V2
 
         public partial class ReadRowsStream
         {
-            private RowAsyncEnumerable _enumerator;
+            private RowAsyncEnumerable _rowEnumerable;
 
             /// <summary>
             /// Returns an asynchronous sequence of rows from this set of results.
             /// </summary>
             /// <returns>An asynchronous sequence of rows from this set of results.</returns>
             public IAsyncEnumerable<Row> AsAsyncEnumerable() =>
-                _enumerator ?? (_enumerator = new RowAsyncEnumerable(this));
+                _rowEnumerable ?? (_rowEnumerable = new RowAsyncEnumerable(this));
 
             private class RowAsyncEnumerable : IAsyncEnumerable<Row>
             {
