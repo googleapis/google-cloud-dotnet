@@ -64,6 +64,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         if (typeSpecificReader != null)
                         {
                             Assert.Equal(typeSpecificReader(reader), valueRead);
+                            // ReSharper disable once CompareNonConstrainedGenericWithNull
+                            Assert.Equal(reader.IsDBNull(0), value == null);
                         }
 
                         rowsRead++;
