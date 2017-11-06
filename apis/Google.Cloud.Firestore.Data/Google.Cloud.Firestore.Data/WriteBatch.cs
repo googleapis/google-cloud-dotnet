@@ -24,6 +24,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types;
 using static Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform.Types;
+using static Google.Cloud.Firestore.V1Beta1.Write;
 
 namespace Google.Cloud.Firestore.Data
 {
@@ -32,6 +33,8 @@ namespace Google.Cloud.Firestore.Data
     /// </summary>
     public sealed class WriteBatch
     {
+        private static readonly OperationOneofCase[] s_manualWriteOperations = { OperationOneofCase.Delete, OperationOneofCase.Update };
+
         private readonly FirestoreDb _db;
 
         internal bool IsEmpty => Writes.Count == 0;
@@ -166,8 +169,10 @@ namespace Google.Cloud.Firestore.Data
             var request = new CommitRequest { Database = _db.RootPath, Writes = { Writes }, Transaction = transactionId };
             var response = await _db.Client.CommitAsync(request, CallSettings.FromCancellationToken(cancellationToken)).ConfigureAwait(false);
             return response.WriteResults
-                // Only return write results that correspond to original calls, not transforms.
-                .Where((wr, index) => Writes[index].Transform == null)
+                // Only return write results that correspond to operation cases 
+                // (There may be other auto-generated operations later, such as validation, so we check for specific operations.)
+                // If there are ever Write messages that are ambiguous, we'll have to keep track of which results to return in a different way.
+                .Where((wr, index) => s_manualWriteOperations.Contains(Writes[index].OperationCase))
                 .Select(wr => WriteResult.FromProto(wr, response.CommitTime))
                 .ToList();
         }
