@@ -37,8 +37,14 @@ namespace Google.Cloud.Storage.V1
     /// All instance methods declared in this class are virtual, with an implementation which simply
     /// throws <see cref="NotImplementedException"/>. All these methods are overridden in <see cref="StorageClientImpl"/>.
     /// </para>
+    /// <para>
+    /// This class implements <see cref="IDisposable"/>; however, the <see cref="Dispose"/> method only requires calling
+    /// if many short-lived instances of <see cref="StorageClient"/> are being created.
+    /// Most code would be expected to create a single <c>StorageClient</c> instance, and use this instance throughout
+    /// the lifetime of the application. In this case, <c>Dispose</c> need not be called.
+    /// </para>
     /// </remarks>
-    public abstract partial class StorageClient
+    public abstract partial class StorageClient : IDisposable
     {
         private static readonly ScopedCredentialProvider _credentialProvider = new ScopedCredentialProvider(
             new[] { StorageService.Scope.DevstorageFullControl });
@@ -104,5 +110,10 @@ namespace Google.Cloud.Storage.V1
 
             return new StorageClientImpl(service, encryptionKey);
         }
+
+        /// <summary>
+        /// Dispose of this instance. See the <see cref="StorageClient"/> remarks on when this should be called.
+        /// </summary>
+        public virtual void Dispose() { }
     }
 }

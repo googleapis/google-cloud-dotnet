@@ -14,6 +14,7 @@
 
 using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Xunit;
 
@@ -21,7 +22,7 @@ namespace Google.Cloud.Storage.V1.Tests
 {
     public class StorageClientTest : AbstractClientTester<StorageClient, StorageClientTest.DerivedStorageClient>
     {
-        public static IEnumerable<object[]> NotImplementedMethods => AllInstanceMethods;
+        public static IEnumerable<object[]> NotImplementedMethods => AllInstanceMethods.Where(x => ((MethodInfo)x[0]).Name != "Dispose");
         public class DerivedStorageClient : StorageClient { }
 
         [Theory]
