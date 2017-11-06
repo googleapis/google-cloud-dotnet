@@ -206,7 +206,7 @@ namespace Google.Cloud.PubSub.V1
         /// <see cref="BatchingSettings.ElementCountThreshold"/> = 1,000;
         /// <see cref="BatchingSettings.ByteCountThreshold"/> = 9,500,000;
         /// </summary>
-        public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 9_500_000L, null);
+        public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 10_000_000L, null);
 
         /// <summary>
         /// Create a <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>.
@@ -614,10 +614,10 @@ namespace Google.Cloud.PubSub.V1
             // If _idleClients is empty, then all clients are currently sending, so local queueing is occuring;
             // which means the current batch cannot be sent, even if it is full.
             bool currentBatchIsFull = _idleClients.Count == 0 ?
-            _currentBatch.Messages.Count >= _batchMaxElementCount ||
-                (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchMaxByteCount) :
-            _currentBatch.Messages.Count >= _batchElementCountThreshold ||
-                (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchByteCountThreshold);
+                _currentBatch.Messages.Count >= _batchMaxElementCount ||
+                    (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchMaxByteCount) :
+                _currentBatch.Messages.Count >= _batchElementCountThreshold ||
+                    (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchByteCountThreshold);
             if (currentBatchIsFull)
             {
                 QueueCurrentBatch();
