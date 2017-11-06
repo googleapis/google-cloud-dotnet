@@ -498,7 +498,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         {
             var msgs = new[] { new[] {
                 ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
-                ServerAction.Data(TimeSpan.FromSeconds(10), new[] { "2" }),
+                ServerAction.Data(TimeSpan.FromSeconds(5), new[] { "2" }),
                 ServerAction.Inf()
             } };
             using (var fake = Fake.Create(msgs, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10)))
@@ -517,10 +517,10 @@ namespace Google.Cloud.PubSub.V1.Tests
                     });
                     await fake.TaskHelper.ConfigureAwait(doneTask);
                     var t0 = fake.Time0;
-                    TimeSpan S(int seconds) => TimeSpan.FromSeconds(seconds);
+                    DateTime S(int seconds) => t0 + TimeSpan.FromSeconds(seconds);
                     Assert.Equal(1, fake.Subscribers.Count);
-                    Assert.Equal(new[] { t0 + S(20), t0 + S(30), t0 + S(40), t0 + S(50), t0 + S(60), t0 + S(70) }, fake.Subscribers[0].Extends.Select(x => x.Time));
-                    Assert.Equal(new[] { t0 + S(70), t0 + S(80) }, fake.Subscribers[0].Acks.Select(x => x.Time));
+                    Assert.Equal(new[] { S(0), S(5), S(20), S(25), S(40), S(45), S(60), S(65) }, fake.Subscribers[0].Extends.Select(x => x.Time));
+                    Assert.Equal(new[] { S(70), S(75) }, fake.Subscribers[0].Acks.Select(x => x.Time));
                 });
             }
         }
