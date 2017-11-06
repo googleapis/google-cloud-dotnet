@@ -226,5 +226,8 @@ namespace Google.Cloud.Translation.V2
             }
             return effectiveModel;
         }
+
+        /// <inheritdoc />
+        public override void Dispose() => Service.Dispose();
     }
 }

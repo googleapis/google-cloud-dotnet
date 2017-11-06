@@ -42,8 +42,14 @@ namespace Google.Cloud.BigQuery.V2
     /// All instance methods declared in this class are virtual, with an implementation which simply
     /// throws <see cref="NotImplementedException"/>. All these methods are overridden in <see cref="BigQueryClientImpl"/>.
     /// </para>
+    /// <para>
+    /// This class implements <see cref="IDisposable"/>; however, the <see cref="Dispose"/> method only requires calling
+    /// if many short-lived instances of <see cref="BigQueryClient"/> are being created.
+    /// Most code would be expected to create a single <c>BigQueryClient</c> instance, and use this instance throughout
+    /// the lifetime of the application. In this case, <c>Dispose</c> need not be called.
+    /// </para>
     /// </remarks>
-    public abstract partial class BigQueryClient
+    public abstract partial class BigQueryClient : IDisposable
     {
         private static readonly ScopedCredentialProvider _credentialProvider = new ScopedCredentialProvider(
             new[] {
@@ -230,5 +236,10 @@ namespace Google.Cloud.BigQuery.V2
                 RetryHandler.MarkAsRetriable(request);
             }
         }
+
+        /// <summary>
+        /// Dispose of this instance. See the <see cref="BigQueryClient"/> remarks on when this should be called.
+        /// </summary>
+        public virtual void Dispose() { }
     }
 }

@@ -22,7 +22,8 @@ namespace Google.Cloud.Translation.V2.Tests
 {
     public class AdvancedTranslationClientTest : AbstractClientTester<AdvancedTranslationClient, AdvancedTranslationClientTest.DerivedAdvancedTranslationClient>
     {
-        public static IEnumerable<object[]> NotImplementedMembers => AllInstanceMethods.Concat(AllInstanceGetters);
+        public static IEnumerable<object[]> NotImplementedMembers => AllInstanceMethods.Concat(AllInstanceGetters)
+            .Where(x => ((MethodInfo)x[0]).Name != "Dispose");
 
         public class DerivedAdvancedTranslationClient : AdvancedTranslationClient
         {
