@@ -155,5 +155,8 @@ namespace Google.Cloud.Storage.V1
             var effectiveKey = keyFromOptions ?? EncryptionKey;
             download.ModifyRequest += effectiveKey.ModifyRequest;
         }
+
+        /// <inheritdoc />
+        public override void Dispose() => Service.Dispose();
     }
 }
