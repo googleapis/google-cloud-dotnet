@@ -41,8 +41,14 @@ namespace Google.Cloud.Translation.V2
     /// All instance methods declared in this class are virtual, with an implementation which simply
     /// throws <see cref="NotImplementedException"/>. All these methods are overridden in <see cref="AdvancedTranslationClientImpl"/>.
     /// </para>
+    /// <para>
+    /// This class implements <see cref="IDisposable"/>; however, the <see cref="Dispose"/> method only requires calling
+    /// if many short-lived instances of <see cref="AdvancedTranslationClient"/> are being created.
+    /// Most code would be expected to create a single <c>AdvancedTranslationClient</c> instance, and use this instance throughout
+    /// the lifetime of the application. In this case, <c>Dispose</c> need not be called.
+    /// </para>
     /// </remarks>
-    public abstract class AdvancedTranslationClient
+    public abstract class AdvancedTranslationClient : IDisposable
     {
         private static readonly ScopedCredentialProvider _credentialProvider =
             new ScopedCredentialProvider(new[] { TranslateService.Scope.CloudPlatform });
@@ -365,5 +371,10 @@ namespace Google.Cloud.Translation.V2
 
             return new AdvancedTranslationClientImpl(service, model);
         }
+
+        /// <summary>
+        /// Dispose of this instance. See the <see cref="AdvancedTranslationClient"/> remarks on when this should be called.
+        /// </summary>
+        public virtual void Dispose() { }
     }
 }

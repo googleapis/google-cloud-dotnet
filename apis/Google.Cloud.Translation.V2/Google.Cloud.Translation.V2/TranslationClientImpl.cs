@@ -223,5 +223,8 @@ namespace Google.Cloud.Translation.V2
             TranslationModels.ValidateModel(effectiveModel);
             return effectiveModel.ToApiName();
         }
+
+        /// <inheritdoc />
+        public override void Dispose() => Service.Dispose();
     }
 }
