@@ -106,5 +106,8 @@ namespace Google.Cloud.BigQuery.V2
             : this(GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference)).ProjectId, service)
         {
         }
+
+        /// <inheritdoc />
+        public override void Dispose() => Service.Dispose();
     }
 }

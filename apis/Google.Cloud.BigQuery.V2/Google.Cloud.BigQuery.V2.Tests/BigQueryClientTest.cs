@@ -51,6 +51,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     o => o.GetParameters().FirstOrDefault()?.ParameterType.Name.EndsWith("Reference") == true);
                 return referenceAcceptingOverload == null || referenceAcceptingOverload == method;
             })
+            .Where(x => ((MethodInfo)x[0]).Name != "Dispose")
             .Concat(AllInstanceGetters);
 
         public class NoOverridesBigQueryClient : BigQueryClient
