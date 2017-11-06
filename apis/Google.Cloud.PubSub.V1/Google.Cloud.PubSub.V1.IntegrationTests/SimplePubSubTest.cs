@@ -224,5 +224,39 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             }
             await simplePublisher.ShutdownAsync(TimeSpan.FromSeconds(15)).ConfigureAwait(false);
         }
+
+        [Fact]
+        public async Task MaxBatchSize()
+        {
+            // Test sending messages such that the maximum batch size is reached.
+            var topicId = _fixture.CreateTopicId();
+            // Create topic
+            var topicName = new TopicName(_fixture.ProjectId, topicId);
+            var publisher = await PublisherClient.CreateAsync().ConfigureAwait(false);
+            await publisher.CreateTopicAsync(topicName).ConfigureAwait(false);
+            // Create SimplePublisher, with no retry
+            var batchingSettings = new BatchingSettings(SimplePublisher.ApiMaxBatchingSettings.ElementCountThreshold,
+                SimplePublisher.ApiMaxBatchingSettings.ByteCountThreshold, TimeSpan.FromSeconds(4));
+            var publisherSettings = PublisherSettings.GetDefault();
+            publisherSettings.PublishSettings = CallSettings.FromCallTiming(CallTiming.FromTimeout(TimeSpan.FromSeconds(60)));
+            var simplePublisher = await SimplePublisher.CreateAsync(topicName,
+                new SimplePublisher.ClientCreationSettings(clientCount: 1, publisherSettings: publisherSettings),
+                new SimplePublisher.Settings { BatchingSettings = batchingSettings }).ConfigureAwait(false);
+            var msgCount = SimplePublisher.ApiMaxBatchingSettings.ElementCountThreshold.Value;
+            var msgSize = SimplePublisher.ApiMaxBatchingSettings.ByteCountThreshold.Value / msgCount;
+            var rnd = new Random(1234);
+            var publishTasks = new Task[msgCount];
+            for (int i = 0; i < msgCount; i++)
+            {
+                var msg = new byte[msgSize];
+                rnd.NextBytes(msg);
+                publishTasks[i] = simplePublisher.PublishAsync(msg);
+            }
+            for (int i = 0; i < msgCount; i++)
+            {
+                // Throws exception if there's a problem
+                await publishTasks[i].ConfigureAwait(false);
+            }
+        }
     }
 }
