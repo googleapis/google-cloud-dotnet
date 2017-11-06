@@ -114,6 +114,6 @@ namespace Google.Cloud.Storage.V1
         /// <summary>
         /// Dispose of this instance. See the <see cref="StorageClient"/> remarks on when this should be called.
         /// </summary>
-        public void Dispose() => Service.Dispose();
+        public virtual void Dispose() { }
     }
 }
