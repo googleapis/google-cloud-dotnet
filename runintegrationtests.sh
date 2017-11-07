@@ -61,3 +61,14 @@ do
 done
 
 mv -f $FAILURE_TEMP_FILE $FAILURE_FILE
+
+# Print status of this run including any failed tests.
+declare -r failed=$(cat $FAILURE_FILE | wc -l)
+if [ $failed == '0' ] 
+then
+  echo "All tests passed!"
+else 
+  echo "Number of Failed Tests: $failed"
+  cat $FAILURE_FILE
+  exit 1
+fi
