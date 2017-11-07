@@ -61,5 +61,8 @@ namespace Google.Cloud.Firestore.Data
         internal V1Beta1.Precondition Proto { get; }
 
         private Precondition(V1Beta1.Precondition proto) => Proto = proto;
+
+        // Only used by tests
+        internal static Precondition FromProto(V1Beta1.Precondition proto) => proto == null ? null : new Precondition(proto);
     }
 }
