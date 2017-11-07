@@ -720,9 +720,12 @@ namespace Google.Cloud.PubSub.V1
             private async Task AutoExtend(HashSet<string> ackIds, CancellationToken allMsgsHandledToken)
             {
                 // Moves ackIds into the extend-queue as required for auto lease extension
+                // This loop is not infinite; it terminates when allMsgsHandledToken is cancelled.
+                // An initial "extend-lease" message is sent to the server immediately. This acts as a receipt
+                // to let the server know that user-land code has now received this batch of messages.
+                // This allows the server and client to roughly agree on a message expiration timer start time.
                 while (true)
                 {
-                    await _taskHelper.ConfigureAwait(_scheduler.Delay(_autoExtendInterval, allMsgsHandledToken));
                     TaskCompletionSource<int> qEvent;
                     lock (_qLock)
                     {
@@ -733,6 +736,7 @@ namespace Google.Cloud.PubSub.V1
                         qEvent = _qEvent;
                     }
                     qEvent.TrySetResult(0);
+                    await _taskHelper.ConfigureAwait(_scheduler.Delay(_autoExtendInterval, allMsgsHandledToken));
                 }
             }
 
