@@ -28,18 +28,19 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
     public class BigtableFixture : IDisposable, ICollectionFixture<BigtableFixture>
     {
         private const string EmulatorEnvironmentVariable = "BIGTABLE_EMULATOR_HOST";
+        private const string TestInstanceEnvironmentVariable = "BIGTABLE_TEST_INSTANCE";
         private const string TestProjectEnvironmentVariable = "TEST_PROJECT";
 
         public const string ColumnFamily1 = "cf1";
         public const string OtherColumnFamily = "test_data";
 
         public ProjectName ProjectName { get; private set; }
-        public InstanceName DefaultInstanceName { get; private set; }
-        public TableName DefaultTableName { get; private set; }
+        public InstanceName InstanceName { get; private set; }
+        public TableName TableName { get; private set; }
 
-        public BigtableInstanceAdminClient DefaultInstanceAdminClient { get; private set; }
-        public BigtableTableAdminClient DefaultTableAdminClient { get; private set; }
-        public BigtableClient DefaultTableClient { get; private set; }
+        public BigtableInstanceAdminClient InstanceAdminClient { get; private set; }
+        public BigtableTableAdminClient TableAdminClient { get; private set; }
+        public BigtableClient TableClient { get; private set; }
 
         public Channel EmulatorChannel { get; }
 
@@ -48,10 +49,13 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             string emulatorHost = Environment.GetEnvironmentVariable(EmulatorEnvironmentVariable);
 
             string projectId;
+            string instanceId;
             if (!string.IsNullOrEmpty(emulatorHost))
             {
                 projectId = "emulator-test-project";
                 EmulatorChannel = new Channel(emulatorHost, ChannelCredentials.Insecure);
+
+                instanceId = "doesnt-matter";
             }
             else
             {
@@ -61,16 +65,24 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     throw new InvalidOperationException(
                         $"Please set either the {EmulatorEnvironmentVariable} or {TestProjectEnvironmentVariable} environment variable before running tests");
                 }
+
+                instanceId = Environment.GetEnvironmentVariable(TestInstanceEnvironmentVariable);
+                if (string.IsNullOrEmpty(instanceId))
+                {
+                    throw new InvalidOperationException(
+                        $"Please set the {TestInstanceEnvironmentVariable} environment variable before running non-emulator tests.");
+                }
             }
 
             ProjectName = new ProjectName(projectId);
+            InstanceName = new InstanceName(projectId, instanceId);
 
             Task.Run(InitBigtableInstanceAndTable).Wait();
         }
 
         public async Task CreateTable(TableName tableName)
         {
-            await DefaultTableAdminClient.CreateTableAsync(
+            await TableAdminClient.CreateTableAsync(
                 new InstanceName(tableName.ProjectId, tableName.InstanceId),
                 tableName.TableId,
                 new Table
@@ -86,49 +98,29 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         private async Task InitBigtableInstanceAndTable()
         {
-            DefaultInstanceName = new InstanceName(ProjectName.ProjectId, "i" + Guid.NewGuid().ToString("N"));
-
             if (EmulatorChannel == null)
             {
-                DefaultInstanceAdminClient = BigtableInstanceAdminClient.Create();
-                DefaultTableAdminClient = BigtableTableAdminClient.Create();
-                DefaultTableClient = BigtableClient.Create();
+                InstanceAdminClient = BigtableInstanceAdminClient.Create();
+                TableAdminClient = BigtableTableAdminClient.Create();
+                TableClient = BigtableClient.Create();
 
-                // Cluster ID must be max 30 characters
-                string clusterId = DefaultInstanceName.InstanceId.Substring(0, 22) + "-cluster";
-
-                var instanceOperation = await DefaultInstanceAdminClient.CreateInstanceAsync(new CreateInstanceRequest
+                try
                 {
-                    Parent = ProjectName.ToString(),
-                    InstanceId = DefaultInstanceName.InstanceId,
-                    Instance = new Instance
-                    {
-                        DisplayName = "Integration tests instance",
-                        Type = Instance.Types.Type.Development
-                    },
-                    Clusters =
-                    {
-                        {
-                            clusterId,
-                            new Cluster
-                            {
-                                ClusterName = new ClusterName(ProjectName.ProjectId, DefaultInstanceName.InstanceId, clusterId),
-                                DefaultStorageType = StorageType.Hdd,
-                                LocationAsLocationName = new LocationName(ProjectName.ProjectId, "us-central1-c")
-                            }
-                        }
-                    }
-                });
-                await instanceOperation.PollUntilCompletedAsync();
+                    await InstanceAdminClient.GetInstanceAsync(InstanceName);
+                }
+                catch (RpcException e) when (e.Status.StatusCode == StatusCode.NotFound)
+                {
+                    Assert.True(false, $"The Bigtable instance for testing does not exist: {InstanceName}");
+                }
             }
             else
             {
-                DefaultTableAdminClient = BigtableTableAdminClient.Create(EmulatorChannel);
-                DefaultTableClient = BigtableClient.Create(EmulatorChannel);
+                TableAdminClient = BigtableTableAdminClient.Create(EmulatorChannel);
+                TableClient = BigtableClient.Create(EmulatorChannel);
             }
 
-            DefaultTableName = new TableName(ProjectName.ProjectId, DefaultInstanceName.InstanceId, "default-table");
-            await CreateTable(DefaultTableName);
+            TableName = new TableName(ProjectName.ProjectId, InstanceName.InstanceId, "default-table");
+            await CreateTable(TableName);
         }
 
         public async Task<BigtableByteString> InsertRowAsync(
@@ -144,7 +136,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             qualifierName = qualifierName ?? "row_exists";
             value = value ?? "true";
 
-            await DefaultTableClient.MutateRowAsync(
+            await TableClient.MutateRowAsync(
                 tableName,
                 rowKey,
                 Mutations.SetCell(
@@ -154,7 +146,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     version));
 
             await BigtableAssert.HasSingleValueAsync(
-                DefaultTableClient,
+                TableClient,
                 tableName,
                 rowKey,
                 familyName,
@@ -201,21 +193,16 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 }
             };
 
-            var response = DefaultTableClient.MutateRows(request);
+            var response = TableClient.MutateRows(request);
             while (await response.ResponseStream.MoveNext(default))
                 ;
         }
 
         public void Dispose()
         {
-            if (DefaultTableAdminClient != null && DefaultTableName != null)
+            if (TableAdminClient != null && TableName != null)
             {
-                DefaultTableAdminClient.DeleteTable(new DeleteTableRequest { Name = DefaultTableName.ToString() });
-            }
-
-            if (DefaultInstanceAdminClient != null && DefaultInstanceName != null)
-            {
-                DefaultInstanceAdminClient.DeleteInstance(DefaultInstanceName);
+                TableAdminClient.DeleteTable(new DeleteTableRequest { Name = TableName.ToString() });
             }
         }
     }

@@ -38,8 +38,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 return;
             }
 
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
 
             var buffer = new byte[8192];
             var rnd = new Random();
@@ -101,8 +101,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRow()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName, version: new BigtableVersion(1));
 
             var row = client.ReadRow(tableName, rowKey);
@@ -118,8 +118,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRowAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName, version: new BigtableVersion(1));
 
             var row = await client.ReadRowAsync(tableName, rowKey);
@@ -135,8 +135,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public void ReadRowMissing()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
 
             var row = client.ReadRow(tableName, "abc");
             Assert.Null(row);
@@ -145,8 +145,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRowMissingAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
 
             var row = await client.ReadRowAsync(tableName, "abc");
             Assert.Null(row);
@@ -155,8 +155,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRowFiltered()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
             await client.MutateRowAsync(
@@ -186,8 +186,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRowFilteredAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
             await client.MutateRowAsync(
@@ -217,8 +217,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRowsWithKeys()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var originalIndexes = new Dictionary<BigtableByteString, int>();
             var rowKeys = new List<BigtableByteString>();
             int endRowIndex = 100;
@@ -261,8 +261,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRowsWithKeysFiltered()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var originalIndexes = new Dictionary<BigtableByteString, int>();
             var rowKeys = new List<BigtableByteString>();
             for (int i = 0; i < 100; i++)
@@ -310,8 +310,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRowsWithKeysLimited()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var originalIndexes = new Dictionary<BigtableByteString, int>();
             var rowKeys = new List<BigtableByteString>();
             for (int i = 0; i < 100; i++)
@@ -355,8 +355,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRowsWithRange()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             string rowKeyPrefix = Guid.NewGuid().ToString();
             int endRowIndex = 0xFF;
             var rowKeys =
@@ -395,8 +395,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRowsWithRangeFiltered()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             string rowKeyPrefix = Guid.NewGuid().ToString();
             int endRowIndex = 0xFF;
             var rowKeys =
@@ -437,8 +437,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRowsWithRangeLimited()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             string rowKeyPrefix = Guid.NewGuid().ToString();
             int endRowIndex = 0xFF;
             var rowKeys =
@@ -479,11 +479,11 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         public async Task ReadRows_Validate_SingleIteration()
         {
             var tableName = new TableName(
-                _fixture.DefaultInstanceName.ProjectId,
-                _fixture.DefaultInstanceName.InstanceId,
+                _fixture.InstanceName.ProjectId,
+                _fixture.InstanceName.InstanceId,
                 "ReadRows_Validate_SingleIteration_Table");
             await _fixture.CreateTable(tableName);
-            var client = _fixture.DefaultTableClient;
+            var client = _fixture.TableClient;
 
             var rowKey = await _fixture.InsertRowAsync(tableName);
             System.Diagnostics.Debug.WriteLine((string)rowKey);
