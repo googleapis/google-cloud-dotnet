@@ -274,7 +274,7 @@ namespace Google.Cloud.Firestore.Data.Tests
         /// <summary>
         /// Creates a canonical representation of a Write just by ordering lists predictably.
         /// </summary>
-        private static Write CanonicalizeWrite(Write input)
+        internal static Write CanonicalizeWrite(Write input)
         {
             var clone = input.Clone();
             if (clone.UpdateMask != null)

@@ -1,0 +1,99 @@
+// Tests for firestore clients.
+
+syntax = "proto3";
+
+package tests;
+
+import "google/firestore/v1beta1/firestore.proto";
+import "google/firestore/v1beta1/common.proto";
+
+// A Test describes a single client method call and its expected result.
+message Test {
+  string description = 1; // short description of the test
+
+  oneof test {
+    GetTest         get = 2;
+    CreateTest      create = 3;
+    SetTest         set = 4;
+    UpdateTest      update = 5;
+    UpdatePathsTest update_paths = 6;
+    DeleteTest      delete = 7;
+  }
+}
+
+// Call to the DocumentRef.Get method.
+message GetTest {
+  // The path of the doc, e.g. "projects/projectID/databases/(default)/documents/C/d"
+  string doc_ref_path = 1;
+
+  // The request that the call should send to the Firestore service.
+  google.firestore.v1beta1.GetDocumentRequest request = 2;
+}
+
+// Call to DocumentRef.Create.
+message CreateTest {
+  // The path of the doc, e.g. "projects/projectID/databases/(default)/documents/C/d"
+  string doc_ref_path = 1;
+
+  // The data passed to Create, as JSON. The strings "Delete" and "ServerTimestamp"
+  // denote the two special sentinel values. Values that could be interpreted as integers
+  // (i.e. digit strings) should be treated as integers.
+  string json_data = 2;
+
+  // The request that the call should generate.
+  google.firestore.v1beta1.CommitRequest request = 3;
+
+  // If true, the call should result in an error without generating a request.
+  // If this is true, request should not be set.
+  bool is_error = 4;
+}
+
+// A call to DocumentRef.Set.
+message SetTest {
+  string doc_ref_path = 1;         // path of doc
+  SetOption option = 2;            // option to the Set call, if any
+  string json_data = 3;            // data (see CreateTest.json_data)
+  google.firestore.v1beta1.CommitRequest request = 4; // expected request
+  bool is_error = 5;               // call signals an error
+}
+
+// A call to the form of DocumentRef.Update that represents the data as a map
+// or dictionary.
+message UpdateTest {
+  string doc_ref_path = 1; // path of doc
+  google.firestore.v1beta1.Precondition precondition = 2; // precondition in call, if any
+  string json_data  = 3;   // data (see CreateTest.json_data)
+  google.firestore.v1beta1.CommitRequest request = 4; // expected request
+  bool is_error = 5;       // call signals an error
+}
+
+// A call to the form of DocumentRef.Update that represents the data as a list
+// of field paths and their values.
+message UpdatePathsTest {
+  string doc_ref_path = 1; // path of doc
+  google.firestore.v1beta1.Precondition precondition = 2; // precondition in call, if any
+  // parallel sequences: field_paths[i] corresponds to json_values[i]
+  repeated FieldPath field_paths = 3; // the argument field paths
+  repeated string json_values = 4;    // the argument values, as JSON
+  google.firestore.v1beta1.CommitRequest request = 5; // expected rquest
+  bool is_error = 6; // call signals an error
+}
+
+// A call to DocmentRef.Delete
+message DeleteTest {
+  string doc_ref_path = 1; // path of doc
+  google.firestore.v1beta1.Precondition precondition = 2;
+  google.firestore.v1beta1.CommitRequest request = 3; // expected rquest
+  bool is_error = 4;       // call signals an error
+}
+
+// An option to the DocumentRef.Set call.
+message SetOption {
+  bool all = 1;                  // if true, merge all fields ("fields" is ignored).
+  repeated FieldPath fields = 2; // field paths for a Merge option
+}
+
+// A field path.
+message FieldPath {
+  repeated string field = 1;
+}

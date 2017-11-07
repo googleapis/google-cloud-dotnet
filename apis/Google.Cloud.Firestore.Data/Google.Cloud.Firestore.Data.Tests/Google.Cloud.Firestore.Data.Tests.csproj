@@ -32,4 +32,7 @@
       <DependentUpon>FirestoreDbTest.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Proto/tests.binprotos" />
+  </ItemGroup>
 </Project>
