@@ -6,6 +6,7 @@ declare -r REPO_ROOT=$(realpath $(dirname ${BASH_SOURCE}))
 declare -r DOCFX_VERSION=2.24
 declare -r DOTCOVER_VERSION=2017.1.20170613.162720 
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
+declare -r PROTOC_VERSION=3.4.0
 
 # Variables to use to invoke the tools themselves
 
@@ -13,6 +14,10 @@ declare -r DOCFX=$REPO_ROOT/packages/docfx.$DOCFX_VERSION/docfx.exe
 declare -r FIND=/usr/bin/find
 declare -r DOTCOVER=$REPO_ROOT/packages/JetBrains.dotCover.CommandLineTools.$DOTCOVER_VERSION/tools/dotCover.exe
 declare -r REPORTGENERATOR=$REPO_ROOT/packages/ReportGenerator.$REPORTGENERATOR_VERSION/tools/ReportGenerator.exe
+
+declare -r PROTOBUF_TOOLS_ROOT=$REPO_ROOT/packages/Google.Protobuf.Tools.$PROTOC_VERSION
+# TODO: Make this work under Linux to
+declare -r PROTOC=$PROTOBUF_TOOLS_ROOT/tools/windows_x64/protoc.exe
 
 # Use an appropriate version of nuget... preferring
 # first an existing NUGET variable, then NuGet, then
@@ -36,6 +41,10 @@ install_dotcover() {
 
 install_reportgenerator() {
   $NUGET install -Verbosity quiet -OutputDirectory $REPO_ROOT/packages -Version $REPORTGENERATOR_VERSION ReportGenerator
+}
+
+install_protoc() {
+  $NUGET install -Verbosity quiet -OutputDirectory $REPO_ROOT/packages -Version $PROTOC_VERSION Google.Protobuf.Tools
 }
 
 install_docfx() {
