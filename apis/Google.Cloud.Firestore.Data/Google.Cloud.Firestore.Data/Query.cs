@@ -43,13 +43,27 @@ namespace Google.Cloud.Firestore.Data
         // Visible for testing
         internal StructuredQuery QueryProto { get; }
 
-        internal string ParentPath { get; }
+        internal CollectionReference Collection { get; }
 
-        internal Query(FirestoreDb database, StructuredQuery query, string parentPath)
+        // Parent path of this query
+        internal string ParentPath => Collection.Parent?.Path ?? Database.DocumentsPath;
+
+        // This would be protected, but that would allow subclasses from other assemblies. The intention is that the only concrete
+        // subclass of Query is CollectionReference. If "private protected" ever ends up in C#, this constructor can be changed.
+        internal Query(FirestoreDb database, string id)
+        {
+            Collection = this as CollectionReference;
+            GaxPreconditions.CheckState(Collection != null, "Internal Query constructor should only be used from CollectionReference");
+            Database = GaxPreconditions.CheckNotNull(database, nameof(database));
+            GaxPreconditions.CheckNotNull(id, nameof(id));
+            QueryProto = new StructuredQuery { From = { new CollectionSelector { CollectionId = id } } };
+        }
+
+        private Query(FirestoreDb database, StructuredQuery query, CollectionReference collection)
         {
             Database = database;
             QueryProto = query;
-            ParentPath = parentPath;
+            Collection = collection;
         }
 
         /// <summary>
@@ -363,7 +377,34 @@ namespace Google.Cloud.Firestore.Data
                 "Too many cursor values specified. The specified values must match the ordering constraints of the query. {0} specified for a query with {1} ordering constraints.",
                 fieldValues.Length, QueryProto.OrderBy.Count);
 
-            return new Cursor { Before = before, Values = { fieldValues.Select(ValueSerializer.Serialize) } };
+            var cursor = new Cursor { Before = before };
+            for (int i = 0; i < fieldValues.Length; i++)
+            {
+                object value = fieldValues[i];
+                // The DocumentId field path is handled differently to other fields. We accept a string (relative path) or
+                // a DocumentReference (absolute path that must be a descendant of this collection).
+                if (QueryProto.OrderBy[i].Field.FieldPath == FieldPath.DocumentId.EncodedPath)
+                {
+                    switch (fieldValues[i])
+                    {
+                        case string relativePath:
+                            // Note: this assumes querying over a single collection at the moment.
+                            // Convert to a DocumentReference for the cursor
+                            value = Collection.Document(relativePath);
+                            break;
+                        case DocumentReference absoluteRef:
+                            // Just validate
+                            GaxPreconditions.CheckArgument(absoluteRef.IsDescendantOf(Collection), nameof(fieldValues),
+                                "A DocumentReference cursor value for a document ID must be a descendant of the collection of the query");
+                            break;
+                        default:
+                            throw new ArgumentException($"A cursor value for a document ID must be a string (relative path) or a DocumentReference", nameof(fieldValues));
+                    }
+                }
+                cursor.Values.Add(ValueSerializer.Serialize(value));
+            }
+
+            return cursor;
         }
 
         private static FieldPath[] ConvertFieldPaths(string[] fieldPaths)
@@ -392,7 +433,7 @@ namespace Google.Cloud.Firestore.Data
             return WithQuery(query);
         }
 
-        private Query WithQuery(StructuredQuery query) => new Query(Database, query, ParentPath);
+        private Query WithQuery(StructuredQuery query) => new Query(Database, query, Collection);
 
         /// <summary>
         /// Asynchronously takes a snapshot of all documents matching the query.

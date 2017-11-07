@@ -183,5 +183,29 @@ namespace Google.Cloud.Firestore.Data
         /// </summary>
         /// <returns>A lazily-iterated sequence of collection references within this document.</returns>
         public IAsyncEnumerable<CollectionReference> ListCollectionsAsync() => Database.ListCollectionsAsync(this);
+
+
+        /// <summary>
+        /// Checks whether this document is an descendant of the given collection (in the same database).
+        /// This is more than just a prefix check, as
+        /// "projects/proj/databases/db/documents/collother/doc" is not a descendant of "projects/proj/databases/db/documents/coll" 
+        /// </summary>
+        /// <param name="collection">Reference to the collection to check. Must not be null.</param>
+        /// <returns>true if this document is a descendant of the specified collection; false otherwise</returns>
+        internal bool IsDescendantOf(CollectionReference collection)
+        {
+            GaxPreconditions.CheckNotNull(collection, nameof(collection));
+            var doc = this;
+            while (doc != null)
+            {
+                var parent = doc.Parent;
+                if (parent.Equals(collection))
+                {
+                    return true;
+                }
+                doc = parent.Parent;
+            }
+            return false;
+        }
     }
 }

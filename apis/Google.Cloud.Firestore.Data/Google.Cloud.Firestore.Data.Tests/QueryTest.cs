@@ -14,27 +14,24 @@
 
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1Beta1;
+using Google.Protobuf;
 using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.Firestore.V1Beta1.FirestoreClient;
-using static Google.Cloud.Firestore.V1Beta1.StructuredQuery.Types;
 using static Google.Cloud.Firestore.Data.Tests.ProtoHelpers;
-using Google.Protobuf;
-using System.Threading;
+using static Google.Cloud.Firestore.V1Beta1.StructuredQuery.Types;
 
 namespace Google.Cloud.Firestore.Data.Tests
 {
     public class QueryTest
     {
-        private static Query GetEmptyQuery()
-        {
-            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
-            return db.Collection("col");
-        }
+        private static readonly FirestoreDb s_db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+
+        private static Query GetEmptyQuery() => s_db.Collection("col");
 
         [Fact]
         public void Select()
@@ -286,6 +283,48 @@ namespace Google.Cloud.Firestore.Data.Tests
             Assert.Throws<ArgumentException>(() => query.StartAfter(values));
             Assert.Throws<ArgumentException>(() => query.EndAt(values));
             Assert.Throws<ArgumentException>(() => query.EndBefore(values));
+        }
+
+        public static IEnumerable<object[]> InvalidDocumentIdCursorValues { get; } = new List<object>
+        {
+            // Incorrect types
+            10,
+            1.5,
+            DateTime.UtcNow,
+            // Relative paths that aren't to a document
+            "",
+            "doc2/col2",
+            "doc2/",
+            "doc2//",
+            // DocumentReference not in this collection
+            s_db.Document("othercol/doc")
+        }.Select(x => new[] { x }).ToList();
+
+        [Theory]
+        [MemberData(nameof(InvalidDocumentIdCursorValues))]
+        public void DocumentIdCursor_Invalid(object value)
+        {
+            var query = GetEmptyQuery().OrderBy(FieldPath.DocumentId);
+            Assert.Throws<ArgumentException>(() => query.StartAt(value));
+        }
+
+        [Fact]
+        public void DocumentIdCursor_ValidRelativePath()
+        {
+            var query = GetEmptyQuery().OrderBy(FieldPath.DocumentId).StartAt("foo");
+            var expected = new Value { ReferenceValue = s_db.Document("col/foo").Path };
+            var actual = query.QueryProto.StartAt.Values.Single();
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void DocumentIdCursor_ValidDocumentReference()
+        {
+            var doc = s_db.Document("col/foo");
+            var query = GetEmptyQuery().OrderBy(FieldPath.DocumentId).StartAt(doc);
+            var expected = new Value { ReferenceValue = doc.Path };
+            var actual = query.QueryProto.StartAt.Values.Single();
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
