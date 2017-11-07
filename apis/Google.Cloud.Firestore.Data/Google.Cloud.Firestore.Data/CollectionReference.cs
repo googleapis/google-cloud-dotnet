@@ -14,7 +14,6 @@
 
 
 using Google.Api.Gax;
-using Google.Cloud.Firestore.V1Beta1;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -44,19 +43,13 @@ namespace Google.Cloud.Firestore.Data
         public DocumentReference Parent { get; }
 
         internal CollectionReference(FirestoreDb database, DocumentReference parent, string id)
-            : base(GaxPreconditions.CheckNotNull(database, nameof(database)), CreateStructuredQuery(id), parent?.Path ?? database.DocumentsPath)
+            : base(database, id) // Base constructor validates
         {
             Parent = parent; // May be null
             Id = id;
             Path = $"{ParentPath}/{Id}";
         }
-
-        private static StructuredQuery CreateStructuredQuery(string id)
-        {
-            GaxPreconditions.CheckNotNull(id, nameof(id));
-            return new StructuredQuery { From = { new StructuredQuery.Types.CollectionSelector { CollectionId = id } } };
-        }
-
+        
         /// <summary>
         /// Creates a <see cref="DocumentReference"/> for a direct child document of this collection with a random ID.
         /// This performs no server-side operations; it only generates the appropriate <c>DocumentReference</c>.
