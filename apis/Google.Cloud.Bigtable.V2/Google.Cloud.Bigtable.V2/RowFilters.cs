@@ -107,30 +107,28 @@ namespace Google.Cloud.Bigtable.V2
                     Filters = { Utilities.ValidateCollection(filters, nameof(filters)) }
                 }
             };
-        
+
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which matches only cells from
         /// columns whose qualifiers satisfy the given RE2 regex.
         /// </summary>
         /// <remarks>
         /// <para>
+        /// The format of RE2 is documented at https://github.com/google/re2/wiki/Syntax.
+        /// </para>
+        /// <para>
         /// Note that, since column qualifiers can contain arbitrary bytes, the `\C`
         /// escape sequence must be used if a true wildcard is desired. The `.`
         /// character will not match the new line character `\n`, which may be
         /// present in a binary qualifier.
-        /// </para>
-        /// <para>
-        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>,
-        /// so <paramref name="regex"/> can be specified using a string as well and its UTF-8
-        /// representations will be used.
         /// </para>
         /// </remarks>
         /// <param name="regex">
         /// The RE2 regex used to match column qualifiers.
         /// </param>
         /// <returns>The created row filter.</returns>
-        public static RowFilter ColumnQualifierRegex(BigtableByteString regex) =>
-            new RowFilter { ColumnQualifierRegexFilter = regex.Value };
+        public static RowFilter ColumnQualifierRegex(string regex) =>
+            new RowFilter { ColumnQualifierRegexFilter = ByteString.CopyFromUtf8(regex) };
 
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which matches only cells from
@@ -233,22 +231,21 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
+        /// The format of RE2 is documented at https://github.com/google/re2/wiki/Syntax.
+        /// </para>
+        /// <para>
         /// Note that, since row keys can contain arbitrary bytes, the `\C` escape
         /// sequence must be used if a true wildcard is desired. The `.` character
         /// will not match the new line character `\n`, which may be present in a
         /// binary key.
-        /// </para>
-        /// <para>
-        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="regex"/> can
-        /// be specified using a string as well and its UTF-8 representations will be used.
         /// </para>
         /// </remarks>
         /// <param name="regex">
         /// The RE2 regex used to match row keys.
         /// </param>
         /// <returns>The created row filter.</returns>
-        public static RowFilter RowKeyRegex(BigtableByteString regex) =>
-            new RowFilter { RowKeyRegexFilter = regex.Value };
+        public static RowFilter RowKeyRegex(string regex) =>
+            new RowFilter { RowKeyRegexFilter = ByteString.CopyFromUtf8(regex) };
 
         // TODO: Seems like this is 0-1. Verify and document it. Validate too?
         /// <summary>
@@ -325,23 +322,21 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
+        /// The format of RE2 is documented at https://github.com/google/re2/wiki/Syntax.
+        /// </para>
+        /// <para>
         /// Note that, since cell values can contain arbitrary bytes, the `\C` escape
         /// sequence must be used if a true wildcard is desired. The `.` character
         /// will not match the new line character `\n`, which may be present in a
         /// binary value.
-        /// </para>
-        /// <para>
-        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>,
-        /// so <paramref name="regex"/> can be specified using a string as well and its UTF-8
-        /// representations will be used.
         /// </para>
         /// </remarks>
         /// <param name="regex">
         /// The RE2 regex used to match cell values.
         /// </param>
         /// <returns>The created row filter.</returns>
-        public static RowFilter ValueRegex(BigtableByteString regex) =>
-            new RowFilter { ValueRegexFilter = regex.Value };
+        public static RowFilter ValueRegex(string regex) =>
+            new RowFilter { ValueRegexFilter = ByteString.CopyFromUtf8(regex) };
 
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which matches only cells
