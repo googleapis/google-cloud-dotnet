@@ -14,6 +14,17 @@ Common operations are exposed via the
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.
 
+# Client life-cycle management
+
+In many cases you don't need to worry about disposing of
+`BigQueryClient` objects, and can create them reasonably freely -
+but be aware that this *can* causes issues with memory and network
+connection usage. We advise you to reuse a single client object if
+possible; if your architecture requires you to frequently create new
+client objects, please dispose of them to help with timely resource
+clean-up. See [the resource clean-up guide](../guides/cleanup.html#rest-based-apis) for more
+details.
+
 # Sample code
 
 ## Querying
