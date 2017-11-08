@@ -12,11 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
-using Google.Protobuf;
-using System;
-using System.Text.RegularExpressions;
-
 namespace Google.Cloud.Bigtable.V2
 {
     /// <summary>
@@ -24,9 +19,6 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     public static class Mutations
     {
-        private static readonly Regex FamilyNameRegex =
-            new Regex("^[-_.A-Z0-9]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-
         /// <summary>
         /// Creates a <see cref="Mutation"/> which deletes cells from the specified column, optionally
         /// restricting the deletions to a given version range.
@@ -59,7 +51,7 @@ namespace Google.Cloud.Bigtable.V2
             {
                 DeleteFromColumn = new Mutation.Types.DeleteFromColumn
                 {
-                    FamilyName = ValidateFamilyName(familyName),
+                    FamilyName = Utilities.ValidateFamilyName(familyName),
                     ColumnQualifier = columnQualifier.Value,
                     TimeRange = versionRange.ToTimestampRange()
                 }
@@ -78,7 +70,7 @@ namespace Google.Cloud.Bigtable.V2
             {
                 DeleteFromFamily = new Mutation.Types.DeleteFromFamily
                 {
-                    FamilyName = ValidateFamilyName(familyName)
+                    FamilyName = Utilities.ValidateFamilyName(familyName)
                 }
             };
 
@@ -127,21 +119,11 @@ namespace Google.Cloud.Bigtable.V2
             {
                 SetCell = new Mutation.Types.SetCell
                 {
-                    FamilyName = ValidateFamilyName(familyName),
+                    FamilyName = Utilities.ValidateFamilyName(familyName),
                     ColumnQualifier = columnQualifier.Value,
                     Value = value.Value,
                     TimestampMicros = version.ToTimestampMicros()
                 }
             };
-
-        private static string ValidateFamilyName(string familyName)
-        {
-            GaxPreconditions.CheckArgument(
-                familyName != null && FamilyNameRegex.IsMatch(familyName),
-                nameof(familyName),
-                "The family name must be non-null and match [-_.a-zA-Z0-9]+");
-
-            return familyName;
-        }
     }
 }

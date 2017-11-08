@@ -419,6 +419,220 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
+        /// Modifies a row atomically on the server. The method reads the latest existing version
+        /// and value from the specified columns and writes a new entry based on
+        /// pre-defined read/modify/write rules. The new value for the version is the
+        /// greater of the previous value's version or the current server version. The method
+        /// returns the new contents of all modified cells.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that the server version is based on the current timestamp since the Unix epoch, so for
+        /// columns which are updated using ReadModifyWriteRow, other reads and writes of those columns
+        /// should use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed
+        /// to using a custom versioning scheme with 64-bit values.
+        /// </para>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
+        /// This method simply delegates to <see cref="ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the read/modify/write rules should be
+        /// applied. Must not be null.
+        /// </param>
+        /// <param name="rowKey">
+        /// The key of the row to which the read/modify/write rules should be applied.
+        /// Must not be empty.
+        /// </param>
+        /// <param name="rules">
+        /// Rules specifying how the specified row's contents are to be transformed
+        /// into writes. Entries are applied in order, meaning that earlier rules will
+        /// affect the results of later ones.  Must not be null, or contain null
+        /// elements.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The response from modifying the row.
+        /// </returns>
+        public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(
+            TableName tableName,
+            BigtableByteString rowKey,
+            IEnumerable<ReadModifyWriteRule> rules,
+            CallSettings callSettings = null) =>
+            ReadModifyWriteRow(
+                CreateReadModifyWriteRowRequest(tableName, rowKey, rules),
+                callSettings);
+
+        /// <summary>
+        /// Modifies a row atomically on the server. The method reads the latest existing version
+        /// and value from the specified columns and writes a new entry based on
+        /// pre-defined read/modify/write rules. The new value for the version is the
+        /// greater of the previous value's version or the current server version. The method
+        /// returns the new contents of all modified cells.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that the server version is based on the current timestamp since the Unix epoch, so for
+        /// columns which are updated using ReadModifyWriteRow, other reads and writes of those columns
+        /// should use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed
+        /// to using a custom versioning scheme with 64-bit values.
+        /// </para>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
+        /// This method simply delegates to <see cref="ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the read/modify/write rules should be
+        /// applied. Must not be null.
+        /// </param>
+        /// <param name="rowKey">
+        /// The key of the row to which the read/modify/write rules should be applied.
+        /// Must not be empty.
+        /// </param>
+        /// <param name="rules">
+        /// Rules specifying how the specified row's contents are to be transformed
+        /// into writes. Entries are applied in order, meaning that earlier rules will
+        /// affect the results of later ones. Must not be null, or contain null
+        /// elements.
+        /// </param>
+        /// <returns>
+        /// The response from modifying the row.
+        /// </returns>
+        public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(
+            TableName tableName,
+            BigtableByteString rowKey,
+            params ReadModifyWriteRule[] rules) =>
+            ReadModifyWriteRow(
+                CreateReadModifyWriteRowRequest(tableName, rowKey, rules));
+
+        /// <summary>
+        /// Asynchronously modifies a row atomically on the server. The method reads the latest existing version
+        /// and value from the specified columns and writes a new entry based on
+        /// pre-defined read/modify/write rules. The new value for the version is the
+        /// greater of the previous value's version or the current server version. The method
+        /// returns the new contents of all modified cells.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that the server version is based on the current timestamp since the Unix epoch, so for
+        /// columns which are updated using ReadModifyWriteRow, other reads and writes of those columns
+        /// should use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed
+        /// to using a custom versioning scheme with 64-bit values.
+        /// </para>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
+        /// This method simply delegates to <see cref="ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the read/modify/write rules should be
+        /// applied. Must not be null.
+        /// </param>
+        /// <param name="rowKey">
+        /// The key of the row to which the read/modify/write rules should be applied.
+        /// Must not be empty.
+        /// </param>
+        /// <param name="rules">
+        /// Rules specifying how the specified row's contents are to be transformed
+        /// into writes. Entries are applied in order, meaning that earlier rules will
+        /// affect the results of later ones.  Must not be null, or contain null
+        /// elements.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The response from modifying the row.
+        /// </returns>
+        public virtual Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
+            TableName tableName,
+            BigtableByteString rowKey,
+            IEnumerable<ReadModifyWriteRule> rules,
+            CallSettings callSettings = null) =>
+            ReadModifyWriteRowAsync(
+                CreateReadModifyWriteRowRequest(tableName, rowKey, rules),
+                callSettings);
+
+        /// <summary>
+        /// Asynchronously modifies a row atomically on the server. The method reads the latest existing version
+        /// and value from the specified columns and writes a new entry based on
+        /// pre-defined read/modify/write rules. The new value for the version is the
+        /// greater of the previous value's version or the current server version. The method
+        /// returns the new contents of all modified cells.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that the server version is based on the current timestamp since the Unix epoch, so for
+        /// columns which are updated using ReadModifyWriteRow, other reads and writes of those columns
+        /// should use <see cref="BigtableVersion"/> values constructed from DateTime values, as opposed
+        /// to using a custom versioning scheme with 64-bit values.
+        /// </para>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// <para>
+        /// This method simply delegates to <see cref="ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the read/modify/write rules should be
+        /// applied. Must not be null.
+        /// </param>
+        /// <param name="rowKey">
+        /// The key of the row to which the read/modify/write rules should be applied.
+        /// Must not be empty.
+        /// </param>
+        /// <param name="rules">
+        /// Rules specifying how the specified row's contents are to be transformed
+        /// into writes. Entries are applied in order, meaning that earlier rules will
+        /// affect the results of later ones. Must not be null, or contain null
+        /// elements.
+        /// </param>
+        /// <returns>
+        /// The response from modifying the row.
+        /// </returns>
+        public virtual Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
+            TableName tableName,
+            BigtableByteString rowKey,
+            params ReadModifyWriteRule[] rules) =>
+            ReadModifyWriteRowAsync(
+                CreateReadModifyWriteRowRequest(tableName, rowKey, rules));
+
+        private static ReadModifyWriteRowRequest CreateReadModifyWriteRowRequest(
+            TableName tableName,
+            BigtableByteString rowKey,
+            IEnumerable<ReadModifyWriteRule> rules)
+        {
+            GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
+            GaxPreconditions.CheckArgument(rowKey.Length != 0, nameof(rowKey), "The row key must not empty");
+            
+            var request = new ReadModifyWriteRowRequest
+            {
+                TableNameAsTableName = tableName,
+                RowKey = rowKey.Value,
+                Rules = { Utilities.ValidateCollection(rules, nameof(rules)) }
+            };
+
+            GaxPreconditions.CheckArgument(
+                request.Rules.Count != 0, nameof(rules), "There must be at least one entry.");
+            return request;
+        }
+
+        /// <summary>
         /// Returns the contents of the requested row, optionally applying the specified Reader filter.
         /// </summary>
         /// <remarks>
