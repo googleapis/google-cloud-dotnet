@@ -340,24 +340,38 @@ namespace Google.Cloud.PubSub.V1.Tests
             [CombinatorialValues(1, 2, 3)] int clientCount,
             [CombinatorialValues(2, 9, 25, 600)] int stopAfterSeconds,
             [CombinatorialValues(1, 2, 3, 4, 5, 10, 21, 99, 148)] int flowMaxElements,
-            [CombinatorialValues(1, 10, 14, 18, 25, 39, 81, 255)] int flowMaxBytes)
+            [CombinatorialValues(1, 10, 14, 18, 25, 39, 81, 255)] int flowMaxBytes,
+            [CombinatorialValues(1, 3, 9, 19)] int threadCount)
         {
             const int msgsPerClient = 100;
             var oneMsgByteCount = FakeSubscriber.MakeReceivedMessage("0000.0000", "0000").CalculateSize();
             var combinedFlowMaxElements = Math.Min(flowMaxElements, flowMaxBytes / oneMsgByteCount + 1);
             var expectedMsgCount = Math.Min(msgsPerClient * clientCount, combinedFlowMaxElements * stopAfterSeconds + (hardStop ? 0 : combinedFlowMaxElements));
             var msgss = Enumerable.Range(0, msgsPerClient).Select(i => ServerAction.Data(TimeSpan.Zero, new[] { i.ToString("D4") }));
-            using (var fake = Fake.Create(Enumerable.Repeat(msgss, clientCount).ToList(), flowMaxElements: flowMaxElements, flowMaxBytes: flowMaxBytes, clientCount: clientCount, threadCount: 3))
+            using (var fake = Fake.Create(Enumerable.Repeat(msgss, clientCount).ToList(),
+                flowMaxElements: flowMaxElements, flowMaxBytes: flowMaxBytes, clientCount: clientCount, threadCount: threadCount))
             {
                 fake.Scheduler.Run(async () =>
                 {
                     List<string> handledMsgs = new List<string>();
+                    int concurrentElementCount = 0;
+                    int concurrentByteCount = 0;
                     var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                     {
+                        var msgSize = msg.CalculateSize();
+                        lock (handledMsgs)
+                        {
+                            // Exceeding the flow byte limit is allowed for individual messages that exceed that size.
+                            Assert.True((concurrentByteCount += msgSize) <= flowMaxBytes || concurrentElementCount == 0, "Flow has exceeded max elements.");
+                            Assert.True((concurrentElementCount += 1) <= flowMaxElements, "Flow has exceeded max bytes.");
+                        }
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
                         lock (handledMsgs)
                         {
                             handledMsgs.Add(msg.Data.ToStringUtf8());
+                            // Check just for sanity
+                            Assert.True((concurrentElementCount -= 1) >= 0);
+                            Assert.True((concurrentByteCount -= msgSize) >= 0);
                         }
                         return SimpleSubscriber.Reply.Ack;
                     });
