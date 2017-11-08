@@ -26,6 +26,14 @@ namespace Google.Cloud.Bigtable.V2.Tests
     public class BigtableClientTest
     {
         private class TestBigtableClient : BigtableClient { }
+        
+        public static TheoryData<BigtableByteString> InvalidRowKeys { get; } = new TheoryData<BigtableByteString>
+        {
+            "",
+            new byte[0],
+            ByteString.Empty,
+            default
+        };
 
         [Fact]
         public async Task CheckAndMutateRow_Valid_Request()
@@ -55,32 +63,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 new[] { Mutations.DeleteFromRow() });
         }
 
-        [Fact]
-        public async Task CheckAndMutateRow_Validate_RowKey()
+        [Theory]
+        [MemberData(nameof(InvalidRowKeys))]
+        public async Task CheckAndMutateRow_Validate_RowKey(BigtableByteString rowKey)
         {
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await CheckAndMutateRow_ValidateArguments<ArgumentException>(
                 tableName,
-                "",
-                RowFilters.PassAllFilter(),
-                new[] { Mutations.DeleteFromRow() },
-                new[] { Mutations.DeleteFromRow() });
-            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
-                tableName,
-                new byte[0],
-                RowFilters.PassAllFilter(),
-                new[] { Mutations.DeleteFromRow() },
-                new[] { Mutations.DeleteFromRow() });
-            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
-                tableName,
-                ByteString.Empty,
-                RowFilters.PassAllFilter(),
-                new[] { Mutations.DeleteFromRow() },
-                new[] { Mutations.DeleteFromRow() });
-            await CheckAndMutateRow_ValidateArguments<ArgumentException>(
-                tableName,
-                default,
+                rowKey,
                 RowFilters.PassAllFilter(),
                 new[] { Mutations.DeleteFromRow() },
                 new[] { Mutations.DeleteFromRow() });
@@ -168,15 +159,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
             await MutateRow_ValidateArguments<ArgumentNullException>(null, "abc", new[] { Mutations.DeleteFromRow() });
         }
 
-        [Fact]
-        public async Task MutateRow_Validate_RowKey()
+        [Theory]
+        [MemberData(nameof(InvalidRowKeys))]
+        public async Task MutateRow_Validate_RowKey(BigtableByteString rowKey)
         {
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
-            await MutateRow_ValidateArguments<ArgumentException>(tableName, "", new[] { Mutations.DeleteFromRow() });
-            await MutateRow_ValidateArguments<ArgumentException>(tableName, new byte[0], new[] { Mutations.DeleteFromRow() });
-            await MutateRow_ValidateArguments<ArgumentException>(tableName, ByteString.Empty, new[] { Mutations.DeleteFromRow() });
-            await MutateRow_ValidateArguments<ArgumentException>(tableName, default, new[] { Mutations.DeleteFromRow() });
+            await MutateRow_ValidateArguments<ArgumentException>(tableName, rowKey, new[] { Mutations.DeleteFromRow() });
         }
 
         [Fact]
@@ -225,20 +214,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
             await ReadModifyWriteRow_ValidateArguments<ArgumentNullException>(
                 null, "abc", new[] { ReadModifyWriteRules.Append("a", "b", "c") });
         }
-        
-        [Fact]
-        public async Task ReadModifyWriteRow_Validate_RowKey()
+
+        [Theory]
+        [MemberData(nameof(InvalidRowKeys))]
+        public async Task ReadModifyWriteRow_Validate_RowKey(BigtableByteString rowKey)
         {
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await ReadModifyWriteRow_ValidateArguments<ArgumentException>(
-                tableName, "", new[] { ReadModifyWriteRules.Append("a", "b", "c") });
-            await ReadModifyWriteRow_ValidateArguments<ArgumentException>(
-                tableName, new byte[0], new[] { ReadModifyWriteRules.Append("a", "b", "c") });
-            await ReadModifyWriteRow_ValidateArguments<ArgumentException>(
-                tableName, ByteString.Empty, new[] { ReadModifyWriteRules.Append("a", "b", "c") });
-            await ReadModifyWriteRow_ValidateArguments<ArgumentException>(
-                tableName, default, new[] { ReadModifyWriteRules.Append("a", "b", "c") });
+                tableName, rowKey, new[] { ReadModifyWriteRules.Append("a", "b", "c") });
         }
 
         [Fact]
@@ -287,15 +271,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
             await ReadRow_ValidateArguments<ArgumentNullException>(null, "abc", null);
         }
 
-        [Fact]
-        public async Task ReadRow_Validare_RowKey()
+        [Theory]
+        [MemberData(nameof(InvalidRowKeys))]
+        public async Task ReadRow_Validate_RowKey(BigtableByteString rowKey)
         {
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
-            await ReadRow_ValidateArguments<ArgumentException>(tableName, "", null);
-            await ReadRow_ValidateArguments<ArgumentException>(tableName, new byte[0], null);
-            await ReadRow_ValidateArguments<ArgumentException>(tableName, ByteString.Empty, null);
-            await ReadRow_ValidateArguments<ArgumentException>(tableName, default, null);
+            await ReadRow_ValidateArguments<ArgumentException>(tableName, rowKey, null);
         }
 
         private async Task ReadRow_ValidateArguments<TException>(

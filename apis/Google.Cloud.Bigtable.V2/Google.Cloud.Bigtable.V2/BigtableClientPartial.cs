@@ -419,10 +419,10 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// Modifies a row atomically. The method reads the latest existing version
+        /// Modifies a row atomically on the server. The method reads the latest existing version
         /// and value from the specified columns and writes a new entry based on
         /// pre-defined read/modify/write rules. The new value for the version is the
-        /// greater of the existing version or the current server version. The method
+        /// greater of the previous value's version or the current server version. The method
         /// returns the new contents of all modified cells.
         /// </summary>
         /// <remarks>
@@ -470,10 +470,10 @@ namespace Google.Cloud.Bigtable.V2
                 callSettings);
 
         /// <summary>
-        /// Modifies a row atomically. The method reads the latest existing version
+        /// Modifies a row atomically on the server. The method reads the latest existing version
         /// and value from the specified columns and writes a new entry based on
         /// pre-defined read/modify/write rules. The new value for the version is the
-        /// greater of the existing version or the current server version. The method
+        /// greater of the previous value's version or the current server version. The method
         /// returns the new contents of all modified cells.
         /// </summary>
         /// <remarks>
@@ -516,10 +516,10 @@ namespace Google.Cloud.Bigtable.V2
                 CreateReadModifyWriteRowRequest(tableName, rowKey, rules));
 
         /// <summary>
-        /// Asynchronously modifies a row atomically. The method reads the latest existing version
+        /// Asynchronously modifies a row atomically on the server. The method reads the latest existing version
         /// and value from the specified columns and writes a new entry based on
         /// pre-defined read/modify/write rules. The new value for the version is the
-        /// greater of the existing version or the current server version. The method
+        /// greater of the previous value's version or the current server version. The method
         /// returns the new contents of all modified cells.
         /// </summary>
         /// <remarks>
@@ -567,10 +567,10 @@ namespace Google.Cloud.Bigtable.V2
                 callSettings);
 
         /// <summary>
-        /// Asynchronously modifies a row atomically. The method reads the latest existing version
+        /// Asynchronously modifies a row atomically on the server. The method reads the latest existing version
         /// and value from the specified columns and writes a new entry based on
         /// pre-defined read/modify/write rules. The new value for the version is the
-        /// greater of the existing version or the current server version. The method
+        /// greater of the previous value's version or the current server version. The method
         /// returns the new contents of all modified cells.
         /// </summary>
         /// <remarks>

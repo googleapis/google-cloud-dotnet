@@ -21,13 +21,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
 {
     public class ReadModifyWriteRulesTest
     {
-        public static IEnumerable<object[]> InvalidFamilyNames { get; } = new List<object[]>
+        public static TheoryData<string> InvalidFamilyNames { get; } = new TheoryData<string>
         {
-            new [] { default(string) },
-            new [] { "" },
-            new [] { "abc*" },
-            new [] { "abc " },
-            new [] { "a=b" }
+            default(string),
+            "",
+            "abc*",
+            "abc ",
+            "a=b"
         };
 
         [Fact]
