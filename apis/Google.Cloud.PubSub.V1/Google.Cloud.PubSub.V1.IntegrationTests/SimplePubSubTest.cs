@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Grpc.Core;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -41,13 +42,18 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
         private readonly PubsubFixture _fixture;
 
-        private async Task RunBulkMessaging(int messageCount, int minMessagesize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount, TimeSpan? timeouts = null)
+        private async Task RunBulkMessaging(
+            int messageCount, int minMessageSize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount,
+            TimeSpan? timeouts = null, int? cancelAfterRecvCount = null)
         {
+            // Force messages to be at least 4 bytes long, so an int ID can be used.
+            minMessageSize = Math.Max(4, minMessageSize);
             var topicId = _fixture.CreateTopicId();
             var subscriptionId = _fixture.CreateSubscriptionId();
 
             Console.WriteLine("BulkMessaging test");
-            Console.WriteLine($"{messageCount} messages; of size [{minMessagesize}, {maxMessageSize}]; max in-flight: {maxMessagesInFlight}, initialNacks: {initialNackCount}");
+            Console.WriteLine($"{messageCount} messages; of size [{minMessageSize}, {maxMessageSize}]; " +
+                $"max in-flight: {maxMessagesInFlight}, initialNacks: {initialNackCount}, cancelAfterRecvCount: {cancelAfterRecvCount}");
 
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
@@ -73,9 +79,10 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     }
                 )).ConfigureAwait(false);
             var simpleSubscriber = await SimpleSubscriber.CreateAsync(subscriptionName,
-                settings: timeouts == null ? null : new SimpleSubscriber.Settings
+                settings: new SimpleSubscriber.Settings
                 {
-                    StreamAckDeadline = timeouts.Value
+                    StreamAckDeadline = timeouts,
+                    FlowControlSettings = new FlowControlSettings(maxMessagesInFlight, null)
                 }).ConfigureAwait(false);
 
             Console.WriteLine("Topic, Subscription, SimplePublisher and SimpleSubscriber all created");
@@ -83,19 +90,39 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             // Subscribe
             object recvLock = new object();
             int recvCount = 0; // Count of received messages
+            int dupCount = 0; // Count of duplicate messages
             long recvSum = 0L; // Sum of bytes of received messages
+            var recvedIds = new ConcurrentDictionary<int, bool>();
+            var nackedIds = new HashSet<int>();
             Task subTask = simpleSubscriber.StartAsync((msg, ct) =>
             {
-                var localRecvCount = Interlocked.Increment(ref recvCount);
-                if (localRecvCount <= initialNackCount)
+                int id = BitConverter.ToInt32(msg.Data.ToArray(), 0);
+                lock (nackedIds)
                 {
-                    return Task.FromResult(SimpleSubscriber.Reply.Nack);
+                    if (nackedIds.Count < initialNackCount)
+                    {
+                        if (nackedIds.Add(id))
+                        {
+                            // This ID not already nacked
+                            Interlocked.Increment(ref recvCount);
+                            return Task.FromResult(SimpleSubscriber.Reply.Nack);
+                        }
+                    }
                 }
-                Interlocked.Add(ref recvSum, msg.Data.Sum(x => (long)x));
-                if (localRecvCount >= messageCount + initialNackCount)
+                bool wasAdded = recvedIds.TryAdd(id, false);
+                if (wasAdded)
                 {
-                    // Test finished, so stop subscriber
-                    Task unused = simpleSubscriber.StopAsync(TimeSpan.FromSeconds(15));
+                    var localRecvCount = Interlocked.Increment(ref recvCount);
+                    Interlocked.Add(ref recvSum, msg.Data.Sum(x => (long)x));
+                    if (localRecvCount == cancelAfterRecvCount || localRecvCount >= messageCount + initialNackCount)
+                    {
+                        // Test finished, so stop subscriber
+                        Task unused = simpleSubscriber.StopAsync(TimeSpan.FromSeconds(15));
+                    }
+                }
+                else
+                {
+                    Interlocked.Add(ref dupCount, 1);
                 }
                 // ACK all messages
                 return Task.FromResult(SimpleSubscriber.Reply.Ack);
@@ -119,6 +146,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     await Task.Delay(TimeSpan.FromSeconds(1), watchdogCts.Token).ConfigureAwait(false);
                     var localSentCount = Interlocked.Add(ref sentCount, 0);
                     var localRecvCount = Interlocked.Add(ref recvCount, 0);
+                    var localDupCount = Interlocked.Add(ref dupCount, 0);
                     if (prevSentCount == localSentCount && prevRecvCount == localRecvCount)
                     {
                         if (noProgressCount > 100)
@@ -137,7 +165,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     }
                     prevSentCount = localSentCount;
                     prevRecvCount = localRecvCount;
-                    Console.WriteLine($"Sent: {localSentCount} (in-flight: {activePubs.Locked(() => activePubs.Count)}); Recv: {localRecvCount}");
+                    Console.WriteLine($"Sent: {localSentCount} (in-flight: {activePubs.Locked(() => activePubs.Count)}); Recv: {localRecvCount} (dups: {localDupCount})");
                 }
             });
 
@@ -147,9 +175,15 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 {
                     Assert.True(false, "Test cancelled by watchdog");
                 }
-                var msgSize = rnd.Next(minMessagesize, maxMessageSize + 1);
+                if (subTask.IsCompleted)
+                {
+                    break;
+                }
+                var msgSize = rnd.Next(minMessageSize, maxMessageSize + 1);
                 var msg = new byte[msgSize];
                 rnd.NextBytes(msg);
+                // Insert an int ID into message
+                Array.Copy(BitConverter.GetBytes(i), msg, 4);
                 sentSum += msg.Sum(x => (long)x);
                 // Send message, and record Task
                 var pubTask = simplePublisher.PublishAsync(msg);
@@ -174,17 +208,27 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             Console.WriteLine("Subscriber finished shutdown");
             Console.WriteLine($"Sent: {sentCount}; Recv: {recvCount}");
 
-            // Check that all messages are correctly received.
-            // This isn't foolproof (we can get to the right sum with wrong values) but it's a pretty strong indicator.
-            Assert.Equal(messageCount + initialNackCount, recvCount);
-            Assert.Equal(sentSum, recvSum);
+            if (cancelAfterRecvCount is int cancelAfter)
+            {
+                Assert.True(recvCount >= cancelAfter && recvCount <= cancelAfter + maxMessagesInFlight, $"Incorrect recvCount: {recvCount}");
+            }
+            else
+            {
+                // Check that all messages are correctly received.
+                Assert.Equal(messageCount + initialNackCount, recvCount);
+                // This isn't foolproof (we can get to the right sum with wrong values) but it's a pretty strong indicator.
+                Assert.Equal(sentSum, recvSum);
+            }
         }
 
-        [Fact]
-        public async Task BulkMessagingAcksOnly()
+        [Theory, CombinatorialData]
+        public async Task BulkMessagingAcksOnly(
+            [CombinatorialValues(1_000, 11_111, 100_000)] int msgCount,
+            [CombinatorialValues(false, true)] bool cancelHalfway)
         {
-            // Approx data: 500MB
-            await RunBulkMessaging(100_000, 1, 10_000, 10_000, 0);
+            // Approx data for 100,000 messages: 500MB
+            await RunBulkMessaging(msgCount, 1, 10_000, msgCount / 10, 0,
+                cancelAfterRecvCount: cancelHalfway ? msgCount / 2 : (int?)null);
         }
 
         [Fact]
