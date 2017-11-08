@@ -46,7 +46,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             int messageCount, int minMessageSize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount,
             TimeSpan? timeouts = null, int? cancelAfterRecvCount = null)
         {
-            // Force messages to be at least 4 byte long, so an int ID can be used.
+            // Force messages to be at least 4 bytes long, so an int ID can be used.
             minMessageSize = Math.Max(4, minMessageSize);
             var topicId = _fixture.CreateTopicId();
             var subscriptionId = _fixture.CreateSubscriptionId();
@@ -104,7 +104,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                         if (nackedIds.Add(id))
                         {
                             // This ID not already nacked
-                            var localRecvCount = Interlocked.Increment(ref recvCount);
+                            Interlocked.Increment(ref recvCount);
                             return Task.FromResult(SimpleSubscriber.Reply.Nack);
                         }
                     }
