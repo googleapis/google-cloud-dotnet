@@ -16,11 +16,15 @@ using Google.Api.Gax;
 using Google.Protobuf;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Bigtable.V2
 {
     internal static class Utilities
     {
+        private static readonly Regex FamilyNameRegex =
+            new Regex("^[-_.a-zA-Z0-9]+$", RegexOptions.Compiled);
+
         public static ByteString Concat(this ByteString left, ByteString right)
         {
             if ((right?.Length).GetValueOrDefault(0) == 0)
@@ -57,6 +61,16 @@ namespace Google.Cloud.Bigtable.V2
                 return mutation;
             });
             return result;
+        }
+
+        public static string ValidateFamilyName(string familyName)
+        {
+            GaxPreconditions.CheckArgument(
+                familyName != null && FamilyNameRegex.IsMatch(familyName),
+                nameof(familyName),
+                "The family name must be non-null and match [-_.a-zA-Z0-9]+");
+
+            return familyName;
         }
     }
 }

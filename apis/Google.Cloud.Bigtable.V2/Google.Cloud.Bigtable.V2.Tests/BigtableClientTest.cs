@@ -207,6 +207,68 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
+        public async Task ReadModifyWriteRow_Valid_Request()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+
+            // NotImplementedException means it got through the normal validations and tried to actually
+            // make the request on the TestBigtableClient.
+            await ReadModifyWriteRow_ValidateArguments<NotImplementedException>(
+                tableName, "abc", new[] { ReadModifyWriteRules.Append("a", "b", "c") } );
+        }
+
+        [Fact]
+        public async Task ReadModifyWriteRow_Validate_TableName()
+        {
+            var client = new TestBigtableClient();
+            await ReadModifyWriteRow_ValidateArguments<ArgumentNullException>(
+                null, "abc", new[] { ReadModifyWriteRules.Append("a", "b", "c") });
+        }
+        
+        [Fact]
+        public async Task ReadModifyWriteRow_Validate_RowKey()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+            await ReadModifyWriteRow_ValidateArguments<ArgumentException>(
+                tableName, "", new[] { ReadModifyWriteRules.Append("a", "b", "c") });
+            await ReadModifyWriteRow_ValidateArguments<ArgumentException>(
+                tableName, new byte[0], new[] { ReadModifyWriteRules.Append("a", "b", "c") });
+            await ReadModifyWriteRow_ValidateArguments<ArgumentException>(
+                tableName, ByteString.Empty, new[] { ReadModifyWriteRules.Append("a", "b", "c") });
+            await ReadModifyWriteRow_ValidateArguments<ArgumentException>(
+                tableName, default, new[] { ReadModifyWriteRules.Append("a", "b", "c") });
+        }
+
+        [Fact]
+        public async Task ReadModifyWriteRow_Validate_Rules()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+            await ReadModifyWriteRow_ValidateArguments<ArgumentNullException>(tableName, "abc", null);
+            await ReadModifyWriteRow_ValidateArguments<ArgumentException>(tableName, "abc", new ReadModifyWriteRule[0]);
+            await ReadModifyWriteRow_ValidateArguments<ArgumentException>(tableName, "abc", new ReadModifyWriteRule[] { null });
+        }
+
+        private async Task ReadModifyWriteRow_ValidateArguments<TException>(
+            TableName tableName,
+            BigtableByteString rowKey,
+            IEnumerable<ReadModifyWriteRule> rules)
+            where TException : Exception
+        {
+            var client = new TestBigtableClient();
+            Assert.Throws<TException>(
+                () => client.ReadModifyWriteRow(tableName, rowKey, rules?.ToArray()));
+            Assert.Throws<TException>(
+                () => client.ReadModifyWriteRow(tableName, rowKey, rules, CallSettings.FromCancellationToken(default)));
+            await Assert.ThrowsAsync<TException>(
+                () => client.ReadModifyWriteRowAsync(tableName, rowKey, rules?.ToArray()));
+            await Assert.ThrowsAsync<TException>(
+                () => client.ReadModifyWriteRowAsync(tableName, rowKey, rules, CallSettings.FromCancellationToken(default)));
+        }
+
+        [Fact]
         public async Task ReadRow_Valid_Request()
         {
             var client = new TestBigtableClient();
