@@ -12,6 +12,17 @@ It wraps the `Google.Apis.Storage.v1` generated library, providing a higher-leve
 Common operations are exposed via the
 [StorageClient](obj/api/Google.Cloud.Storage.V1.StorageClient.yml) class.
 
+# Client life-cycle management
+
+In many cases you don't need to worry about disposing of
+`StorageClient` objects, and can create them reasonably freely -
+but be aware that this *can* causes issues with memory and network
+connection usage. We advise you to reuse a single client object if
+possible; if your architecture requires you to frequently create new
+client objects, please dispose of them to help with timely resource
+clean-up. See [the resource clean-up guide](../guides/cleanup.html#rest-based-apis) for more
+details.
+
 # Sample code
 
 [!code-cs[](obj/snippets/Google.Cloud.Storage.V1.StorageClient.txt#Overview)]
