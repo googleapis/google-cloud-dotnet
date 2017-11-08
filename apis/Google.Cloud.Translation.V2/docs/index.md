@@ -17,6 +17,17 @@ Common operations are exposed via the
 [TranslationClient](obj/api/Google.Cloud.Translation.V2.TranslationClient.yml) and 
 [AdvancedTranslationClient](obj/api/Google.Cloud.Translation.V2.AdvancedTranslationClient.yml) classes.
 
+# Client life-cycle management
+
+In many cases you don't need to worry about disposing of
+`TranslationClient` and `AdvancedTranslationClient` objects, and can create them reasonably freely -
+but be aware that this *can* causes issues with memory and network
+connection usage. We advise you to reuse a single client object if
+possible; if your architecture requires you to frequently create new
+client objects, please dispose of them to help with timely resource
+clean-up. See [the resource clean-up guide](../guides/cleanup.html#rest-based-apis) for more
+details.
+
 # Sample code
 
 ## Translating a single item of text

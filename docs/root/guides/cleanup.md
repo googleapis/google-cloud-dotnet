@@ -1,8 +1,6 @@
 # Unmanaged resource clean-up
 
-Note: this article is only relevant to libraries which use [gRPC](http://www.grpc.io).
-See the [API layers](api-layers.md) article for more details around the differences between
-gRPC-based APIs and REST-based APIs.
+## gRPC-based APIs and channels
 
 gRPC uses the concept of a *channel* between your application
 and the service implementing an API. This consists of a network
@@ -30,3 +28,53 @@ If you do not shut down the channels explicitly, they will be closed automatical
 when either the application domain is unloaded, or the process exits. For most applications, this is
 perfectly adequate; explicit shutdown is only required when your application needs to ensure that
 it has handled all requests appropriately before exiting.
+
+## REST-based APIs
+
+Summary: Use a single client if you can; if you have to create
+multiple clients at a high frequency, dispose of them when you're
+done.
+
+Just as a reminder, Google Cloud Client Libraries for .NET has three
+libraries for REST-based APIs:
+
+- Google.Cloud.Storage.V1 (StorageClient)
+- Google.Cloud.BigQuery.V2 (BigQueryClient)
+- Google.Cloud.Translation.V2 (TranslationClient, AdvancedTranslationClient)
+
+In November 2017, these client classes were changed to implement the
+`IDisposable` interface. The `Dispose` method simply disposes of the
+underlying service object, which in turn disposes of the underlying
+`HttpClient`.
+
+There are three broad usage scenarios to consider:
+
+- A single long-lived client object (or perhaps a limited set,
+  e.g. using different credentials) used for many operations.
+- A new client used for each set of operations, e.g. a new client
+  created for each incoming request on a web site, but with relatively
+  low-frequency use.
+- A new client created for each set of operations, with high-frequency
+  use.
+  
+The ability to dispose of the client really only affects the last of
+these scenarios. The way that `HttpClient` works has two downsides
+when new clients are created frequently:
+
+- Connections to the API server (e.g. the Storage API server) can
+  take a long time to close. This can cause problems if you're running
+  in an environment with a limited number of available connections.
+- Buffers within `HttpClient` can consume memory for longer than is
+  desirable.
+  
+In many cases these don't actually cause problems - if you don't
+reach your connection limit, and the garbage collector is collecting
+the `HttpClient` buffers fast enough to keep your memory usage low,
+you're fine. Likewise if you only ever create a limited set of
+client objects, you shouldn't run into issues.
+
+In other cases, where (for whatever reason) you really want to
+create a lot of client objects in quick succession, it's prudent to
+dispose of the clients when you're done with them. Now that the
+client classes implement `IDisposable`, you can simply use `using`
+statements in the normal way.
