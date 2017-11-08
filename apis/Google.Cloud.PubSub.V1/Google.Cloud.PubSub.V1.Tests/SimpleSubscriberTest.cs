@@ -361,9 +361,9 @@ namespace Google.Cloud.PubSub.V1.Tests
                         var msgSize = msg.CalculateSize();
                         lock (handledMsgs)
                         {
+                            Assert.True((concurrentElementCount += 1) <= flowMaxElements, "Flow has exceeded max elements.");
                             // Exceeding the flow byte limit is allowed for individual messages that exceed that size.
-                            Assert.True((concurrentByteCount += msgSize) <= flowMaxBytes || concurrentElementCount == 0, "Flow has exceeded max elements.");
-                            Assert.True((concurrentElementCount += 1) <= flowMaxElements, "Flow has exceeded max bytes.");
+                            Assert.True((concurrentByteCount += msgSize) <= flowMaxBytes || concurrentElementCount == 1, "Flow has exceeded max bytes.");
                         }
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
                         lock (handledMsgs)
