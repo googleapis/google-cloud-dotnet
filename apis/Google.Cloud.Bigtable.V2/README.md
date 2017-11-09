@@ -5,7 +5,7 @@ The integration tests require:
 
 - A project, identified by the `TEST_PROJECT` environment variable
 - A Bigtable instance, preferably of type Development, created within the
-projet and identified by the `BIGTABLE_TEST_INSTANCE` environment variable.
+project and identified by the `BIGTABLE_TEST_INSTANCE` environment variable.
 - An authenticated account with read/write access to the project, including the
 IAM permissions in the Bigtable Administrator role.
 
