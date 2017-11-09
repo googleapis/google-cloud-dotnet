@@ -28,8 +28,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task NullPredicate_ExistingRow()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName);
 
             var result = client.CheckAndMutateRow(
@@ -73,8 +73,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task NullPredicate_ExistingRowAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName);
 
             var result = await client.CheckAndMutateRowAsync(
@@ -118,8 +118,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task NullPredicate_MissingRow()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
             var result = client.CheckAndMutateRow(
@@ -154,8 +154,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task NullPredicate_MissingRowAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
             var result = await client.CheckAndMutateRowAsync(
@@ -190,8 +190,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task MostRecentValueCheck()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName, value: "a1");
 
             var result = client.CheckAndMutateRow(
@@ -218,8 +218,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task MostRecentValueCheckAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName, value: "a1");
 
             var result = await client.CheckAndMutateRowAsync(
@@ -246,8 +246,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task SecondToLastValueCheck()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName, value: "a1");
 
             var result = client.CheckAndMutateRow(
@@ -275,8 +275,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task SecondToLastValueCheckAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName, value: "a1");
 
             var result = await client.CheckAndMutateRowAsync(
