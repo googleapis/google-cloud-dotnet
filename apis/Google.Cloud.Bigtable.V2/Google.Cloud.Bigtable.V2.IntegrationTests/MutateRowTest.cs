@@ -28,8 +28,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task AddNewRow()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
             client.MutateRow(
                 tableName,
@@ -53,8 +53,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task AddNewRowAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
             await client.MutateRowAsync(
                 tableName,
@@ -78,8 +78,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ModifyRow()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName);
 
             client.MutateRow(
@@ -104,8 +104,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ModifyRowAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName);
 
             await client.MutateRowAsync(
@@ -130,8 +130,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task DeleteFromColumn()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName, version: new BigtableVersion(1));
             client.MutateRow(
                 tableName,
@@ -163,8 +163,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task DeleteFromColumnAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName, version: new BigtableVersion(1));
             client.MutateRow(
                 tableName,
@@ -196,8 +196,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task DeleteFromFamily()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName);
             client.MutateRow(
                 tableName,
@@ -226,8 +226,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task DeleteFromFamilyAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName);
             client.MutateRow(
                 tableName,
@@ -256,8 +256,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task DeleteFromRow()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName);
 
             client.MutateRow(
@@ -271,8 +271,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task DeleteFromRowAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName);
 
             await client.MutateRowAsync(

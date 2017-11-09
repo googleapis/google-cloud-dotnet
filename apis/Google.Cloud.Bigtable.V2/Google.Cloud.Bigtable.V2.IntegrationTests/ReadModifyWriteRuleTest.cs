@@ -29,8 +29,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task Append()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(
                 tableName,
                 BigtableFixture.ColumnFamily1,
@@ -59,8 +59,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task AppendAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(
                 tableName,
                 BigtableFixture.ColumnFamily1,
@@ -89,8 +89,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task Append_NoRowInitially()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
             client.ReadModifyWriteRow(
@@ -113,8 +113,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task Append_NoRowInitiallyAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
             await client.ReadModifyWriteRowAsync(
@@ -137,8 +137,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task Increment()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(
                 tableName,
                 BigtableFixture.ColumnFamily1,
@@ -167,8 +167,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task IncrementAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(
                 tableName,
                 BigtableFixture.ColumnFamily1,
@@ -197,8 +197,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task Increment_NoRowInitially()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
             client.ReadModifyWriteRow(
@@ -221,8 +221,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task Increment_NoRowInitiallyAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
             await client.ReadModifyWriteRowAsync(
@@ -245,8 +245,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task MultipleRulesAsync()
         {
-            var tableName = _fixture.DefaultTableName;
-            var client = _fixture.DefaultTableClient;
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
             await client.ReadModifyWriteRowAsync(
