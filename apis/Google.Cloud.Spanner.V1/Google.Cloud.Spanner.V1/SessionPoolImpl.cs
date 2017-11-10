@@ -130,6 +130,10 @@ namespace Google.Cloud.Spanner.V1
                     await Key.Client.DeleteSessionAsync(entry.Session.GetSessionName(), cancellationToken)
                         .ConfigureAwait(false);
                 }
+                catch (ObjectDisposedException)
+                {
+                    Logger.Info(() => "Unable to delete a pooled session because it was already disposed.");
+                }
                 catch (Exception e)
                 {
                     //The session delete is best effort, but we will log an error if needed
@@ -252,6 +256,9 @@ namespace Google.Cloud.Spanner.V1
             //at this point, this is not possible because we removed it from the pool, so even if the task completes (which
             // is possible due to a race), it will see that the session isn't pooled and cancel out.
             sessionEntry.EvictTaskCancellationSource.Cancel();
+            //any session leaving the pool will be in a state where its transaction warming (if started) is complete
+            //and its eviction task has been canceled.
+            await sessionEntry.Session.WaitForPrewarm().ConfigureAwait(false);
             return sessionEntry.Session;
         }
 
