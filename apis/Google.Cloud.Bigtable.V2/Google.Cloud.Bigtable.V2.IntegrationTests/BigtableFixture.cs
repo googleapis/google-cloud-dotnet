@@ -42,6 +42,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         public BigtableTableAdminClient TableAdminClient { get; private set; }
         public BigtableClient TableClient { get; private set; }
 
+        public List<TableName> CreatedTables { get; } = new List<TableName>();
         public Channel EmulatorChannel { get; }
 
         public BigtableFixture()
@@ -80,8 +81,10 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             Task.Run(InitBigtableInstanceAndTable).Wait();
         }
 
-        public async Task CreateTable(TableName tableName)
+        public async Task<TableName> CreateTable()
         {
+            var tableName = new TableName(ProjectName.ProjectId, InstanceName.InstanceId, Guid.NewGuid().ToString());
+            CreatedTables.Add(tableName);
             await TableAdminClient.CreateTableAsync(
                 new InstanceName(tableName.ProjectId, tableName.InstanceId),
                 tableName.TableId,
@@ -94,6 +97,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         { OtherColumnFamily, new ColumnFamily { GcRule = new GcRule { MaxNumVersions = 3 } } }
                     }
                 });
+            return tableName;
         }
 
         private async Task InitBigtableInstanceAndTable()
@@ -119,8 +123,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 TableClient = BigtableClient.Create(EmulatorChannel);
             }
 
-            TableName = new TableName(ProjectName.ProjectId, InstanceName.InstanceId, "default-table");
-            await CreateTable(TableName);
+            TableName = await CreateTable();
         }
 
         public async Task<BigtableByteString> InsertRowAsync(
@@ -200,9 +203,16 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         public void Dispose()
         {
-            if (TableAdminClient != null && TableName != null)
+            if (TableAdminClient != null)
             {
-                TableAdminClient.DeleteTable(new DeleteTableRequest { Name = TableName.ToString() });
+                foreach (var tableName in CreatedTables)
+                {
+                    try
+                    {
+                        TableAdminClient.DeleteTable(new DeleteTableRequest { Name = tableName.ToString() });
+                    }
+                    catch { }
+                }
             }
         }
     }
