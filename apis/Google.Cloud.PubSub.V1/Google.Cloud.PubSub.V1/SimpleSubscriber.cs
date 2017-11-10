@@ -354,7 +354,7 @@ namespace Google.Cloud.PubSub.V1
             _autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
             _maxAckExtendCount = 10_000;
             _shutdown = shutdown;
-            _scheduler = settings.Scheduler;
+            _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
             _flowControlSettings = settings.FlowControlSettings ?? DefaultFlowControlSettings;
         }
