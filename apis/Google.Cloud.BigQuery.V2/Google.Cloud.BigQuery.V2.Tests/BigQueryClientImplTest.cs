@@ -556,5 +556,23 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("VIEW", tableResource.Type);
             Assert.True(tableResource.View.UseLegacySql);
         }
+
+        [Fact]
+        public void InsertRows_NoRows_NoOp()
+        {
+            // We don't set up any expected requests, so if the client issues any, the test will fail.
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl("project", service);
+            client.InsertRows("dataset", "table", new BigQueryInsertRow[0]);
+        }
+
+        [Fact]
+        public async Task InsertRowsAsync_NoRows_NoOp()
+        {
+            // We don't set up any expected requests, so if the client issues any, the test will fail.
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl("project", service);
+            await client.InsertRowsAsync("dataset", "table", new BigQueryInsertRow[0]);
+        }
     }
 }

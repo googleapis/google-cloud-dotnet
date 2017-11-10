@@ -109,7 +109,11 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override void InsertRows(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null)
         {
-            var request = CreateInsertAllRequest(tableReference, rows, options);
+            var request = CreateInsertAllRequest(tableReference, rows, options, out bool hasRows);
+            if (!hasRows)
+            {
+                return;
+            }
             var response = request.Execute();
             HandleInsertAllResponse(response);
         }
@@ -221,7 +225,11 @@ namespace Google.Cloud.BigQuery.V2
         public override async Task InsertRowsAsync(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows,
             InsertOptions options = null, CancellationToken cancellationToken = default)
         {
-            var request = CreateInsertAllRequest(tableReference, rows, options);
+            var request = CreateInsertAllRequest(tableReference, rows, options, out bool hasRows);
+            if (!hasRows)
+            {
+                return;
+            }
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             HandleInsertAllResponse(response);
         }
@@ -249,7 +257,7 @@ namespace Google.Cloud.BigQuery.V2
             return stream;
         }
 
-        private InsertAllRequest CreateInsertAllRequest(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options)
+        private InsertAllRequest CreateInsertAllRequest(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options, out bool hasRows)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(rows, nameof(rows));
@@ -263,6 +271,8 @@ namespace Google.Cloud.BigQuery.V2
             {
                 Rows = insertRows
             };
+            // It's annoying to use an out parameter for this, but InsertAllRequest doesn't allow access to the body.
+            hasRows = body.Rows.Any();
             options?.ModifyRequest(body);
             var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             request.ModifyRequest += _versionHeaderAction;
