@@ -93,7 +93,7 @@ namespace Google.Cloud.Spanner.V1 {
             _currentCall = _spannerClient.ExecuteSqlStream(_request,
                 _spannerClient.Settings.ExecuteSqlStreamSettings.WithExpiration(
                     _spannerClient.Settings.ConvertTimeoutToExpiration(_timeoutSeconds)));
-            return _currentCall.ResponseHeadersAsync.WithSessionChecking(() => _session);
+            return WithTiming(_currentCall.ResponseHeadersAsync.WithSessionChecking(() => _session), "ResponseHeaders");
         }
 
         /// <summary>
@@ -114,28 +114,53 @@ namespace Google.Cloud.Spanner.V1 {
         ///     our _resumeToken and _resumeSkipCount.
         /// </summary>
         /// <returns></returns>
-        private async Task<bool> ReliableConnectAsync(CancellationToken cancellationToken) {
-            if (_currentCall == null) {
-                await ConnectAsync().ConfigureAwait(false);
+        private async Task<bool> ReliableConnectAsync(CancellationToken cancellationToken)
+        {
+            if (_currentCall == null)
+            {
+                await WithTiming(ConnectAsync(), "ConnectAsync").ConfigureAwait(false);
                 Debug.Assert(_currentCall != null, "_currentCall != null");
 
-                for (int i = 0; i <= _resumeSkipCount; i++) {
+                for (int i = 0; i <= _resumeSkipCount; i++)
+                {
                     ThrowIfCancellationRequested(cancellationToken);
 
                     //This calls a simple movenext on purpose.  If we get an error here, we'll fail out.
                     //TODO(benwu): Fix cancel on MoveNext in a subsequent change targeting spanner GA
-                    _isReading = await _currentCall.ResponseStream.MoveNext(CancellationToken.None).WithSessionChecking(() => _session).ConfigureAwait(false);
+                    _isReading = await WithTiming(
+                            _currentCall.ResponseStream.MoveNext(CancellationToken.None)
+                                .WithSessionChecking(() => _session),
+                            "ResponseStream.MoveNext")
+                        .ConfigureAwait(false);
                     if (!_isReading || _currentCall.ResponseStream.Current == null)
                     {
                         return false;
                     }
-                    if (_metadata == null) {
+                    if (_metadata == null)
+                    {
                         _metadata = _currentCall.ResponseStream.Current.Metadata;
                     }
                 }
                 RecordResumeToken();
             }
+
             return _isReading;
+        }
+
+        private static async Task<T> WithTiming<T>(Task<T> task, string name)
+        {
+            Stopwatch sw = null;
+            if (Logger.DefaultLogger.LogPerformanceTraces)
+            {
+                sw = Stopwatch.StartNew();
+            }
+
+            var result = await task.ConfigureAwait(false);
+            if (sw != null)
+            {
+                Logger.DefaultLogger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
+            }
+            return result;
         }
 
         private async Task<bool> ReliableMoveNextAsync(CancellationToken cancellationToken) {
@@ -233,9 +258,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<bool> HasDataAsync(CancellationToken cancellationToken) {
-            return await ReliableConnectAsync(cancellationToken).ConfigureAwait(false);
-        }
+        public Task<bool> HasDataAsync(CancellationToken cancellationToken) => ReliableConnectAsync(cancellationToken);
 
         /// <summary>
         /// </summary>
