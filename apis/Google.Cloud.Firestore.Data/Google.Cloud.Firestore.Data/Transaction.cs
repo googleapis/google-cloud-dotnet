@@ -125,7 +125,7 @@ namespace Google.Cloud.Firestore.Data
         /// Adds an operation to update a document's data in this transaction.
         /// </summary>
         /// <param name="documentReference">The document to update. Must not be null.</param>
-        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null.</param>
+        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
         /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
         public void Update(DocumentReference documentReference, Dictionary<FieldPath, object> updates, Precondition precondition = null)
         {
