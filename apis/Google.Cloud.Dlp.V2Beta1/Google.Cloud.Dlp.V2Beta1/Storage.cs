@@ -25,51 +25,58 @@ namespace Google.Cloud.Dlp.V2Beta1 {
             "Cihnb29nbGUvcHJpdmFjeS9kbHAvdjJiZXRhMS9zdG9yYWdlLnByb3RvEhpn",
             "b29nbGUucHJpdmFjeS5kbHAudjJiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0",
             "aW9ucy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byIY",
-            "CghJbmZvVHlwZRIMCgRuYW1lGAEgASgJIh4KB0ZpZWxkSWQSEwoLY29sdW1u",
-            "X25hbWUYASABKAkiNwoLUGFydGl0aW9uSWQSEgoKcHJvamVjdF9pZBgCIAEo",
-            "CRIUCgxuYW1lc3BhY2VfaWQYBCABKAkiHgoOS2luZEV4cHJlc3Npb24SDAoE",
-            "bmFtZRgBIAEoCSIhChFQcm9wZXJ0eVJlZmVyZW5jZRIMCgRuYW1lGAIgASgJ",
-            "Ik0KClByb2plY3Rpb24SPwoIcHJvcGVydHkYASABKAsyLS5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjJiZXRhMS5Qcm9wZXJ0eVJlZmVyZW5jZSLHAQoQRGF0YXN0",
-            "b3JlT3B0aW9ucxI9CgxwYXJ0aXRpb25faWQYASABKAsyJy5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjJiZXRhMS5QYXJ0aXRpb25JZBI4CgRraW5kGAIgASgLMiou",
-            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuS2luZEV4cHJlc3Npb24SOgoK",
-            "cHJvamVjdGlvbhgDIAMoCzImLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGEx",
-            "LlByb2plY3Rpb24ieAoTQ2xvdWRTdG9yYWdlT3B0aW9ucxJJCghmaWxlX3Nl",
-            "dBgBIAEoCzI3Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkNsb3VkU3Rv",
-            "cmFnZU9wdGlvbnMuRmlsZVNldBoWCgdGaWxlU2V0EgsKA3VybBgBIAEoCSIg",
-            "ChBDbG91ZFN0b3JhZ2VQYXRoEgwKBHBhdGgYASABKAkilgEKD0JpZ1F1ZXJ5",
-            "T3B0aW9ucxJCCg90YWJsZV9yZWZlcmVuY2UYASABKAsyKS5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjJiZXRhMS5CaWdRdWVyeVRhYmxlEj8KEmlkZW50aWZ5aW5n",
-            "X2ZpZWxkcxgCIAMoCzIjLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkZp",
-            "ZWxkSWQi/gEKDVN0b3JhZ2VDb25maWcSSQoRZGF0YXN0b3JlX29wdGlvbnMY",
-            "AiABKAsyLC5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5EYXRhc3RvcmVP",
-            "cHRpb25zSAASUAoVY2xvdWRfc3RvcmFnZV9vcHRpb25zGAMgASgLMi8uZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuQ2xvdWRTdG9yYWdlT3B0aW9uc0gA",
-            "EkgKEWJpZ19xdWVyeV9vcHRpb25zGAQgASgLMisuZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyYmV0YTEuQmlnUXVlcnlPcHRpb25zSABCBgoEdHlwZSI6Cg9DbG91",
-            "ZFN0b3JhZ2VLZXkSEQoJZmlsZV9wYXRoGAEgASgJEhQKDHN0YXJ0X29mZnNl",
-            "dBgCIAEoAyJDCgxEYXRhc3RvcmVLZXkSMwoKZW50aXR5X2tleRgBIAEoCzIf",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLktleSLFAQoDS2V5Ej0KDHBh",
-            "cnRpdGlvbl9pZBgBIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGEx",
-            "LlBhcnRpdGlvbklkEjkKBHBhdGgYAiADKAsyKy5nb29nbGUucHJpdmFjeS5k",
-            "bHAudjJiZXRhMS5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0aEVsZW1lbnQSDAoE",
-            "a2luZBgBIAEoCRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUYAyABKAlIAEIJCgdp",
-            "ZF90eXBlIqABCglSZWNvcmRLZXkSSAoRY2xvdWRfc3RvcmFnZV9rZXkYASAB",
-            "KAsyKy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5DbG91ZFN0b3JhZ2VL",
-            "ZXlIABJBCg1kYXRhc3RvcmVfa2V5GAIgASgLMiguZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyYmV0YTEuRGF0YXN0b3JlS2V5SABCBgoEdHlwZSJJCg1CaWdRdWVy",
-            "eVRhYmxlEhIKCnByb2plY3RfaWQYASABKAkSEgoKZGF0YXNldF9pZBgCIAEo",
-            "CRIQCgh0YWJsZV9pZBgDIAEoCSI+CghFbnRpdHlJZBIyCgVmaWVsZBgBIAEo",
-            "CzIjLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkZpZWxkSWRCiAEKHmNv",
-            "bS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMUIKRGxwU3RvcmFnZVABWj1n",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL3ByaXZhY3kv",
-            "ZGxwL3YyYmV0YTE7ZGxwqgIYR29vZ2xlLkNsb3VkLkRscC5WMkJldGExYgZw",
-            "cm90bzM="));
+            "CghJbmZvVHlwZRIMCgRuYW1lGAEgASgJIqcCCg5DdXN0b21JbmZvVHlwZRI3",
+            "CglpbmZvX3R5cGUYASABKAsyJC5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRh",
+            "MS5JbmZvVHlwZRJLCgpkaWN0aW9uYXJ5GAIgASgLMjUuZ29vZ2xlLnByaXZh",
+            "Y3kuZGxwLnYyYmV0YTEuQ3VzdG9tSW5mb1R5cGUuRGljdGlvbmFyeUgAGoYB",
+            "CgpEaWN0aW9uYXJ5ElMKCXdvcmRfbGlzdBgBIAEoCzI+Lmdvb2dsZS5wcml2",
+            "YWN5LmRscC52MmJldGExLkN1c3RvbUluZm9UeXBlLkRpY3Rpb25hcnkuV29y",
+            "ZExpc3RIABoZCghXb3JkTGlzdBINCgV3b3JkcxgBIAMoCUIICgZzb3VyY2VC",
+            "BgoEdHlwZSIeCgdGaWVsZElkEhMKC2NvbHVtbl9uYW1lGAEgASgJIjcKC1Bh",
+            "cnRpdGlvbklkEhIKCnByb2plY3RfaWQYAiABKAkSFAoMbmFtZXNwYWNlX2lk",
+            "GAQgASgJIh4KDktpbmRFeHByZXNzaW9uEgwKBG5hbWUYASABKAkiIQoRUHJv",
+            "cGVydHlSZWZlcmVuY2USDAoEbmFtZRgCIAEoCSJNCgpQcm9qZWN0aW9uEj8K",
+            "CHByb3BlcnR5GAEgASgLMi0uZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEu",
+            "UHJvcGVydHlSZWZlcmVuY2UixwEKEERhdGFzdG9yZU9wdGlvbnMSPQoMcGFy",
+            "dGl0aW9uX2lkGAEgASgLMicuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEu",
+            "UGFydGl0aW9uSWQSOAoEa2luZBgCIAEoCzIqLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52MmJldGExLktpbmRFeHByZXNzaW9uEjoKCnByb2plY3Rpb24YAyADKAsy",
+            "Ji5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5Qcm9qZWN0aW9uIngKE0Ns",
+            "b3VkU3RvcmFnZU9wdGlvbnMSSQoIZmlsZV9zZXQYASABKAsyNy5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjJiZXRhMS5DbG91ZFN0b3JhZ2VPcHRpb25zLkZpbGVT",
+            "ZXQaFgoHRmlsZVNldBILCgN1cmwYASABKAkiIAoQQ2xvdWRTdG9yYWdlUGF0",
+            "aBIMCgRwYXRoGAEgASgJIpYBCg9CaWdRdWVyeU9wdGlvbnMSQgoPdGFibGVf",
+            "cmVmZXJlbmNlGAEgASgLMikuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEu",
+            "QmlnUXVlcnlUYWJsZRI/ChJpZGVudGlmeWluZ19maWVsZHMYAiADKAsyIy5n",
+            "b29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5GaWVsZElkIv4BCg1TdG9yYWdl",
+            "Q29uZmlnEkkKEWRhdGFzdG9yZV9vcHRpb25zGAIgASgLMiwuZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyYmV0YTEuRGF0YXN0b3JlT3B0aW9uc0gAElAKFWNsb3Vk",
+            "X3N0b3JhZ2Vfb3B0aW9ucxgDIAEoCzIvLmdvb2dsZS5wcml2YWN5LmRscC52",
+            "MmJldGExLkNsb3VkU3RvcmFnZU9wdGlvbnNIABJIChFiaWdfcXVlcnlfb3B0",
+            "aW9ucxgEIAEoCzIrLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkJpZ1F1",
+            "ZXJ5T3B0aW9uc0gAQgYKBHR5cGUiOgoPQ2xvdWRTdG9yYWdlS2V5EhEKCWZp",
+            "bGVfcGF0aBgBIAEoCRIUCgxzdGFydF9vZmZzZXQYAiABKAMiQwoMRGF0YXN0",
+            "b3JlS2V5EjMKCmVudGl0eV9rZXkYASABKAsyHy5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjJiZXRhMS5LZXkixQEKA0tleRI9CgxwYXJ0aXRpb25faWQYASABKAsy",
+            "Jy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5QYXJ0aXRpb25JZBI5CgRw",
+            "YXRoGAIgAygLMisuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuS2V5LlBh",
+            "dGhFbGVtZW50GkQKC1BhdGhFbGVtZW50EgwKBGtpbmQYASABKAkSDAoCaWQY",
+            "AiABKANIABIOCgRuYW1lGAMgASgJSABCCQoHaWRfdHlwZSKgAQoJUmVjb3Jk",
+            "S2V5EkgKEWNsb3VkX3N0b3JhZ2Vfa2V5GAEgASgLMisuZ29vZ2xlLnByaXZh",
+            "Y3kuZGxwLnYyYmV0YTEuQ2xvdWRTdG9yYWdlS2V5SAASQQoNZGF0YXN0b3Jl",
+            "X2tleRgCIAEoCzIoLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkRhdGFz",
+            "dG9yZUtleUgAQgYKBHR5cGUiSQoNQmlnUXVlcnlUYWJsZRISCgpwcm9qZWN0",
+            "X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoIdGFibGVfaWQYAyAB",
+            "KAkiPgoIRW50aXR5SWQSMgoFZmllbGQYASABKAsyIy5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjJiZXRhMS5GaWVsZElkQogBCh5jb20uZ29vZ2xlLnByaXZhY3ku",
+            "ZGxwLnYyYmV0YTFCCkRscFN0b3JhZ2VQAVo9Z29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9wcml2YWN5L2RscC92MmJldGExO2RscKoC",
+            "GEdvb2dsZS5DbG91ZC5EbHAuVjJCZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.InfoType), global::Google.Cloud.Dlp.V2Beta1.InfoType.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CustomInfoType), global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Parser, new[]{ "InfoType", "Dictionary" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList" }, new[]{ "Source" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.FieldId), global::Google.Cloud.Dlp.V2Beta1.FieldId.Parser, new[]{ "ColumnName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.PartitionId), global::Google.Cloud.Dlp.V2Beta1.PartitionId.Parser, new[]{ "ProjectId", "NamespaceId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.KindExpression), global::Google.Cloud.Dlp.V2Beta1.KindExpression.Parser, new[]{ "Name" }, null, null, null),
@@ -216,6 +223,506 @@ namespace Google.Cloud.Dlp.V2Beta1 {
   }
 
   /// <summary>
+  /// Custom information type provided by the user. Used to find domain-specific
+  /// sensitive information configurable to the data in question.
+  /// </summary>
+  public sealed partial class CustomInfoType : pb::IMessage<CustomInfoType> {
+    private static readonly pb::MessageParser<CustomInfoType> _parser = new pb::MessageParser<CustomInfoType>(() => new CustomInfoType());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CustomInfoType> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomInfoType() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomInfoType(CustomInfoType other) : this() {
+      InfoType = other.infoType_ != null ? other.InfoType.Clone() : null;
+      switch (other.TypeCase) {
+        case TypeOneofCase.Dictionary:
+          Dictionary = other.Dictionary.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomInfoType Clone() {
+      return new CustomInfoType(this);
+    }
+
+    /// <summary>Field number for the "info_type" field.</summary>
+    public const int InfoTypeFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.InfoType infoType_;
+    /// <summary>
+    /// Info type configuration. All custom info types must have configurations
+    /// that do not conflict with built-in info types or other custom info types.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.InfoType InfoType {
+      get { return infoType_; }
+      set {
+        infoType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dictionary" field.</summary>
+    public const int DictionaryFieldNumber = 2;
+    /// <summary>
+    /// Dictionary-based custom info type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary Dictionary {
+      get { return typeCase_ == TypeOneofCase.Dictionary ? (global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.Dictionary;
+      }
+    }
+
+    private object type_;
+    /// <summary>Enum of possible cases for the "type" oneof.</summary>
+    public enum TypeOneofCase {
+      None = 0,
+      Dictionary = 2,
+    }
+    private TypeOneofCase typeCase_ = TypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TypeOneofCase TypeCase {
+      get { return typeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearType() {
+      typeCase_ = TypeOneofCase.None;
+      type_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CustomInfoType);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CustomInfoType other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(InfoType, other.InfoType)) return false;
+      if (!object.Equals(Dictionary, other.Dictionary)) return false;
+      if (TypeCase != other.TypeCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (infoType_ != null) hash ^= InfoType.GetHashCode();
+      if (typeCase_ == TypeOneofCase.Dictionary) hash ^= Dictionary.GetHashCode();
+      hash ^= (int) typeCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (infoType_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InfoType);
+      }
+      if (typeCase_ == TypeOneofCase.Dictionary) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Dictionary);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (infoType_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InfoType);
+      }
+      if (typeCase_ == TypeOneofCase.Dictionary) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Dictionary);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CustomInfoType other) {
+      if (other == null) {
+        return;
+      }
+      if (other.infoType_ != null) {
+        if (infoType_ == null) {
+          infoType_ = new global::Google.Cloud.Dlp.V2Beta1.InfoType();
+        }
+        InfoType.MergeFrom(other.InfoType);
+      }
+      switch (other.TypeCase) {
+        case TypeOneofCase.Dictionary:
+          Dictionary = other.Dictionary;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (infoType_ == null) {
+              infoType_ = new global::Google.Cloud.Dlp.V2Beta1.InfoType();
+            }
+            input.ReadMessage(infoType_);
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary subBuilder = new global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary();
+            if (typeCase_ == TypeOneofCase.Dictionary) {
+              subBuilder.MergeFrom(Dictionary);
+            }
+            input.ReadMessage(subBuilder);
+            Dictionary = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CustomInfoType message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Custom information type based on a dictionary of words or phrases. This can
+      /// be used to match sensitive information specific to the data, such as a list
+      /// of employee IDs or job titles.
+      ///
+      /// Dictionary words are case-insensitive and all characters other than letters
+      /// and digits in the unicode [Basic Multilingual
+      /// Plane](https://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane)
+      /// will be replaced with whitespace when scanning for matches, so the
+      /// dictionary phrase "Sam Johnson" will match all three phrases "sam johnson",
+      /// "Sam, Johnson", and "Sam (Johnson)". Additionally, the characters
+      /// surrounding any match must be of a different type than the adjacent
+      /// characters within the word, so letters must be next to non-letters and
+      /// digits next to non-digits. For example, the dictionary word "jen" will
+      /// match the first three letters of the text "jen123" but will return no
+      /// matches for "jennifer".
+      ///
+      /// Dictionary words containing a large number of characters that are not
+      /// letters or digits may result in unexpected findings because such characters
+      /// are treated as whitespace.
+      /// </summary>
+      public sealed partial class Dictionary : pb::IMessage<Dictionary> {
+        private static readonly pb::MessageParser<Dictionary> _parser = new pb::MessageParser<Dictionary>(() => new Dictionary());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Dictionary> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Dictionary() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Dictionary(Dictionary other) : this() {
+          switch (other.SourceCase) {
+            case SourceOneofCase.WordList:
+              WordList = other.WordList.Clone();
+              break;
+          }
+
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Dictionary Clone() {
+          return new Dictionary(this);
+        }
+
+        /// <summary>Field number for the "word_list" field.</summary>
+        public const int WordListFieldNumber = 1;
+        /// <summary>
+        /// List of words or phrases to search for.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.WordList WordList {
+          get { return sourceCase_ == SourceOneofCase.WordList ? (global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.WordList) source_ : null; }
+          set {
+            source_ = value;
+            sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.WordList;
+          }
+        }
+
+        private object source_;
+        /// <summary>Enum of possible cases for the "source" oneof.</summary>
+        public enum SourceOneofCase {
+          None = 0,
+          WordList = 1,
+        }
+        private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SourceOneofCase SourceCase {
+          get { return sourceCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void ClearSource() {
+          sourceCase_ = SourceOneofCase.None;
+          source_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Dictionary);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Dictionary other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(WordList, other.WordList)) return false;
+          if (SourceCase != other.SourceCase) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (sourceCase_ == SourceOneofCase.WordList) hash ^= WordList.GetHashCode();
+          hash ^= (int) sourceCase_;
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (sourceCase_ == SourceOneofCase.WordList) {
+            output.WriteRawTag(10);
+            output.WriteMessage(WordList);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (sourceCase_ == SourceOneofCase.WordList) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(WordList);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Dictionary other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.SourceCase) {
+            case SourceOneofCase.WordList:
+              WordList = other.WordList;
+              break;
+          }
+
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.WordList subBuilder = new global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.WordList();
+                if (sourceCase_ == SourceOneofCase.WordList) {
+                  subBuilder.MergeFrom(WordList);
+                }
+                input.ReadMessage(subBuilder);
+                WordList = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Dictionary message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// Message defining a list of words or phrases to search for in the data.
+          /// </summary>
+          public sealed partial class WordList : pb::IMessage<WordList> {
+            private static readonly pb::MessageParser<WordList> _parser = new pb::MessageParser<WordList>(() => new WordList());
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pb::MessageParser<WordList> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public WordList() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public WordList(WordList other) : this() {
+              words_ = other.words_.Clone();
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public WordList Clone() {
+              return new WordList(this);
+            }
+
+            /// <summary>Field number for the "words" field.</summary>
+            public const int WordsFieldNumber = 1;
+            private static readonly pb::FieldCodec<string> _repeated_words_codec
+                = pb::FieldCodec.ForString(10);
+            private readonly pbc::RepeatedField<string> words_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Words or phrases defining the dictionary. The dictionary must contain
+            /// at least one phrase and every phrase must contain at least 2 characters
+            /// that are letters or digits. [required]
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public pbc::RepeatedField<string> Words {
+              get { return words_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override bool Equals(object other) {
+              return Equals(other as WordList);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool Equals(WordList other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!words_.Equals(other.words_)) return false;
+              return true;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= words_.GetHashCode();
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void WriteTo(pb::CodedOutputStream output) {
+              words_.WriteTo(output, _repeated_words_codec);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public int CalculateSize() {
+              int size = 0;
+              size += words_.CalculateSize(_repeated_words_codec);
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(WordList other) {
+              if (other == null) {
+                return;
+              }
+              words_.Add(other.words_);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(pb::CodedInputStream input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    input.SkipLastField();
+                    break;
+                  case 10: {
+                    words_.AddEntriesFrom(input, _repeated_words_codec);
+                    break;
+                  }
+                }
+              }
+            }
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// General identifier of a data field in a storage service.
   /// </summary>
   public sealed partial class FieldId : pb::IMessage<FieldId> {
@@ -225,7 +732,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -353,7 +860,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -507,7 +1014,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -630,7 +1137,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -754,7 +1261,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -883,7 +1390,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1075,7 +1582,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1332,7 +1839,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1455,7 +1962,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1608,7 +2115,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1842,7 +2349,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1996,7 +2503,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2128,7 +2635,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2524,7 +3031,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2717,7 +3224,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2907,7 +3414,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
