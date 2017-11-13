@@ -66,7 +66,7 @@ namespace Google.Cloud.Firestore.Data.Tests
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
             var batch = db.CreateWriteBatch();
             var doc = db.Document("col/doc");
-            Assert.Throws<ArgumentException>(() => batch.Set(doc, documentData));
+            Assert.Throws<ArgumentException>(() => batch.Set(doc, documentData, SetOptions.MergeAll));
         }
 
         [Theory]
@@ -77,7 +77,7 @@ namespace Google.Cloud.Firestore.Data.Tests
             var batch = db.CreateWriteBatch();
             var doc = db.Document("col/doc");
             // Don't check the result, just that it doesn't throw.
-            batch.Set(doc, documentData);
+            batch.Set(doc, documentData, SetOptions.MergeAll);
         }
 
         [Fact]
@@ -96,7 +96,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                     Name = doc.Path,
                     Fields = { { "Name", CreateValue("Test") } }
                 },
-                UpdateMask = new DocumentMask { FieldPaths = { "Name", "DeleteMe", "Timestamp" } }
+                UpdateMask = new DocumentMask { FieldPaths = { "Name", "DeleteMe" } }
             };
             var expectedTransform = new Write
             {
@@ -130,13 +130,9 @@ namespace Google.Cloud.Firestore.Data.Tests
                     Fields =
                     {
                         { "ValueA", CreateMap(("Name", CreateValue("Test"))) },
-                        // The presence of this empty map is slightly annoying, but sometimes it's value for an empty
-                        // map to be in a set of fields, and it's hard to detect whether that's deliberate or not at this stage.
-                        // TODO: Validate this decision with the Firestore team.
-                        { "ValueB", CreateMap() }
                     }
                 },
-                UpdateMask = new DocumentMask { FieldPaths = { "ValueA.Name", "ValueA.DeleteMeA", "ValueA.TimestampA", "ValueB.DeleteMeB", "ValueB.TimestampB" } }
+                UpdateMask = new DocumentMask { FieldPaths = { "ValueA.Name", "ValueA.DeleteMeA", "ValueB.DeleteMeB" } }
             };
             var expectedTransform = new Write
             {
