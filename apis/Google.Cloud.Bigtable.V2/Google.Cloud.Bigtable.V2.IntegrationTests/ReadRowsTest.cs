@@ -478,11 +478,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task ReadRows_Validate_SingleIteration()
         {
-            var tableName = new TableName(
-                _fixture.InstanceName.ProjectId,
-                _fixture.InstanceName.InstanceId,
-                "ReadRows_Validate_SingleIteration_Table");
-            await _fixture.CreateTable(tableName);
+            var tableName = await _fixture.CreateTable();
             var client = _fixture.TableClient;
 
             var rowKey = await _fixture.InsertRowAsync(tableName);
