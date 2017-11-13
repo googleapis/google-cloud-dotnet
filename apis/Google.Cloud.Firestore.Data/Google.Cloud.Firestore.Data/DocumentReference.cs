@@ -123,7 +123,7 @@ namespace Google.Cloud.Firestore.Data
         /// <summary>
         /// Asynchronously performs a set of updates on the document referred to by this path, with an optional precondition.
         /// </summary>
-        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null.</param>
+        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
         /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The write result of the server operation.</returns>

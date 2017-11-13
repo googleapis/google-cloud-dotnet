@@ -19,7 +19,6 @@ using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types;
@@ -58,16 +57,13 @@ namespace Google.Cloud.Firestore.Data
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(documentData, nameof(documentData));
-            var write = new Write
-            {
-                CurrentDocument = Precondition.MustNotExist.Proto,
-                Update = new Document
-                {
-                    Fields = { ValueSerializer.SerializeMap(documentData) },
-                    Name = documentReference.Path
-                }
-            };
-            AddUpdate(write);
+            var fields = ValueSerializer.SerializeMap(documentData);
+            var serverTimestamps = new List<FieldPath>();
+            var deletes = new List<FieldPath>();
+            FindSentinels(fields, FieldPath.Empty, serverTimestamps, deletes);
+            GaxPreconditions.CheckArgument(deletes.Count == 0, nameof(documentData), "Delete sentinels cannot appear in Create calls");
+            RemoveSentinels(fields, serverTimestamps);
+            AddUpdateWrites(documentReference, fields, new List<FieldPath>(), Precondition.MustNotExist, serverTimestamps);
             return this;
         }
 
@@ -93,29 +89,29 @@ namespace Google.Cloud.Firestore.Data
         /// Adds an update operation that updates just the specified fields paths in the document, with the corresponding values.
         /// </summary>
         /// <param name="documentReference">A document reference indicating the path of the document to update. Must not be null.</param>
-        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null.</param>
+        /// <param name="updates">The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</param>
         /// <param name="precondition">Optional precondition for updating the document. May be null, which is equivalent to <see cref="Precondition.MustExist"/>.</param>
         /// <returns>This batch, for the purposes of method chaining.</returns>
         public WriteBatch Update(DocumentReference documentReference, IDictionary<FieldPath, object> updates, Precondition precondition = null)
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(updates, nameof(updates));
+            GaxPreconditions.CheckArgument(updates.Count != 0, nameof(updates), "Empty set of updates specified");
+            GaxPreconditions.CheckArgument(precondition?.Proto.Exists != true, nameof(precondition), "Cannot specify a must-exist precondition for update");
 
             var serializedUpdates = updates.ToDictionary(pair => pair.Key, pair => ValueSerializer.Serialize(pair.Value));
-            var deconstructed = ExpandObject(serializedUpdates);
+            var expanded = ExpandObject(serializedUpdates);
 
-            // TODO: Validate that the precondition is reasonable (i.e. not "MustNotExist")?
-            var write = new Write
-            {
-                CurrentDocument = (precondition ?? Precondition.MustExist).Proto,
-                Update = new Document
-                {
-                    Fields = { deconstructed },
-                    Name = documentReference.Path,
-                },
-                UpdateMask = new DocumentMask { FieldPaths = { serializedUpdates.Keys.Select(fp => fp.EncodedPath) } }
-            };
-            AddUpdate(write);
+
+            var serverTimestamps = new List<FieldPath>();
+            var deletes = new List<FieldPath>();
+            FindSentinels(expanded, FieldPath.Empty, serverTimestamps, deletes);
+
+            // This effectively validates that a delete wasn't part of a map. It could still be a multi-segment field path, but it can't be within something else.
+            GaxPreconditions.CheckArgument(deletes.All(fp => updates.ContainsKey(fp)), nameof(updates), "Deletes cannot be nested within update calls");
+            RemoveSentinels(expanded, deletes);
+            RemoveSentinels(expanded, serverTimestamps);
+            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, serverTimestamps);
             return this;
         }
 
@@ -133,27 +129,58 @@ namespace Google.Cloud.Firestore.Data
 
             var fields = ValueSerializer.SerializeMap(documentData);
             options = options ?? SetOptions.Overwrite;
-            var mask = options.FieldMask;
+            var serverTimestamps = new List<FieldPath>();
+            var deletes = new List<FieldPath>();
+            FindSentinels(fields, FieldPath.Empty, serverTimestamps, deletes);
 
-            // TODO: Check it's okay to do this *after* serialization. The Java code is somewhat different.
-            var fieldPaths = mask.Count == 0
-                ? fields.ToDictionary(pair => new FieldPath(pair.Key), pair => pair.Value)
-                : ApplyFieldMask(fields, mask);
-
-            var write = new Write
-            {
-                Update = new Document
-                {
-                    Fields = { ExpandObject(fieldPaths) },
-                    Name = documentReference.Path
-                }
-            };
+            IDictionary<FieldPath, Value> updates;
+            IReadOnlyList<FieldPath> updatePaths;
             if (options.Merge)
             {
-                var paths = mask.Count == 0 ? ExtractDocumentMask(fields) : mask;
-                write.UpdateMask = new DocumentMask { FieldPaths = { paths.Select(fp => fp.EncodedPath) } };
+                var mask = options.FieldMask;
+                if (mask.Count == 0)
+                {
+                    // Merge all:
+                    // - Deletes are allowed anywhere
+                    // - All timestamps converted to transforms
+                    // - Each top-level entry becomes a FieldPath
+                    RemoveSentinels(fields, serverTimestamps);
+                    // Work out the update paths after removing server timestamps but before removing deletes,
+                    // so that we correctly perform the deletes.
+                    updatePaths = ExtractDocumentMask(fields);
+                    RemoveSentinels(fields, deletes);
+                    updates = fields.ToDictionary(pair => new FieldPath(pair.Key), pair => pair.Value);
+                }
+                else
+                {
+                    // Merge specific:
+                    // - Deletes must be in the mask
+                    // - Only timestamps in the mask are converted to transforms
+                    // - Apply the field mask to get the updates
+                    GaxPreconditions.CheckArgument(deletes.All(p => mask.Contains(p)), nameof(documentData), "Delete cannot appear in an unmerged field");
+                    serverTimestamps = serverTimestamps.Intersect(mask).ToList();
+                    RemoveSentinels(fields, deletes);
+                    RemoveSentinels(fields, serverTimestamps);
+                    updates = ApplyFieldMask(fields, mask);
+                    // Every field path in the mask must either refer to a now-removed sentinel, or a remaining value.
+                    GaxPreconditions.CheckArgument(mask.All(p => updates.ContainsKey(p) || deletes.Contains(p) || serverTimestamps.Contains(p)),
+                        nameof(documentData), "All paths specified for merging must appear in the data.");
+                    updatePaths = mask;
+                }
             }
-            AddUpdate(write);
+            else
+            {
+                // Overwrite:
+                // - No deletes allowed
+                // - All timestamps converted to transforms
+                // - Each top-level entry becomes a FieldPath
+                GaxPreconditions.CheckArgument(deletes.Count == 0, nameof(documentData), "Delete cannot appear in document data when overwriting");
+                RemoveSentinels(fields, serverTimestamps);
+                updates = fields.ToDictionary(pair => new FieldPath(pair.Key), pair => pair.Value);
+                updatePaths = new List<FieldPath>();
+            }
+
+            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, serverTimestamps);
             return this;
         }
 
@@ -177,70 +204,76 @@ namespace Google.Cloud.Firestore.Data
                 .ToList();
         }
 
-        /// <summary>
-        /// Adds a Write with an Update field to the list of writes, having first removed all sentinel values.
-        /// If any sentinel values are server timestamps, they are transformed into a new write, which is also added.
-        /// All methods creating an update should call this method rather than calling Writes.Add(write) themselves.
-        /// </summary>
-        private void AddUpdate(Write writeWithUpdate)
+        private void AddUpdateWrites(DocumentReference documentReference, IDictionary<string, Value> fields, IReadOnlyList<FieldPath> updatePaths, Precondition precondition, IList<FieldPath> serverTimestampPaths)
         {
-            var transform = new DocumentTransform { Document = writeWithUpdate.Update.Name };
-            ProcessSentinelValues(writeWithUpdate.Update.Fields, FieldPath.Empty);
-            Writes.Add(writeWithUpdate);
-            if (transform.FieldTransforms.Count != 0)
+            updatePaths = updatePaths.Except(serverTimestampPaths).ToList();
+            if (fields.Count > 0 || updatePaths.Count > 0)
             {
-                Writes.Add(new Write { Transform = transform });
-            }
-
-            // Processes the sentinel values within a map of fields, recursively.
-            // - Dictionary entries will be removed for sentinel fields
-            // - The transform will be updated 
-            void ProcessSentinelValues(IDictionary<string, Value> fields, FieldPath parentPath)
-            {
-                List<string> removals = null;
-                foreach (var pair in fields)
+                Writes.Add(new Write
                 {
-                    Value value = pair.Value;
-                    string key = pair.Key;
-                    if (value.IsServerTimestampSentinel())
+                    CurrentDocument = precondition?.Proto,
+                    Update = new Document
                     {
-                        transform.FieldTransforms.Add(new FieldTransform
+                        Fields = { fields },
+                        Name = documentReference.Path,
+                    },
+                    UpdateMask = updatePaths.Count > 0 ? new DocumentMask { FieldPaths = { updatePaths.Select(fp => fp.EncodedPath) } } : null
+                });
+                precondition = null;
+            }
+            if (serverTimestampPaths.Count > 0 || precondition != null)
+            {
+                Writes.Add(new Write
+                {
+                    CurrentDocument = precondition?.Proto,
+                    Transform = new DocumentTransform
+                    {
+                        Document = documentReference.Path,
+                        FieldTransforms =
                         {
-                            FieldPath = parentPath.Append(pair.Key).EncodedPath,
-                            SetToServerValue = ServerValue.RequestTime
-                        });
-                        removals = AddOrCreate(removals, key);
+                            serverTimestampPaths.Select(p => new FieldTransform
+                            {
+                                FieldPath = p.EncodedPath,
+                                SetToServerValue = ServerValue.RequestTime
+                            })
+                        }
                     }
-                    else if (value.IsDeleteSentinel())
-                    {
-                        removals = AddOrCreate(removals, key);
-                    }
-                    else if (value.MapValue != null)
-                    {
-                        ProcessSentinelValues(value.MapValue.Fields, parentPath.Append(pair.Key));
-                    }
-                    else if (value.ArrayValue != null)
-                    {
-                        ValidateNoSentinelValues(value.ArrayValue.Values);
-                    }
-                }
-                removals?.ForEach(key => fields.Remove(key));
+                });
             }
+        }
 
-            // Adds an item to an existing list, or creates a new list containing the item if there's currently no
-            // list. This allows us to avoid creating lots of lists redundantly.
-            List<string> AddOrCreate(List<string> list, string item)
+        /// <summary>
+        /// Finds all the sentinel values in a field map, adding them to lists based on their type.
+        /// Additionally, this validates that no sentinels exist in arrays (even nested).
+        /// </summary>
+        /// <param name="fields">The field map</param>
+        /// <param name="parentPath">The path of this map within the document. (So FieldPath.Empty for a top-level call.)</param>
+        /// <param name="serverTimestamps">The list to add any discovered server timestamp sentinels to</param>
+        /// <param name="deletes">The list to add any discovered delete sentinels to</param>
+        private static void FindSentinels(IDictionary<string, Value> fields, FieldPath parentPath, List<FieldPath> serverTimestamps, List<FieldPath> deletes)
+        {
+            foreach (var pair in fields)
             {
-                if (list == null)
+                Value value = pair.Value;
+                string key = pair.Key;
+                if (value.IsServerTimestampSentinel())
                 {
-                    list = new List<string>();
+                    serverTimestamps.Add(parentPath.Append(key));
                 }
-                list.Add(item);
-                return list;
+                else if (value.IsDeleteSentinel())
+                {
+                    deletes.Add(parentPath.Append(key));
+                }
+                else if (value.MapValue != null)
+                {
+                    FindSentinels(value.MapValue.Fields, parentPath.Append(pair.Key), serverTimestamps, deletes);
+                }
+                else if (value.ArrayValue != null)
+                {
+                    ValidateNoSentinelValues(value.ArrayValue.Values);
+                }
             }
 
-            // Validates that the given sequence of values contains no sentinel values, recursing
-            // as required to validate in a "deep" way.
             void ValidateNoSentinelValues(IEnumerable<Value> values)
             {
                 foreach (var value in values)
@@ -261,6 +294,36 @@ namespace Google.Cloud.Firestore.Data
                 }
             }
         }
+
+        /// <summary>
+        /// Removes the specified sentinel paths from the given field map. Any maps which were non-empty but become empty due to this are
+        /// removed along the way.
+        /// </summary>
+        /// <returns>true iff the map was non-empty before, but is now empty (i.e. removing the sentinels has removed all data)</returns>
+        private static bool RemoveSentinels(IDictionary<string, Value> fields, List<FieldPath> sentinelPaths)
+        {
+            foreach (var path in sentinelPaths)
+            {
+                RemoveSentinel(fields, path, 0);
+            }
+            // If we don't have any fields left and we removed anything, we must have removed
+            // everything.
+            return fields.Count == 0 && sentinelPaths.Count > 0;
+
+            bool RemoveSentinel(IDictionary<string, Value> currentFields, FieldPath path, int segmentIndex)
+            {
+                string segment = path.Segments[segmentIndex];
+                // We can remove this segment if either it's the leaf (the sentinel itself) or
+                // the recursive call indicates that we've removed all the descendants.
+                var removeSegment = segmentIndex == path.Segments.Length - 1 ||
+                    RemoveSentinel(currentFields[segment].MapValue.Fields, path, segmentIndex + 1);
+                if (removeSegment)
+                {
+                    currentFields.Remove(segment);
+                }
+                return currentFields.Count == 0;
+            }
+        }        
 
         // Visible for testing
         /// <summary>
