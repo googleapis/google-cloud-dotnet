@@ -62,10 +62,11 @@ namespace Google.Cloud.Logging.V2 {
             "bWV0cmljcy8qfToGbWV0cmljEoQBCg9EZWxldGVMb2dNZXRyaWMSKS5nb29n",
             "bGUubG9nZ2luZy52Mi5EZWxldGVMb2dNZXRyaWNSZXF1ZXN0GhYuZ29vZ2xl",
             "LnByb3RvYnVmLkVtcHR5Ii6C0+STAigqJi92Mi97bWV0cmljX25hbWU9cHJv",
-            "amVjdHMvKi9tZXRyaWNzLyp9QoUBChVjb20uZ29vZ2xlLmxvZ2dpbmcudjJC",
+            "amVjdHMvKi9tZXRyaWNzLyp9Qp8BChVjb20uZ29vZ2xlLmxvZ2dpbmcudjJC",
             "E0xvZ2dpbmdNZXRyaWNzUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
             "cHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29n",
-            "bGUuQ2xvdWQuTG9nZ2luZy5WMmIGcHJvdG8z"));
+            "bGUuQ2xvdWQuTG9nZ2luZy5WMsoCF0dvb2dsZVxDbG91ZFxMb2dnaW5nXFYy",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +87,7 @@ namespace Google.Cloud.Logging.V2 {
   /// Describes a logs-based metric.  The value of the metric is the
   /// number of log entries that match a logs filter in a given time interval.
   ///
-  /// A logs-based metric can also be used to extract values from logs and create a
+  /// Logs-based metric can also be used to extract values from logs and create a
   /// a distribution of the values. The distribution records the statistics of the
   /// extracted values along with an optional histogram of the values as specified
   /// by the bucket options.
