@@ -106,7 +106,7 @@ namespace Google.Cloud.Firestore.Data.Tests
                     FieldTransforms = { ServerTimestampTransform("Timestamp") }
                 }
             };
-            AssertWrites(batch, new[] { expectedUpdate, expectedTransform });
+            AssertWrites(batch, (expectedUpdate, true), (expectedTransform, false));
         }
 
         [Fact]
@@ -142,7 +142,27 @@ namespace Google.Cloud.Firestore.Data.Tests
                     FieldTransforms = { ServerTimestampTransform("ValueA.TimestampA"), ServerTimestampTransform("ValueB.TimestampB") }
                 }
             };
-            AssertWrites(batch, new[] { expectedUpdate, expectedTransform });
+            AssertWrites(batch, (expectedUpdate, true), (expectedTransform, false));
+        }
+
+        [Fact]
+        public void SentinelValues_OnlyTransform()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.CreateWriteBatch();
+            var doc = db.Document("col/doc");
+            var data = new { Timestamp = SentinelValue.ServerTimestamp };
+            batch.Set(doc, data, SetOptions.MergeAll);
+            // No Update.
+            var expectedTransform = new Write
+            {
+                Transform = new DocumentTransform
+                {
+                    Document = doc.Path,
+                    FieldTransforms = { ServerTimestampTransform("Timestamp") }
+                }
+            };
+            AssertWrites(batch, (expectedTransform, true));
         }
 
         private static FieldTransform ServerTimestampTransform(string fieldPath) =>
