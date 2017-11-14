@@ -15,9 +15,11 @@
 using Google.Apis.Download;
 using System;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -26,6 +28,8 @@ using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
+    using static TestHelpers;
+
     [Collection(nameof(StorageFixture))]
     public class DownloadObjectTest
     {
@@ -281,6 +285,35 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var expected = _fixture.LargeContent.Skip(2000).Take(1000).ToArray();
             var actual = stream.ToArray();
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void GzipEncoded()
+        {
+            var name = GenerateName();
+            var obj = new Object
+            {
+                Bucket = _fixture.SingleVersionBucket,
+                Name = name,
+                ContentType = "text/plain",
+                ContentEncoding = "gzip"
+            };
+            byte[] data = GetGzipData();
+            _fixture.Client.UploadObject(obj, new MemoryStream(data));
+            var stream = new MemoryStream();
+            _fixture.Client.DownloadObject(obj, stream);
+            Assert.Equal(data, stream.ToArray());
+
+            byte[] GetGzipData()
+            {
+                var memoryStream = new MemoryStream();
+                using (var compressor = new GZipStream(memoryStream, CompressionMode.Compress))
+                {
+                    byte[] bytes = Encoding.UTF8.GetBytes("hello world");
+                    compressor.Write(bytes, 0, bytes.Length);
+                }
+                return memoryStream.ToArray();
+            }
         }
 
         private Object GetLatestVersionOfMultiversionObject()
