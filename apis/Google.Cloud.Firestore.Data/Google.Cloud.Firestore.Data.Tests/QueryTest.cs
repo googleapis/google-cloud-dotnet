@@ -296,8 +296,12 @@ namespace Google.Cloud.Firestore.Data.Tests
             "doc2/col2",
             "doc2/",
             "doc2//",
+            // Relative path to a grandchild document
+            "doc2/col2/doc3",
             // DocumentReference not in this collection
-            s_db.Document("othercol/doc")
+            s_db.Document("othercol/doc"),
+            // DocumentReference which isn't a direct chid
+            s_db.Document("col/doc/col2/doc2")
         }.Select(x => new[] { x }).ToList();
 
         [Theory]

@@ -390,11 +390,12 @@ namespace Google.Cloud.Firestore.Data
                         case string relativePath:
                             // Note: this assumes querying over a single collection at the moment.
                             // Convert to a DocumentReference for the cursor
+                            PathUtilities.ValidateId(relativePath, nameof(fieldValues));
                             value = Collection.Document(relativePath);
                             break;
                         case DocumentReference absoluteRef:
-                            // Just validate
-                            GaxPreconditions.CheckArgument(absoluteRef.IsDescendantOf(Collection), nameof(fieldValues),
+                            // Just validate that the given document is a direct child of the parent collection.
+                            GaxPreconditions.CheckArgument(absoluteRef.Parent.Equals(Collection), nameof(fieldValues),
                                 "A DocumentReference cursor value for a document ID must be a descendant of the collection of the query");
                             break;
                         default:
