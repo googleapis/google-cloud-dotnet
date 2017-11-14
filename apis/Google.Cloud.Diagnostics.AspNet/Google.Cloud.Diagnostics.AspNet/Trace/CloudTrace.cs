@@ -140,6 +140,9 @@ namespace Google.Cloud.Diagnostics.AspNet
             InitializeInternal(application, projectId, options, client, traceFallbackPredicate);
         }
 
+        /// <summary>
+        /// Only used for testing.  See <see cref="Initialize"/> for details.
+        /// </summary>
         internal static CloudTrace InitializeInternal(HttpApplication application, string projectId = null,
             TraceOptions options = null, TraceServiceClient client = null,
             TraceDecisionPredicate traceFallbackPredicate = null)
