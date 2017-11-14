@@ -62,10 +62,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
-            { "Microsoft.NET.Test.Sdk", "15.3.0" },
-            { "xunit", "2.3.1-rc2-build3844" },
-            { "xunit.runner.visualstudio", "2.3.1-rc2-build3844" },
-            { "Moq", "4.7.99" }
+            { "Microsoft.NET.Test.Sdk", "15.5.0" },
+            { "xunit", "2.3.1" },
+            { "xunit.runner.visualstudio", "2.3.1" },
+            { "Moq", "4.7.145" }
         };
 
         // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
@@ -73,7 +73,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
         {
             { ConfigureAwaitAnalyzer, "1.0.0" },
-            { SourceLinkPackage, "2.1.2" }
+            { SourceLinkPackage, "2.5.0" }
         };
 
         private const string DotnetPackInstructionsLabel = "dotnet pack instructions";
