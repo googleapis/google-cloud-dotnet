@@ -2571,6 +2571,307 @@ passing an <a class="xref" href="Google.Cloud.Language.V1.EncodingType.html">Enc
 .NET strings, so the offsets returned by the analysis will be suitable for use in calls
 such as <span class="xref">System.String.Substring(System.Int32,System.Int32)</span>.</p>
 </div>
+  <a id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyText_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.ClassifyText*"></a>
+  <h4 id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyText_Google_Cloud_Language_V1_ClassifyTextRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.ClassifyText(Google.Cloud.Language.V1.ClassifyTextRequest,Google.Api.Gax.Grpc.CallSettings)">ClassifyText(ClassifyTextRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Classifies a document into categories.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ClassifyTextResponse ClassifyText(ClassifyTextRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.ClassifyTextRequest.html">ClassifyTextRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.ClassifyTextResponse.html">ClassifyTextResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyText_Google_Cloud_Language_V1_ClassifyTextRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+// Initialize request argument(s)
+ClassifyTextRequest request = new ClassifyTextRequest
+{
+    Document = new Document(),
+};
+// Make the request
+ClassifyTextResponse response = languageServiceClient.ClassifyText(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyText_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.ClassifyText*"></a>
+  <h4 id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyText_Google_Cloud_Language_V1_Document_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.ClassifyText(Google.Cloud.Language.V1.Document,Google.Api.Gax.Grpc.CallSettings)">ClassifyText(Document, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Classifies a document into categories.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ClassifyTextResponse ClassifyText(Document document, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.Document.html">Document</a></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Input document.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.ClassifyTextResponse.html">ClassifyTextResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyText_Google_Cloud_Language_V1_Document_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+// Initialize request argument(s)
+Document document = new Document();
+// Make the request
+ClassifyTextResponse response = languageServiceClient.ClassifyText(document);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.ClassifyTextAsync*"></a>
+  <h4 id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_Google_Cloud_Language_V1_ClassifyTextRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.ClassifyTextAsync(Google.Cloud.Language.V1.ClassifyTextRequest,Google.Api.Gax.Grpc.CallSettings)">ClassifyTextAsync(ClassifyTextRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Classifies a document into categories.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ClassifyTextResponse&gt; ClassifyTextAsync(ClassifyTextRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.ClassifyTextRequest.html">ClassifyTextRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.ClassifyTextResponse.html">ClassifyTextResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_Google_Cloud_Language_V1_ClassifyTextRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
+// Initialize request argument(s)
+ClassifyTextRequest request = new ClassifyTextRequest
+{
+    Document = new Document(),
+};
+// Make the request
+ClassifyTextResponse response = await languageServiceClient.ClassifyTextAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.ClassifyTextAsync*"></a>
+  <h4 id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_Google_Cloud_Language_V1_Document_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.ClassifyTextAsync(Google.Cloud.Language.V1.Document,Google.Api.Gax.Grpc.CallSettings)">ClassifyTextAsync(Document, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Classifies a document into categories.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ClassifyTextResponse&gt; ClassifyTextAsync(Document document, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.Document.html">Document</a></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Input document.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.ClassifyTextResponse.html">ClassifyTextResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_Google_Cloud_Language_V1_Document_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
+// Initialize request argument(s)
+Document document = new Document();
+// Make the request
+ClassifyTextResponse response = await languageServiceClient.ClassifyTextAsync(document);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.ClassifyTextAsync*"></a>
+  <h4 id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_Google_Cloud_Language_V1_Document_System_Threading_CancellationToken_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.ClassifyTextAsync(Google.Cloud.Language.V1.Document,System.Threading.CancellationToken)">ClassifyTextAsync(Document, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Classifies a document into categories.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ClassifyTextResponse&gt; ClassifyTextAsync(Document document, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.Document.html">Document</a></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Input document.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.ClassifyTextResponse.html">ClassifyTextResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_Google_Cloud_Language_V1_Document_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
+// Initialize request argument(s)
+Document document = new Document();
+// Make the request
+ClassifyTextResponse response = await languageServiceClient.ClassifyTextAsync(document);
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Language_V1_LanguageServiceClient_Create_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.Create*"></a>
   <h4 id="Google_Cloud_Language_V1_LanguageServiceClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Language_V1_LanguageServiceSettings_" data-uid="Google.Cloud.Language.V1.LanguageServiceClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Language.V1.LanguageServiceSettings)">Create(ServiceEndpoint, LanguageServiceSettings)</h4>
   <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Language.V1.LanguageServiceClient.html">LanguageServiceClient</a>, applying defaults for all unspecified settings,

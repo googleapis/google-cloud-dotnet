@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/Google.Cloud.Language.V1",
+  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.Language.V1",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -1911,7 +1911,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features.html",
-          "hash": "6sP7EWsAKZL8CNgV4jVmMg=="
+          "hash": "dZtCWUjRgNG9oBSg8bi0QQ=="
         }
       },
       "is_incremental": false,
@@ -1947,7 +1947,43 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Language.V1.AnnotateTextResponse.html",
-          "hash": "Rac6Gvf5JCTCOu0McNWwVQ=="
+          "hash": "DN5Un6D5S+CVHhGzhgQ0yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Language.V1.ClassificationCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Language.V1.ClassificationCategory.html",
+          "hash": "0bhCF5jx047hwsC8vq8k1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Language.V1.ClassifyTextRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Language.V1.ClassifyTextRequest.html",
+          "hash": "XRuftJcTkbY99/lPWZtCPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Language.V1.ClassifyTextResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Language.V1.ClassifyTextResponse.html",
+          "hash": "QGScwGP6NKHBNuOLshagAg=="
         }
       },
       "is_incremental": false,
@@ -2127,7 +2163,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Language.V1.LanguageService.LanguageServiceBase.html",
-          "hash": "xf8FtXU+ERIa6Dkyz6RXQw=="
+          "hash": "jY/EBrpmK0LW4IgKWfZYHw=="
         }
       },
       "is_incremental": false,
@@ -2139,7 +2175,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Language.V1.LanguageService.LanguageServiceClient.html",
-          "hash": "JYwXINTK6r9iNa0xddAd2A=="
+          "hash": "zIeKUOkyRhfDcuFZCxJd6A=="
         }
       },
       "is_incremental": false,
@@ -2163,7 +2199,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Language.V1.LanguageServiceClient.html",
-          "hash": "mTWIMn5ZccKIJQ5YZg+6OA=="
+          "hash": "B7PzZgJFrFOyF5tIrKflEQ=="
         }
       },
       "is_incremental": false,
@@ -2175,7 +2211,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Language.V1.LanguageServiceClientImpl.html",
-          "hash": "IXWU4pGS9lUnI7RZUevS8Q=="
+          "hash": "bKQwt2ChDY3fy7gnor+zQg=="
         }
       },
       "is_incremental": false,
@@ -2187,7 +2223,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Language.V1.LanguageServiceSettings.html",
-          "hash": "g5sWXhaCXJIfokWqvloTsQ=="
+          "hash": "2mF3hcbBH3xgT0WMtLxkRA=="
         }
       },
       "is_incremental": false,
@@ -2415,7 +2451,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Language.V1.html",
-          "hash": "4dGS9E57HcJbc7OIGhNg+A=="
+          "hash": "ilqN+YFvDDk6mhPB15JLIg=="
         }
       },
       "is_incremental": false,
@@ -4815,7 +4851,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "m+Tte195M5Y4zbvUQzVp0Q=="
+          "hash": "QGmRQMEpTJyEZiOw0pd26Q=="
         }
       },
       "is_incremental": false,
@@ -4845,18 +4881,9 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {
@@ -4864,8 +4891,17 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

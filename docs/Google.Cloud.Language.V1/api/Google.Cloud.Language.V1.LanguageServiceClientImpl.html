@@ -139,6 +139,15 @@
       <a class="xref" href="Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeSyntax_Google_Cloud_Language_V1_Document_System_Nullable_Google_Cloud_Language_V1_EncodingType__Google_Api_Gax_Grpc_CallSettings_">LanguageServiceClient.AnalyzeSyntax(Document, Nullable&lt;EncodingType&gt;, CallSettings)</a>
     </div>
     <div>
+      <a class="xref" href="Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_Google_Cloud_Language_V1_Document_Google_Api_Gax_Grpc_CallSettings_">LanguageServiceClient.ClassifyTextAsync(Document, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_Google_Cloud_Language_V1_Document_System_Threading_CancellationToken_">LanguageServiceClient.ClassifyTextAsync(Document, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_ClassifyText_Google_Cloud_Language_V1_Document_Google_Api_Gax_Grpc_CallSettings_">LanguageServiceClient.ClassifyText(Document, CallSettings)</a>
+    </div>
+    <div>
       <a class="xref" href="Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_AnnotateTextRequest_Types_Features_System_Nullable_Google_Cloud_Language_V1_EncodingType__Google_Api_Gax_Grpc_CallSettings_">LanguageServiceClient.AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, Nullable&lt;EncodingType&gt;, CallSettings)</a>
     </div>
     <div>
@@ -789,6 +798,108 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1_AnnotateTextRequest_Google_Api_Gax_Grpc_CallSettings_">LanguageServiceClient.AnnotateTextAsync(AnnotateTextRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Language_V1_LanguageServiceClientImpl_ClassifyText_" data-uid="Google.Cloud.Language.V1.LanguageServiceClientImpl.ClassifyText*"></a>
+  <h4 id="Google_Cloud_Language_V1_LanguageServiceClientImpl_ClassifyText_Google_Cloud_Language_V1_ClassifyTextRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Language.V1.LanguageServiceClientImpl.ClassifyText(Google.Cloud.Language.V1.ClassifyTextRequest,Google.Api.Gax.Grpc.CallSettings)">ClassifyText(ClassifyTextRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Classifies a document into categories.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ClassifyTextResponse ClassifyText(ClassifyTextRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.ClassifyTextRequest.html">ClassifyTextRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.ClassifyTextResponse.html">ClassifyTextResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_ClassifyText_Google_Cloud_Language_V1_ClassifyTextRequest_Google_Api_Gax_Grpc_CallSettings_">LanguageServiceClient.ClassifyText(ClassifyTextRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Language_V1_LanguageServiceClientImpl_ClassifyTextAsync_" data-uid="Google.Cloud.Language.V1.LanguageServiceClientImpl.ClassifyTextAsync*"></a>
+  <h4 id="Google_Cloud_Language_V1_LanguageServiceClientImpl_ClassifyTextAsync_Google_Cloud_Language_V1_ClassifyTextRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Language.V1.LanguageServiceClientImpl.ClassifyTextAsync(Google.Cloud.Language.V1.ClassifyTextRequest,Google.Api.Gax.Grpc.CallSettings)">ClassifyTextAsync(ClassifyTextRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Classifies a document into categories.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ClassifyTextResponse&gt; ClassifyTextAsync(ClassifyTextRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.ClassifyTextRequest.html">ClassifyTextRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.ClassifyTextResponse.html">ClassifyTextResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_ClassifyTextAsync_Google_Cloud_Language_V1_ClassifyTextRequest_Google_Api_Gax_Grpc_CallSettings_">LanguageServiceClient.ClassifyTextAsync(ClassifyTextRequest, CallSettings)</a></div>
 </article>
           </div>
           
