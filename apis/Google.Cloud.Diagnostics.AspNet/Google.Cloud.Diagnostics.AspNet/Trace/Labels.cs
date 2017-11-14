@@ -46,7 +46,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             return new Dictionary<string, string>
             {
                 { LabelsCommon.HttpRequestSize, request.ContentLength.ToString() },
-                { LabelsCommon.HttpHost, request.UserHostName },
+                { LabelsCommon.HttpHost, request.UserHostName ?? "" },
                 { LabelsCommon.HttpMethod, request.HttpMethod }
             };
         }
