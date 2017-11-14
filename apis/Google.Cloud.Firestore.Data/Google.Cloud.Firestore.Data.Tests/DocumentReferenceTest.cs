@@ -107,31 +107,5 @@ namespace Google.Cloud.Firestore.Data.Tests
             var document = db.Document("root/doc");
             Assert.Throws<ArgumentException>(() => document.Collection(id));
         }
-
-        [Theory]
-        [InlineData("col", "col/doc", true)]
-        [InlineData("col", "col/doc/col2/doc2", true)]
-        [InlineData("col1/doc1/col2", "col1/doc1/col2/doc2", true)]
-        [InlineData("col1/doc1/col2", "col1/doc1/col2/doc2/col3/doc3", true)]
-        [InlineData("col", "other/doc", false)]
-        [InlineData("col1/doc1/col2", "colx/doc1/col2/doc", false)]
-        [InlineData("col1/doc1/col2", "col1/docx/col2/doc", false)]
-        [InlineData("col1/doc1/col2", "col1/doc1/colx/doc", false)]
-        [InlineData("col", "colother/doc", false)]
-        public void IsDescendantOf_SameDatabase(string collectionPath, string documentPath, bool expected)
-        {
-            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
-            var collection = db.Collection(collectionPath);
-            var document = db.Document(documentPath);
-            Assert.Equal(expected, document.IsDescendantOf(collection));
-        }
-
-        [Fact]
-        public void IsDescendantOf_WrongDatabase()
-        {
-            var collection = FirestoreDb.Create("proj1", "db", new FakeFirestoreClient()).Collection("col");
-            var doc = FirestoreDb.Create("proj2", "db", new FakeFirestoreClient()).Document("col/doc");
-            Assert.False(doc.IsDescendantOf(collection));
-        }
     }
 }
