@@ -18,6 +18,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -279,6 +280,18 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.Client.DownloadObject(_fixture.ReadBucket, _fixture.LargeObject, stream,
                 new DownloadObjectOptions { Range = new RangeHeaderValue(2000, 2999) });
             var expected = _fixture.LargeContent.Skip(2000).Take(1000).ToArray();
+            var actual = stream.ToArray();
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact(Skip = "Issue 1641; not fixed yet")]
+        public void DownloadGzippedFile()
+        {
+            // The file has a Content-Encoding of gzip, and it's stored compressed.
+            // We should still be able to download it, and the result should be the original plain text.
+            var stream = new MemoryStream();
+            _fixture.Client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream);
+            var expected = Encoding.UTF8.GetBytes("hello world");
             var actual = stream.ToArray();
             Assert.Equal(expected, actual);
         }

@@ -39,6 +39,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     [CollectionDefinition(nameof(StorageFixture))]
     public sealed class StorageFixture : IDisposable, ICollectionFixture<StorageFixture>
     {
+        internal const string CrossLanguageTestBucket = "storage-library-test-bucket";
+
         private const string ProjectEnvironmentVariable = "TEST_PROJECT";
         private const string RequesterPaysProjectEnvironmentVariable = "REQUESTER_PAYS_TEST_PROJECT";
         private const string RequesterPaysCredentialsEnvironmentVariable = "REQUESTER_PAYS_CREDENTIALS";

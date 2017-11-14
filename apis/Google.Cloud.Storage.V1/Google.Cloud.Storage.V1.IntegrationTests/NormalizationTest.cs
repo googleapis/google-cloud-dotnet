@@ -20,13 +20,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     /// <summary>
     /// Tests that ensure the client does *not* perform any normalization.
-    /// The bucket <see cref="s_bucket"/> contains two files, which are both named "Café"
+    /// The bucket <see cref="StorageFixture.CrossLanguageTestBucket"/> contains two files named "Café"
     /// but using different normalization. The client should be able to retrieve both.
     /// </summary>
     public class NormalizationTest
     {
-        private const string s_bucket = "storage-library-test-bucket";
-
         [Theory]
         // Normalization Form C: a single character for e-acute.
         // URL should end with Caf%C3%A9
@@ -37,11 +35,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public void FetchObjectAndCheckContent(string name, string expectedContent)
         {
             var client = StorageClient.Create();
-            var obj = client.GetObject(s_bucket, name);
+            var obj = client.GetObject(StorageFixture.CrossLanguageTestBucket, name);
             Assert.Equal(name, obj.Name);
 
             var stream = new MemoryStream();
-            client.DownloadObject(s_bucket, name, stream);
+            client.DownloadObject(StorageFixture.CrossLanguageTestBucket, name, stream);
             string text = Encoding.UTF8.GetString(stream.ToArray());
             Assert.Equal(expectedContent, text);
         }
