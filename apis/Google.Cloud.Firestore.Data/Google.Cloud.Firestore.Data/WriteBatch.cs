@@ -23,7 +23,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types;
 using static Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform.Types;
-using static Google.Cloud.Firestore.V1Beta1.Write;
 
 namespace Google.Cloud.Firestore.Data
 {
@@ -32,14 +31,12 @@ namespace Google.Cloud.Firestore.Data
     /// </summary>
     public sealed class WriteBatch
     {
-        private static readonly OperationOneofCase[] s_manualWriteOperations = { OperationOneofCase.Delete, OperationOneofCase.Update };
-
         private readonly FirestoreDb _db;
 
-        internal bool IsEmpty => Writes.Count == 0;
+        internal bool IsEmpty => Elements.Count == 0;
 
-        // Visible for testing; should not be used elsewhere in the production code.
-        internal List<Write> Writes = new List<Write>();
+        // Visible for testing and for this class; should not be used elsewhere in the production code.
+        internal List<BatchElement> Elements { get; } = new List<BatchElement>();
 
         internal WriteBatch(FirestoreDb firestoreDb)
         {
@@ -81,7 +78,7 @@ namespace Google.Cloud.Firestore.Data
                 CurrentDocument = precondition?.Proto,
                 Delete = documentReference.Path
             };
-            Writes.Add(write); // No sentinel values to worry about here
+            Elements.Add(new BatchElement(write, true)); // No sentinel values to worry about here; always a single write
             return this;
         }
 
@@ -193,13 +190,11 @@ namespace Google.Cloud.Firestore.Data
 
         internal async Task<IList<WriteResult>> CommitAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
-            var request = new CommitRequest { Database = _db.RootPath, Writes = { Writes }, Transaction = transactionId };
+            var request = new CommitRequest { Database = _db.RootPath, Writes = { Elements.Select(e => e.Write) }, Transaction = transactionId };
             var response = await _db.Client.CommitAsync(request, CallSettings.FromCancellationToken(cancellationToken)).ConfigureAwait(false);
             return response.WriteResults
-                // Only return write results that correspond to operation cases 
-                // (There may be other auto-generated operations later, such as validation, so we check for specific operations.)
-                // If there are ever Write messages that are ambiguous, we'll have to keep track of which results to return in a different way.
-                .Where((wr, index) => s_manualWriteOperations.Contains(Writes[index].OperationCase))
+                // Only include write results from appropriate elements
+                .Where((wr, index) => Elements[index].IncludeInWriteResults)
                 .Select(wr => WriteResult.FromProto(wr, response.CommitTime))
                 .ToList();
         }
@@ -207,9 +202,10 @@ namespace Google.Cloud.Firestore.Data
         private void AddUpdateWrites(DocumentReference documentReference, IDictionary<string, Value> fields, IReadOnlyList<FieldPath> updatePaths, Precondition precondition, IList<FieldPath> serverTimestampPaths)
         {
             updatePaths = updatePaths.Except(serverTimestampPaths).ToList();
+            bool includeTransformInWriteResults = true;
             if (fields.Count > 0 || updatePaths.Count > 0)
             {
-                Writes.Add(new Write
+                Elements.Add(new BatchElement(new Write
                 {
                     CurrentDocument = precondition?.Proto,
                     Update = new Document
@@ -218,12 +214,13 @@ namespace Google.Cloud.Firestore.Data
                         Name = documentReference.Path,
                     },
                     UpdateMask = updatePaths.Count > 0 ? new DocumentMask { FieldPaths = { updatePaths.Select(fp => fp.EncodedPath) } } : null
-                });
+                }, true));
+                includeTransformInWriteResults = false;
                 precondition = null;
             }
             if (serverTimestampPaths.Count > 0 || precondition != null)
             {
-                Writes.Add(new Write
+                Elements.Add(new BatchElement(new Write
                 {
                     CurrentDocument = precondition?.Proto,
                     Transform = new DocumentTransform
@@ -238,7 +235,7 @@ namespace Google.Cloud.Firestore.Data
                             })
                         }
                     }
-                });
+                }, includeTransformInWriteResults));
             }
         }
 
@@ -458,6 +455,20 @@ namespace Google.Cloud.Firestore.Data
                         result.Add(childPath);
                     }
                 }
+            }
+        }
+
+        // Part of the batch: the write, and whether or not the corresponding WriteResult
+        // should be returned from CommitAsync.
+        internal struct BatchElement
+        {
+            internal Write Write { get; }
+            internal bool IncludeInWriteResults { get; }
+
+            internal BatchElement(Write write, bool includeInWriteResults)
+            {
+                Write = write;
+                IncludeInWriteResults = includeInWriteResults;
             }
         }
     }
