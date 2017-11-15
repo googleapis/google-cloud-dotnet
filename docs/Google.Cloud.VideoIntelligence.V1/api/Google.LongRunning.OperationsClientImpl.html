@@ -1,0 +1,793 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OperationsClientImpl
+   | Google.Cloud.VideoIntelligence.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OperationsClientImpl
+   | Google.Cloud.VideoIntelligence.V1 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.LongRunning.OperationsClientImpl">
+  
+  
+  <h1 id="Google_LongRunning_OperationsClientImpl" data-uid="Google.LongRunning.OperationsClientImpl" class="text-break">Class OperationsClientImpl
+  </h1>
+  <div class="markdown level0 summary"><p>Operations client wrapper implementation, for convenient use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></div>
+    <div class="level2"><span class="xref">OperationsClientImpl</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_DefaultEndpoint">OperationsClient.DefaultEndpoint</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_DefaultScopes">OperationsClient.DefaultScopes</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_CreateAsync_ServiceEndpoint_Google_LongRunning_OperationsSettings_">OperationsClient.CreateAsync(ServiceEndpoint, OperationsSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_Create_ServiceEndpoint_Google_LongRunning_OperationsSettings_">OperationsClient.Create(ServiceEndpoint, OperationsSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_Create_Channel_Google_LongRunning_OperationsSettings_">OperationsClient.Create(Channel, OperationsSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_ShutdownDefaultChannelsAsync">OperationsClient.ShutdownDefaultChannelsAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GetOperationAsync_System_String_CallSettings_">OperationsClient.GetOperationAsync(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GetOperationAsync_System_String_System_Threading_CancellationToken_">OperationsClient.GetOperationAsync(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GetOperation_System_String_CallSettings_">OperationsClient.GetOperation(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_ListOperationsAsync_System_String_System_String_System_String_System_Nullable_System_Int32__CallSettings_">OperationsClient.ListOperationsAsync(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_ListOperations_System_String_System_String_System_String_System_Nullable_System_Int32__CallSettings_">OperationsClient.ListOperations(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_CancelOperationAsync_System_String_CallSettings_">OperationsClient.CancelOperationAsync(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_CancelOperationAsync_System_String_System_Threading_CancellationToken_">OperationsClient.CancelOperationAsync(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_CancelOperation_System_String_CallSettings_">OperationsClient.CancelOperation(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_DeleteOperationAsync_System_String_CallSettings_">OperationsClient.DeleteOperationAsync(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_DeleteOperationAsync_System_String_System_Threading_CancellationToken_">OperationsClient.DeleteOperationAsync(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_DeleteOperation_System_String_CallSettings_">OperationsClient.DeleteOperation(String, CallSettings)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.LongRunning.html">Google.LongRunning</a></h6>
+  <h6><strong>Assembly</strong>: Google.LongRunning.dll</h6>
+  <h5 id="Google_LongRunning_OperationsClientImpl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class OperationsClientImpl : OperationsClient</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_LongRunning_OperationsClientImpl__ctor_" data-uid="Google.LongRunning.OperationsClientImpl.#ctor*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl__ctor_Google_LongRunning_Operations_OperationsClient_Google_LongRunning_OperationsSettings_" data-uid="Google.LongRunning.OperationsClientImpl.#ctor(Google.LongRunning.Operations.OperationsClient,Google.LongRunning.OperationsSettings)">OperationsClientImpl(Operations.OperationsClient, OperationsSettings)</h4>
+  <div class="markdown level1 summary"><p>Constructs a client wrapper for the Operations service, with the specified gRPC client and settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OperationsClientImpl(Operations.OperationsClient grpcClient, OperationsSettings settings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operations.OperationsClient.html">Operations.OperationsClient</a></td>
+        <td><span class="parametername">grpcClient</span></td>
+        <td><p>The underlying gRPC client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsSettings.html">OperationsSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>The base <a class="xref" href="Google.LongRunning.OperationsSettings.html">OperationsSettings</a> used within this client </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_LongRunning_OperationsClientImpl_Clock_" data-uid="Google.LongRunning.OperationsClientImpl.Clock*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_Clock" data-uid="Google.LongRunning.OperationsClientImpl.Clock">Clock</h4>
+  <div class="markdown level1 summary"><p>The clock used for timeouts, retries and polling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IClock Clock { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IClock</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_Clock">OperationsClient.Clock</a></div>
+  <a id="Google_LongRunning_OperationsClientImpl_DefaultPollSettings_" data-uid="Google.LongRunning.OperationsClientImpl.DefaultPollSettings*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_DefaultPollSettings" data-uid="Google.LongRunning.OperationsClientImpl.DefaultPollSettings">DefaultPollSettings</h4>
+  <div class="markdown level1 summary"><p>The poll settings used by default for repeated polling operations.
+May be null if no defaults have been set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PollSettings DefaultPollSettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PollSettings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_DefaultPollSettings">OperationsClient.DefaultPollSettings</a></div>
+  <a id="Google_LongRunning_OperationsClientImpl_GrpcClient_" data-uid="Google.LongRunning.OperationsClientImpl.GrpcClient*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_GrpcClient" data-uid="Google.LongRunning.OperationsClientImpl.GrpcClient">GrpcClient</h4>
+  <div class="markdown level1 summary"><p>The underlying gRPC Operations client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operations.OperationsClient GrpcClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operations.OperationsClient.html">Operations.OperationsClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GrpcClient">OperationsClient.GrpcClient</a></div>
+  <a id="Google_LongRunning_OperationsClientImpl_Scheduler_" data-uid="Google.LongRunning.OperationsClientImpl.Scheduler*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_Scheduler" data-uid="Google.LongRunning.OperationsClientImpl.Scheduler">Scheduler</h4>
+  <div class="markdown level1 summary"><p>The scheduler used for timeouts, retries and polling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IScheduler Scheduler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IScheduler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_Scheduler">OperationsClient.Scheduler</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_LongRunning_OperationsClientImpl_CancelOperation_" data-uid="Google.LongRunning.OperationsClientImpl.CancelOperation*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_CancelOperation_Google_LongRunning_CancelOperationRequest_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.CancelOperation(Google.LongRunning.CancelOperationRequest,CallSettings)">CancelOperation(CancelOperationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Starts asynchronous cancellation on a long-running operation.  The server
+makes a best effort to cancel the operation, but success is not
+guaranteed.  If the server doesn&apos;t support this method, it returns
+<code>google.rpc.Code.UNIMPLEMENTED</code>.  Clients can use
+[Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+other methods to check whether the cancellation succeeded or whether the
+operation completed despite cancellation. On successful cancellation,
+the operation is not deleted; instead, it becomes an operation with
+an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+corresponding to <code>Code.CANCELLED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CancelOperation(CancelOperationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.CancelOperationRequest.html">CancelOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_CancelOperation_Google_LongRunning_CancelOperationRequest_CallSettings_">OperationsClient.CancelOperation(CancelOperationRequest, CallSettings)</a></div>
+  <a id="Google_LongRunning_OperationsClientImpl_CancelOperationAsync_" data-uid="Google.LongRunning.OperationsClientImpl.CancelOperationAsync*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_CancelOperationAsync_Google_LongRunning_CancelOperationRequest_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.CancelOperationAsync(Google.LongRunning.CancelOperationRequest,CallSettings)">CancelOperationAsync(CancelOperationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Starts asynchronous cancellation on a long-running operation.  The server
+makes a best effort to cancel the operation, but success is not
+guaranteed.  If the server doesn&apos;t support this method, it returns
+<code>google.rpc.Code.UNIMPLEMENTED</code>.  Clients can use
+[Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+other methods to check whether the cancellation succeeded or whether the
+operation completed despite cancellation. On successful cancellation,
+the operation is not deleted; instead, it becomes an operation with
+an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+corresponding to <code>Code.CANCELLED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task CancelOperationAsync(CancelOperationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.CancelOperationRequest.html">CancelOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_CancelOperationAsync_Google_LongRunning_CancelOperationRequest_CallSettings_">OperationsClient.CancelOperationAsync(CancelOperationRequest, CallSettings)</a></div>
+  <a id="Google_LongRunning_OperationsClientImpl_DeleteOperation_" data-uid="Google.LongRunning.OperationsClientImpl.DeleteOperation*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_DeleteOperation_Google_LongRunning_DeleteOperationRequest_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.DeleteOperation(Google.LongRunning.DeleteOperationRequest,CallSettings)">DeleteOperation(DeleteOperationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a long-running operation. This method indicates that the client is
+no longer interested in the operation result. It does not cancel the
+operation. If the server doesn&apos;t support this method, it returns
+<code>google.rpc.Code.UNIMPLEMENTED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DeleteOperation(DeleteOperationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.DeleteOperationRequest.html">DeleteOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_DeleteOperation_Google_LongRunning_DeleteOperationRequest_CallSettings_">OperationsClient.DeleteOperation(DeleteOperationRequest, CallSettings)</a></div>
+  <a id="Google_LongRunning_OperationsClientImpl_DeleteOperationAsync_" data-uid="Google.LongRunning.OperationsClientImpl.DeleteOperationAsync*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_DeleteOperationAsync_Google_LongRunning_DeleteOperationRequest_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.DeleteOperationAsync(Google.LongRunning.DeleteOperationRequest,CallSettings)">DeleteOperationAsync(DeleteOperationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a long-running operation. This method indicates that the client is
+no longer interested in the operation result. It does not cancel the
+operation. If the server doesn&apos;t support this method, it returns
+<code>google.rpc.Code.UNIMPLEMENTED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task DeleteOperationAsync(DeleteOperationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.DeleteOperationRequest.html">DeleteOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_DeleteOperationAsync_Google_LongRunning_DeleteOperationRequest_CallSettings_">OperationsClient.DeleteOperationAsync(DeleteOperationRequest, CallSettings)</a></div>
+  <a id="Google_LongRunning_OperationsClientImpl_GetEffectiveCallSettingsForGetOperation_" data-uid="Google.LongRunning.OperationsClientImpl.GetEffectiveCallSettingsForGetOperation*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_GetEffectiveCallSettingsForGetOperation_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.GetEffectiveCallSettingsForGetOperation(CallSettings)">GetEffectiveCallSettingsForGetOperation(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Return the <see cref="!:CallSettings"></see> that would be used by a call to
+<a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GetOperation_Google_LongRunning_GetOperationRequest_CallSettings_">GetOperation(GetOperationRequest, CallSettings)</a>, using the base
+settings of this client and the specified per-call overrides.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override CallSettings GetEffectiveCallSettingsForGetOperation(CallSettings callSettings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>The per-call override, if any.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CallSettings</span></td>
+        <td><p>The effective call settings for a GetOperation RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GetEffectiveCallSettingsForGetOperation_CallSettings_">OperationsClient.GetEffectiveCallSettingsForGetOperation(CallSettings)</a></div>
+  <h5 id="Google_LongRunning_OperationsClientImpl_GetEffectiveCallSettingsForGetOperation_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is used when polling, to determine the appropriate timeout and cancellation
+token to use for each call.</p>
+</div>
+  <a id="Google_LongRunning_OperationsClientImpl_GetOperation_" data-uid="Google.LongRunning.OperationsClientImpl.GetOperation*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_GetOperation_Google_LongRunning_GetOperationRequest_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.GetOperation(Google.LongRunning.GetOperationRequest,CallSettings)">GetOperation(GetOperationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the latest state of a long-running operation.  Clients can use this
+method to poll the operation result at intervals as recommended by the API
+service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation GetOperation(GetOperationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.GetOperationRequest.html">GetOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GetOperation_Google_LongRunning_GetOperationRequest_CallSettings_">OperationsClient.GetOperation(GetOperationRequest, CallSettings)</a></div>
+  <a id="Google_LongRunning_OperationsClientImpl_GetOperationAsync_" data-uid="Google.LongRunning.OperationsClientImpl.GetOperationAsync*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_GetOperationAsync_Google_LongRunning_GetOperationRequest_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.GetOperationAsync(Google.LongRunning.GetOperationRequest,CallSettings)">GetOperationAsync(GetOperationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the latest state of a long-running operation.  Clients can use this
+method to poll the operation result at intervals as recommended by the API
+service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; GetOperationAsync(GetOperationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.GetOperationRequest.html">GetOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GetOperationAsync_Google_LongRunning_GetOperationRequest_CallSettings_">OperationsClient.GetOperationAsync(GetOperationRequest, CallSettings)</a></div>
+  <a id="Google_LongRunning_OperationsClientImpl_ListOperations_" data-uid="Google.LongRunning.OperationsClientImpl.ListOperations*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_ListOperations_Google_LongRunning_ListOperationsRequest_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.ListOperations(Google.LongRunning.ListOperationsRequest,CallSettings)">ListOperations(ListOperationsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists operations that match the specified filter in the request. If the
+server doesn&apos;t support this method, it returns <code>UNIMPLEMENTED</code>.</p>
+<p>NOTE: the <code>name</code> binding below allows API services to override the binding
+to use different resource name schemes, such as <code>users/*/operations</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListOperationsResponse, Operation&gt; ListOperations(ListOperationsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.ListOperationsRequest.html">ListOperationsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PagedEnumerable</span>&lt;<a class="xref" href="Google.LongRunning.ListOperationsResponse.html">ListOperationsResponse</a>, <a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.LongRunning.Operation.html">Operation</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_ListOperations_Google_LongRunning_ListOperationsRequest_CallSettings_">OperationsClient.ListOperations(ListOperationsRequest, CallSettings)</a></div>
+  <a id="Google_LongRunning_OperationsClientImpl_ListOperationsAsync_" data-uid="Google.LongRunning.OperationsClientImpl.ListOperationsAsync*"></a>
+  <h4 id="Google_LongRunning_OperationsClientImpl_ListOperationsAsync_Google_LongRunning_ListOperationsRequest_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.ListOperationsAsync(Google.LongRunning.ListOperationsRequest,CallSettings)">ListOperationsAsync(ListOperationsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists operations that match the specified filter in the request. If the
+server doesn&apos;t support this method, it returns <code>UNIMPLEMENTED</code>.</p>
+<p>NOTE: the <code>name</code> binding below allows API services to override the binding
+to use different resource name schemes, such as <code>users/*/operations</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListOperationsResponse, Operation&gt; ListOperationsAsync(ListOperationsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.ListOperationsRequest.html">ListOperationsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.LongRunning.ListOperationsResponse.html">ListOperationsResponse</a>, <a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.LongRunning.Operation.html">Operation</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_ListOperationsAsync_Google_LongRunning_ListOperationsRequest_CallSettings_">OperationsClient.ListOperationsAsync(ListOperationsRequest, CallSettings)</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
