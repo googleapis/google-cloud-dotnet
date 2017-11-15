@@ -496,12 +496,14 @@
     "id": "Google.Cloud.VideoIntelligence.V1",
     "productName": "Google Cloud Video Intelligence",
     "productUrl": "https://cloud.google.com/video-intelligence",
-    "version": "1.0.0-alpha00",
+    "version": "1.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the v1beta1 Google Cloud Video Intelligence API.",
     "tags": [ "VideoIntelligence" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0"
+      "Google.Api.Gax.Grpc": "2.2.0",      
+      "Google.LongRunning": "1.0.0",
+      "Grpc.Core": "1.7.1"
     },
   },
   
