@@ -137,6 +137,16 @@ namespace Google.Cloud.Diagnostics.AspNet
             TraceOptions options = null, TraceServiceClient client = null,
             TraceDecisionPredicate traceFallbackPredicate = null)
         {
+            InitializeInternal(application, projectId, options, client, traceFallbackPredicate);
+        }
+
+        /// <summary>
+        /// Only used for testing.  See <see cref="Initialize"/> for details.
+        /// </summary>
+        internal static CloudTrace InitializeInternal(HttpApplication application, string projectId = null,
+            TraceOptions options = null, TraceServiceClient client = null,
+            TraceDecisionPredicate traceFallbackPredicate = null)
+        {
             GaxPreconditions.CheckNotNull(application, nameof(application));
 
             projectId = Project.GetAndCheckProjectId(projectId);
@@ -146,12 +156,13 @@ namespace Google.Cloud.Diagnostics.AspNet
             application.BeginRequest += trace.BeginRequest;
             application.EndRequest += trace.EndRequest;
             application.Disposed += (object sender, EventArgs e) => { trace.Dispose(); };
+            return trace;
         }
 
         /// <inheritdoc />
         public void Dispose() => _consumer.Dispose();
 
-        private void BeginRequest(object sender, EventArgs e)
+        internal void BeginRequest(object sender, EventArgs e)
         {
             var request = HttpContext.Current.Request;
             string header = request.Headers.Get(TraceHeaderContext.TraceHeader);
@@ -182,7 +193,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             tracer.AnnotateSpan(Labels.AgentLabel);
         }
 
-        private void EndRequest(object sender, EventArgs e)
+        internal void EndRequest(object sender, EventArgs e)
         {
             ISpan span = ContextInstanceManager.Get<ISpan>();
             if (span == null)
