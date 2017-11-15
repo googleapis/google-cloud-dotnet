@@ -133,6 +133,10 @@ namespace Google.Cloud.Spanner.V1
             return false;
         }
 
+        internal static Task WaitForPrewarm(this Session session)
+            => s_sessionInfoTable.TryGetValue(session, out SessionInfo info)
+                ? info.WaitForPreWarmAsync() : Task.FromResult(0);
+
         /// <summary>
         /// Starts a pre-warm background task to create a transaction on the given session with the
         /// last used transaction options.  This method will only work if CreateTransactionAsync
@@ -283,20 +287,20 @@ namespace Google.Cloud.Spanner.V1
 
             public void StartPreWarmTransaction(Session session, TransactionOptions options)
             {
+                if (PreWarmTask != null)
+                {
+                    Logger.Error(() => "Transaction pool has an invalid state where a session is being released with a prewarm still running.");
+                }
+
                 MarkTransactionUsed();
 
                 // for now, we only prewarm readwrite transactions because the read transaction semantics are usually
                 // dependent on the time the transaction begins.
                 if (options?.ModeCase == TransactionOptions.ModeOneofCase.ReadWrite)
                 {
-                    var oldTask = PreWarmTask;
                     Logger.Debug(
                         () => $"Pre-warming session transaction state. Mode={options.ModeCase}");
-                    PreWarmTask = Task.Run(() => CreateTransactionImplAsync(session, options, oldTask));
-                }
-                else
-                {
-                    PreWarmTask = null;
+                    PreWarmTask = Task.Run(() => CreateTransactionImplAsync(session, options, null));
                 }
             }
         }

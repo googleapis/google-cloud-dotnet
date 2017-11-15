@@ -193,7 +193,7 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         {
             if (LogLevel >= LogLevel.Error)
             {
-                WriteLine(messageFunc());
+                WriteLine($"{messageFunc()}, Exception = {exception}");
             }
         }
 
