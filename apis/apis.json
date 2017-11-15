@@ -258,19 +258,6 @@
   },
 
   {
-    "id": "Google.Cloud.Language.V1.Experimental",
-    "productName": "Google Cloud Natural Language",
-    "productUrl": "https://cloud.google.com/natural-language",
-    "version": "1.0.0-beta05",
-    "type": "grpc",
-    "description": "Experimental library for the Google Cloud Natural Language API, containing features which may still change before final release.",
-    "tags": [ "Language", "Experimental" ],
-    "dependencies": {
-      "Google.LongRunning": "1.0.0"
-    }
-  },
-
-  {
     "id": "Google.Cloud.Logging.Log4Net",
     "version": "2.2.0-alpha00",
     "type": "other",
@@ -507,32 +494,6 @@
     },
   },
   
-  {
-    "id": "Google.Cloud.VideoIntelligence.V1Beta1",
-    "productName": "Google Cloud Video Intelligence",
-    "productUrl": "https://cloud.google.com/video-intelligence",
-    "version": "1.0.0-beta06",
-    "type": "grpc",
-    "description": "Recommended Google client library to access the v1beta1 Google Cloud Video Intelligence API.",
-    "tags": [ "VideoIntelligence" ],
-    "dependencies": {
-      "Google.LongRunning": "1.0.0"
-    },
-  },
-
-  {
-    "id": "Google.Cloud.VideoIntelligence.V1Beta2",
-    "productName": "Google Cloud Video Intelligence",
-    "productUrl": "https://cloud.google.com/video-intelligence",
-    "version": "1.0.0-beta02",
-    "type": "grpc",
-    "description": "Recommended Google client library to access the v1beta2 Google Cloud Video Intelligence API.",
-    "tags": [ "VideoIntelligence" ],
-    "dependencies": {
-      "Google.LongRunning": "1.0.0"
-    },
-  },
-
   {
     "id": "Google.Cloud.Vision.V1",
     "productName": "Google Cloud Vision",

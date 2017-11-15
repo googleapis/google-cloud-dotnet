@@ -203,10 +203,4 @@ generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
 generate_api Google.Cloud.Speech.V1 google/cloud/speech/v1 cloud_speech_v1.yaml
 generate_api Google.Cloud.Trace.V1 google/devtools/cloudtrace/v1 cloudtrace_v1.yaml
 generate_api Google.Cloud.VideoIntelligence.V1 google/cloud/videointelligence/v1 videointelligence_v1.yaml
-generate_api Google.Cloud.VideoIntelligence.V1Beta1 google/cloud/videointelligence/v1beta1 videointelligence.yaml
-generate_api Google.Cloud.VideoIntelligence.V1Beta2 google/cloud/videointelligence/v1beta2 videointelligence_v1beta2.yaml
 generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision.yaml
-
-# Language.V1.Experimental is laid out oddly; only regenerate when we know we need to,
-# then fix up manually.
-# generate_api Google.Cloud.Language.V1.Experimental google/cloud/language/v1beta2 language_v1beta2.yaml
