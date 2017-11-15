@@ -16,12 +16,12 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Stackdriver Logging](https://cloud.google.com/logging/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.V2/) (GA)
   * Integration with Log4Net is provided via [Google.Cloud.Logging.Log4Net](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.Log4Net/) (GA)
 * [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1/) (GA)
-  * Additionally, [a separate package containing experimental features](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1.Experimental/) is available
 * [Stackdriver Monitoring](https://cloud.google.com/monitoring/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Monitoring.V3/) (GA)
 * [Google Cloud Speech](https://cloud.google.com/speech/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1/) (GA)
 * [Google Cloud Storage](https://cloud.google.com/storage/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Storage.V1/) (GA)
 * [Stackdriver Trace](https://cloud.google.com/trace/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (GA)
 * [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (GA)
+* [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1/) (GA)
 * [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (GA)
 
 The following libraries are available at a [late beta](#versioning) quality level:
@@ -37,8 +37,6 @@ The following libraries are available at a [beta](#versioning) quality level:
   * [Google.Cloud.Spanner.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.V1/): Low-level access to Spanner API
   * [Google.Cloud.Spanner.Admin.Database.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Database.V1/): Database administration API
   * [Google.Cloud.Spanner.Admin.Instance.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Instance.V1/): Instance administration API
-* [Google Cloud Video Intelligence (beta 1 API)](https://cloud.google.com/video-intelligence/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1Beta1/) (beta)
-* [Google Cloud Video Intelligence (beta 2 API)](https://cloud.google.com/video-intelligence/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1Beta2/) (beta)
 
 The following libraries are available at an [alpha](#versioning) quality level:
 
