@@ -24,11 +24,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
-// TODO: Create a PR against
-// https://github.com/GoogleCloudPlatform/google-cloud-common/blob/master/testing/firestore/proto/test.proto
-// to specify the namespace.
-using static Tests.Test;
-using Tests;
+using static Google.Cloud.Firestore.Tests.Proto.Test;
 using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Tests.Proto
@@ -139,7 +135,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
             });
         }
         
-        private static Firestore.FieldPath ConvertFieldPath(global::Tests.FieldPath testFieldPath) =>
+        private static Firestore.FieldPath ConvertFieldPath(FieldPath testFieldPath) =>
             new Firestore.FieldPath(testFieldPath.Field.ToArray());
 
         private static DocumentReference GetDocumentReference(string resourceName) =>

@@ -12,7 +12,7 @@ install_protoc
 
 declare -r API_PROTO_ROOT=$REPO_ROOT/googleapis
 declare -r LIB_ROOT=$(realpath $(dirname $0))
-declare -r PROTO_TEST_ROOT=$LIB_ROOT/Google.Cloud.Firestore.Data.Tests/Proto
+declare -r PROTO_TEST_ROOT=$LIB_ROOT/Google.Cloud.Firestore.Tests/Proto
 
 cd $API_PROTO_ROOT
 rm -rf tmp

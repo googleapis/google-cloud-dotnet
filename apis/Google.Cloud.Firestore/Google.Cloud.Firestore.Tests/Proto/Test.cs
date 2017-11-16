@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Tests {
+namespace Google.Cloud.Firestore.Tests.Proto {
 
   /// <summary>Holder for reflection information generated from test.proto</summary>
   public static partial class TestReflection {
@@ -54,19 +54,20 @@ namespace Tests {
             "b2dsZS5maXJlc3RvcmUudjFiZXRhMS5Db21taXRSZXF1ZXN0EhAKCGlzX2Vy",
             "cm9yGAQgASgIIjoKCVNldE9wdGlvbhILCgNhbGwYASABKAgSIAoGZmllbGRz",
             "GAIgAygLMhAudGVzdHMuRmllbGRQYXRoIhoKCUZpZWxkUGF0aBINCgVmaWVs",
-            "ZBgBIAMoCWIGcHJvdG8z"));
+            "ZBgBIAMoCUIlqgIiR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5UZXN0cy5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1Beta1.FirestoreReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tests.Test), global::Tests.Test.Parser, new[]{ "Description", "Get", "Create", "Set", "Update", "UpdatePaths", "Delete" }, new[]{ "Test" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tests.GetTest), global::Tests.GetTest.Parser, new[]{ "DocRefPath", "Request" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tests.CreateTest), global::Tests.CreateTest.Parser, new[]{ "DocRefPath", "JsonData", "Request", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tests.SetTest), global::Tests.SetTest.Parser, new[]{ "DocRefPath", "Option", "JsonData", "Request", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tests.UpdateTest), global::Tests.UpdateTest.Parser, new[]{ "DocRefPath", "Precondition", "JsonData", "Request", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tests.UpdatePathsTest), global::Tests.UpdatePathsTest.Parser, new[]{ "DocRefPath", "Precondition", "FieldPaths", "JsonValues", "Request", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tests.DeleteTest), global::Tests.DeleteTest.Parser, new[]{ "DocRefPath", "Precondition", "Request", "IsError" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tests.SetOption), global::Tests.SetOption.Parser, new[]{ "All", "Fields" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tests.FieldPath), global::Tests.FieldPath.Parser, new[]{ "Field" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Test), global::Google.Cloud.Firestore.Tests.Proto.Test.Parser, new[]{ "Description", "Get", "Create", "Set", "Update", "UpdatePaths", "Delete" }, new[]{ "Test" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.GetTest), global::Google.Cloud.Firestore.Tests.Proto.GetTest.Parser, new[]{ "DocRefPath", "Request" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.CreateTest), global::Google.Cloud.Firestore.Tests.Proto.CreateTest.Parser, new[]{ "DocRefPath", "JsonData", "Request", "IsError" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.SetTest), global::Google.Cloud.Firestore.Tests.Proto.SetTest.Parser, new[]{ "DocRefPath", "Option", "JsonData", "Request", "IsError" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.UpdateTest), global::Google.Cloud.Firestore.Tests.Proto.UpdateTest.Parser, new[]{ "DocRefPath", "Precondition", "JsonData", "Request", "IsError" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest), global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest.Parser, new[]{ "DocRefPath", "Precondition", "FieldPaths", "JsonValues", "Request", "IsError" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.DeleteTest), global::Google.Cloud.Firestore.Tests.Proto.DeleteTest.Parser, new[]{ "DocRefPath", "Precondition", "Request", "IsError" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.SetOption), global::Google.Cloud.Firestore.Tests.Proto.SetOption.Parser, new[]{ "All", "Fields" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.FieldPath), global::Google.Cloud.Firestore.Tests.Proto.FieldPath.Parser, new[]{ "Field" }, null, null, null)
           }));
     }
     #endregion
@@ -83,7 +84,7 @@ namespace Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tests.TestReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -146,8 +147,8 @@ namespace Tests {
     /// <summary>Field number for the "get" field.</summary>
     public const int GetFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Tests.GetTest Get {
-      get { return testCase_ == TestOneofCase.Get ? (global::Tests.GetTest) test_ : null; }
+    public global::Google.Cloud.Firestore.Tests.Proto.GetTest Get {
+      get { return testCase_ == TestOneofCase.Get ? (global::Google.Cloud.Firestore.Tests.Proto.GetTest) test_ : null; }
       set {
         test_ = value;
         testCase_ = value == null ? TestOneofCase.None : TestOneofCase.Get;
@@ -157,8 +158,8 @@ namespace Tests {
     /// <summary>Field number for the "create" field.</summary>
     public const int CreateFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Tests.CreateTest Create {
-      get { return testCase_ == TestOneofCase.Create ? (global::Tests.CreateTest) test_ : null; }
+    public global::Google.Cloud.Firestore.Tests.Proto.CreateTest Create {
+      get { return testCase_ == TestOneofCase.Create ? (global::Google.Cloud.Firestore.Tests.Proto.CreateTest) test_ : null; }
       set {
         test_ = value;
         testCase_ = value == null ? TestOneofCase.None : TestOneofCase.Create;
@@ -168,8 +169,8 @@ namespace Tests {
     /// <summary>Field number for the "set" field.</summary>
     public const int SetFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Tests.SetTest Set {
-      get { return testCase_ == TestOneofCase.Set ? (global::Tests.SetTest) test_ : null; }
+    public global::Google.Cloud.Firestore.Tests.Proto.SetTest Set {
+      get { return testCase_ == TestOneofCase.Set ? (global::Google.Cloud.Firestore.Tests.Proto.SetTest) test_ : null; }
       set {
         test_ = value;
         testCase_ = value == null ? TestOneofCase.None : TestOneofCase.Set;
@@ -179,8 +180,8 @@ namespace Tests {
     /// <summary>Field number for the "update" field.</summary>
     public const int UpdateFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Tests.UpdateTest Update {
-      get { return testCase_ == TestOneofCase.Update ? (global::Tests.UpdateTest) test_ : null; }
+    public global::Google.Cloud.Firestore.Tests.Proto.UpdateTest Update {
+      get { return testCase_ == TestOneofCase.Update ? (global::Google.Cloud.Firestore.Tests.Proto.UpdateTest) test_ : null; }
       set {
         test_ = value;
         testCase_ = value == null ? TestOneofCase.None : TestOneofCase.Update;
@@ -190,8 +191,8 @@ namespace Tests {
     /// <summary>Field number for the "update_paths" field.</summary>
     public const int UpdatePathsFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Tests.UpdatePathsTest UpdatePaths {
-      get { return testCase_ == TestOneofCase.UpdatePaths ? (global::Tests.UpdatePathsTest) test_ : null; }
+    public global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest UpdatePaths {
+      get { return testCase_ == TestOneofCase.UpdatePaths ? (global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest) test_ : null; }
       set {
         test_ = value;
         testCase_ = value == null ? TestOneofCase.None : TestOneofCase.UpdatePaths;
@@ -201,8 +202,8 @@ namespace Tests {
     /// <summary>Field number for the "delete" field.</summary>
     public const int DeleteFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Tests.DeleteTest Delete {
-      get { return testCase_ == TestOneofCase.Delete ? (global::Tests.DeleteTest) test_ : null; }
+    public global::Google.Cloud.Firestore.Tests.Proto.DeleteTest Delete {
+      get { return testCase_ == TestOneofCase.Delete ? (global::Google.Cloud.Firestore.Tests.Proto.DeleteTest) test_ : null; }
       set {
         test_ = value;
         testCase_ = value == null ? TestOneofCase.None : TestOneofCase.Delete;
@@ -378,7 +379,7 @@ namespace Tests {
             break;
           }
           case 18: {
-            global::Tests.GetTest subBuilder = new global::Tests.GetTest();
+            global::Google.Cloud.Firestore.Tests.Proto.GetTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.GetTest();
             if (testCase_ == TestOneofCase.Get) {
               subBuilder.MergeFrom(Get);
             }
@@ -387,7 +388,7 @@ namespace Tests {
             break;
           }
           case 26: {
-            global::Tests.CreateTest subBuilder = new global::Tests.CreateTest();
+            global::Google.Cloud.Firestore.Tests.Proto.CreateTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.CreateTest();
             if (testCase_ == TestOneofCase.Create) {
               subBuilder.MergeFrom(Create);
             }
@@ -396,7 +397,7 @@ namespace Tests {
             break;
           }
           case 34: {
-            global::Tests.SetTest subBuilder = new global::Tests.SetTest();
+            global::Google.Cloud.Firestore.Tests.Proto.SetTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.SetTest();
             if (testCase_ == TestOneofCase.Set) {
               subBuilder.MergeFrom(Set);
             }
@@ -405,7 +406,7 @@ namespace Tests {
             break;
           }
           case 42: {
-            global::Tests.UpdateTest subBuilder = new global::Tests.UpdateTest();
+            global::Google.Cloud.Firestore.Tests.Proto.UpdateTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.UpdateTest();
             if (testCase_ == TestOneofCase.Update) {
               subBuilder.MergeFrom(Update);
             }
@@ -414,7 +415,7 @@ namespace Tests {
             break;
           }
           case 50: {
-            global::Tests.UpdatePathsTest subBuilder = new global::Tests.UpdatePathsTest();
+            global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest();
             if (testCase_ == TestOneofCase.UpdatePaths) {
               subBuilder.MergeFrom(UpdatePaths);
             }
@@ -423,7 +424,7 @@ namespace Tests {
             break;
           }
           case 58: {
-            global::Tests.DeleteTest subBuilder = new global::Tests.DeleteTest();
+            global::Google.Cloud.Firestore.Tests.Proto.DeleteTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.DeleteTest();
             if (testCase_ == TestOneofCase.Delete) {
               subBuilder.MergeFrom(Delete);
             }
@@ -447,7 +448,7 @@ namespace Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tests.TestReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -607,7 +608,7 @@ namespace Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tests.TestReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -832,7 +833,7 @@ namespace Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tests.TestReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -877,12 +878,12 @@ namespace Tests {
 
     /// <summary>Field number for the "option" field.</summary>
     public const int OptionFieldNumber = 2;
-    private global::Tests.SetOption option_;
+    private global::Google.Cloud.Firestore.Tests.Proto.SetOption option_;
     /// <summary>
     /// option to the Set call, if any
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Tests.SetOption Option {
+    public global::Google.Cloud.Firestore.Tests.Proto.SetOption Option {
       get { return option_; }
       set {
         option_ = value;
@@ -1023,7 +1024,7 @@ namespace Tests {
       }
       if (other.option_ != null) {
         if (option_ == null) {
-          option_ = new global::Tests.SetOption();
+          option_ = new global::Google.Cloud.Firestore.Tests.Proto.SetOption();
         }
         Option.MergeFrom(other.Option);
       }
@@ -1055,7 +1056,7 @@ namespace Tests {
           }
           case 18: {
             if (option_ == null) {
-              option_ = new global::Tests.SetOption();
+              option_ = new global::Google.Cloud.Firestore.Tests.Proto.SetOption();
             }
             input.ReadMessage(option_);
             break;
@@ -1092,7 +1093,7 @@ namespace Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tests.TestReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1352,7 +1353,7 @@ namespace Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tests.TestReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1412,14 +1413,14 @@ namespace Tests {
 
     /// <summary>Field number for the "field_paths" field.</summary>
     public const int FieldPathsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Tests.FieldPath> _repeated_fieldPaths_codec
-        = pb::FieldCodec.ForMessage(26, global::Tests.FieldPath.Parser);
-    private readonly pbc::RepeatedField<global::Tests.FieldPath> fieldPaths_ = new pbc::RepeatedField<global::Tests.FieldPath>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.Tests.Proto.FieldPath> _repeated_fieldPaths_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Firestore.Tests.Proto.FieldPath.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.FieldPath> fieldPaths_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.FieldPath>();
     /// <summary>
     /// parallel sequences: field_paths[i] corresponds to json_values[i]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Tests.FieldPath> FieldPaths {
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.FieldPath> FieldPaths {
       get { return fieldPaths_; }
     }
 
@@ -1626,7 +1627,7 @@ namespace Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tests.TestReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1851,7 +1852,7 @@ namespace Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tests.TestReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1893,14 +1894,14 @@ namespace Tests {
 
     /// <summary>Field number for the "fields" field.</summary>
     public const int FieldsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Tests.FieldPath> _repeated_fields_codec
-        = pb::FieldCodec.ForMessage(18, global::Tests.FieldPath.Parser);
-    private readonly pbc::RepeatedField<global::Tests.FieldPath> fields_ = new pbc::RepeatedField<global::Tests.FieldPath>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.Tests.Proto.FieldPath> _repeated_fields_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.Tests.Proto.FieldPath.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.FieldPath> fields_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.FieldPath>();
     /// <summary>
     /// field paths for a Merge option
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Tests.FieldPath> Fields {
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.FieldPath> Fields {
       get { return fields_; }
     }
 
@@ -1997,7 +1998,7 @@ namespace Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Tests.TestReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
