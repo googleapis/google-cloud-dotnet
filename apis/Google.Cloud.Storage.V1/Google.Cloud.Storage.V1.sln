@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26114.2
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1", "Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj", "{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1.CleanTestData", "Google.Cloud.Storage.V1.CleanTestData\Google.Cloud.Storage.V1.CleanTestData.csproj", "{04517FA6-646A-430E-9799-F6D6E34A0B50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Storage.V1.ThroughputTool", "Google.Cloud.Storage.V1.ThroughputTool\Google.Cloud.Storage.V1.ThroughputTool.csproj", "{EF6CB9C6-2B01-4677-B40F-0A32EA597196}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,8 +47,15 @@ Global
 		{04517FA6-646A-430E-9799-F6D6E34A0B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04517FA6-646A-430E-9799-F6D6E34A0B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04517FA6-646A-430E-9799-F6D6E34A0B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF6CB9C6-2B01-4677-B40F-0A32EA597196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6CB9C6-2B01-4677-B40F-0A32EA597196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6CB9C6-2B01-4677-B40F-0A32EA597196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6CB9C6-2B01-4677-B40F-0A32EA597196}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4660383-936D-45A5-8E04-EF94838E91F0}
 	EndGlobalSection
 EndGlobal
