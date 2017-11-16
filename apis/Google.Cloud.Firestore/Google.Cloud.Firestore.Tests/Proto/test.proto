@@ -4,6 +4,8 @@ syntax = "proto3";
 
 package tests;
 
+option csharp_namespace = "Google.Cloud.Firestore.Tests.Proto";
+
 import "google/firestore/v1beta1/firestore.proto";
 import "google/firestore/v1beta1/common.proto";
 
