@@ -203,7 +203,7 @@
   },
 
   {
-    "id": "Google.Cloud.Firestore.Data",
+    "id": "Google.Cloud.Firestore",
     "productName": "Firestore",
     "productUrl": "https://firebase.google.com/docs/firestore/",
     "version": "1.0.0-alpha00",
