@@ -9,24 +9,22 @@ source toolversions.sh
 SCRIPT=$(readlink -f "$0")
 ROOT_DIR=$(dirname "$SCRIPT")
 
+APIS=()
 RETRY_ARG=
 COVERAGE_ARG=
 
-for arg in "$@"
-do
-  case $arg in
-  --retry)
+while (( "$#" )); do
+  if [[ "$1" == "--retry" ]]
+  then 
     RETRY_ARG=yes
-    ;;
-  --coverage)
+  elif [[ "$1" == "--coverage" ]]
+  then
     install_dotcover
     COVERAGE_ARG=yes
-    ;;
-  *)
-    echo "Unknown argument: $arg. Supported arguments: --coverage --retry"
-    exit 1
-    ;;
-  esac
+  else 
+    APIS+=($1)
+  fi
+  shift
 done
 
 # We only overwrite integration-test-failures.txt at the very end,
@@ -39,7 +37,25 @@ touch $FAILURE_TEMP_FILE
 
 cd apis
 
-if [[ "$RETRY_ARG" == "yes" && (-f "$FAILURE_FILE")]]
+if [[ ${#APIS[@]} != 0 ]]
+then
+  temp_testdirs=()
+  for api in ${APIS[*]}
+  do
+    int_dir="${api}/${api}.IntegrationTests"
+    if [[ -d "$int_dir" ]]
+    then
+      temp_testdirs+=($int_dir)
+    fi
+    
+    snip_dir="${api}/${api}.Snippets"
+    if [[ -d "$snip_dir" ]]
+    then
+      temp_testdirs+=($snip_dir)
+    fi 
+  done
+  declare -r testdirs=${temp_testdirs[*]}
+elif [[ "$RETRY_ARG" == "yes" && (-f "$FAILURE_FILE")]]
 then
   declare -r testdirs=$(cat $FAILURE_FILE)
 else
