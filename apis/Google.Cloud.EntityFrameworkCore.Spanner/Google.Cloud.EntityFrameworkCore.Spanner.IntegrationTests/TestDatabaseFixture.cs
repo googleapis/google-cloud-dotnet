@@ -32,7 +32,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
     {
         private readonly Lazy<Task> _creationTask;
         public string TestInstanceName => "spannerintegration";
-        public string TestProjectName => Environment.GetEnvironmentVariable("TEST_PROJECT") ?? "cloud-sharp-jenkins";
+        public string TestProjectName => Environment.GetEnvironmentVariable("TEST_PROJECT");
         public string ConnectionString => $"{NoDbConnectionString}/databases/{DatabaseName}";
         public string NoDbConnectionString => $"Data Source=projects/{TestProjectName}/instances/{TestInstanceName}";
 
