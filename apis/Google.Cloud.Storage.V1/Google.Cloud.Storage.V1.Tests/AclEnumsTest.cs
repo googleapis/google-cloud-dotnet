@@ -23,14 +23,14 @@ namespace Google.Cloud.Storage.V1.Tests
 {
     public class AclEnumsTest
     {
-        private static readonly Type[] s_BucketAclEnums =
+        private static readonly System.Type[] s_BucketAclEnums =
         {
             typeof(BucketsResource.InsertRequest.PredefinedAclEnum),
             typeof(BucketsResource.UpdateRequest.PredefinedAclEnum),
             typeof(BucketsResource.PatchRequest.PredefinedAclEnum)
         };
 
-        public static readonly Type[] s_ObjectAclEnums =
+        public static readonly System.Type[] s_ObjectAclEnums =
         {
             typeof(BucketsResource.InsertRequest.PredefinedDefaultObjectAclEnum),
             typeof(BucketsResource.UpdateRequest.PredefinedDefaultObjectAclEnum),
@@ -49,7 +49,7 @@ namespace Google.Cloud.Storage.V1.Tests
 
         [Theory]
         [MemberData(nameof(BucketAclEnums))]
-        public void PredefinedBucketAclMatchesApiEnums(Type apiType)
+        public void PredefinedBucketAclMatchesApiEnums(System.Type apiType)
         {
             var apiValues = Enum.GetValues(apiType);
             var wrapperValues = Enum.GetValues(typeof(PredefinedBucketAcl));
@@ -64,7 +64,7 @@ namespace Google.Cloud.Storage.V1.Tests
 
         [Theory]
         [MemberData(nameof(ObjectAclEnums))]
-        public void PredefinedObjectAclMatchesApiEnums(Type apiType)
+        public void PredefinedObjectAclMatchesApiEnums(System.Type apiType)
         {
             var apiValues = Enum.GetValues(apiType);
             var wrapperValues = Enum.GetValues(typeof(PredefinedObjectAcl));
@@ -82,7 +82,7 @@ namespace Google.Cloud.Storage.V1.Tests
         {
             var allAclEnums = typeof(StorageService).GetTypeInfo().Assembly.GetTypes().Where(t => t.GetTypeInfo().IsEnum && t.Name.EndsWith("AclEnum"));
             // This gives a better error message than Assert.Empty
-            Assert.Equal(new Type[0], allAclEnums.Except(s_BucketAclEnums).Except(s_ObjectAclEnums).ToArray());
+            Assert.Equal(new System.Type[0], allAclEnums.Except(s_BucketAclEnums).Except(s_ObjectAclEnums).ToArray());
         }
     }
 }
