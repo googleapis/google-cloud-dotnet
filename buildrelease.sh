@@ -35,6 +35,8 @@ fi
 
 ./build.sh $projects
 
+./runintegrationtests.sh $projects
+
 for project in $projects
 do
   # Don't pack the whole solution - just the project. (Avoids packing dependent

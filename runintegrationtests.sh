@@ -9,25 +9,29 @@ source toolversions.sh
 SCRIPT=$(readlink -f "$0")
 ROOT_DIR=$(dirname "$SCRIPT")
 
+APIS=()
 RETRY_ARG=
 COVERAGE_ARG=
 
-for arg in "$@"
-do
-  case $arg in
-  --retry)
+while (( "$#" )); do
+  if [[ "$1" == "--retry" ]]
+  then 
     RETRY_ARG=yes
-    ;;
-  --coverage)
+  elif [[ "$1" == "--coverage" ]]
+  then
     install_dotcover
     COVERAGE_ARG=yes
-    ;;
-  *)
-    echo "Unknown argument: $arg. Supported arguments: --coverage --retry"
-    exit 1
-    ;;
-  esac
+  else 
+    APIS+=($1)
+  fi
+  shift
 done
+
+if [[ ${#APIS[@]} != 0 && "$RETRY_ARG" == "yes" ]]
+then
+  echo "The --retry flag cannot be used when specifying projects to test."
+  exit 1
+fi
 
 # We only overwrite integration-test-failures.txt at the very end,
 # so that if we abort tests early, we don't assume there's nothing to retry.
@@ -39,7 +43,29 @@ touch $FAILURE_TEMP_FILE
 
 cd apis
 
-if [[ "$RETRY_ARG" == "yes" && (-f "$FAILURE_FILE")]]
+# There are three separate ways of determining the tests to run:
+# - If APIs have been specified on the command line, test those
+# - If --retry has been specified, run the previously-failed tests
+# - Otherwise, fine all potential tests
+if [[ ${#APIS[@]} != 0 ]]
+then
+  temp_testdirs=()
+  for api in ${APIS[*]}
+  do
+    int_dir="${api}/${api}.IntegrationTests"
+    if [[ -d "$int_dir" ]]
+    then
+      temp_testdirs+=($int_dir)
+    fi
+    
+    snip_dir="${api}/${api}.Snippets"
+    if [[ -d "$snip_dir" ]]
+    then
+      temp_testdirs+=($snip_dir)
+    fi 
+  done
+  declare -r testdirs=${temp_testdirs[*]}
+elif [[ "$RETRY_ARG" == "yes" && (-f "$FAILURE_FILE")]]
 then
   declare -r testdirs=$(cat $FAILURE_FILE)
 else
