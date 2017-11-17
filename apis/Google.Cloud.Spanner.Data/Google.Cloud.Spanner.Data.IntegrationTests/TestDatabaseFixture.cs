@@ -31,7 +31,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public string TestInstanceName => "spannerintegration";
 
-        public string TestProjectName => Environment.GetEnvironmentVariable("TEST_PROJECT") ?? "cloud-sharp-jenkins";
+        public string TestProjectName => Environment.GetEnvironmentVariable("TEST_PROJECT");
 
         public string ConnectionString => "Data Source=projects/" + TestProjectName + "/instances/" + TestInstanceName
             + "/databases/" + DatabaseName;
