@@ -13,10 +13,19 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using Google.Apis.Auth.OAuth2;
+using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf.WellKnownTypes;
+using Grpc.Auth;
+using Grpc.Core;
+using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data.Ycsb
 {
@@ -28,6 +37,8 @@ namespace Google.Cloud.Spanner.Data.Ycsb
         private static readonly string s_cloudspanner_projectName = "cloudspanner.project";
         private static readonly string s_boundedStaleness = "cloudspanner.boundedstaleness";
         private static readonly string s_numchannels = "cloudspanner.numchannels";
+        private static readonly string s_raw = "cloudspanner.raw"; //execute directly bypassing veneer and gapic
+        private static readonly string s_empty = "cloudspanner.empty"; //do nothing -- just pretend to run.
 
         private static long s_boundedStalenessSeconds;
         private static readonly List<string> s_keys = new List<string>();
@@ -55,6 +66,8 @@ namespace Google.Cloud.Spanner.Data.Ycsb
 
         private static SpannerConnection s_connection;
         private static TimestampBound s_timestampbound;
+        private static SpannerClient s_rawclient;
+        private static ConcurrentQueue<Session> s_rawsessions = new ConcurrentQueue<Session>();
         private static Program DefaultInstance { get; } = new Program();
 
         protected override List<Operation> Operations { get; } = new List<Operation>
@@ -64,14 +77,16 @@ namespace Google.Cloud.Spanner.Data.Ycsb
                 {
                     await Task.Yield();
                     var sw = Stopwatch.StartNew();
-                    var cmd = s_connection.CreateSelectCommand(
-                        s_selectQuery, new SpannerParameterCollection
-                        {
-                            {"p", SpannerDbType.String, s_keys[Rand.Value.Next(s_keys.Count)]}
-                        });
-                    using (var reader = await cmd.ExecuteReaderAsync(s_timestampbound).ConfigureAwait(false))
+                    if (!IsEmpty)
                     {
-                        while (await reader.ReadAsync().ConfigureAwait(false)) { }
+                        if (IsRaw)
+                        {
+                            await RawStreamingReadOperationAsync();
+                        }
+                        else
+                        {
+                            await StreamingReadOperationAsync();
+                        }
                     }
                     latencies.Add(sw.ElapsedMilliseconds);
                 }),
@@ -80,19 +95,80 @@ namespace Google.Cloud.Spanner.Data.Ycsb
                 {
                     await Task.Yield();
                     var sw = Stopwatch.StartNew();
-                    var cmd = s_connection.CreateUpdateCommand(
-                        s_table,
-                        new SpannerParameterCollection
+                    if (!IsEmpty)
+                    {
+                        if (IsRaw)
                         {
-                            {"id", SpannerDbType.String, s_keys[Rand.Value.Next(s_keys.Count)]},
-                            {s_fieldNames[Rand.Value.Next(10)], SpannerDbType.String, GenerateRandomString()}
-                        });
-                    await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+                            await RawUpdateOperationAsync().ConfigureAwait(false);
+                        }
+                        else
+                        {
+                            await UpdateOperationAsync().ConfigureAwait(false);
+                        }
+                    }
                     latencies.Add(sw.ElapsedMilliseconds);
                 }),
             new Operation("scanproportion", x => throw new NotImplementedException("scan is not yet implemented")),
             new Operation("insertproportion", x => throw new NotImplementedException("scan is not yet implemented"))
         };
+
+        private static Task UpdateOperationAsync()
+        {
+            var cmd = s_connection.CreateUpdateCommand(
+                s_table,
+                new SpannerParameterCollection
+                {
+                    {"id", SpannerDbType.String, s_keys[Rand.Value.Next(s_keys.Count)]},
+                    {s_fieldNames[Rand.Value.Next(10)], SpannerDbType.String, GenerateRandomString()}
+                });
+            return cmd.ExecuteNonQueryAsync();
+        }
+
+        private static Task RawUpdateOperationAsync() => RawStreamingReadOperationAsync();
+
+        private static async Task StreamingReadOperationAsync()
+        {
+            var cmd = s_connection.CreateSelectCommand(
+                s_selectQuery, new SpannerParameterCollection
+                {
+                    {"p", SpannerDbType.String, s_keys[Rand.Value.Next(s_keys.Count)]}
+                });
+            using (var reader = await cmd.ExecuteReaderAsync(s_timestampbound).ConfigureAwait(false))
+            {
+                while (await reader.ReadAsync().ConfigureAwait(false)) { }
+            }
+        }
+
+        private static V1.Type s_stringType = new V1.Type { Code = TypeCode.String};
+
+        private static async Task RawStreamingReadOperationAsync()
+        {
+            Session session;
+            s_rawsessions.TryDequeue(out session);
+            var stream = s_rawclient.ExecuteStreamingSql(
+                new ExecuteSqlRequest
+                {
+                    SessionAsSessionName = session.SessionName,
+                    Sql = s_selectQuery,
+                    Params = new Struct { Fields = { {"p", new Value { StringValue = s_keys[Rand.Value.Next(s_keys.Count)] }}}},
+                    ParamTypes = { {"p", s_stringType } },
+                    Transaction = new TransactionSelector
+                    {
+                        SingleUse = new TransactionOptions
+                        {
+                            ReadOnly = new TransactionOptions.Types.ReadOnly
+                            {
+                                Strong = true
+                            }
+                        }
+                    }
+                });
+            while (await stream.ResponseStream.MoveNext().ConfigureAwait(false))
+            {
+            }
+            stream.ResponseStream.Dispose();
+            s_rawsessions.Enqueue(session);
+        }
 
         public static int Main(string[] args) => DefaultInstance.Run(args);
 
@@ -101,16 +177,27 @@ namespace Google.Cloud.Spanner.Data.Ycsb
         /// </summary>
         protected override async Task PreWarmOneInstance()
         {
-            using (var spannerConnection = new SpannerConnection(
-                $"Data Source=projects/{s_project}/instances/{s_instance}/databases/{s_database}"))
+            if (!IsRaw && !IsEmpty)
             {
-                await spannerConnection.OpenAsync();
+                using (var spannerConnection = new SpannerConnection(
+                    $"Data Source=projects/{s_project}/instances/{s_instance}/databases/{s_database}"))
+                {
+                    await spannerConnection.OpenAsync();
+                }
             }
         }
 
         protected override void InitializeSettings()
         {
             base.InitializeSettings();
+            if (!IsEmpty)
+            {
+                s_table = GetOption<string>(s_tableName);
+                s_instance = GetOption<string>(s_cloudspanner_instanceName);
+                s_database = GetOption<string>(s_cloudspanner_databaseName);
+                s_project = GetOption<string>(s_cloudspanner_projectName);
+                s_boundedStalenessSeconds = GetOptionWithDefault(s_boundedStaleness, 0);
+            }
             if (IsDebugMode)
             {
                 Logger.DefaultLogger.LogPerformanceTraces = true;
@@ -140,32 +227,39 @@ namespace Google.Cloud.Spanner.Data.Ycsb
             s_timestampbound = s_boundedStalenessSeconds > 0
                 ? TimestampBound.OfMaxStaleness(TimeSpan.FromSeconds(s_boundedStalenessSeconds))
                 : TimestampBound.Strong;
+            if (IsRaw)
+            {
+                s_rawclient = SpannerClient.Create();
+                for (int i = 0; i < GetOption<int>(NumWorker); i++)
+                {
+                    s_rawsessions.Enqueue(
+                        s_rawclient.CreateSession(new DatabaseName(s_project, s_instance, s_database)));
+                }
+            }
         }
 
         private void LoadKeys()
         {
-            s_connectionString = $"Data Source=projects/{s_project}/instances/{s_instance}/databases/{s_database}";
-            s_selectQuery = $"SELECT u.* FROM {s_table} u WHERE u.id=@p";
-            s_connection = new SpannerConnection(s_connectionString);
-            s_connection.Open();
-
-            DebugMessage("Loading keys...");
-            var cmd = s_connection.CreateSelectCommand($"SELECT u.id FROM {s_table} u");
-            var reader = cmd.ExecuteReader();
-            while (reader.Read())
+            if (!IsEmpty)
             {
-                s_keys.Add(reader.GetString(0));
+                s_connectionString = $"Data Source=projects/{s_project}/instances/{s_instance}/databases/{s_database}";
+                s_selectQuery = $"SELECT u.* FROM {s_table} u WHERE u.id=@p";
+                s_connection = new SpannerConnection(s_connectionString);
+                s_connection.Open();
+
+                DebugMessage("Loading keys...");
+                var cmd = s_connection.CreateSelectCommand($"SELECT u.id FROM {s_table} u");
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    s_keys.Add(reader.GetString(0));
+                }
             }
         }
 
-        protected override void ValidateArguments()
-        {
-            base.ValidateArguments();
-            s_table = GetOption<string>(s_tableName);
-            s_instance = GetOption<string>(s_cloudspanner_instanceName);
-            s_database = GetOption<string>(s_cloudspanner_databaseName);
-            s_project = GetOption<string>(s_cloudspanner_projectName);
-            s_boundedStalenessSeconds = GetOptionWithDefault(s_boundedStaleness, 0);
-        }
+        private static bool IsRaw => GetOptionWithDefault(s_raw, false);
+
+        private static bool IsEmpty => GetOptionWithDefault(s_empty, false);
+
     }
 }
