@@ -27,6 +27,12 @@ while (( "$#" )); do
   shift
 done
 
+if [[ ${#APIS[@]} != 0 && "$RETRY_ARG" == "yes" ]]
+then
+  echo "The --retry flag cannot be used when specifying projects to test."
+  exit 1
+fi
+
 # We only overwrite integration-test-failures.txt at the very end,
 # so that if we abort tests early, we don't assume there's nothing to retry.
 FAILURE_FILE=$ROOT_DIR/integration-test-failures.txt
@@ -37,6 +43,10 @@ touch $FAILURE_TEMP_FILE
 
 cd apis
 
+# There are three separate ways of determining the tests to run:
+# - If APIs have been specified on the command line, test those
+# - If --retry has been specified, run the previously-failed tests
+# - Otherwise, fine all potential tests
 if [[ ${#APIS[@]} != 0 ]]
 then
   temp_testdirs=()
