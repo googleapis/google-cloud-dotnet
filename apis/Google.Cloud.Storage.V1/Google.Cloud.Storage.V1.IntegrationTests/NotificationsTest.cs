@@ -1,0 +1,117 @@
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Xunit;
+using Google.Apis.Storage.v1.Data;
+using Google.Cloud.PubSub.V1;
+using System;
+using System.Linq;
+using System.Text;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
+
+using Object = Google.Apis.Storage.v1.Data.Object;
+
+namespace Google.Cloud.Storage.V1.IntegrationTests
+{
+    [Collection(nameof(StorageFixture))]
+    public class NotificationsTest
+    {
+        private readonly StorageFixture _fixture;
+
+        public NotificationsTest(StorageFixture fixture) => _fixture = fixture;
+
+        [Fact]
+        public void GetServiceAccountEmail()
+        {
+            var projectId = _fixture.ProjectId;
+            var email = _fixture.Client.GetStorageServiceAccountEmail(projectId);
+            Assert.Equal($"{projectId}@gs-project-accounts.iam.gserviceaccount.com", email);
+        }
+
+        /// <summary>
+        /// A single test for all notifications operations, given that they're somewhat intertwined.
+        /// </summary>
+        [Fact]
+        public async Task NotificationsLifeCycle()
+        {
+            var storageClient = _fixture.Client;
+
+            // First create a bucket, a topic and a subscription
+            var publisherClient = PublisherClient.Create();
+            var subscriberClient = SubscriberClient.Create();
+            var bucket = _fixture.BucketPrefix + "notifications";
+            var topicName = new TopicName(_fixture.ProjectId, $"storage-topic-{Guid.NewGuid()}");
+            var subscriptionName = new SubscriptionName(_fixture.ProjectId, $"storage-sub-{Guid.NewGuid()}");
+            publisherClient.CreateTopic(topicName);
+            try
+            {
+                subscriberClient.CreateSubscription(subscriptionName, topicName, new PushConfig(), 10);
+                _fixture.CreateBucket(bucket, false);
+
+                // Create the configuration
+                var config = new Notification { Topic = $"//pubsub.googleapis.com/{topicName}", PayloadFormat = "JSON_API_V1" };
+                var created = storageClient.CreateNotification(bucket, config);
+                string notificationId = created.Id;
+                Assert.NotNull(notificationId);
+
+                // Check we can fetch it
+                var fetched = storageClient.GetNotification(bucket, notificationId);
+
+                // We don't mind if the ETag is different. (It appears not to be populated in the originally-returned one.)
+                fetched.ETag = created.ETag;
+                Assert.Equal(
+                    storageClient.Service.SerializeObject(created),
+                    storageClient.Service.SerializeObject(fetched));
+
+                // Check it appears in the list
+                Assert.Contains(notificationId, storageClient.ListNotifications(bucket).Select(n => n.Id));
+
+                // Create an object in the bucket and check we get a notification.
+                storageClient.UploadObject(bucket, "file.txt", "application/text", new MemoryStream(Encoding.UTF8.GetBytes("hello")));
+
+                // This is the only place we use async in this test, because it makes it easy to cancel the request after 5 seconds.
+                var token = new CancellationTokenSource(TimeSpan.FromSeconds(5)).Token;
+                var pullResponse = await subscriberClient.PullAsync(subscriptionName, false, 10, token);
+
+                var messages = pullResponse.ReceivedMessages;
+                subscriberClient.Acknowledge(subscriptionName, messages.Select(m => m.AckId));
+
+                // Each ReceivedMessage.Message is a JSON representation of the Object that has changed.
+                // We just check that at least one notification was for the object we've just created.
+                var objectIds = messages
+                    .Select(m => m.Message.Data.ToStringUtf8())
+                    .Select(json => (Object) storageClient.Service.Serializer.Deserialize(json, typeof(Object)))
+                    // Object.Id is the notification ID; Object.Name is the object name
+                    .Select(obj => obj.Name)
+                    .ToList();
+
+                Assert.Contains("file.txt", objectIds);
+
+                // Delete the notification configuration
+                storageClient.DeleteNotification(bucket, notificationId);
+
+                // Check it's no longer in the list
+                Assert.DoesNotContain(notificationId, storageClient.ListNotifications(bucket).Select(n => n.Id));
+
+                // TODO: Delete the subscription? (Seems to fail - maybe we need to wait? Put this in the fixture disposal?)
+            }
+            finally
+            {
+                publisherClient.DeleteTopic(topicName);
+            }
+        }
+    }
+}
