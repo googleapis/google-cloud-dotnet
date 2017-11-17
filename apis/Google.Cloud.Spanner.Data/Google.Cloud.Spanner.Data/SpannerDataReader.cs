@@ -242,7 +242,10 @@ namespace Google.Cloud.Spanner.Data
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
-                    await PopulateMetadataAsync(cancellationToken).ConfigureAwait(false);
+                    if (_metadata == null)
+                    {
+                        await PopulateMetadataAsync(cancellationToken).ConfigureAwait(false);
+                    }
                     _innerList.Clear();
                     //read # values == # fields.
                     var first = await _resultSet.NextAsync(cancellationToken).ConfigureAwait(false);
@@ -297,6 +300,10 @@ namespace Google.Cloud.Spanner.Data
 
         internal Task<ResultSetMetadata> PopulateMetadataAsync(CancellationToken cancellationToken)
         {
+            if (_metadata != null)
+            {
+                return Task.FromResult(_metadata);
+            }
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async ()
                     => _metadata ?? (_metadata = await _resultSet.GetMetadataAsync(cancellationToken)
