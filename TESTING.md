@@ -107,10 +107,3 @@ Google.Cloud.Storage.V1
 -----------------------
 
 - Enable the Google Cloud Pub/Sub API as well as Google Cloud Storage
-- Determine your Google Cloud Storage service account and give it
-  publisher access for PubSub:
-  - Either run the integration tests and see the error message in
-    the failure, or determine the service account as
-    `PROJECT_ID_HERE@gs-project-accounts.iam.gserviceaccount.com`
-  - In [the Google Cloud IAM Console](https://console.cloud.google.com/iam-admin/iam/project)
-    add that account with a role of "Pub/Sub Publisher"
