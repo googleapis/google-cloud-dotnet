@@ -18,6 +18,7 @@ using System;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.Admin.Database.V1;
 using Xunit;
+using Google.Cloud.ClientTesting;
 // ReSharper disable MemberCanBePrivate.Global
 
 #endregion
@@ -26,18 +27,16 @@ namespace Google.Cloud.Spanner.Data.Snippets
 {
     // ReSharper disable once ClassNeverInstantiated.Global
     [CollectionDefinition(nameof(SnippetFixture))]
-    public class SnippetFixture : IDisposable, ICollectionFixture<SnippetFixture>
+    public class SnippetFixture : CloudProjectFixtureBase, ICollectionFixture<SnippetFixture>
     {
         private readonly Lazy<Task> _creationTask;
 
         public string TestInstanceName => "spannerintegration";
 
-        public string TestProjectName => Environment.GetEnvironmentVariable("TEST_PROJECT") ?? "cloud-sharp-jenkins";
-
-        public string ConnectionString => $"Data Source=projects/{TestProjectName}/instances/{TestInstanceName}"
+        public string ConnectionString => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}"
             + $"/databases/{TestDatabaseName}";
 
-        private string NoDbConnectionString => $"Data Source=projects/{TestProjectName}/instances/{TestInstanceName}";
+        private string NoDbConnectionString => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}";
 
         public string TestDatabaseName { get; } =
             "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
@@ -48,11 +47,11 @@ namespace Google.Cloud.Spanner.Data.Snippets
 
         public SnippetFixture() => _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
 
-        public void Dispose()
+        public override void Dispose()
         {
             var databaseAdminClient = DatabaseAdminClient.Create();
             databaseAdminClient.DropDatabase(
-                new DatabaseName(TestProjectName, TestInstanceName, TestDatabaseName));
+                new DatabaseName(ProjectId, TestInstanceName, TestDatabaseName));
         }
 
         public Task EnsureTestDatabaseAsync() => _creationTask.Value;

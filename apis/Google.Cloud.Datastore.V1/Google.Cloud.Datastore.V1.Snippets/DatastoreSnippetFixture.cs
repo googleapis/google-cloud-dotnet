@@ -11,10 +11,10 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Google.Cloud.Datastore.V1.Snippets
 {
@@ -23,11 +23,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
     /// All entities use the same partition, which is then wiped at the end of the run.
     /// </summary>
     [CollectionDefinition(nameof(DatastoreSnippetFixture))]
-    public sealed class DatastoreSnippetFixture : IDisposable, ICollectionFixture<DatastoreSnippetFixture>
+    public sealed class DatastoreSnippetFixture : CloudProjectFixtureBase, ICollectionFixture<DatastoreSnippetFixture>
     {
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
-
-        public string ProjectId { get; }
         public string NamespaceId { get; }
         public PartitionId PartitionId => new PartitionId { ProjectId = ProjectId, NamespaceId = NamespaceId };
         public string BookKind = "book";
@@ -39,12 +36,6 @@ namespace Google.Cloud.Datastore.V1.Snippets
 
         public DatastoreSnippetFixture()
         {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
             NamespaceId = "test-" + Guid.NewGuid();
             AddSampleBooks();
             AddSampleTasks();
@@ -82,7 +73,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             _learnDatastoreKey = response.MutationResults[0].Key;
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
             var client = DatastoreClient.Create();
             // Delete all the entities in our partition.
