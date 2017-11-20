@@ -23,6 +23,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 using Object = Google.Apis.Storage.v1.Data.Object;
+using Google.Cloud.Iam.V1;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
@@ -56,9 +57,27 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var topicName = new TopicName(_fixture.ProjectId, $"storage-topic-{Guid.NewGuid()}");
             var subscriptionName = new SubscriptionName(_fixture.ProjectId, $"storage-sub-{Guid.NewGuid()}");
             publisherClient.CreateTopic(topicName);
+
+            // Make sure the Storage service account has permission to publish to the topic.
+            var policy = publisherClient.GetIamPolicy(topicName.ToString()) ?? new Iam.V1.Policy();
+            var role = "roles/pubsub.publisher";
+            string storageServiceAccount = $"serviceAccount:{storageClient.GetStorageServiceAccountEmail(_fixture.ProjectId)}";
+            var publisherBinding = policy.Bindings.FirstOrDefault(binding => binding.Role == role);
+            if (publisherBinding == null)
+            {
+                publisherBinding = new Binding { Role = role };
+                policy.Bindings.Add(publisherBinding);
+            }
+            if (!publisherBinding.Members.Contains(storageServiceAccount, StringComparer.OrdinalIgnoreCase))
+            {
+                publisherBinding.Members.Add(storageServiceAccount);
+                publisherClient.SetIamPolicy(topicName.ToString(), policy);
+            }
+
             try
             {
                 subscriberClient.CreateSubscription(subscriptionName, topicName, new PushConfig(), 10);
+
                 _fixture.CreateBucket(bucket, false);
 
                 // Create the configuration
@@ -66,6 +85,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 var created = storageClient.CreateNotification(bucket, config);
                 string notificationId = created.Id;
                 Assert.NotNull(notificationId);
+
+                // Wait 30 seconds to let the notification become active reliably.
+                await Task.Delay(TimeSpan.FromSeconds(30));
 
                 // Check we can fetch it
                 var fetched = storageClient.GetNotification(bucket, notificationId);
@@ -82,9 +104,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 // Create an object in the bucket and check we get a notification.
                 storageClient.UploadObject(bucket, "file.txt", "application/text", new MemoryStream(Encoding.UTF8.GetBytes("hello")));
 
-                // This is the only place we use async in this test, because it makes it easy to cancel the request after 5 seconds.
-                var token = new CancellationTokenSource(TimeSpan.FromSeconds(5)).Token;
-                var pullResponse = await subscriberClient.PullAsync(subscriptionName, false, 10, token);
+                // This is the only place we use async in this test, because it makes it easy to cancel the request after 10 seconds.
+                var token = new CancellationTokenSource(TimeSpan.FromSeconds(10)).Token;
+                var pullResponse = await subscriberClient.PullAsync(subscriptionName, false, maxMessages: 10, cancellationToken: token);
 
                 var messages = pullResponse.ReceivedMessages;
                 subscriberClient.Acknowledge(subscriptionName, messages.Select(m => m.AckId));
