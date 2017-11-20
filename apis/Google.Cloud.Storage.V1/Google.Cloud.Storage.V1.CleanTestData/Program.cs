@@ -52,13 +52,7 @@ namespace Google.Storage.V2.CleanTestData
 
         private static void DeleteBucket(StorageClient client, string bucket)
         {
-            var objects = client.ListObjects(bucket, options: new ListObjectsOptions { Versions = true });
-            foreach (var obj in objects)
-            {
-                client.DeleteObject(bucket, obj.Name, new DeleteObjectOptions { Generation = obj.Generation });
-                Console.WriteLine($"Deleted {bucket} / {obj.Name} / v{obj.Generation}");
-            }
-            client.DeleteBucket(bucket);
+            client.DeleteBucket(bucket, new DeleteBucketOptions { DeleteObjects = true });
             // Avoid running into quota issues
             Thread.Sleep(2000);
             Console.WriteLine($"Deleted {bucket}");
