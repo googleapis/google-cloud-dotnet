@@ -12,36 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Logging.V2;
-using System;
+using Google.Cloud.ClientTesting;
 using Xunit;
 
 namespace Google.Cloud.Logging.Log4Net.Snippets
 {
     [CollectionDefinition(nameof(Log4NetSnippetFixture))]
-    public sealed class Log4NetSnippetFixture : IDisposable, ICollectionFixture<Log4NetSnippetFixture>
+    public sealed class Log4NetSnippetFixture : CloudProjectFixtureBase, ICollectionFixture<Log4NetSnippetFixture>
     {
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
-
-        public string ProjectId { get; }
-
         public string LogId { get; } = "Log4NetTestLog";
 
-        public Log4NetSnippetFixture()
-        {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
-        }
-
-        public void Dispose()
-        {
-            // No clean-up here, because:
-            // - We can't assert log entries in tests, so it's useful to be able to check them manually later.
-            // - If the log entries haven't arrived yet, deleting them would cause an exception anyway.
-        }
+        // No clean-up, because:
+        // - We can't assert log entries in tests, so it's useful to be able to check them manually later.
+        // - If the log entries haven't arrived yet, deleting them would cause an exception anyway.
     }
 }

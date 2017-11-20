@@ -38,7 +38,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         public SpannerConnectionSnippets(SnippetFixture fixture)
         {
             _fixture = fixture;
-            _projectId = _fixture.TestProjectName;
+            _projectId = _fixture.ProjectId;
             _instanceName = _fixture.TestInstanceName;
             _databaseName = _fixture.TestDatabaseName;
         }

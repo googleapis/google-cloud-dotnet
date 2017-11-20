@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
@@ -26,12 +27,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
     /// All entities use the same partition, which is then wiped at the end of the run.
     /// </summary>
     [CollectionDefinition(nameof(BigQuerySnippetFixture))]
-    public sealed class BigQuerySnippetFixture : IDisposable, ICollectionFixture<BigQuerySnippetFixture>
+    public sealed class BigQuerySnippetFixture : CloudProjectFixtureBase, ICollectionFixture<BigQuerySnippetFixture>
     {
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
         private const string DatasetPrefix = "snippets_";
 
-        public string ProjectId { get; }
         public string GameDatasetId { get; }
         public BigQueryClient Client { get; }
         // This table should not have inserts made during the test,
@@ -49,12 +48,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
         public BigQuerySnippetFixture()
         {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
             Client = BigQueryClient.Create(ProjectId);
             GameDatasetId = CreateGameDataset();
             StorageBucketName = GenerateStorageBucketName();
@@ -116,12 +109,9 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             return id;
         }
 
-        public void Dispose()
-        {
-            // TODO: Work out a way of actually deleting the datasets. If we try to delete them here,
-            // we get an error due to them still being in use.
-            // For the moment, run the tools/Google.Cloud.BigQuery.V2.CleanTestData program
-            // periodically.
-        }
+        // TODO: Work out a way of actually deleting the datasets. If we try to delete them here,
+        // we get an error due to them still being in use.
+        // For the moment, run the tools/Google.Cloud.BigQuery.V2.CleanTestData program
+        // periodically.
     }
 }

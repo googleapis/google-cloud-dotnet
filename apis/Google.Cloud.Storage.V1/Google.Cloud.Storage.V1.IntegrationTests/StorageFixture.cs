@@ -14,8 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
-using Google.Apis.Json;
 using Google.Apis.Storage.v1.Data;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -37,11 +37,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     /// The Google Cloud Project name is fetched from the TEST_PROJECT environment variable.
     /// </summary>
     [CollectionDefinition(nameof(StorageFixture))]
-    public sealed class StorageFixture : IDisposable, ICollectionFixture<StorageFixture>
+    public sealed class StorageFixture : CloudProjectFixtureBase, ICollectionFixture<StorageFixture>
     {
         internal const string CrossLanguageTestBucket = "storage-library-test-bucket";
 
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
         private const string RequesterPaysProjectEnvironmentVariable = "REQUESTER_PAYS_TEST_PROJECT";
         private const string RequesterPaysCredentialsEnvironmentVariable = "REQUESTER_PAYS_CREDENTIALS";
         public const string DelayTestSuffix = "_InitDelayTest";
@@ -63,8 +62,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// A large amount of content (more than 10K). Do not mutate the array.
         /// </summary>
         public byte[] LargeContent { get; }
-
-        public string ProjectId { get; }
 
         /// <summary>
         /// Bucket without versioning enabled, which tests can write to.
@@ -144,7 +141,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private static readonly string[] s_objectsInFolders = { "a/o1.txt", "a/o2.txt", "a/x/o3.txt", "a/x/o4.txt", "b/o5.txt" };
 
         private readonly List<string> _bucketsToDelete = new List<string>();
-        private readonly List<string> _localFilesToDelete = new List<string>();
 
         private readonly HashSet<string> _classesWithDelayTests = new HashSet<string>();
         private readonly Dictionary<string, DelayTestInfo> _delayTests = new Dictionary<string, DelayTestInfo>();
@@ -152,13 +148,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         public StorageFixture()
         {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
             Client = StorageClient.Create();
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
             BucketPrefix = "tests-" + Guid.NewGuid().ToString().ToLowerInvariant().Replace("-", "") + "-";
             LargeContent = Encoding.UTF8.GetBytes(string.Join("\n", Enumerable.Repeat("All work and no play makes Jack a dull boy.", 500)));
             CreateBucket(SingleVersionBucket, false);
@@ -298,7 +288,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _delayTestsNeedToStart = true;
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
             var client = StorageClient.Create();
             foreach (var bucket in _bucketsToDelete)
