@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Grpc.Core;
 using System;
 using System.Linq;
@@ -24,24 +25,10 @@ namespace Google.Cloud.PubSub.V1.Snippets
     /// Topics and subscriptions are created with specific prefixes, and deleted in tear-down.
     /// </summary>
     [CollectionDefinition(nameof(PubsubSnippetFixture))]
-    public sealed class PubsubSnippetFixture : IDisposable, ICollectionFixture<PubsubSnippetFixture>
+    public sealed class PubsubSnippetFixture : CloudProjectFixtureBase, ICollectionFixture<PubsubSnippetFixture>
     {
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
-        private const string NotificationUrlEnvironmentVariable = "TEST_PROJECT_NOTIFICATION_URL";
         private const string TopicPrefix = "snippet-topic-";
         private const string SubscriptionPrefix = "snippet-sub-";
-
-        public string ProjectId { get; }
-
-        public PubsubSnippetFixture()
-        {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
-        }
 
         /// <summary>
         /// Create a topic ID with a prefix which is used to check which topics to delete at the end of the test.
@@ -53,7 +40,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         /// </summary>
         internal string CreateSubscriptionId() => SubscriptionPrefix + Guid.NewGuid().ToString().ToLowerInvariant();
 
-        public void Dispose()
+        public override void Dispose()
         {
             var subscriber = SubscriberClient.Create();
             var subscriptions = subscriber.ListSubscriptions(new ProjectName(ProjectId))

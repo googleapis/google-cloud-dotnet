@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.IntegrationTests.Models;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ using Xunit;
 namespace Google.Cloud.Firestore.IntegrationTests
 {
     [CollectionDefinition(nameof(FirestoreFixture))]
-    public class FirestoreFixture : IDisposable, ICollectionFixture<FirestoreFixture>
+    public class FirestoreFixture : CloudProjectFixtureBase, ICollectionFixture<FirestoreFixture>
     {
         // This is not the test project environment variable used by other integration tests,
         // as Datastore and Firestore can't both be active in the same project.
@@ -46,19 +47,12 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
         private int _uniqueCollectionCounter = 0;
 
-        public FirestoreFixture()
+        public FirestoreFixture() : base(ProjectEnvironmentVariable)
         {
-            string projectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(projectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
-
             // Currently, only the default database is supported... so we create all our collections with a randomly-generated prefix.
             // When multiple databases are supported, we'll create a new one per test run.
             CollectionPrefix = Guid.NewGuid().ToString();
-            FirestoreDb = FirestoreDb.Create(projectId);
+            FirestoreDb = FirestoreDb.Create(ProjectId);
             NonQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-non-query");
             HighScoreCollection = FirestoreDb.Collection(CollectionPrefix + "-high-scores");
             Task.Run(PopulateCollections).Wait();
@@ -90,10 +84,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             return FirestoreDb.Collection($"{CollectionPrefix}-unique-{counter}");
         }
 
-        public void Dispose()
-        {
-            // No-op for now. With multiple-database support, we'll create a database
-            // on construction and delete it here.
-        }
+        // No clean-up for now. With multiple-database support, we'll create a database
+        // on construction and delete it here.
     }
 }

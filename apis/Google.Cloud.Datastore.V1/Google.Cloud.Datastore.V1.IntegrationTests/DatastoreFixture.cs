@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
 using Xunit;
@@ -22,26 +23,17 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
     /// All entities use the same partition, which is then wiped at the end of the run.
     /// </summary>
     [CollectionDefinition(nameof(DatastoreFixture))]
-    public sealed class DatastoreFixture : IDisposable, ICollectionFixture<DatastoreFixture>
+    public sealed class DatastoreFixture : CloudProjectFixtureBase, ICollectionFixture<DatastoreFixture>
     {
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
-
-        public string ProjectId { get; }
         public string NamespaceId { get; }
         public PartitionId PartitionId => new PartitionId { ProjectId = ProjectId, NamespaceId = NamespaceId };
 
         public DatastoreFixture()
         {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
             NamespaceId = "test-" + Guid.NewGuid();
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
             var client = DatastoreClient.Create();
             // Delete all the entities in our partition.
