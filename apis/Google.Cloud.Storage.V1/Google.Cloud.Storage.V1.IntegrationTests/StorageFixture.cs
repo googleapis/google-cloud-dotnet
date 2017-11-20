@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -94,6 +95,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public string ReadBucket => BucketPrefix + "testsonlyread";
 
         public string BucketPrefix { get; }
+
         public StorageClient Client { get; }
 
         /// <summary>
@@ -197,12 +199,15 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             return name;
         }
 
-        internal void CreateBucket(string name, bool multiVersion)
+        internal Bucket CreateBucket(string name, bool multiVersion)
         {
-            Client.CreateBucket(ProjectId, new Bucket { Name = name, Versioning = new Bucket.VersioningData { Enabled = multiVersion } });
+            var bucket = Client.CreateBucket(ProjectId, new Bucket { Name = name, Versioning = new Bucket.VersioningData { Enabled = multiVersion } });
             SleepAfterBucketCreateDelete();
             RegisterBucketToDelete(name);
+            return bucket;
         }
+
+        internal string GenerateBucketName() => (BucketPrefix + Guid.NewGuid().ToString().Replace("-", "")).Substring(0, 63);
 
         private void CreateAndPopulateReadBucket()
         {
@@ -222,11 +227,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// </summary>
         internal static void SleepAfterBucketCreateDelete() => Thread.Sleep(2000);
 
-        internal void RegisterBucketToDelete(string bucket)
-        {
-            _bucketsToDelete.Add(bucket);
-        }
-        
+        internal void RegisterBucketToDelete(string bucket) => _bucketsToDelete.Add(bucket);
+
+        internal void UnregisterBucket(string bucket) => _bucketsToDelete.Remove(bucket);
+
         internal async Task FinishDelayTest(string testName)
         {
             DelayTestInfo currentTestInfo;
@@ -311,13 +315,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         private void DeleteBucket(StorageClient client, string bucket, string userProject)
         {
-            // TODO: We shouldn't need the project ID here.
-            var objects = client.ListObjects(bucket, null, new ListObjectsOptions { Versions = true, UserProject = userProject }).ToList();
-            foreach (var obj in objects)
-            {
-                client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation, UserProject = userProject });
-            }
-            client.DeleteBucket(bucket, new DeleteBucketOptions { UserProject = userProject });
+            client.DeleteBucket(bucket, new DeleteBucketOptions { UserProject = userProject, DeleteObjects = true });
             SleepAfterBucketCreateDelete();
         }
 

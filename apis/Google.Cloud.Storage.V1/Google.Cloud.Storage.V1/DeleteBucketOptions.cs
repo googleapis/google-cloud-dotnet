@@ -40,6 +40,29 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public string UserProject { get; set; }
 
+        /// <summary>
+        /// If set to true, all objects within the bucket will be deleted before attempting
+        /// to delete the bucket itself.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This is a best-effort attempt, with no guarantees of atomicity:
+        /// it's entirely possible for the operation to fail having deleted some objects
+        /// but not all of them. If a precondition is specified, it is checked before deleting any
+        /// objects, and applied again when deleting the bucket, but is not checked while deleting
+        /// the objects. The behavior is unspecified if objects are modified, added or deleted while
+        /// this operation is taking place.
+        /// </para>
+        /// <para>
+        /// The objects are deleted sequentially. If you need to delete buckets with many objects, you
+        /// may wish to implement a parallel solution in application code instead of using this option.
+        /// </para>
+        /// <para>
+        /// If <see cref="UserProject"/> is set, that project will be billed for all operations.
+        /// </para>
+        /// </remarks>
+        public bool? DeleteObjects { get; set; }
+
         internal void ModifyRequest(BucketsResource.DeleteRequest request)
         {
             if (IfMetagenerationMatch != null && IfMetagenerationNotMatch != null)
@@ -58,6 +81,23 @@ namespace Google.Cloud.Storage.V1
             {
                 request.UserProject = UserProject;
             }
+        }
+
+        /// <summary>
+        /// If this set of options contains any preconditions, return a
+        /// <see cref="GetBucketOptions"/> with the same set of options. Otherwise, return null.
+        /// </summary>
+        internal GetBucketOptions CreateGetBucketOptionsForPreconditions()
+        {
+            long? match = IfMetagenerationMatch;
+            long? notMatch = IfMetagenerationNotMatch;
+            return match == null && notMatch == null ? null :
+                new GetBucketOptions
+                {
+                    IfMetagenerationMatch = match,
+                    IfMetagenerationNotMatch = notMatch,
+                    UserProject = UserProject
+                };
         }
     }
 }

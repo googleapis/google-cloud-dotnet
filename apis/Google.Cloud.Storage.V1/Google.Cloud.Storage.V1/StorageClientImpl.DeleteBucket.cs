@@ -14,6 +14,7 @@
 
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -23,37 +24,79 @@ namespace Google.Cloud.Storage.V1
     {
         /// <inheritdoc />
         public override void DeleteBucket(string bucket, DeleteBucketOptions options = null) =>
-            CreateDeleteBucketRequest(bucket, options).Execute();
+            DeleteBucketImpl(ValidateBucketName(bucket), options);
 
         /// <inheritdoc />
         public override Task DeleteBucketAsync(
             string bucket,
             DeleteBucketOptions options = null,
-            CancellationToken cancellationToken = default
-        ) => CreateDeleteBucketRequest(bucket, options).ExecuteAsync(cancellationToken);
+            CancellationToken cancellationToken = default) =>
+            DeleteBucketAsyncImpl(ValidateBucketName(bucket), options, cancellationToken);
 
         /// <inheritdoc />
-        public override void DeleteBucket(Bucket bucket, DeleteBucketOptions options = null)
-            => CreateDeleteBucketRequest(bucket, options).Execute();
+        public override void DeleteBucket(Bucket bucket, DeleteBucketOptions options = null) =>
+            DeleteBucketImpl(ValidateBucket(bucket, nameof(bucket)), options);
 
         /// <inheritdoc />
         public override Task DeleteBucketAsync(
             Bucket bucket,
             DeleteBucketOptions options = null,
-            CancellationToken cancellationToken = default
-        ) => CreateDeleteBucketRequest(bucket, options).ExecuteAsync(cancellationToken);
+            CancellationToken cancellationToken = default) =>
+            DeleteBucketAsyncImpl(ValidateBucket(bucket, nameof(bucket)), options, cancellationToken);
 
-        private BucketsResource.DeleteRequest CreateDeleteBucketRequest(Bucket bucket, DeleteBucketOptions options)
+        // Implementation methods assuming a previously-validate bucket name
+
+        private void DeleteBucketImpl(string bucket, DeleteBucketOptions options)
         {
-            ValidateBucket(bucket, nameof(bucket));
-            var request = Service.Buckets.Delete(bucket.Name);
-            options?.ModifyRequest(request);
-            return request;
+            // Create the request at the start, so we validate the options before we
+            // start deleting objects.
+            var deleteBucketRequest = CreateDeleteBucketRequest(bucket, options);
+            string userProject = options?.UserProject;
+            if (options?.DeleteObjects ?? false)
+            {
+                // Don't start deleting objects if the bucket has the wrong metageneration to start with.
+                var preconditionOptions = options.CreateGetBucketOptionsForPreconditions();
+                if (preconditionOptions != null)
+                {
+                    GetBucket(bucket, preconditionOptions);
+                }
+                foreach (var obj in ListObjects(bucket, null, new ListObjectsOptions { Versions = true, UserProject = userProject }))
+                {
+                    var deleteObjectOptions = new DeleteObjectOptions { UserProject = userProject, Generation = obj.Generation };
+                    DeleteObject(obj, deleteObjectOptions);
+                }
+            }
+            deleteBucketRequest.Execute();
+        }
+
+        private async Task DeleteBucketAsyncImpl(string bucket, DeleteBucketOptions options, CancellationToken cancellationToken)
+        {
+            var deleteBucketRequest = CreateDeleteBucketRequest(bucket, options);
+            string userProject = options?.UserProject;
+            if (options?.DeleteObjects ?? false)
+            {
+                // Don't start deleting objects if the bucket has the wrong metageneration to start with.
+                var preconditionOptions = options.CreateGetBucketOptionsForPreconditions();
+                if (preconditionOptions != null)
+                {
+                    await GetBucketAsync(bucket, preconditionOptions, cancellationToken).ConfigureAwait(false);
+                }
+                var objects = ListObjectsAsync(bucket, null, new ListObjectsOptions { Versions = true, UserProject = userProject });
+                using (var iterator = objects.GetEnumerator())
+                {
+                    while (await iterator.MoveNext(cancellationToken).ConfigureAwait(false))
+                    {
+                        var obj = iterator.Current;
+                        var deleteObjectOptions = new DeleteObjectOptions { UserProject = userProject, Generation = obj.Generation };
+                        await DeleteObjectAsync(obj, deleteObjectOptions, cancellationToken).ConfigureAwait(false);
+                    }
+                }
+            }
+            await deleteBucketRequest.ExecuteAsync(cancellationToken).ConfigureAwait(false);
         }
 
         private BucketsResource.DeleteRequest CreateDeleteBucketRequest(string bucket, DeleteBucketOptions options)
         {
-            ValidateBucketName(bucket);
             var request = Service.Buckets.Delete(bucket);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);

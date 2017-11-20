@@ -124,12 +124,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             var client = StorageClient.Create();
             foreach (var bucket in _bucketsToDelete)
             {
-                var objects = client.ListObjects(bucket, null, new ListObjectsOptions { Versions = true }).ToList();
-                foreach (var obj in objects)
-                {
-                    client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation });
-                }
-                client.DeleteBucket(bucket);
+                client.DeleteBucket(bucket, new DeleteBucketOptions { DeleteObjects = true });
                 SleepAfterBucketCreateDelete();
             }
             foreach (var file in _localFilesToDelete)

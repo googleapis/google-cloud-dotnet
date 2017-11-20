@@ -98,13 +98,15 @@ namespace Google.Cloud.Storage.V1
         /// This method also checks for nullity, so callers don't need to do that first.
         /// This method is internal rather than private for testing purposes.
         /// </summary>
-        internal static void ValidateBucketName(string bucket)
+        /// <returns>The input, to allow inline validation</returns>
+        internal static string ValidateBucketName(string bucket)
         {
             GaxPreconditions.CheckNotNull(bucket, nameof(bucket));
             if (!ValidBucketName.IsMatch(bucket))
             {
                 throw new ArgumentException($"Invalid bucket name '{bucket}' - see https://cloud.google.com/storage/docs/bucket-naming", nameof(bucket));
             }
+            return bucket;
         }
 
         /// <summary>
@@ -112,13 +114,16 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         /// <param name="bucket">Bucket to validate</param>
         /// <param name="paramName">The parameter name in the calling method</param>
-        private void ValidateBucket(Bucket bucket, string paramName)
+        /// <returns>The validated bucket name</returns>
+        private string ValidateBucket(Bucket bucket, string paramName)
         {
             GaxPreconditions.CheckNotNull(bucket, paramName);
-            GaxPreconditions.CheckArgument(bucket.Name != null, paramName, "Bucket must have a name");
-            GaxPreconditions.CheckArgument(ValidBucketName.IsMatch(bucket.Name),
+            string name = bucket.Name;
+            GaxPreconditions.CheckArgument(name != null, paramName, "Bucket must have a name");
+            GaxPreconditions.CheckArgument(ValidBucketName.IsMatch(name),
                 paramName,
                 "Invalid bucket name '{0}' - see https://cloud.google.com/storage/docs/bucket-naming", bucket.Name);
+            return name;
         }
 
         /// <summary>
