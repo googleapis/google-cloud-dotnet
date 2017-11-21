@@ -35,7 +35,7 @@ then
 fi
 
 OS="$(uname -s)"
-if [[ $OS == *"CYGWIN"* || $OS == *"MINGW"* ]]
+if [[ $OS == *"CYGWIN"* || $OS == *"MINGW"* || $OS == *"MSYS_NT"* ]]
 then
   IS_WINDOWS=true
 fi
