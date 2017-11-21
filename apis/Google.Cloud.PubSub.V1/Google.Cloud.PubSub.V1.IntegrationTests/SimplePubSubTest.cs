@@ -117,6 +117,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     if (localRecvCount == cancelAfterRecvCount || localRecvCount >= messageCount + initialNackCount)
                     {
                         // Test finished, so stop subscriber
+                        Console.WriteLine("All msgs received, stopping subscriber.");
                         Task unused = simpleSubscriber.StopAsync(TimeSpan.FromSeconds(15));
                     }
                 }
@@ -219,6 +220,13 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 // This isn't foolproof (we can get to the right sum with wrong values) but it's a pretty strong indicator.
                 Assert.Equal(sentSum, recvSum);
             }
+            Console.WriteLine("Test complete.");
+        }
+
+        [Fact]
+        public async Task ManySmallMessages()
+        {
+            await RunBulkMessaging(10_000_000, 1, 10, 10_000, 0);
         }
 
         [Theory, CombinatorialData]

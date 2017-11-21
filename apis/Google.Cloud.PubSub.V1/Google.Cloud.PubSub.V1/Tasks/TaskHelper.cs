@@ -75,13 +75,14 @@ namespace Google.Cloud.PubSub.V1.Tasks
 
     internal static class Extensions
     {
-        public static TaskAwaitable ConfigureAwaitWithFinally(this TaskHelper taskHelper, Task task, Action finally_)
+        public static TaskAwaitable ConfigureAwaitWithFinally(this TaskHelper taskHelper,
+            Func<Task> taskFn, Action finally_)
         {
             async Task Inner()
             {
                 try
                 {
-                    await taskHelper.ConfigureAwait(task);
+                    await taskHelper.ConfigureAwait(taskFn());
                 }
                 finally
                 {
@@ -91,13 +92,14 @@ namespace Google.Cloud.PubSub.V1.Tasks
             return taskHelper.ConfigureAwait(Inner());
         }
 
-        public static TaskAwaitable<T> ConfigureAwaitWithFinally<T>(this TaskHelper taskHelper, Task<T> task, Action finally_)
+        public static TaskAwaitable<T> ConfigureAwaitWithFinally<T>(this TaskHelper taskHelper,
+            Func<Task<T>> taskFn, Action finally_)
         {
             async Task<T> Inner()
             {
                 try
                 {
-                    return await taskHelper.ConfigureAwait(task);
+                    return await taskHelper.ConfigureAwait(taskFn());
                 }
                 finally
                 {
@@ -107,16 +109,17 @@ namespace Google.Cloud.PubSub.V1.Tasks
             return taskHelper.ConfigureAwait(Inner());
         }
 
-        public static TaskAwaitable<bool> ConfigureAwaitHideCancellation(this TaskHelper taskHelper, Task task)
+        public static TaskAwaitable<bool> ConfigureAwaitHideCancellation(this TaskHelper taskHelper,
+            Func<Task> taskFn)
         {
             async Task<bool> Inner()
             {
                 try
                 {
-                    await taskHelper.ConfigureAwait(task);
+                    await taskHelper.ConfigureAwait(taskFn());
                     return false;
                 }
-                catch (Exception e) when (e.IsCancellation())
+                catch (Exception e) when (e.IsCancellation() || e.IsRpcCancellation())
                 {
                     return true;
                 }
@@ -124,15 +127,16 @@ namespace Google.Cloud.PubSub.V1.Tasks
             return taskHelper.ConfigureAwait(Inner());
         }
 
-        public static TaskAwaitable<T> ConfigureAwaitHideCancellation<T>(this TaskHelper taskHelper, Task<T> task, T resultOnCancellation)
+        public static TaskAwaitable<T> ConfigureAwaitHideCancellation<T>(this TaskHelper taskHelper,
+            Func<Task<T>> taskFn, T resultOnCancellation)
         {
             async Task<T> Inner()
             {
                 try
                 {
-                    return await taskHelper.ConfigureAwait(task);
+                    return await taskHelper.ConfigureAwait(taskFn());
                 }
-                catch (Exception e) when (e.IsCancellation())
+                catch (Exception e) when (e.IsCancellation() || e.IsRpcCancellation())
                 {
                     return resultOnCancellation;
                 }
@@ -140,13 +144,14 @@ namespace Google.Cloud.PubSub.V1.Tasks
             return taskHelper.ConfigureAwait(Inner());
         }
 
-        public static TaskAwaitable<Exception> ConfigureAwaitHideErrors(this TaskHelper taskHelper, Func<Task> task)
+        public static TaskAwaitable<Exception> ConfigureAwaitHideErrors(this TaskHelper taskHelper,
+            Func<Task> taskFn)
         {
             async Task<Exception> Inner()
             {
                 try
                 {
-                    await taskHelper.ConfigureAwait(task());
+                    await taskHelper.ConfigureAwait(taskFn());
                     return null;
                 }
                 catch (Exception e)
@@ -157,16 +162,14 @@ namespace Google.Cloud.PubSub.V1.Tasks
             return taskHelper.ConfigureAwait(Inner());
         }
 
-        public static TaskAwaitable<Exception> ConfigureAwaitHideErrors(this TaskHelper taskHelper, Task task) =>
-            taskHelper.ConfigureAwaitHideErrors(() => task);
-
-        public static TaskAwaitable<T> ConfigureAwaitHideErrors<T>(this TaskHelper taskHelper, Task<T> task, T resultOnError)
+        public static TaskAwaitable<T> ConfigureAwaitHideErrors<T>(this TaskHelper taskHelper,
+            Func<Task<T>> taskFn, T resultOnError)
         {
             async Task<T> Inner()
             {
                 try
                 {
-                    return await taskHelper.ConfigureAwait(task);
+                    return await taskHelper.ConfigureAwait(taskFn());
                 }
                 catch
                 {

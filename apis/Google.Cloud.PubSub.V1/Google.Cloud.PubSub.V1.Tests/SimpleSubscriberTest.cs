@@ -97,23 +97,23 @@ namespace Google.Cloud.PubSub.V1.Tests
 
                 public async Task<bool> MoveNext(CancellationToken cancellationToken)
                 {
-                    if (cancellationToken != CancellationToken.None)
-                    {
-                        // This mimics behaviour of real MoveNext()
-                        throw new InvalidOperationException("CancellationToken not allowed here");
-                    }
                     if (_msgsEn.MoveNext())
                     {
-                        var isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(_scheduler.Delay(_msgsEn.Current.Action.PreInterval, _ct));
-                        if (isCancelled) {
-                            // This mimics behaviour of a real server
-                            throw new RpcException(new Status(StatusCode.Cancelled, "Operation cancelled"));
-                        }
-                        if (_msgsEn.Current.Action.MoveNextEx != null)
+                        using (var cts = CancellationTokenSource.CreateLinkedTokenSource(_ct, cancellationToken))
                         {
-                            throw _msgsEn.Current.Action.MoveNextEx;
+                            var isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(
+                                () => _scheduler.Delay(_msgsEn.Current.Action.PreInterval, cts.Token));
+                            if (isCancelled)
+                            {
+                                // This mimics behaviour of a real server
+                                throw new RpcException(new Status(StatusCode.Cancelled, "Operation cancelled"));
+                            }
+                            if (_msgsEn.Current.Action.MoveNextEx != null)
+                            {
+                                throw _msgsEn.Current.Action.MoveNextEx;
+                            }
+                            return true;
                         }
-                        return true;
                     }
                     return false;
                 }
@@ -272,7 +272,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                         throw new Exception("Should never get here");
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
-                    var isCancelled = await fake.TaskHelper.ConfigureAwaitHideCancellation(fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
+                    var isCancelled = await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                        () => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
                     Assert.Equal(hardStop, isCancelled);
                     Assert.Equal(1, fake.Subscribers.Count);
                     Assert.Empty(fake.Subscribers[0].Acks);
@@ -322,7 +323,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SimpleSubscriber.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
-                    var isCancelled = await fake.TaskHelper.ConfigureAwaitHideCancellation(fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
+                    var isCancelled = await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                        () => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
                     Assert.Equal(hardStop, isCancelled);
                     Assert.Equal(clientCount, fake.Subscribers.Count);
                     Assert.Equal(expectedMsgCount, handledMsgs.Locked(() => handledMsgs.Count));
@@ -376,7 +378,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SimpleSubscriber.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
-                    await fake.TaskHelper.ConfigureAwaitHideCancellation(fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
+                    await fake.TaskHelper.ConfigureAwaitHideCancellation(
+                        () => fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
                     Assert.Equal(expectedMsgCount, handledMsgs.Count);
                 });
             }
@@ -466,8 +469,9 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return SimpleSubscriber.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
-                    Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(fake.Subscriber.StopAsync(CancellationToken.None));
-                    Assert.Equal(unrecoverableEx, ex.InnerException ?? ex);
+                    Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(
+                        () => fake.Subscriber.StopAsync(CancellationToken.None));
+                    Assert.Equal(unrecoverableEx, ex.AllExceptions().FirstOrDefault());
                     Assert.Equal(new[] { "1" }, handledMsgs);
                     Assert.Equal(1, fake.ClientShutdowns.Count);
                 });
@@ -485,24 +489,6 @@ namespace Google.Cloud.PubSub.V1.Tests
                     fake.Subscriber.StartAsync((msg, ct) => throw new Exception());
                     // Only allowed to start a SimpleSubscriber once.
                     Assert.Throws<InvalidOperationException>((Action)(() => fake.Subscriber.StartAsync((msg, ct) => throw new Exception())));
-                });
-            }
-        }
-
-        [Fact]
-        public void OnlyOneStop()
-        {
-            var msgs = new[] { new[] { ServerAction.Inf() } };
-            using (var fake = Fake.Create(msgs))
-            {
-                fake.Scheduler.Run(() =>
-                {
-                    // Cannot stop before start
-                    Assert.Throws<InvalidOperationException>((Action)(() => fake.Subscriber.StopAsync(CancellationToken.None)));
-                    fake.Subscriber.StartAsync((msg, ct) => throw new Exception());
-                    // Only allowed to stop a SimpleSubscriber once.
-                    fake.Subscriber.StopAsync(CancellationToken.None);
-                    Assert.Throws<InvalidOperationException>((Action)(() => fake.Subscriber.StopAsync(CancellationToken.None)));
                 });
             }
         }

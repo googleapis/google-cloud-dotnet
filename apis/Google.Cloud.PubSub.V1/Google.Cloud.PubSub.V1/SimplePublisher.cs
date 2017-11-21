@@ -514,7 +514,7 @@ namespace Google.Cloud.PubSub.V1
                 });
                 _taskHelper.Run(async () =>
                 {
-                    await _taskHelper.ConfigureAwaitHideErrors(_shutdownTcs.Task);
+                    await _taskHelper.ConfigureAwaitHideErrors(() => _shutdownTcs.Task);
                     registration.Dispose();
                 });
                 ShutdownIfCompleted();
@@ -657,7 +657,7 @@ namespace Google.Cloud.PubSub.V1
             {
                 // Perform the RPC to server, catching exceptions.
                 var publishTask = client.PublishAsync(TopicName, batch.Messages, CallSettings.FromCancellationToken(_hardStopCts.Token));
-                var response = await _taskHelper.ConfigureAwaitHideErrors(publishTask, null);
+                var response = await _taskHelper.ConfigureAwaitHideErrors(() => publishTask, null);
                 // Propagate task result to batch.
                 switch (publishTask.Status)
                 {

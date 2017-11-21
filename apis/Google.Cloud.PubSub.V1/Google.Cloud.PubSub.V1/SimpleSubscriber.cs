@@ -352,11 +352,11 @@ namespace Google.Cloud.PubSub.V1
             settings.Validate();
             _modifyDeadlineSeconds = (int)((settings.StreamAckDeadline ?? DefaultStreamAckDeadline).TotalSeconds);
             _autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
-            _maxAckExtendCount = 10_000;
             _shutdown = shutdown;
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
             _flowControlSettings = settings.FlowControlSettings ?? DefaultFlowControlSettings;
+            _maxAckExtendCount = (int)Math.Min(_flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, 10_000);
         }
 
         private readonly object _lock = new object();
@@ -370,7 +370,7 @@ namespace Google.Cloud.PubSub.V1
         private readonly FlowControlSettings _flowControlSettings;
 
         private TaskCompletionSource<int> _mainTcs;
-        private CancellationTokenSource _globalSoftStopCts;
+        private CancellationTokenSource _globalSoftStopCts; // soft-stop is guarenteed to occur before hard-stop.
         private CancellationTokenSource _globalHardStopCts;
 
         /// <inheritdoc />
@@ -391,7 +391,7 @@ namespace Google.Cloud.PubSub.V1
             {
                 registeredTasks.Locked(() => registeredTasks.Add(task));
                 Action unregisterTask = () => registeredTasks.Locked(() => registeredTasks.Remove(task));
-                _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(task, unregisterTask));
+                _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(() => task, unregisterTask));
             };
             Flow flow = new Flow(_flowControlSettings.MaxOutstandingByteCount ?? long.MaxValue,
                 _flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, registerTask, _taskHelper);
@@ -404,22 +404,26 @@ namespace Google.Cloud.PubSub.V1
             // Set up finish task
             _taskHelper.Run(async () =>
             {
+                // WhenAny() always returns a non-faulted task, so the await will never throw.
                 var task = await _taskHelper.ConfigureAwait(_taskHelper.WhenAny(subscriberTasks));
                 if (task.IsFaulted)
                 {
+                    _globalSoftStopCts.Cancel();
                     _globalHardStopCts.Cancel();
                 }
                 // Wait for all subscribers to stop
-                var exception = await _taskHelper.ConfigureAwaitHideErrors(_taskHelper.WhenAll(subscriberTasks));
+                var exception = await _taskHelper.ConfigureAwaitHideErrors(() => _taskHelper.WhenAll(subscriberTasks));
                 // Wait for all registered Tasks to stop
-                await _taskHelper.ConfigureAwaitHideErrors(_taskHelper.WhenAll(registeredTasks.Locked(() => registeredTasks.ToArray())));
+                await _taskHelper.ConfigureAwaitHideErrors(
+                    () => _taskHelper.WhenAll(registeredTasks.Locked(() => registeredTasks.ToArray())));
                 // Call shutdown function
                 if (_shutdown != null)
                 {
                     await _taskHelper.ConfigureAwaitHideErrors(_shutdown);
                 }
                 // Return final result
-                var exceptions = ((exception as AggregateException)?.Flatten()?.InnerExceptions) ?? Enumerable.Repeat(exception, exception == null ? 0 : 1);
+                var exceptions = ((exception as AggregateException)?.Flatten().InnerExceptions) ??
+                    Enumerable.Repeat(exception, exception == null ? 0 : 1);
                 if (exceptions.Any())
                 {
                     _mainTcs.SetException(exceptions);
@@ -442,13 +446,13 @@ namespace Google.Cloud.PubSub.V1
             lock (_lock)
             {
                 GaxPreconditions.CheckState(_mainTcs != null, "Can only stop a started instance.");
-                GaxPreconditions.CheckState(!_globalSoftStopCts.IsCancellationRequested, "Can only stop an instance once.");
                 _globalSoftStopCts.Cancel();
             }
             var registration = hardStopToken.Register(() => _globalHardStopCts.Cancel());
             // Do not register this Task to be awaited on at shutdown.
             // It completes *after* _mainTcs, and all registered tasks must complete before _mainTcs
-            _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(_mainTcs.Task, () => registration.Dispose()));
+            _taskHelper.Run(async () =>
+                await _taskHelper.ConfigureAwaitWithFinally(() => _mainTcs.Task, () => registration.Dispose()));
             return _mainTcs.Task;
         }
 
@@ -464,6 +468,7 @@ namespace Google.Cloud.PubSub.V1
                 _maxElementCount = maxElementCount;
                 _registerTaskFn = registerTaskFn;
                 _taskHelper = taskHelper;
+                _event = new AsyncAutoResetEvent(taskHelper);
             }
 
             private readonly object _lock = new object();
@@ -471,11 +476,10 @@ namespace Google.Cloud.PubSub.V1
             private readonly long _maxElementCount;
             private readonly Action<Task> _registerTaskFn;
             private readonly TaskHelper _taskHelper;
+            private readonly AsyncAutoResetEvent _event;
 
             private long _byteCount;
             private long _elementCount;
-
-            private TaskCompletionSource<int> _event = new TaskCompletionSource<int>();
 
             /// <summary>
             /// Is flow-control currently within limits. Pre-condition: must be locked.
@@ -496,10 +500,8 @@ namespace Google.Cloud.PubSub.V1
             /// <returns>A Task that completes once <paramref name="fn"/> has been scheduled for execution.</returns>
             public async Task Process(long byteCount, Func<Task> fn)
             {
-                Task prevEventTask = null;
                 while (true)
                 {
-                    Task eventTask;
                     lock (_lock)
                     {
                         if (IsFlowOk())
@@ -509,32 +511,27 @@ namespace Google.Cloud.PubSub.V1
                             _elementCount += 1;
                             break;
                         }
-                        // Flow not OK, prepare to wait until a previous fn completes.
-                        eventTask = _event.Task;
                     }
-                    prevEventTask = eventTask;
-                    await _taskHelper.ConfigureAwait(eventTask);
+                    // Flow not OK, wait until a previous fn completes.
+                    // CancellationToken not required, as the fn() will always drain on cancellation.
+                    await _taskHelper.ConfigureAwait(_event.WaitAsync(CancellationToken.None));
                 }
                 // Execute fn, and schedule the following code to execute once it has completed.
                 // Register the function, so we can be sure it's completed during shutdown.
-                _registerTaskFn(_taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn(), () =>
+                _registerTaskFn(_taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn, () =>
                 {
-                    TaskCompletionSource<int> ev = null;
+                    bool setEvent;
                     lock (_lock)
                     {
                         bool preIsFlowOk = IsFlowOk();
                         _byteCount -= byteCount;
                         _elementCount -= 1;
-                        if (!preIsFlowOk && IsFlowOk())
-                        {
-                            // If moving from flow-bad to flow-OK, then trigger the next execution.
-                            ev = _event;
-                            _event = new TaskCompletionSource<int>();
-                        }
+                        // If moving from flow-bad to flow-OK, then trigger the next execution.
+                        setEvent = !preIsFlowOk && IsFlowOk();
                     }
-                    if (ev != null)
+                    if (setEvent)
                     {
-                        ev.SetResult(0);
+                        _event.Set();
                     }
                 })));
             }
@@ -566,8 +563,9 @@ namespace Google.Cloud.PubSub.V1
                 _taskHelper = subscriber._taskHelper;
                 _softStopCts = subscriber._globalSoftStopCts;
                 _hardStopCts = CancellationTokenSource.CreateLinkedTokenSource(subscriber._globalHardStopCts.Token);
-                subscriber._globalSoftStopCts.Token.Register(() => _qLock.Locked(() => _qEvent).TrySetResult(0));
-                subscriber._globalHardStopCts.Token.Register(() => _qLock.Locked(() => _qEvent).TrySetResult(0));
+                _qEvent = new AsyncAutoResetEvent(_taskHelper);
+                subscriber._globalSoftStopCts.Token.Register(() => _qEvent.Set());
+                subscriber._globalHardStopCts.Token.Register(() => _qEvent.Set());
             }
 
             private readonly SubscriptionName _subscriptionName;
@@ -587,7 +585,7 @@ namespace Google.Cloud.PubSub.V1
             private readonly Queue<string> _ackQueue = new Queue<string>();
             private readonly Queue<string> _extendQueue = new Queue<string>();
             private int _unAckedMsgCount;
-            private TaskCompletionSource<int> _qEvent = new TaskCompletionSource<int>();
+            private AsyncAutoResetEvent _qEvent;
 
             // States:
             // Push faulted: local immediate stop/restart streaming-pull request
@@ -610,8 +608,7 @@ namespace Google.Cloud.PubSub.V1
                         // The CancellationTokenSource that reflects the state of the StreamingPull() RPC.
                         // This is cancelled once the StreamingPull() RPC has an error.
                         var streamingPullCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
-                        pull = _client.StreamingPull(CallSettings.FromCancellationToken(streamingPullCts.Token),
-                            new BidirectionalStreamingSettings(1));
+                        pull = _client.StreamingPull(CallSettings.FromCancellationToken(streamingPullCts.Token), new BidirectionalStreamingSettings(1));
                         // Initial call to start subscribe messages arriving.
                         await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
                         {
@@ -622,7 +619,9 @@ namespace Google.Cloud.PubSub.V1
                         var pushTask = _taskHelper.Run(() => Push(pull, streamingPullCts.Token));
                         // Read incoming messages whilst not stopped, and not in a fault condition.
                         var pullTask = _taskHelper.Run(() => Pull(pull, streamingPullCts.Token));
-                        // Wait for either pull or push to complete.
+                        // Trigger _qEvent, to restart pushes with new streaming-pull
+                        _qEvent.Set();
+                        // Wait for either pull or push to complete. This will not throw on error or cancellation.
                         var completedTask = await _taskHelper.ConfigureAwait(_taskHelper.WhenAny(pushTask, pullTask));
                         // Only cancel streaming if one of the tasks faulted. Otherwise use the non-abortive shutdown.
                         // This is only important during error conditions, and is to force the pull/push to stop
@@ -633,13 +632,15 @@ namespace Google.Cloud.PubSub.V1
                             streamingPullCts.Cancel();
                         }
                         // Trigger _qEvent, to ensure Push sees any state changes.
-                        _qLock.Locked(() => _qEvent).TrySetResult(0);
+                        _qEvent.Set();
                         // Await until pull and push have both stopped.
+                        // If pull of push is faulted/cancelled, this will throw.
                         await _taskHelper.ConfigureAwait(_taskHelper.WhenAll(pushTask, pullTask));
                     }
-                    catch (Exception e) when (e.IsCancellation() || e.IsRpcCancellation() || (e.As<RpcException>()?.IsRecoverable() ?? false))
+                    catch (Exception e0) when (
+                        e0.AllExceptions().All(e => e.IsCancellation() || (e.As<RpcException>()?.IsRecoverable() ?? false)))
                     {
-                        // If it's not an unrecoverable error, then allow non-exceptional code-paths to handle. Do nothing here.
+                        // If all errors are recoverable, then do nothing here; restart pull on loop.
                     }
                     finally
                     {
@@ -656,19 +657,19 @@ namespace Google.Cloud.PubSub.V1
             private async Task Pull(SubscriberClient.StreamingPullStream pull, CancellationToken streamingPullToken)
             {
                 var cts = CancellationTokenSource.CreateLinkedTokenSource(streamingPullToken, _softStopCts.Token);
-                // .MoveNext() will only accept CancellationToken.None (by design seemingly), so we have to use the cancellationToken
-                // specified when the StreamingPull was started.
-                while (!cts.IsCancellationRequested && await _taskHelper.ConfigureAwait(pull.ResponseStream.MoveNext(CancellationToken.None)))
+                while (!cts.IsCancellationRequested &&
+                    await _taskHelper.ConfigureAwaitHideCancellation(() => pull.ResponseStream.MoveNext(cts.Token), false))
                 {
-                    // If in soft-stop, the overall StreamingPull might not yet be cancelled, but don't process any more msgs.
                     if (cts.IsCancellationRequested)
                     {
                         break;
                     }
                     var msgs = pull.ResponseStream.Current.ReceivedMessages;
-                    var ackIds = new HashSet<string>(msgs.Select(x => x.AckId));
+                    var extendIds = new HashSet<string>(msgs.Select(x => x.AckId));
+                    // Extend leases immediately. This is the receipt to the server that starts the server lease timeout.
+                    QueueLeaseExtensions(extendIds);
                     var allMsgsHandledCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
-                    _registerTaskFn(_taskHelper.Run(() => AutoExtend(ackIds, allMsgsHandledCts.Token)));
+                    _registerTaskFn(_taskHelper.Run(() => AutoExtend(extendIds, allMsgsHandledCts.Token)));
                     foreach (var msg in msgs)
                     {
                         if (cts.IsCancellationRequested)
@@ -688,55 +689,61 @@ namespace Google.Cloud.PubSub.V1
                             }
                             // Execute the user-provided message handler, and ignoring exceptions.
                             // And process the ACK/NACK response.
-                            var reply = await _taskHelper.ConfigureAwaitHideErrors(_handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
-                            TaskCompletionSource<int> qEvent = null;
+                            var reply = await _taskHelper.ConfigureAwaitHideErrors(
+                                () => _handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
+                            bool triggerQEvent = false;
                             lock (_qLock)
                             {
+                                extendIds.Remove(msg.AckId);
+                                if (extendIds.Count == 0)
+                                {
+                                    allMsgsHandledCts.Cancel();
+                                }
                                 if (reply == Reply.Ack)
                                 {
-                                    ackIds.Remove(msg.AckId);
                                     _ackQueue.Enqueue(msg.AckId);
-                                    if (ackIds.Count == 0)
-                                    {
-                                        allMsgsHandledCts.Cancel();
-                                    }
-                                    qEvent = _qEvent;
+                                    triggerQEvent = true;
                                 }
                                 else
                                 {
                                     _unAckedMsgCount -= 1;
                                 }
                             }
-                            if (qEvent != null)
+                            if (triggerQEvent)
                             {
                                 // Unblock Push(), because now there is at least one ACK to push.
-                                qEvent.TrySetResult(0);
+                                _qEvent.Set();
                             }
                         }));
                     }
                 }
             }
 
+            private void QueueLeaseExtensions(IEnumerable<string> ackIds)
+            {
+                lock (_qLock)
+                {
+                    _extendQueue.EnqueueAll(ackIds);
+                }
+                _qEvent.Set();
+            }
+
             private async Task AutoExtend(HashSet<string> ackIds, CancellationToken allMsgsHandledToken)
             {
                 // Moves ackIds into the extend-queue as required for auto lease extension
                 // This loop is not infinite; it terminates when allMsgsHandledToken is cancelled.
-                // An initial "extend-lease" message is sent to the server immediately. This acts as a receipt
-                // to let the server know that user-land code has now received this batch of messages.
-                // This allows the server and client to roughly agree on a message expiration timer start time.
                 while (true)
                 {
-                    TaskCompletionSource<int> qEvent;
-                    lock (_qLock)
+                    bool isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(
+                        () => _scheduler.Delay(_autoExtendInterval, allMsgsHandledToken));
+                    if (isCancelled)
                     {
-                        // Take snapshot of all ids still not processed.
-                        // It's OK if an ID is lease-extended and ACKed to the server concurrently.
-                        // The ACK takes precedence on the server.
-                        _extendQueue.EnqueueAll(ackIds);
-                        qEvent = _qEvent;
+                        break;
                     }
-                    qEvent.TrySetResult(0);
-                    await _taskHelper.ConfigureAwait(_scheduler.Delay(_autoExtendInterval, allMsgsHandledToken));
+                    // Queue lease extensions on all not-yet-processed messages.
+                    // It's OK if an ID is lease-extended and ACKed to the server concurrently.
+                    // The ACK takes precedence on the server.
+                    QueueLeaseExtensions(ackIds);
                 }
             }
 
@@ -748,49 +755,42 @@ namespace Google.Cloud.PubSub.V1
                 // If it's unrecoverable, then a global hard stop occurs.
                 while (true)
                 {
-                    await _taskHelper.ConfigureAwait(_qLock.Locked(() => _qEvent.Task));
-                    List<string> acks = new List<string>();
-                    List<string> extends = new List<string>();
+                    // Wait until there are acks or lease-extensions to push to server.
+                    while (_qLock.Locked(() => _ackQueue.Count == 0 && _extendQueue.Count == 0))
+                    {
+                        if (_softStopCts.IsCancellationRequested && _qLock.Locked(() => _unAckedMsgCount == 0))
+                        {
+                            // All acks sent and a stop has been requested, so cancel local _hardStopCts
+                            // to signal this SingleChannel has completed; then exit Pusher
+                            _hardStopCts.Cancel();
+                            return;
+                        }
+                        try
+                        {
+                            await _taskHelper.ConfigureAwait(_qEvent.WaitAsync(streamingPullToken));
+                        }
+                        catch (Exception e) when (e.IsCancellation())
+                        {
+                            return;
+                        }
+                    }
+                    // Get local copies of acks/extensions to send.
+                    var acks = _qLock.Locked(() => _ackQueue.Take(_maxAckExtendCount).ToList());
+                    var extends = _qLock.Locked(() => _extendQueue.Take(_maxAckExtendCount - acks.Count).ToList());
+                    // Send acks/extensions
+                    await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
+                    {
+                        AckIds = { acks },
+                        ModifyDeadlineAckIds = { extends },
+                        ModifyDeadlineSeconds = { Enumerable.Repeat(_modifyDeadlineSeconds, extends.Count) },
+                    }));
+                    // If the send didn't have errors, then dequeue the acks/extends that were just sent.
+                    // Any error would have thrown an exception in the previous WriteAsync() call.
                     lock (_qLock)
                     {
-                        // _qEvent must be re-created before any actual work is done.
-                        // This ensures no work will be missed if a re-trigger occurs just after the _qEvent.Task await.
-                        _qEvent = new TaskCompletionSource<int>();
-                        // On hard-stop or pull failure, just exit immediately. No more extends/acks will be pushed.
-                        // If a recoverable pull failure, then extend/ack pushing will continue in a new StreamingPull.
-                        if (streamingPullToken.IsCancellationRequested)
-                        {
-                            break;
-                        }
-                        // Send acks that are waiting, but no more that _maxAckExtendCount
-                        while (_ackQueue.Count > 0 && acks.Count < _maxAckExtendCount)
-                        {
-                            acks.Add(_ackQueue.Dequeue());
-                        }
-                        // Send extends that are waiting, but no more acks+extends than _maxAckExtendCount
-                        while (_extendQueue.Count > 0 && (acks.Count + extends.Count) < _maxAckExtendCount)
-                        {
-                            extends.Add(_extendQueue.Dequeue());
-                        }
-                    }
-                    // If anything to be sent, then send it now
-                    if (acks.Count > 0 || extends.Count > 0)
-                    {
-                        await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
-                        {
-                            AckIds = { acks },
-                            ModifyDeadlineAckIds = { extends },
-                            ModifyDeadlineSeconds = { extends.Select(_ => _modifyDeadlineSeconds) },
-                        }));
-                        // Decrement _unAckedMsgCount by the number of acks just successfully sent.
-                        _qLock.Locked(() => _unAckedMsgCount -= acks.Count);
-                    }
-                    if (_softStopCts.IsCancellationRequested && _qLock.Locked(() => _unAckedMsgCount) == 0)
-                    {
-                        // All acks sent and a stop has been requested, so cancel local _hardStopCts
-                        // to signal this SingleChannel has completed; then exit Pusher
-                        _hardStopCts.Cancel();
-                        break;
+                        _ackQueue.Dequeue(acks.Count);
+                        _extendQueue.Dequeue(extends.Count);
+                        _unAckedMsgCount -= acks.Count;
                     }
                 }
             }
