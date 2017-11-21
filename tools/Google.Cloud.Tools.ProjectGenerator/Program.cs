@@ -335,9 +335,9 @@ TODO: Add snippet references here.
         private static string GetPreferredCoverageFramework(ApiMetadata api)
         {
             var targetFrameworks = GetTestTargetFrameworks(api);
-            if (targetFrameworks.Contains(TargetFrameworkClassic))
+            if (targetFrameworks.Contains(TargetFrameworkCore))
             {
-                return TargetFrameworkClassic;
+                return TargetFrameworkCore;
             }
             // Otherwise, return the first one found.
             return targetFrameworks.Split(';').FirstOrDefault();
