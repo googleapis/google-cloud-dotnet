@@ -69,9 +69,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="unmanaged-resource-clean-up">Unmanaged resource clean-up</h1>
 
-<p>Note: this article is only relevant to libraries which use <a href="http://www.grpc.io">gRPC</a>.
-See the <a href="api-layers.html">API layers</a> article for more details around the differences between
-gRPC-based APIs and REST-based APIs.</p>
+<h2 id="grpc-based-apis-and-channels">gRPC-based APIs and channels</h2>
 <p>gRPC uses the concept of a <em>channel</em> between your application
 and the service implementing an API. This consists of a network
 connection and some unmanaged resources which handle its status and
@@ -93,6 +91,51 @@ after shutting others down... it will just require a new network connection to b
 when either the application domain is unloaded, or the process exits. For most applications, this is
 perfectly adequate; explicit shutdown is only required when your application needs to ensure that
 it has handled all requests appropriately before exiting.</p>
+<h2 id="rest-based-apis">REST-based APIs</h2>
+<p>Summary: Use a single client if you can; if you have to create
+multiple clients at a high frequency, dispose of them when you&#39;re
+done.</p>
+<p>Just as a reminder, Google Cloud Client Libraries for .NET has three
+libraries for REST-based APIs:</p>
+<ul>
+<li>Google.Cloud.Storage.V1 (StorageClient)</li>
+<li>Google.Cloud.BigQuery.V2 (BigQueryClient)</li>
+<li>Google.Cloud.Translation.V2 (TranslationClient, AdvancedTranslationClient)</li>
+</ul>
+<p>In November 2017, these client classes were changed to implement the
+<code>IDisposable</code> interface. The <code>Dispose</code> method simply disposes of the
+underlying service object, which in turn disposes of the underlying
+<code>HttpClient</code>.</p>
+<p>There are three broad usage scenarios to consider:</p>
+<ul>
+<li>A single long-lived client object (or perhaps a limited set,
+e.g. using different credentials) used for many operations.</li>
+<li>A new client used for each set of operations, e.g. a new client
+created for each incoming request on a web site, but with relatively
+low-frequency use.</li>
+<li>A new client created for each set of operations, with high-frequency
+use.</li>
+</ul>
+<p>The ability to dispose of the client really only affects the last of
+these scenarios. The way that <code>HttpClient</code> works has two downsides
+when new clients are created frequently:</p>
+<ul>
+<li>Connections to the API server (e.g. the Storage API server) can
+take a long time to close. This can cause problems if you&#39;re running
+in an environment with a limited number of available connections.</li>
+<li>Buffers within <code>HttpClient</code> can consume memory for longer than is
+desirable.</li>
+</ul>
+<p>In many cases these don&#39;t actually cause problems - if you don&#39;t
+reach your connection limit, and the garbage collector is collecting
+the <code>HttpClient</code> buffers fast enough to keep your memory usage low,
+you&#39;re fine. Likewise if you only ever create a limited set of
+client objects, you shouldn&#39;t run into issues.</p>
+<p>In other cases, where (for whatever reason) you really want to
+create a lot of client objects in quick succession, it&#39;s prudent to
+dispose of the clients when you&#39;re done with them. Now that the
+client classes implement <code>IDisposable</code>, you can simply use <code>using</code>
+statements in the normal way.</p>
 </article>
           </div>
           
