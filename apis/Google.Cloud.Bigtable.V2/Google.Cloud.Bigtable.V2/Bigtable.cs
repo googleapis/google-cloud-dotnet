@@ -84,10 +84,11 @@ namespace Google.Cloud.Bigtable.V2 {
             "djIuUmVhZE1vZGlmeVdyaXRlUm93UmVxdWVzdBouLmdvb2dsZS5iaWd0YWJs",
             "ZS52Mi5SZWFkTW9kaWZ5V3JpdGVSb3dSZXNwb25zZSJOgtPkkwJIIkMvdjIv",
             "e3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn06",
-            "cmVhZE1vZGlmeVdyaXRlUm93OgEqQoABChZjb20uZ29vZ2xlLmJpZ3RhYmxl",
+            "cmVhZE1vZGlmeVdyaXRlUm93OgEqQpsBChZjb20uZ29vZ2xlLmJpZ3RhYmxl",
             "LnYyQg1CaWd0YWJsZVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
             "b3RvL2dvb2dsZWFwaXMvYmlndGFibGUvdjI7YmlndGFibGWqAhhHb29nbGUu",
-            "Q2xvdWQuQmlndGFibGUuVjJiBnByb3RvMw=="));
+            "Q2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVcVjJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

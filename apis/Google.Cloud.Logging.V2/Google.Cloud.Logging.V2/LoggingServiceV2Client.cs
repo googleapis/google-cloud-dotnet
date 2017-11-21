@@ -432,12 +432,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
         ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
+        ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"`,
         /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
@@ -467,12 +467,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
         ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
+        ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"`,
         /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
@@ -499,12 +499,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
         ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
+        ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"`,
         /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
@@ -572,7 +572,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// ## Log entry resources
-        /// 
+        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
@@ -582,12 +582,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
         /// in `entries` that do not specify a value for `log_name`:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
         ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
+        ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"` or
         /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
@@ -597,11 +597,11 @@ namespace Google.Cloud.Logging.V2
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
         /// entries in `entries` that do not specify a value for `resource`. Example:
-        /// 
+        ///
         ///     { "type": "gce_instance",
         ///       "labels": {
         ///         "zone": "us-central1-a", "instance_id": "00000000000000000000" }}
-        /// 
+        ///
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="labels">
@@ -616,18 +616,18 @@ namespace Google.Cloud.Logging.V2
         /// `log_name`, `resource`, and `labels` fields are copied into those log
         /// entries in this list that do not include values for their corresponding
         /// fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
-        /// 
+        ///
         /// If the `timestamp` or `insert_id` fields are missing in log entries, then
         /// this method supplies the current time or a unique identifier, respectively.
         /// The supplied values are chosen so that, among the log entries that did not
         /// supply their own values, the entries earlier in the list will sort before
         /// the entries later in the list. See the `entries.list` method.
-        /// 
+        ///
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
         /// 24 hours in the future might be discarded. Discarding does not return
         /// an error.
-        /// 
+        ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
         /// you should try to include several log entries in this list,
@@ -656,7 +656,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// ## Log entry resources
-        /// 
+        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
@@ -666,12 +666,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
         /// in `entries` that do not specify a value for `log_name`:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
         ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
+        ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"` or
         /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
@@ -681,11 +681,11 @@ namespace Google.Cloud.Logging.V2
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
         /// entries in `entries` that do not specify a value for `resource`. Example:
-        /// 
+        ///
         ///     { "type": "gce_instance",
         ///       "labels": {
         ///         "zone": "us-central1-a", "instance_id": "00000000000000000000" }}
-        /// 
+        ///
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="labels">
@@ -700,18 +700,18 @@ namespace Google.Cloud.Logging.V2
         /// `log_name`, `resource`, and `labels` fields are copied into those log
         /// entries in this list that do not include values for their corresponding
         /// fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
-        /// 
+        ///
         /// If the `timestamp` or `insert_id` fields are missing in log entries, then
         /// this method supplies the current time or a unique identifier, respectively.
         /// The supplied values are chosen so that, among the log entries that did not
         /// supply their own values, the entries earlier in the list will sort before
         /// the entries later in the list. See the `entries.list` method.
-        /// 
+        ///
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
         /// 24 hours in the future might be discarded. Discarding does not return
         /// an error.
-        /// 
+        ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
         /// you should try to include several log entries in this list,
@@ -737,7 +737,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// ## Log entry resources
-        /// 
+        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
@@ -747,12 +747,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
         /// in `entries` that do not specify a value for `log_name`:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
         ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
-        /// 
+        ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"` or
         /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
@@ -762,11 +762,11 @@ namespace Google.Cloud.Logging.V2
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
         /// entries in `entries` that do not specify a value for `resource`. Example:
-        /// 
+        ///
         ///     { "type": "gce_instance",
         ///       "labels": {
         ///         "zone": "us-central1-a", "instance_id": "00000000000000000000" }}
-        /// 
+        ///
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="labels">
@@ -781,18 +781,18 @@ namespace Google.Cloud.Logging.V2
         /// `log_name`, `resource`, and `labels` fields are copied into those log
         /// entries in this list that do not include values for their corresponding
         /// fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.
-        /// 
+        ///
         /// If the `timestamp` or `insert_id` fields are missing in log entries, then
         /// this method supplies the current time or a unique identifier, respectively.
         /// The supplied values are chosen so that, among the log entries that did not
         /// supply their own values, the entries earlier in the list will sort before
         /// the entries later in the list. See the `entries.list` method.
-        /// 
+        ///
         /// Log entries with timestamps that are more than the
         /// [logs retention period](/logging/quota-policy) in the past or more than
         /// 24 hours in the future might be discarded. Discarding does not return
         /// an error.
-        /// 
+        ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
         /// you should try to include several log entries in this list,
@@ -821,7 +821,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// ## Log entry resources
-        /// 
+        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
@@ -846,7 +846,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// ## Log entry resources
-        /// 
+        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
@@ -877,12 +877,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
         /// retrieve log entries:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
-        /// 
+        ///
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
         /// <param name="filter">
@@ -941,12 +941,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
         /// retrieve log entries:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
-        /// 
+        ///
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
         /// <param name="filter">
@@ -1085,7 +1085,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name that owns the logs:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
@@ -1124,7 +1124,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name that owns the logs:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
@@ -1295,7 +1295,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// ## Log entry resources
-        /// 
+        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
@@ -1321,7 +1321,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// ## Log entry resources
-        /// 
+        ///
         /// Writes log entries to Stackdriver Logging. This API method is the
         /// only way to send log entries to Stackdriver Logging. This method
         /// is used, directly or indirectly, by the Stackdriver Logging agent
