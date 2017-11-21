@@ -8,8 +8,11 @@
 
 # Getting started
 
-TODO: Add a link to the client classes here, and introductory text.
+All operations are performed through
+[ClusterManagerClient](obj/api/Google.Cloud.Container.V1.ClusterManagerClient.yml).
 
 # Sample code
 
-TODO: Add snippet references here.
+## List clusters
+
+[!code-cs[](obj/snippets/Google.Cloud.Container.V1.ClusterManagerClient.txt#ListAllClusters)]
