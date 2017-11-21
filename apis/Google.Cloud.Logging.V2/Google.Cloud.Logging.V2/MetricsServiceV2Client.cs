@@ -386,7 +386,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project containing the metrics:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         /// </param>
         /// <param name="pageToken">
@@ -421,7 +421,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project containing the metrics:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         /// </param>
         /// <param name="pageToken">
@@ -494,7 +494,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="metricName">
         /// The resource name of the desired metric:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
         /// </param>
         /// <param name="callSettings">
@@ -517,7 +517,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="metricName">
         /// The resource name of the desired metric:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
         /// </param>
         /// <param name="cancellationToken">
@@ -537,7 +537,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="metricName">
         /// The resource name of the desired metric:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
         /// </param>
         /// <param name="callSettings">
@@ -598,9 +598,9 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// The resource name of the project in which to create the metric:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
-        /// 
+        ///
         /// The new metric must be provided in the request.
         /// </param>
         /// <param name="metric">
@@ -629,9 +629,9 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// The resource name of the project in which to create the metric:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
-        /// 
+        ///
         /// The new metric must be provided in the request.
         /// </param>
         /// <param name="metric">
@@ -657,9 +657,9 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// The resource name of the project in which to create the metric:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
-        /// 
+        ///
         /// The new metric must be provided in the request.
         /// </param>
         /// <param name="metric">
@@ -726,9 +726,9 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="metricName">
         /// The resource name of the metric to update:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
-        /// 
+        ///
         /// The updated metric must be provided in the request and it's
         /// `name` field must be the same as `[METRIC_ID]` If the metric
         /// does not exist in `[PROJECT_ID]`, then a new metric is created.
@@ -758,9 +758,9 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="metricName">
         /// The resource name of the metric to update:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
-        /// 
+        ///
         /// The updated metric must be provided in the request and it's
         /// `name` field must be the same as `[METRIC_ID]` If the metric
         /// does not exist in `[PROJECT_ID]`, then a new metric is created.
@@ -787,9 +787,9 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="metricName">
         /// The resource name of the metric to update:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
-        /// 
+        ///
         /// The updated metric must be provided in the request and it's
         /// `name` field must be the same as `[METRIC_ID]` If the metric
         /// does not exist in `[PROJECT_ID]`, then a new metric is created.
@@ -857,7 +857,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="metricName">
         /// The resource name of the metric to delete:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
         /// </param>
         /// <param name="callSettings">
@@ -880,7 +880,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="metricName">
         /// The resource name of the metric to delete:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
         /// </param>
         /// <param name="cancellationToken">
@@ -900,7 +900,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="metricName">
         /// The resource name of the metric to delete:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
         /// </param>
         /// <param name="callSettings">
