@@ -32,9 +32,10 @@ namespace Google.Cloud.Firestore
         public static Precondition MustExist { get; } = new Precondition(new V1Beta1.Precondition { Exists = true });
 
         /// <summary>
-        /// Precondition that the document must not exist.
+        /// Precondition that the document must not exist. (This is internal for now; we don't believe there's
+        /// a reason for clients to specify this anywhere.)
         /// </summary>
-        public static Precondition MustNotExist { get; } = new Precondition(new V1Beta1.Precondition { Exists = false });
+        internal static Precondition MustNotExist { get; } = new Precondition(new V1Beta1.Precondition { Exists = false });
 
         /// <summary>
         /// Creates a precondition that the document has the specified last update time.
