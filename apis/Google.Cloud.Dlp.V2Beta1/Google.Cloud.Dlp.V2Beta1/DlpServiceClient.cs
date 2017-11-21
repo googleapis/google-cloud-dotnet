@@ -23,6 +23,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -49,11 +50,11 @@ namespace Google.Cloud.Dlp.V2Beta1
         private DlpServiceSettings(DlpServiceSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            InspectContentSettings = existing.InspectContentSettings;
+            RedactContentSettings = existing.RedactContentSettings;
             DeidentifyContentSettings = existing.DeidentifyContentSettings;
             AnalyzeDataSourceRiskSettings = existing.AnalyzeDataSourceRiskSettings;
             AnalyzeDataSourceRiskOperationsSettings = existing.AnalyzeDataSourceRiskOperationsSettings?.Clone();
-            InspectContentSettings = existing.InspectContentSettings;
-            RedactContentSettings = existing.RedactContentSettings;
             CreateInspectOperationSettings = existing.CreateInspectOperationSettings;
             CreateInspectOperationOperationsSettings = existing.CreateInspectOperationOperationsSettings?.Clone();
             ListInspectFindingsSettings = existing.ListInspectFindingsSettings;
@@ -127,6 +128,64 @@ namespace Google.Cloud.Dlp.V2Beta1
             maxDelay: TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.InspectContent</c> and <c>DlpServiceClient.InspectContentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.InspectContent</c> and
+        /// <c>DlpServiceClient.InspectContentAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings InspectContentSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.RedactContent</c> and <c>DlpServiceClient.RedactContentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.RedactContent</c> and
+        /// <c>DlpServiceClient.RedactContentAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings RedactContentSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -208,64 +267,6 @@ namespace Google.Cloud.Dlp.V2Beta1
                 1.5,
                 TimeSpan.FromMilliseconds(45000L))
         };
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>DlpServiceClient.InspectContent</c> and <c>DlpServiceClient.InspectContentAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>DlpServiceClient.InspectContent</c> and
-        /// <c>DlpServiceClient.InspectContentAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings InspectContentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>DlpServiceClient.RedactContent</c> and <c>DlpServiceClient.RedactContentAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>DlpServiceClient.RedactContent</c> and
-        /// <c>DlpServiceClient.RedactContentAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings RedactContentSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -504,6 +505,359 @@ namespace Google.Cloud.Dlp.V2Beta1
         public virtual DlpService.DlpServiceClient GrpcClient
         {
             get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Finds potentially sensitive info in a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Items in a single request are
+        /// considered "related" unless inspect_config.independent_inputs is true.
+        /// Up to 100 are allowed per request.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<InspectContentResponse> InspectContentAsync(
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            CallSettings callSettings = null) => InspectContentAsync(
+                new InspectContentRequest
+                {
+                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
+                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Finds potentially sensitive info in a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Items in a single request are
+        /// considered "related" unless inspect_config.independent_inputs is true.
+        /// Up to 100 are allowed per request.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<InspectContentResponse> InspectContentAsync(
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            CancellationToken cancellationToken) => InspectContentAsync(
+                inspectConfig,
+                items,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds potentially sensitive info in a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Items in a single request are
+        /// considered "related" unless inspect_config.independent_inputs is true.
+        /// Up to 100 are allowed per request.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual InspectContentResponse InspectContent(
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            CallSettings callSettings = null) => InspectContent(
+                new InspectContentRequest
+                {
+                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
+                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Finds potentially sensitive info in a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<InspectContentResponse> InspectContentAsync(
+            InspectContentRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Finds potentially sensitive info in a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual InspectContentResponse InspectContent(
+            InspectContentRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Up to 100 are allowed per request.
+        /// </param>
+        /// <param name="replaceConfigs">
+        /// The strings to replace findings text findings with. Must specify at least
+        /// one of these or one ImageRedactionConfig if redacting images.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RedactContentResponse> RedactContentAsync(
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs,
+            CallSettings callSettings = null) => RedactContentAsync(
+                new RedactContentRequest
+                {
+                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
+                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
+                    ReplaceConfigs = { GaxPreconditions.CheckNotNull(replaceConfigs, nameof(replaceConfigs)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Up to 100 are allowed per request.
+        /// </param>
+        /// <param name="replaceConfigs">
+        /// The strings to replace findings text findings with. Must specify at least
+        /// one of these or one ImageRedactionConfig if redacting images.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RedactContentResponse> RedactContentAsync(
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs,
+            CancellationToken cancellationToken) => RedactContentAsync(
+                inspectConfig,
+                items,
+                replaceConfigs,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Up to 100 are allowed per request.
+        /// </param>
+        /// <param name="replaceConfigs">
+        /// The strings to replace findings text findings with. Must specify at least
+        /// one of these or one ImageRedactionConfig if redacting images.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual RedactContentResponse RedactContent(
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs,
+            CallSettings callSettings = null) => RedactContent(
+                new RedactContentRequest
+                {
+                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
+                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
+                    ReplaceConfigs = { GaxPreconditions.CheckNotNull(replaceConfigs, nameof(replaceConfigs)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Up to 100 are allowed per request.
+        /// </param>
+        /// <param name="imageRedactionConfigs">
+        /// The configuration for specifying what content to redact from images.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RedactContentResponse> RedactContentAsync(
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            IEnumerable<RedactContentRequest.Types.ImageRedactionConfig> imageRedactionConfigs,
+            CallSettings callSettings = null) => RedactContentAsync(
+                new RedactContentRequest
+                {
+                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
+                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
+                    ImageRedactionConfigs = { imageRedactionConfigs ?? Enumerable.Empty<RedactContentRequest.Types.ImageRedactionConfig>() }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Up to 100 are allowed per request.
+        /// </param>
+        /// <param name="imageRedactionConfigs">
+        /// The configuration for specifying what content to redact from images.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RedactContentResponse> RedactContentAsync(
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            IEnumerable<RedactContentRequest.Types.ImageRedactionConfig> imageRedactionConfigs,
+            CancellationToken cancellationToken) => RedactContentAsync(
+                inspectConfig,
+                items,
+                imageRedactionConfigs,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="inspectConfig">
+        /// Configuration for the inspector.
+        /// </param>
+        /// <param name="items">
+        /// The list of items to inspect. Up to 100 are allowed per request.
+        /// </param>
+        /// <param name="imageRedactionConfigs">
+        /// The configuration for specifying what content to redact from images.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual RedactContentResponse RedactContent(
+            InspectConfig inspectConfig,
+            IEnumerable<ContentItem> items,
+            IEnumerable<RedactContentRequest.Types.ImageRedactionConfig> imageRedactionConfigs,
+            CallSettings callSettings = null) => RedactContent(
+                new RedactContentRequest
+                {
+                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
+                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
+                    ImageRedactionConfigs = { imageRedactionConfigs ?? Enumerable.Empty<RedactContentRequest.Types.ImageRedactionConfig>() }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RedactContentResponse> RedactContentAsync(
+            RedactContentRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual RedactContentResponse RedactContent(
+            RedactContentRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -793,266 +1147,6 @@ namespace Google.Cloud.Dlp.V2Beta1
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 AnalyzeDataSourceRiskOperationsClient,
                 callSettings);
-
-        /// <summary>
-        /// Finds potentially sensitive info in a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="inspectConfig">
-        /// Configuration for the inspector.
-        /// </param>
-        /// <param name="items">
-        /// The list of items to inspect. Items in a single request are
-        /// considered "related" unless inspect_config.independent_inputs is true.
-        /// Up to 100 are allowed per request.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<InspectContentResponse> InspectContentAsync(
-            InspectConfig inspectConfig,
-            IEnumerable<ContentItem> items,
-            CallSettings callSettings = null) => InspectContentAsync(
-                new InspectContentRequest
-                {
-                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
-                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
-                },
-                callSettings);
-
-        /// <summary>
-        /// Finds potentially sensitive info in a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="inspectConfig">
-        /// Configuration for the inspector.
-        /// </param>
-        /// <param name="items">
-        /// The list of items to inspect. Items in a single request are
-        /// considered "related" unless inspect_config.independent_inputs is true.
-        /// Up to 100 are allowed per request.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<InspectContentResponse> InspectContentAsync(
-            InspectConfig inspectConfig,
-            IEnumerable<ContentItem> items,
-            CancellationToken cancellationToken) => InspectContentAsync(
-                inspectConfig,
-                items,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Finds potentially sensitive info in a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="inspectConfig">
-        /// Configuration for the inspector.
-        /// </param>
-        /// <param name="items">
-        /// The list of items to inspect. Items in a single request are
-        /// considered "related" unless inspect_config.independent_inputs is true.
-        /// Up to 100 are allowed per request.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual InspectContentResponse InspectContent(
-            InspectConfig inspectConfig,
-            IEnumerable<ContentItem> items,
-            CallSettings callSettings = null) => InspectContent(
-                new InspectContentRequest
-                {
-                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
-                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
-                },
-                callSettings);
-
-        /// <summary>
-        /// Finds potentially sensitive info in a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<InspectContentResponse> InspectContentAsync(
-            InspectContentRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Finds potentially sensitive info in a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual InspectContentResponse InspectContent(
-            InspectContentRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Redacts potentially sensitive info from a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="inspectConfig">
-        /// Configuration for the inspector.
-        /// </param>
-        /// <param name="items">
-        /// The list of items to inspect. Up to 100 are allowed per request.
-        /// </param>
-        /// <param name="replaceConfigs">
-        /// The strings to replace findings text findings with. Must specify at least
-        /// one of these or one ImageRedactionConfig if redacting images.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<RedactContentResponse> RedactContentAsync(
-            InspectConfig inspectConfig,
-            IEnumerable<ContentItem> items,
-            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs,
-            CallSettings callSettings = null) => RedactContentAsync(
-                new RedactContentRequest
-                {
-                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
-                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
-                    ReplaceConfigs = { GaxPreconditions.CheckNotNull(replaceConfigs, nameof(replaceConfigs)) },
-                },
-                callSettings);
-
-        /// <summary>
-        /// Redacts potentially sensitive info from a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="inspectConfig">
-        /// Configuration for the inspector.
-        /// </param>
-        /// <param name="items">
-        /// The list of items to inspect. Up to 100 are allowed per request.
-        /// </param>
-        /// <param name="replaceConfigs">
-        /// The strings to replace findings text findings with. Must specify at least
-        /// one of these or one ImageRedactionConfig if redacting images.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<RedactContentResponse> RedactContentAsync(
-            InspectConfig inspectConfig,
-            IEnumerable<ContentItem> items,
-            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs,
-            CancellationToken cancellationToken) => RedactContentAsync(
-                inspectConfig,
-                items,
-                replaceConfigs,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Redacts potentially sensitive info from a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="inspectConfig">
-        /// Configuration for the inspector.
-        /// </param>
-        /// <param name="items">
-        /// The list of items to inspect. Up to 100 are allowed per request.
-        /// </param>
-        /// <param name="replaceConfigs">
-        /// The strings to replace findings text findings with. Must specify at least
-        /// one of these or one ImageRedactionConfig if redacting images.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual RedactContentResponse RedactContent(
-            InspectConfig inspectConfig,
-            IEnumerable<ContentItem> items,
-            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs,
-            CallSettings callSettings = null) => RedactContent(
-                new RedactContentRequest
-                {
-                    InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
-                    Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
-                    ReplaceConfigs = { GaxPreconditions.CheckNotNull(replaceConfigs, nameof(replaceConfigs)) },
-                },
-                callSettings);
-
-        /// <summary>
-        /// Redacts potentially sensitive info from a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<RedactContentResponse> RedactContentAsync(
-            RedactContentRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Redacts potentially sensitive info from a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual RedactContentResponse RedactContent(
-            RedactContentRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Schedules a job scanning content in a Google Cloud Platform data
@@ -1555,10 +1649,10 @@ namespace Google.Cloud.Dlp.V2Beta1
     /// </summary>
     public sealed partial class DlpServiceClientImpl : DlpServiceClient
     {
-        private readonly ApiCall<DeidentifyContentRequest, DeidentifyContentResponse> _callDeidentifyContent;
-        private readonly ApiCall<AnalyzeDataSourceRiskRequest, Operation> _callAnalyzeDataSourceRisk;
         private readonly ApiCall<InspectContentRequest, InspectContentResponse> _callInspectContent;
         private readonly ApiCall<RedactContentRequest, RedactContentResponse> _callRedactContent;
+        private readonly ApiCall<DeidentifyContentRequest, DeidentifyContentResponse> _callDeidentifyContent;
+        private readonly ApiCall<AnalyzeDataSourceRiskRequest, Operation> _callAnalyzeDataSourceRisk;
         private readonly ApiCall<CreateInspectOperationRequest, Operation> _callCreateInspectOperation;
         private readonly ApiCall<ListInspectFindingsRequest, ListInspectFindingsResponse> _callListInspectFindings;
         private readonly ApiCall<ListInfoTypesRequest, ListInfoTypesResponse> _callListInfoTypes;
@@ -1578,14 +1672,14 @@ namespace Google.Cloud.Dlp.V2Beta1
                 grpcClient.CreateOperationsClient(), effectiveSettings.AnalyzeDataSourceRiskOperationsSettings);
             CreateInspectOperationOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateInspectOperationOperationsSettings);
-            _callDeidentifyContent = clientHelper.BuildApiCall<DeidentifyContentRequest, DeidentifyContentResponse>(
-                GrpcClient.DeidentifyContentAsync, GrpcClient.DeidentifyContent, effectiveSettings.DeidentifyContentSettings);
-            _callAnalyzeDataSourceRisk = clientHelper.BuildApiCall<AnalyzeDataSourceRiskRequest, Operation>(
-                GrpcClient.AnalyzeDataSourceRiskAsync, GrpcClient.AnalyzeDataSourceRisk, effectiveSettings.AnalyzeDataSourceRiskSettings);
             _callInspectContent = clientHelper.BuildApiCall<InspectContentRequest, InspectContentResponse>(
                 GrpcClient.InspectContentAsync, GrpcClient.InspectContent, effectiveSettings.InspectContentSettings);
             _callRedactContent = clientHelper.BuildApiCall<RedactContentRequest, RedactContentResponse>(
                 GrpcClient.RedactContentAsync, GrpcClient.RedactContent, effectiveSettings.RedactContentSettings);
+            _callDeidentifyContent = clientHelper.BuildApiCall<DeidentifyContentRequest, DeidentifyContentResponse>(
+                GrpcClient.DeidentifyContentAsync, GrpcClient.DeidentifyContent, effectiveSettings.DeidentifyContentSettings);
+            _callAnalyzeDataSourceRisk = clientHelper.BuildApiCall<AnalyzeDataSourceRiskRequest, Operation>(
+                GrpcClient.AnalyzeDataSourceRiskAsync, GrpcClient.AnalyzeDataSourceRisk, effectiveSettings.AnalyzeDataSourceRiskSettings);
             _callCreateInspectOperation = clientHelper.BuildApiCall<CreateInspectOperationRequest, Operation>(
                 GrpcClient.CreateInspectOperationAsync, GrpcClient.CreateInspectOperation, effectiveSettings.CreateInspectOperationSettings);
             _callListInspectFindings = clientHelper.BuildApiCall<ListInspectFindingsRequest, ListInspectFindingsResponse>(
@@ -1605,14 +1699,98 @@ namespace Google.Cloud.Dlp.V2Beta1
         public override DlpService.DlpServiceClient GrpcClient { get; }
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
-        partial void Modify_DeidentifyContentRequest(ref DeidentifyContentRequest request, ref CallSettings settings);
-        partial void Modify_AnalyzeDataSourceRiskRequest(ref AnalyzeDataSourceRiskRequest request, ref CallSettings settings);
         partial void Modify_InspectContentRequest(ref InspectContentRequest request, ref CallSettings settings);
         partial void Modify_RedactContentRequest(ref RedactContentRequest request, ref CallSettings settings);
+        partial void Modify_DeidentifyContentRequest(ref DeidentifyContentRequest request, ref CallSettings settings);
+        partial void Modify_AnalyzeDataSourceRiskRequest(ref AnalyzeDataSourceRiskRequest request, ref CallSettings settings);
         partial void Modify_CreateInspectOperationRequest(ref CreateInspectOperationRequest request, ref CallSettings settings);
         partial void Modify_ListInspectFindingsRequest(ref ListInspectFindingsRequest request, ref CallSettings settings);
         partial void Modify_ListInfoTypesRequest(ref ListInfoTypesRequest request, ref CallSettings settings);
         partial void Modify_ListRootCategoriesRequest(ref ListRootCategoriesRequest request, ref CallSettings settings);
+
+        /// <summary>
+        /// Finds potentially sensitive info in a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<InspectContentResponse> InspectContentAsync(
+            InspectContentRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_InspectContentRequest(ref request, ref callSettings);
+            return _callInspectContent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finds potentially sensitive info in a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override InspectContentResponse InspectContent(
+            InspectContentRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_InspectContentRequest(ref request, ref callSettings);
+            return _callInspectContent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<RedactContentResponse> RedactContentAsync(
+            RedactContentRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_RedactContentRequest(ref request, ref callSettings);
+            return _callRedactContent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Redacts potentially sensitive info from a list of strings.
+        /// This method has limits on input size, processing time, and output size.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override RedactContentResponse RedactContent(
+            RedactContentRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_RedactContentRequest(ref request, ref callSettings);
+            return _callRedactContent.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// De-identifies potentially sensitive info from a list of strings.
@@ -1704,90 +1882,6 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// The long-running operations client for <c>AnalyzeDataSourceRisk</c>.
         /// </summary>
         public override OperationsClient AnalyzeDataSourceRiskOperationsClient { get; }
-
-        /// <summary>
-        /// Finds potentially sensitive info in a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<InspectContentResponse> InspectContentAsync(
-            InspectContentRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_InspectContentRequest(ref request, ref callSettings);
-            return _callInspectContent.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Finds potentially sensitive info in a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override InspectContentResponse InspectContent(
-            InspectContentRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_InspectContentRequest(ref request, ref callSettings);
-            return _callInspectContent.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Redacts potentially sensitive info from a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<RedactContentResponse> RedactContentAsync(
-            RedactContentRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_RedactContentRequest(ref request, ref callSettings);
-            return _callRedactContent.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Redacts potentially sensitive info from a list of strings.
-        /// This method has limits on input size, processing time, and output size.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override RedactContentResponse RedactContent(
-            RedactContentRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_RedactContentRequest(ref request, ref callSettings);
-            return _callRedactContent.Sync(request, callSettings);
-        }
 
         /// <summary>
         /// Schedules a job scanning content in a Google Cloud Platform data
