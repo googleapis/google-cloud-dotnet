@@ -582,7 +582,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose sinks are to be listed:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
@@ -620,7 +620,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose sinks are to be listed:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
@@ -696,12 +696,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="sinkName">
         /// Required. The resource name of the sink:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="callSettings">
@@ -724,12 +724,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="sinkName">
         /// Required. The resource name of the sink:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -749,12 +749,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="sinkName">
         /// Required. The resource name of the sink:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="callSettings">
@@ -818,12 +818,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The resource in which to create the sink:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
-        /// 
+        ///
         /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="sink">
@@ -855,12 +855,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The resource in which to create the sink:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
-        /// 
+        ///
         /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="sink">
@@ -889,12 +889,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The resource in which to create the sink:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
-        /// 
+        ///
         /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="sink">
@@ -971,12 +971,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="sinkName">
         /// Required. The full resource name of the sink to update, including the
         /// parent resource and the sink identifier:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="sink">
@@ -1009,12 +1009,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="sinkName">
         /// Required. The full resource name of the sink to update, including the
         /// parent resource and the sink identifier:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="sink">
@@ -1044,12 +1044,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="sinkName">
         /// Required. The full resource name of the sink to update, including the
         /// parent resource and the sink identifier:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="sink">
@@ -1124,12 +1124,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="sinkName">
         /// Required. The full resource name of the sink to delete, including the
         /// parent resource and the sink identifier:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="callSettings">
@@ -1154,12 +1154,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="sinkName">
         /// Required. The full resource name of the sink to delete, including the
         /// parent resource and the sink identifier:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1181,12 +1181,12 @@ namespace Google.Cloud.Logging.V2
         /// <param name="sinkName">
         /// Required. The full resource name of the sink to delete, including the
         /// parent resource and the sink identifier:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
         ///     "folders/[FOLDER_ID]/sinks/[SINK_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="callSettings">
@@ -1249,7 +1249,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
@@ -1287,7 +1287,7 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose exclusions are to be listed.
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
@@ -1363,12 +1363,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="callSettings">
@@ -1391,12 +1391,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1416,12 +1416,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="callSettings">
@@ -1484,12 +1484,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
-        /// 
+        ///
         /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="exclusion">
@@ -1520,12 +1520,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
-        /// 
+        ///
         /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="exclusion">
@@ -1553,12 +1553,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource in which to create the exclusion:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
         ///     "folders/[FOLDER_ID]"
-        /// 
+        ///
         /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="exclusion">
@@ -1629,12 +1629,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the exclusion to update:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="exclusion">
@@ -1646,7 +1646,7 @@ namespace Google.Cloud.Logging.V2
         /// New values for the fields are taken from the corresponding fields in the
         /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
         /// `update_mask` are not changed and are ignored in the request.
-        /// 
+        ///
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
         /// </param>
@@ -1674,12 +1674,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the exclusion to update:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="exclusion">
@@ -1691,7 +1691,7 @@ namespace Google.Cloud.Logging.V2
         /// New values for the fields are taken from the corresponding fields in the
         /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
         /// `update_mask` are not changed and are ignored in the request.
-        /// 
+        ///
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
         /// </param>
@@ -1716,12 +1716,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the exclusion to update:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="exclusion">
@@ -1733,7 +1733,7 @@ namespace Google.Cloud.Logging.V2
         /// New values for the fields are taken from the corresponding fields in the
         /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
         /// `update_mask` are not changed and are ignored in the request.
-        /// 
+        ///
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
         /// </param>
@@ -1799,12 +1799,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion to delete:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="callSettings">
@@ -1827,12 +1827,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion to delete:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1852,12 +1852,12 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of an existing exclusion to delete:
-        /// 
+        ///
         ///     "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
         ///     "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]"
-        /// 
+        ///
         /// Example: `"projects/my-project-id/exclusions/my-exclusion-id"`.
         /// </param>
         /// <param name="callSettings">

@@ -100,10 +100,11 @@ namespace Google.Cloud.Datastore.V1 {
             "OmFsbG9jYXRlSWRzOgEqEo4BCgpSZXNlcnZlSWRzEiYuZ29vZ2xlLmRhdGFz",
             "dG9yZS52MS5SZXNlcnZlSWRzUmVxdWVzdBonLmdvb2dsZS5kYXRhc3RvcmUu",
             "djEuUmVzZXJ2ZUlkc1Jlc3BvbnNlIi+C0+STAikiJC92MS9wcm9qZWN0cy97",
-            "cHJvamVjdF9pZH06cmVzZXJ2ZUlkczoBKkKFAQoXY29tLmdvb2dsZS5kYXRh",
+            "cHJvamVjdF9pZH06cmVzZXJ2ZUlkczoBKkKhAQoXY29tLmdvb2dsZS5kYXRh",
             "c3RvcmUudjFCDkRhdGFzdG9yZVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3Jn",
             "L2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YXN0b3JlL3YxO2RhdGFzdG9yZaoC",
-            "GUdvb2dsZS5DbG91ZC5EYXRhc3RvcmUuVjFiBnByb3RvMw=="));
+            "GUdvb2dsZS5DbG91ZC5EYXRhc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRGF0",
+            "YXN0b3JlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
