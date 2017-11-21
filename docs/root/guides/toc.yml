@@ -1,5 +1,7 @@
 - name: Supported platforms
   href: platforms.md
+- name: Package names
+  href: package-names.md
 - name: Page streaming
   href: page-streaming.md
 - name: Resource names and IDs
