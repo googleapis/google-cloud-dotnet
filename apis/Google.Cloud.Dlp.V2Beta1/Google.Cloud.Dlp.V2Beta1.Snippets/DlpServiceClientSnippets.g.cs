@@ -34,6 +34,351 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
     /// <summary>Generated snippets</summary>
     public class GeneratedDlpServiceClientSnippets
     {
+        /// <summary>Snippet for InspectContentAsync</summary>
+        public async Task InspectContentAsync()
+        {
+            // Snippet: InspectContentAsync(InspectConfig,IEnumerable<ContentItem>,CallSettings)
+            // Additional: InspectContentAsync(InspectConfig,IEnumerable<ContentItem>,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            IEnumerable<ContentItem> items = new[]
+            {
+                new ContentItem
+                {
+                    Type = "text/plain",
+                    Value = "My email is example@example.com.",
+                },
+            };
+            // Make the request
+            InspectContentResponse response = await dlpServiceClient.InspectContentAsync(inspectConfig, items);
+            // End snippet
+        }
+
+        /// <summary>Snippet for InspectContent</summary>
+        public void InspectContent()
+        {
+            // Snippet: InspectContent(InspectConfig,IEnumerable<ContentItem>,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            IEnumerable<ContentItem> items = new[]
+            {
+                new ContentItem
+                {
+                    Type = "text/plain",
+                    Value = "My email is example@example.com.",
+                },
+            };
+            // Make the request
+            InspectContentResponse response = dlpServiceClient.InspectContent(inspectConfig, items);
+            // End snippet
+        }
+
+        /// <summary>Snippet for InspectContentAsync</summary>
+        public async Task InspectContentAsync_RequestObject()
+        {
+            // Snippet: InspectContentAsync(InspectContentRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            InspectContentRequest request = new InspectContentRequest
+            {
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                Items = {
+                            new ContentItem
+                            {
+                                Type = "text/plain",
+                                Value = "My email is example@example.com.",
+                            },
+                        },
+            };
+            // Make the request
+            InspectContentResponse response = await dlpServiceClient.InspectContentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for InspectContent</summary>
+        public void InspectContent_RequestObject()
+        {
+            // Snippet: InspectContent(InspectContentRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            InspectContentRequest request = new InspectContentRequest
+            {
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                Items = {
+                            new ContentItem
+                            {
+                                Type = "text/plain",
+                                Value = "My email is example@example.com.",
+                            },
+                        },
+            };
+            // Make the request
+            InspectContentResponse response = dlpServiceClient.InspectContent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RedactContentAsync</summary>
+        public async Task RedactContentAsync1()
+        {
+            // Snippet: RedactContentAsync(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ReplaceConfig>,CallSettings)
+            // Additional: RedactContentAsync(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ReplaceConfig>,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            IEnumerable<ContentItem> items = new[]
+            {
+                new ContentItem
+                {
+                    Type = "text/plain",
+                    Value = "My email is example@example.com.",
+                },
+            };
+            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs = new[]
+            {
+                new RedactContentRequest.Types.ReplaceConfig
+                {
+                    InfoType = new InfoType
+                               {
+                                   Name = "EMAIL_ADDRESS",
+                               },
+                    ReplaceWith = "REDACTED",
+                },
+            };
+            // Make the request
+            RedactContentResponse response = await dlpServiceClient.RedactContentAsync(inspectConfig, items, replaceConfigs);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RedactContent</summary>
+        public void RedactContent1()
+        {
+            // Snippet: RedactContent(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ReplaceConfig>,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            IEnumerable<ContentItem> items = new[]
+            {
+                new ContentItem
+                {
+                    Type = "text/plain",
+                    Value = "My email is example@example.com.",
+                },
+            };
+            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs = new[]
+            {
+                new RedactContentRequest.Types.ReplaceConfig
+                {
+                    InfoType = new InfoType
+                               {
+                                   Name = "EMAIL_ADDRESS",
+                               },
+                    ReplaceWith = "REDACTED",
+                },
+            };
+            // Make the request
+            RedactContentResponse response = dlpServiceClient.RedactContent(inspectConfig, items, replaceConfigs);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RedactContentAsync</summary>
+        public async Task RedactContentAsync2()
+        {
+            // Snippet: RedactContentAsync(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ImageRedactionConfig>,CallSettings)
+            // Additional: RedactContentAsync(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ImageRedactionConfig>,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            IEnumerable<ContentItem> items = new[]
+            {
+                new ContentItem
+                {
+                    Type = "text/plain",
+                    Value = "My email is example@example.com.",
+                },
+            };
+            IEnumerable<RedactContentRequest.Types.ImageRedactionConfig> imageRedactionConfigs = new List<RedactContentRequest.Types.ImageRedactionConfig>();
+            // Make the request
+            RedactContentResponse response = await dlpServiceClient.RedactContentAsync(inspectConfig, items, imageRedactionConfigs);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RedactContent</summary>
+        public void RedactContent2()
+        {
+            // Snippet: RedactContent(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ImageRedactionConfig>,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            IEnumerable<ContentItem> items = new[]
+            {
+                new ContentItem
+                {
+                    Type = "text/plain",
+                    Value = "My email is example@example.com.",
+                },
+            };
+            IEnumerable<RedactContentRequest.Types.ImageRedactionConfig> imageRedactionConfigs = new List<RedactContentRequest.Types.ImageRedactionConfig>();
+            // Make the request
+            RedactContentResponse response = dlpServiceClient.RedactContent(inspectConfig, items, imageRedactionConfigs);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RedactContentAsync</summary>
+        public async Task RedactContentAsync_RequestObject()
+        {
+            // Snippet: RedactContentAsync(RedactContentRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RedactContentRequest request = new RedactContentRequest
+            {
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                Items = {
+                            new ContentItem
+                            {
+                                Type = "text/plain",
+                                Value = "My email is example@example.com.",
+                            },
+                        },
+                ReplaceConfigs = {
+                                     new RedactContentRequest.Types.ReplaceConfig
+                                     {
+                                         InfoType = new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                         ReplaceWith = "REDACTED",
+                                     },
+                                 },
+            };
+            // Make the request
+            RedactContentResponse response = await dlpServiceClient.RedactContentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RedactContent</summary>
+        public void RedactContent_RequestObject()
+        {
+            // Snippet: RedactContent(RedactContentRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            RedactContentRequest request = new RedactContentRequest
+            {
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                Items = {
+                            new ContentItem
+                            {
+                                Type = "text/plain",
+                                Value = "My email is example@example.com.",
+                            },
+                        },
+                ReplaceConfigs = {
+                                     new RedactContentRequest.Types.ReplaceConfig
+                                     {
+                                         InfoType = new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                         ReplaceWith = "REDACTED",
+                                     },
+                                 },
+            };
+            // Make the request
+            RedactContentResponse response = dlpServiceClient.RedactContent(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeidentifyContentAsync</summary>
         public async Task DeidentifyContentAsync()
         {
@@ -237,290 +582,6 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
                 // If it has completed, then access the result
                 RiskAnalysisOperationResult retrievedResult = retrievedResponse.Result;
             }
-            // End snippet
-        }
-
-        /// <summary>Snippet for InspectContentAsync</summary>
-        public async Task InspectContentAsync()
-        {
-            // Snippet: InspectContentAsync(InspectConfig,IEnumerable<ContentItem>,CallSettings)
-            // Additional: InspectContentAsync(InspectConfig,IEnumerable<ContentItem>,CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            InspectConfig inspectConfig = new InspectConfig
-            {
-                InfoTypes = {
-                                new InfoType
-                                {
-                                    Name = "EMAIL_ADDRESS",
-                                },
-                            },
-            };
-            IEnumerable<ContentItem> items = new[]
-            {
-                new ContentItem
-                {
-                    Type = "text/plain",
-                    Value = "My email is example@example.com.",
-                },
-            };
-            // Make the request
-            InspectContentResponse response = await dlpServiceClient.InspectContentAsync(inspectConfig, items);
-            // End snippet
-        }
-
-        /// <summary>Snippet for InspectContent</summary>
-        public void InspectContent()
-        {
-            // Snippet: InspectContent(InspectConfig,IEnumerable<ContentItem>,CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            InspectConfig inspectConfig = new InspectConfig
-            {
-                InfoTypes = {
-                                new InfoType
-                                {
-                                    Name = "EMAIL_ADDRESS",
-                                },
-                            },
-            };
-            IEnumerable<ContentItem> items = new[]
-            {
-                new ContentItem
-                {
-                    Type = "text/plain",
-                    Value = "My email is example@example.com.",
-                },
-            };
-            // Make the request
-            InspectContentResponse response = dlpServiceClient.InspectContent(inspectConfig, items);
-            // End snippet
-        }
-
-        /// <summary>Snippet for InspectContentAsync</summary>
-        public async Task InspectContentAsync_RequestObject()
-        {
-            // Snippet: InspectContentAsync(InspectContentRequest,CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            InspectContentRequest request = new InspectContentRequest
-            {
-                InspectConfig = new InspectConfig
-                                {
-                                    InfoTypes = {
-                                                    new InfoType
-                                                    {
-                                                        Name = "EMAIL_ADDRESS",
-                                                    },
-                                                },
-                                },
-                Items = {
-                            new ContentItem
-                            {
-                                Type = "text/plain",
-                                Value = "My email is example@example.com.",
-                            },
-                        },
-            };
-            // Make the request
-            InspectContentResponse response = await dlpServiceClient.InspectContentAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for InspectContent</summary>
-        public void InspectContent_RequestObject()
-        {
-            // Snippet: InspectContent(InspectContentRequest,CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            InspectContentRequest request = new InspectContentRequest
-            {
-                InspectConfig = new InspectConfig
-                                {
-                                    InfoTypes = {
-                                                    new InfoType
-                                                    {
-                                                        Name = "EMAIL_ADDRESS",
-                                                    },
-                                                },
-                                },
-                Items = {
-                            new ContentItem
-                            {
-                                Type = "text/plain",
-                                Value = "My email is example@example.com.",
-                            },
-                        },
-            };
-            // Make the request
-            InspectContentResponse response = dlpServiceClient.InspectContent(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for RedactContentAsync</summary>
-        public async Task RedactContentAsync()
-        {
-            // Snippet: RedactContentAsync(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ReplaceConfig>,CallSettings)
-            // Additional: RedactContentAsync(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ReplaceConfig>,CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            InspectConfig inspectConfig = new InspectConfig
-            {
-                InfoTypes = {
-                                new InfoType
-                                {
-                                    Name = "EMAIL_ADDRESS",
-                                },
-                            },
-            };
-            IEnumerable<ContentItem> items = new[]
-            {
-                new ContentItem
-                {
-                    Type = "text/plain",
-                    Value = "My email is example@example.com.",
-                },
-            };
-            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs = new[]
-            {
-                new RedactContentRequest.Types.ReplaceConfig
-                {
-                    InfoType = new InfoType
-                               {
-                                   Name = "EMAIL_ADDRESS",
-                               },
-                    ReplaceWith = "REDACTED",
-                },
-            };
-            // Make the request
-            RedactContentResponse response = await dlpServiceClient.RedactContentAsync(inspectConfig, items, replaceConfigs);
-            // End snippet
-        }
-
-        /// <summary>Snippet for RedactContent</summary>
-        public void RedactContent()
-        {
-            // Snippet: RedactContent(InspectConfig,IEnumerable<ContentItem>,IEnumerable<RedactContentRequest.Types.ReplaceConfig>,CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            InspectConfig inspectConfig = new InspectConfig
-            {
-                InfoTypes = {
-                                new InfoType
-                                {
-                                    Name = "EMAIL_ADDRESS",
-                                },
-                            },
-            };
-            IEnumerable<ContentItem> items = new[]
-            {
-                new ContentItem
-                {
-                    Type = "text/plain",
-                    Value = "My email is example@example.com.",
-                },
-            };
-            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs = new[]
-            {
-                new RedactContentRequest.Types.ReplaceConfig
-                {
-                    InfoType = new InfoType
-                               {
-                                   Name = "EMAIL_ADDRESS",
-                               },
-                    ReplaceWith = "REDACTED",
-                },
-            };
-            // Make the request
-            RedactContentResponse response = dlpServiceClient.RedactContent(inspectConfig, items, replaceConfigs);
-            // End snippet
-        }
-
-        /// <summary>Snippet for RedactContentAsync</summary>
-        public async Task RedactContentAsync_RequestObject()
-        {
-            // Snippet: RedactContentAsync(RedactContentRequest,CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            RedactContentRequest request = new RedactContentRequest
-            {
-                InspectConfig = new InspectConfig
-                                {
-                                    InfoTypes = {
-                                                    new InfoType
-                                                    {
-                                                        Name = "EMAIL_ADDRESS",
-                                                    },
-                                                },
-                                },
-                Items = {
-                            new ContentItem
-                            {
-                                Type = "text/plain",
-                                Value = "My email is example@example.com.",
-                            },
-                        },
-                ReplaceConfigs = {
-                                     new RedactContentRequest.Types.ReplaceConfig
-                                     {
-                                         InfoType = new InfoType
-                                                    {
-                                                        Name = "EMAIL_ADDRESS",
-                                                    },
-                                         ReplaceWith = "REDACTED",
-                                     },
-                                 },
-            };
-            // Make the request
-            RedactContentResponse response = await dlpServiceClient.RedactContentAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for RedactContent</summary>
-        public void RedactContent_RequestObject()
-        {
-            // Snippet: RedactContent(RedactContentRequest,CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            RedactContentRequest request = new RedactContentRequest
-            {
-                InspectConfig = new InspectConfig
-                                {
-                                    InfoTypes = {
-                                                    new InfoType
-                                                    {
-                                                        Name = "EMAIL_ADDRESS",
-                                                    },
-                                                },
-                                },
-                Items = {
-                            new ContentItem
-                            {
-                                Type = "text/plain",
-                                Value = "My email is example@example.com.",
-                            },
-                        },
-                ReplaceConfigs = {
-                                     new RedactContentRequest.Types.ReplaceConfig
-                                     {
-                                         InfoType = new InfoType
-                                                    {
-                                                        Name = "EMAIL_ADDRESS",
-                                                    },
-                                         ReplaceWith = "REDACTED",
-                                     },
-                                 },
-            };
-            // Make the request
-            RedactContentResponse response = dlpServiceClient.RedactContent(request);
             // End snippet
         }
 
