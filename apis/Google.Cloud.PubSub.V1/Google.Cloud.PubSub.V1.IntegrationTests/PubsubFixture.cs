@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
 using Xunit;
@@ -19,29 +20,16 @@ using Xunit;
 namespace Google.Cloud.PubSub.V1.IntegrationTests
 {
     [CollectionDefinition(nameof(PubsubFixture))]
-    public sealed class PubsubFixture : IDisposable, ICollectionFixture<PubsubFixture>
+    public sealed class PubsubFixture : CloudProjectFixtureBase, ICollectionFixture<PubsubFixture>
     {
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
         private const string TopicPrefix = "integration-topic-";
         private const string SubscriptionPrefix = "integration-sub-";
-
-        public string ProjectId { get; }
-
-        public PubsubFixture()
-        {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
-        }
 
         internal string CreateTopicId() => TopicPrefix + Guid.NewGuid().ToString().ToLowerInvariant();
 
         internal string CreateSubscriptionId() => SubscriptionPrefix + Guid.NewGuid().ToString().ToLowerInvariant();
 
-        public void Dispose()
+        public override void Dispose()
         {
             var subscriber = SubscriberClient.Create();
             var subscriptions = subscriber.ListSubscriptions(new ProjectName(ProjectId))

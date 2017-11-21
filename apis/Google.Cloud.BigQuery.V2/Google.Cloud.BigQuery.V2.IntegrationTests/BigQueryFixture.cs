@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -34,16 +35,13 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
     /// operate on.
     /// </summary>
     [CollectionDefinition(nameof(BigQueryFixture))]
-    public class BigQueryFixture : IDisposable, ICollectionFixture<BigQueryFixture>
+    public class BigQueryFixture : CloudProjectFixtureBase, ICollectionFixture<BigQueryFixture>
     {
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
-
         /// <summary>
         /// Used to generate dataset IDs which are still clearly identifiable with this test.
         /// </summary>
         private int extraDatasetCounter;
 
-        public string ProjectId { get; }
         public string DatasetId { get; }
         public string LabelsDatasetId { get; }
         public string HighScoreTableId { get; } = "highscores";
@@ -53,13 +51,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
         public BigQueryFixture()
         {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
-
             var now = DateTime.UtcNow;
             DatasetId = now.ToString("'test'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
             LabelsDatasetId = now.ToString("'testlabels'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
@@ -280,13 +271,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Thread.Sleep(2500);
         }
 
-
-        public void Dispose()
-        {
-            // TODO: Consider deleting the dataset here. It
-            // might be nice to clean up after ourselves, but realistically
-            // we won't be creating much data, and it's useful to be able to see
-            // it after tests have finished, particularly on failure.
-        }
+        // TODO: Consider deleting the dataset here. It
+        // might be nice to clean up after ourselves, but realistically
+        // we won't be creating much data, and it's useful to be able to see
+        // it after tests have finished, particularly on failure.
     }
 }

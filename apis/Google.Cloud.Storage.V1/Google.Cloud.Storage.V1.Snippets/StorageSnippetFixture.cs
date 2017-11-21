@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,29 +28,21 @@ namespace Google.Cloud.Storage.V1.Snippets
     /// environment variable.
     /// </summary>
     [CollectionDefinition(nameof(StorageSnippetFixture))]
-    public sealed class StorageSnippetFixture : IDisposable, ICollectionFixture<StorageSnippetFixture>
+    public sealed class StorageSnippetFixture : CloudProjectFixtureBase, ICollectionFixture<StorageSnippetFixture>
     {
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
         private const string NotificationUrlEnvironmentVariable = "TEST_PROJECT_NOTIFICATION_URL";
 
         public string HelloStorageObjectName { get; } = "greetings/hello.txt";
         public string WorldLocalFileName { get; } = "world.txt";
         public string HelloWorldContent { get; } = "hello, world";
-        public string ProjectId { get; }
         public string BucketName { get; }
         public string NotificationUrl { get; }
 
-        private readonly List<string> bucketsToDelete = new List<string>();
-        private readonly List<string> localFilesToDelete = new List<string>();
+        private readonly List<string> _bucketsToDelete = new List<string>();
+        private readonly List<string> _localFilesToDelete = new List<string>();
 
         public StorageSnippetFixture()
         {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
             NotificationUrl = Environment.GetEnvironmentVariable(NotificationUrlEnvironmentVariable);
             BucketName = "snippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
             CreateAndPopulateBucket();
@@ -72,18 +65,18 @@ namespace Google.Cloud.Storage.V1.Snippets
 
         internal void RegisterBucketToDelete(string bucket)
         {
-            bucketsToDelete.Add(bucket);
+            _bucketsToDelete.Add(bucket);
         }
 
         internal void RegisterLocalFileToDelete(string path)
         {
-            localFilesToDelete.Add(path);
+            _localFilesToDelete.Add(path);
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
             var client = StorageClient.Create();
-            foreach (var bucket in bucketsToDelete)
+            foreach (var bucket in _bucketsToDelete)
             {
                 var objects = client.ListObjects(bucket, null, new ListObjectsOptions { Versions = true }).ToList();
                 foreach (var obj in objects)
@@ -92,7 +85,7 @@ namespace Google.Cloud.Storage.V1.Snippets
                 }
                 client.DeleteBucket(bucket);
             }
-            foreach (var file in localFilesToDelete)
+            foreach (var file in _localFilesToDelete)
             {
                 File.Delete(file);
             }

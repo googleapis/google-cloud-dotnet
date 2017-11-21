@@ -12,6 +12,7 @@ ROOT_DIR=$(dirname "$SCRIPT")
 APIS=()
 RETRY_ARG=
 COVERAGE_ARG=
+IS_WINDOWS=false
 
 while (( "$#" )); do
   if [[ "$1" == "--retry" ]]
@@ -31,6 +32,12 @@ if [[ ${#APIS[@]} != 0 && "$RETRY_ARG" == "yes" ]]
 then
   echo "The --retry flag cannot be used when specifying projects to test."
   exit 1
+fi
+
+OS="$(uname -s)"
+if [[ $OS == *"CYGWIN"* || $OS == *"MINGW"* || $OS == *"MSYS_NT"* ]]
+then
+  IS_WINDOWS=true
 fi
 
 # We only overwrite integration-test-failures.txt at the very end,
@@ -77,6 +84,9 @@ do
   if [[ "$testdir" =~ Metadata ]]
   then
     echo "Skipping $testdir; test not supported yet."
+  elif [[ "$testdir" =~ AspNet\. && $IS_WINDOWS == false ]]
+  then
+    echo "Skipping $testdir; test not supported on non windows environment."
   elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
   then
     (cd $testdir; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)

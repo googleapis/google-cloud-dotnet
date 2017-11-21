@@ -18,6 +18,7 @@ using System;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Xunit;
+using Google.Cloud.ClientTesting;
 
 #endregion
 
@@ -25,19 +26,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     // ReSharper disable once ClassNeverInstantiated.Global
     [CollectionDefinition(nameof(TestDatabaseFixture))]
-    public class TestDatabaseFixture : IDisposable, ICollectionFixture<TestDatabaseFixture>
+    public class TestDatabaseFixture : CloudProjectFixtureBase, ICollectionFixture<TestDatabaseFixture>
     {
         private readonly Lazy<Task> _creationTask;
 
         public string TestInstanceName => "spannerintegration";
 
-        public string TestProjectName => Environment.GetEnvironmentVariable("TEST_PROJECT") ?? "cloud-sharp-jenkins";
+        public string ConnectionString => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}"
+            + $"/databases/{DatabaseName}";
 
-        public string ConnectionString => "Data Source=projects/" + TestProjectName + "/instances/" + TestInstanceName
-            + "/databases/" + DatabaseName;
-
-        public string NoDbConnectionString => "Data Source=projects/" + TestProjectName + "/instances/" +
-            TestInstanceName;
+        public string NoDbConnectionString => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}";
 
         // scratch can be used to run tests on a precreated db.
         // all tests are designed to be re-run on an exiting db (previously written state will
@@ -58,7 +56,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public TestDatabaseFixture() => _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
 
-        public void Dispose()
+        public override void Dispose()
         {
             using (var connection = new SpannerConnection(NoDbConnectionString))
             {

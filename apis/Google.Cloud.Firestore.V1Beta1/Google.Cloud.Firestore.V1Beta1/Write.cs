@@ -52,10 +52,11 @@ namespace Google.Cloud.Firestore.V1Beta1 {
             "dmUSEAoIZG9jdW1lbnQYASABKAkSGgoScmVtb3ZlZF90YXJnZXRfaWRzGAIg",
             "AygFEi0KCXJlYWRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
             "c3RhbXAiMwoPRXhpc3RlbmNlRmlsdGVyEhEKCXRhcmdldF9pZBgBIAEoBRIN",
-            "CgVjb3VudBgCIAEoBUKXAQocY29tLmdvb2dsZS5maXJlc3RvcmUudjFiZXRh",
+            "CgVjb3VudBgCIAEoBUK4AQocY29tLmdvb2dsZS5maXJlc3RvcmUudjFiZXRh",
             "MUIKV3JpdGVQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
             "b29nbGVhcGlzL2ZpcmVzdG9yZS92MWJldGExO2ZpcmVzdG9yZaICBEdDRlOq",
-            "Ah5Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLlYxQmV0YTFiBnByb3RvMw=="));
+            "Ah5Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLlYxQmV0YTHKAh5Hb29nbGVcQ2xv",
+            "dWRcRmlyZXN0b3JlXFYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -447,6 +448,7 @@ namespace Google.Cloud.Firestore.V1Beta1 {
     /// <summary>
     /// The list of transformations to apply to the fields of the document, in
     /// order.
+    /// This must not be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform> FieldTransforms {
@@ -733,7 +735,8 @@ namespace Google.Cloud.Firestore.V1Beta1 {
             /// </summary>
             [pbr::OriginalName("SERVER_VALUE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
-            /// The time at which the server processed the request.
+            /// The time at which the server processed the request, with millisecond
+            /// precision.
             /// </summary>
             [pbr::OriginalName("REQUEST_TIME")] RequestTime = 1,
           }

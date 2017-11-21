@@ -12,9 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Grpc;
-using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Bigtable.Admin.V2;
+using Google.Cloud.ClientTesting;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -24,12 +23,14 @@ using Xunit;
 
 namespace Google.Cloud.Bigtable.V2.IntegrationTests
 {
+    // Note: this does not use CloudProjectFixtureBase as a base class, as an emulator can be used as an alternative.
+    // If that pattern becomes more widespread, we can bring that into CloudProjectFixtureBase.
     [CollectionDefinition(nameof(BigtableFixture))]
     public class BigtableFixture : IDisposable, ICollectionFixture<BigtableFixture>
     {
         private const string EmulatorEnvironmentVariable = "BIGTABLE_EMULATOR_HOST";
         private const string TestInstanceEnvironmentVariable = "BIGTABLE_TEST_INSTANCE";
-        private const string TestProjectEnvironmentVariable = "TEST_PROJECT";
+        private const string TestProjectEnvironmentVariable = CloudProjectFixtureBase.TestProjectEnvironmentVariable;
 
         public const string ColumnFamily1 = "cf1";
         public const string OtherColumnFamily = "test_data";
