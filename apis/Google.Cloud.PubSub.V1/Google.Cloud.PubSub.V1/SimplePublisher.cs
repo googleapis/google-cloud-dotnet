@@ -514,7 +514,7 @@ namespace Google.Cloud.PubSub.V1
                 });
                 _taskHelper.Run(async () =>
                 {
-                    await _taskHelper.ConfigureAwaitHideErrors(_shutdownTcs.Task);
+                    await _taskHelper.ConfigureAwaitHideErrors(() => _shutdownTcs.Task);
                     registration.Dispose();
                 });
                 ShutdownIfCompleted();
@@ -573,23 +573,24 @@ namespace Google.Cloud.PubSub.V1
             if (_batchDelayThreshold is TimeSpan batchDelayThreshold)
             {
                 // read cancellation token here, in case the current batch changes before the task below starts.
-                var timerCancellationToken =
-                    CancellationTokenSource.CreateLinkedTokenSource(_currentBatch.TimerCts.Token, _hardStopCts.Token).Token;
+                var timerCancellation =
+                    CancellationTokenSource.CreateLinkedTokenSource(_currentBatch.TimerCts.Token, _hardStopCts.Token);
                 // Ignore result of this Task. If it's cancelled, it's because the batch has already been sent.
                 _taskHelper.Run(async () =>
                 {
-                    await _taskHelper.ConfigureAwait(_scheduler.Delay(batchDelayThreshold, timerCancellationToken));
+                    await _taskHelper.ConfigureAwait(_scheduler.Delay(batchDelayThreshold, timerCancellation.Token));
                     // If batch has already moved to queue, timerToken will have been cancelled.
                     lock (_lock)
                     {
                         // Check for cancellation inside lock to avoid race-condition.
-                        if (!timerCancellationToken.IsCancellationRequested)
+                        if (!timerCancellation.IsCancellationRequested)
                         {
                             // Force queuing of the current batch, whatever the size.
                             // There will always be at least one message in the batch.
                             QueueCurrentBatch();
                         }
                     }
+                    timerCancellation.Dispose();
                 });
             }
         }
@@ -657,7 +658,7 @@ namespace Google.Cloud.PubSub.V1
             {
                 // Perform the RPC to server, catching exceptions.
                 var publishTask = client.PublishAsync(TopicName, batch.Messages, CallSettings.FromCancellationToken(_hardStopCts.Token));
-                var response = await _taskHelper.ConfigureAwaitHideErrors(publishTask, null);
+                var response = await _taskHelper.ConfigureAwaitHideErrors(() => publishTask, null);
                 // Propagate task result to batch.
                 switch (publishTask.Status)
                 {

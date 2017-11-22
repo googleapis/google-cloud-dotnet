@@ -44,6 +44,14 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
+        internal static void Dequeue<T>(this Queue<T> queue, int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                queue.Dequeue();
+            }
+        }
+
         internal static bool Is<T>(this Exception e) where T : Exception =>
             e is T || (e is AggregateException ae && ae.Flatten().InnerException is T);
 
@@ -53,6 +61,9 @@ namespace Google.Cloud.PubSub.V1
             (e as T) ?? ((e as AggregateException)?.Flatten()?.InnerException as T);
 
         internal static bool IsRpcCancellation(this Exception e) => e.As<RpcException>()?.Status.StatusCode == StatusCode.Cancelled;
+
+        internal static IEnumerable<Exception> AllExceptions(this Exception e) =>
+            (IEnumerable<Exception>)(e as AggregateException)?.Flatten().InnerExceptions ?? new[] { e };
 
         internal static bool IsRecoverable(this RpcException e)
         {
