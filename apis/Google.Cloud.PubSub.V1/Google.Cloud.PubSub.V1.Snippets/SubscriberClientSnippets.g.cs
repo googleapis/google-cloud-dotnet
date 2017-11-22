@@ -169,8 +169,16 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
             {
-                Subscription = new Subscription(),
-                UpdateMask = new FieldMask(),
+                Subscription = new Subscription
+                               {
+                                   AckDeadlineSeconds = 42,
+                               },
+                UpdateMask = new FieldMask
+                             {
+                                 Paths = {
+                                             "ack_deadline_seconds",
+                                         },
+                             },
             };
             // Make the request
             Subscription response = await subscriberClient.UpdateSubscriptionAsync(request);
@@ -186,8 +194,16 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
             {
-                Subscription = new Subscription(),
-                UpdateMask = new FieldMask(),
+                Subscription = new Subscription
+                               {
+                                   AckDeadlineSeconds = 42,
+                               },
+                UpdateMask = new FieldMask
+                             {
+                                 Paths = {
+                                             "ack_deadline_seconds",
+                                         },
+                             },
             };
             // Make the request
             Subscription response = subscriberClient.UpdateSubscription(request);
@@ -994,8 +1010,19 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             UpdateSnapshotRequest request = new UpdateSnapshotRequest
             {
-                Snapshot = new Snapshot(),
-                UpdateMask = new FieldMask(),
+                Snapshot = new Snapshot
+                           {
+                               ExpireTime = new Timestamp
+                                            {
+                                                Seconds = 123456L,
+                                            },
+                           },
+                UpdateMask = new FieldMask
+                             {
+                                 Paths = {
+                                             "expire_time",
+                                         },
+                             },
             };
             // Make the request
             Snapshot response = await subscriberClient.UpdateSnapshotAsync(request);
@@ -1011,8 +1038,19 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             UpdateSnapshotRequest request = new UpdateSnapshotRequest
             {
-                Snapshot = new Snapshot(),
-                UpdateMask = new FieldMask(),
+                Snapshot = new Snapshot
+                           {
+                               ExpireTime = new Timestamp
+                                            {
+                                                Seconds = 123456L,
+                                            },
+                           },
+                UpdateMask = new FieldMask
+                             {
+                                 Paths = {
+                                             "expire_time",
+                                         },
+                             },
             };
             // Make the request
             Snapshot response = subscriberClient.UpdateSnapshot(request);
