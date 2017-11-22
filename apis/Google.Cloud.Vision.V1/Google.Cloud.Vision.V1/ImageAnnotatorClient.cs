@@ -172,10 +172,12 @@ namespace Google.Cloud.Vision.V1
         /// The default ImageAnnotator scopes are:
         /// <list type="bullet">
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/cloud-vision"</description></item>
         /// </list>
         /// </remarks>
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-vision",
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
