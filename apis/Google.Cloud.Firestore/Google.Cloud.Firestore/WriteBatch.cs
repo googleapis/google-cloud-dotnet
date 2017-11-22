@@ -31,6 +31,8 @@ namespace Google.Cloud.Firestore
     /// </summary>
     public sealed class WriteBatch
     {
+        private static readonly IReadOnlyList<FieldPath> s_emptyFieldPathList = new List<FieldPath>().AsReadOnly();
+
         private readonly FirestoreDb _db;
 
         internal bool IsEmpty => Elements.Count == 0;
@@ -60,7 +62,9 @@ namespace Google.Cloud.Firestore
             FindSentinels(fields, FieldPath.Empty, serverTimestamps, deletes);
             GaxPreconditions.CheckArgument(deletes.Count == 0, nameof(documentData), "Delete sentinels cannot appear in Create calls");
             RemoveSentinels(fields, serverTimestamps);
-            AddUpdateWrites(documentReference, fields, new List<FieldPath>(), Precondition.MustNotExist, serverTimestamps);
+            // Force a write if we've not got any sentinel values. Otherwise, we end up with an empty transform instead,
+            // just to specify the precondition.
+            AddUpdateWrites(documentReference, fields, s_emptyFieldPathList, Precondition.MustNotExist, serverTimestamps, serverTimestamps.Count == 0);
             return this;
         }
 
@@ -108,7 +112,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckArgument(deletes.All(fp => updates.ContainsKey(fp)), nameof(updates), "Deletes cannot be nested within update calls");
             RemoveSentinels(expanded, deletes);
             RemoveSentinels(expanded, serverTimestamps);
-            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, serverTimestamps);
+            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, serverTimestamps, false);
             return this;
         }
 
@@ -130,6 +134,7 @@ namespace Google.Cloud.Firestore
             var deletes = new List<FieldPath>();
             FindSentinels(fields, FieldPath.Empty, serverTimestamps, deletes);
 
+            bool forceWrite = false;
             IDictionary<FieldPath, Value> updates;
             IReadOnlyList<FieldPath> updatePaths;
             if (options.Merge)
@@ -138,9 +143,11 @@ namespace Google.Cloud.Firestore
                 if (mask.Count == 0)
                 {
                     // Merge all:
+                    // - Empty data is not allowed
                     // - Deletes are allowed anywhere
                     // - All timestamps converted to transforms
                     // - Each top-level entry becomes a FieldPath
+                    GaxPreconditions.CheckArgument(fields.Count != 0, nameof(documentData), "{0} cannot be specified with empty data", nameof(SetOptions.MergeAll));
                     RemoveSentinels(fields, serverTimestamps);
                     // Work out the update paths after removing server timestamps but before removing deletes,
                     // so that we correctly perform the deletes.
@@ -174,10 +181,11 @@ namespace Google.Cloud.Firestore
                 GaxPreconditions.CheckArgument(deletes.Count == 0, nameof(documentData), "Delete cannot appear in document data when overwriting");
                 RemoveSentinels(fields, serverTimestamps);
                 updates = fields.ToDictionary(pair => new FieldPath(pair.Key), pair => pair.Value);
-                updatePaths = new List<FieldPath>();
+                updatePaths = s_emptyFieldPathList;
+                forceWrite = true;
             }
 
-            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, serverTimestamps);
+            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, serverTimestamps, forceWrite);
             return this;
         }
 
@@ -199,11 +207,17 @@ namespace Google.Cloud.Firestore
                 .ToList();
         }
 
-        private void AddUpdateWrites(DocumentReference documentReference, IDictionary<string, Value> fields, IReadOnlyList<FieldPath> updatePaths, Precondition precondition, IList<FieldPath> serverTimestampPaths)
+        private void AddUpdateWrites(
+            DocumentReference documentReference,
+            IDictionary<string, Value> fields,
+            IReadOnlyList<FieldPath> updatePaths,
+            Precondition precondition,
+            IList<FieldPath> serverTimestampPaths,
+            bool forceWrite)
         {
             updatePaths = updatePaths.Except(serverTimestampPaths).ToList();
             bool includeTransformInWriteResults = true;
-            if (fields.Count > 0 || updatePaths.Count > 0)
+            if (forceWrite || fields.Count > 0 || updatePaths.Count > 0)
             {
                 Elements.Add(new BatchElement(new Write
                 {
