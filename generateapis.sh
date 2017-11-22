@@ -211,4 +211,5 @@ generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
 generate_api Google.Cloud.Speech.V1 google/cloud/speech/v1 cloud_speech_v1.yaml
 generate_api Google.Cloud.Trace.V1 google/devtools/cloudtrace/v1 cloudtrace_v1.yaml
 generate_api Google.Cloud.VideoIntelligence.V1 google/cloud/videointelligence/v1 videointelligence_v1.yaml
-generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision.yaml
+generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision_v1.yaml
+generate_api Google.Cloud.Vision.V1P1Beta1 google/cloud/vision/v1p1beta1 vision_v1p1beta1.yaml
