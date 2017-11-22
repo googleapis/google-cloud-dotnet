@@ -657,6 +657,7 @@ namespace Google.Cloud.PubSub.V1
 
             private async Task Pull(SubscriberClient.StreamingPullStream pull, CancellationToken streamingPullToken)
             {
+                // This method returns normally on cancellation. The caller handles cancellation.
                 using (var cts = CancellationTokenSource.CreateLinkedTokenSource(streamingPullToken, _softStopCts.Token))
                 {
                     async Task<bool> MoveNext()
@@ -704,9 +705,9 @@ namespace Google.Cloud.PubSub.V1
                                 {
                                     _unAckedMsgCount += 1;
                                 }
-                            // Execute the user-provided message handler, and ignoring exceptions.
-                            // And process the ACK/NACK response.
-                            var reply = await _taskHelper.ConfigureAwaitHideErrors(
+                                // Execute the user-provided message handler, and ignoring exceptions.
+                                // And process the ACK/NACK response.
+                                var reply = await _taskHelper.ConfigureAwaitHideErrors(
                                     () => _handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
                                 bool triggerQEvent = false;
                                 lock (_qLock)
@@ -728,8 +729,8 @@ namespace Google.Cloud.PubSub.V1
                                 }
                                 if (triggerQEvent)
                                 {
-                                // Unblock Push(), because now there is at least one ACK to push.
-                                _qEvent.Set();
+                                    // Unblock Push(), because now there is at least one ACK to push.
+                                    _qEvent.Set();
                                 }
                             }));
                         }
@@ -797,8 +798,13 @@ namespace Google.Cloud.PubSub.V1
                         }
                     }
                     // Get local copies of acks/extensions to send.
-                    var acks = _qLock.Locked(() => _ackQueue.Take(_maxAckExtendCount).ToList());
-                    var extends = _qLock.Locked(() => _extendQueue.Take(_maxAckExtendCount - acks.Count).ToList());
+                    List<string> acks;
+                    List<string> extends;
+                    lock (_qLock)
+                    {
+                        acks = _ackQueue.Take(_maxAckExtendCount).ToList();
+                        extends = _extendQueue.Take(_maxAckExtendCount - acks.Count).ToList();
+                    }
                     // Send acks/extensions
                     await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
                     {

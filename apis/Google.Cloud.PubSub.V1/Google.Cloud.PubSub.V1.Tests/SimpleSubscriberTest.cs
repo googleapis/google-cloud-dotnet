@@ -146,9 +146,17 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 public PullStream(TimeSpan writeAsyncPreDelay,
                     IEnumerable<ServerAction> msgs, List<TimedId> extends, List<TimedId> acks, List<DateTime> writeCompletes,
-                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, CancellationToken? ct) =>
-                    (_taskHelper, _scheduler, _writeAsyncPreDelay, _en, _clock, _extends, _acks, _writeCompletes) =
-                        (taskHelper, scheduler, writeAsyncPreDelay, new En(msgs, scheduler, taskHelper, clock, ct), clock, extends, acks, writeCompletes);
+                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, CancellationToken? ct)
+                {
+                    _taskHelper = taskHelper;
+                    _scheduler = scheduler;
+                    _writeAsyncPreDelay = writeAsyncPreDelay; // delay within the WriteAsync() method. Simulating network or server slowness.
+                    _en = new En(msgs, scheduler, taskHelper, clock, ct);
+                    _clock = clock;
+                    _extends = extends;
+                    _acks = acks;
+                    _writeCompletes = writeCompletes;
+                }
 
                 private readonly object _lock = new object();
                 private readonly TaskHelper _taskHelper;
