@@ -328,8 +328,12 @@ namespace Google.Cloud.Firestore
         /// For example, { "a.b": "c" } is converted into { "a": { "b": "c" } }
         /// ... assuming that a.b is a field path with two segments "a" and "b", rather than a single segment of "a.b".
         /// </summary>
+        /// <remarks>
+        /// Precondition (checked in method): dictionary keys do not contain any mutual prefixes.
+        /// </remarks>
         internal static IDictionary<string, Value> ExpandObject(IDictionary<FieldPath, Value> data)
         {
+            ValidateNoPrefixes(data.Keys);
             var result = new Dictionary<string, Value>();
             foreach (var pair in data)
             {
@@ -344,58 +348,24 @@ namespace Google.Cloud.Firestore
                     // but it's harder to reason about.)
                     if (i == segments.Length - 1)
                     {                        
-                        if (value.MapValue != null)
-                        {
-                            value = value.Clone();
-                        }
-                        if (currentMap.TryGetValue(segments[i], out var currentValue))
-                        {
-                            GaxPreconditions.CheckState(currentValue.MapValue != null && value.MapValue != null,
-                                "Attempt to merge values where at least one is not a map; path={0} (segment {1})", pair.Key, segments[i]);
-                            MergeMaps(value.MapValue, currentValue.MapValue);
-                        }
-                        else
-                        {
-                            currentMap[segments[i]] = value;
-                        }
+                        currentMap[segments[i]] = value;
                     }
                     else
                     {
                         // Anything *not* at the end of the path needs to be a map. Create one if we haven't already got
-                        // an entry for this path, or use the existing one.
+                        // an entry for this path, or use the existing one. The precondition on mutual prefixes ensures
+                        // that we'll never see a non-map value here.
                         if (!currentMap.TryGetValue(segments[i], out var newMap))
                         {
                             newMap = new Value { MapValue = new MapValue() };
                             currentMap[segments[i]] = newMap;
-                        }
-                        else
-                        {
-                            GaxPreconditions.CheckState(newMap.MapValue != null, "Non-map value exists in path {0} (segment {1})", pair.Key, segments[i]);
                         }
                         currentMap = newMap.MapValue.Fields;
                     }
                 }
             }
 
-            return result;
-
-            void MergeMaps(MapValue source, MapValue destination)
-            {
-                foreach (var pair in source.Fields)
-                {
-                    if (destination.Fields.TryGetValue(pair.Key, out var currentValue))
-                    {
-                        // Merge further map fields, but nothing else.
-                        GaxPreconditions.CheckState(pair.Value.MapValue != null && currentValue.MapValue != null,
-                            "Cannot merge map elements which aren't further maps");
-                        MergeMaps(pair.Value.MapValue, currentValue.MapValue);
-                    }
-                    else
-                    {
-                        destination.Fields.Add(pair.Key, pair.Value);
-                    }
-                }
-            }
+            return result;            
         }
 
         // Visible for testing
@@ -454,6 +424,26 @@ namespace Google.Cloud.Firestore
                     {
                         result.Add(childPath);
                     }
+                }
+            }
+        }
+
+        // Visible for testing
+        /// <summary>
+        /// Validates that the given set of paths contains no paths p1, p2 such that p1.IsPrefixOf(p2) is true.
+        /// </summary>
+        internal static void ValidateNoPrefixes(IEnumerable<FieldPath> paths)
+        {
+            // It's very convenient that the escaping rules and character ordering means that
+            // performing a lexicographic sort by encoded path means we only need to check adjacent values.
+            var ordered = paths.OrderBy(p => p.EncodedPath, StringComparer.Ordinal).ToList();
+            for (int i = 0; i < ordered.Count - 1; i++)
+            {
+                FieldPath current = ordered[i];
+                FieldPath next = ordered[i + 1];
+                if (current.IsPrefixOf(next))
+                {
+                    throw new ArgumentException($"{current} is a prefix of {next}. Prefixes must not be specified in updates.");
                 }
             }
         }

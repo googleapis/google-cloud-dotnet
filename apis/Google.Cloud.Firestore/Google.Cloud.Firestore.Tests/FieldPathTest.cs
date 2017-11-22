@@ -93,5 +93,19 @@ namespace Google.Cloud.Firestore.Tests
             var unequal = new[] { new FieldPath("a", "c") };
             EqualityTester.AssertEqual(control, equal, unequal);
         }
+
+        [Theory]
+        [InlineData("a", "a.b", true)]
+        [InlineData("a", "a.b.c", true)]
+        [InlineData("a", "a", true)]
+        [InlineData("a.b", "a", false)]
+        [InlineData("a", "b", false)]
+        [InlineData("a", "b.c", false)]
+        public void IsPrefix(string path1, string path2, bool expected)
+        {
+            var fp1 = FieldPath.FromDotSeparatedString(path1);
+            var fp2 = FieldPath.FromDotSeparatedString(path2);
+            Assert.Equal(expected, fp1.IsPrefixOf(fp2));
+        }
     }
 }
