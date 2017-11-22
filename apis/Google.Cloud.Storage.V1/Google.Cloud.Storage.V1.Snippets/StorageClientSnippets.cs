@@ -12,10 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Apis.Download;
 using Google.Apis.Storage.v1.Data;
 using Google.Apis.Upload;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Iam.V1;
+using Google.Cloud.PubSub.V1;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -26,6 +29,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Policy = Google.Apis.Storage.v1.Data.Policy;
 
 namespace Google.Cloud.Storage.V1.Snippets
 {
@@ -798,5 +802,171 @@ namespace Google.Cloud.Storage.V1.Snippets
         // Member: ModifyBucketLabelsAsync(string, *, *, *)
         // See [ModifyBucketLabels](ref) for a synchronous example.
         // End see-also
+
+        [Fact]
+        public void GetStorageServiceAccountEmail()
+        {
+            var projectId = _fixture.ProjectId;
+
+            // Snippet: GetStorageServiceAccountEmail(string, *)
+            StorageClient client = StorageClient.Create();
+            string serviceAccountEmail = client.GetStorageServiceAccountEmail(projectId);
+            Console.WriteLine(serviceAccountEmail);
+            // End snippet
+        }
+
+        // See-also: GetStorageServiceAccountEmail(string, *)
+        // Member: GetStorageServiceAccountEmailAsync(string, *, *)
+        // See [GetStorageServiceAccountEmail](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void GetNotification()
+        {
+            var projectId = _fixture.ProjectId;
+
+            string bucket = _fixture.BucketName;
+            var created = _fixture.CreateNotification("prefix1");
+            string notificationId = created.Id;
+
+            // Snippet: GetNotification(string, string, *)
+            StorageClient client = StorageClient.Create();
+            Notification notification = client.GetNotification(bucket, notificationId);
+            Console.WriteLine($"ID: {notification.Id}");
+            Console.WriteLine($"Payload format: {notification.PayloadFormat}");
+            Console.WriteLine($"Topic: {notification.Topic}");
+            Console.WriteLine($"Prefix: {notification.ObjectNamePrefix}");
+            Console.WriteLine($"Event types: {string.Join(",", notification.EventTypes ?? new string[0])}");
+            // End snippet
+        }
+
+        // See-also: GetNotification(string, string, *)
+        // Member: GetNotificationAsync(string, string, *, *)
+        // See [GetNotification](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void CreateNotification()
+        {
+            var projectId = _fixture.ProjectId;
+
+            string bucket = _fixture.BucketName;
+            // This creates the topic, which is most of the work...
+            var created = _fixture.CreateNotification("prefix2");
+            var topicId = created.Topic.Split('/').Last();
+
+            // Snippet: CreateNotification(string, Notification, *)
+            TopicName topicName = new TopicName(projectId, topicId);
+            StorageClient client = StorageClient.Create();
+            Notification notification = new Notification
+            {
+                Topic = $"//pubsub.googleapis.com/{topicName}",
+                PayloadFormat = "JSON_API_V1"
+            };
+            notification = client.CreateNotification(bucket, notification);
+            Console.WriteLine($"Created notification ID: {notification.Id}");
+            // End snippet
+        }
+
+        // See-also: CreateNotification(string, Notification, *)
+        // Member: CreateNotificationAsync(string, Notification, *, *)
+        // See [CreateNotification](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void DeleteNotification()
+        {
+            var projectId = _fixture.ProjectId;
+
+            string bucket = _fixture.BucketName;
+            var notificationId = _fixture.CreateNotification("prefix3").Id;
+
+            // Snippet: DeleteNotification(string, string, *)
+            StorageClient client = StorageClient.Create();
+            client.DeleteNotification(bucket, notificationId);
+            // End snippet
+        }
+
+        // See-also: DeleteNotification(string, string, *)
+        // Member: DeleteNotificationAsync(string, string, *, *)
+        // See [DeleteNotification](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void ListNotifications()
+        {
+            var projectId = _fixture.ProjectId;
+
+            string bucket = _fixture.BucketName;
+
+            // Snippet: ListNotifications(string, *)
+            StorageClient client = StorageClient.Create();
+            IReadOnlyList<Notification> notifications = client.ListNotifications(bucket);
+            foreach (Notification notification in notifications)
+            {
+                Console.WriteLine($"{notification.Id}: Topic={notification.Topic}; Prefix={notification.ObjectNamePrefix}");
+            }
+            // End snippet
+        }
+
+        // See-also: ListNotifications(string, *)
+        // Member: ListNotificationsAsync(string, *, *)
+        // See [ListNotifications](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void NotificationsOverview()
+        {
+            string projectId = _fixture.ProjectId;
+            string bucket = _fixture.BucketName;
+            string topicId = "topic-" + Guid.NewGuid().ToString().ToLowerInvariant();
+
+            // Sample: NotificationsOverview
+            // First create a Pub/Sub topic.
+            PublisherClient publisherClient = PublisherClient.Create();
+            TopicName topicName = new TopicName(projectId, topicId);
+            publisherClient.CreateTopic(topicName);
+
+            // Prepare the topic for Storage notifications. The Storage Service Account must have Publish permission
+            // for the topic. The code below adds the service account into the "roles/pubsub.publisher" role for the topic.
+            // This code can be simplified for a newly-created topic, but gives an example of how to add the permission
+            // to a topic which may already have some permissions set.
+
+            // Determine the Storage Service Account name to use in IAM operations.
+            StorageClient storageClient = StorageClient.Create();
+            string storageServiceAccount = $"serviceAccount:{storageClient.GetStorageServiceAccountEmail(projectId)}";
+
+            // Fetch the IAM policy for the topic.
+            Iam.V1.Policy policy = publisherClient.GetIamPolicy(topicName.ToString()) ?? new Iam.V1.Policy();
+
+            // Find a binding for the publisher role, if one already exists. Otherwise, create one (locally).
+            string role = "roles/pubsub.publisher";
+            Binding publisherBinding = policy.Bindings.FirstOrDefault(binding => binding.Role == role);
+            if (publisherBinding == null)
+            {
+                publisherBinding = new Binding { Role = role };
+                policy.Bindings.Add(publisherBinding);
+            }
+            // Ensure the Storage Service Account is in the publisher role, setting the IAM policy for the topic
+            // on the server if necessary.
+            if (!publisherBinding.Members.Contains(storageServiceAccount))
+            {
+                publisherBinding.Members.Add(storageServiceAccount);
+                publisherClient.SetIamPolicy(topicName.ToString(), policy);
+            }
+
+            // Now that the topic is ready, we can create a notification configuration for Storage
+            Notification notification = new Notification
+            {
+                Topic = $"//pubsub.googleapis.com/{topicName}",
+                PayloadFormat = "JSON_API_V1"
+            };
+            notification = storageClient.CreateNotification(bucket, notification);
+            Console.WriteLine($"Created notification ID: {notification.Id}");
+
+            // End sample
+
+            _fixture.RegisterTopicToDelete(topicName);            
+        }
     }
 }
