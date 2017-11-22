@@ -96,7 +96,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             scheduler.Run(async () =>
             {
                 var id = await taskHelper.ConfigureAwait(pub.PublishAsync("1"));
-                bool isCancelled = await taskHelper.ConfigureAwaitHideCancellation(pub.ShutdownAsync(new CancellationToken(hardStop)));
+                bool isCancelled = await taskHelper.ConfigureAwaitHideCancellation(
+                    () => pub.ShutdownAsync(new CancellationToken(hardStop)));
                 Assert.Equal(hardStop, isCancelled);
                 Assert.Equal("1", id);
                 Assert.Equal(1, shutdownCount);
@@ -126,7 +127,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 var tasks = Enumerable.Range(0, messageCount).Select(i => pub.PublishAsync(i.ToString())).ToArray();
                 var ids = new HashSet<string>(await taskHelper.ConfigureAwait(taskHelper.WhenAll(tasks)));
-                var isCancelled = await taskHelper.ConfigureAwaitHideCancellation(pub.ShutdownAsync(new CancellationToken(hardStop)));
+                var isCancelled = await taskHelper.ConfigureAwaitHideCancellation(
+                    () => pub.ShutdownAsync(new CancellationToken(hardStop)));
                 Assert.Equal(hardStop, isCancelled);
                 var expected = new HashSet<string>(Enumerable.Range(0, messageCount).Select(x => x.ToString()));
                 Assert.Equal(expected, ids);
@@ -152,8 +154,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             scheduler.Run(async () =>
             {
                 var pubTask = pub.PublishAsync("1");
-                var isCancelled = await taskHelper.ConfigureAwaitHideCancellation(pub.ShutdownAsync(new CancellationToken(hardStop)));
-                var pubResult = await taskHelper.ConfigureAwaitHideCancellation(pubTask, null);
+                var isCancelled = await taskHelper.ConfigureAwaitHideCancellation(
+                    () => pub.ShutdownAsync(new CancellationToken(hardStop)));
+                var pubResult = await taskHelper.ConfigureAwaitHideCancellation(() => pubTask, null);
                 Assert.Equal(hardStop, pubTask.IsCanceled);
                 Assert.Equal(hardStop, isCancelled);
                 Assert.Equal(hardStop ? null : "1", pubResult);

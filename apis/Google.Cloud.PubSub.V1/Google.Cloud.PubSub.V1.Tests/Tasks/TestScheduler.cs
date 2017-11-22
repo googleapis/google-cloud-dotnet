@@ -344,7 +344,7 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                 var cancelled = false;
                 foreach (var task in tasks)
                 {
-                    await this.ConfigureAwaitHideErrors(task);
+                    await this.ConfigureAwaitHideErrors(() => task);
                     switch (task.Status)
                     {
                         case TaskStatus.RanToCompletion:
@@ -376,7 +376,7 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                 {
                     Run(async () =>
                     {
-                        await this.ConfigureAwaitHideErrors(task);
+                        await this.ConfigureAwaitHideErrors(() => task);
                         tcs.TrySetResult(task);
                     });
                 }
