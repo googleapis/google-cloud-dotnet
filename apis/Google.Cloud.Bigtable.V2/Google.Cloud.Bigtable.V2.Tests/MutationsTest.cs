@@ -13,29 +13,26 @@
 // limitations under the License.
 
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
 using Xunit;
 
 namespace Google.Cloud.Bigtable.V2.Tests
 {
     public class MutationsTest
     {
-        public static IEnumerable<object[]> ValidFamilyNames { get; } = new List<object[]>
+        public static TheoryData<string> ValidFamilyNames { get; } = new TheoryData<string>
         {
-            new [] { "a" },
-            new [] { "A" },
-            new [] { "-_.aZ09" }
+            "a",
+            "A",
+            "-_.aZ09"
         };
 
-        public static IEnumerable<object[]> InvalidFamilyNames { get; } = new List<object[]>
+        public static TheoryData<string> InvalidFamilyNames { get; } = new TheoryData<string>
         {
-            new [] { default(string) },
-            new [] { "" },
-            new [] { "abc*" },
-            new [] { "abc " },
-            new [] { "a=b" }
+            default,
+            "",
+            "abc*",
+            "abc ",
+            "a=b"
         };
 
         [Theory]
