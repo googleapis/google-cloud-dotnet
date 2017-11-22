@@ -61,39 +61,6 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public void ExpandObject_MergeMapAndDeepPath()
-        {
-            var input = new OrderPreservingDictionary<FieldPath, Value>
-            {
-                { new FieldPath("a"), CreateMap(("b", CreateValue(10)), ("c", CreateValue(20))) },
-                { new FieldPath("a", "d"), CreateValue(30) }
-            };
-            var expected = new Dictionary<string, Value>
-            {
-                { "a", CreateMap(("b", CreateValue(10)), ("c", CreateValue(20)), ("d", CreateValue(30))) }
-            };
-            AssertExpandObjectValid(input, expected);
-        }
-
-        [Fact]
-        public void ExpandObject_MergeMapsFromInput()
-        {
-            // Input is two ways of populating a.b - one by specifying that "a" is a map with a key "b" and value { "c": 10, "d": 20 },
-            // and the other by specifying that "a.b" is a value { "e": 30, "f": 40}.
-            // Result should be a map with "a" has a single field ("b") which is a map containing fields "c", "d", "e" and "f".
-            var input = new OrderPreservingDictionary<FieldPath, Value>
-            {
-                { new FieldPath("a"), CreateMap("b", CreateMap(("c", CreateValue(10)), ("d", CreateValue(20)))) },
-                { new FieldPath("a", "b"), CreateMap(("e", CreateValue(30)), ("f", CreateValue(40))) }
-            };
-            var expected = new Dictionary<string, Value>
-            {
-                { "a", CreateMap("b", CreateMap(("c", CreateValue(10)), ("d", CreateValue(20)), ("e", CreateValue(30)), ("f", CreateValue(40)))) }
-            };
-            AssertExpandObjectValid(input, expected);
-        }
-
-        [Fact]
         public void ExpandObject_IntermediateMapMerging()
         {
             var input = new OrderPreservingDictionary<FieldPath, Value>
@@ -106,28 +73,6 @@ namespace Google.Cloud.Firestore.Tests
                 { "a", CreateMap("b", CreateMap(("c", CreateValue(10)), ("d", CreateValue(20)))) }
             };
             AssertExpandObjectValid(input, expected);
-        }
-
-        [Fact]
-        public void ExpandoObject_MergingNonMaps()
-        {
-            var input = new OrderPreservingDictionary<FieldPath, Value>
-            {
-                { new FieldPath("a"), CreateMap("b", CreateValue(10)) },
-                { new FieldPath("a", "b"), CreateValue(20) }
-            };
-            AssertExpandObjectInvalid(input);
-        }
-
-        [Fact]
-        public void ExpandoObject_NonMapInPath()
-        {
-            var input = new OrderPreservingDictionary<FieldPath, Value>
-            {
-                { new FieldPath("a"), CreateValue("not a map") },
-                { new FieldPath("a", "b"), CreateValue(20) }
-            };
-            AssertExpandObjectInvalid(input);
         }
 
         /// <summary>
