@@ -88,7 +88,6 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             Console.WriteLine("Topic, Subscription, SimplePublisher and SimpleSubscriber all created");
 
             // Subscribe
-            object recvLock = new object();
             int recvCount = 0; // Count of received messages
             int dupCount = 0; // Count of duplicate messages
             long recvSum = 0L; // Sum of bytes of received messages

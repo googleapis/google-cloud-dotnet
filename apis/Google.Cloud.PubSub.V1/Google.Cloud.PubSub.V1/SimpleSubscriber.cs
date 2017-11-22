@@ -603,11 +603,11 @@ namespace Google.Cloud.PubSub.V1
                 while (!_hardStopCts.IsCancellationRequested)
                 {
                     SubscriberClient.StreamingPullStream pull = null;
+                    // The CancellationTokenSource that reflects the state of the StreamingPull() RPC.
+                    // This is cancelled once the StreamingPull() RPC has an error.
+                    var streamingPullCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
                     try
                     {
-                        // The CancellationTokenSource that reflects the state of the StreamingPull() RPC.
-                        // This is cancelled once the StreamingPull() RPC has an error.
-                        var streamingPullCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
                         pull = _client.StreamingPull(CallSettings.FromCancellationToken(streamingPullCts.Token), new BidirectionalStreamingSettings(1));
                         // Initial call to start subscribe messages arriving.
                         await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
@@ -650,82 +650,89 @@ namespace Google.Cloud.PubSub.V1
                         {
                             _registerTaskFn(_taskHelper.Run(() => pull.WriteCompleteAsync()));
                         }
+                        streamingPullCts.Dispose();
                     }
                 }
             }
 
             private async Task Pull(SubscriberClient.StreamingPullStream pull, CancellationToken streamingPullToken)
             {
-                var cts = CancellationTokenSource.CreateLinkedTokenSource(streamingPullToken, _softStopCts.Token);
-                async Task<bool> MoveNext()
+                using (var cts = CancellationTokenSource.CreateLinkedTokenSource(streamingPullToken, _softStopCts.Token))
                 {
-                    // Pause pulling more messages if too many msgs are locally queued for sending.
-                    // The size of the extend queue is a reasonable proxy for push loading.
-                    while (_qLock.Locked(() => _extendQueue.Count) >= _maxAckExtendCount)
+                    async Task<bool> MoveNext()
                     {
-                        // A 100ms pause is fairly arbitrary, but should never cause problems.
-                        // Using an event would be better, but this is simpler and easier to assure correctness.
-                        await _taskHelper.ConfigureAwait(_scheduler.Delay(TimeSpan.FromMilliseconds(100), cts.Token));
+                        // Pause pulling more messages if too many msgs are locally queued for sending.
+                        // The size of the extend queue is a reasonable proxy for push loading.
+                        while (_qLock.Locked(() => _extendQueue.Count) >= _maxAckExtendCount)
+                        {
+                            // A 100ms pause is fairly arbitrary, but should never cause problems.
+                            // Using an event would be better, but this is simpler and easier to assure correctness.
+                            await _taskHelper.ConfigureAwait(_scheduler.Delay(TimeSpan.FromMilliseconds(100), cts.Token));
+                        }
+                        return await pull.ResponseStream.MoveNext(cts.Token);
                     }
-                    return await pull.ResponseStream.MoveNext(cts.Token);
-                }
-                while (!cts.IsCancellationRequested && await _taskHelper.ConfigureAwaitHideCancellation(MoveNext, false))
-                {
-                    if (cts.IsCancellationRequested)
-                    {
-                        return;
-                    }
-                    var msgs = pull.ResponseStream.Current.ReceivedMessages;
-                    var extendIds = new HashSet<string>(msgs.Select(x => x.AckId));
-                    // Extend leases immediately. This is the receipt to the server that starts the server lease timeout.
-                    QueueLeaseExtensions(extendIds);
-                    var allMsgsHandledCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
-                    _registerTaskFn(_taskHelper.Run(() => AutoExtend(extendIds, allMsgsHandledCts.Token)));
-                    foreach (var msg in msgs)
+                    while (!cts.IsCancellationRequested && await _taskHelper.ConfigureAwaitHideCancellation(MoveNext, false))
                     {
                         if (cts.IsCancellationRequested)
                         {
                             return;
                         }
-                        // Returned Task completes once flow-control is satisfied.
-                        await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), async () =>
+                        var msgs = new List<ReceivedMessage>(pull.ResponseStream.Current.ReceivedMessages);
+                        var extendIds = new HashSet<string>(msgs.Select(x => x.AckId));
+                        // Extend leases immediately. This is the receipt to the server that starts the server lease timeout.
+                        QueueLeaseExtensions(extendIds);
+                        var allMsgsHandledCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
+                        _registerTaskFn(_taskHelper.Run(() => AutoExtend(extendIds, allMsgsHandledCts)));
+                        for (int msgIndex = 0; msgIndex < msgs.Count; msgIndex++)
                         {
-                            if (cts.IsCancellationRequested)
+                            var msg = msgs[msgIndex];
+                            // Remove reference to message. In case a small number of messages from each
+                            // pull take a long time to process. This ensures all other messages aren't still referenced.
+                            msgs[msgIndex] = null;
+                            if (_softStopCts.IsCancellationRequested)
                             {
                                 return;
                             }
-                            lock (_qLock)
+                            // Returned Task completes once flow-control is satisfied.
+                            await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), async () =>
                             {
-                                _unAckedMsgCount += 1;
-                            }
+                                if (_softStopCts.IsCancellationRequested)
+                                {
+                                    return;
+                                }
+                                lock (_qLock)
+                                {
+                                    _unAckedMsgCount += 1;
+                                }
                             // Execute the user-provided message handler, and ignoring exceptions.
                             // And process the ACK/NACK response.
                             var reply = await _taskHelper.ConfigureAwaitHideErrors(
-                                () => _handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
-                            bool triggerQEvent = false;
-                            lock (_qLock)
-                            {
-                                extendIds.Remove(msg.AckId);
-                                if (extendIds.Count == 0)
+                                    () => _handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
+                                bool triggerQEvent = false;
+                                lock (_qLock)
                                 {
-                                    allMsgsHandledCts.Cancel();
+                                    extendIds.Remove(msg.AckId);
+                                    if (extendIds.Count == 0)
+                                    {
+                                        allMsgsHandledCts.Cancel();
+                                    }
+                                    if (reply == Reply.Ack)
+                                    {
+                                        _ackQueue.Enqueue(msg.AckId);
+                                        triggerQEvent = true;
+                                    }
+                                    else
+                                    {
+                                        _unAckedMsgCount -= 1;
+                                    }
                                 }
-                                if (reply == Reply.Ack)
+                                if (triggerQEvent)
                                 {
-                                    _ackQueue.Enqueue(msg.AckId);
-                                    triggerQEvent = true;
-                                }
-                                else
-                                {
-                                    _unAckedMsgCount -= 1;
-                                }
-                            }
-                            if (triggerQEvent)
-                            {
                                 // Unblock Push(), because now there is at least one ACK to push.
                                 _qEvent.Set();
-                            }
-                        }));
+                                }
+                            }));
+                        }
                     }
                 }
             }
@@ -739,22 +746,29 @@ namespace Google.Cloud.PubSub.V1
                 _qEvent.Set();
             }
 
-            private async Task AutoExtend(HashSet<string> ackIds, CancellationToken allMsgsHandledToken)
+            private async Task AutoExtend(HashSet<string> ackIds, CancellationTokenSource allMsgsHandled)
             {
                 // Moves ackIds into the extend-queue as required for auto lease extension
                 // This loop is not infinite; it terminates when allMsgsHandledToken is cancelled.
-                while (true)
+                try
                 {
-                    bool isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(
-                        () => _scheduler.Delay(_autoExtendInterval, allMsgsHandledToken));
-                    if (isCancelled)
+                    while (true)
                     {
-                        break;
+                        bool isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(
+                            () => _scheduler.Delay(_autoExtendInterval, allMsgsHandled.Token));
+                        if (isCancelled)
+                        {
+                            return;
+                        }
+                        // Queue lease extensions on all not-yet-processed messages.
+                        // It's OK if an ID is lease-extended and ACKed to the server concurrently.
+                        // The ACK takes precedence on the server.
+                        QueueLeaseExtensions(ackIds);
                     }
-                    // Queue lease extensions on all not-yet-processed messages.
-                    // It's OK if an ID is lease-extended and ACKed to the server concurrently.
-                    // The ACK takes precedence on the server.
-                    QueueLeaseExtensions(ackIds);
+                }
+                finally
+                {
+                    allMsgsHandled.Dispose();
                 }
             }
 
