@@ -17,6 +17,7 @@ using Google.Api.Gax.Rest;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Apis.Storage.v1.ProjectsResource;
@@ -26,17 +27,6 @@ namespace Google.Cloud.Storage.V1
     // Implementation of notifications operations
     public partial class StorageClientImpl
     {
-        // Note: this isn't a production-ready implementation of IPageManager, as the API doesn't support pagination at the moment.
-        // If the API isn't *going* to get pagination, we could potentially fake it by making a single request and then paginating the response in memory.
-        private sealed class NotificationPageManager : IPageManager<NotificationsResource.ListRequest, Notifications, Notification>
-        {
-            internal static readonly NotificationPageManager Instance = new NotificationPageManager();
-            public string GetNextPageToken(Notifications response) => null;
-            public IEnumerable<Notification> GetResources(Notifications response) => response.Items;
-            public void SetPageSize(NotificationsResource.ListRequest request, int pageSize) { }
-            public void SetPageToken(NotificationsResource.ListRequest request, string pageToken) { }
-        }
-
         /// <inheritdoc />
         public override string GetStorageServiceAccountEmail(string projectId, GetStorageServiceAccountEmailOptions options = null) =>
             CreateGetServiceAccountEmailRequest(projectId, options).Execute().EmailAddress;
@@ -58,20 +48,21 @@ namespace Google.Cloud.Storage.V1
             CreateCreateNotificationRequest(bucket, notification, options).ExecuteAsync(cancellationToken);
 
         /// <inheritdoc />
-        public override PagedEnumerable<Notifications, Notification> ListNotifications(string bucket, ListNotificationsOptions options = null)
+        public override IReadOnlyList<Notification> ListNotifications(string bucket, ListNotificationsOptions options = null)
         {
             ValidateBucketName(bucket);
-            return new RestPagedEnumerable<NotificationsResource.ListRequest, Notifications, Notification>(
-                () => CreateListNotificationsRequest(bucket, options), NotificationPageManager.Instance);
-
+            var list = CreateListNotificationsRequest(bucket, options).Execute().Items ?? new List<Notification>();
+            return new ReadOnlyCollection<Notification>(list);
         }
 
         /// <inheritdoc />
-        public override PagedAsyncEnumerable<Notifications, Notification> ListNotificationsAsync(string bucket, ListNotificationsOptions options = null)
+        public override async Task<IReadOnlyList<Notification>> ListNotificationsAsync(string bucket, ListNotificationsOptions options = null, CancellationToken cancellationToken = default)
         {
             ValidateBucketName(bucket);
-            return new RestPagedAsyncEnumerable<NotificationsResource.ListRequest, Notifications, Notification>(
-                () => CreateListNotificationsRequest(bucket, options), NotificationPageManager.Instance);
+            var request = CreateListNotificationsRequest(bucket, options);
+            var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            var list = response.Items ?? new List<Notification>();
+            return new ReadOnlyCollection<Notification>(list);
         }
 
         /// <inheritdoc />
