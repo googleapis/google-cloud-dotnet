@@ -296,6 +296,19 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void DownloadGzippedFile_IgnoreHash()
+        {
+            // The file has a Content-Encoding of gzip, and it's stored compressed.
+            // We can't currently validate the hash, but the escape hatch allows us to download it anyway.
+            var stream = new MemoryStream();
+            _fixture.Client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream,
+                new DownloadObjectOptions { HashValidationMode = HashValidationMode.Never });
+            var expected = Encoding.UTF8.GetBytes("hello world");
+            var actual = stream.ToArray();
+            Assert.Equal(expected, actual);
+        }
+
         private Object GetLatestVersionOfMultiversionObject()
         {
             var service = _fixture.Client.Service;
