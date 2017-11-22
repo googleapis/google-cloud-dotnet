@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Apis.Storage.v1.Data;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -94,8 +95,8 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         /// <param name="bucket">The bucket for which to list associated notification configurations. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of notification configurations associated with the specified bucket.</returns>
-        public virtual PagedEnumerable<Notifications, Notification> ListNotifications(string bucket, ListNotificationsOptions options = null) =>
+        /// <returns>A list of notification configurations associated with the specified bucket. This method never returns null.</returns>
+        public virtual IReadOnlyList<Notification> ListNotifications(string bucket, ListNotificationsOptions options = null) =>
             throw new NotImplementedException();
 
         /// <summary>
@@ -103,8 +104,10 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         /// <param name="bucket">The bucket for which to list associated notification configurations. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>An asynchronous sequence of notification configurations associated with the specified bucket.</returns>
-        public virtual PagedAsyncEnumerable<Notifications, Notification> ListNotificationsAsync(string bucket, ListNotificationsOptions options = null) =>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation, with a result returning the
+        /// list of notification configurations associated with the specified bucket. The result is never null.</returns>
+        public virtual Task<IReadOnlyList<Notification>> ListNotificationsAsync(string bucket, ListNotificationsOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
 
         /// <summary>
