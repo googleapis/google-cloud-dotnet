@@ -285,7 +285,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Throws<ArgumentException>(() => query.EndBefore(values));
         }
 
-        public static IEnumerable<object[]> InvalidDocumentIdCursorValues { get; } = new List<object>
+        public static TheoryData<object> InvalidDocumentIdCursorValues { get; } = new TheoryData<object>
         {
             // Incorrect types
             10,
@@ -302,7 +302,7 @@ namespace Google.Cloud.Firestore.Tests
             s_db.Document("othercol/doc"),
             // DocumentReference which isn't a direct chid
             s_db.Document("col/doc/col2/doc2")
-        }.Select(x => new[] { x }).ToList();
+        };
 
         [Theory]
         [MemberData(nameof(InvalidDocumentIdCursorValues))]

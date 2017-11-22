@@ -72,7 +72,13 @@ generate_api() {
   API_OUT_DIR=apis
   API_SRC_DIR=googleapis/$2
   API_YAML=$API_SRC_DIR/../$3
-  
+
+  if [[ ! -f $API_YAML ]]
+  then
+    echo "$API_YAML doesn't exist. Please check inputs."
+    exit 1
+  fi
+
   echo Generating $1
   mkdir $API_TMP_DIR
   
@@ -186,6 +192,7 @@ $PROTOC \
   googleapis/google/logging/type/*.proto
 
 # Now the per-API codegen
+generate_api Google.Cloud.BigQuery.DataTransfer.V1 google/cloud/bigquery/datatransfer/v1 datatransfer.yaml
 generate_api Google.Cloud.Bigtable.Admin.V2 google/bigtable/admin/v2 bigtableadmin.yaml
 generate_api Google.Cloud.Bigtable.V2 google/bigtable/v2 bigtable.yaml
 generate_api Google.Cloud.Container.V1 google/container/v1 container.yaml

@@ -31,6 +31,8 @@ namespace Google.Cloud.Firestore
     /// </summary>
     public sealed class WriteBatch
     {
+        private static readonly IReadOnlyList<FieldPath> s_emptyFieldPathList = new List<FieldPath>().AsReadOnly();
+
         private readonly FirestoreDb _db;
 
         internal bool IsEmpty => Elements.Count == 0;
@@ -60,7 +62,9 @@ namespace Google.Cloud.Firestore
             FindSentinels(fields, FieldPath.Empty, serverTimestamps, deletes);
             GaxPreconditions.CheckArgument(deletes.Count == 0, nameof(documentData), "Delete sentinels cannot appear in Create calls");
             RemoveSentinels(fields, serverTimestamps);
-            AddUpdateWrites(documentReference, fields, new List<FieldPath>(), Precondition.MustNotExist, serverTimestamps);
+            // Force a write if we've not got any sentinel values. Otherwise, we end up with an empty transform instead,
+            // just to specify the precondition.
+            AddUpdateWrites(documentReference, fields, s_emptyFieldPathList, Precondition.MustNotExist, serverTimestamps, serverTimestamps.Count == 0);
             return this;
         }
 
@@ -108,7 +112,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckArgument(deletes.All(fp => updates.ContainsKey(fp)), nameof(updates), "Deletes cannot be nested within update calls");
             RemoveSentinels(expanded, deletes);
             RemoveSentinels(expanded, serverTimestamps);
-            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, serverTimestamps);
+            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, serverTimestamps, false);
             return this;
         }
 
@@ -130,6 +134,7 @@ namespace Google.Cloud.Firestore
             var deletes = new List<FieldPath>();
             FindSentinels(fields, FieldPath.Empty, serverTimestamps, deletes);
 
+            bool forceWrite = false;
             IDictionary<FieldPath, Value> updates;
             IReadOnlyList<FieldPath> updatePaths;
             if (options.Merge)
@@ -138,9 +143,11 @@ namespace Google.Cloud.Firestore
                 if (mask.Count == 0)
                 {
                     // Merge all:
+                    // - Empty data is not allowed
                     // - Deletes are allowed anywhere
                     // - All timestamps converted to transforms
                     // - Each top-level entry becomes a FieldPath
+                    GaxPreconditions.CheckArgument(fields.Count != 0, nameof(documentData), "{0} cannot be specified with empty data", nameof(SetOptions.MergeAll));
                     RemoveSentinels(fields, serverTimestamps);
                     // Work out the update paths after removing server timestamps but before removing deletes,
                     // so that we correctly perform the deletes.
@@ -174,10 +181,11 @@ namespace Google.Cloud.Firestore
                 GaxPreconditions.CheckArgument(deletes.Count == 0, nameof(documentData), "Delete cannot appear in document data when overwriting");
                 RemoveSentinels(fields, serverTimestamps);
                 updates = fields.ToDictionary(pair => new FieldPath(pair.Key), pair => pair.Value);
-                updatePaths = new List<FieldPath>();
+                updatePaths = s_emptyFieldPathList;
+                forceWrite = true;
             }
 
-            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, serverTimestamps);
+            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, serverTimestamps, forceWrite);
             return this;
         }
 
@@ -199,11 +207,17 @@ namespace Google.Cloud.Firestore
                 .ToList();
         }
 
-        private void AddUpdateWrites(DocumentReference documentReference, IDictionary<string, Value> fields, IReadOnlyList<FieldPath> updatePaths, Precondition precondition, IList<FieldPath> serverTimestampPaths)
+        private void AddUpdateWrites(
+            DocumentReference documentReference,
+            IDictionary<string, Value> fields,
+            IReadOnlyList<FieldPath> updatePaths,
+            Precondition precondition,
+            IList<FieldPath> serverTimestampPaths,
+            bool forceWrite)
         {
             updatePaths = updatePaths.Except(serverTimestampPaths).ToList();
             bool includeTransformInWriteResults = true;
-            if (fields.Count > 0 || updatePaths.Count > 0)
+            if (forceWrite || fields.Count > 0 || updatePaths.Count > 0)
             {
                 Elements.Add(new BatchElement(new Write
                 {
@@ -328,8 +342,12 @@ namespace Google.Cloud.Firestore
         /// For example, { "a.b": "c" } is converted into { "a": { "b": "c" } }
         /// ... assuming that a.b is a field path with two segments "a" and "b", rather than a single segment of "a.b".
         /// </summary>
+        /// <remarks>
+        /// Precondition (checked in method): dictionary keys do not contain any mutual prefixes.
+        /// </remarks>
         internal static IDictionary<string, Value> ExpandObject(IDictionary<FieldPath, Value> data)
         {
+            ValidateNoPrefixes(data.Keys);
             var result = new Dictionary<string, Value>();
             foreach (var pair in data)
             {
@@ -344,58 +362,24 @@ namespace Google.Cloud.Firestore
                     // but it's harder to reason about.)
                     if (i == segments.Length - 1)
                     {                        
-                        if (value.MapValue != null)
-                        {
-                            value = value.Clone();
-                        }
-                        if (currentMap.TryGetValue(segments[i], out var currentValue))
-                        {
-                            GaxPreconditions.CheckState(currentValue.MapValue != null && value.MapValue != null,
-                                "Attempt to merge values where at least one is not a map; path={0} (segment {1})", pair.Key, segments[i]);
-                            MergeMaps(value.MapValue, currentValue.MapValue);
-                        }
-                        else
-                        {
-                            currentMap[segments[i]] = value;
-                        }
+                        currentMap[segments[i]] = value;
                     }
                     else
                     {
                         // Anything *not* at the end of the path needs to be a map. Create one if we haven't already got
-                        // an entry for this path, or use the existing one.
+                        // an entry for this path, or use the existing one. The precondition on mutual prefixes ensures
+                        // that we'll never see a non-map value here.
                         if (!currentMap.TryGetValue(segments[i], out var newMap))
                         {
                             newMap = new Value { MapValue = new MapValue() };
                             currentMap[segments[i]] = newMap;
-                        }
-                        else
-                        {
-                            GaxPreconditions.CheckState(newMap.MapValue != null, "Non-map value exists in path {0} (segment {1})", pair.Key, segments[i]);
                         }
                         currentMap = newMap.MapValue.Fields;
                     }
                 }
             }
 
-            return result;
-
-            void MergeMaps(MapValue source, MapValue destination)
-            {
-                foreach (var pair in source.Fields)
-                {
-                    if (destination.Fields.TryGetValue(pair.Key, out var currentValue))
-                    {
-                        // Merge further map fields, but nothing else.
-                        GaxPreconditions.CheckState(pair.Value.MapValue != null && currentValue.MapValue != null,
-                            "Cannot merge map elements which aren't further maps");
-                        MergeMaps(pair.Value.MapValue, currentValue.MapValue);
-                    }
-                    else
-                    {
-                        destination.Fields.Add(pair.Key, pair.Value);
-                    }
-                }
-            }
+            return result;            
         }
 
         // Visible for testing
@@ -454,6 +438,26 @@ namespace Google.Cloud.Firestore
                     {
                         result.Add(childPath);
                     }
+                }
+            }
+        }
+
+        // Visible for testing
+        /// <summary>
+        /// Validates that the given set of paths contains no paths p1, p2 such that p1.IsPrefixOf(p2) is true.
+        /// </summary>
+        internal static void ValidateNoPrefixes(IEnumerable<FieldPath> paths)
+        {
+            // It's very convenient that the escaping rules and character ordering means that
+            // performing a lexicographic sort by encoded path means we only need to check adjacent values.
+            var ordered = paths.OrderBy(p => p.EncodedPath, StringComparer.Ordinal).ToList();
+            for (int i = 0; i < ordered.Count - 1; i++)
+            {
+                FieldPath current = ordered[i];
+                FieldPath next = ordered[i + 1];
+                if (current.IsPrefixOf(next))
+                {
+                    throw new ArgumentException($"{current} is a prefix of {next}. Prefixes must not be specified in updates.");
                 }
             }
         }
