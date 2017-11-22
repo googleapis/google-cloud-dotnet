@@ -81,16 +81,18 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             private class En : IAsyncEnumerator<StreamingPullResponse>
             {
-                public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, CancellationToken? ct)
+                public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock, CancellationToken? ct)
                 {
                     _msgsEn = msgs.Select((x, i) => (i, x)).GetEnumerator();
                     _scheduler = scheduler;
                     _taskHelper = taskHelper;
+                    _clock = clock;
                     _ct = ct ?? CancellationToken.None;
                 }
 
                 private readonly IScheduler _scheduler;
                 private readonly TaskHelper _taskHelper;
+                private readonly IClock _clock;
                 private readonly CancellationToken _ct;
 
                 private readonly IEnumerator<(int Index, ServerAction Action)> _msgsEn;
@@ -142,11 +144,16 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             private class PullStream : StreamingPullStream
             {
-                public PullStream(IEnumerable<ServerAction> msgs, List<TimedId> extends, List<TimedId> acks, List<DateTime> writeCompletes,
+                public PullStream(TimeSpan writeAsyncPreDelay,
+                    IEnumerable<ServerAction> msgs, List<TimedId> extends, List<TimedId> acks, List<DateTime> writeCompletes,
                     IScheduler scheduler, IClock clock, TaskHelper taskHelper, CancellationToken? ct) =>
-                    (_en, _clock, _extends, _acks, _writeCompletes) = (new En(msgs, scheduler, taskHelper, ct), clock, extends, acks, writeCompletes);
+                    (_taskHelper, _scheduler, _writeAsyncPreDelay, _en, _clock, _extends, _acks, _writeCompletes) =
+                        (taskHelper, scheduler, writeAsyncPreDelay, new En(msgs, scheduler, taskHelper, clock, ct), clock, extends, acks, writeCompletes);
 
                 private readonly object _lock = new object();
+                private readonly TaskHelper _taskHelper;
+                private readonly IScheduler _scheduler;
+                private readonly TimeSpan _writeAsyncPreDelay;
                 private readonly IAsyncEnumerator<StreamingPullResponse> _en;
                 private readonly IClock _clock;
                 private readonly List<TimedId> _extends;
@@ -155,13 +162,14 @@ namespace Google.Cloud.PubSub.V1.Tests
 
                 public override IAsyncEnumerator<StreamingPullResponse> ResponseStream => _en;
 
-                public override Task WriteAsync(StreamingPullRequest message)
+                public override async Task WriteAsync(StreamingPullRequest message)
                 {
+                    await _taskHelper.ConfigureAwait(_scheduler.Delay(_writeAsyncPreDelay, CancellationToken.None));
+                    var now = _clock.GetCurrentDateTimeUtc();
                     lock (_lock)
                     {
-                        _extends.AddRange(message.ModifyDeadlineAckIds.Select(id => new TimedId(_clock.GetCurrentDateTimeUtc(), id)));
-                        _acks.AddRange(message.AckIds.Select(id => new TimedId(_clock.GetCurrentDateTimeUtc(), id)));
-                        return Task.FromResult(0);
+                        _extends.AddRange(message.ModifyDeadlineAckIds.Select(id => new TimedId(now, id)).ToList());
+                        _acks.AddRange(message.AckIds.Select(id => new TimedId(now, id)).ToList());
                     }
                 }
 
@@ -175,18 +183,21 @@ namespace Google.Cloud.PubSub.V1.Tests
                 }
             }
 
-            public FakeSubscriber(IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock, TaskHelper taskHelper)
+            public FakeSubscriber(
+                IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock, TaskHelper taskHelper, TimeSpan writeAsyncPreDelay)
             {
                 _msgsEn = msgsEn;
                 _scheduler = scheduler;
                 _clock = clock;
                 _taskHelper = taskHelper;
+                _writeAsyncPreDelay = writeAsyncPreDelay;
             }
 
             private readonly IEnumerator<IEnumerable<ServerAction>> _msgsEn;
             private readonly IScheduler _scheduler;
             private readonly IClock _clock;
             private readonly TaskHelper _taskHelper;
+            private readonly TimeSpan _writeAsyncPreDelay;
 
             private readonly List<TimedId> _extends = new List<TimedId>();
             private readonly List<TimedId> _acks = new List<TimedId>();
@@ -196,7 +207,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             public IReadOnlyList<TimedId> Acks => _acks;
             public IReadOnlyList<DateTime> WriteCompletes => _writeCompletes;
 
-            public override StreamingPullStream StreamingPull(CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)
+            public override StreamingPullStream StreamingPull(
+                CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)
             {
                 lock (_msgsEn)
                 {
@@ -205,7 +217,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                         throw new InvalidOperationException("Test subscriber creation failed. Run out of (fake) data");
                     }
                     var msgs = _msgsEn.Current;
-                    return new PullStream(msgs, _extends, _acks, _writeCompletes, _scheduler, _clock, _taskHelper, callSettings?.CancellationToken);
+                    return new PullStream(_writeAsyncPreDelay, msgs,
+                        _extends, _acks, _writeCompletes, _scheduler, _clock, _taskHelper, callSettings?.CancellationToken);
                 }
             }
         }
@@ -222,13 +235,15 @@ namespace Google.Cloud.PubSub.V1.Tests
             public static Fake Create(IList<IEnumerable<ServerAction>> msgs,
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
                 int? flowMaxElements = null, int? flowMaxBytes = null,
-                int clientCount = 1, int threadCount = 1)
+                int clientCount = 1, int threadCount = 1, TimeSpan? writeAsyncPreDelay = null)
             {
                 var scheduler = new TestScheduler(threadCount: threadCount);
                 TaskHelper taskHelper = scheduler.TaskHelper;
                 List<DateTime> clientShutdowns = new List<DateTime>();
                 var msgEn = msgs.GetEnumerator();
-                var clients = Enumerable.Range(0, clientCount).Select(_ => new FakeSubscriber(msgEn, scheduler, scheduler.Clock, taskHelper)).ToList();
+                var clients = Enumerable.Range(0, clientCount)
+                    .Select(_ => new FakeSubscriber(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero))
+                    .ToList();
                 var settings = new SimpleSubscriber.Settings
                 {
                     Scheduler = scheduler,
@@ -521,6 +536,37 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Equal(1, fake.Subscribers.Count);
                     Assert.Equal(new[] { S(0), S(5), S(20), S(25), S(40), S(45), S(60), S(65) }, fake.Subscribers[0].Extends.Select(x => x.Time));
                     Assert.Equal(new[] { S(70), S(75) }, fake.Subscribers[0].Acks.Select(x => x.Time));
+                });
+            }
+        }
+
+        [Fact]
+        public void SlowUplinkThrottlesPull()
+        {
+            const int msgCount = 20;
+            const int flowMaxEls = 5;
+            var preDelay = TimeSpan.FromSeconds(10);
+            var msgs = new[] {
+                Enumerable.Range(0, msgCount)
+                    .Select(i => ServerAction.Data(TimeSpan.Zero, new[] { i.ToString() }))
+                    .Concat(new[] { ServerAction.Inf() })
+            };
+            using (var fake = Fake.Create(msgs, flowMaxElements: flowMaxEls, writeAsyncPreDelay: preDelay))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var subTask = fake.Subscriber.StartAsync((msg, ct) => Task.FromResult(SimpleSubscriber.Reply.Ack));
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1000), CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
+                    await fake.TaskHelper.ConfigureAwait(subTask);
+                    var sub = fake.Subscribers[0];
+                    Assert.Equal(msgCount, sub.Extends.Count);
+                    Assert.Equal(msgCount, sub.Acks.Count);
+                    // Difficult to predict the exact timings, so check durations.
+                    // *2 due to an extend and an ack required sending for each msg.
+                    var expectedMinDuration = TimeSpan.FromTicks(preDelay.Ticks * 2 * msgCount / flowMaxEls);
+                    Assert.True(sub.Extends.Last().Time - sub.Extends.First().Time >= expectedMinDuration, "Pull not throttled (extends)");
+                    Assert.True(sub.Acks.Last().Time - sub.Acks.First().Time >= expectedMinDuration, "Pull not throttled (acks)");
                 });
             }
         }

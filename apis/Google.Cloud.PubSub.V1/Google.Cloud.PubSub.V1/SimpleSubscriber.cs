@@ -657,12 +657,23 @@ namespace Google.Cloud.PubSub.V1
             private async Task Pull(SubscriberClient.StreamingPullStream pull, CancellationToken streamingPullToken)
             {
                 var cts = CancellationTokenSource.CreateLinkedTokenSource(streamingPullToken, _softStopCts.Token);
-                while (!cts.IsCancellationRequested &&
-                    await _taskHelper.ConfigureAwaitHideCancellation(() => pull.ResponseStream.MoveNext(cts.Token), false))
+                async Task<bool> MoveNext()
+                {
+                    // Pause pulling more messages if too many msgs are locally queued for sending.
+                    // The size of the extend queue is a reasonable proxy for push loading.
+                    while (_qLock.Locked(() => _extendQueue.Count) >= _maxAckExtendCount)
+                    {
+                        // A 100ms pause is fairly arbitrary, but should never cause problems.
+                        // Using an event would be better, but this is simpler and easier to assure correctness.
+                        await _taskHelper.ConfigureAwait(_scheduler.Delay(TimeSpan.FromMilliseconds(100), cts.Token));
+                    }
+                    return await pull.ResponseStream.MoveNext(cts.Token);
+                }
+                while (!cts.IsCancellationRequested && await _taskHelper.ConfigureAwaitHideCancellation(MoveNext, false))
                 {
                     if (cts.IsCancellationRequested)
                     {
-                        break;
+                        return;
                     }
                     var msgs = pull.ResponseStream.Current.ReceivedMessages;
                     var extendIds = new HashSet<string>(msgs.Select(x => x.AckId));
@@ -674,7 +685,7 @@ namespace Google.Cloud.PubSub.V1
                     {
                         if (cts.IsCancellationRequested)
                         {
-                            break;
+                            return;
                         }
                         // Returned Task completes once flow-control is satisfied.
                         await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), async () =>
@@ -765,11 +776,8 @@ namespace Google.Cloud.PubSub.V1
                             _hardStopCts.Cancel();
                             return;
                         }
-                        try
-                        {
-                            await _taskHelper.ConfigureAwait(_qEvent.WaitAsync(streamingPullToken));
-                        }
-                        catch (Exception e) when (e.IsCancellation())
+                        var isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(() => _qEvent.WaitAsync(streamingPullToken));
+                        if (isCancelled)
                         {
                             return;
                         }
