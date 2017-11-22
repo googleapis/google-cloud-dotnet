@@ -27,7 +27,7 @@ namespace Google.Cloud.Firestore.Tests
     // WriteBatch.Set as it lets us check the update mask handling too.
     public partial class WriteBatchTest
     {
-        public static IEnumerable<object[]> SentinelValuesInArraysData { get; } = new List<object>
+        public static TheoryData<object> SentinelValuesInArraysData { get; } = new TheoryData<object>
         {
             // Single check that ServerTimestamp counts as a sentinel value. For the rest of the
             // test data, we'll just use Delete
@@ -44,16 +44,14 @@ namespace Google.Cloud.Firestore.Tests
 
             // An array within a map
             new { Foo = new { Score = 10, Values = new[] { SentinelValue.Delete } } }
-        }
-        .Select(x => new[] { x }).ToList();
+        };
 
-        public static IEnumerable<object[]> NoSentinelValuesInArraysData { get; } = new List<object>
+        public static TheoryData<object> NoSentinelValuesInArraysData { get; } = new TheoryData<object>
         {
             // Each object has a sentinel value in a valid position.
             new { Values = new[] { 1, 2 }, DeleteMe = SentinelValue.Delete },
             new { Values = new[] { new { Fields = new { NestedArray = new[] { 1, 2 }, Text = "Foo" } } }, DeleteMe = SentinelValue.Delete }
-        }
-        .Select(x => new[] { x }).ToList();
+        };
 
         /// <summary>
         /// Array values cannot contain sentinel values (delete/server-timestamp) anywhere,
