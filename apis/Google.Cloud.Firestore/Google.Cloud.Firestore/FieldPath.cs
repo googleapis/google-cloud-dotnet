@@ -169,5 +169,25 @@ namespace Google.Cloud.Firestore
         /// Conversion from FieldPath to FieldReference.
         /// </summary>
         internal FieldReference ToFieldReference() => new FieldReference { FieldPath = EncodedPath };
+
+        /// <summary>
+        /// Checks whether the specified path starts with the same path segments as this path. A path
+        /// is considered a prefix of itself, in the way that "a".StartsWith("a") returns true.
+        /// </summary>
+        internal bool IsPrefixOf(FieldPath path)
+        {
+            if (path.Segments.Length < Segments.Length)
+            {
+                return false;
+            }
+            for (int i = 0; i < Segments.Length; i++)
+            {
+                if (Segments[i] != path.Segments[i])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }
