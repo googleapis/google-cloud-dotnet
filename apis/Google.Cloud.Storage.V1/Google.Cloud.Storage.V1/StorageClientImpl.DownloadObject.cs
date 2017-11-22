@@ -142,9 +142,10 @@ namespace Google.Cloud.Storage.V1
                 }
             });
 
-        private HashValidatingDownloader CreateDownloader(DownloadObjectOptions options)
+        private MediaDownloader CreateDownloader(DownloadObjectOptions options)
         {
-            var downloader = new HashValidatingDownloader(Service);
+            MediaDownloader downloader = options.HashValidationMode == HashValidationMode.Never
+                ? new MediaDownloader(Service) : new HashValidatingDownloader(Service);
             downloader.ModifyRequest += _versionHeaderAction;
             options?.ModifyDownloader(downloader);
             ApplyEncryptionKey(options?.EncryptionKey, downloader);

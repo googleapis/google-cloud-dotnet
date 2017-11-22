@@ -74,6 +74,18 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public string UserProject { get; set; }
 
+        /// <summary>
+        /// Specifies whether or not the object's hash code should be validated. If this property is null,
+        /// the hash code will always be validated.
+        /// </summary>
+        /// <remarks>
+        /// This is effectively an escape hatch for situations where hash validation fails.
+        /// See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1641 for background
+        /// on this option. It is recommended that you leave this option unset unless you are knowingly
+        /// downloading data for an object where hashing will fail.
+        /// </remarks>
+        public HashValidationMode? HashValidationMode { get; set; }
+
         internal void ModifyDownloader(MediaDownloader downloader)
         {
             if (ChunkSize != null)
