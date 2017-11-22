@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CoverageParams>
   <TargetExecutable>/Program Files/dotnet/dotnet.exe</TargetExecutable>
-  <TargetArguments>test --no-build -f netcoreapp2.0 -c Release</TargetArguments>
+  <TargetArguments>test --no-build -c Release</TargetArguments>
   <Filters>
     <IncludeFilters>
       <FilterEntry>

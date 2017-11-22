@@ -92,9 +92,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
 
-        private const string TargetFrameworkCore = "netcoreapp1.0";
-        private const string TargetFrameworkClassic = "net452";
-
         static int Main()
         {
             try
@@ -332,17 +329,6 @@ TODO: Add snippet references here.
         private static string GetTestTargetFrameworks(ApiMetadata api) => api.TestTargetFrameworks ??
                                                                       api.TargetFrameworks ?? DefaultTestTargetFrameworks;
 
-        private static string GetPreferredCoverageFramework(ApiMetadata api)
-        {
-            var targetFrameworks = GetTestTargetFrameworks(api);
-            if (targetFrameworks.Contains(TargetFrameworkClassic))
-            {
-                return TargetFrameworkClassic;
-            }
-            // Otherwise, return the first one found.
-            return targetFrameworks.Split(';').FirstOrDefault();
-        }
-
         private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
             var dependencies = new SortedList<string, string>(CommonTestDependencies);
@@ -388,7 +374,7 @@ TODO: Add snippet references here.
         {
             var targetExecutable = new XElement("TargetExecutable", "/Program Files/dotnet/dotnet.exe");
             var targetArguments = new XElement("TargetArguments",
-                $"test --no-build -f {GetPreferredCoverageFramework(api)} -c Release");
+                $"test --no-build -c Release");
             var filters = new XElement("Filters", new XElement("IncludeFilters",
                 new XElement("FilterEntry", new XElement("ModuleMask", api.Id)),
                 // Allow tests to contribute coverage to project dependencies, but not package dependencies
