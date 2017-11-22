@@ -11,7 +11,10 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Iam.V1;
+using Google.Cloud.PubSub.V1;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -40,12 +43,14 @@ namespace Google.Cloud.Storage.V1.Snippets
 
         private readonly List<string> _bucketsToDelete = new List<string>();
         private readonly List<string> _localFilesToDelete = new List<string>();
+        private readonly List<TopicName> _topicsToDelete = new List<TopicName>();
 
         public StorageSnippetFixture()
         {
             NotificationUrl = Environment.GetEnvironmentVariable(NotificationUrlEnvironmentVariable);
             BucketName = "snippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
             CreateAndPopulateBucket();
+            CreateNotificationsBucket();
         }
 
         /// <summary>
@@ -63,6 +68,43 @@ namespace Google.Cloud.Storage.V1.Snippets
             RegisterLocalFileToDelete(WorldLocalFileName);
         }
 
+        private void CreateNotificationsBucket()
+        {
+            string bucket = "snippets-notifications-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            var topicName = new TopicName(ProjectId, bucket);
+            var storageClient = StorageClient.Create();
+            storageClient.CreateBucket(ProjectId, bucket);
+        }
+
+        internal Notification CreateNotification(string prefix)
+        {
+            var publisherClient = PublisherClient.Create();
+            var topicName = new TopicName(ProjectId, "topic-" + Guid.NewGuid().ToString().ToLowerInvariant());
+            publisherClient.CreateTopic(topicName);
+            RegisterTopicToDelete(topicName);
+            var storageClient = StorageClient.Create();
+            string storageServiceAccount = $"serviceAccount:{storageClient.GetStorageServiceAccountEmail(ProjectId)}";
+
+            // TODO: Simplify this when we have IAM convenience methods.
+            var policy = publisherClient.GetIamPolicy(topicName.ToString()) ?? new Iam.V1.Policy();
+            var role = "roles/pubsub.publisher";
+
+            var publisherBinding = policy.Bindings.FirstOrDefault(binding => binding.Role == role);
+            if (publisherBinding == null)
+            {
+                publisherBinding = new Binding { Role = role };
+                policy.Bindings.Add(publisherBinding);
+            }
+            if (!publisherBinding.Members.Contains(storageServiceAccount))
+            {
+                publisherBinding.Members.Add(storageServiceAccount);
+                publisherClient.SetIamPolicy(topicName.ToString(), policy);
+            }
+
+            return storageClient.CreateNotification(BucketName,
+                new Notification { Topic = $"//pubsub.googleapis.com/{topicName}", PayloadFormat = "JSON_API_V1" });
+        }
+
         internal void RegisterBucketToDelete(string bucket)
         {
             _bucketsToDelete.Add(bucket);
@@ -71,6 +113,11 @@ namespace Google.Cloud.Storage.V1.Snippets
         internal void RegisterLocalFileToDelete(string path)
         {
             _localFilesToDelete.Add(path);
+        }
+
+        internal void RegisterTopicToDelete(TopicName topicName)
+        {
+            _topicsToDelete.Add(topicName);
         }
 
         public override void Dispose()
@@ -89,6 +136,8 @@ namespace Google.Cloud.Storage.V1.Snippets
             {
                 File.Delete(file);
             }
+            var publisherClient = PublisherClient.Create();
+            _topicsToDelete.ForEach(topicName => publisherClient.DeleteTopic(topicName));
         }
     }
 }

@@ -64,3 +64,16 @@ one, you can do so either for all operations with a particular
 `StorageClient` or on individual ones.
 
 [!code-cs[](obj/snippets/Google.Cloud.Storage.V1.StorageClient.txt#CustomerSuppliedEncryptionKeys)]
+
+## Change notification via Google Cloud Pub/Sub
+
+You can configure a bucket to send a change notification to a
+[Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) topic
+when changes occur. The sample below shows how to create a Pub/Sub
+topic, set its permissions so that the change notifications can be
+published to it, and then create the notification configuration on a
+bucket. You'll need to add a dependency on the
+`Google.Cloud.PubSub.V1` NuGet package to create the topic and
+manage its permissions.
+
+[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.StorageClient.txt#NotificationsOverview)]
