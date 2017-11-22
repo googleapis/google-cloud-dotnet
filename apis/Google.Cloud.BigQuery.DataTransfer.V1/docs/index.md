@@ -8,8 +8,12 @@
 
 # Getting started
 
-TODO: Add a link to the client classes here, and introductory text.
+All operations are performed through
+[DataTransferServiceClient](obj/api/Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.yml).
 
 # Sample code
 
-TODO: Add snippet references here.
+## List clusters
+
+[!code-cs[](obj/snippets/Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.txt#ListAllDataSources)]
+
