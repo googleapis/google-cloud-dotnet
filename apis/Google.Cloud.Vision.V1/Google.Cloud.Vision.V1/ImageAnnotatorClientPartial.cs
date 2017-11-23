@@ -424,7 +424,7 @@ namespace Google.Cloud.Vision.V1
             };
             // This will throw on error.
             var response = Annotate(request, callSettings);
-            return new RepeatedFieldWrapper<T>(annotationExtractor(response));
+            return annotationExtractor(response);
         }
 
         private async Task<IReadOnlyList<T>> AnnotateSingleFeatureTypeAsync<T>(
@@ -445,7 +445,7 @@ namespace Google.Cloud.Vision.V1
             };
             // This will throw on error.
             var response = await AnnotateAsync(request, callSettings).ConfigureAwait(false);
-            return new RepeatedFieldWrapper<T>(annotationExtractor(response));
+            return annotationExtractor(response);
         }
 
         // Convenience methods to annotate a single feature type from a single image, returning a singular result.
