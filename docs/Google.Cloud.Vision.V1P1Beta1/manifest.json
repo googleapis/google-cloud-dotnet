@@ -1,0 +1,4981 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.Vision.V1P1Beta1",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Noix1kJtLc5KtKLw3fWiIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Advice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Advice.html",
+          "hash": "gdufGLjRGsm1kHiLi2s6xA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.AnnotationsReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.AnnotationsReflection.html",
+          "hash": "VLloDARvXqy4PnGhp4y3lg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.AuthProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.AuthProvider.html",
+          "hash": "kSxXBYAvPeEY+xkT4A4+Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.AuthReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.AuthReflection.html",
+          "hash": "0RHSpqnL4zG7NecRrdTjdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.AuthRequirement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.AuthRequirement.html",
+          "hash": "0prXfLzlSlKuPf19KMIHcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Authentication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Authentication.html",
+          "hash": "YQS1hL50UrDcemNRbvcPiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.AuthenticationRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.AuthenticationRule.html",
+          "hash": "+KuKUhu9ApwboeBeKmL6Kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.AuthorizationConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.AuthorizationConfig.html",
+          "hash": "7K6F8HzY0FpLpqG9UMHp0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.AuthorizationConfigReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.AuthorizationConfigReflection.html",
+          "hash": "rm+s3NNOPfD3aBk7B5+x8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Backend.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Backend.html",
+          "hash": "+O9Yr9rNWM2U98hyzZrvOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.BackendReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.BackendReflection.html",
+          "hash": "2fy+zK/kZJ4+o8KFFEMrtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.BackendRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.BackendRule.html",
+          "hash": "sV34WWr3FcZ0JDV+q5IUjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Billing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Billing.html",
+          "hash": "fFZSsOuVq7GJKd1JerCnag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.BillingReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.BillingReflection.html",
+          "hash": "NoszDEUpywnBAy95Kfzcgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.BillingStatusRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.BillingStatusRule.html",
+          "hash": "k3xMbb7JrpbNOeQJjq/NSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.ChangeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.ChangeType.html",
+          "hash": "5SVMWS7xDYU1SK2o5KVxYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.ConfigChange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.ConfigChange.html",
+          "hash": "XkTVdUPvRc3ULvUjpRFeOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.ConfigChangeReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.ConfigChangeReflection.html",
+          "hash": "iiSNQUmCq6y14p19GnRNBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.ConsumerReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.ConsumerReflection.html",
+          "hash": "9E4o8FT9JWAU8p0DkcazBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Context.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Context.html",
+          "hash": "1LWjyDPDPzBUOM3u2FzHkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.ContextReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.ContextReflection.html",
+          "hash": "cKcex/CYfo90e4iVsxczFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.ContextRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.ContextRule.html",
+          "hash": "yAqgwwPOifSsAxgOjK2NTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Control.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Control.html",
+          "hash": "emn+g15Ix8EjqEhfPzS9bw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.ControlReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.ControlReflection.html",
+          "hash": "CXSEV1NHt1dxSdyzC/XsOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.CustomHttpPattern.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.CustomHttpPattern.html",
+          "hash": "ScT7y8UY5ts/7vNHkJSRUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Distribution.Types.BucketOptions.OptionsOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Distribution.Types.BucketOptions.OptionsOneofCase.html",
+          "hash": "MMl1d9hxfnita6yPYbouTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Distribution.Types.BucketOptions.Types.Explicit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Distribution.Types.BucketOptions.Types.Explicit.html",
+          "hash": "SaXAxp8RCwAO++1BXEmI1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Distribution.Types.BucketOptions.Types.Exponential.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Distribution.Types.BucketOptions.Types.Exponential.html",
+          "hash": "j4Wki5xQ2jXNL/MgGQr2zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Distribution.Types.BucketOptions.Types.Linear.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Distribution.Types.BucketOptions.Types.Linear.html",
+          "hash": "KARcp8pl1vUaB0NAjXdOoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Distribution.Types.BucketOptions.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Distribution.Types.BucketOptions.Types.html",
+          "hash": "eNVRkmm/p7P35+xgFxwMYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Distribution.Types.BucketOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Distribution.Types.BucketOptions.html",
+          "hash": "fIM2rtRxUcsrinHsgBLYVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Distribution.Types.Range.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Distribution.Types.Range.html",
+          "hash": "8XwFqFe7Ne/7enu/Yv4VHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Distribution.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Distribution.Types.html",
+          "hash": "OsfzgyJDi+6TNUGeAAoD5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Distribution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Distribution.html",
+          "hash": "7EuB8BBbz69J9R1XXM95iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.DistributionReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.DistributionReflection.html",
+          "hash": "NkUO+AssZb0eE2l17XfYaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Documentation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Documentation.html",
+          "hash": "MbkcLaTnbrq4i53klZI/OA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.DocumentationReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.DocumentationReflection.html",
+          "hash": "qU7jnEsufGp0Ke2+BGGSGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.DocumentationRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.DocumentationRule.html",
+          "hash": "7Dms1ce6szp3sxxNMlAkXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Endpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Endpoint.html",
+          "hash": "r+y6bXmMekzHJj4abiepbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.EndpointReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.EndpointReflection.html",
+          "hash": "8isLXksIEcOF4In4jHa2qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Experimental.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Experimental.html",
+          "hash": "mBhuM1ogMo1zzMc4316ZTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.ExperimentalReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.ExperimentalReflection.html",
+          "hash": "Uowr0VravF119T++ubZLqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.BatchingSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.BatchingSettings.html",
+          "hash": "PcnXeG9qwzoqLb+s/lWZjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.EmptyDictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.EmptyDictionary-2.html",
+          "hash": "/oE3vNjqVQL80RyJOF9r6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Expiration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Expiration.html",
+          "hash": "6MeMvUgkEmsWhMks630/NA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.ExpirationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.ExpirationExtensions.html",
+          "hash": "KqQubn7uYe1Fc8JVs4o4Kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.ExpirationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.ExpirationType.html",
+          "hash": "PIq5QDJnX0juOHHGRD9sQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.FlowControlSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.FlowControlSettings.html",
+          "hash": "oJes7sSJTRXPaKamza6N9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.GaePlatformDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.GaePlatformDetails.html",
+          "hash": "Ww7uXGl84kyVlnmq7qHGDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.GaxPreconditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.GaxPreconditions.html",
+          "hash": "1xlF+lwrv0mKQQc81APZ/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.GcePlatformDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.GcePlatformDetails.html",
+          "hash": "PoHFAOzhDCxEP7hx0GkCkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.GkePlatformDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.GkePlatformDetails.html",
+          "hash": "gGHljvi9xWhVoDWXW/cSqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.ApiBidirectionalStreamingCall-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.ApiBidirectionalStreamingCall-2.html",
+          "hash": "bOiiGQVdzkKNBYOODcrqeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.ApiCall-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.ApiCall-2.html",
+          "hash": "YtJ02M6rxwhMfxTK6bAE4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.ApiServerStreamingCall-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.ApiServerStreamingCall-2.html",
+          "hash": "0UtF+ss66knC+09pBgulmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.BackoffSettings.html",
+          "hash": "chJhcJmRlR+OZvvpuQfbiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.BidirectionalStreamingBase-2.html",
+          "hash": "ulZrdOkxfewtoO4brLJxNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.BidirectionalStreamingSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.BidirectionalStreamingSettings.html",
+          "hash": "vueAul6+XP1m9RfqNmEb/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.BufferedClientStreamWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.BufferedClientStreamWriter-1.html",
+          "hash": "WD5WTGVZRyU/W5rWWPxoog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.CallSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.CallSettings.html",
+          "hash": "mt+NMSoK8ahDgsXQdzKW6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.CallSettingsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.CallSettingsExtensions.html",
+          "hash": "s+87MR05xkURgUBDkyECew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.CallTiming.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.CallTiming.html",
+          "hash": "zC9wEZVb9lf4DW0Pgl5x9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.CallTimingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.CallTimingType.html",
+          "hash": "hcedU+DWj9AmKG9tnTPn7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.ChannelPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.ChannelPool.html",
+          "hash": "kTxkoRq2sfgfA9zMPrIMwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.ClientHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.ClientHelper.html",
+          "hash": "Mm3Keewr85A2sHYTm1w9CQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.GrpcPagedAsyncEnumerable-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.GrpcPagedAsyncEnumerable-3.html",
+          "hash": "G3t9J0/MSwCHOZXIIEtXXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.GrpcPagedEnumerable-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.GrpcPagedEnumerable-3.html",
+          "hash": "ZbBQSleXPbMlWlsQE0wDZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.IPageRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.IPageRequest.html",
+          "hash": "7wjnsPEvCV5szhS7uIcb8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.IPageResponse-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.IPageResponse-1.html",
+          "hash": "2rQWF7vLKkkjfAgQ5pJOww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.MonitoredResourceBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.MonitoredResourceBuilder.html",
+          "hash": "fOaEPVEPNGr/CSJNs1ob9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.RetrySettings.IJitter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.RetrySettings.IJitter.html",
+          "hash": "l9jCff6JhNa2xmSeQ/7w/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.RetrySettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.RetrySettings.html",
+          "hash": "J7VkBIgLzPstpLmP5I/6LQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.ServerStreamingBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.ServerStreamingBase-1.html",
+          "hash": "3tfZbcT+oCISfWPpzw16NQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.ServiceEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.ServiceEndpoint.html",
+          "hash": "img+qpRPiT+0tH0fwCYXpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.ServiceSettingsBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.ServiceSettingsBase.html",
+          "hash": "1oGfl4YmZYUPKNn9yGivwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Grpc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Grpc.html",
+          "hash": "AF4NBLmxe8OAXlI4seFOPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.IClock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.IClock.html",
+          "hash": "Bw60EZCGYpEMekRQR12CKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.IResourceName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.IResourceName.html",
+          "hash": "DblKjH2SC8T99ZLOP23tew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.IScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.IScheduler.html",
+          "hash": "hf0Qlu5W2iPNDm1aY3jc0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Page-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Page-1.html",
+          "hash": "1SvWonGGVH+xXG1E8VlHiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.PagedAsyncEnumerable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.PagedAsyncEnumerable-2.html",
+          "hash": "89KZlHcel93Ve/V1ejmbvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.PagedEnumerable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.PagedEnumerable-2.html",
+          "hash": "WzS4zcTUu12R0sJjREG4Rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.PathTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.PathTemplate.html",
+          "hash": "Q4CcnDGrAJbKkO0pp4vpog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Platform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Platform.html",
+          "hash": "oGF9K+MQT4ganK/pZEovBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.PlatformType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.PlatformType.html",
+          "hash": "/Q2OJ6ouuus0QXQUiF4IMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.PollSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.PollSettings.html",
+          "hash": "jntSLo6xHm/VIwRjpllbFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.Polling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.Polling.html",
+          "hash": "fjek3B0mLYEHVV7dmllPOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.ResourceMismatchException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.ResourceMismatchException.html",
+          "hash": "79R6uR9a5VN9wTkUEyuB1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.ResourceNameKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.ResourceNameKind.html",
+          "hash": "3O71z296GnEZiwPildtWUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.ResourceNameList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.ResourceNameList-1.html",
+          "hash": "Nx9IzsTrf1ydcGHWwaIBjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.SchedulerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.SchedulerExtensions.html",
+          "hash": "jYI42eBSaIAHWSg9u/2bhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.SystemClock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.SystemClock.html",
+          "hash": "5zbkWVWlSbrJCyFZYqQJNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.SystemScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.SystemScheduler.html",
+          "hash": "qOgtecd25cW2GbCN39JFPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.TaskExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.TaskExtensions.html",
+          "hash": "sP/N091TocW78bGIJgcyRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.TemplatedResourceName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.TemplatedResourceName.html",
+          "hash": "kbeF0q7A8GdUH8Wk4aIFCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.UnknownResourceName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.UnknownResourceName.html",
+          "hash": "UkybSLoxR9zZ8yHc3oIjiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.VersionHeaderBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.VersionHeaderBuilder.html",
+          "hash": "UuvfuCaZ6gnyVOQr0SwdFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Gax.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Gax.html",
+          "hash": "OAIFekheDhBdu6mmJIJsXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Http.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Http.html",
+          "hash": "gFQooKnmvvQjd63l7XgmPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.HttpBody.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.HttpBody.html",
+          "hash": "K7BWb/1Q7bwtdcV8MiJpEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.HttpReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.HttpReflection.html",
+          "hash": "YAECgGJhlG29Z6TwwWpLfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.HttpRule.PatternOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.HttpRule.PatternOneofCase.html",
+          "hash": "909gdGjLguCpkySgy7ZWxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.HttpRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.HttpRule.html",
+          "hash": "NSeNoAGq15yPNZShqF12Tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.HttpbodyReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.HttpbodyReflection.html",
+          "hash": "GCqgQUqIYlJ70kk9/gTIkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.LabelDescriptor.Types.ValueType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.LabelDescriptor.Types.ValueType.html",
+          "hash": "6U2ohFTuUH1MjnxA9aVIOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.LabelDescriptor.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.LabelDescriptor.Types.html",
+          "hash": "SfdsHaU4GpsPdXwf/YZW/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.LabelDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.LabelDescriptor.html",
+          "hash": "V8OqcuV/o24Ol3f/pFO9cA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.LabelReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.LabelReflection.html",
+          "hash": "mcGXDhkCznpIkfyeepX/gA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.LogDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.LogDescriptor.html",
+          "hash": "6Eu/1MPDFI7vPCtKTtRX/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.LogReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.LogReflection.html",
+          "hash": "jLoX2XH14v9SH8W+GUBH+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Logging.Types.LoggingDestination.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Logging.Types.LoggingDestination.html",
+          "hash": "8nN6G59FYyNop74EN3HWMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Logging.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Logging.Types.html",
+          "hash": "305wR3PEbE4DF3SLp1BPxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Logging.html",
+          "hash": "WP9wHSxsBBmBZrz6ZUmLlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.LoggingReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.LoggingReflection.html",
+          "hash": "8HxYQApPLTor5Kb7QM/VJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Metric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Metric.html",
+          "hash": "pP3lMyWLLclEk2QFVj5WbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.MetricDescriptor.Types.MetricKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.MetricDescriptor.Types.MetricKind.html",
+          "hash": "vNhpZzi8W88G7tusadOxqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.MetricDescriptor.Types.ValueType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.MetricDescriptor.Types.ValueType.html",
+          "hash": "6cKM4ydwEc4etYWxpJi1Jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.MetricDescriptor.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.MetricDescriptor.Types.html",
+          "hash": "jbdAEAvjGwuFOvMLSwJB1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.MetricDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.MetricDescriptor.html",
+          "hash": "Gpw0HSPLxWofGAY0C2XjOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.MetricReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.MetricReflection.html",
+          "hash": "jF2rij5SpESI+OpTyong3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.MetricRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.MetricRule.html",
+          "hash": "xqPbw7Q4OQC4/NBv4Y3ldw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.MonitoredResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.MonitoredResource.html",
+          "hash": "1U45HIP6AyS0hJpspvwShQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.MonitoredResourceDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.MonitoredResourceDescriptor.html",
+          "hash": "+fn65GUE6qgQoPf2IKaPOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.MonitoredResourceReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.MonitoredResourceReflection.html",
+          "hash": "lFfTDipmiB2uVSEsfwhrgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Monitoring.Types.MonitoringDestination.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Monitoring.Types.MonitoringDestination.html",
+          "hash": "hUJtkk0Q1Q9YnkryFiDF7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Monitoring.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Monitoring.Types.html",
+          "hash": "CH23rEGwoUtLhskaGsjz8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Monitoring.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Monitoring.html",
+          "hash": "uJquvoOu7JKDJY2sW8kPmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.MonitoringReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.MonitoringReflection.html",
+          "hash": "rvnF3r238gNFJdSQvwlRuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.OAuthRequirements.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.OAuthRequirements.html",
+          "hash": "fnnEkkxgHr+x0oLn279Cow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Page.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Page.html",
+          "hash": "NU+cn+HHbNP5tHSMicCnAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.ProjectProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.ProjectProperties.html",
+          "hash": "UkWE+SEssafDBKOrw3Redw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Property.Types.PropertyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Property.Types.PropertyType.html",
+          "hash": "845HNSraE+bDYxWBMR07QA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Property.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Property.Types.html",
+          "hash": "Dvue4VREsSeb5IlMdJd9Pg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Property.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Property.html",
+          "hash": "yyUM2rIkz9X+hxEovN96Eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Quota.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Quota.html",
+          "hash": "urQHsTguNZleemkd+IqGQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.QuotaLimit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.QuotaLimit.html",
+          "hash": "S74BiJvnSjyTV0Y60qewAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.QuotaReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.QuotaReflection.html",
+          "hash": "Ms7Go2a1b3maOTLMJufg3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Service.html",
+          "hash": "Q5nTHY2ZCwfH5utuMTTYdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.ServiceReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.ServiceReflection.html",
+          "hash": "990TU4gyybtAZ5b5/Aeb1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.SourceInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.SourceInfo.html",
+          "hash": "U6EwafqOUIeIRTAX1aIt9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.SourceInfoReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.SourceInfoReflection.html",
+          "hash": "oqlK7xqHHZO4Ba9+PTjLzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.SystemParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.SystemParameter.html",
+          "hash": "fR70G2BYCuImB358bS4dEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.SystemParameterReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.SystemParameterReflection.html",
+          "hash": "VX1IotefVdXVnrkODs2kAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.SystemParameterRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.SystemParameterRule.html",
+          "hash": "AIeRaq3MADMhqGPFBAkIdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.SystemParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.SystemParameters.html",
+          "hash": "lHwj3luoJxEs5MDqZlhdHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.Usage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.Usage.html",
+          "hash": "bzMbdkMMF1woWOlknpLEFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.UsageReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.UsageReflection.html",
+          "hash": "ZROm9HYjF/K9m39M6p6xeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.UsageRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.UsageRule.html",
+          "hash": "bLySNBnetONONC+D2PpDcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Api.html",
+          "hash": "NEQ8NGydTLsvH9ZHEhTFbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.AnnotateImageException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.AnnotateImageException.html",
+          "hash": "79SoekJqSh69QtHzdCwWlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.AnnotateImageRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.AnnotateImageRequest.html",
+          "hash": "Nb2y9BpK2Ro02aX5lsS0dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.AnnotateImageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.AnnotateImageResponse.html",
+          "hash": "DIyNVBGl0zQjaiTM6gcpQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.BatchAnnotateImagesRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.BatchAnnotateImagesRequest.html",
+          "hash": "oxA8mALejYtCtZskrxefPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.BatchAnnotateImagesResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.BatchAnnotateImagesResponse.html",
+          "hash": "BqzWhO3FAAVhvebwqv8fuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Block.Types.BlockType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Block.Types.BlockType.html",
+          "hash": "D9y47pgjrAADR8dCYyvcNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Block.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Block.Types.html",
+          "hash": "Jf15qzjHPj2KL+sW7z+p4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Block.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Block.html",
+          "hash": "6X9aV5ZL5xZEJVkUhMG/rQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.BoundingPoly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.BoundingPoly.html",
+          "hash": "bI4xDCXKETdEYS+nNxaOlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.ColorInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.ColorInfo.html",
+          "hash": "YY+YCOFnTnpk7he3RyEE1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.CropHint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.CropHint.html",
+          "hash": "jAx1WGoWtNfcjN5vuW0SQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.CropHintsAnnotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.CropHintsAnnotation.html",
+          "hash": "wJSqeFAjggtH0KT8FHFx0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.CropHintsParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.CropHintsParams.html",
+          "hash": "y/5qoxi7Ty78z+2g7lRm9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.DominantColorsAnnotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.DominantColorsAnnotation.html",
+          "hash": "W1I05dTg5n0w1NYPD7nxCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.EntityAnnotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.EntityAnnotation.html",
+          "hash": "8zkHywelzkaT6fPKvRE1gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.FaceAnnotation.Types.Landmark.Types.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.FaceAnnotation.Types.Landmark.Types.Type.html",
+          "hash": "dAyAoZqRjzZO1g1Is+n8MA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.FaceAnnotation.Types.Landmark.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.FaceAnnotation.Types.Landmark.Types.html",
+          "hash": "8y7GXVn7P182RK2LmViSiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.FaceAnnotation.Types.Landmark.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.FaceAnnotation.Types.Landmark.html",
+          "hash": "WXCSpQOsjqDkoJ2B6YowyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.FaceAnnotation.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.FaceAnnotation.Types.html",
+          "hash": "8v0ogpVZbX86IzNHbWFX9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.FaceAnnotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.FaceAnnotation.html",
+          "hash": "nuEatRIrWiDKaftOhSSqOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Feature.Types.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Feature.Types.Type.html",
+          "hash": "nYqu7fchEBIzjAGNgNkHqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Feature.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Feature.Types.html",
+          "hash": "NMSoFBhHv5qMBZs1wzlljg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Feature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Feature.html",
+          "hash": "i64PDauQkQuMFDNe1cVCJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Image.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Image.html",
+          "hash": "l8Mlp7uIX8cfTFj3YcEYxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotator.ImageAnnotatorBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotator.ImageAnnotatorBase.html",
+          "hash": "dpi3ascd9WwDI3IUsZZf/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotator.ImageAnnotatorClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotator.ImageAnnotatorClient.html",
+          "hash": "xtjJ3bC8xhAC8aXGPx+igA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotator.html",
+          "hash": "ebvd68e9+ZPZVE99Hee34w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClient.html",
+          "hash": "TE/ePgv2vCjDred6NleN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClientImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClientImpl.html",
+          "hash": "SP4yMVOJWPOYtbiNi2IUJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorSettings.html",
+          "hash": "JE80L6KZIYl8OShv5nYrRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.ImageContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.ImageContext.html",
+          "hash": "a5secGJMF8UsV04EErdPRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.ImageProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.ImageProperties.html",
+          "hash": "t2t0EnLQvfUI+E1MuCxsCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.ImageSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.ImageSource.html",
+          "hash": "F/k9eFui4ZqmGbveW8dmAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.LatLongRect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.LatLongRect.html",
+          "hash": "C8+b8k5dKAR1ZDYgMUnyIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Likelihood.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Likelihood.html",
+          "hash": "s04MUzEyYjyN98A44z8TXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.LocationInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.LocationInfo.html",
+          "hash": "oDJDsoEB+N4Qd6YKtSNs+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Page.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Page.html",
+          "hash": "0SKYuBZZIM0OwEJVWkv/Mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Paragraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Paragraph.html",
+          "hash": "IjyqJCLZcsI0tCUlUnfOgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Position.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Position.html",
+          "hash": "IAM/LXsUNuIXhak8SswbvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Property.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Property.html",
+          "hash": "LfLlyb2GU60f7vPvEO6G3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.SafeSearchAnnotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.SafeSearchAnnotation.html",
+          "hash": "vTvjqyeXTxmxBtssnBSbtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Symbol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Symbol.html",
+          "hash": "rHwnGGuOCoEdwMcF4dHHZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.DetectedBreak.Types.BreakType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.DetectedBreak.Types.BreakType.html",
+          "hash": "k2NQhNcb1LGsqs5rsMigtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.DetectedBreak.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.DetectedBreak.Types.html",
+          "hash": "EC5+TKK+evEuC/NGn7j3mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.DetectedBreak.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.DetectedBreak.html",
+          "hash": "+gNCnTXJWouzhjyxShYn7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.DetectedLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.DetectedLanguage.html",
+          "hash": "WajEb3YAtsXRAQJKOibg3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.TextProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.TextProperty.html",
+          "hash": "/HAhixvtejP7qPzMvfIiEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.Types.html",
+          "hash": "R4z7qO9EuNwIYvYoUXo05Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.TextAnnotation.html",
+          "hash": "4FYlgDrhiNViYm6DVS0QRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Vertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Vertex.html",
+          "hash": "OJ5gcPXmFg6piMwWFDrhEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.WebDetection.Types.WebEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.WebDetection.Types.WebEntity.html",
+          "hash": "2Qslc8mNRa0t+BL7vHhZWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.WebDetection.Types.WebImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.WebDetection.Types.WebImage.html",
+          "hash": "rcpkWrLLFEiTMaKK22Jk7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.WebDetection.Types.WebLabel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.WebDetection.Types.WebLabel.html",
+          "hash": "nuwYzqm7WQt1C5TqB5gTGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.WebDetection.Types.WebPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.WebDetection.Types.WebPage.html",
+          "hash": "VuwrOQeigNyht5O0yZF0eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.WebDetection.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.WebDetection.Types.html",
+          "hash": "HdJXkh94MPCAjXc1WzLxVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.WebDetection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.WebDetection.html",
+          "hash": "GQ2DwztqkTC6fDPbFDFfRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.WebDetectionParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.WebDetectionParams.html",
+          "hash": "eMMRCa/3F/9qc85BivNDeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.Word.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.Word.html",
+          "hash": "9etGIwVOJLEyfaRAL10Ogw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Vision.V1P1Beta1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Vision.V1P1Beta1.html",
+          "hash": "vEJHUZ1Amb/zXXPHuMw9FA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.ByteString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.ByteString.html",
+          "hash": "2nNY1E8wy7sjoTlnUd6phQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.CodedInputStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.CodedInputStream.html",
+          "hash": "Gd3RQzP7FCOILptbLlc/Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.CodedOutputStream.OutOfSpaceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.CodedOutputStream.OutOfSpaceException.html",
+          "hash": "bWWyLqwNnO58bwCKJkvTkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.CodedOutputStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.CodedOutputStream.html",
+          "hash": "Z29JVqxycSvt0+qA93ZFIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Collections.MapField-2.Codec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Collections.MapField-2.Codec.html",
+          "hash": "6Umw15+UtCZ6nR5aE2AKrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Collections.MapField-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Collections.MapField-2.html",
+          "hash": "cWGzzMCiP/2ZipPcwZys7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Collections.RepeatedField-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Collections.RepeatedField-1.html",
+          "hash": "oMg0nYvpHBF/wHgtsmtlZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Collections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Collections.html",
+          "hash": "XjqgcmEfxodXYLlqnDT/Gw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.FieldCodec-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.FieldCodec-1.html",
+          "hash": "Tb1SwYwj42dDCpYwGpDdgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.FieldCodec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.FieldCodec.html",
+          "hash": "gVVZ5Rzp7M2rGcJFD8on1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.ICustomDiagnosticMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.ICustomDiagnosticMessage.html",
+          "hash": "iHTx9GjhxW/W5ltuB3V3tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.IDeepCloneable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.IDeepCloneable-1.html",
+          "hash": "eSmRj07w67xYx2DztMGvuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.IMessage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.IMessage-1.html",
+          "hash": "pFG9/eQMi6vVbLDra9otzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.IMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.IMessage.html",
+          "hash": "fLSfFQHhhw9aurXs7jgIlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.InvalidJsonException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.InvalidJsonException.html",
+          "hash": "3IIfMAdi67wcatJ3nuryKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.InvalidProtocolBufferException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.InvalidProtocolBufferException.html",
+          "hash": "3mvLW69FwYqz4EfMeZVk4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.JsonFormatter.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.JsonFormatter.Settings.html",
+          "hash": "sqU6LRCYXkCdL6VaWvc3Rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.JsonFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.JsonFormatter.html",
+          "hash": "ahdLX+sg5hIk3NFpkz7LdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.JsonParser.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.JsonParser.Settings.html",
+          "hash": "S1fXhCsgn9ayXnqpatgxeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.JsonParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.JsonParser.html",
+          "hash": "ZC1rXm4tmM2NYd6KFNP9ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.MessageExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.MessageExtensions.html",
+          "hash": "BD0coMGzIMjIaATjwbu0pQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.MessageParser-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.MessageParser-1.html",
+          "hash": "c9UvYRTsKtAOtb5C+R2sBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.MessageParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.MessageParser.html",
+          "hash": "G9f7TJinLHSakKP7xxG48g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.ProtoPreconditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.ProtoPreconditions.html",
+          "hash": "l1eLaUigFYSBkdEbGCvr8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.CustomOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.CustomOptions.html",
+          "hash": "/h5FZv4m/ljhpEEOqf7Dhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.DescriptorBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.DescriptorBase.html",
+          "hash": "LmPVzBDElIh23RPK4mkDpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.DescriptorValidationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.DescriptorValidationException.html",
+          "hash": "vRFd3WiCuaKwsKm/dFK36Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.EnumDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.EnumDescriptor.html",
+          "hash": "AzdbbzDLQvVsGl+wRiTraw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.EnumValueDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.EnumValueDescriptor.html",
+          "hash": "8FRf/THrxyUiVLODmILnWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.FieldDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.FieldDescriptor.html",
+          "hash": "KvSPEK0mRn0HHzYTVzqFcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.FieldType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.FieldType.html",
+          "hash": "td++ZWHwXHC2Jws8ZGzBeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.FileDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.FileDescriptor.html",
+          "hash": "ziYV+bbgvn8dPue965ir6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.GeneratedClrTypeInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.GeneratedClrTypeInfo.html",
+          "hash": "/v+Zqrbj7T/Ag3nArzUdDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.IDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.IDescriptor.html",
+          "hash": "DXs7utGSOAVilNSeTUdDLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.IFieldAccessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.IFieldAccessor.html",
+          "hash": "UChmMZ6bwReY2kdAIML0sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.MessageDescriptor.FieldCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.MessageDescriptor.FieldCollection.html",
+          "hash": "WJD45nHKTxXBPTUBBRzulg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.MessageDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.MessageDescriptor.html",
+          "hash": "gp6Sml7U0erNziCnLVh41Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.MethodDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.MethodDescriptor.html",
+          "hash": "hVfNmTf+kXJtsY7V/bjGaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.OneofAccessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.OneofAccessor.html",
+          "hash": "zV44BDmBbZ/OFbiIcR1Z8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.OneofDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.OneofDescriptor.html",
+          "hash": "xxUML4W7Lg28ISL7PF7qkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.OriginalNameAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.OriginalNameAttribute.html",
+          "hash": "aAaJuw9DtHTGTenxkHy68g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.ServiceDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.ServiceDescriptor.html",
+          "hash": "iuXPqxgh6IjZnLQ64saZBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.TypeRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.TypeRegistry.html",
+          "hash": "La/dBXQPGFSzh3taOKTiWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.Reflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.Reflection.html",
+          "hash": "pOuwKom7A7aDn2iyLEbOig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Any.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Any.html",
+          "hash": "TOmdrKHt/gt6RQu/XqzgXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.AnyReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.AnyReflection.html",
+          "hash": "zO9YQDrMk3rHfXiunaby3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Api.html",
+          "hash": "mNol875kxcCqqd3JnYR3iQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.ApiReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.ApiReflection.html",
+          "hash": "q0W6Z8qEOYkNACxqeIJczw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.BoolValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.BoolValue.html",
+          "hash": "8C7Uz+T6FKAgzTwC4qTa4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.BytesValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.BytesValue.html",
+          "hash": "QECrTftNLU5V528TL4FNow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.DoubleValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.DoubleValue.html",
+          "hash": "dhLdawGtXAzTOnN0tRcEGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Duration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Duration.html",
+          "hash": "vLUYD68bMW94SIs+/2s0aA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.DurationReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.DurationReflection.html",
+          "hash": "OPeQd4eXF9ARQFpJk1Gkow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Empty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Empty.html",
+          "hash": "Nj/Xth8utvz7djLRBr0xbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.EmptyReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.EmptyReflection.html",
+          "hash": "TxrSAoKtANN1VMs+Htdt2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Enum.html",
+          "hash": "yyOT29R2pxLiEaGEVQA+FA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.EnumValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.EnumValue.html",
+          "hash": "SE16cNm10U0KAYJnxOsw8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Field.Types.Cardinality.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Field.Types.Cardinality.html",
+          "hash": "qpKHQQlzMOe1M+NWyRT7tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Field.Types.Kind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Field.Types.Kind.html",
+          "hash": "uDgdYfyTqKBXPr+OM60R6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Field.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Field.Types.html",
+          "hash": "URi4/LDhUXmUETb53wU1BA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Field.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Field.html",
+          "hash": "dJ1Jj9OdYN+/5/fWcYv4oA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.FieldMask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.FieldMask.html",
+          "hash": "3C2nahpK4xqWRlzR0j1VdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.FieldMaskReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.FieldMaskReflection.html",
+          "hash": "/NtCu35FHm/fCsohi8H2Zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.FloatValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.FloatValue.html",
+          "hash": "VP7IUNkq4ye5Epg9j7wTLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Int32Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Int32Value.html",
+          "hash": "i30S+vfysXCeKSN0Qu2+pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Int64Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Int64Value.html",
+          "hash": "GibVCzmOcyS/W4KKBgIphw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.ListValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.ListValue.html",
+          "hash": "7+cmYXx6kf6syWi6BjNB8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Method.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Method.html",
+          "hash": "nS6EtjzlOKJEWQ9twcYM5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Mixin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Mixin.html",
+          "hash": "wxVwSeLrj9X1mE/AA6zLkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.NullValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.NullValue.html",
+          "hash": "PvjOvUeRJRY60EdJEJ9QOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Option.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Option.html",
+          "hash": "RGuY/05gLIdBjRhWHQ1yPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.SourceContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.SourceContext.html",
+          "hash": "Yv5s/YTmqbw4H9UOlWSpAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.SourceContextReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.SourceContextReflection.html",
+          "hash": "GQ7Ff4G5gSBFtIBks7h63A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.StringValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.StringValue.html",
+          "hash": "gDnBzAv5SUHp8tjVcQkAPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Struct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Struct.html",
+          "hash": "l0pRZxDfLv/N6e8ku4SgEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.StructReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.StructReflection.html",
+          "hash": "UbC3yiZQiFymfoB6BBSqYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Syntax.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Syntax.html",
+          "hash": "2prdTowQnj4kSspcK75/tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.TimeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.TimeExtensions.html",
+          "hash": "bfMyEhN1u+G3XH//KzqxcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Timestamp.html",
+          "hash": "I1TKLIsjpZei1Phcd3557Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.TimestampReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.TimestampReflection.html",
+          "hash": "fZnz5iaql/HPHlxpJAjWSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Type.html",
+          "hash": "9Kygsv7EhE0kQgLOkVQhew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.TypeReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.TypeReflection.html",
+          "hash": "zadybpg3AYg1KBOESLc6Iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.UInt32Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.UInt32Value.html",
+          "hash": "LeNE1SLWapXoYMqNnX603g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.UInt64Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.UInt64Value.html",
+          "hash": "a7ZOeGuFSWc/A+89eyfIuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Value.KindOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Value.KindOneofCase.html",
+          "hash": "KAwFU6NVVX16rVPBjAv7/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.Value.html",
+          "hash": "ChMEN4ZVGfh9tcetRPmURg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.WrappersReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.WrappersReflection.html",
+          "hash": "ximjZG19fsZzimJLXJs0ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WellKnownTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WellKnownTypes.html",
+          "hash": "9nNZTSzn5tWqGJ+L6wjzpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WireFormat.WireType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WireFormat.WireType.html",
+          "hash": "GMod77yBBg+uQXtyZs57Rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.WireFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.WireFormat.html",
+          "hash": "Ab4LQzDCdctOzM7hYHTnAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Protobuf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Protobuf.html",
+          "hash": "A9r6mfC7t9JNQzaZlg8dIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.BadRequest.Types.FieldViolation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.BadRequest.Types.FieldViolation.html",
+          "hash": "/1ShJkbdmO3pY6qSIMBVqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.BadRequest.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.BadRequest.Types.html",
+          "hash": "8EuDiXR7beJV9A016/w3QQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.BadRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.BadRequest.html",
+          "hash": "4Ir0Lc4GvZCzBSya1KyQ2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.Code.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.Code.html",
+          "hash": "3lckNbwd7C3SiFerzQroTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.CodeReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.CodeReflection.html",
+          "hash": "4r5yatGJuqVso0jZ4rbU+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.DebugInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.DebugInfo.html",
+          "hash": "zeatrUIFlUWeGyXuqQ6oBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.ErrorDetailsReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.ErrorDetailsReflection.html",
+          "hash": "5OZ7k3n3+ujpam2L5NdCDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.Help.Types.Link.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.Help.Types.Link.html",
+          "hash": "UOrpl8ute9jP5s79MF63hg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.Help.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.Help.Types.html",
+          "hash": "AmtTtAipGUbvLGA6eLk/nQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.Help.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.Help.html",
+          "hash": "teOSHNzq52xMF+dmg5LuQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.LocalizedMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.LocalizedMessage.html",
+          "hash": "ohDtLETnjoHXRREnMdQcYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.QuotaFailure.Types.Violation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.QuotaFailure.Types.Violation.html",
+          "hash": "FyEZ0qEtKvnDTDAfolo3Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.QuotaFailure.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.QuotaFailure.Types.html",
+          "hash": "yocoWkEeP6gaM/YjJpqcIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.QuotaFailure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.QuotaFailure.html",
+          "hash": "bTRJNEnZqjtf9cFrPg7CEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.RequestInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.RequestInfo.html",
+          "hash": "5fPh5CeeCATUrCm08s7eeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.ResourceInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.ResourceInfo.html",
+          "hash": "q5YVl5/pXKS0ZqMTZyM30g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.RetryInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.RetryInfo.html",
+          "hash": "KDpOshndIuJPh45WqtwbGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.Status.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.Status.html",
+          "hash": "KBorUUpDZP57ykzJQsnKvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.StatusReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.StatusReflection.html",
+          "hash": "NeTMGB/d+ywXg5z0tMRkLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Rpc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Rpc.html",
+          "hash": "yPJtkAlbem07BudUlimRyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.Color.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.Color.html",
+          "hash": "NJBL49QRwFxDeRR7WADWQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.ColorReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.ColorReflection.html",
+          "hash": "2yzPGixJPEbXCT/5B57biQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.Date.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.Date.html",
+          "hash": "bKBuYWUDdlwNgYofdyXC5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.DateReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.DateReflection.html",
+          "hash": "Fy/G2kpyrgNDhazmMNyr1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.DayOfWeek.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.DayOfWeek.html",
+          "hash": "p2Y2EzvA+CHLwQ5fb2TYfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.DayofweekReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.DayofweekReflection.html",
+          "hash": "L7FnkNIMfSQfq0k6ju8zzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.LatLng.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.LatLng.html",
+          "hash": "jrs7sQAcFSu1WJRUkwVdmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.LatlngReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.LatlngReflection.html",
+          "hash": "snu26V34OUNfv4jb502PtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.Money.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.Money.html",
+          "hash": "I/H+yo9kJQjFIIE7Bhs/3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.MoneyReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.MoneyReflection.html",
+          "hash": "vmy8JngPULkHh8o55K7vMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.PostalAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.PostalAddress.html",
+          "hash": "aiu+SC+hUZfpCRQca6Nfcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.PostalAddressReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.PostalAddressReflection.html",
+          "hash": "MCw2cQUoWi7yody4qiemmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.TimeOfDay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.TimeOfDay.html",
+          "hash": "cOtYlzw/mHoDhkvaNzSiyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.TimeofdayReflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.TimeofdayReflection.html",
+          "hash": "4BIIYsXl75uKxIm6r+7EIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Type.html",
+          "hash": "j/FCQeFZQTqgDjmeZBOqEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AsyncAuthInterceptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AsyncAuthInterceptor.html",
+          "hash": "rxKw34zhxs/rTUip7uYX0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AsyncClientStreamingCall-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AsyncClientStreamingCall-2.html",
+          "hash": "JVwTLSO1KQjuWeXLP5auZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AsyncDuplexStreamingCall-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AsyncDuplexStreamingCall-2.html",
+          "hash": "zp29VZ6W/eHmZoUr4z3Fig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AsyncServerStreamingCall-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AsyncServerStreamingCall-1.html",
+          "hash": "Io27QWVsHkRuAvu96Gte3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AsyncUnaryCall-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AsyncUnaryCall-1.html",
+          "hash": "PTpkjZMycaZ9FGvTUX60uQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AuthContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AuthContext.html",
+          "hash": "FkLjUYtm/nWKl5Z6M6UhwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AuthInterceptorContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AuthInterceptorContext.html",
+          "hash": "1S0llopRuzHa8yblHm1skw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.AuthProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.AuthProperty.html",
+          "hash": "mgaNUnqSYs/qaEx8bzKEpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.CallCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.CallCredentials.html",
+          "hash": "+OWceidm36r+WM5OD+x9Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.CallInvocationDetails-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.CallInvocationDetails-2.html",
+          "hash": "nqKRUgh3PUaa8CGIZ+74HA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.CallInvoker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.CallInvoker.html",
+          "hash": "Jghv70g/cBnlEVaDAXnOOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.CallOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.CallOptions.html",
+          "hash": "d0VgH0fY5Yc64pqlGRrPUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Calls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Calls.html",
+          "hash": "rERM+zGBZajzxMcmujAYaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Channel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Channel.html",
+          "hash": "xVHCNr9wC9snLGVmJ9qJBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ChannelCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ChannelCredentials.html",
+          "hash": "18GkG7f6YnBXxQEskiYnMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ChannelOption.OptionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ChannelOption.OptionType.html",
+          "hash": "SYAWt/rHTUdmXyodBDZLzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ChannelOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ChannelOption.html",
+          "hash": "eKlsnFYEwEe/MG0yBs8V2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ChannelOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ChannelOptions.html",
+          "hash": "FLwh0xpszYRuMNWNeLAo4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ChannelState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ChannelState.html",
+          "hash": "IXX/c45WSCEQqu77a5ldPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ClientBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ClientBase-1.html",
+          "hash": "yG0VmtYUgV/Kj7sDU4YDHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ClientBase.ClientBaseConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ClientBase.ClientBaseConfiguration.html",
+          "hash": "lw/J1BB/bc/YCyjqBwtK9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ClientBase.html",
+          "hash": "yD/JldfmeXEUstlCTbI41A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ClientStreamingServerMethod-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ClientStreamingServerMethod-2.html",
+          "hash": "z8yY9p0NlwXNj82+l1Fx9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.CompressionLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.CompressionLevel.html",
+          "hash": "bR6scB88MVe9DkyjgMILkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ContextPropagationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ContextPropagationOptions.html",
+          "hash": "UypiS3mWiuF97ThpTKKYMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ContextPropagationToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ContextPropagationToken.html",
+          "hash": "ERMyIxFwNqCL3Q3OD+56qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.DefaultCallInvoker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.DefaultCallInvoker.html",
+          "hash": "7ZstWVd+IIZ1qG2e2fgpPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.DuplexStreamingServerMethod-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.DuplexStreamingServerMethod-2.html",
+          "hash": "lmo0BapJJt1P9AJJZ/1oBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.GrpcEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.GrpcEnvironment.html",
+          "hash": "pWGbKJ+vDxqaTDBUwioGjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IAsyncStreamReader-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IAsyncStreamReader-1.html",
+          "hash": "6XvfFsKi8aGWF4rAascDSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IAsyncStreamWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IAsyncStreamWriter-1.html",
+          "hash": "YZx3+VrXaHy+8Gfya6S5xQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IClientStreamWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IClientStreamWriter-1.html",
+          "hash": "LeAMzcg2zrKlOe/tyv7gAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IHasWriteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IHasWriteOptions.html",
+          "hash": "7mypAyG7aSJzeQnltD88sQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IMethod.html",
+          "hash": "9UmrX3Ih0HdvMpEA6hDESw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.IServerStreamWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.IServerStreamWriter-1.html",
+          "hash": "BfChWUo5+8pdBo6ynx9DxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.KeyCertificatePair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.KeyCertificatePair.html",
+          "hash": "JpJYKPYFrLVgFOqIAMeuEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.ConsoleLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.ConsoleLogger.html",
+          "hash": "FkekrMHAZ/2MA/xmLfqUOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.ILogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.ILogger.html",
+          "hash": "4NaxphRCMya2HmbLyRcpyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.LogLevel.html",
+          "hash": "YWQmQZ4UFh4/yZ/FzaTxiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.LogLevelFilterLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.LogLevelFilterLogger.html",
+          "hash": "3vNhxc1gfuvO+/ZcZuZ7Uw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.NullLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.NullLogger.html",
+          "hash": "R8n64+1/tuC6BCGaEraLmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.TextWriterLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.TextWriterLogger.html",
+          "hash": "eQSROhWFJLaUzBWDPV9yYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Logging.html",
+          "hash": "ZRSi1u/kQ6Lr9z+dVH1njA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Marshaller-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Marshaller-1.html",
+          "hash": "TviEbrnWZyzwVwJwW3j54w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Marshallers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Marshallers.html",
+          "hash": "MOKsTT4pMtUcDDoG4u0OPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Metadata.Entry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Metadata.Entry.html",
+          "hash": "HXbHhPHppGWZmyIS5p3ZzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Metadata.html",
+          "hash": "NWge78b3YCBiA9/62CB4Uw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Method-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Method-2.html",
+          "hash": "3lo2PNPsBv1mT1nDl1DThQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.MethodType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.MethodType.html",
+          "hash": "UHKGFUqbJdxaEcRPVVG04A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.RpcException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.RpcException.html",
+          "hash": "nKIUONJhmclLrdEdHHpGKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Server.ServerPortCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Server.ServerPortCollection.html",
+          "hash": "E1TS+lJoxIuVKj+uXTNArA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Server.ServiceDefinitionCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Server.ServiceDefinitionCollection.html",
+          "hash": "vgirOg+OPT0l5AQZqeiNeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Server.html",
+          "hash": "X8V2nfR2t9ikV4TBIz/yxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerCallContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerCallContext.html",
+          "hash": "pFrLBvJ+YO7Mb2Do/7QJ7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerCredentials.html",
+          "hash": "R+1n7tzhPo36dB/nA4XOvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerPort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerPort.html",
+          "hash": "Z2CsIxBWz/Ye1WdXQnWcPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerServiceDefinition.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerServiceDefinition.Builder.html",
+          "hash": "/yFyDjKGFwplRVVc1r4PJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerServiceDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerServiceDefinition.html",
+          "hash": "ZvtvXb101xQgcnha3iF2dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.ServerStreamingServerMethod-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.ServerStreamingServerMethod-2.html",
+          "hash": "jePavl1VMtVI5FNdEKroMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.SslCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.SslCredentials.html",
+          "hash": "vy8Dlvk7ckqFdcSyNx8IAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.SslServerCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.SslServerCredentials.html",
+          "hash": "mtMaHCR9vYJPtSmnXleWpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Status.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Status.html",
+          "hash": "Kl6FB9OmDdXfXM1C3oCzgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.StatusCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.StatusCode.html",
+          "hash": "a4ftzJMkhQVsd9xrjbE9EA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.UnaryServerMethod-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.UnaryServerMethod-2.html",
+          "hash": "nxYqJk4HT7OyWZFFRwdz8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Utils.AsyncStreamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Utils.AsyncStreamExtensions.html",
+          "hash": "al64ZEbrXb/OCSJz+MaGJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Utils.BenchmarkUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Utils.BenchmarkUtil.html",
+          "hash": "sCdmW05RE+6rj9cxC7J/EQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Utils.GrpcPreconditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Utils.GrpcPreconditions.html",
+          "hash": "pMh+QBZyna6FOq/ugoy4fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Utils.TaskUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Utils.TaskUtils.html",
+          "hash": "qQBDZgLUEmSGWFhLzYz5zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.Utils.html",
+          "hash": "falJ90ZFJBXPBsgdp/mVOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.VersionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.VersionInfo.html",
+          "hash": "xNMhvD689vB9bIejqPU3iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.WriteFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.WriteFlags.html",
+          "hash": "6lk7pbPe24hBqnG6LTAMTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.WriteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.WriteOptions.html",
+          "hash": "PFgh8rUiLavhKle3f+WBzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Grpc.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Grpc.Core.html",
+          "hash": "qNhhZbL8/jdQhD0XcsW1Vg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "GIVE9f/0luq6tuTbWuPNlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "hTPYqSHFn2xF3wstI7vt5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

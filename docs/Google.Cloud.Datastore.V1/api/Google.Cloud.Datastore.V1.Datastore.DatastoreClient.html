@@ -1135,6 +1135,230 @@ entities.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Datastore.V1.Datastore.DatastoreClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
+  <a id="Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIds_" data-uid="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIds_Google_Cloud_Datastore_V1_ReserveIdsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.CallOptions)">ReserveIds(ReserveIdsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Prevents the supplied keys&apos; IDs from being auto-allocated by Cloud
+Datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ReserveIdsResponse ReserveIds(ReserveIdsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsRequest.html">ReserveIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsResponse.html">ReserveIdsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIds_" data-uid="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIds_Google_Cloud_Datastore_V1_ReserveIdsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ReserveIds(ReserveIdsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Prevents the supplied keys&apos; IDs from being auto-allocated by Cloud
+Datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ReserveIdsResponse ReserveIds(ReserveIdsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsRequest.html">ReserveIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsResponse.html">ReserveIdsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIdsAsync_" data-uid="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIdsAsync_Google_Cloud_Datastore_V1_ReserveIdsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.CallOptions)">ReserveIdsAsync(ReserveIdsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Prevents the supplied keys&apos; IDs from being auto-allocated by Cloud
+Datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ReserveIdsResponse&gt; ReserveIdsAsync(ReserveIdsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsRequest.html">ReserveIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsResponse.html">ReserveIdsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIdsAsync_" data-uid="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIdsAsync_Google_Cloud_Datastore_V1_ReserveIdsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ReserveIdsAsync(ReserveIdsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Prevents the supplied keys&apos; IDs from being auto-allocated by Cloud
+Datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ReserveIdsResponse&gt; ReserveIdsAsync(ReserveIdsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsRequest.html">ReserveIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsResponse.html">ReserveIdsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Datastore_V1_Datastore_DatastoreClient_Rollback_" data-uid="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.Rollback*"></a>
   <h4 id="Google_Cloud_Datastore_V1_Datastore_DatastoreClient_Rollback_Google_Cloud_Datastore_V1_RollbackRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.Rollback(Google.Cloud.Datastore.V1.RollbackRequest,Grpc.Core.CallOptions)">Rollback(RollbackRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Rolls back a transaction.</p>

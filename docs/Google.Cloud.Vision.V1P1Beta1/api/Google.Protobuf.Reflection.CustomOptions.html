@@ -1,0 +1,971 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CustomOptions
+   | Google.Cloud.Vision.V1P1Beta1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CustomOptions
+   | Google.Cloud.Vision.V1P1Beta1 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Protobuf.Reflection.CustomOptions">
+  
+  
+  <h1 id="Google_Protobuf_Reflection_CustomOptions" data-uid="Google.Protobuf.Reflection.CustomOptions" class="text-break">Class CustomOptions
+  </h1>
+  <div class="markdown level0 summary"><p>Container for a set of custom options specified within a message, field etc.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CustomOptions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Protobuf.Reflection.html">Google.Protobuf.Reflection</a></h6>
+  <h6><strong>Assembly</strong>: Google.Protobuf.dll</h6>
+  <h5 id="Google_Protobuf_Reflection_CustomOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CustomOptions</code></pre>
+  </div>
+  <h5 id="Google_Protobuf_Reflection_CustomOptions_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+This type is publicly immutable, but internally mutable. It is only populated
+by the descriptor parsing code - by the time any user code is able to see an instance,
+it will be fully initialized.
+</p>
+<p>
+If an option is requested using the incorrect method, an answer may still be returned: all
+of the numeric types are represented internally using 64-bit integers, for example. It is up to
+the caller to ensure that they make the appropriate method call for the option they&apos;re interested in.
+Note that enum options are simply stored as integers, so the value should be fetched using
+<a class="xref" href="Google.Protobuf.Reflection.CustomOptions.html#Google_Protobuf_Reflection_CustomOptions_TryGetInt32_System_Int32_System_Int32__">TryGetInt32(Int32, out Int32)</a> and then cast appropriately.
+</p>
+<p>
+Repeated options are currently not supported. Asking for a single value of an option
+which was actually repeated will return the last value, except for message types where
+all the set values are merged together.
+</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetBool_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetBool*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetBool_System_Int32_System_Boolean__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetBool(System.Int32,System.Boolean@)">TryGetBool(Int32, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a Boolean value for the specified option field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetBool(int field, out bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetBytes_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetBytes*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetBytes_System_Int32_Google_Protobuf_ByteString__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetBytes(System.Int32,Google.Protobuf.ByteString@)">TryGetBytes(Int32, out ByteString)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a bytes value for the specified option field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetBytes(int field, out ByteString value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetDouble_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetDouble*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetDouble_System_Int32_System_Double__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetDouble(System.Int32,System.Double@)">TryGetDouble(Int32, out Double)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a 64-bit floating point value for the specified option field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetDouble(int field, out double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetFixed32_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetFixed32*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetFixed32_System_Int32_System_UInt32__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetFixed32(System.Int32,System.UInt32@)">TryGetFixed32(Int32, out UInt32)</h4>
+  <div class="markdown level1 summary"><p>Retrieves an unsigned 32-bit integer value for the specified option field,
+assuming a fixed-length representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetFixed32(int field, out uint value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetFixed64_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetFixed64*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetFixed64_System_Int32_System_UInt64__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetFixed64(System.Int32,System.UInt64@)">TryGetFixed64(Int32, out UInt64)</h4>
+  <div class="markdown level1 summary"><p>Retrieves an unsigned 64-bit integer value for the specified option field,
+assuming a fixed-length representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetFixed64(int field, out ulong value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetFloat_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetFloat*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetFloat_System_Int32_System_Single__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetFloat(System.Int32,System.Single@)">TryGetFloat(Int32, out Single)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a 32-bit floating point value for the specified option field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetFloat(int field, out float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetInt32_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetInt32*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetInt32_System_Int32_System_Int32__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetInt32(System.Int32,System.Int32@)">TryGetInt32(Int32, out Int32)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a signed 32-bit integer value for the specified option field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetInt32(int field, out int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetInt64_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetInt64*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetInt64_System_Int32_System_Int64__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetInt64(System.Int32,System.Int64@)">TryGetInt64(Int32, out Int64)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a signed 64-bit integer value for the specified option field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetInt64(int field, out long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetMessage_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetMessage*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetMessage__1_System_Int32___0__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetMessage``1(System.Int32,``0@)">TryGetMessage&lt;T&gt;(Int32, out T)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a message value for the specified option field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetMessage&lt;T&gt;(int field, out T value)where T : class, IMessage, new ()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetSFixed32_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetSFixed32*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetSFixed32_System_Int32_System_Int32__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetSFixed32(System.Int32,System.Int32@)">TryGetSFixed32(Int32, out Int32)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a signed 32-bit integer value for the specified option field,
+assuming a fixed-length representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetSFixed32(int field, out int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetSFixed64_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetSFixed64*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetSFixed64_System_Int32_System_Int64__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetSFixed64(System.Int32,System.Int64@)">TryGetSFixed64(Int32, out Int64)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a signed 64-bit integer value for the specified option field,
+assuming a fixed-length representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetSFixed64(int field, out long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetSInt32_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetSInt32*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetSInt32_System_Int32_System_Int32__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetSInt32(System.Int32,System.Int32@)">TryGetSInt32(Int32, out Int32)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a signed 32-bit integer value for the specified option field,
+assuming a zigzag encoding.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetSInt32(int field, out int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetSInt64_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetSInt64*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetSInt64_System_Int32_System_Int64__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetSInt64(System.Int32,System.Int64@)">TryGetSInt64(Int32, out Int64)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a signed 64-bit integer value for the specified option field,
+assuming a zigzag encoding.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetSInt64(int field, out long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetString_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetString*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetString_System_Int32_System_String__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetString(System.Int32,System.String@)">TryGetString(Int32, out String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a string value for the specified option field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetString(int field, out string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetUInt32_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetUInt32*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetUInt32_System_Int32_System_UInt32__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetUInt32(System.Int32,System.UInt32@)">TryGetUInt32(Int32, out UInt32)</h4>
+  <div class="markdown level1 summary"><p>Retrieves an unsigned 32-bit integer value for the specified option field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetUInt32(int field, out uint value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Reflection_CustomOptions_TryGetUInt64_" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetUInt64*"></a>
+  <h4 id="Google_Protobuf_Reflection_CustomOptions_TryGetUInt64_System_Int32_System_UInt64__" data-uid="Google.Protobuf.Reflection.CustomOptions.TryGetUInt64(System.Int32,System.UInt64@)">TryGetUInt64(Int32, out UInt64)</h4>
+  <div class="markdown level1 summary"><p>Retrieves an unsigned 64-bit integer value for the specified option field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetUInt64(int field, out ulong value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">field</span></td>
+        <td><p>The field to fetch the value for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The output variable to populate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a suitable value for the field was found; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

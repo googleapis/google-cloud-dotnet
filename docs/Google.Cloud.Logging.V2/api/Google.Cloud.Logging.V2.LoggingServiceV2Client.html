@@ -1731,7 +1731,12 @@ in turn be shut down by another call to this method.</p>
 </div>
   <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries*"></a>
   <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Cloud.Logging.V2.LogEntry},Google.Api.Gax.Grpc.CallSettings)">WriteLogEntries(LogNameOneof, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
+  <div class="markdown level1 summary"><h2 id="log-entry-resources">Log entry resources</h2>
+<p>Writes log entries to Stackdriver Logging. This API method is the
+only way to send log entries to Stackdriver Logging. This method
+is used, directly or indirectly, by the Stackdriver Logging agent
+(fluentd) and all logging libraries configured to use Stackdriver
+Logging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1787,19 +1792,24 @@ See [LogEntry][google.logging.v2.LogEntry].</p>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html">LogEntry</a>&gt;</td>
         <td><span class="parametername">entries</span></td>
-        <td><p>Required.  The log entries to write. Values supplied for the fields
-<code>log_name</code>, <code>resource</code>, and <code>labels</code> in this <code>entries.write</code> request are
-inserted into those log entries in this list that do not provide their own
-values.</p>
-<p>Stackdriver Logging also creates and inserts values for <code>timestamp</code> and
-<code>insert_id</code> if the entries do not provide them. The created <code>insert_id</code> for
-the N&apos;th entry in this list will be greater than earlier entries and less
-than later entries.  Otherwise, the order of log entries in this list does
-not matter.</p>
+        <td><p>Required. The log entries to send to Stackdriver Logging. The order of log
+entries in this list does not matter. Values supplied in this method&apos;s
+<code>log_name</code>, <code>resource</code>, and <code>labels</code> fields are copied into those log
+entries in this list that do not include values for their corresponding
+fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.</p>
+<p>If the <code>timestamp</code> or <code>insert_id</code> fields are missing in log entries, then
+this method supplies the current time or a unique identifier, respectively.
+The supplied values are chosen so that, among the log entries that did not
+supply their own values, the entries earlier in the list will sort before
+the entries later in the list. See the <code>entries.list</code> method.</p>
+<p>Log entries with timestamps that are more than the
+<a href="/logging/quota-policy">logs retention period</a> in the past or more than
+24 hours in the future might be discarded. Discarding does not return
+an error.</p>
 <p>To improve throughput and to avoid exceeding the
 <a href="/logging/quota-policy">quota limit</a> for calls to <code>entries.write</code>,
-you should write multiple log entries at once rather than
-calling this method for each individual log entry.</p>
+you should try to include several log entries in this list,
+rather than calling this method for each individual log entry.</p>
 </td>
       </tr>
       <tr>
@@ -1841,7 +1851,12 @@ WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(logNam
   </div>
   <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries*"></a>
   <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">WriteLogEntries(WriteLogEntriesRequest, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
+  <div class="markdown level1 summary"><h2 id="log-entry-resources">Log entry resources</h2>
+<p>Writes log entries to Stackdriver Logging. This API method is the
+only way to send log entries to Stackdriver Logging. This method
+is used, directly or indirectly, by the Stackdriver Logging agent
+(fluentd) and all logging libraries configured to use Stackdriver
+Logging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1903,7 +1918,12 @@ WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(reques
   </div>
   <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Cloud.Logging.V2.LogEntry},Google.Api.Gax.Grpc.CallSettings)">WriteLogEntriesAsync(LogNameOneof, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
+  <div class="markdown level1 summary"><h2 id="log-entry-resources">Log entry resources</h2>
+<p>Writes log entries to Stackdriver Logging. This API method is the
+only way to send log entries to Stackdriver Logging. This method
+is used, directly or indirectly, by the Stackdriver Logging agent
+(fluentd) and all logging libraries configured to use Stackdriver
+Logging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1959,19 +1979,24 @@ See [LogEntry][google.logging.v2.LogEntry].</p>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html">LogEntry</a>&gt;</td>
         <td><span class="parametername">entries</span></td>
-        <td><p>Required.  The log entries to write. Values supplied for the fields
-<code>log_name</code>, <code>resource</code>, and <code>labels</code> in this <code>entries.write</code> request are
-inserted into those log entries in this list that do not provide their own
-values.</p>
-<p>Stackdriver Logging also creates and inserts values for <code>timestamp</code> and
-<code>insert_id</code> if the entries do not provide them. The created <code>insert_id</code> for
-the N&apos;th entry in this list will be greater than earlier entries and less
-than later entries.  Otherwise, the order of log entries in this list does
-not matter.</p>
+        <td><p>Required. The log entries to send to Stackdriver Logging. The order of log
+entries in this list does not matter. Values supplied in this method&apos;s
+<code>log_name</code>, <code>resource</code>, and <code>labels</code> fields are copied into those log
+entries in this list that do not include values for their corresponding
+fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.</p>
+<p>If the <code>timestamp</code> or <code>insert_id</code> fields are missing in log entries, then
+this method supplies the current time or a unique identifier, respectively.
+The supplied values are chosen so that, among the log entries that did not
+supply their own values, the entries earlier in the list will sort before
+the entries later in the list. See the <code>entries.list</code> method.</p>
+<p>Log entries with timestamps that are more than the
+<a href="/logging/quota-policy">logs retention period</a> in the past or more than
+24 hours in the future might be discarded. Discarding does not return
+an error.</p>
 <p>To improve throughput and to avoid exceeding the
 <a href="/logging/quota-policy">quota limit</a> for calls to <code>entries.write</code>,
-you should write multiple log entries at once rather than
-calling this method for each individual log entry.</p>
+you should try to include several log entries in this list,
+rather than calling this method for each individual log entry.</p>
 </td>
       </tr>
       <tr>
@@ -2013,7 +2038,12 @@ WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesA
   </div>
   <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Cloud.Logging.V2.LogEntry},System.Threading.CancellationToken)">WriteLogEntriesAsync(LogNameOneof, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
+  <div class="markdown level1 summary"><h2 id="log-entry-resources">Log entry resources</h2>
+<p>Writes log entries to Stackdriver Logging. This API method is the
+only way to send log entries to Stackdriver Logging. This method
+is used, directly or indirectly, by the Stackdriver Logging agent
+(fluentd) and all logging libraries configured to use Stackdriver
+Logging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2069,19 +2099,24 @@ See [LogEntry][google.logging.v2.LogEntry].</p>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html">LogEntry</a>&gt;</td>
         <td><span class="parametername">entries</span></td>
-        <td><p>Required.  The log entries to write. Values supplied for the fields
-<code>log_name</code>, <code>resource</code>, and <code>labels</code> in this <code>entries.write</code> request are
-inserted into those log entries in this list that do not provide their own
-values.</p>
-<p>Stackdriver Logging also creates and inserts values for <code>timestamp</code> and
-<code>insert_id</code> if the entries do not provide them. The created <code>insert_id</code> for
-the N&apos;th entry in this list will be greater than earlier entries and less
-than later entries.  Otherwise, the order of log entries in this list does
-not matter.</p>
+        <td><p>Required. The log entries to send to Stackdriver Logging. The order of log
+entries in this list does not matter. Values supplied in this method&apos;s
+<code>log_name</code>, <code>resource</code>, and <code>labels</code> fields are copied into those log
+entries in this list that do not include values for their corresponding
+fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.</p>
+<p>If the <code>timestamp</code> or <code>insert_id</code> fields are missing in log entries, then
+this method supplies the current time or a unique identifier, respectively.
+The supplied values are chosen so that, among the log entries that did not
+supply their own values, the entries earlier in the list will sort before
+the entries later in the list. See the <code>entries.list</code> method.</p>
+<p>Log entries with timestamps that are more than the
+<a href="/logging/quota-policy">logs retention period</a> in the past or more than
+24 hours in the future might be discarded. Discarding does not return
+an error.</p>
 <p>To improve throughput and to avoid exceeding the
 <a href="/logging/quota-policy">quota limit</a> for calls to <code>entries.write</code>,
-you should write multiple log entries at once rather than
-calling this method for each individual log entry.</p>
+you should try to include several log entries in this list,
+rather than calling this method for each individual log entry.</p>
 </td>
       </tr>
       <tr>
@@ -2123,7 +2158,12 @@ WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesA
   </div>
   <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">WriteLogEntriesAsync(WriteLogEntriesRequest, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
+  <div class="markdown level1 summary"><h2 id="log-entry-resources">Log entry resources</h2>
+<p>Writes log entries to Stackdriver Logging. This API method is the
+only way to send log entries to Stackdriver Logging. This method
+is used, directly or indirectly, by the Stackdriver Logging agent
+(fluentd) and all logging libraries configured to use Stackdriver
+Logging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

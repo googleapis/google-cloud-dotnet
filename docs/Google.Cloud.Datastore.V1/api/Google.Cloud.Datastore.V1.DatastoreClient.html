@@ -1983,6 +1983,338 @@ IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
 LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptions, keys);
 </code></pre></div>
   </div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIds_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIds_Google_Cloud_Datastore_V1_ReserveIdsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Google.Api.Gax.Grpc.CallSettings)">ReserveIds(ReserveIdsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Prevents the supplied keys&apos; IDs from being auto-allocated by Cloud
+Datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ReserveIdsResponse ReserveIds(ReserveIdsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsRequest.html">ReserveIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsResponse.html">ReserveIdsResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIds_Google_Cloud_Datastore_V1_ReserveIdsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+ReserveIdsRequest request = new ReserveIdsRequest
+{
+    ProjectId = &quot;&quot;,
+    Keys = { },
+};
+// Make the request
+ReserveIdsResponse response = datastoreClient.ReserveIds(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIds_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIds_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">ReserveIds(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Prevents the supplied keys&apos; IDs from being auto-allocated by Cloud
+Datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ReserveIdsResponse ReserveIds(string projectId, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectId</span></td>
+        <td><p>The ID of the project against which to make the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>A list of keys with complete key paths whose numeric IDs should not be
+auto-allocated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsResponse.html">ReserveIdsResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIds_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
+// Make the request
+ReserveIdsResponse response = datastoreClient.ReserveIds(projectId, keys);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_Google_Cloud_Datastore_V1_ReserveIdsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Google.Api.Gax.Grpc.CallSettings)">ReserveIdsAsync(ReserveIdsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Prevents the supplied keys&apos; IDs from being auto-allocated by Cloud
+Datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ReserveIdsResponse&gt; ReserveIdsAsync(ReserveIdsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsRequest.html">ReserveIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsResponse.html">ReserveIdsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_Google_Cloud_Datastore_V1_ReserveIdsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+ReserveIdsRequest request = new ReserveIdsRequest
+{
+    ProjectId = &quot;&quot;,
+    Keys = { },
+};
+// Make the request
+ReserveIdsResponse response = await datastoreClient.ReserveIdsAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">ReserveIdsAsync(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Prevents the supplied keys&apos; IDs from being auto-allocated by Cloud
+Datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ReserveIdsResponse&gt; ReserveIdsAsync(string projectId, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectId</span></td>
+        <td><p>The ID of the project against which to make the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>A list of keys with complete key paths whose numeric IDs should not be
+auto-allocated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsResponse.html">ReserveIdsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
+// Make the request
+ReserveIdsResponse response = await datastoreClient.ReserveIdsAsync(projectId, keys);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Threading.CancellationToken)">ReserveIdsAsync(String, IEnumerable&lt;Key&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Prevents the supplied keys&apos; IDs from being auto-allocated by Cloud
+Datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ReserveIdsResponse&gt; ReserveIdsAsync(string projectId, IEnumerable&lt;Key&gt; keys, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectId</span></td>
+        <td><p>The ID of the project against which to make the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>A list of keys with complete key paths whose numeric IDs should not be
+auto-allocated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsResponse.html">ReserveIdsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
+// Make the request
+ReserveIdsResponse response = await datastoreClient.ReserveIdsAsync(projectId, keys);
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Datastore_V1_DatastoreClient_Rollback_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Rollback*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Rollback_Google_Cloud_Datastore_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Rollback(Google.Cloud.Datastore.V1.RollbackRequest,Google.Api.Gax.Grpc.CallSettings)">Rollback(RollbackRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Rolls back a transaction.</p>

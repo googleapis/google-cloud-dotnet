@@ -1,0 +1,510 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TransferConfig
+   | Google.Cloud.BigQuery.DataTransfer.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TransferConfig
+   | Google.Cloud.BigQuery.DataTransfer.V1 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig">
+  
+  
+  <h1 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig" class="text-break">Class TransferConfig
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a data transfer configuration. A transfer configuration
+contains all metadata needed to perform a data transfer. For example,
+<code>destination_dataset_id</code> specifies where data should be stored.
+When a new transfer configuration is created, the specified
+<code>destination_dataset_id</code> is created when needed and shared with the
+appropriate data source service account.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TransferConfig</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.html">Google.Cloud.BigQuery.DataTransfer.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.BigQuery.DataTransfer.V1.dll</h6>
+  <h5 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TransferConfig : IMessage&lt;TransferConfig&gt;, IMessage, IEquatable&lt;TransferConfig&gt;, IDeepCloneable&lt;TransferConfig&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_DataRefreshWindowDays_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.DataRefreshWindowDays*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_DataRefreshWindowDays" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.DataRefreshWindowDays">DataRefreshWindowDays</h4>
+  <div class="markdown level1 summary"><p>The number of days to look back to automatically refresh the data.
+For example, if <code>data_refresh_window_days = 10</code>, then every day
+BigQuery reingests data for [today-10, today-1], rather than ingesting data
+for just [today-1].
+Only valid if the data source supports the feature. Set the value to  0
+to use the default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DataRefreshWindowDays { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_DatasetRegion_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.DatasetRegion*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_DatasetRegion" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.DatasetRegion">DatasetRegion</h4>
+  <div class="markdown level1 summary"><p>Output only. Region in which BigQuery dataset is located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DatasetRegion { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_DataSourceId_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.DataSourceId*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_DataSourceId" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.DataSourceId">DataSourceId</h4>
+  <div class="markdown level1 summary"><p>Data source id. Cannot be changed once data transfer is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DataSourceId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_DestinationDatasetId_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.DestinationDatasetId*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_DestinationDatasetId" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.DestinationDatasetId">DestinationDatasetId</h4>
+  <div class="markdown level1 summary"><p>The BigQuery target dataset id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DestinationDatasetId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Disabled_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Disabled*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Disabled" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Disabled">Disabled</h4>
+  <div class="markdown level1 summary"><p>Is this config disabled. When set to true, no runs are scheduled
+for a given transfer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Disabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_DisplayName_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.DisplayName*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_DisplayName" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"><p>User specified display name for the data transfer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DisplayName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Name_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Name*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Name" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The resource name of the transfer config.
+Transfer config names have the form
+<code>projects/{project_id}/transferConfigs/{config_id}</code>.
+Where <code>config_id</code> is usually a uuid, even though it is not
+guaranteed or required. The name is ignored when creating a transfer
+config.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_NextRunTime_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.NextRunTime*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_NextRunTime" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.NextRunTime">NextRunTime</h4>
+  <div class="markdown level1 summary"><p>Output only. Next time when data transfer will run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp NextRunTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Params_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Params*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Params" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Params">Params</h4>
+  <div class="markdown level1 summary"><p>Data transfer specific parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Struct Params { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Struct.html">Struct</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Schedule_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Schedule*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Schedule" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Schedule">Schedule</h4>
+  <div class="markdown level1 summary"><p>Data transfer schedule.
+If the data source does not support a custom schedule, this should be
+empty. If it is empty, the default value for the data source will be
+used.
+The specified times are in UTC.
+Examples of valid format:
+<code>1st,3rd monday of month 15:30</code>,
+<code>every wed,fri of jan,jun 13:15</code>, and
+<code>first sunday of quarter 00:00</code>.
+See more explanation about the format here:
+<a href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
+NOTE: the granularity should be at least 8 hours, or less frequent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Schedule { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_State_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.State*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_State" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.State">State</h4>
+  <div class="markdown level1 summary"><p>Output only. State of the most recently updated transfer run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferState State { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferState.html">TransferState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_TransferConfigNameOneof_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.TransferConfigNameOneof*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_TransferConfigNameOneof" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.TransferConfigNameOneof">TransferConfigNameOneof</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html#Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_TransferConfigNameOneof">TransferConfigNameOneof</a>-typed view over the <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html#Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Name">Name</a> resource name property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferConfigNameOneof TransferConfigNameOneof { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigNameOneof.html">TransferConfigNameOneof</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_UpdateTime_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.UpdateTime*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_UpdateTime" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.UpdateTime">UpdateTime</h4>
+  <div class="markdown level1 summary"><p>Output only. Data transfer modification time. Ignored by server on input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp UpdateTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_UserId_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.UserId*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_UserId" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.UserId">UserId</h4>
+  <div class="markdown level1 summary"><p>Output only. Unique ID of the user on whose behalf transfer is done.
+Applicable only to data sources that do not support service accounts.
+When set to 0, the data source service account credentials are used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long UserId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

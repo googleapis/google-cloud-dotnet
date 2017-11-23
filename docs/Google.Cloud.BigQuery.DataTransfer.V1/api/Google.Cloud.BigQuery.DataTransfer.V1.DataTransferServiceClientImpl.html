@@ -1,0 +1,1643 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DataTransferServiceClientImpl
+   | Google.Cloud.BigQuery.DataTransfer.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DataTransferServiceClientImpl
+   | Google.Cloud.BigQuery.DataTransfer.V1 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl">
+  
+  
+  <h1 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl" class="text-break">Class DataTransferServiceClientImpl
+  </h1>
+  <div class="markdown level0 summary"><p>DataTransferService client wrapper implementation, for convenient use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html">DataTransferServiceClient</a></div>
+    <div class="level2"><span class="xref">DataTransferServiceClientImpl</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DefaultEndpoint">DataTransferServiceClient.DefaultEndpoint</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DefaultScopes">DataTransferServiceClient.DefaultScopes</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceSettings_">DataTransferServiceClient.CreateAsync(ServiceEndpoint, DataTransferServiceSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceSettings_">DataTransferServiceClient.Create(ServiceEndpoint, DataTransferServiceSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_Create_Grpc_Core_Channel_Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceSettings_">DataTransferServiceClient.Create(Channel, DataTransferServiceSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ShutdownDefaultChannelsAsync">DataTransferServiceClient.ShutdownDefaultChannelsAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetDataSourceAsync_Google_Cloud_BigQuery_DataTransfer_V1_DataSourceNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetDataSourceAsync(DataSourceNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetDataSourceAsync_Google_Cloud_BigQuery_DataTransfer_V1_DataSourceNameOneof_System_Threading_CancellationToken_">DataTransferServiceClient.GetDataSourceAsync(DataSourceNameOneof, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetDataSource_Google_Cloud_BigQuery_DataTransfer_V1_DataSourceNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetDataSource(DataSourceNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListDataSourcesAsync_Google_Cloud_BigQuery_DataTransfer_V1_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListDataSourcesAsync(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListDataSources_Google_Cloud_BigQuery_DataTransfer_V1_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListDataSources(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CreateTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_ParentNameOneof_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.CreateTransferConfigAsync(ParentNameOneof, TransferConfig, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CreateTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_ParentNameOneof_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_System_Threading_CancellationToken_">DataTransferServiceClient.CreateTransferConfigAsync(ParentNameOneof, TransferConfig, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CreateTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_ParentNameOneof_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.CreateTransferConfig(ParentNameOneof, TransferConfig, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_UpdateTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.UpdateTransferConfigAsync(TransferConfig, FieldMask, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_UpdateTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_">DataTransferServiceClient.UpdateTransferConfigAsync(TransferConfig, FieldMask, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_UpdateTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfig_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.UpdateTransferConfig(TransferConfig, FieldMask, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DeleteTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.DeleteTransferConfigAsync(TransferConfigNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DeleteTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_System_Threading_CancellationToken_">DataTransferServiceClient.DeleteTransferConfigAsync(TransferConfigNameOneof, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DeleteTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.DeleteTransferConfig(TransferConfigNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetTransferConfigAsync(TransferConfigNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_System_Threading_CancellationToken_">DataTransferServiceClient.GetTransferConfigAsync(TransferConfigNameOneof, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetTransferConfig(TransferConfigNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferConfigsAsync_Google_Cloud_BigQuery_DataTransfer_V1_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferConfigsAsync(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferConfigs_Google_Cloud_BigQuery_DataTransfer_V1_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferConfigs(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ScheduleTransferRunsAsync_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_Google_Protobuf_WellKnownTypes_Timestamp_Google_Protobuf_WellKnownTypes_Timestamp_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ScheduleTransferRunsAsync(TransferConfigNameOneof, Timestamp, Timestamp, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ScheduleTransferRunsAsync_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_Google_Protobuf_WellKnownTypes_Timestamp_Google_Protobuf_WellKnownTypes_Timestamp_System_Threading_CancellationToken_">DataTransferServiceClient.ScheduleTransferRunsAsync(TransferConfigNameOneof, Timestamp, Timestamp, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ScheduleTransferRuns_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_Google_Protobuf_WellKnownTypes_Timestamp_Google_Protobuf_WellKnownTypes_Timestamp_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ScheduleTransferRuns(TransferConfigNameOneof, Timestamp, Timestamp, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetTransferRunAsync_Google_Cloud_BigQuery_DataTransfer_V1_RunNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetTransferRunAsync(RunNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetTransferRunAsync_Google_Cloud_BigQuery_DataTransfer_V1_RunNameOneof_System_Threading_CancellationToken_">DataTransferServiceClient.GetTransferRunAsync(RunNameOneof, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetTransferRun_Google_Cloud_BigQuery_DataTransfer_V1_RunNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetTransferRun(RunNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DeleteTransferRunAsync_Google_Cloud_BigQuery_DataTransfer_V1_RunNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.DeleteTransferRunAsync(RunNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DeleteTransferRunAsync_Google_Cloud_BigQuery_DataTransfer_V1_RunNameOneof_System_Threading_CancellationToken_">DataTransferServiceClient.DeleteTransferRunAsync(RunNameOneof, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DeleteTransferRun_Google_Cloud_BigQuery_DataTransfer_V1_RunNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.DeleteTransferRun(RunNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferRunsAsync_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferRunsAsync(TransferConfigNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferRuns_Google_Cloud_BigQuery_DataTransfer_V1_TransferConfigNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferRuns(TransferConfigNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferLogsAsync_Google_Cloud_BigQuery_DataTransfer_V1_RunNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferLogsAsync(RunNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferLogs_Google_Cloud_BigQuery_DataTransfer_V1_RunNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferLogs(RunNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CheckValidCredsAsync_Google_Cloud_BigQuery_DataTransfer_V1_DataSourceNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.CheckValidCredsAsync(DataSourceNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CheckValidCredsAsync_Google_Cloud_BigQuery_DataTransfer_V1_DataSourceNameOneof_System_Threading_CancellationToken_">DataTransferServiceClient.CheckValidCredsAsync(DataSourceNameOneof, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CheckValidCreds_Google_Cloud_BigQuery_DataTransfer_V1_DataSourceNameOneof_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.CheckValidCreds(DataSourceNameOneof, CallSettings)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.html">Google.Cloud.BigQuery.DataTransfer.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.BigQuery.DataTransfer.V1.dll</h6>
+  <h5 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DataTransferServiceClientImpl : DataTransferServiceClient</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl__ctor_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.#ctor*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl__ctor_Google_Cloud_BigQuery_DataTransfer_V1_DataTransferService_DataTransferServiceClient_Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.#ctor(Google.Cloud.BigQuery.DataTransfer.V1.DataTransferService.DataTransferServiceClient,Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceSettings)">DataTransferServiceClientImpl(DataTransferService.DataTransferServiceClient, DataTransferServiceSettings)</h4>
+  <div class="markdown level1 summary"><p>Constructs a client wrapper for the DataTransferService service, with the specified gRPC client and settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTransferServiceClientImpl(DataTransferService.DataTransferServiceClient grpcClient, DataTransferServiceSettings settings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferService.DataTransferServiceClient.html">DataTransferService.DataTransferServiceClient</a></td>
+        <td><span class="parametername">grpcClient</span></td>
+        <td><p>The underlying gRPC client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceSettings.html">DataTransferServiceSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>The base <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceSettings.html">DataTransferServiceSettings</a> used within this client </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GrpcClient_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GrpcClient*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GrpcClient" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GrpcClient">GrpcClient</h4>
+  <div class="markdown level1 summary"><p>The underlying gRPC DataTransferService client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DataTransferService.DataTransferServiceClient GrpcClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferService.DataTransferServiceClient.html">DataTransferService.DataTransferServiceClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GrpcClient">DataTransferServiceClient.GrpcClient</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_CheckValidCreds_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.CheckValidCreds*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_CheckValidCreds_Google_Cloud_BigQuery_DataTransfer_V1_CheckValidCredsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.CheckValidCreds(Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest,Google.Api.Gax.Grpc.CallSettings)">CheckValidCreds(CheckValidCredsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns true if valid credentials exist for the given data source and
+requesting user.
+Some data sources doesn&apos;t support service account, so we need to talk to
+them on behalf of the end user. This API just checks whether we have OAuth
+token for the particular user, which is a pre-requisite before user can
+create a transfer config.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override CheckValidCredsResponse CheckValidCreds(CheckValidCredsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest.html">CheckValidCredsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse.html">CheckValidCredsResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CheckValidCreds_Google_Cloud_BigQuery_DataTransfer_V1_CheckValidCredsRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.CheckValidCreds(CheckValidCredsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_CheckValidCredsAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.CheckValidCredsAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_CheckValidCredsAsync_Google_Cloud_BigQuery_DataTransfer_V1_CheckValidCredsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.CheckValidCredsAsync(Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest,Google.Api.Gax.Grpc.CallSettings)">CheckValidCredsAsync(CheckValidCredsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns true if valid credentials exist for the given data source and
+requesting user.
+Some data sources doesn&apos;t support service account, so we need to talk to
+them on behalf of the end user. This API just checks whether we have OAuth
+token for the particular user, which is a pre-requisite before user can
+create a transfer config.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;CheckValidCredsResponse&gt; CheckValidCredsAsync(CheckValidCredsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest.html">CheckValidCredsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse.html">CheckValidCredsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CheckValidCredsAsync_Google_Cloud_BigQuery_DataTransfer_V1_CheckValidCredsRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.CheckValidCredsAsync(CheckValidCredsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_CreateTransferConfig_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.CreateTransferConfig*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_CreateTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_CreateTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.CreateTransferConfig(Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest,Google.Api.Gax.Grpc.CallSettings)">CreateTransferConfig(CreateTransferConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new data transfer configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TransferConfig CreateTransferConfig(CreateTransferConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest.html">CreateTransferConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CreateTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_CreateTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.CreateTransferConfig(CreateTransferConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_CreateTransferConfigAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.CreateTransferConfigAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_CreateTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_CreateTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.CreateTransferConfigAsync(Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest,Google.Api.Gax.Grpc.CallSettings)">CreateTransferConfigAsync(CreateTransferConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new data transfer configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;TransferConfig&gt; CreateTransferConfigAsync(CreateTransferConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest.html">CreateTransferConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_CreateTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_CreateTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.CreateTransferConfigAsync(CreateTransferConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_DeleteTransferConfig_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.DeleteTransferConfig*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_DeleteTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_DeleteTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.DeleteTransferConfig(Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteTransferConfig(DeleteTransferConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a data transfer configuration,
+including any associated transfer runs and logs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DeleteTransferConfig(DeleteTransferConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest.html">DeleteTransferConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DeleteTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_DeleteTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.DeleteTransferConfig(DeleteTransferConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_DeleteTransferConfigAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.DeleteTransferConfigAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_DeleteTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_DeleteTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.DeleteTransferConfigAsync(Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteTransferConfigAsync(DeleteTransferConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a data transfer configuration,
+including any associated transfer runs and logs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task DeleteTransferConfigAsync(DeleteTransferConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest.html">DeleteTransferConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DeleteTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_DeleteTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.DeleteTransferConfigAsync(DeleteTransferConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_DeleteTransferRun_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.DeleteTransferRun*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_DeleteTransferRun_Google_Cloud_BigQuery_DataTransfer_V1_DeleteTransferRunRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.DeleteTransferRun(Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteTransferRun(DeleteTransferRunRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes the specified transfer run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DeleteTransferRun(DeleteTransferRunRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest.html">DeleteTransferRunRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DeleteTransferRun_Google_Cloud_BigQuery_DataTransfer_V1_DeleteTransferRunRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.DeleteTransferRun(DeleteTransferRunRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_DeleteTransferRunAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.DeleteTransferRunAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_DeleteTransferRunAsync_Google_Cloud_BigQuery_DataTransfer_V1_DeleteTransferRunRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.DeleteTransferRunAsync(Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteTransferRunAsync(DeleteTransferRunRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes the specified transfer run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task DeleteTransferRunAsync(DeleteTransferRunRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest.html">DeleteTransferRunRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_DeleteTransferRunAsync_Google_Cloud_BigQuery_DataTransfer_V1_DeleteTransferRunRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.DeleteTransferRunAsync(DeleteTransferRunRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetDataSource_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetDataSource*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetDataSource_Google_Cloud_BigQuery_DataTransfer_V1_GetDataSourceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetDataSource(Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest,Google.Api.Gax.Grpc.CallSettings)">GetDataSource(GetDataSourceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a supported data source and returns its settings,
+which can be used for UI rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DataSource GetDataSource(GetDataSourceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest.html">GetDataSourceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSource.html">DataSource</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetDataSource_Google_Cloud_BigQuery_DataTransfer_V1_GetDataSourceRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetDataSource(GetDataSourceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetDataSourceAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetDataSourceAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetDataSourceAsync_Google_Cloud_BigQuery_DataTransfer_V1_GetDataSourceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetDataSourceAsync(Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest,Google.Api.Gax.Grpc.CallSettings)">GetDataSourceAsync(GetDataSourceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a supported data source and returns its settings,
+which can be used for UI rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;DataSource&gt; GetDataSourceAsync(GetDataSourceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest.html">GetDataSourceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSource.html">DataSource</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetDataSourceAsync_Google_Cloud_BigQuery_DataTransfer_V1_GetDataSourceRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetDataSourceAsync(GetDataSourceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetTransferConfig_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetTransferConfig*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_GetTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetTransferConfig(Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest,Google.Api.Gax.Grpc.CallSettings)">GetTransferConfig(GetTransferConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns information about a data transfer config.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TransferConfig GetTransferConfig(GetTransferConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest.html">GetTransferConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_GetTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetTransferConfig(GetTransferConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetTransferConfigAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetTransferConfigAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_GetTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetTransferConfigAsync(Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest,Google.Api.Gax.Grpc.CallSettings)">GetTransferConfigAsync(GetTransferConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns information about a data transfer config.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;TransferConfig&gt; GetTransferConfigAsync(GetTransferConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest.html">GetTransferConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_GetTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetTransferConfigAsync(GetTransferConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetTransferRun_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetTransferRun*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetTransferRun_Google_Cloud_BigQuery_DataTransfer_V1_GetTransferRunRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetTransferRun(Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest,Google.Api.Gax.Grpc.CallSettings)">GetTransferRun(GetTransferRunRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns information about the particular transfer run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TransferRun GetTransferRun(GetTransferRunRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest.html">GetTransferRunRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.html">TransferRun</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetTransferRun_Google_Cloud_BigQuery_DataTransfer_V1_GetTransferRunRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetTransferRun(GetTransferRunRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetTransferRunAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetTransferRunAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_GetTransferRunAsync_Google_Cloud_BigQuery_DataTransfer_V1_GetTransferRunRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.GetTransferRunAsync(Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest,Google.Api.Gax.Grpc.CallSettings)">GetTransferRunAsync(GetTransferRunRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns information about the particular transfer run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;TransferRun&gt; GetTransferRunAsync(GetTransferRunRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest.html">GetTransferRunRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.html">TransferRun</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_GetTransferRunAsync_Google_Cloud_BigQuery_DataTransfer_V1_GetTransferRunRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.GetTransferRunAsync(GetTransferRunRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListDataSources_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListDataSources*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListDataSources_Google_Cloud_BigQuery_DataTransfer_V1_ListDataSourcesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListDataSources(Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest,Google.Api.Gax.Grpc.CallSettings)">ListDataSources(ListDataSourcesRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists supported data sources and returns their settings,
+which can be used for UI rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListDataSourcesResponse, DataSource&gt; ListDataSources(ListDataSourcesRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest.html">ListDataSourcesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse.html">ListDataSourcesResponse</a>, <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSource.html">DataSource</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSource.html">DataSource</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListDataSources_Google_Cloud_BigQuery_DataTransfer_V1_ListDataSourcesRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListDataSources(ListDataSourcesRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListDataSourcesAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListDataSourcesAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListDataSourcesAsync_Google_Cloud_BigQuery_DataTransfer_V1_ListDataSourcesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListDataSourcesAsync(Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest,Google.Api.Gax.Grpc.CallSettings)">ListDataSourcesAsync(ListDataSourcesRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists supported data sources and returns their settings,
+which can be used for UI rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListDataSourcesResponse, DataSource&gt; ListDataSourcesAsync(ListDataSourcesRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest.html">ListDataSourcesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse.html">ListDataSourcesResponse</a>, <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSource.html">DataSource</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSource.html">DataSource</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListDataSourcesAsync_Google_Cloud_BigQuery_DataTransfer_V1_ListDataSourcesRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListDataSourcesAsync(ListDataSourcesRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferConfigs_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferConfigs*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferConfigs_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferConfigsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferConfigs(Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest,Google.Api.Gax.Grpc.CallSettings)">ListTransferConfigs(ListTransferConfigsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns information about all data transfers in the project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListTransferConfigsResponse, TransferConfig&gt; ListTransferConfigs(ListTransferConfigsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest.html">ListTransferConfigsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse.html">ListTransferConfigsResponse</a>, <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferConfigs_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferConfigsRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferConfigs(ListTransferConfigsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferConfigsAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferConfigsAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferConfigsAsync_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferConfigsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferConfigsAsync(Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest,Google.Api.Gax.Grpc.CallSettings)">ListTransferConfigsAsync(ListTransferConfigsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns information about all data transfers in the project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListTransferConfigsResponse, TransferConfig&gt; ListTransferConfigsAsync(ListTransferConfigsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest.html">ListTransferConfigsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse.html">ListTransferConfigsResponse</a>, <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferConfigsAsync_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferConfigsRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferConfigsAsync(ListTransferConfigsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferLogs_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferLogs*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferLogs_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferLogsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferLogs(Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest,Google.Api.Gax.Grpc.CallSettings)">ListTransferLogs(ListTransferLogsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns user facing log messages for the data transfer run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListTransferLogsResponse, TransferMessage&gt; ListTransferLogs(ListTransferLogsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest.html">ListTransferLogsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse.html">ListTransferLogsResponse</a>, <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.html">TransferMessage</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.html">TransferMessage</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferLogs_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferLogsRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferLogs(ListTransferLogsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferLogsAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferLogsAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferLogsAsync_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferLogsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferLogsAsync(Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest,Google.Api.Gax.Grpc.CallSettings)">ListTransferLogsAsync(ListTransferLogsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns user facing log messages for the data transfer run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListTransferLogsResponse, TransferMessage&gt; ListTransferLogsAsync(ListTransferLogsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest.html">ListTransferLogsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse.html">ListTransferLogsResponse</a>, <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.html">TransferMessage</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.html">TransferMessage</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferLogsAsync_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferLogsRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferLogsAsync(ListTransferLogsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferRuns_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferRuns*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferRuns_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferRunsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferRuns(Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest,Google.Api.Gax.Grpc.CallSettings)">ListTransferRuns(ListTransferRunsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns information about running and completed jobs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListTransferRunsResponse, TransferRun&gt; ListTransferRuns(ListTransferRunsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.html">ListTransferRunsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse.html">ListTransferRunsResponse</a>, <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.html">TransferRun</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.html">TransferRun</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferRuns_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferRunsRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferRuns(ListTransferRunsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferRunsAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferRunsAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ListTransferRunsAsync_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferRunsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ListTransferRunsAsync(Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest,Google.Api.Gax.Grpc.CallSettings)">ListTransferRunsAsync(ListTransferRunsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns information about running and completed jobs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListTransferRunsResponse, TransferRun&gt; ListTransferRunsAsync(ListTransferRunsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.html">ListTransferRunsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse.html">ListTransferRunsResponse</a>, <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.html">TransferRun</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.html">TransferRun</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ListTransferRunsAsync_Google_Cloud_BigQuery_DataTransfer_V1_ListTransferRunsRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ListTransferRunsAsync(ListTransferRunsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ScheduleTransferRuns_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ScheduleTransferRuns*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ScheduleTransferRuns_Google_Cloud_BigQuery_DataTransfer_V1_ScheduleTransferRunsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ScheduleTransferRuns(Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest,Google.Api.Gax.Grpc.CallSettings)">ScheduleTransferRuns(ScheduleTransferRunsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates transfer runs for a time range [range_start_time, range_end_time].
+For each date - or whatever granularity the data source supports - in the
+range, one transfer run is created.
+Note that runs are created per UTC time in the time range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ScheduleTransferRunsResponse ScheduleTransferRuns(ScheduleTransferRunsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest.html">ScheduleTransferRunsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse.html">ScheduleTransferRunsResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ScheduleTransferRuns_Google_Cloud_BigQuery_DataTransfer_V1_ScheduleTransferRunsRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ScheduleTransferRuns(ScheduleTransferRunsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ScheduleTransferRunsAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ScheduleTransferRunsAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_ScheduleTransferRunsAsync_Google_Cloud_BigQuery_DataTransfer_V1_ScheduleTransferRunsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.ScheduleTransferRunsAsync(Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest,Google.Api.Gax.Grpc.CallSettings)">ScheduleTransferRunsAsync(ScheduleTransferRunsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates transfer runs for a time range [range_start_time, range_end_time].
+For each date - or whatever granularity the data source supports - in the
+range, one transfer run is created.
+Note that runs are created per UTC time in the time range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ScheduleTransferRunsResponse&gt; ScheduleTransferRunsAsync(ScheduleTransferRunsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest.html">ScheduleTransferRunsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse.html">ScheduleTransferRunsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_ScheduleTransferRunsAsync_Google_Cloud_BigQuery_DataTransfer_V1_ScheduleTransferRunsRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.ScheduleTransferRunsAsync(ScheduleTransferRunsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_UpdateTransferConfig_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.UpdateTransferConfig*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_UpdateTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_UpdateTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.UpdateTransferConfig(Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateTransferConfig(UpdateTransferConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates a data transfer configuration.
+All fields must be set, even if they are not updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TransferConfig UpdateTransferConfig(UpdateTransferConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest.html">UpdateTransferConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_UpdateTransferConfig_Google_Cloud_BigQuery_DataTransfer_V1_UpdateTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.UpdateTransferConfig(UpdateTransferConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_UpdateTransferConfigAsync_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.UpdateTransferConfigAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClientImpl_UpdateTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_UpdateTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.UpdateTransferConfigAsync(Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateTransferConfigAsync(UpdateTransferConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates a data transfer configuration.
+All fields must be set, even if they are not updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;TransferConfig&gt; UpdateTransferConfigAsync(UpdateTransferConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest.html">UpdateTransferConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html#Google_Cloud_BigQuery_DataTransfer_V1_DataTransferServiceClient_UpdateTransferConfigAsync_Google_Cloud_BigQuery_DataTransfer_V1_UpdateTransferConfigRequest_Google_Api_Gax_Grpc_CallSettings_">DataTransferServiceClient.UpdateTransferConfigAsync(UpdateTransferConfigRequest, CallSettings)</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

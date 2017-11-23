@@ -83,10 +83,6 @@
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClientImpl.html">BigQueryClientImpl</a></h4>
       <section><p>Wrapper around <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html">BigqueryService</a> to provide simpler operations.</p>
 </section>
-      <h4><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryCommand.html">BigQueryCommand</a></h4>
-      <section><p>A SQL query (or DML command) to be sent to BigQuery, optionally
-including parameters.</p>
-</section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html">BigQueryDataset</a></h4>
       <section><p>A dataset within BigQuery.</p>
 </section>
@@ -104,10 +100,7 @@ including parameters.</p>
 A page token may be present to indicate that more results are available.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameter.html">BigQueryParameter</a></h4>
-      <section><p>A parameter within the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameterCollection.html">BigQueryParameterCollection</a> of a <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryCommand.html">BigQueryCommand</a>.</p>
-</section>
-      <h4><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameterCollection.html">BigQueryParameterCollection</a></h4>
-      <section><p>A collection of <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameter.html">BigQueryParameter</a> elements, as part of a <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryCommand.html">BigQueryCommand</a>.</p>
+      <section><p>A parameter within a SQL query.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQueryResults</a></h4>
       <section><p>The results of a completed query.</p>
@@ -227,7 +220,7 @@ available, but this class exists to provide consistency and extensibility.</p>
       <section><p>The mode of a field within a schema.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameterMode.html">BigQueryParameterMode</a></h4>
-      <section><p>The mode for all the parameters in a <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryCommand.html">BigQueryCommand</a>.
+      <section><p>The mode for all the parameters in a query, specified by <a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_ParameterMode">ParameterMode</a>.
 Parameters can be named within the query (<code>@parameterName&lt;/code&gt;), or positional (<code>?</code>).<p>
 </code></section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.CompressionType.html">CompressionType</a></h4>
@@ -244,13 +237,6 @@ Parameters can be named within the query (<code>@parameterName&lt;/code&gt;), or
 </section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.QueryPriority.html">QueryPriority</a></h4>
       <section><p>The priority of a query.</p>
-</section>
-      <h4><a class="xref" href="Google.Cloud.BigQuery.V2.TimePartitionType.html">TimePartitionType</a></h4>
-      <section><p>The partitioning type used for tables which are partitioned
-based on time. Currently only &quot;day&quot; is supported, but this enum
-exists to allow for future expansion. See
-<a href="https://cloud.google.com/bigquery/docs/creating-partitioned-tables">https://cloud.google.com/bigquery/docs/creating-partitioned-tables</a> for
-more details on partitioned tables.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.WriteDisposition.html">WriteDisposition</a></h4>
       <section><p>Indicates the desired behavior when writing to a table which already contains data.</p>

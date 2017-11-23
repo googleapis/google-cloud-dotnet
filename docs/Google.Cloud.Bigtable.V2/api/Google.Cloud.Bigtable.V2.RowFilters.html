@@ -334,14 +334,14 @@ elements.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex*"></a>
-  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_Google_Cloud_Bigtable_V2_BigtableByteString_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex(Google.Cloud.Bigtable.V2.BigtableByteString)">ColumnQualifierRegex(BigtableByteString)</h4>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_System_String_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex(System.String)">ColumnQualifierRegex(String)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells from
 columns whose qualifiers satisfy the given RE2 regex.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RowFilter ColumnQualifierRegex(BigtableByteString regex)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RowFilter ColumnQualifierRegex(string regex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -354,7 +354,7 @@ columns whose qualifiers satisfy the given RE2 regex.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">regex</span></td>
         <td><p>The RE2 regex used to match column qualifiers.</p>
 </td>
@@ -377,17 +377,15 @@ columns whose qualifiers satisfy the given RE2 regex.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_Google_Cloud_Bigtable_V2_BigtableByteString__remarks">Remarks</h5>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_System_String__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
+The format of RE2 is documented at <a href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>.
+</p>
+<p>
 Note that, since column qualifiers can contain arbitrary bytes, the <code>\C</code>
 escape sequence must be used if a true wildcard is desired. The <code>.</code>
 character will not match the new line character <code>\n</code>, which may be
 present in a binary qualifier.
-</p>
-<p>
-Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>,
-so <code data-dev-comment-type="paramref" class="paramref">regex</code> can be specified using a string as well and its UTF-8
-representations will be used.
 </p>
 </div>
   <a id="Google_Cloud_Bigtable_V2_RowFilters_ColumnRange_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ColumnRange*"></a>
@@ -621,7 +619,7 @@ but included for completeness.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex*"></a>
-  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_Google_Cloud_Bigtable_V2_BigtableByteString_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex(Google.Cloud.Bigtable.V2.BigtableByteString)">RowKeyRegex(BigtableByteString)</h4>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_System_String_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex(System.String)">RowKeyRegex(String)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells
 from rows whose keys satisfy the given RE2 regex. In other words, passes
 through the entire row when the key matches, and otherwise produces an
@@ -630,7 +628,7 @@ empty row.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RowFilter RowKeyRegex(BigtableByteString regex)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RowFilter RowKeyRegex(string regex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -643,7 +641,7 @@ empty row.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">regex</span></td>
         <td><p>The RE2 regex used to match row keys.</p>
 </td>
@@ -666,16 +664,15 @@ empty row.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_Google_Cloud_Bigtable_V2_BigtableByteString__remarks">Remarks</h5>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_System_String__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
+The format of RE2 is documented at <a href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>.
+</p>
+<p>
 Note that, since row keys can contain arbitrary bytes, the <code>\C</code> escape
 sequence must be used if a true wildcard is desired. The <code>.</code> character
 will not match the new line character <code>\n</code>, which may be present in a
 binary key.
-</p>
-<p>
-Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>, so <code data-dev-comment-type="paramref" class="paramref">regex</code> can
-be specified using a string as well and its UTF-8 representations will be used.
 </p>
 </div>
   <a id="Google_Cloud_Bigtable_V2_RowFilters_RowSample_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.RowSample*"></a>
@@ -865,14 +862,14 @@ with values that fall within the given range.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ValueRegex*"></a>
-  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_Google_Cloud_Bigtable_V2_BigtableByteString_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ValueRegex(Google.Cloud.Bigtable.V2.BigtableByteString)">ValueRegex(BigtableByteString)</h4>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_System_String_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.ValueRegex(System.String)">ValueRegex(String)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a> instance which matches only cells
 with values that satisfy the given regular expression.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RowFilter ValueRegex(BigtableByteString regex)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RowFilter ValueRegex(string regex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -885,7 +882,7 @@ with values that satisfy the given regular expression.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">regex</span></td>
         <td><p>The RE2 regex used to match cell values.</p>
 </td>
@@ -908,17 +905,15 @@ with values that satisfy the given regular expression.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_Google_Cloud_Bigtable_V2_BigtableByteString__remarks">Remarks</h5>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_System_String__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
+The format of RE2 is documented at <a href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>.
+</p>
+<p>
 Note that, since cell values can contain arbitrary bytes, the <code>\C</code> escape
 sequence must be used if a true wildcard is desired. The <code>.</code> character
 will not match the new line character <code>\n</code>, which may be present in a
 binary value.
-</p>
-<p>
-Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>,
-so <code data-dev-comment-type="paramref" class="paramref">regex</code> can be specified using a string as well and its UTF-8
-representations will be used.
 </p>
 </div>
   <a id="Google_Cloud_Bigtable_V2_RowFilters_VersionRange_" data-uid="Google.Cloud.Bigtable.V2.RowFilters.VersionRange*"></a>

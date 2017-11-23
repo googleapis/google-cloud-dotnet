@@ -297,6 +297,12 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
       <h4><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.Types.html">ReadOptions.Types</a></h4>
       <section><p>Container for nested types declared in the ReadOptions message type.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsRequest.html">ReserveIdsRequest</a></h4>
+      <section><p>The request for [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Datastore.V1.ReserveIdsResponse.html">ReserveIdsResponse</a></h4>
+      <section><p>The response for [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Datastore.V1.RollbackRequest.html">RollbackRequest</a></h4>
       <section><p>The request for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].</p>
 </section>
@@ -312,6 +318,9 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
 </section>
       <h4><a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.html">TransactionOptions</a></h4>
       <section><p>Options for beginning a new transaction.</p>
+<p>Transactions can be created explicitly with calls to
+[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction] or implicitly by setting
+[ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction] in read requests.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.Types.html">TransactionOptions.Types</a></h4>
       <section><p>Container for nested types declared in the TransactionOptions message type.</p>

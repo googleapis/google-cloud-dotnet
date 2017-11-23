@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/Google.Cloud.Datastore.V1",
+  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.Datastore.V1",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -1980,7 +1980,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Datastore.V1.Datastore.DatastoreBase.html",
-          "hash": "m9a1ZnTKhhtDi5zT2YtCzw=="
+          "hash": "vCv6X9HMMtxb8xCmW7j+vA=="
         }
       },
       "is_incremental": false,
@@ -1992,7 +1992,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Datastore.V1.Datastore.DatastoreClient.html",
-          "hash": "p+O6ctjB/mj9SMrBytNs5w=="
+          "hash": "cYBuT+Dodijs6xx5Cz+AuA=="
         }
       },
       "is_incremental": false,
@@ -2016,7 +2016,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Datastore.V1.DatastoreClient.html",
-          "hash": "0TlbzqvRpYXnDk0kC3qDYA=="
+          "hash": "M/kNColkaPHhv5nlkitH7Q=="
         }
       },
       "is_incremental": false,
@@ -2028,7 +2028,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Datastore.V1.DatastoreClientImpl.html",
-          "hash": "uHGNfmUw1nidcOTQBeyyIw=="
+          "hash": "m4UUDPcwkLvvOjzYoBXJ3Q=="
         }
       },
       "is_incremental": false,
@@ -2052,7 +2052,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Datastore.V1.DatastoreDb.html",
-          "hash": "Uun6ZGg4ByR+xw65IEzhCQ=="
+          "hash": "SQte1MNZMIl+30VxTVfh3w=="
         }
       },
       "is_incremental": false,
@@ -2064,7 +2064,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Datastore.V1.DatastoreDbImpl.html",
-          "hash": "d9FHSXFVaAJeEoeKesrT7g=="
+          "hash": "r6kpCzxACk8W3Ua/r8QA9Q=="
         }
       },
       "is_incremental": false,
@@ -2088,7 +2088,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Datastore.V1.DatastoreSettings.html",
-          "hash": "Pileo0Ilt96Vz6vqNUmkJg=="
+          "hash": "UEl9JRgIm5N4CazgtqvDRQ=="
         }
       },
       "is_incremental": false,
@@ -2600,6 +2600,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Datastore.V1.ReserveIdsRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Datastore.V1.ReserveIdsRequest.html",
+          "hash": "FwRF/+vDCnDOb5swMSvYVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Datastore.V1.ReserveIdsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Datastore.V1.ReserveIdsResponse.html",
+          "hash": "1FEXynKItdNu/4O9D2fIwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Datastore.V1.RollbackRequest.yml",
       "output": {
         ".html": {
@@ -2712,7 +2736,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Datastore.V1.TransactionOptions.html",
-          "hash": "9z8QgNgM/auJqvYF196CpA=="
+          "hash": "apw8NDCbmBmkK1GI+8hX+w=="
         }
       },
       "is_incremental": false,
@@ -2760,7 +2784,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Datastore.V1.html",
-          "hash": "jUkudmLx5iDoZ5AhhsjgnA=="
+          "hash": "fiu/LlT1p/AnCQcjUfJcgg=="
         }
       },
       "is_incremental": false,
@@ -5160,7 +5184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "KvqoYajbEyHE8l/gQS6vXQ=="
+          "hash": "kc/NWmDanUJX/g1EZqcn5g=="
         }
       },
       "is_incremental": false,
@@ -5190,16 +5214,16 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "RestApiDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
@@ -5208,9 +5232,9 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "RestApiDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

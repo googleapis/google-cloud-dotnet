@@ -16854,6 +16854,18 @@ references:
   commentId: Overload:Google.Cloud.Datastore.V1.Datastore.DatastoreBase.Lookup
   fullName: Google.Cloud.Datastore.V1.Datastore.DatastoreBase.Lookup
   nameWithType: Datastore.DatastoreBase.Lookup
+- uid: Google.Cloud.Datastore.V1.Datastore.DatastoreBase.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.ServerCallContext)
+  name: ReserveIds(ReserveIdsRequest, ServerCallContext)
+  href: api/Google.Cloud.Datastore.V1.Datastore.DatastoreBase.html#Google_Cloud_Datastore_V1_Datastore_DatastoreBase_ReserveIds_Google_Cloud_Datastore_V1_ReserveIdsRequest_Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.Datastore.V1.Datastore.DatastoreBase.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.ServerCallContext)
+  fullName: Google.Cloud.Datastore.V1.Datastore.DatastoreBase.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest, Grpc.Core.ServerCallContext)
+  nameWithType: Datastore.DatastoreBase.ReserveIds(ReserveIdsRequest, ServerCallContext)
+- uid: Google.Cloud.Datastore.V1.Datastore.DatastoreBase.ReserveIds*
+  name: ReserveIds
+  href: api/Google.Cloud.Datastore.V1.Datastore.DatastoreBase.html#Google_Cloud_Datastore_V1_Datastore_DatastoreBase_ReserveIds_
+  commentId: Overload:Google.Cloud.Datastore.V1.Datastore.DatastoreBase.ReserveIds
+  fullName: Google.Cloud.Datastore.V1.Datastore.DatastoreBase.ReserveIds
+  nameWithType: Datastore.DatastoreBase.ReserveIds
 - uid: Google.Cloud.Datastore.V1.Datastore.DatastoreBase.Rollback(Google.Cloud.Datastore.V1.RollbackRequest,Grpc.Core.ServerCallContext)
   name: Rollback(RollbackRequest, ServerCallContext)
   href: api/Google.Cloud.Datastore.V1.Datastore.DatastoreBase.html#Google_Cloud_Datastore_V1_Datastore_DatastoreBase_Rollback_Google_Cloud_Datastore_V1_RollbackRequest_Grpc_Core_ServerCallContext_
@@ -17094,6 +17106,48 @@ references:
   commentId: Overload:Google.Cloud.Datastore.V1.Datastore.DatastoreClient.NewInstance
   fullName: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.NewInstance
   nameWithType: Datastore.DatastoreClient.NewInstance
+- uid: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.CallOptions)
+  name: ReserveIds(ReserveIdsRequest, CallOptions)
+  href: api/Google.Cloud.Datastore.V1.Datastore.DatastoreClient.html#Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIds_Google_Cloud_Datastore_V1_ReserveIdsRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest, Grpc.Core.CallOptions)
+  nameWithType: Datastore.DatastoreClient.ReserveIds(ReserveIdsRequest, CallOptions)
+- uid: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: ReserveIds(ReserveIdsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Datastore.V1.Datastore.DatastoreClient.html#Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIds_Google_Cloud_Datastore_V1_ReserveIdsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: ReserveIds(ReserveIdsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: Datastore.DatastoreClient.ReserveIds(ReserveIdsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: Datastore.DatastoreClient.ReserveIds(ReserveIdsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds*
+  name: ReserveIds
+  href: api/Google.Cloud.Datastore.V1.Datastore.DatastoreClient.html#Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIds_
+  commentId: Overload:Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds
+  fullName: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIds
+  nameWithType: Datastore.DatastoreClient.ReserveIds
+- uid: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.CallOptions)
+  name: ReserveIdsAsync(ReserveIdsRequest, CallOptions)
+  href: api/Google.Cloud.Datastore.V1.Datastore.DatastoreClient.html#Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIdsAsync_Google_Cloud_Datastore_V1_ReserveIdsRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest, Grpc.Core.CallOptions)
+  nameWithType: Datastore.DatastoreClient.ReserveIdsAsync(ReserveIdsRequest, CallOptions)
+- uid: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: ReserveIdsAsync(ReserveIdsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Datastore.V1.Datastore.DatastoreClient.html#Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIdsAsync_Google_Cloud_Datastore_V1_ReserveIdsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: ReserveIdsAsync(ReserveIdsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: Datastore.DatastoreClient.ReserveIdsAsync(ReserveIdsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: Datastore.DatastoreClient.ReserveIdsAsync(ReserveIdsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync*
+  name: ReserveIdsAsync
+  href: api/Google.Cloud.Datastore.V1.Datastore.DatastoreClient.html#Google_Cloud_Datastore_V1_Datastore_DatastoreClient_ReserveIdsAsync_
+  commentId: Overload:Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync
+  fullName: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.ReserveIdsAsync
+  nameWithType: Datastore.DatastoreClient.ReserveIdsAsync
 - uid: Google.Cloud.Datastore.V1.Datastore.DatastoreClient.Rollback(Google.Cloud.Datastore.V1.RollbackRequest,Grpc.Core.CallOptions)
   name: Rollback(RollbackRequest, CallOptions)
   href: api/Google.Cloud.Datastore.V1.Datastore.DatastoreClient.html#Google_Cloud_Datastore_V1_Datastore_DatastoreClient_Rollback_Google_Cloud_Datastore_V1_RollbackRequest_Grpc_Core_CallOptions_
@@ -17472,6 +17526,57 @@ references:
   commentId: Overload:Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync
   fullName: Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync
   nameWithType: DatastoreClient.LookupAsync
+- uid: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ReserveIds(ReserveIdsRequest, CallSettings)
+  href: api/Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_ReserveIds_Google_Cloud_Datastore_V1_ReserveIdsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DatastoreClient.ReserveIds(ReserveIdsRequest, CallSettings)
+- uid: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)
+  name: ReserveIds(String, IEnumerable<Key>, CallSettings)
+  href: api/Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_ReserveIds_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ReserveIds(String, IEnumerable(Of Key), CallSettings)
+  fullName: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Key>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.Datastore.V1.Key), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DatastoreClient.ReserveIds(String, IEnumerable<Key>, CallSettings)
+  nameWithType.vb: DatastoreClient.ReserveIds(String, IEnumerable(Of Key), CallSettings)
+- uid: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds*
+  name: ReserveIds
+  href: api/Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_ReserveIds_
+  commentId: Overload:Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds
+  fullName: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIds
+  nameWithType: DatastoreClient.ReserveIds
+- uid: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ReserveIdsAsync(ReserveIdsRequest, CallSettings)
+  href: api/Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_Google_Cloud_Datastore_V1_ReserveIdsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DatastoreClient.ReserveIdsAsync(ReserveIdsRequest, CallSettings)
+- uid: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)
+  name: ReserveIdsAsync(String, IEnumerable<Key>, CallSettings)
+  href: api/Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ReserveIdsAsync(String, IEnumerable(Of Key), CallSettings)
+  fullName: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Key>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.Datastore.V1.Key), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DatastoreClient.ReserveIdsAsync(String, IEnumerable<Key>, CallSettings)
+  nameWithType.vb: DatastoreClient.ReserveIdsAsync(String, IEnumerable(Of Key), CallSettings)
+- uid: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Threading.CancellationToken)
+  name: ReserveIdsAsync(String, IEnumerable<Key>, CancellationToken)
+  href: api/Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Threading.CancellationToken)
+  name.vb: ReserveIdsAsync(String, IEnumerable(Of Key), CancellationToken)
+  fullName: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.Datastore.V1.Key>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.Datastore.V1.Key), System.Threading.CancellationToken)
+  nameWithType: DatastoreClient.ReserveIdsAsync(String, IEnumerable<Key>, CancellationToken)
+  nameWithType.vb: DatastoreClient.ReserveIdsAsync(String, IEnumerable(Of Key), CancellationToken)
+- uid: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync*
+  name: ReserveIdsAsync
+  href: api/Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_ReserveIdsAsync_
+  commentId: Overload:Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync
+  fullName: Google.Cloud.Datastore.V1.DatastoreClient.ReserveIdsAsync
+  nameWithType: DatastoreClient.ReserveIdsAsync
 - uid: Google.Cloud.Datastore.V1.DatastoreClient.Rollback(Google.Cloud.Datastore.V1.RollbackRequest,Google.Api.Gax.Grpc.CallSettings)
   name: Rollback(RollbackRequest, CallSettings)
   href: api/Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_Rollback_Google_Cloud_Datastore_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17676,6 +17781,30 @@ references:
   commentId: Overload:Google.Cloud.Datastore.V1.DatastoreClientImpl.LookupAsync
   fullName: Google.Cloud.Datastore.V1.DatastoreClientImpl.LookupAsync
   nameWithType: DatastoreClientImpl.LookupAsync
+- uid: Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ReserveIds(ReserveIdsRequest, CallSettings)
+  href: api/Google.Cloud.Datastore.V1.DatastoreClientImpl.html#Google_Cloud_Datastore_V1_DatastoreClientImpl_ReserveIds_Google_Cloud_Datastore_V1_ReserveIdsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIds(Google.Cloud.Datastore.V1.ReserveIdsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DatastoreClientImpl.ReserveIds(ReserveIdsRequest, CallSettings)
+- uid: Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIds*
+  name: ReserveIds
+  href: api/Google.Cloud.Datastore.V1.DatastoreClientImpl.html#Google_Cloud_Datastore_V1_DatastoreClientImpl_ReserveIds_
+  commentId: Overload:Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIds
+  fullName: Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIds
+  nameWithType: DatastoreClientImpl.ReserveIds
+- uid: Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ReserveIdsAsync(ReserveIdsRequest, CallSettings)
+  href: api/Google.Cloud.Datastore.V1.DatastoreClientImpl.html#Google_Cloud_Datastore_V1_DatastoreClientImpl_ReserveIdsAsync_Google_Cloud_Datastore_V1_ReserveIdsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIdsAsync(Google.Cloud.Datastore.V1.ReserveIdsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DatastoreClientImpl.ReserveIdsAsync(ReserveIdsRequest, CallSettings)
+- uid: Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIdsAsync*
+  name: ReserveIdsAsync
+  href: api/Google.Cloud.Datastore.V1.DatastoreClientImpl.html#Google_Cloud_Datastore_V1_DatastoreClientImpl_ReserveIdsAsync_
+  commentId: Overload:Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIdsAsync
+  fullName: Google.Cloud.Datastore.V1.DatastoreClientImpl.ReserveIdsAsync
+  nameWithType: DatastoreClientImpl.ReserveIdsAsync
 - uid: Google.Cloud.Datastore.V1.DatastoreClientImpl.Rollback(Google.Cloud.Datastore.V1.RollbackRequest,Google.Api.Gax.Grpc.CallSettings)
   name: Rollback(RollbackRequest, CallSettings)
   href: api/Google.Cloud.Datastore.V1.DatastoreClientImpl.html#Google_Cloud_Datastore_V1_DatastoreClientImpl_Rollback_Google_Cloud_Datastore_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17838,6 +17967,12 @@ references:
   commentId: M:Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction(Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction(Google.Api.Gax.Grpc.CallSettings)
   nameWithType: DatastoreDb.BeginTransaction(CallSettings)
+- uid: Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction(Google.Cloud.Datastore.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)
+  name: BeginTransaction(TransactionOptions, CallSettings)
+  href: api/Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Cloud_Datastore_V1_TransactionOptions_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction(Google.Cloud.Datastore.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction(Google.Cloud.Datastore.V1.TransactionOptions, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DatastoreDb.BeginTransaction(TransactionOptions, CallSettings)
 - uid: Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction*
   name: BeginTransaction
   href: api/Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_
@@ -17850,6 +17985,12 @@ references:
   commentId: M:Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync(Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync(Google.Api.Gax.Grpc.CallSettings)
   nameWithType: DatastoreDb.BeginTransactionAsync(CallSettings)
+- uid: Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync(Google.Cloud.Datastore.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)
+  name: BeginTransactionAsync(TransactionOptions, CallSettings)
+  href: api/Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Cloud_Datastore_V1_TransactionOptions_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync(Google.Cloud.Datastore.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync(Google.Cloud.Datastore.V1.TransactionOptions, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DatastoreDb.BeginTransactionAsync(TransactionOptions, CallSettings)
 - uid: Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync*
   name: BeginTransactionAsync
   href: api/Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_
@@ -18420,6 +18561,12 @@ references:
   commentId: M:Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransaction(Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransaction(Google.Api.Gax.Grpc.CallSettings)
   nameWithType: DatastoreDbImpl.BeginTransaction(CallSettings)
+- uid: Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransaction(Google.Cloud.Datastore.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)
+  name: BeginTransaction(TransactionOptions, CallSettings)
+  href: api/Google.Cloud.Datastore.V1.DatastoreDbImpl.html#Google_Cloud_Datastore_V1_DatastoreDbImpl_BeginTransaction_Google_Cloud_Datastore_V1_TransactionOptions_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransaction(Google.Cloud.Datastore.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransaction(Google.Cloud.Datastore.V1.TransactionOptions, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DatastoreDbImpl.BeginTransaction(TransactionOptions, CallSettings)
 - uid: Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransaction*
   name: BeginTransaction
   href: api/Google.Cloud.Datastore.V1.DatastoreDbImpl.html#Google_Cloud_Datastore_V1_DatastoreDbImpl_BeginTransaction_
@@ -18432,6 +18579,12 @@ references:
   commentId: M:Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransactionAsync(Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransactionAsync(Google.Api.Gax.Grpc.CallSettings)
   nameWithType: DatastoreDbImpl.BeginTransactionAsync(CallSettings)
+- uid: Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransactionAsync(Google.Cloud.Datastore.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)
+  name: BeginTransactionAsync(TransactionOptions, CallSettings)
+  href: api/Google.Cloud.Datastore.V1.DatastoreDbImpl.html#Google_Cloud_Datastore_V1_DatastoreDbImpl_BeginTransactionAsync_Google_Cloud_Datastore_V1_TransactionOptions_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransactionAsync(Google.Cloud.Datastore.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransactionAsync(Google.Cloud.Datastore.V1.TransactionOptions, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DatastoreDbImpl.BeginTransactionAsync(TransactionOptions, CallSettings)
 - uid: Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransactionAsync*
   name: BeginTransactionAsync
   href: api/Google.Cloud.Datastore.V1.DatastoreDbImpl.html#Google_Cloud_Datastore_V1_DatastoreDbImpl_BeginTransactionAsync_
@@ -18882,6 +19035,18 @@ references:
   commentId: Overload:Google.Cloud.Datastore.V1.DatastoreSettings.NonIdempotentRetryFilter
   fullName: Google.Cloud.Datastore.V1.DatastoreSettings.NonIdempotentRetryFilter
   nameWithType: DatastoreSettings.NonIdempotentRetryFilter
+- uid: Google.Cloud.Datastore.V1.DatastoreSettings.ReserveIdsSettings
+  name: ReserveIdsSettings
+  href: api/Google.Cloud.Datastore.V1.DatastoreSettings.html#Google_Cloud_Datastore_V1_DatastoreSettings_ReserveIdsSettings
+  commentId: P:Google.Cloud.Datastore.V1.DatastoreSettings.ReserveIdsSettings
+  fullName: Google.Cloud.Datastore.V1.DatastoreSettings.ReserveIdsSettings
+  nameWithType: DatastoreSettings.ReserveIdsSettings
+- uid: Google.Cloud.Datastore.V1.DatastoreSettings.ReserveIdsSettings*
+  name: ReserveIdsSettings
+  href: api/Google.Cloud.Datastore.V1.DatastoreSettings.html#Google_Cloud_Datastore_V1_DatastoreSettings_ReserveIdsSettings_
+  commentId: Overload:Google.Cloud.Datastore.V1.DatastoreSettings.ReserveIdsSettings
+  fullName: Google.Cloud.Datastore.V1.DatastoreSettings.ReserveIdsSettings
+  nameWithType: DatastoreSettings.ReserveIdsSettings
 - uid: Google.Cloud.Datastore.V1.DatastoreSettings.RollbackSettings
   name: RollbackSettings
   href: api/Google.Cloud.Datastore.V1.DatastoreSettings.html#Google_Cloud_Datastore_V1_DatastoreSettings_RollbackSettings
@@ -21241,6 +21406,54 @@ references:
   commentId: F:Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency.Unspecified
   fullName: Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency.Unspecified
   nameWithType: ReadOptions.Types.ReadConsistency.Unspecified
+- uid: Google.Cloud.Datastore.V1.ReserveIdsRequest
+  name: ReserveIdsRequest
+  href: api/Google.Cloud.Datastore.V1.ReserveIdsRequest.html
+  commentId: T:Google.Cloud.Datastore.V1.ReserveIdsRequest
+  fullName: Google.Cloud.Datastore.V1.ReserveIdsRequest
+  nameWithType: ReserveIdsRequest
+- uid: Google.Cloud.Datastore.V1.ReserveIdsRequest.DatabaseId
+  name: DatabaseId
+  href: api/Google.Cloud.Datastore.V1.ReserveIdsRequest.html#Google_Cloud_Datastore_V1_ReserveIdsRequest_DatabaseId
+  commentId: P:Google.Cloud.Datastore.V1.ReserveIdsRequest.DatabaseId
+  fullName: Google.Cloud.Datastore.V1.ReserveIdsRequest.DatabaseId
+  nameWithType: ReserveIdsRequest.DatabaseId
+- uid: Google.Cloud.Datastore.V1.ReserveIdsRequest.DatabaseId*
+  name: DatabaseId
+  href: api/Google.Cloud.Datastore.V1.ReserveIdsRequest.html#Google_Cloud_Datastore_V1_ReserveIdsRequest_DatabaseId_
+  commentId: Overload:Google.Cloud.Datastore.V1.ReserveIdsRequest.DatabaseId
+  fullName: Google.Cloud.Datastore.V1.ReserveIdsRequest.DatabaseId
+  nameWithType: ReserveIdsRequest.DatabaseId
+- uid: Google.Cloud.Datastore.V1.ReserveIdsRequest.Keys
+  name: Keys
+  href: api/Google.Cloud.Datastore.V1.ReserveIdsRequest.html#Google_Cloud_Datastore_V1_ReserveIdsRequest_Keys
+  commentId: P:Google.Cloud.Datastore.V1.ReserveIdsRequest.Keys
+  fullName: Google.Cloud.Datastore.V1.ReserveIdsRequest.Keys
+  nameWithType: ReserveIdsRequest.Keys
+- uid: Google.Cloud.Datastore.V1.ReserveIdsRequest.Keys*
+  name: Keys
+  href: api/Google.Cloud.Datastore.V1.ReserveIdsRequest.html#Google_Cloud_Datastore_V1_ReserveIdsRequest_Keys_
+  commentId: Overload:Google.Cloud.Datastore.V1.ReserveIdsRequest.Keys
+  fullName: Google.Cloud.Datastore.V1.ReserveIdsRequest.Keys
+  nameWithType: ReserveIdsRequest.Keys
+- uid: Google.Cloud.Datastore.V1.ReserveIdsRequest.ProjectId
+  name: ProjectId
+  href: api/Google.Cloud.Datastore.V1.ReserveIdsRequest.html#Google_Cloud_Datastore_V1_ReserveIdsRequest_ProjectId
+  commentId: P:Google.Cloud.Datastore.V1.ReserveIdsRequest.ProjectId
+  fullName: Google.Cloud.Datastore.V1.ReserveIdsRequest.ProjectId
+  nameWithType: ReserveIdsRequest.ProjectId
+- uid: Google.Cloud.Datastore.V1.ReserveIdsRequest.ProjectId*
+  name: ProjectId
+  href: api/Google.Cloud.Datastore.V1.ReserveIdsRequest.html#Google_Cloud_Datastore_V1_ReserveIdsRequest_ProjectId_
+  commentId: Overload:Google.Cloud.Datastore.V1.ReserveIdsRequest.ProjectId
+  fullName: Google.Cloud.Datastore.V1.ReserveIdsRequest.ProjectId
+  nameWithType: ReserveIdsRequest.ProjectId
+- uid: Google.Cloud.Datastore.V1.ReserveIdsResponse
+  name: ReserveIdsResponse
+  href: api/Google.Cloud.Datastore.V1.ReserveIdsResponse.html
+  commentId: T:Google.Cloud.Datastore.V1.ReserveIdsResponse
+  fullName: Google.Cloud.Datastore.V1.ReserveIdsResponse
+  nameWithType: ReserveIdsResponse
 - uid: Google.Cloud.Datastore.V1.RollbackRequest
   name: RollbackRequest
   href: api/Google.Cloud.Datastore.V1.RollbackRequest.html
@@ -21415,6 +21628,42 @@ references:
   commentId: T:Google.Cloud.Datastore.V1.TransactionOptions
   fullName: Google.Cloud.Datastore.V1.TransactionOptions
   nameWithType: TransactionOptions
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.CreateForRetry(Google.Protobuf.ByteString)
+  name: CreateForRetry(ByteString)
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_CreateForRetry_Google_Protobuf_ByteString_
+  commentId: M:Google.Cloud.Datastore.V1.TransactionOptions.CreateForRetry(Google.Protobuf.ByteString)
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.CreateForRetry(Google.Protobuf.ByteString)
+  nameWithType: TransactionOptions.CreateForRetry(ByteString)
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.CreateForRetry*
+  name: CreateForRetry
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_CreateForRetry_
+  commentId: Overload:Google.Cloud.Datastore.V1.TransactionOptions.CreateForRetry
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.CreateForRetry
+  nameWithType: TransactionOptions.CreateForRetry
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.CreateReadOnly
+  name: CreateReadOnly()
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_CreateReadOnly
+  commentId: M:Google.Cloud.Datastore.V1.TransactionOptions.CreateReadOnly
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.CreateReadOnly()
+  nameWithType: TransactionOptions.CreateReadOnly()
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.CreateReadOnly*
+  name: CreateReadOnly
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_CreateReadOnly_
+  commentId: Overload:Google.Cloud.Datastore.V1.TransactionOptions.CreateReadOnly
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.CreateReadOnly
+  nameWithType: TransactionOptions.CreateReadOnly
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.CreateReadWrite
+  name: CreateReadWrite()
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_CreateReadWrite
+  commentId: M:Google.Cloud.Datastore.V1.TransactionOptions.CreateReadWrite
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.CreateReadWrite()
+  nameWithType: TransactionOptions.CreateReadWrite()
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.CreateReadWrite*
+  name: CreateReadWrite
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_CreateReadWrite_
+  commentId: Overload:Google.Cloud.Datastore.V1.TransactionOptions.CreateReadWrite
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.CreateReadWrite
+  nameWithType: TransactionOptions.CreateReadWrite
 - uid: Google.Cloud.Datastore.V1.TransactionOptions.ModeCase
   name: ModeCase
   href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_ModeCase

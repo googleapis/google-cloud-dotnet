@@ -73,7 +73,7 @@
   
   <h1 id="Google_Cloud_BigQuery_V2_BigQueryParameter" data-uid="Google.Cloud.BigQuery.V2.BigQueryParameter" class="text-break">Class BigQueryParameter
   </h1>
-  <div class="markdown level0 summary"><p>A parameter within the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameterCollection.html">BigQueryParameterCollection</a> of a <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryCommand.html">BigQueryCommand</a>.</p>
+  <div class="markdown level0 summary"><p>A parameter within a SQL query.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -114,7 +114,7 @@ All scalar types may be specified as a string value, which will not be validated
 but passed to the API as-is.
 </p>
 <ul><li><code>Bool</code>: <code>System.Boolean</code></li><li><code>Int64</code>: <code>System.Int16</code>, <code>System.Int32</code>, <code>System.Int64</code>, <code>System.UInt16</code>, <code>System.UInt32</code>,
-<code>System.UInt64</code></li><li><code>Float64</code>: Any type valid for <code>Int64</code>, as well as <code>System.Single</code> and <code>System.Double</code></li><li><code>String</code>: <code>System.String</code></li><li><code>Bytes</code>: <code>System.Byte[]</code></li><li><code>Date</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code></li><li><code>DateTime</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code></li><li><code>Time</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code>, <code>System.TimeSpan</code></li><li><code>Timestamp</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code></li><li><code>Array</code>: An <code>IReadOnlyList&lt;T&gt;</code> of any of the above types corresponding to the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameter.html#Google_Cloud_BigQuery_V2_BigQueryParameter_ArrayType">ArrayType</a>,
+<code>System.UInt64</code></li><li><code>Float64</code>: Any type valid for <code>Int64</code>, as well as <code>System.Single</code> and <code>System.Double</code></li><li><code>String</code>: <code>System.String</code></li><li><code>Bytes</code>: <code>System.Byte[]</code></li><li><code>Date</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code></li><li><code>DateTime</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code></li><li><code>Time</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code>, <code>System.TimeSpan</code></li><li><code>Timestamp</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code></li><li><code>Array</code>: An <code>IReadOnlyList&lt;T&gt;</code> of any of the above types corresponding to the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameter.html#Google_Cloud_BigQuery_V2_BigQueryParameter_ArrayElementType">ArrayElementType</a>,
 which will be inferred from the value&apos;s element type if not otherwise specified.</li></ul>
 <p>
 If the parameter type is null, it is inferred from the value. A <span class="xref">System.TimeSpan</span> value is
@@ -316,31 +316,6 @@ Struct parameters are currently not supported.
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public BigQueryDbType? ArrayElementType { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDbType.html">BigQueryDbType</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryParameter_ArrayType_" data-uid="Google.Cloud.BigQuery.V2.BigQueryParameter.ArrayType*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryParameter_ArrayType" data-uid="Google.Cloud.BigQuery.V2.BigQueryParameter.ArrayType">ArrayType</h4>
-  <div class="markdown level1 summary"><p>The type of the nested elements, for array parameters. If this is null, the type is inferred from the value.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This property has been renamed to ArrayElementType. Please migrate your code to use that.&quot;)]
-public BigQueryDbType? ArrayType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

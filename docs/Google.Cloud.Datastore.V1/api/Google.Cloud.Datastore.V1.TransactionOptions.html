@@ -74,6 +74,9 @@
   <h1 id="Google_Cloud_Datastore_V1_TransactionOptions" data-uid="Google.Cloud.Datastore.V1.TransactionOptions" class="text-break">Class TransactionOptions
   </h1>
   <div class="markdown level0 summary"><p>Options for beginning a new transaction.</p>
+<p>Transactions can be created explicitly with calls to
+[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction] or implicitly by setting
+[ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction] in read requests.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -179,6 +182,101 @@
       <tr>
         <td><a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.html">TransactionOptions.Types.ReadWrite</a></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Datastore_V1_TransactionOptions_CreateForRetry_" data-uid="Google.Cloud.Datastore.V1.TransactionOptions.CreateForRetry*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_TransactionOptions_CreateForRetry_Google_Protobuf_ByteString_" data-uid="Google.Cloud.Datastore.V1.TransactionOptions.CreateForRetry(Google.Protobuf.ByteString)">CreateForRetry(ByteString)</h4>
+  <div class="markdown level1 summary"><p>Creates options for a transaction that will retry a previous one, identified by <code data-dev-comment-type="paramref" class="paramref">previousTransactionId</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionOptions CreateForRetry(ByteString previousTransactionId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">previousTransactionId</span></td>
+        <td><p>The ID of the transaction being retried.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.html">TransactionOptions</a> for a transaction to retry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Datastore_V1_TransactionOptions_CreateReadOnly_" data-uid="Google.Cloud.Datastore.V1.TransactionOptions.CreateReadOnly*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_TransactionOptions_CreateReadOnly" data-uid="Google.Cloud.Datastore.V1.TransactionOptions.CreateReadOnly">CreateReadOnly()</h4>
+  <div class="markdown level1 summary"><p>Creates options for a read-only transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionOptions CreateReadOnly()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.html">TransactionOptions</a> for a read-only transaction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Datastore_V1_TransactionOptions_CreateReadWrite_" data-uid="Google.Cloud.Datastore.V1.TransactionOptions.CreateReadWrite*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_TransactionOptions_CreateReadWrite" data-uid="Google.Cloud.Datastore.V1.TransactionOptions.CreateReadWrite">CreateReadWrite()</h4>
+  <div class="markdown level1 summary"><p>Creates options for a read-write transaction. (This is equivalent to not specifying transaction options at all.)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionOptions CreateReadWrite()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.html">TransactionOptions</a> for a read-write transaction.</p>
+</td>
       </tr>
     </tbody>
   </table>

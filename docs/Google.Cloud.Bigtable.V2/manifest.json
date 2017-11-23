@@ -1848,7 +1848,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Bigtable.V2.BigtableByteString.html",
-          "hash": "72jEIPkV2hc9vj+iNyOkAA=="
+          "hash": "+gSe9XSLjafxGEwCH6drkw=="
         }
       },
       "is_incremental": false,
@@ -1872,7 +1872,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.html",
-          "hash": "8pF6mLxErpzQFw/1rTMAgg=="
+          "hash": "FdewFpAQITnRwuad/zpvxQ=="
         }
       },
       "is_incremental": false,
@@ -1896,7 +1896,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Bigtable.V2.BigtableClient.html",
-          "hash": "QDtKpUjqewy4G3aRutSy2w=="
+          "hash": "8zzfREa+uQrsRORcjhkT2A=="
         }
       },
       "is_incremental": false,
@@ -1908,7 +1908,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Bigtable.V2.BigtableClientImpl.html",
-          "hash": "V0vW6LMgB5OAtIKTJwpS0w=="
+          "hash": "qF2JA+vSKcmZSDXHh774hQ=="
         }
       },
       "is_incremental": false,
@@ -2288,6 +2288,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Bigtable.V2.ReadModifyWriteRules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Bigtable.V2.ReadModifyWriteRules.html",
+          "hash": "wpk8IF6g3Rc5JaolIZIVBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Bigtable.V2.ReadRowsRequest.yml",
       "output": {
         ".html": {
@@ -2436,7 +2448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Bigtable.V2.RowFilters.html",
-          "hash": "fLMj0nV+nq8aoJPNGd3aaA=="
+          "hash": "5U+eKm/ucrM+JSBJ7mL0zQ=="
         }
       },
       "is_incremental": false,
@@ -2580,7 +2592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Bigtable.V2.html",
-          "hash": "Dv4QT0pPbSrhbbTiE7fXmg=="
+          "hash": "knQPflvIXfujk3g2jJNZLQ=="
         }
       },
       "is_incremental": false,
@@ -4980,7 +4992,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "+ssONeoMimpyZF0Mnb2jig=="
+          "hash": "o6/0D+viWxkGqA4J7+qdIg=="
         }
       },
       "is_incremental": false,
@@ -5015,9 +5027,9 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
+        "RestApiDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
@@ -5028,9 +5040,9 @@
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "RestApiDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

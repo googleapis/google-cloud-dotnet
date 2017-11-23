@@ -183,7 +183,8 @@ when a value is added to the row would be ineffective as the values could change
   <div class="markdown level1 summary"><p>To help ensure data consistency, you can supply an <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryInsertRow.html#Google_Cloud_BigQuery_V2_BigQueryInsertRow_InsertId">InsertId</a> for each inserted row.
 BigQuery remembers this ID for at least one minute. If you try to stream the same set of rows within
 that time period and the insertId property is set, BigQuery uses the property to de-duplicate
-your data on a best effort basis.</p>
+your data on a best effort basis. If no ID is specified, one will be generated to allow all
+insert operations to be retried.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

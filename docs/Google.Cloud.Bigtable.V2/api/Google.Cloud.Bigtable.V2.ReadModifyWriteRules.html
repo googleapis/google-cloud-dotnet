@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ReadModifyWriteRules
+   | Google.Cloud.Bigtable.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ReadModifyWriteRules
+   | Google.Cloud.Bigtable.V2 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Bigtable.V2.ReadModifyWriteRules">
+  
+  
+  <h1 id="Google_Cloud_Bigtable_V2_ReadModifyWriteRules" data-uid="Google.Cloud.Bigtable.V2.ReadModifyWriteRules" class="text-break">Class ReadModifyWriteRules
+  </h1>
+  <div class="markdown level0 summary"><p>Static class with convenience methods for creating various kinds of <a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRule.html">ReadModifyWriteRule</a> instances.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ReadModifyWriteRules</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Bigtable.V2.html">Google.Cloud.Bigtable.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Bigtable.V2.dll</h6>
+  <h5 id="Google_Cloud_Bigtable_V2_ReadModifyWriteRules_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ReadModifyWriteRules</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Bigtable_V2_ReadModifyWriteRules_Append_" data-uid="Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Append*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_ReadModifyWriteRules_Append_System_String_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_BigtableByteString_" data-uid="Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Append(System.String,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.BigtableByteString)">Append(String, BigtableByteString, BigtableByteString)</h4>
+  <div class="markdown level1 summary"><p>Rule specifying that <code data-dev-comment-type="paramref" class="paramref">appendValue</code> be appended to the existing value.
+If the targeted cell is unset, it will be treated as containing the empty string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadModifyWriteRule Append(string familyName, BigtableByteString columnQualifier, BigtableByteString appendValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">familyName</span></td>
+        <td><p>The name of the family to which the read/modify/write should be applied.
+Must match <code>[-_.a-zA-Z0-9]+</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">columnQualifier</span></td>
+        <td><p>The qualifier of the column to which the read/modify/write should be
+applied. Can be any byte string, including the empty string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">appendValue</span></td>
+        <td><p>The value to append to the existing cell value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRule.html">ReadModifyWriteRule</a></td>
+        <td><p>The append value rule.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_ReadModifyWriteRules_Append_System_String_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_BigtableByteString__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>,
+so <code data-dev-comment-type="paramref" class="paramref">columnQualifier</code> can be specified using a string as well and
+its UTF-8 representations will be used.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_ReadModifyWriteRules_Increment_" data-uid="Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Increment*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_ReadModifyWriteRules_Increment_System_String_Google_Cloud_Bigtable_V2_BigtableByteString_System_Int64_" data-uid="Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Increment(System.String,Google.Cloud.Bigtable.V2.BigtableByteString,System.Int64)">Increment(String, BigtableByteString, Int64)</h4>
+  <div class="markdown level1 summary"><p>Rule specifying that <code data-dev-comment-type="paramref" class="paramref">incrementAmount</code> be added to the existing value.
+If the targeted cell is unset, it will be treated as containing a zero.
+Otherwise, the targeted cell must contain an 8-byte value (interpreted
+as a 64-bit big-endian signed integer), or the entire request will fail.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadModifyWriteRule Increment(string familyName, BigtableByteString columnQualifier, long incrementAmount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">familyName</span></td>
+        <td><p>The name of the family to which the read/modify/write should be applied.
+Must match <code>[-_.a-zA-Z0-9]+</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">columnQualifier</span></td>
+        <td><p>The qualifier of the column to which the read/modify/write should be
+applied. Can be any byte string, including the empty string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">incrementAmount</span></td>
+        <td><p>The amount to increment the existing cell value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRule.html">ReadModifyWriteRule</a></td>
+        <td><p>The increment amount rule.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_ReadModifyWriteRules_Increment_System_String_Google_Cloud_Bigtable_V2_BigtableByteString_System_Int64__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>,
+so <code data-dev-comment-type="paramref" class="paramref">columnQualifier</code> can be specified using a string as well and
+its UTF-8 representations will be used.
+</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

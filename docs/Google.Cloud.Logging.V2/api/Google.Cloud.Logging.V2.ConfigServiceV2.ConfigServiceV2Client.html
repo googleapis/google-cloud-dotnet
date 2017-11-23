@@ -204,11 +204,238 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusion_Google_Cloud_Logging_V2_CreateExclusionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.CallOptions)">CreateExclusion(CreateExclusionRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exclusion in a specified parent resource.
+Only log entries belonging to that resource can be excluded.
+You can have up to 10 exclusions in a resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion CreateExclusion(CreateExclusionRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html">CreateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusion_Google_Cloud_Logging_V2_CreateExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateExclusion(CreateExclusionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exclusion in a specified parent resource.
+Only log entries belonging to that resource can be excluded.
+You can have up to 10 exclusions in a resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion CreateExclusion(CreateExclusionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html">CreateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusionAsync_Google_Cloud_Logging_V2_CreateExclusionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.CallOptions)">CreateExclusionAsync(CreateExclusionRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exclusion in a specified parent resource.
+Only log entries belonging to that resource can be excluded.
+You can have up to 10 exclusions in a resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogExclusion&gt; CreateExclusionAsync(CreateExclusionRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html">CreateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusionAsync_Google_Cloud_Logging_V2_CreateExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateExclusionAsync(CreateExclusionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exclusion in a specified parent resource.
+Only log entries belonging to that resource can be excluded.
+You can have up to 10 exclusions in a resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogExclusion&gt; CreateExclusionAsync(CreateExclusionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html">CreateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.CallOptions)">CreateSink(CreateSinkRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
-export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&apos;s start and end times or the sink&apos;s
+export of newly-ingested log entries begins immediately, unless the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -260,8 +487,7 @@ export log entries only from the resource owning the sink.</p>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSink(CreateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
-export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&apos;s start and end times or the sink&apos;s
+export of newly-ingested log entries begins immediately, unless the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -325,8 +551,7 @@ export log entries only from the resource owning the sink.</p>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.CallOptions)">CreateSinkAsync(CreateSinkRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
-export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&apos;s start and end times or the sink&apos;s
+export of newly-ingested log entries begins immediately, unless the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -378,8 +603,7 @@ export log entries only from the resource owning the sink.</p>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSinkAsync(CreateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
-export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&apos;s start and end times or the sink&apos;s
+export of newly-ingested log entries begins immediately, unless the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -435,6 +659,226 @@ export log entries only from the resource owning the sink.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusion_Google_Cloud_Logging_V2_DeleteExclusionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.CallOptions)">DeleteExclusion(DeleteExclusionRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Deletes an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Empty DeleteExclusion(DeleteExclusionRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.DeleteExclusionRequest.html">DeleteExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusion_Google_Cloud_Logging_V2_DeleteExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteExclusion(DeleteExclusionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Deletes an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Empty DeleteExclusion(DeleteExclusionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.DeleteExclusionRequest.html">DeleteExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusionAsync_Google_Cloud_Logging_V2_DeleteExclusionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.CallOptions)">DeleteExclusionAsync(DeleteExclusionRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Deletes an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteExclusionAsync(DeleteExclusionRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.DeleteExclusionRequest.html">DeleteExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusionAsync_Google_Cloud_Logging_V2_DeleteExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteExclusionAsync(DeleteExclusionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Deletes an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteExclusionAsync(DeleteExclusionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.DeleteExclusionRequest.html">DeleteExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -664,6 +1108,226 @@ service account is also deleted.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusion_Google_Cloud_Logging_V2_GetExclusionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.CallOptions)">GetExclusion(GetExclusionRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets the description of an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion GetExclusion(GetExclusionRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html">GetExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusion_Google_Cloud_Logging_V2_GetExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetExclusion(GetExclusionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the description of an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion GetExclusion(GetExclusionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html">GetExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusionAsync_Google_Cloud_Logging_V2_GetExclusionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.CallOptions)">GetExclusionAsync(GetExclusionRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets the description of an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogExclusion&gt; GetExclusionAsync(GetExclusionRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html">GetExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusionAsync_Google_Cloud_Logging_V2_GetExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetExclusionAsync(GetExclusionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the description of an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogExclusion&gt; GetExclusionAsync(GetExclusionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html">GetExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetSink_Google_Cloud_Logging_V2_GetSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetSink(Google.Cloud.Logging.V2.GetSinkRequest,Grpc.Core.CallOptions)">GetSink(GetSinkRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets a sink.</p>
@@ -879,6 +1543,226 @@ service account is also deleted.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusions_Google_Cloud_Logging_V2_ListExclusionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.CallOptions)">ListExclusions(ListExclusionsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Lists all the exclusions in a parent resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ListExclusionsResponse ListExclusions(ListExclusionsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsRequest.html">ListExclusionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusions_Google_Cloud_Logging_V2_ListExclusionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListExclusions(ListExclusionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists all the exclusions in a parent resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ListExclusionsResponse ListExclusions(ListExclusionsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsRequest.html">ListExclusionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusionsAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusionsAsync_Google_Cloud_Logging_V2_ListExclusionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.CallOptions)">ListExclusionsAsync(ListExclusionsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Lists all the exclusions in a parent resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListExclusionsResponse&gt; ListExclusionsAsync(ListExclusionsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsRequest.html">ListExclusionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusionsAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusionsAsync_Google_Cloud_Logging_V2_ListExclusionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListExclusionsAsync(ListExclusionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists all the exclusions in a parent resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListExclusionsResponse&gt; ListExclusionsAsync(ListExclusionsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsRequest.html">ListExclusionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -1147,15 +2031,231 @@ service account is also deleted.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusion_Google_Cloud_Logging_V2_UpdateExclusionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.CallOptions)">UpdateExclusion(UpdateExclusionRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Changes one or more properties of an existing exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion UpdateExclusion(UpdateExclusionRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html">UpdateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusion_Google_Cloud_Logging_V2_UpdateExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateExclusion(UpdateExclusionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Changes one or more properties of an existing exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion UpdateExclusion(UpdateExclusionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html">UpdateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusionAsync_Google_Cloud_Logging_V2_UpdateExclusionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.CallOptions)">UpdateExclusionAsync(UpdateExclusionRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Changes one or more properties of an existing exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogExclusion&gt; UpdateExclusionAsync(UpdateExclusionRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html">UpdateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusionAsync_Google_Cloud_Logging_V2_UpdateExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateExclusionAsync(UpdateExclusionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Changes one or more properties of an existing exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogExclusion&gt; UpdateExclusionAsync(UpdateExclusionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html">UpdateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.CallOptions)">UpdateSink(UpdateSinkRequest, CallOptions)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
-identical to
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
-If the named sink does exist, then this method replaces the following
-fields in the existing sink with values from the new sink: <code>destination</code>,
-<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
-The updated filter might also have a new <code>writer_identity</code>; see the
+  <div class="markdown level1 summary"><p>Updates a sink.  This method replaces the following fields in the existing
+sink with values from the new sink: <code>destination</code>, and <code>filter</code>.
+The updated sink might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1205,13 +2305,9 @@ The updated filter might also have a new <code>writer_identity</code>; see the
   </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSink(UpdateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
-identical to
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
-If the named sink does exist, then this method replaces the following
-fields in the existing sink with values from the new sink: <code>destination</code>,
-<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
-The updated filter might also have a new <code>writer_identity</code>; see the
+  <div class="markdown level1 summary"><p>Updates a sink.  This method replaces the following fields in the existing
+sink with values from the new sink: <code>destination</code>, and <code>filter</code>.
+The updated sink might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1273,13 +2369,9 @@ The updated filter might also have a new <code>writer_identity</code>; see the
   </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSinkAsync_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSinkAsync(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.CallOptions)">UpdateSinkAsync(UpdateSinkRequest, CallOptions)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
-identical to
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
-If the named sink does exist, then this method replaces the following
-fields in the existing sink with values from the new sink: <code>destination</code>,
-<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
-The updated filter might also have a new <code>writer_identity</code>; see the
+  <div class="markdown level1 summary"><p>Updates a sink.  This method replaces the following fields in the existing
+sink with values from the new sink: <code>destination</code>, and <code>filter</code>.
+The updated sink might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1329,13 +2421,9 @@ The updated filter might also have a new <code>writer_identity</code>; see the
   </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSinkAsync_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSinkAsync(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSinkAsync(UpdateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
-identical to
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
-If the named sink does exist, then this method replaces the following
-fields in the existing sink with values from the new sink: <code>destination</code>,
-<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
-The updated filter might also have a new <code>writer_identity</code>; see the
+  <div class="markdown level1 summary"><p>Updates a sink.  This method replaces the following fields in the existing
+sink with values from the new sink: <code>destination</code>, and <code>filter</code>.
+The updated sink might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

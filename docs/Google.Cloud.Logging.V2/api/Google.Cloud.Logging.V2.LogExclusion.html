@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LogExclusion
+   | Google.Cloud.Logging.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LogExclusion
+   | Google.Cloud.Logging.V2 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.LogExclusion">
+  
+  
+  <h1 id="Google_Cloud_Logging_V2_LogExclusion" data-uid="Google.Cloud.Logging.V2.LogExclusion" class="text-break">Class LogExclusion
+  </h1>
+  <div class="markdown level0 summary"><p>Specifies a set of log entries that are not to be stored in Stackdriver
+Logging. If your project receives a large volume of logs, you might be able
+to use exclusions to reduce your chargeable logs. Exclusions are processed
+after log sinks, so you can export log entries before they are excluded.
+Audit log entries and log entries from Amazon Web Services are never
+excluded.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LogExclusion</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Logging.V2.html">Google.Cloud.Logging.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Logging.V2.dll</h6>
+  <h5 id="Google_Cloud_Logging_V2_LogExclusion_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class LogExclusion : IMessage&lt;LogExclusion&gt;, IMessage, IEquatable&lt;LogExclusion&gt;, IDeepCloneable&lt;LogExclusion&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Logging_V2_LogExclusion_Description_" data-uid="Google.Cloud.Logging.V2.LogExclusion.Description*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogExclusion_Description" data-uid="Google.Cloud.Logging.V2.LogExclusion.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Optional. A description of this exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogExclusion_Disabled_" data-uid="Google.Cloud.Logging.V2.LogExclusion.Disabled*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogExclusion_Disabled" data-uid="Google.Cloud.Logging.V2.LogExclusion.Disabled">Disabled</h4>
+  <div class="markdown level1 summary"><p>Optional. If set to True, then this exclusion is disabled and it does not
+exclude any log entries. You can use
+<a href="/logging/docs/alpha-exclusion/docs/reference/v2/rest/v2/projects.exclusions/patch">exclusions.patch</a>
+to change the value of this field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Disabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogExclusion_Filter_" data-uid="Google.Cloud.Logging.V2.LogExclusion.Filter*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogExclusion_Filter" data-uid="Google.Cloud.Logging.V2.LogExclusion.Filter">Filter</h4>
+  <div class="markdown level1 summary"><p>Required.
+An <a href="/logging/docs/view/advanced_filters">advanced logs filter</a>
+that matches the log entries to be excluded. By using the
+<a href="/logging/docs/view/advanced_filters#sample">sample function</a>,
+you can exclude less than 100% of the matching log entries.
+For example, the following filter matches 99% of low-severity log
+entries from load balancers:</p>
+<p>&quot;resource.type=http_load_balancer severity&lt;ERROR sample(insertId, 0.99)&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Filter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogExclusion_Name_" data-uid="Google.Cloud.Logging.V2.LogExclusion.Name*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogExclusion_Name" data-uid="Google.Cloud.Logging.V2.LogExclusion.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Required. A client-assigned identifier, such as
+<code>&amp;quot;load-balancer-exclusion&amp;quot;</code>. Identifiers are limited to 100 characters and
+can include only letters, digits, underscores, hyphens, and periods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

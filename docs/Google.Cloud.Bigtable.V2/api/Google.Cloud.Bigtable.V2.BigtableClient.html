@@ -1898,6 +1898,170 @@ ReadModifyWriteRowResponse response = bigtableClient.ReadModifyWriteRow(request)
 </code></pre></div>
   </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_ReadModifyWriteRule___" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.ReadModifyWriteRule[])">ReadModifyWriteRow(TableName, BigtableByteString, ReadModifyWriteRule[])</h4>
+  <div class="markdown level1 summary"><p>Modifies a row atomically on the server. The method reads the latest existing version
+and value from the specified columns and writes a new entry based on
+pre-defined read/modify/write rules. The new value for the version is the
+greater of the previous value&apos;s version or the current server version. The method
+returns the new contents of all modified cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(TableName tableName, BigtableByteString rowKey, params ReadModifyWriteRule[] rules)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TableName.html">TableName</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the read/modify/write rules should be
+applied. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the read/modify/write rules should be applied.
+Must not be empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRule.html">ReadModifyWriteRule</a>[]</td>
+        <td><span class="parametername">rules</span></td>
+        <td><p>Rules specifying how the specified row&apos;s contents are to be transformed
+into writes. Entries are applied in order, meaning that earlier rules will
+affect the results of later ones. Must not be null, or contain null
+elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.html">ReadModifyWriteRowResponse</a></td>
+        <td><p>The response from modifying the row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_ReadModifyWriteRule____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that the server version is based on the current timestamp since the Unix epoch, so for
+columns which are updated using ReadModifyWriteRow, other reads and writes of those columns
+should use <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html">BigtableVersion</a> values constructed from DateTime values, as opposed
+to using a custom versioning scheme with 64-bit values.
+</p>
+<p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>, so <code data-dev-comment-type="paramref" class="paramref">rowKey</code> can
+be specified using a string as well and its UTF-8 representations will be used.
+</p>
+<p>
+This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_">ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)</a>.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRow(TableName, BigtableByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Modifies a row atomically on the server. The method reads the latest existing version
+and value from the specified columns and writes a new entry based on
+pre-defined read/modify/write rules. The new value for the version is the
+greater of the previous value&apos;s version or the current server version. The method
+returns the new contents of all modified cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(TableName tableName, BigtableByteString rowKey, IEnumerable&lt;ReadModifyWriteRule&gt; rules, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TableName.html">TableName</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the read/modify/write rules should be
+applied. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the read/modify/write rules should be applied.
+Must not be empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRule.html">ReadModifyWriteRule</a>&gt;</td>
+        <td><span class="parametername">rules</span></td>
+        <td><p>Rules specifying how the specified row&apos;s contents are to be transformed
+into writes. Entries are applied in order, meaning that earlier rules will
+affect the results of later ones.  Must not be null, or contain null
+elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.html">ReadModifyWriteRowResponse</a></td>
+        <td><p>The response from modifying the row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that the server version is based on the current timestamp since the Unix epoch, so for
+columns which are updated using ReadModifyWriteRow, other reads and writes of those columns
+should use <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html">BigtableVersion</a> values constructed from DateTime values, as opposed
+to using a custom versioning scheme with 64-bit values.
+</p>
+<p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>, so <code data-dev-comment-type="paramref" class="paramref">rowKey</code> can
+be specified using a string as well and its UTF-8 representations will be used.
+</p>
+<p>
+This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_">ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)</a>.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_TableName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRow(TableName, ByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
 and value from the specified columns and writes a new entry based on
@@ -2047,6 +2211,170 @@ ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
 ReadModifyWriteRowResponse response = await bigtableClient.ReadModifyWriteRowAsync(request);
 </code></pre></div>
   </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_ReadModifyWriteRule___" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.ReadModifyWriteRule[])">ReadModifyWriteRowAsync(TableName, BigtableByteString, ReadModifyWriteRule[])</h4>
+  <div class="markdown level1 summary"><p>Asynchronously modifies a row atomically on the server. The method reads the latest existing version
+and value from the specified columns and writes a new entry based on
+pre-defined read/modify/write rules. The new value for the version is the
+greater of the previous value&apos;s version or the current server version. The method
+returns the new contents of all modified cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ReadModifyWriteRowResponse&gt; ReadModifyWriteRowAsync(TableName tableName, BigtableByteString rowKey, params ReadModifyWriteRule[] rules)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TableName.html">TableName</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the read/modify/write rules should be
+applied. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the read/modify/write rules should be applied.
+Must not be empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRule.html">ReadModifyWriteRule</a>[]</td>
+        <td><span class="parametername">rules</span></td>
+        <td><p>Rules specifying how the specified row&apos;s contents are to be transformed
+into writes. Entries are applied in order, meaning that earlier rules will
+affect the results of later ones. Must not be null, or contain null
+elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.html">ReadModifyWriteRowResponse</a>&gt;</td>
+        <td><p>The response from modifying the row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_ReadModifyWriteRule____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that the server version is based on the current timestamp since the Unix epoch, so for
+columns which are updated using ReadModifyWriteRow, other reads and writes of those columns
+should use <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html">BigtableVersion</a> values constructed from DateTime values, as opposed
+to using a custom versioning scheme with 64-bit values.
+</p>
+<p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>, so <code data-dev-comment-type="paramref" class="paramref">rowKey</code> can
+be specified using a string as well and its UTF-8 representations will be used.
+</p>
+<p>
+This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_">ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)</a>.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRowAsync(TableName, BigtableByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously modifies a row atomically on the server. The method reads the latest existing version
+and value from the specified columns and writes a new entry based on
+pre-defined read/modify/write rules. The new value for the version is the
+greater of the previous value&apos;s version or the current server version. The method
+returns the new contents of all modified cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ReadModifyWriteRowResponse&gt; ReadModifyWriteRowAsync(TableName tableName, BigtableByteString rowKey, IEnumerable&lt;ReadModifyWriteRule&gt; rules, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TableName.html">TableName</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the read/modify/write rules should be
+applied. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the read/modify/write rules should be applied.
+Must not be empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRule.html">ReadModifyWriteRule</a>&gt;</td>
+        <td><span class="parametername">rules</span></td>
+        <td><p>Rules specifying how the specified row&apos;s contents are to be transformed
+into writes. Entries are applied in order, meaning that earlier rules will
+affect the results of later ones.  Must not be null, or contain null
+elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.html">ReadModifyWriteRowResponse</a>&gt;</td>
+        <td><p>The response from modifying the row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that the server version is based on the current timestamp since the Unix epoch, so for
+columns which are updated using ReadModifyWriteRow, other reads and writes of those columns
+should use <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html">BigtableVersion</a> values constructed from DateTime values, as opposed
+to using a custom versioning scheme with 64-bit values.
+</p>
+<p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>, so <code data-dev-comment-type="paramref" class="paramref">rowKey</code> can
+be specified using a string as well and its UTF-8 representations will be used.
+</p>
+<p>
+This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_">ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)</a>.
+</p>
+</div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
@@ -2211,6 +2539,141 @@ IEnumerable&lt;ReadModifyWriteRule&gt; rules = new List&lt;ReadModifyWriteRule&g
 ReadModifyWriteRowResponse response = await bigtableClient.ReadModifyWriteRowAsync(tableName, rowKey, rules);
 </code></pre></div>
   </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRow_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_RowFilter_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRow(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.RowFilter,Google.Api.Gax.Grpc.CallSettings)">ReadRow(TableName, BigtableByteString, RowFilter, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns the contents of the requested row, optionally applying the specified Reader filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Row ReadRow(TableName tableName, BigtableByteString rowKey, RowFilter filter = null, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TableName.html">TableName</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table from which to read. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to read. Must not be empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>The filter to apply to the contents of the specified row. If null,
+reads the entirety of the row.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.Row.html">Row</a></td>
+        <td><p>The row from the server or null if it does not exist.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRow_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_RowFilter_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_RowFilter_Google_Api_Gax_Grpc_CallSettings_">ReadRowAsync(TableName, BigtableByteString, RowFilter, CallSettings)</a>.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_RowFilter_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.RowFilter,Google.Api.Gax.Grpc.CallSettings)">ReadRowAsync(TableName, BigtableByteString, RowFilter, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously returns the contents of the requested row, optionally applying the specified Reader filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Row&gt; ReadRowAsync(TableName tableName, BigtableByteString rowKey, RowFilter filter = null, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TableName.html">TableName</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table from which to read. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to read. Must not be empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>The filter to apply to the contents of the specified row. If null,
+reads the entirety of the row.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.Row.html">Row</a>&gt;</td>
+        <td><p>The row from the server or null if it does not exist.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_RowFilter_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_RowSet_Google_Cloud_Bigtable_V2_RowFilter_System_Nullable_System_Int64__Google_Api_Gax_Grpc_CallSettings_">ReadRows(TableName, RowSet, RowFilter, Nullable&lt;Int64&gt;, CallSettings)</a>
+and takes the single row result or null if no rows are returned.
+</p>
+</div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRows*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_ReadRowsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.ReadRowsRequest,Google.Api.Gax.Grpc.CallSettings)">ReadRows(ReadRowsRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Streams back the contents of all requested rows in key order, optionally
@@ -2286,6 +2749,81 @@ while (await responseStream.MoveNext())
 // The response stream has completed
 </code></pre></div>
   </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRows*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_RowSet_Google_Cloud_Bigtable_V2_RowFilter_System_Nullable_System_Int64__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.RowSet,Google.Cloud.Bigtable.V2.RowFilter,System.Nullable{System.Int64},Google.Api.Gax.Grpc.CallSettings)">ReadRows(TableName, RowSet, RowFilter, Nullable&lt;Int64&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Streams back the contents of all requested rows in key order, optionally
+applying the same Reader filter to each.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BigtableClient.ReadRowsStream ReadRows(TableName tableName, RowSet rows = null, RowFilter filter = null, long ? rowsLimit = default (long ? ), CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TableName.html">TableName</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table from which to read. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowSet.html">RowSet</a></td>
+        <td><span class="parametername">rows</span></td>
+        <td><p>The row keys and/or ranges to read. If null, reads from all rows.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.html">RowFilter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>The filter to apply to the contents of the specified row(s). If null,
+reads the entirety of each row.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="parametername">rowsLimit</span></td>
+        <td><p>The read will terminate after committing to N rows&apos; worth of results.
+If null or 0, returns all results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.html">BigtableClient.ReadRowsStream</a></td>
+        <td><p>The server stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_RowSet_Google_Cloud_Bigtable_V2_RowFilter_System_Nullable_System_Int64__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_ReadRowsRequest_Google_Api_Gax_Grpc_CallSettings_">ReadRows(ReadRowsRequest, CallSettings)</a>.
+</p>
+</div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_SampleRowKeysRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys(Google.Cloud.Bigtable.V2.SampleRowKeysRequest,Google.Api.Gax.Grpc.CallSettings)">SampleRowKeys(SampleRowKeysRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Returns a sample of row keys in the table. The returned row keys will

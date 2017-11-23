@@ -104,11 +104,61 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_CreateExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_CreateExclusion_Google_Cloud_Logging_V2_CreateExclusionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.ServerCallContext)">CreateExclusion(CreateExclusionRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exclusion in a specified parent resource.
+Only log entries belonging to that resource can be excluded.
+You can have up to 10 exclusions in a resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; CreateExclusion(CreateExclusionRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html">CreateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_CreateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.ServerCallContext)">CreateSink(CreateSinkRequest, ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
-export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&apos;s start and end times or the sink&apos;s
+export of newly-ingested log entries begins immediately, unless the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -152,6 +202,55 @@ export log entries only from the resource owning the sink.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_DeleteExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_DeleteExclusion_Google_Cloud_Logging_V2_DeleteExclusionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.ServerCallContext)">DeleteExclusion(DeleteExclusionRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Deletes an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteExclusion(DeleteExclusionRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.DeleteExclusionRequest.html">DeleteExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
         <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
       </tr>
@@ -207,6 +306,55 @@ service account is also deleted.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_GetExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_GetExclusion_Google_Cloud_Logging_V2_GetExclusionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.ServerCallContext)">GetExclusion(GetExclusionRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Gets the description of an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; GetExclusion(GetExclusionRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html">GetExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_GetSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_GetSink_Google_Cloud_Logging_V2_GetSinkRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetSink(Google.Cloud.Logging.V2.GetSinkRequest,Grpc.Core.ServerCallContext)">GetSink(GetSinkRequest, ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Gets a sink.</p>
@@ -251,6 +399,55 @@ service account is also deleted.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_ListExclusions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListExclusions*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_ListExclusions_Google_Cloud_Logging_V2_ListExclusionsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.ServerCallContext)">ListExclusions(ListExclusionsRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Lists all the exclusions in a parent resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListExclusionsResponse&gt; ListExclusions(ListExclusionsRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsRequest.html">ListExclusionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a>&gt;</td>
         <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
       </tr>
@@ -305,15 +502,60 @@ service account is also deleted.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_UpdateExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_UpdateExclusion_Google_Cloud_Logging_V2_UpdateExclusionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.ServerCallContext)">UpdateExclusion(UpdateExclusionRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Changes one or more properties of an existing exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; UpdateExclusion(UpdateExclusionRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html">UpdateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.ServerCallContext)">UpdateSink(UpdateSinkRequest, ServerCallContext)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
-identical to
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
-If the named sink does exist, then this method replaces the following
-fields in the existing sink with values from the new sink: <code>destination</code>,
-<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
-The updated filter might also have a new <code>writer_identity</code>; see the
+  <div class="markdown level1 summary"><p>Updates a sink.  This method replaces the following fields in the existing
+sink with values from the new sink: <code>destination</code>, and <code>filter</code>.
+The updated sink might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

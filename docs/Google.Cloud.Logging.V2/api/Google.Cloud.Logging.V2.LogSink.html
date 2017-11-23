@@ -172,11 +172,7 @@ entries are not exported.  For more information, see
   </table>
   <a id="Google_Cloud_Logging_V2_LogSink_EndTime_" data-uid="Google.Cloud.Logging.V2.LogSink.EndTime*"></a>
   <h4 id="Google_Cloud_Logging_V2_LogSink_EndTime" data-uid="Google.Cloud.Logging.V2.LogSink.EndTime">EndTime</h4>
-  <div class="markdown level1 summary"><p>Optional. The time at which this sink will stop exporting log entries.  Log
-entries are exported only if their timestamp is earlier than the end time.
-If this field is not supplied, there is no end time.  If both a start time
-and an end time are provided, then the end time must be later than the
-start time.</p>
+  <div class="markdown level1 summary"><p>Deprecated. This field is ignored when creating or updating sinks.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -203,8 +199,7 @@ start time.</p>
   <div class="markdown level1 summary"><p>Optional.
 An <a href="/logging/docs/view/advanced_filters">advanced logs filter</a>.  The only
 exported log entries are those that are in the resource owning the sink and
-that match the filter. The filter must use the log entry format specified
-by the <code>output_version_format</code> parameter.  For example, in the v2 format:</p>
+that match the filter.  For example:</p>
 <p>logName=&quot;projects/[PROJECT_ID]/logs/[LOG_ID]&quot; AND severity&gt;=ERROR</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -292,11 +287,8 @@ periods.</p>
   </table>
   <a id="Google_Cloud_Logging_V2_LogSink_OutputVersionFormat_" data-uid="Google.Cloud.Logging.V2.LogSink.OutputVersionFormat*"></a>
   <h4 id="Google_Cloud_Logging_V2_LogSink_OutputVersionFormat" data-uid="Google.Cloud.Logging.V2.LogSink.OutputVersionFormat">OutputVersionFormat</h4>
-  <div class="markdown level1 summary"><p>Optional. The log entry format to use for this sink&apos;s exported log
-entries.  The v2 format is used by default.
-<strong>The v1 format is deprecated</strong> and should be used only as part of a
-migration effort to v2.
-See <a href="/logging/docs/api/v2/migration-to-v2">Migration to the v2 API</a>.</p>
+  <div class="markdown level1 summary"><p>Deprecated. The log entry format to use for this sink&apos;s exported log
+entries.  The v2 format is used by default and cannot be changed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -320,10 +312,7 @@ See <a href="/logging/docs/api/v2/migration-to-v2">Migration to the v2 API</a>.<
   </table>
   <a id="Google_Cloud_Logging_V2_LogSink_StartTime_" data-uid="Google.Cloud.Logging.V2.LogSink.StartTime*"></a>
   <h4 id="Google_Cloud_Logging_V2_LogSink_StartTime" data-uid="Google.Cloud.Logging.V2.LogSink.StartTime">StartTime</h4>
-  <div class="markdown level1 summary"><p>Optional. The time at which this sink will begin exporting log entries.
-Log entries are exported only if their timestamp is not earlier than the
-start time.  The default value of this field is the time the sink is
-created or updated.</p>
+  <div class="markdown level1 summary"><p>Deprecated. This field is ignored when creating or updating sinks.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

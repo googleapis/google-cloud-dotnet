@@ -82,6 +82,10 @@
     <div class="level1"><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html">BigQueryClient</a></div>
     <div class="level2"><span class="xref">BigQueryClientImpl</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -436,19 +440,7 @@
       <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">BigQueryClient.ExecuteQuery(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions, GetQueryResultsOptions)</a>
     </div>
     <div>
-      <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">BigQueryClient.ExecuteQuery(String, QueryOptions, GetQueryResultsOptions)</a>
-    </div>
-    <div>
-      <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">BigQueryClient.ExecuteQuery(BigQueryCommand, QueryOptions, GetQueryResultsOptions)</a>
-    </div>
-    <div>
       <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">BigQueryClient.ExecuteQueryAsync(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions, GetQueryResultsOptions, CancellationToken)</a>
-    </div>
-    <div>
-      <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">BigQueryClient.ExecuteQueryAsync(String, QueryOptions, GetQueryResultsOptions, CancellationToken)</a>
-    </div>
-    <div>
-      <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">BigQueryClient.ExecuteQueryAsync(BigQueryCommand, QueryOptions, GetQueryResultsOptions, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetQueryResults_System_String_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">BigQueryClient.GetQueryResults(String, GetQueryResultsOptions)</a>
@@ -575,7 +567,7 @@
   <h6><strong>Assembly</strong>: Google.Cloud.BigQuery.V2.dll</h6>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class BigQueryClientImpl : BigQueryClient</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class BigQueryClientImpl : BigQueryClient, IDisposable</code></pre>
   </div>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>This is the &quot;default&quot; implementation of <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html">BigQueryClient</a>. Most client code
@@ -1483,112 +1475,6 @@ individual components of table references. Instead, use <a class="xref" href="Go
 <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetTableReference_System_String_System_String_System_String_">GetTableReference(String, String, String)</a> to create table references.</p>
 </div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions)">CreateQueryJob(BigQueryCommand, QueryOptions)</h4>
-  <div class="markdown level1 summary"><p>Creates a job for a query/command.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
-public override BigQueryJob CreateQueryJob(BigQueryCommand command, QueryOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryCommand.html">BigQueryCommand</a></td>
-        <td><span class="parametername">command</span></td>
-        <td><p>The command to execute. Must not be null.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html">QueryOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a></td>
-        <td><p>The query job created. Use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetQueryResults_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">GetQueryResults(JobReference, GetQueryResultsOptions)</a> to retrieve
-the results of the query.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_">BigQueryClient.CreateQueryJob(BigQueryCommand, QueryOptions)</a></div>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_System_String_Google_Cloud_BigQuery_V2_QueryOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.QueryOptions)">CreateQueryJob(String, QueryOptions)</h4>
-  <div class="markdown level1 summary"><p>Creates a job for a SQL query.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
-public override BigQueryJob CreateQueryJob(string sql, QueryOptions options = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td><p>The SQL query. Must not be null.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html">QueryOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a></td>
-        <td><p>The query job created. Use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetQueryResults_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_">GetQueryResults(JobReference, GetQueryResultsOptions)</a> to retrieve
-the results of the query.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_Google_Cloud_BigQuery_V2_QueryOptions_">BigQueryClient.CreateQueryJob(String, QueryOptions)</a></div>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions)">CreateQueryJob(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a job for a SQL query.</p>
 </div>
@@ -1646,126 +1532,6 @@ the results of the query.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_">BigQueryClient.CreateQueryJob(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions)</a></div>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)">CreateQueryJobAsync(BigQueryCommand, QueryOptions, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Asynchronously creates a job for a query/command.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
-public override Task&lt;BigQueryJob&gt; CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryCommand.html">BigQueryCommand</a></td>
-        <td><span class="parametername">command</span></td>
-        <td><p>The command to execute. Must not be null.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html">QueryOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The token to monitor for cancellation requests.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a>&gt;</td>
-        <td><p>A task representing the asynchronous operation. When complete, the result is
-the query job created. Use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetQueryResultsAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">GetQueryResultsAsync(JobReference, GetQueryResultsOptions, CancellationToken)</a> to retrieve
-the results of the query.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_">BigQueryClient.CreateQueryJobAsync(BigQueryCommand, QueryOptions, CancellationToken)</a></div>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)">CreateQueryJobAsync(String, QueryOptions, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Asynchronously creates a job for a SQL query.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method will be removed before the final release. Please migrate to the overload accepting an IEnumerable&lt;BigQueryParameter&gt;&quot;)]
-public override Task&lt;BigQueryJob&gt; CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">sql</span></td>
-        <td><p>The SQL query. Must not be null.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html">QueryOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The token to monitor for cancellation requests.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a>&gt;</td>
-        <td><p>A task representing the asynchronous operation. When complete, the result is
-the query job created. Use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetQueryResultsAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">GetQueryResultsAsync(JobReference, GetQueryResultsOptions, CancellationToken)</a> to retrieve
-the results of the query.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_">BigQueryClient.CreateQueryJobAsync(String, QueryOptions, CancellationToken)</a></div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryParameter__Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryParameter},Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)">CreateQueryJobAsync(String, IEnumerable&lt;BigQueryParameter&gt;, QueryOptions, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Asynchronously creates a job for a SQL query.</p>
@@ -2136,6 +1902,17 @@ the newly created table.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_DeleteTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_DeleteTableOptions_System_Threading_CancellationToken_">BigQueryClient.DeleteTableAsync(TableReference, DeleteTableOptions, CancellationToken)</a></div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_Dispose_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.Dispose*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_Dispose" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Dispose of this instance. See the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html">BigQueryClient</a> remarks on when this should be called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Dispose()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Dispose">BigQueryClient.Dispose()</a></div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_GetDataset_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.GetDataset*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_GetDatasetOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.GetDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.GetDatasetOptions)">GetDataset(DatasetReference, GetDatasetOptions)</h4>
   <div class="markdown level1 summary"><p>Retrieves the specified dataset.</p>

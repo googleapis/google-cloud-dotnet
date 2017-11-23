@@ -613,6 +613,55 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
 }
 </code></pre></div>
   </div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Cloud_Datastore_V1_TransactionOptions_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction(Google.Cloud.Datastore.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(TransactionOptions, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Begins a transaction, returning a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DatastoreTransaction BeginTransaction(TransactionOptions options, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the new transaction. May be null, for default options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a></td>
+        <td><p>A new <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> for this object&apos;s project.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync(Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(CallSettings)</h4>
   <div class="markdown level1 summary"><p>Begins a transaction asynchronously, returning a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
@@ -661,6 +710,55 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
   <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_">BeginTransaction</a> for an example of the synchronous equivalent of this method.</p>
 </div>
   </div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Cloud_Datastore_V1_TransactionOptions_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync(Google.Cloud.Datastore.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(TransactionOptions, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Begins a transaction asynchronously, returning a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;DatastoreTransaction&gt; BeginTransactionAsync(TransactionOptions options, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the new transaction. May be null, for default options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a>&gt;</td>
+        <td><p>A new <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> for this object&apos;s project.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Datastore_V1_DatastoreDb_Create_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Create*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Create_System_String_System_String_Google_Cloud_Datastore_V1_DatastoreClient_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Create(System.String,System.String,Google.Cloud.Datastore.V1.DatastoreClient)">Create(String, String, DatastoreClient)</h4>
   <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html">DatastoreDb</a> to operate on the partition identified by <code data-dev-comment-type="paramref" class="paramref">projectId</code>

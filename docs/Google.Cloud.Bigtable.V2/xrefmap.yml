@@ -16515,6 +16515,15 @@ references:
   commentId: Overload:Google.Cloud.Bigtable.V2.BigtableByteString.op_Equality
   fullName: Google.Cloud.Bigtable.V2.BigtableByteString.Equality
   nameWithType: BigtableByteString.Equality
+- uid: Google.Cloud.Bigtable.V2.BigtableByteString.op_Explicit(Google.Cloud.Bigtable.V2.BigtableByteString)~Google.Protobuf.ByteString
+  name: Explicit(BigtableByteString to ByteString)
+  href: api/Google.Cloud.Bigtable.V2.BigtableByteString.html#Google_Cloud_Bigtable_V2_BigtableByteString_op_Explicit_Google_Cloud_Bigtable_V2_BigtableByteString__Google_Protobuf_ByteString
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableByteString.op_Explicit(Google.Cloud.Bigtable.V2.BigtableByteString)~Google.Protobuf.ByteString
+  name.vb: Narrowing(BigtableByteString to ByteString)
+  fullName: Google.Cloud.Bigtable.V2.BigtableByteString.Explicit(Google.Cloud.Bigtable.V2.BigtableByteString to Google.Protobuf.ByteString)
+  fullName.vb: Google.Cloud.Bigtable.V2.BigtableByteString.Narrowing(Google.Cloud.Bigtable.V2.BigtableByteString to Google.Protobuf.ByteString)
+  nameWithType: BigtableByteString.Explicit(BigtableByteString to ByteString)
+  nameWithType.vb: BigtableByteString.Narrowing(BigtableByteString to ByteString)
 - uid: Google.Cloud.Bigtable.V2.BigtableByteString.op_Explicit(Google.Cloud.Bigtable.V2.BigtableByteString)~System.Byte[]
   name: Explicit(BigtableByteString to Byte[])
   href: api/Google.Cloud.Bigtable.V2.BigtableByteString.html#Google_Cloud_Bigtable_V2_BigtableByteString_op_Explicit_Google_Cloud_Bigtable_V2_BigtableByteString__System_Byte__
@@ -16575,15 +16584,6 @@ references:
   commentId: Overload:Google.Cloud.Bigtable.V2.BigtableByteString.op_GreaterThanOrEqual
   fullName: Google.Cloud.Bigtable.V2.BigtableByteString.GreaterThanOrEqual
   nameWithType: BigtableByteString.GreaterThanOrEqual
-- uid: Google.Cloud.Bigtable.V2.BigtableByteString.op_Implicit(Google.Cloud.Bigtable.V2.BigtableByteString)~Google.Protobuf.ByteString
-  name: Implicit(BigtableByteString to ByteString)
-  href: api/Google.Cloud.Bigtable.V2.BigtableByteString.html#Google_Cloud_Bigtable_V2_BigtableByteString_op_Implicit_Google_Cloud_Bigtable_V2_BigtableByteString__Google_Protobuf_ByteString
-  commentId: M:Google.Cloud.Bigtable.V2.BigtableByteString.op_Implicit(Google.Cloud.Bigtable.V2.BigtableByteString)~Google.Protobuf.ByteString
-  name.vb: Widening(BigtableByteString to ByteString)
-  fullName: Google.Cloud.Bigtable.V2.BigtableByteString.Implicit(Google.Cloud.Bigtable.V2.BigtableByteString to Google.Protobuf.ByteString)
-  fullName.vb: Google.Cloud.Bigtable.V2.BigtableByteString.Widening(Google.Cloud.Bigtable.V2.BigtableByteString to Google.Protobuf.ByteString)
-  nameWithType: BigtableByteString.Implicit(BigtableByteString to ByteString)
-  nameWithType.vb: BigtableByteString.Widening(BigtableByteString to ByteString)
 - uid: Google.Cloud.Bigtable.V2.BigtableByteString.op_Implicit(Google.Protobuf.ByteString)~Google.Cloud.Bigtable.V2.BigtableByteString
   name: Implicit(ByteString to BigtableByteString)
   href: api/Google.Cloud.Bigtable.V2.BigtableByteString.html#Google_Cloud_Bigtable_V2_BigtableByteString_op_Implicit_Google_Protobuf_ByteString__Google_Cloud_Bigtable_V2_BigtableByteString
@@ -16959,6 +16959,24 @@ references:
   commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: BigtableClient.ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.ReadModifyWriteRule[])
+  name: ReadModifyWriteRow(TableName, BigtableByteString, ReadModifyWriteRule[])
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_ReadModifyWriteRule___
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.ReadModifyWriteRule[])
+  name.vb: ReadModifyWriteRow(TableName, BigtableByteString, ReadModifyWriteRule())
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.BigtableByteString, Google.Cloud.Bigtable.V2.ReadModifyWriteRule[])
+  fullName.vb: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.BigtableByteString, Google.Cloud.Bigtable.V2.ReadModifyWriteRule())
+  nameWithType: BigtableClient.ReadModifyWriteRow(TableName, BigtableByteString, ReadModifyWriteRule[])
+  nameWithType.vb: BigtableClient.ReadModifyWriteRow(TableName, BigtableByteString, ReadModifyWriteRule())
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)
+  name: ReadModifyWriteRow(TableName, BigtableByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ReadModifyWriteRow(TableName, BigtableByteString, IEnumerable(Of ReadModifyWriteRule), CallSettings)
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.BigtableByteString, System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.ReadModifyWriteRule>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.BigtableByteString, System.Collections.Generic.IEnumerable(Of Google.Cloud.Bigtable.V2.ReadModifyWriteRule), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: BigtableClient.ReadModifyWriteRow(TableName, BigtableByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
+  nameWithType.vb: BigtableClient.ReadModifyWriteRow(TableName, BigtableByteString, IEnumerable(Of ReadModifyWriteRule), CallSettings)
 - uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)
   name: ReadModifyWriteRow(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
   href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_TableName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_
@@ -16980,6 +16998,24 @@ references:
   commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: BigtableClient.ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.ReadModifyWriteRule[])
+  name: ReadModifyWriteRowAsync(TableName, BigtableByteString, ReadModifyWriteRule[])
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_ReadModifyWriteRule___
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.ReadModifyWriteRule[])
+  name.vb: ReadModifyWriteRowAsync(TableName, BigtableByteString, ReadModifyWriteRule())
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.BigtableByteString, Google.Cloud.Bigtable.V2.ReadModifyWriteRule[])
+  fullName.vb: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.BigtableByteString, Google.Cloud.Bigtable.V2.ReadModifyWriteRule())
+  nameWithType: BigtableClient.ReadModifyWriteRowAsync(TableName, BigtableByteString, ReadModifyWriteRule[])
+  nameWithType.vb: BigtableClient.ReadModifyWriteRowAsync(TableName, BigtableByteString, ReadModifyWriteRule())
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)
+  name: ReadModifyWriteRowAsync(TableName, BigtableByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ReadModifyWriteRowAsync(TableName, BigtableByteString, IEnumerable(Of ReadModifyWriteRule), CallSettings)
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.BigtableByteString, System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.ReadModifyWriteRule>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.BigtableByteString, System.Collections.Generic.IEnumerable(Of Google.Cloud.Bigtable.V2.ReadModifyWriteRule), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: BigtableClient.ReadModifyWriteRowAsync(TableName, BigtableByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
+  nameWithType.vb: BigtableClient.ReadModifyWriteRowAsync(TableName, BigtableByteString, IEnumerable(Of ReadModifyWriteRule), CallSettings)
 - uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)
   name: ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable<ReadModifyWriteRule>, CallSettings)
   href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_
@@ -17004,12 +17040,45 @@ references:
   commentId: Overload:Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync
   fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync
   nameWithType: BigtableClient.ReadModifyWriteRowAsync
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadRow(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.RowFilter,Google.Api.Gax.Grpc.CallSettings)
+  name: ReadRow(TableName, BigtableByteString, RowFilter, CallSettings)
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRow_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_RowFilter_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadRow(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.RowFilter,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadRow(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.BigtableByteString, Google.Cloud.Bigtable.V2.RowFilter, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: BigtableClient.ReadRow(TableName, BigtableByteString, RowFilter, CallSettings)
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadRow*
+  name: ReadRow
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRow_
+  commentId: Overload:Google.Cloud.Bigtable.V2.BigtableClient.ReadRow
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadRow
+  nameWithType: BigtableClient.ReadRow
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.RowFilter,Google.Api.Gax.Grpc.CallSettings)
+  name: ReadRowAsync(TableName, BigtableByteString, RowFilter, CallSettings)
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_RowFilter_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.RowFilter,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadRowAsync(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.BigtableByteString, Google.Cloud.Bigtable.V2.RowFilter, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: BigtableClient.ReadRowAsync(TableName, BigtableByteString, RowFilter, CallSettings)
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadRowAsync*
+  name: ReadRowAsync
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRowAsync_
+  commentId: Overload:Google.Cloud.Bigtable.V2.BigtableClient.ReadRowAsync
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadRowAsync
+  nameWithType: BigtableClient.ReadRowAsync
 - uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.ReadRowsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ReadRows(ReadRowsRequest, CallSettings)
   href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_ReadRowsRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.ReadRowsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.ReadRowsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: BigtableClient.ReadRows(ReadRowsRequest, CallSettings)
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.RowSet,Google.Cloud.Bigtable.V2.RowFilter,System.Nullable{System.Int64},Google.Api.Gax.Grpc.CallSettings)
+  name: ReadRows(TableName, RowSet, RowFilter, Nullable<Int64>, CallSettings)
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_RowSet_Google_Cloud_Bigtable_V2_RowFilter_System_Nullable_System_Int64__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.RowSet,Google.Cloud.Bigtable.V2.RowFilter,System.Nullable{System.Int64},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ReadRows(TableName, RowSet, RowFilter, Nullable(Of Int64), CallSettings)
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.RowSet, Google.Cloud.Bigtable.V2.RowFilter, System.Nullable<System.Int64>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.RowSet, Google.Cloud.Bigtable.V2.RowFilter, System.Nullable(Of System.Int64), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: BigtableClient.ReadRows(TableName, RowSet, RowFilter, Nullable<Int64>, CallSettings)
+  nameWithType.vb: BigtableClient.ReadRows(TableName, RowSet, RowFilter, Nullable(Of Int64), CallSettings)
 - uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadRows*
   name: ReadRows
   href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_
@@ -17022,6 +17091,18 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream
   fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream
   nameWithType: BigtableClient.ReadRowsStream
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.AsAsyncEnumerable
+  name: AsAsyncEnumerable()
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRowsStream_AsAsyncEnumerable
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.AsAsyncEnumerable
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.AsAsyncEnumerable()
+  nameWithType: BigtableClient.ReadRowsStream.AsAsyncEnumerable()
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.AsAsyncEnumerable*
+  name: AsAsyncEnumerable
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRowsStream_AsAsyncEnumerable_
+  commentId: Overload:Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.AsAsyncEnumerable
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.AsAsyncEnumerable
+  nameWithType: BigtableClient.ReadRowsStream.AsAsyncEnumerable
 - uid: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys(Google.Cloud.Bigtable.V2.SampleRowKeysRequest,Google.Api.Gax.Grpc.CallSettings)
   name: SampleRowKeys(SampleRowKeysRequest, CallSettings)
   href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_SampleRowKeysRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -18603,6 +18684,36 @@ references:
   commentId: F:Google.Cloud.Bigtable.V2.ReadModifyWriteRule.RuleOneofCase.None
   fullName: Google.Cloud.Bigtable.V2.ReadModifyWriteRule.RuleOneofCase.None
   nameWithType: ReadModifyWriteRule.RuleOneofCase.None
+- uid: Google.Cloud.Bigtable.V2.ReadModifyWriteRules
+  name: ReadModifyWriteRules
+  href: api/Google.Cloud.Bigtable.V2.ReadModifyWriteRules.html
+  commentId: T:Google.Cloud.Bigtable.V2.ReadModifyWriteRules
+  fullName: Google.Cloud.Bigtable.V2.ReadModifyWriteRules
+  nameWithType: ReadModifyWriteRules
+- uid: Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Append(System.String,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.BigtableByteString)
+  name: Append(String, BigtableByteString, BigtableByteString)
+  href: api/Google.Cloud.Bigtable.V2.ReadModifyWriteRules.html#Google_Cloud_Bigtable_V2_ReadModifyWriteRules_Append_System_String_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_BigtableByteString_
+  commentId: M:Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Append(System.String,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.BigtableByteString)
+  fullName: Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Append(System.String, Google.Cloud.Bigtable.V2.BigtableByteString, Google.Cloud.Bigtable.V2.BigtableByteString)
+  nameWithType: ReadModifyWriteRules.Append(String, BigtableByteString, BigtableByteString)
+- uid: Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Append*
+  name: Append
+  href: api/Google.Cloud.Bigtable.V2.ReadModifyWriteRules.html#Google_Cloud_Bigtable_V2_ReadModifyWriteRules_Append_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Append
+  fullName: Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Append
+  nameWithType: ReadModifyWriteRules.Append
+- uid: Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Increment(System.String,Google.Cloud.Bigtable.V2.BigtableByteString,System.Int64)
+  name: Increment(String, BigtableByteString, Int64)
+  href: api/Google.Cloud.Bigtable.V2.ReadModifyWriteRules.html#Google_Cloud_Bigtable_V2_ReadModifyWriteRules_Increment_System_String_Google_Cloud_Bigtable_V2_BigtableByteString_System_Int64_
+  commentId: M:Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Increment(System.String,Google.Cloud.Bigtable.V2.BigtableByteString,System.Int64)
+  fullName: Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Increment(System.String, Google.Cloud.Bigtable.V2.BigtableByteString, System.Int64)
+  nameWithType: ReadModifyWriteRules.Increment(String, BigtableByteString, Int64)
+- uid: Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Increment*
+  name: Increment
+  href: api/Google.Cloud.Bigtable.V2.ReadModifyWriteRules.html#Google_Cloud_Bigtable_V2_ReadModifyWriteRules_Increment_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Increment
+  fullName: Google.Cloud.Bigtable.V2.ReadModifyWriteRules.Increment
+  nameWithType: ReadModifyWriteRules.Increment
 - uid: Google.Cloud.Bigtable.V2.ReadRowsRequest
   name: ReadRowsRequest
   href: api/Google.Cloud.Bigtable.V2.ReadRowsRequest.html
@@ -19410,12 +19521,12 @@ references:
   commentId: Overload:Google.Cloud.Bigtable.V2.RowFilters.Chain
   fullName: Google.Cloud.Bigtable.V2.RowFilters.Chain
   nameWithType: RowFilters.Chain
-- uid: Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex(Google.Cloud.Bigtable.V2.BigtableByteString)
-  name: ColumnQualifierRegex(BigtableByteString)
-  href: api/Google.Cloud.Bigtable.V2.RowFilters.html#Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_Google_Cloud_Bigtable_V2_BigtableByteString_
-  commentId: M:Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex(Google.Cloud.Bigtable.V2.BigtableByteString)
-  fullName: Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex(Google.Cloud.Bigtable.V2.BigtableByteString)
-  nameWithType: RowFilters.ColumnQualifierRegex(BigtableByteString)
+- uid: Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex(System.String)
+  name: ColumnQualifierRegex(String)
+  href: api/Google.Cloud.Bigtable.V2.RowFilters.html#Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_System_String_
+  commentId: M:Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex(System.String)
+  fullName: Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex(System.String)
+  nameWithType: RowFilters.ColumnQualifierRegex(String)
 - uid: Google.Cloud.Bigtable.V2.RowFilters.ColumnQualifierRegex*
   name: ColumnQualifierRegex
   href: api/Google.Cloud.Bigtable.V2.RowFilters.html#Google_Cloud_Bigtable_V2_RowFilters_ColumnQualifierRegex_
@@ -19485,12 +19596,12 @@ references:
   commentId: Overload:Google.Cloud.Bigtable.V2.RowFilters.PassAllFilter
   fullName: Google.Cloud.Bigtable.V2.RowFilters.PassAllFilter
   nameWithType: RowFilters.PassAllFilter
-- uid: Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex(Google.Cloud.Bigtable.V2.BigtableByteString)
-  name: RowKeyRegex(BigtableByteString)
-  href: api/Google.Cloud.Bigtable.V2.RowFilters.html#Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_Google_Cloud_Bigtable_V2_BigtableByteString_
-  commentId: M:Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex(Google.Cloud.Bigtable.V2.BigtableByteString)
-  fullName: Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex(Google.Cloud.Bigtable.V2.BigtableByteString)
-  nameWithType: RowFilters.RowKeyRegex(BigtableByteString)
+- uid: Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex(System.String)
+  name: RowKeyRegex(String)
+  href: api/Google.Cloud.Bigtable.V2.RowFilters.html#Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_System_String_
+  commentId: M:Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex(System.String)
+  fullName: Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex(System.String)
+  nameWithType: RowFilters.RowKeyRegex(String)
 - uid: Google.Cloud.Bigtable.V2.RowFilters.RowKeyRegex*
   name: RowKeyRegex
   href: api/Google.Cloud.Bigtable.V2.RowFilters.html#Google_Cloud_Bigtable_V2_RowFilters_RowKeyRegex_
@@ -19548,12 +19659,12 @@ references:
   commentId: Overload:Google.Cloud.Bigtable.V2.RowFilters.ValueRange
   fullName: Google.Cloud.Bigtable.V2.RowFilters.ValueRange
   nameWithType: RowFilters.ValueRange
-- uid: Google.Cloud.Bigtable.V2.RowFilters.ValueRegex(Google.Cloud.Bigtable.V2.BigtableByteString)
-  name: ValueRegex(BigtableByteString)
-  href: api/Google.Cloud.Bigtable.V2.RowFilters.html#Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_Google_Cloud_Bigtable_V2_BigtableByteString_
-  commentId: M:Google.Cloud.Bigtable.V2.RowFilters.ValueRegex(Google.Cloud.Bigtable.V2.BigtableByteString)
-  fullName: Google.Cloud.Bigtable.V2.RowFilters.ValueRegex(Google.Cloud.Bigtable.V2.BigtableByteString)
-  nameWithType: RowFilters.ValueRegex(BigtableByteString)
+- uid: Google.Cloud.Bigtable.V2.RowFilters.ValueRegex(System.String)
+  name: ValueRegex(String)
+  href: api/Google.Cloud.Bigtable.V2.RowFilters.html#Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_System_String_
+  commentId: M:Google.Cloud.Bigtable.V2.RowFilters.ValueRegex(System.String)
+  fullName: Google.Cloud.Bigtable.V2.RowFilters.ValueRegex(System.String)
+  nameWithType: RowFilters.ValueRegex(String)
 - uid: Google.Cloud.Bigtable.V2.RowFilters.ValueRegex*
   name: ValueRegex
   href: api/Google.Cloud.Bigtable.V2.RowFilters.html#Google_Cloud_Bigtable_V2_RowFilters_ValueRegex_

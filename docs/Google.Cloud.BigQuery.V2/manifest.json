@@ -16,12 +16,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "VDT8+Z/TpMC6ZM5Zeiu4Ug=="
+          "hash": "OW5oIPf1+4tn+280ZEUL7A=="
         }
       },
       "is_incremental": false,
@@ -1641,7 +1644,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryClient.html",
-          "hash": "79FrOToPTrjm0cRZY2inDw=="
+          "hash": "SwPQcrdAPhIAqqBFgw2bPw=="
         }
       },
       "is_incremental": false,
@@ -1653,19 +1656,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html",
-          "hash": "TCLXkiWV9eQFEueAhJEM4g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryCommand.html",
-          "hash": "DAl327+psnGAWvAgKKJw0w=="
+          "hash": "8g34ZQMZgNocvl/w4HA4Qw=="
         }
       },
       "is_incremental": false,
@@ -1677,7 +1668,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryDataset.html",
-          "hash": "S8hTsFcwgJMs6hPFKFztYw=="
+          "hash": "fD9BW4FLBfccgIzgvWi3Fg=="
         }
       },
       "is_incremental": false,
@@ -1725,7 +1716,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryInsertRow.html",
-          "hash": "vbzqZg8P6dUIgtfUc+HG5Q=="
+          "hash": "N6UEu/ELtU4xCa7cSRPg1Q=="
         }
       },
       "is_incremental": false,
@@ -1737,7 +1728,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryJob.html",
-          "hash": "zTMWVkHVfxECPdsXpv4hmw=="
+          "hash": "hbuAK9y2FELrnx1nRNdiFg=="
         }
       },
       "is_incremental": false,
@@ -1761,19 +1752,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryParameter.html",
-          "hash": "di3aCYnrFAThcenTvoEr5Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.BigQueryParameterCollection.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryParameterCollection.html",
-          "hash": "FbBHYRyhM/8b1UgiD2/+Wg=="
+          "hash": "Uf63v0pkac3gA0NWX8ZM6Q=="
         }
       },
       "is_incremental": false,
@@ -1785,7 +1764,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryParameterMode.html",
-          "hash": "8SxMFly4RGZ0HT0zHiapIw=="
+          "hash": "cpDE8pALPY20yNAyJunMTw=="
         }
       },
       "is_incremental": false,
@@ -1821,7 +1800,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.BigQueryTable.html",
-          "hash": "JF+jmxhj8O+j1nTsIYE8Cg=="
+          "hash": "xeVPzJHO5c3e+DJL1VIlBA=="
         }
       },
       "is_incremental": false,
@@ -1929,7 +1908,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.CreateTableOptions.html",
-          "hash": "GeetZhRj50YWJq36yS8grQ=="
+          "hash": "uGIbnlB+6keInDJEX99nWg=="
         }
       },
       "is_incremental": false,
@@ -2169,7 +2148,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.QueryOptions.html",
-          "hash": "3X4Emu5FWauPB5SeRzPipg=="
+          "hash": "CSgq7O0oemmdcvRwZ8vkdA=="
         }
       },
       "is_incremental": false,
@@ -2206,18 +2185,6 @@
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.TimePartition.html",
           "hash": "Otl2MkAbUOD+Je6l9sj+sA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Google.Cloud.BigQuery.V2.TimePartitionType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.Cloud.BigQuery.V2.TimePartitionType.html",
-          "hash": "wJ/BmlfyTLLxoQ/cNztHmQ=="
         }
       },
       "is_incremental": false,
@@ -2301,7 +2268,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.BigQuery.V2.html",
-          "hash": "ttIt1SvhDw/j8383SujDZA=="
+          "hash": "yDAgL4/q77OvcHA+vI8nxQ=="
         }
       },
       "is_incremental": false,
@@ -2313,7 +2280,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ti8SEXb5Rcrw0C4+qml+2w=="
+          "hash": "pi1KWW1ceEcUtuGbbDDHdg=="
         }
       },
       "is_incremental": false,
@@ -2348,9 +2315,9 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "RestApiDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
@@ -2361,9 +2328,9 @@
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "RestApiDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

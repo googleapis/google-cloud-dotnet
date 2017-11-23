@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Cloud.BigQuery.DataTransfer.V1
+   | Google.Cloud.BigQuery.DataTransfer.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Cloud.BigQuery.DataTransfer.V1
+   | Google.Cloud.BigQuery.DataTransfer.V1 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.BigQuery.DataTransfer.V1">
+  
+  <h1 id="Google_Cloud_BigQuery_DataTransfer_V1" data-uid="Google.Cloud.BigQuery.DataTransfer.V1" class="text-break">Namespace Google.Cloud.BigQuery.DataTransfer.V1
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest.html">CheckValidCredsRequest</a></h4>
+      <section><p>A request to determine whether the user has valid credentials. This method
+is used to limit the number of OAuth popups in the user interface. The
+user id is inferred from the API call context.
+If the data source has the Google+ authorization type, this method
+returns false, as it cannot be determined whether the credentials are
+already valid merely based on the user id.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse.html">CheckValidCredsResponse</a></h4>
+      <section><p>A response indicating whether the credentials exist and are valid.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest.html">CreateTransferConfigRequest</a></h4>
+      <section><p>A request to create a data transfer configuration. If new credentials are
+needed for this transfer configuration, an authorization code must be
+provided. If an authorization code is provided, the transfer configuration
+will be associated with the user id corresponding to the
+authorization code. Otherwise, the transfer configuration will be associated
+with the calling user.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSource.html">DataSource</a></h4>
+      <section><p>Represents data source metadata. Metadata is sufficient to
+render UI and request proper OAuth tokens.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.html">DataSource.Types</a></h4>
+      <section><p>Container for nested types declared in the DataSource message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSourceName.html">DataSourceName</a></h4>
+      <section><p>Resource name for the &apos;data_source&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSourceNameOneof.html">DataSourceNameOneof</a></h4>
+      <section><p>Resource name which will contain one of a choice of resource names.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.html">DataSourceParameter</a></h4>
+      <section><p>Represents a data source parameter with validation rules, so that
+parameters can be rendered in the UI. These parameters are given to us by
+supported data sources, and include all needed information for rendering
+and validation.
+Thus, whoever uses this api can decide to generate either generic ui,
+or custom data source specific forms.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.html">DataSourceParameter.Types</a></h4>
+      <section><p>Container for nested types declared in the DataSourceParameter message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferService.html">DataTransferService</a></h4>
+      <section><p>The Google BigQuery Data Transfer Service API enables BigQuery users to
+configure the transfer of their data from other Google Products into BigQuery.
+This service contains methods that are end user exposed. It backs up the
+frontend.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferService.DataTransferServiceBase.html">DataTransferService.DataTransferServiceBase</a></h4>
+      <section><p>Base class for server-side implementations of DataTransferService</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferService.DataTransferServiceClient.html">DataTransferService.DataTransferServiceClient</a></h4>
+      <section><p>Client for DataTransferService</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html">DataTransferServiceClient</a></h4>
+      <section><p>DataTransferService client wrapper, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClientImpl.html">DataTransferServiceClientImpl</a></h4>
+      <section><p>DataTransferService client wrapper implementation, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceSettings.html">DataTransferServiceSettings</a></h4>
+      <section><p>Settings for a <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.html">DataTransferServiceClient</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest.html">DeleteTransferConfigRequest</a></h4>
+      <section><p>A request to delete data transfer information. All associated transfer runs
+and log messages will be deleted as well.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest.html">DeleteTransferRunRequest</a></h4>
+      <section><p>A request to delete data transfer run information.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest.html">GetDataSourceRequest</a></h4>
+      <section><p>A request to get data source info.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest.html">GetTransferConfigRequest</a></h4>
+      <section><p>A request to get data transfer information.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest.html">GetTransferRunRequest</a></h4>
+      <section><p>A request to get data transfer run information.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest.html">ListDataSourcesRequest</a></h4>
+      <section><p>Request to list supported data sources and their data transfer settings.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse.html">ListDataSourcesResponse</a></h4>
+      <section><p>Returns list of supported data sources and their metadata.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest.html">ListTransferConfigsRequest</a></h4>
+      <section><p>A request to list data transfers configured for a BigQuery project.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse.html">ListTransferConfigsResponse</a></h4>
+      <section><p>The returned list of pipelines in the project.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest.html">ListTransferLogsRequest</a></h4>
+      <section><p>A request to get user facing log messages associated with data transfer run.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse.html">ListTransferLogsResponse</a></h4>
+      <section><p>The returned list transfer run messages.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.html">ListTransferRunsRequest</a></h4>
+      <section><p>A request to list data transfer runs. UI can use this method to show/filter
+specific data transfer runs. The data source can use this method to request
+all scheduled transfer runs.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.html">ListTransferRunsRequest.Types</a></h4>
+      <section><p>Container for nested types declared in the ListTransferRunsRequest message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse.html">ListTransferRunsResponse</a></h4>
+      <section><p>The returned list of pipelines in the project.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.LocationDataSourceName.html">LocationDataSourceName</a></h4>
+      <section><p>Resource name for the &apos;location_data_source&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.LocationName.html">LocationName</a></h4>
+      <section><p>Resource name for the &apos;location&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.LocationRunName.html">LocationRunName</a></h4>
+      <section><p>Resource name for the &apos;location_run&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.LocationTransferConfigName.html">LocationTransferConfigName</a></h4>
+      <section><p>Resource name for the &apos;location_transfer_config&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ParentNameOneof.html">ParentNameOneof</a></h4>
+      <section><p>Resource name which will contain one of a choice of resource names.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ProjectName.html">ProjectName</a></h4>
+      <section><p>Resource name for the &apos;project&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.RunName.html">RunName</a></h4>
+      <section><p>Resource name for the &apos;run&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.RunNameOneof.html">RunNameOneof</a></h4>
+      <section><p>Resource name which will contain one of a choice of resource names.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest.html">ScheduleTransferRunsRequest</a></h4>
+      <section><p>A request to schedule transfer runs for a time range.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse.html">ScheduleTransferRunsResponse</a></h4>
+      <section><p>A response to schedule transfer runs for a time range.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.html">TransferConfig</a></h4>
+      <section><p>Represents a data transfer configuration. A transfer configuration
+contains all metadata needed to perform a data transfer. For example,
+<code>destination_dataset_id</code> specifies where data should be stored.
+When a new transfer configuration is created, the specified
+<code>destination_dataset_id</code> is created when needed and shared with the
+appropriate data source service account.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigName.html">TransferConfigName</a></h4>
+      <section><p>Resource name for the &apos;transfer_config&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigNameOneof.html">TransferConfigNameOneof</a></h4>
+      <section><p>Resource name which will contain one of a choice of resource names.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.html">TransferMessage</a></h4>
+      <section><p>Represents a user facing message for a particular data transfer run.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.html">TransferMessage.Types</a></h4>
+      <section><p>Container for nested types declared in the TransferMessage message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.html">TransferRun</a></h4>
+      <section><p>Represents a data transfer run.
+Next id: 23</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest.html">UpdateTransferConfigRequest</a></h4>
+      <section><p>A request to update a transfer configuration. To update the user id of the
+transfer configuration, an authorization code needs to be provided.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType.html">DataSource.Types.AuthorizationType</a></h4>
+      <section><p>The type of authorization needed for this data source.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType.html">DataSource.Types.DataRefreshType</a></h4>
+      <section><p>Represents how the data source supports data auto refresh.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSourceNameOneof.OneofType.html">DataSourceNameOneof.OneofType</a></h4>
+      <section><p>The possible contents of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSourceNameOneof.html">DataSourceNameOneof</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type.html">DataSourceParameter.Types.Type</a></h4>
+      <section><p>Parameter type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt.html">ListTransferRunsRequest.Types.RunAttempt</a></h4>
+      <section><p>Represents which runs should be pulled.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ParentNameOneof.OneofType.html">ParentNameOneof.OneofType</a></h4>
+      <section><p>The possible contents of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.ParentNameOneof.html">ParentNameOneof</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.RunNameOneof.OneofType.html">RunNameOneof.OneofType</a></h4>
+      <section><p>The possible contents of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.RunNameOneof.html">RunNameOneof</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigNameOneof.OneofType.html">TransferConfigNameOneof.OneofType</a></h4>
+      <section><p>The possible contents of <a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigNameOneof.html">TransferConfigNameOneof</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity.html">TransferMessage.Types.MessageSeverity</a></h4>
+      <section><p>Represents data transfer user facing message severity.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferState.html">TransferState</a></h4>
+      <section><p>Represents data transfer run state.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.DataTransfer.V1.TransferType.html">TransferType</a></h4>
+      <section><p>Represents data transfer type.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
