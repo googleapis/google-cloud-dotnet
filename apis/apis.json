@@ -283,7 +283,7 @@
 
   {
     "id": "Google.Cloud.Logging.Log4Net",
-    "version": "2.2.0-alpha00",
+    "version": "2.2.0",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
@@ -291,13 +291,13 @@
     "tags": [ "Log4Net", "Logging", "Stackdriver" ],
     "dependencies": {
       "log4net": "2.0.8",
-      "Google.Api.Gax.Grpc": "default",
-      "Google.Cloud.Logging.V2": "2.0.0",
+      "Google.Api.Gax.Grpc": "2.2.1",
+      "Google.Cloud.Logging.V2": "2.1.0",
       "Google.Cloud.DevTools.Common": "1.0.0",
-      "Grpc.Core": "default"
+      "Grpc.Core": "1.7.1"
     },
     "testDependencies": {
-      "Google.Api.Gax.Testing": "2.2.0"
+      "Google.Api.Gax.Testing": "2.2.1"
     }
   },
 
