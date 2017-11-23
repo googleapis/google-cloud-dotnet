@@ -929,31 +929,15 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             // Prepare the topic for Storage notifications. The Storage Service Account must have Publish permission
             // for the topic. The code below adds the service account into the "roles/pubsub.publisher" role for the topic.
-            // This code can be simplified for a newly-created topic, but gives an example of how to add the permission
-            // to a topic which may already have some permissions set.
 
             // Determine the Storage Service Account name to use in IAM operations.
             StorageClient storageClient = StorageClient.Create();
             string storageServiceAccount = $"serviceAccount:{storageClient.GetStorageServiceAccountEmail(projectId)}";
 
-            // Fetch the IAM policy for the topic.
-            Iam.V1.Policy policy = publisherClient.GetIamPolicy(topicName.ToString()) ?? new Iam.V1.Policy();
-
-            // Find a binding for the publisher role, if one already exists. Otherwise, create one (locally).
-            string role = "roles/pubsub.publisher";
-            Binding publisherBinding = policy.Bindings.FirstOrDefault(binding => binding.Role == role);
-            if (publisherBinding == null)
-            {
-                publisherBinding = new Binding { Role = role };
-                policy.Bindings.Add(publisherBinding);
-            }
-            // Ensure the Storage Service Account is in the publisher role, setting the IAM policy for the topic
-            // on the server if necessary.
-            if (!publisherBinding.Members.Contains(storageServiceAccount))
-            {
-                publisherBinding.Members.Add(storageServiceAccount);
-                publisherClient.SetIamPolicy(topicName.ToString(), policy);
-            }
+            // Modify the IAM policy for the topic.
+            publisherClient.IamHelper.ModifyPolicy(
+                topicName.ToString(),
+                policy => policy.AddRoleMember("roles/pubsub.publisher", storageServiceAccount));
 
             // Now that the topic is ready, we can create a notification configuration for Storage
             Notification notification = new Notification

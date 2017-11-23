@@ -85,21 +85,10 @@ namespace Google.Cloud.Storage.V1.Snippets
             var storageClient = StorageClient.Create();
             string storageServiceAccount = $"serviceAccount:{storageClient.GetStorageServiceAccountEmail(ProjectId)}";
 
-            // TODO: Simplify this when we have IAM convenience methods.
-            var policy = publisherClient.GetIamPolicy(topicName.ToString()) ?? new Iam.V1.Policy();
-            var role = "roles/pubsub.publisher";
-
-            var publisherBinding = policy.Bindings.FirstOrDefault(binding => binding.Role == role);
-            if (publisherBinding == null)
-            {
-                publisherBinding = new Binding { Role = role };
-                policy.Bindings.Add(publisherBinding);
-            }
-            if (!publisherBinding.Members.Contains(storageServiceAccount))
-            {
-                publisherBinding.Members.Add(storageServiceAccount);
-                publisherClient.SetIamPolicy(topicName.ToString(), policy);
-            }
+            // Modify the IAM policy for the topic.
+            publisherClient.IamHelper.ModifyPolicy(
+                topicName.ToString(),
+                policy => policy.AddRoleMember("roles/pubsub.publisher", storageServiceAccount));
 
             return storageClient.CreateNotification(BucketName,
                 new Notification { Topic = $"//pubsub.googleapis.com/{topicName}", PayloadFormat = "JSON_API_V1" });
