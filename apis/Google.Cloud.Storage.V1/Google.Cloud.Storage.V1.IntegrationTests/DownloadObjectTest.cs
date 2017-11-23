@@ -309,6 +309,13 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void InvalidHashValidationMode()
+        {
+            var options = new DownloadObjectOptions { HashValidationMode = (HashValidationMode) 12345 };
+            Assert.Throws<ArgumentException>(() => _fixture.Client.DownloadObject(_fixture.ReadBucket, "irrelevant.txt", new MemoryStream(), options));
+        }
+
         private Object GetLatestVersionOfMultiversionObject()
         {
             var service = _fixture.Client.Service;
