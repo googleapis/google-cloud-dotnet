@@ -25,7 +25,7 @@
     "id": "Google.Cloud.BigQuery.DataTransfer.V1",
     "productName": "Google BigQuery Data Transfer",
     "productUrl": "https://cloud.google.com/bigquery/",
-    "version": "1.0.0-beta00",
+    "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the BigQuery Data Transfer API, which transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.",
     "tags": [ "BigQuery", "DataTransfer" ]
@@ -35,7 +35,7 @@
     "id": "Google.Cloud.BigQuery.V2",
     "productName": "Google BigQuery",
     "productUrl": "https://cloud.google.com/bigquery/",
-    "version": "1.0.0-beta18",
+    "version": "1.0.0-beta19",
     "type": "rest",
     "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
     "dependencies": {
@@ -51,7 +51,7 @@
     "id": "Google.Cloud.Bigtable.Admin.V2",
     "productName": "Google Cloud Bigtable Administration",
     "productUrl": "https://cloud.google.com/bigtable/",
-    "version": "1.0.0-alpha01",
+    "version": "1.0.0-alpha02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
     "tags": [ "Bigtable" ],
@@ -68,7 +68,7 @@
     "id": "Google.Cloud.Bigtable.V2",
     "productName": "Google Bigtable",
     "productUrl": "https://cloud.google.com/bigtable/",
-    "version": "1.0.0-alpha01",
+    "version": "1.0.0-alpha02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
@@ -95,16 +95,16 @@
     "id": "Google.Cloud.Datastore.V1",
     "productName": "Google Cloud Datastore",
     "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
-    "version": "2.1.0-alpha00",
+    "version": "2.1.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
     "tags": [ "Datastore" ],
     "dependencies": {
-      "Grpc.Core": "1.4.0",
-      "Google.Api.Gax.Grpc": "2.0.0"
+      "Grpc.Core": "1.7.1",
+      "Google.Api.Gax.Grpc": "2.2.1"
     },
     "testDependencies": {
-      "Google.Api.Gax.Grpc.Testing": "2.0.0"
+      "Google.Api.Gax.Grpc.Testing": "2.2.1"
     },
   },
   
@@ -317,14 +317,14 @@
     "id": "Google.Cloud.Logging.V2",
     "productName": "Stackdriver Logging",
     "productUrl": "https://cloud.google.com/logging/",
-    "version": "2.1.0-beta00",
+    "version": "2.1.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Stackdriver Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
     "tags": [ "Logging", "Stackdriver" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.0.0",
+      "Google.Api.Gax.Grpc": "2.2.1",
       "Google.Cloud.Logging.Type": "2.0.0",
-      "Grpc.Core": "1.4.0"
+      "Grpc.Core": "1.7.1"
     }
   },
 
@@ -467,7 +467,7 @@
     "id": "Google.Cloud.Storage.V1",
     "productName": "Google Cloud Storage",
     "productUrl": "https://cloud.google.com/storage/",
-    "version": "2.1.0-alpha02",
+    "version": "2.1.0-beta01",
     "type": "rest",
     "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
     "dependencies": {
@@ -540,7 +540,7 @@
     "id": "Google.Cloud.Vision.V1P1Beta1",
     "productName": "Google Cloud Vision",
     "productUrl": "https://cloud.google.com/vision",
-    "version": "1.0.0-beta00",
+    "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Google client library to access the Google Cloud Vision API version v1p1beta1 with upcoming features.",
     "tags": [ "Vision" ]
