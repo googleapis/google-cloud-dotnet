@@ -113,19 +113,24 @@
   </h3>
   <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Entries_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Entries*"></a>
   <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Entries" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Entries">Entries</h4>
-  <div class="markdown level1 summary"><p>Required.  The log entries to write. Values supplied for the fields
-<code>log_name</code>, <code>resource</code>, and <code>labels</code> in this <code>entries.write</code> request are
-inserted into those log entries in this list that do not provide their own
-values.</p>
-<p>Stackdriver Logging also creates and inserts values for <code>timestamp</code> and
-<code>insert_id</code> if the entries do not provide them. The created <code>insert_id</code> for
-the N&apos;th entry in this list will be greater than earlier entries and less
-than later entries.  Otherwise, the order of log entries in this list does
-not matter.</p>
+  <div class="markdown level1 summary"><p>Required. The log entries to send to Stackdriver Logging. The order of log
+entries in this list does not matter. Values supplied in this method&apos;s
+<code>log_name</code>, <code>resource</code>, and <code>labels</code> fields are copied into those log
+entries in this list that do not include values for their corresponding
+fields. For more information, see the [LogEntry][google.logging.v2.LogEntry] type.</p>
+<p>If the <code>timestamp</code> or <code>insert_id</code> fields are missing in log entries, then
+this method supplies the current time or a unique identifier, respectively.
+The supplied values are chosen so that, among the log entries that did not
+supply their own values, the entries earlier in the list will sort before
+the entries later in the list. See the <code>entries.list</code> method.</p>
+<p>Log entries with timestamps that are more than the
+<a href="/logging/quota-policy">logs retention period</a> in the past or more than
+24 hours in the future might be discarded. Discarding does not return
+an error.</p>
 <p>To improve throughput and to avoid exceeding the
 <a href="/logging/quota-policy">quota limit</a> for calls to <code>entries.write</code>,
-you should write multiple log entries at once rather than
-calling this method for each individual log entry.</p>
+you should try to include several log entries in this list,
+rather than calling this method for each individual log entry.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

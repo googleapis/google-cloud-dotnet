@@ -17052,6 +17052,135 @@ references:
   commentId: N:Google.Cloud.Logging.V2
   fullName: Google.Cloud.Logging.V2
   nameWithType: Google.Cloud.Logging.V2
+- uid: Google.Cloud.Logging.V2.BillingExclusionName
+  name: BillingExclusionName
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html
+  commentId: T:Google.Cloud.Logging.V2.BillingExclusionName
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName
+  nameWithType: BillingExclusionName
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.#ctor(System.String,System.String)
+  name: BillingExclusionName(String, String)
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName__ctor_System_String_System_String_
+  commentId: M:Google.Cloud.Logging.V2.BillingExclusionName.#ctor(System.String,System.String)
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.BillingExclusionName(System.String, System.String)
+  nameWithType: BillingExclusionName.BillingExclusionName(String, String)
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.#ctor*
+  name: BillingExclusionName
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName__ctor_
+  commentId: Overload:Google.Cloud.Logging.V2.BillingExclusionName.#ctor
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.BillingExclusionName
+  nameWithType: BillingExclusionName.BillingExclusionName
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.BillingAccountId
+  name: BillingAccountId
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_BillingAccountId
+  commentId: P:Google.Cloud.Logging.V2.BillingExclusionName.BillingAccountId
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.BillingAccountId
+  nameWithType: BillingExclusionName.BillingAccountId
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.BillingAccountId*
+  name: BillingAccountId
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_BillingAccountId_
+  commentId: Overload:Google.Cloud.Logging.V2.BillingExclusionName.BillingAccountId
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.BillingAccountId
+  nameWithType: BillingExclusionName.BillingAccountId
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.ExclusionId
+  name: ExclusionId
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_ExclusionId
+  commentId: P:Google.Cloud.Logging.V2.BillingExclusionName.ExclusionId
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.ExclusionId
+  nameWithType: BillingExclusionName.ExclusionId
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.ExclusionId*
+  name: ExclusionId
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_ExclusionId_
+  commentId: Overload:Google.Cloud.Logging.V2.BillingExclusionName.ExclusionId
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.ExclusionId
+  nameWithType: BillingExclusionName.ExclusionId
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.GetHashCode
+  name: GetHashCode()
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_GetHashCode
+  commentId: M:Google.Cloud.Logging.V2.BillingExclusionName.GetHashCode
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.GetHashCode()
+  nameWithType: BillingExclusionName.GetHashCode()
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.GetHashCode*
+  name: GetHashCode
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_GetHashCode_
+  commentId: Overload:Google.Cloud.Logging.V2.BillingExclusionName.GetHashCode
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.GetHashCode
+  nameWithType: BillingExclusionName.GetHashCode
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.Kind
+  name: Kind
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_Kind
+  commentId: P:Google.Cloud.Logging.V2.BillingExclusionName.Kind
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.Kind
+  nameWithType: BillingExclusionName.Kind
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.Kind*
+  name: Kind
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_Kind_
+  commentId: Overload:Google.Cloud.Logging.V2.BillingExclusionName.Kind
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.Kind
+  nameWithType: BillingExclusionName.Kind
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.op_Equality(Google.Cloud.Logging.V2.BillingExclusionName,Google.Cloud.Logging.V2.BillingExclusionName)
+  name: Equality(BillingExclusionName, BillingExclusionName)
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_op_Equality_Google_Cloud_Logging_V2_BillingExclusionName_Google_Cloud_Logging_V2_BillingExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.BillingExclusionName.op_Equality(Google.Cloud.Logging.V2.BillingExclusionName,Google.Cloud.Logging.V2.BillingExclusionName)
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.Equality(Google.Cloud.Logging.V2.BillingExclusionName, Google.Cloud.Logging.V2.BillingExclusionName)
+  nameWithType: BillingExclusionName.Equality(BillingExclusionName, BillingExclusionName)
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.op_Equality*
+  name: Equality
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_op_Equality_
+  commentId: Overload:Google.Cloud.Logging.V2.BillingExclusionName.op_Equality
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.Equality
+  nameWithType: BillingExclusionName.Equality
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.op_Inequality(Google.Cloud.Logging.V2.BillingExclusionName,Google.Cloud.Logging.V2.BillingExclusionName)
+  name: Inequality(BillingExclusionName, BillingExclusionName)
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_op_Inequality_Google_Cloud_Logging_V2_BillingExclusionName_Google_Cloud_Logging_V2_BillingExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.BillingExclusionName.op_Inequality(Google.Cloud.Logging.V2.BillingExclusionName,Google.Cloud.Logging.V2.BillingExclusionName)
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.Inequality(Google.Cloud.Logging.V2.BillingExclusionName, Google.Cloud.Logging.V2.BillingExclusionName)
+  nameWithType: BillingExclusionName.Inequality(BillingExclusionName, BillingExclusionName)
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.op_Inequality*
+  name: Inequality
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_op_Inequality_
+  commentId: Overload:Google.Cloud.Logging.V2.BillingExclusionName.op_Inequality
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.Inequality
+  nameWithType: BillingExclusionName.Inequality
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.Parse(System.String)
+  name: Parse(String)
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_Parse_System_String_
+  commentId: M:Google.Cloud.Logging.V2.BillingExclusionName.Parse(System.String)
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.Parse(System.String)
+  nameWithType: BillingExclusionName.Parse(String)
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.Parse*
+  name: Parse
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_Parse_
+  commentId: Overload:Google.Cloud.Logging.V2.BillingExclusionName.Parse
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.Parse
+  nameWithType: BillingExclusionName.Parse
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.ToString
+  name: ToString()
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_ToString
+  commentId: M:Google.Cloud.Logging.V2.BillingExclusionName.ToString
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.ToString()
+  nameWithType: BillingExclusionName.ToString()
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.ToString*
+  name: ToString
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_ToString_
+  commentId: Overload:Google.Cloud.Logging.V2.BillingExclusionName.ToString
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.ToString
+  nameWithType: BillingExclusionName.ToString
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.TryParse(System.String,Google.Cloud.Logging.V2.BillingExclusionName@)
+  name: TryParse(String, out BillingExclusionName)
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_TryParse_System_String_Google_Cloud_Logging_V2_BillingExclusionName__
+  commentId: M:Google.Cloud.Logging.V2.BillingExclusionName.TryParse(System.String,Google.Cloud.Logging.V2.BillingExclusionName@)
+  name.vb: TryParse(String, ByRef BillingExclusionName)
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.TryParse(System.String, out Google.Cloud.Logging.V2.BillingExclusionName)
+  fullName.vb: Google.Cloud.Logging.V2.BillingExclusionName.TryParse(System.String, ByRef Google.Cloud.Logging.V2.BillingExclusionName)
+  nameWithType: BillingExclusionName.TryParse(String, out BillingExclusionName)
+  nameWithType.vb: BillingExclusionName.TryParse(String, ByRef BillingExclusionName)
+- uid: Google.Cloud.Logging.V2.BillingExclusionName.TryParse*
+  name: TryParse
+  href: api/Google.Cloud.Logging.V2.BillingExclusionName.html#Google_Cloud_Logging_V2_BillingExclusionName_TryParse_
+  commentId: Overload:Google.Cloud.Logging.V2.BillingExclusionName.TryParse
+  fullName: Google.Cloud.Logging.V2.BillingExclusionName.TryParse
+  nameWithType: BillingExclusionName.TryParse
 - uid: Google.Cloud.Logging.V2.BillingLogName
   name: BillingLogName
   href: api/Google.Cloud.Logging.V2.BillingLogName.html
@@ -17451,6 +17580,18 @@ references:
   commentId: T:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base
   nameWithType: ConfigServiceV2.ConfigServiceV2Base
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.ServerCallContext)
+  name: CreateExclusion(CreateExclusionRequest, ServerCallContext)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_CreateExclusion_Google_Cloud_Logging_V2_CreateExclusionRequest_Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.ServerCallContext)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest, Grpc.Core.ServerCallContext)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Base.CreateExclusion(CreateExclusionRequest, ServerCallContext)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateExclusion*
+  name: CreateExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_CreateExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateExclusion
+  nameWithType: ConfigServiceV2.ConfigServiceV2Base.CreateExclusion
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.ServerCallContext)
   name: CreateSink(CreateSinkRequest, ServerCallContext)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_ServerCallContext_
@@ -17463,6 +17604,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateSink
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateSink
   nameWithType: ConfigServiceV2.ConfigServiceV2Base.CreateSink
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.ServerCallContext)
+  name: DeleteExclusion(DeleteExclusionRequest, ServerCallContext)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_DeleteExclusion_Google_Cloud_Logging_V2_DeleteExclusionRequest_Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.ServerCallContext)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest, Grpc.Core.ServerCallContext)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Base.DeleteExclusion(DeleteExclusionRequest, ServerCallContext)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteExclusion*
+  name: DeleteExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_DeleteExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteExclusion
+  nameWithType: ConfigServiceV2.ConfigServiceV2Base.DeleteExclusion
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteSink(Google.Cloud.Logging.V2.DeleteSinkRequest,Grpc.Core.ServerCallContext)
   name: DeleteSink(DeleteSinkRequest, ServerCallContext)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_DeleteSink_Google_Cloud_Logging_V2_DeleteSinkRequest_Grpc_Core_ServerCallContext_
@@ -17475,6 +17628,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteSink
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteSink
   nameWithType: ConfigServiceV2.ConfigServiceV2Base.DeleteSink
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.ServerCallContext)
+  name: GetExclusion(GetExclusionRequest, ServerCallContext)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_GetExclusion_Google_Cloud_Logging_V2_GetExclusionRequest_Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.ServerCallContext)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest, Grpc.Core.ServerCallContext)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Base.GetExclusion(GetExclusionRequest, ServerCallContext)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetExclusion*
+  name: GetExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_GetExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetExclusion
+  nameWithType: ConfigServiceV2.ConfigServiceV2Base.GetExclusion
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetSink(Google.Cloud.Logging.V2.GetSinkRequest,Grpc.Core.ServerCallContext)
   name: GetSink(GetSinkRequest, ServerCallContext)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_GetSink_Google_Cloud_Logging_V2_GetSinkRequest_Grpc_Core_ServerCallContext_
@@ -17487,6 +17652,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetSink
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetSink
   nameWithType: ConfigServiceV2.ConfigServiceV2Base.GetSink
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.ServerCallContext)
+  name: ListExclusions(ListExclusionsRequest, ServerCallContext)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_ListExclusions_Google_Cloud_Logging_V2_ListExclusionsRequest_Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.ServerCallContext)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest, Grpc.Core.ServerCallContext)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Base.ListExclusions(ListExclusionsRequest, ServerCallContext)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListExclusions*
+  name: ListExclusions
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_ListExclusions_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListExclusions
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListExclusions
+  nameWithType: ConfigServiceV2.ConfigServiceV2Base.ListExclusions
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListSinks(Google.Cloud.Logging.V2.ListSinksRequest,Grpc.Core.ServerCallContext)
   name: ListSinks(ListSinksRequest, ServerCallContext)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_ListSinks_Google_Cloud_Logging_V2_ListSinksRequest_Grpc_Core_ServerCallContext_
@@ -17499,6 +17676,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListSinks
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListSinks
   nameWithType: ConfigServiceV2.ConfigServiceV2Base.ListSinks
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.ServerCallContext)
+  name: UpdateExclusion(UpdateExclusionRequest, ServerCallContext)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_UpdateExclusion_Google_Cloud_Logging_V2_UpdateExclusionRequest_Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.ServerCallContext)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest, Grpc.Core.ServerCallContext)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Base.UpdateExclusion(UpdateExclusionRequest, ServerCallContext)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateExclusion*
+  name: UpdateExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_UpdateExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateExclusion
+  nameWithType: ConfigServiceV2.ConfigServiceV2Base.UpdateExclusion
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.ServerCallContext)
   name: UpdateSink(UpdateSinkRequest, ServerCallContext)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_ServerCallContext_
@@ -17547,6 +17736,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.#ctor
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ConfigServiceV2Client
   nameWithType: ConfigServiceV2.ConfigServiceV2Client.ConfigServiceV2Client
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.CallOptions)
+  name: CreateExclusion(CreateExclusionRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusion_Google_Cloud_Logging_V2_CreateExclusionRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest, Grpc.Core.CallOptions)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(CreateExclusionRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: CreateExclusion(CreateExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusion_Google_Cloud_Logging_V2_CreateExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: CreateExclusion(CreateExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(CreateExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ConfigServiceV2.ConfigServiceV2Client.CreateExclusion(CreateExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion*
+  name: CreateExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusion
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.CreateExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.CallOptions)
+  name: CreateExclusionAsync(CreateExclusionRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusionAsync_Google_Cloud_Logging_V2_CreateExclusionRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest, Grpc.Core.CallOptions)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(CreateExclusionRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: CreateExclusionAsync(CreateExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusionAsync_Google_Cloud_Logging_V2_CreateExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: CreateExclusionAsync(CreateExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(CreateExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync(CreateExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync*
+  name: CreateExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.CreateExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.CallOptions)
   name: CreateSink(CreateSinkRequest, CallOptions)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_CallOptions_
@@ -17589,6 +17820,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync
   nameWithType: ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.CallOptions)
+  name: DeleteExclusion(DeleteExclusionRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusion_Google_Cloud_Logging_V2_DeleteExclusionRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest, Grpc.Core.CallOptions)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(DeleteExclusionRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: DeleteExclusion(DeleteExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusion_Google_Cloud_Logging_V2_DeleteExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: DeleteExclusion(DeleteExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(DeleteExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion(DeleteExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion*
+  name: DeleteExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.DeleteExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.CallOptions)
+  name: DeleteExclusionAsync(DeleteExclusionRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusionAsync_Google_Cloud_Logging_V2_DeleteExclusionRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest, Grpc.Core.CallOptions)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(DeleteExclusionRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: DeleteExclusionAsync(DeleteExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusionAsync_Google_Cloud_Logging_V2_DeleteExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: DeleteExclusionAsync(DeleteExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(DeleteExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync(DeleteExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync*
+  name: DeleteExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.DeleteExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteSink(Google.Cloud.Logging.V2.DeleteSinkRequest,Grpc.Core.CallOptions)
   name: DeleteSink(DeleteSinkRequest, CallOptions)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteSink_Google_Cloud_Logging_V2_DeleteSinkRequest_Grpc_Core_CallOptions_
@@ -17631,6 +17904,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteSinkAsync
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteSinkAsync
   nameWithType: ConfigServiceV2.ConfigServiceV2Client.DeleteSinkAsync
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.CallOptions)
+  name: GetExclusion(GetExclusionRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusion_Google_Cloud_Logging_V2_GetExclusionRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest, Grpc.Core.CallOptions)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.GetExclusion(GetExclusionRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: GetExclusion(GetExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusion_Google_Cloud_Logging_V2_GetExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: GetExclusion(GetExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.GetExclusion(GetExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ConfigServiceV2.ConfigServiceV2Client.GetExclusion(GetExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion*
+  name: GetExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusion
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.GetExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.CallOptions)
+  name: GetExclusionAsync(GetExclusionRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusionAsync_Google_Cloud_Logging_V2_GetExclusionRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest, Grpc.Core.CallOptions)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(GetExclusionRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: GetExclusionAsync(GetExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusionAsync_Google_Cloud_Logging_V2_GetExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: GetExclusionAsync(GetExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(GetExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync(GetExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync*
+  name: GetExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.GetExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetSink(Google.Cloud.Logging.V2.GetSinkRequest,Grpc.Core.CallOptions)
   name: GetSink(GetSinkRequest, CallOptions)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetSink_Google_Cloud_Logging_V2_GetSinkRequest_Grpc_Core_CallOptions_
@@ -17673,6 +17988,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetSinkAsync
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetSinkAsync
   nameWithType: ConfigServiceV2.ConfigServiceV2Client.GetSinkAsync
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.CallOptions)
+  name: ListExclusions(ListExclusionsRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusions_Google_Cloud_Logging_V2_ListExclusionsRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest, Grpc.Core.CallOptions)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.ListExclusions(ListExclusionsRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: ListExclusions(ListExclusionsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusions_Google_Cloud_Logging_V2_ListExclusionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: ListExclusions(ListExclusionsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.ListExclusions(ListExclusionsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ConfigServiceV2.ConfigServiceV2Client.ListExclusions(ListExclusionsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions*
+  name: ListExclusions
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusions_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusions
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.ListExclusions
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.CallOptions)
+  name: ListExclusionsAsync(ListExclusionsRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusionsAsync_Google_Cloud_Logging_V2_ListExclusionsRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest, Grpc.Core.CallOptions)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(ListExclusionsRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: ListExclusionsAsync(ListExclusionsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusionsAsync_Google_Cloud_Logging_V2_ListExclusionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: ListExclusionsAsync(ListExclusionsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(ListExclusionsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync(ListExclusionsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync*
+  name: ListExclusionsAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListExclusionsAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.ListExclusionsAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListSinks(Google.Cloud.Logging.V2.ListSinksRequest,Grpc.Core.CallOptions)
   name: ListSinks(ListSinksRequest, CallOptions)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListSinks_Google_Cloud_Logging_V2_ListSinksRequest_Grpc_Core_CallOptions_
@@ -17727,6 +18084,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.NewInstance
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.NewInstance
   nameWithType: ConfigServiceV2.ConfigServiceV2Client.NewInstance
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.CallOptions)
+  name: UpdateExclusion(UpdateExclusionRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusion_Google_Cloud_Logging_V2_UpdateExclusionRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest, Grpc.Core.CallOptions)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(UpdateExclusionRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: UpdateExclusion(UpdateExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusion_Google_Cloud_Logging_V2_UpdateExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: UpdateExclusion(UpdateExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(UpdateExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion(UpdateExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion*
+  name: UpdateExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.UpdateExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.CallOptions)
+  name: UpdateExclusionAsync(UpdateExclusionRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusionAsync_Google_Cloud_Logging_V2_UpdateExclusionRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest, Grpc.Core.CallOptions)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(UpdateExclusionRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: UpdateExclusionAsync(UpdateExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusionAsync_Google_Cloud_Logging_V2_UpdateExclusionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: UpdateExclusionAsync(UpdateExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(UpdateExclusionRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync(UpdateExclusionRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync*
+  name: UpdateExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync
+  nameWithType: ConfigServiceV2.ConfigServiceV2Client.UpdateExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.CallOptions)
   name: UpdateSink(UpdateSinkRequest, CallOptions)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_CallOptions_
@@ -17805,6 +18204,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateAsync
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateAsync
   nameWithType: ConfigServiceV2Client.CreateAsync
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateExclusion(CreateExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusion_Google_Cloud_Logging_V2_CreateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.CreateExclusion(CreateExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateExclusion(ParentNameOneof, LogExclusion, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusion_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogExclusion_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.ParentNameOneof, Google.Cloud.Logging.V2.LogExclusion, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.CreateExclusion(ParentNameOneof, LogExclusion, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion*
+  name: CreateExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion
+  nameWithType: ConfigServiceV2Client.CreateExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateExclusionAsync(CreateExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusionAsync_Google_Cloud_Logging_V2_CreateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.CreateExclusionAsync(CreateExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateExclusionAsync(ParentNameOneof, LogExclusion, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusionAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogExclusion_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.ParentNameOneof, Google.Cloud.Logging.V2.LogExclusion, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.CreateExclusionAsync(ParentNameOneof, LogExclusion, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogExclusion,System.Threading.CancellationToken)
+  name: CreateExclusionAsync(ParentNameOneof, LogExclusion, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusionAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogExclusion_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogExclusion,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.ParentNameOneof, Google.Cloud.Logging.V2.LogExclusion, System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2Client.CreateExclusionAsync(ParentNameOneof, LogExclusion, CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync*
+  name: CreateExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync
+  nameWithType: ConfigServiceV2Client.CreateExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Google.Api.Gax.Grpc.CallSettings)
   name: CreateSink(CreateSinkRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17871,6 +18312,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.DefaultScopes
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.DefaultScopes
   nameWithType: ConfigServiceV2Client.DefaultScopes
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteExclusion(DeleteExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusion_Google_Cloud_Logging_V2_DeleteExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.DeleteExclusion(DeleteExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteExclusion(ExclusionNameOneof, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusion_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.DeleteExclusion(ExclusionNameOneof, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion*
+  name: DeleteExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion
+  nameWithType: ConfigServiceV2Client.DeleteExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteExclusionAsync(DeleteExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusionAsync_Google_Cloud_Logging_V2_DeleteExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.DeleteExclusionAsync(DeleteExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteExclusionAsync(ExclusionNameOneof, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.DeleteExclusionAsync(ExclusionNameOneof, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,System.Threading.CancellationToken)
+  name: DeleteExclusionAsync(ExclusionNameOneof, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof, System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2Client.DeleteExclusionAsync(ExclusionNameOneof, CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync*
+  name: DeleteExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync
+  nameWithType: ConfigServiceV2Client.DeleteExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSink(Google.Cloud.Logging.V2.DeleteSinkRequest,Google.Api.Gax.Grpc.CallSettings)
   name: DeleteSink(DeleteSinkRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSink_Google_Cloud_Logging_V2_DeleteSinkRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17913,6 +18396,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync
   nameWithType: ConfigServiceV2Client.DeleteSinkAsync
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)
+  name: GetExclusion(ExclusionNameOneof, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusion_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.GetExclusion(ExclusionNameOneof, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: GetExclusion(GetExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusion_Google_Cloud_Logging_V2_GetExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.GetExclusion(GetExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion*
+  name: GetExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion
+  nameWithType: ConfigServiceV2Client.GetExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)
+  name: GetExclusionAsync(ExclusionNameOneof, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.GetExclusionAsync(ExclusionNameOneof, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,System.Threading.CancellationToken)
+  name: GetExclusionAsync(ExclusionNameOneof, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof, System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2Client.GetExclusionAsync(ExclusionNameOneof, CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: GetExclusionAsync(GetExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusionAsync_Google_Cloud_Logging_V2_GetExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.GetExclusionAsync(GetExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync*
+  name: GetExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync
+  nameWithType: ConfigServiceV2Client.GetExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSink(Google.Cloud.Logging.V2.GetSinkRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetSink(GetSinkRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_GetSink_Google_Cloud_Logging_V2_GetSinkRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17967,6 +18492,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.GrpcClient
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.GrpcClient
   nameWithType: ConfigServiceV2Client.GrpcClient
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListExclusions(ListExclusionsRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusions_Google_Cloud_Logging_V2_ListExclusionsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.ListExclusions(ListExclusionsRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListExclusions(ParentNameOneof, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusions_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListExclusions(ParentNameOneof, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ParentNameOneof, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ParentNameOneof, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.ListExclusions(ParentNameOneof, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ConfigServiceV2Client.ListExclusions(ParentNameOneof, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions*
+  name: ListExclusions
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusions_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions
+  nameWithType: ConfigServiceV2Client.ListExclusions
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListExclusionsAsync(ListExclusionsRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusionsAsync_Google_Cloud_Logging_V2_ListExclusionsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.ListExclusionsAsync(ListExclusionsRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListExclusionsAsync(ParentNameOneof, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusionsAsync_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListExclusionsAsync(ParentNameOneof, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ParentNameOneof, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ParentNameOneof, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.ListExclusionsAsync(ParentNameOneof, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ConfigServiceV2Client.ListExclusionsAsync(ParentNameOneof, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync*
+  name: ListExclusionsAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusionsAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync
+  nameWithType: ConfigServiceV2Client.ListExclusionsAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinks(Google.Cloud.Logging.V2.ListSinksRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListSinks(ListSinksRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_ListSinks_Google_Cloud_Logging_V2_ListSinksRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -18021,6 +18588,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.ShutdownDefaultChannelsAsync
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.ShutdownDefaultChannelsAsync
   nameWithType: ConfigServiceV2Client.ShutdownDefaultChannelsAsync
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Protobuf.WellKnownTypes.FieldMask,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateExclusion(ExclusionNameOneof, LogExclusion, FieldMask, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusion_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Cloud_Logging_V2_LogExclusion_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Protobuf.WellKnownTypes.FieldMask,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof, Google.Cloud.Logging.V2.LogExclusion, Google.Protobuf.WellKnownTypes.FieldMask, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.UpdateExclusion(ExclusionNameOneof, LogExclusion, FieldMask, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateExclusion(UpdateExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusion_Google_Cloud_Logging_V2_UpdateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.UpdateExclusion(UpdateExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion*
+  name: UpdateExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion
+  nameWithType: ConfigServiceV2Client.UpdateExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Protobuf.WellKnownTypes.FieldMask,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateExclusionAsync(ExclusionNameOneof, LogExclusion, FieldMask, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Cloud_Logging_V2_LogExclusion_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Protobuf.WellKnownTypes.FieldMask,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof, Google.Cloud.Logging.V2.LogExclusion, Google.Protobuf.WellKnownTypes.FieldMask, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.UpdateExclusionAsync(ExclusionNameOneof, LogExclusion, FieldMask, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Protobuf.WellKnownTypes.FieldMask,System.Threading.CancellationToken)
+  name: UpdateExclusionAsync(ExclusionNameOneof, LogExclusion, FieldMask, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Cloud_Logging_V2_LogExclusion_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Protobuf.WellKnownTypes.FieldMask,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof, Google.Cloud.Logging.V2.LogExclusion, Google.Protobuf.WellKnownTypes.FieldMask, System.Threading.CancellationToken)
+  nameWithType: ConfigServiceV2Client.UpdateExclusionAsync(ExclusionNameOneof, LogExclusion, FieldMask, CancellationToken)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateExclusionAsync(UpdateExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusionAsync_Google_Cloud_Logging_V2_UpdateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2Client.UpdateExclusionAsync(UpdateExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync*
+  name: UpdateExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync
+  nameWithType: ConfigServiceV2Client.UpdateExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink(Google.Cloud.Logging.V2.SinkNameOneof,Google.Cloud.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)
   name: UpdateSink(SinkNameOneof, LogSink, CallSettings)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_SinkNameOneof_Google_Cloud_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_
@@ -18081,6 +18690,30 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.#ctor
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ConfigServiceV2ClientImpl
   nameWithType: ConfigServiceV2ClientImpl.ConfigServiceV2ClientImpl
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateExclusion(CreateExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_CreateExclusion_Google_Cloud_Logging_V2_CreateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2ClientImpl.CreateExclusion(CreateExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusion*
+  name: CreateExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_CreateExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusion
+  nameWithType: ConfigServiceV2ClientImpl.CreateExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateExclusionAsync(CreateExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_CreateExclusionAsync_Google_Cloud_Logging_V2_CreateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2ClientImpl.CreateExclusionAsync(CreateExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusionAsync*
+  name: CreateExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_CreateExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateExclusionAsync
+  nameWithType: ConfigServiceV2ClientImpl.CreateExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Google.Api.Gax.Grpc.CallSettings)
   name: CreateSink(CreateSinkRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -18105,6 +18738,30 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateSinkAsync
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateSinkAsync
   nameWithType: ConfigServiceV2ClientImpl.CreateSinkAsync
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteExclusion(DeleteExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_DeleteExclusion_Google_Cloud_Logging_V2_DeleteExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2ClientImpl.DeleteExclusion(DeleteExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusion*
+  name: DeleteExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_DeleteExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusion
+  nameWithType: ConfigServiceV2ClientImpl.DeleteExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteExclusionAsync(DeleteExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_DeleteExclusionAsync_Google_Cloud_Logging_V2_DeleteExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2ClientImpl.DeleteExclusionAsync(DeleteExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusionAsync*
+  name: DeleteExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_DeleteExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteExclusionAsync
+  nameWithType: ConfigServiceV2ClientImpl.DeleteExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteSink(Google.Cloud.Logging.V2.DeleteSinkRequest,Google.Api.Gax.Grpc.CallSettings)
   name: DeleteSink(DeleteSinkRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_DeleteSink_Google_Cloud_Logging_V2_DeleteSinkRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -18129,6 +18786,30 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteSinkAsync
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteSinkAsync
   nameWithType: ConfigServiceV2ClientImpl.DeleteSinkAsync
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: GetExclusion(GetExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_GetExclusion_Google_Cloud_Logging_V2_GetExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2ClientImpl.GetExclusion(GetExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusion*
+  name: GetExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_GetExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusion
+  nameWithType: ConfigServiceV2ClientImpl.GetExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: GetExclusionAsync(GetExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_GetExclusionAsync_Google_Cloud_Logging_V2_GetExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2ClientImpl.GetExclusionAsync(GetExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusionAsync*
+  name: GetExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_GetExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetExclusionAsync
+  nameWithType: ConfigServiceV2ClientImpl.GetExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GetSink(Google.Cloud.Logging.V2.GetSinkRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetSink(GetSinkRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_GetSink_Google_Cloud_Logging_V2_GetSinkRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -18165,6 +18846,30 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GrpcClient
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.GrpcClient
   nameWithType: ConfigServiceV2ClientImpl.GrpcClient
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListExclusions(ListExclusionsRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_ListExclusions_Google_Cloud_Logging_V2_ListExclusionsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2ClientImpl.ListExclusions(ListExclusionsRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusions*
+  name: ListExclusions
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_ListExclusions_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusions
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusions
+  nameWithType: ConfigServiceV2ClientImpl.ListExclusions
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListExclusionsAsync(ListExclusionsRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_ListExclusionsAsync_Google_Cloud_Logging_V2_ListExclusionsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2ClientImpl.ListExclusionsAsync(ListExclusionsRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusionsAsync*
+  name: ListExclusionsAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_ListExclusionsAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusionsAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListExclusionsAsync
+  nameWithType: ConfigServiceV2ClientImpl.ListExclusionsAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListSinks(Google.Cloud.Logging.V2.ListSinksRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListSinks(ListSinksRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_ListSinks_Google_Cloud_Logging_V2_ListSinksRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -18189,6 +18894,30 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListSinksAsync
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.ListSinksAsync
   nameWithType: ConfigServiceV2ClientImpl.ListSinksAsync
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateExclusion(UpdateExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_UpdateExclusion_Google_Cloud_Logging_V2_UpdateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2ClientImpl.UpdateExclusion(UpdateExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusion*
+  name: UpdateExclusion
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_UpdateExclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusion
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusion
+  nameWithType: ConfigServiceV2ClientImpl.UpdateExclusion
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateExclusionAsync(UpdateExclusionRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_UpdateExclusionAsync_Google_Cloud_Logging_V2_UpdateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ConfigServiceV2ClientImpl.UpdateExclusionAsync(UpdateExclusionRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusionAsync*
+  name: UpdateExclusionAsync
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_UpdateExclusionAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusionAsync
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateExclusionAsync
+  nameWithType: ConfigServiceV2ClientImpl.UpdateExclusionAsync
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Google.Api.Gax.Grpc.CallSettings)
   name: UpdateSink(UpdateSinkRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html#Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -18243,6 +18972,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.Clone
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.Clone
   nameWithType: ConfigServiceV2Settings.Clone
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.CreateExclusionSettings
+  name: CreateExclusionSettings
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_CreateExclusionSettings
+  commentId: P:Google.Cloud.Logging.V2.ConfigServiceV2Settings.CreateExclusionSettings
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.CreateExclusionSettings
+  nameWithType: ConfigServiceV2Settings.CreateExclusionSettings
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.CreateExclusionSettings*
+  name: CreateExclusionSettings
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_CreateExclusionSettings_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.CreateExclusionSettings
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.CreateExclusionSettings
+  nameWithType: ConfigServiceV2Settings.CreateExclusionSettings
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.CreateSinkSettings
   name: CreateSinkSettings
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_CreateSinkSettings
@@ -18255,6 +18996,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.CreateSinkSettings
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.CreateSinkSettings
   nameWithType: ConfigServiceV2Settings.CreateSinkSettings
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.DeleteExclusionSettings
+  name: DeleteExclusionSettings
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_DeleteExclusionSettings
+  commentId: P:Google.Cloud.Logging.V2.ConfigServiceV2Settings.DeleteExclusionSettings
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.DeleteExclusionSettings
+  nameWithType: ConfigServiceV2Settings.DeleteExclusionSettings
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.DeleteExclusionSettings*
+  name: DeleteExclusionSettings
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_DeleteExclusionSettings_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.DeleteExclusionSettings
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.DeleteExclusionSettings
+  nameWithType: ConfigServiceV2Settings.DeleteExclusionSettings
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.DeleteSinkSettings
   name: DeleteSinkSettings
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_DeleteSinkSettings
@@ -18303,6 +19056,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetDefaultTimeoutBackoff
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetDefaultTimeoutBackoff
   nameWithType: ConfigServiceV2Settings.GetDefaultTimeoutBackoff
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetExclusionSettings
+  name: GetExclusionSettings
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_GetExclusionSettings
+  commentId: P:Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetExclusionSettings
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetExclusionSettings
+  nameWithType: ConfigServiceV2Settings.GetExclusionSettings
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetExclusionSettings*
+  name: GetExclusionSettings
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_GetExclusionSettings_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetExclusionSettings
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetExclusionSettings
+  nameWithType: ConfigServiceV2Settings.GetExclusionSettings
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetSinkSettings
   name: GetSinkSettings
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_GetSinkSettings
@@ -18315,6 +19080,30 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetSinkSettings
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetSinkSettings
   nameWithType: ConfigServiceV2Settings.GetSinkSettings
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkRetryBackoff
+  name: GetWriteSinkRetryBackoff()
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_GetWriteSinkRetryBackoff
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkRetryBackoff
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkRetryBackoff()
+  nameWithType: ConfigServiceV2Settings.GetWriteSinkRetryBackoff()
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkRetryBackoff*
+  name: GetWriteSinkRetryBackoff
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_GetWriteSinkRetryBackoff_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkRetryBackoff
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkRetryBackoff
+  nameWithType: ConfigServiceV2Settings.GetWriteSinkRetryBackoff
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkTimeoutBackoff
+  name: GetWriteSinkTimeoutBackoff()
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_GetWriteSinkTimeoutBackoff
+  commentId: M:Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkTimeoutBackoff
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkTimeoutBackoff()
+  nameWithType: ConfigServiceV2Settings.GetWriteSinkTimeoutBackoff()
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkTimeoutBackoff*
+  name: GetWriteSinkTimeoutBackoff
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_GetWriteSinkTimeoutBackoff_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkTimeoutBackoff
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.GetWriteSinkTimeoutBackoff
+  nameWithType: ConfigServiceV2Settings.GetWriteSinkTimeoutBackoff
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.IdempotentRetryFilter
   name: IdempotentRetryFilter
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_IdempotentRetryFilter
@@ -18327,6 +19116,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.IdempotentRetryFilter
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.IdempotentRetryFilter
   nameWithType: ConfigServiceV2Settings.IdempotentRetryFilter
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.ListExclusionsSettings
+  name: ListExclusionsSettings
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_ListExclusionsSettings
+  commentId: P:Google.Cloud.Logging.V2.ConfigServiceV2Settings.ListExclusionsSettings
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.ListExclusionsSettings
+  nameWithType: ConfigServiceV2Settings.ListExclusionsSettings
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.ListExclusionsSettings*
+  name: ListExclusionsSettings
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_ListExclusionsSettings_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.ListExclusionsSettings
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.ListExclusionsSettings
+  nameWithType: ConfigServiceV2Settings.ListExclusionsSettings
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.ListSinksSettings
   name: ListSinksSettings
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_ListSinksSettings
@@ -18351,6 +19152,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.NonIdempotentRetryFilter
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.NonIdempotentRetryFilter
   nameWithType: ConfigServiceV2Settings.NonIdempotentRetryFilter
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.UpdateExclusionSettings
+  name: UpdateExclusionSettings
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_UpdateExclusionSettings
+  commentId: P:Google.Cloud.Logging.V2.ConfigServiceV2Settings.UpdateExclusionSettings
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.UpdateExclusionSettings
+  nameWithType: ConfigServiceV2Settings.UpdateExclusionSettings
+- uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.UpdateExclusionSettings*
+  name: UpdateExclusionSettings
+  href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_UpdateExclusionSettings_
+  commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.UpdateExclusionSettings
+  fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.UpdateExclusionSettings
+  nameWithType: ConfigServiceV2Settings.UpdateExclusionSettings
 - uid: Google.Cloud.Logging.V2.ConfigServiceV2Settings.UpdateSinkSettings
   name: UpdateSinkSettings
   href: api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html#Google_Cloud_Logging_V2_ConfigServiceV2Settings_UpdateSinkSettings
@@ -18363,6 +19176,48 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.ConfigServiceV2Settings.UpdateSinkSettings
   fullName: Google.Cloud.Logging.V2.ConfigServiceV2Settings.UpdateSinkSettings
   nameWithType: ConfigServiceV2Settings.UpdateSinkSettings
+- uid: Google.Cloud.Logging.V2.CreateExclusionRequest
+  name: CreateExclusionRequest
+  href: api/Google.Cloud.Logging.V2.CreateExclusionRequest.html
+  commentId: T:Google.Cloud.Logging.V2.CreateExclusionRequest
+  fullName: Google.Cloud.Logging.V2.CreateExclusionRequest
+  nameWithType: CreateExclusionRequest
+- uid: Google.Cloud.Logging.V2.CreateExclusionRequest.Exclusion
+  name: Exclusion
+  href: api/Google.Cloud.Logging.V2.CreateExclusionRequest.html#Google_Cloud_Logging_V2_CreateExclusionRequest_Exclusion
+  commentId: P:Google.Cloud.Logging.V2.CreateExclusionRequest.Exclusion
+  fullName: Google.Cloud.Logging.V2.CreateExclusionRequest.Exclusion
+  nameWithType: CreateExclusionRequest.Exclusion
+- uid: Google.Cloud.Logging.V2.CreateExclusionRequest.Exclusion*
+  name: Exclusion
+  href: api/Google.Cloud.Logging.V2.CreateExclusionRequest.html#Google_Cloud_Logging_V2_CreateExclusionRequest_Exclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.CreateExclusionRequest.Exclusion
+  fullName: Google.Cloud.Logging.V2.CreateExclusionRequest.Exclusion
+  nameWithType: CreateExclusionRequest.Exclusion
+- uid: Google.Cloud.Logging.V2.CreateExclusionRequest.Parent
+  name: Parent
+  href: api/Google.Cloud.Logging.V2.CreateExclusionRequest.html#Google_Cloud_Logging_V2_CreateExclusionRequest_Parent
+  commentId: P:Google.Cloud.Logging.V2.CreateExclusionRequest.Parent
+  fullName: Google.Cloud.Logging.V2.CreateExclusionRequest.Parent
+  nameWithType: CreateExclusionRequest.Parent
+- uid: Google.Cloud.Logging.V2.CreateExclusionRequest.Parent*
+  name: Parent
+  href: api/Google.Cloud.Logging.V2.CreateExclusionRequest.html#Google_Cloud_Logging_V2_CreateExclusionRequest_Parent_
+  commentId: Overload:Google.Cloud.Logging.V2.CreateExclusionRequest.Parent
+  fullName: Google.Cloud.Logging.V2.CreateExclusionRequest.Parent
+  nameWithType: CreateExclusionRequest.Parent
+- uid: Google.Cloud.Logging.V2.CreateExclusionRequest.ParentAsParentNameOneof
+  name: ParentAsParentNameOneof
+  href: api/Google.Cloud.Logging.V2.CreateExclusionRequest.html#Google_Cloud_Logging_V2_CreateExclusionRequest_ParentAsParentNameOneof
+  commentId: P:Google.Cloud.Logging.V2.CreateExclusionRequest.ParentAsParentNameOneof
+  fullName: Google.Cloud.Logging.V2.CreateExclusionRequest.ParentAsParentNameOneof
+  nameWithType: CreateExclusionRequest.ParentAsParentNameOneof
+- uid: Google.Cloud.Logging.V2.CreateExclusionRequest.ParentAsParentNameOneof*
+  name: ParentAsParentNameOneof
+  href: api/Google.Cloud.Logging.V2.CreateExclusionRequest.html#Google_Cloud_Logging_V2_CreateExclusionRequest_ParentAsParentNameOneof_
+  commentId: Overload:Google.Cloud.Logging.V2.CreateExclusionRequest.ParentAsParentNameOneof
+  fullName: Google.Cloud.Logging.V2.CreateExclusionRequest.ParentAsParentNameOneof
+  nameWithType: CreateExclusionRequest.ParentAsParentNameOneof
 - uid: Google.Cloud.Logging.V2.CreateLogMetricRequest
   name: CreateLogMetricRequest
   href: api/Google.Cloud.Logging.V2.CreateLogMetricRequest.html
@@ -18459,6 +19314,36 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.CreateSinkRequest.UniqueWriterIdentity
   fullName: Google.Cloud.Logging.V2.CreateSinkRequest.UniqueWriterIdentity
   nameWithType: CreateSinkRequest.UniqueWriterIdentity
+- uid: Google.Cloud.Logging.V2.DeleteExclusionRequest
+  name: DeleteExclusionRequest
+  href: api/Google.Cloud.Logging.V2.DeleteExclusionRequest.html
+  commentId: T:Google.Cloud.Logging.V2.DeleteExclusionRequest
+  fullName: Google.Cloud.Logging.V2.DeleteExclusionRequest
+  nameWithType: DeleteExclusionRequest
+- uid: Google.Cloud.Logging.V2.DeleteExclusionRequest.ExclusionNameOneof
+  name: ExclusionNameOneof
+  href: api/Google.Cloud.Logging.V2.DeleteExclusionRequest.html#Google_Cloud_Logging_V2_DeleteExclusionRequest_ExclusionNameOneof
+  commentId: P:Google.Cloud.Logging.V2.DeleteExclusionRequest.ExclusionNameOneof
+  fullName: Google.Cloud.Logging.V2.DeleteExclusionRequest.ExclusionNameOneof
+  nameWithType: DeleteExclusionRequest.ExclusionNameOneof
+- uid: Google.Cloud.Logging.V2.DeleteExclusionRequest.ExclusionNameOneof*
+  name: ExclusionNameOneof
+  href: api/Google.Cloud.Logging.V2.DeleteExclusionRequest.html#Google_Cloud_Logging_V2_DeleteExclusionRequest_ExclusionNameOneof_
+  commentId: Overload:Google.Cloud.Logging.V2.DeleteExclusionRequest.ExclusionNameOneof
+  fullName: Google.Cloud.Logging.V2.DeleteExclusionRequest.ExclusionNameOneof
+  nameWithType: DeleteExclusionRequest.ExclusionNameOneof
+- uid: Google.Cloud.Logging.V2.DeleteExclusionRequest.Name
+  name: Name
+  href: api/Google.Cloud.Logging.V2.DeleteExclusionRequest.html#Google_Cloud_Logging_V2_DeleteExclusionRequest_Name
+  commentId: P:Google.Cloud.Logging.V2.DeleteExclusionRequest.Name
+  fullName: Google.Cloud.Logging.V2.DeleteExclusionRequest.Name
+  nameWithType: DeleteExclusionRequest.Name
+- uid: Google.Cloud.Logging.V2.DeleteExclusionRequest.Name*
+  name: Name
+  href: api/Google.Cloud.Logging.V2.DeleteExclusionRequest.html#Google_Cloud_Logging_V2_DeleteExclusionRequest_Name_
+  commentId: Overload:Google.Cloud.Logging.V2.DeleteExclusionRequest.Name
+  fullName: Google.Cloud.Logging.V2.DeleteExclusionRequest.Name
+  nameWithType: DeleteExclusionRequest.Name
 - uid: Google.Cloud.Logging.V2.DeleteLogMetricRequest
   name: DeleteLogMetricRequest
   href: api/Google.Cloud.Logging.V2.DeleteLogMetricRequest.html
@@ -18549,6 +19434,507 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.DeleteSinkRequest.SinkNameAsSinkNameOneof
   fullName: Google.Cloud.Logging.V2.DeleteSinkRequest.SinkNameAsSinkNameOneof
   nameWithType: DeleteSinkRequest.SinkNameAsSinkNameOneof
+- uid: Google.Cloud.Logging.V2.ExclusionName
+  name: ExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html
+  commentId: T:Google.Cloud.Logging.V2.ExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionName
+  nameWithType: ExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionName.#ctor(System.String,System.String)
+  name: ExclusionName(String, String)
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName__ctor_System_String_System_String_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionName.#ctor(System.String,System.String)
+  fullName: Google.Cloud.Logging.V2.ExclusionName.ExclusionName(System.String, System.String)
+  nameWithType: ExclusionName.ExclusionName(String, String)
+- uid: Google.Cloud.Logging.V2.ExclusionName.#ctor*
+  name: ExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName__ctor_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionName.#ctor
+  fullName: Google.Cloud.Logging.V2.ExclusionName.ExclusionName
+  nameWithType: ExclusionName.ExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionName.ExclusionId
+  name: ExclusionId
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_ExclusionId
+  commentId: P:Google.Cloud.Logging.V2.ExclusionName.ExclusionId
+  fullName: Google.Cloud.Logging.V2.ExclusionName.ExclusionId
+  nameWithType: ExclusionName.ExclusionId
+- uid: Google.Cloud.Logging.V2.ExclusionName.ExclusionId*
+  name: ExclusionId
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_ExclusionId_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionName.ExclusionId
+  fullName: Google.Cloud.Logging.V2.ExclusionName.ExclusionId
+  nameWithType: ExclusionName.ExclusionId
+- uid: Google.Cloud.Logging.V2.ExclusionName.GetHashCode
+  name: GetHashCode()
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_GetHashCode
+  commentId: M:Google.Cloud.Logging.V2.ExclusionName.GetHashCode
+  fullName: Google.Cloud.Logging.V2.ExclusionName.GetHashCode()
+  nameWithType: ExclusionName.GetHashCode()
+- uid: Google.Cloud.Logging.V2.ExclusionName.GetHashCode*
+  name: GetHashCode
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_GetHashCode_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionName.GetHashCode
+  fullName: Google.Cloud.Logging.V2.ExclusionName.GetHashCode
+  nameWithType: ExclusionName.GetHashCode
+- uid: Google.Cloud.Logging.V2.ExclusionName.Kind
+  name: Kind
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_Kind
+  commentId: P:Google.Cloud.Logging.V2.ExclusionName.Kind
+  fullName: Google.Cloud.Logging.V2.ExclusionName.Kind
+  nameWithType: ExclusionName.Kind
+- uid: Google.Cloud.Logging.V2.ExclusionName.Kind*
+  name: Kind
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_Kind_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionName.Kind
+  fullName: Google.Cloud.Logging.V2.ExclusionName.Kind
+  nameWithType: ExclusionName.Kind
+- uid: Google.Cloud.Logging.V2.ExclusionName.op_Equality(Google.Cloud.Logging.V2.ExclusionName,Google.Cloud.Logging.V2.ExclusionName)
+  name: Equality(ExclusionName, ExclusionName)
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_op_Equality_Google_Cloud_Logging_V2_ExclusionName_Google_Cloud_Logging_V2_ExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionName.op_Equality(Google.Cloud.Logging.V2.ExclusionName,Google.Cloud.Logging.V2.ExclusionName)
+  fullName: Google.Cloud.Logging.V2.ExclusionName.Equality(Google.Cloud.Logging.V2.ExclusionName, Google.Cloud.Logging.V2.ExclusionName)
+  nameWithType: ExclusionName.Equality(ExclusionName, ExclusionName)
+- uid: Google.Cloud.Logging.V2.ExclusionName.op_Equality*
+  name: Equality
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_op_Equality_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionName.op_Equality
+  fullName: Google.Cloud.Logging.V2.ExclusionName.Equality
+  nameWithType: ExclusionName.Equality
+- uid: Google.Cloud.Logging.V2.ExclusionName.op_Inequality(Google.Cloud.Logging.V2.ExclusionName,Google.Cloud.Logging.V2.ExclusionName)
+  name: Inequality(ExclusionName, ExclusionName)
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_op_Inequality_Google_Cloud_Logging_V2_ExclusionName_Google_Cloud_Logging_V2_ExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionName.op_Inequality(Google.Cloud.Logging.V2.ExclusionName,Google.Cloud.Logging.V2.ExclusionName)
+  fullName: Google.Cloud.Logging.V2.ExclusionName.Inequality(Google.Cloud.Logging.V2.ExclusionName, Google.Cloud.Logging.V2.ExclusionName)
+  nameWithType: ExclusionName.Inequality(ExclusionName, ExclusionName)
+- uid: Google.Cloud.Logging.V2.ExclusionName.op_Inequality*
+  name: Inequality
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_op_Inequality_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionName.op_Inequality
+  fullName: Google.Cloud.Logging.V2.ExclusionName.Inequality
+  nameWithType: ExclusionName.Inequality
+- uid: Google.Cloud.Logging.V2.ExclusionName.Parse(System.String)
+  name: Parse(String)
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_Parse_System_String_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionName.Parse(System.String)
+  fullName: Google.Cloud.Logging.V2.ExclusionName.Parse(System.String)
+  nameWithType: ExclusionName.Parse(String)
+- uid: Google.Cloud.Logging.V2.ExclusionName.Parse*
+  name: Parse
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_Parse_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionName.Parse
+  fullName: Google.Cloud.Logging.V2.ExclusionName.Parse
+  nameWithType: ExclusionName.Parse
+- uid: Google.Cloud.Logging.V2.ExclusionName.ProjectId
+  name: ProjectId
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_ProjectId
+  commentId: P:Google.Cloud.Logging.V2.ExclusionName.ProjectId
+  fullName: Google.Cloud.Logging.V2.ExclusionName.ProjectId
+  nameWithType: ExclusionName.ProjectId
+- uid: Google.Cloud.Logging.V2.ExclusionName.ProjectId*
+  name: ProjectId
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_ProjectId_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionName.ProjectId
+  fullName: Google.Cloud.Logging.V2.ExclusionName.ProjectId
+  nameWithType: ExclusionName.ProjectId
+- uid: Google.Cloud.Logging.V2.ExclusionName.ToString
+  name: ToString()
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_ToString
+  commentId: M:Google.Cloud.Logging.V2.ExclusionName.ToString
+  fullName: Google.Cloud.Logging.V2.ExclusionName.ToString()
+  nameWithType: ExclusionName.ToString()
+- uid: Google.Cloud.Logging.V2.ExclusionName.ToString*
+  name: ToString
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_ToString_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionName.ToString
+  fullName: Google.Cloud.Logging.V2.ExclusionName.ToString
+  nameWithType: ExclusionName.ToString
+- uid: Google.Cloud.Logging.V2.ExclusionName.TryParse(System.String,Google.Cloud.Logging.V2.ExclusionName@)
+  name: TryParse(String, out ExclusionName)
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_TryParse_System_String_Google_Cloud_Logging_V2_ExclusionName__
+  commentId: M:Google.Cloud.Logging.V2.ExclusionName.TryParse(System.String,Google.Cloud.Logging.V2.ExclusionName@)
+  name.vb: TryParse(String, ByRef ExclusionName)
+  fullName: Google.Cloud.Logging.V2.ExclusionName.TryParse(System.String, out Google.Cloud.Logging.V2.ExclusionName)
+  fullName.vb: Google.Cloud.Logging.V2.ExclusionName.TryParse(System.String, ByRef Google.Cloud.Logging.V2.ExclusionName)
+  nameWithType: ExclusionName.TryParse(String, out ExclusionName)
+  nameWithType.vb: ExclusionName.TryParse(String, ByRef ExclusionName)
+- uid: Google.Cloud.Logging.V2.ExclusionName.TryParse*
+  name: TryParse
+  href: api/Google.Cloud.Logging.V2.ExclusionName.html#Google_Cloud_Logging_V2_ExclusionName_TryParse_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionName.TryParse
+  fullName: Google.Cloud.Logging.V2.ExclusionName.TryParse
+  nameWithType: ExclusionName.TryParse
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof
+  name: ExclusionNameOneof
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html
+  commentId: T:Google.Cloud.Logging.V2.ExclusionNameOneof
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof
+  nameWithType: ExclusionNameOneof
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.#ctor(Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType,Google.Api.Gax.IResourceName)
+  name: ExclusionNameOneof(ExclusionNameOneof.OneofType, IResourceName)
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof__ctor_Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_Google_Api_Gax_IResourceName_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.#ctor(Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType,Google.Api.Gax.IResourceName)
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.ExclusionNameOneof(Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType, Google.Api.Gax.IResourceName)
+  nameWithType: ExclusionNameOneof.ExclusionNameOneof(ExclusionNameOneof.OneofType, IResourceName)
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.#ctor*
+  name: ExclusionNameOneof
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof__ctor_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.#ctor
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.ExclusionNameOneof
+  nameWithType: ExclusionNameOneof.ExclusionNameOneof
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.BillingExclusionName
+  name: BillingExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_BillingExclusionName
+  commentId: P:Google.Cloud.Logging.V2.ExclusionNameOneof.BillingExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.BillingExclusionName
+  nameWithType: ExclusionNameOneof.BillingExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.BillingExclusionName*
+  name: BillingExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_BillingExclusionName_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.BillingExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.BillingExclusionName
+  nameWithType: ExclusionNameOneof.BillingExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.ExclusionName
+  name: ExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_ExclusionName
+  commentId: P:Google.Cloud.Logging.V2.ExclusionNameOneof.ExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.ExclusionName
+  nameWithType: ExclusionNameOneof.ExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.ExclusionName*
+  name: ExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_ExclusionName_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.ExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.ExclusionName
+  nameWithType: ExclusionNameOneof.ExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.FolderExclusionName
+  name: FolderExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_FolderExclusionName
+  commentId: P:Google.Cloud.Logging.V2.ExclusionNameOneof.FolderExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.FolderExclusionName
+  nameWithType: ExclusionNameOneof.FolderExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.FolderExclusionName*
+  name: FolderExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_FolderExclusionName_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.FolderExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.FolderExclusionName
+  nameWithType: ExclusionNameOneof.FolderExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.BillingExclusionName)
+  name: From(BillingExclusionName)
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_From_Google_Cloud_Logging_V2_BillingExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.BillingExclusionName)
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.BillingExclusionName)
+  nameWithType: ExclusionNameOneof.From(BillingExclusionName)
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.ExclusionName)
+  name: From(ExclusionName)
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_From_Google_Cloud_Logging_V2_ExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.ExclusionName)
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.ExclusionName)
+  nameWithType: ExclusionNameOneof.From(ExclusionName)
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.FolderExclusionName)
+  name: From(FolderExclusionName)
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_From_Google_Cloud_Logging_V2_FolderExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.FolderExclusionName)
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.FolderExclusionName)
+  nameWithType: ExclusionNameOneof.From(FolderExclusionName)
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.OrganizationExclusionName)
+  name: From(OrganizationExclusionName)
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_From_Google_Cloud_Logging_V2_OrganizationExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.OrganizationExclusionName)
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.From(Google.Cloud.Logging.V2.OrganizationExclusionName)
+  nameWithType: ExclusionNameOneof.From(OrganizationExclusionName)
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.From*
+  name: From
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_From_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.From
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.From
+  nameWithType: ExclusionNameOneof.From
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.GetHashCode
+  name: GetHashCode()
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_GetHashCode
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.GetHashCode
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.GetHashCode()
+  nameWithType: ExclusionNameOneof.GetHashCode()
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.GetHashCode*
+  name: GetHashCode
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_GetHashCode_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.GetHashCode
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.GetHashCode
+  nameWithType: ExclusionNameOneof.GetHashCode
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.Kind
+  name: Kind
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_Kind
+  commentId: P:Google.Cloud.Logging.V2.ExclusionNameOneof.Kind
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Kind
+  nameWithType: ExclusionNameOneof.Kind
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.Kind*
+  name: Kind
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_Kind_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.Kind
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Kind
+  nameWithType: ExclusionNameOneof.Kind
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.Name
+  name: Name
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_Name
+  commentId: P:Google.Cloud.Logging.V2.ExclusionNameOneof.Name
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Name
+  nameWithType: ExclusionNameOneof.Name
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.Name*
+  name: Name
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_Name_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.Name
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Name
+  nameWithType: ExclusionNameOneof.Name
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType
+  name: ExclusionNameOneof.OneofType
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.html
+  commentId: T:Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType
+  nameWithType: ExclusionNameOneof.OneofType
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.BillingExclusionName
+  name: BillingExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.html#Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_BillingExclusionName
+  commentId: F:Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.BillingExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.BillingExclusionName
+  nameWithType: ExclusionNameOneof.OneofType.BillingExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.ExclusionName
+  name: ExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.html#Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_ExclusionName
+  commentId: F:Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.ExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.ExclusionName
+  nameWithType: ExclusionNameOneof.OneofType.ExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.FolderExclusionName
+  name: FolderExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.html#Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_FolderExclusionName
+  commentId: F:Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.FolderExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.FolderExclusionName
+  nameWithType: ExclusionNameOneof.OneofType.FolderExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.OrganizationExclusionName
+  name: OrganizationExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.html#Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_OrganizationExclusionName
+  commentId: F:Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.OrganizationExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.OrganizationExclusionName
+  nameWithType: ExclusionNameOneof.OneofType.OrganizationExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.Unknown
+  name: Unknown
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.html#Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_Unknown
+  commentId: F:Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.Unknown
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.Unknown
+  nameWithType: ExclusionNameOneof.OneofType.Unknown
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.op_Equality(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.ExclusionNameOneof)
+  name: Equality(ExclusionNameOneof, ExclusionNameOneof)
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_op_Equality_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Cloud_Logging_V2_ExclusionNameOneof_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.op_Equality(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.ExclusionNameOneof)
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Equality(Google.Cloud.Logging.V2.ExclusionNameOneof, Google.Cloud.Logging.V2.ExclusionNameOneof)
+  nameWithType: ExclusionNameOneof.Equality(ExclusionNameOneof, ExclusionNameOneof)
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.op_Equality*
+  name: Equality
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_op_Equality_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.op_Equality
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Equality
+  nameWithType: ExclusionNameOneof.Equality
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.op_Inequality(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.ExclusionNameOneof)
+  name: Inequality(ExclusionNameOneof, ExclusionNameOneof)
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_op_Inequality_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Cloud_Logging_V2_ExclusionNameOneof_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.op_Inequality(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.ExclusionNameOneof)
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Inequality(Google.Cloud.Logging.V2.ExclusionNameOneof, Google.Cloud.Logging.V2.ExclusionNameOneof)
+  nameWithType: ExclusionNameOneof.Inequality(ExclusionNameOneof, ExclusionNameOneof)
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.op_Inequality*
+  name: Inequality
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_op_Inequality_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.op_Inequality
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Inequality
+  nameWithType: ExclusionNameOneof.Inequality
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.OrganizationExclusionName
+  name: OrganizationExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_OrganizationExclusionName
+  commentId: P:Google.Cloud.Logging.V2.ExclusionNameOneof.OrganizationExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.OrganizationExclusionName
+  nameWithType: ExclusionNameOneof.OrganizationExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.OrganizationExclusionName*
+  name: OrganizationExclusionName
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_OrganizationExclusionName_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.OrganizationExclusionName
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.OrganizationExclusionName
+  nameWithType: ExclusionNameOneof.OrganizationExclusionName
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.Parse(System.String,System.Boolean)
+  name: Parse(String, Boolean)
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_Parse_System_String_System_Boolean_
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.Parse(System.String,System.Boolean)
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Parse(System.String, System.Boolean)
+  nameWithType: ExclusionNameOneof.Parse(String, Boolean)
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.Parse*
+  name: Parse
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_Parse_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.Parse
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Parse
+  nameWithType: ExclusionNameOneof.Parse
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.ToString
+  name: ToString()
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_ToString
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.ToString
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.ToString()
+  nameWithType: ExclusionNameOneof.ToString()
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.ToString*
+  name: ToString
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_ToString_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.ToString
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.ToString
+  nameWithType: ExclusionNameOneof.ToString
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.TryParse(System.String,System.Boolean,Google.Cloud.Logging.V2.ExclusionNameOneof@)
+  name: TryParse(String, Boolean, out ExclusionNameOneof)
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_TryParse_System_String_System_Boolean_Google_Cloud_Logging_V2_ExclusionNameOneof__
+  commentId: M:Google.Cloud.Logging.V2.ExclusionNameOneof.TryParse(System.String,System.Boolean,Google.Cloud.Logging.V2.ExclusionNameOneof@)
+  name.vb: TryParse(String, Boolean, ByRef ExclusionNameOneof)
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.TryParse(System.String, System.Boolean, out Google.Cloud.Logging.V2.ExclusionNameOneof)
+  fullName.vb: Google.Cloud.Logging.V2.ExclusionNameOneof.TryParse(System.String, System.Boolean, ByRef Google.Cloud.Logging.V2.ExclusionNameOneof)
+  nameWithType: ExclusionNameOneof.TryParse(String, Boolean, out ExclusionNameOneof)
+  nameWithType.vb: ExclusionNameOneof.TryParse(String, Boolean, ByRef ExclusionNameOneof)
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.TryParse*
+  name: TryParse
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_TryParse_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.TryParse
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.TryParse
+  nameWithType: ExclusionNameOneof.TryParse
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.Type
+  name: Type
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_Type
+  commentId: P:Google.Cloud.Logging.V2.ExclusionNameOneof.Type
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Type
+  nameWithType: ExclusionNameOneof.Type
+- uid: Google.Cloud.Logging.V2.ExclusionNameOneof.Type*
+  name: Type
+  href: api/Google.Cloud.Logging.V2.ExclusionNameOneof.html#Google_Cloud_Logging_V2_ExclusionNameOneof_Type_
+  commentId: Overload:Google.Cloud.Logging.V2.ExclusionNameOneof.Type
+  fullName: Google.Cloud.Logging.V2.ExclusionNameOneof.Type
+  nameWithType: ExclusionNameOneof.Type
+- uid: Google.Cloud.Logging.V2.FolderExclusionName
+  name: FolderExclusionName
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html
+  commentId: T:Google.Cloud.Logging.V2.FolderExclusionName
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName
+  nameWithType: FolderExclusionName
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.#ctor(System.String,System.String)
+  name: FolderExclusionName(String, String)
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName__ctor_System_String_System_String_
+  commentId: M:Google.Cloud.Logging.V2.FolderExclusionName.#ctor(System.String,System.String)
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.FolderExclusionName(System.String, System.String)
+  nameWithType: FolderExclusionName.FolderExclusionName(String, String)
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.#ctor*
+  name: FolderExclusionName
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName__ctor_
+  commentId: Overload:Google.Cloud.Logging.V2.FolderExclusionName.#ctor
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.FolderExclusionName
+  nameWithType: FolderExclusionName.FolderExclusionName
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.ExclusionId
+  name: ExclusionId
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_ExclusionId
+  commentId: P:Google.Cloud.Logging.V2.FolderExclusionName.ExclusionId
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.ExclusionId
+  nameWithType: FolderExclusionName.ExclusionId
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.ExclusionId*
+  name: ExclusionId
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_ExclusionId_
+  commentId: Overload:Google.Cloud.Logging.V2.FolderExclusionName.ExclusionId
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.ExclusionId
+  nameWithType: FolderExclusionName.ExclusionId
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.FolderId
+  name: FolderId
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_FolderId
+  commentId: P:Google.Cloud.Logging.V2.FolderExclusionName.FolderId
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.FolderId
+  nameWithType: FolderExclusionName.FolderId
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.FolderId*
+  name: FolderId
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_FolderId_
+  commentId: Overload:Google.Cloud.Logging.V2.FolderExclusionName.FolderId
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.FolderId
+  nameWithType: FolderExclusionName.FolderId
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.GetHashCode
+  name: GetHashCode()
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_GetHashCode
+  commentId: M:Google.Cloud.Logging.V2.FolderExclusionName.GetHashCode
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.GetHashCode()
+  nameWithType: FolderExclusionName.GetHashCode()
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.GetHashCode*
+  name: GetHashCode
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_GetHashCode_
+  commentId: Overload:Google.Cloud.Logging.V2.FolderExclusionName.GetHashCode
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.GetHashCode
+  nameWithType: FolderExclusionName.GetHashCode
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.Kind
+  name: Kind
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_Kind
+  commentId: P:Google.Cloud.Logging.V2.FolderExclusionName.Kind
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.Kind
+  nameWithType: FolderExclusionName.Kind
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.Kind*
+  name: Kind
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_Kind_
+  commentId: Overload:Google.Cloud.Logging.V2.FolderExclusionName.Kind
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.Kind
+  nameWithType: FolderExclusionName.Kind
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.op_Equality(Google.Cloud.Logging.V2.FolderExclusionName,Google.Cloud.Logging.V2.FolderExclusionName)
+  name: Equality(FolderExclusionName, FolderExclusionName)
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_op_Equality_Google_Cloud_Logging_V2_FolderExclusionName_Google_Cloud_Logging_V2_FolderExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.FolderExclusionName.op_Equality(Google.Cloud.Logging.V2.FolderExclusionName,Google.Cloud.Logging.V2.FolderExclusionName)
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.Equality(Google.Cloud.Logging.V2.FolderExclusionName, Google.Cloud.Logging.V2.FolderExclusionName)
+  nameWithType: FolderExclusionName.Equality(FolderExclusionName, FolderExclusionName)
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.op_Equality*
+  name: Equality
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_op_Equality_
+  commentId: Overload:Google.Cloud.Logging.V2.FolderExclusionName.op_Equality
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.Equality
+  nameWithType: FolderExclusionName.Equality
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.op_Inequality(Google.Cloud.Logging.V2.FolderExclusionName,Google.Cloud.Logging.V2.FolderExclusionName)
+  name: Inequality(FolderExclusionName, FolderExclusionName)
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_op_Inequality_Google_Cloud_Logging_V2_FolderExclusionName_Google_Cloud_Logging_V2_FolderExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.FolderExclusionName.op_Inequality(Google.Cloud.Logging.V2.FolderExclusionName,Google.Cloud.Logging.V2.FolderExclusionName)
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.Inequality(Google.Cloud.Logging.V2.FolderExclusionName, Google.Cloud.Logging.V2.FolderExclusionName)
+  nameWithType: FolderExclusionName.Inequality(FolderExclusionName, FolderExclusionName)
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.op_Inequality*
+  name: Inequality
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_op_Inequality_
+  commentId: Overload:Google.Cloud.Logging.V2.FolderExclusionName.op_Inequality
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.Inequality
+  nameWithType: FolderExclusionName.Inequality
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.Parse(System.String)
+  name: Parse(String)
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_Parse_System_String_
+  commentId: M:Google.Cloud.Logging.V2.FolderExclusionName.Parse(System.String)
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.Parse(System.String)
+  nameWithType: FolderExclusionName.Parse(String)
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.Parse*
+  name: Parse
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_Parse_
+  commentId: Overload:Google.Cloud.Logging.V2.FolderExclusionName.Parse
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.Parse
+  nameWithType: FolderExclusionName.Parse
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.ToString
+  name: ToString()
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_ToString
+  commentId: M:Google.Cloud.Logging.V2.FolderExclusionName.ToString
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.ToString()
+  nameWithType: FolderExclusionName.ToString()
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.ToString*
+  name: ToString
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_ToString_
+  commentId: Overload:Google.Cloud.Logging.V2.FolderExclusionName.ToString
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.ToString
+  nameWithType: FolderExclusionName.ToString
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.TryParse(System.String,Google.Cloud.Logging.V2.FolderExclusionName@)
+  name: TryParse(String, out FolderExclusionName)
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_TryParse_System_String_Google_Cloud_Logging_V2_FolderExclusionName__
+  commentId: M:Google.Cloud.Logging.V2.FolderExclusionName.TryParse(System.String,Google.Cloud.Logging.V2.FolderExclusionName@)
+  name.vb: TryParse(String, ByRef FolderExclusionName)
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.TryParse(System.String, out Google.Cloud.Logging.V2.FolderExclusionName)
+  fullName.vb: Google.Cloud.Logging.V2.FolderExclusionName.TryParse(System.String, ByRef Google.Cloud.Logging.V2.FolderExclusionName)
+  nameWithType: FolderExclusionName.TryParse(String, out FolderExclusionName)
+  nameWithType.vb: FolderExclusionName.TryParse(String, ByRef FolderExclusionName)
+- uid: Google.Cloud.Logging.V2.FolderExclusionName.TryParse*
+  name: TryParse
+  href: api/Google.Cloud.Logging.V2.FolderExclusionName.html#Google_Cloud_Logging_V2_FolderExclusionName_TryParse_
+  commentId: Overload:Google.Cloud.Logging.V2.FolderExclusionName.TryParse
+  fullName: Google.Cloud.Logging.V2.FolderExclusionName.TryParse
+  nameWithType: FolderExclusionName.TryParse
 - uid: Google.Cloud.Logging.V2.FolderLogName
   name: FolderLogName
   href: api/Google.Cloud.Logging.V2.FolderLogName.html
@@ -18924,6 +20310,36 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.FolderSinkName.TryParse
   fullName: Google.Cloud.Logging.V2.FolderSinkName.TryParse
   nameWithType: FolderSinkName.TryParse
+- uid: Google.Cloud.Logging.V2.GetExclusionRequest
+  name: GetExclusionRequest
+  href: api/Google.Cloud.Logging.V2.GetExclusionRequest.html
+  commentId: T:Google.Cloud.Logging.V2.GetExclusionRequest
+  fullName: Google.Cloud.Logging.V2.GetExclusionRequest
+  nameWithType: GetExclusionRequest
+- uid: Google.Cloud.Logging.V2.GetExclusionRequest.ExclusionNameOneof
+  name: ExclusionNameOneof
+  href: api/Google.Cloud.Logging.V2.GetExclusionRequest.html#Google_Cloud_Logging_V2_GetExclusionRequest_ExclusionNameOneof
+  commentId: P:Google.Cloud.Logging.V2.GetExclusionRequest.ExclusionNameOneof
+  fullName: Google.Cloud.Logging.V2.GetExclusionRequest.ExclusionNameOneof
+  nameWithType: GetExclusionRequest.ExclusionNameOneof
+- uid: Google.Cloud.Logging.V2.GetExclusionRequest.ExclusionNameOneof*
+  name: ExclusionNameOneof
+  href: api/Google.Cloud.Logging.V2.GetExclusionRequest.html#Google_Cloud_Logging_V2_GetExclusionRequest_ExclusionNameOneof_
+  commentId: Overload:Google.Cloud.Logging.V2.GetExclusionRequest.ExclusionNameOneof
+  fullName: Google.Cloud.Logging.V2.GetExclusionRequest.ExclusionNameOneof
+  nameWithType: GetExclusionRequest.ExclusionNameOneof
+- uid: Google.Cloud.Logging.V2.GetExclusionRequest.Name
+  name: Name
+  href: api/Google.Cloud.Logging.V2.GetExclusionRequest.html#Google_Cloud_Logging_V2_GetExclusionRequest_Name
+  commentId: P:Google.Cloud.Logging.V2.GetExclusionRequest.Name
+  fullName: Google.Cloud.Logging.V2.GetExclusionRequest.Name
+  nameWithType: GetExclusionRequest.Name
+- uid: Google.Cloud.Logging.V2.GetExclusionRequest.Name*
+  name: Name
+  href: api/Google.Cloud.Logging.V2.GetExclusionRequest.html#Google_Cloud_Logging_V2_GetExclusionRequest_Name_
+  commentId: Overload:Google.Cloud.Logging.V2.GetExclusionRequest.Name
+  fullName: Google.Cloud.Logging.V2.GetExclusionRequest.Name
+  nameWithType: GetExclusionRequest.Name
 - uid: Google.Cloud.Logging.V2.GetLogMetricRequest
   name: GetLogMetricRequest
   href: api/Google.Cloud.Logging.V2.GetLogMetricRequest.html
@@ -18984,6 +20400,118 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.GetSinkRequest.SinkNameAsSinkNameOneof
   fullName: Google.Cloud.Logging.V2.GetSinkRequest.SinkNameAsSinkNameOneof
   nameWithType: GetSinkRequest.SinkNameAsSinkNameOneof
+- uid: Google.Cloud.Logging.V2.ListExclusionsRequest
+  name: ListExclusionsRequest
+  href: api/Google.Cloud.Logging.V2.ListExclusionsRequest.html
+  commentId: T:Google.Cloud.Logging.V2.ListExclusionsRequest
+  fullName: Google.Cloud.Logging.V2.ListExclusionsRequest
+  nameWithType: ListExclusionsRequest
+- uid: Google.Cloud.Logging.V2.ListExclusionsRequest.PageSize
+  name: PageSize
+  href: api/Google.Cloud.Logging.V2.ListExclusionsRequest.html#Google_Cloud_Logging_V2_ListExclusionsRequest_PageSize
+  commentId: P:Google.Cloud.Logging.V2.ListExclusionsRequest.PageSize
+  fullName: Google.Cloud.Logging.V2.ListExclusionsRequest.PageSize
+  nameWithType: ListExclusionsRequest.PageSize
+- uid: Google.Cloud.Logging.V2.ListExclusionsRequest.PageSize*
+  name: PageSize
+  href: api/Google.Cloud.Logging.V2.ListExclusionsRequest.html#Google_Cloud_Logging_V2_ListExclusionsRequest_PageSize_
+  commentId: Overload:Google.Cloud.Logging.V2.ListExclusionsRequest.PageSize
+  fullName: Google.Cloud.Logging.V2.ListExclusionsRequest.PageSize
+  nameWithType: ListExclusionsRequest.PageSize
+- uid: Google.Cloud.Logging.V2.ListExclusionsRequest.PageToken
+  name: PageToken
+  href: api/Google.Cloud.Logging.V2.ListExclusionsRequest.html#Google_Cloud_Logging_V2_ListExclusionsRequest_PageToken
+  commentId: P:Google.Cloud.Logging.V2.ListExclusionsRequest.PageToken
+  fullName: Google.Cloud.Logging.V2.ListExclusionsRequest.PageToken
+  nameWithType: ListExclusionsRequest.PageToken
+- uid: Google.Cloud.Logging.V2.ListExclusionsRequest.PageToken*
+  name: PageToken
+  href: api/Google.Cloud.Logging.V2.ListExclusionsRequest.html#Google_Cloud_Logging_V2_ListExclusionsRequest_PageToken_
+  commentId: Overload:Google.Cloud.Logging.V2.ListExclusionsRequest.PageToken
+  fullName: Google.Cloud.Logging.V2.ListExclusionsRequest.PageToken
+  nameWithType: ListExclusionsRequest.PageToken
+- uid: Google.Cloud.Logging.V2.ListExclusionsRequest.Parent
+  name: Parent
+  href: api/Google.Cloud.Logging.V2.ListExclusionsRequest.html#Google_Cloud_Logging_V2_ListExclusionsRequest_Parent
+  commentId: P:Google.Cloud.Logging.V2.ListExclusionsRequest.Parent
+  fullName: Google.Cloud.Logging.V2.ListExclusionsRequest.Parent
+  nameWithType: ListExclusionsRequest.Parent
+- uid: Google.Cloud.Logging.V2.ListExclusionsRequest.Parent*
+  name: Parent
+  href: api/Google.Cloud.Logging.V2.ListExclusionsRequest.html#Google_Cloud_Logging_V2_ListExclusionsRequest_Parent_
+  commentId: Overload:Google.Cloud.Logging.V2.ListExclusionsRequest.Parent
+  fullName: Google.Cloud.Logging.V2.ListExclusionsRequest.Parent
+  nameWithType: ListExclusionsRequest.Parent
+- uid: Google.Cloud.Logging.V2.ListExclusionsRequest.ParentAsParentNameOneof
+  name: ParentAsParentNameOneof
+  href: api/Google.Cloud.Logging.V2.ListExclusionsRequest.html#Google_Cloud_Logging_V2_ListExclusionsRequest_ParentAsParentNameOneof
+  commentId: P:Google.Cloud.Logging.V2.ListExclusionsRequest.ParentAsParentNameOneof
+  fullName: Google.Cloud.Logging.V2.ListExclusionsRequest.ParentAsParentNameOneof
+  nameWithType: ListExclusionsRequest.ParentAsParentNameOneof
+- uid: Google.Cloud.Logging.V2.ListExclusionsRequest.ParentAsParentNameOneof*
+  name: ParentAsParentNameOneof
+  href: api/Google.Cloud.Logging.V2.ListExclusionsRequest.html#Google_Cloud_Logging_V2_ListExclusionsRequest_ParentAsParentNameOneof_
+  commentId: Overload:Google.Cloud.Logging.V2.ListExclusionsRequest.ParentAsParentNameOneof
+  fullName: Google.Cloud.Logging.V2.ListExclusionsRequest.ParentAsParentNameOneof
+  nameWithType: ListExclusionsRequest.ParentAsParentNameOneof
+- uid: Google.Cloud.Logging.V2.ListExclusionsResponse
+  name: ListExclusionsResponse
+  href: api/Google.Cloud.Logging.V2.ListExclusionsResponse.html
+  commentId: T:Google.Cloud.Logging.V2.ListExclusionsResponse
+  fullName: Google.Cloud.Logging.V2.ListExclusionsResponse
+  nameWithType: ListExclusionsResponse
+- uid: Google.Cloud.Logging.V2.ListExclusionsResponse.Exclusions
+  name: Exclusions
+  href: api/Google.Cloud.Logging.V2.ListExclusionsResponse.html#Google_Cloud_Logging_V2_ListExclusionsResponse_Exclusions
+  commentId: P:Google.Cloud.Logging.V2.ListExclusionsResponse.Exclusions
+  fullName: Google.Cloud.Logging.V2.ListExclusionsResponse.Exclusions
+  nameWithType: ListExclusionsResponse.Exclusions
+- uid: Google.Cloud.Logging.V2.ListExclusionsResponse.Exclusions*
+  name: Exclusions
+  href: api/Google.Cloud.Logging.V2.ListExclusionsResponse.html#Google_Cloud_Logging_V2_ListExclusionsResponse_Exclusions_
+  commentId: Overload:Google.Cloud.Logging.V2.ListExclusionsResponse.Exclusions
+  fullName: Google.Cloud.Logging.V2.ListExclusionsResponse.Exclusions
+  nameWithType: ListExclusionsResponse.Exclusions
+- uid: Google.Cloud.Logging.V2.ListExclusionsResponse.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Cloud.Logging.V2.ListExclusionsResponse.html#Google_Cloud_Logging_V2_ListExclusionsResponse_GetEnumerator
+  commentId: M:Google.Cloud.Logging.V2.ListExclusionsResponse.GetEnumerator
+  fullName: Google.Cloud.Logging.V2.ListExclusionsResponse.GetEnumerator()
+  nameWithType: ListExclusionsResponse.GetEnumerator()
+- uid: Google.Cloud.Logging.V2.ListExclusionsResponse.GetEnumerator*
+  name: GetEnumerator
+  href: api/Google.Cloud.Logging.V2.ListExclusionsResponse.html#Google_Cloud_Logging_V2_ListExclusionsResponse_GetEnumerator_
+  commentId: Overload:Google.Cloud.Logging.V2.ListExclusionsResponse.GetEnumerator
+  fullName: Google.Cloud.Logging.V2.ListExclusionsResponse.GetEnumerator
+  nameWithType: ListExclusionsResponse.GetEnumerator
+- uid: Google.Cloud.Logging.V2.ListExclusionsResponse.NextPageToken
+  name: NextPageToken
+  href: api/Google.Cloud.Logging.V2.ListExclusionsResponse.html#Google_Cloud_Logging_V2_ListExclusionsResponse_NextPageToken
+  commentId: P:Google.Cloud.Logging.V2.ListExclusionsResponse.NextPageToken
+  fullName: Google.Cloud.Logging.V2.ListExclusionsResponse.NextPageToken
+  nameWithType: ListExclusionsResponse.NextPageToken
+- uid: Google.Cloud.Logging.V2.ListExclusionsResponse.NextPageToken*
+  name: NextPageToken
+  href: api/Google.Cloud.Logging.V2.ListExclusionsResponse.html#Google_Cloud_Logging_V2_ListExclusionsResponse_NextPageToken_
+  commentId: Overload:Google.Cloud.Logging.V2.ListExclusionsResponse.NextPageToken
+  fullName: Google.Cloud.Logging.V2.ListExclusionsResponse.NextPageToken
+  nameWithType: ListExclusionsResponse.NextPageToken
+- uid: Google.Cloud.Logging.V2.ListExclusionsResponse.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Cloud.Logging.V2.ListExclusionsResponse.html#Google_Cloud_Logging_V2_ListExclusionsResponse_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Cloud.Logging.V2.ListExclusionsResponse.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Cloud.Logging.V2.ListExclusionsResponse.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: ListExclusionsResponse.IEnumerable.GetEnumerator()
+  nameWithType.vb: ListExclusionsResponse.System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Cloud.Logging.V2.ListExclusionsResponse.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Google.Cloud.Logging.V2.ListExclusionsResponse.html#Google_Cloud_Logging_V2_ListExclusionsResponse_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Google.Cloud.Logging.V2.ListExclusionsResponse.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Google.Cloud.Logging.V2.ListExclusionsResponse.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: ListExclusionsResponse.IEnumerable.GetEnumerator
+  nameWithType.vb: ListExclusionsResponse.System.Collections.IEnumerable.GetEnumerator
 - uid: Google.Cloud.Logging.V2.ListLogEntriesRequest
   name: ListLogEntriesRequest
   href: api/Google.Cloud.Logging.V2.ListLogEntriesRequest.html
@@ -19736,6 +21264,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.LogEntry.SourceLocation
   fullName: Google.Cloud.Logging.V2.LogEntry.SourceLocation
   nameWithType: LogEntry.SourceLocation
+- uid: Google.Cloud.Logging.V2.LogEntry.SpanId
+  name: SpanId
+  href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_SpanId
+  commentId: P:Google.Cloud.Logging.V2.LogEntry.SpanId
+  fullName: Google.Cloud.Logging.V2.LogEntry.SpanId
+  nameWithType: LogEntry.SpanId
+- uid: Google.Cloud.Logging.V2.LogEntry.SpanId*
+  name: SpanId
+  href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_SpanId_
+  commentId: Overload:Google.Cloud.Logging.V2.LogEntry.SpanId
+  fullName: Google.Cloud.Logging.V2.LogEntry.SpanId
+  nameWithType: LogEntry.SpanId
 - uid: Google.Cloud.Logging.V2.LogEntry.TextPayload
   name: TextPayload
   href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_TextPayload
@@ -19868,6 +21408,60 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.LogEntrySourceLocation.Line
   fullName: Google.Cloud.Logging.V2.LogEntrySourceLocation.Line
   nameWithType: LogEntrySourceLocation.Line
+- uid: Google.Cloud.Logging.V2.LogExclusion
+  name: LogExclusion
+  href: api/Google.Cloud.Logging.V2.LogExclusion.html
+  commentId: T:Google.Cloud.Logging.V2.LogExclusion
+  fullName: Google.Cloud.Logging.V2.LogExclusion
+  nameWithType: LogExclusion
+- uid: Google.Cloud.Logging.V2.LogExclusion.Description
+  name: Description
+  href: api/Google.Cloud.Logging.V2.LogExclusion.html#Google_Cloud_Logging_V2_LogExclusion_Description
+  commentId: P:Google.Cloud.Logging.V2.LogExclusion.Description
+  fullName: Google.Cloud.Logging.V2.LogExclusion.Description
+  nameWithType: LogExclusion.Description
+- uid: Google.Cloud.Logging.V2.LogExclusion.Description*
+  name: Description
+  href: api/Google.Cloud.Logging.V2.LogExclusion.html#Google_Cloud_Logging_V2_LogExclusion_Description_
+  commentId: Overload:Google.Cloud.Logging.V2.LogExclusion.Description
+  fullName: Google.Cloud.Logging.V2.LogExclusion.Description
+  nameWithType: LogExclusion.Description
+- uid: Google.Cloud.Logging.V2.LogExclusion.Disabled
+  name: Disabled
+  href: api/Google.Cloud.Logging.V2.LogExclusion.html#Google_Cloud_Logging_V2_LogExclusion_Disabled
+  commentId: P:Google.Cloud.Logging.V2.LogExclusion.Disabled
+  fullName: Google.Cloud.Logging.V2.LogExclusion.Disabled
+  nameWithType: LogExclusion.Disabled
+- uid: Google.Cloud.Logging.V2.LogExclusion.Disabled*
+  name: Disabled
+  href: api/Google.Cloud.Logging.V2.LogExclusion.html#Google_Cloud_Logging_V2_LogExclusion_Disabled_
+  commentId: Overload:Google.Cloud.Logging.V2.LogExclusion.Disabled
+  fullName: Google.Cloud.Logging.V2.LogExclusion.Disabled
+  nameWithType: LogExclusion.Disabled
+- uid: Google.Cloud.Logging.V2.LogExclusion.Filter
+  name: Filter
+  href: api/Google.Cloud.Logging.V2.LogExclusion.html#Google_Cloud_Logging_V2_LogExclusion_Filter
+  commentId: P:Google.Cloud.Logging.V2.LogExclusion.Filter
+  fullName: Google.Cloud.Logging.V2.LogExclusion.Filter
+  nameWithType: LogExclusion.Filter
+- uid: Google.Cloud.Logging.V2.LogExclusion.Filter*
+  name: Filter
+  href: api/Google.Cloud.Logging.V2.LogExclusion.html#Google_Cloud_Logging_V2_LogExclusion_Filter_
+  commentId: Overload:Google.Cloud.Logging.V2.LogExclusion.Filter
+  fullName: Google.Cloud.Logging.V2.LogExclusion.Filter
+  nameWithType: LogExclusion.Filter
+- uid: Google.Cloud.Logging.V2.LogExclusion.Name
+  name: Name
+  href: api/Google.Cloud.Logging.V2.LogExclusion.html#Google_Cloud_Logging_V2_LogExclusion_Name
+  commentId: P:Google.Cloud.Logging.V2.LogExclusion.Name
+  fullName: Google.Cloud.Logging.V2.LogExclusion.Name
+  nameWithType: LogExclusion.Name
+- uid: Google.Cloud.Logging.V2.LogExclusion.Name*
+  name: Name
+  href: api/Google.Cloud.Logging.V2.LogExclusion.html#Google_Cloud_Logging_V2_LogExclusion_Name_
+  commentId: Overload:Google.Cloud.Logging.V2.LogExclusion.Name
+  fullName: Google.Cloud.Logging.V2.LogExclusion.Name
+  nameWithType: LogExclusion.Name
 - uid: Google.Cloud.Logging.V2.LoggingServiceV2
   name: LoggingServiceV2
   href: api/Google.Cloud.Logging.V2.LoggingServiceV2.html
@@ -20825,6 +22419,18 @@ references:
   commentId: T:Google.Cloud.Logging.V2.LogMetric
   fullName: Google.Cloud.Logging.V2.LogMetric
   nameWithType: LogMetric
+- uid: Google.Cloud.Logging.V2.LogMetric.BucketOptions
+  name: BucketOptions
+  href: api/Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric_BucketOptions
+  commentId: P:Google.Cloud.Logging.V2.LogMetric.BucketOptions
+  fullName: Google.Cloud.Logging.V2.LogMetric.BucketOptions
+  nameWithType: LogMetric.BucketOptions
+- uid: Google.Cloud.Logging.V2.LogMetric.BucketOptions*
+  name: BucketOptions
+  href: api/Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric_BucketOptions_
+  commentId: Overload:Google.Cloud.Logging.V2.LogMetric.BucketOptions
+  fullName: Google.Cloud.Logging.V2.LogMetric.BucketOptions
+  nameWithType: LogMetric.BucketOptions
 - uid: Google.Cloud.Logging.V2.LogMetric.Description
   name: Description
   href: api/Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric_Description
@@ -20849,6 +22455,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.LogMetric.Filter
   fullName: Google.Cloud.Logging.V2.LogMetric.Filter
   nameWithType: LogMetric.Filter
+- uid: Google.Cloud.Logging.V2.LogMetric.LabelExtractors
+  name: LabelExtractors
+  href: api/Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric_LabelExtractors
+  commentId: P:Google.Cloud.Logging.V2.LogMetric.LabelExtractors
+  fullName: Google.Cloud.Logging.V2.LogMetric.LabelExtractors
+  nameWithType: LogMetric.LabelExtractors
+- uid: Google.Cloud.Logging.V2.LogMetric.LabelExtractors*
+  name: LabelExtractors
+  href: api/Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric_LabelExtractors_
+  commentId: Overload:Google.Cloud.Logging.V2.LogMetric.LabelExtractors
+  fullName: Google.Cloud.Logging.V2.LogMetric.LabelExtractors
+  nameWithType: LogMetric.LabelExtractors
 - uid: Google.Cloud.Logging.V2.LogMetric.Name
   name: Name
   href: api/Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric_Name
@@ -20885,6 +22503,18 @@ references:
   commentId: F:Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2
   fullName: Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion.V2
   nameWithType: LogMetric.Types.ApiVersion.V2
+- uid: Google.Cloud.Logging.V2.LogMetric.ValueExtractor
+  name: ValueExtractor
+  href: api/Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric_ValueExtractor
+  commentId: P:Google.Cloud.Logging.V2.LogMetric.ValueExtractor
+  fullName: Google.Cloud.Logging.V2.LogMetric.ValueExtractor
+  nameWithType: LogMetric.ValueExtractor
+- uid: Google.Cloud.Logging.V2.LogMetric.ValueExtractor*
+  name: ValueExtractor
+  href: api/Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric_ValueExtractor_
+  commentId: Overload:Google.Cloud.Logging.V2.LogMetric.ValueExtractor
+  fullName: Google.Cloud.Logging.V2.LogMetric.ValueExtractor
+  nameWithType: LogMetric.ValueExtractor
 - uid: Google.Cloud.Logging.V2.LogMetric.Version
   name: Version
   href: api/Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric_Version
@@ -22649,6 +24279,135 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.MetricsServiceV2Settings.UpdateLogMetricSettings
   fullName: Google.Cloud.Logging.V2.MetricsServiceV2Settings.UpdateLogMetricSettings
   nameWithType: MetricsServiceV2Settings.UpdateLogMetricSettings
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName
+  name: OrganizationExclusionName
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html
+  commentId: T:Google.Cloud.Logging.V2.OrganizationExclusionName
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName
+  nameWithType: OrganizationExclusionName
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.#ctor(System.String,System.String)
+  name: OrganizationExclusionName(String, String)
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName__ctor_System_String_System_String_
+  commentId: M:Google.Cloud.Logging.V2.OrganizationExclusionName.#ctor(System.String,System.String)
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.OrganizationExclusionName(System.String, System.String)
+  nameWithType: OrganizationExclusionName.OrganizationExclusionName(String, String)
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.#ctor*
+  name: OrganizationExclusionName
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName__ctor_
+  commentId: Overload:Google.Cloud.Logging.V2.OrganizationExclusionName.#ctor
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.OrganizationExclusionName
+  nameWithType: OrganizationExclusionName.OrganizationExclusionName
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.ExclusionId
+  name: ExclusionId
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_ExclusionId
+  commentId: P:Google.Cloud.Logging.V2.OrganizationExclusionName.ExclusionId
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.ExclusionId
+  nameWithType: OrganizationExclusionName.ExclusionId
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.ExclusionId*
+  name: ExclusionId
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_ExclusionId_
+  commentId: Overload:Google.Cloud.Logging.V2.OrganizationExclusionName.ExclusionId
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.ExclusionId
+  nameWithType: OrganizationExclusionName.ExclusionId
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.GetHashCode
+  name: GetHashCode()
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_GetHashCode
+  commentId: M:Google.Cloud.Logging.V2.OrganizationExclusionName.GetHashCode
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.GetHashCode()
+  nameWithType: OrganizationExclusionName.GetHashCode()
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.GetHashCode*
+  name: GetHashCode
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_GetHashCode_
+  commentId: Overload:Google.Cloud.Logging.V2.OrganizationExclusionName.GetHashCode
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.GetHashCode
+  nameWithType: OrganizationExclusionName.GetHashCode
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.Kind
+  name: Kind
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_Kind
+  commentId: P:Google.Cloud.Logging.V2.OrganizationExclusionName.Kind
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.Kind
+  nameWithType: OrganizationExclusionName.Kind
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.Kind*
+  name: Kind
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_Kind_
+  commentId: Overload:Google.Cloud.Logging.V2.OrganizationExclusionName.Kind
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.Kind
+  nameWithType: OrganizationExclusionName.Kind
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.op_Equality(Google.Cloud.Logging.V2.OrganizationExclusionName,Google.Cloud.Logging.V2.OrganizationExclusionName)
+  name: Equality(OrganizationExclusionName, OrganizationExclusionName)
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_op_Equality_Google_Cloud_Logging_V2_OrganizationExclusionName_Google_Cloud_Logging_V2_OrganizationExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.OrganizationExclusionName.op_Equality(Google.Cloud.Logging.V2.OrganizationExclusionName,Google.Cloud.Logging.V2.OrganizationExclusionName)
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.Equality(Google.Cloud.Logging.V2.OrganizationExclusionName, Google.Cloud.Logging.V2.OrganizationExclusionName)
+  nameWithType: OrganizationExclusionName.Equality(OrganizationExclusionName, OrganizationExclusionName)
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.op_Equality*
+  name: Equality
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_op_Equality_
+  commentId: Overload:Google.Cloud.Logging.V2.OrganizationExclusionName.op_Equality
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.Equality
+  nameWithType: OrganizationExclusionName.Equality
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.op_Inequality(Google.Cloud.Logging.V2.OrganizationExclusionName,Google.Cloud.Logging.V2.OrganizationExclusionName)
+  name: Inequality(OrganizationExclusionName, OrganizationExclusionName)
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_op_Inequality_Google_Cloud_Logging_V2_OrganizationExclusionName_Google_Cloud_Logging_V2_OrganizationExclusionName_
+  commentId: M:Google.Cloud.Logging.V2.OrganizationExclusionName.op_Inequality(Google.Cloud.Logging.V2.OrganizationExclusionName,Google.Cloud.Logging.V2.OrganizationExclusionName)
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.Inequality(Google.Cloud.Logging.V2.OrganizationExclusionName, Google.Cloud.Logging.V2.OrganizationExclusionName)
+  nameWithType: OrganizationExclusionName.Inequality(OrganizationExclusionName, OrganizationExclusionName)
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.op_Inequality*
+  name: Inequality
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_op_Inequality_
+  commentId: Overload:Google.Cloud.Logging.V2.OrganizationExclusionName.op_Inequality
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.Inequality
+  nameWithType: OrganizationExclusionName.Inequality
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.OrganizationId
+  name: OrganizationId
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_OrganizationId
+  commentId: P:Google.Cloud.Logging.V2.OrganizationExclusionName.OrganizationId
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.OrganizationId
+  nameWithType: OrganizationExclusionName.OrganizationId
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.OrganizationId*
+  name: OrganizationId
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_OrganizationId_
+  commentId: Overload:Google.Cloud.Logging.V2.OrganizationExclusionName.OrganizationId
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.OrganizationId
+  nameWithType: OrganizationExclusionName.OrganizationId
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.Parse(System.String)
+  name: Parse(String)
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_Parse_System_String_
+  commentId: M:Google.Cloud.Logging.V2.OrganizationExclusionName.Parse(System.String)
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.Parse(System.String)
+  nameWithType: OrganizationExclusionName.Parse(String)
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.Parse*
+  name: Parse
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_Parse_
+  commentId: Overload:Google.Cloud.Logging.V2.OrganizationExclusionName.Parse
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.Parse
+  nameWithType: OrganizationExclusionName.Parse
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.ToString
+  name: ToString()
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_ToString
+  commentId: M:Google.Cloud.Logging.V2.OrganizationExclusionName.ToString
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.ToString()
+  nameWithType: OrganizationExclusionName.ToString()
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.ToString*
+  name: ToString
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_ToString_
+  commentId: Overload:Google.Cloud.Logging.V2.OrganizationExclusionName.ToString
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.ToString
+  nameWithType: OrganizationExclusionName.ToString
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.TryParse(System.String,Google.Cloud.Logging.V2.OrganizationExclusionName@)
+  name: TryParse(String, out OrganizationExclusionName)
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_TryParse_System_String_Google_Cloud_Logging_V2_OrganizationExclusionName__
+  commentId: M:Google.Cloud.Logging.V2.OrganizationExclusionName.TryParse(System.String,Google.Cloud.Logging.V2.OrganizationExclusionName@)
+  name.vb: TryParse(String, ByRef OrganizationExclusionName)
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.TryParse(System.String, out Google.Cloud.Logging.V2.OrganizationExclusionName)
+  fullName.vb: Google.Cloud.Logging.V2.OrganizationExclusionName.TryParse(System.String, ByRef Google.Cloud.Logging.V2.OrganizationExclusionName)
+  nameWithType: OrganizationExclusionName.TryParse(String, out OrganizationExclusionName)
+  nameWithType.vb: OrganizationExclusionName.TryParse(String, ByRef OrganizationExclusionName)
+- uid: Google.Cloud.Logging.V2.OrganizationExclusionName.TryParse*
+  name: TryParse
+  href: api/Google.Cloud.Logging.V2.OrganizationExclusionName.html#Google_Cloud_Logging_V2_OrganizationExclusionName_TryParse_
+  commentId: Overload:Google.Cloud.Logging.V2.OrganizationExclusionName.TryParse
+  fullName: Google.Cloud.Logging.V2.OrganizationExclusionName.TryParse
+  nameWithType: OrganizationExclusionName.TryParse
 - uid: Google.Cloud.Logging.V2.OrganizationLogName
   name: OrganizationLogName
   href: api/Google.Cloud.Logging.V2.OrganizationLogName.html
@@ -23756,6 +25515,60 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.SinkNameOneof.Type
   fullName: Google.Cloud.Logging.V2.SinkNameOneof.Type
   nameWithType: SinkNameOneof.Type
+- uid: Google.Cloud.Logging.V2.UpdateExclusionRequest
+  name: UpdateExclusionRequest
+  href: api/Google.Cloud.Logging.V2.UpdateExclusionRequest.html
+  commentId: T:Google.Cloud.Logging.V2.UpdateExclusionRequest
+  fullName: Google.Cloud.Logging.V2.UpdateExclusionRequest
+  nameWithType: UpdateExclusionRequest
+- uid: Google.Cloud.Logging.V2.UpdateExclusionRequest.Exclusion
+  name: Exclusion
+  href: api/Google.Cloud.Logging.V2.UpdateExclusionRequest.html#Google_Cloud_Logging_V2_UpdateExclusionRequest_Exclusion
+  commentId: P:Google.Cloud.Logging.V2.UpdateExclusionRequest.Exclusion
+  fullName: Google.Cloud.Logging.V2.UpdateExclusionRequest.Exclusion
+  nameWithType: UpdateExclusionRequest.Exclusion
+- uid: Google.Cloud.Logging.V2.UpdateExclusionRequest.Exclusion*
+  name: Exclusion
+  href: api/Google.Cloud.Logging.V2.UpdateExclusionRequest.html#Google_Cloud_Logging_V2_UpdateExclusionRequest_Exclusion_
+  commentId: Overload:Google.Cloud.Logging.V2.UpdateExclusionRequest.Exclusion
+  fullName: Google.Cloud.Logging.V2.UpdateExclusionRequest.Exclusion
+  nameWithType: UpdateExclusionRequest.Exclusion
+- uid: Google.Cloud.Logging.V2.UpdateExclusionRequest.ExclusionNameOneof
+  name: ExclusionNameOneof
+  href: api/Google.Cloud.Logging.V2.UpdateExclusionRequest.html#Google_Cloud_Logging_V2_UpdateExclusionRequest_ExclusionNameOneof
+  commentId: P:Google.Cloud.Logging.V2.UpdateExclusionRequest.ExclusionNameOneof
+  fullName: Google.Cloud.Logging.V2.UpdateExclusionRequest.ExclusionNameOneof
+  nameWithType: UpdateExclusionRequest.ExclusionNameOneof
+- uid: Google.Cloud.Logging.V2.UpdateExclusionRequest.ExclusionNameOneof*
+  name: ExclusionNameOneof
+  href: api/Google.Cloud.Logging.V2.UpdateExclusionRequest.html#Google_Cloud_Logging_V2_UpdateExclusionRequest_ExclusionNameOneof_
+  commentId: Overload:Google.Cloud.Logging.V2.UpdateExclusionRequest.ExclusionNameOneof
+  fullName: Google.Cloud.Logging.V2.UpdateExclusionRequest.ExclusionNameOneof
+  nameWithType: UpdateExclusionRequest.ExclusionNameOneof
+- uid: Google.Cloud.Logging.V2.UpdateExclusionRequest.Name
+  name: Name
+  href: api/Google.Cloud.Logging.V2.UpdateExclusionRequest.html#Google_Cloud_Logging_V2_UpdateExclusionRequest_Name
+  commentId: P:Google.Cloud.Logging.V2.UpdateExclusionRequest.Name
+  fullName: Google.Cloud.Logging.V2.UpdateExclusionRequest.Name
+  nameWithType: UpdateExclusionRequest.Name
+- uid: Google.Cloud.Logging.V2.UpdateExclusionRequest.Name*
+  name: Name
+  href: api/Google.Cloud.Logging.V2.UpdateExclusionRequest.html#Google_Cloud_Logging_V2_UpdateExclusionRequest_Name_
+  commentId: Overload:Google.Cloud.Logging.V2.UpdateExclusionRequest.Name
+  fullName: Google.Cloud.Logging.V2.UpdateExclusionRequest.Name
+  nameWithType: UpdateExclusionRequest.Name
+- uid: Google.Cloud.Logging.V2.UpdateExclusionRequest.UpdateMask
+  name: UpdateMask
+  href: api/Google.Cloud.Logging.V2.UpdateExclusionRequest.html#Google_Cloud_Logging_V2_UpdateExclusionRequest_UpdateMask
+  commentId: P:Google.Cloud.Logging.V2.UpdateExclusionRequest.UpdateMask
+  fullName: Google.Cloud.Logging.V2.UpdateExclusionRequest.UpdateMask
+  nameWithType: UpdateExclusionRequest.UpdateMask
+- uid: Google.Cloud.Logging.V2.UpdateExclusionRequest.UpdateMask*
+  name: UpdateMask
+  href: api/Google.Cloud.Logging.V2.UpdateExclusionRequest.html#Google_Cloud_Logging_V2_UpdateExclusionRequest_UpdateMask_
+  commentId: Overload:Google.Cloud.Logging.V2.UpdateExclusionRequest.UpdateMask
+  fullName: Google.Cloud.Logging.V2.UpdateExclusionRequest.UpdateMask
+  nameWithType: UpdateExclusionRequest.UpdateMask
 - uid: Google.Cloud.Logging.V2.UpdateLogMetricRequest
   name: UpdateLogMetricRequest
   href: api/Google.Cloud.Logging.V2.UpdateLogMetricRequest.html
@@ -23852,6 +25665,18 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.UpdateSinkRequest.UniqueWriterIdentity
   fullName: Google.Cloud.Logging.V2.UpdateSinkRequest.UniqueWriterIdentity
   nameWithType: UpdateSinkRequest.UniqueWriterIdentity
+- uid: Google.Cloud.Logging.V2.UpdateSinkRequest.UpdateMask
+  name: UpdateMask
+  href: api/Google.Cloud.Logging.V2.UpdateSinkRequest.html#Google_Cloud_Logging_V2_UpdateSinkRequest_UpdateMask
+  commentId: P:Google.Cloud.Logging.V2.UpdateSinkRequest.UpdateMask
+  fullName: Google.Cloud.Logging.V2.UpdateSinkRequest.UpdateMask
+  nameWithType: UpdateSinkRequest.UpdateMask
+- uid: Google.Cloud.Logging.V2.UpdateSinkRequest.UpdateMask*
+  name: UpdateMask
+  href: api/Google.Cloud.Logging.V2.UpdateSinkRequest.html#Google_Cloud_Logging_V2_UpdateSinkRequest_UpdateMask_
+  commentId: Overload:Google.Cloud.Logging.V2.UpdateSinkRequest.UpdateMask
+  fullName: Google.Cloud.Logging.V2.UpdateSinkRequest.UpdateMask
+  nameWithType: UpdateSinkRequest.UpdateMask
 - uid: Google.Cloud.Logging.V2.WriteLogEntriesPartialErrors
   name: WriteLogEntriesPartialErrors
   href: api/Google.Cloud.Logging.V2.WriteLogEntriesPartialErrors.html

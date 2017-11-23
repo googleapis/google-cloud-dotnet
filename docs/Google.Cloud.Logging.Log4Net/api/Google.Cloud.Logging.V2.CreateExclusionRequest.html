@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DeleteBucketOptions
-   | Google.Cloud.Storage.V1 </title>
+    <title>Class CreateExclusionRequest
+   | Google.Cloud.Logging.Log4Net </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DeleteBucketOptions
-   | Google.Cloud.Storage.V1 ">
+    <meta name="title" content="Class CreateExclusionRequest
+   | Google.Cloud.Logging.Log4Net ">
     <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -68,18 +68,25 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Google.Cloud.Storage.V1.DeleteBucketOptions">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.CreateExclusionRequest">
   
   
-  <h1 id="Google_Cloud_Storage_V1_DeleteBucketOptions" data-uid="Google.Cloud.Storage.V1.DeleteBucketOptions" class="text-break">Class DeleteBucketOptions
+  <h1 id="Google_Cloud_Logging_V2_CreateExclusionRequest" data-uid="Google.Cloud.Logging.V2.CreateExclusionRequest" class="text-break">Class CreateExclusionRequest
   </h1>
-  <div class="markdown level0 summary"><p>Options for <code>DeleteBucket</code> operations.</p>
+  <div class="markdown level0 summary"><p>The parameters to <code>CreateExclusion</code>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DeleteBucketOptions</span></div>
+    <div class="level1"><span class="xref">CreateExclusionRequest</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html">CreateExclusionRequest</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html">CreateExclusionRequest</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html">CreateExclusionRequest</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -96,23 +103,23 @@
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Storage.V1.html">Google.Cloud.Storage.V1</a></h6>
-  <h6><strong>Assembly</strong>: Google.Cloud.Storage.V1.dll</h6>
-  <h5 id="Google_Cloud_Storage_V1_DeleteBucketOptions_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Logging.V2.html">Google.Cloud.Logging.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Logging.V2.dll</h6>
+  <h5 id="Google_Cloud_Logging_V2_CreateExclusionRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DeleteBucketOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class CreateExclusionRequest : IMessage&lt;CreateExclusionRequest&gt;, IMessage, IEquatable&lt;CreateExclusionRequest&gt;, IDeepCloneable&lt;CreateExclusionRequest&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_Storage_V1_DeleteBucketOptions_IfMetagenerationMatch_" data-uid="Google.Cloud.Storage.V1.DeleteBucketOptions.IfMetagenerationMatch*"></a>
-  <h4 id="Google_Cloud_Storage_V1_DeleteBucketOptions_IfMetagenerationMatch" data-uid="Google.Cloud.Storage.V1.DeleteBucketOptions.IfMetagenerationMatch">IfMetagenerationMatch</h4>
-  <div class="markdown level1 summary"><p>Precondition for deletion: the bucket is only deleted if its
-meta-generation matches the given value.</p>
+  <a id="Google_Cloud_Logging_V2_CreateExclusionRequest_Exclusion_" data-uid="Google.Cloud.Logging.V2.CreateExclusionRequest.Exclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_CreateExclusionRequest_Exclusion" data-uid="Google.Cloud.Logging.V2.CreateExclusionRequest.Exclusion">Exclusion</h4>
+  <div class="markdown level1 summary"><p>Required. The new exclusion, whose <code>name</code> parameter is an exclusion name
+that is not already used in the parent resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long ? IfMetagenerationMatch { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public LogExclusion Exclusion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,45 +131,24 @@ meta-generation matches the given value.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Storage_V1_DeleteBucketOptions_IfMetagenerationNotMatch_" data-uid="Google.Cloud.Storage.V1.DeleteBucketOptions.IfMetagenerationNotMatch*"></a>
-  <h4 id="Google_Cloud_Storage_V1_DeleteBucketOptions_IfMetagenerationNotMatch" data-uid="Google.Cloud.Storage.V1.DeleteBucketOptions.IfMetagenerationNotMatch">IfMetagenerationNotMatch</h4>
-  <div class="markdown level1 summary"><p>Precondition for deletion: the bucket is only deleted if its
-meta-generation does not match the given value.</p>
+  <a id="Google_Cloud_Logging_V2_CreateExclusionRequest_Parent_" data-uid="Google.Cloud.Logging.V2.CreateExclusionRequest.Parent*"></a>
+  <h4 id="Google_Cloud_Logging_V2_CreateExclusionRequest_Parent" data-uid="Google.Cloud.Logging.V2.CreateExclusionRequest.Parent">Parent</h4>
+  <div class="markdown level1 summary"><p>Required. The parent resource in which to create the exclusion:</p>
+<p>&quot;projects/[PROJECT_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
+<p>Examples: <code>&amp;quot;projects/my-logging-project&amp;quot;</code>, <code>&amp;quot;organizations/123456789&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long ? IfMetagenerationNotMatch { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_Storage_V1_DeleteBucketOptions_UserProject_" data-uid="Google.Cloud.Storage.V1.DeleteBucketOptions.UserProject*"></a>
-  <h4 id="Google_Cloud_Storage_V1_DeleteBucketOptions_UserProject" data-uid="Google.Cloud.Storage.V1.DeleteBucketOptions.UserProject">UserProject</h4>
-  <div class="markdown level1 summary"><p>If set, this is the ID of the project which will be billed for the request.
-The caller must have suitable permissions for the project being billed.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string UserProject { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Parent { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,6 +161,30 @@ The caller must have suitable permissions for the project being billed.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_CreateExclusionRequest_ParentAsParentNameOneof_" data-uid="Google.Cloud.Logging.V2.CreateExclusionRequest.ParentAsParentNameOneof*"></a>
+  <h4 id="Google_Cloud_Logging_V2_CreateExclusionRequest_ParentAsParentNameOneof" data-uid="Google.Cloud.Logging.V2.CreateExclusionRequest.ParentAsParentNameOneof">ParentAsParentNameOneof</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html">ParentNameOneof</a>-typed view over the <a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html#Google_Cloud_Logging_V2_CreateExclusionRequest_Parent">Parent</a> resource name property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ParentNameOneof ParentAsParentNameOneof { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html">ParentNameOneof</a></td>
         <td></td>
       </tr>
     </tbody>

@@ -82,6 +82,10 @@
     <div class="level1"><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a></div>
     <div class="level2"><span class="xref">StorageClientImpl</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -89,6 +93,9 @@
     </div>
     <div>
       <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_Google_Cloud_Storage_V1_EncryptionKey_">StorageClient.Create(GoogleCredential, EncryptionKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateUnauthenticated">StorageClient.CreateUnauthenticated()</a>
     </div>
     <div>
       <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketLabel_System_String_System_String_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_">StorageClient.SetBucketLabel(String, String, String, ModifyBucketLabelsOptions)</a>
@@ -119,7 +126,7 @@
   <h6><strong>Assembly</strong>: Google.Cloud.Storage.V1.dll</h6>
   <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class StorageClientImpl : StorageClient</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class StorageClientImpl : StorageClient, IDisposable</code></pre>
   </div>
   <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>This is the &quot;default&quot; implementation of <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a>. Most client code
@@ -760,6 +767,127 @@ resource representation of the newly-created bucket.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucketAsync_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_">StorageClient.CreateBucketAsync(String, String, CreateBucketOptions, CancellationToken)</a></div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_CreateNotification_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateNotification*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateNotification_System_String_Google_Apis_Storage_v1_Data_Notification_Google_Cloud_Storage_V1_CreateNotificationOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateNotification(System.String,Google.Apis.Storage.v1.Data.Notification,Google.Cloud.Storage.V1.CreateNotificationOptions)">CreateNotification(String, Notification, CreateNotificationOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a notification configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Notification CreateNotification(string bucket, Notification notification, CreateNotificationOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The bucket for which to create the notification configuration. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a></td>
+        <td><span class="parametername">notification</span></td>
+        <td><p>The notification configuration to create. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.CreateNotificationOptions.html">CreateNotificationOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a></td>
+        <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a> representation of the newly-created notification configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateNotification_System_String_Google_Apis_Storage_v1_Data_Notification_Google_Cloud_Storage_V1_CreateNotificationOptions_">StorageClient.CreateNotification(String, Notification, CreateNotificationOptions)</a></div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_CreateNotificationAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateNotificationAsync*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateNotificationAsync_System_String_Google_Apis_Storage_v1_Data_Notification_Google_Cloud_Storage_V1_CreateNotificationOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateNotificationAsync(System.String,Google.Apis.Storage.v1.Data.Notification,Google.Cloud.Storage.V1.CreateNotificationOptions,System.Threading.CancellationToken)">CreateNotificationAsync(String, Notification, CreateNotificationOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a notification configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Notification&gt; CreateNotificationAsync(string bucket, Notification notification, CreateNotificationOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The bucket for which to create the notification configuration. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a></td>
+        <td><span class="parametername">notification</span></td>
+        <td><p>The notification configuration to create. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.CreateNotificationOptions.html">CreateNotificationOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a> representation of the newly-created notification configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateNotificationAsync_System_String_Google_Apis_Storage_v1_Data_Notification_Google_Cloud_Storage_V1_CreateNotificationOptions_System_Threading_CancellationToken_">StorageClient.CreateNotificationAsync(String, Notification, CreateNotificationOptions, CancellationToken)</a></div>
   <a id="Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader*"></a>
   <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)">CreateObjectUploader(Object, Stream, UploadObjectOptions)</h4>
   <div class="markdown level1 summary"><p>Creates an instance which is capable of starting a resumable upload for an object.</p>
@@ -1086,6 +1214,110 @@ defaults will be used.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucketAsync_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_">StorageClient.DeleteBucketAsync(String, DeleteBucketOptions, CancellationToken)</a></div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteNotification_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotification*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteNotification_System_String_System_String_Google_Cloud_Storage_V1_DeleteNotificationOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotification(System.String,System.String,Google.Cloud.Storage.V1.DeleteNotificationOptions)">DeleteNotification(String, String, DeleteNotificationOptions)</h4>
+  <div class="markdown level1 summary"><p>Deletes a notification configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DeleteNotification(string bucket, string notificationId, DeleteNotificationOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The bucket associated with the notification configuration. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">notificationId</span></td>
+        <td><p>ID of the notification configuration to delete. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteNotificationOptions.html">DeleteNotificationOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteNotification_System_String_System_String_Google_Cloud_Storage_V1_DeleteNotificationOptions_">StorageClient.DeleteNotification(String, String, DeleteNotificationOptions)</a></div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteNotificationAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotificationAsync*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteNotificationAsync_System_String_System_String_Google_Cloud_Storage_V1_DeleteNotificationOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotificationAsync(System.String,System.String,Google.Cloud.Storage.V1.DeleteNotificationOptions,System.Threading.CancellationToken)">DeleteNotificationAsync(String, String, DeleteNotificationOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously deletes a notification configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task DeleteNotificationAsync(string bucket, string notificationId, DeleteNotificationOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The bucket associated with the notification configuration. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">notificationId</span></td>
+        <td><p>ID of the notification configuration to delete. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteNotificationOptions.html">DeleteNotificationOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteNotificationAsync_System_String_System_String_Google_Cloud_Storage_V1_DeleteNotificationOptions_System_Threading_CancellationToken_">StorageClient.DeleteNotificationAsync(String, String, DeleteNotificationOptions, CancellationToken)</a></div>
   <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteObject*"></a>
   <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.DeleteObjectOptions)">DeleteObject(Object, DeleteObjectOptions)</h4>
   <div class="markdown level1 summary"><p>Deletes a version of the specified object synchronously.</p>
@@ -1362,6 +1594,17 @@ If the request attempts to delete an object that does not exist or a specific ve
 not exist, this counts as a failure with an HTTP status code of 404.
 </p>
 </div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_Dispose_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.Dispose*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_Dispose" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Dispose of this instance. See the <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a> remarks on when this should be called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Dispose()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Dispose">StorageClient.Dispose()</a></div>
   <a id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DownloadObject*"></a>
   <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DownloadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObject(Object, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</h4>
   <div class="markdown level1 summary"><p>Downloads the data for an object from storage synchronously, into a specified stream.</p>
@@ -1840,6 +2083,127 @@ defaults will be used.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicyAsync_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_System_Threading_CancellationToken_">StorageClient.GetBucketIamPolicyAsync(String, GetBucketIamPolicyOptions, CancellationToken)</a></div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetNotification_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetNotification*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetNotification_System_String_System_String_Google_Cloud_Storage_V1_GetNotificationOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetNotification(System.String,System.String,Google.Cloud.Storage.V1.GetNotificationOptions)">GetNotification(String, String, GetNotificationOptions)</h4>
+  <div class="markdown level1 summary"><p>Fetches a notification configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Notification GetNotification(string bucket, string notificationId, GetNotificationOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The bucket associated with the notification configuration. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">notificationId</span></td>
+        <td><p>ID of the notification configuration to fetch. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.GetNotificationOptions.html">GetNotificationOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a></td>
+        <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a> representation of the notification configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetNotification_System_String_System_String_Google_Cloud_Storage_V1_GetNotificationOptions_">StorageClient.GetNotification(String, String, GetNotificationOptions)</a></div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetNotificationAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetNotificationAsync*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetNotificationAsync_System_String_System_String_Google_Cloud_Storage_V1_GetNotificationOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetNotificationAsync(System.String,System.String,Google.Cloud.Storage.V1.GetNotificationOptions,System.Threading.CancellationToken)">GetNotificationAsync(String, String, GetNotificationOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously fetches a notification configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Notification&gt; GetNotificationAsync(string bucket, string notificationId, GetNotificationOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The bucket associated with the notification configuration. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">notificationId</span></td>
+        <td><p>ID of the notification configuration to fetch. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.GetNotificationOptions.html">GetNotificationOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a> representation of the notification configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetNotificationAsync_System_String_System_String_Google_Cloud_Storage_V1_GetNotificationOptions_System_Threading_CancellationToken_">StorageClient.GetNotificationAsync(String, String, GetNotificationOptions, CancellationToken)</a></div>
   <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetObject*"></a>
   <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetObject(System.String,System.String,Google.Cloud.Storage.V1.GetObjectOptions)">GetObject(String, String, GetObjectOptions)</h4>
   <div class="markdown level1 summary"><p>Fetches the information about an object synchronously.</p>
@@ -1971,6 +2335,117 @@ defaults will be used.</p>
   <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</a>
 to download the content.</p>
 </div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetStorageServiceAccountEmail_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmail*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetStorageServiceAccountEmail_System_String_Google_Cloud_Storage_V1_GetStorageServiceAccountEmailOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmail(System.String,Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions)">GetStorageServiceAccountEmail(String, GetStorageServiceAccountEmailOptions)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the service account email address that Google Cloud Storage uses for operations on
+other services such as Google Cloud Pub/Sub.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetStorageServiceAccountEmail(string projectId, GetStorageServiceAccountEmailOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectId</span></td>
+        <td><p>ID of the project to retrieve the service account for. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.html">GetStorageServiceAccountEmailOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The email address of the service account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetStorageServiceAccountEmail_System_String_Google_Cloud_Storage_V1_GetStorageServiceAccountEmailOptions_">StorageClient.GetStorageServiceAccountEmail(String, GetStorageServiceAccountEmailOptions)</a></div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetStorageServiceAccountEmailAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmailAsync*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetStorageServiceAccountEmailAsync_System_String_Google_Cloud_Storage_V1_GetStorageServiceAccountEmailOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmailAsync(System.String,Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions,System.Threading.CancellationToken)">GetStorageServiceAccountEmailAsync(String, GetStorageServiceAccountEmailOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously retrieves the service account email address that Google Cloud Storage uses for operations on
+other services such as Google Cloud Pub/Sub.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;string&gt; GetStorageServiceAccountEmailAsync(string projectId, GetStorageServiceAccountEmailOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectId</span></td>
+        <td><p>ID of the project to retrieve the service account for. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.html">GetStorageServiceAccountEmailOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A task representing the asynchronous operation, with a result returning the
+email address of the service account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetStorageServiceAccountEmailAsync_System_String_Google_Cloud_Storage_V1_GetStorageServiceAccountEmailOptions_System_Threading_CancellationToken_">StorageClient.GetStorageServiceAccountEmailAsync(String, GetStorageServiceAccountEmailOptions, CancellationToken)</a></div>
   <a id="Google_Cloud_Storage_V1_StorageClientImpl_ListBuckets_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListBuckets*"></a>
   <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ListBuckets_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListBuckets(System.String,Google.Cloud.Storage.V1.ListBucketsOptions)">ListBuckets(String, ListBucketsOptions)</h4>
   <div class="markdown level1 summary"><p>Lists the buckets for a given project, synchronously but lazily.</p>
@@ -2083,6 +2558,115 @@ defaults will be supplied.</p>
   <div class="markdown level1 remarks"><p>This method fetches the buckets lazily, making requests to the underlying service
 for a page of results at a time, as required.</p>
 </div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_ListNotifications_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListNotifications*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ListNotifications_System_String_Google_Cloud_Storage_V1_ListNotificationsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListNotifications(System.String,Google.Cloud.Storage.V1.ListNotificationsOptions)">ListNotifications(String, ListNotificationsOptions)</h4>
+  <div class="markdown level1 summary"><p>Lists notification configurations associated with a bucket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IReadOnlyList&lt;Notification&gt; ListNotifications(string bucket, ListNotificationsOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The bucket for which to list associated notification configurations. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.ListNotificationsOptions.html">ListNotificationsOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a>&gt;</td>
+        <td><p>A list of notification configurations associated with the specified bucket. This method never returns null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListNotifications_System_String_Google_Cloud_Storage_V1_ListNotificationsOptions_">StorageClient.ListNotifications(String, ListNotificationsOptions)</a></div>
+  <a id="Google_Cloud_Storage_V1_StorageClientImpl_ListNotificationsAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListNotificationsAsync*"></a>
+  <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ListNotificationsAsync_System_String_Google_Cloud_Storage_V1_ListNotificationsOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListNotificationsAsync(System.String,Google.Cloud.Storage.V1.ListNotificationsOptions,System.Threading.CancellationToken)">ListNotificationsAsync(String, ListNotificationsOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously lists notification configurations associated with a bucket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;IReadOnlyList&lt;Notification&gt;&gt; ListNotificationsAsync(string bucket, ListNotificationsOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The bucket for which to list associated notification configurations. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.ListNotificationsOptions.html">ListNotificationsOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Notification.html">Notification</a>&gt;&gt;</td>
+        <td><p>A task representing the asynchronous operation, with a result returning the
+list of notification configurations associated with the specified bucket. The result is never null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListNotificationsAsync_System_String_Google_Cloud_Storage_V1_ListNotificationsOptions_System_Threading_CancellationToken_">StorageClient.ListNotificationsAsync(String, ListNotificationsOptions, CancellationToken)</a></div>
   <a id="Google_Cloud_Storage_V1_StorageClientImpl_ListObjects_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListObjects*"></a>
   <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ListObjects_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListObjects(System.String,System.String,Google.Cloud.Storage.V1.ListObjectsOptions)">ListObjects(String, String, ListObjectsOptions)</h4>
   <div class="markdown level1 summary"><p>Lists the objects in a given bucket, synchronously but lazily.</p>

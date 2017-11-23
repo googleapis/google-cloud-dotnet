@@ -1,15 +1,18 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/Google.Cloud.Storage.V1",
+  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.Storage.V1",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "iCZ+aK0o2ioNhvdZI1uJrQ=="
+          "hash": "qnv8lTTj85S2ET3B+Jn85A=="
         }
       },
       "is_incremental": false,
@@ -1965,7 +1968,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.CopyObjectOptions.html",
-          "hash": "y76+dAU1ar8kvyV6warZPg=="
+          "hash": "orW6cBynxeFmb5djNG41GQ=="
         }
       },
       "is_incremental": false,
@@ -1985,11 +1988,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Storage.V1.CreateNotificationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Storage.V1.CreateNotificationOptions.html",
+          "hash": "Lwg9pxCdQTf/mfEW3XA6FQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Storage.V1.DeleteBucketOptions.yml",
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.DeleteBucketOptions.html",
-          "hash": "ytqnlUd8goAcVrLR679ZKw=="
+          "hash": "qdrSpPhhp+maEw1fzwt37A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Storage.V1.DeleteNotificationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Storage.V1.DeleteNotificationOptions.html",
+          "hash": "cT5vru69vJ7n7e2ejVa7xA=="
         }
       },
       "is_incremental": false,
@@ -2001,7 +2028,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.DeleteObjectOptions.html",
-          "hash": "LxK751C4Kti9rgv6x6F8GQ=="
+          "hash": "cTIWL+dx6V8obgHd+WrXKQ=="
         }
       },
       "is_incremental": false,
@@ -2013,7 +2040,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.DownloadObjectOptions.html",
-          "hash": "4ubX5nCCiZ5SyTKa+fffWg=="
+          "hash": "HEmbdpqgbyOiDMb3WKzyBQ=="
         }
       },
       "is_incremental": false,
@@ -2037,7 +2064,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.html",
-          "hash": "pxCojY5L2Ub8CJYBYE+3iw=="
+          "hash": "GddFolQ5swVMUndQURIadw=="
         }
       },
       "is_incremental": false,
@@ -2049,7 +2076,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.GetBucketOptions.html",
-          "hash": "B+kAU9v0cP8dKlEo7w19vQ=="
+          "hash": "crlZSJc5iQdb2ey2CDLYgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Storage.V1.GetNotificationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Storage.V1.GetNotificationOptions.html",
+          "hash": "YYoSM0qLlGfBCpyPpLFuQg=="
         }
       },
       "is_incremental": false,
@@ -2061,7 +2100,31 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.GetObjectOptions.html",
-          "hash": "ZA4SaLZFYp+CcoHzrvtD5A=="
+          "hash": "/tipKBgonfc8sg2EQnftjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.html",
+          "hash": "sLl03AogBts4IIPa+vAlDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Storage.V1.HashValidationMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Storage.V1.HashValidationMode.html",
+          "hash": "iRuwUbnhjrFkTtYUoKKXTg=="
         }
       },
       "is_incremental": false,
@@ -2081,11 +2144,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Storage.V1.ListNotificationsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Storage.V1.ListNotificationsOptions.html",
+          "hash": "zd2W4FBHv1bjBnW1RN6liA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Storage.V1.ListObjectsOptions.yml",
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.ListObjectsOptions.html",
-          "hash": "pZbaEfpVnkRPgArOjcbo1A=="
+          "hash": "UTjes1ZPwi9T0Gkn04O5nQ=="
         }
       },
       "is_incremental": false,
@@ -2109,7 +2184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.PatchBucketOptions.html",
-          "hash": "M+d6Vg6jgULP7ob8jHNm0Q=="
+          "hash": "DMNiWTxsyBuwrU9vz1J5Dw=="
         }
       },
       "is_incremental": false,
@@ -2121,7 +2196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.PatchObjectOptions.html",
-          "hash": "JU89Mls9UGJ+8FtURSDSAg=="
+          "hash": "ANX4UB6J46tz6EXY0DETDA=="
         }
       },
       "is_incremental": false,
@@ -2169,7 +2244,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.html",
-          "hash": "UgJZUDsRlKifsONPLfNAhA=="
+          "hash": "2reaCP92/T6tgPm9Pkkkcw=="
         }
       },
       "is_incremental": false,
@@ -2205,7 +2280,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.StorageClient.html",
-          "hash": "rUiO9ntrlfd/aebA8F2IvQ=="
+          "hash": "uY6vqroRv9xNCpUCF45n2g=="
         }
       },
       "is_incremental": false,
@@ -2217,7 +2292,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.StorageClientImpl.html",
-          "hash": "EhK9q3U30Ru7Rp2KyHGjkQ=="
+          "hash": "s0A5S8iagflGT/4nEbeGjg=="
         }
       },
       "is_incremental": false,
@@ -2229,7 +2304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.html",
-          "hash": "UFUlGDITtmwzcIjZTRvNIQ=="
+          "hash": "c6+pthOMFl10JlTNddQ/Ng=="
         }
       },
       "is_incremental": false,
@@ -2241,7 +2316,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.UpdateBucketOptions.html",
-          "hash": "uikKN6NrIGRHoakexD1V3g=="
+          "hash": "cNtXTd0dokBqwLR6k2UwRg=="
         }
       },
       "is_incremental": false,
@@ -2253,7 +2328,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.UpdateObjectOptions.html",
-          "hash": "S1r9wPL/Q6+wZEJoSZAgqg=="
+          "hash": "NEu189ThMf/vuQ2zqf5ptg=="
         }
       },
       "is_incremental": false,
@@ -2265,7 +2340,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.UploadObjectOptions.html",
-          "hash": "I8elBsrpE6+mYqfFwxZcbw=="
+          "hash": "TOEJ51oZ9ANCJqK5RUxTwg=="
         }
       },
       "is_incremental": false,
@@ -2289,7 +2364,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Storage.V1.html",
-          "hash": "6ll636w/Ull2gjlkNlS2OQ=="
+          "hash": "4x75lFoSIUzrTNG69+TwmA=="
         }
       },
       "is_incremental": false,
@@ -2301,7 +2376,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "GX00SnhgInFELPON6DV7+Q=="
+          "hash": "7Qq27fpEbSMi52LitWDVrg=="
         }
       },
       "is_incremental": false,
@@ -2331,19 +2406,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "RestApiDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
@@ -2352,6 +2422,11 @@
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

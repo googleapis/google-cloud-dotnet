@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ListLogEntriesResponse
+    <title>Class ListExclusionsResponse
    | Google.Cloud.Logging.Log4Net </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ListLogEntriesResponse
+    <meta name="title" content="Class ListExclusionsResponse
    | Google.Cloud.Logging.Log4Net ">
     <meta name="generator" content="docfx 2.24.0.0">
     
@@ -68,28 +68,28 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.ListLogEntriesResponse">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.ListExclusionsResponse">
   
   
-  <h1 id="Google_Cloud_Logging_V2_ListLogEntriesResponse" data-uid="Google.Cloud.Logging.V2.ListLogEntriesResponse" class="text-break">Class ListLogEntriesResponse
+  <h1 id="Google_Cloud_Logging_V2_ListExclusionsResponse" data-uid="Google.Cloud.Logging.V2.ListExclusionsResponse" class="text-break">Class ListExclusionsResponse
   </h1>
-  <div class="markdown level0 summary"><p>Result returned from <code>ListLogEntries</code>.</p>
+  <div class="markdown level0 summary"><p>Result returned from <code>ListExclusions</code>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ListLogEntriesResponse</span></div>
+    <div class="level1"><span class="xref">ListExclusionsResponse</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListLogEntriesResponse.html">ListLogEntriesResponse</a>&gt;</div>
-    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListLogEntriesResponse.html">ListLogEntriesResponse</a>&gt;</div>
-    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListLogEntriesResponse.html">ListLogEntriesResponse</a>&gt;</div>
-    <div><a class="xref" href="Google.Api.Gax.Grpc.IPageResponse-1.html">IPageResponse</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html">LogEntry</a>&gt;</div>
-    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html">LogEntry</a>&gt;</div>
+    <div><a class="xref" href="Google.Api.Gax.Grpc.IPageResponse-1.html">IPageResponse</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</div>
     <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -108,22 +108,20 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Logging.V2.html">Google.Cloud.Logging.V2</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.Logging.V2.dll</h6>
-  <h5 id="Google_Cloud_Logging_V2_ListLogEntriesResponse_syntax">Syntax</h5>
+  <h5 id="Google_Cloud_Logging_V2_ListExclusionsResponse_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ListLogEntriesResponse : IMessage&lt;ListLogEntriesResponse&gt;, IMessage, IEquatable&lt;ListLogEntriesResponse&gt;, IDeepCloneable&lt;ListLogEntriesResponse&gt;, IPageResponse&lt;LogEntry&gt;, IEnumerable&lt;LogEntry&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ListExclusionsResponse : IPageResponse&lt;LogExclusion&gt;, IEnumerable&lt;LogExclusion&gt;, IEnumerable, IMessage&lt;ListExclusionsResponse&gt;, IMessage, IEquatable&lt;ListExclusionsResponse&gt;, IDeepCloneable&lt;ListExclusionsResponse&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_Logging_V2_ListLogEntriesResponse_Entries_" data-uid="Google.Cloud.Logging.V2.ListLogEntriesResponse.Entries*"></a>
-  <h4 id="Google_Cloud_Logging_V2_ListLogEntriesResponse_Entries" data-uid="Google.Cloud.Logging.V2.ListLogEntriesResponse.Entries">Entries</h4>
-  <div class="markdown level1 summary"><p>A list of log entries.  If <code>entries</code> is empty, <code>nextPageToken</code> may still be
-returned, indicating that more entries may exist.  See <code>nextPageToken</code> for
-more information.</p>
+  <a id="Google_Cloud_Logging_V2_ListExclusionsResponse_Exclusions_" data-uid="Google.Cloud.Logging.V2.ListExclusionsResponse.Exclusions*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ListExclusionsResponse_Exclusions" data-uid="Google.Cloud.Logging.V2.ListExclusionsResponse.Exclusions">Exclusions</h4>
+  <div class="markdown level1 summary"><p>A list of exclusions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RepeatedField&lt;LogEntry&gt; Entries { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;LogExclusion&gt; Exclusions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,22 +133,16 @@ more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html">LogEntry</a>&gt;</td>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Logging_V2_ListLogEntriesResponse_NextPageToken_" data-uid="Google.Cloud.Logging.V2.ListLogEntriesResponse.NextPageToken*"></a>
-  <h4 id="Google_Cloud_Logging_V2_ListLogEntriesResponse_NextPageToken" data-uid="Google.Cloud.Logging.V2.ListLogEntriesResponse.NextPageToken">NextPageToken</h4>
-  <div class="markdown level1 summary"><p>If there might be more results than those appearing in this response, then
-<code>nextPageToken</code> is included.  To get the next set of results, call this
+  <a id="Google_Cloud_Logging_V2_ListExclusionsResponse_NextPageToken_" data-uid="Google.Cloud.Logging.V2.ListExclusionsResponse.NextPageToken*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ListExclusionsResponse_NextPageToken" data-uid="Google.Cloud.Logging.V2.ListExclusionsResponse.NextPageToken">NextPageToken</h4>
+  <div class="markdown level1 summary"><p>If there might be more results than appear in this response, then
+<code>nextPageToken</code> is included.  To get the next set of results, call the same
 method again using the value of <code>nextPageToken</code> as <code>pageToken</code>.</p>
-<p>If a value for <code>next_page_token</code> appears and the <code>entries</code> field is empty,
-it means that the search found no log entries so far but it did not have
-time to search all the possible log entries.  Retry the method with this
-value for <code>page_token</code> to continue the search.  Alternatively, consider
-speeding up the search by changing your filter to specify a single log name
-or resource type, or to narrow the time range of the search.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -176,14 +168,14 @@ or resource type, or to narrow the time range of the search.</p>
       <div><a class="xref" href="Google.Api.Gax.Grpc.IPageResponse-1.html#Google_Api_Gax_Grpc_IPageResponse_1_NextPageToken">IPageResponse&lt;TResource&gt;.NextPageToken</a></div>
   <h3 id="methods">Methods
   </h3>
-  <a id="Google_Cloud_Logging_V2_ListLogEntriesResponse_GetEnumerator_" data-uid="Google.Cloud.Logging.V2.ListLogEntriesResponse.GetEnumerator*"></a>
-  <h4 id="Google_Cloud_Logging_V2_ListLogEntriesResponse_GetEnumerator" data-uid="Google.Cloud.Logging.V2.ListLogEntriesResponse.GetEnumerator">GetEnumerator()</h4>
+  <a id="Google_Cloud_Logging_V2_ListExclusionsResponse_GetEnumerator_" data-uid="Google.Cloud.Logging.V2.ListExclusionsResponse.GetEnumerator*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ListExclusionsResponse_GetEnumerator" data-uid="Google.Cloud.Logging.V2.ListExclusionsResponse.GetEnumerator">GetEnumerator()</h4>
   <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the resources in this response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator&lt;LogEntry&gt; GetEnumerator()</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;LogExclusion&gt; GetEnumerator()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -195,7 +187,7 @@ or resource type, or to narrow the time range of the search.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html">LogEntry</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -204,8 +196,8 @@ or resource type, or to narrow the time range of the search.</p>
       <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
-  <a id="Google_Cloud_Logging_V2_ListLogEntriesResponse_System_Collections_IEnumerable_GetEnumerator_" data-uid="Google.Cloud.Logging.V2.ListLogEntriesResponse.System#Collections#IEnumerable#GetEnumerator*"></a>
-  <h4 id="Google_Cloud_Logging_V2_ListLogEntriesResponse_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Cloud.Logging.V2.ListLogEntriesResponse.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <a id="Google_Cloud_Logging_V2_ListExclusionsResponse_System_Collections_IEnumerable_GetEnumerator_" data-uid="Google.Cloud.Logging.V2.ListExclusionsResponse.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ListExclusionsResponse_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Cloud.Logging.V2.ListExclusionsResponse.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

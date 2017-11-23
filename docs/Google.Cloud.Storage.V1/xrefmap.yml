@@ -13700,6 +13700,24 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.CreateBucketOptions.Projection
   fullName: Google.Cloud.Storage.V1.CreateBucketOptions.Projection
   nameWithType: CreateBucketOptions.Projection
+- uid: Google.Cloud.Storage.V1.CreateNotificationOptions
+  name: CreateNotificationOptions
+  href: api/Google.Cloud.Storage.V1.CreateNotificationOptions.html
+  commentId: T:Google.Cloud.Storage.V1.CreateNotificationOptions
+  fullName: Google.Cloud.Storage.V1.CreateNotificationOptions
+  nameWithType: CreateNotificationOptions
+- uid: Google.Cloud.Storage.V1.CreateNotificationOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.CreateNotificationOptions.html#Google_Cloud_Storage_V1_CreateNotificationOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.CreateNotificationOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.CreateNotificationOptions.UserProject
+  nameWithType: CreateNotificationOptions.UserProject
+- uid: Google.Cloud.Storage.V1.CreateNotificationOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.CreateNotificationOptions.html#Google_Cloud_Storage_V1_CreateNotificationOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.CreateNotificationOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.CreateNotificationOptions.UserProject
+  nameWithType: CreateNotificationOptions.UserProject
 - uid: Google.Cloud.Storage.V1.DeleteBucketOptions
   name: DeleteBucketOptions
   href: api/Google.Cloud.Storage.V1.DeleteBucketOptions.html
@@ -13742,6 +13760,24 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.DeleteBucketOptions.UserProject
   fullName: Google.Cloud.Storage.V1.DeleteBucketOptions.UserProject
   nameWithType: DeleteBucketOptions.UserProject
+- uid: Google.Cloud.Storage.V1.DeleteNotificationOptions
+  name: DeleteNotificationOptions
+  href: api/Google.Cloud.Storage.V1.DeleteNotificationOptions.html
+  commentId: T:Google.Cloud.Storage.V1.DeleteNotificationOptions
+  fullName: Google.Cloud.Storage.V1.DeleteNotificationOptions
+  nameWithType: DeleteNotificationOptions
+- uid: Google.Cloud.Storage.V1.DeleteNotificationOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.DeleteNotificationOptions.html#Google_Cloud_Storage_V1_DeleteNotificationOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.DeleteNotificationOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.DeleteNotificationOptions.UserProject
+  nameWithType: DeleteNotificationOptions.UserProject
+- uid: Google.Cloud.Storage.V1.DeleteNotificationOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.DeleteNotificationOptions.html#Google_Cloud_Storage_V1_DeleteNotificationOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.DeleteNotificationOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.DeleteNotificationOptions.UserProject
+  nameWithType: DeleteNotificationOptions.UserProject
 - uid: Google.Cloud.Storage.V1.DeleteObjectOptions
   name: DeleteObjectOptions
   href: api/Google.Cloud.Storage.V1.DeleteObjectOptions.html
@@ -13862,6 +13898,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.Generation
   fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.Generation
   nameWithType: DownloadObjectOptions.Generation
+- uid: Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode
+  name: HashValidationMode
+  href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_HashValidationMode
+  commentId: P:Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode
+  fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode
+  nameWithType: DownloadObjectOptions.HashValidationMode
+- uid: Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode*
+  name: HashValidationMode
+  href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_HashValidationMode_
+  commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode
+  fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode
+  nameWithType: DownloadObjectOptions.HashValidationMode
 - uid: Google.Cloud.Storage.V1.DownloadObjectOptions.IfGenerationMatch
   name: IfGenerationMatch
   href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_IfGenerationMatch
@@ -14099,6 +14147,24 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.GetBucketOptions.UserProject
   fullName: Google.Cloud.Storage.V1.GetBucketOptions.UserProject
   nameWithType: GetBucketOptions.UserProject
+- uid: Google.Cloud.Storage.V1.GetNotificationOptions
+  name: GetNotificationOptions
+  href: api/Google.Cloud.Storage.V1.GetNotificationOptions.html
+  commentId: T:Google.Cloud.Storage.V1.GetNotificationOptions
+  fullName: Google.Cloud.Storage.V1.GetNotificationOptions
+  nameWithType: GetNotificationOptions
+- uid: Google.Cloud.Storage.V1.GetNotificationOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.GetNotificationOptions.html#Google_Cloud_Storage_V1_GetNotificationOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.GetNotificationOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.GetNotificationOptions.UserProject
+  nameWithType: GetNotificationOptions.UserProject
+- uid: Google.Cloud.Storage.V1.GetNotificationOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.GetNotificationOptions.html#Google_Cloud_Storage_V1_GetNotificationOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.GetNotificationOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.GetNotificationOptions.UserProject
+  nameWithType: GetNotificationOptions.UserProject
 - uid: Google.Cloud.Storage.V1.GetObjectOptions
   name: GetObjectOptions
   href: api/Google.Cloud.Storage.V1.GetObjectOptions.html
@@ -14201,6 +14267,42 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.GetObjectOptions.UserProject
   fullName: Google.Cloud.Storage.V1.GetObjectOptions.UserProject
   nameWithType: GetObjectOptions.UserProject
+- uid: Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions
+  name: GetStorageServiceAccountEmailOptions
+  href: api/Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.html
+  commentId: T:Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions
+  fullName: Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions
+  nameWithType: GetStorageServiceAccountEmailOptions
+- uid: Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.html#Google_Cloud_Storage_V1_GetStorageServiceAccountEmailOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.UserProject
+  nameWithType: GetStorageServiceAccountEmailOptions.UserProject
+- uid: Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.html#Google_Cloud_Storage_V1_GetStorageServiceAccountEmailOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.UserProject
+  nameWithType: GetStorageServiceAccountEmailOptions.UserProject
+- uid: Google.Cloud.Storage.V1.HashValidationMode
+  name: HashValidationMode
+  href: api/Google.Cloud.Storage.V1.HashValidationMode.html
+  commentId: T:Google.Cloud.Storage.V1.HashValidationMode
+  fullName: Google.Cloud.Storage.V1.HashValidationMode
+  nameWithType: HashValidationMode
+- uid: Google.Cloud.Storage.V1.HashValidationMode.Always
+  name: Always
+  href: api/Google.Cloud.Storage.V1.HashValidationMode.html#Google_Cloud_Storage_V1_HashValidationMode_Always
+  commentId: F:Google.Cloud.Storage.V1.HashValidationMode.Always
+  fullName: Google.Cloud.Storage.V1.HashValidationMode.Always
+  nameWithType: HashValidationMode.Always
+- uid: Google.Cloud.Storage.V1.HashValidationMode.Never
+  name: Never
+  href: api/Google.Cloud.Storage.V1.HashValidationMode.html#Google_Cloud_Storage_V1_HashValidationMode_Never
+  commentId: F:Google.Cloud.Storage.V1.HashValidationMode.Never
+  fullName: Google.Cloud.Storage.V1.HashValidationMode.Never
+  nameWithType: HashValidationMode.Never
 - uid: Google.Cloud.Storage.V1.ListBucketsOptions
   name: ListBucketsOptions
   href: api/Google.Cloud.Storage.V1.ListBucketsOptions.html
@@ -14243,6 +14345,24 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.ListBucketsOptions.Projection
   fullName: Google.Cloud.Storage.V1.ListBucketsOptions.Projection
   nameWithType: ListBucketsOptions.Projection
+- uid: Google.Cloud.Storage.V1.ListNotificationsOptions
+  name: ListNotificationsOptions
+  href: api/Google.Cloud.Storage.V1.ListNotificationsOptions.html
+  commentId: T:Google.Cloud.Storage.V1.ListNotificationsOptions
+  fullName: Google.Cloud.Storage.V1.ListNotificationsOptions
+  nameWithType: ListNotificationsOptions
+- uid: Google.Cloud.Storage.V1.ListNotificationsOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.ListNotificationsOptions.html#Google_Cloud_Storage_V1_ListNotificationsOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.ListNotificationsOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.ListNotificationsOptions.UserProject
+  nameWithType: ListNotificationsOptions.UserProject
+- uid: Google.Cloud.Storage.V1.ListNotificationsOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.ListNotificationsOptions.html#Google_Cloud_Storage_V1_ListNotificationsOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.ListNotificationsOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.ListNotificationsOptions.UserProject
+  nameWithType: ListNotificationsOptions.UserProject
 - uid: Google.Cloud.Storage.V1.ListObjectsOptions
   name: ListObjectsOptions
   href: api/Google.Cloud.Storage.V1.ListObjectsOptions.html
@@ -14849,6 +14969,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.CreateBucketAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.CreateBucketAsync
   nameWithType: StorageClient.CreateBucketAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.CreateNotification(System.String,Google.Apis.Storage.v1.Data.Notification,Google.Cloud.Storage.V1.CreateNotificationOptions)
+  name: CreateNotification(String, Notification, CreateNotificationOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateNotification_System_String_Google_Apis_Storage_v1_Data_Notification_Google_Cloud_Storage_V1_CreateNotificationOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.CreateNotification(System.String,Google.Apis.Storage.v1.Data.Notification,Google.Cloud.Storage.V1.CreateNotificationOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.CreateNotification(System.String, Google.Apis.Storage.v1.Data.Notification, Google.Cloud.Storage.V1.CreateNotificationOptions)
+  nameWithType: StorageClient.CreateNotification(String, Notification, CreateNotificationOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.CreateNotification*
+  name: CreateNotification
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateNotification_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.CreateNotification
+  fullName: Google.Cloud.Storage.V1.StorageClient.CreateNotification
+  nameWithType: StorageClient.CreateNotification
+- uid: Google.Cloud.Storage.V1.StorageClient.CreateNotificationAsync(System.String,Google.Apis.Storage.v1.Data.Notification,Google.Cloud.Storage.V1.CreateNotificationOptions,System.Threading.CancellationToken)
+  name: CreateNotificationAsync(String, Notification, CreateNotificationOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateNotificationAsync_System_String_Google_Apis_Storage_v1_Data_Notification_Google_Cloud_Storage_V1_CreateNotificationOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.CreateNotificationAsync(System.String,Google.Apis.Storage.v1.Data.Notification,Google.Cloud.Storage.V1.CreateNotificationOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.CreateNotificationAsync(System.String, Google.Apis.Storage.v1.Data.Notification, Google.Cloud.Storage.V1.CreateNotificationOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.CreateNotificationAsync(String, Notification, CreateNotificationOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.CreateNotificationAsync*
+  name: CreateNotificationAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateNotificationAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.CreateNotificationAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.CreateNotificationAsync
+  nameWithType: StorageClient.CreateNotificationAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)
   name: CreateObjectUploader(Object, Stream, UploadObjectOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateObjectUploader_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_
@@ -14867,6 +15011,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader
   fullName: Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader
   nameWithType: StorageClient.CreateObjectUploader
+- uid: Google.Cloud.Storage.V1.StorageClient.CreateUnauthenticated
+  name: CreateUnauthenticated()
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateUnauthenticated
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.CreateUnauthenticated
+  fullName: Google.Cloud.Storage.V1.StorageClient.CreateUnauthenticated()
+  nameWithType: StorageClient.CreateUnauthenticated()
+- uid: Google.Cloud.Storage.V1.StorageClient.CreateUnauthenticated*
+  name: CreateUnauthenticated
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateUnauthenticated_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.CreateUnauthenticated
+  fullName: Google.Cloud.Storage.V1.StorageClient.CreateUnauthenticated
+  nameWithType: StorageClient.CreateUnauthenticated
 - uid: Google.Cloud.Storage.V1.StorageClient.DeleteBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.DeleteBucketOptions)
   name: DeleteBucket(Bucket, DeleteBucketOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions_
@@ -14903,6 +15059,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.DeleteBucketAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.DeleteBucketAsync
   nameWithType: StorageClient.DeleteBucketAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.DeleteNotification(System.String,System.String,Google.Cloud.Storage.V1.DeleteNotificationOptions)
+  name: DeleteNotification(String, String, DeleteNotificationOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteNotification_System_String_System_String_Google_Cloud_Storage_V1_DeleteNotificationOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.DeleteNotification(System.String,System.String,Google.Cloud.Storage.V1.DeleteNotificationOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.DeleteNotification(System.String, System.String, Google.Cloud.Storage.V1.DeleteNotificationOptions)
+  nameWithType: StorageClient.DeleteNotification(String, String, DeleteNotificationOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.DeleteNotification*
+  name: DeleteNotification
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteNotification_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.DeleteNotification
+  fullName: Google.Cloud.Storage.V1.StorageClient.DeleteNotification
+  nameWithType: StorageClient.DeleteNotification
+- uid: Google.Cloud.Storage.V1.StorageClient.DeleteNotificationAsync(System.String,System.String,Google.Cloud.Storage.V1.DeleteNotificationOptions,System.Threading.CancellationToken)
+  name: DeleteNotificationAsync(String, String, DeleteNotificationOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteNotificationAsync_System_String_System_String_Google_Cloud_Storage_V1_DeleteNotificationOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.DeleteNotificationAsync(System.String,System.String,Google.Cloud.Storage.V1.DeleteNotificationOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.DeleteNotificationAsync(System.String, System.String, Google.Cloud.Storage.V1.DeleteNotificationOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.DeleteNotificationAsync(String, String, DeleteNotificationOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.DeleteNotificationAsync*
+  name: DeleteNotificationAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteNotificationAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.DeleteNotificationAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.DeleteNotificationAsync
+  nameWithType: StorageClient.DeleteNotificationAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.DeleteObjectOptions)
   name: DeleteObject(Object, DeleteObjectOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_
@@ -14939,6 +15119,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.DeleteObjectAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.DeleteObjectAsync
   nameWithType: StorageClient.DeleteObjectAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.Dispose
+  name: Dispose()
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Dispose
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.Dispose
+  fullName: Google.Cloud.Storage.V1.StorageClient.Dispose()
+  nameWithType: StorageClient.Dispose()
+- uid: Google.Cloud.Storage.V1.StorageClient.Dispose*
+  name: Dispose
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Dispose_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.Dispose
+  fullName: Google.Cloud.Storage.V1.StorageClient.Dispose
+  nameWithType: StorageClient.Dispose
 - uid: Google.Cloud.Storage.V1.StorageClient.DownloadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.IProgress{Google.Apis.Download.IDownloadProgress})
   name: DownloadObject(Object, Stream, DownloadObjectOptions, IProgress<IDownloadProgress>)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__
@@ -15047,6 +15239,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicyAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicyAsync
   nameWithType: StorageClient.GetBucketIamPolicyAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.GetNotification(System.String,System.String,Google.Cloud.Storage.V1.GetNotificationOptions)
+  name: GetNotification(String, String, GetNotificationOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetNotification_System_String_System_String_Google_Cloud_Storage_V1_GetNotificationOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.GetNotification(System.String,System.String,Google.Cloud.Storage.V1.GetNotificationOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetNotification(System.String, System.String, Google.Cloud.Storage.V1.GetNotificationOptions)
+  nameWithType: StorageClient.GetNotification(String, String, GetNotificationOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.GetNotification*
+  name: GetNotification
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetNotification_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.GetNotification
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetNotification
+  nameWithType: StorageClient.GetNotification
+- uid: Google.Cloud.Storage.V1.StorageClient.GetNotificationAsync(System.String,System.String,Google.Cloud.Storage.V1.GetNotificationOptions,System.Threading.CancellationToken)
+  name: GetNotificationAsync(String, String, GetNotificationOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetNotificationAsync_System_String_System_String_Google_Cloud_Storage_V1_GetNotificationOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.GetNotificationAsync(System.String,System.String,Google.Cloud.Storage.V1.GetNotificationOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetNotificationAsync(System.String, System.String, Google.Cloud.Storage.V1.GetNotificationOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.GetNotificationAsync(String, String, GetNotificationOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.GetNotificationAsync*
+  name: GetNotificationAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetNotificationAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.GetNotificationAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetNotificationAsync
+  nameWithType: StorageClient.GetNotificationAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.GetObject(System.String,System.String,Google.Cloud.Storage.V1.GetObjectOptions)
   name: GetObject(String, String, GetObjectOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_
@@ -15071,6 +15287,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.GetObjectAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.GetObjectAsync
   nameWithType: StorageClient.GetObjectAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmail(System.String,Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions)
+  name: GetStorageServiceAccountEmail(String, GetStorageServiceAccountEmailOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetStorageServiceAccountEmail_System_String_Google_Cloud_Storage_V1_GetStorageServiceAccountEmailOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmail(System.String,Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmail(System.String, Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions)
+  nameWithType: StorageClient.GetStorageServiceAccountEmail(String, GetStorageServiceAccountEmailOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmail*
+  name: GetStorageServiceAccountEmail
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetStorageServiceAccountEmail_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmail
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmail
+  nameWithType: StorageClient.GetStorageServiceAccountEmail
+- uid: Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmailAsync(System.String,Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions,System.Threading.CancellationToken)
+  name: GetStorageServiceAccountEmailAsync(String, GetStorageServiceAccountEmailOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetStorageServiceAccountEmailAsync_System_String_Google_Cloud_Storage_V1_GetStorageServiceAccountEmailOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmailAsync(System.String,Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmailAsync(System.String, Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.GetStorageServiceAccountEmailAsync(String, GetStorageServiceAccountEmailOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmailAsync*
+  name: GetStorageServiceAccountEmailAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetStorageServiceAccountEmailAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmailAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetStorageServiceAccountEmailAsync
+  nameWithType: StorageClient.GetStorageServiceAccountEmailAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.ListBuckets(System.String,Google.Cloud.Storage.V1.ListBucketsOptions)
   name: ListBuckets(String, ListBucketsOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListBuckets_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_
@@ -15095,6 +15335,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.ListBucketsAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.ListBucketsAsync
   nameWithType: StorageClient.ListBucketsAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.ListNotifications(System.String,Google.Cloud.Storage.V1.ListNotificationsOptions)
+  name: ListNotifications(String, ListNotificationsOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListNotifications_System_String_Google_Cloud_Storage_V1_ListNotificationsOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.ListNotifications(System.String,Google.Cloud.Storage.V1.ListNotificationsOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.ListNotifications(System.String, Google.Cloud.Storage.V1.ListNotificationsOptions)
+  nameWithType: StorageClient.ListNotifications(String, ListNotificationsOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.ListNotifications*
+  name: ListNotifications
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListNotifications_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.ListNotifications
+  fullName: Google.Cloud.Storage.V1.StorageClient.ListNotifications
+  nameWithType: StorageClient.ListNotifications
+- uid: Google.Cloud.Storage.V1.StorageClient.ListNotificationsAsync(System.String,Google.Cloud.Storage.V1.ListNotificationsOptions,System.Threading.CancellationToken)
+  name: ListNotificationsAsync(String, ListNotificationsOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListNotificationsAsync_System_String_Google_Cloud_Storage_V1_ListNotificationsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.ListNotificationsAsync(System.String,Google.Cloud.Storage.V1.ListNotificationsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.ListNotificationsAsync(System.String, Google.Cloud.Storage.V1.ListNotificationsOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.ListNotificationsAsync(String, ListNotificationsOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.ListNotificationsAsync*
+  name: ListNotificationsAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListNotificationsAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.ListNotificationsAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.ListNotificationsAsync
+  nameWithType: StorageClient.ListNotificationsAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.ListObjects(System.String,System.String,Google.Cloud.Storage.V1.ListObjectsOptions)
   name: ListObjects(String, String, ListObjectsOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_
@@ -15521,6 +15785,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.CreateBucketAsync
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.CreateBucketAsync
   nameWithType: StorageClientImpl.CreateBucketAsync
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.CreateNotification(System.String,Google.Apis.Storage.v1.Data.Notification,Google.Cloud.Storage.V1.CreateNotificationOptions)
+  name: CreateNotification(String, Notification, CreateNotificationOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_CreateNotification_System_String_Google_Apis_Storage_v1_Data_Notification_Google_Cloud_Storage_V1_CreateNotificationOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.CreateNotification(System.String,Google.Apis.Storage.v1.Data.Notification,Google.Cloud.Storage.V1.CreateNotificationOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.CreateNotification(System.String, Google.Apis.Storage.v1.Data.Notification, Google.Cloud.Storage.V1.CreateNotificationOptions)
+  nameWithType: StorageClientImpl.CreateNotification(String, Notification, CreateNotificationOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.CreateNotification*
+  name: CreateNotification
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_CreateNotification_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.CreateNotification
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.CreateNotification
+  nameWithType: StorageClientImpl.CreateNotification
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.CreateNotificationAsync(System.String,Google.Apis.Storage.v1.Data.Notification,Google.Cloud.Storage.V1.CreateNotificationOptions,System.Threading.CancellationToken)
+  name: CreateNotificationAsync(String, Notification, CreateNotificationOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_CreateNotificationAsync_System_String_Google_Apis_Storage_v1_Data_Notification_Google_Cloud_Storage_V1_CreateNotificationOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.CreateNotificationAsync(System.String,Google.Apis.Storage.v1.Data.Notification,Google.Cloud.Storage.V1.CreateNotificationOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.CreateNotificationAsync(System.String, Google.Apis.Storage.v1.Data.Notification, Google.Cloud.Storage.V1.CreateNotificationOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClientImpl.CreateNotificationAsync(String, Notification, CreateNotificationOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.CreateNotificationAsync*
+  name: CreateNotificationAsync
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_CreateNotificationAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.CreateNotificationAsync
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.CreateNotificationAsync
+  nameWithType: StorageClientImpl.CreateNotificationAsync
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)
   name: CreateObjectUploader(Object, Stream, UploadObjectOptions)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_
@@ -15575,6 +15863,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucketAsync
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucketAsync
   nameWithType: StorageClientImpl.DeleteBucketAsync
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotification(System.String,System.String,Google.Cloud.Storage.V1.DeleteNotificationOptions)
+  name: DeleteNotification(String, String, DeleteNotificationOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_DeleteNotification_System_String_System_String_Google_Cloud_Storage_V1_DeleteNotificationOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotification(System.String,System.String,Google.Cloud.Storage.V1.DeleteNotificationOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotification(System.String, System.String, Google.Cloud.Storage.V1.DeleteNotificationOptions)
+  nameWithType: StorageClientImpl.DeleteNotification(String, String, DeleteNotificationOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotification*
+  name: DeleteNotification
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_DeleteNotification_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotification
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotification
+  nameWithType: StorageClientImpl.DeleteNotification
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotificationAsync(System.String,System.String,Google.Cloud.Storage.V1.DeleteNotificationOptions,System.Threading.CancellationToken)
+  name: DeleteNotificationAsync(String, String, DeleteNotificationOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_DeleteNotificationAsync_System_String_System_String_Google_Cloud_Storage_V1_DeleteNotificationOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotificationAsync(System.String,System.String,Google.Cloud.Storage.V1.DeleteNotificationOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotificationAsync(System.String, System.String, Google.Cloud.Storage.V1.DeleteNotificationOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClientImpl.DeleteNotificationAsync(String, String, DeleteNotificationOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotificationAsync*
+  name: DeleteNotificationAsync
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_DeleteNotificationAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotificationAsync
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.DeleteNotificationAsync
+  nameWithType: StorageClientImpl.DeleteNotificationAsync
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.DeleteObjectOptions)
   name: DeleteObject(Object, DeleteObjectOptions)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_
@@ -15611,6 +15923,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.DeleteObjectAsync
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.DeleteObjectAsync
   nameWithType: StorageClientImpl.DeleteObjectAsync
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.Dispose
+  name: Dispose()
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_Dispose
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.Dispose
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.Dispose()
+  nameWithType: StorageClientImpl.Dispose()
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.Dispose*
+  name: Dispose
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_Dispose_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.Dispose
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.Dispose
+  nameWithType: StorageClientImpl.Dispose
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.DownloadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.IProgress{Google.Apis.Download.IDownloadProgress})
   name: DownloadObject(Object, Stream, DownloadObjectOptions, IProgress<IDownloadProgress>)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__
@@ -15719,6 +16043,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicyAsync
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicyAsync
   nameWithType: StorageClientImpl.GetBucketIamPolicyAsync
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetNotification(System.String,System.String,Google.Cloud.Storage.V1.GetNotificationOptions)
+  name: GetNotification(String, String, GetNotificationOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetNotification_System_String_System_String_Google_Cloud_Storage_V1_GetNotificationOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.GetNotification(System.String,System.String,Google.Cloud.Storage.V1.GetNotificationOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetNotification(System.String, System.String, Google.Cloud.Storage.V1.GetNotificationOptions)
+  nameWithType: StorageClientImpl.GetNotification(String, String, GetNotificationOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetNotification*
+  name: GetNotification
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetNotification_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.GetNotification
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetNotification
+  nameWithType: StorageClientImpl.GetNotification
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetNotificationAsync(System.String,System.String,Google.Cloud.Storage.V1.GetNotificationOptions,System.Threading.CancellationToken)
+  name: GetNotificationAsync(String, String, GetNotificationOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetNotificationAsync_System_String_System_String_Google_Cloud_Storage_V1_GetNotificationOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.GetNotificationAsync(System.String,System.String,Google.Cloud.Storage.V1.GetNotificationOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetNotificationAsync(System.String, System.String, Google.Cloud.Storage.V1.GetNotificationOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClientImpl.GetNotificationAsync(String, String, GetNotificationOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetNotificationAsync*
+  name: GetNotificationAsync
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetNotificationAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.GetNotificationAsync
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetNotificationAsync
+  nameWithType: StorageClientImpl.GetNotificationAsync
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.GetObject(System.String,System.String,Google.Cloud.Storage.V1.GetObjectOptions)
   name: GetObject(String, String, GetObjectOptions)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_
@@ -15743,6 +16091,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.GetObjectAsync
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetObjectAsync
   nameWithType: StorageClientImpl.GetObjectAsync
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmail(System.String,Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions)
+  name: GetStorageServiceAccountEmail(String, GetStorageServiceAccountEmailOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetStorageServiceAccountEmail_System_String_Google_Cloud_Storage_V1_GetStorageServiceAccountEmailOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmail(System.String,Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmail(System.String, Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions)
+  nameWithType: StorageClientImpl.GetStorageServiceAccountEmail(String, GetStorageServiceAccountEmailOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmail*
+  name: GetStorageServiceAccountEmail
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetStorageServiceAccountEmail_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmail
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmail
+  nameWithType: StorageClientImpl.GetStorageServiceAccountEmail
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmailAsync(System.String,Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions,System.Threading.CancellationToken)
+  name: GetStorageServiceAccountEmailAsync(String, GetStorageServiceAccountEmailOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetStorageServiceAccountEmailAsync_System_String_Google_Cloud_Storage_V1_GetStorageServiceAccountEmailOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmailAsync(System.String,Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmailAsync(System.String, Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClientImpl.GetStorageServiceAccountEmailAsync(String, GetStorageServiceAccountEmailOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmailAsync*
+  name: GetStorageServiceAccountEmailAsync
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetStorageServiceAccountEmailAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmailAsync
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetStorageServiceAccountEmailAsync
+  nameWithType: StorageClientImpl.GetStorageServiceAccountEmailAsync
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.ListBuckets(System.String,Google.Cloud.Storage.V1.ListBucketsOptions)
   name: ListBuckets(String, ListBucketsOptions)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ListBuckets_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_
@@ -15767,6 +16139,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.ListBucketsAsync
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.ListBucketsAsync
   nameWithType: StorageClientImpl.ListBucketsAsync
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ListNotifications(System.String,Google.Cloud.Storage.V1.ListNotificationsOptions)
+  name: ListNotifications(String, ListNotificationsOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ListNotifications_System_String_Google_Cloud_Storage_V1_ListNotificationsOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.ListNotifications(System.String,Google.Cloud.Storage.V1.ListNotificationsOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ListNotifications(System.String, Google.Cloud.Storage.V1.ListNotificationsOptions)
+  nameWithType: StorageClientImpl.ListNotifications(String, ListNotificationsOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ListNotifications*
+  name: ListNotifications
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ListNotifications_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.ListNotifications
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ListNotifications
+  nameWithType: StorageClientImpl.ListNotifications
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ListNotificationsAsync(System.String,Google.Cloud.Storage.V1.ListNotificationsOptions,System.Threading.CancellationToken)
+  name: ListNotificationsAsync(String, ListNotificationsOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ListNotificationsAsync_System_String_Google_Cloud_Storage_V1_ListNotificationsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.ListNotificationsAsync(System.String,Google.Cloud.Storage.V1.ListNotificationsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ListNotificationsAsync(System.String, Google.Cloud.Storage.V1.ListNotificationsOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClientImpl.ListNotificationsAsync(String, ListNotificationsOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ListNotificationsAsync*
+  name: ListNotificationsAsync
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ListNotificationsAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.ListNotificationsAsync
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ListNotificationsAsync
+  nameWithType: StorageClientImpl.ListNotificationsAsync
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.ListObjects(System.String,System.String,Google.Cloud.Storage.V1.ListObjectsOptions)
   name: ListObjects(String, String, ListObjectsOptions)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ListObjects_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_

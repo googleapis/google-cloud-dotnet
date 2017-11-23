@@ -178,6 +178,37 @@ is always downloaded.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Storage_V1_DownloadObjectOptions_HashValidationMode_" data-uid="Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode*"></a>
+  <h4 id="Google_Cloud_Storage_V1_DownloadObjectOptions_HashValidationMode" data-uid="Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode">HashValidationMode</h4>
+  <div class="markdown level1 summary"><p>Specifies whether or not the object&apos;s hash code should be validated. If this property is null,
+the hash code will always be validated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HashValidationMode? HashValidationMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Storage.V1.HashValidationMode.html">HashValidationMode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Storage_V1_DownloadObjectOptions_HashValidationMode_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is effectively an escape hatch for situations where hash validation fails.
+See <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1641">https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1641</a> for background
+on this option. It is recommended that you leave this option unset unless you are knowingly
+downloading data for an object where hashing will fail.</p>
+</div>
   <a id="Google_Cloud_Storage_V1_DownloadObjectOptions_IfGenerationMatch_" data-uid="Google.Cloud.Storage.V1.DownloadObjectOptions.IfGenerationMatch*"></a>
   <h4 id="Google_Cloud_Storage_V1_DownloadObjectOptions_IfGenerationMatch" data-uid="Google.Cloud.Storage.V1.DownloadObjectOptions.IfGenerationMatch">IfGenerationMatch</h4>
   <div class="markdown level1 summary"><p>Precondition for download: the object is only downloaded if its generation matches the given value.</p>
@@ -300,7 +331,7 @@ is always downloaded.</p>
   </table>
   <a id="Google_Cloud_Storage_V1_DownloadObjectOptions_UserProject_" data-uid="Google.Cloud.Storage.V1.DownloadObjectOptions.UserProject*"></a>
   <h4 id="Google_Cloud_Storage_V1_DownloadObjectOptions_UserProject" data-uid="Google.Cloud.Storage.V1.DownloadObjectOptions.UserProject">UserProject</h4>
-  <div class="markdown level1 summary"><p>If set, this is the ID of the project which will be billed for the request, for requester-pays buckets.
+  <div class="markdown level1 summary"><p>If set, this is the ID of the project which will be billed for the request.
 The caller must have suitable permissions for the project being billed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

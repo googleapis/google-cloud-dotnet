@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class UpdateSinkRequest
+    <title>Class UpdateExclusionRequest
    | Google.Cloud.Logging.Log4Net </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class UpdateSinkRequest
+    <meta name="title" content="Class UpdateExclusionRequest
    | Google.Cloud.Logging.Log4Net ">
     <meta name="generator" content="docfx 2.24.0.0">
     
@@ -68,25 +68,25 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.UpdateExclusionRequest">
   
   
-  <h1 id="Google_Cloud_Logging_V2_UpdateSinkRequest" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest" class="text-break">Class UpdateSinkRequest
+  <h1 id="Google_Cloud_Logging_V2_UpdateExclusionRequest" data-uid="Google.Cloud.Logging.V2.UpdateExclusionRequest" class="text-break">Class UpdateExclusionRequest
   </h1>
-  <div class="markdown level0 summary"><p>The parameters to <code>UpdateSink</code>.</p>
+  <div class="markdown level0 summary"><p>The parameters to <code>UpdateExclusion</code>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UpdateSinkRequest</span></div>
+    <div class="level1"><span class="xref">UpdateExclusionRequest</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.UpdateSinkRequest.html">UpdateSinkRequest</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html">UpdateExclusionRequest</a>&gt;</div>
     <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.UpdateSinkRequest.html">UpdateSinkRequest</a>&gt;</div>
-    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.UpdateSinkRequest.html">UpdateSinkRequest</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html">UpdateExclusionRequest</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html">UpdateExclusionRequest</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,21 +105,21 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Logging.V2.html">Google.Cloud.Logging.V2</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.Logging.V2.dll</h6>
-  <h5 id="Google_Cloud_Logging_V2_UpdateSinkRequest_syntax">Syntax</h5>
+  <h5 id="Google_Cloud_Logging_V2_UpdateExclusionRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class UpdateSinkRequest : IMessage&lt;UpdateSinkRequest&gt;, IMessage, IEquatable&lt;UpdateSinkRequest&gt;, IDeepCloneable&lt;UpdateSinkRequest&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UpdateExclusionRequest : IMessage&lt;UpdateExclusionRequest&gt;, IMessage, IEquatable&lt;UpdateExclusionRequest&gt;, IDeepCloneable&lt;UpdateExclusionRequest&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_Logging_V2_UpdateSinkRequest_Sink_" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest.Sink*"></a>
-  <h4 id="Google_Cloud_Logging_V2_UpdateSinkRequest_Sink" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest.Sink">Sink</h4>
-  <div class="markdown level1 summary"><p>Required. The updated sink, whose name is the same identifier that appears
-as part of <code>sink_name</code>.</p>
+  <a id="Google_Cloud_Logging_V2_UpdateExclusionRequest_Exclusion_" data-uid="Google.Cloud.Logging.V2.UpdateExclusionRequest.Exclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_UpdateExclusionRequest_Exclusion" data-uid="Google.Cloud.Logging.V2.UpdateExclusionRequest.Exclusion">Exclusion</h4>
+  <div class="markdown level1 summary"><p>Required. New values for the existing exclusion. Only the fields specified
+in <code>update_mask</code> are relevant.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LogSink Sink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public LogExclusion Exclusion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,25 +131,48 @@ as part of <code>sink_name</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a></td>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Logging_V2_UpdateSinkRequest_SinkName_" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest.SinkName*"></a>
-  <h4 id="Google_Cloud_Logging_V2_UpdateSinkRequest_SinkName" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest.SinkName">SinkName</h4>
-  <div class="markdown level1 summary"><p>Required. The full resource name of the sink to update, including the
-parent resource and the sink identifier:</p>
-<p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;
-&quot;billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]&quot;
-&quot;folders/[FOLDER_ID]/sinks/[SINK_ID]&quot;</p>
-<p>Example: <code>&amp;quot;projects/my-project-id/sinks/my-sink-id&amp;quot;</code>.</p>
+  <a id="Google_Cloud_Logging_V2_UpdateExclusionRequest_ExclusionNameOneof_" data-uid="Google.Cloud.Logging.V2.UpdateExclusionRequest.ExclusionNameOneof*"></a>
+  <h4 id="Google_Cloud_Logging_V2_UpdateExclusionRequest_ExclusionNameOneof" data-uid="Google.Cloud.Logging.V2.UpdateExclusionRequest.ExclusionNameOneof">ExclusionNameOneof</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html#Google_Cloud_Logging_V2_UpdateExclusionRequest_ExclusionNameOneof">ExclusionNameOneof</a>-typed view over the <a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html#Google_Cloud_Logging_V2_UpdateExclusionRequest_Name">Name</a> resource name property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SinkName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ExclusionNameOneof ExclusionNameOneof { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_UpdateExclusionRequest_Name_" data-uid="Google.Cloud.Logging.V2.UpdateExclusionRequest.Name*"></a>
+  <h4 id="Google_Cloud_Logging_V2_UpdateExclusionRequest_Name" data-uid="Google.Cloud.Logging.V2.UpdateExclusionRequest.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Required. The resource name of the exclusion to update:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,79 +189,14 @@ parent resource and the sink identifier:</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Logging_V2_UpdateSinkRequest_SinkNameAsSinkNameOneof_" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest.SinkNameAsSinkNameOneof*"></a>
-  <h4 id="Google_Cloud_Logging_V2_UpdateSinkRequest_SinkNameAsSinkNameOneof" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest.SinkNameAsSinkNameOneof">SinkNameAsSinkNameOneof</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html">SinkNameOneof</a>-typed view over the <a class="xref" href="Google.Cloud.Logging.V2.UpdateSinkRequest.html#Google_Cloud_Logging_V2_UpdateSinkRequest_SinkName">SinkName</a> resource name property.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SinkNameOneof SinkNameAsSinkNameOneof { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html">SinkNameOneof</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_Logging_V2_UpdateSinkRequest_UniqueWriterIdentity_" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest.UniqueWriterIdentity*"></a>
-  <h4 id="Google_Cloud_Logging_V2_UpdateSinkRequest_UniqueWriterIdentity" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest.UniqueWriterIdentity">UniqueWriterIdentity</h4>
-  <div class="markdown level1 summary"><p>Optional. See
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>
-for a description of this field.  When updating a sink, the effect of this
-field on the value of <code>writer_identity</code> in the updated sink depends on both
-the old and new values of this field:</p>
-<ul>
-<li>If the old and new values of this field are both false or both true,
-then there is no change to the sink&apos;s <code>writer_identity</code>.</li>
-<li>If the old value is false and the new value is true, then
-<code>writer_identity</code> is changed to a unique service account.</li>
-<li>It is an error if the old value is true and the new value is
-set to false or defaulted to false.</li>
-</ul>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool UniqueWriterIdentity { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_Logging_V2_UpdateSinkRequest_UpdateMask_" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest.UpdateMask*"></a>
-  <h4 id="Google_Cloud_Logging_V2_UpdateSinkRequest_UpdateMask" data-uid="Google.Cloud.Logging.V2.UpdateSinkRequest.UpdateMask">UpdateMask</h4>
-  <div class="markdown level1 summary"><p>Optional. Field mask that specifies the fields in <code>sink</code> that need
-an update. A sink field will be overwritten if, and only if, it is
-in the update mask.  <code>name</code> and output only fields cannot be updated.</p>
-<p>An empty updateMask is temporarily treated as using the following mask
-for backwards compatibility purposes:
-destination,filter,includeChildren
-At some point in the future, behavior will be removed and specifying an
-empty updateMask will be an error.</p>
-<p>For a detailed <code>FieldMask</code> definition, see
-<a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask">https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask</a></p>
-<p>Example: <code>updateMask=filter</code>.</p>
+  <a id="Google_Cloud_Logging_V2_UpdateExclusionRequest_UpdateMask_" data-uid="Google.Cloud.Logging.V2.UpdateExclusionRequest.UpdateMask*"></a>
+  <h4 id="Google_Cloud_Logging_V2_UpdateExclusionRequest_UpdateMask" data-uid="Google.Cloud.Logging.V2.UpdateExclusionRequest.UpdateMask">UpdateMask</h4>
+  <div class="markdown level1 summary"><p>Required. A nonempty list of fields to change in the existing exclusion.
+New values for the fields are taken from the corresponding fields in the
+[LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+<code>update_mask</code> are not changed and are ignored in the request.</p>
+<p>For example, to change the filter and description of an exclusion,
+specify an <code>update_mask</code> of <code>&amp;quot;filter,description&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

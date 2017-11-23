@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SetBucketIamPolicyOptions
-   | Google.Cloud.Storage.V1 </title>
+    <title>Enum ExclusionNameOneof.OneofType
+   | Google.Cloud.Logging.Log4Net </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SetBucketIamPolicyOptions
-   | Google.Cloud.Storage.V1 ">
+    <meta name="title" content="Enum ExclusionNameOneof.OneofType
+   | Google.Cloud.Logging.Log4Net ">
     <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -68,67 +68,57 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Google.Cloud.Storage.V1.SetBucketIamPolicyOptions">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType">
   
   
-  <h1 id="Google_Cloud_Storage_V1_SetBucketIamPolicyOptions" data-uid="Google.Cloud.Storage.V1.SetBucketIamPolicyOptions" class="text-break">Class SetBucketIamPolicyOptions
+  <h1 id="Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType" data-uid="Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType" class="text-break">Enum ExclusionNameOneof.OneofType
   </h1>
-  <div class="markdown level0 summary"><p>Options for <code>SetBucketIamPolicy</code> operations.</p>
+  <div class="markdown level0 summary"><p>The possible contents of <a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SetBucketIamPolicyOptions</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Storage.V1.html">Google.Cloud.Storage.V1</a></h6>
-  <h6><strong>Assembly</strong>: Google.Cloud.Storage.V1.dll</h6>
-  <h5 id="Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Logging.V2.html">Google.Cloud.Logging.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Logging.V2.dll</h6>
+  <h5 id="Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class SetBucketIamPolicyOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public enum OneofType</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
-  <a id="Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_UserProject_" data-uid="Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.UserProject*"></a>
-  <h4 id="Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_UserProject" data-uid="Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.UserProject">UserProject</h4>
-  <div class="markdown level1 summary"><p>If set, this is the ID of the project which will be billed for the request.
-The caller must have suitable permissions for the project being billed.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string UserProject { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
-    </thead>
+    <thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td id="Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_BillingExclusionName">BillingExclusionName</td>
+        <td><p>A resource of type &apos;billing_exclusion&apos;.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_ExclusionName">ExclusionName</td>
+        <td><p>A resource of type &apos;exclusion&apos;.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_FolderExclusionName">FolderExclusionName</td>
+        <td><p>A resource of type &apos;folder_exclusion&apos;.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_OrganizationExclusionName">OrganizationExclusionName</td>
+        <td><p>A resource of type &apos;organization_exclusion&apos;.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Logging_V2_ExclusionNameOneof_OneofType_Unknown">Unknown</td>
+        <td><p>A resource of an unknown type.</p>
+</td>
       </tr>
     </tbody>
-  </table>
+  </thead></thead></table>
 </article>
           </div>
           

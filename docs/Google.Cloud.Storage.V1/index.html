@@ -80,6 +80,15 @@ Authentication</a> guide for more details.</p>
 <h1 id="getting-started">Getting started</h1>
 <p>Common operations are exposed via the
 <a href="api/Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a> class.</p>
+<h1 id="client-life-cycle-management">Client life-cycle management</h1>
+<p>In many cases you don&#39;t need to worry about disposing of
+<code>StorageClient</code> objects, and can create them reasonably freely -
+but be aware that this <em>can</em> causes issues with memory and network
+connection usage. We advise you to reuse a single client object if
+possible; if your architecture requires you to frequently create new
+client objects, please dispose of them to help with timely resource
+clean-up. See <a href="../guides/cleanup.html#rest-based-apis">the resource clean-up guide</a> for more
+details.</p>
 <h1 id="sample-code">Sample code</h1>
 <pre><code class="lang-cs">var client = StorageClient.Create();
 
@@ -202,6 +211,57 @@ client.DownloadObject(bucketName, &quot;encrypted.txt&quot;, new MemoryStream())
 var client2 = StorageClient.Create();
 client2.DownloadObject(bucketName, &quot;encrypted.txt&quot;, new MemoryStream(),
     new DownloadObjectOptions { EncryptionKey = key });
+</code></pre><h2 id="change-notification-via-google-cloud-pubsub">Change notification via Google Cloud Pub/Sub</h2>
+<p>You can configure a bucket to send a change notification to a
+<a href="https://cloud.google.com/pubsub/">Google Cloud Pub/Sub</a> topic
+when changes occur. The sample below shows how to create a Pub/Sub
+topic, set its permissions so that the change notifications can be
+published to it, and then create the notification configuration on a
+bucket. You&#39;ll need to add a dependency on the
+<code>Google.Cloud.PubSub.V1</code> NuGet package to create the topic and
+manage its permissions.</p>
+<pre><code class="lang-cs">// First create a Pub/Sub topic.
+PublisherClient publisherClient = PublisherClient.Create();
+TopicName topicName = new TopicName(projectId, topicId);
+publisherClient.CreateTopic(topicName);
+
+// Prepare the topic for Storage notifications. The Storage Service Account must have Publish permission
+// for the topic. The code below adds the service account into the &quot;roles/pubsub.publisher&quot; role for the topic.
+// This code can be simplified for a newly-created topic, but gives an example of how to add the permission
+// to a topic which may already have some permissions set.
+
+// Determine the Storage Service Account name to use in IAM operations.
+StorageClient storageClient = StorageClient.Create();
+string storageServiceAccount = $&quot;serviceAccount:{storageClient.GetStorageServiceAccountEmail(projectId)}&quot;;
+
+// Fetch the IAM policy for the topic.
+Iam.V1.Policy policy = publisherClient.GetIamPolicy(topicName.ToString()) ?? new Iam.V1.Policy();
+
+// Find a binding for the publisher role, if one already exists. Otherwise, create one (locally).
+string role = &quot;roles/pubsub.publisher&quot;;
+Binding publisherBinding = policy.Bindings.FirstOrDefault(binding =&gt; binding.Role == role);
+if (publisherBinding == null)
+{
+    publisherBinding = new Binding { Role = role };
+    policy.Bindings.Add(publisherBinding);
+}
+// Ensure the Storage Service Account is in the publisher role, setting the IAM policy for the topic
+// on the server if necessary.
+if (!publisherBinding.Members.Contains(storageServiceAccount))
+{
+    publisherBinding.Members.Add(storageServiceAccount);
+    publisherClient.SetIamPolicy(topicName.ToString(), policy);
+}
+
+// Now that the topic is ready, we can create a notification configuration for Storage
+Notification notification = new Notification
+{
+    Topic = $&quot;//pubsub.googleapis.com/{topicName}&quot;,
+    PayloadFormat = &quot;JSON_API_V1&quot;
+};
+notification = storageClient.CreateNotification(bucket, notification);
+Console.WriteLine($&quot;Created notification ID: {notification.Id}&quot;);
+
 </code></pre></article>
           </div>
           

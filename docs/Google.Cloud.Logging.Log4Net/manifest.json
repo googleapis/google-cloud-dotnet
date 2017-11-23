@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/Google.Cloud.Logging.Log4Net",
+  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.Logging.Log4Net",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "i8tCfkY55mNAL2woWJcFNw=="
+          "hash": "djjTJRcMeiNZv2UhUNrvVA=="
         }
       },
       "is_incremental": false,
@@ -2072,6 +2072,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.BillingExclusionName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.BillingExclusionName.html",
+          "hash": "VPMMX7+CVOBKNiuoC7CnxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Logging.V2.BillingLogName.yml",
       "output": {
         ".html": {
@@ -2112,7 +2124,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.html",
-          "hash": "uKO9l932RAxSDJxakibqXg=="
+          "hash": "DBYDWBz0+gqlSmblTxWbTQ=="
         }
       },
       "is_incremental": false,
@@ -2124,7 +2136,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html",
-          "hash": "y6cPuy9Y099C3kvj2w3MuQ=="
+          "hash": "lnDcw/3TitnxnHwTplsioA=="
         }
       },
       "is_incremental": false,
@@ -2148,7 +2160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.ConfigServiceV2Client.html",
-          "hash": "KPHN8M4OgYo4noHkKY43zg=="
+          "hash": "LhPZ+hCpU1hzXpcG8TjZ4Q=="
         }
       },
       "is_incremental": false,
@@ -2160,7 +2172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.html",
-          "hash": "7fm2cdhMMGYuMJ+EdbeHpA=="
+          "hash": "67rB03S2WLlqiu7ZRtRVQQ=="
         }
       },
       "is_incremental": false,
@@ -2172,7 +2184,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.ConfigServiceV2Settings.html",
-          "hash": "LlCnzuYDEkThJbMn5t7Jdg=="
+          "hash": "beaVNmMqXcjmFjVxvBHyfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.CreateExclusionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.CreateExclusionRequest.html",
+          "hash": "5vewq8Zi/2YiFshM0UGdPA=="
         }
       },
       "is_incremental": false,
@@ -2197,6 +2221,18 @@
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.CreateSinkRequest.html",
           "hash": "5qLYYBHjGEm/+nGIsf92ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.DeleteExclusionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.DeleteExclusionRequest.html",
+          "hash": "ejuZYtwfJQs38Tzhd1XraQ=="
         }
       },
       "is_incremental": false,
@@ -2240,6 +2276,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.ExclusionName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.ExclusionName.html",
+          "hash": "evKvZXqCmLjTu86C2s3ReA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.ExclusionNameOneof.OneofType.html",
+          "hash": "SCj9RocrGjrq5CiFFmKTyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.ExclusionNameOneof.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.ExclusionNameOneof.html",
+          "hash": "dFLSWmJUNgczNz74smfuPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.FolderExclusionName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.FolderExclusionName.html",
+          "hash": "na6BgGizuiitezveEov/Cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Logging.V2.FolderLogName.yml",
       "output": {
         ".html": {
@@ -2276,6 +2360,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.GetExclusionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.GetExclusionRequest.html",
+          "hash": "AadbG9rMLg5VUs+T0eADnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Logging.V2.GetLogMetricRequest.yml",
       "output": {
         ".html": {
@@ -2300,6 +2396,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.ListExclusionsRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.ListExclusionsRequest.html",
+          "hash": "ODVnGsJneZreWktuP8Gg8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.ListExclusionsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.ListExclusionsResponse.html",
+          "hash": "gMyuEW/Sfkg/yjQTeZL+ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Logging.V2.ListLogEntriesRequest.yml",
       "output": {
         ".html": {
@@ -2316,7 +2436,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.ListLogEntriesResponse.html",
-          "hash": "6IC9T2LLEGo4JL4oZXelEQ=="
+          "hash": "HCN57ixrhLkPJfmU0d+cHQ=="
         }
       },
       "is_incremental": false,
@@ -2436,7 +2556,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.LogEntry.html",
-          "hash": "BdbIvpxcUkvkHK8fwDDAWQ=="
+          "hash": "8pIFIpZ+12yyrtv+MOBDQg=="
         }
       },
       "is_incremental": false,
@@ -2461,6 +2581,18 @@
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.LogEntrySourceLocation.html",
           "hash": "RoILSWIc/tz++ZYUiverTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.LogExclusion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.LogExclusion.html",
+          "hash": "5Za8n1azwJrCjzbj3yZLMg=="
         }
       },
       "is_incremental": false,
@@ -2496,7 +2628,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.LogMetric.html",
-          "hash": "uSqdbfRXBNnaAlewxDfRxA=="
+          "hash": "ymFrqH7jM3puijmTT3HsiA=="
         }
       },
       "is_incremental": false,
@@ -2568,7 +2700,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.LogSink.html",
-          "hash": "ETk/eFtFzYFLjT4cW2ClKg=="
+          "hash": "9ofxusBlJLDsIjYp21UPDg=="
         }
       },
       "is_incremental": false,
@@ -2580,7 +2712,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.html",
-          "hash": "kqLl1/iqfgceuvxQp6RLFQ=="
+          "hash": "bOJ2GY97HHe78TinmJGyaQ=="
         }
       },
       "is_incremental": false,
@@ -2592,7 +2724,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.html",
-          "hash": "oUw/1XN270nnfmTaoniMDg=="
+          "hash": "v7j0nc2V0cgXPXiAcf6cyg=="
         }
       },
       "is_incremental": false,
@@ -2616,7 +2748,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.LoggingServiceV2Client.html",
-          "hash": "wYyPOQjZRlYeGdQCBxx0Sg=="
+          "hash": "aNqTlH32qzhI5596ecJ80g=="
         }
       },
       "is_incremental": false,
@@ -2628,7 +2760,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.html",
-          "hash": "Z53rCnX+4gfronj8gRv2Wg=="
+          "hash": "0SBn8lkzBhsqR+e8ga/Bsw=="
         }
       },
       "is_incremental": false,
@@ -2640,7 +2772,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.LoggingServiceV2Settings.html",
-          "hash": "+9n0ZldqQ+Qyx7dE3SFgww=="
+          "hash": "euUpRqXpruBpqQ2IYVK36w=="
         }
       },
       "is_incremental": false,
@@ -2748,7 +2880,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.MetricsServiceV2Settings.html",
-          "hash": "vSpQGwM2get1ECFPtvIdow=="
+          "hash": "7qEsDkcWfarZieRDVtixlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.OrganizationExclusionName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.OrganizationExclusionName.html",
+          "hash": "3/10mGIHIVrvzMQCjFdolQ=="
         }
       },
       "is_incremental": false,
@@ -2864,6 +3008,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Logging.V2.UpdateExclusionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Logging.V2.UpdateExclusionRequest.html",
+          "hash": "9UESohy1KO8phlLQd0K8LA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Logging.V2.UpdateLogMetricRequest.yml",
       "output": {
         ".html": {
@@ -2880,7 +3036,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.UpdateSinkRequest.html",
-          "hash": "B/XDCeEJdwwZ8LeR7bw8gQ=="
+          "hash": "1xfgyPjx6NhfdNZp98gRwA=="
         }
       },
       "is_incremental": false,
@@ -2904,7 +3060,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.WriteLogEntriesRequest.html",
-          "hash": "Ip+ZY88MoSaC6ycIrxGNPw=="
+          "hash": "7VG69JJbJvHhWSin1dKO4A=="
         }
       },
       "is_incremental": false,
@@ -2928,7 +3084,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Logging.V2.html",
-          "hash": "a6kIN/BLgWLQs4ZmdhXZeg=="
+          "hash": "JmJhfBcn7UaSOIGx56lz6w=="
         }
       },
       "is_incremental": false,
@@ -5328,7 +5484,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "4DH9ZP48FKLSDNRYMP7nHg=="
+          "hash": "qcklep5YQEim2IwGWt79CQ=="
         }
       },
       "is_incremental": false,
@@ -5363,22 +5519,22 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "RestApiDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

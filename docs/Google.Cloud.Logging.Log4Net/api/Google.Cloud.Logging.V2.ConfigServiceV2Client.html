@@ -334,11 +334,301 @@ necessary.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusion_Google_Cloud_Logging_V2_CreateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.CreateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)">CreateExclusion(CreateExclusionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exclusion in a specified parent resource.
+Only log entries belonging to that resource can be excluded.
+You can have up to 10 exclusions in a resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion CreateExclusion(CreateExclusionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html">CreateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusion_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogExclusion_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusion(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Api.Gax.Grpc.CallSettings)">CreateExclusion(ParentNameOneof, LogExclusion, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exclusion in a specified parent resource.
+Only log entries belonging to that resource can be excluded.
+You can have up to 10 exclusions in a resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion CreateExclusion(ParentNameOneof parent, LogExclusion exclusion, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html">ParentNameOneof</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Required. The parent resource in which to create the exclusion:</p>
+<p>&quot;projects/[PROJECT_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
+<p>Examples: <code>&amp;quot;projects/my-logging-project&amp;quot;</code>, <code>&amp;quot;organizations/123456789&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><span class="parametername">exclusion</span></td>
+        <td><p>Required. The new exclusion, whose <code>name</code> parameter is an exclusion name
+that is not already used in the parent resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusionAsync_Google_Cloud_Logging_V2_CreateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.CreateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)">CreateExclusionAsync(CreateExclusionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exclusion in a specified parent resource.
+Only log entries belonging to that resource can be excluded.
+You can have up to 10 exclusions in a resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; CreateExclusionAsync(CreateExclusionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.CreateExclusionRequest.html">CreateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusionAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogExclusion_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Api.Gax.Grpc.CallSettings)">CreateExclusionAsync(ParentNameOneof, LogExclusion, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exclusion in a specified parent resource.
+Only log entries belonging to that resource can be excluded.
+You can have up to 10 exclusions in a resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; CreateExclusionAsync(ParentNameOneof parent, LogExclusion exclusion, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html">ParentNameOneof</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Required. The parent resource in which to create the exclusion:</p>
+<p>&quot;projects/[PROJECT_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
+<p>Examples: <code>&amp;quot;projects/my-logging-project&amp;quot;</code>, <code>&amp;quot;organizations/123456789&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><span class="parametername">exclusion</span></td>
+        <td><p>Required. The new exclusion, whose <code>name</code> parameter is an exclusion name
+that is not already used in the parent resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateExclusionAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogExclusion_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateExclusionAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogExclusion,System.Threading.CancellationToken)">CreateExclusionAsync(ParentNameOneof, LogExclusion, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exclusion in a specified parent resource.
+Only log entries belonging to that resource can be excluded.
+You can have up to 10 exclusions in a resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; CreateExclusionAsync(ParentNameOneof parent, LogExclusion exclusion, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html">ParentNameOneof</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Required. The parent resource in which to create the exclusion:</p>
+<p>&quot;projects/[PROJECT_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
+<p>Examples: <code>&amp;quot;projects/my-logging-project&amp;quot;</code>, <code>&amp;quot;organizations/123456789&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><span class="parametername">exclusion</span></td>
+        <td><p>Required. The new exclusion, whose <code>name</code> parameter is an exclusion name
+that is not already used in the parent resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">CreateSink(CreateSinkRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
-export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&apos;s start and end times or the sink&apos;s
+export of newly-ingested log entries begins immediately, unless the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -390,8 +680,7 @@ export log entries only from the resource owning the sink.</p>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">CreateSink(ParentNameOneof, LogSink, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
-export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&apos;s start and end times or the sink&apos;s
+export of newly-ingested log entries begins immediately, unless the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -455,8 +744,7 @@ is not already in use.</p>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_CreateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync(Google.Cloud.Logging.V2.CreateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">CreateSinkAsync(CreateSinkRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
-export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&apos;s start and end times or the sink&apos;s
+export of newly-ingested log entries begins immediately, unless the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -508,8 +796,7 @@ export log entries only from the resource owning the sink.</p>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">CreateSinkAsync(ParentNameOneof, LogSink, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
-export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&apos;s start and end times or the sink&apos;s
+export of newly-ingested log entries begins immediately, unless the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -573,8 +860,7 @@ is not already in use.</p>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogSink_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogSink,System.Threading.CancellationToken)">CreateSinkAsync(ParentNameOneof, LogSink, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
-export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&apos;s start and end times or the sink&apos;s
+export of newly-ingested log entries begins immediately, unless the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -630,6 +916,234 @@ is not already in use.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusion_Google_Cloud_Logging_V2_DeleteExclusionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.DeleteExclusionRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteExclusion(DeleteExclusionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DeleteExclusion(DeleteExclusionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.DeleteExclusionRequest.html">DeleteExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusion_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)">DeleteExclusion(ExclusionNameOneof, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DeleteExclusion(ExclusionNameOneof name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The resource name of an existing exclusion to delete:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusionAsync_Google_Cloud_Logging_V2_DeleteExclusionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.DeleteExclusionRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteExclusionAsync(DeleteExclusionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteExclusionAsync(DeleteExclusionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.DeleteExclusionRequest.html">DeleteExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)">DeleteExclusionAsync(ExclusionNameOneof, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteExclusionAsync(ExclusionNameOneof name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The resource name of an existing exclusion to delete:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,System.Threading.CancellationToken)">DeleteExclusionAsync(ExclusionNameOneof, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Deletes an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteExclusionAsync(ExclusionNameOneof name, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The resource name of an existing exclusion to delete:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td><p>A Task containing the RPC response.</p>
 </td>
       </tr>
@@ -866,6 +1380,266 @@ parent resource and the sink identifier:</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusion_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)">GetExclusion(ExclusionNameOneof, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the description of an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion GetExclusion(ExclusionNameOneof name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The resource name of an existing exclusion:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusion_Google_Cloud_Logging_V2_GetExclusionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusion(Google.Cloud.Logging.V2.GetExclusionRequest,Google.Api.Gax.Grpc.CallSettings)">GetExclusion(GetExclusionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the description of an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion GetExclusion(GetExclusionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html">GetExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Api.Gax.Grpc.CallSettings)">GetExclusionAsync(ExclusionNameOneof, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the description of an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; GetExclusionAsync(ExclusionNameOneof name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The resource name of an existing exclusion:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,System.Threading.CancellationToken)">GetExclusionAsync(ExclusionNameOneof, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the description of an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; GetExclusionAsync(ExclusionNameOneof name, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The resource name of an existing exclusion:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetExclusionAsync_Google_Cloud_Logging_V2_GetExclusionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetExclusionAsync(Google.Cloud.Logging.V2.GetExclusionRequest,Google.Api.Gax.Grpc.CallSettings)">GetExclusionAsync(GetExclusionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the description of an exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; GetExclusionAsync(GetExclusionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html">GetExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
         <td><p>A Task containing the RPC response.</p>
 </td>
       </tr>
@@ -1127,6 +1901,238 @@ parent resource and the sink identifier:</p>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
         <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusions_Google_Cloud_Logging_V2_ListExclusionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ListExclusionsRequest,Google.Api.Gax.Grpc.CallSettings)">ListExclusions(ListExclusionsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all the exclusions in a parent resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListExclusionsResponse, LogExclusion&gt; ListExclusions(ListExclusionsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsRequest.html">ListExclusionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a>, <a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusions_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusions(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListExclusions(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all the exclusions in a parent resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListExclusionsResponse, LogExclusion&gt; ListExclusions(ParentNameOneof parent, string pageToken = null, int ? pageSize = default (int ? ), CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html">ParentNameOneof</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Required. The parent resource whose exclusions are to be listed.</p>
+<p>&quot;projects/[PROJECT_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pageToken</span></td>
+        <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">pageSize</span></td>
+        <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a>, <a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusionsAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusionsAsync_Google_Cloud_Logging_V2_ListExclusionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ListExclusionsRequest,Google.Api.Gax.Grpc.CallSettings)">ListExclusionsAsync(ListExclusionsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all the exclusions in a parent resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListExclusionsResponse, LogExclusion&gt; ListExclusionsAsync(ListExclusionsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsRequest.html">ListExclusionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a>, <a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusionsAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListExclusionsAsync_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListExclusionsAsync(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListExclusionsAsync(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all the exclusions in a parent resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListExclusionsResponse, LogExclusion&gt; ListExclusionsAsync(ParentNameOneof parent, string pageToken = null, int ? pageSize = default (int ? ), CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html">ParentNameOneof</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Required. The parent resource whose exclusions are to be listed.</p>
+<p>&quot;projects/[PROJECT_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pageToken</span></td>
+        <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">pageSize</span></td>
+        <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListExclusionsResponse.html">ListExclusionsResponse</a>, <a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a> resources.</p>
 </td>
       </tr>
     </tbody>
@@ -1395,15 +2401,325 @@ created are not affected.</p>
 and <a class="xref" href="Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Logging_V2_ConfigServiceV2Settings_">CreateAsync(ServiceEndpoint, ConfigServiceV2Settings)</a> will create new channels, which could
 in turn be shut down by another call to this method.</p>
 </div>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusion_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Cloud_Logging_V2_LogExclusion_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Protobuf.WellKnownTypes.FieldMask,Google.Api.Gax.Grpc.CallSettings)">UpdateExclusion(ExclusionNameOneof, LogExclusion, FieldMask, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Changes one or more properties of an existing exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion UpdateExclusion(ExclusionNameOneof name, LogExclusion exclusion, FieldMask updateMask, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The resource name of the exclusion to update:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><span class="parametername">exclusion</span></td>
+        <td><p>Required. New values for the existing exclusion. Only the fields specified
+in <code>update_mask</code> are relevant.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.FieldMask.html">FieldMask</a></td>
+        <td><span class="parametername">updateMask</span></td>
+        <td><p>Required. A nonempty list of fields to change in the existing exclusion.
+New values for the fields are taken from the corresponding fields in the
+[LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+<code>update_mask</code> are not changed and are ignored in the request.</p>
+<p>For example, to change the filter and description of an exclusion,
+specify an <code>update_mask</code> of <code>&amp;quot;filter,description&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusion_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusion_Google_Cloud_Logging_V2_UpdateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusion(Google.Cloud.Logging.V2.UpdateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateExclusion(UpdateExclusionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Changes one or more properties of an existing exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LogExclusion UpdateExclusion(UpdateExclusionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html">UpdateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Cloud_Logging_V2_LogExclusion_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Protobuf.WellKnownTypes.FieldMask,Google.Api.Gax.Grpc.CallSettings)">UpdateExclusionAsync(ExclusionNameOneof, LogExclusion, FieldMask, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Changes one or more properties of an existing exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; UpdateExclusionAsync(ExclusionNameOneof name, LogExclusion exclusion, FieldMask updateMask, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The resource name of the exclusion to update:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><span class="parametername">exclusion</span></td>
+        <td><p>Required. New values for the existing exclusion. Only the fields specified
+in <code>update_mask</code> are relevant.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.FieldMask.html">FieldMask</a></td>
+        <td><span class="parametername">updateMask</span></td>
+        <td><p>Required. A nonempty list of fields to change in the existing exclusion.
+New values for the fields are taken from the corresponding fields in the
+[LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+<code>update_mask</code> are not changed and are ignored in the request.</p>
+<p>For example, to change the filter and description of an exclusion,
+specify an <code>update_mask</code> of <code>&amp;quot;filter,description&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusionAsync_Google_Cloud_Logging_V2_ExclusionNameOneof_Google_Cloud_Logging_V2_LogExclusion_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.ExclusionNameOneof,Google.Cloud.Logging.V2.LogExclusion,Google.Protobuf.WellKnownTypes.FieldMask,System.Threading.CancellationToken)">UpdateExclusionAsync(ExclusionNameOneof, LogExclusion, FieldMask, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Changes one or more properties of an existing exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; UpdateExclusionAsync(ExclusionNameOneof name, LogExclusion exclusion, FieldMask updateMask, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The resource name of the exclusion to update:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a></td>
+        <td><span class="parametername">exclusion</span></td>
+        <td><p>Required. New values for the existing exclusion. Only the fields specified
+in <code>update_mask</code> are relevant.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.FieldMask.html">FieldMask</a></td>
+        <td><span class="parametername">updateMask</span></td>
+        <td><p>Required. A nonempty list of fields to change in the existing exclusion.
+New values for the fields are taken from the corresponding fields in the
+[LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
+<code>update_mask</code> are not changed and are ignored in the request.</p>
+<p>For example, to change the filter and description of an exclusion,
+specify an <code>update_mask</code> of <code>&amp;quot;filter,description&amp;quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusionAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync*"></a>
+  <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateExclusionAsync_Google_Cloud_Logging_V2_UpdateExclusionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateExclusionAsync(Google.Cloud.Logging.V2.UpdateExclusionRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateExclusionAsync(UpdateExclusionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Changes one or more properties of an existing exclusion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LogExclusion&gt; UpdateExclusionAsync(UpdateExclusionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.UpdateExclusionRequest.html">UpdateExclusionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogExclusion.html">LogExclusion</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_SinkNameOneof_Google_Cloud_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink(Google.Cloud.Logging.V2.SinkNameOneof,Google.Cloud.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">UpdateSink(SinkNameOneof, LogSink, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
-identical to
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
-If the named sink does exist, then this method replaces the following
-fields in the existing sink with values from the new sink: <code>destination</code>,
-<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
-The updated filter might also have a new <code>writer_identity</code>; see the
+  <div class="markdown level1 summary"><p>Updates a sink.  This method replaces the following fields in the existing
+sink with values from the new sink: <code>destination</code>, and <code>filter</code>.
+The updated sink might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1437,8 +2753,7 @@ parent resource and the sink identifier:</p>
         <td><a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a></td>
         <td><span class="parametername">sink</span></td>
         <td><p>Required. The updated sink, whose name is the same identifier that appears
-as part of <code>sink_name</code>.  If <code>sink_name</code> does not exist, then
-this method creates a new sink.</p>
+as part of <code>sink_name</code>.</p>
 </td>
       </tr>
       <tr>
@@ -1467,13 +2782,9 @@ this method creates a new sink.</p>
   </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateSink(UpdateSinkRequest, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
-identical to
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
-If the named sink does exist, then this method replaces the following
-fields in the existing sink with values from the new sink: <code>destination</code>,
-<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
-The updated filter might also have a new <code>writer_identity</code>; see the
+  <div class="markdown level1 summary"><p>Updates a sink.  This method replaces the following fields in the existing
+sink with values from the new sink: <code>destination</code>, and <code>filter</code>.
+The updated sink might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1523,13 +2834,9 @@ The updated filter might also have a new <code>writer_identity</code>; see the
   </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_Google_Cloud_Logging_V2_SinkNameOneof_Google_Cloud_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync(Google.Cloud.Logging.V2.SinkNameOneof,Google.Cloud.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">UpdateSinkAsync(SinkNameOneof, LogSink, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
-identical to
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
-If the named sink does exist, then this method replaces the following
-fields in the existing sink with values from the new sink: <code>destination</code>,
-<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
-The updated filter might also have a new <code>writer_identity</code>; see the
+  <div class="markdown level1 summary"><p>Updates a sink.  This method replaces the following fields in the existing
+sink with values from the new sink: <code>destination</code>, and <code>filter</code>.
+The updated sink might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1563,8 +2870,7 @@ parent resource and the sink identifier:</p>
         <td><a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a></td>
         <td><span class="parametername">sink</span></td>
         <td><p>Required. The updated sink, whose name is the same identifier that appears
-as part of <code>sink_name</code>.  If <code>sink_name</code> does not exist, then
-this method creates a new sink.</p>
+as part of <code>sink_name</code>.</p>
 </td>
       </tr>
       <tr>
@@ -1593,13 +2899,9 @@ this method creates a new sink.</p>
   </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_Google_Cloud_Logging_V2_SinkNameOneof_Google_Cloud_Logging_V2_LogSink_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync(Google.Cloud.Logging.V2.SinkNameOneof,Google.Cloud.Logging.V2.LogSink,System.Threading.CancellationToken)">UpdateSinkAsync(SinkNameOneof, LogSink, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
-identical to
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
-If the named sink does exist, then this method replaces the following
-fields in the existing sink with values from the new sink: <code>destination</code>,
-<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
-The updated filter might also have a new <code>writer_identity</code>; see the
+  <div class="markdown level1 summary"><p>Updates a sink.  This method replaces the following fields in the existing
+sink with values from the new sink: <code>destination</code>, and <code>filter</code>.
+The updated sink might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1633,8 +2935,7 @@ parent resource and the sink identifier:</p>
         <td><a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a></td>
         <td><span class="parametername">sink</span></td>
         <td><p>Required. The updated sink, whose name is the same identifier that appears
-as part of <code>sink_name</code>.  If <code>sink_name</code> does not exist, then
-this method creates a new sink.</p>
+as part of <code>sink_name</code>.</p>
 </td>
       </tr>
       <tr>
@@ -1663,13 +2964,9 @@ this method creates a new sink.</p>
   </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_Google_Cloud_Logging_V2_UpdateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync(Google.Cloud.Logging.V2.UpdateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateSinkAsync(UpdateSinkRequest, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
-identical to
-<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
-If the named sink does exist, then this method replaces the following
-fields in the existing sink with values from the new sink: <code>destination</code>,
-<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
-The updated filter might also have a new <code>writer_identity</code>; see the
+  <div class="markdown level1 summary"><p>Updates a sink.  This method replaces the following fields in the existing
+sink with values from the new sink: <code>destination</code>, and <code>filter</code>.
+The updated sink might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

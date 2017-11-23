@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SetBucketIamPolicyOptions
-   | Google.Cloud.Storage.V1 </title>
+    <title>Class GetExclusionRequest
+   | Google.Cloud.Logging.Log4Net </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SetBucketIamPolicyOptions
-   | Google.Cloud.Storage.V1 ">
+    <meta name="title" content="Class GetExclusionRequest
+   | Google.Cloud.Logging.Log4Net ">
     <meta name="generator" content="docfx 2.24.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -68,18 +68,25 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Google.Cloud.Storage.V1.SetBucketIamPolicyOptions">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.GetExclusionRequest">
   
   
-  <h1 id="Google_Cloud_Storage_V1_SetBucketIamPolicyOptions" data-uid="Google.Cloud.Storage.V1.SetBucketIamPolicyOptions" class="text-break">Class SetBucketIamPolicyOptions
+  <h1 id="Google_Cloud_Logging_V2_GetExclusionRequest" data-uid="Google.Cloud.Logging.V2.GetExclusionRequest" class="text-break">Class GetExclusionRequest
   </h1>
-  <div class="markdown level0 summary"><p>Options for <code>SetBucketIamPolicy</code> operations.</p>
+  <div class="markdown level0 summary"><p>The parameters to <code>GetExclusion</code>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SetBucketIamPolicyOptions</span></div>
+    <div class="level1"><span class="xref">GetExclusionRequest</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html">GetExclusionRequest</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html">GetExclusionRequest</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html">GetExclusionRequest</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -96,23 +103,51 @@
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Storage.V1.html">Google.Cloud.Storage.V1</a></h6>
-  <h6><strong>Assembly</strong>: Google.Cloud.Storage.V1.dll</h6>
-  <h5 id="Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Logging.V2.html">Google.Cloud.Logging.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Logging.V2.dll</h6>
+  <h5 id="Google_Cloud_Logging_V2_GetExclusionRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class SetBucketIamPolicyOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetExclusionRequest : IMessage&lt;GetExclusionRequest&gt;, IMessage, IEquatable&lt;GetExclusionRequest&gt;, IDeepCloneable&lt;GetExclusionRequest&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_UserProject_" data-uid="Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.UserProject*"></a>
-  <h4 id="Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_UserProject" data-uid="Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.UserProject">UserProject</h4>
-  <div class="markdown level1 summary"><p>If set, this is the ID of the project which will be billed for the request.
-The caller must have suitable permissions for the project being billed.</p>
+  <a id="Google_Cloud_Logging_V2_GetExclusionRequest_ExclusionNameOneof_" data-uid="Google.Cloud.Logging.V2.GetExclusionRequest.ExclusionNameOneof*"></a>
+  <h4 id="Google_Cloud_Logging_V2_GetExclusionRequest_ExclusionNameOneof" data-uid="Google.Cloud.Logging.V2.GetExclusionRequest.ExclusionNameOneof">ExclusionNameOneof</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html#Google_Cloud_Logging_V2_GetExclusionRequest_ExclusionNameOneof">ExclusionNameOneof</a>-typed view over the <a class="xref" href="Google.Cloud.Logging.V2.GetExclusionRequest.html#Google_Cloud_Logging_V2_GetExclusionRequest_Name">Name</a> resource name property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string UserProject { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ExclusionNameOneof ExclusionNameOneof { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.ExclusionNameOneof.html">ExclusionNameOneof</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_GetExclusionRequest_Name_" data-uid="Google.Cloud.Logging.V2.GetExclusionRequest.Name*"></a>
+  <h4 id="Google_Cloud_Logging_V2_GetExclusionRequest_Name" data-uid="Google.Cloud.Logging.V2.GetExclusionRequest.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Required. The resource name of an existing exclusion:</p>
+<p>&quot;projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]&quot;
+&quot;folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]&quot;</p>
+<p>Example: <code>&amp;quot;projects/my-project-id/exclusions/my-exclusion-id&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
