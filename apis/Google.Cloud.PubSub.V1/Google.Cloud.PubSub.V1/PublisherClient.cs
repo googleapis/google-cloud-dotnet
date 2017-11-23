@@ -592,6 +592,14 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
+        /// A helper for IAM operations.
+        /// </summary>
+        public virtual IamHelper IamHelper
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
         /// <param name="name">
@@ -1746,6 +1754,7 @@ namespace Google.Cloud.PubSub.V1
                 grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
             _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
                 grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+            IamHelper = new IamHelperImpl(clientHelper.Clock, clientHelper.Scheduler, _callGetIamPolicy, _callSetIamPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1755,6 +1764,11 @@ namespace Google.Cloud.PubSub.V1
         /// The underlying gRPC Publisher client.
         /// </summary>
         public override Publisher.PublisherClient GrpcClient { get; }
+
+        /// <summary>
+        /// A helper for IAM operations.
+        /// </summary>
+        public override IamHelper IamHelper { get; }
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_Topic(ref Topic request, ref CallSettings settings);
