@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/Google.Cloud.PubSub.V1",
+  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.PubSub.V1",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -1908,7 +1908,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Iam.V1.Policy.html",
-          "hash": "RtjCpr5ctIQy47SDfKn9Bg=="
+          "hash": "3ZJ16hr4nJvckX7mIusN+A=="
         }
       },
       "is_incremental": false,
@@ -2292,7 +2292,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.PubSub.V1.PublisherSettings.html",
-          "hash": "DffOQNpC7kzgIWj30BNM2w=="
+          "hash": "Va2eNjbjUCL/JTXNnjC/lg=="
         }
       },
       "is_incremental": false,
@@ -2616,7 +2616,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.PubSub.V1.SubscriberClient.html",
-          "hash": "jTKCj4lVl2LXS6CEEj3ZXg=="
+          "hash": "pVgM9/z8wRABhUe26AleXA=="
         }
       },
       "is_incremental": false,
@@ -2640,7 +2640,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.PubSub.V1.SubscriberSettings.html",
-          "hash": "GWja+3V5q/3Gd52hDPqQ9w=="
+          "hash": "gUas7cVAS2BvLFsok4VLIQ=="
         }
       },
       "is_incremental": false,
@@ -5190,19 +5190,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "RestApiDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
@@ -5211,6 +5206,11 @@
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
