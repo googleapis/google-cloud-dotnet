@@ -59,18 +59,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             publisherClient.CreateTopic(topicName);
 
             // Make sure the Storage service account has permission to publish to the topic.
-            var policy = publisherClient.GetIamPolicy(topicName.ToString()) ?? new Iam.V1.Policy();
+            var policy = publisherClient.GetIamPolicy(topicName.ToString());
             var role = "roles/pubsub.publisher";
             string storageServiceAccount = $"serviceAccount:{storageClient.GetStorageServiceAccountEmail(_fixture.ProjectId)}";
-            var publisherBinding = policy.Bindings.FirstOrDefault(binding => binding.Role == role);
-            if (publisherBinding == null)
+            if (policy.AddRoleMember(role, storageServiceAccount))
             {
-                publisherBinding = new Binding { Role = role };
-                policy.Bindings.Add(publisherBinding);
-            }
-            if (!publisherBinding.Members.Contains(storageServiceAccount, StringComparer.OrdinalIgnoreCase))
-            {
-                publisherBinding.Members.Add(storageServiceAccount);
                 publisherClient.SetIamPolicy(topicName.ToString(), policy);
             }
 
