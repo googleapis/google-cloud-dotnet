@@ -29,6 +29,8 @@ GA:
 - [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html)
 - [Google.Cloud.VideoIntelligence.V1](Google.Cloud.VideoIntelligence.V1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
+  - Additionally, a [Google.Cloud.Vision.V1P1Beta1](Google.Cloud.Vision.V1P1Beta1/index.html)
+    library is available for access to beta API functionality.
 
 Late beta:
 
@@ -36,6 +38,7 @@ Late beta:
 
 Beta:
 
+- [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
 - Google Cloud Spanner:
