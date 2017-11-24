@@ -23,6 +23,8 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (GA)
 * [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1/) (GA)
 * [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (GA)
+  * Additionally, a [Google.Cloud.Vision.V1P1Beta1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1P1Beta1/)
+    library is available for access to beta API functionality.
 
 The following libraries are available at a [late beta](#versioning) quality level:
 
@@ -30,6 +32,7 @@ The following libraries are available at a [late beta](#versioning) quality leve
 
 The following libraries are available at a [beta](#versioning) quality level:
 
+* [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.DataTransfer.V1/) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (beta)
 * [Google Cloud Spanner](https://cloud.google.com/spanner/): four packages are available, all beta:
