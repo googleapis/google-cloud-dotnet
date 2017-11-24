@@ -41,7 +41,7 @@ for project in $projects
 do
   # Don't pack the whole solution - just the project. (Avoids packing dependent
   # projects such as Google.LongRunning.)
-  dotnet pack --no-build -o $PWD/nuget -c Release apis/$project/$project
+  dotnet pack --no-build --no-restore -o $PWD/nuget -c Release apis/$project/$project
 done
 
 # TODO: Make builddocs.sh cope with being run from any directory.
