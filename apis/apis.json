@@ -260,12 +260,11 @@
 
   {
     "id": "Google.Cloud.Iam.V1",
-    "version": "1.0.0-beta12",
+    "version": "1.0.0-beta13",
     "type": "grpc",
     "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
     "tags": [ "IAM", "Identity", "Access" ],
   },
-
 
   {
     "id": "Google.Cloud.Language.V1",
@@ -359,7 +358,7 @@
     "id": "Google.Cloud.PubSub.V1",
     "productName": "Cloud Pub/Sub",
     "productUrl": "https://cloud.google.com/pubsub/",
-    "version": "1.0.0-beta13",
+    "version": "1.0.0-beta14",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
     "dependencies": {
