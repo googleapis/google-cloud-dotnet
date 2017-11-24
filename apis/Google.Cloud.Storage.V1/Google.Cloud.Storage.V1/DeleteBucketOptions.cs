@@ -42,22 +42,19 @@ namespace Google.Cloud.Storage.V1
 
         internal void ModifyRequest(BucketsResource.DeleteRequest request)
         {
+
             if (IfMetagenerationMatch != null && IfMetagenerationNotMatch != null)
-            {
                 throw new ArgumentException($"Cannot specify {nameof(IfMetagenerationMatch)} and {nameof(IfMetagenerationNotMatch)} in the same options", "options");
-            }
+
             if (IfMetagenerationMatch != null)
-            {
                 request.IfMetagenerationMatch = IfMetagenerationMatch;
-            }
+
             if (IfMetagenerationNotMatch != null)
-            {
                 request.IfMetagenerationNotMatch = IfMetagenerationNotMatch;
-            }
+
             if (UserProject != null)
-            {
                 request.UserProject = UserProject;
-            }
+
         }
     }
 }

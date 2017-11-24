@@ -811,7 +811,7 @@ namespace Google.Cloud.PubSub.V1
         /// <returns>The task representing the created <see cref="SubscriberClient"/>.</returns>
         public static async Task<SubscriberClient> CreateAsync(ServiceEndpoint endpoint = null, SubscriberSettings settings = null)
         {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            var channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
@@ -825,7 +825,7 @@ namespace Google.Cloud.PubSub.V1
         /// <returns>The created <see cref="SubscriberClient"/>.</returns>
         public static SubscriberClient Create(ServiceEndpoint endpoint = null, SubscriberSettings settings = null)
         {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            var channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
@@ -838,7 +838,7 @@ namespace Google.Cloud.PubSub.V1
         public static SubscriberClient Create(Channel channel, SubscriberSettings settings = null)
         {
             GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Subscriber.SubscriberClient grpcClient = new Subscriber.SubscriberClient(channel);
+            var grpcClient = new Subscriber.SubscriberClient(channel);
             return new SubscriberClientImpl(grpcClient, settings);
         }
 
@@ -856,10 +856,7 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// The underlying gRPC Subscriber client.
         /// </summary>
-        public virtual Subscriber.SubscriberClient GrpcClient
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public virtual Subscriber.SubscriberClient GrpcClient => throw new NotImplementedException();
 
         /// <summary>
         /// Creates a subscription to a given topic.
@@ -1100,10 +1097,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Subscription> CreateSubscriptionAsync(
             Subscription request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Creates a subscription to a given topic.
@@ -1128,10 +1123,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Subscription CreateSubscription(
             Subscription request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Gets the configuration details of a subscription.
@@ -1210,10 +1203,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Subscription> GetSubscriptionAsync(
             GetSubscriptionRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Gets the configuration details of a subscription.
@@ -1229,10 +1220,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Subscription GetSubscription(
             GetSubscriptionRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
@@ -1253,10 +1242,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Subscription> UpdateSubscriptionAsync(
             UpdateSubscriptionRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
@@ -1277,10 +1264,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Subscription UpdateSubscription(
             UpdateSubscriptionRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -1364,10 +1349,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(
             ListSubscriptionsRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -1383,10 +1366,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(
             ListSubscriptionsRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Deletes an existing subscription. All messages retained in the subscription
@@ -1481,10 +1462,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task DeleteSubscriptionAsync(
             DeleteSubscriptionRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Deletes an existing subscription. All messages retained in the subscription
@@ -1504,10 +1483,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual void DeleteSubscription(
             DeleteSubscriptionRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Modifies the ack deadline for a specific message. This method is useful
@@ -1673,10 +1650,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual void ModifyAckDeadline(
             ModifyAckDeadlineRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
@@ -1797,10 +1772,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task AcknowledgeAsync(
             AcknowledgeRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
@@ -1822,10 +1795,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual void Acknowledge(
             AcknowledgeRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
@@ -1964,10 +1935,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<PullResponse> PullAsync(
             PullRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
@@ -1986,10 +1955,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual PullResponse Pull(
             PullRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
@@ -2016,10 +1983,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual StreamingPullStream StreamingPull(
             CallSettings callSettings = null,
-            BidirectionalStreamingSettings streamingSettings = null)
-        {
+            BidirectionalStreamingSettings streamingSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Bidirectional streaming methods for <c>StreamingPull</c>.
@@ -2155,10 +2120,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task ModifyPushConfigAsync(
             ModifyPushConfigRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
@@ -2179,10 +2142,9 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual void ModifyPushConfig(
             ModifyPushConfigRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
+        
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Lists the existing snapshots.
@@ -2266,10 +2228,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(
             ListSnapshotsRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Lists the existing snapshots.
@@ -2285,10 +2245,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(
             ListSnapshotsRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Creates a snapshot from the requested subscription.
@@ -2451,10 +2409,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Snapshot> CreateSnapshotAsync(
             CreateSnapshotRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Creates a snapshot from the requested subscription.
@@ -2479,10 +2435,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Snapshot CreateSnapshot(
             CreateSnapshotRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Updates an existing snapshot. Note that certain properties of a snapshot
@@ -2503,10 +2457,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Snapshot> UpdateSnapshotAsync(
             UpdateSnapshotRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Updates an existing snapshot. Note that certain properties of a snapshot
@@ -2527,10 +2479,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Snapshot UpdateSnapshot(
             UpdateSnapshotRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Removes an existing snapshot. All messages retained in the snapshot
@@ -2621,10 +2571,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task DeleteSnapshotAsync(
             DeleteSnapshotRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Removes an existing snapshot. All messages retained in the snapshot
@@ -2643,10 +2591,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual void DeleteSnapshot(
             DeleteSnapshotRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Seeks an existing subscription to a point in time or to a given snapshot,
@@ -2663,10 +2609,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<SeekResponse> SeekAsync(
             SeekRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Seeks an existing subscription to a point in time or to a given snapshot,
@@ -2683,10 +2627,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual SeekResponse Seek(
             SeekRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
@@ -2796,10 +2738,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Policy> SetIamPolicyAsync(
             SetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
@@ -2816,10 +2756,9 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Policy SetIamPolicy(
             SetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
+        
 
         /// <summary>
         /// Gets the access control policy for a resource.
@@ -2909,10 +2848,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Policy> GetIamPolicyAsync(
             GetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Gets the access control policy for a resource.
@@ -2930,10 +2867,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Policy GetIamPolicy(
             GetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -3047,10 +2982,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
             TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -3068,10 +3001,8 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual TestIamPermissionsResponse TestIamPermissions(
             TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
-        {
+            CallSettings callSettings = null) =>
             throw new NotImplementedException();
-        }
 
     }
 

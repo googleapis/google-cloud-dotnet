@@ -40,20 +40,18 @@ namespace Google.Cloud.Storage.V1
 
         internal void ModifyRequest(BucketsResource.InsertRequest request)
         {
+
             if (PredefinedAcl != null)
-            {
                 request.PredefinedAcl =
                     GaxPreconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
-            }
+
             if (PredefinedDefaultObjectAcl != null)
-            {
                 request.PredefinedDefaultObjectAcl =
                     GaxPreconditions.CheckEnumValue((PredefinedDefaultObjectAclEnum) PredefinedDefaultObjectAcl, nameof(PredefinedDefaultObjectAcl));
-            }
+
             if (Projection != null)
-            {
                 request.Projection = GaxPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
-            }
+
         }
     }
 }

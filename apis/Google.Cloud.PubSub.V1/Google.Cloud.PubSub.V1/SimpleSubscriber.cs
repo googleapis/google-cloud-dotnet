@@ -238,9 +238,7 @@ namespace Google.Cloud.PubSub.V1
             {
                 var credentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
                 if (credentials.IsCreateScopedRequired)
-                {
                     credentials = credentials.CreateScoped(SubscriberClient.DefaultScopes);
-                }
                 channelCredentials = credentials.ToChannelCredentials();
             }
             // Create the channels and clients, and register shutdown functions for each channel
@@ -393,7 +391,7 @@ namespace Google.Cloud.PubSub.V1
                 Action unregisterTask = () => registeredTasks.Locked(() => registeredTasks.Remove(task));
                 _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(() => task, unregisterTask));
             };
-            Flow flow = new Flow(_flowControlSettings.MaxOutstandingByteCount ?? long.MaxValue,
+            var flow = new Flow(_flowControlSettings.MaxOutstandingByteCount ?? long.MaxValue,
                 _flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, registerTask, _taskHelper);
             // Start all subscribers
             var subscriberTasks = _clients.Select(client =>
@@ -418,24 +416,19 @@ namespace Google.Cloud.PubSub.V1
                     () => _taskHelper.WhenAll(registeredTasks.Locked(() => registeredTasks.ToArray())));
                 // Call shutdown function
                 if (_shutdown != null)
-                {
                     await _taskHelper.ConfigureAwaitHideErrors(_shutdown);
-                }
+
                 // Return final result
                 var exceptions = ((exception as AggregateException)?.Flatten().InnerExceptions) ??
                     Enumerable.Repeat(exception, exception == null ? 0 : 1);
+
                 if (exceptions.Any())
-                {
                     _mainTcs.SetException(exceptions);
-                }
                 else if (_globalHardStopCts.IsCancellationRequested)
-                {
                     _mainTcs.SetCanceled();
-                }
                 else
-                {
                     _mainTcs.SetResult(0);
-                }
+
             });
             return _mainTcs.Task;
         }
@@ -530,9 +523,7 @@ namespace Google.Cloud.PubSub.V1
                         setEvent = !preIsFlowOk && IsFlowOk();
                     }
                     if (setEvent)
-                    {
                         _event.Set();
-                    }
                 })));
             }
         }
@@ -628,9 +619,8 @@ namespace Google.Cloud.PubSub.V1
                         // when the other has already errored out.
                         // If both have already stopped (due to error or not), then this is essentially a nop.
                         if (completedTask.IsFaulted)
-                        {
                             streamingPullCts.Cancel();
-                        }
+                        
                         // Trigger _qEvent, to ensure Push sees any state changes.
                         _qEvent.Set();
                         // Await until pull and push have both stopped.
@@ -647,9 +637,7 @@ namespace Google.Cloud.PubSub.V1
                         // Try to cleanly shutdown the subscriber. This may or may not be possible
                         // depending on the state of the subscriber; ignore all errors.
                         if (pull != null)
-                        {
                             _registerTaskFn(_taskHelper.Run(() => pull.WriteCompleteAsync()));
-                        }
                         streamingPullCts.Dispose();
                     }
                 }
@@ -675,9 +663,7 @@ namespace Google.Cloud.PubSub.V1
                     while (!cts.IsCancellationRequested && await _taskHelper.ConfigureAwaitHideCancellation(MoveNext, false))
                     {
                         if (cts.IsCancellationRequested)
-                        {
                             return;
-                        }
                         var msgs = new List<ReceivedMessage>(pull.ResponseStream.Current.ReceivedMessages);
                         var extendIds = new HashSet<string>(msgs.Select(x => x.AckId));
                         // Extend leases immediately. This is the receipt to the server that starts the server lease timeout.
@@ -691,16 +677,12 @@ namespace Google.Cloud.PubSub.V1
                             // pull take a long time to process. This ensures all other messages aren't still referenced.
                             msgs[msgIndex] = null;
                             if (_softStopCts.IsCancellationRequested)
-                            {
                                 return;
-                            }
                             // Returned Task completes once flow-control is satisfied.
                             await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), async () =>
                             {
                                 if (_softStopCts.IsCancellationRequested)
-                                {
                                     return;
-                                }
                                 lock (_qLock)
                                 {
                                     _unAckedMsgCount += 1;
@@ -713,25 +695,22 @@ namespace Google.Cloud.PubSub.V1
                                 lock (_qLock)
                                 {
                                     extendIds.Remove(msg.AckId);
+
                                     if (extendIds.Count == 0)
-                                    {
                                         allMsgsHandledCts.Cancel();
-                                    }
+
                                     if (reply == Reply.Ack)
                                     {
                                         _ackQueue.Enqueue(msg.AckId);
                                         triggerQEvent = true;
                                     }
                                     else
-                                    {
                                         _unAckedMsgCount -= 1;
-                                    }
+
                                 }
                                 if (triggerQEvent)
-                                {
                                     // Unblock Push(), because now there is at least one ACK to push.
                                     _qEvent.Set();
-                                }
                             }));
                         }
                     }
@@ -758,9 +737,7 @@ namespace Google.Cloud.PubSub.V1
                         bool isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(
                             () => _scheduler.Delay(_autoExtendInterval, allMsgsHandled.Token));
                         if (isCancelled)
-                        {
                             return;
-                        }
                         // Queue lease extensions on all not-yet-processed messages.
                         // It's OK if an ID is lease-extended and ACKed to the server concurrently.
                         // The ACK takes precedence on the server.
@@ -793,9 +770,7 @@ namespace Google.Cloud.PubSub.V1
                         }
                         var isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(() => _qEvent.WaitAsync(streamingPullToken));
                         if (isCancelled)
-                        {
                             return;
-                        }
                     }
                     // Get local copies of acks/extensions to send.
                     List<string> acks;
