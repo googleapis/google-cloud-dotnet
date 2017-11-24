@@ -85,19 +85,10 @@ namespace Google.Cloud.Storage.V1.Snippets
             var storageClient = StorageClient.Create();
             string storageServiceAccount = $"serviceAccount:{storageClient.GetStorageServiceAccountEmail(ProjectId)}";
 
-            // TODO: Simplify this when we have IAM convenience methods.
-            var policy = publisherClient.GetIamPolicy(topicName.ToString()) ?? new Iam.V1.Policy();
+            var policy = publisherClient.GetIamPolicy(topicName.ToString());
             var role = "roles/pubsub.publisher";
-
-            var publisherBinding = policy.Bindings.FirstOrDefault(binding => binding.Role == role);
-            if (publisherBinding == null)
+            if (policy.AddRoleMember(role, storageServiceAccount))
             {
-                publisherBinding = new Binding { Role = role };
-                policy.Bindings.Add(publisherBinding);
-            }
-            if (!publisherBinding.Members.Contains(storageServiceAccount))
-            {
-                publisherBinding.Members.Add(storageServiceAccount);
                 publisherClient.SetIamPolicy(topicName.ToString(), policy);
             }
 
