@@ -122,73 +122,54 @@ namespace Google.Cloud.Storage.V1
             // Note the use of ArgumentException here, as this will basically be the result of invalid
             // options being passed to a public method.
             if (IfGenerationMatch != null && IfGenerationNotMatch != null)
-            {
                 throw new ArgumentException($"Cannot specify {nameof(IfGenerationMatch)} and {nameof(IfGenerationNotMatch)} in the same options", "options");
-            }
+
             if (IfMetagenerationMatch != null && IfMetagenerationNotMatch != null)
-            {
                 throw new ArgumentException($"Cannot specify {nameof(IfMetagenerationMatch)} and {nameof(IfMetagenerationNotMatch)} in the same options", "options");
-            }
+
             if (IfSourceGenerationMatch != null && IfSourceGenerationNotMatch != null)
-            {
                 throw new ArgumentException($"Cannot specify {nameof(IfSourceGenerationMatch)} and {nameof(IfSourceGenerationNotMatch)} in the same options", "options");
-            }
+
             if (IfSourceMetagenerationMatch != null && IfSourceMetagenerationNotMatch != null)
-            {
                 throw new ArgumentException($"Cannot specify {nameof(IfSourceMetagenerationMatch)} and {nameof(IfSourceMetagenerationNotMatch)} in the same options", "options");
-            }
 
             if (DestinationPredefinedAcl != null)
-            {
                 request.DestinationPredefinedAcl =
                     GaxPreconditions.CheckEnumValue((DestinationPredefinedAclEnum) DestinationPredefinedAcl, nameof(DestinationPredefinedAcl));
-            }
+
             if (SourceGeneration != null)
-            {
                 request.SourceGeneration = SourceGeneration;
-            }
+
             if (Projection != null)
-            {
                 request.Projection = GaxPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
-            }
 
             if (IfGenerationMatch != null)
-            {
                 request.IfGenerationMatch = IfGenerationMatch;
-            }
+
             if (IfGenerationNotMatch != null)
-            {
                 request.IfGenerationNotMatch = IfGenerationNotMatch;
-            }
+
             if (IfMetagenerationMatch != null)
-            {
                 request.IfMetagenerationMatch = IfMetagenerationMatch;
-            }
+
             if (IfMetagenerationNotMatch != null)
-            {
                 request.IfMetagenerationNotMatch = IfMetagenerationNotMatch;
-            }
 
             if (IfSourceGenerationMatch != null)
-            {
                 request.IfSourceGenerationMatch = IfSourceGenerationMatch;
-            }
+
             if (IfSourceGenerationNotMatch != null)
-            {
                 request.IfSourceGenerationNotMatch = IfSourceGenerationNotMatch;
-            }
+
             if (IfSourceMetagenerationMatch != null)
-            {
                 request.IfSourceMetagenerationMatch = IfSourceMetagenerationMatch;
-            }
+
             if (IfSourceMetagenerationNotMatch != null)
-            {
                 request.IfSourceMetagenerationNotMatch = IfSourceMetagenerationNotMatch;
-            }
+
             if (UserProject != null)
-            {
                 request.UserProject = UserProject;
-            }
+
         }
     }
 }
