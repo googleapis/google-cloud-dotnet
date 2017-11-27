@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Versioning | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Versioning | Google Cloud APIs ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="versioning">Versioning</h1>
+
+<h2 id="api-versioning">API versioning</h2>
+<p>API versions appear in the package names of some packages. See the
+<a href="package names">package-names.md</a> documentation for more details of
+when this occurs.</p>
+<p>The stable releases of APIs only have a major version number (e.g.
+V1, V2). Changes made to these APIs within a major version are
+always backward-compatible. New functionality is exposed via a new
+version (typically minor) of the client library package.</p>
+<p>When an API is made publicly available while it is not yet stable,
+that is indicated by a suffix on the version number. If this is a
+prerelease of a new major version of the API, it is indicated just
+by the major version number and a &quot;BetaX&quot; suffix, e.g.
+<code>Google.Cloud.ErrorReporting.V1Beta1</code>. If it is a prerelease for a minor update
+to an existing GA API, this is indicated with both the point release
+number and the beta revision of that point release. For example
+<code>Google.Cloud.Vision.V1P1Beta1</code> is the first beta for the first
+point release of the Vision V1 API.</p>
+<h2 id="package-versioning">Package versioning</h2>
+<p>Packages follow <a href="http://semver.org">Semantic Versioning</a> - which
+sounds simpler than it really is, due to the difficulty of
+determining exactly what counts as a breaking change. The rules for
+what would count as a breaking change are difficult to document
+exhaustively, but the general thrust is described below.</p>
+<h3 id="major-versions">Major versions</h3>
+<p>Code which compiles against version 1.0 may not compile against
+version 2.0, and if it does, it may no longer work the same way.
+Likewise, existing packages with a dependency on version 1.0 may not
+work when version 2.0 is present at execution time.</p>
+<p>Examples of changes which provoke a new major version:</p>
+<ul>
+<li>Updating a dependency to a new major version</li>
+<li>Adding a new dependency<sup>1</sup></li>
+<li>Removing or renaming any publicly-accessible API surface member.
+(This includes renaming parameters.)</li>
+</ul>
+<p><sup>1</sup> One exception here is when the dependency is to a brand
+new package. The reason that introducing a new dependency introduces
+a new major version is that existing code may have a dependency on a
+different major version of the same package. While this exception
+violates <em>very strict</em> semantic versioning, it relieves the
+inconvenience of introducing new major versions, with very little
+risk of causing problems. Similarly, a new dependency on a system
+package (e.g. <code>System.Threading.Tasks.Extensions</code>) can be introduced
+without provoking a new major version. Both of these would cause a
+minor version bump instead.</p>
+<h3 id="minor-versions">Minor versions</h3>
+<p>Code which compiles aginst version 1.0 should compile against
+version 1.1, with the exception of code which compiles but would
+never work at execution time<sup>1</sup>. Likewise, existing
+packages with a dependency on version 1.0 should work when version
+1.1 is present at execution time.</p>
+<p>Examples of changes which provoke a new minor version:</p>
+<ul>
+<li>Updating a dependency to a new minor version</li>
+<li>Adding new functionality via new types and type members</li>
+<li>Adding new enum values</li>
+</ul>
+<p><sup>1</sup> This exemption makes it easier to add overloads. A call
+to <code>Foo(null)</code> can become ambiguous if an overload is added, but if
+such code would always have caused an <code>ArgumentNullException</code>
+anyway, we don&#39;t view this as a breaking change.</p>
+<h3 id="patch-versions">Patch versions</h3>
+<p>Like minor versions, patch versions are backward-compatible - but
+additionally, they are <em>forward-compatible</em>: code which compiles
+against version 1.0.1 should also compile against version 1.0.0. The
+dependency resolution of .NET is likely to ensure that this
+compatibility is never exposed for packages (so a package with a
+dependency on version 1.0.1 will never have to execute in an
+environment where only 1.0.0 is present), but if that <em>does</em> occur,
+that code should work too, unless it relies on the behavioral fixes
+between the two patch versions.</p>
+<p>Examples of changes which provoke a new minor version:</p>
+<ul>
+<li>Updating a dependency to a new patch version</li>
+<li>Purely internal bug fixes with no change to the exposed API</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

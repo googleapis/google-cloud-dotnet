@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/root",
+  "source_base_path": "c:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/root",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "faq.html",
-          "hash": "+SnE6WJkp9bUko0zKvH5pw=="
+          "hash": "YaGFY7G+0vXHayuQ88eXyw=="
         }
       },
       "is_incremental": false,
@@ -98,6 +98,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "guides/package-names.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/package-names.html",
+          "hash": "xofRaEMrq3A3Ycq6Q/IW0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -145,7 +157,22 @@
       "output": {
         ".html": {
           "relative_path": "guides/toc.html",
-          "hash": "OBhonbI+GpgCZ+ai9pxuMQ=="
+          "hash": "2/BagfrYXPZ5EGCSNH9HeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "guides/versioning.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/versioning.html",
+          "hash": "f41/EUO0xXhm5l608V6NBg=="
         }
       },
       "is_incremental": false,
@@ -160,7 +187,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "cxPph9U4P+LXI0P6IRqD1w=="
+          "hash": "nm55kNu3oetblDVY2a3L0g=="
         }
       },
       "is_incremental": false,
@@ -948,22 +975,22 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "RestApiDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

@@ -95,7 +95,16 @@ ChannelCredentials channelCredentials = userCredential.ToChannelCredentials();
 Channel channel = new Channel(PublisherClient.DefaultEndpoint, channelCredentials);
 PublisherClient client = PublisherClient.Create(channel);
 // Now use client, and clean up channel if and when you need to.
-</code></pre><p>Note that it&#39;s also possible to specify credentials for an
+</code></pre><p>Note that if you construct a <code>GoogleCredential</code> (e.g. with
+<code>GoogleCredential.FromFile</code>) you should apply the scopes required by
+the API using the <code>GoogleCredential.CreateScoped</code> method and the <code>DefaultScopes</code>
+property from the API you&#39;re using. For example:</p>
+<pre><code>GoogleCredential credential = GoogleCredential
+    .FromFile(&quot;auth.json&quot;)
+    .CreateScoped(PublisherClient.DefaultScopes);
+ChannelCredentials channelCredentials = credential.ToChannelCredentials();
+...
+</code></pre><p>It&#39;s also possible to specify credentials for an
 individual RPC call. For example, you can create a channel using the
 default application credentials, then specify a <code>CallCredentials</code> in
 the <code>CallSettings</code> passed to a single method call. The
@@ -117,6 +126,10 @@ PublisherClient client = PublisherClient.Create();
 client.Publish(/* regular method arguments */,
     CallSettings.FromCallCredentials(callCredentials));
 </code></pre><p>This approach means you don&#39;t need to worry about channel clean-up.</p>
+<p>We expect to make all of this easier over time, at least for common
+scenarios where you don&#39;t perform any channel shutdown. We also hope
+to remove the requirement to specify the scopes when creating
+credentials manually.</p>
 <h2 id="how-can-i-trace-grpc-issues">How can I trace gRPC issues?</h2>
 <p>For libraries that use gRPC, it can be very useful to hook into the
 gRPC logging framework. There are two aspects to this:</p>
