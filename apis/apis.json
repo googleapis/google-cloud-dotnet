@@ -139,7 +139,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNet",
-    "version": "2.0.0-beta02",
+    "version": "2.0.0",
     "type": "other",
     "targetFrameworks": "net45",
     "testTargetFrameworks": "net452",
@@ -150,7 +150,7 @@
       "Microsoft.AspNet.WebApi.Core": "5.2.3",
       "Microsoft.AspNet.WebPages": "3.2.3",
       "Microsoft.AspNet.Mvc": "5.2.3",
-      "Grpc.Core": "1.4.0"
+      "Grpc.Core": "1.7.1"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
@@ -161,7 +161,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNetCore",
-    "version": "2.0.0-beta02",
+    "version": "2.0.0",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net46",
     "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.0;net46",
@@ -175,7 +175,7 @@
       "Microsoft.AspNetCore.Http.Extensions": "1.0.2",
       "Microsoft.Extensions.Logging": "1.0.2",
       "Microsoft.Extensions.Logging.Debug": "1.0.2",
-      "Grpc.Core": "1.4.0"
+      "Grpc.Core": "1.7.1"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
@@ -186,7 +186,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.Common",
-    "version": "2.0.0-beta02",
+    "version": "2.0.0",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
@@ -195,7 +195,7 @@
     "dependencies": {
       "Google.Cloud.Logging.V2": "2.0.0",
       "Google.Cloud.Trace.V1": "1.0.0",
-      "Grpc.Core": "1.4.0"
+      "Grpc.Core": "1.7.1"
     },
     "testDependencies": {
       "Google.Cloud.ErrorReporting.V1Beta1": "project",
