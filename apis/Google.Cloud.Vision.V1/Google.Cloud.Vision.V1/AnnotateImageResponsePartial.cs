@@ -23,13 +23,7 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         /// <exception cref="AnnotateImageException">The <see cref="Error"/> property is non-null.</exception>
         /// <returns><c>this</c> if the message has no error.</returns>
-        public AnnotateImageResponse ThrowOnError()
-        {
-            if (Error != null)
-            {
-                throw new AnnotateImageException(this);
-            }
-            return this;
-        }
+        public AnnotateImageResponse ThrowOnError() =>
+            Error == null ? this : throw new AnnotateImageException(this);
     }
 }
