@@ -45,7 +45,20 @@ PublisherClient client = PublisherClient.Create(channel);
 // Now use client, and clean up channel if and when you need to.
 ```
 
-Note that it's also possible to specify credentials for an
+Note that if you construct a `GoogleCredential` (e.g. with
+`GoogleCredential.FromFile`) you should apply the scopes required by
+the API using the `GoogleCredential.CreateScoped` method and the `DefaultScopes`
+property from the API you're using. For example:
+
+```
+GoogleCredential credential = GoogleCredential
+    .FromFile("auth.json")
+    .CreateScoped(PublisherClient.DefaultScopes);
+ChannelCredentials channelCredentials = credential.ToChannelCredentials();
+...
+```
+
+It's also possible to specify credentials for an
 individual RPC call. For example, you can create a channel using the
 default application credentials, then specify a `CallCredentials` in
 the `CallSettings` passed to a single method call. The
@@ -71,6 +84,11 @@ client.Publish(/* regular method arguments */,
 ```
 
 This approach means you don't need to worry about channel clean-up.
+
+We expect to make all of this easier over time, at least for common
+scenarios where you don't perform any channel shutdown. We also hope
+to remove the requirement to specify the scopes when creating
+credentials manually.
 
 ## How can I trace gRPC issues?
 
