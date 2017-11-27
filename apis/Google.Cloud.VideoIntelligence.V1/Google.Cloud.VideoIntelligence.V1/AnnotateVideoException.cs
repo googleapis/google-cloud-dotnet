@@ -20,7 +20,7 @@ namespace Google.Cloud.VideoIntelligence.V1
     /// <summary>
     /// An error occurring when annotating an video.
     /// </summary>
-    public sealed class VideoAnnotationResultsException : Exception
+    public sealed class AnnotateVideoException : Exception
     {
         /// <summary>
         /// The complete response containing the error.
@@ -32,18 +32,12 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// </summary>
         /// <param name="response">The response containing the error. Must not be null, and the <see cref="VideoAnnotationResults.Error"/>
         /// property must not be null.</param>
-        public VideoAnnotationResultsException(VideoAnnotationResults response) : base(CheckHasError(response).Error.Message)
+        public AnnotateVideoException(VideoAnnotationResults response) : base(response?.Error?.Message)
         {
-            this.Response = response;
-        }
-
-        // Annoying, but GaxPreconditions.CheckArgument doesn't return anything, because it doesn't have the whole argument.
-        // Maybe we should have an overload for that. (It's only really a problem in constructor chaining...)
-        private static VideoAnnotationResults CheckHasError(VideoAnnotationResults response)
-        {
-            GaxPreconditions.CheckNotNull(response, nameof(response));
+            // The null-conditional operator in the constructor initializer make it okay 
+            GaxPreconditions.CheckNotNull(response, nameof(response)); GaxPreconditions.CheckNotNull(response, nameof(response));
             GaxPreconditions.CheckArgument(response.Error != null, nameof(response), "response must contain an error");
-            return response;
+            Response = response;
         }
     }
 }
