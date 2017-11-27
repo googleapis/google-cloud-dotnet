@@ -92,28 +92,26 @@ been run, in the same commit.
 
 Dependencies in the API catalog are specified as properties where
 the property name is the package name and the value is the version
-number. If the version number is left blank, then:
+number.
 
-- For GAX or gRPC dependencies, the version number is determined by
-  the project generator, to keep these dependencies in sync for all
-  packages.
-- For projects within the repository, a project reference is used.
+If the version number is set to "project", then a project reference
+is used.
 
-If a version number is specified, it's *always* a package reference.
-Importantly, project references should only be used between
-production packages when both packages will be published together.
-This avoids inconsistent builds where a package is built against a
-local version which is different from the declared dependency. *This
-isn't currently checked, but will be as part of the releasing
-process.*
+If the version number is set to "default", then the version number
+is determined by the project generator, to keep these dependencies
+in sync for all appropriate packages. This is not permitted for GA
+releases (i.e. ones with no alpha or beta suffix), as we need a
+clear record of the dependencies in that case. For example, if the
+most recent release is 2.3.1 against gRPC 1.7.0, it's fine to make
+2.3.2 depend on 1.7.1, but depending on gRPC 1.8.0 would require a
+new minor version (2.4.0).
 
 ## Releasing
 
 Releasing consists of five steps:
 
-- Updating the version number in GitHub
-- Tagging the commit (typically the commit that updated the version
-  number)
+- Updating the version number in GitHub (via standard pull requests)
+- Creating a release tag and GitHub release
 - Building and testing
 - Pushing the package to nuget.org
 - Updating the documentation in GitHub (in the `gh-pages` branch)
@@ -122,39 +120,21 @@ Releasing consists of five steps:
 
 - After the version number is committed, run `tagreleases.sh` from the
   root directory to tag all updated versions.
-- Run `buildrelease.sh` manually, specifying one of the API names
-  and versions just tagged.
-- Run `runintegrationtests.sh` from `releasebuild`
+- Run `buildrelease.sh` manually, specifying the commit that was
+  tagged. (`tagreleases.sh` outputs the command line to run)
 - Go into the `releasebuild/nuget` directory and push
 - Make sure you have a clone of the gh-pages branch, copy the
   documentation from `releasebuild/docs/output/assembled` as the new
   `docs` directory in the `gh-pages branch, commit and push.
-  
-Issues with this:
 
-- Integration tests are not run automatically
-- The build takes a long time as it rebuilds all packages, runs unit
-  tests for them all and builds all the documentation
-- There's no validation of project dependencies as described above
+Note that `tagreleases.sh` checks that there are no project
+references from APIs being released now to APIs that *aren't* being
+released. Without this check, it's possible for a released version
+to depend on unreleased changes.
 
 ### Future process
 
-- `tagreleases.sh` will perform validation of project references for
-  packages being tagged
-- A Google build machine (with appropriate secrets) will listen for
-  tags being created
-- When a set of tags is created (with some delay to avoid "spotting"
-  one tag when more are on the way), a build will be run of just the
-  tagged packages
-- The integration tests for the tagged packages will be run (as well
-  as the regular unit tests)
-  - We may wish to run integration tests of any packages that depend
-    on the package being built, too.
-- Potentially check that the GitHub tags are still what they were
-  at the start of the process. (If a tag has been deleted or changed,
-  don't publish anything, and report an error. It becomes awkward if
-  there were two tags for the same commit and only one of them has
-  changed. Should we publish the "unchanged tag" package?)
-- The new NuGet packages will be pushed
-- The documentation for the tagged packages will be built and pushed, as well as
-  the "root" documentation
+- Commit the new versions as before
+- Run `tagreleases.sh` as before
+- A build machine picks up the tags and performs all the remaining
+  steps with no manual intervention
