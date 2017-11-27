@@ -39,7 +39,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Tests
         public void ThrowOnError_Error()
         {
             var results = new VideoAnnotationResults { Error = new Rpc.Status { Message = "Bang" } };
-            var exception = Assert.Throws<VideoAnnotationResultsException>(() => results.ThrowOnError());
+            var exception = Assert.Throws<AnnotateVideoException>(() => results.ThrowOnError());
             Assert.Equal("Bang", exception.Message);
             Assert.Same(results, exception.Response);
         }

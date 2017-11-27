@@ -18,18 +18,12 @@ namespace Google.Cloud.VideoIntelligence.V1
     public partial class VideoAnnotationResults
     {
         /// <summary>
-        /// If the <see cref="Error"/> property is non-null, throws an <see cref="VideoAnnotationResultsException"/>.
+        /// If the <see cref="Error"/> property is non-null, throws an <see cref="AnnotateVideoException"/>.
         /// Otherwise, returns <c>this</c> (so that the method can be called in a fluent manner).
         /// </summary>
-        /// <exception cref="VideoAnnotationResultsException">The <see cref="Error"/> property is non-null.</exception>
+        /// <exception cref="AnnotateVideoException">The <see cref="Error"/> property is non-null.</exception>
         /// <returns><c>this</c> if the message has no error.</returns>
-        public VideoAnnotationResults ThrowOnError()
-        {
-            if (Error != null)
-            {
-                throw new VideoAnnotationResultsException(this);
-            }
-            return this;
-        }
+        public VideoAnnotationResults ThrowOnError() =>
+            Error == null ? this : throw new AnnotateVideoException(this);
     }
 }
