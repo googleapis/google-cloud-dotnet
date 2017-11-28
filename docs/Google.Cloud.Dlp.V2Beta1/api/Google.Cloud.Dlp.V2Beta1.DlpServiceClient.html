@@ -105,6 +105,30 @@
   </div>
   <h3 id="properties">Properties
   </h3>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskOperationsClient_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRiskOperationsClient*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskOperationsClient" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRiskOperationsClient">AnalyzeDataSourceRiskOperationsClient</h4>
+  <div class="markdown level1 summary"><p>The long-running operations client for <code>AnalyzeDataSourceRisk</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual OperationsClient AnalyzeDataSourceRiskOperationsClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_CreateInspectOperationOperationsClient_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationOperationsClient*"></a>
   <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_CreateInspectOperationOperationsClient" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationOperationsClient">CreateInspectOperationOperationsClient</h4>
   <div class="markdown level1 summary"><p>The long-running operations client for <code>CreateInspectOperation</code>.</p>
@@ -207,6 +231,430 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRisk_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRisk*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRisk_Google_Cloud_Dlp_V2Beta1_AnalyzeDataSourceRiskRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRisk(Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest,Google.Api.Gax.Grpc.CallSettings)">AnalyzeDataSourceRisk(AnalyzeDataSourceRiskRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Schedules a job to compute risk analysis metrics over content in a Google
+Cloud Platform repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; AnalyzeDataSourceRisk(AnalyzeDataSourceRiskRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest.html">AnalyzeDataSourceRiskRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.html">RiskAnalysisOperationResult</a>, <a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.html">RiskAnalysisOperationMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRisk_Google_Cloud_Dlp_V2Beta1_AnalyzeDataSourceRiskRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+// Initialize request argument(s)
+AnalyzeDataSourceRiskRequest request = new AnalyzeDataSourceRiskRequest
+{
+    PrivacyMetric = new PrivacyMetric(),
+    SourceTable = new BigQueryTable(),
+};
+// Make the request
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; response =
+    dlpServiceClient.AnalyzeDataSourceRisk(request);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; completedResponse =
+    response.PollUntilCompleted();
+// Retrieve the operation result
+RiskAnalysisOperationResult result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; retrievedResponse =
+    dlpServiceClient.PollOnceAnalyzeDataSourceRisk(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    RiskAnalysisOperationResult retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRisk_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRisk*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRisk_Google_Cloud_Dlp_V2Beta1_PrivacyMetric_Google_Cloud_Dlp_V2Beta1_BigQueryTable_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRisk(Google.Cloud.Dlp.V2Beta1.PrivacyMetric,Google.Cloud.Dlp.V2Beta1.BigQueryTable,Google.Api.Gax.Grpc.CallSettings)">AnalyzeDataSourceRisk(PrivacyMetric, BigQueryTable, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Schedules a job to compute risk analysis metrics over content in a Google
+Cloud Platform repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; AnalyzeDataSourceRisk(PrivacyMetric privacyMetric, BigQueryTable sourceTable, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrivacyMetric.html">PrivacyMetric</a></td>
+        <td><span class="parametername">privacyMetric</span></td>
+        <td><p>Privacy metric to compute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.BigQueryTable.html">BigQueryTable</a></td>
+        <td><span class="parametername">sourceTable</span></td>
+        <td><p>Input dataset to compute metrics over.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.html">RiskAnalysisOperationResult</a>, <a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.html">RiskAnalysisOperationMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRisk_Google_Cloud_Dlp_V2Beta1_PrivacyMetric_Google_Cloud_Dlp_V2Beta1_BigQueryTable_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+// Initialize request argument(s)
+PrivacyMetric privacyMetric = new PrivacyMetric();
+BigQueryTable sourceTable = new BigQueryTable();
+// Make the request
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; response =
+    dlpServiceClient.AnalyzeDataSourceRisk(privacyMetric, sourceTable);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; completedResponse =
+    response.PollUntilCompleted();
+// Retrieve the operation result
+RiskAnalysisOperationResult result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; retrievedResponse =
+    dlpServiceClient.PollOnceAnalyzeDataSourceRisk(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    RiskAnalysisOperationResult retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRiskAsync*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskAsync_Google_Cloud_Dlp_V2Beta1_AnalyzeDataSourceRiskRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRiskAsync(Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest,Google.Api.Gax.Grpc.CallSettings)">AnalyzeDataSourceRiskAsync(AnalyzeDataSourceRiskRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Schedules a job to compute risk analysis metrics over content in a Google
+Cloud Platform repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt;&gt; AnalyzeDataSourceRiskAsync(AnalyzeDataSourceRiskRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest.html">AnalyzeDataSourceRiskRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.html">RiskAnalysisOperationResult</a>, <a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.html">RiskAnalysisOperationMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskAsync_Google_Cloud_Dlp_V2Beta1_AnalyzeDataSourceRiskRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+// Initialize request argument(s)
+AnalyzeDataSourceRiskRequest request = new AnalyzeDataSourceRiskRequest
+{
+    PrivacyMetric = new PrivacyMetric(),
+    SourceTable = new BigQueryTable(),
+};
+// Make the request
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; response =
+    await dlpServiceClient.AnalyzeDataSourceRiskAsync(request);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// Retrieve the operation result
+RiskAnalysisOperationResult result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; retrievedResponse =
+    await dlpServiceClient.PollOnceAnalyzeDataSourceRiskAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    RiskAnalysisOperationResult retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRiskAsync*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskAsync_Google_Cloud_Dlp_V2Beta1_PrivacyMetric_Google_Cloud_Dlp_V2Beta1_BigQueryTable_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRiskAsync(Google.Cloud.Dlp.V2Beta1.PrivacyMetric,Google.Cloud.Dlp.V2Beta1.BigQueryTable,Google.Api.Gax.Grpc.CallSettings)">AnalyzeDataSourceRiskAsync(PrivacyMetric, BigQueryTable, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Schedules a job to compute risk analysis metrics over content in a Google
+Cloud Platform repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt;&gt; AnalyzeDataSourceRiskAsync(PrivacyMetric privacyMetric, BigQueryTable sourceTable, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrivacyMetric.html">PrivacyMetric</a></td>
+        <td><span class="parametername">privacyMetric</span></td>
+        <td><p>Privacy metric to compute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.BigQueryTable.html">BigQueryTable</a></td>
+        <td><span class="parametername">sourceTable</span></td>
+        <td><p>Input dataset to compute metrics over.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.html">RiskAnalysisOperationResult</a>, <a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.html">RiskAnalysisOperationMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskAsync_Google_Cloud_Dlp_V2Beta1_PrivacyMetric_Google_Cloud_Dlp_V2Beta1_BigQueryTable_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+// Initialize request argument(s)
+PrivacyMetric privacyMetric = new PrivacyMetric();
+BigQueryTable sourceTable = new BigQueryTable();
+// Make the request
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; response =
+    await dlpServiceClient.AnalyzeDataSourceRiskAsync(privacyMetric, sourceTable);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// Retrieve the operation result
+RiskAnalysisOperationResult result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; retrievedResponse =
+    await dlpServiceClient.PollOnceAnalyzeDataSourceRiskAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    RiskAnalysisOperationResult retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRiskAsync*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskAsync_Google_Cloud_Dlp_V2Beta1_PrivacyMetric_Google_Cloud_Dlp_V2Beta1_BigQueryTable_System_Threading_CancellationToken_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.AnalyzeDataSourceRiskAsync(Google.Cloud.Dlp.V2Beta1.PrivacyMetric,Google.Cloud.Dlp.V2Beta1.BigQueryTable,System.Threading.CancellationToken)">AnalyzeDataSourceRiskAsync(PrivacyMetric, BigQueryTable, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Schedules a job to compute risk analysis metrics over content in a Google
+Cloud Platform repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt;&gt; AnalyzeDataSourceRiskAsync(PrivacyMetric privacyMetric, BigQueryTable sourceTable, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrivacyMetric.html">PrivacyMetric</a></td>
+        <td><span class="parametername">privacyMetric</span></td>
+        <td><p>Privacy metric to compute.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.BigQueryTable.html">BigQueryTable</a></td>
+        <td><span class="parametername">sourceTable</span></td>
+        <td><p>Input dataset to compute metrics over.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.html">RiskAnalysisOperationResult</a>, <a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.html">RiskAnalysisOperationMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_AnalyzeDataSourceRiskAsync_Google_Cloud_Dlp_V2Beta1_PrivacyMetric_Google_Cloud_Dlp_V2Beta1_BigQueryTable_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+// Initialize request argument(s)
+PrivacyMetric privacyMetric = new PrivacyMetric();
+BigQueryTable sourceTable = new BigQueryTable();
+// Make the request
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; response =
+    await dlpServiceClient.AnalyzeDataSourceRiskAsync(privacyMetric, sourceTable);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// Retrieve the operation result
+RiskAnalysisOperationResult result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; retrievedResponse =
+    await dlpServiceClient.PollOnceAnalyzeDataSourceRiskAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    RiskAnalysisOperationResult retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_Create_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.Create*"></a>
   <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Dlp_V2Beta1_DlpServiceSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Dlp.V2Beta1.DlpServiceSettings)">Create(ServiceEndpoint, DlpServiceSettings)</h4>
   <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html">DlpServiceClient</a>, applying defaults for all unspecified settings,
@@ -494,22 +942,7 @@ repository.</p>
       <tr>
         <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.html">OutputStorageConfig</a></td>
         <td><span class="parametername">outputConfig</span></td>
-        <td><p>Optional location to store findings. The bucket must already exist and
-the Google APIs service account for DLP must have write permission to
-write to the given bucket.
-&lt;p&gt;Results are split over multiple csv files with each file name matching
-the pattern &quot;[operation_id]_[count].csv&quot;, for example
-<code>3094877188788974909_1.csv</code>. The <code>operation_id</code> matches the
-identifier for the Operation, and the <code>count</code> is a counter used for
-tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
-following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
-&lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
-&lt;li&gt;start_offset&lt;br/&gt;
-&lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
-&lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
-&lt;li&gt;dataset_id &lt;li&gt;table_id</p>
+        <td><p>Optional location to store findings.</p>
 </td>
       </tr>
       <tr>
@@ -720,22 +1153,7 @@ repository.</p>
       <tr>
         <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.html">OutputStorageConfig</a></td>
         <td><span class="parametername">outputConfig</span></td>
-        <td><p>Optional location to store findings. The bucket must already exist and
-the Google APIs service account for DLP must have write permission to
-write to the given bucket.
-&lt;p&gt;Results are split over multiple csv files with each file name matching
-the pattern &quot;[operation_id]_[count].csv&quot;, for example
-<code>3094877188788974909_1.csv</code>. The <code>operation_id</code> matches the
-identifier for the Operation, and the <code>count</code> is a counter used for
-tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
-following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
-&lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
-&lt;li&gt;start_offset&lt;br/&gt;
-&lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
-&lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
-&lt;li&gt;dataset_id &lt;li&gt;table_id</p>
+        <td><p>Optional location to store findings.</p>
 </td>
       </tr>
       <tr>
@@ -845,22 +1263,7 @@ repository.</p>
       <tr>
         <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.html">OutputStorageConfig</a></td>
         <td><span class="parametername">outputConfig</span></td>
-        <td><p>Optional location to store findings. The bucket must already exist and
-the Google APIs service account for DLP must have write permission to
-write to the given bucket.
-&lt;p&gt;Results are split over multiple csv files with each file name matching
-the pattern &quot;[operation_id]_[count].csv&quot;, for example
-<code>3094877188788974909_1.csv</code>. The <code>operation_id</code> matches the
-identifier for the Operation, and the <code>count</code> is a counter used for
-tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
-following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
-&lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
-&lt;li&gt;start_offset&lt;br/&gt;
-&lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
-&lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
-&lt;li&gt;dataset_id &lt;li&gt;table_id</p>
+        <td><p>Optional location to store findings.</p>
 </td>
       </tr>
       <tr>
@@ -933,6 +1336,361 @@ if (retrievedResponse.IsCompleted)
     // If it has completed, then access the result
     InspectOperationResult retrievedResult = retrievedResponse.Result;
 }
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContent_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DeidentifyContent*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContent_Google_Cloud_Dlp_V2Beta1_DeidentifyConfig_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DeidentifyContent(Google.Cloud.Dlp.V2Beta1.DeidentifyConfig,Google.Cloud.Dlp.V2Beta1.InspectConfig,System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.ContentItem},Google.Api.Gax.Grpc.CallSettings)">DeidentifyContent(DeidentifyConfig, InspectConfig, IEnumerable&lt;ContentItem&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>De-identifies potentially sensitive info from a list of strings.
+This method has limits on input size and output size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DeidentifyContentResponse DeidentifyContent(DeidentifyConfig deidentifyConfig, InspectConfig inspectConfig, IEnumerable&lt;ContentItem&gt; items, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyConfig.html">DeidentifyConfig</a></td>
+        <td><span class="parametername">deidentifyConfig</span></td>
+        <td><p>Configuration for the de-identification of the list of content items.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InspectConfig.html">InspectConfig</a></td>
+        <td><span class="parametername">inspectConfig</span></td>
+        <td><p>Configuration for the inspector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.ContentItem.html">ContentItem</a>&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The list of items to inspect. Up to 100 are allowed per request.
+All items will be treated as text/*.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.html">DeidentifyContentResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContent_Google_Cloud_Dlp_V2Beta1_DeidentifyConfig_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+// Initialize request argument(s)
+DeidentifyConfig deidentifyConfig = new DeidentifyConfig();
+InspectConfig inspectConfig = new InspectConfig();
+IEnumerable&lt;ContentItem&gt; items = new List&lt;ContentItem&gt;();
+// Make the request
+DeidentifyContentResponse response = dlpServiceClient.DeidentifyContent(deidentifyConfig, inspectConfig, items);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContent_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DeidentifyContent*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContent_Google_Cloud_Dlp_V2Beta1_DeidentifyContentRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DeidentifyContent(Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest,Google.Api.Gax.Grpc.CallSettings)">DeidentifyContent(DeidentifyContentRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>De-identifies potentially sensitive info from a list of strings.
+This method has limits on input size and output size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DeidentifyContentResponse DeidentifyContent(DeidentifyContentRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest.html">DeidentifyContentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.html">DeidentifyContentResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContent_Google_Cloud_Dlp_V2Beta1_DeidentifyContentRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+// Initialize request argument(s)
+DeidentifyContentRequest request = new DeidentifyContentRequest
+{
+    DeidentifyConfig = new DeidentifyConfig(),
+    InspectConfig = new InspectConfig(),
+    Items = { },
+};
+// Make the request
+DeidentifyContentResponse response = dlpServiceClient.DeidentifyContent(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContentAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DeidentifyContentAsync*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContentAsync_Google_Cloud_Dlp_V2Beta1_DeidentifyConfig_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DeidentifyContentAsync(Google.Cloud.Dlp.V2Beta1.DeidentifyConfig,Google.Cloud.Dlp.V2Beta1.InspectConfig,System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.ContentItem},Google.Api.Gax.Grpc.CallSettings)">DeidentifyContentAsync(DeidentifyConfig, InspectConfig, IEnumerable&lt;ContentItem&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>De-identifies potentially sensitive info from a list of strings.
+This method has limits on input size and output size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;DeidentifyContentResponse&gt; DeidentifyContentAsync(DeidentifyConfig deidentifyConfig, InspectConfig inspectConfig, IEnumerable&lt;ContentItem&gt; items, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyConfig.html">DeidentifyConfig</a></td>
+        <td><span class="parametername">deidentifyConfig</span></td>
+        <td><p>Configuration for the de-identification of the list of content items.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InspectConfig.html">InspectConfig</a></td>
+        <td><span class="parametername">inspectConfig</span></td>
+        <td><p>Configuration for the inspector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.ContentItem.html">ContentItem</a>&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The list of items to inspect. Up to 100 are allowed per request.
+All items will be treated as text/*.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.html">DeidentifyContentResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContentAsync_Google_Cloud_Dlp_V2Beta1_DeidentifyConfig_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+// Initialize request argument(s)
+DeidentifyConfig deidentifyConfig = new DeidentifyConfig();
+InspectConfig inspectConfig = new InspectConfig();
+IEnumerable&lt;ContentItem&gt; items = new List&lt;ContentItem&gt;();
+// Make the request
+DeidentifyContentResponse response = await dlpServiceClient.DeidentifyContentAsync(deidentifyConfig, inspectConfig, items);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContentAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DeidentifyContentAsync*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContentAsync_Google_Cloud_Dlp_V2Beta1_DeidentifyConfig_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__System_Threading_CancellationToken_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DeidentifyContentAsync(Google.Cloud.Dlp.V2Beta1.DeidentifyConfig,Google.Cloud.Dlp.V2Beta1.InspectConfig,System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.ContentItem},System.Threading.CancellationToken)">DeidentifyContentAsync(DeidentifyConfig, InspectConfig, IEnumerable&lt;ContentItem&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>De-identifies potentially sensitive info from a list of strings.
+This method has limits on input size and output size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;DeidentifyContentResponse&gt; DeidentifyContentAsync(DeidentifyConfig deidentifyConfig, InspectConfig inspectConfig, IEnumerable&lt;ContentItem&gt; items, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyConfig.html">DeidentifyConfig</a></td>
+        <td><span class="parametername">deidentifyConfig</span></td>
+        <td><p>Configuration for the de-identification of the list of content items.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InspectConfig.html">InspectConfig</a></td>
+        <td><span class="parametername">inspectConfig</span></td>
+        <td><p>Configuration for the inspector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.ContentItem.html">ContentItem</a>&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The list of items to inspect. Up to 100 are allowed per request.
+All items will be treated as text/*.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.html">DeidentifyContentResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContentAsync_Google_Cloud_Dlp_V2Beta1_DeidentifyConfig_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+// Initialize request argument(s)
+DeidentifyConfig deidentifyConfig = new DeidentifyConfig();
+InspectConfig inspectConfig = new InspectConfig();
+IEnumerable&lt;ContentItem&gt; items = new List&lt;ContentItem&gt;();
+// Make the request
+DeidentifyContentResponse response = await dlpServiceClient.DeidentifyContentAsync(deidentifyConfig, inspectConfig, items);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContentAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DeidentifyContentAsync*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContentAsync_Google_Cloud_Dlp_V2Beta1_DeidentifyContentRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DeidentifyContentAsync(Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest,Google.Api.Gax.Grpc.CallSettings)">DeidentifyContentAsync(DeidentifyContentRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>De-identifies potentially sensitive info from a list of strings.
+This method has limits on input size and output size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;DeidentifyContentResponse&gt; DeidentifyContentAsync(DeidentifyContentRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest.html">DeidentifyContentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.html">DeidentifyContentResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DeidentifyContentAsync_Google_Cloud_Dlp_V2Beta1_DeidentifyContentRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+// Initialize request argument(s)
+DeidentifyContentRequest request = new DeidentifyContentRequest
+{
+    DeidentifyConfig = new DeidentifyConfig(),
+    InspectConfig = new InspectConfig(),
+    Items = { },
+};
+// Make the request
+DeidentifyContentResponse response = await dlpServiceClient.DeidentifyContentAsync(request);
 </code></pre></div>
   </div>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_InspectContent_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.InspectContent*"></a>
@@ -1758,7 +2516,7 @@ ListInspectFindingsResponse response = dlpServiceClient.ListInspectFindings(requ
         <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ResultName.html">ResultName</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>Identifier of the results set returned as metadata of
-the longrunning operation created by a call to CreateInspectOperation.
+the longrunning operation created by a call to InspectDataSource.
 Should be in the format of <code>inspect/results/{id}</code>.</p>
 </td>
       </tr>
@@ -1881,7 +2639,7 @@ ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFinding
         <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ResultName.html">ResultName</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>Identifier of the results set returned as metadata of
-the longrunning operation created by a call to CreateInspectOperation.
+the longrunning operation created by a call to InspectDataSource.
 Should be in the format of <code>inspect/results/{id}</code>.</p>
 </td>
       </tr>
@@ -1942,7 +2700,7 @@ ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFinding
         <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ResultName.html">ResultName</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>Identifier of the results set returned as metadata of
-the longrunning operation created by a call to CreateInspectOperation.
+the longrunning operation created by a call to InspectDataSource.
 Should be in the format of <code>inspect/results/{id}</code>.</p>
 </td>
       </tr>
@@ -2286,6 +3044,104 @@ string languageCode = &quot;en&quot;;
 ListRootCategoriesResponse response = await dlpServiceClient.ListRootCategoriesAsync(languageCode);
 </code></pre></div>
   </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_PollOnceAnalyzeDataSourceRisk_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.PollOnceAnalyzeDataSourceRisk*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_PollOnceAnalyzeDataSourceRisk_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.PollOnceAnalyzeDataSourceRisk(System.String,Google.Api.Gax.Grpc.CallSettings)">PollOnceAnalyzeDataSourceRisk(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Poll an operation once, using an <code>operationName</code> from a previous invocation of <code>AnalyzeDataSourceRisk</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt; PollOnceAnalyzeDataSourceRisk(string operationName, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">operationName</span></td>
+        <td><p>The name of a previously invoked operation. Must not be <code>null</code> or empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.html">RiskAnalysisOperationResult</a>, <a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.html">RiskAnalysisOperationMetadata</a>&gt;</td>
+        <td><p>The result of polling the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_PollOnceAnalyzeDataSourceRiskAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.PollOnceAnalyzeDataSourceRiskAsync*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_PollOnceAnalyzeDataSourceRiskAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.PollOnceAnalyzeDataSourceRiskAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">PollOnceAnalyzeDataSourceRiskAsync(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously poll an operation once, using an <code>operationName</code> from a previous invocation of <code>AnalyzeDataSourceRiskAsync</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;RiskAnalysisOperationResult, RiskAnalysisOperationMetadata&gt;&gt; PollOnceAnalyzeDataSourceRiskAsync(string operationName, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">operationName</span></td>
+        <td><p>The name of a previously invoked operation. Must not be <code>null</code> or empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.html">RiskAnalysisOperationResult</a>, <a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.html">RiskAnalysisOperationMetadata</a>&gt;&gt;</td>
+        <td><p>A task representing the result of polling the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_PollOnceCreateInspectOperation_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.PollOnceCreateInspectOperation*"></a>
   <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_PollOnceCreateInspectOperation_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.PollOnceCreateInspectOperation(System.String,Google.Api.Gax.Grpc.CallSettings)">PollOnceCreateInspectOperation(String, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Poll an operation once, using an <code>operationName</code> from a previous invocation of <code>CreateInspectOperation</code>.</p>
@@ -2384,6 +3240,95 @@ ListRootCategoriesResponse response = await dlpServiceClient.ListRootCategoriesA
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContent_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.RedactContent*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContent_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_RedactContentRequest_Types_ImageRedactionConfig__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.RedactContent(Google.Cloud.Dlp.V2Beta1.InspectConfig,System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.ContentItem},System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig},Google.Api.Gax.Grpc.CallSettings)">RedactContent(InspectConfig, IEnumerable&lt;ContentItem&gt;, IEnumerable&lt;RedactContentRequest.Types.ImageRedactionConfig&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Redacts potentially sensitive info from a list of strings.
+This method has limits on input size, processing time, and output size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual RedactContentResponse RedactContent(InspectConfig inspectConfig, IEnumerable&lt;ContentItem&gt; items, IEnumerable&lt;RedactContentRequest.Types.ImageRedactionConfig&gt; imageRedactionConfigs, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InspectConfig.html">InspectConfig</a></td>
+        <td><span class="parametername">inspectConfig</span></td>
+        <td><p>Configuration for the inspector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.ContentItem.html">ContentItem</a>&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The list of items to inspect. Up to 100 are allowed per request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig.html">RedactContentRequest.Types.ImageRedactionConfig</a>&gt;</td>
+        <td><span class="parametername">imageRedactionConfigs</span></td>
+        <td><p>The configuration for specifying what content to redact from images.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentResponse.html">RedactContentResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContent_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_RedactContentRequest_Types_ImageRedactionConfig__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+// Initialize request argument(s)
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+IEnumerable&lt;ContentItem&gt; items = new[]
+{
+    new ContentItem
+    {
+        Type = &quot;text/plain&quot;,
+        Value = &quot;My email is example@example.com.&quot;,
+    },
+};
+IEnumerable&lt;RedactContentRequest.Types.ImageRedactionConfig&gt; imageRedactionConfigs = new List&lt;RedactContentRequest.Types.ImageRedactionConfig&gt;();
+// Make the request
+RedactContentResponse response = dlpServiceClient.RedactContent(inspectConfig, items, imageRedactionConfigs);
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContent_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.RedactContent*"></a>
   <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContent_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_RedactContentRequest_Types_ReplaceConfig__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.RedactContent(Google.Cloud.Dlp.V2Beta1.InspectConfig,System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.ContentItem},System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ReplaceConfig},Google.Api.Gax.Grpc.CallSettings)">RedactContent(InspectConfig, IEnumerable&lt;ContentItem&gt;, IEnumerable&lt;RedactContentRequest.Types.ReplaceConfig&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Redacts potentially sensitive info from a list of strings.
@@ -2557,19 +3502,187 @@ RedactContentRequest request = new RedactContentRequest
                     Value = &quot;My email is example@example.com.&quot;,
                 },
             },
-    ReplaceConfigs = {
-                         new RedactContentRequest.Types.ReplaceConfig
-                         {
-                             InfoType = new InfoType
-                                        {
-                                            Name = &quot;EMAIL_ADDRESS&quot;,
-                                        },
-                             ReplaceWith = &quot;REDACTED&quot;,
-                         },
-                     },
 };
 // Make the request
 RedactContentResponse response = dlpServiceClient.RedactContent(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContentAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.RedactContentAsync*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContentAsync_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_RedactContentRequest_Types_ImageRedactionConfig__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.RedactContentAsync(Google.Cloud.Dlp.V2Beta1.InspectConfig,System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.ContentItem},System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig},Google.Api.Gax.Grpc.CallSettings)">RedactContentAsync(InspectConfig, IEnumerable&lt;ContentItem&gt;, IEnumerable&lt;RedactContentRequest.Types.ImageRedactionConfig&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Redacts potentially sensitive info from a list of strings.
+This method has limits on input size, processing time, and output size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;RedactContentResponse&gt; RedactContentAsync(InspectConfig inspectConfig, IEnumerable&lt;ContentItem&gt; items, IEnumerable&lt;RedactContentRequest.Types.ImageRedactionConfig&gt; imageRedactionConfigs, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InspectConfig.html">InspectConfig</a></td>
+        <td><span class="parametername">inspectConfig</span></td>
+        <td><p>Configuration for the inspector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.ContentItem.html">ContentItem</a>&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The list of items to inspect. Up to 100 are allowed per request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig.html">RedactContentRequest.Types.ImageRedactionConfig</a>&gt;</td>
+        <td><span class="parametername">imageRedactionConfigs</span></td>
+        <td><p>The configuration for specifying what content to redact from images.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentResponse.html">RedactContentResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContentAsync_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_RedactContentRequest_Types_ImageRedactionConfig__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+// Initialize request argument(s)
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+IEnumerable&lt;ContentItem&gt; items = new[]
+{
+    new ContentItem
+    {
+        Type = &quot;text/plain&quot;,
+        Value = &quot;My email is example@example.com.&quot;,
+    },
+};
+IEnumerable&lt;RedactContentRequest.Types.ImageRedactionConfig&gt; imageRedactionConfigs = new List&lt;RedactContentRequest.Types.ImageRedactionConfig&gt;();
+// Make the request
+RedactContentResponse response = await dlpServiceClient.RedactContentAsync(inspectConfig, items, imageRedactionConfigs);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContentAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.RedactContentAsync*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContentAsync_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_RedactContentRequest_Types_ImageRedactionConfig__System_Threading_CancellationToken_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.RedactContentAsync(Google.Cloud.Dlp.V2Beta1.InspectConfig,System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.ContentItem},System.Collections.Generic.IEnumerable{Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig},System.Threading.CancellationToken)">RedactContentAsync(InspectConfig, IEnumerable&lt;ContentItem&gt;, IEnumerable&lt;RedactContentRequest.Types.ImageRedactionConfig&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Redacts potentially sensitive info from a list of strings.
+This method has limits on input size, processing time, and output size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;RedactContentResponse&gt; RedactContentAsync(InspectConfig inspectConfig, IEnumerable&lt;ContentItem&gt; items, IEnumerable&lt;RedactContentRequest.Types.ImageRedactionConfig&gt; imageRedactionConfigs, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InspectConfig.html">InspectConfig</a></td>
+        <td><span class="parametername">inspectConfig</span></td>
+        <td><p>Configuration for the inspector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.ContentItem.html">ContentItem</a>&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The list of items to inspect. Up to 100 are allowed per request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig.html">RedactContentRequest.Types.ImageRedactionConfig</a>&gt;</td>
+        <td><span class="parametername">imageRedactionConfigs</span></td>
+        <td><p>The configuration for specifying what content to redact from images.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentResponse.html">RedactContentResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContentAsync_Google_Cloud_Dlp_V2Beta1_InspectConfig_System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_ContentItem__System_Collections_Generic_IEnumerable_Google_Cloud_Dlp_V2Beta1_RedactContentRequest_Types_ImageRedactionConfig__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+// Initialize request argument(s)
+InspectConfig inspectConfig = new InspectConfig
+{
+    InfoTypes = {
+                    new InfoType
+                    {
+                        Name = &quot;EMAIL_ADDRESS&quot;,
+                    },
+                },
+};
+IEnumerable&lt;ContentItem&gt; items = new[]
+{
+    new ContentItem
+    {
+        Type = &quot;text/plain&quot;,
+        Value = &quot;My email is example@example.com.&quot;,
+    },
+};
+IEnumerable&lt;RedactContentRequest.Types.ImageRedactionConfig&gt; imageRedactionConfigs = new List&lt;RedactContentRequest.Types.ImageRedactionConfig&gt;();
+// Make the request
+RedactContentResponse response = await dlpServiceClient.RedactContentAsync(inspectConfig, items, imageRedactionConfigs);
 </code></pre></div>
   </div>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_RedactContentAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.RedactContentAsync*"></a>
@@ -2845,16 +3958,6 @@ RedactContentRequest request = new RedactContentRequest
                     Value = &quot;My email is example@example.com.&quot;,
                 },
             },
-    ReplaceConfigs = {
-                         new RedactContentRequest.Types.ReplaceConfig
-                         {
-                             InfoType = new InfoType
-                                        {
-                                            Name = &quot;EMAIL_ADDRESS&quot;,
-                                        },
-                             ReplaceWith = &quot;REDACTED&quot;,
-                         },
-                     },
 };
 // Make the request
 RedactContentResponse response = await dlpServiceClient.RedactContentAsync(request);

@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/Google.Cloud.Dlp.V2Beta1",
+  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.Dlp.V2Beta1",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -1808,6 +1808,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest.html",
+          "hash": "/snWE7Qlo9K6xJm9VuQh8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.BigQueryOptions.yml",
       "output": {
         ".html": {
@@ -1832,11 +1844,107 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.Bucket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.Bucket.html",
+          "hash": "crugDSMOtIaugdx5RTMu6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.html",
+          "hash": "pp+sX6XNFqzALb5T/hPM3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.BucketingConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.BucketingConfig.html",
+          "hash": "Kd68Z5wqEo8qoKlriCeaOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CategoryDescription.yml",
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CategoryDescription.html",
           "hash": "n24c6GkmUzZpojnImdWH2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CharacterMaskConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CharacterMaskConfig.html",
+          "hash": "RJ5g8yIaUyZS6BNvkxoCCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CharsToIgnore.CharactersOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CharsToIgnore.CharactersOneofCase.html",
+          "hash": "V96C3vPiJ8ztCxXTralvLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Types.CharacterGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Types.CharacterGroup.html",
+          "hash": "r48YrD/HrOHMlIIM3HrZPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Types.html",
+          "hash": "NiFgrreTAKngc+VA7AugYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CharsToIgnore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CharsToIgnore.html",
+          "hash": "YpTXb56Z8eShn8PJ4TTeww=="
         }
       },
       "is_incremental": false,
@@ -1944,7 +2052,178 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.html",
-          "hash": "1wBkbrkrjZ/LlU39kVFhhQ=="
+          "hash": "0p+LflgOx5gQqu8nWvuokQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CryptoHashConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CryptoHashConfig.html",
+          "hash": "mw/19ypcsYYwpAt5O5qwHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CryptoKey.SourceOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CryptoKey.SourceOneofCase.html",
+          "hash": "IocnuhUH2od/kh4Cb88+gA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CryptoKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CryptoKey.html",
+          "hash": "LrIF1wmAZRBL3f8oNqhzOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.AlphabetOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.AlphabetOneofCase.html",
+          "hash": "7y1ZhT9VNqGjDxlcbvzXdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet.html",
+          "hash": "k3/wQKsBKP3Hjqal//0zvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.Types.html",
+          "hash": "r5h+mIRWkD3UwXiwcCrZng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.html",
+          "hash": "gjllDkpNWEheefj8CtRqsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.TypeOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.TypeOneofCase.html",
+          "hash": "RjnPJChPwj0kiyF+R4fkpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.SourceOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.SourceOneofCase.html",
+          "hash": "FfTJC7IfZrL4N5CupiFtwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.WordList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.WordList.html",
+          "hash": "ANov+7/TInO2AqEjhZltjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.html",
+          "hash": "GEBTQ2cMWMunKbJMuD3+lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.html",
+          "hash": "IEaLUtK9OkIf6dXqaAJ+Bw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.html",
+          "hash": "KDVzAYfy7/cUEZxSRSxoSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.CustomInfoType.html",
+          "hash": "4TV941oXVWCN/jLUiRu8Pw=="
         }
       },
       "is_incremental": false,
@@ -1976,11 +2255,71 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.DeidentificationSummary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.DeidentificationSummary.html",
+          "hash": "OOkpvNz16SkpXez2nrSqfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.DeidentifyConfig.TransformationOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.DeidentifyConfig.TransformationOneofCase.html",
+          "hash": "RUx7dixg+fwE4a0NL+8xvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.DeidentifyConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.DeidentifyConfig.html",
+          "hash": "H6n7WEf+Hy55HNvM8V2zxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest.html",
+          "hash": "KI3ygE0hwJF2LBTV32RJgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.html",
+          "hash": "q4APunx0gVn0hRZW3m1VMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.DlpService.DlpServiceBase.yml",
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.DlpService.DlpServiceBase.html",
-          "hash": "YeU08rcpFzagHesHWMY+kg=="
+          "hash": "FYN6EfsdI12PvqwHTLMU4A=="
         }
       },
       "is_incremental": false,
@@ -1992,7 +2331,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.DlpService.DlpServiceClient.html",
-          "hash": "KSfrjhegJ9y46gbERUMwLA=="
+          "hash": "NWMCymzBGj6ZITWlLQ+oEQ=="
         }
       },
       "is_incremental": false,
@@ -2016,7 +2355,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html",
-          "hash": "oBUPyS/84i/yRYnhbNceXA=="
+          "hash": "8CN0iL26Bk9cdWXkC3D8zA=="
         }
       },
       "is_incremental": false,
@@ -2028,7 +2367,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.html",
-          "hash": "DTUqaYGj75ArBzTWZy6cug=="
+          "hash": "fBUN+gJ6ggpfWnEup9xulw=="
         }
       },
       "is_incremental": false,
@@ -2040,7 +2379,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.html",
-          "hash": "X+ceVgHK/KKcbvJ4mW3KXA=="
+          "hash": "JeBE2L5x9fxsXNr1ldUsjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.EntityId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.EntityId.html",
+          "hash": "GGggfICOh/5Cwut9ZJE5Ew=="
         }
       },
       "is_incremental": false,
@@ -2060,11 +2411,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.FieldTransformation.TransformationOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.FieldTransformation.TransformationOneofCase.html",
+          "hash": "MCMJxLXJHDaDZQiskZNcEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.FieldTransformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.FieldTransformation.html",
+          "hash": "nqanqmurPPLBfoxif3eWaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.Finding.yml",
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.Finding.html",
           "hash": "qYJCUi/gx3Dz/ING6W8UTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.FixedSizeBucketingConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.FixedSizeBucketingConfig.html",
+          "hash": "il5Jr9Zh2MFHbeHGR3Yz0Q=="
         }
       },
       "is_incremental": false,
@@ -2100,7 +2487,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.InfoTypeDescription.html",
-          "hash": "fjDCuOIutPsAsbtJ3IFFxw=="
+          "hash": "Q4ayq/2Y53rr3KhAAMtxHA=="
         }
       },
       "is_incremental": false,
@@ -2113,6 +2500,42 @@
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.InfoTypeStatistics.html",
           "hash": "NM4cw7EQZfupdn1IKqQ+/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.InfoTypeTransformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.InfoTypeTransformation.html",
+          "hash": "dSiDRWeGv4cbFYQmvuTR9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.html",
+          "hash": "JWhCTHYeT2mdlMAcoSlAqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.html",
+          "hash": "eq5OrxO6oRpIE7uZyHqCaQ=="
         }
       },
       "is_incremental": false,
@@ -2148,7 +2571,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.InspectConfig.html",
-          "hash": "E3hc1D4kVn21xIcEGD56nQ=="
+          "hash": "G1vYUQMFPN+hw4S1nhygmQ=="
         }
       },
       "is_incremental": false,
@@ -2276,6 +2699,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.KmsWrappedCryptoKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.KmsWrappedCryptoKey.html",
+          "hash": "KMUgbCy4UaPF+/1iNt8byQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.Likelihood.yml",
       "output": {
         ".html": {
@@ -2316,7 +2751,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.html",
-          "hash": "SM94k8e9QgwHm80DMd6Rsg=="
+          "hash": "gzE2dg8Wbj/zhUOOjG1m8Q=="
         }
       },
       "is_incremental": false,
@@ -2400,7 +2835,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.html",
-          "hash": "suF40yY92Pi5cIWrexpoFQ=="
+          "hash": "2ArfSaIzPuFF9gXKjsZwVQ=="
         }
       },
       "is_incremental": false,
@@ -2413,6 +2848,114 @@
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.PartitionId.html",
           "hash": "jmV7Uw0O9fL/59fJfYwdJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation.TransformationOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation.TransformationOneofCase.html",
+          "hash": "juDTfUf7cE8fPplXDdG0YA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation.html",
+          "hash": "EwmDi2SBtdB15IMOZUpG9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.TypeOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.TypeOneofCase.html",
+          "hash": "6K5vcuk1lpowVFqCjloMhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.CategoricalStatsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.CategoricalStatsConfig.html",
+          "hash": "DdZAPaiIU9wYe5hxdB5zkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.KAnonymityConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.KAnonymityConfig.html",
+          "hash": "HVzpvD1HU0mU/x3qEajKTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.LDiversityConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.LDiversityConfig.html",
+          "hash": "o/Iev1aHgYxLc5HDP3bbPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.NumericalStatsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.NumericalStatsConfig.html",
+          "hash": "Ih0JkIdupkbqSKRYoTr8Rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.html",
+          "hash": "C/DYzfEnqkRCVPtrvrzRlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.PrivacyMetric.html",
+          "hash": "GrFu9C/cgO8DeRP9NDN40w=="
         }
       },
       "is_incremental": false,
@@ -2456,6 +2999,102 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Condition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Condition.html",
+          "hash": "z4UbRwQGvr8sdyr4I47vLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Conditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Conditions.html",
+          "hash": "8ORHhxNNW5+6mClt8vunQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.TypeOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.TypeOneofCase.html",
+          "hash": "NQDMq3ga8LVoE1FMibnk+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Types.LogicalOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Types.LogicalOperator.html",
+          "hash": "20QX1z4uEWJMjP+P/WEpcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Types.html",
+          "hash": "ZD/cl8t+rL1EMfO2xZA90A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.html",
+          "hash": "wzse1vCHB3SY8dgoWmAdzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.html",
+          "hash": "DfjOyflNDneMhynDoNIG2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RecordCondition.html",
+          "hash": "E8Vt79jxPM8O90rLJnoBtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordKey.TypeOneofCase.yml",
       "output": {
         ".html": {
@@ -2480,6 +3119,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordSuppression.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RecordSuppression.html",
+          "hash": "1rQNIk2To77e1SWqIu8YAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RecordTransformations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RecordTransformations.html",
+          "hash": "BHieJMivn9uGS1hTYOMoJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RedactConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RedactConfig.html",
+          "hash": "mQGrmDoWLBMZ86DD0lYR9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig.TargetOneofCase.yml",
       "output": {
         ".html": {
@@ -2496,7 +3171,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig.html",
-          "hash": "+lc49rm7TTxcdXA3/sfoPQ=="
+          "hash": "YIXdwnc20IdMAdaxOlgexA=="
         }
       },
       "is_incremental": false,
@@ -2552,11 +3227,239 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RelationalOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RelationalOperator.html",
+          "hash": "g/9Ze5Hz8esnzd8+I2+pNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.ReplaceValueConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.ReplaceValueConfig.html",
+          "hash": "wn+vhrDLanhWaQG4v4e0kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.ReplaceWithInfoTypeConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.ReplaceWithInfoTypeConfig.html",
+          "hash": "RVROZ4ctee8LbuHIYYXJBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.ResultName.yml",
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.ResultName.html",
           "hash": "VSgJjBzdaKMTC1u/aWxQVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.html",
+          "hash": "br3uNUvGnkbIFXRbB2FZLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.ResultOneofCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.ResultOneofCase.html",
+          "hash": "TJ4zlrTf6kmPUf1jvk3KAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket.html",
+          "hash": "T/6zjJQ7PkgR5P0rMCTAaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.html",
+          "hash": "bUB/MWpAQe4EzBfwrvpQgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.html",
+          "hash": "KvYc7IT8XoGPvu+/dz5JYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass.html",
+          "hash": "eP4JEs551ZmLaqg6L+NyFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket.html",
+          "hash": "jCNW2TtzDXy170BsKqtPGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.html",
+          "hash": "fmRccnBRn3ka1Pkw8Lsucw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.html",
+          "hash": "YSZOhzwqts3E5gQiJcOG2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass.html",
+          "hash": "VZHmaru/lLdNeizvB5eyDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket.html",
+          "hash": "b4Jap4jd/WOPwqg3Tp69JQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.html",
+          "hash": "BxjL/1t1zfltW/wOqU++Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.html",
+          "hash": "j/9dQe9pql1/GRnSc4Cp8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.NumericalStatsResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.NumericalStatsResult.html",
+          "hash": "IxnQ6UwslbPs9RjpN0SyQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.html",
+          "hash": "9uaBWyJZK5ADhxs5cLqqDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.html",
+          "hash": "bq+3HhLxDAjh+VQGhEzR6g=="
         }
       },
       "is_incremental": false,
@@ -2636,6 +3539,114 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.TimePartConfig.Types.TimePart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.TimePartConfig.Types.TimePart.html",
+          "hash": "4vhyeUix3EavrKoJi3yF4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.TimePartConfig.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.TimePartConfig.Types.html",
+          "hash": "xqgo2EhB6OXTxBnQcUjh4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.TimePartConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.TimePartConfig.html",
+          "hash": "lWjyL2NrAjnAHvFqnBkIkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.SummaryResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.SummaryResult.html",
+          "hash": "ZJBP2R81eGKll+BkVNdDZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.TransformationResultCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.TransformationResultCode.html",
+          "hash": "X+qpCYQQBCZojPGsX3aUhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.html",
+          "hash": "9/srXbqKHtLG6e4xx+dBRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.TransformationSummary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.TransformationSummary.html",
+          "hash": "XfchrqoaQotdylazrtLU7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.TransientCryptoKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.TransientCryptoKey.html",
+          "hash": "gF9k7MUq05L4F+AvisPfhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.UnwrappedCryptoKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.UnwrappedCryptoKey.html",
+          "hash": "R7dS5skwT8aCg/LFRrA6Wg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.yml",
       "output": {
         ".html": {
@@ -2660,11 +3671,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.ValueFrequency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Dlp.V2Beta1.ValueFrequency.html",
+          "hash": "ad4YEzIQQqIB9HKbjN5fkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Dlp.V2Beta1.yml",
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Dlp.V2Beta1.html",
-          "hash": "mlW6rCUYE21JaVmZgMfZfQ=="
+          "hash": "ZkqJ54ndAg50YRppg+n+Yw=="
         }
       },
       "is_incremental": false,
@@ -5256,7 +6279,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "3snppLp+VELuL6c5gGGmIA=="
+          "hash": "zPzHvUu/EqxZI0oZdC68fw=="
         }
       },
       "is_incremental": false,
@@ -5286,27 +6309,27 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "RestApiDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

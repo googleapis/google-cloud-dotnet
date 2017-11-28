@@ -162,22 +162,7 @@ repository.</p>
   </table>
   <a id="Google_Cloud_Dlp_V2Beta1_CreateInspectOperationRequest_OutputConfig_" data-uid="Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OutputConfig*"></a>
   <h4 id="Google_Cloud_Dlp_V2Beta1_CreateInspectOperationRequest_OutputConfig" data-uid="Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OutputConfig">OutputConfig</h4>
-  <div class="markdown level1 summary"><p>Optional location to store findings. The bucket must already exist and
-the Google APIs service account for DLP must have write permission to
-write to the given bucket.
-&lt;p&gt;Results are split over multiple csv files with each file name matching
-the pattern &quot;[operation_id]_[count].csv&quot;, for example
-<code>3094877188788974909_1.csv</code>. The <code>operation_id</code> matches the
-identifier for the Operation, and the <code>count</code> is a counter used for
-tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
-following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
-&lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
-&lt;li&gt;start_offset&lt;br/&gt;
-&lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
-&lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
-&lt;li&gt;dataset_id &lt;li&gt;table_id</p>
+  <div class="markdown level1 summary"><p>Optional location to store findings.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

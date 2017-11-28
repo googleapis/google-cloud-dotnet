@@ -104,6 +104,56 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpService_DlpServiceBase_AnalyzeDataSourceRisk_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpService.DlpServiceBase.AnalyzeDataSourceRisk*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpService_DlpServiceBase_AnalyzeDataSourceRisk_Google_Cloud_Dlp_V2Beta1_AnalyzeDataSourceRiskRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpService.DlpServiceBase.AnalyzeDataSourceRisk(Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest,Grpc.Core.ServerCallContext)">AnalyzeDataSourceRisk(AnalyzeDataSourceRiskRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Schedules a job to compute risk analysis metrics over content in a Google
+Cloud Platform repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; AnalyzeDataSourceRisk(AnalyzeDataSourceRiskRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest.html">AnalyzeDataSourceRiskRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpService_DlpServiceBase_CreateInspectOperation_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpService.DlpServiceBase.CreateInspectOperation*"></a>
   <h4 id="Google_Cloud_Dlp_V2Beta1_DlpService_DlpServiceBase_CreateInspectOperation_Google_Cloud_Dlp_V2Beta1_CreateInspectOperationRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpService.DlpServiceBase.CreateInspectOperation(Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest,Grpc.Core.ServerCallContext)">CreateInspectOperation(CreateInspectOperationRequest, ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Schedules a job scanning content in a Google Cloud Platform data
@@ -149,6 +199,56 @@ repository.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpService_DlpServiceBase_DeidentifyContent_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpService.DlpServiceBase.DeidentifyContent*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpService_DlpServiceBase_DeidentifyContent_Google_Cloud_Dlp_V2Beta1_DeidentifyContentRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpService.DlpServiceBase.DeidentifyContent(Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest,Grpc.Core.ServerCallContext)">DeidentifyContent(DeidentifyContentRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>De-identifies potentially sensitive info from a list of strings.
+This method has limits on input size and output size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;DeidentifyContentResponse&gt; DeidentifyContent(DeidentifyContentRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest.html">DeidentifyContentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.html">DeidentifyContentResponse</a>&gt;</td>
         <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
       </tr>

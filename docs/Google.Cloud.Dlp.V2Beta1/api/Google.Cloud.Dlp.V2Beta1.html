@@ -77,6 +77,9 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.AnalyzeDataSourceRiskRequest.html">AnalyzeDataSourceRiskRequest</a></h4>
+      <section><p>Request for creating a risk analysis operation.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.BigQueryOptions.html">BigQueryOptions</a></h4>
       <section><p>Options defining BigQuery table and row identifiers.</p>
 </section>
@@ -87,8 +90,40 @@ a table is often referenced with a string in the format of:
 <code>&amp;lt;project_id&gt;:&amp;lt;dataset_id&gt;.&amp;lt;table_id&gt;</code> or
 <code>&amp;lt;project_id&gt;.&amp;lt;dataset_id&gt;.&amp;lt;table_id&gt;</code>.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.BucketingConfig.html">BucketingConfig</a></h4>
+      <section><p>Generalization function that buckets values based on ranges. The ranges and
+replacement values are dynamically provided by the user for custom behavior,
+such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH
+This can be used on
+data of type: number, long, string, timestamp.
+If the bound <code>Value</code> type differs from the type of data being transformed, we
+will first attempt converting the type of the data to be transformed to match
+the type of the bound before comparing.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.html">BucketingConfig.Types</a></h4>
+      <section><p>Container for nested types declared in the BucketingConfig message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.BucketingConfig.Types.Bucket.html">BucketingConfig.Types.Bucket</a></h4>
+      <section><p>Buckets represented as ranges, along with replacement values. Ranges must
+be non-overlapping.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CategoryDescription.html">CategoryDescription</a></h4>
       <section><p>Info Type Category description.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CharacterMaskConfig.html">CharacterMaskConfig</a></h4>
+      <section><p>Partially mask a string by replacing a given number of characters with a
+fixed character. Masking can start from the beginning or end of the string.
+This can be used on data of any type (numbers, longs, and so on) and when
+de-identifying structured data we&apos;ll attempt to preserve the original data&apos;s
+type. (This allows you to take a long like 123 and modify it to a string like
+**3.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CharsToIgnore.html">CharsToIgnore</a></h4>
+      <section><p>Characters to skip when doing deidentification of a value. These will be left
+alone and skipped.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Types.html">CharsToIgnore.Types</a></h4>
+      <section><p>Container for nested types declared in the CharsToIgnore message type.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CloudStorageKey.html">CloudStorageKey</a></h4>
       <section><p>Record key for a finding in a Cloud Storage file.</p>
@@ -116,11 +151,81 @@ a Google Cloud Storage bucket.</p>
       <section><p>Request for scheduling a scan of a data subset from a Google Platform data
 repository.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CryptoHashConfig.html">CryptoHashConfig</a></h4>
+      <section><p>Pseudonymization method that generates surrogates via cryptographic hashing.
+Uses SHA-256.
+Outputs a 32 byte digest as an uppercase hex string
+(for example, 41D1567F7F99F1DC2A5FAB886DEE5BEE).
+Currently, only string and integer values can be hashed.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CryptoKey.html">CryptoKey</a></h4>
+      <section><p>This is a data encryption key (DEK) (as opposed to
+a key encryption key (KEK) stored by KMS).
+When using KMS to wrap/unwrap DEKs, be sure to set an appropriate
+IAM policy on the KMS CryptoKey (KEK) to ensure an attacker cannot
+unwrap the data crypto key.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.html">CryptoReplaceFfxFpeConfig</a></h4>
+      <section><p>Replaces an identifier with a surrogate using FPE with the FFX
+mode of operation.
+The identifier must be representable by the US-ASCII character set.
+For a given crypto key and context, the same identifier will be
+replaced with the same surrogate.
+Identifiers must be at least two characters long.
+In the case that the identifier is the empty string, it will be skipped.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.Types.html">CryptoReplaceFfxFpeConfig.Types</a></h4>
+      <section><p>Container for nested types declared in the CryptoReplaceFfxFpeConfig message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CustomInfoType.html">CustomInfoType</a></h4>
+      <section><p>Custom information type provided by the user. Used to find domain-specific
+sensitive information configurable to the data in question.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.html">CustomInfoType.Types</a></h4>
+      <section><p>Container for nested types declared in the CustomInfoType message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.html">CustomInfoType.Types.Dictionary</a></h4>
+      <section><p>Custom information type based on a dictionary of words or phrases. This can
+be used to match sensitive information specific to the data, such as a list
+of employee IDs or job titles.</p>
+<p>Dictionary words are case-insensitive and all characters other than letters
+and digits in the unicode <a href="https://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane">Basic Multilingual
+Plane</a>
+will be replaced with whitespace when scanning for matches, so the
+dictionary phrase &quot;Sam Johnson&quot; will match all three phrases &quot;sam johnson&quot;,
+&quot;Sam, Johnson&quot;, and &quot;Sam (Johnson)&quot;. Additionally, the characters
+surrounding any match must be of a different type than the adjacent
+characters within the word, so letters must be next to non-letters and
+digits next to non-digits. For example, the dictionary word &quot;jen&quot; will
+match the first three letters of the text &quot;jen123&quot; but will return no
+matches for &quot;jennifer&quot;.</p>
+<p>Dictionary words containing a large number of characters that are not
+letters or digits may result in unexpected findings because such characters
+are treated as whitespace.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.html">CustomInfoType.Types.Dictionary.Types</a></h4>
+      <section><p>Container for nested types declared in the Dictionary message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.Types.WordList.html">CustomInfoType.Types.Dictionary.Types.WordList</a></h4>
+      <section><p>Message defining a list of words or phrases to search for in the data.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DatastoreKey.html">DatastoreKey</a></h4>
       <section><p>Record key for a finding in Cloud Datastore.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DatastoreOptions.html">DatastoreOptions</a></h4>
       <section><p>Options defining a data set within Google Cloud Datastore.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentificationSummary.html">DeidentificationSummary</a></h4>
+      <section><p>High level summary of deidentification.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyConfig.html">DeidentifyConfig</a></h4>
+      <section><p>The configuration that controls how the data will change.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentRequest.html">DeidentifyContentRequest</a></h4>
+      <section><p>Request to de-identify a list of items.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyContentResponse.html">DeidentifyContentResponse</a></h4>
+      <section><p>Results of de-identifying a list of items.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DlpService.html">DlpService</a></h4>
       <section><p>The DLP API is a service that allows clients
@@ -145,11 +250,33 @@ scheduling of data scans on Google Cloud Platform based data sets.</p>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.html">DlpServiceSettings</a></h4>
       <section><p>Settings for a <a class="xref" href="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html">DlpServiceClient</a>.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.EntityId.html">EntityId</a></h4>
+      <section><p>An entity in a dataset is a field or set of fields that correspond to a
+single person. For example, in medical records the <code>EntityId</code> might be
+a patient identifier, or for financial records it might be an account
+identifier. This message is used when generalizations or analysis must be
+consistent across multiple rows pertaining to the same entity.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.FieldId.html">FieldId</a></h4>
       <section><p>General identifier of a data field in a storage service.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.FieldTransformation.html">FieldTransformation</a></h4>
+      <section><p>The transformation to apply to the field.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.Finding.html">Finding</a></h4>
       <section><p>Container structure describing a single finding within a string or image.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.FixedSizeBucketingConfig.html">FixedSizeBucketingConfig</a></h4>
+      <section><p>Buckets values based on fixed size ranges. The
+Bucketing transformation can provide all of this functionality,
+but requires more configuration. This message is provided as a convenience to
+the user for simple bucketing strategies.
+The resulting value will be a hyphenated string of
+lower_bound-upper_bound.
+This can be used on data of type: double, long.
+If the bound Value type differs from the type of data
+being transformed, we will first attempt converting the type of the data to
+be transformed to match the type of the bound before comparing.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ImageLocation.html">ImageLocation</a></h4>
       <section><p>Bounding box encompassing detected text within an image.</p>
@@ -158,10 +285,23 @@ scheduling of data scans on Google Cloud Platform based data sets.</p>
       <section><p>Type of information detected by the API.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InfoTypeDescription.html">InfoTypeDescription</a></h4>
-      <section><p>Info type description.</p>
+      <section><p>Description of the information type (infoType).</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InfoTypeStatistics.html">InfoTypeStatistics</a></h4>
       <section><p>Statistics regarding a specific InfoType.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.html">InfoTypeTransformations</a></h4>
+      <section><p>A type of transformation that will scan unstructured text and
+apply various <code>PrimitiveTransformation</code>s to each finding, where the
+transformation is applied to only values that were identified as a specific
+info_type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.html">InfoTypeTransformations.Types</a></h4>
+      <section><p>Container for nested types declared in the InfoTypeTransformations message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InfoTypeTransformations.Types.InfoTypeTransformation.html">InfoTypeTransformations.Types.InfoTypeTransformation</a></h4>
+      <section><p>A transformation to apply to text that is identified as a specific
+info_type.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.InspectConfig.html">InspectConfig</a></h4>
       <section><p>Configuration description of the scanning process.
@@ -207,6 +347,12 @@ If neither is set, the element is incomplete.</p>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.KindExpression.html">KindExpression</a></h4>
       <section><p>A representation of a Datastore kind.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.KmsWrappedCryptoKey.html">KmsWrappedCryptoKey</a></h4>
+      <section><p>Include to use an existing data crypto key wrapped by KMS.
+Authorization requires the following IAM permissions when sending a request
+to perform a crypto transformation using a kms-wrapped crypto key:
+dlp.kms.encrypt</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ListInfoTypesRequest.html">ListInfoTypesRequest</a></h4>
       <section><p>Request for the list of info types belonging to a given category,
 or all supported info types if no category is specified.</p>
@@ -243,6 +389,29 @@ by project and namespace, however the namespace ID may be empty.</p>
 <p>A partition ID contains several dimensions:
 project ID and namespace ID.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation.html">PrimitiveTransformation</a></h4>
+      <section><p>A rule for transforming a value.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrivacyMetric.html">PrivacyMetric</a></h4>
+      <section><p>Privacy metric to compute for reidentification risk analysis.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.html">PrivacyMetric.Types</a></h4>
+      <section><p>Container for nested types declared in the PrivacyMetric message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.CategoricalStatsConfig.html">PrivacyMetric.Types.CategoricalStatsConfig</a></h4>
+      <section><p>Compute numerical stats over an individual column, including
+number of distinct values and value count distribution.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.KAnonymityConfig.html">PrivacyMetric.Types.KAnonymityConfig</a></h4>
+      <section><p>k-anonymity metric, used for analysis of reidentification risk.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.LDiversityConfig.html">PrivacyMetric.Types.LDiversityConfig</a></h4>
+      <section><p>l-diversity metric, used for analysis of reidentification risk.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrivacyMetric.Types.NumericalStatsConfig.html">PrivacyMetric.Types.NumericalStatsConfig</a></h4>
+      <section><p>Compute numerical stats over an individual column, including
+min, max, and quantiles.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.Projection.html">Projection</a></h4>
       <section><p>A representation of a Datastore property in a projection.</p>
 </section>
@@ -252,8 +421,55 @@ project ID and namespace ID.</p>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.Range.html">Range</a></h4>
       <section><p>Generic half-open interval [start, end)</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordCondition.html">RecordCondition</a></h4>
+      <section><p>A condition for determining whether a transformation should be applied to
+a field.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.html">RecordCondition.Types</a></h4>
+      <section><p>Container for nested types declared in the RecordCondition message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Condition.html">RecordCondition.Types.Condition</a></h4>
+      <section><p>The field type of <code>value</code> and <code>field</code> do not need to match to be
+considered equal, but not all comparisons are possible.</p>
+<p>A <code>value</code> of type:</p>
+<ul>
+<li><code>string</code> can be compared against all other types</li>
+<li><code>boolean</code> can only be compared against other booleans</li>
+<li><code>integer</code> can be compared against doubles or a string if the string value
+can be parsed as an integer.</li>
+<li><code>double</code> can be compared against integers or a string if the string can
+be parsed as a double.</li>
+<li><code>Timestamp</code> can be compared against strings in RFC 3339 date string
+format.</li>
+<li><code>TimeOfDay</code> can be compared against timestamps and strings in the format
+of &apos;HH:mm:ss&apos;.</li>
+</ul>
+<p>If we fail to compare do to type mismatch, a warning will be given and
+the condition will evaluate to false.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Conditions.html">RecordCondition.Types.Conditions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.html">RecordCondition.Types.Expressions</a></h4>
+      <section><p>A collection of expressions</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Types.html">RecordCondition.Types.Expressions.Types</a></h4>
+      <section><p>Container for nested types declared in the Expressions message type.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordKey.html">RecordKey</a></h4>
       <section><p>Message for a unique key indicating a record that contains a finding.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordSuppression.html">RecordSuppression</a></h4>
+      <section><p>Configuration to suppress records whose suppression conditions evaluate to
+true.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordTransformations.html">RecordTransformations</a></h4>
+      <section><p>A type of transformation that is applied over structured data such as a
+table.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactConfig.html">RedactConfig</a></h4>
+      <section><p>Redact a given value. For example, if used with an <code>InfoTypeTransformation</code>
+transforming PHONE_NUMBER, and input &apos;My phone number is 206-555-0123&apos;, the
+output would be &apos;My phone number is &apos;.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentRequest.html">RedactContentRequest</a></h4>
       <section><p>Request to search for potentially sensitive info in a list of items
@@ -263,15 +479,70 @@ and replace it with a default or provided content.</p>
       <section><p>Container for nested types declared in the RedactContentRequest message type.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig.html">RedactContentRequest.Types.ImageRedactionConfig</a></h4>
-      <section><p>Configuration for determing how redaction of images should occur.</p>
+      <section><p>Configuration for determining how redaction of images should occur.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ReplaceConfig.html">RedactContentRequest.Types.ReplaceConfig</a></h4>
       <section></section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentResponse.html">RedactContentResponse</a></h4>
       <section><p>Results of redacting a list of items.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ReplaceValueConfig.html">ReplaceValueConfig</a></h4>
+      <section><p>Replace each input value with a given <code>Value</code>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ReplaceWithInfoTypeConfig.html">ReplaceWithInfoTypeConfig</a></h4>
+      <section><p>Replace each matching finding with the name of the info_type.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ResultName.html">ResultName</a></h4>
       <section><p>Resource name for the &apos;result&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationMetadata.html">RiskAnalysisOperationMetadata</a></h4>
+      <section><p>Metadata returned within the
+<a href="/dlp/docs/reference/rest/v2beta1/riskAnalysis.operations/get"><code>riskAnalysis.operations.get</code></a>
+for risk analysis.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.html">RiskAnalysisOperationResult</a></h4>
+      <section><p>Result of a risk analysis
+<a href="/dlp/docs/reference/rest/v2beta1/inspect.operations"><code>Operation</code></a>
+request.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.html">RiskAnalysisOperationResult.Types</a></h4>
+      <section><p>Container for nested types declared in the RiskAnalysisOperationResult message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.html">RiskAnalysisOperationResult.Types.CategoricalStatsResult</a></h4>
+      <section><p>Result of the categorical stats computation.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.html">RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types</a></h4>
+      <section><p>Container for nested types declared in the CategoricalStatsResult message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket.html">RiskAnalysisOperationResult.Types.CategoricalStatsResult.Types.CategoricalStatsHistogramBucket</a></h4>
+      <section><p>Histogram bucket of value frequencies in the column.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.html">RiskAnalysisOperationResult.Types.KAnonymityResult</a></h4>
+      <section><p>Result of the k-anonymity computation.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.html">RiskAnalysisOperationResult.Types.KAnonymityResult.Types</a></h4>
+      <section><p>Container for nested types declared in the KAnonymityResult message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass.html">RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityEquivalenceClass</a></h4>
+      <section><p>The set of columns&apos; values that share the same k-anonymity value.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket.html">RiskAnalysisOperationResult.Types.KAnonymityResult.Types.KAnonymityHistogramBucket</a></h4>
+      <section><p>Histogram bucket of equivalence class sizes in the table.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.html">RiskAnalysisOperationResult.Types.LDiversityResult</a></h4>
+      <section><p>Result of the l-diversity computation.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.html">RiskAnalysisOperationResult.Types.LDiversityResult.Types</a></h4>
+      <section><p>Container for nested types declared in the LDiversityResult message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass.html">RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityEquivalenceClass</a></h4>
+      <section><p>The set of columns&apos; values that share the same l-diversity value.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket.html">RiskAnalysisOperationResult.Types.LDiversityResult.Types.LDiversityHistogramBucket</a></h4>
+      <section><p>Histogram bucket of sensitive value frequencies in the table.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.Types.NumericalStatsResult.html">RiskAnalysisOperationResult.Types.NumericalStatsResult</a></h4>
+      <section><p>Result of the numerical stats computation.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.StorageConfig.html">StorageConfig</a></h4>
       <section><p>Shared message indicating Cloud storage type.</p>
@@ -287,13 +558,69 @@ and replace it with a default or provided content.</p>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.TableLocation.html">TableLocation</a></h4>
       <section><p>Location of a finding within a <code>ContentItem.Table</code>.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.TimePartConfig.html">TimePartConfig</a></h4>
+      <section><p>For use with <code>Date</code>, <code>Timestamp</code>, and <code>TimeOfDay</code>, extract or preserve a
+portion of the value.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.TimePartConfig.Types.html">TimePartConfig.Types</a></h4>
+      <section><p>Container for nested types declared in the TimePartConfig message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.TransformationSummary.html">TransformationSummary</a></h4>
+      <section><p>Summary of a single tranformation.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.html">TransformationSummary.Types</a></h4>
+      <section><p>Container for nested types declared in the TransformationSummary message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.SummaryResult.html">TransformationSummary.Types.SummaryResult</a></h4>
+      <section><p>A collection that informs the user the number of times a particular
+<code>TransformationResultCode</code> and error details occurred.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.TransientCryptoKey.html">TransientCryptoKey</a></h4>
+      <section><p>Use this to have a random data crypto key generated.
+It will be discarded after the operation/request finishes.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.UnwrappedCryptoKey.html">UnwrappedCryptoKey</a></h4>
+      <section><p>Using raw keys is prone to security risks due to accidentally
+leaking the key. Choose another type of key if possible.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.Value.html">Value</a></h4>
       <section><p>Set of primitive values supported by the system.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ValueFrequency.html">ValueFrequency</a></h4>
+      <section><p>A value of a field, including its frequency.</p>
+</section>
     <h3 id="enums">Enums
   </h3>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CharsToIgnore.CharactersOneofCase.html">CharsToIgnore.CharactersOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;characters&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CharsToIgnore.Types.CharacterGroup.html">CharsToIgnore.Types.CharacterGroup</a></h4>
+      <section></section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.html">ContentItem.DataItemOneofCase</a></h4>
       <section><p>Enum of possible cases for the &quot;data_item&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CryptoKey.SourceOneofCase.html">CryptoKey.SourceOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;source&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.AlphabetOneofCase.html">CryptoReplaceFfxFpeConfig.AlphabetOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;alphabet&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet.html">CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet</a></h4>
+      <section><p>These are commonly used subsets of the alphabet that the FFX mode
+natively supports. In the algorithm, the alphabet is selected using
+the &quot;radix&quot;. Therefore each corresponds to particular radix.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CustomInfoType.TypeOneofCase.html">CustomInfoType.TypeOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;type&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.CustomInfoType.Types.Dictionary.SourceOneofCase.html">CustomInfoType.Types.Dictionary.SourceOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;source&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DeidentifyConfig.TransformationOneofCase.html">DeidentifyConfig.TransformationOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;transformation&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.FieldTransformation.TransformationOneofCase.html">FieldTransformation.TransformationOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;transformation&quot; oneof.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.Key.Types.PathElement.IdTypeOneofCase.html">Key.Types.PathElement.IdTypeOneofCase</a></h4>
       <section><p>Enum of possible cases for the &quot;id_type&quot; oneof.</p>
@@ -305,14 +632,36 @@ based on the number of elements they contain which imply a match.</p>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.TypeOneofCase.html">OutputStorageConfig.TypeOneofCase</a></h4>
       <section><p>Enum of possible cases for the &quot;type&quot; oneof.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrimitiveTransformation.TransformationOneofCase.html">PrimitiveTransformation.TransformationOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;transformation&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.PrivacyMetric.TypeOneofCase.html">PrivacyMetric.TypeOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;type&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.TypeOneofCase.html">RecordCondition.Types.Expressions.TypeOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;type&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordCondition.Types.Expressions.Types.LogicalOperator.html">RecordCondition.Types.Expressions.Types.LogicalOperator</a></h4>
+      <section></section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RecordKey.TypeOneofCase.html">RecordKey.TypeOneofCase</a></h4>
       <section><p>Enum of possible cases for the &quot;type&quot; oneof.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types.ImageRedactionConfig.TargetOneofCase.html">RedactContentRequest.Types.ImageRedactionConfig.TargetOneofCase</a></h4>
       <section><p>Enum of possible cases for the &quot;target&quot; oneof.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RelationalOperator.html">RelationalOperator</a></h4>
+      <section><p>Operators available for comparing the value of fields.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.RiskAnalysisOperationResult.ResultOneofCase.html">RiskAnalysisOperationResult.ResultOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;result&quot; oneof.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase.html">StorageConfig.TypeOneofCase</a></h4>
       <section><p>Enum of possible cases for the &quot;type&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.TimePartConfig.Types.TimePart.html">TimePartConfig.Types.TimePart</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.TransformationSummary.Types.TransformationResultCode.html">TransformationSummary.Types.TransformationResultCode</a></h4>
+      <section><p>Possible outcomes of transformations.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.html">Value.TypeOneofCase</a></h4>
       <section><p>Enum of possible cases for the &quot;type&quot; oneof.</p>
