@@ -41,12 +41,9 @@ namespace Google.Cloud.Storage.V1.ThroughputTool
         private void ReportPeriodically()
         {
             Console.WriteLine("Timestamp  Elapsed         MB     Mbps");
-            while (true)
+            while (!_tcs.Task.IsCompleted)
             {
-                if (_tcs.Task.Wait(s_reportPeriod))
-                {
-                    return;
-                }
+                _tcs.Task.Wait(s_reportPeriod);
                 DateTime now = DateTime.UtcNow;
                 TimeSpan elapsed = _stopwatch.Elapsed;
                 double totalSeconds = elapsed.TotalSeconds;
