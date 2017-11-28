@@ -26,10 +26,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "bGUuYmlndGFibGUuYWRtaW4udjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
             "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8qPQoLU3Rv",
             "cmFnZVR5cGUSHAoYU1RPUkFHRV9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDU1NE",
-            "EAESBwoDSEREEAJCjQEKHGNvbS5nb29nbGUuYmlndGFibGUuYWRtaW4udjJC",
+            "EAESBwoDSEREEAJCrgEKHGNvbS5nb29nbGUuYmlndGFibGUuYWRtaW4udjJC",
             "C0NvbW1vblByb3RvUAFaPWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
             "b2dsZWFwaXMvYmlndGFibGUvYWRtaW4vdjI7YWRtaW6qAh5Hb29nbGUuQ2xv",
-            "dWQuQmlndGFibGUuQWRtaW4uVjJiBnByb3RvMw=="));
+            "dWQuQmlndGFibGUuQWRtaW4uVjLKAh5Hb29nbGVcQ2xvdWRcQmlndGFibGVc",
+            "QWRtaW5cVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Bigtable.Admin.V2.StorageType), }, null));
