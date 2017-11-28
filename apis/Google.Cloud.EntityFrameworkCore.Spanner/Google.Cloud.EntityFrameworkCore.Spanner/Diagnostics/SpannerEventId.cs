@@ -12,12 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Diagnostics;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Logging;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics
+namespace Microsoft.EntityFrameworkCore.Diagnostics
 {
     /// <summary>
     /// Event IDs for Cloud Spanner log messages

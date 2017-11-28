@@ -15,8 +15,6 @@
 #region
 
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
@@ -32,6 +30,8 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
     public class TestDatabaseFixture : CloudProjectFixtureBase, ICollectionFixture<TestDatabaseFixture>
     {
         private readonly Lazy<Task> _creationTask;
+
+        public TestDatabaseFixture() => _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
         public string TestInstanceName => "spannerintegration";
         public string ConnectionString => $"{NoDbConnectionString}/databases/{DatabaseName}";
         public string NoDbConnectionString => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}";
@@ -41,8 +41,9 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         // not cause failures).
         // if you use a scratch database, be sure to comment out the database
         // creation and disposal methods.
-        private string DatabaseName { get; }  =  // "scratch";
+        private string DatabaseName { get; } = // "scratch";
             "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+
         public int TestTableRowCount { get; } = 15;
         public string TestTable { get; } = nameof(TestTableContext.StringTable);
 
@@ -56,7 +57,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                 dropCommand.ExecuteNonQueryAsync().ResultWithUnwrappedExceptions();
             }
         }
-        
+
         private async Task ExecuteDdlAsync(string ddlStatement)
         {
             using (var connection = new SpannerConnection(ConnectionString))
@@ -112,7 +113,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
         private async Task CreateTableAsync()
         {
-            string createTableStatement = $@"CREATE TABLE {TestTable} (
+            var createTableStatement = $@"CREATE TABLE {TestTable} (
                                             Key                STRING(MAX) NOT NULL,
                                             StringValue        STRING(MAX),
                                           ) PRIMARY KEY (Key)";

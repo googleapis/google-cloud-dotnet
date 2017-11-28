@@ -13,9 +13,8 @@
 // limitations under the License.
 
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore.Query.ExpressionTranslators;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Query.ExpressionTranslators.Internal
+namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     /// <summary>
     /// </summary>

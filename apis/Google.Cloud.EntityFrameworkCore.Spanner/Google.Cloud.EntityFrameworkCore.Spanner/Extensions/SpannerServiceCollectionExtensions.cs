@@ -13,20 +13,20 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.EntityFrameworkCore.Spanner.Infrastructure.Internal;
-using Google.Cloud.EntityFrameworkCore.Spanner.Metadata.Conventions;
-using Google.Cloud.EntityFrameworkCore.Spanner.Query.ExpressionTranslators.Internal;
-using Google.Cloud.EntityFrameworkCore.Spanner.Query.Internal;
-using Google.Cloud.EntityFrameworkCore.Spanner.Query.Sql.Internal;
-using Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal;
-using Google.Cloud.EntityFrameworkCore.Spanner.Update.Internal;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.EntityFrameworkCore.Query.ExpressionTranslators;
+using Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.EntityFrameworkCore.Query.Sql;
+using Microsoft.EntityFrameworkCore.Query.Sql.Internal;
 using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
 using Microsoft.EntityFrameworkCore.Update;
+using Microsoft.EntityFrameworkCore.Update.Internal;
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection

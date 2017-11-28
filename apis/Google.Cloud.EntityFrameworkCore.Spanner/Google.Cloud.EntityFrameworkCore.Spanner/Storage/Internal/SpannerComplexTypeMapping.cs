@@ -14,9 +14,8 @@
 
 using System.Data.Common;
 using Google.Cloud.Spanner.Data;
-using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
+namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
     /// Represents a complex spanner type mapping. This class is used for setting up type conversions.

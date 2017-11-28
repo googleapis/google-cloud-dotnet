@@ -12,10 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.EntityFrameworkCore.Query;
-using Microsoft.EntityFrameworkCore.Query.Internal;
-
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Query.Internal
+namespace Microsoft.EntityFrameworkCore.Query.Internal
 {
     /// <summary>
     /// </summary>

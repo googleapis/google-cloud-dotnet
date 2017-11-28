@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.EntityFrameworkCore.Query.ExpressionTranslators;
-
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Query.ExpressionTranslators.Internal
+namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     /// <summary>
     /// </summary>

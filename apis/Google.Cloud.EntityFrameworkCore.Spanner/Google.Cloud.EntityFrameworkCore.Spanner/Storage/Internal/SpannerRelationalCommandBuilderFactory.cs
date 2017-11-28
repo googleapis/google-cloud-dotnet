@@ -20,15 +20,11 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
-using Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics;
 using Google.Cloud.Spanner.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
+namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
     /// </summary>
@@ -188,7 +184,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
                     IRelationalConnection connection,
                     DbCommandMethod executeMethod,
                     IReadOnlyDictionary<string, object> parameterValues,
-                    CancellationToken cancellationToken = default(CancellationToken))
+                    CancellationToken cancellationToken = default)
                 {
                     GaxPreconditions.CheckNotNull(connection, nameof(connection));
 

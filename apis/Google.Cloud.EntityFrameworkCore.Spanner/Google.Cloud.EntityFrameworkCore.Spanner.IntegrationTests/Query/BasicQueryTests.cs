@@ -14,6 +14,7 @@
 
 #region
 
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
@@ -21,18 +22,16 @@ using Xunit.Abstractions;
 
 #endregion
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
+namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
     [Collection(nameof(TestDatabaseFixture))]
     public class BasicQueryTests
     {
-        private readonly TestDatabaseFixture _testFixture;
-
         // ReSharper disable once UnusedParameter.Local
-        public BasicQueryTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
-        {
-            _testFixture = testFixture;
-        }
+        public BasicQueryTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper) => _testFixture =
+            testFixture;
+
+        private readonly TestDatabaseFixture _testFixture;
 
         [Fact]
         public async Task All()
@@ -44,7 +43,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                 Assert.Equal(15, strings.Count);
                 Assert.Equal(
                     @"message:SpannerCommand.ExecuteReader.Query=SELECT s.Key, s.StringValue FROM StringTable AS s",
-                db.GetCurrentLog());
+                    db.GetCurrentLog());
             }
         }
 
@@ -85,31 +84,51 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         }
 
 
-        [Fact(Skip = "TODO: looks like a type conversion issue in sql gen bowels.")]
+        [Fact]
         public async Task ContainsAsync()
         {
             using (var db = await _testFixture.CreateContextAsync(
                 x => x?.StartsWith("SpannerCommand.ExecuteReader.Query") ?? false))
             {
-                var containsValue = await db.StringTable.ContainsAsync(new StringEntry
-                {
-                    Key = "k1",
-                    StringValue = "nonexistent_but_shouldn't_matter_string"
-                });
+                var containsValue = await db.StringTable.Select(x => x.StringValue).ContainsAsync("v1");
                 Assert.Equal(true, containsValue);
                 Assert.Equal(
-                    @"message:SpannerCommand.ExecuteReader.Query=SELECT x.StringValue FROM StringTable AS x",
+                    @"message:SpannerCommand.ExecuteReader.Query=SELECT CASE     WHEN @__p_0 IN (         SELECT x.StringValue         FROM StringTable AS x     )     THEN TRUE ELSE FALSE END",
                     db.GetCurrentLog());
 
                 db.ClearLog();
-                containsValue = await db.StringTable.ContainsAsync(new StringEntry
-                {
-                    Key = "key_that_doesnt_exist",
-                    StringValue = "nonexistent_but_shouldn't_matter_string"
-                });
+                containsValue = await db.StringTable.Select(x => x.StringValue).ContainsAsync("nonexistent_key");
                 Assert.Equal(false, containsValue);
                 Assert.Equal(
-                    @"message:SpannerCommand.ExecuteReader.Query=SELECT x.StringValue FROM StringTable AS x",
+                    @"message:SpannerCommand.ExecuteReader.Query=SELECT CASE     WHEN @__p_0 IN (         SELECT x.StringValue         FROM StringTable AS x     )     THEN TRUE ELSE FALSE END",
+                    db.GetCurrentLog());
+            }
+        }
+
+        [Fact]
+        public async Task FirstAsync()
+        {
+            using (var db = await _testFixture.CreateContextAsync(
+                x => x?.StartsWith("SpannerCommand.ExecuteReader.Query") ?? false))
+            {
+                var firstEntry = await db.StringTable.Where(x => x.Key.StartsWith("k")).FirstAsync();
+                Assert.StartsWith("k", firstEntry.Key);
+                Assert.Equal(
+                    @"message:SpannerCommand.ExecuteReader.Query=SELECT s.Key, s.StringValue FROM StringTable AS s",
+                    db.GetCurrentLog());
+            }
+        }
+
+        [Fact]
+        public async Task FirstOrDefaultNullAsync()
+        {
+            using (var db = await _testFixture.CreateContextAsync(
+                x => x?.StartsWith("SpannerCommand.ExecuteReader.Query") ?? false))
+            {
+                var firstEntry = await db.StringTable.Where(x => x.Key.StartsWith("vk")).FirstOrDefaultAsync();
+                Assert.Null(firstEntry);
+                Assert.Equal(
+                    @"message:SpannerCommand.ExecuteReader.Query=SELECT s.Key, s.StringValue FROM StringTable AS s",
                     db.GetCurrentLog());
             }
         }

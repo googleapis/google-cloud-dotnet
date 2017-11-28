@@ -41,4 +41,7 @@
       <PackagePath>lib/netstandard2.0</PackagePath>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\Internal\" />
+  </ItemGroup>
 </Project>

@@ -17,9 +17,8 @@ using System.Collections.Generic;
 using System.Data;
 using Google.Cloud.Spanner.Data;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
+namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
     /// </summary>
@@ -38,6 +37,37 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
         private static readonly LongTypeMapping s_long 
             = new LongTypeMapping(SpannerDbType.Int64.ToString(), DbType.Int64);
 
+        private static readonly SpannerComplexTypeMapping s_stringArray
+            = new SpannerComplexTypeMapping(SpannerDbType.ArrayOf(SpannerDbType.String));
+        private static readonly SpannerComplexTypeMapping s_boolArray
+            = new SpannerComplexTypeMapping(SpannerDbType.ArrayOf(SpannerDbType.Bool));
+        private static readonly SpannerComplexTypeMapping s_doubleArray
+            = new SpannerComplexTypeMapping(SpannerDbType.ArrayOf(SpannerDbType.Float64));
+        private static readonly SpannerComplexTypeMapping s_longArray
+            = new SpannerComplexTypeMapping(SpannerDbType.ArrayOf(SpannerDbType.Int64));
+        private static readonly SpannerComplexTypeMapping s_dateArray
+            = new SpannerComplexTypeMapping(SpannerDbType.ArrayOf(SpannerDbType.Timestamp));
+
+        private static readonly Dictionary<System.Type, RelationalTypeMapping> s_clrTypeMappings
+            = new Dictionary<System.Type, RelationalTypeMapping>
+            {
+                {typeof(short), s_long},
+                {typeof(int), s_long},
+                {typeof(long), s_long},
+                {typeof(decimal), s_defaultString},
+                {typeof(uint), s_long},
+                {typeof(bool), s_bool},
+                {typeof(DateTime), s_datetime},
+                {typeof(float), s_double},
+                {typeof(double), s_double},
+                {typeof(string), s_defaultString},
+                {typeof(string[]), s_stringArray},
+                {typeof(bool[]), s_boolArray},
+                {typeof(double[]), s_doubleArray},
+                {typeof(long[]), s_longArray},
+                {typeof(DateTime[]), s_dateArray},
+            };
+
         private static readonly Dictionary<SpannerDbType, RelationalTypeMapping> s_dbTypeMappings
             = new Dictionary<SpannerDbType, RelationalTypeMapping>
             {
@@ -50,19 +80,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
                 { SpannerDbType.String, s_defaultString },
                 { SpannerDbType.Unspecified, null },
             };
-
-        private static readonly Dictionary<System.Type, RelationalTypeMapping> s_clrTypeMappings
-            = new Dictionary<System.Type, RelationalTypeMapping>
-        {
-            {typeof(int), s_long },
-            {typeof(long), s_long },
-            {typeof(uint), s_long},
-            {typeof(bool), s_bool},
-            {typeof(DateTime), s_datetime},
-            {typeof(float), s_double},
-            {typeof(double), s_double},
-            {typeof(string), s_defaultString}
-        };
 
         /// <summary>
         /// </summary>

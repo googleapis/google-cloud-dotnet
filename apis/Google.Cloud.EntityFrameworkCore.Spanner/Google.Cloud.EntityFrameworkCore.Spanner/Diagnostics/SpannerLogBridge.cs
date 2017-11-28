@@ -13,15 +13,14 @@
 // limitations under the License.
 
 using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics
+namespace Microsoft.EntityFrameworkCore.Diagnostics
 {
     /// <summary>
     /// This is internal functionality and not intended for public use.
     /// </summary>
-    public class SpannerLogBridge<TLoggerCategory> : Cloud.Spanner.V1.Internal.Logging.DefaultLogger
+    public class SpannerLogBridge<TLoggerCategory> : DefaultLogger
         where TLoggerCategory : LoggerCategory<TLoggerCategory>, new()
     {
         private readonly IDiagnosticsLogger<TLoggerCategory> _efLogger;

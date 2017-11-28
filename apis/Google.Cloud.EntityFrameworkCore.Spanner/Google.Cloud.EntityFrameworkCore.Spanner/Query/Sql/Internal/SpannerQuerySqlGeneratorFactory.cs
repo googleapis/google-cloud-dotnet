@@ -14,9 +14,8 @@
 
 using Google.Api.Gax;
 using Microsoft.EntityFrameworkCore.Query.Expressions;
-using Microsoft.EntityFrameworkCore.Query.Sql;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Query.Sql.Internal
+namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
 {
     /// <summary>
     /// </summary>

@@ -14,9 +14,8 @@
 
 using System.Text;
 using Google.Api.Gax;
-using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
+namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
     /// </summary>

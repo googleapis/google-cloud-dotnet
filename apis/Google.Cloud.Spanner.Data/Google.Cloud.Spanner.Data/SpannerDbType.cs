@@ -271,6 +271,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Returns a clone of this type with the specified size constraint.
+        /// Only valid on <see cref="TypeCode.String"/> and <see cref="TypeCode.Bytes"/>
         /// </summary>
         /// <param name="size">Represents the number of characters (for <see cref="TypeCode.String"/>)
         ///  or bytes (for <see cref="TypeCode.Bytes"/>)</param>
