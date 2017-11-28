@@ -26,6 +26,9 @@ while (( "$#" )); do
   then 
     echo "Not running tests..."
     runtests=false
+  elif [[ "$1" == "--diff" ]]
+  then
+    apis+=($(git diff master --name-only | grep apis/Google | cut -d/ -f 2 | uniq))
   else 
     apis+=($1)
   fi
