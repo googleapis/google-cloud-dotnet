@@ -128,7 +128,8 @@ namespace Google.Cloud.Spanner.Data
         public override string CommandText
         {
             get => SpannerCommandTextBuilder?.ToString() ?? "";
-            set => SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value);
+            set => SpannerCommandTextBuilder = string.IsNullOrEmpty(value) ? null :
+                        SpannerCommandTextBuilder.FromCommandText(value);
         }
 
 
@@ -344,7 +345,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             ParentAsInstanceName = parent,
                             CreateStatement = commandText,
-                            ExtraStatements = {spannerCommandTextBuilder.ExtraStatements}
+                            ExtraStatements = {spannerCommandTextBuilder.ExtraStatements ?? new string[0]}
                         }).ConfigureAwait(false);
                     response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
                     if (response.IsFaulted)

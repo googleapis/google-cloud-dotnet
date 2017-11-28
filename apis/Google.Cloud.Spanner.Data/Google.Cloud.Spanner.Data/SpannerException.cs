@@ -94,7 +94,12 @@ namespace Google.Cloud.Spanner.Data
             ErrorCode = innerException.IsSessionExpiredError() ? ErrorCode.Aborted : code;
         }
 
-        internal SpannerException(ErrorCode code, string message) : base(message)
+        /// <summary>
+        /// Creates a new instance of <see cref="SpannerException"/>
+        /// </summary>
+        /// <param name="code">The <see cref="ErrorCode"/> for the exception.</param>
+        /// <param name="message">A descriptive message about the exception.</param>
+        public SpannerException(ErrorCode code, string message) : base(message)
         {
             Logger.DefaultLogger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
             ErrorCode = code;
