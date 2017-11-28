@@ -322,16 +322,6 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
                                 Value = "My email is example@example.com.",
                             },
                         },
-                ReplaceConfigs = {
-                                     new RedactContentRequest.Types.ReplaceConfig
-                                     {
-                                         InfoType = new InfoType
-                                                    {
-                                                        Name = "EMAIL_ADDRESS",
-                                                    },
-                                         ReplaceWith = "REDACTED",
-                                     },
-                                 },
             };
             // Make the request
             RedactContentResponse response = await dlpServiceClient.RedactContentAsync(request);
@@ -363,16 +353,6 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
                                 Value = "My email is example@example.com.",
                             },
                         },
-                ReplaceConfigs = {
-                                     new RedactContentRequest.Types.ReplaceConfig
-                                     {
-                                         InfoType = new InfoType
-                                                    {
-                                                        Name = "EMAIL_ADDRESS",
-                                                    },
-                                         ReplaceWith = "REDACTED",
-                                     },
-                                 },
             };
             // Make the request
             RedactContentResponse response = dlpServiceClient.RedactContent(request);

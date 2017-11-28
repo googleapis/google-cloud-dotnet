@@ -660,7 +660,7 @@ namespace Google.Cloud.Dlp.V2Beta1
                 {
                     InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
                     Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
-                    ReplaceConfigs = { GaxPreconditions.CheckNotNull(replaceConfigs, nameof(replaceConfigs)) },
+                    ReplaceConfigs = { replaceConfigs ?? Enumerable.Empty<RedactContentRequest.Types.ReplaceConfig>() }, // Optional
                 },
                 callSettings);
 
@@ -723,7 +723,7 @@ namespace Google.Cloud.Dlp.V2Beta1
                 {
                     InspectConfig = GaxPreconditions.CheckNotNull(inspectConfig, nameof(inspectConfig)),
                     Items = { GaxPreconditions.CheckNotNull(items, nameof(items)) },
-                    ReplaceConfigs = { GaxPreconditions.CheckNotNull(replaceConfigs, nameof(replaceConfigs)) },
+                    ReplaceConfigs = { replaceConfigs ?? Enumerable.Empty<RedactContentRequest.Types.ReplaceConfig>() }, // Optional
                 },
                 callSettings);
 
