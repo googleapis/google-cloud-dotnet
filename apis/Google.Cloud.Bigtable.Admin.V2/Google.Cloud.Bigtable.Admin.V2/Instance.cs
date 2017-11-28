@@ -37,10 +37,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "ZGVmYXVsdF9zdG9yYWdlX3R5cGUYBSABKA4yJS5nb29nbGUuYmlndGFibGUu",
             "YWRtaW4udjIuU3RvcmFnZVR5cGUiUQoFU3RhdGUSEwoPU1RBVEVfTk9UX0tO",
             "T1dOEAASCQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCFJFU0laSU5HEAMS",
-            "DAoIRElTQUJMRUQQBEKPAQocY29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
+            "DAoIRElTQUJMRUQQBEKwAQocY29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
             "MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
             "by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIeR29vZ2xl",
-            "LkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyYgZwcm90bzM="));
+            "LkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3VkXEJpZ3Rh",
+            "YmxlXEFkbWluXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
