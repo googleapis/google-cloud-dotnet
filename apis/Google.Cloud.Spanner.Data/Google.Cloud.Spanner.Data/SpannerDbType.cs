@@ -268,7 +268,14 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="size"></param>
         /// <returns></returns>
-        public SpannerDbType WithSize(int size) => new SpannerDbType(TypeCode, size);
+        public SpannerDbType WithSize(int size)
+        {
+            if (size != 0 && TypeCode != TypeCode.Bytes && TypeCode != TypeCode.String)
+            {
+                throw new InvalidOperationException($"Size may only be set on types {nameof(String)} and {nameof(Bytes)}");
+            }
+            return new SpannerDbType(TypeCode, size);
+        }
 
         /// <inheritdoc />
         public override bool Equals(object obj) => Equals(obj as SpannerDbType);

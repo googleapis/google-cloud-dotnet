@@ -428,7 +428,8 @@ namespace Google.Cloud.Spanner.Data
                 {
                     if (string.IsNullOrEmpty(_connectionStringBuilder?.SpannerDatabase))
                     {
-                        Logger.Warn(() => "No database was defined. Therefore OpenAsync did not establish a session.");
+                        Logger.Info(() => "No database was defined. Therefore OpenAsync did not establish a session.");
+                        _state = ConnectionState.Open;
                         return;
                     }
                     if (IsOpen)
