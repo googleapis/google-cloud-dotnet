@@ -11,8 +11,9 @@ in [this separate package](../Google.Cloud.Language.V1.Experimental/index.html).
 
 # Getting started
 
-All operations are performed through
-[LanguageServiceClient](obj/api/Google.Cloud.Language.V1.LanguageServiceClient.yml).
+{{client-classes}}
+
+{{client-construction}}
 
 All the methods on the client require a
 [Document](obj/api/Google.Cloud.Language.V1.Document.yml) to
