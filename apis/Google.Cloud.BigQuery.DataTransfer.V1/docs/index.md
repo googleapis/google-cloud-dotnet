@@ -8,8 +8,9 @@
 
 # Getting started
 
-All operations are performed through
-[DataTransferServiceClient](obj/api/Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.yml).
+{{client-classes}}
+
+{{client-construction}}
 
 # Sample code
 

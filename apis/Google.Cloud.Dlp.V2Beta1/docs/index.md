@@ -8,8 +8,9 @@
 
 # Getting started
 
-All operations are performed through
-[DlpServiceClient](obj/api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.yml).
+{{client-classes}}
+
+{{client-construction}}
 
 # Sample code
 

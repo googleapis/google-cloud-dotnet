@@ -8,8 +8,9 @@
 
 # Getting started
 
-The main entry point for the API is [TraceServiceClient](obj/api/Google.Cloud.Trace.V1.TraceServiceClient.yml).
-Create an instance using the static `Create` method, optionally specifying a service endpoint and settings.
+{{client-classes}}
+
+{{client-construction}}
 
 # Sample code
 

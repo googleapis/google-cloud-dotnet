@@ -12,14 +12,9 @@ NuGet package.
 
 # Getting started
 
-There are three client classes to be aware of:
+{{client-classes}}
 
-- [ErrorGroupServiceClient](obj/api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.yml)
-- [ErrorStatsServiceClient](obj/api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.yml)
-- [ReportErrorsServiceClient](obj/api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.yml)
-
-In each case, create an instance using the static `Create` method,
-optionally specifying a service endpoint and settings.
+{{client-construction}}
 
 # Sample code
 
