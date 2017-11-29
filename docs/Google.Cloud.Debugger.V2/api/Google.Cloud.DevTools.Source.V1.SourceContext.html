@@ -82,33 +82,11 @@ with a path point to a unique revision of a single file or directory.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SourceContext</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.DevTools.Source.V1.SourceContext.html">SourceContext</a>&gt;</div>
-    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.DevTools.Source.V1.SourceContext.html">SourceContext</a>&gt;</div>
-    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.DevTools.Source.V1.SourceContext.html">SourceContext</a>&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.DevTools.Source.V1.html">Google.Cloud.DevTools.Source.V1</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.DevTools.Common.dll</h6>
   <h5 id="Google_Cloud_DevTools_Source_V1_SourceContext_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class SourceContext : IMessage&lt;SourceContext&gt;, IMessage, IEquatable&lt;SourceContext&gt;, IDeepCloneable&lt;SourceContext&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class SourceContext : Protobuf.IMessage&lt;SourceContext&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -174,16 +152,6 @@ of the log entry. </p>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Protobuf.InvalidProtocolBufferException.html">InvalidProtocolBufferException</a></td>
-        <td><p>The source context file is valid JSON, but is not valid as a SourceContext.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Google.Protobuf.InvalidJsonException.html">InvalidJsonException</a></td>
-        <td><p>The source context file is not valid JSON.</p>
-</td>
-      </tr>
       <tr>
         <td><span class="xref">System.Security.SecurityException</span></td>
         <td><p>The application does not have permission to read the file.</p>
