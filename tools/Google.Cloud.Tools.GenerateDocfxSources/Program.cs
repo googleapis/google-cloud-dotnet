@@ -227,6 +227,7 @@ specifying an end-point or channel and settings";
             var layout = DirectoryLayout.ForApi(api.Id);
             var packageSource = Path.Combine(layout.SourceDirectory, api.Id);
             var sourceFiles = Directory.GetFiles(packageSource, "*Client.cs");
+            // TODO: Find a more robust way of detecting the clients.
             var clients = sourceFiles
                 .Where(file => File.ReadAllText(file).Contains(": ServiceSettingsBase")) // Check it contains a generated client
                 .Select(file => Path.GetFileName(file))             // Just the file name, not full path

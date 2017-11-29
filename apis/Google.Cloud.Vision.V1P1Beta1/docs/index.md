@@ -8,8 +8,9 @@
 
 # Getting started
 
-All operations are performed through
-[ImageAnnotatorClient](obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClient.yml).
+{{client-classes}}
+
+{{client-construction}}
 
 The "core" method [BatchAnnotateImages](obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClient.yml#Google_Cloud_Vision_V1P1Beta1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1P1Beta1_AnnotateImageRequest__Google_Api_Gax_CallSettings_)
 can perform multiple (potentially different) annotations on multiple

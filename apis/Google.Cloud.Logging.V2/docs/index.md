@@ -23,6 +23,9 @@ homepage](https://github.com/logary/logary#stackdriver-target-alpha-level).
 
 # Raw RPC API
 
-If required,
-[LoggingServiceV2Client](obj/api/Google.Cloud.Logging.V2.LoggingServiceV2Client.yml)
-provides a low-level abstraction over the raw RPC API.
+If required, this package provides a low-level abstraciton over the
+raw RPC API.
+
+{{client-classes}}
+
+{{client-construction}}

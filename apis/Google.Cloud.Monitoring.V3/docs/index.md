@@ -8,13 +8,9 @@
 
 # Getting started
 
-There are two client classes to be aware of:
+{{client-classes}}
 
-- [GroupServiceClient](obj/api/Google.Cloud.Monitoring.V3.GroupServiceClient.yml)
-- [MetricServiceClient](obj/api/Google.Cloud.Monitoring.V3.MetricServiceClient.yml)
-
-In each case, create an instance using the static `Create` method,
-optionally specifying a service endpoint and settings.
+{{client-construction}}
 
 # Sample code
 
