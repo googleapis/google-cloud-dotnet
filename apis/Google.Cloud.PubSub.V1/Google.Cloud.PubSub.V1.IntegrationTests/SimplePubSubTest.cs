@@ -44,7 +44,8 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
         private async Task RunBulkMessaging(
             int messageCount, int minMessageSize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount,
-            TimeSpan? timeouts = null, int? cancelAfterRecvCount = null)
+            TimeSpan? timeouts = null, int? cancelAfterRecvCount = null, TimeSpan? interPublishDelay = null,
+            TimeSpan? debugOutputPeriod = null)
         {
             // Force messages to be at least 4 bytes long, so an int ID can be used.
             minMessageSize = Math.Max(4, minMessageSize);
@@ -52,8 +53,12 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var subscriptionId = _fixture.CreateSubscriptionId();
 
             Console.WriteLine("BulkMessaging test");
+            Console.WriteLine($"ProjectID: {_fixture.ProjectId}");
+            Console.WriteLine($"Topic ID: {topicId}");
+            Console.WriteLine($"Subscription ID: {subscriptionId}");
             Console.WriteLine($"{messageCount} messages; of size [{minMessageSize}, {maxMessageSize}]; " +
-                $"max in-flight: {maxMessagesInFlight}, initialNacks: {initialNackCount}, cancelAfterRecvCount: {cancelAfterRecvCount}");
+                $"max in-flight: {maxMessagesInFlight}, initialNacks: {initialNackCount}, " +
+                $"cancelAfterRecvCount: {cancelAfterRecvCount}, interPublishDelay: {interPublishDelay}");
 
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
@@ -138,18 +143,19 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             CancellationTokenSource watchdogCts = new CancellationTokenSource();
             Task.Run(async () =>
             {
+                var debugOutputPeriod1 = debugOutputPeriod ?? TimeSpan.FromSeconds(1);
                 int prevSentCount = -1;
                 int prevRecvCount = -1;
                 int noProgressCount = 0;
-                while (!watchdogCts.IsCancellationRequested)
+                while (true)
                 {
-                    await Task.Delay(TimeSpan.FromSeconds(1), watchdogCts.Token).ConfigureAwait(false);
+                    await Task.Delay(debugOutputPeriod1, watchdogCts.Token).ConfigureAwait(false);
                     var localSentCount = Interlocked.Add(ref sentCount, 0);
                     var localRecvCount = Interlocked.Add(ref recvCount, 0);
                     var localDupCount = Interlocked.Add(ref dupCount, 0);
                     if (prevSentCount == localSentCount && prevRecvCount == localRecvCount)
                     {
-                        if (noProgressCount > 100)
+                        if (noProgressCount > 60)
                         {
                             // Deadlock, shutdown subscriber, and cancel
                             Console.WriteLine("Deadlock detected. Cancelling test");
@@ -165,7 +171,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     }
                     prevSentCount = localSentCount;
                     prevRecvCount = localRecvCount;
-                    Console.WriteLine($"Sent: {localSentCount} (in-flight: {activePubs.Locked(() => activePubs.Count)}); Recv: {localRecvCount} (dups: {localDupCount})");
+                    Console.WriteLine($"[{DateTime.Now}] Sent: {localSentCount} (in-flight: {activePubs.Locked(() => activePubs.Count)}); Recv: {localRecvCount} (dups: {localDupCount})");
                 }
             });
 
@@ -178,6 +184,10 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 if (subTask.IsCompleted)
                 {
                     break;
+                }
+                if (i > 0 && interPublishDelay is TimeSpan delay)
+                {
+                    await Task.Delay(delay, watchdogCts.Token).ConfigureAwait(false);
                 }
                 var msgSize = rnd.Next(minMessageSize, maxMessageSize + 1);
                 var msg = new byte[msgSize];
@@ -225,7 +235,17 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         [Fact]
         public async Task ManySmallMessages()
         {
-            await RunBulkMessaging(10_000_000, 1, 10, 10_000, 0);
+            await RunBulkMessaging(2_000_000, 1, 10, 10_000, 0);
+        }
+
+        [Theory(Skip = "Very long-running test; takes 6 hours")]
+        [InlineData(9, 15)]
+        [InlineData(5, 30)]
+        [InlineData(3, 60)]
+        public async Task LongPause(int totalMsgs, int pauseMinutes)
+        {
+            await RunBulkMessaging(totalMsgs, 100, 100, 100, 0,
+                interPublishDelay: TimeSpan.FromMinutes(pauseMinutes), debugOutputPeriod: TimeSpan.FromMinutes(2));
         }
 
         [Theory, CombinatorialData]
@@ -249,7 +269,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         public async Task MaximumSizedMessages()
         {
             // Approx data: 500MB
-            await RunBulkMessaging(50, 9_900_000, 9_990_000, 20, 0, timeouts: TimeSpan.FromMinutes(10));
+            await RunBulkMessaging(50, 9_900_000, 9_990_000, 20, 0, timeouts: TimeSpan.FromMinutes(10), debugOutputPeriod: TimeSpan.FromSeconds(5));
         }
 
         [Fact]

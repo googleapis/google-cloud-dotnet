@@ -19,6 +19,7 @@ using Google.Cloud.PubSub.V1.Tasks;
 using Grpc.Auth;
 using Grpc.Core;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -446,8 +447,8 @@ namespace Google.Cloud.PubSub.V1
             lock (_lock)
             {
                 GaxPreconditions.CheckState(_mainTcs != null, "Can only stop a started instance.");
-                _globalSoftStopCts.Cancel();
             }
+            _globalSoftStopCts.Cancel();
             var registration = hardStopToken.Register(() => _globalHardStopCts.Cancel());
             // Do not register this Task to be awaited on at shutdown.
             // It completes *after* _mainTcs, and all registered tasks must complete before _mainTcs
@@ -596,6 +597,8 @@ namespace Google.Cloud.PubSub.V1
             // - Pull task completes, which does not cancel streamingPullCts
             // hard-stop requested: immediate stop of pull and push
             // - Pull and Push fault, if they are still running
+            // Pull call completes; ie MoveNext() returns false: immediate stop of Push, restart stream-pull request
+            // - Pull and Push complete
 
             public async Task StartAsync()
             {
@@ -623,15 +626,15 @@ namespace Google.Cloud.PubSub.V1
                         _qEvent.Set();
                         // Wait for either pull or push to complete. This will not throw on error or cancellation.
                         var completedTask = await _taskHelper.ConfigureAwait(_taskHelper.WhenAny(pushTask, pullTask));
-                        // Only cancel streaming if one of the tasks faulted. Otherwise use the non-abortive shutdown.
-                        // This is only important during error conditions, and is to force the pull/push to stop
-                        // when the other has already errored out.
-                        // If both have already stopped (due to error or not), then this is essentially a nop.
-                        if (completedTask.IsFaulted)
+                        // If fault: RPC is broken, need to cancel and restart
+                        // If cancelled: Softstop or hardstop.
+                        // * If hard-stop: Everything already cancelled, do nothing; or could cancel, it'll be a nop
+                        // * If soft-stop: Need to allow push to continue, do nothing
+                        // If completed OK: Server has terminated RPC, need to restart
+                        if (completedTask.IsFaulted || !completedTask.IsCanceled)
                         {
                             streamingPullCts.Cancel();
                         }
-                        // Trigger _qEvent, to ensure Push sees any state changes.
                         _qEvent.Set();
                         // Await until pull and push have both stopped.
                         // If pull of push is faulted/cancelled, this will throw.
@@ -670,15 +673,18 @@ namespace Google.Cloud.PubSub.V1
                             // Using an event would be better, but this is simpler and easier to assure correctness.
                             await _taskHelper.ConfigureAwait(_scheduler.Delay(TimeSpan.FromMilliseconds(100), cts.Token));
                         }
-                        return await pull.ResponseStream.MoveNext(cts.Token);
+                        // Don't use a cancellation-token here, as it will cancel the whole call.
+                        // This isn't desirable, as push operations may still be ongoing.
+                        return await pull.ResponseStream.MoveNext(CancellationToken.None);
                     }
-                    while (!cts.IsCancellationRequested && await _taskHelper.ConfigureAwaitHideCancellation(MoveNext, false))
+                    while (await _taskHelper.ConfigureAwait(MoveNext()))
                     {
-                        if (cts.IsCancellationRequested)
-                        {
-                            return;
-                        }
-                        var msgs = new List<ReceivedMessage>(pull.ResponseStream.Current.ReceivedMessages);
+                        cts.Token.ThrowIfCancellationRequested();
+                        var receivedMessages = pull.ResponseStream.Current.ReceivedMessages;
+                        // Copy msgs to list, and clear original proto repeatedfield;
+                        // to remove refs to large messages as soon as possible.
+                        var msgs = receivedMessages.ToList();
+                        receivedMessages.Clear();
                         var extendIds = new HashSet<string>(msgs.Select(x => x.AckId));
                         // Extend leases immediately. This is the receipt to the server that starts the server lease timeout.
                         QueueLeaseExtensions(extendIds);
@@ -690,17 +696,13 @@ namespace Google.Cloud.PubSub.V1
                             // Remove reference to message. In case a small number of messages from each
                             // pull take a long time to process. This ensures all other messages aren't still referenced.
                             msgs[msgIndex] = null;
-                            if (_softStopCts.IsCancellationRequested)
-                            {
-                                return;
-                            }
+                            // If stop requested, then don't start processing any further messages.
+                            _softStopCts.Token.ThrowIfCancellationRequested();
                             // Returned Task completes once flow-control is satisfied.
                             await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), async () =>
                             {
-                                if (_softStopCts.IsCancellationRequested)
-                                {
-                                    return;
-                                }
+                                // If stop requested, then don't start processing any further messages.
+                                _softStopCts.Token.ThrowIfCancellationRequested();
                                 lock (_qLock)
                                 {
                                     _unAckedMsgCount += 1;
@@ -791,11 +793,7 @@ namespace Google.Cloud.PubSub.V1
                             _hardStopCts.Cancel();
                             return;
                         }
-                        var isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(() => _qEvent.WaitAsync(streamingPullToken));
-                        if (isCancelled)
-                        {
-                            return;
-                        }
+                        await _taskHelper.ConfigureAwait(_qEvent.WaitAsync(streamingPullToken));
                     }
                     // Get local copies of acks/extensions to send.
                     List<string> acks;
@@ -805,13 +803,15 @@ namespace Google.Cloud.PubSub.V1
                         acks = _ackQueue.Take(_maxAckExtendCount).ToList();
                         extends = _extendQueue.Take(_maxAckExtendCount - acks.Count).ToList();
                     }
-                    // Send acks/extensions
-                    await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
+                    var req = new StreamingPullRequest
                     {
                         AckIds = { acks },
-                        ModifyDeadlineAckIds = { extends },
-                        ModifyDeadlineSeconds = { Enumerable.Repeat(_modifyDeadlineSeconds, extends.Count) },
-                    }));
+                        // Don't lease-extend any msg that is also being acked.
+                        ModifyDeadlineAckIds = { extends.Except(acks) }
+                    };
+                    req.ModifyDeadlineSeconds.AddRange(Enumerable.Repeat(_modifyDeadlineSeconds, req.ModifyDeadlineAckIds.Count));
+                    // Send acks/extensions
+                    await _taskHelper.ConfigureAwait(pull.WriteAsync(req));
                     // If the send didn't have errors, then dequeue the acks/extends that were just sent.
                     // Any error would have thrown an exception in the previous WriteAsync() call.
                     lock (_qLock)

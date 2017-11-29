@@ -81,18 +81,20 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             private class En : IAsyncEnumerator<StreamingPullResponse>
             {
-                public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock, CancellationToken? ct)
+                public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock, bool useMsgAsId, CancellationToken? ct)
                 {
                     _msgsEn = msgs.Select((x, i) => (i, x)).GetEnumerator();
                     _scheduler = scheduler;
                     _taskHelper = taskHelper;
                     _clock = clock;
+                    _useMsgAsId = useMsgAsId;
                     _ct = ct ?? CancellationToken.None;
                 }
 
                 private readonly IScheduler _scheduler;
                 private readonly TaskHelper _taskHelper;
                 private readonly IClock _clock;
+                private readonly bool _useMsgAsId;
                 private readonly CancellationToken _ct;
 
                 private readonly IEnumerator<(int Index, ServerAction Action)> _msgsEn;
@@ -101,6 +103,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     if (_msgsEn.MoveNext())
                     {
+                        // TODO: This is not correct. The real server cancels the entire call if this cancellationtoken is cancelled.
                         using (var cts = CancellationTokenSource.CreateLinkedTokenSource(_ct, cancellationToken))
                         {
                             var isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(
@@ -131,7 +134,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return new StreamingPullResponse
                         {
                             ReceivedMessages = {
-                                _msgsEn.Current.Action.Msgs.Select((s, i) => MakeReceivedMessage(MakeMsgId(_msgsEn.Current.Index, i), s))
+                                _msgsEn.Current.Action.Msgs.Select((s, i) =>
+                                    MakeReceivedMessage(_useMsgAsId ? s : MakeMsgId(_msgsEn.Current.Index, i), s))
                             }
                         };
                     }
@@ -146,12 +150,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 public PullStream(TimeSpan writeAsyncPreDelay,
                     IEnumerable<ServerAction> msgs, List<TimedId> extends, List<TimedId> acks, List<DateTime> writeCompletes,
-                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, CancellationToken? ct)
+                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, bool useMsgAsId, CancellationToken? ct)
                 {
                     _taskHelper = taskHelper;
                     _scheduler = scheduler;
                     _writeAsyncPreDelay = writeAsyncPreDelay; // delay within the WriteAsync() method. Simulating network or server slowness.
-                    _en = new En(msgs, scheduler, taskHelper, clock, ct);
+                    _en = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct);
                     _clock = clock;
                     _extends = extends;
                     _acks = acks;
@@ -192,13 +196,15 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
 
             public FakeSubscriber(
-                IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock, TaskHelper taskHelper, TimeSpan writeAsyncPreDelay)
+                IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock,
+                TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId)
             {
                 _msgsEn = msgsEn;
                 _scheduler = scheduler;
                 _clock = clock;
                 _taskHelper = taskHelper;
                 _writeAsyncPreDelay = writeAsyncPreDelay;
+                _useMsgAsId = useMsgAsId;
             }
 
             private readonly IEnumerator<IEnumerable<ServerAction>> _msgsEn;
@@ -206,6 +212,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             private readonly IClock _clock;
             private readonly TaskHelper _taskHelper;
             private readonly TimeSpan _writeAsyncPreDelay;
+            private readonly bool _useMsgAsId;
 
             private readonly List<TimedId> _extends = new List<TimedId>();
             private readonly List<TimedId> _acks = new List<TimedId>();
@@ -225,8 +232,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                         throw new InvalidOperationException("Test subscriber creation failed. Run out of (fake) data");
                     }
                     var msgs = _msgsEn.Current;
-                    return new PullStream(_writeAsyncPreDelay, msgs,
-                        _extends, _acks, _writeCompletes, _scheduler, _clock, _taskHelper, callSettings?.CancellationToken);
+                    return new PullStream(_writeAsyncPreDelay, msgs, _extends, _acks, _writeCompletes,
+                        _scheduler, _clock, _taskHelper, _useMsgAsId, callSettings?.CancellationToken);
                 }
             }
         }
@@ -240,17 +247,18 @@ namespace Google.Cloud.PubSub.V1.Tests
             public List<DateTime> ClientShutdowns { get; set; }
             public SimpleSubscriberImpl Subscriber { get; set; }
 
-            public static Fake Create(IList<IEnumerable<ServerAction>> msgs,
+            public static Fake Create(IReadOnlyList<IEnumerable<ServerAction>> msgs,
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
                 int? flowMaxElements = null, int? flowMaxBytes = null,
-                int clientCount = 1, int threadCount = 1, TimeSpan? writeAsyncPreDelay = null)
+                int clientCount = 1, int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
+                bool useMsgAsId = false)
             {
                 var scheduler = new TestScheduler(threadCount: threadCount);
                 TaskHelper taskHelper = scheduler.TaskHelper;
                 List<DateTime> clientShutdowns = new List<DateTime>();
                 var msgEn = msgs.GetEnumerator();
                 var clients = Enumerable.Range(0, clientCount)
-                    .Select(_ => new FakeSubscriber(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero))
+                    .Select(_ => new FakeSubscriber(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId))
                     .ToList();
                 var settings = new SimpleSubscriber.Settings
                 {
@@ -358,6 +366,58 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
+
+        [Theory, CombinatorialData]
+        public void OneClientManyMsgs([CombinatorialValues(1, 2, 3, 4, 5)] int rndSeed)
+        {
+            // Test sending a large quantity of messages
+            const int maxStreamingPull = 14;
+            const int maxMoveNext = 14;
+            const int maxMsgCount = 80;
+            var rnd = new Random(rndSeed);
+            var streamingPullCount = rnd.Next(maxStreamingPull / 2, maxStreamingPull);
+            var msgs = Enumerable.Range(0, streamingPullCount).Select(rpcId =>
+            {
+                var moveNextCount = rnd.Next(maxMoveNext / 2, maxMoveNext);
+                return Enumerable.Range(0, moveNextCount).Select(moveNextId =>
+                {
+                    var msgCount = rnd.Next(1, maxMsgCount);
+                    var preInterval = TimeSpan.FromMilliseconds(rnd.NextDouble() * 50.0);
+                    return ServerAction.Data(preInterval, Enumerable.Range(0, msgCount).Select(i => $"{rpcId}:{moveNextId}:{i}").ToList());
+                }).ToList();
+            }).Concat(new[] { new[] { ServerAction.Inf() }.ToList() }).ToList();
+            var allMsgIds = msgs.SelectMany(x => x.SelectMany(y => y.Msgs ?? new string[0])).ToList();
+            var allMsgIdsSet = new HashSet<string>(allMsgIds);
+            var totalMsgCount = allMsgIds.Count;
+            using (var fake = Fake.Create(msgs, useMsgAsId: true))
+            {
+                fake.Scheduler.Run(async () =>
+                {
+                    var recvedMsgs = new List<string>();
+                    var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        var delay = TimeSpan.FromSeconds(rnd.NextDouble() * 600.0);
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(delay, ct));
+                        var msgString = msg.Data.ToStringUtf8();
+                        lock (recvedMsgs)
+                        {
+                            recvedMsgs.Add(msgString);
+                            if (recvedMsgs.Count == totalMsgCount)
+                            {
+                                Task unused = fake.Subscriber.StopAsync(CancellationToken.None);
+                            }
+                        }
+                        return SimpleSubscriber.Reply.Ack;
+                    });
+                    await fake.TaskHelper.ConfigureAwait(startTask);
+                    Assert.Equal(totalMsgCount, recvedMsgs.Count);
+                    Assert.Equal(allMsgIdsSet, new HashSet<string>(recvedMsgs));
+                    var sub = fake.Subscribers[0];
+                    Assert.Equal(totalMsgCount, sub.Acks.Count);
+                    Assert.Equal(allMsgIdsSet, new HashSet<string>(sub.Acks.Select(x => x.Id)));
+                });
+            }
+        }
         
         [Theory, PairwiseData]
         public void FlowControl(
@@ -372,7 +432,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             var oneMsgByteCount = FakeSubscriber.MakeReceivedMessage("0000.0000", "0000").CalculateSize();
             var combinedFlowMaxElements = Math.Min(flowMaxElements, flowMaxBytes / oneMsgByteCount + 1);
             var expectedMsgCount = Math.Min(msgsPerClient * clientCount, combinedFlowMaxElements * stopAfterSeconds + (hardStop ? 0 : combinedFlowMaxElements));
-            var msgss = Enumerable.Range(0, msgsPerClient).Select(i => ServerAction.Data(TimeSpan.Zero, new[] { i.ToString("D4") }));
+            var msgss = Enumerable.Range(0, msgsPerClient)
+                .Select(i => ServerAction.Data(TimeSpan.Zero, new[] { i.ToString("D4") }))
+                .Concat(new[] { ServerAction.Inf() });
             using (var fake = Fake.Create(Enumerable.Repeat(msgss, clientCount).ToList(),
                 flowMaxElements: flowMaxElements, flowMaxBytes: flowMaxBytes, clientCount: clientCount, threadCount: threadCount))
             {
@@ -531,11 +593,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                     {
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
-                        try
-                        {
-                            Task unusedTask = fake.Subscriber.StopAsync(CancellationToken.None);
-                        }
-                        catch { }
+                        Task unusedTask = fake.Subscriber.StopAsync(CancellationToken.None);
                         return SimpleSubscriber.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(doneTask);
@@ -568,12 +626,10 @@ namespace Google.Cloud.PubSub.V1.Tests
                     await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwait(subTask);
                     var sub = fake.Subscribers[0];
-                    Assert.Equal(msgCount, sub.Extends.Count);
+                    Assert.True(sub.Extends.Count <= msgCount); // Difficult to predict, must be <= total message count
                     Assert.Equal(msgCount, sub.Acks.Count);
                     // Difficult to predict the exact timings, so check durations.
-                    // *2 due to an extend and an ack required sending for each msg.
-                    var expectedMinDuration = TimeSpan.FromTicks(preDelay.Ticks * 2 * msgCount / flowMaxEls);
-                    Assert.True(sub.Extends.Last().Time - sub.Extends.First().Time >= expectedMinDuration, "Pull not throttled (extends)");
+                    var expectedMinDuration = TimeSpan.FromTicks(preDelay.Ticks * msgCount / flowMaxEls);
                     Assert.True(sub.Acks.Last().Time - sub.Acks.First().Time >= expectedMinDuration, "Pull not throttled (acks)");
                 });
             }
