@@ -203,11 +203,45 @@ download a service account JSON file then set the `GOOGLE_APPLICATION_CREDENTIAL
 The credentials will automatically be used to authenticate. See the [Getting Started With
 Authentication](https://cloud.google.com/docs/authentication/getting-started) guide for more details.";
 
+            string clientClasses = CreateClientClassesDocumentation(api);
+
+            string clientConstruction =
+@"Create a client instance by calling the static `Create` method, optionally
+specifying an end-point or channel and settings";
+
             return text
                 .Replace("{{title}}", title)
                 .Replace("{{description}}", description)
                 .Replace("{{installation}}", installation)
-                .Replace("{{auth}}", auth);
+                .Replace("{{auth}}", auth)
+                .Replace("{{client-classes}}", clientClasses)
+                .Replace("{{client-construction}}", clientConstruction);
+        }
+
+        private static string CreateClientClassesDocumentation(ApiMetadata api)
+        {
+            if (api.Type != "grpc")
+            {
+                return "FIXME"; // No automatic templating for this API
+            }
+            var layout = DirectoryLayout.ForApi(api.Id);
+            var packageSource = Path.Combine(layout.SourceDirectory, api.Id);
+            var sourceFiles = Directory.GetFiles(packageSource, "*Client.cs");
+            var clients = sourceFiles
+                .Where(file => File.ReadAllText(file).Contains(": ServiceSettingsBase")) // Check it contains a generated client
+                .Select(file => Path.GetFileName(file))             // Just the file name, not full path
+                .Select(file => file.Substring(0, file.Length - 3)) // Trim .cs
+                .OrderBy(client => client)
+                .Select(client => $"[{client}](obj/api/{api.Id}.{client}.yml)") // Markdown link to API doc
+                .ToList();
+            switch (clients.Count)
+            {
+                case 0: return "FIXME"; // No automatic templating for this API
+                case 1: return $"All operations are performed through {clients[0]}.";
+                default:
+                    var list = string.Join("\r\n", clients.Select(client => $"- {client}"));
+                    return $"All operations are performed through the following client classes:\r\n\r\n{list}";
+            }
         }
 
         private static void CreateToc(string api, string outputDirectory)
