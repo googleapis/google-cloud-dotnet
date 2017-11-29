@@ -74,7 +74,7 @@ fi
 
 for testdir in $testdirs
 do
-  if [[ "$testdir" =~ Metadata || "$testdir" =~ EntityFrameworkCore.Spanner ]]
+  if [[ "$testdir" =~ Metadata || "$testdir" =~ EntityFrameworkCore.Spanner || "$testdir" =~ PubSub ]]
   then
     echo "Skipping $testdir; test not supported yet."
   elif [[ "$testdir" =~ AspNet\. && "$OS" != "Windows_NT" ]]
