@@ -223,11 +223,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
 # Getting started
 
-TODO: Add a link to the client classes here, and introductory text.
+{{client-classes}}
 
-# Sample code
-
-TODO: Add snippet references here.
+{{client-construction}}
 ");
                 Console.WriteLine($"Generated documentation stub for {api.Id}");
             }
