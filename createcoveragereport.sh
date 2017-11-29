@@ -11,7 +11,14 @@ then
  mkdir coverage
 fi
 
-[ -f coverage/all.dvcr ] && rm coverage/all.dvcr
+if ! compgen -G "coverage/*.dvcr"
+then
+  echo "No coverage reports found to merge."
+  # This isn't an error
+  exit 0
+fi
+
+rm -f coverage/all.dvcr
 
 echo "Merging reports..."
 $DOTCOVER merge -Source=$(echo coverage/*.dvcr | sed 's/ /;/g') -Output=coverage/all.dvcr ""
