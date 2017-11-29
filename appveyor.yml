@@ -28,20 +28,18 @@ build_script:
   - bash generateprojects.sh && git diff --exit-code
   - bash build.sh --notests --diff
 
-# scripts to run before tests
+# Scripts to run before tests
 before_test:
   - choco install codecov
 
-# run the tests with coverage
+# Run the tests with coverage
 test_script:
   - bash runcoverage.sh
   
-# scripts to run after tests
+# Create and upload code coverage report.
+# As we only build changed APIs, and some APIs don't have unit tests,
+# we need to handle the possibility of there being no coverage to
+# report on.
 after_test:
   - bash createcoveragereport.sh
-  - codecov -f "coverage/coverage-filtered.xml"
-# Docs disabled until https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1380
-# is better understood
-  - # cd docs
-  - # bash builddocs.sh
-  - # cd ..
+  - if exist coverage/coverage-filtered.xml codecov -f "coverage/coverage-filtered.xml"
