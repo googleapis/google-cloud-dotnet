@@ -375,6 +375,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             const int maxMoveNext = 14;
             const int maxMsgCount = 80;
             var rnd = new Random(rndSeed);
+            // Construct a sequence of sequences of batches of messages:
+            // Outer sequence is for each invocation of StreamingPull().
+            // Inner sequence is for each invocation of MoveNext() on the StreamingPull response stream.
+            // And each call to MoveNext() returns a batch of messages.
+            // All sizes vary, to test that are no size-specific dependencies.
             var streamingPullCount = rnd.Next(maxStreamingPull / 2, maxStreamingPull);
             var msgs = Enumerable.Range(0, streamingPullCount).Select(rpcId =>
             {
