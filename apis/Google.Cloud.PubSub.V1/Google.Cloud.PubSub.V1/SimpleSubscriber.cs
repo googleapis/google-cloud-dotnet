@@ -557,7 +557,7 @@ namespace Google.Cloud.PubSub.V1
                 _handlerAsync = handlerAsync;
                 _autoExtendInterval = subscriber._autoExtendInterval;
                 _modifyDeadlineSeconds = subscriber._modifyDeadlineSeconds;
-                _maxAckExtendQueue = subscriber._maxAckExtendQueue;
+                _maxAckExtendQueueSize = subscriber._maxAckExtendQueue;
                 _flow = flow;
                 _registerTaskFn = registerTaskFn;
                 _scheduler = subscriber._scheduler;
@@ -574,7 +574,7 @@ namespace Google.Cloud.PubSub.V1
             private readonly Func<PubsubMessage, CancellationToken, Task<Reply>> _handlerAsync;
             private readonly TimeSpan _autoExtendInterval;
             private readonly int _modifyDeadlineSeconds;
-            private readonly int _maxAckExtendQueue;
+            private readonly int _maxAckExtendQueueSize;
             private readonly Flow _flow;
             private readonly Action<Task> _registerTaskFn;
             private readonly IScheduler _scheduler;
@@ -667,7 +667,7 @@ namespace Google.Cloud.PubSub.V1
                     {
                         // Pause pulling more messages if too many msgs are locally queued for sending.
                         // The size of the extend queue is a reasonable proxy for push loading.
-                        while (_qLock.Locked(() => _extendQueue.Count) >= _maxAckExtendQueue)
+                        while (_qLock.Locked(() => _extendQueue.Count) >= _maxAckExtendQueueSize)
                         {
                             // A 100ms pause is fairly arbitrary, but should never cause problems.
                             // Using an event would be better, but this is simpler and easier to assure correctness.
@@ -780,7 +780,7 @@ namespace Google.Cloud.PubSub.V1
                 // Send ack/extends in smaller chunks than maximum ack/extend queue size.
                 // This temporally smooths out server message receipt, which causes higher
                 // sustained message delivery in high-bandwidth environments.
-                var maxAckExtendSendCount = Math.Max(10, _maxAckExtendQueue / 4);
+                var maxAckExtendSendCount = Math.Max(10, _maxAckExtendQueueSize / 4);
                 // Pushing of acks and extends
                 // If a Push call fails then this Task always ends, and the StreamingPull is cancelled.
                 // If it's recoverable, then a new StreamingPull call is started.
