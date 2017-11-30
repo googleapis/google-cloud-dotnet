@@ -639,5 +639,88 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
+
+        [Fact]
+        public void ValidParameters()
+        {
+            var subscriptionName = new SubscriptionName("project", "subscriptionId");
+            var clients = new[] { SubscriberClient.Create() };
+
+            var settingsDefault = new SimpleSubscriber.Settings();
+            new SimpleSubscriberImpl(subscriptionName, clients, settingsDefault, null);
+
+            var settingsAckDeadline1 = new SimpleSubscriber.Settings
+            {
+                StreamAckDeadline = SimpleSubscriber.MinimumStreamAckDeadline
+            };
+            new SimpleSubscriberImpl(subscriptionName, clients, settingsAckDeadline1, null);
+
+            var settingsAckDeadline2 = new SimpleSubscriber.Settings
+            {
+                StreamAckDeadline = SimpleSubscriber.MaximumStreamAckDeadline
+            };
+            new SimpleSubscriberImpl(subscriptionName, clients, settingsAckDeadline2, null);
+
+            var settingsAckExtension1 = new SimpleSubscriber.Settings
+            {
+                AckExtensionWindow = SimpleSubscriber.MinimumAckExtensionWindow
+            };
+            new SimpleSubscriberImpl(subscriptionName, clients, settingsAckExtension1, null);
+            
+            var settingsAckExtension2 = new SimpleSubscriber.Settings
+            {
+                AckExtensionWindow = TimeSpan.FromTicks(SimpleSubscriber.DefaultStreamAckDeadline.Ticks / 2)
+            };
+            new SimpleSubscriberImpl(subscriptionName, clients, settingsAckExtension2, null);
+        }
+
+        [Fact]
+        public void InvalidParameters()
+        {
+            var subscriptionName = new SubscriptionName("project", "subscriptionId");
+            var clients = new[] { SubscriberClient.Create() };
+            var settings = new SimpleSubscriber.Settings();
+
+            var ex1 = Assert.Throws<ArgumentNullException>(() => new SimpleSubscriberImpl(null, clients, settings, null));
+            Assert.Equal("subscriptionName", ex1.ParamName);
+
+            var ex2 = Assert.Throws<ArgumentNullException>(() => new SimpleSubscriberImpl(subscriptionName, null, settings, null));
+            Assert.Equal("clients", ex2.ParamName);
+
+            var ex3 = Assert.Throws<ArgumentException>(() => new SimpleSubscriberImpl(subscriptionName, new SubscriberClient[] { null }, settings, null));
+            Assert.Equal("clients", ex3.ParamName);
+
+            var ex4 = Assert.Throws<ArgumentNullException>(() => new SimpleSubscriberImpl(subscriptionName, clients, null, null));
+            Assert.Equal("settings", ex4.ParamName);
+
+            var settingsBadAckDeadline1 = new SimpleSubscriber.Settings
+            {
+                StreamAckDeadline = SimpleSubscriber.MinimumStreamAckDeadline - TimeSpan.FromMilliseconds(1)
+            };
+            var ex5 = Assert.Throws<ArgumentOutOfRangeException>(() => new SimpleSubscriberImpl(subscriptionName, clients, settingsBadAckDeadline1, null));
+            Assert.Equal("StreamAckDeadline", ex5.ParamName);
+
+            var settingsBadAckDeadline2 = new SimpleSubscriber.Settings
+            {
+                StreamAckDeadline = SimpleSubscriber.MaximumStreamAckDeadline + TimeSpan.FromMilliseconds(1)
+            };
+            var ex6 = Assert.Throws<ArgumentOutOfRangeException>(() => new SimpleSubscriberImpl(subscriptionName, clients, settingsBadAckDeadline2, null));
+            Assert.Equal("StreamAckDeadline", ex6.ParamName);
+
+            var settingsBadAckExtension1 = new SimpleSubscriber.Settings
+            {
+                AckExtensionWindow = SimpleSubscriber.MinimumAckExtensionWindow - TimeSpan.FromMilliseconds(1)
+            };
+            var ex7 = Assert.Throws<ArgumentOutOfRangeException>(() => new SimpleSubscriberImpl(subscriptionName, clients, settingsBadAckExtension1, null));
+            Assert.Equal("AckExtensionWindow", ex7.ParamName);
+
+            var settingsBadAckExtension2 = new SimpleSubscriber.Settings
+            {
+                // This is too large. The ack extension window must be less than half the ack deadline.
+                AckExtensionWindow = TimeSpan.FromTicks(SimpleSubscriber.DefaultStreamAckDeadline.Ticks / 2 + 1)
+            };
+            var ex8 = Assert.Throws<ArgumentOutOfRangeException>(() => new SimpleSubscriberImpl(subscriptionName, clients, settingsBadAckExtension2, null));
+            Assert.Equal("AckExtensionWindow", ex8.ParamName);
+        }
     }
 }
