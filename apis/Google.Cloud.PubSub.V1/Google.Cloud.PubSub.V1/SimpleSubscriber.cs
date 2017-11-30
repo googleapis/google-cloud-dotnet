@@ -357,7 +357,7 @@ namespace Google.Cloud.PubSub.V1
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
             _flowControlSettings = settings.FlowControlSettings ?? DefaultFlowControlSettings;
-            _maxAckExtendCount = (int)Math.Min(_flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, 10_000);
+            _maxAckExtendQueue = (int)Math.Min(_flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, 20_000);
         }
 
         private readonly object _lock = new object();
@@ -365,7 +365,7 @@ namespace Google.Cloud.PubSub.V1
         private readonly Func<Task> _shutdown;
         private readonly TimeSpan _autoExtendInterval; // Interval between message lease auto-extends
         private readonly int _modifyDeadlineSeconds; // Value to use as new deadline when lease auto-extends
-        private readonly int _maxAckExtendCount; // Maximum count of acks/extends to push to server in a single messages
+        private readonly int _maxAckExtendQueue; // Maximum count of acks/extends to push to server in a single messages
         private readonly IScheduler _scheduler;
         private readonly TaskHelper _taskHelper;
         private readonly FlowControlSettings _flowControlSettings;
@@ -557,7 +557,7 @@ namespace Google.Cloud.PubSub.V1
                 _handlerAsync = handlerAsync;
                 _autoExtendInterval = subscriber._autoExtendInterval;
                 _modifyDeadlineSeconds = subscriber._modifyDeadlineSeconds;
-                _maxAckExtendCount = subscriber._maxAckExtendCount;
+                _maxAckExtendQueueSize = subscriber._maxAckExtendQueue;
                 _flow = flow;
                 _registerTaskFn = registerTaskFn;
                 _scheduler = subscriber._scheduler;
@@ -574,7 +574,7 @@ namespace Google.Cloud.PubSub.V1
             private readonly Func<PubsubMessage, CancellationToken, Task<Reply>> _handlerAsync;
             private readonly TimeSpan _autoExtendInterval;
             private readonly int _modifyDeadlineSeconds;
-            private readonly int _maxAckExtendCount;
+            private readonly int _maxAckExtendQueueSize;
             private readonly Flow _flow;
             private readonly Action<Task> _registerTaskFn;
             private readonly IScheduler _scheduler;
@@ -667,7 +667,7 @@ namespace Google.Cloud.PubSub.V1
                     {
                         // Pause pulling more messages if too many msgs are locally queued for sending.
                         // The size of the extend queue is a reasonable proxy for push loading.
-                        while (_qLock.Locked(() => _extendQueue.Count) >= _maxAckExtendCount)
+                        while (_qLock.Locked(() => _extendQueue.Count) >= _maxAckExtendQueueSize)
                         {
                             // A 100ms pause is fairly arbitrary, but should never cause problems.
                             // Using an event would be better, but this is simpler and easier to assure correctness.
@@ -777,6 +777,10 @@ namespace Google.Cloud.PubSub.V1
 
             private async Task Push(SubscriberClient.StreamingPullStream pull, CancellationToken streamingPullToken)
             {
+                // Send ack/extends in smaller chunks than maximum ack/extend queue size.
+                // This temporally smooths out server message receipt, which causes higher
+                // sustained message delivery in high-bandwidth environments.
+                var maxAckExtendSendCount = Math.Max(10, _maxAckExtendQueueSize / 4);
                 // Pushing of acks and extends
                 // If a Push call fails then this Task always ends, and the StreamingPull is cancelled.
                 // If it's recoverable, then a new StreamingPull call is started.
@@ -800,8 +804,8 @@ namespace Google.Cloud.PubSub.V1
                     List<string> extends;
                     lock (_qLock)
                     {
-                        acks = _ackQueue.Take(_maxAckExtendCount).ToList();
-                        extends = _extendQueue.Take(_maxAckExtendCount - acks.Count).ToList();
+                        acks = _ackQueue.Take(maxAckExtendSendCount).ToList();
+                        extends = _extendQueue.Take(maxAckExtendSendCount - acks.Count).ToList();
                     }
                     var req = new StreamingPullRequest
                     {
