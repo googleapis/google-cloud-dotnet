@@ -1,0 +1,3518 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ClusterManagerClientImpl
+   | Google.Cloud.Container.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ClusterManagerClientImpl
+   | Google.Cloud.Container.V1 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl">
+  
+  
+  <h1 id="Google_Cloud_Container_V1_ClusterManagerClientImpl" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl" class="text-break">Class ClusterManagerClientImpl
+  </h1>
+  <div class="markdown level0 summary"><p>ClusterManager client wrapper implementation, for convenient use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html">ClusterManagerClient</a></div>
+    <div class="level2"><span class="xref">ClusterManagerClientImpl</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DefaultEndpoint">ClusterManagerClient.DefaultEndpoint</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DefaultScopes">ClusterManagerClient.DefaultScopes</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Container_V1_ClusterManagerSettings_">ClusterManagerClient.CreateAsync(ServiceEndpoint, ClusterManagerSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Container_V1_ClusterManagerSettings_">ClusterManagerClient.Create(ServiceEndpoint, ClusterManagerSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_Create_Grpc_Core_Channel_Google_Cloud_Container_V1_ClusterManagerSettings_">ClusterManagerClient.Create(Channel, ClusterManagerSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ShutdownDefaultChannelsAsync">ClusterManagerClient.ShutdownDefaultChannelsAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListClustersAsync_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListClustersAsync(String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListClustersAsync_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.ListClustersAsync(String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListClusters_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListClusters(String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetClusterAsync_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetClusterAsync(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetClusterAsync_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.GetClusterAsync(String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetCluster_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetCluster(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateClusterAsync_System_String_System_String_Google_Cloud_Container_V1_Cluster_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CreateClusterAsync(String, String, Cluster, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateClusterAsync_System_String_System_String_Google_Cloud_Container_V1_Cluster_System_Threading_CancellationToken_">ClusterManagerClient.CreateClusterAsync(String, String, Cluster, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateCluster_System_String_System_String_Google_Cloud_Container_V1_Cluster_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CreateCluster(String, String, Cluster, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateClusterAsync_System_String_System_String_System_String_Google_Cloud_Container_V1_ClusterUpdate_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.UpdateClusterAsync(String, String, String, ClusterUpdate, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateClusterAsync_System_String_System_String_System_String_Google_Cloud_Container_V1_ClusterUpdate_System_Threading_CancellationToken_">ClusterManagerClient.UpdateClusterAsync(String, String, String, ClusterUpdate, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateCluster_System_String_System_String_System_String_Google_Cloud_Container_V1_ClusterUpdate_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.UpdateCluster(String, String, String, ClusterUpdate, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLoggingServiceAsync_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLoggingServiceAsync(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLoggingServiceAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.SetLoggingServiceAsync(String, String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLoggingService_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLoggingService(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMonitoringServiceAsync_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetMonitoringServiceAsync(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMonitoringServiceAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.SetMonitoringServiceAsync(String, String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMonitoringService_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetMonitoringService(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetAddonsConfigAsync_System_String_System_String_System_String_Google_Cloud_Container_V1_AddonsConfig_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetAddonsConfigAsync(String, String, String, AddonsConfig, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetAddonsConfigAsync_System_String_System_String_System_String_Google_Cloud_Container_V1_AddonsConfig_System_Threading_CancellationToken_">ClusterManagerClient.SetAddonsConfigAsync(String, String, String, AddonsConfig, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetAddonsConfig_System_String_System_String_System_String_Google_Cloud_Container_V1_AddonsConfig_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetAddonsConfig(String, String, String, AddonsConfig, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLocationsAsync_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLocationsAsync(String, String, String, IEnumerable&lt;String&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLocationsAsync_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_">ClusterManagerClient.SetLocationsAsync(String, String, String, IEnumerable&lt;String&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLocations_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLocations(String, String, String, IEnumerable&lt;String&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateMasterAsync_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.UpdateMasterAsync(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateMasterAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.UpdateMasterAsync(String, String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateMaster_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.UpdateMaster(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DeleteClusterAsync_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.DeleteClusterAsync(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DeleteClusterAsync_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.DeleteClusterAsync(String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DeleteCluster_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.DeleteCluster(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListOperationsAsync_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListOperationsAsync(String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListOperationsAsync_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.ListOperationsAsync(String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListOperations_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListOperations(String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetOperationAsync_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetOperationAsync(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetOperationAsync_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.GetOperationAsync(String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetOperation_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetOperation(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CancelOperationAsync_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CancelOperationAsync(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CancelOperationAsync_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.CancelOperationAsync(String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CancelOperation_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CancelOperation(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetServerConfigAsync_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetServerConfigAsync(String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetServerConfigAsync_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.GetServerConfigAsync(String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetServerConfig_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetServerConfig(String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListNodePoolsAsync_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListNodePoolsAsync(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListNodePoolsAsync_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.ListNodePoolsAsync(String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListNodePools_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListNodePools(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetNodePoolAsync_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetNodePoolAsync(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetNodePoolAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.GetNodePoolAsync(String, String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetNodePool_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetNodePool(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateNodePoolAsync_System_String_System_String_System_String_Google_Cloud_Container_V1_NodePool_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CreateNodePoolAsync(String, String, String, NodePool, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateNodePoolAsync_System_String_System_String_System_String_Google_Cloud_Container_V1_NodePool_System_Threading_CancellationToken_">ClusterManagerClient.CreateNodePoolAsync(String, String, String, NodePool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateNodePool_System_String_System_String_System_String_Google_Cloud_Container_V1_NodePool_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CreateNodePool(String, String, String, NodePool, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DeleteNodePoolAsync_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.DeleteNodePoolAsync(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DeleteNodePoolAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.DeleteNodePoolAsync(String, String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DeleteNodePool_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.DeleteNodePool(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_RollbackNodePoolUpgradeAsync_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.RollbackNodePoolUpgradeAsync(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_RollbackNodePoolUpgradeAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.RollbackNodePoolUpgradeAsync(String, String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_RollbackNodePoolUpgrade_System_String_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.RollbackNodePoolUpgrade(String, String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLegacyAbacAsync_System_String_System_String_System_String_System_Boolean_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLegacyAbacAsync(String, String, String, Boolean, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLegacyAbacAsync_System_String_System_String_System_String_System_Boolean_System_Threading_CancellationToken_">ClusterManagerClient.SetLegacyAbacAsync(String, String, String, Boolean, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLegacyAbac_System_String_System_String_System_String_System_Boolean_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLegacyAbac(String, String, String, Boolean, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_StartIPRotationAsync_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.StartIPRotationAsync(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_StartIPRotationAsync_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.StartIPRotationAsync(String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_StartIPRotation_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.StartIPRotation(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CompleteIPRotationAsync_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CompleteIPRotationAsync(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CompleteIPRotationAsync_System_String_System_String_System_String_System_Threading_CancellationToken_">ClusterManagerClient.CompleteIPRotationAsync(String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CompleteIPRotation_System_String_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CompleteIPRotation(String, String, String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNetworkPolicyAsync_System_String_System_String_System_String_Google_Cloud_Container_V1_NetworkPolicy_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetNetworkPolicyAsync(String, String, String, NetworkPolicy, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNetworkPolicyAsync_System_String_System_String_System_String_Google_Cloud_Container_V1_NetworkPolicy_System_Threading_CancellationToken_">ClusterManagerClient.SetNetworkPolicyAsync(String, String, String, NetworkPolicy, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNetworkPolicy_System_String_System_String_System_String_Google_Cloud_Container_V1_NetworkPolicy_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetNetworkPolicy(String, String, String, NetworkPolicy, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMaintenancePolicyAsync_System_String_System_String_System_String_Google_Cloud_Container_V1_MaintenancePolicy_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetMaintenancePolicyAsync(String, String, String, MaintenancePolicy, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMaintenancePolicyAsync_System_String_System_String_System_String_Google_Cloud_Container_V1_MaintenancePolicy_System_Threading_CancellationToken_">ClusterManagerClient.SetMaintenancePolicyAsync(String, String, String, MaintenancePolicy, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMaintenancePolicy_System_String_System_String_System_String_Google_Cloud_Container_V1_MaintenancePolicy_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetMaintenancePolicy(String, String, String, MaintenancePolicy, CallSettings)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Container.V1.html">Google.Cloud.Container.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Container.V1.dll</h6>
+  <h5 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ClusterManagerClientImpl : ClusterManagerClient</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl__ctor_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.#ctor*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl__ctor_Google_Cloud_Container_V1_ClusterManager_ClusterManagerClient_Google_Cloud_Container_V1_ClusterManagerSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.#ctor(Google.Cloud.Container.V1.ClusterManager.ClusterManagerClient,Google.Cloud.Container.V1.ClusterManagerSettings)">ClusterManagerClientImpl(ClusterManager.ClusterManagerClient, ClusterManagerSettings)</h4>
+  <div class="markdown level1 summary"><p>Constructs a client wrapper for the ClusterManager service, with the specified gRPC client and settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClusterManagerClientImpl(ClusterManager.ClusterManagerClient grpcClient, ClusterManagerSettings settings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ClusterManager.ClusterManagerClient.html">ClusterManager.ClusterManagerClient</a></td>
+        <td><span class="parametername">grpcClient</span></td>
+        <td><p>The underlying gRPC client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerSettings.html">ClusterManagerSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>The base <a class="xref" href="Google.Cloud.Container.V1.ClusterManagerSettings.html">ClusterManagerSettings</a> used within this client </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GrpcClient_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GrpcClient*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GrpcClient" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GrpcClient">GrpcClient</h4>
+  <div class="markdown level1 summary"><p>The underlying gRPC ClusterManager client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ClusterManager.ClusterManagerClient GrpcClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ClusterManager.ClusterManagerClient.html">ClusterManager.ClusterManagerClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GrpcClient">ClusterManagerClient.GrpcClient</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CancelOperation_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CancelOperation*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CancelOperation_Google_Cloud_Container_V1_CancelOperationRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CancelOperation(Google.Cloud.Container.V1.CancelOperationRequest,Google.Api.Gax.Grpc.CallSettings)">CancelOperation(CancelOperationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Cancels the specified operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CancelOperation(CancelOperationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CancelOperationRequest.html">CancelOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CancelOperation_Google_Cloud_Container_V1_CancelOperationRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CancelOperation(CancelOperationRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CancelOperationAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CancelOperationAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CancelOperationAsync_Google_Cloud_Container_V1_CancelOperationRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CancelOperationAsync(Google.Cloud.Container.V1.CancelOperationRequest,Google.Api.Gax.Grpc.CallSettings)">CancelOperationAsync(CancelOperationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Cancels the specified operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task CancelOperationAsync(CancelOperationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CancelOperationRequest.html">CancelOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CancelOperationAsync_Google_Cloud_Container_V1_CancelOperationRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CancelOperationAsync(CancelOperationRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CompleteIPRotation_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CompleteIPRotation*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CompleteIPRotation_Google_Cloud_Container_V1_CompleteIPRotationRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CompleteIPRotation(Google.Cloud.Container.V1.CompleteIPRotationRequest,Google.Api.Gax.Grpc.CallSettings)">CompleteIPRotation(CompleteIPRotationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Completes master IP rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation CompleteIPRotation(CompleteIPRotationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CompleteIPRotationRequest.html">CompleteIPRotationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CompleteIPRotation_Google_Cloud_Container_V1_CompleteIPRotationRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CompleteIPRotation(CompleteIPRotationRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CompleteIPRotationAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CompleteIPRotationAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CompleteIPRotationAsync_Google_Cloud_Container_V1_CompleteIPRotationRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CompleteIPRotationAsync(Google.Cloud.Container.V1.CompleteIPRotationRequest,Google.Api.Gax.Grpc.CallSettings)">CompleteIPRotationAsync(CompleteIPRotationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Completes master IP rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; CompleteIPRotationAsync(CompleteIPRotationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CompleteIPRotationRequest.html">CompleteIPRotationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CompleteIPRotationAsync_Google_Cloud_Container_V1_CompleteIPRotationRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CompleteIPRotationAsync(CompleteIPRotationRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CreateCluster_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CreateCluster*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CreateCluster_Google_Cloud_Container_V1_CreateClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CreateCluster(Google.Cloud.Container.V1.CreateClusterRequest,Google.Api.Gax.Grpc.CallSettings)">CreateCluster(CreateClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a cluster, consisting of the specified number and type of Google
+Compute Engine instances.</p>
+<p>By default, the cluster is created in the project&apos;s
+<a href="/compute/docs/networks-and-firewalls#networks">default network</a>.</p>
+<p>One firewall is added for the cluster. After cluster creation,
+the cluster creates routes for each node to allow the containers
+on that node to communicate with all other instances in the
+cluster.</p>
+<p>Finally, an entry is added to the project&apos;s global metadata indicating
+which CIDR range is being used by the cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation CreateCluster(CreateClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CreateClusterRequest.html">CreateClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateCluster_Google_Cloud_Container_V1_CreateClusterRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CreateCluster(CreateClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CreateClusterAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CreateClusterAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CreateClusterAsync_Google_Cloud_Container_V1_CreateClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CreateClusterAsync(Google.Cloud.Container.V1.CreateClusterRequest,Google.Api.Gax.Grpc.CallSettings)">CreateClusterAsync(CreateClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a cluster, consisting of the specified number and type of Google
+Compute Engine instances.</p>
+<p>By default, the cluster is created in the project&apos;s
+<a href="/compute/docs/networks-and-firewalls#networks">default network</a>.</p>
+<p>One firewall is added for the cluster. After cluster creation,
+the cluster creates routes for each node to allow the containers
+on that node to communicate with all other instances in the
+cluster.</p>
+<p>Finally, an entry is added to the project&apos;s global metadata indicating
+which CIDR range is being used by the cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; CreateClusterAsync(CreateClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CreateClusterRequest.html">CreateClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateClusterAsync_Google_Cloud_Container_V1_CreateClusterRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CreateClusterAsync(CreateClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CreateNodePool_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CreateNodePool*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CreateNodePool_Google_Cloud_Container_V1_CreateNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CreateNodePool(Google.Cloud.Container.V1.CreateNodePoolRequest,Google.Api.Gax.Grpc.CallSettings)">CreateNodePool(CreateNodePoolRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a node pool for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation CreateNodePool(CreateNodePoolRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CreateNodePoolRequest.html">CreateNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateNodePool_Google_Cloud_Container_V1_CreateNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CreateNodePool(CreateNodePoolRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CreateNodePoolAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CreateNodePoolAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_CreateNodePoolAsync_Google_Cloud_Container_V1_CreateNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.CreateNodePoolAsync(Google.Cloud.Container.V1.CreateNodePoolRequest,Google.Api.Gax.Grpc.CallSettings)">CreateNodePoolAsync(CreateNodePoolRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a node pool for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; CreateNodePoolAsync(CreateNodePoolRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CreateNodePoolRequest.html">CreateNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_CreateNodePoolAsync_Google_Cloud_Container_V1_CreateNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.CreateNodePoolAsync(CreateNodePoolRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_DeleteCluster_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.DeleteCluster*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_DeleteCluster_Google_Cloud_Container_V1_DeleteClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.DeleteCluster(Google.Cloud.Container.V1.DeleteClusterRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteCluster(DeleteClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes the cluster, including the Kubernetes endpoint and all worker
+nodes.</p>
+<p>Firewalls and routes that were configured during cluster creation
+are also deleted.</p>
+<p>Other Google Compute Engine resources that might be in use by the cluster
+(e.g. load balancer resources) will not be deleted if they weren&apos;t present
+at the initial create time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation DeleteCluster(DeleteClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.DeleteClusterRequest.html">DeleteClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DeleteCluster_Google_Cloud_Container_V1_DeleteClusterRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.DeleteCluster(DeleteClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_DeleteClusterAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.DeleteClusterAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_DeleteClusterAsync_Google_Cloud_Container_V1_DeleteClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.DeleteClusterAsync(Google.Cloud.Container.V1.DeleteClusterRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteClusterAsync(DeleteClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes the cluster, including the Kubernetes endpoint and all worker
+nodes.</p>
+<p>Firewalls and routes that were configured during cluster creation
+are also deleted.</p>
+<p>Other Google Compute Engine resources that might be in use by the cluster
+(e.g. load balancer resources) will not be deleted if they weren&apos;t present
+at the initial create time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; DeleteClusterAsync(DeleteClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.DeleteClusterRequest.html">DeleteClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DeleteClusterAsync_Google_Cloud_Container_V1_DeleteClusterRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.DeleteClusterAsync(DeleteClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_DeleteNodePool_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.DeleteNodePool*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_DeleteNodePool_Google_Cloud_Container_V1_DeleteNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.DeleteNodePool(Google.Cloud.Container.V1.DeleteNodePoolRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteNodePool(DeleteNodePoolRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a node pool from a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation DeleteNodePool(DeleteNodePoolRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.DeleteNodePoolRequest.html">DeleteNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DeleteNodePool_Google_Cloud_Container_V1_DeleteNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.DeleteNodePool(DeleteNodePoolRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_DeleteNodePoolAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.DeleteNodePoolAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_DeleteNodePoolAsync_Google_Cloud_Container_V1_DeleteNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.DeleteNodePoolAsync(Google.Cloud.Container.V1.DeleteNodePoolRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteNodePoolAsync(DeleteNodePoolRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a node pool from a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; DeleteNodePoolAsync(DeleteNodePoolRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.DeleteNodePoolRequest.html">DeleteNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_DeleteNodePoolAsync_Google_Cloud_Container_V1_DeleteNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.DeleteNodePoolAsync(DeleteNodePoolRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetCluster_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetCluster*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetCluster_Google_Cloud_Container_V1_GetClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetCluster(Google.Cloud.Container.V1.GetClusterRequest,Google.Api.Gax.Grpc.CallSettings)">GetCluster(GetClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the details of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Cluster GetCluster(GetClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetClusterRequest.html">GetClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Cluster.html">Cluster</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetCluster_Google_Cloud_Container_V1_GetClusterRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetCluster(GetClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetClusterAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetClusterAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetClusterAsync_Google_Cloud_Container_V1_GetClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetClusterAsync(Google.Cloud.Container.V1.GetClusterRequest,Google.Api.Gax.Grpc.CallSettings)">GetClusterAsync(GetClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the details of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Cluster&gt; GetClusterAsync(GetClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetClusterRequest.html">GetClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Cluster.html">Cluster</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetClusterAsync_Google_Cloud_Container_V1_GetClusterRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetClusterAsync(GetClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetNodePool_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetNodePool*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetNodePool_Google_Cloud_Container_V1_GetNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetNodePool(Google.Cloud.Container.V1.GetNodePoolRequest,Google.Api.Gax.Grpc.CallSettings)">GetNodePool(GetNodePoolRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the node pool requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override NodePool GetNodePool(GetNodePoolRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetNodePoolRequest.html">GetNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.NodePool.html">NodePool</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetNodePool_Google_Cloud_Container_V1_GetNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetNodePool(GetNodePoolRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetNodePoolAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetNodePoolAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetNodePoolAsync_Google_Cloud_Container_V1_GetNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetNodePoolAsync(Google.Cloud.Container.V1.GetNodePoolRequest,Google.Api.Gax.Grpc.CallSettings)">GetNodePoolAsync(GetNodePoolRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the node pool requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;NodePool&gt; GetNodePoolAsync(GetNodePoolRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetNodePoolRequest.html">GetNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.NodePool.html">NodePool</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetNodePoolAsync_Google_Cloud_Container_V1_GetNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetNodePoolAsync(GetNodePoolRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetOperation_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetOperation*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetOperation_Google_Cloud_Container_V1_GetOperationRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetOperation(Google.Cloud.Container.V1.GetOperationRequest,Google.Api.Gax.Grpc.CallSettings)">GetOperation(GetOperationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the specified operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation GetOperation(GetOperationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetOperationRequest.html">GetOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetOperation_Google_Cloud_Container_V1_GetOperationRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetOperation(GetOperationRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetOperationAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetOperationAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetOperationAsync_Google_Cloud_Container_V1_GetOperationRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetOperationAsync(Google.Cloud.Container.V1.GetOperationRequest,Google.Api.Gax.Grpc.CallSettings)">GetOperationAsync(GetOperationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the specified operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; GetOperationAsync(GetOperationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetOperationRequest.html">GetOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetOperationAsync_Google_Cloud_Container_V1_GetOperationRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetOperationAsync(GetOperationRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetServerConfig_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetServerConfig*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetServerConfig_Google_Cloud_Container_V1_GetServerConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetServerConfig(Google.Cloud.Container.V1.GetServerConfigRequest,Google.Api.Gax.Grpc.CallSettings)">GetServerConfig(GetServerConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns configuration info about the Container Engine service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ServerConfig GetServerConfig(GetServerConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetServerConfigRequest.html">GetServerConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ServerConfig.html">ServerConfig</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetServerConfig_Google_Cloud_Container_V1_GetServerConfigRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetServerConfig(GetServerConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetServerConfigAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetServerConfigAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_GetServerConfigAsync_Google_Cloud_Container_V1_GetServerConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.GetServerConfigAsync(Google.Cloud.Container.V1.GetServerConfigRequest,Google.Api.Gax.Grpc.CallSettings)">GetServerConfigAsync(GetServerConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns configuration info about the Container Engine service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ServerConfig&gt; GetServerConfigAsync(GetServerConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetServerConfigRequest.html">GetServerConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.ServerConfig.html">ServerConfig</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_GetServerConfigAsync_Google_Cloud_Container_V1_GetServerConfigRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.GetServerConfigAsync(GetServerConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListClusters_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListClusters*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListClusters_Google_Cloud_Container_V1_ListClustersRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListClusters(Google.Cloud.Container.V1.ListClustersRequest,Google.Api.Gax.Grpc.CallSettings)">ListClusters(ListClustersRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all clusters owned by a project in either the specified zone or all
+zones.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ListClustersResponse ListClusters(ListClustersRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListClustersRequest.html">ListClustersRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListClustersResponse.html">ListClustersResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListClusters_Google_Cloud_Container_V1_ListClustersRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListClusters(ListClustersRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListClustersAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListClustersAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListClustersAsync_Google_Cloud_Container_V1_ListClustersRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListClustersAsync(Google.Cloud.Container.V1.ListClustersRequest,Google.Api.Gax.Grpc.CallSettings)">ListClustersAsync(ListClustersRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all clusters owned by a project in either the specified zone or all
+zones.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ListClustersResponse&gt; ListClustersAsync(ListClustersRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListClustersRequest.html">ListClustersRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.ListClustersResponse.html">ListClustersResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListClustersAsync_Google_Cloud_Container_V1_ListClustersRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListClustersAsync(ListClustersRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListNodePools_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListNodePools*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListNodePools_Google_Cloud_Container_V1_ListNodePoolsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListNodePools(Google.Cloud.Container.V1.ListNodePoolsRequest,Google.Api.Gax.Grpc.CallSettings)">ListNodePools(ListNodePoolsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists the node pools for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ListNodePoolsResponse ListNodePools(ListNodePoolsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListNodePoolsRequest.html">ListNodePoolsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListNodePoolsResponse.html">ListNodePoolsResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListNodePools_Google_Cloud_Container_V1_ListNodePoolsRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListNodePools(ListNodePoolsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListNodePoolsAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListNodePoolsAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListNodePoolsAsync_Google_Cloud_Container_V1_ListNodePoolsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListNodePoolsAsync(Google.Cloud.Container.V1.ListNodePoolsRequest,Google.Api.Gax.Grpc.CallSettings)">ListNodePoolsAsync(ListNodePoolsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists the node pools for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ListNodePoolsResponse&gt; ListNodePoolsAsync(ListNodePoolsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListNodePoolsRequest.html">ListNodePoolsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.ListNodePoolsResponse.html">ListNodePoolsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListNodePoolsAsync_Google_Cloud_Container_V1_ListNodePoolsRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListNodePoolsAsync(ListNodePoolsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListOperations_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListOperations*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListOperations_Google_Cloud_Container_V1_ListOperationsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListOperations(Google.Cloud.Container.V1.ListOperationsRequest,Google.Api.Gax.Grpc.CallSettings)">ListOperations(ListOperationsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all operations in a project in a specific zone or all zones.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ListOperationsResponse ListOperations(ListOperationsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListOperationsRequest.html">ListOperationsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListOperationsResponse.html">ListOperationsResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListOperations_Google_Cloud_Container_V1_ListOperationsRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListOperations(ListOperationsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListOperationsAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListOperationsAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_ListOperationsAsync_Google_Cloud_Container_V1_ListOperationsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.ListOperationsAsync(Google.Cloud.Container.V1.ListOperationsRequest,Google.Api.Gax.Grpc.CallSettings)">ListOperationsAsync(ListOperationsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all operations in a project in a specific zone or all zones.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ListOperationsResponse&gt; ListOperationsAsync(ListOperationsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListOperationsRequest.html">ListOperationsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.ListOperationsResponse.html">ListOperationsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_ListOperationsAsync_Google_Cloud_Container_V1_ListOperationsRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.ListOperationsAsync(ListOperationsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_RollbackNodePoolUpgrade_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.RollbackNodePoolUpgrade*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_RollbackNodePoolUpgrade_Google_Cloud_Container_V1_RollbackNodePoolUpgradeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.RollbackNodePoolUpgrade(Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest,Google.Api.Gax.Grpc.CallSettings)">RollbackNodePoolUpgrade(RollbackNodePoolUpgradeRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Roll back the previously Aborted or Failed NodePool upgrade.
+This will be an no-op if the last upgrade successfully completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation RollbackNodePoolUpgrade(RollbackNodePoolUpgradeRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest.html">RollbackNodePoolUpgradeRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_RollbackNodePoolUpgrade_Google_Cloud_Container_V1_RollbackNodePoolUpgradeRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.RollbackNodePoolUpgrade(RollbackNodePoolUpgradeRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_RollbackNodePoolUpgradeAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.RollbackNodePoolUpgradeAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_RollbackNodePoolUpgradeAsync_Google_Cloud_Container_V1_RollbackNodePoolUpgradeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.RollbackNodePoolUpgradeAsync(Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest,Google.Api.Gax.Grpc.CallSettings)">RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Roll back the previously Aborted or Failed NodePool upgrade.
+This will be an no-op if the last upgrade successfully completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest.html">RollbackNodePoolUpgradeRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_RollbackNodePoolUpgradeAsync_Google_Cloud_Container_V1_RollbackNodePoolUpgradeRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.RollbackNodePoolUpgradeAsync(RollbackNodePoolUpgradeRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetAddonsConfig_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetAddonsConfig*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetAddonsConfig_Google_Cloud_Container_V1_SetAddonsConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetAddonsConfig(Google.Cloud.Container.V1.SetAddonsConfigRequest,Google.Api.Gax.Grpc.CallSettings)">SetAddonsConfig(SetAddonsConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the addons of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetAddonsConfig(SetAddonsConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetAddonsConfigRequest.html">SetAddonsConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetAddonsConfig_Google_Cloud_Container_V1_SetAddonsConfigRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetAddonsConfig(SetAddonsConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetAddonsConfigAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetAddonsConfigAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetAddonsConfigAsync_Google_Cloud_Container_V1_SetAddonsConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetAddonsConfigAsync(Google.Cloud.Container.V1.SetAddonsConfigRequest,Google.Api.Gax.Grpc.CallSettings)">SetAddonsConfigAsync(SetAddonsConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the addons of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetAddonsConfigAsync(SetAddonsConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetAddonsConfigRequest.html">SetAddonsConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetAddonsConfigAsync_Google_Cloud_Container_V1_SetAddonsConfigRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetAddonsConfigAsync(SetAddonsConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLabels_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLabels*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLabels_Google_Cloud_Container_V1_SetLabelsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLabels(Google.Cloud.Container.V1.SetLabelsRequest,Google.Api.Gax.Grpc.CallSettings)">SetLabels(SetLabelsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets labels on a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetLabels(SetLabelsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLabelsRequest.html">SetLabelsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLabels_Google_Cloud_Container_V1_SetLabelsRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLabels(SetLabelsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLabelsAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLabelsAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLabelsAsync_Google_Cloud_Container_V1_SetLabelsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLabelsAsync(Google.Cloud.Container.V1.SetLabelsRequest,Google.Api.Gax.Grpc.CallSettings)">SetLabelsAsync(SetLabelsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets labels on a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetLabelsAsync(SetLabelsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLabelsRequest.html">SetLabelsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLabelsAsync_Google_Cloud_Container_V1_SetLabelsRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLabelsAsync(SetLabelsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLegacyAbac_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLegacyAbac*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLegacyAbac_Google_Cloud_Container_V1_SetLegacyAbacRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLegacyAbac(Google.Cloud.Container.V1.SetLegacyAbacRequest,Google.Api.Gax.Grpc.CallSettings)">SetLegacyAbac(SetLegacyAbacRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Enables or disables the ABAC authorization mechanism on a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetLegacyAbac(SetLegacyAbacRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLegacyAbacRequest.html">SetLegacyAbacRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLegacyAbac_Google_Cloud_Container_V1_SetLegacyAbacRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLegacyAbac(SetLegacyAbacRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLegacyAbacAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLegacyAbacAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLegacyAbacAsync_Google_Cloud_Container_V1_SetLegacyAbacRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLegacyAbacAsync(Google.Cloud.Container.V1.SetLegacyAbacRequest,Google.Api.Gax.Grpc.CallSettings)">SetLegacyAbacAsync(SetLegacyAbacRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Enables or disables the ABAC authorization mechanism on a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetLegacyAbacAsync(SetLegacyAbacRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLegacyAbacRequest.html">SetLegacyAbacRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLegacyAbacAsync_Google_Cloud_Container_V1_SetLegacyAbacRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLegacyAbacAsync(SetLegacyAbacRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLocations_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLocations*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLocations_Google_Cloud_Container_V1_SetLocationsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLocations(Google.Cloud.Container.V1.SetLocationsRequest,Google.Api.Gax.Grpc.CallSettings)">SetLocations(SetLocationsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the locations of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetLocations(SetLocationsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLocationsRequest.html">SetLocationsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLocations_Google_Cloud_Container_V1_SetLocationsRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLocations(SetLocationsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLocationsAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLocationsAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLocationsAsync_Google_Cloud_Container_V1_SetLocationsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLocationsAsync(Google.Cloud.Container.V1.SetLocationsRequest,Google.Api.Gax.Grpc.CallSettings)">SetLocationsAsync(SetLocationsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the locations of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetLocationsAsync(SetLocationsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLocationsRequest.html">SetLocationsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLocationsAsync_Google_Cloud_Container_V1_SetLocationsRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLocationsAsync(SetLocationsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLoggingService_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLoggingService*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLoggingService_Google_Cloud_Container_V1_SetLoggingServiceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLoggingService(Google.Cloud.Container.V1.SetLoggingServiceRequest,Google.Api.Gax.Grpc.CallSettings)">SetLoggingService(SetLoggingServiceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the logging service of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetLoggingService(SetLoggingServiceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLoggingServiceRequest.html">SetLoggingServiceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLoggingService_Google_Cloud_Container_V1_SetLoggingServiceRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLoggingService(SetLoggingServiceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLoggingServiceAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLoggingServiceAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetLoggingServiceAsync_Google_Cloud_Container_V1_SetLoggingServiceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetLoggingServiceAsync(Google.Cloud.Container.V1.SetLoggingServiceRequest,Google.Api.Gax.Grpc.CallSettings)">SetLoggingServiceAsync(SetLoggingServiceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the logging service of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetLoggingServiceAsync(SetLoggingServiceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLoggingServiceRequest.html">SetLoggingServiceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetLoggingServiceAsync_Google_Cloud_Container_V1_SetLoggingServiceRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetLoggingServiceAsync(SetLoggingServiceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMaintenancePolicy_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMaintenancePolicy*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMaintenancePolicy_Google_Cloud_Container_V1_SetMaintenancePolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMaintenancePolicy(Google.Cloud.Container.V1.SetMaintenancePolicyRequest,Google.Api.Gax.Grpc.CallSettings)">SetMaintenancePolicy(SetMaintenancePolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the maintenance policy for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetMaintenancePolicy(SetMaintenancePolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetMaintenancePolicyRequest.html">SetMaintenancePolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMaintenancePolicy_Google_Cloud_Container_V1_SetMaintenancePolicyRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetMaintenancePolicy(SetMaintenancePolicyRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMaintenancePolicyAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMaintenancePolicyAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMaintenancePolicyAsync_Google_Cloud_Container_V1_SetMaintenancePolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMaintenancePolicyAsync(Google.Cloud.Container.V1.SetMaintenancePolicyRequest,Google.Api.Gax.Grpc.CallSettings)">SetMaintenancePolicyAsync(SetMaintenancePolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the maintenance policy for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetMaintenancePolicyAsync(SetMaintenancePolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetMaintenancePolicyRequest.html">SetMaintenancePolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMaintenancePolicyAsync_Google_Cloud_Container_V1_SetMaintenancePolicyRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetMaintenancePolicyAsync(SetMaintenancePolicyRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMasterAuth_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMasterAuth*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMasterAuth_Google_Cloud_Container_V1_SetMasterAuthRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMasterAuth(Google.Cloud.Container.V1.SetMasterAuthRequest,Google.Api.Gax.Grpc.CallSettings)">SetMasterAuth(SetMasterAuthRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Used to set master auth materials. Currently supports :-
+Changing the admin password of a specific cluster.
+This can be either via password generation or explicitly set the password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetMasterAuth(SetMasterAuthRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetMasterAuthRequest.html">SetMasterAuthRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMasterAuth_Google_Cloud_Container_V1_SetMasterAuthRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetMasterAuth(SetMasterAuthRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMasterAuthAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMasterAuthAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMasterAuthAsync_Google_Cloud_Container_V1_SetMasterAuthRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMasterAuthAsync(Google.Cloud.Container.V1.SetMasterAuthRequest,Google.Api.Gax.Grpc.CallSettings)">SetMasterAuthAsync(SetMasterAuthRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Used to set master auth materials. Currently supports :-
+Changing the admin password of a specific cluster.
+This can be either via password generation or explicitly set the password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetMasterAuthAsync(SetMasterAuthRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetMasterAuthRequest.html">SetMasterAuthRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMasterAuthAsync_Google_Cloud_Container_V1_SetMasterAuthRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetMasterAuthAsync(SetMasterAuthRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMonitoringService_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMonitoringService*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMonitoringService_Google_Cloud_Container_V1_SetMonitoringServiceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMonitoringService(Google.Cloud.Container.V1.SetMonitoringServiceRequest,Google.Api.Gax.Grpc.CallSettings)">SetMonitoringService(SetMonitoringServiceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the monitoring service of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetMonitoringService(SetMonitoringServiceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetMonitoringServiceRequest.html">SetMonitoringServiceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMonitoringService_Google_Cloud_Container_V1_SetMonitoringServiceRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetMonitoringService(SetMonitoringServiceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMonitoringServiceAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMonitoringServiceAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetMonitoringServiceAsync_Google_Cloud_Container_V1_SetMonitoringServiceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetMonitoringServiceAsync(Google.Cloud.Container.V1.SetMonitoringServiceRequest,Google.Api.Gax.Grpc.CallSettings)">SetMonitoringServiceAsync(SetMonitoringServiceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the monitoring service of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetMonitoringServiceAsync(SetMonitoringServiceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetMonitoringServiceRequest.html">SetMonitoringServiceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetMonitoringServiceAsync_Google_Cloud_Container_V1_SetMonitoringServiceRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetMonitoringServiceAsync(SetMonitoringServiceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNetworkPolicy_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNetworkPolicy*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNetworkPolicy_Google_Cloud_Container_V1_SetNetworkPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNetworkPolicy(Google.Cloud.Container.V1.SetNetworkPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">SetNetworkPolicy(SetNetworkPolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Enables/Disables Network Policy for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetNetworkPolicy(SetNetworkPolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNetworkPolicyRequest.html">SetNetworkPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNetworkPolicy_Google_Cloud_Container_V1_SetNetworkPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetNetworkPolicy(SetNetworkPolicyRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNetworkPolicyAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNetworkPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNetworkPolicyAsync_Google_Cloud_Container_V1_SetNetworkPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNetworkPolicyAsync(Google.Cloud.Container.V1.SetNetworkPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">SetNetworkPolicyAsync(SetNetworkPolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Enables/Disables Network Policy for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetNetworkPolicyAsync(SetNetworkPolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNetworkPolicyRequest.html">SetNetworkPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNetworkPolicyAsync_Google_Cloud_Container_V1_SetNetworkPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetNetworkPolicyAsync(SetNetworkPolicyRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolAutoscaling_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolAutoscaling*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolAutoscaling_Google_Cloud_Container_V1_SetNodePoolAutoscalingRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolAutoscaling(Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest,Google.Api.Gax.Grpc.CallSettings)">SetNodePoolAutoscaling(SetNodePoolAutoscalingRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the autoscaling settings of a specific node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetNodePoolAutoscaling(SetNodePoolAutoscalingRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest.html">SetNodePoolAutoscalingRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNodePoolAutoscaling_Google_Cloud_Container_V1_SetNodePoolAutoscalingRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetNodePoolAutoscaling(SetNodePoolAutoscalingRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolAutoscalingAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolAutoscalingAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolAutoscalingAsync_Google_Cloud_Container_V1_SetNodePoolAutoscalingRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolAutoscalingAsync(Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest,Google.Api.Gax.Grpc.CallSettings)">SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the autoscaling settings of a specific node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest.html">SetNodePoolAutoscalingRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNodePoolAutoscalingAsync_Google_Cloud_Container_V1_SetNodePoolAutoscalingRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetNodePoolAutoscalingAsync(SetNodePoolAutoscalingRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolManagement_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolManagement*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolManagement_Google_Cloud_Container_V1_SetNodePoolManagementRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolManagement(Google.Cloud.Container.V1.SetNodePoolManagementRequest,Google.Api.Gax.Grpc.CallSettings)">SetNodePoolManagement(SetNodePoolManagementRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the NodeManagement options for a node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetNodePoolManagement(SetNodePoolManagementRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNodePoolManagementRequest.html">SetNodePoolManagementRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNodePoolManagement_Google_Cloud_Container_V1_SetNodePoolManagementRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetNodePoolManagement(SetNodePoolManagementRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolManagementAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolManagementAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolManagementAsync_Google_Cloud_Container_V1_SetNodePoolManagementRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolManagementAsync(Google.Cloud.Container.V1.SetNodePoolManagementRequest,Google.Api.Gax.Grpc.CallSettings)">SetNodePoolManagementAsync(SetNodePoolManagementRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the NodeManagement options for a node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetNodePoolManagementAsync(SetNodePoolManagementRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNodePoolManagementRequest.html">SetNodePoolManagementRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNodePoolManagementAsync_Google_Cloud_Container_V1_SetNodePoolManagementRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetNodePoolManagementAsync(SetNodePoolManagementRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolSize_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolSize*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolSize_Google_Cloud_Container_V1_SetNodePoolSizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolSize(Google.Cloud.Container.V1.SetNodePoolSizeRequest,Google.Api.Gax.Grpc.CallSettings)">SetNodePoolSize(SetNodePoolSizeRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of a specific node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation SetNodePoolSize(SetNodePoolSizeRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNodePoolSizeRequest.html">SetNodePoolSizeRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNodePoolSize_Google_Cloud_Container_V1_SetNodePoolSizeRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetNodePoolSize(SetNodePoolSizeRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolSizeAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolSizeAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_SetNodePoolSizeAsync_Google_Cloud_Container_V1_SetNodePoolSizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.SetNodePoolSizeAsync(Google.Cloud.Container.V1.SetNodePoolSizeRequest,Google.Api.Gax.Grpc.CallSettings)">SetNodePoolSizeAsync(SetNodePoolSizeRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of a specific node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; SetNodePoolSizeAsync(SetNodePoolSizeRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNodePoolSizeRequest.html">SetNodePoolSizeRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_SetNodePoolSizeAsync_Google_Cloud_Container_V1_SetNodePoolSizeRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.SetNodePoolSizeAsync(SetNodePoolSizeRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_StartIPRotation_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.StartIPRotation*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_StartIPRotation_Google_Cloud_Container_V1_StartIPRotationRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.StartIPRotation(Google.Cloud.Container.V1.StartIPRotationRequest,Google.Api.Gax.Grpc.CallSettings)">StartIPRotation(StartIPRotationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Start master IP rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation StartIPRotation(StartIPRotationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.StartIPRotationRequest.html">StartIPRotationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_StartIPRotation_Google_Cloud_Container_V1_StartIPRotationRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.StartIPRotation(StartIPRotationRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_StartIPRotationAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.StartIPRotationAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_StartIPRotationAsync_Google_Cloud_Container_V1_StartIPRotationRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.StartIPRotationAsync(Google.Cloud.Container.V1.StartIPRotationRequest,Google.Api.Gax.Grpc.CallSettings)">StartIPRotationAsync(StartIPRotationRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Start master IP rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; StartIPRotationAsync(StartIPRotationRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.StartIPRotationRequest.html">StartIPRotationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_StartIPRotationAsync_Google_Cloud_Container_V1_StartIPRotationRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.StartIPRotationAsync(StartIPRotationRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateCluster_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateCluster*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateCluster_Google_Cloud_Container_V1_UpdateClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateCluster(Google.Cloud.Container.V1.UpdateClusterRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateCluster(UpdateClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the settings of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation UpdateCluster(UpdateClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.UpdateClusterRequest.html">UpdateClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateCluster_Google_Cloud_Container_V1_UpdateClusterRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.UpdateCluster(UpdateClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateClusterAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateClusterAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateClusterAsync_Google_Cloud_Container_V1_UpdateClusterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateClusterAsync(Google.Cloud.Container.V1.UpdateClusterRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateClusterAsync(UpdateClusterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the settings of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; UpdateClusterAsync(UpdateClusterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.UpdateClusterRequest.html">UpdateClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateClusterAsync_Google_Cloud_Container_V1_UpdateClusterRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.UpdateClusterAsync(UpdateClusterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateMaster_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateMaster*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateMaster_Google_Cloud_Container_V1_UpdateMasterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateMaster(Google.Cloud.Container.V1.UpdateMasterRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateMaster(UpdateMasterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the master of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation UpdateMaster(UpdateMasterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.UpdateMasterRequest.html">UpdateMasterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateMaster_Google_Cloud_Container_V1_UpdateMasterRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.UpdateMaster(UpdateMasterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateMasterAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateMasterAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateMasterAsync_Google_Cloud_Container_V1_UpdateMasterRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateMasterAsync(Google.Cloud.Container.V1.UpdateMasterRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateMasterAsync(UpdateMasterRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the master of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; UpdateMasterAsync(UpdateMasterRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.UpdateMasterRequest.html">UpdateMasterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateMasterAsync_Google_Cloud_Container_V1_UpdateMasterRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.UpdateMasterAsync(UpdateMasterRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateNodePool_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateNodePool*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateNodePool_Google_Cloud_Container_V1_UpdateNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateNodePool(Google.Cloud.Container.V1.UpdateNodePoolRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateNodePool(UpdateNodePoolRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the version and/or image type of a specific node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation UpdateNodePool(UpdateNodePoolRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.UpdateNodePoolRequest.html">UpdateNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateNodePool_Google_Cloud_Container_V1_UpdateNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.UpdateNodePool(UpdateNodePoolRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateNodePoolAsync_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateNodePoolAsync*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManagerClientImpl_UpdateNodePoolAsync_Google_Cloud_Container_V1_UpdateNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Container.V1.ClusterManagerClientImpl.UpdateNodePoolAsync(Google.Cloud.Container.V1.UpdateNodePoolRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateNodePoolAsync(UpdateNodePoolRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the version and/or image type of a specific node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; UpdateNodePoolAsync(UpdateNodePoolRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.UpdateNodePoolRequest.html">UpdateNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Container.V1.ClusterManagerClient.html#Google_Cloud_Container_V1_ClusterManagerClient_UpdateNodePoolAsync_Google_Cloud_Container_V1_UpdateNodePoolRequest_Google_Api_Gax_Grpc_CallSettings_">ClusterManagerClient.UpdateNodePoolAsync(UpdateNodePoolRequest, CallSettings)</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

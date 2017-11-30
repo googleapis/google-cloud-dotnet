@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Protobuf
+   | Google.Cloud.Container.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Protobuf
+   | Google.Cloud.Container.V1 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Protobuf">
+  
+  <h1 id="Google_Protobuf" data-uid="Google.Protobuf" class="text-break">Namespace Google.Protobuf
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></h4>
+      <section><p>Immutable array of bytes.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></h4>
+      <section><p>Reads and decodes protocol message fields.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a></h4>
+      <section><p>Encodes and writes protocol message fields.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.CodedOutputStream.OutOfSpaceException.html">CodedOutputStream.OutOfSpaceException</a></h4>
+      <section><p>Indicates that a CodedOutputStream wrapping a flat byte array
+ran out of space.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.FieldCodec.html">FieldCodec</a></h4>
+      <section><p>Factory methods for <a class="xref" href="Google.Protobuf.FieldCodec-1.html">FieldCodec&lt;T&gt;</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.FieldCodec-1.html">FieldCodec&lt;T&gt;</a></h4>
+      <section><p>
+An encode/decode pair for a single field. This effectively encapsulates
+all the information needed to read or write the field value from/to a coded
+stream.
+</p>
+<p>
+This class is public and has to be as it is used by generated code, but its public
+API is very limited - just what the generated code needs to call directly.
+</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.InvalidJsonException.html">InvalidJsonException</a></h4>
+      <section><p>Thrown when an attempt is made to parse invalid JSON, e.g. using
+a non-string property key, or including a redundant comma. Parsing a protocol buffer
+message represented in JSON using <a class="xref" href="Google.Protobuf.JsonParser.html">JsonParser</a> can throw both this
+exception and <a class="xref" href="Google.Protobuf.InvalidProtocolBufferException.html">InvalidProtocolBufferException</a> depending on the situation. This
+exception is only thrown for &quot;pure JSON&quot; errors, whereas <code>InvalidProtocolBufferException</code>
+is thrown when the JSON may be valid in and of itself, but cannot be parsed as a protocol buffer
+message.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.InvalidProtocolBufferException.html">InvalidProtocolBufferException</a></h4>
+      <section><p>Thrown when a protocol message being parsed is invalid in some way,
+e.g. it contains a malformed varint or a negative byte length.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.JsonFormatter.html">JsonFormatter</a></h4>
+      <section><p>Reflection-based converter from messages to JSON.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.JsonFormatter.Settings.html">JsonFormatter.Settings</a></h4>
+      <section><p>Settings controlling JSON formatting.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.JsonParser.html">JsonParser</a></h4>
+      <section><p>Reflection-based converter from JSON to messages.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.JsonParser.Settings.html">JsonParser.Settings</a></h4>
+      <section><p>Settings controlling JSON parsing.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.MessageExtensions.html">MessageExtensions</a></h4>
+      <section><p>Extension methods on <a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a> and <a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage&lt;T&gt;</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.MessageParser.html">MessageParser</a></h4>
+      <section><p>A general message parser, typically used by reflection-based code as all the methods
+return simple <a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.MessageParser-1.html">MessageParser&lt;T&gt;</a></h4>
+      <section><p>A parser for a specific message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.ProtoPreconditions.html">ProtoPreconditions</a></h4>
+      <section><p>Helper methods for throwing exceptions when preconditions are not met.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.WireFormat.html">WireFormat</a></h4>
+      <section><p>This class is used internally by the Protocol Buffer Library and generated
+message implementations. It is public only for the sake of those generated
+messages. Others should not use this class directly.
+<p>
+This class contains constants and helper functions useful for dealing with
+the Protocol Buffer wire format.
+</p></p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Google.Protobuf.ICustomDiagnosticMessage.html">ICustomDiagnosticMessage</a></h4>
+      <section><p>A message type that has a custom string format for diagnostic purposes.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable&lt;T&gt;</a></h4>
+      <section><p>Generic interface for a deeply cloneable type.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></h4>
+      <section><p>Interface for a Protocol Buffers message, supporting
+basic operations required for serialization.</p>
+</section>
+      <h4><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage&lt;T&gt;</a></h4>
+      <section><p>Generic interface for a Protocol Buffers message,
+where the type parameter is expected to be the same type as
+the implementation class.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Google.Protobuf.WireFormat.WireType.html">WireFormat.WireType</a></h4>
+      <section><p>Wire types within protobuf encoding.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

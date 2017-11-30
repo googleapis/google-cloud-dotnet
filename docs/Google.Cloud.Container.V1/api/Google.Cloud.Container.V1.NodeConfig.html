@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NodeConfig
+   | Google.Cloud.Container.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NodeConfig
+   | Google.Cloud.Container.V1 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Container.V1.NodeConfig">
+  
+  
+  <h1 id="Google_Cloud_Container_V1_NodeConfig" data-uid="Google.Cloud.Container.V1.NodeConfig" class="text-break">Class NodeConfig
+  </h1>
+  <div class="markdown level0 summary"><p>Parameters that describe the nodes in a cluster.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NodeConfig</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Container.V1.NodeConfig.html">NodeConfig</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.NodeConfig.html">NodeConfig</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Container.V1.NodeConfig.html">NodeConfig</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Container.V1.html">Google.Cloud.Container.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Container.V1.dll</h6>
+  <h5 id="Google_Cloud_Container_V1_NodeConfig_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NodeConfig : IMessage&lt;NodeConfig&gt;, IMessage, IEquatable&lt;NodeConfig&gt;, IDeepCloneable&lt;NodeConfig&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Container_V1_NodeConfig_Accelerators_" data-uid="Google.Cloud.Container.V1.NodeConfig.Accelerators*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_Accelerators" data-uid="Google.Cloud.Container.V1.NodeConfig.Accelerators">Accelerators</h4>
+  <div class="markdown level1 summary"><p>A list of hardware accelerators to be attached to each node.
+See <a href="https://cloud.google.com/compute/docs/gpus">https://cloud.google.com/compute/docs/gpus</a> for more information about
+support for GPUs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;AcceleratorConfig&gt; Accelerators { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Container.V1.AcceleratorConfig.html">AcceleratorConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_DiskSizeGb_" data-uid="Google.Cloud.Container.V1.NodeConfig.DiskSizeGb*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_DiskSizeGb" data-uid="Google.Cloud.Container.V1.NodeConfig.DiskSizeGb">DiskSizeGb</h4>
+  <div class="markdown level1 summary"><p>Size of the disk attached to each node, specified in GB.
+The smallest allowed disk size is 10GB.</p>
+<p>If unspecified, the default disk size is 100GB.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DiskSizeGb { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_ImageType_" data-uid="Google.Cloud.Container.V1.NodeConfig.ImageType*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_ImageType" data-uid="Google.Cloud.Container.V1.NodeConfig.ImageType">ImageType</h4>
+  <div class="markdown level1 summary"><p>The image type to use for this node. Note that for a given image type,
+the latest version of it will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ImageType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_Labels_" data-uid="Google.Cloud.Container.V1.NodeConfig.Labels*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_Labels" data-uid="Google.Cloud.Container.V1.NodeConfig.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>The map of Kubernetes labels (key/value pairs) to be applied to each node.
+These will added in addition to any default label(s) that
+Kubernetes may apply to the node.
+In case of conflict in label keys, the applied set may differ depending on
+the Kubernetes version -- it&apos;s best to assume the behavior is undefined
+and conflicts should be avoided.
+For more information, including usage and the valid values, see:
+<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/">https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_LocalSsdCount_" data-uid="Google.Cloud.Container.V1.NodeConfig.LocalSsdCount*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_LocalSsdCount" data-uid="Google.Cloud.Container.V1.NodeConfig.LocalSsdCount">LocalSsdCount</h4>
+  <div class="markdown level1 summary"><p>The number of local SSD disks to be attached to the node.</p>
+<p>The limit for this value is dependant upon the maximum number of
+disks available on a machine per zone. See:
+<a href="https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits">https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits</a>
+for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LocalSsdCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_MachineType_" data-uid="Google.Cloud.Container.V1.NodeConfig.MachineType*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_MachineType" data-uid="Google.Cloud.Container.V1.NodeConfig.MachineType">MachineType</h4>
+  <div class="markdown level1 summary"><p>The name of a Google Compute Engine <a href="/compute/docs/machine-types">machine
+type</a> (e.g.
+<code>n1-standard-1</code>).</p>
+<p>If unspecified, the default machine type is
+<code>n1-standard-1</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MachineType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_Metadata_" data-uid="Google.Cloud.Container.V1.NodeConfig.Metadata*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_Metadata" data-uid="Google.Cloud.Container.V1.NodeConfig.Metadata">Metadata</h4>
+  <div class="markdown level1 summary"><p>The metadata key/value pairs assigned to instances in the cluster.</p>
+<p>Keys must conform to the regexp [a-zA-Z0-9-_]+ and be less than 128 bytes
+in length. These are reflected as part of a URL in the metadata server.
+Additionally, to avoid ambiguity, keys must not conflict with any other
+metadata keys for the project or be one of the four reserved keys:
+&quot;instance-template&quot;, &quot;kube-env&quot;, &quot;startup-script&quot;, and &quot;user-data&quot;</p>
+<p>Values are free-form strings, and only have meaning as interpreted by
+the image running in the instance. The only restriction placed on them is
+that each value&apos;s size must be less than or equal to 32 KB.</p>
+<p>The total size of all keys and values must be less than 512 KB.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Metadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_MinCpuPlatform_" data-uid="Google.Cloud.Container.V1.NodeConfig.MinCpuPlatform*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_MinCpuPlatform" data-uid="Google.Cloud.Container.V1.NodeConfig.MinCpuPlatform">MinCpuPlatform</h4>
+  <div class="markdown level1 summary"><p>Minimum CPU platform to be used by this instance. The instance may be
+scheduled on the specified or newer CPU platform. Applicable values are the
+friendly names of CPU platforms, such as
+&lt;code&gt;minCpuPlatform: &amp;quot;Intel Haswell&amp;quot;&lt;/code&gt; or
+&lt;code&gt;minCpuPlatform: &amp;quot;Intel Sandy Bridge&amp;quot;&lt;/code&gt;. For more
+information, read <a href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">how to specify min CPU platform</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MinCpuPlatform { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_OauthScopes_" data-uid="Google.Cloud.Container.V1.NodeConfig.OauthScopes*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_OauthScopes" data-uid="Google.Cloud.Container.V1.NodeConfig.OauthScopes">OauthScopes</h4>
+  <div class="markdown level1 summary"><p>The set of Google API scopes to be made available on all of the
+node VMs under the &quot;default&quot; service account.</p>
+<p>The following scopes are recommended, but not required, and by default are
+not included:</p>
+<ul>
+<li><code>https://www.googleapis.com/auth/compute</code> is required for mounting
+persistent storage on your nodes.</li>
+<li><code>https://www.googleapis.com/auth/devstorage.read_only</code> is required for
+communicating with <strong>gcr.io</strong>
+(the <a href="/container-registry/">Google Container Registry</a>).</li>
+</ul>
+<p>If unspecified, no scopes are added, unless Cloud Logging or Cloud
+Monitoring are enabled, in which case their required scopes will be added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; OauthScopes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_Preemptible_" data-uid="Google.Cloud.Container.V1.NodeConfig.Preemptible*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_Preemptible" data-uid="Google.Cloud.Container.V1.NodeConfig.Preemptible">Preemptible</h4>
+  <div class="markdown level1 summary"><p>Whether the nodes are created as preemptible VM instances. See:
+<a href="https://cloud.google.com/compute/docs/instances/preemptible">https://cloud.google.com/compute/docs/instances/preemptible</a> for more
+information about preemptible VM instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Preemptible { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_ServiceAccount_" data-uid="Google.Cloud.Container.V1.NodeConfig.ServiceAccount*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_ServiceAccount" data-uid="Google.Cloud.Container.V1.NodeConfig.ServiceAccount">ServiceAccount</h4>
+  <div class="markdown level1 summary"><p>The Google Cloud Platform Service Account to be used by the node VMs. If
+no Service Account is specified, the &quot;default&quot; service account is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ServiceAccount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_NodeConfig_Tags_" data-uid="Google.Cloud.Container.V1.NodeConfig.Tags*"></a>
+  <h4 id="Google_Cloud_Container_V1_NodeConfig_Tags" data-uid="Google.Cloud.Container.V1.NodeConfig.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>The list of instance tags applied to all nodes. Tags are used to identify
+valid sources or targets for network firewalls and are specified by
+the client during cluster or node pool creation. Each tag within the list
+must comply with RFC1035.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

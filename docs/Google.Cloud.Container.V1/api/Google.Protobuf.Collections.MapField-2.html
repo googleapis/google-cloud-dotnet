@@ -1,0 +1,1478 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MapField&lt;TKey, TValue&gt;
+   | Google.Cloud.Container.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MapField&lt;TKey, TValue&gt;
+   | Google.Cloud.Container.V1 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Protobuf.Collections.MapField`2">
+  
+  
+  <h1 id="Google_Protobuf_Collections_MapField_2" data-uid="Google.Protobuf.Collections.MapField`2" class="text-break">Class MapField&lt;TKey, TValue&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Representation of a map field in a Protocol Buffer message.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MapField&lt;TKey, TValue&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;TKey, TValue&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TKey, TValue&gt;</div>
+    <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;TKey, TValue&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IDictionary</span></div>
+    <div><span class="xref">System.Collections.ICollection</span></div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;TKey, TValue&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Protobuf.Collections.html">Google.Protobuf.Collections</a></h6>
+  <h6><strong>Assembly</strong>: Google.Protobuf.dll</h6>
+  <h5 id="Google_Protobuf_Collections_MapField_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class MapField&lt;TKey, TValue&gt; : IDeepCloneable&lt;MapField&lt;TKey, TValue&gt;&gt;, IDictionary&lt;TKey, TValue&gt;, ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEquatable&lt;MapField&lt;TKey, TValue&gt;&gt;, IDictionary, ICollection, IReadOnlyDictionary&lt;TKey, TValue&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>Key type in the map. Must be a type supported by Protocol Buffer map keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Value type in the map. Must be a type supported by Protocol Buffers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Protobuf_Collections_MapField_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+For string keys, the equality comparison is provided by <span class="xref">System.StringComparer.Ordinal</span>.
+</p>
+<p>
+Null values are not permitted in the map, either for wrapper types or regular messages.
+If a map is deserialized from a data stream and the value is missing from an entry, a default value
+is created instead. For primitive types, that is the regular default value (0, the empty string and so
+on); for message types, an empty instance of the message is created, as if the map entry contained a 0-length
+encoded value for the field.
+</p>
+<p>
+This implementation does not generally prohibit the use of key/value types which are not
+supported by Protocol Buffers (e.g. using a key type of <pre><code>byte</code></pre>) but nor does it guarantee
+that all operations will work in such cases.
+</p>
+<p>
+The order in which entries are returned when iterating over this object is undefined, and may change
+in future versions.
+</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Protobuf_Collections_MapField_2_Count_" data-uid="Google.Protobuf.Collections.MapField`2.Count*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Count" data-uid="Google.Protobuf.Collections.MapField`2.Count">Count</h4>
+  <div class="markdown level1 summary"><p>Gets the number of elements contained in the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Count</span></div>
+      <div><span class="xref">System.Collections.ICollection.Count</span></div>
+      <div><span class="xref">System.Collections.Generic.IReadOnlyCollection&lt;T&gt;.Count</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_IsReadOnly_" data-uid="Google.Protobuf.Collections.MapField`2.IsReadOnly*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_IsReadOnly" data-uid="Google.Protobuf.Collections.MapField`2.IsReadOnly">IsReadOnly</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the map is read-only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly</span></div>
+      <div><span class="xref">System.Collections.IDictionary.IsReadOnly</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_Item_" data-uid="Google.Protobuf.Collections.MapField`2.Item*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Item__0_" data-uid="Google.Protobuf.Collections.MapField`2.Item(`0)">Item[TKey]</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the value associated with the specified key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TValue this[TKey key] { get; set; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key of the value to get or set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><p>The value associated with the specified key. If the specified key is not found,
+a get operation throws a <span class="xref">System.Collections.Generic.KeyNotFoundException</span>, and a set operation creates a new element with the specified key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.Item[TKey]</span></div>
+      <div><span class="xref">System.Collections.Generic.IReadOnlyDictionary&lt;TKey, TValue&gt;.Item[TKey]</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyNotFoundException</span></td>
+        <td><p>The property is retrieved and key does not exist in the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Collections_MapField_2_Keys_" data-uid="Google.Protobuf.Collections.MapField`2.Keys*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Keys" data-uid="Google.Protobuf.Collections.MapField`2.Keys">Keys</h4>
+  <div class="markdown level1 summary"><p>Gets a collection containing the keys in the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;TKey&gt; Keys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;TKey&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.Keys</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_Values_" data-uid="Google.Protobuf.Collections.MapField`2.Values*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Values" data-uid="Google.Protobuf.Collections.MapField`2.Values">Values</h4>
+  <div class="markdown level1 summary"><p>Gets a collection containing the values in the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;TValue&gt; Values { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.Values</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Protobuf_Collections_MapField_2_Add_" data-uid="Google.Protobuf.Collections.MapField`2.Add*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Add__0__1_" data-uid="Google.Protobuf.Collections.MapField`2.Add(`0,`1)">Add(TKey, TValue)</h4>
+  <div class="markdown level1 summary"><p>Adds the specified key/value pair to the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(TKey key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key to add</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.Add(TKey, TValue)</span></div>
+  <h5 id="Google_Protobuf_Collections_MapField_2_Add__0__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This operation fails if the key already exists in the map. To replace an existing entry, use the indexer.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>The given key already exists in map.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Collections_MapField_2_Add_" data-uid="Google.Protobuf.Collections.MapField`2.Add*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Add_System_Collections_Generic_IDictionary__0__1__" data-uid="Google.Protobuf.Collections.MapField`2.Add(System.Collections.Generic.IDictionary{`0,`1})">Add(IDictionary&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds the specified entries to the map. The keys and values are not automatically cloned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(IDictionary&lt;TKey, TValue&gt; entries)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">entries</span></td>
+        <td><p>The entries to add to the map.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Collections_MapField_2_AddEntriesFrom_" data-uid="Google.Protobuf.Collections.MapField`2.AddEntriesFrom*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_AddEntriesFrom_Google_Protobuf_CodedInputStream_Google_Protobuf_Collections_MapField__0__1__Codec_" data-uid="Google.Protobuf.Collections.MapField`2.AddEntriesFrom(Google.Protobuf.CodedInputStream,Google.Protobuf.Collections.MapField{`0,`1}.Codec)">AddEntriesFrom(CodedInputStream, MapField&lt;TKey, TValue&gt;.Codec)</h4>
+  <div class="markdown level1 summary"><p>Adds entries to the map from the given stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEntriesFrom(CodedInputStream input, MapField&lt;TKey, TValue&gt;.Codec codec)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>Stream to read from</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.Codec.html">MapField.Codec</a>&lt;&gt;</td>
+        <td><span class="parametername">codec</span></td>
+        <td><p>Codec describing how the key/value pairs are encoded</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Protobuf_Collections_MapField_2_AddEntriesFrom_Google_Protobuf_CodedInputStream_Google_Protobuf_Collections_MapField__0__1__Codec__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It is assumed that the stream is initially positioned after the tag specified by the codec.
+This method will continue reading entries from the stream until the end is reached, or
+a different tag is encountered.</p>
+</div>
+  <a id="Google_Protobuf_Collections_MapField_2_CalculateSize_" data-uid="Google.Protobuf.Collections.MapField`2.CalculateSize*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_CalculateSize_Google_Protobuf_Collections_MapField__0__1__Codec_" data-uid="Google.Protobuf.Collections.MapField`2.CalculateSize(Google.Protobuf.Collections.MapField{`0,`1}.Codec)">CalculateSize(MapField&lt;TKey, TValue&gt;.Codec)</h4>
+  <div class="markdown level1 summary"><p>Calculates the size of this map based on the given entry codec.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CalculateSize(MapField&lt;TKey, TValue&gt;.Codec codec)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.Codec.html">MapField.Codec</a>&lt;&gt;</td>
+        <td><span class="parametername">codec</span></td>
+        <td><p>The codec to use to encode each entry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Protobuf_Collections_MapField_2_Clear_" data-uid="Google.Protobuf.Collections.MapField`2.Clear*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Clear" data-uid="Google.Protobuf.Collections.MapField`2.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Removes all items from the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Clear()</span></div>
+      <div><span class="xref">System.Collections.IDictionary.Clear()</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_Clone_" data-uid="Google.Protobuf.Collections.MapField`2.Clone*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Clone" data-uid="Google.Protobuf.Collections.MapField`2.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Creates a deep clone of this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapField&lt;TKey, TValue&gt; Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;TKey, TValue&gt;</td>
+        <td><p>A deep clone of this object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;T&gt;.Clone()</a></div>
+  <a id="Google_Protobuf_Collections_MapField_2_ContainsKey_" data-uid="Google.Protobuf.Collections.MapField`2.ContainsKey*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_ContainsKey__0_" data-uid="Google.Protobuf.Collections.MapField`2.ContainsKey(`0)">ContainsKey(TKey)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified key is present in the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsKey(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the map contains the given key; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.ContainsKey(TKey)</span></div>
+      <div><span class="xref">System.Collections.Generic.IReadOnlyDictionary&lt;TKey, TValue&gt;.ContainsKey(TKey)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_Equals_" data-uid="Google.Protobuf.Collections.MapField`2.Equals*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Equals_Google_Protobuf_Collections_MapField__0__1__" data-uid="Google.Protobuf.Collections.MapField`2.Equals(Google.Protobuf.Collections.MapField{`0,`1})">Equals(MapField&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Compares this map with another for equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(MapField&lt;TKey, TValue&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The map to compare this with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">other</code> refers to an equal map; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.IEquatable&lt;T&gt;.Equals(T)</span></div>
+  <h5 id="Google_Protobuf_Collections_MapField_2_Equals_Google_Protobuf_Collections_MapField__0__1___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The order of the key/value pairs in the maps is not deemed significant in this comparison.</p>
+</div>
+  <a id="Google_Protobuf_Collections_MapField_2_Equals_" data-uid="Google.Protobuf.Collections.MapField`2.Equals*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Equals_System_Object_" data-uid="Google.Protobuf.Collections.MapField`2.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <span class="xref">System.Object</span>, is equal to this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The <span class="xref">System.Object</span> to compare with this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the specified <span class="xref">System.Object</span> is equal to this instance; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_GetEnumerator_" data-uid="Google.Protobuf.Collections.MapField`2.GetEnumerator*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_GetEnumerator" data-uid="Google.Protobuf.Collections.MapField`2.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</td>
+        <td><p>An enumerator that can be used to iterate through the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_GetHashCode_" data-uid="Google.Protobuf.Collections.MapField`2.GetHashCode*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_GetHashCode" data-uid="Google.Protobuf.Collections.MapField`2.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns a hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_Remove_" data-uid="Google.Protobuf.Collections.MapField`2.Remove*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_Remove__0_" data-uid="Google.Protobuf.Collections.MapField`2.Remove(`0)">Remove(TKey)</h4>
+  <div class="markdown level1 summary"><p>Removes the entry identified by the given key from the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key indicating the entry to remove from the map.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the map contained the given key before the entry was removed; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.Remove(TKey)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_ToString_" data-uid="Google.Protobuf.Collections.MapField`2.ToString*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_ToString" data-uid="Google.Protobuf.Collections.MapField`2.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a string representation of this repeated field, in the same
+way as it would be represented by the default JSON formatter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_TryGetValue_" data-uid="Google.Protobuf.Collections.MapField`2.TryGetValue*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_TryGetValue__0__1__" data-uid="Google.Protobuf.Collections.MapField`2.TryGetValue(`0,`1@)">TryGetValue(TKey, out TValue)</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with the specified key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetValue(TKey key, out TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key whose value to get.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>When this method returns, the value associated with the specified key, if the key is found;
+otherwise, the default value for the type of the <code data-dev-comment-type="paramref" class="paramref">value</code> parameter.
+This parameter is passed uninitialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the map contains an element with the specified key; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.TryGetValue(TKey, TValue)</span></div>
+      <div><span class="xref">System.Collections.Generic.IReadOnlyDictionary&lt;TKey, TValue&gt;.TryGetValue(TKey, TValue)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_WriteTo_" data-uid="Google.Protobuf.Collections.MapField`2.WriteTo*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_WriteTo_Google_Protobuf_CodedOutputStream_Google_Protobuf_Collections_MapField__0__1__Codec_" data-uid="Google.Protobuf.Collections.MapField`2.WriteTo(Google.Protobuf.CodedOutputStream,Google.Protobuf.Collections.MapField{`0,`1}.Codec)">WriteTo(CodedOutputStream, MapField&lt;TKey, TValue&gt;.Codec)</h4>
+  <div class="markdown level1 summary"><p>Writes the contents of this map to the given coded output stream, using the specified codec
+to encode each entry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output, MapField&lt;TKey, TValue&gt;.Codec codec)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a></td>
+        <td><span class="parametername">output</span></td>
+        <td><p>The output stream to write to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.Codec.html">MapField.Codec</a>&lt;&gt;</td>
+        <td><span class="parametername">codec</span></td>
+        <td><p>The codec to use for each entry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Add_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Add_System_Collections_Generic_KeyValuePair__0__1__" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})">ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Add(KeyValuePair&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds the specified item to the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Add(KeyValuePair&lt;TKey, TValue&gt; item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to add to the map.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Add(T)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Contains_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Contains_System_Collections_Generic_KeyValuePair__0__1__" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})">ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Contains(KeyValuePair&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether map contains an entry equivalent to the given key/value pair.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Contains(KeyValuePair&lt;TKey, TValue&gt; item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The key/value pair to find.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Contains(T)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___CopyTo_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___CopyTo_System_Collections_Generic_KeyValuePair__0__1____System_Int32_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.CopyTo(KeyValuePair&lt;TKey, TValue&gt;[], Int32)</h4>
+  <div class="markdown level1 summary"><p>Copies the key/value pairs in this map to an array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.CopyTo(KeyValuePair&lt;TKey, TValue&gt;[] array, int arrayIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;[]</td>
+        <td><span class="parametername">array</span></td>
+        <td><p>The array to copy the entries into.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">arrayIndex</span></td>
+        <td><p>The index of the array at which to start copying values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.CopyTo(T[], System.Int32)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Remove_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Remove_System_Collections_Generic_KeyValuePair__0__1__" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})">ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Remove(KeyValuePair&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified key/value pair from the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Remove(KeyValuePair&lt;TKey, TValue&gt; item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The key/value pair to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the key/value pair was found and removed; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Remove(T)</span></div>
+  <h5 id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Remove_System_Collections_Generic_KeyValuePair__0__1___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Both the key and the value must be found for the entry to be removed.</p>
+</div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_IReadOnlyDictionary_TKey_TValue__Keys_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Keys*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_IReadOnlyDictionary_TKey_TValue__Keys" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Keys">IReadOnlyDictionary&lt;TKey, TValue&gt;.Keys</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;TKey&gt; IReadOnlyDictionary&lt;TKey, TValue&gt;.Keys { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TKey&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IReadOnlyDictionary&lt;TKey, TValue&gt;.Keys</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_IReadOnlyDictionary_TKey_TValue__Values_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Values*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_Generic_IReadOnlyDictionary_TKey_TValue__Values" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#Generic#IReadOnlyDictionary{TKey,TValue}#Values">IReadOnlyDictionary&lt;TKey, TValue&gt;.Values</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;TValue&gt; IReadOnlyDictionary&lt;TKey, TValue&gt;.Values { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IReadOnlyDictionary&lt;TKey, TValue&gt;.Values</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_ICollection_CopyTo_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#ICollection#CopyTo*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_ICollection_CopyTo_System_Array_System_Int32_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">ICollection.CopyTo(Array, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICollection.CopyTo(Array array, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Array</span></td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.ICollection.CopyTo(System.Array, System.Int32)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_ICollection_IsSynchronized_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#ICollection#IsSynchronized*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_ICollection_IsSynchronized" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#ICollection#IsSynchronized">ICollection.IsSynchronized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICollection.IsSynchronized { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.ICollection.IsSynchronized</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_ICollection_SyncRoot_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#ICollection#SyncRoot*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_ICollection_SyncRoot" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#ICollection#SyncRoot">ICollection.SyncRoot</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object ICollection.SyncRoot { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.ICollection.SyncRoot</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Add_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Add*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Add_System_Object_System_Object_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Add(System.Object,System.Object)">IDictionary.Add(Object, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IDictionary.Add(object key, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IDictionary.Add(System.Object, System.Object)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Contains_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Contains*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Contains_System_Object_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Contains(System.Object)">IDictionary.Contains(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IDictionary.Contains(object key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IDictionary.Contains(System.Object)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_GetEnumerator_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#GetEnumerator*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_GetEnumerator" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#GetEnumerator">IDictionary.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDictionaryEnumerator IDictionary.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IDictionaryEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IDictionary.GetEnumerator()</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_IsFixedSize_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#IsFixedSize*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_IsFixedSize" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#IsFixedSize">IDictionary.IsFixedSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IDictionary.IsFixedSize { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IDictionary.IsFixedSize</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Item_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Item*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Item_System_Object_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Item(System.Object)">IDictionary.Item[Object]</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IDictionary.this[object key] { get; set; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IDictionary.Item[System.Object]</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Keys_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Keys*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Keys" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Keys">IDictionary.Keys</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICollection IDictionary.Keys { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ICollection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IDictionary.Keys</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Remove_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Remove*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Remove_System_Object_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Remove(System.Object)">IDictionary.Remove(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IDictionary.Remove(object key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IDictionary.Remove(System.Object)</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Values_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Values*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_IDictionary_Values" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IDictionary#Values">IDictionary.Values</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICollection IDictionary.Values { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ICollection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IDictionary.Values</span></div>
+  <a id="Google_Protobuf_Collections_MapField_2_System_Collections_IEnumerable_GetEnumerator_" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Google_Protobuf_Collections_MapField_2_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Protobuf.Collections.MapField`2.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through a collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><p>An <span class="xref">System.Collections.IEnumerator</span> object that can be used to iterate through the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

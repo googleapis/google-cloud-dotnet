@@ -1,0 +1,1627 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ClusterManager.ClusterManagerBase
+   | Google.Cloud.Container.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ClusterManager.ClusterManagerBase
+   | Google.Cloud.Container.V1 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase">
+  
+  
+  <h1 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase" class="text-break">Class ClusterManager.ClusterManagerBase
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for server-side implementations of ClusterManager</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ClusterManager.ClusterManagerBase</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Container.V1.html">Google.Cloud.Container.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Container.V1.dll</h6>
+  <h5 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ClusterManagerBase</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_CancelOperation_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.CancelOperation*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_CancelOperation_Google_Cloud_Container_V1_CancelOperationRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.CancelOperation(Google.Cloud.Container.V1.CancelOperationRequest,Grpc.Core.ServerCallContext)">CancelOperation(CancelOperationRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Cancels the specified operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; CancelOperation(CancelOperationRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CancelOperationRequest.html">CancelOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_CompleteIPRotation_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.CompleteIPRotation*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_CompleteIPRotation_Google_Cloud_Container_V1_CompleteIPRotationRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.CompleteIPRotation(Google.Cloud.Container.V1.CompleteIPRotationRequest,Grpc.Core.ServerCallContext)">CompleteIPRotation(CompleteIPRotationRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Completes master IP rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; CompleteIPRotation(CompleteIPRotationRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CompleteIPRotationRequest.html">CompleteIPRotationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_CreateCluster_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.CreateCluster*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_CreateCluster_Google_Cloud_Container_V1_CreateClusterRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.CreateCluster(Google.Cloud.Container.V1.CreateClusterRequest,Grpc.Core.ServerCallContext)">CreateCluster(CreateClusterRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Creates a cluster, consisting of the specified number and type of Google
+Compute Engine instances.</p>
+<p>By default, the cluster is created in the project&apos;s
+<a href="/compute/docs/networks-and-firewalls#networks">default network</a>.</p>
+<p>One firewall is added for the cluster. After cluster creation,
+the cluster creates routes for each node to allow the containers
+on that node to communicate with all other instances in the
+cluster.</p>
+<p>Finally, an entry is added to the project&apos;s global metadata indicating
+which CIDR range is being used by the cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; CreateCluster(CreateClusterRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CreateClusterRequest.html">CreateClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_CreateNodePool_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.CreateNodePool*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_CreateNodePool_Google_Cloud_Container_V1_CreateNodePoolRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.CreateNodePool(Google.Cloud.Container.V1.CreateNodePoolRequest,Grpc.Core.ServerCallContext)">CreateNodePool(CreateNodePoolRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Creates a node pool for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; CreateNodePool(CreateNodePoolRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.CreateNodePoolRequest.html">CreateNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_DeleteCluster_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.DeleteCluster*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_DeleteCluster_Google_Cloud_Container_V1_DeleteClusterRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.DeleteCluster(Google.Cloud.Container.V1.DeleteClusterRequest,Grpc.Core.ServerCallContext)">DeleteCluster(DeleteClusterRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Deletes the cluster, including the Kubernetes endpoint and all worker
+nodes.</p>
+<p>Firewalls and routes that were configured during cluster creation
+are also deleted.</p>
+<p>Other Google Compute Engine resources that might be in use by the cluster
+(e.g. load balancer resources) will not be deleted if they weren&apos;t present
+at the initial create time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; DeleteCluster(DeleteClusterRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.DeleteClusterRequest.html">DeleteClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_DeleteNodePool_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.DeleteNodePool*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_DeleteNodePool_Google_Cloud_Container_V1_DeleteNodePoolRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.DeleteNodePool(Google.Cloud.Container.V1.DeleteNodePoolRequest,Grpc.Core.ServerCallContext)">DeleteNodePool(DeleteNodePoolRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Deletes a node pool from a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; DeleteNodePool(DeleteNodePoolRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.DeleteNodePoolRequest.html">DeleteNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_GetCluster_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.GetCluster*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_GetCluster_Google_Cloud_Container_V1_GetClusterRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.GetCluster(Google.Cloud.Container.V1.GetClusterRequest,Grpc.Core.ServerCallContext)">GetCluster(GetClusterRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Gets the details of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Cluster&gt; GetCluster(GetClusterRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetClusterRequest.html">GetClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Cluster.html">Cluster</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_GetNodePool_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.GetNodePool*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_GetNodePool_Google_Cloud_Container_V1_GetNodePoolRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.GetNodePool(Google.Cloud.Container.V1.GetNodePoolRequest,Grpc.Core.ServerCallContext)">GetNodePool(GetNodePoolRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the node pool requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;NodePool&gt; GetNodePool(GetNodePoolRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetNodePoolRequest.html">GetNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.NodePool.html">NodePool</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_GetOperation_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.GetOperation*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_GetOperation_Google_Cloud_Container_V1_GetOperationRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.GetOperation(Google.Cloud.Container.V1.GetOperationRequest,Grpc.Core.ServerCallContext)">GetOperation(GetOperationRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Gets the specified operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; GetOperation(GetOperationRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetOperationRequest.html">GetOperationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_GetServerConfig_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.GetServerConfig*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_GetServerConfig_Google_Cloud_Container_V1_GetServerConfigRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.GetServerConfig(Google.Cloud.Container.V1.GetServerConfigRequest,Grpc.Core.ServerCallContext)">GetServerConfig(GetServerConfigRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Returns configuration info about the Container Engine service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ServerConfig&gt; GetServerConfig(GetServerConfigRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.GetServerConfigRequest.html">GetServerConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.ServerConfig.html">ServerConfig</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_ListClusters_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.ListClusters*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_ListClusters_Google_Cloud_Container_V1_ListClustersRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.ListClusters(Google.Cloud.Container.V1.ListClustersRequest,Grpc.Core.ServerCallContext)">ListClusters(ListClustersRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Lists all clusters owned by a project in either the specified zone or all
+zones.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListClustersResponse&gt; ListClusters(ListClustersRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListClustersRequest.html">ListClustersRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.ListClustersResponse.html">ListClustersResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_ListNodePools_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.ListNodePools*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_ListNodePools_Google_Cloud_Container_V1_ListNodePoolsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.ListNodePools(Google.Cloud.Container.V1.ListNodePoolsRequest,Grpc.Core.ServerCallContext)">ListNodePools(ListNodePoolsRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Lists the node pools for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListNodePoolsResponse&gt; ListNodePools(ListNodePoolsRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListNodePoolsRequest.html">ListNodePoolsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.ListNodePoolsResponse.html">ListNodePoolsResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_ListOperations_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.ListOperations*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_ListOperations_Google_Cloud_Container_V1_ListOperationsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.ListOperations(Google.Cloud.Container.V1.ListOperationsRequest,Grpc.Core.ServerCallContext)">ListOperations(ListOperationsRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Lists all operations in a project in a specific zone or all zones.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListOperationsResponse&gt; ListOperations(ListOperationsRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.ListOperationsRequest.html">ListOperationsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.ListOperationsResponse.html">ListOperationsResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_RollbackNodePoolUpgrade_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.RollbackNodePoolUpgrade*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_RollbackNodePoolUpgrade_Google_Cloud_Container_V1_RollbackNodePoolUpgradeRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.RollbackNodePoolUpgrade(Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest,Grpc.Core.ServerCallContext)">RollbackNodePoolUpgrade(RollbackNodePoolUpgradeRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Roll back the previously Aborted or Failed NodePool upgrade.
+This will be an no-op if the last upgrade successfully completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; RollbackNodePoolUpgrade(RollbackNodePoolUpgradeRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest.html">RollbackNodePoolUpgradeRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetAddonsConfig_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetAddonsConfig*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetAddonsConfig_Google_Cloud_Container_V1_SetAddonsConfigRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetAddonsConfig(Google.Cloud.Container.V1.SetAddonsConfigRequest,Grpc.Core.ServerCallContext)">SetAddonsConfig(SetAddonsConfigRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Sets the addons of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetAddonsConfig(SetAddonsConfigRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetAddonsConfigRequest.html">SetAddonsConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetLabels_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetLabels*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetLabels_Google_Cloud_Container_V1_SetLabelsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetLabels(Google.Cloud.Container.V1.SetLabelsRequest,Grpc.Core.ServerCallContext)">SetLabels(SetLabelsRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Sets labels on a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetLabels(SetLabelsRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLabelsRequest.html">SetLabelsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetLegacyAbac_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetLegacyAbac*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetLegacyAbac_Google_Cloud_Container_V1_SetLegacyAbacRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetLegacyAbac(Google.Cloud.Container.V1.SetLegacyAbacRequest,Grpc.Core.ServerCallContext)">SetLegacyAbac(SetLegacyAbacRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Enables or disables the ABAC authorization mechanism on a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetLegacyAbac(SetLegacyAbacRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLegacyAbacRequest.html">SetLegacyAbacRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetLocations_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetLocations*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetLocations_Google_Cloud_Container_V1_SetLocationsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetLocations(Google.Cloud.Container.V1.SetLocationsRequest,Grpc.Core.ServerCallContext)">SetLocations(SetLocationsRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Sets the locations of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetLocations(SetLocationsRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLocationsRequest.html">SetLocationsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetLoggingService_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetLoggingService*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetLoggingService_Google_Cloud_Container_V1_SetLoggingServiceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetLoggingService(Google.Cloud.Container.V1.SetLoggingServiceRequest,Grpc.Core.ServerCallContext)">SetLoggingService(SetLoggingServiceRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Sets the logging service of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetLoggingService(SetLoggingServiceRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetLoggingServiceRequest.html">SetLoggingServiceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetMaintenancePolicy_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetMaintenancePolicy*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetMaintenancePolicy_Google_Cloud_Container_V1_SetMaintenancePolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetMaintenancePolicy(Google.Cloud.Container.V1.SetMaintenancePolicyRequest,Grpc.Core.ServerCallContext)">SetMaintenancePolicy(SetMaintenancePolicyRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Sets the maintenance policy for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetMaintenancePolicy(SetMaintenancePolicyRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetMaintenancePolicyRequest.html">SetMaintenancePolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetMasterAuth_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetMasterAuth*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetMasterAuth_Google_Cloud_Container_V1_SetMasterAuthRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetMasterAuth(Google.Cloud.Container.V1.SetMasterAuthRequest,Grpc.Core.ServerCallContext)">SetMasterAuth(SetMasterAuthRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Used to set master auth materials. Currently supports :-
+Changing the admin password of a specific cluster.
+This can be either via password generation or explicitly set the password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetMasterAuth(SetMasterAuthRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetMasterAuthRequest.html">SetMasterAuthRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetMonitoringService_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetMonitoringService*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetMonitoringService_Google_Cloud_Container_V1_SetMonitoringServiceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetMonitoringService(Google.Cloud.Container.V1.SetMonitoringServiceRequest,Grpc.Core.ServerCallContext)">SetMonitoringService(SetMonitoringServiceRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Sets the monitoring service of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetMonitoringService(SetMonitoringServiceRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetMonitoringServiceRequest.html">SetMonitoringServiceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetNetworkPolicy_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetNetworkPolicy*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetNetworkPolicy_Google_Cloud_Container_V1_SetNetworkPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetNetworkPolicy(Google.Cloud.Container.V1.SetNetworkPolicyRequest,Grpc.Core.ServerCallContext)">SetNetworkPolicy(SetNetworkPolicyRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Enables/Disables Network Policy for a cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetNetworkPolicy(SetNetworkPolicyRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNetworkPolicyRequest.html">SetNetworkPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetNodePoolAutoscaling_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetNodePoolAutoscaling*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetNodePoolAutoscaling_Google_Cloud_Container_V1_SetNodePoolAutoscalingRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetNodePoolAutoscaling(Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest,Grpc.Core.ServerCallContext)">SetNodePoolAutoscaling(SetNodePoolAutoscalingRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Sets the autoscaling settings of a specific node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetNodePoolAutoscaling(SetNodePoolAutoscalingRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest.html">SetNodePoolAutoscalingRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetNodePoolManagement_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetNodePoolManagement*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetNodePoolManagement_Google_Cloud_Container_V1_SetNodePoolManagementRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetNodePoolManagement(Google.Cloud.Container.V1.SetNodePoolManagementRequest,Grpc.Core.ServerCallContext)">SetNodePoolManagement(SetNodePoolManagementRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Sets the NodeManagement options for a node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetNodePoolManagement(SetNodePoolManagementRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNodePoolManagementRequest.html">SetNodePoolManagementRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetNodePoolSize_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetNodePoolSize*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_SetNodePoolSize_Google_Cloud_Container_V1_SetNodePoolSizeRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.SetNodePoolSize(Google.Cloud.Container.V1.SetNodePoolSizeRequest,Grpc.Core.ServerCallContext)">SetNodePoolSize(SetNodePoolSizeRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of a specific node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SetNodePoolSize(SetNodePoolSizeRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.SetNodePoolSizeRequest.html">SetNodePoolSizeRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_StartIPRotation_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.StartIPRotation*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_StartIPRotation_Google_Cloud_Container_V1_StartIPRotationRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.StartIPRotation(Google.Cloud.Container.V1.StartIPRotationRequest,Grpc.Core.ServerCallContext)">StartIPRotation(StartIPRotationRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Start master IP rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; StartIPRotation(StartIPRotationRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.StartIPRotationRequest.html">StartIPRotationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_UpdateCluster_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.UpdateCluster*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_UpdateCluster_Google_Cloud_Container_V1_UpdateClusterRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.UpdateCluster(Google.Cloud.Container.V1.UpdateClusterRequest,Grpc.Core.ServerCallContext)">UpdateCluster(UpdateClusterRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Updates the settings of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; UpdateCluster(UpdateClusterRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.UpdateClusterRequest.html">UpdateClusterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_UpdateMaster_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.UpdateMaster*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_UpdateMaster_Google_Cloud_Container_V1_UpdateMasterRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.UpdateMaster(Google.Cloud.Container.V1.UpdateMasterRequest,Grpc.Core.ServerCallContext)">UpdateMaster(UpdateMasterRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Updates the master of a specific cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; UpdateMaster(UpdateMasterRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.UpdateMasterRequest.html">UpdateMasterRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_UpdateNodePool_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.UpdateNodePool*"></a>
+  <h4 id="Google_Cloud_Container_V1_ClusterManager_ClusterManagerBase_UpdateNodePool_Google_Cloud_Container_V1_UpdateNodePoolRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Container.V1.ClusterManager.ClusterManagerBase.UpdateNodePool(Google.Cloud.Container.V1.UpdateNodePoolRequest,Grpc.Core.ServerCallContext)">UpdateNodePool(UpdateNodePoolRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Updates the version and/or image type of a specific node pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; UpdateNodePool(UpdateNodePoolRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Container.V1.UpdateNodePoolRequest.html">UpdateNodePoolRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Container.V1.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
