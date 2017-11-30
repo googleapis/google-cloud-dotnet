@@ -12,7 +12,7 @@
     <Deterministic>true</Deterministic>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Recommended Google client library to access the v1beta1 Google Cloud Video Intelligence API.</Description>
+    <Description>Recommended Google client library to access the Google Cloud Video Intelligence API.</Description>
     <PackageTags>VideoIntelligence;Google;Cloud</PackageTags>
     <Copyright>Copyright 2017 Google Inc.</Copyright>
     <Authors>Google Inc.</Authors>
