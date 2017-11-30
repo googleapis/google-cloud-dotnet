@@ -201,9 +201,9 @@ namespace Google.Cloud.PubSub.V1
         public static TimeSpan MaximumStreamAckDeadline { get; } = TimeSpan.FromMinutes(10);
 
         /// <summary>
-        /// The default message ACKnowledgement deadline of 20 seconds.
+        /// The default message ACKnowledgement deadline of 60 seconds.
         /// </summary>
-        public static TimeSpan DefaultStreamAckDeadline { get; } = TimeSpan.FromSeconds(20);
+        public static TimeSpan DefaultStreamAckDeadline { get; } = TimeSpan.FromSeconds(60);
 
         /// <summary>
         /// The minimum message ACKnowledgement extension window of 50 milliseconds.
@@ -211,9 +211,9 @@ namespace Google.Cloud.PubSub.V1
         public static TimeSpan MinimumAckExtensionWindow { get; } = TimeSpan.FromMilliseconds(50);
 
         /// <summary>
-        /// The default message ACKnowlegdment extension window of 2 seconds.
+        /// The default message ACKnowlegdment extension window of 15 seconds.
         /// </summary>
-        public static TimeSpan DefaultAckExtensionWindow { get; } = TimeSpan.FromSeconds(2);
+        public static TimeSpan DefaultAckExtensionWindow { get; } = TimeSpan.FromSeconds(15);
 
         /// <summary>
         /// Create a <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.
