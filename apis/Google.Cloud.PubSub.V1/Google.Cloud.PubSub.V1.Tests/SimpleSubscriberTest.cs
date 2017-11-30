@@ -640,11 +640,15 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
         }
 
+        private class FakeSubscriberClient : SubscriberClient
+        {
+        }
+
         [Fact]
         public void ValidParameters()
         {
             var subscriptionName = new SubscriptionName("project", "subscriptionId");
-            var clients = new[] { SubscriberClient.Create() };
+            var clients = new[] { new FakeSubscriberClient() };
 
             var settingsDefault = new SimpleSubscriber.Settings();
             new SimpleSubscriberImpl(subscriptionName, clients, settingsDefault, null);
@@ -678,7 +682,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void InvalidParameters()
         {
             var subscriptionName = new SubscriptionName("project", "subscriptionId");
-            var clients = new[] { SubscriberClient.Create() };
+            var clients = new[] { new FakeSubscriberClient() };
             var settings = new SimpleSubscriber.Settings();
 
             var ex1 = Assert.Throws<ArgumentNullException>(() => new SimpleSubscriberImpl(null, clients, settings, null));
