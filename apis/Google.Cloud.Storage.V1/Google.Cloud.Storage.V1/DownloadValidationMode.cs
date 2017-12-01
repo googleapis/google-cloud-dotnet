@@ -15,9 +15,9 @@
 namespace Google.Cloud.Storage.V1
 {
     /// <summary>
-    /// Describes the circumstances under which the hash of an object is validated.
+    /// Describes the circumstances under which the hash of an object is validated when downloading.
     /// </summary>
-    public enum HashValidationMode
+    public enum DownloadValidationMode
     {
         /// <summary>
         /// The hash is always validated.
