@@ -473,7 +473,7 @@
       "Google.Apis.Storage.v1": "1.30.0.1014"
     },
     "testDependencies": {
-      "Google.Cloud.Iam.V1": "project",
+      "Google.Cloud.Iam.V1": "1.0.0-beta13",
       "Google.Cloud.PubSub.V1": "project"
     },
     "tags": [ "Storage" ]
