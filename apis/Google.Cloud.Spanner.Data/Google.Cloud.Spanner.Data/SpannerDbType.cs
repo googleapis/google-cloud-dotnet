@@ -17,6 +17,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
@@ -96,6 +97,7 @@ namespace Google.Cloud.Spanner.Data
 
         private SpannerDbType(TypeCode typeCode, int? size = null)
         {
+            GaxPreconditions.CheckNonNegative(size.GetValueOrDefault(), "Size must be nonnegative.");
             TypeCode = typeCode;
             Size = size;
         }
@@ -266,11 +268,12 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Returns a clone of this type with the specified size constraint.
         /// </summary>
-        /// <param name="size"></param>
+        /// <param name="size">Represents the number of characters (for <see cref="TypeCode.String"/>)
+        ///  or bytes (for <see cref="TypeCode.Bytes"/>)</param>
         /// <returns></returns>
         public SpannerDbType WithSize(int size)
         {
-            if (size != 0 && TypeCode != TypeCode.Bytes && TypeCode != TypeCode.String)
+            if (TypeCode != TypeCode.Bytes && TypeCode != TypeCode.String)
             {
                 throw new InvalidOperationException($"Size may only be set on types {nameof(String)} and {nameof(Bytes)}");
             }
