@@ -298,7 +298,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            var options = BufferOptions.TimedBuffer(TimeSpan.FromSeconds(10));
+            var options = BufferOptions.TimedBuffer(TimeSpan.FromSeconds(20));
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, null, options);
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
