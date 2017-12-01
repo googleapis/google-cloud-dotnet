@@ -163,5 +163,19 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Assert.Throws<FileNotFoundException>(() => connection.GetCredentials());
             }
         }
+
+        [Fact]
+        public void WithDatabase()
+        {
+            var connectionStringBuilder =
+                new SpannerConnectionStringBuilder("Data Source=projects/project1/instances/instance1");
+            Assert.Null(connectionStringBuilder.SpannerDatabase);
+            connectionStringBuilder = connectionStringBuilder.WithDatabase("db1");
+            Assert.Equal("db1", connectionStringBuilder.SpannerDatabase);
+            connectionStringBuilder = connectionStringBuilder.WithDatabase("db2");
+            Assert.Equal("db2", connectionStringBuilder.SpannerDatabase);
+            connectionStringBuilder = connectionStringBuilder.WithDatabase(null);
+            Assert.Null(connectionStringBuilder.SpannerDatabase);
+        }
     }
 }

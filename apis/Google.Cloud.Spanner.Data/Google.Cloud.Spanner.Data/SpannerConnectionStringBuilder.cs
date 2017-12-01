@@ -237,10 +237,12 @@ namespace Google.Cloud.Spanner.Data
         /// Returns a new instance of a <see cref="SpannerConnectionStringBuilder"/> with the database
         /// portion of the DataSource replaced with a new value.
         /// </summary>
-        /// <param name="database">the new database name.</param>
+        /// <param name="database">The new database name. Can be null to open a connection for Ddl commands.</param>
         /// <returns>a new instance of <see cref="SpannerConnectionStringBuilder"/></returns>
-        public SpannerConnectionStringBuilder WithDatabase(string database) 
-            => CloneWithNewDataSource($"projects/{Project}/instances/{SpannerInstance}/databases/{database}");
+        public SpannerConnectionStringBuilder WithDatabase(string database)
+            => string.IsNullOrEmpty(database)
+                ? CloneWithNewDataSource($"projects/{Project}/instances/{SpannerInstance}")
+                : CloneWithNewDataSource($"projects/{Project}/instances/{SpannerInstance}/databases/{database}");
 
         private string GetValueOrDefault(string key, string defaultValue = "")
         {
