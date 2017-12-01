@@ -144,10 +144,10 @@ namespace Google.Cloud.Storage.V1
 
         private MediaDownloader CreateDownloader(DownloadObjectOptions options)
         {
-            HashValidationMode mode = options?.HashValidationMode ?? HashValidationMode.Always;
-            GaxPreconditions.CheckEnumValue(mode, nameof(DownloadObjectOptions.HashValidationMode));
+            DownloadValidationMode mode = options?.DownloadValidationMode ?? DownloadValidationMode.Always;
+            GaxPreconditions.CheckEnumValue(mode, nameof(DownloadObjectOptions.DownloadValidationMode));
 
-            MediaDownloader downloader = mode == HashValidationMode.Never
+            MediaDownloader downloader = mode == DownloadValidationMode.Never
                 ? new MediaDownloader(Service) : new HashValidatingDownloader(Service);
             downloader.ModifyRequest += _versionHeaderAction;
             options?.ModifyDownloader(downloader);
