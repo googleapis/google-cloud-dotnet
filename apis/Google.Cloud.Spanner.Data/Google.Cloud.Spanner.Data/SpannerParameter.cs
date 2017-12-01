@@ -88,7 +88,11 @@ namespace Google.Cloud.Spanner.Data
         public override string ParameterName { get; set; }
 
         /// <inheritdoc />
-        public override int Size { get; set; }
+        public override int Size
+        {
+            get => SpannerDbType.Size.GetValueOrDefault();
+            set => SpannerDbType = SpannerDbType.WithSize(value);
+        }
 
         /// <inheritdoc />
         public override string SourceColumn { get; set; }
