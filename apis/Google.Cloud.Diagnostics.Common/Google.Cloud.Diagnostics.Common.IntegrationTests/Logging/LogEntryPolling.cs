@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Diagnostics.Common.Tests;
+using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
 using System;
 using System.Collections.Generic;
@@ -40,7 +41,8 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <param name="minEntries">The minimum number of logs entries that should be waited for.
         ///     If minEntries is zero this method will wait the full timeout before checking for the
         ///     entries.</param>
-        public IEnumerable<LogEntry> GetEntries(DateTime startTime, string testId, int minEntries)
+        /// <param name="minSeverity">The minimum severity a log can be.</param>
+        public IEnumerable<LogEntry> GetEntries(DateTime startTime, string testId, int minEntries, LogSeverity minSeverity)
         {
             return GetEntries(minEntries, () =>
             {
@@ -49,7 +51,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 var request = new ListLogEntriesRequest
                 {
                     ResourceNames = { $"projects/{_projectId}" },
-                    Filter = $"timestamp >= \"{time}\" AND textPayload:{testId}",
+                    Filter = $"timestamp >= \"{time}\" AND textPayload:{testId} AND severity >= {minSeverity}",
                     PageSize = 1000,
                 };
                 return _client.ListLogEntries(request);
