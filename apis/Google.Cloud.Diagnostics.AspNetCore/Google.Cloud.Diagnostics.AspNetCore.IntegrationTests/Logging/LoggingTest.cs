@@ -17,6 +17,7 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Logging.Type;
+using Google.Cloud.Logging.V2;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -51,7 +52,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 // No entries should be found as not enough entries were created to
                 // flush the buffer.
-                Assert.Empty(_polling.GetEntries(startTime, testId, 0));
+                Assert.Empty(_polling.GetEntries(startTime, testId, 0, LogSeverity.Default));
             }
         }
 
@@ -72,7 +73,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             // While we normally should not have entries we disposed of the server
             // which should flush the buffer.
-            var results = _polling.GetEntries(startTime, testId, 2);
+            var results = _polling.GetEntries(startTime, testId, 2, LogSeverity.Error);
             Assert.Equal(2, results.Count());
             Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
             Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
@@ -95,7 +96,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Critical/{testId}");
 
                 // NoBufferLoggerTestApplication does not support debug or info logs.
-                var results = _polling.GetEntries(startTime, testId, 3);
+                var results = _polling.GetEntries(startTime, testId, 3, LogSeverity.Warning);
                 Assert.Equal(3, results.Count());
                 Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
                 Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
@@ -125,7 +126,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 // Just check that a large portion of logs entires were pushed.  Not all
                 // will be pushed as some may be in the buffer.
-                var results = _polling.GetEntries(startTime, testId, 500);
+                var results = _polling.GetEntries(startTime, testId, 500, LogSeverity.Default);
                 Assert.True(results.Count() >= 500);
                 Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Debug));
                 Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Info));
@@ -149,14 +150,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Warning/{testId}");
                 await client.GetAsync($"/Main/Error/{testId}");
 
-                var noResults = _polling.GetEntries(startTime, testId, 0);
+                var noResults = _polling.GetEntries(startTime, testId, 0, LogSeverity.Warning);
                 Assert.Empty(noResults);
 
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
                 Thread.Sleep(TimeSpan.FromSeconds(10));
 
-                var results = _polling.GetEntries(startTime, testId, 4);
+                var results = _polling.GetEntries(startTime, testId, 4, LogSeverity.Warning);
                 Assert.Equal(4, results.Count());
                 Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
                 Assert.Equal(2, results.Count(l => l.Severity == LogSeverity.Error));
@@ -178,7 +179,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
 
-                var results = _polling.GetEntries(startTime, testId, 3);
+                var results = _polling.GetEntries(startTime, testId, 3, LogSeverity.Warning);
                 Assert.Equal(3, results.Count());
                 var resourceType = NoBufferResourceLoggerTestApplication.Resource.Type;
                 var buildResources = results.Where(e => e.Resource.Type.Equals(resourceType));
@@ -197,7 +198,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Scope/{testId}");
-                var results = _polling.GetEntries(startTime, testId, 1);
+                var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
                 var message = MainController.GetMessage(nameof(MainController.Scope), testId);
                 Assert.Contains($"Scope => {message}", results.Single().TextPayload);
             }
