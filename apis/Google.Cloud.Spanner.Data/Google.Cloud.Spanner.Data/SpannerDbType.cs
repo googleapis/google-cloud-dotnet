@@ -270,7 +270,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="size">Represents the number of characters (for <see cref="TypeCode.String"/>)
         ///  or bytes (for <see cref="TypeCode.Bytes"/>)</param>
-        /// <returns></returns>
+        /// <returns>A new instance of <see cref="SpannerDbType"/> with the same <see cref="TypeCode"/> and new size.</returns>
         public SpannerDbType WithSize(int size)
         {
             if (TypeCode != TypeCode.Bytes && TypeCode != TypeCode.String)
