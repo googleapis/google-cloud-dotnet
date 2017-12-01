@@ -73,19 +73,14 @@
   
   <h1 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger" class="text-break">Class Logger
   </h1>
-  <div class="markdown level0 summary"><p>Provides diagnostic information on Cloud Spanner.
-By default, diagnostic logs will be sent to Trace.WriteLine for .Net desktop
-and stderr for .Net Core.
-The default LogLevel is LogLevel.Error which will only log error information.
-Performance logging can be turned on by setting LogPerformanceTraces = true.
-TODO: examine <a href="https://github.com/grpc/grpc/tree/master/src/csharp/Grpc.Core/Logging">https://github.com/grpc/grpc/tree/master/src/csharp/Grpc.Core/Logging</a>
-to determine if it should be used instead.</p>
+  <div class="markdown level0 summary"><p>This is an internal class and is not intended to be used by external code.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Logger</span></div>
+      <div class="level2"><a class="xref" href="Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.html">DefaultLogger</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -110,13 +105,14 @@ to determine if it should be used instead.</p>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Instance_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Instance*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Instance" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Instance">Instance</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_DefaultLogger_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.DefaultLogger*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_DefaultLogger" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.DefaultLogger">DefaultLogger</h4>
+  <div class="markdown level1 summary"><p>This is an internal property and is not intended to be used by external code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Logger Instance { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static Logger DefaultLogger { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +129,38 @@ to determine if it should be used instead.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogLevel_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogLevel*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogLevel" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogLevel">LogLevel</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_EnableSensitiveDataLogging_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.EnableSensitiveDataLogging*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_EnableSensitiveDataLogging" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.EnableSensitiveDataLogging">EnableSensitiveDataLogging</h4>
+  <div class="markdown level1 summary"><p>This is an internal property and is not intended to be used by external code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LogLevel LogLevel { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool EnableSensitiveDataLogging { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogLevel_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogLevel*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogLevel" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogLevel">LogLevel</h4>
+  <div class="markdown level1 summary"><p>This is an internal property and is not intended to be used by external code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogLevel LogLevel { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,11 +179,12 @@ to determine if it should be used instead.</p>
   </table>
   <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceTraces_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceTraces*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceTraces" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceTraces">LogPerformanceTraces</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This is an internal property and is not intended to be used by external code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool LogPerformanceTraces { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool LogPerformanceTraces { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,11 +203,12 @@ to determine if it should be used instead.</p>
   </table>
   <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_PerformanceTraceLogInterval_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.PerformanceTraceLogInterval*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_PerformanceTraceLogInterval" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.PerformanceTraceLogInterval">PerformanceTraceLogInterval</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This is an internal property and is not intended to be used by external code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TimeSpan PerformanceTraceLogInterval { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TimeSpan PerformanceTraceLogInterval { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,11 +227,12 @@ to determine if it should be used instead.</p>
   </table>
   <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_ResetPerformanceTracesEachInterval_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.ResetPerformanceTracesEachInterval*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_ResetPerformanceTracesEachInterval" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.ResetPerformanceTracesEachInterval">ResetPerformanceTracesEachInterval</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This is an internal property and is not intended to be used by external code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ResetPerformanceTracesEachInterval { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ResetPerformanceTracesEachInterval { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,12 +253,12 @@ to determine if it should be used instead.</p>
   </h3>
   <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Debug_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Debug_System_Func_System_String__" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug(System.Func{System.String})">Debug(Func&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Logs a debug message.</p>
+  <div class="markdown level1 summary"><p>This is an internal method and is not intended to be used by external code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Debug(Func&lt;string&gt; messageFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Debug(Func&lt;string&gt; messageFunc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -249,43 +273,18 @@ to determine if it should be used instead.</p>
       <tr>
         <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">messageFunc</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Debug_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Debug_System_String_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug(System.String)">Debug(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Debug(string message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Error_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Error*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Error_System_Func_System_String__System_Exception_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Error(System.Func{System.String},System.Exception)">Error(Func&lt;String&gt;, Exception)</h4>
-  <div class="markdown level1 summary"><p>Logs an error.</p>
+  <div class="markdown level1 summary"><p>This is an internal method and is not intended to be used by external code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Error(Func&lt;string&gt; messageFunc, Exception exception = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Error(Func&lt;string&gt; messageFunc, Exception exception = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -300,36 +299,6 @@ to determine if it should be used instead.</p>
       <tr>
         <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">messageFunc</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Exception</span></td>
-        <td><span class="parametername">exception</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Error_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Error*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Error_System_String_System_Exception_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Error(System.String,System.Exception)">Error(String, Exception)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Error(string message, Exception exception = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
         <td></td>
       </tr>
       <tr>
@@ -341,12 +310,12 @@ to determine if it should be used instead.</p>
   </table>
   <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Info_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Info_System_Func_System_String__" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info(System.Func{System.String})">Info(Func&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Logs an information message.</p>
+  <div class="markdown level1 summary"><p>This is an internal method and is not intended to be used by external code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Info(Func&lt;string&gt; messageFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Info(Func&lt;string&gt; messageFunc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,69 +334,14 @@ to determine if it should be used instead.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Info_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Info_System_String_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info(System.String)">Info(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Info(string message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceCounter_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounter*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceCounter_System_String_System_Func_System_Double_System_Double__" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounter(System.String,System.Func{System.Double,System.Double})">LogPerformanceCounter(String, Func&lt;Double, Double&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void LogPerformanceCounter(string name, Func&lt;double, double&gt; valueFunc)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Double</span>, <span class="xref">System.Double</span>&gt;</td>
-        <td><span class="parametername">valueFunc</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceCounter_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounter*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceCounter_System_String_System_Func_System_Double__" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounter(System.String,System.Func{System.Double})">LogPerformanceCounter(String, Func&lt;Double&gt;)</h4>
-  <div class="markdown level1 summary"><p>Logs a performance counter.</p>
+  <div class="markdown level1 summary"><p>This is an internal method and is not intended to be used by external code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void LogPerformanceCounter(string name, Func&lt;double&gt; valueFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">public void LogPerformanceCounter(string name, Func&lt;double&gt; valueFunc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -453,12 +367,12 @@ to determine if it should be used instead.</p>
   </table>
   <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceCounterFn_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounterFn*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceCounterFn_System_String_System_Func_System_Double_System_Double__" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounterFn(System.String,System.Func{System.Double,System.Double})">LogPerformanceCounterFn(String, Func&lt;Double, Double&gt;)</h4>
-  <div class="markdown level1 summary"><p>Logs a performance counter.</p>
+  <div class="markdown level1 summary"><p>This is an internal method and is not intended to be used by external code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void LogPerformanceCounterFn(string name, Func&lt;double, double&gt; valueFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">public void LogPerformanceCounterFn(string name, Func&lt;double, double&gt; valueFunc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -484,29 +398,73 @@ to determine if it should be used instead.</p>
   </table>
   <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceData_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceData*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceData" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceData">LogPerformanceData()</h4>
-  <div class="markdown level1 summary"><p>Logs performance data if performance logging is enabled.</p>
+  <div class="markdown level1 summary"><p>This is an internal method and is not intended to be used by external code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void LogPerformanceData()</code></pre>
+    <pre><code class="lang-csharp hljs">public void LogPerformanceData()</code></pre>
   </div>
-  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceDataImpl_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceDataImpl*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceDataImpl" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceDataImpl">LogPerformanceDataImpl()</h4>
-  <div class="markdown level1 summary"><p>Performs the real performance logging.</p>
+  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceMessage_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceMessage*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceMessage_System_String_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceMessage(System.String)">LogPerformanceMessage(String)</h4>
+  <div class="markdown level1 summary"><p>This is an internal method and is not intended to be used by external code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void LogPerformanceDataImpl()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void LogPerformanceMessage(string message)</code></pre>
   </div>
-  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_SetLogger_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetLogger*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_SetLogger_Google_Cloud_Spanner_V1_Internal_Logging_Logger_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetLogger(Google.Cloud.Spanner.V1.Internal.Logging.Logger)">SetLogger(Logger)</h4>
-  <div class="markdown level1 summary"></div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Sensitive_Info_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Sensitive_Info*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Sensitive_Info_System_Func_System_String__" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Sensitive_Info(System.Func{System.String})">Sensitive_Info(Func&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>This is an internal method and is not intended to be used by external code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void SetLogger(Logger instance)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Sensitive_Info(Func&lt;string&gt; messageFunc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">messageFunc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_SetDefaultLogger_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetDefaultLogger*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_SetDefaultLogger_Google_Cloud_Spanner_V1_Internal_Logging_Logger_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetDefaultLogger(Google.Cloud.Spanner.V1.Internal.Logging.Logger)">SetDefaultLogger(Logger)</h4>
+  <div class="markdown level1 summary"><p>This is an internal property and is not intended to be used by external code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetDefaultLogger(Logger instance)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -527,12 +485,12 @@ to determine if it should be used instead.</p>
   </table>
   <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Warn_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Warn_System_Func_System_String__" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn(System.Func{System.String})">Warn(Func&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Logs a warning.</p>
+  <div class="markdown level1 summary"><p>This is an internal method and is not intended to be used by external code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Warn(Func&lt;string&gt; messageFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Warn(Func&lt;string&gt; messageFunc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -551,13 +509,14 @@ to determine if it should be used instead.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Warn_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_Warn_System_String_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn(System.String)">Warn(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_WriteLine_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.WriteLine*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Internal_Logging_Logger_WriteLine_System_String_" data-uid="Google.Cloud.Spanner.V1.Internal.Logging.Logger.WriteLine(System.String)">WriteLine(String)</h4>
+  <div class="markdown level1 summary"><p>This is an internal method and is not intended to be used by external code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Warn(string message)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void WriteLine(string message)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

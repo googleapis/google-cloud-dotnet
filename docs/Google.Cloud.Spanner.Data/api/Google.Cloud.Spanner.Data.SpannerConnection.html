@@ -237,7 +237,7 @@ configurable
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection__ctor_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.#ctor*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_SpannerConnection__ctor_System_String_Google_Apis_Auth_OAuth2_ITokenAccess_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.#ctor(System.String,Google.Apis.Auth.OAuth2.ITokenAccess)">SpannerConnection(String, ITokenAccess)</h4>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnection__ctor_System_String_Grpc_Core_ChannelCredentials_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.#ctor(System.String,Grpc.Core.ChannelCredentials)">SpannerConnection(String, ChannelCredentials)</h4>
   <div class="markdown level1 summary"><p>Creates a SpannerConnection with a datasource contained in connectionString
 and optional credential information supplied in connectionString or the credential
 argument.</p>
@@ -245,7 +245,7 @@ argument.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpannerConnection(string connectionString, ITokenAccess credential = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SpannerConnection(string connectionString, ChannelCredentials credentials = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,15 +265,15 @@ argument.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span></td>
-        <td><span class="parametername">credential</span></td>
+        <td><a class="xref" href="Grpc.Core.ChannelCredentials.html">ChannelCredentials</a></td>
+        <td><span class="parametername">credentials</span></td>
         <td><p>An optional credential for operations to be performed on the Spanner database.  May be null.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <div>
-  <h5 id="Google_Cloud_Spanner_Data_SpannerConnection__ctor_System_String_Google_Apis_Auth_OAuth2_ITokenAccess__snippet">Sample code</h5>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerConnection__ctor_System_String_Grpc_Core_ChannelCredentials__snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">string connectionString = &quot;Data Source=projects/my-project/instances/my-instance/databases/my-db&quot;;
 SpannerConnection connection = new SpannerConnection(connectionString);
 Console.WriteLine(connection.Project);
@@ -403,6 +403,30 @@ Console.WriteLine(connection.Database);
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerConnection_Logger_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Logger*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_Logger" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Logger">Logger</h4>
+  <div class="markdown level1 summary"><p>This property is intended for internal use only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Logger Logger { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.Internal.Logging.Logger.html">Logger</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -784,6 +808,30 @@ await retryPolicy.ExecuteAsync(
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.ChangeDatabase(System.String)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerConnection_ClearPooledResourcesAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.ClearPooledResourcesAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_ClearPooledResourcesAsync" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.ClearPooledResourcesAsync">ClearPooledResourcesAsync()</h4>
+  <div class="markdown level1 summary"><p>Releases all pooled Cloud Spanner sessions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task ClearPooledResourcesAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection_Close_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Close*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_Close" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.Close">Close()</h4>
   <div class="markdown level1 summary"></div>
@@ -820,14 +868,14 @@ await retryPolicy.ExecuteAsync(
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.CreateDbCommand()</span></div>
   <a id="Google_Cloud_Spanner_Data_SpannerConnection_CreateDdlCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateDdlCommand*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateDdlCommand_System_String_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateDdlCommand(System.String)">CreateDdlCommand(String)</h4>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateDdlCommand_System_String_System_String___" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.CreateDdlCommand(System.String,System.String[])">CreateDdlCommand(String, String[])</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> to execute a DDL (CREATE/DROP TABLE, etc) statement.
 This method is thread safe.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpannerCommand CreateDdlCommand(string ddlStatement)</code></pre>
+    <pre><code class="lang-csharp hljs">public SpannerCommand CreateDdlCommand(string ddlStatement, params string[] extraDdlStatements)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -843,6 +891,13 @@ This method is thread safe.</p>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">ddlStatement</span></td>
         <td><p>The DDL statement (eg &apos;CREATE TABLE MYTABLE ...&apos;).  Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">extraDdlStatements</span></td>
+        <td><p>An optional set of additional DDL statements to execute after
+the first statement.  Extra Ddl statements cannot be used to create additional databases.</p>
 </td>
       </tr>
     </tbody>
@@ -864,7 +919,7 @@ This method is thread safe.</p>
     </tbody>
   </table>
   <div>
-  <h5 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateDdlCommand_System_String__snippet">Sample code</h5>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerConnection_CreateDdlCommand_System_String_System_String____snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">using (var connection =
     new SpannerConnection($&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
 {
@@ -1347,8 +1402,8 @@ May be null.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbConnection.EnlistTransaction(System.Transactions.Transaction)</span></div>
-  <a id="Google_Cloud_Spanner_Data_SpannerConnection_GetCredential_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.GetCredential*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_GetCredential" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.GetCredential">GetCredential()</h4>
+  <a id="Google_Cloud_Spanner_Data_SpannerConnection_GetCredentials_" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.GetCredentials*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnection_GetCredentials" data-uid="Google.Cloud.Spanner.Data.SpannerConnection.GetCredentials">GetCredentials()</h4>
   <div class="markdown level1 summary"><p>The credential used for the connection, if set.
 If credentials are not specified, then application default credentials are used instead.
 See gcloud documentation on how to set up application default credentials.</p>
@@ -1356,7 +1411,7 @@ See gcloud documentation on how to set up application default credentials.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ITokenAccess GetCredential()</code></pre>
+    <pre><code class="lang-csharp hljs">public ChannelCredentials GetCredentials()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1368,7 +1423,7 @@ See gcloud documentation on how to set up application default credentials.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span></td>
+        <td><a class="xref" href="Grpc.Core.ChannelCredentials.html">ChannelCredentials</a></td>
         <td></td>
       </tr>
     </tbody>

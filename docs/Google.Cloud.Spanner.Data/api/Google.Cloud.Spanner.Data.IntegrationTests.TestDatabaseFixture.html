@@ -78,17 +78,27 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TestDatabaseFixture</span></div>
+    <div class="level1"><span class="xref">Google.Cloud.ClientTesting.CloudProjectFixtureBase</span></div>
+    <div class="level2"><span class="xref">TestDatabaseFixture</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">ICollectionFixture</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.html">TestDatabaseFixture</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Google.Cloud.ClientTesting.CloudProjectFixtureBase.TestProjectEnvironmentVariable</span>
+    </div>
+    <div>
+      <span class="xref">Google.Cloud.ClientTesting.CloudProjectFixtureBase.ProjectId</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Data.IntegrationTests.html">Google.Cloud.Spanner.Data.IntegrationTests</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Data.IntegrationTests.dll</h6>
   <h5 id="Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TestDatabaseFixture : IDisposable, ICollectionFixture&lt;TestDatabaseFixture&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class TestDatabaseFixture : CloudProjectFixtureBase, ICollectionFixture&lt;TestDatabaseFixture&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -240,29 +250,6 @@
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_TestProjectName_" data-uid="Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.TestProjectName*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_TestProjectName" data-uid="Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.TestProjectName">TestProjectName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string TestProjectName { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_TestTable_" data-uid="Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.TestTable*"></a>
   <h4 id="Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_TestTable" data-uid="Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.TestTable">TestTable</h4>
   <div class="markdown level1 summary"></div>
@@ -317,8 +304,10 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Dispose()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Cloud.ClientTesting.CloudProjectFixtureBase.Dispose</span></div>
   <a id="Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_EnsureTestDatabaseAsync_" data-uid="Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.EnsureTestDatabaseAsync*"></a>
   <h4 id="Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_EnsureTestDatabaseAsync" data-uid="Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.EnsureTestDatabaseAsync">EnsureTestDatabaseAsync()</h4>
   <div class="markdown level1 summary"></div>

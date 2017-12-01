@@ -73,7 +73,7 @@
   
   <h1 id="Google_Cloud_Spanner_V1_TransactionOptions_Types_ReadOnly" data-uid="Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly" class="text-break">Class TransactionOptions.Types.ReadOnly
   </h1>
-  <div class="markdown level0 summary"><p>Options for read-only transactions.</p>
+  <div class="markdown level0 summary"><p>Message type to initiate a read-only transaction.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -184,6 +184,8 @@ transactions.</p>
 read, or data that is fresh enough to observe the effects of some
 previously committed transaction whose timestamp is known.</p>
 <p>Note that this option can only be used in single-use transactions.</p>
+<p>A timestamp in RFC3339 UTC &amp;quot;Zulu&amp;quot; format, accurate to nanoseconds.
+Example: <code>&amp;quot;2014-10-02T15:01:23.045123456Z&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -215,6 +217,8 @@ specified timestamp, modulo the read&apos;s deadline.</p>
 <p>Useful for large scale consistent reads such as mapreduces, or
 for coordinating many reads against a consistent snapshot of the
 data.</p>
+<p>A timestamp in RFC3339 UTC &amp;quot;Zulu&amp;quot; format, accurate to nanoseconds.
+Example: <code>&amp;quot;2014-10-02T15:01:23.045123456Z&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

@@ -183,6 +183,30 @@ such as &apos;INSERT MYTABLE&apos;.  Must not be null.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommandTextBuilder_ExtraStatements_" data-uid="Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.ExtraStatements*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommandTextBuilder_ExtraStatements" data-uid="Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.ExtraStatements">ExtraStatements</h4>
+  <div class="markdown level1 summary"><p>A set of additional statements to execute if supported by the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] ExtraStatements { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Spanner_Data_SpannerCommandTextBuilder_SpannerCommandType_" data-uid="Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.SpannerCommandType*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerCommandTextBuilder_SpannerCommandType" data-uid="Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.SpannerCommandType">SpannerCommandType</h4>
   <div class="markdown level1 summary"><p>Gets the type of Spanner command (Select, Update, Delete, InsertOrUpdate, Insert, Ddl).</p>
@@ -235,14 +259,14 @@ or Insert</p>
   <h3 id="methods">Methods
   </h3>
   <a id="Google_Cloud_Spanner_Data_SpannerCommandTextBuilder_CreateDdlTextBuilder_" data-uid="Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.CreateDdlTextBuilder*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_SpannerCommandTextBuilder_CreateDdlTextBuilder_System_String_" data-uid="Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.CreateDdlTextBuilder(System.String)">CreateDdlTextBuilder(String)</h4>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommandTextBuilder_CreateDdlTextBuilder_System_String_System_String___" data-uid="Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.CreateDdlTextBuilder(System.String,System.String[])">CreateDdlTextBuilder(String, String[])</h4>
   <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.html">SpannerCommandTextBuilder</a> instance that generates <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_CommandText">CommandText</a>
 for executing a DDL statement.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SpannerCommandTextBuilder CreateDdlTextBuilder(string ddlStatement)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SpannerCommandTextBuilder CreateDdlTextBuilder(string ddlStatement, params string[] extraDdlStatements)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,6 +282,13 @@ for executing a DDL statement.</p>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">ddlStatement</span></td>
         <td><p>The full DDL statement. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">extraDdlStatements</span></td>
+        <td><p>An optional set of additional DDL statements to execute after
+the first statement.  Extra Ddl statements cannot be used to create additional databases.</p>
 </td>
       </tr>
     </tbody>

@@ -244,14 +244,14 @@ Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={
     <pre><code class="lang-csharp hljs">public SpannerConnectionStringBuilder()</code></pre>
   </div>
   <a id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder__ctor_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.#ctor*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder__ctor_System_String_Google_Apis_Auth_OAuth2_ITokenAccess_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.#ctor(System.String,Google.Apis.Auth.OAuth2.ITokenAccess)">SpannerConnectionStringBuilder(String, ITokenAccess)</h4>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder__ctor_System_String_Grpc_Core_ChannelCredentials_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.#ctor(System.String,Grpc.Core.ChannelCredentials)">SpannerConnectionStringBuilder(String, ChannelCredentials)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html">SpannerConnectionStringBuilder</a> with the given
 connection string and optional credential</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,8 +272,8 @@ Must not be null.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span></td>
-        <td><span class="parametername">credential</span></td>
+        <td><a class="xref" href="Grpc.Core.ChannelCredentials.html">ChannelCredentials</a></td>
+        <td><span class="parametername">credentials</span></td>
         <td><p>Optionally supplied credential to use for the connection.
 If not set, then default application credentials will be used.
 Credentials can be retrieved from a file or obtained interactively.
@@ -524,9 +524,9 @@ port will be used.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_GetCredential_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredential*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_GetCredential" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredential">GetCredential()</h4>
-  <div class="markdown level1 summary"><p>The <span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span> credential used to communicate with Spanner.
+  <a id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_GetCredentials_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredentials*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_GetCredentials" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredentials">GetCredentials()</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Grpc.Core.ChannelCredentials.html">ChannelCredentials</a> credential used to communicate with Spanner.
 If not set, then default application credentials will be used.
 Credentials can be retrieved from a file or obtained interactively.
 See Google Cloud documentation for more information.</p>
@@ -534,7 +534,7 @@ See Google Cloud documentation for more information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ITokenAccess GetCredential()</code></pre>
+    <pre><code class="lang-csharp hljs">public ChannelCredentials GetCredentials()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -546,8 +546,52 @@ See Google Cloud documentation for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Google.Apis.Auth.OAuth2.ITokenAccess</span></td>
+        <td><a class="xref" href="Grpc.Core.ChannelCredentials.html">ChannelCredentials</a></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_WithDatabase_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.WithDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_WithDatabase_System_String_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.WithDatabase(System.String)">WithDatabase(String)</h4>
+  <div class="markdown level1 summary"><p>Returns a new instance of a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html">SpannerConnectionStringBuilder</a> with the database
+portion of the DataSource replaced with a new value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerConnectionStringBuilder WithDatabase(string database)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The new database name. Can be null to open a connection for Ddl commands.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html">SpannerConnectionStringBuilder</a></td>
+        <td><p>A new instance of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html">SpannerConnectionStringBuilder</a></p>
+</td>
       </tr>
     </tbody>
   </table>

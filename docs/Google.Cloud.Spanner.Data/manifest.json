@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/jon/Test/Projects/google-cloud-dotnet/docs/output/Google.Cloud.Spanner.Data",
+  "source_base_path": "C:/Users/benwu/spanner/google-cloud-dotnet/releasebuild/docs/output/Google.Cloud.Spanner.Data",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -36,7 +36,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.html",
-          "hash": "AkWLMUnWL5CnFKVGoFE/Ug=="
+          "hash": "2UJHXTyspFpfy4tFiu8Q3A=="
         }
       },
       "is_incremental": false,
@@ -120,7 +120,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html",
-          "hash": "kMR8gnAjwhaLu26LFmBBow=="
+          "hash": "y0RqPRsbJRT8oIHGVb0ZVQ=="
         }
       },
       "is_incremental": false,
@@ -372,7 +372,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.Instance.html",
-          "hash": "NfaDooA8kEE5kHtKtwrbsw=="
+          "hash": "1iPRmjZN4Hm94X791hRb/Q=="
         }
       },
       "is_incremental": false,
@@ -516,7 +516,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.html",
-          "hash": "8JeLHPenKo+iib/mFeVHAQ=="
+          "hash": "r+vDcXi3joC8oL3/caUZEQ=="
         }
       },
       "is_incremental": false,
@@ -600,7 +600,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.html",
-          "hash": "CTNYr3zd42DhDjYnXOjzPQ=="
+          "hash": "9HluFJ3L3FRV8gOfbBrudg=="
         }
       },
       "is_incremental": false,
@@ -684,7 +684,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.html",
-          "hash": "X7Z0KJVE9nsfDHJBozjiHg=="
+          "hash": "NYcvDiuWFm4JbWeADj83JA=="
         }
       },
       "is_incremental": false,
@@ -756,7 +756,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Data.SpannerCommand.html",
-          "hash": "cVGFh7ML4hk4rvGWh33Hzw=="
+          "hash": "ubBnNp5jm7HLqR8yK4L+xQ=="
         }
       },
       "is_incremental": false,
@@ -768,7 +768,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.html",
-          "hash": "BJh117LmsgMCFdMiozqJdQ=="
+          "hash": "FPow338BYJzscpr0tTyJvw=="
         }
       },
       "is_incremental": false,
@@ -792,7 +792,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Data.SpannerConnection.html",
-          "hash": "lPZDWqbTP/VFtfzS/0JflQ=="
+          "hash": "qYZwjQ7NgyEoHRyJT56zHA=="
         }
       },
       "is_incremental": false,
@@ -804,7 +804,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html",
-          "hash": "5y8okEJIuYFsw4ANarsIBA=="
+          "hash": "a6E2X+A321zRoQ8pDEAu8A=="
         }
       },
       "is_incremental": false,
@@ -828,7 +828,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Data.SpannerDataReader.html",
-          "hash": "+4ZHwvjX0xXzcEWEU0hKGw=="
+          "hash": "5GgLhKlW721VHklSnJ1Obw=="
         }
       },
       "is_incremental": false,
@@ -840,7 +840,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Data.SpannerDbType.html",
-          "hash": "qXRCO00skbgvfxosGs4zfA=="
+          "hash": "1lfJ9GyUtCVpr0AOEGMY9g=="
         }
       },
       "is_incremental": false,
@@ -852,7 +852,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.Data.SpannerException.html",
-          "hash": "JNJOFLYvXqvEINYBa0Ko0Q=="
+          "hash": "xX9yNVPNWG6v8FPPByeCfQ=="
         }
       },
       "is_incremental": false,
@@ -1056,7 +1056,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.CreateSessionRequest.html",
-          "hash": "AcnSWr6UMpdxVkfKfam9HQ=="
+          "hash": "BrZdq5zGygNHxKmydhzstA=="
         }
       },
       "is_incremental": false,
@@ -1160,6 +1160,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.html",
+          "hash": "IfCTAB+iLnID72ZnTTRUxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.Internal.Logging.LogLevel.yml",
       "output": {
         ".html": {
@@ -1176,7 +1188,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html",
-          "hash": "MmfNbX2jOE4WGjbGRYphbw=="
+          "hash": "ppkANpghKJgpn+XCEFZwLg=="
         }
       },
       "is_incremental": false,
@@ -1188,7 +1200,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.Internal.Logging.html",
-          "hash": "/SjOytoDM9Q6Y8DbXqWQZQ=="
+          "hash": "bKTX1gxfPHtNzcsu5mx1Zw=="
         }
       },
       "is_incremental": false,
@@ -1261,6 +1273,30 @@
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.KeySet.html",
           "hash": "spWoKYwNDkyWcFo2Ufv1YQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.ListSessionsRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.ListSessionsRequest.html",
+          "hash": "uYWC9hKGUxQuOWq2qvCiNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.ListSessionsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.ListSessionsResponse.html",
+          "hash": "i0uf67GasdeG8nXSXHwTiw=="
         }
       },
       "is_incremental": false,
@@ -1428,7 +1464,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.ReliableStreamReader.html",
-          "hash": "Ri7jnwmd2Cy0N4jEnc+4Pw=="
+          "hash": "LIshgkD4Qd1A6LszOyPjWw=="
         }
       },
       "is_incremental": false,
@@ -1488,7 +1524,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.Session.html",
-          "hash": "QYCn2krz9WLRre6BZgyoxg=="
+          "hash": "r033Rug6apulPcI4wRJEnQ=="
         }
       },
       "is_incremental": false,
@@ -1512,7 +1548,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.SessionPool.html",
-          "hash": "gdIiuczpxezkAKC3L7XhGg=="
+          "hash": "rVYArgyiANigfYS3V3B9Ng=="
         }
       },
       "is_incremental": false,
@@ -1536,7 +1572,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.Spanner.SpannerBase.html",
-          "hash": "Zy8sdcOyLHZ6oR0+tfMMUA=="
+          "hash": "8HGyrRO4zNDfa8yvDPWdnw=="
         }
       },
       "is_incremental": false,
@@ -1548,7 +1584,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.html",
-          "hash": "fulrrnsvttG88NwNwb9Bcg=="
+          "hash": "jbknYd+Fs0kxfvbT5ziSvQ=="
         }
       },
       "is_incremental": false,
@@ -1596,7 +1632,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.SpannerClient.html",
-          "hash": "5qkkRYG5rZslpNAxERtbmw=="
+          "hash": "RLGEoN8hrtTqki8Pubp9DQ=="
         }
       },
       "is_incremental": false,
@@ -1608,7 +1644,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.SpannerClientImpl.html",
-          "hash": "3XuLNLrkx6AnsJ5TT912pA=="
+          "hash": "5aMMm0xJox1T1Jl+xg3rlA=="
         }
       },
       "is_incremental": false,
@@ -1620,7 +1656,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.SpannerSettings.html",
-          "hash": "QW4TxC+9uWR+/8+SHeuO4w=="
+          "hash": "r8+StgXduAitik6/MIiiNA=="
         }
       },
       "is_incremental": false,
@@ -1692,7 +1728,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.Transaction.html",
-          "hash": "DLvS57qLsR7puFLMEon81g=="
+          "hash": "34zRyEkCGFnXxWKoek1btw=="
         }
       },
       "is_incremental": false,
@@ -1728,7 +1764,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.html",
-          "hash": "CbDoyzmB00r0hbxWUtJYPg=="
+          "hash": "60G+sWkWBEzwSAJoFWICLg=="
         }
       },
       "is_incremental": false,
@@ -1740,7 +1776,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.html",
-          "hash": "3yweuUUTFFakfKK5BHBjLA=="
+          "hash": "If66dZDMdCZBSTaKpkU94g=="
         }
       },
       "is_incremental": false,
@@ -1824,7 +1860,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.TypeCode.html",
-          "hash": "D0s4uvTYnvE34OztoIHwtg=="
+          "hash": "vTcE8u4NeCWNzp0rUoigag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Google.Cloud.Spanner.V1.TypeCodeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.Cloud.Spanner.V1.TypeCodeExtensions.html",
+          "hash": "H7U7Xbxo9LwnpK+83I1qrQ=="
         }
       },
       "is_incremental": false,
@@ -1836,7 +1884,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Google.Cloud.Spanner.V1.html",
-          "hash": "hSlaW1bYPVGFS57AMtzFyw=="
+          "hash": "3QImmM+eB1RFlQbs8l1lJQ=="
         }
       },
       "is_incremental": false,
@@ -2724,7 +2772,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "FKAxHMu6WwUSM/hlpFbhQw=="
+          "hash": "FEm9KEgWb6L9GuMizhIKiw=="
         }
       },
       "is_incremental": false,

@@ -283,7 +283,10 @@ segment of the name must be between 6 and 30 characters in length.</p>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_Instance_NodeCount_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.Instance.NodeCount*"></a>
   <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_Instance_NodeCount" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.Instance.NodeCount">NodeCount</h4>
-  <div class="markdown level1 summary"><p>Required. The number of nodes allocated to this instance.</p>
+  <div class="markdown level1 summary"><p>Required. The number of nodes allocated to this instance. This may be zero
+in API responses for instances that are not yet in state <code>READY</code>.</p>
+<p>See <a href="https://cloud.google.com/spanner/docs/instances#node_count">the documentation</a>
+for more information about nodes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

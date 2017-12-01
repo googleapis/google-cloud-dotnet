@@ -170,6 +170,54 @@
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerDbType_DbType_" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.DbType*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDbType_DbType" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.DbType">DbType</h4>
+  <div class="markdown level1 summary"><p>The corresponding <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html#Google_Cloud_Spanner_Data_SpannerDbType_DbType">DbType</a> for this Cloud Spanner type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbType DbType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DbType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerDbType_DefaultClrType_" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.DefaultClrType*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDbType_DefaultClrType" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.DefaultClrType">DefaultClrType</h4>
+  <div class="markdown level1 summary"><p>The default <span class="xref">System.Type</span> for this Cloud Spanner type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type DefaultClrType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Spanner_Data_SpannerDbType_Float64_" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.Float64*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerDbType_Float64" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.Float64">Float64</h4>
   <div class="markdown level1 summary"><p>64 bit floating point number.</p>
@@ -214,6 +262,30 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerDbType_Size_" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.Size*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDbType_Size" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.Size">Size</h4>
+  <div class="markdown level1 summary"><p>The size of the Type, if set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ? Size { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -438,6 +510,99 @@ has a default constructor.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Object.ToString()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerDbType_TryParse_" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.TryParse*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDbType_TryParse_System_String_Google_Cloud_Spanner_Data_SpannerDbType__" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.TryParse(System.String,Google.Cloud.Spanner.Data.SpannerDbType@)">TryParse(String, out SpannerDbType)</h4>
+  <div class="markdown level1 summary"><p>Given a string representation, returns an instance of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string spannerType, out SpannerDbType spannerDbType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">spannerType</span></td>
+        <td><p>A string representation of a SpannerDbType. See <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html#Google_Cloud_Spanner_Data_SpannerDbType_ToString">ToString()</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a></td>
+        <td><span class="parametername">spannerDbType</span></td>
+        <td><p>If parsing was successful, then an instance of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a>.
+ Otherwise null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerDbType_WithSize_" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.WithSize*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDbType_WithSize_System_Int32_" data-uid="Google.Cloud.Spanner.Data.SpannerDbType.WithSize(System.Int32)">WithSize(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns a clone of this type with the specified size constraint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerDbType WithSize(int size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>Represents the number of characters (for <a class="xref" href="Google.Cloud.Spanner.V1.TypeCode.html#Google_Cloud_Spanner_V1_TypeCode_String">String</a>)
+ or bytes (for <a class="xref" href="Google.Cloud.Spanner.V1.TypeCode.html#Google_Cloud_Spanner_V1_TypeCode_Bytes">Bytes</a>)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a></td>
+        <td><p>A new instance of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a> with the same <span class="xref">Google.Cloud.Spanner.Data.SpannerDbType.TypeCode</span> and new size.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

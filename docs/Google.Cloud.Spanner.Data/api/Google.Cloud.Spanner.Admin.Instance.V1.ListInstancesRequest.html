@@ -117,20 +117,20 @@
   <div class="markdown level1 summary"><p>An expression for filtering the results of the request. Filter rules are
 case insensitive. The fields eligible for filtering are:</p>
 <ul>
-<li>name</li>
-<li>display_name</li>
-<li>labels.key where key is the name of a label</li>
+<li><code>name</code></li>
+<li><code>display_name</code></li>
+<li><code>labels.key</code> where key is the name of a label</li>
 </ul>
 <p>Some examples of using filters are:</p>
 <ul>
-<li>name:* --&gt; The instance has a name.</li>
-<li>name:Howl --&gt; The instance&apos;s name contains the string &quot;howl&quot;.</li>
-<li>name:HOWL --&gt; Equivalent to above.</li>
-<li>NAME:howl --&gt; Equivalent to above.</li>
-<li>labels.env:* --&gt; The instance has the label &quot;env&quot;.</li>
-<li>labels.env:dev --&gt; The instance has the label &quot;env&quot; and the value of
+<li><code>name:*</code> --&gt; The instance has a name.</li>
+<li><code>name:Howl</code> --&gt; The instance&apos;s name contains the string &quot;howl&quot;.</li>
+<li><code>name:HOWL</code> --&gt; Equivalent to above.</li>
+<li><code>NAME:howl</code> --&gt; Equivalent to above.</li>
+<li><code>labels.env:*</code> --&gt; The instance has the label &quot;env&quot;.</li>
+<li><code>labels.env:dev</code> --&gt; The instance has the label &quot;env&quot; and the value of
                 the label contains the string &quot;dev&quot;.</li>
-<li>name:howl labels.env:dev --&gt; The instance&apos;s name contains &quot;howl&quot; and
+<li><code>name:howl labels.env:dev</code> --&gt; The instance&apos;s name contains &quot;howl&quot; and
                           it has the label &quot;env&quot; with its value
                           containing &quot;dev&quot;.</li>
 </ul>

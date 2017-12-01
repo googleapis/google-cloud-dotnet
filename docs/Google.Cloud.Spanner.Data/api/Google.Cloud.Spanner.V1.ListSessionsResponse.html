@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CreateDatabaseRequest
+    <title>Class ListSessionsResponse
    | Google.Cloud.Spanner.Data </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CreateDatabaseRequest
+    <meta name="title" content="Class ListSessionsResponse
    | Google.Cloud.Spanner.Data ">
     <meta name="generator" content="docfx 2.24.0.0">
     
@@ -68,25 +68,28 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.V1.ListSessionsResponse">
   
   
-  <h1 id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest" class="text-break">Class CreateDatabaseRequest
+  <h1 id="Google_Cloud_Spanner_V1_ListSessionsResponse" data-uid="Google.Cloud.Spanner.V1.ListSessionsResponse" class="text-break">Class ListSessionsResponse
   </h1>
-  <div class="markdown level0 summary"><p>The request for [CreateDatabase][google.spanner.admin.database.v1.DatabaseAdmin.CreateDatabase].</p>
+  <div class="markdown level0 summary"><p>The response for [ListSessions][google.spanner.v1.Spanner.ListSessions].</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CreateDatabaseRequest</span></div>
+    <div class="level1"><span class="xref">ListSessionsResponse</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">Google.Protobuf.IMessage</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.html">CreateDatabaseRequest</a>&gt;</div>
+    <div><span class="xref">Google.Protobuf.IMessage</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsResponse.html">ListSessionsResponse</a>&gt;</div>
     <div><span class="xref">Google.Protobuf.IMessage</span></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.html">CreateDatabaseRequest</a>&gt;</div>
-    <div><span class="xref">Google.Protobuf.IDeepCloneable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.html">CreateDatabaseRequest</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsResponse.html">ListSessionsResponse</a>&gt;</div>
+    <div><span class="xref">Google.Protobuf.IDeepCloneable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsResponse.html">ListSessionsResponse</a>&gt;</div>
+    <div><span class="xref">Google.Api.Gax.Grpc.IPageResponse</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -103,26 +106,24 @@
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.html">Google.Cloud.Spanner.Admin.Database.V1</a></h6>
-  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Admin.Database.V1.dll</h6>
-  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.V1.html">Google.Cloud.Spanner.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.V1.dll</h6>
+  <h5 id="Google_Cloud_Spanner_V1_ListSessionsResponse_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class CreateDatabaseRequest : IMessage&lt;CreateDatabaseRequest&gt;, IMessage, IEquatable&lt;CreateDatabaseRequest&gt;, IDeepCloneable&lt;CreateDatabaseRequest&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ListSessionsResponse : IMessage&lt;ListSessionsResponse&gt;, IMessage, IEquatable&lt;ListSessionsResponse&gt;, IDeepCloneable&lt;ListSessionsResponse&gt;, IPageResponse&lt;Session&gt;, IEnumerable&lt;Session&gt;, IEnumerable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_CreateStatement_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.CreateStatement*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_CreateStatement" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.CreateStatement">CreateStatement</h4>
-  <div class="markdown level1 summary"><p>Required. A <code>CREATE DATABASE</code> statement, which specifies the ID of the
-new database.  The database ID must conform to the regular expression
-<code>[a-z][a-z0-9_\-]*[a-z0-9]</code> and be between 2 and 30 characters in length.
-If the database ID is a reserved word or if it contains a hyphen, the
-database ID must be enclosed in backticks (<code>` </code>).</p>
+  <a id="Google_Cloud_Spanner_V1_ListSessionsResponse_NextPageToken_" data-uid="Google.Cloud.Spanner.V1.ListSessionsResponse.NextPageToken*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_ListSessionsResponse_NextPageToken" data-uid="Google.Cloud.Spanner.V1.ListSessionsResponse.NextPageToken">NextPageToken</h4>
+  <div class="markdown level1 summary"><p><code>next_page_token</code> can be sent in a subsequent
+[ListSessions][google.spanner.v1.Spanner.ListSessions] call to fetch more of the matching
+sessions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CreateStatement { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string NextPageToken { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -139,17 +140,16 @@ database ID must be enclosed in backticks (<code>` </code>).</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_ExtraStatements_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.ExtraStatements*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_ExtraStatements" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.ExtraStatements">ExtraStatements</h4>
-  <div class="markdown level1 summary"><p>An optional list of DDL statements to run inside the newly created
-database. Statements can create tables, indexes, etc. These
-statements execute atomically with the creation of the database:
-if there is an error in any statement, the database is not created.</p>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">Google.Api.Gax.Grpc.IPageResponse&lt;TResource&gt;.NextPageToken</span></div>
+  <a id="Google_Cloud_Spanner_V1_ListSessionsResponse_Sessions_" data-uid="Google.Cloud.Spanner.V1.ListSessionsResponse.Sessions*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_ListSessionsResponse_Sessions" data-uid="Google.Cloud.Spanner.V1.ListSessionsResponse.Sessions">Sessions</h4>
+  <div class="markdown level1 summary"><p>The list of requested sessions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; ExtraStatements { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;Session&gt; Sessions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,22 +161,23 @@ if there is an error in any statement, the database is not created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_Parent_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.Parent*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_Parent" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.Parent">Parent</h4>
-  <div class="markdown level1 summary"><p>Required. The name of the instance that will serve the new database.
-Values are of the form <code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;</code>.</p>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_V1_ListSessionsResponse_GetEnumerator_" data-uid="Google.Cloud.Spanner.V1.ListSessionsResponse.GetEnumerator*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_ListSessionsResponse_GetEnumerator" data-uid="Google.Cloud.Spanner.V1.ListSessionsResponse.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the resources in this response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Parent { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;Session&gt; GetEnumerator()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -186,21 +187,24 @@ Values are of the form <code>projects/&amp;lt;project&gt;/instances/&amp;lt;inst
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_ParentAsInstanceName_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.ParentAsInstanceName*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_ParentAsInstanceName" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.ParentAsInstanceName">ParentAsInstanceName</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.InstanceName.html">InstanceName</a>-typed view over the <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.html#Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_Parent">Parent</a> resource name property.</p>
-</div>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Google_Cloud_Spanner_V1_ListSessionsResponse_System_Collections_IEnumerable_GetEnumerator_" data-uid="Google.Cloud.Spanner.V1.ListSessionsResponse.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_ListSessionsResponse_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Cloud.Spanner.V1.ListSessionsResponse.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InstanceName ParentAsInstanceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -210,11 +214,13 @@ Values are of the form <code>projects/&amp;lt;project&gt;/instances/&amp;lt;inst
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.InstanceName.html">InstanceName</a></td>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
 </article>
           </div>
           
