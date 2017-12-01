@@ -303,16 +303,16 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // We can't currently validate the hash, but the escape hatch allows us to download it anyway.
             var stream = new MemoryStream();
             _fixture.Client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream,
-                new DownloadObjectOptions { HashValidationMode = HashValidationMode.Never });
+                new DownloadObjectOptions { DownloadValidationMode = DownloadValidationMode.Never });
             var expected = Encoding.UTF8.GetBytes("hello world");
             var actual = stream.ToArray();
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void InvalidHashValidationMode()
+        public void InvalidDownloadValidationMode()
         {
-            var options = new DownloadObjectOptions { HashValidationMode = (HashValidationMode) 12345 };
+            var options = new DownloadObjectOptions { DownloadValidationMode = (DownloadValidationMode) 12345 };
             Assert.Throws<ArgumentException>(() => _fixture.Client.DownloadObject(_fixture.ReadBucket, "irrelevant.txt", new MemoryStream(), options));
         }
 
