@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Cloud.Trace.V2
+   | Google.Cloud.Trace.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Cloud.Trace.V2
+   | Google.Cloud.Trace.V2 ">
+    <meta name="generator" content="docfx 2.24.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Trace.V2">
+  
+  <h1 id="Google_Cloud_Trace_V2" data-uid="Google.Cloud.Trace.V2" class="text-break">Namespace Google.Cloud.Trace.V2
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.AttributeValue.html">AttributeValue</a></h4>
+      <section><p>The allowed types for [VALUE] in a <code>[KEY]:[VALUE]</code> attribute.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.BatchWriteSpansRequest.html">BatchWriteSpansRequest</a></h4>
+      <section><p>The request message for the <code>BatchWriteSpans</code> method.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Module.html">Module</a></h4>
+      <section><p>Binary module.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.ProjectName.html">ProjectName</a></h4>
+      <section><p>Resource name for the &apos;project&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.html">Span</a></h4>
+      <section><p>A span represents a single operation within a trace. Spans can be
+nested to form a trace tree. Often, a trace contains a root span
+that describes the end-to-end latency, and one or more subspans for
+its sub-operations. A trace can also contain multiple root spans,
+or none at all. Spans do not need to be contiguous&amp;mdash;there may be
+gaps or overlaps between spans in a trace.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.html">Span.Types</a></h4>
+      <section><p>Container for nested types declared in the Span message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.Attributes.html">Span.Types.Attributes</a></h4>
+      <section><p>A set of attributes, each in the format <code>[KEY]:[VALUE]</code>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.Link.html">Span.Types.Link</a></h4>
+      <section><p>A pointer from the current span to another span in the same trace or in a
+different trace. For example, this can be used in batching operations,
+where a single batch handler processes multiple requests from different
+traces or when the handler receives a request from a different project.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.Link.Types.html">Span.Types.Link.Types</a></h4>
+      <section><p>Container for nested types declared in the Link message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.Links.html">Span.Types.Links</a></h4>
+      <section><p>A collection of links, which are references from this span to a span
+in the same or different trace.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.TimeEvent.html">Span.Types.TimeEvent</a></h4>
+      <section><p>A time-stamped annotation or message event in the Span.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.html">Span.Types.TimeEvent.Types</a></h4>
+      <section><p>Container for nested types declared in the TimeEvent message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.Annotation.html">Span.Types.TimeEvent.Types.Annotation</a></h4>
+      <section><p>Text annotation with a set of attributes.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.html">Span.Types.TimeEvent.Types.MessageEvent</a></h4>
+      <section><p>An event describing a message sent/received between Spans.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.html">Span.Types.TimeEvent.Types.MessageEvent.Types</a></h4>
+      <section><p>Container for nested types declared in the MessageEvent message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.TimeEvents.html">Span.Types.TimeEvents</a></h4>
+      <section><p>A collection of <code>TimeEvent</code>s. A <code>TimeEvent</code> is a time-stamped annotation
+on the span, consisting of either user-supplied key:value pairs, or
+details of a message sent/received between Spans.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.SpanName.html">SpanName</a></h4>
+      <section><p>Resource name for the &apos;span&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.StackTrace.html">StackTrace</a></h4>
+      <section><p>A call stack appearing in a trace.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.StackTrace.Types.html">StackTrace.Types</a></h4>
+      <section><p>Container for nested types declared in the StackTrace message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.StackTrace.Types.StackFrame.html">StackTrace.Types.StackFrame</a></h4>
+      <section><p>Represents a single stack frame in a stack trace.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.StackTrace.Types.StackFrames.html">StackTrace.Types.StackFrames</a></h4>
+      <section><p>A collection of stack frames, which can be truncated.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.TraceService.html">TraceService</a></h4>
+      <section><p>This file describes an API for collecting and viewing traces and spans
+within a trace.  A Trace is a collection of spans corresponding to a single
+operation or set of operations for an application. A span is an individual
+timed event which forms a node of the trace tree. A single trace may
+contain span(s) from multiple services.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.TraceService.TraceServiceBase.html">TraceService.TraceServiceBase</a></h4>
+      <section><p>Base class for server-side implementations of TraceService</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.TraceService.TraceServiceClient.html">TraceService.TraceServiceClient</a></h4>
+      <section><p>Client for TraceService</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.TraceServiceClient.html">TraceServiceClient</a></h4>
+      <section><p>TraceService client wrapper, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.TraceServiceClientImpl.html">TraceServiceClientImpl</a></h4>
+      <section><p>TraceService client wrapper implementation, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.TraceServiceSettings.html">TraceServiceSettings</a></h4>
+      <section><p>Settings for a <a class="xref" href="Google.Cloud.Trace.V2.TraceServiceClient.html">TraceServiceClient</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.TruncatableString.html">TruncatableString</a></h4>
+      <section><p>Represents a string that might be shortened to a specified length.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.AttributeValue.ValueOneofCase.html">AttributeValue.ValueOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;value&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.Link.Types.Type.html">Span.Types.Link.Types.Type</a></h4>
+      <section><p>The relationship of the current span relative to the linked span: child,
+parent, or unspecified.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.TimeEvent.Types.MessageEvent.Types.Type.html">Span.Types.TimeEvent.Types.MessageEvent.Types.Type</a></h4>
+      <section><p>Indicates whether the message was sent or received.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Trace.V2.Span.Types.TimeEvent.ValueOneofCase.html">Span.Types.TimeEvent.ValueOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;value&quot; oneof.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
