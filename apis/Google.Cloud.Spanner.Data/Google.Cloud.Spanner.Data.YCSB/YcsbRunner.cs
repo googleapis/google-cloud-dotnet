@@ -65,12 +65,15 @@ namespace Google.Cloud.Spanner.Data.Ycsb
 
         protected int Run(string[] args)
         {
-            if (!TryParseArguments(args))
+            if (!GetConfigFilePath(args))
             {
                 return -1;
             }
             LoadConfigFile();
-            ValidateArguments();
+            if (!TryParseArguments(args) || !ValidateArguments())
+            {
+                return -1;
+            }
             InitializeSettings();
 
             DebugMessage("prewarm...");
@@ -235,15 +238,16 @@ namespace Google.Cloud.Spanner.Data.Ycsb
             Options["AppVersion"] = AppVersion; //this is just for verification purposes if this app gets updated.
         }
 
-        protected virtual void ValidateArguments()
+        private bool ValidateArguments()
         {
             s_total = Operations.Select(x => x.Proportion).Sum();
             _totalOperations = GetOption<long>(Operationcount);
             if (GetOption<string>(ClientType) != "dotnet")
             {
                 Console.Error.WriteLine("Expected client_type=dotnet");
-                throw new InvalidOperationException();
+                return false;
             }
+            return true;
         }
 
         protected static T GetOptionWithDefault<T>(string optionName, T defaultValue)
@@ -265,7 +269,7 @@ namespace Google.Cloud.Spanner.Data.Ycsb
             return parsedValue;
         }
 
-        private bool TryParseArguments(IReadOnlyList<string> args)
+        private bool GetConfigFilePath(IReadOnlyList<string> args)
         {
             if (args == null || args.Count == 0 || args[0] != "run")
             {
@@ -286,7 +290,11 @@ namespace Google.Cloud.Spanner.Data.Ycsb
                 PrintUsage();
                 return false;
             }
+            return true;
+        }
 
+        private bool TryParseArguments(IReadOnlyList<string> args)
+        {
             if (args.Count % 2 != 0)
             {
                 //wierd error, user had a -p without another value or had an extra space in a value causing it
