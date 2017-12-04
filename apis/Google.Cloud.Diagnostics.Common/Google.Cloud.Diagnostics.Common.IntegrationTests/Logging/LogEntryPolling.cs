@@ -32,6 +32,8 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <summary>Client to use to send RPCs.</summary>
         private readonly LoggingServiceV2Client _client = LoggingServiceV2Client.Create();
 
+        internal LogEntryPolling(TimeSpan timeout) : base(timeout) { }
+
         /// <summary>
         /// Gets log entries that contain the passed in testId in the log message.  Will poll
         /// and wait for the entries to appear.

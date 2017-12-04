@@ -34,7 +34,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class LoggingTest
     {
-        private readonly LogEntryPolling _polling = new LogEntryPolling();
+        private readonly LogEntryPolling _polling = new LogEntryPolling(TimeSpan.FromSeconds(60));
 
         [Fact]
         public async Task Logging_SizedBufferNoLogs()
@@ -140,6 +140,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_TimedBuffer()
         {
+            // To ensure this test does not take too long and to not wait for the buffer to 
+            // flush itself we use custom polling to check for the initial check that no
+            // entries exist.
+            var quickPolling = new LogEntryPolling(TimeSpan.FromSeconds(10));
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
 
@@ -150,7 +154,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Warning/{testId}");
                 await client.GetAsync($"/Main/Error/{testId}");
 
-                var noResults = _polling.GetEntries(startTime, testId, 0, LogSeverity.Warning);
+                var noResults = quickPolling.GetEntries(startTime, testId, 0, LogSeverity.Warning);
                 Assert.Empty(noResults);
 
                 await client.GetAsync($"/Main/Error/{testId}");
