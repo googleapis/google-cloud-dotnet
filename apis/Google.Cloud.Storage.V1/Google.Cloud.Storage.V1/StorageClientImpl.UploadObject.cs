@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Apis.Storage.v1;
 using Google.Apis.Upload;
+using Google.Cloud.Storage.V1;
 using System;
 using System.IO;
 using System.Threading;
@@ -69,8 +70,8 @@ namespace Google.Cloud.Storage.V1
             return UploadObject(
                 new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
                 source, options, progress);
-        }        
-        
+        }
+
         /// <inheritdoc />
         public override Task<Object> UploadObjectAsync(
             string bucket,
@@ -92,41 +93,115 @@ namespace Google.Cloud.Storage.V1
             Object destination,
             Stream source,
             UploadObjectOptions options = null,
-            IProgress<IUploadProgress> progress = null)
-        {
-            var mediaUpload = CreateObjectUploader(destination, source, options);
-            if (progress != null)
-            {
-                mediaUpload.ProgressChanged += progress.Report;
-            }
-            var finalProgress = mediaUpload.Upload();
-            if (finalProgress.Exception != null)
-            {
-                throw finalProgress.Exception;
-            }
-            
-            return mediaUpload.ResponseBody;
-        }
+            IProgress<IUploadProgress> progress = null) =>
+            new UploadHelper(this, destination, source, options, progress).Execute();
 
         /// <inheritdoc />
-        public override async Task<Object> UploadObjectAsync(
+        public override Task<Object> UploadObjectAsync(
             Object destination,
             Stream source,
             UploadObjectOptions options = null,
             CancellationToken cancellationToken = default,
-            IProgress<IUploadProgress> progress = null)
+            IProgress<IUploadProgress> progress = null) =>
+            new UploadHelper(this, destination, source, options, progress).ExecuteAsync(cancellationToken);
+
+        /// <summary>
+        /// Helper class to provide common context between sync and async operations. Helps avoid quite so much duplicate code...
+        /// </summary>
+        private sealed class UploadHelper
         {
-            var mediaUpload = CreateObjectUploader(destination, source, options);
-            if (progress != null)
+            private readonly StorageClient _client;
+            private readonly ObjectsResource.InsertMediaUpload _mediaUpload;
+            private readonly Crc32c _crc;
+            private readonly Action<Object> _validationFailureAction;
+            private readonly Func<Object, CancellationToken, Task> _validationFailureAsyncAction;
+
+            internal UploadHelper(
+                StorageClient client,
+                Object destination,
+                Stream source,
+                UploadObjectOptions options,
+                IProgress<IUploadProgress> progress)
             {
-                mediaUpload.ProgressChanged += progress.Report;
+                _client = client;
+                _mediaUpload = client.CreateObjectUploader(destination, source, options);
+                if (progress != null)
+                {
+                    _mediaUpload.ProgressChanged += progress.Report;
+                }
+
+                var validationMode = options?.UploadValidationMode ?? UploadObjectOptions.DefaultValidationMode;
+                GaxPreconditions.CheckEnumValue(validationMode, nameof(UploadObjectOptions.UploadValidationMode));
+                switch (validationMode)
+                {
+                    case UploadValidationMode.DeleteAndThrow:
+                        _crc = new Crc32c();
+                        _mediaUpload.UploadStreamInterceptor += _crc.UpdateHash;
+                        _validationFailureAction = obj => client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation });
+                        _validationFailureAsyncAction = (obj, token) => client.DeleteObjectAsync(obj, new DeleteObjectOptions { Generation = obj.Generation }, token);
+                        break;
+                    case UploadValidationMode.ThrowOnly:
+                        _crc = new Crc32c();
+                        _mediaUpload.UploadStreamInterceptor += _crc.UpdateHash;
+                        break;
+                }
             }
-            var finalProgress = await mediaUpload.UploadAsync(cancellationToken).ConfigureAwait(false);
-            if (finalProgress.Exception != null)
+
+            internal Object Execute()
             {
-                throw finalProgress.Exception;
+                _mediaUpload.Upload();
+                CheckFinalProgress();
+                var result = _mediaUpload.ResponseBody;
+                var hash = _crc == null ? result.Crc32c : Convert.ToBase64String(_crc.GetHash());
+                if (hash != result.Crc32c)
+                {
+                    AggregateException additionalFailures = null;
+                    try
+                    {
+                        _validationFailureAction?.Invoke(result);
+                    }
+                    catch (Exception e)
+                    {
+                        additionalFailures = new AggregateException(e);
+                    }
+                    throw new UploadValidationException(hash, result, additionalFailures);
+                }
+                return result;
             }
-            return mediaUpload.ResponseBody;
+
+            internal async Task<Object> ExecuteAsync(CancellationToken cancellationToken)
+            {
+                await _mediaUpload.UploadAsync(cancellationToken).ConfigureAwait(false);
+                CheckFinalProgress();
+                var result = _mediaUpload.ResponseBody;
+                var hash = _crc == null ? result.Crc32c : Convert.ToBase64String(_crc.GetHash());
+                if (hash != result.Crc32c)
+                {
+                    AggregateException additionalFailures = null;
+                    try
+                    {
+                        if (_validationFailureAsyncAction != null)
+                        {
+                            await _validationFailureAsyncAction(result, cancellationToken).ConfigureAwait(false);
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        additionalFailures = new AggregateException(e);
+                    }
+                    throw new UploadValidationException(hash, result, additionalFailures);
+                }
+                return result;
+            }
+            
+            private void CheckFinalProgress()
+            {
+                var finalProgress = _mediaUpload.GetProgress();
+                if (finalProgress.Exception != null)
+                {
+                    throw finalProgress.Exception;
+                }
+            }
         }
     }
 }
