@@ -49,6 +49,7 @@ Beta:
   - [Google.Cloud.Spanner.V1](Google.Cloud.Spanner.V1/index.html): Low-level access to Spanner API
   - [Google.Cloud.Spanner.Admin.Database.V1](Google.Cloud.Spanner.Admin.Database.V1/index.html): Database administration API
   - [Google.Cloud.Spanner.Admin.Instance.V1](Google.Cloud.Spanner.Admin.Instance.V1/index.html): Instance administration API
+- [Google.Cloud.Trace.V2](Google.Cloud.Trace.V2/index.html)
 
 Alpha:
 
