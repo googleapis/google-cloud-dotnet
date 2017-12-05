@@ -30,7 +30,7 @@ property is used.
 The client-wide `CallSettings` is higher-priority than per-RPC-method `CallSettings`
 because it is often useful to be able to easily specify common properties to use
 for all RPC invocations. For example, a common set of
-[headers](../obj/api/Google.Api.Gax.Grpc.CallSettings.yml#Google_Api_Gax_Grpc_CallSettings_Headers);
+[headers](../obj/api/Google.Api.Gax.Grpc.CallSettings.yml#Google_Api_Gax_Grpc_CallSettings_HeaderMutation);
 or a common
 [deadline](../obj/api/Google.Api.Gax.Grpc.CallSettings.yml#Google_Api_Gax_Grpc_CallSettings_Timing)
 for multiple RPC invocations.
