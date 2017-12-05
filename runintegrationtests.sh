@@ -63,13 +63,19 @@ then
     then
       temp_testdirs+=($snip_dir)
     fi 
+
+    smoke_dir="${api}/${api}.SmokeTests"
+    if [[ -d "$smoke_dir" ]]
+    then
+      temp_testdirs+=($smoke_dir)
+    fi 
   done
   declare -r testdirs=${temp_testdirs[*]}
 elif [[ "$RETRY_ARG" == "yes" && (-f "$FAILURE_FILE")]]
 then
   declare -r testdirs=$(cat $FAILURE_FILE)
 else
-  declare -r testdirs=$(echo */*.IntegrationTests */*.Snippets)
+  declare -r testdirs=$(echo */*.IntegrationTests */*.Snippets */*.SmokeTests)
 fi
 
 for testdir in $testdirs
@@ -80,15 +86,20 @@ do
   elif [[ "$testdir" =~ AspNet\. && "$OS" != "Windows_NT" ]]
   then
     echo "Skipping $testdir; test not supported on non windows environment."
+  elif [[ "$testdir" =~ SmokeTests ]]
+  then
+    # Smoke tests aren't unit tests - we just run them
+    echo "Running $testdir"
+    dotnet run -p $testdir || echo "$testdir" >> $FAILURE_TEMP_FILE
   elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
   then
     (cd $testdir; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)
   else
-    # For a non-coverage run, just run dotnet with the same arugments that we would have run
+    # For a non-coverage run, just run dotnet with the same arguments that we would have run
     # for coverage.
     (cd $testdir;
      dotnetargs=$(grep TargetArguments coverage.xml | sed -E 's/<\/?TargetArguments>//g');
-     dotnet $dotnetargs || echo "$testdir" >> $FAILURE_TEMP_FILE)
+     dotnet $dotnetargs || echo "$testdir" >> $FAILURE_TEMP_FILE) 
   fi
 done
 
