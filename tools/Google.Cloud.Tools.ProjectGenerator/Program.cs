@@ -329,6 +329,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
+            // Don't generate a project file if we've got a placeholder directory
+            if (Directory.GetFiles(directory, "*.cs").Length == 0)
+            {
+                return;
+            }
             var dependencies = new SortedList<string, string>(CommonTestDependencies);
             dependencies.Add(api.Id, "project");
 
