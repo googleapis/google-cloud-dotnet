@@ -18,7 +18,7 @@ build_api_docs() {
     dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources/*.csproj -- $api
   fi
   cp filterConfig.yml output/$api
-  $DOCFX metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt
+  $DOCFX metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
   dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown/*.csproj -- $api
   
@@ -29,7 +29,7 @@ build_api_docs() {
     cat dependencies/api/$dep/toc >> output/$api/obj/api/toc.yml
   done
   
-  $DOCFX build --logLevel Warning output/$api/docfx.json | tee errors.txt
+  $DOCFX build --logLevel Warning output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
 
   # Special case root: that should end up in the root of the assembled
