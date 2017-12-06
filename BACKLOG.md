@@ -8,57 +8,57 @@ the request and want to put work into it.
 
 ## Static code analysis
 
-- Issue: #1709
+- Issue: [#1709](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1709)
 - Status: Further investigation required. We already have
   some analysis in the form of custom Roslyn analyzers.
 
 ## Metadata client failure
 
-- Issue: #1568
+- Issue: [#1568](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1568)
 - Status: Metadata client is low priority right now; needs
   some more investigation
   
 ## Storage client-side encryption
 
-- Issue: #1451
+- Issue: [#1451](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1451)
 - Status: More details required.
 
 ## Consider changing the project site link in NuGet
 
-- Issue: #1399
+- Issue: [#1399](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1399)
 - Status: Need a more concrete proposal for what to link to.
   Different use cases suggest different options.
   
 ## Provide F# samples
 
-- Issue: #682
+- Issue: [#682](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/682)
 - Status: "Nice to have" but significant investment in terms of
   infrastructure/planning.
 
 ## Detect dev/non-dev environment in diagnostic libraries
 
-- Issue: #829
+- Issue: [#829](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/829)
 - Status: More consideration and customer feedback required.
 
 ## Dispose of ErrorReportingExceptionFilter
 
-- Issue: #803
+- Issue: [#803](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/803)
 - Status: Resources are alive as long as the application is anyway.
 
 ## Allow BigQuery Struct parameters to be specified
 
-- Issue: #500
+- Issue: [#500](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/500)
 - Status: No customer requests for this yet; can implement when
   reqiured.
 
 ## Allow Storage "delete bucket and content" in single call
 
-- Issue: #187
+- Issue: [#187](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/187)
 - Status: Prototyped, but complex due to considerations for
   parallelism. May not be worth the complexity.
 
 # Improve handling of Markdown from protos
 
-- Issue: #110
+- Issue: [#110](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/110)
 - Status: Ideally, protoc should do this. Massive work item, no
   funding right now.
