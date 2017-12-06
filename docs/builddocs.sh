@@ -14,6 +14,16 @@ build_api_docs() {
   then
     cp -r root output/root
     mkdir -p output/root/obj/api
+  elif [[ ! -d "../apis/$api/docs" ]]
+  then
+    if [[ -d "../apis/$api" ]]
+    then
+      echo "No docs directory for $api; ignoring"
+      return 0
+    else
+      echo "$api does not exist; aborting"
+      return 1
+    fi
   else
     dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources/*.csproj -- $api
   fi
