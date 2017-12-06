@@ -88,9 +88,10 @@ do
     echo "Skipping $testdir; test not supported on non windows environment."
   elif [[ "$testdir" =~ SmokeTests ]]
   then
-    # Smoke tests aren't unit tests - we just run them
+    # Smoke tests aren't unit tests - we just run them as console apps,
+    # passing in the project ID
     echo "Running $testdir"
-    dotnet run -p $testdir || echo "$testdir" >> $FAILURE_TEMP_FILE
+    dotnet run -p $testdir -- $TEST_PROJECT || echo "$testdir" >> $FAILURE_TEMP_FILE
   elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
   then
     (cd $testdir; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)
