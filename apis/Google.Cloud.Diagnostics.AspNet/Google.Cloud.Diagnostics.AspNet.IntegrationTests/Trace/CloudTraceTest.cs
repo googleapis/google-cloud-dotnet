@@ -12,14 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
+using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
+using Google.Protobuf.WellKnownTypes;
 using System;
+using System.IO;
+using System.Threading;
 using System.Web;
 using Xunit;
-using System.IO;
-using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Protobuf.WellKnownTypes;
-using System.Threading;
 
 namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 {
@@ -29,6 +30,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         private readonly string _testId;
         private readonly Timestamp _startTime;
 
+        private static readonly TraceOptions _noBuffer = TraceOptions.Create(bufferOptions: BufferOptions.NoBuffer());
         private readonly TraceEntryPolling _polling = new TraceEntryPolling();
 
         public CloudTraceTest()
@@ -49,7 +51,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [Fact]
         public void Trace()
         {
-            using (var cloudTrace = CloudTrace.InitializeInternal(new HttpApplication(), _projectId))
+            using (var cloudTrace = CloudTrace.InitializeInternal(new HttpApplication(), _projectId, _noBuffer))
             {
                 cloudTrace.BeginRequest(null, null);
                 cloudTrace.EndRequest(null, null);
@@ -65,7 +67,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         {
             var predicate = TraceDecisionPredicate.Create((req) => false);
             using (var cloudTrace = CloudTrace.InitializeInternal(new HttpApplication(), 
-                projectId: _projectId, traceFallbackPredicate: predicate))
+                projectId: _projectId, options: _noBuffer, traceFallbackPredicate: predicate))
             {
                 cloudTrace.BeginRequest(null, null);
                 cloudTrace.EndRequest(null, null);
@@ -78,7 +80,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [Fact]
         public void Trace_Multiple_Spans()
         {
-            using (var cloudTrace = CloudTrace.InitializeInternal(new HttpApplication(), _projectId))
+            using (var cloudTrace = CloudTrace.InitializeInternal(new HttpApplication(), _projectId, _noBuffer))
             {
                 cloudTrace.BeginRequest(null, null);
                 using (CloudTrace.Tracer.StartSpan("/another-trace"))
