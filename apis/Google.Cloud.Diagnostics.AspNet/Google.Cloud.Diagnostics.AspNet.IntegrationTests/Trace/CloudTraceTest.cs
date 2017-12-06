@@ -30,7 +30,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         private readonly string _testId;
         private readonly Timestamp _startTime;
 
-        private readonly TraceOptions _noBuffer = TraceOptions.Create(bufferOptions: BufferOptions.NoBuffer());
+        private static readonly TraceOptions _noBuffer = TraceOptions.Create(bufferOptions: BufferOptions.NoBuffer());
         private readonly TraceEntryPolling _polling = new TraceEntryPolling();
 
         public CloudTraceTest()
