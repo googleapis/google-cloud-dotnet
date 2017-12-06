@@ -22,12 +22,6 @@ the request and want to put work into it.
 
 - Issue: [#1451](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1451)
 - Status: More details required.
-
-## Consider changing the project site link in NuGet
-
-- Issue: [#1399](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1399)
-- Status: Need a more concrete proposal for what to link to.
-  Different use cases suggest different options.
   
 ## Provide F# samples
 
