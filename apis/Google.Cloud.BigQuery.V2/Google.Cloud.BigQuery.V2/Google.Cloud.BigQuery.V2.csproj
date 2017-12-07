@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-beta19</Version>
+    <Version>1.0.0</Version>
     <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.3</TargetFrameworks>
     <LangVersion>latest</LangVersion>
@@ -25,7 +25,7 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.2.1" />
-    <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.30.0.1018" />
+    <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.31.0.1044" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.5.0" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
