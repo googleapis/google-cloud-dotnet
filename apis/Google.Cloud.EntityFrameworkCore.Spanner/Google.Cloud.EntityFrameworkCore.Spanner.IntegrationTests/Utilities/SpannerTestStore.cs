@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -121,7 +122,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
         }
 
         private static int s_gStatements;
-        private const int s_skipToLine = 149;
+        private const int SkipToLine = 0;
 
         public static void ExecuteScript(string databaseName, string scriptPath)
         {
@@ -189,10 +190,10 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                         }
                         else if (tokens[0] == "INSERT")
                         {
-                            if (s_gStatements >= s_skipToLine)
-                            {
-                                Console.WriteLine("break here");
-                            }
+//                            if (s_gStatements >= s_skipToLine)
+//                            {
+//                                Console.WriteLine("break here");
+//                            }
 
                             // we do some simple parsing of a DML insert to a write command.
                             if (tokens.Count < 5 || tokens[0] != "INSERT" || tokens[1] != "INTO")
@@ -282,8 +283,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                                 command.Parameters[j].Value = values[j];
                             }
                         }
-                        if (s_gStatements < s_skipToLine) continue;
-
+                        if (s_gStatements < SkipToLine) continue;
                         command.ExecuteNonQuery();
                     }
 
@@ -446,7 +446,8 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                 {
                     connection.Close();
                 }
-                File.WriteAllText(@"C:\Users\benwu\readme.txt", $"Got to line {s_gStatements}");
+                //To debug the parse error, set SkipToLine= this value.
+                Trace.WriteLine($"Error encountered at statement {s_gStatements}");
             }
         }
 
