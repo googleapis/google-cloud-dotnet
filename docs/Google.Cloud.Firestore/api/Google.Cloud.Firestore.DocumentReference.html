@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DocumentReference
+   | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DocumentReference
+   | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Firestore.DocumentReference">
+  
+  
+  <h1 id="Google_Cloud_Firestore_DocumentReference" data-uid="Google.Cloud.Firestore.DocumentReference" class="text-break">Class DocumentReference
+  </h1>
+  <div class="markdown level0 summary"><p>A reference to a document in a Firestore database. The existence of
+this object does not imply that the document currently exists in storage.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DocumentReference</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Firestore.html">Google.Cloud.Firestore</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Firestore.dll</h6>
+  <h5 id="Google_Cloud_Firestore_DocumentReference_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DocumentReference : IEquatable&lt;DocumentReference&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Firestore_DocumentReference_Database_" data-uid="Google.Cloud.Firestore.DocumentReference.Database*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_Database" data-uid="Google.Cloud.Firestore.DocumentReference.Database">Database</h4>
+  <div class="markdown level1 summary"><p>The database which contains the document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FirestoreDb Database { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.FirestoreDb.html">FirestoreDb</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentReference_Id_" data-uid="Google.Cloud.Firestore.DocumentReference.Id*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_Id" data-uid="Google.Cloud.Firestore.DocumentReference.Id">Id</h4>
+  <div class="markdown level1 summary"><p>The final part of the complete document path; this is the identity of
+the document relative to its parent collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentReference_Parent_" data-uid="Google.Cloud.Firestore.DocumentReference.Parent*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_Parent" data-uid="Google.Cloud.Firestore.DocumentReference.Parent">Parent</h4>
+  <div class="markdown level1 summary"><p>The parent collection. Never null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CollectionReference Parent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.CollectionReference.html">CollectionReference</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentReference_Path_" data-uid="Google.Cloud.Firestore.DocumentReference.Path*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_Path" data-uid="Google.Cloud.Firestore.DocumentReference.Path">Path</h4>
+  <div class="markdown level1 summary"><p>The complete document path, including project and database ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Firestore_DocumentReference_Collection_" data-uid="Google.Cloud.Firestore.DocumentReference.Collection*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_Collection_System_String_" data-uid="Google.Cloud.Firestore.DocumentReference.Collection(System.String)">Collection(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Firestore.CollectionReference.html">CollectionReference</a> for a child collection of this document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CollectionReference Collection(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path to the collection, relative to this document. Must not be null, and must contain
+an odd number of slash-separated path elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.CollectionReference.html">CollectionReference</a></td>
+        <td><p>A <a class="xref" href="Google.Cloud.Firestore.CollectionReference.html">CollectionReference</a> for the specified collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentReference_CreateAsync_" data-uid="Google.Cloud.Firestore.DocumentReference.CreateAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_CreateAsync_System_Object_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.DocumentReference.CreateAsync(System.Object,System.Threading.CancellationToken)">CreateAsync(Object, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a document on the server with the given data. The document must not exist beforehand.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;WriteResult&gt; CreateAsync(object documentData, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">documentData</span></td>
+        <td><p>The data for the document. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to monitor for the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.WriteResult.html">WriteResult</a>&gt;</td>
+        <td><p>The write result of the server operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentReference_DeleteAsync_" data-uid="Google.Cloud.Firestore.DocumentReference.DeleteAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_DeleteAsync_Google_Cloud_Firestore_Precondition_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.DocumentReference.DeleteAsync(Google.Cloud.Firestore.Precondition,System.Threading.CancellationToken)">DeleteAsync(Precondition, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously deletes the document referred to by this path, with an optional precondition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;WriteResult&gt; DeleteAsync(Precondition precondition = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Precondition.html">Precondition</a></td>
+        <td><span class="parametername">precondition</span></td>
+        <td><p>Optional precondition for deletion. May be null, in which case the deletion is unconditional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to monitor for the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.WriteResult.html">WriteResult</a>&gt;</td>
+        <td><p>The write result of the server operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_DocumentReference_DeleteAsync_Google_Cloud_Firestore_Precondition_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If no precondition is specified and the document doesn&apos;t exist, this returned task will succeed. If a precondition
+is specified and not met, the returned task will fail with an <a class="xref" href="Grpc.Core.RpcException.html">RpcException</a>.</p>
+</div>
+  <a id="Google_Cloud_Firestore_DocumentReference_GetHashCode_" data-uid="Google.Cloud.Firestore.DocumentReference.GetHashCode*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_GetHashCode" data-uid="Google.Cloud.Firestore.DocumentReference.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <a id="Google_Cloud_Firestore_DocumentReference_ListCollectionsAsync_" data-uid="Google.Cloud.Firestore.DocumentReference.ListCollectionsAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_ListCollectionsAsync" data-uid="Google.Cloud.Firestore.DocumentReference.ListCollectionsAsync">ListCollectionsAsync()</h4>
+  <div class="markdown level1 summary"><p>Retrieves the collections within this document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;CollectionReference&gt; ListCollectionsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.CollectionReference.html">CollectionReference</a>&gt;</td>
+        <td><p>A lazily-iterated sequence of collection references within this document.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentReference_SetAsync_" data-uid="Google.Cloud.Firestore.DocumentReference.SetAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_SetAsync_System_Object_Google_Cloud_Firestore_SetOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.DocumentReference.SetAsync(System.Object,Google.Cloud.Firestore.SetOptions,System.Threading.CancellationToken)">SetAsync(Object, SetOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously sets data in the document, either replacing it completely or merging fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;WriteResult&gt; SetAsync(object documentData, SetOptions options = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">documentData</span></td>
+        <td><p>The data to store in the document. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.SetOptions.html">SetOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to use when updating the document. May be null, which is equivalent to <a class="xref" href="Google.Cloud.Firestore.SetOptions.html#Google_Cloud_Firestore_SetOptions_Overwrite">Overwrite</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to monitor for the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.WriteResult.html">WriteResult</a>&gt;</td>
+        <td><p>The write result of the server operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentReference_SnapshotAsync_" data-uid="Google.Cloud.Firestore.DocumentReference.SnapshotAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_SnapshotAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.DocumentReference.SnapshotAsync(System.Threading.CancellationToken)">SnapshotAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously fetches a snapshot of the document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DocumentSnapshot&gt; SnapshotAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.DocumentSnapshot.html">DocumentSnapshot</a>&gt;</td>
+        <td><p>A snapshot of the document. The snapshot may represent a missing document.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentReference_ToString_" data-uid="Google.Cloud.Firestore.DocumentReference.ToString*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_ToString" data-uid="Google.Cloud.Firestore.DocumentReference.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <a id="Google_Cloud_Firestore_DocumentReference_UpdateAsync_" data-uid="Google.Cloud.Firestore.DocumentReference.UpdateAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentReference_UpdateAsync_System_Collections_Generic_IDictionary_Google_Cloud_Firestore_FieldPath_System_Object__Google_Cloud_Firestore_Precondition_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.DocumentReference.UpdateAsync(System.Collections.Generic.IDictionary{Google.Cloud.Firestore.FieldPath,System.Object},Google.Cloud.Firestore.Precondition,System.Threading.CancellationToken)">UpdateAsync(IDictionary&lt;FieldPath, Object&gt;, Precondition, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously performs a set of updates on the document referred to by this path, with an optional precondition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;WriteResult&gt; UpdateAsync(IDictionary&lt;FieldPath, object&gt; updates, Precondition precondition = null, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<a class="xref" href="Google.Cloud.Firestore.FieldPath.html">FieldPath</a>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">updates</span></td>
+        <td><p>The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Precondition.html">Precondition</a></td>
+        <td><span class="parametername">precondition</span></td>
+        <td><p>Optional precondition for updating the document. May be null, which is equivalent to <a class="xref" href="Google.Cloud.Firestore.Precondition.html#Google_Cloud_Firestore_Precondition_MustExist">MustExist</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to monitor for the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.WriteResult.html">WriteResult</a>&gt;</td>
+        <td><p>The write result of the server operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>User guide | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="User guide | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="user-guide">User guide</h1>
+
+<h2 id="accessing-documents-and-collections">Accessing documents and collections</h2>
+<p>From <code>FirestoreDb</code>, you can create a <code>DocumentReference</code> or <code>CollectionReference</code> directly by
+their path from the database root. From a <code>DocumentReference</code> you can create a <code>CollectionReference</code>
+for a child collection, and likewise from a <code>CollectionReference</code> you can create a <code>DocumentReference</code>
+for a child document.</p>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+
+// You can create references directly from FirestoreDb:
+CollectionReference citiesFromDb = db.Collection(&quot;cities&quot;);
+DocumentReference londonFromDb = db.Document(&quot;cities/london&quot;);
+CollectionReference londonRestaurantsFromDb = db.Collection(&quot;cities/london/restaurants&quot;);
+
+// Or from other references:
+DocumentReference londonFromCities = citiesFromDb.Document(&quot;london&quot;);
+CollectionReference londonRestaurantFromLondon = londonFromDb.Collection(&quot;restaurants&quot;);
+</code></pre><h2 id="writing-documents">Writing documents</h2>
+<p>See the <a href="datamodel.html">data model</a> page for the different representations available. For the rest of
+this section, we will use the following attributed class:</p>
+<pre><code class="lang-cs">[FirestoreData]
+public class City
+{
+    [FirestoreProperty]
+    public string Name { get; set; }
+
+    [FirestoreProperty]
+    public string State { get; set; }
+
+    [FirestoreProperty]
+    public string Country { get; set; }
+
+    [FirestoreProperty(&quot;Capital&quot;)]
+    public bool IsCapital { get; set; }
+
+    [FirestoreProperty]
+    public long Population { get; set; }
+}
+</code></pre><h3 id="creating-a-document">Creating a document</h3>
+<p>A specific document can be created using <code>DocumentReference.CreateAsync</code>; alternatively,
+<code>CollectionReference.AddAsync</code> will generate a random document ID within the associated collection.</p>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+
+// Create a document with a random ID in the &quot;cities&quot; collection.
+CollectionReference collection = db.Collection(&quot;cities&quot;);
+City city = new City
+{
+    Name = &quot;Los Angeles&quot;,
+    Country = &quot;USA&quot;,
+    State = &quot;CA&quot;,
+    IsCapital = false,
+    Population = 3900000L
+};
+
+// Alternatively, collection.Document(&quot;los-angeles&quot;).Create(city);
+DocumentReference document = await collection.AddAsync(city);
+</code></pre><p>Once created, a document can be modified in multiple ways.</p>
+<h3 id="updating-specific-fields">Updating specific fields</h3>
+<p>Specific fields in the document can be modified using <code>DocumentReference.UpdateAsync</code>. Currently this
+requires a <code>Dictionary&lt;FieldMask, object&gt;</code> to be passed in, but we intend to improve this experience.
+See <a href="furtherwork.html">further work items</a> for more discussion over improving this.</p>
+<p>A precondition may be specified for the update.</p>
+<pre><code class="lang-cs">Dictionary&lt;FieldPath, object&gt; updates = new Dictionary&lt;FieldPath, object&gt;
+{
+    { new FieldPath(&quot;Population&quot;), 3900005L },
+    { new FieldPath(&quot;Country&quot;), &quot;United States of America&quot; }
+};
+await document.UpdateAsync(updates);
+</code></pre><h3 id="setting-document-data-with-optional-merging">Setting document data with optional merging</h3>
+<p>The <code>SetAsync</code> operation is versatile. By default it replaces all data in the document. For example, this code:</p>
+<pre><code class="lang-cs">City newCity = new City
+{
+    Name = &quot;Los Angeles&quot;,
+    Country = &quot;United States of America&quot;,
+    Population = 3900005L
+};
+await document.SetAsync(newCity);
+</code></pre><p>... would end up wiping out setting the <code>State</code> field in the document to a null value. (<code>Capital</code> would still be <code>false</code>,
+as that&#39;s the default value of the <code>bool</code> type.)</p>
+<p>To use our class model but specify which fields we want to merge, we can specify an appropriate <code>SetOptions</code>.</p>
+<pre><code class="lang-cs">City newCity = new City
+{
+    Name = &quot;Los Angeles&quot;,
+    Country = &quot;United States of America&quot;,
+    Population = 3900005L
+};
+await document.SetAsync(newCity, SetOptions.MergeFields(&quot;Country&quot;, &quot;Population&quot;));
+</code></pre><p>A simpler option in many cases - particularly when your document doesn&#39;t deal with nested data - is to use an anonymous
+type to specify the fields you want to modify, and specify <code>SetOptions.MergeAll</code> so that all the fields you&#39;ve specified
+in the anonymous type are merged, but no others.</p>
+<pre><code class="lang-cs">await document.SetAsync(
+    new { Country = &quot;United States of America&quot;, Population = 3900005L },
+    SetOptions.MergeAll);
+</code></pre><h3 id="deleting-a-document">Deleting a document</h3>
+<p>Deleting a document is simple via <code>DocumentReference.DeleteAsync</code>. A precondition can be specified (for example, to only
+delete the document if its last-update timestamp matches one you know); otherwise the delete operation is unconditional.</p>
+<pre><code class="lang-cs">await document.DeleteAsync();
+// With no precondition, the delete call succeeds even if the document
+// doesn&#39;t exist. With a precondition of &quot;document must exist&quot; the call
+// will fail if the document doesn&#39;t exist.
+await document.DeleteAsync();
+</code></pre><p>All of these operations can also be performed in batches via <code>WriteBatch</code>, or within transactions.</p>
+<h2 id="reading-documents">Reading documents</h2>
+<p>Once your data is in Firestore, you probably want to read it at some point.</p>
+<h3 id="fetching-a-document-snapshot">Fetching a document snapshot</h3>
+<p><code>DocumentReference</code> allows you to fetch a snapshot of a document:</p>
+<pre><code class="lang-cs">DocumentSnapshot snapshot = await document.SnapshotAsync();
+// Even if there&#39;s no document in the server, we still get a snapshot
+// back - but it knows the document doesn&#39;t exist.
+Console.WriteLine(snapshot.Exists);
+
+// Individual fields can be checked and fetched
+Console.WriteLine(snapshot.Contains(&quot;Planet&quot;)); // False
+Console.WriteLine(snapshot.GetField&lt;string&gt;(&quot;Name&quot;)); // Los Angeles
+
+// Or you can deserialize to a dictionary or a model
+City fetchedCity = snapshot.Deserialize&lt;City&gt;();
+Console.WriteLine(fetchedCity.Name); // Los Angeles
+</code></pre><h3 id="querying">Querying</h3>
+<p>You can also query collections, either directly to retrieve all the data from all the documents in the collection,
+or with filtering, projections, ordering etc.</p>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+CollectionReference collection = db.Collection(&quot;cities&quot;);
+
+// A CollectionReference is a Query, so we can just fetch everything
+QuerySnapshot allCities = await collection.SnapshotAsync();
+foreach (DocumentSnapshot document in allCities.Documents)
+{
+    // Do anything you&#39;d normally do with a DocumentSnapshot
+    City city = document.Deserialize&lt;City&gt;();
+    Console.WriteLine(city.Name);
+}
+
+// But we can apply filters, perform ordering etc too.
+Query bigCitiesQuery = collection
+    .Where(&quot;Population&quot;, QueryOperator.GreaterThan, 3000000)
+    .OrderByDescending(&quot;Population&quot;);
+
+QuerySnapshot bigCities = await bigCitiesQuery.SnapshotAsync();
+foreach (DocumentSnapshot document in bigCities.Documents)
+{
+    // Do anything you&#39;d normally do with a DocumentSnapshot
+    City city = document.Deserialize&lt;City&gt;();
+    Console.WriteLine($&quot;{city.Name}: {city.Population}&quot;);
+}
+</code></pre><h2 id="transactions">Transactions</h2>
+<p>Transactions accept a callback of user code, which is then passed a <code>Transaction</code> object
+to work with.</p>
+<p>Transactions always run asynchronously, but may be given a synchronous callback;
+as modification operations (<code>Create</code>, <code>Update</code> etc) are specified synchronously and batched locally,
+transactions often won&#39;t need any asynchronous code. However, the operations to fetch document or
+query snapshots within a transaction do require asynchrony.</p>
+<p>The callback can return optionally a value.</p>
+<p>The callback will be executed multiple times if the transaction needs to be retried due to conflicting
+modifications.</p>
+<p>In this section, we&#39;ll deal with a simple document that just has a single counter. We want to keep an up-to-date counter,
+and periodically (once per day, for example) we&#39;ll update another counter to match the current value. For more
+details of counters, see the <a href="https://firebase.google.com/docs/firestore/solutions/counters">main Firestore user guide</a>.</p>
+<h3 id="creating-multiple-documents-atomically">Creating multiple documents atomically</h3>
+<p>If we only have a single current counter and a single daily counter, we could </p>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+CollectionReference collection = db.Collection(&quot;counters&quot;);
+DocumentReference currentCounter = collection.Document(&quot;current&quot;);
+DocumentReference dailyCounter = collection.Document(&quot;daily&quot;);
+
+await db.RunTransactionAsync(transaction =&gt;
+{
+    transaction.Create(currentCounter, new { Counter = 0 });
+    transaction.Create(dailyCounter, new { Counter = 0 });
+});
+</code></pre><h3 id="creating-multiple-documents-atomically-and-returning-a-value">Creating multiple documents atomically and returning a value</h3>
+<p>If we want to keep multiple counters, we might want to generate a &quot;probably unique&quot; ID using the current client time,
+and then use that as a prefix for both document names, returning the generated prefix from the transaction.</p>
+<p>(Note: I&#39;m not sure this is a good example.)</p>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+CollectionReference collection = db.Collection(&quot;counters&quot;);
+
+string result = await db.RunTransactionAsync(transaction =&gt;
+{
+    string prefix = DateTime.UtcNow.ToString(&quot;yyyyMMddHHmmsssfffffff&quot;, CultureInfo.InvariantCulture);
+    transaction.Create(collection.Document(prefix + &quot;-current&quot;), new { Counter = 0 });
+    transaction.Create(collection.Document(prefix + &quot;-daily&quot;), new { Counter = 0 });
+    return prefix;
+});
+Console.WriteLine(result); // The prefix we generated
+</code></pre><h3 id="updating-the-daily-counter-from-the-current-one">Updating the daily counter from the current one</h3>
+<p>Once a day, we want to atomically fetch the current counter, and update the daily one.</p>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+CollectionReference collection = db.Collection(&quot;counters&quot;);
+DocumentReference currentCounter = collection.Document(&quot;current&quot;);
+DocumentReference dailyCounter = collection.Document(&quot;daily&quot;);
+
+await db.RunTransactionAsync(async transaction =&gt;
+{
+    DocumentSnapshot currentSnapshot = await transaction.GetDocumentSnapshotAsync(currentCounter);
+    long counter = currentSnapshot.GetField&lt;long&gt;(&quot;Counter&quot;);
+    transaction.Set(dailyCounter, new { Counter = counter });
+});
+</code></pre><h3 id="updating-the-current-counter">Updating the current counter</h3>
+<p>When we update the current counter, we may well want to know the current value afterwards. That&#39;s easily done by
+returning it from the callback:</p>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+CollectionReference collection = db.Collection(&quot;counters&quot;);
+DocumentReference currentCounter = collection.Document(&quot;current&quot;);
+
+long newValue = await db.RunTransactionAsync(async transaction =&gt;
+{
+    DocumentSnapshot currentSnapshot = await transaction.GetDocumentSnapshotAsync(currentCounter);
+    long counter = currentSnapshot.GetField&lt;long&gt;(&quot;Counter&quot;) + 1;
+    transaction.Set(currentCounter, new { Counter = counter });
+    return counter;
+});
+// Use the value we&#39;ve just written in application code
+Console.WriteLine(newValue);
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

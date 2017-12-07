@@ -1,0 +1,963 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Query
+   | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Query
+   | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Firestore.Query">
+  
+  
+  <h1 id="Google_Cloud_Firestore_Query" data-uid="Google.Cloud.Firestore.Query" class="text-break">Class Query
+  </h1>
+  <div class="markdown level0 summary"><p>A query against a collection.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Query</span></div>
+      <div class="level2"><a class="xref" href="Google.Cloud.Firestore.CollectionReference.html">CollectionReference</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Firestore.html">Google.Cloud.Firestore</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Firestore.dll</h6>
+  <h5 id="Google_Cloud_Firestore_Query_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Query</code></pre>
+  </div>
+  <h5 id="Google_Cloud_Firestore_Query_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p><a class="xref" href="Google.Cloud.Firestore.CollectionReference.html">CollectionReference</a> derives from this class as a &quot;return-all&quot; query against the
+collection it refers to.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Firestore_Query_Database_" data-uid="Google.Cloud.Firestore.Query.Database*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_Database" data-uid="Google.Cloud.Firestore.Query.Database">Database</h4>
+  <div class="markdown level1 summary"><p>The database this query will search over.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FirestoreDb Database { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.FirestoreDb.html">FirestoreDb</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Firestore_Query_EndAt_" data-uid="Google.Cloud.Firestore.Query.EndAt*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_EndAt_System_Object___" data-uid="Google.Cloud.Firestore.Query.EndAt(System.Object[])">EndAt(Object[])</h4>
+  <div class="markdown level1 summary"><p>Creates and returns a new query that ends at the provided fields relative to the order of the
+query. The order of the field values must match the order of the order-by clauses of the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query EndAt(params object[] fieldValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">fieldValues</span></td>
+        <td><p>The field values. Must not be null or empty, or have more values than query has orderings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the specified end position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_EndAt_System_Object____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call replaces any previously specified end position in the query.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_EndBefore_" data-uid="Google.Cloud.Firestore.Query.EndBefore*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_EndBefore_System_Object___" data-uid="Google.Cloud.Firestore.Query.EndBefore(System.Object[])">EndBefore(Object[])</h4>
+  <div class="markdown level1 summary"><p>Creates and returns a new query that ends before the provided fields relative to the order of the
+query. The order of the field values must match the order of the order-by clauses of the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query EndBefore(params object[] fieldValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">fieldValues</span></td>
+        <td><p>The field values. Must not be null or empty, or have more values than query has orderings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the specified end position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_EndBefore_System_Object____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call replaces any previously specified end position in the query.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_Limit_" data-uid="Google.Cloud.Firestore.Query.Limit*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_Limit_System_Int32_" data-uid="Google.Cloud.Firestore.Query.Limit(System.Int32)">Limit(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specifies the maximum number of results to return.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query Limit(int limit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The maximum number of results to return. Must be greater than or equal to 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the specified limit applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_Limit_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call replaces any previously-specified limit in the query.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_Offset_" data-uid="Google.Cloud.Firestore.Query.Offset*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_Offset_System_Int32_" data-uid="Google.Cloud.Firestore.Query.Offset(System.Int32)">Offset(Int32)</h4>
+  <div class="markdown level1 summary"><p>Specifies a number of results to skip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query Offset(int offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The number of results to skip. Must be greater than or equal to 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the specified offset applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_Offset_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call replaces any previously-specified offset in the query.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_OrderBy_" data-uid="Google.Cloud.Firestore.Query.OrderBy*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_OrderBy_Google_Cloud_Firestore_FieldPath_" data-uid="Google.Cloud.Firestore.Query.OrderBy(Google.Cloud.Firestore.FieldPath)">OrderBy(FieldPath)</h4>
+  <div class="markdown level1 summary"><p>Adds an additional ascending ordering by the specified path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query OrderBy(FieldPath fieldPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.FieldPath.html">FieldPath</a></td>
+        <td><span class="parametername">fieldPath</span></td>
+        <td><p>The field path to order by. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the additional specified ordering applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_OrderBy_Google_Cloud_Firestore_FieldPath__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Unlike LINQ&apos;s OrderBy method, this call adds additional subordinate orderings to any
+additionally specified. So <code>query.OrderBy(&quot;foo&quot;).OrderBy(&quot;bar&quot;)</code> is similar
+to a LINQ <code>query.OrderBy(x =&gt; x.Foo).ThenBy(x =&gt; x.Bar)</code>.
+</p>
+<p>
+This method cannot be called after a start/end cursor has been specified with
+<a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StartAt_System_Object___">StartAt(Object[])</a>, <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StartAfter_System_Object___">StartAfter(Object[])</a>, <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_EndAt_System_Object___">EndAt(Object[])</a> or <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_EndBefore_System_Object___">EndBefore(Object[])</a>.
+</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_OrderBy_" data-uid="Google.Cloud.Firestore.Query.OrderBy*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_OrderBy_System_String_" data-uid="Google.Cloud.Firestore.Query.OrderBy(System.String)">OrderBy(String)</h4>
+  <div class="markdown level1 summary"><p>Adds an additional ascending ordering by the specified path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query OrderBy(string fieldPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fieldPath</span></td>
+        <td><p>The dot-separated field path to order by. Must not be null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the additional specified ordering applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_OrderBy_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Unlike LINQ&apos;s OrderBy method, this call adds additional subordinate orderings to any
+additionally specified. So <code>query.OrderBy(&quot;foo&quot;).OrderBy(&quot;bar&quot;)</code> is similar
+to a LINQ <code>query.OrderBy(x =&gt; x.Foo).ThenBy(x =&gt; x.Bar)</code>.
+</p>
+<p>
+This method cannot be called after a start/end cursor has been specified with
+<a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StartAt_System_Object___">StartAt(Object[])</a>, <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StartAfter_System_Object___">StartAfter(Object[])</a>, <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_EndAt_System_Object___">EndAt(Object[])</a> or <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_EndBefore_System_Object___">EndBefore(Object[])</a>.
+</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_OrderByDescending_" data-uid="Google.Cloud.Firestore.Query.OrderByDescending*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_OrderByDescending_Google_Cloud_Firestore_FieldPath_" data-uid="Google.Cloud.Firestore.Query.OrderByDescending(Google.Cloud.Firestore.FieldPath)">OrderByDescending(FieldPath)</h4>
+  <div class="markdown level1 summary"><p>Adds an additional descending ordering by the specified path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query OrderByDescending(FieldPath fieldPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.FieldPath.html">FieldPath</a></td>
+        <td><span class="parametername">fieldPath</span></td>
+        <td><p>The field path to order by. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the additional specified ordering applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_OrderByDescending_Google_Cloud_Firestore_FieldPath__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Unlike LINQ&apos;s OrderBy method, this call adds additional subordinate orderings to any
+additionally specified. So <code>query.OrderBy(&quot;foo&quot;).OrderByDescending(&quot;bar&quot;)</code> is similar
+to a LINQ <code>query.OrderBy(x =&gt; x.Foo).ThenByDescending(x =&gt; x.Bar)</code>.
+</p>
+<p>
+This method cannot be called after a start/end cursor has been specified with
+<a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StartAt_System_Object___">StartAt(Object[])</a>, <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StartAfter_System_Object___">StartAfter(Object[])</a>, <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_EndAt_System_Object___">EndAt(Object[])</a> or <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_EndBefore_System_Object___">EndBefore(Object[])</a>.
+</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_OrderByDescending_" data-uid="Google.Cloud.Firestore.Query.OrderByDescending*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_OrderByDescending_System_String_" data-uid="Google.Cloud.Firestore.Query.OrderByDescending(System.String)">OrderByDescending(String)</h4>
+  <div class="markdown level1 summary"><p>Adds an additional descending ordering by the specified path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query OrderByDescending(string fieldPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fieldPath</span></td>
+        <td><p>The dot-separated field path to order by. Must not be null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the additional specified ordering applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_OrderByDescending_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Unlike LINQ&apos;s OrderBy method, this call adds additional subordinate orderings to any
+additionally specified. So <code>query.OrderBy(&quot;foo&quot;).OrderByDescending(&quot;bar&quot;)</code> is similar
+to a LINQ <code>query.OrderBy(x =&gt; x.Foo).ThenByDescending(x =&gt; x.Bar)</code>.
+</p>
+<p>
+This method cannot be called after a start/end cursor has been specified with
+<a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StartAt_System_Object___">StartAt(Object[])</a>, <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StartAfter_System_Object___">StartAfter(Object[])</a>, <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_EndAt_System_Object___">EndAt(Object[])</a> or <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_EndBefore_System_Object___">EndBefore(Object[])</a>.
+</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_Select_" data-uid="Google.Cloud.Firestore.Query.Select*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_Select_Google_Cloud_Firestore_FieldPath___" data-uid="Google.Cloud.Firestore.Query.Select(Google.Cloud.Firestore.FieldPath[])">Select(FieldPath[])</h4>
+  <div class="markdown level1 summary"><p>Specifies the field paths to return in the results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query Select(params FieldPath[] fieldPaths)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.FieldPath.html">FieldPath</a>[]</td>
+        <td><span class="parametername">fieldPaths</span></td>
+        <td><p>The field paths to select. Must not be null or empty, or contain null elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the specified projection applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_Select_Google_Cloud_Firestore_FieldPath____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call replaces any previously-specified projections in the query.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_Select_" data-uid="Google.Cloud.Firestore.Query.Select*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_Select_System_String___" data-uid="Google.Cloud.Firestore.Query.Select(System.String[])">Select(String[])</h4>
+  <div class="markdown level1 summary"><p>Specifies the field paths to return in the results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query Select(params string[] fieldPaths)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">fieldPaths</span></td>
+        <td><p>The dot-separated field paths to select. Must not be null or empty, or contain null or empty
+elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the specified projection applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_Select_System_String____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call replaces any previously-specified projections in the query.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_SnapshotAsync_" data-uid="Google.Cloud.Firestore.Query.SnapshotAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_SnapshotAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.Query.SnapshotAsync(System.Threading.CancellationToken)">SnapshotAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously takes a snapshot of all documents matching the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;QuerySnapshot&gt; SnapshotAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token for the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.QuerySnapshot.html">QuerySnapshot</a>&gt;</td>
+        <td><p>A snapshot of documents matching the query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Query_StartAfter_" data-uid="Google.Cloud.Firestore.Query.StartAfter*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_StartAfter_System_Object___" data-uid="Google.Cloud.Firestore.Query.StartAfter(System.Object[])">StartAfter(Object[])</h4>
+  <div class="markdown level1 summary"><p>Creates and returns a new query that starts after the provided fields relative to the order of the
+query. The order of the field values must match the order of the order-by clauses of the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query StartAfter(params object[] fieldValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">fieldValues</span></td>
+        <td><p>The field values. Must not be null or empty, or have more values than query has orderings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the specified start position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_StartAfter_System_Object____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call replaces any previously specified start position in the query.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_StartAt_" data-uid="Google.Cloud.Firestore.Query.StartAt*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_StartAt_System_Object___" data-uid="Google.Cloud.Firestore.Query.StartAt(System.Object[])">StartAt(Object[])</h4>
+  <div class="markdown level1 summary"><p>Creates and returns a new query that starts at the provided fields relative to the order of the
+query. The order of the field values must match the order of the order-by clauses of the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query StartAt(params object[] fieldValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">fieldValues</span></td>
+        <td><p>The field values. Must not be null or empty, or have more values than query has orderings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the specified start position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_StartAt_System_Object____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call replaces any previously specified start position in the query.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_StreamAsync_" data-uid="Google.Cloud.Firestore.Query.StreamAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_StreamAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.Query.StreamAsync(System.Threading.CancellationToken)">StreamAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Returns an asynchronous sequence of snapshots matching the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;DocumentSnapshot&gt; StreamAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token for the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.DocumentSnapshot.html">DocumentSnapshot</a>&gt;</td>
+        <td><p>An asynchronous sequence of document snapshots matching the query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_StreamAsync_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Each time you iterate over the sequence, a new query will be performed.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_Where_" data-uid="Google.Cloud.Firestore.Query.Where*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_Where_Google_Cloud_Firestore_FieldPath_Google_Cloud_Firestore_QueryOperator_System_Object_" data-uid="Google.Cloud.Firestore.Query.Where(Google.Cloud.Firestore.FieldPath,Google.Cloud.Firestore.QueryOperator,System.Object)">Where(FieldPath, QueryOperator, Object)</h4>
+  <div class="markdown level1 summary"><p>Add a filter for the given field path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query Where(FieldPath fieldPath, QueryOperator op, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.FieldPath.html">FieldPath</a></td>
+        <td><span class="parametername">fieldPath</span></td>
+        <td><p>The field path to filter on. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.QueryOperator.html">QueryOperator</a></td>
+        <td><span class="parametername">op</span></td>
+        <td><p>The filter operator.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to compare in the filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the additional specified filter applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_Where_Google_Cloud_Firestore_FieldPath_Google_Cloud_Firestore_QueryOperator_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call adds additional filters to any previously-specified ones.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Query_Where_" data-uid="Google.Cloud.Firestore.Query.Where*"></a>
+  <h4 id="Google_Cloud_Firestore_Query_Where_System_String_Google_Cloud_Firestore_QueryOperator_System_Object_" data-uid="Google.Cloud.Firestore.Query.Where(System.String,Google.Cloud.Firestore.QueryOperator,System.Object)">Where(String, QueryOperator, Object)</h4>
+  <div class="markdown level1 summary"><p>Add a filter for the given field path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query Where(string fieldPath, QueryOperator op, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fieldPath</span></td>
+        <td><p>The dot-separated field path to filter on. Must not be null or empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.QueryOperator.html">QueryOperator</a></td>
+        <td><span class="parametername">op</span></td>
+        <td><p>The filter operator. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to compare in the filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></td>
+        <td><p>A new query based on the current one, but with the additional specified filter applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Query_Where_System_String_Google_Cloud_Firestore_QueryOperator_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call adds additional filters to any previously-specified ones.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

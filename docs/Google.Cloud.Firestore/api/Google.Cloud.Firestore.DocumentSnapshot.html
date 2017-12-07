@@ -1,0 +1,784 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DocumentSnapshot
+   | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DocumentSnapshot
+   | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Firestore.DocumentSnapshot">
+  
+  
+  <h1 id="Google_Cloud_Firestore_DocumentSnapshot" data-uid="Google.Cloud.Firestore.DocumentSnapshot" class="text-break">Class DocumentSnapshot
+  </h1>
+  <div class="markdown level0 summary"><p>An immutable snapshot of the data for a document.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DocumentSnapshot</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Firestore.html">Google.Cloud.Firestore</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Firestore.dll</h6>
+  <h5 id="Google_Cloud_Firestore_DocumentSnapshot_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DocumentSnapshot</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_CreateTime_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.CreateTime*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_CreateTime" data-uid="Google.Cloud.Firestore.DocumentSnapshot.CreateTime">CreateTime</h4>
+  <div class="markdown level1 summary"><p>The creation time of the document if it exists, or null otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp? CreateTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_Database_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Database*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_Database" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Database">Database</h4>
+  <div class="markdown level1 summary"><p>The database that owns the document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FirestoreDb Database { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.FirestoreDb.html">FirestoreDb</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_Exists_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Exists*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_Exists" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Exists">Exists</h4>
+  <div class="markdown level1 summary"><p>Whether or not the document exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Exists { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_Id_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Id*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_Id" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Id">Id</h4>
+  <div class="markdown level1 summary"><p>The ID of the document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_ReadTime_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.ReadTime*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_ReadTime" data-uid="Google.Cloud.Firestore.DocumentSnapshot.ReadTime">ReadTime</h4>
+  <div class="markdown level1 summary"><p>The time at which this snapshot was read.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp ReadTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_Reference_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Reference*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_Reference" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Reference">Reference</h4>
+  <div class="markdown level1 summary"><p>The full reference to the document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DocumentReference Reference { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_UpdateTime_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.UpdateTime*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_UpdateTime" data-uid="Google.Cloud.Firestore.DocumentSnapshot.UpdateTime">UpdateTime</h4>
+  <div class="markdown level1 summary"><p>The update time of the document if it exists, or null otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp? UpdateTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_Contains_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Contains*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_Contains_Google_Cloud_Firestore_FieldPath_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Contains(Google.Cloud.Firestore.FieldPath)">Contains(FieldPath)</h4>
+  <div class="markdown level1 summary"><p>Determines whether or not the given field path is present in the document. If this snapshot represents
+a missing document, this method will always return false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(FieldPath path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.FieldPath.html">FieldPath</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The field path to check. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the specified path represents a field in the document; false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_Contains_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Contains*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_Contains_System_String_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Contains(System.String)">Contains(String)</h4>
+  <div class="markdown level1 summary"><p>Determines whether or not the given field path is present in the document. If this snapshot represents
+a missing document, this method will always return false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The dot-separated field path to check. Must not be null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the specified path represents a field in the document; false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_Deserialize_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Deserialize*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_Deserialize__1" data-uid="Google.Cloud.Firestore.DocumentSnapshot.Deserialize``1">Deserialize&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Deserializes the document data as the specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Deserialize&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The deserialized data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type to deserialize the document data as.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>This snapshot represents a missing document, i.e. <a class="xref" href="Google.Cloud.Firestore.DocumentSnapshot.html#Google_Cloud_Firestore_DocumentSnapshot_Exists">Exists</a> is false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_GetField_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.GetField*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_GetField__1_Google_Cloud_Firestore_FieldPath_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.GetField``1(Google.Cloud.Firestore.FieldPath)">GetField&lt;T&gt;(FieldPath)</h4>
+  <div class="markdown level1 summary"><p>Fetches a field value from the document, throwing an exception if the field does not exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T GetField&lt;T&gt;(FieldPath path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.FieldPath.html">FieldPath</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The field path to fetch. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The deserialized value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The field does not exist in the document data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_GetField_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.GetField*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_GetField__1_System_String_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.GetField``1(System.String)">GetField&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"><p>Fetches a field value from the document, throwing an exception if the field does not exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T GetField&lt;T&gt;(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The dot-separated field path to fetch. Must not be null or empty</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The deserialized value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The field does not exist in the document data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_ToDictionary_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.ToDictionary*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_ToDictionary" data-uid="Google.Cloud.Firestore.DocumentSnapshot.ToDictionary">ToDictionary()</h4>
+  <div class="markdown level1 summary"><p>Returns the document data as a <span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, object&gt; ToDictionary()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><p>A <span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span> containing the document data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>This snapshot represents a missing document, i.e. <a class="xref" href="Google.Cloud.Firestore.DocumentSnapshot.html#Google_Cloud_Firestore_DocumentSnapshot_Exists">Exists</a> is false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_TryGetField_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.TryGetField*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_TryGetField__1_Google_Cloud_Firestore_FieldPath___0__" data-uid="Google.Cloud.Firestore.DocumentSnapshot.TryGetField``1(Google.Cloud.Firestore.FieldPath,``0@)">TryGetField&lt;T&gt;(FieldPath, out T)</h4>
+  <div class="markdown level1 summary"><p>Attempts to fetch the given field path from the document, returning whether or not it was found, and deserializing
+it if it was found.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetField&lt;T&gt;(FieldPath path, out T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.FieldPath.html">FieldPath</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The field path to fetch. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>When this method returns, contains the deserialized value if the field was found, or the default value
+of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the field was found; false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type to deserialize the value to, if it is found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_DocumentSnapshot_TryGetField__1_Google_Cloud_Firestore_FieldPath___0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not throw an exception if the field is not found, but does throw an exception if the field was found
+but cannot be deserialized.</p>
+</div>
+  <a id="Google_Cloud_Firestore_DocumentSnapshot_TryGetField_" data-uid="Google.Cloud.Firestore.DocumentSnapshot.TryGetField*"></a>
+  <h4 id="Google_Cloud_Firestore_DocumentSnapshot_TryGetField__1_System_String___0__" data-uid="Google.Cloud.Firestore.DocumentSnapshot.TryGetField``1(System.String,``0@)">TryGetField&lt;T&gt;(String, out T)</h4>
+  <div class="markdown level1 summary"><p>Attempts to fetch the given field path from the document, returning whether or not it was found, and deserializing
+it if it was found.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetField&lt;T&gt;(string path, out T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The dot-separated field path to fetch. Must not be null or empty</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>When this method returns, contains the deserialized value if the field was found, or the default value
+of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the field was found; false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type to deserialize the value to, if it is found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_DocumentSnapshot_TryGetField__1_System_String___0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not throw an exception if the field is not found, but does throw an exception if the field was found
+but cannot be deserialized.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

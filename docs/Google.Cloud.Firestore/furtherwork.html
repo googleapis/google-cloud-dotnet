@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Further work and decisions | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Further work and decisions | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="further-work-and-decisions">Further work and decisions</h1>
+
+<p>The library is currently at a reasonably early stage. This page provides a list of further work that needs doing and
+public API options to consider. This is a subset of the &quot;TODO&quot; comments found in the code.</p>
+<h2 id="expose-cleaner-ways-of-performing-update-operations">Expose cleaner ways of performing update operations</h2>
+<p>We need to think about this before implementing, as it affects <code>DocumentReference</code>, <code>Transaction</code> and <code>WriteBatch</code>.</p>
+<p>A few possible options (leaving off the preconditions and any cancellation token):</p>
+<ul>
+<li><code>Update(DocumentReference documentReference, object documentData)</code><br>Used with anonymous types or dictionaries, this could be great for top-level
+fields: <code>Update(doc, new { Score = 20 })</code>. It gets harder when thinking about
+nested maps.</li>
+<li><code>Update(DocumentReference documentReference, string field, object value)</code> and
+potentially multiple overloads for more fields (alternating field, value, field, value).
+This could be nice, but will be limited.</li>
+<li><code>Update(DocumentReference documentReference, params (string path, object value)[] updates)</code><br>Required users to be aware of C# 7 tuples, but then it&#39;s pretty nice. (It also adds a dependency
+on <code>System.ValueTuple</code>, but that shouldn&#39;t be a big deal.)</li>
+</ul>
+<h2 id="do-we-need-synchronous-operations">Do we need synchronous operations?</h2>
+<p>Currently everything that interacts with the server uses asynchrony.
+I&#39;m tempted to keep it that way, but we could provide synchronous operations if necessary.
+It&#39;s slightly awkward to wrap the streaming calls in synchronous operations though.</p>
+<h2 id="serialization">Serialization</h2>
+<h3 id="performance">Performance</h3>
+<p>Currently we use a lot of reflection all the time. We should be able to use expression trees to build
+up complete serializers and deserializers once per target type, if we&#39;re careful. This is a lot of effort,
+but should improve client-side performance a lot. It should be fairly easy to benchmark, and can be optimized without
+affecting the public API.</p>
+<h3 id="data-type-support">Data type support</h3>
+<p>Should we try to support <code>Guid</code>, <code>decimal</code>, anything similar? Other collection types?</p>
+<p>We currently implicitly support <code>ExpandoObject</code> for serialization, but we could deserialize to that as well
+(defaulting all nested maps to that too), if accessing data via dynamic types is useful.</p>
+<h2 id="options-for-attributed-classes">Options for attributed classes</h2>
+<p>We can provide a lot of tweaking of the behavior of attributed classes. For example:</p>
+<ul>
+<li>Specify the default naming convention for all properties in the class, e.g. convert <code>FooBar</code> to <code>foo_bar</code> automatically if that&#39;s the specified convention</li>
+<li>Specify what should happen to fields that are being deserialized and don&#39;t have a matching property</li>
+<li>Specify whether <em>all</em> properties should be considered by the serializer/deserializer, or only those with <code>[FirestoreProperty]</code></li>
+</ul>
+<h2 id="options-for-asynchrony-in-transactions">Options for asynchrony in transactions</h2>
+<p>We use <code>ConfigureAwait(false)</code> everywhere in the library when awaiting asynchronous operations.
+Normally that&#39;s fine, but if a user attempts to perform any context-sensitive work in a transaction callback,
+they may be surprised that the callback is not operating in the calling context. Should this be configurable? If so, how?</p>
+<h2 id="transactions">Transactions</h2>
+<h3 id="snapshot-handling">Snapshot handling</h3>
+<p>Are the names of <code>GetQuerySnapshotAsync</code> and <code>GetDocumentSnapshotAsync</code> appropriate? <code>Query</code> and <code>DocumentReference</code> have just <code>SnapshotAsync</code>,
+but we don&#39;t want to be ambiguous in the naming within <code>Transaction</code>. Perhaps <code>SnapshotQueryAsync</code> and <code>SnapshotDocumentAsync</code>?</p>
+<h3 id="retries">Retries</h3>
+<p>The semantics of transaction retry probably need to be tweaked, including the &quot;per-transaction&quot; retry of the <code>Commit</code> operation.</p>
+<h2 id="query-options">Query options</h2>
+<ul>
+<li>Should we <em>attempt</em> to fake actual LINQ support? It would be very limited.</li>
+<li>Are we happy with <code>Query.Where(string field, QueryOperatior op, object value)</code>? We could have extra methods (<code>WhereEqual</code> etc)</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<p>How can we make it easy for users to test their client code? Possible options:</p>
+<ul>
+<li>Make common interaction points virtual, to allow for mocking. (Could be awkard - while <code>FirestoreDb</code> is a natural 
+service-like class, <code>DocumentReference</code> and <code>CollectionReference</code> are less so, but interact with the service.)</li>
+<li>Provide a C# in-process emulator</li>
+<li>Provide a local server emulator</li>
+</ul>
+<h2 id="database-selection">Database selection</h2>
+<p>Currently the library assumes that the limitation on database ID to &quot;(default)&quot; will be lifted soon enough for it to
+be worth the library having the flexibility of allowing a database ID to be specified. (All our tests do this.) If the
+&quot;single-database&quot; limitation is going to be longer-lasting, we should force &quot;(default)&quot; instead.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

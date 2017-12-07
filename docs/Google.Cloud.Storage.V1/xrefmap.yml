@@ -13874,6 +13874,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.ChunkSize
   fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.ChunkSize
   nameWithType: DownloadObjectOptions.ChunkSize
+- uid: Google.Cloud.Storage.V1.DownloadObjectOptions.DownloadValidationMode
+  name: DownloadValidationMode
+  href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_DownloadValidationMode
+  commentId: P:Google.Cloud.Storage.V1.DownloadObjectOptions.DownloadValidationMode
+  fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.DownloadValidationMode
+  nameWithType: DownloadObjectOptions.DownloadValidationMode
+- uid: Google.Cloud.Storage.V1.DownloadObjectOptions.DownloadValidationMode*
+  name: DownloadValidationMode
+  href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_DownloadValidationMode_
+  commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.DownloadValidationMode
+  fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.DownloadValidationMode
+  nameWithType: DownloadObjectOptions.DownloadValidationMode
 - uid: Google.Cloud.Storage.V1.DownloadObjectOptions.EncryptionKey
   name: EncryptionKey
   href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_EncryptionKey
@@ -13898,18 +13910,6 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.Generation
   fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.Generation
   nameWithType: DownloadObjectOptions.Generation
-- uid: Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode
-  name: HashValidationMode
-  href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_HashValidationMode
-  commentId: P:Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode
-  fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode
-  nameWithType: DownloadObjectOptions.HashValidationMode
-- uid: Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode*
-  name: HashValidationMode
-  href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_HashValidationMode_
-  commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode
-  fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.HashValidationMode
-  nameWithType: DownloadObjectOptions.HashValidationMode
 - uid: Google.Cloud.Storage.V1.DownloadObjectOptions.IfGenerationMatch
   name: IfGenerationMatch
   href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_IfGenerationMatch
@@ -13982,6 +13982,24 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.UserProject
   fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.UserProject
   nameWithType: DownloadObjectOptions.UserProject
+- uid: Google.Cloud.Storage.V1.DownloadValidationMode
+  name: DownloadValidationMode
+  href: api/Google.Cloud.Storage.V1.DownloadValidationMode.html
+  commentId: T:Google.Cloud.Storage.V1.DownloadValidationMode
+  fullName: Google.Cloud.Storage.V1.DownloadValidationMode
+  nameWithType: DownloadValidationMode
+- uid: Google.Cloud.Storage.V1.DownloadValidationMode.Always
+  name: Always
+  href: api/Google.Cloud.Storage.V1.DownloadValidationMode.html#Google_Cloud_Storage_V1_DownloadValidationMode_Always
+  commentId: F:Google.Cloud.Storage.V1.DownloadValidationMode.Always
+  fullName: Google.Cloud.Storage.V1.DownloadValidationMode.Always
+  nameWithType: DownloadValidationMode.Always
+- uid: Google.Cloud.Storage.V1.DownloadValidationMode.Never
+  name: Never
+  href: api/Google.Cloud.Storage.V1.DownloadValidationMode.html#Google_Cloud_Storage_V1_DownloadValidationMode_Never
+  commentId: F:Google.Cloud.Storage.V1.DownloadValidationMode.Never
+  fullName: Google.Cloud.Storage.V1.DownloadValidationMode.Never
+  nameWithType: DownloadValidationMode.Never
 - uid: Google.Cloud.Storage.V1.EncryptionKey
   name: EncryptionKey
   href: api/Google.Cloud.Storage.V1.EncryptionKey.html
@@ -14285,24 +14303,6 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.UserProject
   fullName: Google.Cloud.Storage.V1.GetStorageServiceAccountEmailOptions.UserProject
   nameWithType: GetStorageServiceAccountEmailOptions.UserProject
-- uid: Google.Cloud.Storage.V1.HashValidationMode
-  name: HashValidationMode
-  href: api/Google.Cloud.Storage.V1.HashValidationMode.html
-  commentId: T:Google.Cloud.Storage.V1.HashValidationMode
-  fullName: Google.Cloud.Storage.V1.HashValidationMode
-  nameWithType: HashValidationMode
-- uid: Google.Cloud.Storage.V1.HashValidationMode.Always
-  name: Always
-  href: api/Google.Cloud.Storage.V1.HashValidationMode.html#Google_Cloud_Storage_V1_HashValidationMode_Always
-  commentId: F:Google.Cloud.Storage.V1.HashValidationMode.Always
-  fullName: Google.Cloud.Storage.V1.HashValidationMode.Always
-  nameWithType: HashValidationMode.Always
-- uid: Google.Cloud.Storage.V1.HashValidationMode.Never
-  name: Never
-  href: api/Google.Cloud.Storage.V1.HashValidationMode.html#Google_Cloud_Storage_V1_HashValidationMode_Never
-  commentId: F:Google.Cloud.Storage.V1.HashValidationMode.Never
-  fullName: Google.Cloud.Storage.V1.HashValidationMode.Never
-  nameWithType: HashValidationMode.Never
 - uid: Google.Cloud.Storage.V1.ListBucketsOptions
   name: ListBucketsOptions
   href: api/Google.Cloud.Storage.V1.ListBucketsOptions.html
@@ -16769,6 +16769,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.UploadObjectOptions.Projection
   fullName: Google.Cloud.Storage.V1.UploadObjectOptions.Projection
   nameWithType: UploadObjectOptions.Projection
+- uid: Google.Cloud.Storage.V1.UploadObjectOptions.UploadValidationMode
+  name: UploadValidationMode
+  href: api/Google.Cloud.Storage.V1.UploadObjectOptions.html#Google_Cloud_Storage_V1_UploadObjectOptions_UploadValidationMode
+  commentId: P:Google.Cloud.Storage.V1.UploadObjectOptions.UploadValidationMode
+  fullName: Google.Cloud.Storage.V1.UploadObjectOptions.UploadValidationMode
+  nameWithType: UploadObjectOptions.UploadValidationMode
+- uid: Google.Cloud.Storage.V1.UploadObjectOptions.UploadValidationMode*
+  name: UploadValidationMode
+  href: api/Google.Cloud.Storage.V1.UploadObjectOptions.html#Google_Cloud_Storage_V1_UploadObjectOptions_UploadValidationMode_
+  commentId: Overload:Google.Cloud.Storage.V1.UploadObjectOptions.UploadValidationMode
+  fullName: Google.Cloud.Storage.V1.UploadObjectOptions.UploadValidationMode
+  nameWithType: UploadObjectOptions.UploadValidationMode
 - uid: Google.Cloud.Storage.V1.UploadObjectOptions.UserProject
   name: UserProject
   href: api/Google.Cloud.Storage.V1.UploadObjectOptions.html#Google_Cloud_Storage_V1_UploadObjectOptions_UserProject
@@ -16781,6 +16793,84 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.UploadObjectOptions.UserProject
   fullName: Google.Cloud.Storage.V1.UploadObjectOptions.UserProject
   nameWithType: UploadObjectOptions.UserProject
+- uid: Google.Cloud.Storage.V1.UploadValidationException
+  name: UploadValidationException
+  href: api/Google.Cloud.Storage.V1.UploadValidationException.html
+  commentId: T:Google.Cloud.Storage.V1.UploadValidationException
+  fullName: Google.Cloud.Storage.V1.UploadValidationException
+  nameWithType: UploadValidationException
+- uid: Google.Cloud.Storage.V1.UploadValidationException.#ctor(System.String,Google.Apis.Storage.v1.Data.Object,System.AggregateException)
+  name: UploadValidationException(String, Object, AggregateException)
+  href: api/Google.Cloud.Storage.V1.UploadValidationException.html#Google_Cloud_Storage_V1_UploadValidationException__ctor_System_String_Google_Apis_Storage_v1_Data_Object_System_AggregateException_
+  commentId: M:Google.Cloud.Storage.V1.UploadValidationException.#ctor(System.String,Google.Apis.Storage.v1.Data.Object,System.AggregateException)
+  fullName: Google.Cloud.Storage.V1.UploadValidationException.UploadValidationException(System.String, Google.Apis.Storage.v1.Data.Object, System.AggregateException)
+  nameWithType: UploadValidationException.UploadValidationException(String, Object, AggregateException)
+- uid: Google.Cloud.Storage.V1.UploadValidationException.#ctor*
+  name: UploadValidationException
+  href: api/Google.Cloud.Storage.V1.UploadValidationException.html#Google_Cloud_Storage_V1_UploadValidationException__ctor_
+  commentId: Overload:Google.Cloud.Storage.V1.UploadValidationException.#ctor
+  fullName: Google.Cloud.Storage.V1.UploadValidationException.UploadValidationException
+  nameWithType: UploadValidationException.UploadValidationException
+- uid: Google.Cloud.Storage.V1.UploadValidationException.AdditionalFailures
+  name: AdditionalFailures
+  href: api/Google.Cloud.Storage.V1.UploadValidationException.html#Google_Cloud_Storage_V1_UploadValidationException_AdditionalFailures
+  commentId: P:Google.Cloud.Storage.V1.UploadValidationException.AdditionalFailures
+  fullName: Google.Cloud.Storage.V1.UploadValidationException.AdditionalFailures
+  nameWithType: UploadValidationException.AdditionalFailures
+- uid: Google.Cloud.Storage.V1.UploadValidationException.AdditionalFailures*
+  name: AdditionalFailures
+  href: api/Google.Cloud.Storage.V1.UploadValidationException.html#Google_Cloud_Storage_V1_UploadValidationException_AdditionalFailures_
+  commentId: Overload:Google.Cloud.Storage.V1.UploadValidationException.AdditionalFailures
+  fullName: Google.Cloud.Storage.V1.UploadValidationException.AdditionalFailures
+  nameWithType: UploadValidationException.AdditionalFailures
+- uid: Google.Cloud.Storage.V1.UploadValidationException.ClientSideHash
+  name: ClientSideHash
+  href: api/Google.Cloud.Storage.V1.UploadValidationException.html#Google_Cloud_Storage_V1_UploadValidationException_ClientSideHash
+  commentId: P:Google.Cloud.Storage.V1.UploadValidationException.ClientSideHash
+  fullName: Google.Cloud.Storage.V1.UploadValidationException.ClientSideHash
+  nameWithType: UploadValidationException.ClientSideHash
+- uid: Google.Cloud.Storage.V1.UploadValidationException.ClientSideHash*
+  name: ClientSideHash
+  href: api/Google.Cloud.Storage.V1.UploadValidationException.html#Google_Cloud_Storage_V1_UploadValidationException_ClientSideHash_
+  commentId: Overload:Google.Cloud.Storage.V1.UploadValidationException.ClientSideHash
+  fullName: Google.Cloud.Storage.V1.UploadValidationException.ClientSideHash
+  nameWithType: UploadValidationException.ClientSideHash
+- uid: Google.Cloud.Storage.V1.UploadValidationException.UploadedObject
+  name: UploadedObject
+  href: api/Google.Cloud.Storage.V1.UploadValidationException.html#Google_Cloud_Storage_V1_UploadValidationException_UploadedObject
+  commentId: P:Google.Cloud.Storage.V1.UploadValidationException.UploadedObject
+  fullName: Google.Cloud.Storage.V1.UploadValidationException.UploadedObject
+  nameWithType: UploadValidationException.UploadedObject
+- uid: Google.Cloud.Storage.V1.UploadValidationException.UploadedObject*
+  name: UploadedObject
+  href: api/Google.Cloud.Storage.V1.UploadValidationException.html#Google_Cloud_Storage_V1_UploadValidationException_UploadedObject_
+  commentId: Overload:Google.Cloud.Storage.V1.UploadValidationException.UploadedObject
+  fullName: Google.Cloud.Storage.V1.UploadValidationException.UploadedObject
+  nameWithType: UploadValidationException.UploadedObject
+- uid: Google.Cloud.Storage.V1.UploadValidationMode
+  name: UploadValidationMode
+  href: api/Google.Cloud.Storage.V1.UploadValidationMode.html
+  commentId: T:Google.Cloud.Storage.V1.UploadValidationMode
+  fullName: Google.Cloud.Storage.V1.UploadValidationMode
+  nameWithType: UploadValidationMode
+- uid: Google.Cloud.Storage.V1.UploadValidationMode.DeleteAndThrow
+  name: DeleteAndThrow
+  href: api/Google.Cloud.Storage.V1.UploadValidationMode.html#Google_Cloud_Storage_V1_UploadValidationMode_DeleteAndThrow
+  commentId: F:Google.Cloud.Storage.V1.UploadValidationMode.DeleteAndThrow
+  fullName: Google.Cloud.Storage.V1.UploadValidationMode.DeleteAndThrow
+  nameWithType: UploadValidationMode.DeleteAndThrow
+- uid: Google.Cloud.Storage.V1.UploadValidationMode.None
+  name: None
+  href: api/Google.Cloud.Storage.V1.UploadValidationMode.html#Google_Cloud_Storage_V1_UploadValidationMode_None
+  commentId: F:Google.Cloud.Storage.V1.UploadValidationMode.None
+  fullName: Google.Cloud.Storage.V1.UploadValidationMode.None
+  nameWithType: UploadValidationMode.None
+- uid: Google.Cloud.Storage.V1.UploadValidationMode.ThrowOnly
+  name: ThrowOnly
+  href: api/Google.Cloud.Storage.V1.UploadValidationMode.html#Google_Cloud_Storage_V1_UploadValidationMode_ThrowOnly
+  commentId: F:Google.Cloud.Storage.V1.UploadValidationMode.ThrowOnly
+  fullName: Google.Cloud.Storage.V1.UploadValidationMode.ThrowOnly
+  nameWithType: UploadValidationMode.ThrowOnly
 - uid: Google.Cloud.Storage.V1.UrlSigner
   name: UrlSigner
   href: api/Google.Cloud.Storage.V1.UrlSigner.html

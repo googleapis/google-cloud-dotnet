@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Data model | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Data model | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="data-model">Data model</h1>
+
+<p>The Firestore data model revolves around <em>documents</em> and <em>collections</em>.</p>
+<p>Collections contain documents, which can contain more collections. The document data itself doesn&#39;t contain subcollections,
+although it can contain nested data.</p>
+<p>The Firestore library for .NET provides multiple options for working with Firestore data.
+It aims to make it simple for you to work with the data, whether you&#39;re creating, updating or querying it.</p>
+<p>This page is primarily aimed at explaining how document data can be used with the .NET library. See
+the <a href="userguide.html">user guide</a> for more details around the relationship between documents and collections.</p>
+<h1 id="data-types">Data types</h1>
+<p>A document is essentially a map, from field names to field values. Firestore supports multiple types of data for fields.
+For interoperability, some Firestore data types map onto multiple .NET types. The table below shows these types, and the default .NET
+type that a value will be deserialized as, when no other information is available.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Firestore data type</th>
+      <th>.NET supported types</th>
+      <th>Default type</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Array</td>
+      <td>Any <code>IEnumerable&lt;T&gt;</code></td>
+      <td><code>List&lt;object&gt;</code></td>
+      <td>Array elements cannot themselves be arrays</td>
+    </tr>
+    <tr>
+      <td>Boolean</td>
+      <td><code>bool</code></td>
+      <td><code>bool</code></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Bytes</td>
+      <td>
+        <code><a href="api/Google.Cloud.Firestore.Blob.html">Google.Cloud.Firestore.Blob</a></code><br>
+        <code>byte[]</code><br>
+        <code>Google.Protobuf.ByteString</code>
+      </td>
+      <td><code>Google.Cloud.Firestore.Blob</code></td>
+      <td>Up to 1,048,487 bytes (1 MiB - 89 bytes). Only the first 1,500 bytes are considered by queries.</td>
+    </tr>
+    <tr>
+      <td>Date and time</td>
+      <td>
+        <code><a href="api/Google.Cloud.Firestore.Timestamp.html">Google.Cloud.Firestore.Timestamp</a></code><br>
+        <code>System.DateTime</code><br>
+        <code>System.DateTimeOffset</code><br>
+        <code>Google.Protobuf.WellKnownTypes.Timestamp</code>
+      </td>
+      <td><code>Google.Cloud.Firestore.Timestamp</code></td>
+      <td>When stored in Cloud Firestore, precise only to microseconds; any additional precision is rounded down. <code>DateTime</code>
+        values must have a <code>Kind</code> of <code>Utc</code> to be converted; <code>DateTimeOffset</code> values are converted
+        to UTC automatically, and the offset information is discarded.</td>
+    </tr>
+    <tr>
+      <td>Floating-point number</td>
+      <td><code>double</code>, <code>float</code></td>
+      <td><code>double</code></td>
+      <td>64-bit double precision, IEEE 754.</td>
+    </tr>
+    <tr>
+      <td>Geographical point</td>
+      <td>
+        <code><a href="api/Google.Cloud.Firestore.GeoPoint.html">Google.Cloud.Firestore.GeoPoint</a></code><br>
+        <code>Google.Type.LatLng</code>
+      </td>
+      <td><code>Google.Cloud.Firestore.GeoPoint</code></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Integer</td>
+      <td>Any integer type (<code>byte</code>, <code>short</code>, <code>ushort</code>, <code>int</code>, <code>long</code> etc)</td>
+      <td><code>long</code></td>
+      <td>Signed 64-bit integer. When deserializing from server data, if the value is outside the range of the target type,
+        <code>OverflowException</code> is thrown. Similarly, an <code>OverflowException</code> will
+        be thrown if a <code>ulong</code> value outside the range of <code>long</code> is serialized.</td>
+    </tr>
+    <tr>
+      <td>Map</td>
+      <td>Any <code>IDictionary&lt;string, TValue&gt;</code>, anonymous type or attributed-class (see later)</td>
+      <td><code>Dictionary&lt;string, object&gt;</code></td>
+      <td>Represents an object embedded within a document. When indexed, you can query on subfields. If you exclude this value from indexing, then all subfields are also excluded from indexing.</td>
+    </tr>
+    <tr>
+      <td>Null</td>
+      <td>Null reference</td>
+      <td>n/a</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Reference</td>
+      <td><code><a href="api/Google.Cloud.Firestore.DocumentReference.html">Google.Cloud.Firestore.DocumentReference</a></code></td>
+      <td><code>Google.Cloud.Firestore.DocumentReference</code></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td><code>string</code></td>
+      <td><code>string</code></td>
+      <td>Sort order is in UTF-8 representation</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The &quot;name to value&quot; map can be represented in multiple ways. The following sections demonstrate each approach. Note that map values can be nested,
+and you can mix and match approaches. For example, an attributed class can contain a dictionary or vice versa.
+Similarly, you can serialize as an anonymous type then deserialize as an attributed class.</p>
+<h2 id="mapping-with-attributed-classes">Mapping with attributed classes</h2>
+<p>If you apply the <a href="api/Google.Cloud.Firestore.FirestoreDataAttribute.html">FirestoreData</a> attribute to a class, the Firestore library for .NET can use it for serialization (when sending data to the server)
+and deserialization (when retrieving data). All public instance properties with the <a href="api/Google.Cloud.Firestore.FirestorePropertyAttribute.html">FirestoreProperty</a> attribute applied are serialized.</p>
+<p>For example, to model a city as a document, you might have a class like this:</p>
+<pre><code class="lang-cs">[FirestoreData]
+public class City
+{
+    [FirestoreProperty]
+    public string Name { get; set; }
+
+    [FirestoreProperty]
+    public string State { get; set; }
+
+    [FirestoreProperty]
+    public string Country { get; set; }
+
+    [FirestoreProperty(&quot;Capital&quot;)]
+    public bool IsCapital { get; set;  }
+
+    [FirestoreProperty]
+    public long Population { get; set; }
+}
+</code></pre><p>Note how the <code>IsCapital</code> property specifies the name in the attribute; this is the field name that will be in the stored document.
+This allows you to use idiomatic names in your .NET code, but match whatever field name is used in your Firestore database.</p>
+<p>You might then use it to create a document and then fetch it like this:</p>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+
+// Create a document with a random ID in the &quot;cities&quot; collection.
+CollectionReference collection = db.Collection(&quot;cities&quot;);
+City city = new City
+{
+    Name = &quot;Los Angeles&quot;,
+    Country = &quot;USA&quot;,
+    State = &quot;CA&quot;,
+    IsCapital = false,
+    Population = 3900000L
+};
+DocumentReference document = await collection.AddAsync(city);
+
+// Fetch the data back from the server and deserialize it.
+DocumentSnapshot snapshot = await document.SnapshotAsync();
+City citySnapshot = snapshot.Deserialize&lt;City&gt;();
+Console.WriteLine(citySnapshot.Name); // Los Angeles
+</code></pre><p>In order to deserialize a map as an attributed class, the class must have a public parameterless constructor. (The C# compiler provides
+one by default if no other constructors are specified.) The properties in the map must each have an attributed, public instance property with a public setter,
+and the type of the property must be suitable for the value in the map. If the attributed class doesn&#39;t have a suitable property for an element of the map,
+an exception is thrown.</p>
+<h2 id="mapping-with-dictionaries">Mapping with dictionaries</h2>
+<p>A map can be represented as a <code>Dictionary&lt;string, object&gt;</code> - or if you&#39;re only storing values of a particular type, a <code>Dictionary&lt;string, int&gt;</code>, <code>Dictionary&lt;string, string&gt;</code> etc.
+The key type for the dictionary must always be <code>string</code>, as the Firestore field name is used as the key.</p>
+<p>Dictionaries can be passed to the various document creation and modification methods to represent the data, and <code>DocumentSnapshot.ToDictionary</code> deserializes
+document data to a dictionary representation.</p>
+<p>The equivalent city code using dictionaries would look like this:</p>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+
+// Create a document with a random ID in the &quot;cities&quot; collection.
+CollectionReference collection = db.Collection(&quot;cities&quot;);
+Dictionary&lt;string, object&gt; city = new Dictionary&lt;string, object&gt;
+{
+    { &quot;Name&quot;, &quot;Los Angeles&quot; },
+    { &quot;Country&quot;, &quot;USA&quot; },
+    { &quot;State&quot;, &quot;CA&quot; },
+    { &quot;Capital&quot;, false },
+    { &quot;Population&quot;, 3900000L }
+};
+DocumentReference document = await collection.AddAsync(city);
+
+// Fetch the data back from the server and deserialize it.
+DocumentSnapshot snapshot = await document.SnapshotAsync();
+Dictionary&lt;string, object&gt; cityData = snapshot.ToDictionary();
+Console.WriteLine(cityData[&quot;Name&quot;]); // Los Angeles
+</code></pre><h2 id="mapping-with-anonymous-types">Mapping with anonymous types</h2>
+<p>Anonymous types can be used for serialization, but not deserialization. They are particularly useful to specify partial updates, or
+to populate data which isn&#39;t then read within the same codebase.</p>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+
+// Create a document with a random ID in the &quot;cities&quot; collection.
+CollectionReference collection = db.Collection(&quot;cities&quot;);
+var city = new
+{
+    Name = &quot;Los Angeles&quot;,
+    Country = &quot;USA&quot;,
+    State = &quot;CA&quot;,
+    Capital = false,
+    Population = 3900000L
+};
+DocumentReference document = await collection.AddAsync(city);
+
+// Update just the population using another anonymous type
+await document.SetAsync(new { Population = 3900005L }, SetOptions.MergeAll);
+
+// Fetch the latest document and print the population
+DocumentSnapshot snapshot = await document.SnapshotAsync();
+Console.WriteLine(snapshot.GetField&lt;long&gt;(&quot;Population&quot;)); // 3900005
+</code></pre><h1 id="sentinel-values">Sentinel values</h1>
+<p>So far all the values we&#39;ve looked at have been known by the C# code. There are two <em>sentinel values</em> available which behave slightly differently.</p>
+<h2 id="server-side-timestamp">Server-side timestamp</h2>
+<p>When you update a document using the server-side timestamp sentinel value, the actual timestamp that&#39;s recorded is the commit time
+according to the Firestore server.</p>
+<p>For attributed classes, you can specify <code>SentinelValue = SentinelValue.ServerTimestamp</code> in the attribute declaration. Usually
+this will be on a property of type <code>Timestamp</code> (or <code>DateTime</code> or <code>DateTimeOffset</code>) so that you can retrieve the timestamp later.</p>
+<pre><code class="lang-cs">[FirestoreData]
+public class HighScore
+{
+    [FirestoreProperty]
+    public int Score { get; set; }
+
+    [FirestoreProperty]
+    public string Name { get; set; }
+
+    [FirestoreProperty(SentinelValue = SentinelValue.ServerTimestamp)]
+    public Timestamp LastUpdated { get; set; }
+}
+</code></pre><p>For dictionaries and anonymous types, you can use <code>SentinelValue.ServerTimestamp</code> as the value itself. For example,
+to update just the <code>Score</code> and <code>Timestamp</code> fields of a <code>HighScore</code> document, you could use an anonymous type instead of
+the attributed model</p>
+<pre><code class="lang-cs">await document.SetAsync(
+    new { Score = 20, LastUpdated = SentinelValue.ServerTimestamp },
+    SetOptions.MergeAll);
+</code></pre><p>Note that each document automatically keeps track of when it was last updated anyway, but you may wish to be more fine-grained;
+if a document may change in several ways, you may want a timestamp for when a specific field was last modified.</p>
+<h2 id="deleted-fields">Deleted fields</h2>
+<p>It can be useful to indicate that a field needs to be deleted from a document, particularly using anonymous types. For example,
+to delete a single field in a document, you can use:</p>
+<pre><code class="lang-csharp">await doc.Set(new { Score = SentinelValue.Delete }, SetOptions.MergeAll);
+</code></pre><p>You <em>can</em> specify <code>SentinelValue = SentinelValue.Delete</code> in a property attribute, but this would be highly unusual. It could be useful
+as part of a schema migration strategy, for example. It&#39;s mostly supported for the sake of consistency.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

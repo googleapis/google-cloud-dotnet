@@ -1,0 +1,437 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CollectionReference
+   | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CollectionReference
+   | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Firestore.CollectionReference">
+  
+  
+  <h1 id="Google_Cloud_Firestore_CollectionReference" data-uid="Google.Cloud.Firestore.CollectionReference" class="text-break">Class CollectionReference
+  </h1>
+  <div class="markdown level0 summary"><p>A reference to a collection in a Firestore database. The existence of
+this object does not imply that the collection currently exists in storage.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Google.Cloud.Firestore.Query.html">Query</a></div>
+    <div class="level2"><span class="xref">CollectionReference</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.CollectionReference.html">CollectionReference</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_Database">Query.Database</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_Select_System_String___">Query.Select(String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_Select_Google_Cloud_Firestore_FieldPath___">Query.Select(FieldPath[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_Where_System_String_Google_Cloud_Firestore_QueryOperator_System_Object_">Query.Where(String, QueryOperator, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_Where_Google_Cloud_Firestore_FieldPath_Google_Cloud_Firestore_QueryOperator_System_Object_">Query.Where(FieldPath, QueryOperator, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_OrderBy_System_String_">Query.OrderBy(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_OrderByDescending_System_String_">Query.OrderByDescending(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_OrderBy_Google_Cloud_Firestore_FieldPath_">Query.OrderBy(FieldPath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_OrderByDescending_Google_Cloud_Firestore_FieldPath_">Query.OrderByDescending(FieldPath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_Limit_System_Int32_">Query.Limit(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_Offset_System_Int32_">Query.Offset(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StartAt_System_Object___">Query.StartAt(Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StartAfter_System_Object___">Query.StartAfter(Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_EndBefore_System_Object___">Query.EndBefore(Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_EndAt_System_Object___">Query.EndAt(Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_SnapshotAsync_System_Threading_CancellationToken_">Query.SnapshotAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Firestore.Query.html#Google_Cloud_Firestore_Query_StreamAsync_System_Threading_CancellationToken_">Query.StreamAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Firestore.html">Google.Cloud.Firestore</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Firestore.dll</h6>
+  <h5 id="Google_Cloud_Firestore_CollectionReference_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CollectionReference : Query, IEquatable&lt;CollectionReference&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Firestore_CollectionReference_Id_" data-uid="Google.Cloud.Firestore.CollectionReference.Id*"></a>
+  <h4 id="Google_Cloud_Firestore_CollectionReference_Id" data-uid="Google.Cloud.Firestore.CollectionReference.Id">Id</h4>
+  <div class="markdown level1 summary"><p>The final part of the complete collection path; this is the identity of
+the collection relative to its parent document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_CollectionReference_Parent_" data-uid="Google.Cloud.Firestore.CollectionReference.Parent*"></a>
+  <h4 id="Google_Cloud_Firestore_CollectionReference_Parent" data-uid="Google.Cloud.Firestore.CollectionReference.Parent">Parent</h4>
+  <div class="markdown level1 summary"><p>The parent document, or null if this is a root collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DocumentReference Parent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_CollectionReference_Path_" data-uid="Google.Cloud.Firestore.CollectionReference.Path*"></a>
+  <h4 id="Google_Cloud_Firestore_CollectionReference_Path" data-uid="Google.Cloud.Firestore.CollectionReference.Path">Path</h4>
+  <div class="markdown level1 summary"><p>The complete collection path, including project and database ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Firestore_CollectionReference_AddAsync_" data-uid="Google.Cloud.Firestore.CollectionReference.AddAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_CollectionReference_AddAsync_System_Object_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.CollectionReference.AddAsync(System.Object,System.Threading.CancellationToken)">AddAsync(Object, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a document with the given data in this collection. The document has a randomly generated ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DocumentReference&gt; AddAsync(object documentData, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">documentData</span></td>
+        <td><p>The data for the document. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to monitor for the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a>&gt;</td>
+        <td><p>The reference for the newly-created document.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_CollectionReference_AddAsync_System_Object_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <a class="xref" href="Google.Cloud.Firestore.WriteResult.html">WriteResult</a> for the operation is required, use <a class="xref" href="Google.Cloud.Firestore.DocumentReference.html#Google_Cloud_Firestore_DocumentReference_CreateAsync_System_Object_System_Threading_CancellationToken_">CreateAsync(Object, CancellationToken)</a>
+instead of this method.</p>
+</div>
+  <a id="Google_Cloud_Firestore_CollectionReference_Document_" data-uid="Google.Cloud.Firestore.CollectionReference.Document*"></a>
+  <h4 id="Google_Cloud_Firestore_CollectionReference_Document_System_String_" data-uid="Google.Cloud.Firestore.CollectionReference.Document(System.String)">Document(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a> for a child document of this reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DocumentReference Document(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path to the document, relative to this collection. Must not be null, and must contain
+an odd number of slash-separated path elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a></td>
+        <td><p>A <a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a> for the specified document.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_CollectionReference_GenerateDocument_" data-uid="Google.Cloud.Firestore.CollectionReference.GenerateDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_CollectionReference_GenerateDocument" data-uid="Google.Cloud.Firestore.CollectionReference.GenerateDocument">GenerateDocument()</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a> for a direct child document of this collection with a random ID.
+This performs no server-side operations; it only generates the appropriate <code>DocumentReference</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DocumentReference GenerateDocument()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a></td>
+        <td><p>A <a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a> to a child document of this collection with a random ID.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_CollectionReference_GetHashCode_" data-uid="Google.Cloud.Firestore.CollectionReference.GetHashCode*"></a>
+  <h4 id="Google_Cloud_Firestore_CollectionReference_GetHashCode" data-uid="Google.Cloud.Firestore.CollectionReference.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <a id="Google_Cloud_Firestore_CollectionReference_ToString_" data-uid="Google.Cloud.Firestore.CollectionReference.ToString*"></a>
+  <h4 id="Google_Cloud_Firestore_CollectionReference_ToString" data-uid="Google.Cloud.Firestore.CollectionReference.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

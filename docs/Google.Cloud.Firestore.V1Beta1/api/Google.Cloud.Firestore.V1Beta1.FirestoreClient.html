@@ -1,0 +1,3114 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FirestoreClient
+   | Google.Cloud.Firestore.V1Beta1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FirestoreClient
+   | Google.Cloud.Firestore.V1Beta1 ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient">
+  
+  
+  <h1 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient" class="text-break">Class FirestoreClient
+  </h1>
+  <div class="markdown level0 summary"><p>Firestore client wrapper, for convenient use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FirestoreClient</span></div>
+      <div class="level2"><a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClientImpl.html">FirestoreClientImpl</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Firestore.V1Beta1.html">Google.Cloud.Firestore.V1Beta1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Firestore.V1Beta1.dll</h6>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class FirestoreClient</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DefaultEndpoint_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DefaultEndpoint*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DefaultEndpoint" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DefaultEndpoint">DefaultEndpoint</h4>
+  <div class="markdown level1 summary"><p>The default endpoint for the Firestore service, which is a host of &quot;firestore.googleapis.com&quot; and a port of 443.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DefaultScopes_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DefaultScopes*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DefaultScopes" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DefaultScopes">DefaultScopes</h4>
+  <div class="markdown level1 summary"><p>The default Firestore scopes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DefaultScopes_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The default Firestore scopes are:
+<ul><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform&amp;quot">https://www.googleapis.com/auth/cloud-platform&quot</a>;</li><li>&quot;<a href="https://www.googleapis.com/auth/datastore&amp;quot">https://www.googleapis.com/auth/datastore&quot</a>;</li></ul></p>
+</div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_GrpcClient_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.GrpcClient*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_GrpcClient" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.GrpcClient">GrpcClient</h4>
+  <div class="markdown level1 summary"><p>The underlying gRPC Firestore client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Firestore.FirestoreClient GrpcClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.html">Firestore.FirestoreClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BatchGetDocuments_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BatchGetDocuments*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BatchGetDocuments_Google_Cloud_Firestore_V1Beta1_BatchGetDocumentsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BatchGetDocuments(Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsRequest,Google.Api.Gax.Grpc.CallSettings)">BatchGetDocuments(BatchGetDocumentsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets multiple documents.</p>
+<p>Documents returned by this method are not guaranteed to be returned in the
+same order that they were requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual FirestoreClient.BatchGetDocumentsStream BatchGetDocuments(BatchGetDocumentsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsRequest.html">BatchGetDocumentsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BatchGetDocumentsStream.html">FirestoreClient.BatchGetDocumentsStream</a></td>
+        <td><p>The server stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BatchGetDocuments_Google_Cloud_Firestore_V1Beta1_BatchGetDocumentsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument
+BatchGetDocumentsRequest request = new BatchGetDocumentsRequest
+{
+    Database = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    Documents = { },
+};
+// Make the request, returning a streaming response
+FirestoreClient.BatchGetDocumentsStream streamingResponse = firestoreClient.BatchGetDocuments(request);
+
+// Read streaming responses from server until complete
+IAsyncEnumerator&lt;BatchGetDocumentsResponse&gt; responseStream = streamingResponse.ResponseStream;
+while (await responseStream.MoveNext())
+{
+    BatchGetDocumentsResponse response = responseStream.Current;
+    // Do something with streamed response
+}
+// The response stream has completed
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransaction_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BeginTransaction*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransaction_Google_Cloud_Firestore_V1Beta1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BeginTransaction(Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest,Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(BeginTransactionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Starts a new transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BeginTransactionResponse BeginTransaction(BeginTransactionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse.html">BeginTransactionResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransaction_Google_Cloud_Firestore_V1Beta1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+BeginTransactionRequest request = new BeginTransactionRequest
+{
+    Database = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString(),
+};
+// Make the request
+BeginTransactionResponse response = firestoreClient.BeginTransaction(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransaction_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BeginTransaction*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransaction_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BeginTransaction(System.String,Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Starts a new transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BeginTransactionResponse BeginTransaction(string database, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The database name. In the format:
+<code>projects/{project_id}/databases/{database_id}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse.html">BeginTransactionResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransaction_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+string formattedDatabase = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString();
+// Make the request
+BeginTransactionResponse response = firestoreClient.BeginTransaction(formattedDatabase);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransactionAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BeginTransactionAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransactionAsync_Google_Cloud_Firestore_V1Beta1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BeginTransactionAsync(Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest,Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(BeginTransactionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Starts a new transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BeginTransactionResponse&gt; BeginTransactionAsync(BeginTransactionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse.html">BeginTransactionResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransactionAsync_Google_Cloud_Firestore_V1Beta1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+BeginTransactionRequest request = new BeginTransactionRequest
+{
+    Database = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString(),
+};
+// Make the request
+BeginTransactionResponse response = await firestoreClient.BeginTransactionAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransactionAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BeginTransactionAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransactionAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BeginTransactionAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Starts a new transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BeginTransactionResponse&gt; BeginTransactionAsync(string database, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The database name. In the format:
+<code>projects/{project_id}/databases/{database_id}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse.html">BeginTransactionResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransactionAsync_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+string formattedDatabase = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString();
+// Make the request
+BeginTransactionResponse response = await firestoreClient.BeginTransactionAsync(formattedDatabase);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransactionAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BeginTransactionAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransactionAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.BeginTransactionAsync(System.String,System.Threading.CancellationToken)">BeginTransactionAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Starts a new transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;BeginTransactionResponse&gt; BeginTransactionAsync(string database, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The database name. In the format:
+<code>projects/{project_id}/databases/{database_id}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse.html">BeginTransactionResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_BeginTransactionAsync_System_String_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+string formattedDatabase = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString();
+// Make the request
+BeginTransactionResponse response = await firestoreClient.BeginTransactionAsync(formattedDatabase);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Commit_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Commit*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Commit_Google_Cloud_Firestore_V1Beta1_CommitRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Commit(Google.Cloud.Firestore.V1Beta1.CommitRequest,Google.Api.Gax.Grpc.CallSettings)">Commit(CommitRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction, while optionally updating documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitRequest.html">CommitRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitResponse.html">CommitResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Commit_Google_Cloud_Firestore_V1Beta1_CommitRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+CommitRequest request = new CommitRequest
+{
+    Database = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    Writes = { },
+};
+// Make the request
+CommitResponse response = firestoreClient.Commit(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Commit_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Commit*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Commit_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Firestore_V1Beta1_Write__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Commit(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Firestore.V1Beta1.Write},Google.Api.Gax.Grpc.CallSettings)">Commit(String, IEnumerable&lt;Write&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction, while optionally updating documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(string database, IEnumerable&lt;Write&gt; writes, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The database name. In the format:
+<code>projects/{project_id}/databases/{database_id}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Write.html">Write</a>&gt;</td>
+        <td><span class="parametername">writes</span></td>
+        <td><p>The writes to apply.</p>
+<p>Always executed atomically and in order.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitResponse.html">CommitResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Commit_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Firestore_V1Beta1_Write__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+string formattedDatabase = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString();
+IEnumerable&lt;Write&gt; writes = new List&lt;Write&gt;();
+// Make the request
+CommitResponse response = firestoreClient.Commit(formattedDatabase, writes);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CommitAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CommitAsync_Google_Cloud_Firestore_V1Beta1_CommitRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CommitAsync(Google.Cloud.Firestore.V1Beta1.CommitRequest,Google.Api.Gax.Grpc.CallSettings)">CommitAsync(CommitRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction, while optionally updating documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(CommitRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitRequest.html">CommitRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CommitAsync_Google_Cloud_Firestore_V1Beta1_CommitRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+CommitRequest request = new CommitRequest
+{
+    Database = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    Writes = { },
+};
+// Make the request
+CommitResponse response = await firestoreClient.CommitAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CommitAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CommitAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Firestore_V1Beta1_Write__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CommitAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Firestore.V1Beta1.Write},Google.Api.Gax.Grpc.CallSettings)">CommitAsync(String, IEnumerable&lt;Write&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction, while optionally updating documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(string database, IEnumerable&lt;Write&gt; writes, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The database name. In the format:
+<code>projects/{project_id}/databases/{database_id}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Write.html">Write</a>&gt;</td>
+        <td><span class="parametername">writes</span></td>
+        <td><p>The writes to apply.</p>
+<p>Always executed atomically and in order.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CommitAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Firestore_V1Beta1_Write__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+string formattedDatabase = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString();
+IEnumerable&lt;Write&gt; writes = new List&lt;Write&gt;();
+// Make the request
+CommitResponse response = await firestoreClient.CommitAsync(formattedDatabase, writes);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CommitAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CommitAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Firestore_V1Beta1_Write__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CommitAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Firestore.V1Beta1.Write},System.Threading.CancellationToken)">CommitAsync(String, IEnumerable&lt;Write&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction, while optionally updating documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(string database, IEnumerable&lt;Write&gt; writes, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The database name. In the format:
+<code>projects/{project_id}/databases/{database_id}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Write.html">Write</a>&gt;</td>
+        <td><span class="parametername">writes</span></td>
+        <td><p>The writes to apply.</p>
+<p>Always executed atomically and in order.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CommitAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Firestore_V1Beta1_Write__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+string formattedDatabase = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString();
+IEnumerable&lt;Write&gt; writes = new List&lt;Write&gt;();
+// Make the request
+CommitResponse response = await firestoreClient.CommitAsync(formattedDatabase, writes);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Create_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Create*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Firestore_V1Beta1_FirestoreSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Firestore.V1Beta1.FirestoreSettings)">Create(ServiceEndpoint, FirestoreSettings)</h4>
+  <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html">FirestoreClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FirestoreClient Create(ServiceEndpoint endpoint = null, FirestoreSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreSettings.html">FirestoreSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreSettings.html">FirestoreSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html">FirestoreClient</a></td>
+        <td><p>The created <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html">FirestoreClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Create_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Create*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Create_Grpc_Core_Channel_Google_Cloud_Firestore_V1Beta1_FirestoreSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Create(Grpc.Core.Channel,Google.Cloud.Firestore.V1Beta1.FirestoreSettings)">Create(Channel, FirestoreSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html">FirestoreClient</a> which uses the specified channel for remote operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FirestoreClient Create(Channel channel, FirestoreSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Channel.html">Channel</a></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>The <a class="xref" href="Grpc.Core.Channel.html">Channel</a> for remote operations. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreSettings.html">FirestoreSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreSettings.html">FirestoreSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html">FirestoreClient</a></td>
+        <td><p>The created <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html">FirestoreClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CreateAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CreateAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Firestore_V1Beta1_FirestoreSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CreateAsync(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Firestore.V1Beta1.FirestoreSettings)">CreateAsync(ServiceEndpoint, FirestoreSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html">FirestoreClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;FirestoreClient&gt; CreateAsync(ServiceEndpoint endpoint = null, FirestoreSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreSettings.html">FirestoreSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreSettings.html">FirestoreSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html">FirestoreClient</a>&gt;</td>
+        <td><p>The task representing the created <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html">FirestoreClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CreateDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CreateDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CreateDocument_Google_Cloud_Firestore_V1Beta1_CreateDocumentRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CreateDocument(Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest,Google.Api.Gax.Grpc.CallSettings)">CreateDocument(CreateDocumentRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Document CreateDocument(CreateDocumentRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest.html">CreateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CreateDocument_Google_Cloud_Firestore_V1Beta1_CreateDocumentRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+CreateDocumentRequest request = new CreateDocumentRequest
+{
+    Parent = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+    CollectionId = &quot;&quot;,
+    DocumentId = &quot;&quot;,
+    Document = new Document(),
+};
+// Make the request
+Document response = firestoreClient.CreateDocument(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CreateDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CreateDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CreateDocumentAsync_Google_Cloud_Firestore_V1Beta1_CreateDocumentRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.CreateDocumentAsync(Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest,Google.Api.Gax.Grpc.CallSettings)">CreateDocumentAsync(CreateDocumentRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Document&gt; CreateDocumentAsync(CreateDocumentRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest.html">CreateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_CreateDocumentAsync_Google_Cloud_Firestore_V1Beta1_CreateDocumentRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+CreateDocumentRequest request = new CreateDocumentRequest
+{
+    Parent = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+    CollectionId = &quot;&quot;,
+    DocumentId = &quot;&quot;,
+    Document = new Document(),
+};
+// Make the request
+Document response = await firestoreClient.CreateDocumentAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DeleteDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocument_Google_Cloud_Firestore_V1Beta1_DeleteDocumentRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DeleteDocument(Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteDocument(DeleteDocumentRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DeleteDocument(DeleteDocumentRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest.html">DeleteDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocument_Google_Cloud_Firestore_V1Beta1_DeleteDocumentRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+DeleteDocumentRequest request = new DeleteDocumentRequest
+{
+    Name = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+};
+// Make the request
+firestoreClient.DeleteDocument(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DeleteDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocument_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DeleteDocument(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteDocument(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DeleteDocument(string name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The resource name of the Document to delete. In the format:
+<code>projects/{project_id}/databases/{database_id}/documents/{document_path}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocument_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+string formattedName = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString();
+// Make the request
+firestoreClient.DeleteDocument(formattedName);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DeleteDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocumentAsync_Google_Cloud_Firestore_V1Beta1_DeleteDocumentRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DeleteDocumentAsync(Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteDocumentAsync(DeleteDocumentRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteDocumentAsync(DeleteDocumentRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest.html">DeleteDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocumentAsync_Google_Cloud_Firestore_V1Beta1_DeleteDocumentRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+DeleteDocumentRequest request = new DeleteDocumentRequest
+{
+    Name = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+};
+// Make the request
+await firestoreClient.DeleteDocumentAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DeleteDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocumentAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DeleteDocumentAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteDocumentAsync(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteDocumentAsync(string name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The resource name of the Document to delete. In the format:
+<code>projects/{project_id}/databases/{database_id}/documents/{document_path}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocumentAsync_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+string formattedName = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString();
+// Make the request
+await firestoreClient.DeleteDocumentAsync(formattedName);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DeleteDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocumentAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.DeleteDocumentAsync(System.String,System.Threading.CancellationToken)">DeleteDocumentAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Deletes a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteDocumentAsync(string name, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The resource name of the Document to delete. In the format:
+<code>projects/{project_id}/databases/{database_id}/documents/{document_path}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_DeleteDocumentAsync_System_String_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+string formattedName = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString();
+// Make the request
+await firestoreClient.DeleteDocumentAsync(formattedName);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_GetDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.GetDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_GetDocument_Google_Cloud_Firestore_V1Beta1_GetDocumentRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.GetDocument(Google.Cloud.Firestore.V1Beta1.GetDocumentRequest,Google.Api.Gax.Grpc.CallSettings)">GetDocument(GetDocumentRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets a single document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Document GetDocument(GetDocumentRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.GetDocumentRequest.html">GetDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_GetDocument_Google_Cloud_Firestore_V1Beta1_GetDocumentRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+GetDocumentRequest request = new GetDocumentRequest
+{
+    Name = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+};
+// Make the request
+Document response = firestoreClient.GetDocument(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_GetDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.GetDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_GetDocumentAsync_Google_Cloud_Firestore_V1Beta1_GetDocumentRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.GetDocumentAsync(Google.Cloud.Firestore.V1Beta1.GetDocumentRequest,Google.Api.Gax.Grpc.CallSettings)">GetDocumentAsync(GetDocumentRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets a single document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Document&gt; GetDocumentAsync(GetDocumentRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.GetDocumentRequest.html">GetDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_GetDocumentAsync_Google_Cloud_Firestore_V1Beta1_GetDocumentRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+GetDocumentRequest request = new GetDocumentRequest
+{
+    Name = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+};
+// Make the request
+Document response = await firestoreClient.GetDocumentAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIds_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListCollectionIds*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIds_Google_Cloud_Firestore_V1Beta1_ListCollectionIdsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListCollectionIds(Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest,Google.Api.Gax.Grpc.CallSettings)">ListCollectionIds(ListCollectionIdsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all the collection IDs underneath a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListCollectionIdsResponse, string&gt; ListCollectionIds(ListCollectionIdsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest.html">ListCollectionIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse.html">ListCollectionIdsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+        <td><p>A pageable sequence of <span class="xref">System.String</span> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIds_Google_Cloud_Firestore_V1Beta1_ListCollectionIdsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+ListCollectionIdsRequest request = new ListCollectionIdsRequest
+{
+    Parent = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+};
+// Make the request
+PagedEnumerable&lt;ListCollectionIdsResponse, string&gt; response =
+    firestoreClient.ListCollectionIds(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (string item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListCollectionIdsResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (string item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;string&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (string item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIds_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListCollectionIds*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIds_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListCollectionIds(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListCollectionIds(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all the collection IDs underneath a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListCollectionIdsResponse, string&gt; ListCollectionIds(string parent, string pageToken = null, int ? pageSize = default (int ? ), CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The parent document. In the format:
+<code>projects/{project_id}/databases/{database_id}/documents/{document_path}</code>.
+For example:
+<code>projects/my-project/databases/my-database/documents/chatrooms/my-chatroom</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pageToken</span></td>
+        <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">pageSize</span></td>
+        <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse.html">ListCollectionIdsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+        <td><p>A pageable sequence of <span class="xref">System.String</span> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIds_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+string formattedParent = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString();
+// Make the request
+PagedEnumerable&lt;ListCollectionIdsResponse, string&gt; response =
+    firestoreClient.ListCollectionIds(formattedParent);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (string item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListCollectionIdsResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (string item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;string&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (string item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIdsAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListCollectionIdsAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIdsAsync_Google_Cloud_Firestore_V1Beta1_ListCollectionIdsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListCollectionIdsAsync(Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest,Google.Api.Gax.Grpc.CallSettings)">ListCollectionIdsAsync(ListCollectionIdsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all the collection IDs underneath a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListCollectionIdsResponse, string&gt; ListCollectionIdsAsync(ListCollectionIdsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest.html">ListCollectionIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse.html">ListCollectionIdsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <span class="xref">System.String</span> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIdsAsync_Google_Cloud_Firestore_V1Beta1_ListCollectionIdsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+ListCollectionIdsRequest request = new ListCollectionIdsRequest
+{
+    Parent = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+};
+// Make the request
+PagedAsyncEnumerable&lt;ListCollectionIdsResponse, string&gt; response =
+    firestoreClient.ListCollectionIdsAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((string item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListCollectionIdsResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (string item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;string&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (string item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIdsAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListCollectionIdsAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIdsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListCollectionIdsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListCollectionIdsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all the collection IDs underneath a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListCollectionIdsResponse, string&gt; ListCollectionIdsAsync(string parent, string pageToken = null, int ? pageSize = default (int ? ), CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>The parent document. In the format:
+<code>projects/{project_id}/databases/{database_id}/documents/{document_path}</code>.
+For example:
+<code>projects/my-project/databases/my-database/documents/chatrooms/my-chatroom</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pageToken</span></td>
+        <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">pageSize</span></td>
+        <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse.html">ListCollectionIdsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <span class="xref">System.String</span> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListCollectionIdsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+string formattedParent = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString();
+// Make the request
+PagedAsyncEnumerable&lt;ListCollectionIdsResponse, string&gt; response =
+    firestoreClient.ListCollectionIdsAsync(formattedParent);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((string item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListCollectionIdsResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (string item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;string&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (string item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListDocuments_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListDocuments*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListDocuments_Google_Cloud_Firestore_V1Beta1_ListDocumentsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListDocuments(Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest,Google.Api.Gax.Grpc.CallSettings)">ListDocuments(ListDocumentsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListDocumentsResponse, Document&gt; ListDocuments(ListDocumentsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest.html">ListDocumentsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsResponse.html">ListDocumentsResponse</a>, <a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListDocuments_Google_Cloud_Firestore_V1Beta1_ListDocumentsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+ListDocumentsRequest request = new ListDocumentsRequest
+{
+    Parent = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+    CollectionId = &quot;&quot;,
+};
+// Make the request
+PagedEnumerable&lt;ListDocumentsResponse, Document&gt; response =
+    firestoreClient.ListDocuments(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (Document item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListDocumentsResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (Document item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;Document&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (Document item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListDocumentsAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListDocumentsAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListDocumentsAsync_Google_Cloud_Firestore_V1Beta1_ListDocumentsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListDocumentsAsync(Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest,Google.Api.Gax.Grpc.CallSettings)">ListDocumentsAsync(ListDocumentsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListDocumentsResponse, Document&gt; ListDocumentsAsync(ListDocumentsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest.html">ListDocumentsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsResponse.html">ListDocumentsResponse</a>, <a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ListDocumentsAsync_Google_Cloud_Firestore_V1Beta1_ListDocumentsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+ListDocumentsRequest request = new ListDocumentsRequest
+{
+    Parent = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+    CollectionId = &quot;&quot;,
+};
+// Make the request
+PagedAsyncEnumerable&lt;ListDocumentsResponse, Document&gt; response =
+    firestoreClient.ListDocumentsAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((Document item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListDocumentsResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (Document item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;Document&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (Document item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Listen_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Listen*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Listen_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Listen(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)">Listen(CallSettings, BidirectionalStreamingSettings)</h4>
+  <div class="markdown level1 summary"><p>Listens to changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual FirestoreClient.ListenStream Listen(CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingSettings.html">BidirectionalStreamingSettings</a></td>
+        <td><span class="parametername">streamingSettings</span></td>
+        <td><p>If not null, applies streaming overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ListenStream.html">FirestoreClient.ListenStream</a></td>
+        <td><p>The client-server stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Listen_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize streaming call, retrieving the stream object
+FirestoreClient.ListenStream duplexStream = firestoreClient.Listen();
+
+// Sending requests and retrieving responses can be arbitrarily interleaved.
+// Exact sequence will depend on client/server behavior.
+
+// Create task to do something with responses from server
+Task responseHandlerTask = Task.Run(async () =&gt;
+{
+    IAsyncEnumerator&lt;ListenResponse&gt; responseStream = duplexStream.ResponseStream;
+    while (await responseStream.MoveNext())
+    {
+        ListenResponse response = responseStream.Current;
+        // Do something with streamed response
+    }
+    // The response stream has completed
+});
+
+// Send requests to the server
+bool done = false;
+while (!done)
+{
+    // Initialize a request
+    ListenRequest request = new ListenRequest
+    {
+        Database = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    };
+    // Stream a request to the server
+    await duplexStream.WriteAsync(request);
+
+    // Set &quot;done&quot; to true when sending requests is complete
+}
+// Complete writing requests to the stream
+await duplexStream.WriteCompleteAsync();
+// Await the response handler.
+// This will complete once all server responses have been processed.
+await responseHandlerTask;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Rollback_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Rollback*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Rollback_Google_Cloud_Firestore_V1Beta1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Rollback(Google.Cloud.Firestore.V1Beta1.RollbackRequest,Google.Api.Gax.Grpc.CallSettings)">Rollback(RollbackRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Rollback(RollbackRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.RollbackRequest.html">RollbackRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Rollback_Google_Cloud_Firestore_V1Beta1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+RollbackRequest request = new RollbackRequest
+{
+    Database = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    Transaction = ByteString.CopyFromUtf8(&quot;&quot;),
+};
+// Make the request
+firestoreClient.Rollback(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Rollback_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Rollback*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Rollback_System_String_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Rollback(System.String,Google.Protobuf.ByteString,Google.Api.Gax.Grpc.CallSettings)">Rollback(String, ByteString, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Rollback(string database, ByteString transaction, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The database name. In the format:
+<code>projects/{project_id}/databases/{database_id}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td><p>The transaction to roll back.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Rollback_System_String_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+string formattedDatabase = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString();
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+firestoreClient.Rollback(formattedDatabase, transaction);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RollbackAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.RollbackAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RollbackAsync_Google_Cloud_Firestore_V1Beta1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.RollbackAsync(Google.Cloud.Firestore.V1Beta1.RollbackRequest,Google.Api.Gax.Grpc.CallSettings)">RollbackAsync(RollbackRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task RollbackAsync(RollbackRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.RollbackRequest.html">RollbackRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RollbackAsync_Google_Cloud_Firestore_V1Beta1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+RollbackRequest request = new RollbackRequest
+{
+    Database = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    Transaction = ByteString.CopyFromUtf8(&quot;&quot;),
+};
+// Make the request
+await firestoreClient.RollbackAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RollbackAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.RollbackAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.RollbackAsync(System.String,Google.Protobuf.ByteString,Google.Api.Gax.Grpc.CallSettings)">RollbackAsync(String, ByteString, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task RollbackAsync(string database, ByteString transaction, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The database name. In the format:
+<code>projects/{project_id}/databases/{database_id}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td><p>The transaction to roll back.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+string formattedDatabase = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString();
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+await firestoreClient.RollbackAsync(formattedDatabase, transaction);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RollbackAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.RollbackAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.RollbackAsync(System.String,Google.Protobuf.ByteString,System.Threading.CancellationToken)">RollbackAsync(String, ByteString, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task RollbackAsync(string database, ByteString transaction, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The database name. In the format:
+<code>projects/{project_id}/databases/{database_id}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td><p>The transaction to roll back.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+string formattedDatabase = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString();
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+await firestoreClient.RollbackAsync(formattedDatabase, transaction);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RunQuery_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.RunQuery*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RunQuery_Google_Cloud_Firestore_V1Beta1_RunQueryRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.RunQuery(Google.Cloud.Firestore.V1Beta1.RunQueryRequest,Google.Api.Gax.Grpc.CallSettings)">RunQuery(RunQueryRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Runs a query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual FirestoreClient.RunQueryStream RunQuery(RunQueryRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.RunQueryRequest.html">RunQueryRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.RunQueryStream.html">FirestoreClient.RunQueryStream</a></td>
+        <td><p>The server stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_RunQuery_Google_Cloud_Firestore_V1Beta1_RunQueryRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument
+RunQueryRequest request = new RunQueryRequest
+{
+    Parent = new AnyPathName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;, &quot;[DOCUMENT]&quot;, &quot;[ANY_PATH]&quot;).ToString(),
+};
+// Make the request, returning a streaming response
+FirestoreClient.RunQueryStream streamingResponse = firestoreClient.RunQuery(request);
+
+// Read streaming responses from server until complete
+IAsyncEnumerator&lt;RunQueryResponse&gt; responseStream = streamingResponse.ResponseStream;
+while (await responseStream.MoveNext())
+{
+    RunQueryResponse response = responseStream.Current;
+    // Do something with streamed response
+}
+// The response stream has completed
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ShutdownDefaultChannelsAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
+  <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html#Google_Cloud_Firestore_V1Beta1_FirestoreClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Firestore_V1Beta1_FirestoreSettings_">Create(ServiceEndpoint, FirestoreSettings)</a>
+and <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html#Google_Cloud_Firestore_V1Beta1_FirestoreClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Firestore_V1Beta1_FirestoreSettings_">CreateAsync(ServiceEndpoint, FirestoreSettings)</a>. Channels which weren&apos;t automatically
+created are not affected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task ShutdownDefaultChannelsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the asynchronous shutdown operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html#Google_Cloud_Firestore_V1Beta1_FirestoreClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Firestore_V1Beta1_FirestoreSettings_">Create(ServiceEndpoint, FirestoreSettings)</a>
+and <a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.html#Google_Cloud_Firestore_V1Beta1_FirestoreClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Firestore_V1Beta1_FirestoreSettings_">CreateAsync(ServiceEndpoint, FirestoreSettings)</a> will create new channels, which could
+in turn be shut down by another call to this method.</p>
+</div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.UpdateDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocument_Google_Cloud_Firestore_V1Beta1_Document_Google_Cloud_Firestore_V1Beta1_DocumentMask_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.UpdateDocument(Google.Cloud.Firestore.V1Beta1.Document,Google.Cloud.Firestore.V1Beta1.DocumentMask,Google.Api.Gax.Grpc.CallSettings)">UpdateDocument(Document, DocumentMask, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates or inserts a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Document UpdateDocument(Document document, DocumentMask updateMask, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>The updated document.
+Creates the document if it does not already exist.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.DocumentMask.html">DocumentMask</a></td>
+        <td><span class="parametername">updateMask</span></td>
+        <td><p>The fields to update.
+None of the field paths in the mask may contain a reserved name.</p>
+<p>If the document exists on the server and has fields not referenced in the
+mask, they are left unchanged.
+Fields referenced in the mask, but not present in the input document, are
+deleted from the document on the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocument_Google_Cloud_Firestore_V1Beta1_Document_Google_Cloud_Firestore_V1Beta1_DocumentMask_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+Document document = new Document();
+DocumentMask updateMask = new DocumentMask();
+// Make the request
+Document response = firestoreClient.UpdateDocument(document, updateMask);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.UpdateDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocument_Google_Cloud_Firestore_V1Beta1_UpdateDocumentRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.UpdateDocument(Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateDocument(UpdateDocumentRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates or inserts a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Document UpdateDocument(UpdateDocumentRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest.html">UpdateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocument_Google_Cloud_Firestore_V1Beta1_UpdateDocumentRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize request argument(s)
+UpdateDocumentRequest request = new UpdateDocumentRequest
+{
+    Document = new Document(),
+    UpdateMask = new DocumentMask(),
+};
+// Make the request
+Document response = firestoreClient.UpdateDocument(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.UpdateDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocumentAsync_Google_Cloud_Firestore_V1Beta1_Document_Google_Cloud_Firestore_V1Beta1_DocumentMask_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.UpdateDocumentAsync(Google.Cloud.Firestore.V1Beta1.Document,Google.Cloud.Firestore.V1Beta1.DocumentMask,Google.Api.Gax.Grpc.CallSettings)">UpdateDocumentAsync(Document, DocumentMask, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates or inserts a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Document&gt; UpdateDocumentAsync(Document document, DocumentMask updateMask, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>The updated document.
+Creates the document if it does not already exist.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.DocumentMask.html">DocumentMask</a></td>
+        <td><span class="parametername">updateMask</span></td>
+        <td><p>The fields to update.
+None of the field paths in the mask may contain a reserved name.</p>
+<p>If the document exists on the server and has fields not referenced in the
+mask, they are left unchanged.
+Fields referenced in the mask, but not present in the input document, are
+deleted from the document on the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocumentAsync_Google_Cloud_Firestore_V1Beta1_Document_Google_Cloud_Firestore_V1Beta1_DocumentMask_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+Document document = new Document();
+DocumentMask updateMask = new DocumentMask();
+// Make the request
+Document response = await firestoreClient.UpdateDocumentAsync(document, updateMask);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.UpdateDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocumentAsync_Google_Cloud_Firestore_V1Beta1_Document_Google_Cloud_Firestore_V1Beta1_DocumentMask_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.UpdateDocumentAsync(Google.Cloud.Firestore.V1Beta1.Document,Google.Cloud.Firestore.V1Beta1.DocumentMask,System.Threading.CancellationToken)">UpdateDocumentAsync(Document, DocumentMask, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates or inserts a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Document&gt; UpdateDocumentAsync(Document document, DocumentMask updateMask, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>The updated document.
+Creates the document if it does not already exist.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.DocumentMask.html">DocumentMask</a></td>
+        <td><span class="parametername">updateMask</span></td>
+        <td><p>The fields to update.
+None of the field paths in the mask may contain a reserved name.</p>
+<p>If the document exists on the server and has fields not referenced in the
+mask, they are left unchanged.
+Fields referenced in the mask, but not present in the input document, are
+deleted from the document on the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocumentAsync_Google_Cloud_Firestore_V1Beta1_Document_Google_Cloud_Firestore_V1Beta1_DocumentMask_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+Document document = new Document();
+DocumentMask updateMask = new DocumentMask();
+// Make the request
+Document response = await firestoreClient.UpdateDocumentAsync(document, updateMask);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.UpdateDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocumentAsync_Google_Cloud_Firestore_V1Beta1_UpdateDocumentRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.UpdateDocumentAsync(Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateDocumentAsync(UpdateDocumentRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates or inserts a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Document&gt; UpdateDocumentAsync(UpdateDocumentRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest.html">UpdateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_UpdateDocumentAsync_Google_Cloud_Firestore_V1Beta1_UpdateDocumentRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
+// Initialize request argument(s)
+UpdateDocumentRequest request = new UpdateDocumentRequest
+{
+    Document = new Document(),
+    UpdateMask = new DocumentMask(),
+};
+// Make the request
+Document response = await firestoreClient.UpdateDocumentAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Write_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Write*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Write_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_" data-uid="Google.Cloud.Firestore.V1Beta1.FirestoreClient.Write(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)">Write(CallSettings, BidirectionalStreamingSettings)</h4>
+  <div class="markdown level1 summary"><p>Streams batches of document updates and deletes, in order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual FirestoreClient.WriteStream Write(CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.BidirectionalStreamingSettings.html">BidirectionalStreamingSettings</a></td>
+        <td><span class="parametername">streamingSettings</span></td>
+        <td><p>If not null, applies streaming overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.FirestoreClient.WriteStream.html">FirestoreClient.WriteStream</a></td>
+        <td><p>The client-server stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_FirestoreClient_Write_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+FirestoreClient firestoreClient = FirestoreClient.Create();
+// Initialize streaming call, retrieving the stream object
+FirestoreClient.WriteStream duplexStream = firestoreClient.Write();
+
+// Sending requests and retrieving responses can be arbitrarily interleaved.
+// Exact sequence will depend on client/server behavior.
+
+// Create task to do something with responses from server
+Task responseHandlerTask = Task.Run(async () =&gt;
+{
+    IAsyncEnumerator&lt;WriteResponse&gt; responseStream = duplexStream.ResponseStream;
+    while (await responseStream.MoveNext())
+    {
+        WriteResponse response = responseStream.Current;
+        // Do something with streamed response
+    }
+    // The response stream has completed
+});
+
+// Send requests to the server
+bool done = false;
+while (!done)
+{
+    // Initialize a request
+    WriteRequest request = new WriteRequest
+    {
+        Database = new DatabaseRootName(&quot;[PROJECT]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    };
+    // Stream a request to the server
+    await duplexStream.WriteAsync(request);
+
+    // Set &quot;done&quot; to true when sending requests is complete
+}
+// Complete writing requests to the stream
+await duplexStream.WriteCompleteAsync();
+// Await the response handler.
+// This will complete once all server responses have been processed.
+await responseHandlerTask;
+</code></pre></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

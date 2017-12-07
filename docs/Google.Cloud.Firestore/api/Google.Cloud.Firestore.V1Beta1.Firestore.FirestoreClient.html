@@ -1,0 +1,2681 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Firestore.FirestoreClient
+   | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Firestore.FirestoreClient
+   | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient">
+  
+  
+  <h1 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient" class="text-break">Class Firestore.FirestoreClient
+  </h1>
+  <div class="markdown level0 summary"><p>Client for Firestore</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Grpc.Core.ClientBase.html">ClientBase</a></div>
+    <div class="level2"><a class="xref" href="Grpc.Core.ClientBase-1.html">ClientBase</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.html">Firestore.FirestoreClient</a>&gt;</div>
+    <div class="level3"><span class="xref">Firestore.FirestoreClient</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Grpc.Core.ClientBase-1.html#Grpc_Core_ClientBase_1_WithHost_System_String_">ClientBase&lt;Firestore.FirestoreClient&gt;.WithHost(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Grpc.Core.ClientBase.html#Grpc_Core_ClientBase_CallInvoker">ClientBase.CallInvoker</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Firestore.V1Beta1.html">Google.Cloud.Firestore.V1Beta1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Firestore.V1Beta1.dll</h6>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FirestoreClient : ClientBase&lt;Firestore.FirestoreClient&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient__ctor_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.#ctor*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient__ctor" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.#ctor">FirestoreClient()</h4>
+  <div class="markdown level1 summary"><p>Protected parameterless constructor to allow creation of test doubles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected FirestoreClient()</code></pre>
+  </div>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient__ctor_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.#ctor*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient__ctor_Grpc_Core_CallInvoker_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.#ctor(Grpc.Core.CallInvoker)">FirestoreClient(CallInvoker)</h4>
+  <div class="markdown level1 summary"><p>Creates a new client for Firestore that uses a custom <code>CallInvoker</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FirestoreClient(CallInvoker callInvoker)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallInvoker.html">CallInvoker</a></td>
+        <td><span class="parametername">callInvoker</span></td>
+        <td><p>The callInvoker to use to make remote calls.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient__ctor_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.#ctor*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient__ctor_Grpc_Core_Channel_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.#ctor(Grpc.Core.Channel)">FirestoreClient(Channel)</h4>
+  <div class="markdown level1 summary"><p>Creates a new client for Firestore</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FirestoreClient(Channel channel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Channel.html">Channel</a></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>The channel to use to make remote calls.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient__ctor_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.#ctor*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient__ctor_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">FirestoreClient(ClientBase.ClientBaseConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Protected constructor to allow creation of configured clients.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected FirestoreClient(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ClientBase.ClientBaseConfiguration.html">ClientBase.ClientBaseConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The client configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BatchGetDocuments_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BatchGetDocuments*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BatchGetDocuments_Google_Cloud_Firestore_V1Beta1_BatchGetDocumentsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BatchGetDocuments(Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsRequest,Grpc.Core.CallOptions)">BatchGetDocuments(BatchGetDocumentsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets multiple documents.</p>
+<p>Documents returned by this method are not guaranteed to be returned in the
+same order that they were requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncServerStreamingCall&lt;BatchGetDocumentsResponse&gt; BatchGetDocuments(BatchGetDocumentsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsRequest.html">BatchGetDocumentsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsResponse.html">BatchGetDocumentsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BatchGetDocuments_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BatchGetDocuments*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BatchGetDocuments_Google_Cloud_Firestore_V1Beta1_BatchGetDocumentsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BatchGetDocuments(Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">BatchGetDocuments(BatchGetDocumentsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets multiple documents.</p>
+<p>Documents returned by this method are not guaranteed to be returned in the
+same order that they were requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncServerStreamingCall&lt;BatchGetDocumentsResponse&gt; BatchGetDocuments(BatchGetDocumentsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsRequest.html">BatchGetDocumentsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.BatchGetDocumentsResponse.html">BatchGetDocumentsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BeginTransaction_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BeginTransaction*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BeginTransaction_Google_Cloud_Firestore_V1Beta1_BeginTransactionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BeginTransaction(Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest,Grpc.Core.CallOptions)">BeginTransaction(BeginTransactionRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Starts a new transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BeginTransactionResponse BeginTransaction(BeginTransactionRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse.html">BeginTransactionResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BeginTransaction_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BeginTransaction*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BeginTransaction_Google_Cloud_Firestore_V1Beta1_BeginTransactionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BeginTransaction(Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">BeginTransaction(BeginTransactionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Starts a new transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BeginTransactionResponse BeginTransaction(BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse.html">BeginTransactionResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BeginTransactionAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BeginTransactionAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BeginTransactionAsync_Google_Cloud_Firestore_V1Beta1_BeginTransactionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BeginTransactionAsync(Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest,Grpc.Core.CallOptions)">BeginTransactionAsync(BeginTransactionRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Starts a new transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;BeginTransactionResponse&gt; BeginTransactionAsync(BeginTransactionRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse.html">BeginTransactionResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BeginTransactionAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BeginTransactionAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_BeginTransactionAsync_Google_Cloud_Firestore_V1Beta1_BeginTransactionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.BeginTransactionAsync(Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">BeginTransactionAsync(BeginTransactionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Starts a new transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;BeginTransactionResponse&gt; BeginTransactionAsync(BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.BeginTransactionResponse.html">BeginTransactionResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Commit_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Commit*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Commit_Google_Cloud_Firestore_V1Beta1_CommitRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Commit(Google.Cloud.Firestore.V1Beta1.CommitRequest,Grpc.Core.CallOptions)">Commit(CommitRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction, while optionally updating documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitRequest.html">CommitRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitResponse.html">CommitResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Commit_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Commit*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Commit_Google_Cloud_Firestore_V1Beta1_CommitRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Commit(Google.Cloud.Firestore.V1Beta1.CommitRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Commit(CommitRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction, while optionally updating documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitRequest.html">CommitRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitResponse.html">CommitResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CommitAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CommitAsync_Google_Cloud_Firestore_V1Beta1_CommitRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CommitAsync(Google.Cloud.Firestore.V1Beta1.CommitRequest,Grpc.Core.CallOptions)">CommitAsync(CommitRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction, while optionally updating documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;CommitResponse&gt; CommitAsync(CommitRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitRequest.html">CommitRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CommitAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CommitAsync_Google_Cloud_Firestore_V1Beta1_CommitRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CommitAsync(Google.Cloud.Firestore.V1Beta1.CommitRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CommitAsync(CommitRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction, while optionally updating documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;CommitResponse&gt; CommitAsync(CommitRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitRequest.html">CommitRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CreateDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CreateDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CreateDocument_Google_Cloud_Firestore_V1Beta1_CreateDocumentRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CreateDocument(Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest,Grpc.Core.CallOptions)">CreateDocument(CreateDocumentRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Document CreateDocument(CreateDocumentRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest.html">CreateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CreateDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CreateDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CreateDocument_Google_Cloud_Firestore_V1Beta1_CreateDocumentRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CreateDocument(Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateDocument(CreateDocumentRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Document CreateDocument(CreateDocumentRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest.html">CreateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CreateDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CreateDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CreateDocumentAsync_Google_Cloud_Firestore_V1Beta1_CreateDocumentRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CreateDocumentAsync(Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest,Grpc.Core.CallOptions)">CreateDocumentAsync(CreateDocumentRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Document&gt; CreateDocumentAsync(CreateDocumentRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest.html">CreateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CreateDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CreateDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_CreateDocumentAsync_Google_Cloud_Firestore_V1Beta1_CreateDocumentRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.CreateDocumentAsync(Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateDocumentAsync(CreateDocumentRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Document&gt; CreateDocumentAsync(CreateDocumentRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.CreateDocumentRequest.html">CreateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_DeleteDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.DeleteDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_DeleteDocument_Google_Cloud_Firestore_V1Beta1_DeleteDocumentRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.DeleteDocument(Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest,Grpc.Core.CallOptions)">DeleteDocument(DeleteDocumentRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Deletes a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Empty DeleteDocument(DeleteDocumentRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest.html">DeleteDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_DeleteDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.DeleteDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_DeleteDocument_Google_Cloud_Firestore_V1Beta1_DeleteDocumentRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.DeleteDocument(Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteDocument(DeleteDocumentRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Deletes a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Empty DeleteDocument(DeleteDocumentRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest.html">DeleteDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_DeleteDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.DeleteDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_DeleteDocumentAsync_Google_Cloud_Firestore_V1Beta1_DeleteDocumentRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.DeleteDocumentAsync(Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest,Grpc.Core.CallOptions)">DeleteDocumentAsync(DeleteDocumentRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Deletes a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteDocumentAsync(DeleteDocumentRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest.html">DeleteDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_DeleteDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.DeleteDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_DeleteDocumentAsync_Google_Cloud_Firestore_V1Beta1_DeleteDocumentRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.DeleteDocumentAsync(Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteDocumentAsync(DeleteDocumentRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Deletes a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteDocumentAsync(DeleteDocumentRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.DeleteDocumentRequest.html">DeleteDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_GetDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.GetDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_GetDocument_Google_Cloud_Firestore_V1Beta1_GetDocumentRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.GetDocument(Google.Cloud.Firestore.V1Beta1.GetDocumentRequest,Grpc.Core.CallOptions)">GetDocument(GetDocumentRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets a single document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Document GetDocument(GetDocumentRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.GetDocumentRequest.html">GetDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_GetDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.GetDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_GetDocument_Google_Cloud_Firestore_V1Beta1_GetDocumentRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.GetDocument(Google.Cloud.Firestore.V1Beta1.GetDocumentRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetDocument(GetDocumentRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets a single document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Document GetDocument(GetDocumentRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.GetDocumentRequest.html">GetDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_GetDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.GetDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_GetDocumentAsync_Google_Cloud_Firestore_V1Beta1_GetDocumentRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.GetDocumentAsync(Google.Cloud.Firestore.V1Beta1.GetDocumentRequest,Grpc.Core.CallOptions)">GetDocumentAsync(GetDocumentRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Gets a single document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Document&gt; GetDocumentAsync(GetDocumentRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.GetDocumentRequest.html">GetDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_GetDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.GetDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_GetDocumentAsync_Google_Cloud_Firestore_V1Beta1_GetDocumentRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.GetDocumentAsync(Google.Cloud.Firestore.V1Beta1.GetDocumentRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetDocumentAsync(GetDocumentRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets a single document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Document&gt; GetDocumentAsync(GetDocumentRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.GetDocumentRequest.html">GetDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListCollectionIds_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListCollectionIds*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListCollectionIds_Google_Cloud_Firestore_V1Beta1_ListCollectionIdsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListCollectionIds(Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest,Grpc.Core.CallOptions)">ListCollectionIds(ListCollectionIdsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Lists all the collection IDs underneath a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ListCollectionIdsResponse ListCollectionIds(ListCollectionIdsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest.html">ListCollectionIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse.html">ListCollectionIdsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListCollectionIds_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListCollectionIds*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListCollectionIds_Google_Cloud_Firestore_V1Beta1_ListCollectionIdsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListCollectionIds(Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListCollectionIds(ListCollectionIdsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists all the collection IDs underneath a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ListCollectionIdsResponse ListCollectionIds(ListCollectionIdsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest.html">ListCollectionIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse.html">ListCollectionIdsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListCollectionIdsAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListCollectionIdsAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListCollectionIdsAsync_Google_Cloud_Firestore_V1Beta1_ListCollectionIdsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListCollectionIdsAsync(Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest,Grpc.Core.CallOptions)">ListCollectionIdsAsync(ListCollectionIdsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Lists all the collection IDs underneath a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListCollectionIdsResponse&gt; ListCollectionIdsAsync(ListCollectionIdsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest.html">ListCollectionIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse.html">ListCollectionIdsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListCollectionIdsAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListCollectionIdsAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListCollectionIdsAsync_Google_Cloud_Firestore_V1Beta1_ListCollectionIdsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListCollectionIdsAsync(Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListCollectionIdsAsync(ListCollectionIdsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists all the collection IDs underneath a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListCollectionIdsResponse&gt; ListCollectionIdsAsync(ListCollectionIdsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsRequest.html">ListCollectionIdsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListCollectionIdsResponse.html">ListCollectionIdsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListDocuments_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListDocuments*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListDocuments_Google_Cloud_Firestore_V1Beta1_ListDocumentsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListDocuments(Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest,Grpc.Core.CallOptions)">ListDocuments(ListDocumentsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Lists documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ListDocumentsResponse ListDocuments(ListDocumentsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest.html">ListDocumentsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsResponse.html">ListDocumentsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListDocuments_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListDocuments*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListDocuments_Google_Cloud_Firestore_V1Beta1_ListDocumentsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListDocuments(Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListDocuments(ListDocumentsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ListDocumentsResponse ListDocuments(ListDocumentsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest.html">ListDocumentsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsResponse.html">ListDocumentsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListDocumentsAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListDocumentsAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListDocumentsAsync_Google_Cloud_Firestore_V1Beta1_ListDocumentsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListDocumentsAsync(Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest,Grpc.Core.CallOptions)">ListDocumentsAsync(ListDocumentsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Lists documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListDocumentsResponse&gt; ListDocumentsAsync(ListDocumentsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest.html">ListDocumentsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsResponse.html">ListDocumentsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListDocumentsAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListDocumentsAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_ListDocumentsAsync_Google_Cloud_Firestore_V1Beta1_ListDocumentsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.ListDocumentsAsync(Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListDocumentsAsync(ListDocumentsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListDocumentsResponse&gt; ListDocumentsAsync(ListDocumentsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsRequest.html">ListDocumentsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListDocumentsResponse.html">ListDocumentsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Listen_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Listen*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Listen_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Listen(Grpc.Core.CallOptions)">Listen(CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Listens to changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncDuplexStreamingCall&lt;ListenRequest, ListenResponse&gt; Listen(CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncDuplexStreamingCall-2.html">AsyncDuplexStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListenRequest.html">ListenRequest</a>, <a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListenResponse.html">ListenResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Listen_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Listen*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Listen_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Listen(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Listen(Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Listens to changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncDuplexStreamingCall&lt;ListenRequest, ListenResponse&gt; Listen(Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncDuplexStreamingCall-2.html">AsyncDuplexStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListenRequest.html">ListenRequest</a>, <a class="xref" href="Google.Cloud.Firestore.V1Beta1.ListenResponse.html">ListenResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_NewInstance_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.NewInstance*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">NewInstance(ClientBase.ClientBaseConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of client from given <code>ClientBaseConfiguration</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Firestore.FirestoreClient NewInstance(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ClientBase.ClientBaseConfiguration.html">ClientBase.ClientBaseConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.html">Firestore.FirestoreClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Rollback_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Rollback*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Rollback_Google_Cloud_Firestore_V1Beta1_RollbackRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Rollback(Google.Cloud.Firestore.V1Beta1.RollbackRequest,Grpc.Core.CallOptions)">Rollback(RollbackRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Empty Rollback(RollbackRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.RollbackRequest.html">RollbackRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Rollback_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Rollback*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Rollback_Google_Cloud_Firestore_V1Beta1_RollbackRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Rollback(Google.Cloud.Firestore.V1Beta1.RollbackRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Rollback(RollbackRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Empty Rollback(RollbackRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.RollbackRequest.html">RollbackRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_RollbackAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.RollbackAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_RollbackAsync_Google_Cloud_Firestore_V1Beta1_RollbackRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.RollbackAsync(Google.Cloud.Firestore.V1Beta1.RollbackRequest,Grpc.Core.CallOptions)">RollbackAsync(RollbackRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; RollbackAsync(RollbackRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.RollbackRequest.html">RollbackRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_RollbackAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.RollbackAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_RollbackAsync_Google_Cloud_Firestore_V1Beta1_RollbackRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.RollbackAsync(Google.Cloud.Firestore.V1Beta1.RollbackRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">RollbackAsync(RollbackRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; RollbackAsync(RollbackRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.RollbackRequest.html">RollbackRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_RunQuery_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.RunQuery*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_RunQuery_Google_Cloud_Firestore_V1Beta1_RunQueryRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.RunQuery(Google.Cloud.Firestore.V1Beta1.RunQueryRequest,Grpc.Core.CallOptions)">RunQuery(RunQueryRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Runs a query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncServerStreamingCall&lt;RunQueryResponse&gt; RunQuery(RunQueryRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.RunQueryRequest.html">RunQueryRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.RunQueryResponse.html">RunQueryResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_RunQuery_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.RunQuery*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_RunQuery_Google_Cloud_Firestore_V1Beta1_RunQueryRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.RunQuery(Google.Cloud.Firestore.V1Beta1.RunQueryRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">RunQuery(RunQueryRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Runs a query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncServerStreamingCall&lt;RunQueryResponse&gt; RunQuery(RunQueryRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.RunQueryRequest.html">RunQueryRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.RunQueryResponse.html">RunQueryResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_UpdateDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.UpdateDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_UpdateDocument_Google_Cloud_Firestore_V1Beta1_UpdateDocumentRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.UpdateDocument(Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest,Grpc.Core.CallOptions)">UpdateDocument(UpdateDocumentRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Updates or inserts a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Document UpdateDocument(UpdateDocumentRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest.html">UpdateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_UpdateDocument_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.UpdateDocument*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_UpdateDocument_Google_Cloud_Firestore_V1Beta1_UpdateDocumentRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.UpdateDocument(Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateDocument(UpdateDocumentRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates or inserts a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Document UpdateDocument(UpdateDocumentRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest.html">UpdateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_UpdateDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.UpdateDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_UpdateDocumentAsync_Google_Cloud_Firestore_V1Beta1_UpdateDocumentRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.UpdateDocumentAsync(Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest,Grpc.Core.CallOptions)">UpdateDocumentAsync(UpdateDocumentRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Updates or inserts a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Document&gt; UpdateDocumentAsync(UpdateDocumentRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest.html">UpdateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_UpdateDocumentAsync_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.UpdateDocumentAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_UpdateDocumentAsync_Google_Cloud_Firestore_V1Beta1_UpdateDocumentRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.UpdateDocumentAsync(Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateDocumentAsync(UpdateDocumentRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates or inserts a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Document&gt; UpdateDocumentAsync(UpdateDocumentRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.V1Beta1.UpdateDocumentRequest.html">UpdateDocumentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Document.html">Document</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Write_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Write*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Write_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Write(Grpc.Core.CallOptions)">Write(CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Streams batches of document updates and deletes, in order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncDuplexStreamingCall&lt;WriteRequest, WriteResponse&gt; Write(CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncDuplexStreamingCall-2.html">AsyncDuplexStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.WriteRequest.html">WriteRequest</a>, <a class="xref" href="Google.Cloud.Firestore.V1Beta1.WriteResponse.html">WriteResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Write_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Write*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_Firestore_FirestoreClient_Write_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.V1Beta1.Firestore.FirestoreClient.Write(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Write(Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Streams batches of document updates and deletes, in order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncDuplexStreamingCall&lt;WriteRequest, WriteResponse&gt; Write(Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncDuplexStreamingCall-2.html">AsyncDuplexStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.WriteRequest.html">WriteRequest</a>, <a class="xref" href="Google.Cloud.Firestore.V1Beta1.WriteResponse.html">WriteResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

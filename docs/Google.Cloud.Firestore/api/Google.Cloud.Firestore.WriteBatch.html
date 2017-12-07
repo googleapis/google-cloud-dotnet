@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class WriteBatch
+   | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class WriteBatch
+   | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Firestore.WriteBatch">
+  
+  
+  <h1 id="Google_Cloud_Firestore_WriteBatch" data-uid="Google.Cloud.Firestore.WriteBatch" class="text-break">Class WriteBatch
+  </h1>
+  <div class="markdown level0 summary"><p>A batch of write operations, to be applied in a single commit.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">WriteBatch</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Firestore.html">Google.Cloud.Firestore</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Firestore.dll</h6>
+  <h5 id="Google_Cloud_Firestore_WriteBatch_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class WriteBatch</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Firestore_WriteBatch_CommitAsync_" data-uid="Google.Cloud.Firestore.WriteBatch.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Firestore_WriteBatch_CommitAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.Firestore.WriteBatch.CommitAsync(System.Threading.CancellationToken)">CommitAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Commits the batch on the server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IList&lt;WriteResult&gt;&gt; CommitAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Firestore.WriteResult.html">WriteResult</a>&gt;&gt;</td>
+        <td><p>The write results from the commit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_WriteBatch_Create_" data-uid="Google.Cloud.Firestore.WriteBatch.Create*"></a>
+  <h4 id="Google_Cloud_Firestore_WriteBatch_Create_Google_Cloud_Firestore_DocumentReference_System_Object_" data-uid="Google.Cloud.Firestore.WriteBatch.Create(Google.Cloud.Firestore.DocumentReference,System.Object)">Create(DocumentReference, Object)</h4>
+  <div class="markdown level1 summary"><p>Adds a write operation which will create the specified document with a precondition
+that it doesn&apos;t exist already.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WriteBatch Create(DocumentReference documentReference, object documentData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a></td>
+        <td><span class="parametername">documentReference</span></td>
+        <td><p>A document reference indicating the path of the document to create. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">documentData</span></td>
+        <td><p>The data for the document. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.WriteBatch.html">WriteBatch</a></td>
+        <td><p>This batch, for the purpose of method chaining</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_WriteBatch_Delete_" data-uid="Google.Cloud.Firestore.WriteBatch.Delete*"></a>
+  <h4 id="Google_Cloud_Firestore_WriteBatch_Delete_Google_Cloud_Firestore_DocumentReference_Google_Cloud_Firestore_Precondition_" data-uid="Google.Cloud.Firestore.WriteBatch.Delete(Google.Cloud.Firestore.DocumentReference,Google.Cloud.Firestore.Precondition)">Delete(DocumentReference, Precondition)</h4>
+  <div class="markdown level1 summary"><p>Adds a write operation that deletes the specified document, with an optional precondition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WriteBatch Delete(DocumentReference documentReference, Precondition precondition = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a></td>
+        <td><span class="parametername">documentReference</span></td>
+        <td><p>A document reference indicating the path of the document to delete. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Precondition.html">Precondition</a></td>
+        <td><span class="parametername">precondition</span></td>
+        <td><p>Optional precondition for deletion. May be null, in which case the deletion is unconditional.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.WriteBatch.html">WriteBatch</a></td>
+        <td><p>This batch, for the purposes of method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_WriteBatch_Set_" data-uid="Google.Cloud.Firestore.WriteBatch.Set*"></a>
+  <h4 id="Google_Cloud_Firestore_WriteBatch_Set_Google_Cloud_Firestore_DocumentReference_System_Object_Google_Cloud_Firestore_SetOptions_" data-uid="Google.Cloud.Firestore.WriteBatch.Set(Google.Cloud.Firestore.DocumentReference,System.Object,Google.Cloud.Firestore.SetOptions)">Set(DocumentReference, Object, SetOptions)</h4>
+  <div class="markdown level1 summary"><p>Adds an operation that sets data in a document, either replacing it completely or merging fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WriteBatch Set(DocumentReference documentReference, object documentData, SetOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a></td>
+        <td><span class="parametername">documentReference</span></td>
+        <td><p>A document reference indicating the path of the document to update. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">documentData</span></td>
+        <td><p>The data to store in the document. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.SetOptions.html">SetOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to use when setting data in the document. May be null, which is equivalent to <a class="xref" href="Google.Cloud.Firestore.SetOptions.html#Google_Cloud_Firestore_SetOptions_Overwrite">Overwrite</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.WriteBatch.html">WriteBatch</a></td>
+        <td><p>This batch, for the purposes of method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_WriteBatch_Update_" data-uid="Google.Cloud.Firestore.WriteBatch.Update*"></a>
+  <h4 id="Google_Cloud_Firestore_WriteBatch_Update_Google_Cloud_Firestore_DocumentReference_System_Collections_Generic_IDictionary_Google_Cloud_Firestore_FieldPath_System_Object__Google_Cloud_Firestore_Precondition_" data-uid="Google.Cloud.Firestore.WriteBatch.Update(Google.Cloud.Firestore.DocumentReference,System.Collections.Generic.IDictionary{Google.Cloud.Firestore.FieldPath,System.Object},Google.Cloud.Firestore.Precondition)">Update(DocumentReference, IDictionary&lt;FieldPath, Object&gt;, Precondition)</h4>
+  <div class="markdown level1 summary"><p>Adds an update operation that updates just the specified fields paths in the document, with the corresponding values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WriteBatch Update(DocumentReference documentReference, IDictionary&lt;FieldPath, object&gt; updates, Precondition precondition = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.DocumentReference.html">DocumentReference</a></td>
+        <td><span class="parametername">documentReference</span></td>
+        <td><p>A document reference indicating the path of the document to update. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<a class="xref" href="Google.Cloud.Firestore.FieldPath.html">FieldPath</a>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">updates</span></td>
+        <td><p>The updates to perform on the document, keyed by the field path to update. Fields not present in this dictionary are not updated. Must not be null or empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Precondition.html">Precondition</a></td>
+        <td><span class="parametername">precondition</span></td>
+        <td><p>Optional precondition for updating the document. May be null, which is equivalent to <a class="xref" href="Google.Cloud.Firestore.Precondition.html#Google_Cloud_Firestore_Precondition_MustExist">MustExist</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.WriteBatch.html">WriteBatch</a></td>
+        <td><p>This batch, for the purposes of method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

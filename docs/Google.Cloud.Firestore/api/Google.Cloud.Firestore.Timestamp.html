@@ -1,0 +1,807 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct Timestamp
+   | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct Timestamp
+   | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Firestore.Timestamp">
+  
+  
+  <h1 id="Google_Cloud_Firestore_Timestamp" data-uid="Google.Cloud.Firestore.Timestamp" class="text-break">Struct Timestamp
+  </h1>
+  <div class="markdown level0 summary"><p>A nanosecond-precision immutable timestamp. When this is stored as part of a document in Firestore,
+it is truncated to the microsecond, towards the start of time.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a>&gt;</div>
+    <div><span class="xref">System.IComparable</span></div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Firestore.html">Google.Cloud.Firestore</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Firestore.dll</h6>
+  <h5 id="Google_Cloud_Firestore_Timestamp_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct Timestamp : IEquatable&lt;Timestamp&gt;, IComparable, IComparable&lt;Timestamp&gt;</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Firestore_Timestamp_CompareTo_" data-uid="Google.Cloud.Firestore.Timestamp.CompareTo*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_CompareTo_Google_Cloud_Firestore_Timestamp_" data-uid="Google.Cloud.Firestore.Timestamp.CompareTo(Google.Cloud.Firestore.Timestamp)">CompareTo(Timestamp)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(Timestamp other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.IComparable&lt;T&gt;.CompareTo(T)</span></div>
+  <a id="Google_Cloud_Firestore_Timestamp_CompareTo_" data-uid="Google.Cloud.Firestore.Timestamp.CompareTo*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_CompareTo_System_Object_" data-uid="Google.Cloud.Firestore.Timestamp.CompareTo(System.Object)">CompareTo(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.IComparable.CompareTo(System.Object)</span></div>
+  <a id="Google_Cloud_Firestore_Timestamp_FromDateTime_" data-uid="Google.Cloud.Firestore.Timestamp.FromDateTime*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_FromDateTime_System_DateTime_" data-uid="Google.Cloud.Firestore.Timestamp.FromDateTime(System.DateTime)">FromDateTime(DateTime)</h4>
+  <div class="markdown level1 summary"><p>Converts a <span class="xref">System.DateTime</span> to a <a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Timestamp FromDateTime(DateTime dateTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">dateTime</span></td>
+        <td><p>The value to convert; its kind must be <span class="xref">System.DateTimeKind.Utc</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><p>A <a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a> representation of <code data-dev-comment-type="paramref" class="paramref">dateTime</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Timestamp_FromDateTimeOffset_" data-uid="Google.Cloud.Firestore.Timestamp.FromDateTimeOffset*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_FromDateTimeOffset_System_DateTimeOffset_" data-uid="Google.Cloud.Firestore.Timestamp.FromDateTimeOffset(System.DateTimeOffset)">FromDateTimeOffset(DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Converts the given <span class="xref">System.DateTimeOffset</span> to a <a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Timestamp FromDateTimeOffset(DateTimeOffset dateTimeOffset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><span class="parametername">dateTimeOffset</span></td>
+        <td><p>The date and time (with UTC offset) to convert to a timestamp.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><p>The converted timestamp.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Timestamp_FromDateTimeOffset_System_DateTimeOffset__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The offset is taken into consideration when converting the value (so the same instant in time
+is represented) but is not a separate part of the resulting value. In other words, there is no
+roundtrip operation to retrieve the original <code>DateTimeOffset</code>.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Timestamp_FromProto_" data-uid="Google.Cloud.Firestore.Timestamp.FromProto*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_FromProto_Google_Protobuf_WellKnownTypes_Timestamp_" data-uid="Google.Cloud.Firestore.Timestamp.FromProto(Google.Protobuf.WellKnownTypes.Timestamp)">FromProto(Timestamp)</h4>
+  <div class="markdown level1 summary"><p>Creates an instance from a Protobuf <span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span> representation.
+Later modifications to the Protobuf representation will not affect the returned oject.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Timestamp FromProto(Timestamp proto)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span></td>
+        <td><span class="parametername">proto</span></td>
+        <td><p>A Protobuf timestamp representation. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><p>An immutable timestamp.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Timestamp_GetCurrentTimestamp_" data-uid="Google.Cloud.Firestore.Timestamp.GetCurrentTimestamp*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_GetCurrentTimestamp" data-uid="Google.Cloud.Firestore.Timestamp.GetCurrentTimestamp">GetCurrentTimestamp()</h4>
+  <div class="markdown level1 summary"><p>Returns the current timestamp according to the system clock. The system time zone
+is irrelevant, as a timestamp represents an instant in time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Timestamp GetCurrentTimestamp()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><p>The current timestamp according to the system clock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Timestamp_GetHashCode_" data-uid="Google.Cloud.Firestore.Timestamp.GetHashCode*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_GetHashCode" data-uid="Google.Cloud.Firestore.Timestamp.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  <a id="Google_Cloud_Firestore_Timestamp_ToDateTime_" data-uid="Google.Cloud.Firestore.Timestamp.ToDateTime*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_ToDateTime" data-uid="Google.Cloud.Firestore.Timestamp.ToDateTime">ToDateTime()</h4>
+  <div class="markdown level1 summary"><p>Converts this timestamp to a <span class="xref">System.DateTime</span> with a kind of
+<span class="xref">System.DateTimeKind.Utc</span>. This can lose information as DateTime has a precision of
+a tick (100 nanoseconds). If the timestamp is not a precise number of ticks, it will be
+truncated towards the start of time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime ToDateTime()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><p>A <span class="xref">System.DateTime</span> representation of this timestamp.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Timestamp_ToDateTimeOffset_" data-uid="Google.Cloud.Firestore.Timestamp.ToDateTimeOffset*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_ToDateTimeOffset" data-uid="Google.Cloud.Firestore.Timestamp.ToDateTimeOffset">ToDateTimeOffset()</h4>
+  <div class="markdown level1 summary"><p>Converts this timestamp into a <span class="xref">System.DateTimeOffset</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset ToDateTimeOffset()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td><p>This timestamp as a <code>DateTimeOffset</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Firestore_Timestamp_ToDateTimeOffset_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The resulting <code>DateTimeOffset</code> will always have an <code>Offset</code> of zero.
+If the timestamp is not a precise number of ticks, it will be truncated towards the start
+of time.
+<span class="xref">System.DateTimeOffset</span> value precisely on a second.</p>
+</div>
+  <a id="Google_Cloud_Firestore_Timestamp_ToProto_" data-uid="Google.Cloud.Firestore.Timestamp.ToProto*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_ToProto" data-uid="Google.Cloud.Firestore.Timestamp.ToProto">ToProto()</h4>
+  <div class="markdown level1 summary"><p>Creates a Protobuf <span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span> representation of this
+timestamp. Modifications to the returned message will not be reflected in this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp ToProto()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span></td>
+        <td><p>A Protobuf timestamp representation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Timestamp_ToString_" data-uid="Google.Cloud.Firestore.Timestamp.ToString*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_ToString" data-uid="Google.Cloud.Firestore.Timestamp.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  <h3 id="operators">Operators
+  </h3>
+  <a id="Google_Cloud_Firestore_Timestamp_op_Equality_" data-uid="Google.Cloud.Firestore.Timestamp.op_Equality*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_op_Equality_Google_Cloud_Firestore_Timestamp_Google_Cloud_Firestore_Timestamp_" data-uid="Google.Cloud.Firestore.Timestamp.op_Equality(Google.Cloud.Firestore.Timestamp,Google.Cloud.Firestore.Timestamp)">Equality(Timestamp, Timestamp)</h4>
+  <div class="markdown level1 summary"><p>Operator overload to compare two Blob values for equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Timestamp lhs, Timestamp rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td><p>Left value to compare</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p>Right value to compare</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if <code data-dev-comment-type="paramref" class="paramref">lhs</code> is equal to <code data-dev-comment-type="paramref" class="paramref">rhs</code>; otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Timestamp_op_GreaterThan_" data-uid="Google.Cloud.Firestore.Timestamp.op_GreaterThan*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_op_GreaterThan_Google_Cloud_Firestore_Timestamp_Google_Cloud_Firestore_Timestamp_" data-uid="Google.Cloud.Firestore.Timestamp.op_GreaterThan(Google.Cloud.Firestore.Timestamp,Google.Cloud.Firestore.Timestamp)">GreaterThan(Timestamp, Timestamp)</h4>
+  <div class="markdown level1 summary"><p>Compares two timestamps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator&gt;(Timestamp lhs, Timestamp rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td><p>The left timestamp to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p>The right timestamp to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true is <code data-dev-comment-type="paramref" class="paramref">lhs</code> is strictly later than <code data-dev-comment-type="paramref" class="paramref">rhs</code>; otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Timestamp_op_GreaterThanOrEqual_" data-uid="Google.Cloud.Firestore.Timestamp.op_GreaterThanOrEqual*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_op_GreaterThanOrEqual_Google_Cloud_Firestore_Timestamp_Google_Cloud_Firestore_Timestamp_" data-uid="Google.Cloud.Firestore.Timestamp.op_GreaterThanOrEqual(Google.Cloud.Firestore.Timestamp,Google.Cloud.Firestore.Timestamp)">GreaterThanOrEqual(Timestamp, Timestamp)</h4>
+  <div class="markdown level1 summary"><p>Compares two timestamps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;=(Timestamp lhs, Timestamp rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td><p>The left timestamp to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p>The right timestamp to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true is <code data-dev-comment-type="paramref" class="paramref">lhs</code> is later than or equal to <code data-dev-comment-type="paramref" class="paramref">rhs</code>; otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Timestamp_op_Inequality_" data-uid="Google.Cloud.Firestore.Timestamp.op_Inequality*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_op_Inequality_Google_Cloud_Firestore_Timestamp_Google_Cloud_Firestore_Timestamp_" data-uid="Google.Cloud.Firestore.Timestamp.op_Inequality(Google.Cloud.Firestore.Timestamp,Google.Cloud.Firestore.Timestamp)">Inequality(Timestamp, Timestamp)</h4>
+  <div class="markdown level1 summary"><p>Operator overload to compare two Blob values for inequality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Timestamp lhs, Timestamp rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td><p>Left value to compare</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p>Right value to compare</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>false if <code data-dev-comment-type="paramref" class="paramref">lhs</code> is equal to <code data-dev-comment-type="paramref" class="paramref">rhs</code>; otherwise true.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Timestamp_op_LessThan_" data-uid="Google.Cloud.Firestore.Timestamp.op_LessThan*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_op_LessThan_Google_Cloud_Firestore_Timestamp_Google_Cloud_Firestore_Timestamp_" data-uid="Google.Cloud.Firestore.Timestamp.op_LessThan(Google.Cloud.Firestore.Timestamp,Google.Cloud.Firestore.Timestamp)">LessThan(Timestamp, Timestamp)</h4>
+  <div class="markdown level1 summary"><p>Compares two timestamps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;(Timestamp lhs, Timestamp rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td><p>The left timestamp to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p>The right timestamp to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true is <code data-dev-comment-type="paramref" class="paramref">lhs</code> is strictly earlier than <code data-dev-comment-type="paramref" class="paramref">rhs</code>; otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_Timestamp_op_LessThanOrEqual_" data-uid="Google.Cloud.Firestore.Timestamp.op_LessThanOrEqual*"></a>
+  <h4 id="Google_Cloud_Firestore_Timestamp_op_LessThanOrEqual_Google_Cloud_Firestore_Timestamp_Google_Cloud_Firestore_Timestamp_" data-uid="Google.Cloud.Firestore.Timestamp.op_LessThanOrEqual(Google.Cloud.Firestore.Timestamp,Google.Cloud.Firestore.Timestamp)">LessThanOrEqual(Timestamp, Timestamp)</h4>
+  <div class="markdown level1 summary"><p>Compares two timestamps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;=(Timestamp lhs, Timestamp rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td><p>The left timestamp to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Firestore.Timestamp.html">Timestamp</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p>The right timestamp to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true is <code data-dev-comment-type="paramref" class="paramref">lhs</code> is earlier than or equal to <code data-dev-comment-type="paramref" class="paramref">rhs</code>; otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

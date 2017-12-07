@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class WriteRequest
+   | Google.Cloud.Firestore.V1Beta1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class WriteRequest
+   | Google.Cloud.Firestore.V1Beta1 ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest">
+  
+  
+  <h1 id="Google_Cloud_Firestore_V1Beta1_WriteRequest" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest" class="text-break">Class WriteRequest
+  </h1>
+  <div class="markdown level0 summary"><p>The request for [Firestore.Write][google.firestore.v1beta1.Firestore.Write].</p>
+<p>The first request creates a stream, or resumes an existing one from a token.</p>
+<p>When creating a new stream, the server replies with a response containing
+only an ID and a token, to use in the next request.</p>
+<p>When resuming a stream, the server first streams any responses later than the
+given token, then a response containing only an up-to-date token, to use in
+the next request.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">WriteRequest</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.WriteRequest.html">WriteRequest</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.WriteRequest.html">WriteRequest</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.WriteRequest.html">WriteRequest</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Firestore.V1Beta1.html">Google.Cloud.Firestore.V1Beta1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Firestore.V1Beta1.dll</h6>
+  <h5 id="Google_Cloud_Firestore_V1Beta1_WriteRequest_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class WriteRequest : IMessage&lt;WriteRequest&gt;, IMessage, IEquatable&lt;WriteRequest&gt;, IDeepCloneable&lt;WriteRequest&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Firestore_V1Beta1_WriteRequest_Database_" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest.Database*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_WriteRequest_Database" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest.Database">Database</h4>
+  <div class="markdown level1 summary"><p>The database name. In the format:
+<code>projects/{project_id}/databases/{database_id}</code>.
+This is only required in the first message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Database { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_WriteRequest_Labels_" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest.Labels*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_WriteRequest_Labels" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>Labels associated with this write request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_WriteRequest_StreamId_" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest.StreamId*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_WriteRequest_StreamId" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest.StreamId">StreamId</h4>
+  <div class="markdown level1 summary"><p>The ID of the write stream to resume.
+This may only be set in the first message. When left empty, a new write
+stream will be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string StreamId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_WriteRequest_StreamToken_" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest.StreamToken*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_WriteRequest_StreamToken" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest.StreamToken">StreamToken</h4>
+  <div class="markdown level1 summary"><p>A stream token that was previously sent by the server.</p>
+<p>The client should set this field to the token from the most recent
+[WriteResponse][google.firestore.v1beta1.WriteResponse] it has received. This acknowledges that the client has
+received responses up to this token. After sending this token, earlier
+tokens may not be used anymore.</p>
+<p>The server may close the stream if there are too many unacknowledged
+responses.</p>
+<p>Leave this field unset when creating a new stream. To resume a stream at
+a specific point, set this field and the <code>stream_id</code> field.</p>
+<p>Leave this field unset when creating a new stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ByteString StreamToken { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Firestore_V1Beta1_WriteRequest_Writes_" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest.Writes*"></a>
+  <h4 id="Google_Cloud_Firestore_V1Beta1_WriteRequest_Writes" data-uid="Google.Cloud.Firestore.V1Beta1.WriteRequest.Writes">Writes</h4>
+  <div class="markdown level1 summary"><p>The writes to apply.</p>
+<p>Always executed atomically and in order.
+This must be empty on the first request.
+This may be empty on the last request.
+This must not be empty on all other requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;Write&gt; Writes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Firestore.V1Beta1.Write.html">Write</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

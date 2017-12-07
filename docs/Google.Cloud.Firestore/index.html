@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Google.Cloud.Firestore | Google.Cloud.Firestore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Google.Cloud.Firestore | Google.Cloud.Firestore ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="googlecloudfirestore">Google.Cloud.Firestore</h1>
+
+<p><code>Google.Cloud.Firestore</code> is a.NET client library for the <a href="https://firebase.google.com/docs/firestore/">Firestore API</a>.</p>
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Cloud.Firestore</code> package from NuGet. Add it to
+your project in the normal way (for example by right-clicking on the
+project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
+Please ensure you enable pre-release packages(for example, in the
+Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
+box).</p>
+<h1 id="authentication">Authentication</h1>
+<p>When running on Google Cloud Platform, no action needs to be taken to authenticate.</p>
+<p>Otherwise, the simplest way of authenticating your API calls is to
+download a service account JSON file then set the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to refer to it.
+The credentials will automatically be used to authenticate. See the <a href="https://cloud.google.com/docs/authentication/getting-started">Getting Started With
+Authentication</a> guide for more details.</p>
+<h1 id="getting-started">Getting started</h1>
+<p>Everything starts with <a href="api/Google.Cloud.Firestore.FirestoreDb.html">FirestoreDb</a>.
+Create an instance using the <code>Create</code> or <code>CreateAsync</code> methods, passing in your Google Cloud project ID.
+The default credentials will be used to authenticate with the server.</p>
+<p>From there, you can create, fetch and modify documents, and run queries.</p>
+<h1 id="sample-code">Sample code</h1>
+<pre><code class="lang-cs">FirestoreDb db = FirestoreDb.Create(projectId);
+
+// Create a document with a random ID in the &quot;users&quot; collection.
+CollectionReference collection = db.Collection(&quot;users&quot;);
+DocumentReference document = await collection.AddAsync(new { Name = new { First = &quot;Ada&quot;, Last = &quot;Lovelace&quot; }, Born = 1815 });
+
+// A DocumentReference doesn&#39;t contain the data - it&#39;s just a path.
+// Let&#39;s fetch the current document.
+DocumentSnapshot snapshot = await document.SnapshotAsync();
+
+// We can access individual fields by dot-separated path
+Console.WriteLine(snapshot.GetField&lt;string&gt;(&quot;Name.First&quot;));
+Console.WriteLine(snapshot.GetField&lt;string&gt;(&quot;Name.Last&quot;));
+Console.WriteLine(snapshot.GetField&lt;int&gt;(&quot;Born&quot;));
+
+// Or deserialize the whole document into a dictionary
+Dictionary&lt;string, object&gt; data = snapshot.ToDictionary();
+Dictionary&lt;string, object&gt; name = (Dictionary&lt;string, object&gt;) data[&quot;Name&quot;];
+Console.WriteLine(name[&quot;First&quot;]);
+Console.WriteLine(name[&quot;Last&quot;]);
+
+// See the &quot;data model&quot; guide for more options for data handling.
+
+// Query the collection for all documents where doc.Born &lt; 1900.
+Query query = collection.Where(&quot;Born&quot;, QueryOperator.LessThan, 1900);
+QuerySnapshot querySnapshot = await query.SnapshotAsync();
+foreach (DocumentSnapshot queryResult in querySnapshot.Documents)
+{
+    string firstName = queryResult.GetField&lt;string&gt;(&quot;Name.First&quot;);
+    string lastName = queryResult.GetField&lt;string&gt;(&quot;Name.Last&quot;);
+    int born = queryResult.GetField&lt;int&gt;(&quot;Born&quot;);
+    Console.WriteLine($&quot;{firstName} {lastName}; born {born}&quot;);
+}
+</code></pre><p>See the <a href="userguide.html">user guide</a> for more samples.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
