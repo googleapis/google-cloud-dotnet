@@ -26,7 +26,7 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="2.2.1" />
-    <PackageReference Include="Google.Cloud.Iam.V1" Version="1.0.0-beta12" />
+    <PackageReference Include="Google.Cloud.Iam.V1" Version="1.0.0" />
     <PackageReference Include="Google.LongRunning" Version="1.0.0" />
     <PackageReference Include="Grpc.Core" Version="1.7.1" PrivateAssets="None" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.5.0" PrivateAssets="All" />
