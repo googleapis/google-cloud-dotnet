@@ -76,6 +76,9 @@ namespace Google.Cloud.Diagnostics.Common
             public ulong SpanId() => TraceSpan.SpanId;
         }
 
+        /// <summary>The number of nanoseconds in a millisecond.</summary>
+        internal static readonly int _nanosecondsInAMillisecond = 1000000; // 1,000,000
+
         /// <summary>The trace consumer to push the trace to when completed.</summary>
         private readonly IConsumer<TraceProto> _consumer;
 
@@ -203,6 +206,14 @@ namespace Google.Cloud.Diagnostics.Common
 
             lock (_traceLock)
             {
+                // If the time between the start and end of a span is less then 1 ms
+                // the span will not be recorded.  If this is the case bump up
+                // the time by 1 ms which is the smallest amount of time for the Trace API
+                // to record a trace. 
+                if ((span.TraceSpan.EndTime.Nanos - span.TraceSpan.StartTime.Nanos) < 1000000)
+                {
+                    span.TraceSpan.EndTime.Nanos += 1000000;
+                }
                 _trace.Spans.Add(span.TraceSpan);
 
                 var newOpenSpanCount = Interlocked.Decrement(ref _openSpanCount);
