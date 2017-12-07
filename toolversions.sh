@@ -3,7 +3,7 @@
 
 declare -r REPO_ROOT=$(realpath $(dirname ${BASH_SOURCE}))
 
-declare -r DOCFX_VERSION=2.28.1
+declare -r DOCFX_VERSION=2.28.2
 declare -r DOTCOVER_VERSION=2017.1.20170613.162720 
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
 declare -r PROTOC_VERSION=3.4.0
