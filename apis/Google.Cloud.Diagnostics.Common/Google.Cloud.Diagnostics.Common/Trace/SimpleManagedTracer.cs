@@ -76,9 +76,6 @@ namespace Google.Cloud.Diagnostics.Common
             public ulong SpanId() => TraceSpan.SpanId;
         }
 
-        /// <summary>The number of nanoseconds in a millisecond.</summary>
-        internal static readonly int _nanosecondsInAMillisecond = 1000000; // 1,000,000
-
         /// <summary>The trace consumer to push the trace to when completed.</summary>
         private readonly IConsumer<TraceProto> _consumer;
 
@@ -210,9 +207,12 @@ namespace Google.Cloud.Diagnostics.Common
                 // the span will not be recorded.  If this is the case bump up
                 // the time by 1 ms which is the smallest amount of time for the Trace API
                 // to record a trace. 
-                if ((span.TraceSpan.EndTime.Nanos - span.TraceSpan.StartTime.Nanos) < _nanosecondsInAMillisecond)
+                var end = span.TraceSpan.EndTime.ToDateTime();
+                var start = span.TraceSpan.StartTime.ToDateTime();
+                if ((end - start) < TimeSpan.FromMilliseconds(1))
                 {
-                    span.TraceSpan.EndTime.Nanos += _nanosecondsInAMillisecond;
+                    var newTime = span.TraceSpan.EndTime.ToDateTime().Add(TimeSpan.FromMilliseconds(1));
+                    span.TraceSpan.EndTime = Timestamp.FromDateTime(newTime);
                 }
                 _trace.Spans.Add(span.TraceSpan);
 

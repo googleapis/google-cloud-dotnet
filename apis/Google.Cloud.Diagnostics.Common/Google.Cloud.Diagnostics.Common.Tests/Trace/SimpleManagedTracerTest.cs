@@ -62,7 +62,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 span.StartTime != null &&
                 parentId == span.ParentSpanId &&
                 span.EndTime != null &&
-                (span.EndTime.Nanos - span.StartTime.Nanos) >= SimpleManagedTracer._nanosecondsInAMillisecond;
+                span.EndTime.ToDateTime() > span.StartTime.ToDateTime();
         }
 
         /// <summary>
@@ -76,9 +76,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         /// </summary>
         private static bool IsShortLivedSpan(TraceSpan span) 
         {
-            var totalNanos = span.EndTime.Nanos - span.StartTime.Nanos;
-            var nanosInMs = SimpleManagedTracer._nanosecondsInAMillisecond;
-            return totalNanos == nanosInMs && totalNanos <= nanosInMs * 2;
+            var totalTime = span.EndTime.ToDateTime() - span.StartTime.ToDateTime();
+            return totalTime >= TimeSpan.FromMilliseconds(1) && totalTime <= TimeSpan.FromMilliseconds(2);
         }
 
         [Fact]
