@@ -18,11 +18,11 @@ using System.Data;
 using System.Data.Common;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Data;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Microsoft.EntityFrameworkCore.Utilities
 {
@@ -39,140 +39,8 @@ namespace Microsoft.EntityFrameworkCore.Utilities
         private string _connectionString;
         private bool _deleteDatabase;
 
-        /// <summary>
-        /// This map helps us parse INSERT INTO TSQL when the sql does not indicate the column
-        /// </summary>
-        private static readonly Dictionary<string, string[]> s_tableFieldsNames
-            = new Dictionary<string, string[]>
-            {
-                {
-                    "Employees",
-                    new[]
-                    {
-                        "EmployeeID",
-                        "LastName",
-                        "FirstName",
-                        "Title",
-                        "TitleOfCourtesy",
-                        "BirthDate",
-                        "HireDate",
-                        "Address",
-                        "City",
-                        "Region",
-                        "PostalCode",
-                        "Country",
-                        "HomePhone",
-                        "Extension",
-                        "Photo",
-                        "Notes",
-                        "ReportsTo",
-                        "PhotoPath"
-                    }
-                },
-                {
-                    "Categories",
-                    new[]
-                    {
-                        "CategoryID",
-                        "CategoryName",
-                        "Description",
-                        "Picture"
-                    }
-                },
-                {
-                    "Customers",
-                    new[]
-                    {
-                        "CustomerID",
-                        "CompanyName",
-                        "ContactName",
-                        "ContactTitle",
-                        "Address",
-                        "City",
-                        "Region",
-                        "PostalCode",
-                        "Country",
-                        "Phone",
-                        "Fax"
-                    }
-                },
-                {
-                    "Shippers",
-                    new[]
-                    {
-                        "ShipperID",
-                        "CompanyName",
-                        "Phone"
-                    }
-                },
-                {
-                    "Suppliers",
-                    new[]
-                    {
-                        "SupplierID",
-                        "CompanyName",
-                        "ContactName",
-                        "ContactTitle",
-                        "Address",
-                        "City",
-                        "Region",
-                        "PostalCode",
-                        "Country",
-                        "Phone",
-                        "Fax",
-                        "HomePage"
-                    }
-                },
-                {
-                    "Orders",
-                    new[]
-                    {
-                        "OrderID",
-                        "CustomerID",
-                        "EmployeeID",
-                        "OrderDate",
-                        "RequiredDate",
-                        "ShippedDate",
-                        "ShipVia",
-                        "Freight",
-                        "ShipName",
-                        "ShipAddress",
-                        "ShipCity",
-                        "ShipRegion",
-                        "ShipPostalCode",
-                        "ShipCountry"
-                    }
-                },
-                {
-                    "Products",
-                    new[]
-                    {
-                        "ProductID",
-                        "ProductName",
-                        "SupplierID",
-                        "CategoryID",
-                        "QuantityPerUnit",
-                        "UnitPrice",
-                        "UnitsInStock",
-                        "UnitsOnOrder",
-                        "ReorderLevel",
-                        "Discontinued"
-                    }
-                },
-                {
-                    "Order_Details",
-                    new[]
-                    {
-                        "OrderID",
-                        "ProductID",
-                        "UnitPrice",
-                        "Quantity",
-                        "Discount"
-                    }
-                }
-
-            };
-
+        private static readonly Dictionary<string, List<Tuple<string, SpannerDbType>>> s_columnMap
+            = new Dictionary<string, List<Tuple<string, SpannerDbType>>>();
 
         private SpannerTestStore(string name, bool cleanDatabase = true)
         {
@@ -244,21 +112,19 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                         return false;
                     }
 
-                    Clean(Name);
+                    DeleteDatabase(Name);
                 }
-                else
-                {
-                    ExecuteNonQuery(master, GetCreateDatabaseStatement(Name));
-                }
+                ExecuteNonQuery(master, GetCreateDatabaseStatement(Name));
             }
 
             return true;
         }
 
+        private static int s_gStatements;
+        private const int s_skipToLine = 149;
+
         public static void ExecuteScript(string databaseName, string scriptPath)
         {
-            // HACK: Probe for script file as current dir
-            // is different between k build and VS run.
             if (File.Exists(@"..\..\" + scriptPath))
             {
                 //executing in VS - so path is relative to bin\<config> dir
@@ -274,18 +140,150 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             {
                 Execute(connection, command =>
                 {
-
                     var statements = Regex.Split(script, @";[\r?\n]\s+", RegexOptions.Multiline);
 
                     foreach (var statement in statements)
                     {
+                        s_gStatements++;
                         if (string.IsNullOrWhiteSpace(statement)
                             || statement.StartsWith("SET ", StringComparison.Ordinal))
                         {
                             continue;
                         }
 
-                        command.CommandText = statement;
+                        var tokens = statement.Split(' ', '(', ')', ',', ';').Where(
+                            x => !string.IsNullOrEmpty(x?.Trim())).ToList();
+                        if (tokens.Count == 0)
+                        {
+                            continue;
+                        }
+
+                        if (tokens[0] == "CREATE")
+                        {
+                            if (tokens[1] == "TABLE")
+                            {
+                                var tableName = tokens[2];
+                                var columnData = new List<Tuple<string, SpannerDbType>>();
+                                var i = 3;
+                                while (tokens[i] != "PRIMARY")
+                                {
+                                    SpannerDbType type;
+                                    if (!SpannerDbType.TryParse(tokens[i + 1], out type))
+                                    {
+                                        throw new InvalidOperationException($"Unable to parse {tokens[i + 1]}");
+                                    }
+                                    columnData.Add(new Tuple<string, SpannerDbType>(tokens[i], type));
+                                    i += 2;
+                                    if (tokens[i] == "MAX" || (tokens[i][0] >= '0' && tokens[i][0] <= '9'))
+                                    {
+                                        i++;
+                                    }
+                                    if (tokens[i] == "NOT")
+                                    {
+                                        i += 2;
+                                    }
+                                }
+                                s_columnMap[tableName] = columnData;
+                            }
+                            command.CommandText = statement;
+                        }
+                        else if (tokens[0] == "INSERT")
+                        {
+                            if (s_gStatements >= s_skipToLine)
+                            {
+                                Console.WriteLine("break here");
+                            }
+
+                            // we do some simple parsing of a DML insert to a write command.
+                            if (tokens.Count < 5 || tokens[0] != "INSERT" || tokens[1] != "INTO")
+                            {
+                                continue;
+                            }
+
+                            var m = Regex.Match(statement, @"INSERT INTO ([^\r\n\t\f\v(]+)\s?(\(.*\))?.*VALUES.(\(.*\))", RegexOptions.Singleline);
+                            var targetTable = m.Groups[1].Value.Trim();
+                            var columnGroup = m.Groups[2].Value;
+                            var valueGroup = m.Groups[3].Value;
+
+                            //get columns to set.
+                            IEnumerable<Tuple<string, SpannerDbType>> targetColumns;
+                            if (string.IsNullOrEmpty(columnGroup))
+                            {
+                                //use the lookup table.
+                                targetColumns = s_columnMap[targetTable];
+                            }
+                            else
+                            {
+                                var trimmedCols = columnGroup.Remove(columnGroup.Length - 1, 1).Remove(0, 1);
+                                targetColumns = trimmedCols.Split(',')
+                                    .Select(x => s_columnMap[targetTable].First(y => y.Item1 == x.Trim()));
+                            }
+
+                            //value parsing is a bit complicated and we do a simpler (hackish) heuristic which
+                            //isnt completely valid for all cases, but works for our inputs.
+                            valueGroup = valueGroup.Remove(valueGroup.Length - 1, 1).Remove(0, 1);
+                            var valueTokens = valueGroup.Split(',').ToList();
+                            var values = new List<string>();
+                            StringBuilder sb = null;
+                            for (var i = 0; i < valueTokens.Count; i++)
+                            {
+                                var valueToken = valueTokens[i].Replace("''", "'");
+                                if (sb != null)
+                                {
+                                    sb.Append(valueToken);
+                                    if (sb[sb.Length - 1] == '\'')
+                                    {
+                                        values.Add(sb.ToString().Substring(0, sb.Length - 1));
+                                        sb = null;
+                                    }
+                                    continue;
+                                }
+                                valueToken = valueToken.TrimStart();
+                                if (valueToken.StartsWith("TO_DATE"))
+                                {
+                                    int dateQuoteInd = valueToken.IndexOf('\'');
+                                    int endDateQuote = valueToken.IndexOf('\'', dateQuoteInd + 1);
+
+                                    values.Add(valueToken.Substring(dateQuoteInd + 1, endDateQuote - dateQuoteInd - 1));
+                                    i++;
+                                }
+                                else if (valueToken.StartsWith("'") || valueToken.StartsWith("N'"))
+                                {
+                                    valueToken = valueToken.StartsWith("'") ?
+                                        valueToken.Substring(1, valueToken.Length - 1) 
+                                            : valueToken.Substring(2, valueToken.Length - 2);
+                                    if (valueToken.EndsWith("'"))
+                                    {
+                                        values.Add(valueToken.Substring(0, valueToken.Length - 1));
+                                    }
+                                    else
+                                    {
+                                        sb = new StringBuilder(valueToken);
+                                    }
+                                }
+                                else
+                                {
+                                    values.Add(string.Equals(valueToken, "NULL", StringComparison.InvariantCultureIgnoreCase)
+                                        ? null : valueToken);
+                                }
+                            }
+
+                            command.CommandText = $"INSERT {targetTable}";
+                            command.Parameters.Clear();
+                            command.Parameters.AddRange(targetColumns.Select(x =>
+                                        new SpannerParameter(x.Item1, x.Item2)).ToArray());
+
+                            if (values.Count != command.Parameters.Count)
+                            {
+                                throw new InvalidOperationException("error parsing input northwind.sql");
+                            }
+                            for (var j = 0; j < command.Parameters.Count; j++)
+                            {
+                                command.Parameters[j].Value = values[j];
+                            }
+                        }
+                        if (s_gStatements < s_skipToLine) continue;
+
                         command.ExecuteNonQuery();
                     }
 
@@ -312,23 +310,6 @@ namespace Microsoft.EntityFrameworkCore.Utilities
 
             _deleteDatabase = deleteDatabase;
             return this;
-        }
-
-        private static void Clean(string name)
-        {
-            //TODO(benwu)
-//            var options = new DbContextOptionsBuilder()
-//                .UseSpanner(CreateConnectionString(name), b => b.ApplyConfiguration())
-//                .UseInternalServiceProvider(
-//                    new ServiceCollection()
-//                        .AddEntityFrameworkSpanner()
-//                        .BuildServiceProvider())
-//                .Options;
-//
-//            using (var context = new DbContext(options))
-//            {
-//                context.Database.EnsureClean();
-//            }
         }
 
         private static string GetCreateDatabaseStatement(string name)
@@ -365,7 +346,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             }
         }
 
-        private static string GetDropDatabaseSql(string name) => $@"DROP DATABASE ""{name}""";
+        private static string GetDropDatabaseSql(string name) => $@"DROP DATABASE {name}";
 
         public override void OpenConnection() => _connection.Open();
 
@@ -465,6 +446,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                 {
                     connection.Close();
                 }
+                File.WriteAllText(@"C:\Users\benwu\readme.txt", $"Got to line {s_gStatements}");
             }
         }
 

@@ -97,8 +97,7 @@ CREATE TABLE Orders (
     ShipRegion STRING(15),
     ShipPostalCode STRING(10),
     ShipCountry STRING(15)
-) PRIMARY KEY (CustomerID, OrderID),
-  INTERLEAVE IN PARENT Customers ON DELETE CASCADE;
+) PRIMARY KEY (OrderID);
 
 CREATE  INDEX Ord_CustomerID ON Orders(CustomerID);
 
@@ -139,8 +138,7 @@ CREATE TABLE Order_Details (
     UnitPrice FLOAT64 NOT NULL,
     Quantity FLOAT64 NOT NULL,
     Discount FLOAT64 NOT NULL
-) PRIMARY KEY(OrderID, ProductID),
-  INTERLEAVE IN PARENT Orders ON DELETE CASCADE;
+) PRIMARY KEY(OrderID, ProductID);
 
 CREATE  INDEX Od_OrderID ON Order_Details(OrderID);
 

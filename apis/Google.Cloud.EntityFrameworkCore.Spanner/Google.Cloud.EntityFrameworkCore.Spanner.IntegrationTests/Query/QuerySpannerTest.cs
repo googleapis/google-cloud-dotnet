@@ -32,6 +32,8 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         [Fact]
         public override void String_Contains_Literal()
         {
+            var test = CreateContext().Set<Customer>().ToArray();
+
             base.String_Contains_Literal();
             AssertContainsInSql("WHERE STRPOS(\"c\".\"ContactName\", 'M') > 0");
         }

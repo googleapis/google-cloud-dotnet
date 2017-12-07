@@ -47,8 +47,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         public int TestTableRowCount { get; } = 15;
         public string TestTable { get; } = nameof(TestTableContext.StringTable);
 
-        public TestDatabaseFixture() => _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
-
         public override void Dispose()
         {
             using (var connection = new SpannerConnection(NoDbConnectionString))
