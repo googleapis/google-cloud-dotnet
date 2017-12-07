@@ -210,9 +210,9 @@ namespace Google.Cloud.Diagnostics.Common
                 // the span will not be recorded.  If this is the case bump up
                 // the time by 1 ms which is the smallest amount of time for the Trace API
                 // to record a trace. 
-                if ((span.TraceSpan.EndTime.Nanos - span.TraceSpan.StartTime.Nanos) < 1000000)
+                if ((span.TraceSpan.EndTime.Nanos - span.TraceSpan.StartTime.Nanos) < _nanosecondsInAMillisecond)
                 {
-                    span.TraceSpan.EndTime.Nanos += 1000000;
+                    span.TraceSpan.EndTime.Nanos += _nanosecondsInAMillisecond;
                 }
                 _trace.Spans.Add(span.TraceSpan);
 
