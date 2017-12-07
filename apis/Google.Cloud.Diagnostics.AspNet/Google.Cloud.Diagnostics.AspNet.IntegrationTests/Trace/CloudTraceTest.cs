@@ -54,7 +54,6 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             using (var cloudTrace = CloudTrace.InitializeInternal(new HttpApplication(), _projectId, _noBuffer))
             {
                 cloudTrace.BeginRequest(null, null);
-                Thread.Sleep(TimeSpan.FromMilliseconds(1));
                 cloudTrace.EndRequest(null, null);
             }
 
@@ -71,7 +70,6 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
                 projectId: _projectId, options: _noBuffer, traceFallbackPredicate: predicate))
             {
                 cloudTrace.BeginRequest(null, null);
-                Thread.Sleep(TimeSpan.FromMilliseconds(1));
                 cloudTrace.EndRequest(null, null);
             }
 
