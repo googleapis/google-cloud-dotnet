@@ -12,7 +12,7 @@
 
 {{client-construction}}
 
-The "core" method [BatchAnnotateImages](obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClient.yml#Google_Cloud_Vision_V1P1Beta1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1P1Beta1_AnnotateImageRequest__Google_Api_Gax_CallSettings_)
+The "core" method [BatchAnnotateImages](obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClient.yml#Google_Cloud_Vision_V1P1Beta1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1P1Beta1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings_)
 can perform multiple (potentially different) annotations on multiple
 images, but convenience methods are provided for common cases of
 working with a single image, and for performing a single annotation
@@ -86,7 +86,7 @@ contains an error.
 
 [!code-cs[](obj/snippets/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClient.txt#ErrorHandling_SingleImage)]
 
-The [BatchAnnotateImages](obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClient.yml#Google_Cloud_Vision_V1P1Beta1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1P1Beta1_AnnotateImageRequest__Google_Api_Gax_CallSettings_)
+The [BatchAnnotateImages](obj/api/Google.Cloud.Vision.V1P1Beta1.ImageAnnotatorClient.yml#Google_Cloud_Vision_V1P1Beta1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1P1Beta1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings_)
 method does not throw this exception, but [BatchAnnotateImagesResponse.ThrowOnAnyError()](obj/api/Google.Cloud.Vision.V1P1Beta1.BatchAnnotateImagesResponse.yml##Google_Cloud_Vision_V1P1Beta1_BatchAnnotateImagesResponse_ThrowOnAnyError) checks
 all responses are successful, throwing an AggregateException if there are any errors.
 The AggregateException contains one AnnotateImageException for each response that contains an error.

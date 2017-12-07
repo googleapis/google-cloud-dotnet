@@ -10,6 +10,7 @@
 
 The following libraries are available at a [GA](#versioning) quality level:
 
+* [Google BigQuery](https://cloud.google.com/bigquery/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.V2/) (GA)
 * [Google Cloud Datastore](https://cloud.google.com/datastore/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Datastore.V1/) (GA)
 * Google Cloud Diagnostics for ASP.NET - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNet/) (GA)
 * Google Cloud Diagnostics for ASP.NET Core - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNetCore/) (GA)
@@ -25,10 +26,11 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (GA)
   * Additionally, a [Google.Cloud.Vision.V1P1Beta1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1P1Beta1/)
     library is available for access to beta API functionality.
-
-The following libraries are available at a [late beta](#versioning) quality level:
-
-* [Google BigQuery](https://cloud.google.com/bigquery/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.V2/) (late beta)
+* [Google Cloud Spanner](https://cloud.google.com/spanner/): four packages are available, all GA:
+  * [Google.Cloud.Spanner.Data](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Data/): ADO.NET provider for Google Cloud Spanner (recommended)
+  * [Google.Cloud.Spanner.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.V1/): Low-level access to Spanner API
+  * [Google.Cloud.Spanner.Admin.Database.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Database.V1/): Database administration API
+  * [Google.Cloud.Spanner.Admin.Instance.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Instance.V1/): Instance administration API
 
 The following libraries are available at a [beta](#versioning) quality level:
 
@@ -37,12 +39,10 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Google Cloud Debugger](https://cloud.google.com/debugger/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Debugger.V2) (beta)
 * [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Dlp.V2Beta1/) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
+* [Google Cloud Firestore](https://cloud.google.com/firestore/): two packages are available, both beta:
+  * [Google.Cloud.Firestore](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore/): High-level client library for Google Cloud Firestore (recommended)
+  * [Google.Cloud.Firestore.V1Beta1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore.V1Beta1/): Low-level access to Firestore API
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (beta)
-* [Google Cloud Spanner](https://cloud.google.com/spanner/): four packages are available, all beta:
-  * [Google.Cloud.Spanner.Data](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Data/): ADO.NET provider for Google Cloud Spanner (recommended)
-  * [Google.Cloud.Spanner.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.V1/): Low-level access to Spanner API
-  * [Google.Cloud.Spanner.Admin.Database.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Database.V1/): Database administration API
-  * [Google.Cloud.Spanner.Admin.Instance.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Instance.V1/): Instance administration API
 * [Stackdriver Trace v2](https://cloud.google.com/trace/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V2/) (beta)
 
 The following libraries are available at an [alpha](#versioning) quality level:
@@ -123,11 +123,6 @@ the following quality levels:
 **GA**: Libraries defined at a GA (General Availability) quality level are
 expected to be stable: breaking API changes will not be made without a new major
 release.
-
-**Late Beta**: Libraries defined at a Late Beta quality level are
-expected to be mostly stable and we're working towards their release
-candidate. We will address issues and requests with a higher
-priority.
 
 **Beta**: Libraries defined at a Beta quality level are expected to
 be stable and working, but the API surface is still under active

@@ -32,6 +32,8 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public const int MinimumChunkSize = ResumableUpload<Object>.MinimumChunkSize;
 
+        internal static UploadValidationMode DefaultValidationMode { get; } = V1.UploadValidationMode.DeleteAndThrow;
+
         /// <summary>
         /// Precondition for upload: the object is only uploaded if the existing object's
         /// generation matches the given value.
@@ -97,6 +99,17 @@ namespace Google.Cloud.Storage.V1
         /// The caller must have suitable permissions for the project being billed.
         /// </summary>
         public string UserProject { get; set; }
+
+        /// <summary>
+        /// Specifies how the upload should be validated for data integrity.
+        /// If this property is null, this is equivalent to <see cref="UploadValidationMode.DeleteAndThrow"/>.
+        /// </summary>
+        /// <remarks>
+        /// The hash is only validated at the end of the upload, after the object has been created.
+        /// An exception is thrown if it's incorrect, but the object will still exist unless
+        /// the validation action deletes it.
+        /// </remarks>
+        public UploadValidationMode? UploadValidationMode { get; set; }
 
         internal void ModifyMediaUpload(InsertMediaUpload upload)
         {

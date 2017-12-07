@@ -14,11 +14,21 @@ build_api_docs() {
   then
     cp -r root output/root
     mkdir -p output/root/obj/api
+  elif [[ ! -d "../apis/$api/docs" ]]
+  then
+    if [[ -d "../apis/$api" ]]
+    then
+      echo "No docs directory for $api; ignoring"
+      return 0
+    else
+      echo "$api does not exist; aborting"
+      return 1
+    fi
   else
     dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources/*.csproj -- $api
   fi
   cp filterConfig.yml output/$api
-  $DOCFX metadata -f output/$api/docfx.json | tee errors.txt
+  $DOCFX metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
   dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown/*.csproj -- $api
   
@@ -29,7 +39,7 @@ build_api_docs() {
     cat dependencies/api/$dep/toc >> output/$api/obj/api/toc.yml
   done
   
-  $DOCFX build output/$api/docfx.json | tee errors.txt
+  $DOCFX build --logLevel Warning output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
 
   # Special case root: that should end up in the root of the assembled

@@ -329,6 +329,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
+            // Don't generate a project file if we've got a placeholder directory
+            if (Directory.GetFiles(directory, "*.cs").Length == 0)
+            {
+                return;
+            }
             var dependencies = new SortedList<string, string>(CommonTestDependencies);
             dependencies.Add(api.Id, "project");
 
@@ -370,6 +375,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         private static void GenerateCoverageFile(ApiMetadata api, string directory)
         {
+            // Don't generate a coverage file if we've got a placeholder directory
+            if (Directory.GetFiles(directory, "*.cs").Length == 0)
+            {
+                return;
+            }
             var targetExecutable = new XElement("TargetExecutable", "/Program Files/dotnet/dotnet.exe");
             var targetArguments = new XElement("TargetArguments",
                 $"test --no-build -c Release");
