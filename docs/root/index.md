@@ -16,6 +16,7 @@ supported here.
 
 GA:
 
+- [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
 - [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html)
 - [Google.Cloud.Diagnostics.AspNet](Google.Cloud.Diagnostics.AspNet/index.html)
 - [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html)
@@ -23,6 +24,11 @@ GA:
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
   - Additionally, a [separate Log4Net integration package is available](Google.Cloud.Logging.Log4Net/index.html)
 - [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)
+- Google Cloud Spanner:
+  - [Google.Cloud.Spanner.Data](Google.Cloud.Spanner.Data/index.html): ADO.NET provider for Google Cloud Spanner (recommended)
+  - [Google.Cloud.Spanner.V1](Google.Cloud.Spanner.V1/index.html): Low-level access to Spanner API
+  - [Google.Cloud.Spanner.Admin.Database.V1](Google.Cloud.Spanner.Admin.Database.V1/index.html): Database administration API
+  - [Google.Cloud.Spanner.Admin.Instance.V1](Google.Cloud.Spanner.Admin.Instance.V1/index.html): Instance administration API
 - [Google.Cloud.Speech.V1](Google.Cloud.Speech.V1/index.html)
 - [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html)
 - [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
@@ -32,10 +38,6 @@ GA:
   - Additionally, a [Google.Cloud.Vision.V1P1Beta1](Google.Cloud.Vision.V1P1Beta1/index.html)
     library is available for access to beta API functionality.
 
-Late beta:
-
-- [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
-
 Beta:
 
 - [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html)
@@ -43,12 +45,10 @@ Beta:
 - [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html)
 - [Google.Cloud.Dlp.V2Beta1](Google.Cloud.Dlp.V2Beta1/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
+- Google Cloud Firestore:
+  - [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html): High-level client library for Google Cloud Firestore (recommended)
+  - [Google.Cloud.Firestore.V1Beta](Google.Cloud.Firestore.V1Beta1/index.html): Low-level access to Firestore API
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
-- Google Cloud Spanner:
-  - [Google.Cloud.Spanner.Data](Google.Cloud.Spanner.Data/index.html): ADO.NET provider for Google Cloud Spanner (recommended)
-  - [Google.Cloud.Spanner.V1](Google.Cloud.Spanner.V1/index.html): Low-level access to Spanner API
-  - [Google.Cloud.Spanner.Admin.Database.V1](Google.Cloud.Spanner.Admin.Database.V1/index.html): Database administration API
-  - [Google.Cloud.Spanner.Admin.Instance.V1](Google.Cloud.Spanner.Admin.Instance.V1/index.html): Instance administration API
 - [Google.Cloud.Trace.V2](Google.Cloud.Trace.V2/index.html)
 
 Alpha:
