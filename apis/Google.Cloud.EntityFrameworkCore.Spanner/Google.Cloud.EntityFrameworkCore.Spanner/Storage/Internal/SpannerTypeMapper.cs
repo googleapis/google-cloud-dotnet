@@ -24,8 +24,8 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
     /// </summary>
     public class SpannerTypeMapper : RelationalTypeMapper
     {
-        private static readonly BoolTypeMapping s_bool
-            = new BoolTypeMapping(SpannerDbType.Bool.ToString());
+        private static readonly SpannerBoolTypeMapping s_bool
+            = new SpannerBoolTypeMapping(SpannerDbType.Bool.ToString());
         private static readonly DateTimeTypeMapping s_date
             = new DateTimeTypeMapping(SpannerDbType.Date.ToString(), DbType.DateTime);
         private static readonly DateTimeTypeMapping s_datetime

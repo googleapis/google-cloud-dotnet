@@ -1,4 +1,4 @@
-// Copyright 2017 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,25 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Collections.Generic;
-
 namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
-    /// <summary>
-    /// </summary>
-    public sealed class SpannerCompositeMemberTranslator : RelationalCompositeMemberTranslator
+    internal class SpannerStringToUpperTranslator : ParameterlessInstanceMethodCallTranslator
     {
-        /// <summary>
-        /// </summary>
-        /// <param name="dependencies"></param>
-        public SpannerCompositeMemberTranslator(RelationalCompositeMemberTranslatorDependencies dependencies)
-            : base(dependencies)
+        public SpannerStringToUpperTranslator()
+            : base(typeof(string), "ToUpper", "UPPER")
         {
-            AddTranslators(new List<IMemberTranslator>
-            {
-                new SpannerStringLengthTranslator(),
-                new SpannerDateTimeMemberTranslator()
-            });
         }
     }
 }
