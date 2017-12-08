@@ -27,9 +27,9 @@ namespace Google.Cloud.MetadataTesting
     {
         static void Main(string[] args)
         {
-            Test(ShowRunningOnComputeEngine);
-            Test(ShowPlatform);
             Test(MakeLanguageRequest);
+            Test(ShowPlatform);
+            Test(ShowRunningOnComputeEngine);
         }
 
         static void Test(Func<string> function)
