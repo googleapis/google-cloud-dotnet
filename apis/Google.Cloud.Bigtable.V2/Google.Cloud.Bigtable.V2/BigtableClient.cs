@@ -781,11 +781,11 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// Modifies a row atomically. The method reads the latest existing timestamp
-        /// and value from the specified columns and writes a new entry based on
-        /// pre-defined read/modify/write rules. The new value for the timestamp is the
-        /// greater of the existing timestamp or the current server time. The method
-        /// returns the new contents of all modified cells.
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
         /// The unique name of the table to which the read/modify/write rules should be
@@ -821,11 +821,11 @@ namespace Google.Cloud.Bigtable.V2
                 callSettings);
 
         /// <summary>
-        /// Modifies a row atomically. The method reads the latest existing timestamp
-        /// and value from the specified columns and writes a new entry based on
-        /// pre-defined read/modify/write rules. The new value for the timestamp is the
-        /// greater of the existing timestamp or the current server time. The method
-        /// returns the new contents of all modified cells.
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
         /// The unique name of the table to which the read/modify/write rules should be
@@ -858,11 +858,11 @@ namespace Google.Cloud.Bigtable.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Modifies a row atomically. The method reads the latest existing timestamp
-        /// and value from the specified columns and writes a new entry based on
-        /// pre-defined read/modify/write rules. The new value for the timestamp is the
-        /// greater of the existing timestamp or the current server time. The method
-        /// returns the new contents of all modified cells.
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
         /// The unique name of the table to which the read/modify/write rules should be
@@ -898,11 +898,11 @@ namespace Google.Cloud.Bigtable.V2
                 callSettings);
 
         /// <summary>
-        /// Modifies a row atomically. The method reads the latest existing timestamp
-        /// and value from the specified columns and writes a new entry based on
-        /// pre-defined read/modify/write rules. The new value for the timestamp is the
-        /// greater of the existing timestamp or the current server time. The method
-        /// returns the new contents of all modified cells.
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -921,11 +921,11 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// Modifies a row atomically. The method reads the latest existing timestamp
-        /// and value from the specified columns and writes a new entry based on
-        /// pre-defined read/modify/write rules. The new value for the timestamp is the
-        /// greater of the existing timestamp or the current server time. The method
-        /// returns the new contents of all modified cells.
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1203,11 +1203,11 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// Modifies a row atomically. The method reads the latest existing timestamp
-        /// and value from the specified columns and writes a new entry based on
-        /// pre-defined read/modify/write rules. The new value for the timestamp is the
-        /// greater of the existing timestamp or the current server time. The method
-        /// returns the new contents of all modified cells.
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1227,11 +1227,11 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// Modifies a row atomically. The method reads the latest existing timestamp
-        /// and value from the specified columns and writes a new entry based on
-        /// pre-defined read/modify/write rules. The new value for the timestamp is the
-        /// greater of the existing timestamp or the current server time. The method
-        /// returns the new contents of all modified cells.
+        /// Modifies a row atomically on the server. The method reads the latest
+        /// existing timestamp and value from the specified columns and writes a new
+        /// entry based on pre-defined read/modify/write rules. The new value for the
+        /// timestamp is the greater of the existing timestamp or the current server
+        /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
