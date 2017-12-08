@@ -25,84 +25,87 @@ namespace Google.Cloud.Bigtable.V2 {
             "CiFnb29nbGUvYmlndGFibGUvdjIvYmlndGFibGUucHJvdG8SEmdvb2dsZS5i",
             "aWd0YWJsZS52MhocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxodZ29v",
             "Z2xlL2JpZ3RhYmxlL3YyL2RhdGEucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93",
-            "cmFwcGVycy5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8ikgEKD1Jl",
-            "YWRSb3dzUmVxdWVzdBISCgp0YWJsZV9uYW1lGAEgASgJEigKBHJvd3MYAiAB",
-            "KAsyGi5nb29nbGUuYmlndGFibGUudjIuUm93U2V0Ei0KBmZpbHRlchgDIAEo",
-            "CzIdLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXISEgoKcm93c19saW1p",
-            "dBgEIAEoAyL4AgoQUmVhZFJvd3NSZXNwb25zZRI+CgZjaHVua3MYASADKAsy",
-            "Li5nb29nbGUuYmlndGFibGUudjIuUmVhZFJvd3NSZXNwb25zZS5DZWxsQ2h1",
-            "bmsSHAoUbGFzdF9zY2FubmVkX3Jvd19rZXkYAiABKAwahQIKCUNlbGxDaHVu",
-            "axIPCgdyb3dfa2V5GAEgASgMEjEKC2ZhbWlseV9uYW1lGAIgASgLMhwuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEi4KCXF1YWxpZmllchgDIAEoCzIb",
-            "Lmdvb2dsZS5wcm90b2J1Zi5CeXRlc1ZhbHVlEhgKEHRpbWVzdGFtcF9taWNy",
-            "b3MYBCABKAMSDgoGbGFiZWxzGAUgAygJEg0KBXZhbHVlGAYgASgMEhIKCnZh",
-            "bHVlX3NpemUYByABKAUSEwoJcmVzZXRfcm93GAggASgISAASFAoKY29tbWl0",
-            "X3JvdxgJIAEoCEgAQgwKCnJvd19zdGF0dXMiKgoUU2FtcGxlUm93S2V5c1Jl",
-            "cXVlc3QSEgoKdGFibGVfbmFtZRgBIAEoCSI+ChVTYW1wbGVSb3dLZXlzUmVz",
-            "cG9uc2USDwoHcm93X2tleRgBIAEoDBIUCgxvZmZzZXRfYnl0ZXMYAiABKAMi",
-            "aAoQTXV0YXRlUm93UmVxdWVzdBISCgp0YWJsZV9uYW1lGAEgASgJEg8KB3Jv",
-            "d19rZXkYAiABKAwSLwoJbXV0YXRpb25zGAMgAygLMhwuZ29vZ2xlLmJpZ3Rh",
-            "YmxlLnYyLk11dGF0aW9uIhMKEU11dGF0ZVJvd1Jlc3BvbnNlIrABChFNdXRh",
-            "dGVSb3dzUmVxdWVzdBISCgp0YWJsZV9uYW1lGAEgASgJEjwKB2VudHJpZXMY",
-            "AiADKAsyKy5nb29nbGUuYmlndGFibGUudjIuTXV0YXRlUm93c1JlcXVlc3Qu",
-            "RW50cnkaSQoFRW50cnkSDwoHcm93X2tleRgBIAEoDBIvCgltdXRhdGlvbnMY",
-            "AiADKAsyHC5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb24ijwEKEk11dGF0",
-            "ZVJvd3NSZXNwb25zZRI9CgdlbnRyaWVzGAEgAygLMiwuZ29vZ2xlLmJpZ3Rh",
-            "YmxlLnYyLk11dGF0ZVJvd3NSZXNwb25zZS5FbnRyeRo6CgVFbnRyeRINCgVp",
-            "bmRleBgBIAEoAxIiCgZzdGF0dXMYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1",
-            "cyLlAQoYQ2hlY2tBbmRNdXRhdGVSb3dSZXF1ZXN0EhIKCnRhYmxlX25hbWUY",
-            "ASABKAkSDwoHcm93X2tleRgCIAEoDBI3ChBwcmVkaWNhdGVfZmlsdGVyGAYg",
-            "ASgLMh0uZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRlchI0Cg50cnVlX211",
-            "dGF0aW9ucxgEIAMoCzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbhI1",
-            "Cg9mYWxzZV9tdXRhdGlvbnMYBSADKAsyHC5nb29nbGUuYmlndGFibGUudjIu",
-            "TXV0YXRpb24iNgoZQ2hlY2tBbmRNdXRhdGVSb3dSZXNwb25zZRIZChFwcmVk",
-            "aWNhdGVfbWF0Y2hlZBgBIAEoCCJ4ChlSZWFkTW9kaWZ5V3JpdGVSb3dSZXF1",
-            "ZXN0EhIKCnRhYmxlX25hbWUYASABKAkSDwoHcm93X2tleRgCIAEoDBI2CgVy",
-            "dWxlcxgDIAMoCzInLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkTW9kaWZ5V3Jp",
-            "dGVSdWxlIkIKGlJlYWRNb2RpZnlXcml0ZVJvd1Jlc3BvbnNlEiQKA3JvdxgB",
-            "IAEoCzIXLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3cyrQgKCEJpZ3RhYmxlEp0B",
-            "CghSZWFkUm93cxIjLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkUm93c1JlcXVl",
-            "c3QaJC5nb29nbGUuYmlndGFibGUudjIuUmVhZFJvd3NSZXNwb25zZSJEgtPk",
-            "kwI+IjkvdjIve3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90",
-            "YWJsZXMvKn06cmVhZFJvd3M6ASowARKuAQoNU2FtcGxlUm93S2V5cxIoLmdv",
-            "b2dsZS5iaWd0YWJsZS52Mi5TYW1wbGVSb3dLZXlzUmVxdWVzdBopLmdvb2ds",
-            "ZS5iaWd0YWJsZS52Mi5TYW1wbGVSb3dLZXlzUmVzcG9uc2UiRoLT5JMCQBI+",
-            "L3YyL3t0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVz",
-            "Lyp9OnNhbXBsZVJvd0tleXMwARKfAQoJTXV0YXRlUm93EiQuZ29vZ2xlLmJp",
-            "Z3RhYmxlLnYyLk11dGF0ZVJvd1JlcXVlc3QaJS5nb29nbGUuYmlndGFibGUu",
-            "djIuTXV0YXRlUm93UmVzcG9uc2UiRYLT5JMCPyI6L3YyL3t0YWJsZV9uYW1l",
-            "PXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9Om11dGF0ZVJvdzoB",
-            "KhKlAQoKTXV0YXRlUm93cxIlLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVS",
-            "b3dzUmVxdWVzdBomLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dzUmVz",
-            "cG9uc2UiRoLT5JMCQCI7L3YyL3t0YWJsZV9uYW1lPXByb2plY3RzLyovaW5z",
-            "dGFuY2VzLyovdGFibGVzLyp9Om11dGF0ZVJvd3M6ASowARK/AQoRQ2hlY2tB",
-            "bmRNdXRhdGVSb3cSLC5nb29nbGUuYmlndGFibGUudjIuQ2hlY2tBbmRNdXRh",
-            "dGVSb3dSZXF1ZXN0Gi0uZ29vZ2xlLmJpZ3RhYmxlLnYyLkNoZWNrQW5kTXV0",
-            "YXRlUm93UmVzcG9uc2UiTYLT5JMCRyJCL3YyL3t0YWJsZV9uYW1lPXByb2pl",
-            "Y3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9OmNoZWNrQW5kTXV0YXRlUm93",
-            "OgEqEsMBChJSZWFkTW9kaWZ5V3JpdGVSb3cSLS5nb29nbGUuYmlndGFibGUu",
-            "djIuUmVhZE1vZGlmeVdyaXRlUm93UmVxdWVzdBouLmdvb2dsZS5iaWd0YWJs",
-            "ZS52Mi5SZWFkTW9kaWZ5V3JpdGVSb3dSZXNwb25zZSJOgtPkkwJIIkMvdjIv",
+            "cmFwcGVycy5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8iqgEKD1Jl",
+            "YWRSb3dzUmVxdWVzdBISCgp0YWJsZV9uYW1lGAEgASgJEhYKDmFwcF9wcm9m",
+            "aWxlX2lkGAUgASgJEigKBHJvd3MYAiABKAsyGi5nb29nbGUuYmlndGFibGUu",
+            "djIuUm93U2V0Ei0KBmZpbHRlchgDIAEoCzIdLmdvb2dsZS5iaWd0YWJsZS52",
+            "Mi5Sb3dGaWx0ZXISEgoKcm93c19saW1pdBgEIAEoAyL4AgoQUmVhZFJvd3NS",
+            "ZXNwb25zZRI+CgZjaHVua3MYASADKAsyLi5nb29nbGUuYmlndGFibGUudjIu",
+            "UmVhZFJvd3NSZXNwb25zZS5DZWxsQ2h1bmsSHAoUbGFzdF9zY2FubmVkX3Jv",
+            "d19rZXkYAiABKAwahQIKCUNlbGxDaHVuaxIPCgdyb3dfa2V5GAEgASgMEjEK",
+            "C2ZhbWlseV9uYW1lGAIgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1Zh",
+            "bHVlEi4KCXF1YWxpZmllchgDIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5CeXRl",
+            "c1ZhbHVlEhgKEHRpbWVzdGFtcF9taWNyb3MYBCABKAMSDgoGbGFiZWxzGAUg",
+            "AygJEg0KBXZhbHVlGAYgASgMEhIKCnZhbHVlX3NpemUYByABKAUSEwoJcmVz",
+            "ZXRfcm93GAggASgISAASFAoKY29tbWl0X3JvdxgJIAEoCEgAQgwKCnJvd19z",
+            "dGF0dXMiQgoUU2FtcGxlUm93S2V5c1JlcXVlc3QSEgoKdGFibGVfbmFtZRgB",
+            "IAEoCRIWCg5hcHBfcHJvZmlsZV9pZBgCIAEoCSI+ChVTYW1wbGVSb3dLZXlz",
+            "UmVzcG9uc2USDwoHcm93X2tleRgBIAEoDBIUCgxvZmZzZXRfYnl0ZXMYAiAB",
+            "KAMigAEKEE11dGF0ZVJvd1JlcXVlc3QSEgoKdGFibGVfbmFtZRgBIAEoCRIW",
+            "Cg5hcHBfcHJvZmlsZV9pZBgEIAEoCRIPCgdyb3dfa2V5GAIgASgMEi8KCW11",
+            "dGF0aW9ucxgDIAMoCzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbiIT",
+            "ChFNdXRhdGVSb3dSZXNwb25zZSLIAQoRTXV0YXRlUm93c1JlcXVlc3QSEgoK",
+            "dGFibGVfbmFtZRgBIAEoCRIWCg5hcHBfcHJvZmlsZV9pZBgDIAEoCRI8Cgdl",
+            "bnRyaWVzGAIgAygLMisuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0ZVJvd3NS",
+            "ZXF1ZXN0LkVudHJ5GkkKBUVudHJ5Eg8KB3Jvd19rZXkYASABKAwSLwoJbXV0",
+            "YXRpb25zGAIgAygLMhwuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0aW9uIo8B",
+            "ChJNdXRhdGVSb3dzUmVzcG9uc2USPQoHZW50cmllcxgBIAMoCzIsLmdvb2ds",
+            "ZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dzUmVzcG9uc2UuRW50cnkaOgoFRW50",
+            "cnkSDQoFaW5kZXgYASABKAMSIgoGc3RhdHVzGAIgASgLMhIuZ29vZ2xlLnJw",
+            "Yy5TdGF0dXMi/QEKGENoZWNrQW5kTXV0YXRlUm93UmVxdWVzdBISCgp0YWJs",
+            "ZV9uYW1lGAEgASgJEhYKDmFwcF9wcm9maWxlX2lkGAcgASgJEg8KB3Jvd19r",
+            "ZXkYAiABKAwSNwoQcHJlZGljYXRlX2ZpbHRlchgGIAEoCzIdLmdvb2dsZS5i",
+            "aWd0YWJsZS52Mi5Sb3dGaWx0ZXISNAoOdHJ1ZV9tdXRhdGlvbnMYBCADKAsy",
+            "HC5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb24SNQoPZmFsc2VfbXV0YXRp",
+            "b25zGAUgAygLMhwuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0aW9uIjYKGUNo",
+            "ZWNrQW5kTXV0YXRlUm93UmVzcG9uc2USGQoRcHJlZGljYXRlX21hdGNoZWQY",
+            "ASABKAgikAEKGVJlYWRNb2RpZnlXcml0ZVJvd1JlcXVlc3QSEgoKdGFibGVf",
+            "bmFtZRgBIAEoCRIWCg5hcHBfcHJvZmlsZV9pZBgEIAEoCRIPCgdyb3dfa2V5",
+            "GAIgASgMEjYKBXJ1bGVzGAMgAygLMicuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJl",
+            "YWRNb2RpZnlXcml0ZVJ1bGUiQgoaUmVhZE1vZGlmeVdyaXRlUm93UmVzcG9u",
+            "c2USJAoDcm93GAEgASgLMhcuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvdzKtCAoI",
+            "QmlndGFibGUSnQEKCFJlYWRSb3dzEiMuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJl",
+            "YWRSb3dzUmVxdWVzdBokLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkUm93c1Jl",
+            "c3BvbnNlIkSC0+STAj4iOS92Mi97dGFibGVfbmFtZT1wcm9qZWN0cy8qL2lu",
+            "c3RhbmNlcy8qL3RhYmxlcy8qfTpyZWFkUm93czoBKjABEq4BCg1TYW1wbGVS",
+            "b3dLZXlzEiguZ29vZ2xlLmJpZ3RhYmxlLnYyLlNhbXBsZVJvd0tleXNSZXF1",
+            "ZXN0GikuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNhbXBsZVJvd0tleXNSZXNwb25z",
+            "ZSJGgtPkkwJAEj4vdjIve3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5j",
+            "ZXMvKi90YWJsZXMvKn06c2FtcGxlUm93S2V5czABEp8BCglNdXRhdGVSb3cS",
+            "JC5nb29nbGUuYmlndGFibGUudjIuTXV0YXRlUm93UmVxdWVzdBolLmdvb2ds",
+            "ZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dSZXNwb25zZSJFgtPkkwI/IjovdjIv",
             "e3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn06",
-            "cmVhZE1vZGlmeVdyaXRlUm93OgEqQpsBChZjb20uZ29vZ2xlLmJpZ3RhYmxl",
-            "LnYyQg1CaWd0YWJsZVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvYmlndGFibGUvdjI7YmlndGFibGWqAhhHb29nbGUu",
-            "Q2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVcVjJi",
-            "BnByb3RvMw=="));
+            "bXV0YXRlUm93OgEqEqUBCgpNdXRhdGVSb3dzEiUuZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLk11dGF0ZVJvd3NSZXF1ZXN0GiYuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11",
+            "dGF0ZVJvd3NSZXNwb25zZSJGgtPkkwJAIjsvdjIve3RhYmxlX25hbWU9cHJv",
+            "amVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn06bXV0YXRlUm93czoBKjAB",
+            "Er8BChFDaGVja0FuZE11dGF0ZVJvdxIsLmdvb2dsZS5iaWd0YWJsZS52Mi5D",
+            "aGVja0FuZE11dGF0ZVJvd1JlcXVlc3QaLS5nb29nbGUuYmlndGFibGUudjIu",
+            "Q2hlY2tBbmRNdXRhdGVSb3dSZXNwb25zZSJNgtPkkwJHIkIvdjIve3RhYmxl",
+            "X25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn06Y2hlY2tB",
+            "bmRNdXRhdGVSb3c6ASoSwwEKElJlYWRNb2RpZnlXcml0ZVJvdxItLmdvb2ds",
+            "ZS5iaWd0YWJsZS52Mi5SZWFkTW9kaWZ5V3JpdGVSb3dSZXF1ZXN0Gi4uZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLlJlYWRNb2RpZnlXcml0ZVJvd1Jlc3BvbnNlIk6C",
+            "0+STAkgiQy92Mi97dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
+            "L3RhYmxlcy8qfTpyZWFkTW9kaWZ5V3JpdGVSb3c6ASpCmwEKFmNvbS5nb29n",
+            "bGUuYmlndGFibGUudjJCDUJpZ3RhYmxlUHJvdG9QAVo6Z29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9iaWd0YWJsZS92MjtiaWd0YWJs",
+            "ZaoCGEdvb2dsZS5DbG91ZC5CaWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxC",
+            "aWd0YWJsZVxWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsRequest), global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Parser, new[]{ "TableName", "Rows", "Filter", "RowsLimit" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsRequest), global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Parser, new[]{ "TableName", "AppProfileId", "Rows", "Filter", "RowsLimit" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsResponse), global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Parser, new[]{ "Chunks", "LastScannedRowKey" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Types.CellChunk), global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Types.CellChunk.Parser, new[]{ "RowKey", "FamilyName", "Qualifier", "TimestampMicros", "Labels", "Value", "ValueSize", "ResetRow", "CommitRow" }, new[]{ "RowStatus" }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest), global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest.Parser, new[]{ "TableName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest), global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest.Parser, new[]{ "TableName", "AppProfileId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse), global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse.Parser, new[]{ "RowKey", "OffsetBytes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowRequest), global::Google.Cloud.Bigtable.V2.MutateRowRequest.Parser, new[]{ "TableName", "RowKey", "Mutations" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowRequest), global::Google.Cloud.Bigtable.V2.MutateRowRequest.Parser, new[]{ "TableName", "AppProfileId", "RowKey", "Mutations" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowResponse), global::Google.Cloud.Bigtable.V2.MutateRowResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsRequest), global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Parser, new[]{ "TableName", "Entries" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry), global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry.Parser, new[]{ "RowKey", "Mutations" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsRequest), global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Parser, new[]{ "TableName", "AppProfileId", "Entries" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry), global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry.Parser, new[]{ "RowKey", "Mutations" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsResponse), global::Google.Cloud.Bigtable.V2.MutateRowsResponse.Parser, new[]{ "Entries" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsResponse.Types.Entry), global::Google.Cloud.Bigtable.V2.MutateRowsResponse.Types.Entry.Parser, new[]{ "Index", "Status" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest), global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.Parser, new[]{ "TableName", "RowKey", "PredicateFilter", "TrueMutations", "FalseMutations" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest), global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.Parser, new[]{ "TableName", "AppProfileId", "RowKey", "PredicateFilter", "TrueMutations", "FalseMutations" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse), global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.Parser, new[]{ "PredicateMatched" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.Parser, new[]{ "TableName", "RowKey", "Rules" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.Parser, new[]{ "TableName", "AppProfileId", "RowKey", "Rules" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.Parser, new[]{ "Row" }, null, null, null)
           }));
     }
@@ -138,6 +141,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReadRowsRequest(ReadRowsRequest other) : this() {
       tableName_ = other.tableName_;
+      appProfileId_ = other.appProfileId_;
       Rows = other.rows_ != null ? other.Rows.Clone() : null;
       Filter = other.filter_ != null ? other.Filter.Clone() : null;
       rowsLimit_ = other.rowsLimit_;
@@ -161,6 +165,26 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "app_profile_id" field.</summary>
+    public const int AppProfileIdFieldNumber = 5;
+    private string appProfileId_ = "";
+    /// <summary>
+    /// This is a private alpha release of Cloud Bigtable replication. This feature
+    /// is not currently available to most Cloud Bigtable customers. This feature
+    /// might be changed in backward-incompatible ways and is not recommended for
+    /// production use. It is not subject to any SLA or deprecation policy.
+    ///
+    /// This value specifies routing for replication. If not specified, the
+    /// "default" application profile will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AppProfileId {
+      get { return appProfileId_; }
+      set {
+        appProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -222,6 +246,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AppProfileId != other.AppProfileId) return false;
       if (!object.Equals(Rows, other.Rows)) return false;
       if (!object.Equals(Filter, other.Filter)) return false;
       if (RowsLimit != other.RowsLimit) return false;
@@ -232,6 +257,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       if (rows_ != null) hash ^= Rows.GetHashCode();
       if (filter_ != null) hash ^= Filter.GetHashCode();
       if (RowsLimit != 0L) hash ^= RowsLimit.GetHashCode();
@@ -261,6 +287,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(32);
         output.WriteInt64(RowsLimit);
       }
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AppProfileId);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -268,6 +298,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
       }
       if (rows_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rows);
@@ -288,6 +321,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AppProfileId.Length != 0) {
+        AppProfileId = other.AppProfileId;
       }
       if (other.rows_ != null) {
         if (rows_ == null) {
@@ -334,6 +370,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 32: {
             RowsLimit = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            AppProfileId = input.ReadString();
             break;
           }
         }
@@ -961,6 +1001,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SampleRowKeysRequest(SampleRowKeysRequest other) : this() {
       tableName_ = other.tableName_;
+      appProfileId_ = other.appProfileId_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -984,6 +1025,26 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "app_profile_id" field.</summary>
+    public const int AppProfileIdFieldNumber = 2;
+    private string appProfileId_ = "";
+    /// <summary>
+    /// This is a private alpha release of Cloud Bigtable replication. This feature
+    /// is not currently available to most Cloud Bigtable customers. This feature
+    /// might be changed in backward-incompatible ways and is not recommended for
+    /// production use. It is not subject to any SLA or deprecation policy.
+    ///
+    /// This value specifies routing for replication. If not specified, the
+    /// "default" application profile will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AppProfileId {
+      get { return appProfileId_; }
+      set {
+        appProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SampleRowKeysRequest);
@@ -998,6 +1059,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AppProfileId != other.AppProfileId) return false;
       return true;
     }
 
@@ -1005,6 +1067,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       return hash;
     }
 
@@ -1019,6 +1082,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(10);
         output.WriteString(TableName);
       }
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AppProfileId);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1026,6 +1093,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
       }
       return size;
     }
@@ -1037,6 +1107,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AppProfileId.Length != 0) {
+        AppProfileId = other.AppProfileId;
       }
     }
 
@@ -1050,6 +1123,10 @@ namespace Google.Cloud.Bigtable.V2 {
             break;
           case 10: {
             TableName = input.ReadString();
+            break;
+          }
+          case 18: {
+            AppProfileId = input.ReadString();
             break;
           }
         }
@@ -1249,6 +1326,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MutateRowRequest(MutateRowRequest other) : this() {
       tableName_ = other.tableName_;
+      appProfileId_ = other.appProfileId_;
       rowKey_ = other.rowKey_;
       mutations_ = other.mutations_.Clone();
     }
@@ -1271,6 +1349,26 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "app_profile_id" field.</summary>
+    public const int AppProfileIdFieldNumber = 4;
+    private string appProfileId_ = "";
+    /// <summary>
+    /// This is a private alpha release of Cloud Bigtable replication. This feature
+    /// is not currently available to most Cloud Bigtable customers. This feature
+    /// might be changed in backward-incompatible ways and is not recommended for
+    /// production use. It is not subject to any SLA or deprecation policy.
+    ///
+    /// This value specifies routing for replication. If not specified, the
+    /// "default" application profile will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AppProfileId {
+      get { return appProfileId_; }
+      set {
+        appProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1317,6 +1415,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AppProfileId != other.AppProfileId) return false;
       if (RowKey != other.RowKey) return false;
       if(!mutations_.Equals(other.mutations_)) return false;
       return true;
@@ -1326,6 +1425,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       if (RowKey.Length != 0) hash ^= RowKey.GetHashCode();
       hash ^= mutations_.GetHashCode();
       return hash;
@@ -1347,6 +1447,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteBytes(RowKey);
       }
       mutations_.WriteTo(output, _repeated_mutations_codec);
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(AppProfileId);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1354,6 +1458,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
       }
       if (RowKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(RowKey);
@@ -1369,6 +1476,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AppProfileId.Length != 0) {
+        AppProfileId = other.AppProfileId;
       }
       if (other.RowKey.Length != 0) {
         RowKey = other.RowKey;
@@ -1394,6 +1504,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 26: {
             mutations_.AddEntriesFrom(input, _repeated_mutations_codec);
+            break;
+          }
+          case 34: {
+            AppProfileId = input.ReadString();
             break;
           }
         }
@@ -1522,6 +1636,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MutateRowsRequest(MutateRowsRequest other) : this() {
       tableName_ = other.tableName_;
+      appProfileId_ = other.appProfileId_;
       entries_ = other.entries_.Clone();
     }
 
@@ -1541,6 +1656,26 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "app_profile_id" field.</summary>
+    public const int AppProfileIdFieldNumber = 3;
+    private string appProfileId_ = "";
+    /// <summary>
+    /// This is a private alpha release of Cloud Bigtable replication. This feature
+    /// is not currently available to most Cloud Bigtable customers. This feature
+    /// might be changed in backward-incompatible ways and is not recommended for
+    /// production use. It is not subject to any SLA or deprecation policy.
+    ///
+    /// This value specifies routing for replication. If not specified, the
+    /// "default" application profile will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AppProfileId {
+      get { return appProfileId_; }
+      set {
+        appProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1575,6 +1710,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AppProfileId != other.AppProfileId) return false;
       if(!entries_.Equals(other.entries_)) return false;
       return true;
     }
@@ -1583,6 +1719,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       hash ^= entries_.GetHashCode();
       return hash;
     }
@@ -1599,6 +1736,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteString(TableName);
       }
       entries_.WriteTo(output, _repeated_entries_codec);
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AppProfileId);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1606,6 +1747,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
       }
       size += entries_.CalculateSize(_repeated_entries_codec);
       return size;
@@ -1618,6 +1762,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AppProfileId.Length != 0) {
+        AppProfileId = other.AppProfileId;
       }
       entries_.Add(other.entries_);
     }
@@ -1636,6 +1783,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 18: {
             entries_.AddEntriesFrom(input, _repeated_entries_codec);
+            break;
+          }
+          case 26: {
+            AppProfileId = input.ReadString();
             break;
           }
         }
@@ -2108,6 +2259,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CheckAndMutateRowRequest(CheckAndMutateRowRequest other) : this() {
       tableName_ = other.tableName_;
+      appProfileId_ = other.appProfileId_;
       rowKey_ = other.rowKey_;
       PredicateFilter = other.predicateFilter_ != null ? other.PredicateFilter.Clone() : null;
       trueMutations_ = other.trueMutations_.Clone();
@@ -2133,6 +2285,26 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "app_profile_id" field.</summary>
+    public const int AppProfileIdFieldNumber = 7;
+    private string appProfileId_ = "";
+    /// <summary>
+    /// This is a private alpha release of Cloud Bigtable replication. This feature
+    /// is not currently available to most Cloud Bigtable customers. This feature
+    /// might be changed in backward-incompatible ways and is not recommended for
+    /// production use. It is not subject to any SLA or deprecation policy.
+    ///
+    /// This value specifies routing for replication. If not specified, the
+    /// "default" application profile will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AppProfileId {
+      get { return appProfileId_; }
+      set {
+        appProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2215,6 +2387,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AppProfileId != other.AppProfileId) return false;
       if (RowKey != other.RowKey) return false;
       if (!object.Equals(PredicateFilter, other.PredicateFilter)) return false;
       if(!trueMutations_.Equals(other.trueMutations_)) return false;
@@ -2226,6 +2399,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       if (RowKey.Length != 0) hash ^= RowKey.GetHashCode();
       if (predicateFilter_ != null) hash ^= PredicateFilter.GetHashCode();
       hash ^= trueMutations_.GetHashCode();
@@ -2254,6 +2428,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(PredicateFilter);
       }
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(AppProfileId);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2261,6 +2439,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
       }
       if (RowKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(RowKey);
@@ -2280,6 +2461,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AppProfileId.Length != 0) {
+        AppProfileId = other.AppProfileId;
       }
       if (other.RowKey.Length != 0) {
         RowKey = other.RowKey;
@@ -2323,6 +2507,10 @@ namespace Google.Cloud.Bigtable.V2 {
               predicateFilter_ = new global::Google.Cloud.Bigtable.V2.RowFilter();
             }
             input.ReadMessage(predicateFilter_);
+            break;
+          }
+          case 58: {
+            AppProfileId = input.ReadString();
             break;
           }
         }
@@ -2483,6 +2671,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReadModifyWriteRowRequest(ReadModifyWriteRowRequest other) : this() {
       tableName_ = other.tableName_;
+      appProfileId_ = other.appProfileId_;
       rowKey_ = other.rowKey_;
       rules_ = other.rules_.Clone();
     }
@@ -2506,6 +2695,26 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "app_profile_id" field.</summary>
+    public const int AppProfileIdFieldNumber = 4;
+    private string appProfileId_ = "";
+    /// <summary>
+    /// This is a private alpha release of Cloud Bigtable replication. This feature
+    /// is not currently available to most Cloud Bigtable customers. This feature
+    /// might be changed in backward-incompatible ways and is not recommended for
+    /// production use. It is not subject to any SLA or deprecation policy.
+    ///
+    /// This value specifies routing for replication. If not specified, the
+    /// "default" application profile will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AppProfileId {
+      get { return appProfileId_; }
+      set {
+        appProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2552,6 +2761,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AppProfileId != other.AppProfileId) return false;
       if (RowKey != other.RowKey) return false;
       if(!rules_.Equals(other.rules_)) return false;
       return true;
@@ -2561,6 +2771,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       if (RowKey.Length != 0) hash ^= RowKey.GetHashCode();
       hash ^= rules_.GetHashCode();
       return hash;
@@ -2582,6 +2793,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteBytes(RowKey);
       }
       rules_.WriteTo(output, _repeated_rules_codec);
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(AppProfileId);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2589,6 +2804,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AppProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
       }
       if (RowKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(RowKey);
@@ -2604,6 +2822,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AppProfileId.Length != 0) {
+        AppProfileId = other.AppProfileId;
       }
       if (other.RowKey.Length != 0) {
         RowKey = other.RowKey;
@@ -2629,6 +2850,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 26: {
             rules_.AddEntriesFrom(input, _repeated_rules_codec);
+            break;
+          }
+          case 34: {
+            AppProfileId = input.ReadString();
             break;
           }
         }
