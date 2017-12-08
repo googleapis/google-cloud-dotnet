@@ -62,7 +62,22 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 span.StartTime != null &&
                 parentId == span.ParentSpanId &&
                 span.EndTime != null &&
-                span.StartTime.ToDateTime() <= span.EndTime.ToDateTime();
+                span.EndTime.ToDateTime() > span.StartTime.ToDateTime();
+        }
+
+        /// <summary>
+        /// Used to ensure a <see cref="TraceSpan"/>'s that starts ends immediately 
+        /// has a total run time of 1ms.  This checks for between 1ms and 2ms allow
+        /// some wiggle-room.
+        /// 
+        /// This is needed as we tack on 1ms of time to spans that do not have 
+        /// a difference of 1ms between start and end.  If we do not the Trace
+        /// API will not record the span.
+        /// </summary>
+        private static bool IsShortLivedSpan(TraceSpan span) 
+        {
+            var totalTime = span.EndTime.ToDateTime() - span.StartTime.ToDateTime();
+            return totalTime >= TimeSpan.FromMilliseconds(1) && totalTime <= TimeSpan.FromMilliseconds(2);
         }
 
         [Fact]
@@ -73,7 +88,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
-                    t => IsValidSpan(t.Single().Spans.Single(), "span-name"))));
+                    t => IsShortLivedSpan(t.Single().Spans.Single()) &&
+                        IsValidSpan(t.Single().Spans.Single(), "span-name"))));
 
             tracer.StartSpan("span-name").Dispose();
             mockConsumer.VerifyAll();
@@ -87,7 +103,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
-                    t => IsValidSpan(t.Single().Spans.Single(), "span-name"))));
+                    t => IsShortLivedSpan(t.Single().Spans.Single()) &&
+                        IsValidSpan(t.Single().Spans.Single(), "span-name"))));
 
             tracer.StartSpan("span-name").Dispose();
             mockConsumer.VerifyAll();
@@ -101,7 +118,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
-                    t => IsValidSpan(t.Single().Spans.Single(), "span-name", 123))));
+                    t => IsShortLivedSpan(t.Single().Spans.Single()) &&
+                        IsValidSpan(t.Single().Spans.Single(), "span-name", 123))));
 
             tracer.StartSpan("span-name").Dispose();
             mockConsumer.VerifyAll();

@@ -203,6 +203,17 @@ namespace Google.Cloud.Diagnostics.Common
 
             lock (_traceLock)
             {
+                // If the time between the start and end of a span is less then 1 ms
+                // the span will not be recorded.  If this is the case bump up
+                // the time by 1 ms which is the smallest amount of time for the Trace API
+                // to record a trace. 
+                var end = span.TraceSpan.EndTime.ToDateTime();
+                var start = span.TraceSpan.StartTime.ToDateTime();
+                if ((end - start) < TimeSpan.FromMilliseconds(1))
+                {
+                    var newTime = span.TraceSpan.EndTime.ToDateTime().Add(TimeSpan.FromMilliseconds(1));
+                    span.TraceSpan.EndTime = Timestamp.FromDateTime(newTime);
+                }
                 _trace.Spans.Add(span.TraceSpan);
 
                 var newOpenSpanCount = Interlocked.Decrement(ref _openSpanCount);
