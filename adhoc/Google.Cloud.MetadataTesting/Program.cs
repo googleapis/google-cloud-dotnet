@@ -16,6 +16,11 @@ using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Language.V1;
 using System;
+using System.Diagnostics;
+using System.Linq;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 using static Google.Cloud.Language.V1.AnnotateTextRequest.Types;
 
 namespace Google.Cloud.MetadataTesting
@@ -27,6 +32,7 @@ namespace Google.Cloud.MetadataTesting
     {
         static void Main(string[] args)
         {
+            TestAsync(MakeMetadataRequest);
             Test(MakeLanguageRequest);
             Test(ShowPlatform);
             Test(ShowRunningOnComputeEngine);
@@ -37,12 +43,49 @@ namespace Google.Cloud.MetadataTesting
             string name = function.Method.Name;
             try
             {
-                Console.WriteLine($"{name}: {function()}");
+                Log($"{name}: {function()}");
             }
             catch (Exception e)
             {
-                Console.WriteLine($"{name}: Exception: {e.GetType().Name}: {e.Message}");
+                Log($"{name}: {e.GetType().Name}: {e.Message}");
             }
+        }
+
+        static void TestAsync(Func<Task<string>> function)
+        {
+            string name = function.Method.Name;
+            try
+            {
+                var result = Task.Run(function).Result;
+                Log($"{name}: {result}");
+            }
+            catch (AggregateException e)
+            {
+                foreach (var inner in e.InnerExceptions)
+                {
+                    Log($"{name}: {inner.GetType().Name}: {inner.Message}");
+                }
+            }
+        }
+
+        static async Task<string> MakeMetadataRequest()
+        {
+            var httpRequest = new HttpRequestMessage(HttpMethod.Get, "http://metadata.google.internal");
+            var cts = new CancellationTokenSource(5000);
+
+            var httpClient = new HttpClient();
+            var stopwatch = Stopwatch.StartNew();
+            var response = await httpClient.SendAsync(httpRequest, cts.Token).ConfigureAwait(false);
+            stopwatch.Stop();
+            Log($"Status code: {response.StatusCode}");
+
+            bool googleFlavor = false;
+            if (response.Headers.TryGetValues("Metadata-Flavor", out var headerValues))
+            {
+                googleFlavor = headerValues.Contains("Google");
+            }
+
+            return $"{response.StatusCode} / ({(int) stopwatch.ElapsedMilliseconds}ms) / Google flavor ? {googleFlavor}";
         }
 
         static string ShowRunningOnComputeEngine() =>
@@ -58,5 +101,8 @@ namespace Google.Cloud.MetadataTesting
                 new Features { ExtractEntities = true });
             return $"Language service returned {annotation.Entities.Count} entities";
         }
+
+        static void Log(string message) =>
+            Console.WriteLine($"{DateTime.UtcNow:HH:mm:ss.FFFFFF}: {message}");
     }
 }
