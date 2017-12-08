@@ -62,7 +62,21 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 span.StartTime != null &&
                 parentId == span.ParentSpanId &&
                 span.EndTime != null &&
-                span.StartTime.ToDateTime() <= span.EndTime.ToDateTime();
+                span.EndTime.ToDateTime() > span.StartTime.ToDateTime();
+        }
+
+        /// <summary>
+        /// Used to ensure a <see cref="TraceSpan"/>'s that starts ends immediately 
+        /// has a total run time of 1ms.
+        /// 
+        /// This is needed as we set the length to 1ms for spans that do not have 
+        /// a difference of 1ms between start and end. If we do not the Trace
+        /// API will not record the span.
+        /// </summary>
+        private static bool Is1MsSpan(TraceSpan span)
+        {
+            var duration = span.EndTime - span.StartTime;
+            return duration.Seconds == 0 && duration.Nanos == 1_000_000;
         }
 
         [Fact]
@@ -73,7 +87,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
-                    t => IsValidSpan(t.Single().Spans.Single(), "span-name"))));
+                    t => Is1MsSpan(t.Single().Spans.Single()) &&
+                        IsValidSpan(t.Single().Spans.Single(), "span-name"))));
 
             tracer.StartSpan("span-name").Dispose();
             mockConsumer.VerifyAll();
@@ -87,7 +102,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
-                    t => IsValidSpan(t.Single().Spans.Single(), "span-name"))));
+                    t => Is1MsSpan(t.Single().Spans.Single()) &&
+                        IsValidSpan(t.Single().Spans.Single(), "span-name"))));
 
             tracer.StartSpan("span-name").Dispose();
             mockConsumer.VerifyAll();
@@ -101,7 +117,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
-                    t => IsValidSpan(t.Single().Spans.Single(), "span-name", 123))));
+                    t => Is1MsSpan(t.Single().Spans.Single()) &&
+                        IsValidSpan(t.Single().Spans.Single(), "span-name", 123))));
 
             tracer.StartSpan("span-name").Dispose();
             mockConsumer.VerifyAll();
@@ -143,7 +160,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             using (tracer.StartSpan("span-name"))
             {
                 tracer.AnnotateSpan(annotation);
-            }               
+            }
             mockConsumer.VerifyAll();
         }
 
@@ -164,7 +181,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             using (tracer.StartSpan("span-name"))
             {
                 tracer.SetStackTrace(FilledStackTrace);
-            }                
+            }
             mockConsumer.VerifyAll();
         }
 
@@ -492,7 +509,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 using (tracer.StartSpan("child-one")) { }
                 using (tracer.StartSpan("child-two"))
                 {
-                    using (tracer.StartSpan("grandchild-one")) { } ;
+                    using (tracer.StartSpan("grandchild-one")) { };
                 }
             }
             mockConsumer.VerifyAll();
@@ -533,7 +550,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
 
             ISpan span = null;
-            await RunInDisjointThreads(() => span = tracer.StartSpan("span-name"), 
+            await RunInDisjointThreads(() => span = tracer.StartSpan("span-name"),
                 () =>
                 {
                     span.SetStackTrace(FilledStackTrace);

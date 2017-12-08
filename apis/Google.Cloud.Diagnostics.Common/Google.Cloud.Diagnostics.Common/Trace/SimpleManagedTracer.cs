@@ -35,6 +35,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         private sealed class Span : ISpan
         {
+            private const int NanosPerMillisecond = Duration.NanosecondsPerSecond / 1000;
             internal TraceSpan TraceSpan { get; private set; }
 
             private readonly SimpleManagedTracer _tracer;
@@ -45,6 +46,41 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 _tracer = GaxPreconditions.CheckNotNull(tracer, nameof(tracer));
                 TraceSpan = GaxPreconditions.CheckNotNull(traceSpan, nameof(traceSpan));
+            }
+
+            /// <summary>
+            /// If the time between the start and end of a span is less then 1 ms
+            /// the span will not be recorded. If this is the case set the end time to
+            /// exactly 1ms after the start time. This is also performed if somehow the end
+            /// time is earlier than the start time, e.g. due to clock sync.
+            /// </summary>
+            internal void EnsureVisibleDuration()
+            {
+                var start = TraceSpan.StartTime;
+                var end = TraceSpan.EndTime;
+                // Assumption: even if the system clock is out, these will be normalized timestamps.
+                var seconds = end.Seconds - start.Seconds;
+                // If the start and end are more than a second apart, we're definitely okay.
+                if (seconds > 1)
+                {
+                    return;
+                }
+                // Check for seconds being negative first to avoid any possibility of overflow.
+                if (seconds < 0 || seconds * Duration.NanosecondsPerSecond + end.Nanos - start.Nanos < NanosPerMillisecond)
+                {
+                    // Efficient way of effectively computing start + 1ms
+                    int newNanos = start.Nanos + NanosPerMillisecond;
+                    if (newNanos > Duration.NanosecondsPerSecond)
+                    {
+                        end.Nanos = newNanos - Duration.NanosecondsPerSecond;
+                        end.Seconds = start.Seconds + 1;
+                    }
+                    else
+                    {
+                        end.Nanos = newNanos;
+                        end.Seconds = start.Seconds;
+                    }
+                }
             }
 
             /// <summary> Ends the current span.</summary>
@@ -200,11 +236,10 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 TraceStack = currentStack.Pop(out _);
             }
-
+            span.EnsureVisibleDuration();
             lock (_traceLock)
             {
                 _trace.Spans.Add(span.TraceSpan);
-
                 var newOpenSpanCount = Interlocked.Decrement(ref _openSpanCount);
                 Debug.Assert(newOpenSpanCount >= 0, "Invalid open span count");
                 if (newOpenSpanCount <= 0)
