@@ -28,13 +28,19 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
         {
             // Sample: Intro
             DlpServiceClient client = DlpServiceClient.Create();
-            ContentItem content = new ContentItem
+            var request = new RedactContentRequest
             {
-                Type = "text/plain",
-                Value = "Hi! My phone number is 555-1234-567. Please call me!"
+                Items =
+                {
+                    new ContentItem
+                    {
+                        Type = "text/plain",
+                        Value = "Hi! My phone number is 555-1234-567. Please call me!"
+                    }
+                },
+                ReplaceConfigs = { new ReplaceConfig { ReplaceWith = "(Redacted)" } }
             };
-            ReplaceConfig replace = new ReplaceConfig { ReplaceWith = "(Redacted)" };
-            var response = client.RedactContent(new InspectConfig(), new[] { content }, new[] { replace });
+            var response = client.RedactContent(request);
             var item = response.Items[0];
             Console.WriteLine(item.Value);
             // End sample
