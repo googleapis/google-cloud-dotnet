@@ -91,7 +91,7 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
                     return;
                 }
                 var message = new StringBuilder();
-                var metricList = new SortedList();
+                var metricList = new SortedList<string, string>();
                 message.AppendLine("Spanner performance metrics:");
 
                 foreach (var kvp in _perfCounterDictionary)
@@ -123,7 +123,7 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
                     }
                 }
 
-                foreach (string s in metricList.GetValueList())
+                foreach (string s in metricList.Values)
                 {
                     message.AppendLine(s);
                 }
