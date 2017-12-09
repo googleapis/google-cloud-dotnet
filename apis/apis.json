@@ -476,12 +476,12 @@
       "Google.Cloud.Spanner.V1": "project",
       "Google.Cloud.Spanner.Admin.Database.V1": "project",
       "Google.Cloud.Spanner.Admin.Instance.V1": "project",
-      "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
+      "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
       "Grpc.Core": "default"
     },
     "testDependencies": {
-      "Microsoft.EntityFrameworkCore.Relational.Specification.Tests": "2.0.0",
-      "Microsoft.EntityFrameworkCore.Specification.Tests": "2.0.0",
+      "Microsoft.EntityFrameworkCore.Relational.Specification.Tests": "2.0.1",
+      "Microsoft.EntityFrameworkCore.Specification.Tests": "2.0.1",
       "Microsoft.Extensions.Configuration": "2.0.0",
       "Microsoft.Extensions.Configuration.FileExtensions": "2.0.0",
       "Microsoft.Extensions.Configuration.Json": "2.0.0",

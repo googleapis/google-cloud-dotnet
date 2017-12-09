@@ -26,7 +26,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
         }
 
         public override RelationalTypeMapping Clone(string storeType, int? size)
-            => new BoolTypeMapping(storeType, DbType);
+            => new SpannerBoolTypeMapping(storeType, DbType);
 
         protected override string GenerateNonNullSqlLiteral(object value)
             => (bool)value ? "true" : "false";

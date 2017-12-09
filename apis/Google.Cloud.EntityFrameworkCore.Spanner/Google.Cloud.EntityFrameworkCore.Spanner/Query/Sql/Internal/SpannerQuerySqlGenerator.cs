@@ -12,7 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Linq.Expressions;
+using Google.Api.Gax;
 using Microsoft.EntityFrameworkCore.Query.Expressions;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
 {
@@ -31,6 +34,124 @@ namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
         {
         }
 
+        /// <inheritdoc />
+        protected override string GenerateOperator(Expression expression)
+            => expression.NodeType == ExpressionType.Add
+               && expression.Type == typeof(string)
+                ? " || "
+                : base.GenerateOperator(expression);
+
+        /// <inheritdoc />
+        public override Expression VisitSqlFunction(SqlFunctionExpression sqlFunctionExpression)
+        {
+            switch (sqlFunctionExpression.FunctionName)
+            {
+                case "CAST":
+                    {
+                        Sql.Append(sqlFunctionExpression.FunctionName);
+                        Sql.Append("(");
+
+                        Visit(sqlFunctionExpression.Arguments[0]);
+
+                        Sql.Append(" AS ");
+
+                        Visit(sqlFunctionExpression.Arguments[1]);
+
+                        Sql.Append(")");
+
+                        return sqlFunctionExpression;
+                    }
+            }
+
+            return base.VisitSqlFunction(sqlFunctionExpression);
+        }
+
+        /// <inheritdoc />
+        protected override void GenerateTop(SelectExpression selectExpression)
+        {
+        }
+
+        /// <inheritdoc />
+        protected override void GenerateLimitOffset(SelectExpression selectExpression)
+        {
+            GaxPreconditions.CheckNotNull(selectExpression, nameof(selectExpression));
+
+            if (selectExpression.Limit != null)
+            {
+                Sql.AppendLine().Append("LIMIT ");
+                Visit(selectExpression.Limit);
+            }
+
+            if (selectExpression.Offset != null)
+            {
+                if (selectExpression.Limit == null)
+                {
+                    Sql.AppendLine();
+                }
+                else
+                {
+                    Sql.Append(' ');
+                }
+                Sql.Append("OFFSET ");
+                Visit(selectExpression.Offset);
+            }
+        }
+
+        /// <inheritdoc />
+        protected override Expression VisitBinary(BinaryExpression binaryExpression)
+        {
+            GaxPreconditions.CheckNotNull(binaryExpression, nameof(binaryExpression));
+
+            switch (binaryExpression.NodeType)
+            {
+                case ExpressionType.Add:
+                {
+                    if (binaryExpression.Type == typeof(string))
+                    {
+                        Sql.Append("CONCAT(");
+                        Visit(binaryExpression.Left);
+                        Sql.Append(", ");
+                        Visit(binaryExpression.Right);
+                        Sql.Append(")");
+
+                        return binaryExpression;
+                    }
+                    break;
+                }
+                case ExpressionType.And:
+                {
+                    Sql.Append("BIT_AND(");
+                    Visit(binaryExpression.Left);
+                    Sql.Append(", ");
+                    Visit(binaryExpression.Right);
+                    Sql.Append(")");
+
+                    return binaryExpression;
+                }
+                case ExpressionType.Or:
+                {
+                    Sql.Append("BIT_OR(");
+                    Visit(binaryExpression.Left);
+                    Sql.Append(", ");
+                    Visit(binaryExpression.Right);
+                    Sql.Append(")");
+
+                    return binaryExpression;
+                    }
+                case ExpressionType.Modulo:
+                {
+                    Sql.Append("MOD(");
+                    Visit(binaryExpression.Left);
+                    Sql.Append(", ");
+                    Visit(binaryExpression.Right);
+                    Sql.Append(")");
+
+                    return binaryExpression;
+                }
+            }
+
+            return base.VisitBinary(binaryExpression);
+        }
         /// <summary>
         ///     The default true literal SQL.
         /// </summary>

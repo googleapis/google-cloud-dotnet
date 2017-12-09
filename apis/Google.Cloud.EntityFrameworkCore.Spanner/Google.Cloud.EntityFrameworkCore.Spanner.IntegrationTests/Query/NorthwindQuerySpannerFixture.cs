@@ -78,15 +78,15 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
                 .Property(c => c.CustomerID)
                 .HasColumnType("STRING(5)");
 
-            var pbuilder = modelBuilder.Entity<OrderDetail>()
-                .Property(od => od.UnitPrice);
-
-            pbuilder
+            modelBuilder.Entity<OrderDetail>()
+                .Property(od => od.UnitPrice)
                 .HasColumnType("FLOAT64");
 
             modelBuilder.Entity<Product>()
                 .Property(p => p.UnitPrice)
                 .HasColumnType("FLOAT64");
+
+            modelBuilder.Entity<OrderDetail>().ToTable("Order_Details");
         }
     }
 }

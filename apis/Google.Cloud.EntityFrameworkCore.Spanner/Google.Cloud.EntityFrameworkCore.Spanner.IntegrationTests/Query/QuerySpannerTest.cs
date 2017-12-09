@@ -31,6 +31,20 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         }
 
         [Fact]
+        public override void Convert_ToDouble()
+        {
+//            AssertSingleResult<Order>(os => os.Average(o => o.OrderID));
+//            using (var context = Fixture.CreateContext())
+//            {
+//                var actual = context.Set<Order>().Average(o => o.OrderID);
+//                var expected = NorthwindData.CreateOrders().Average(o => o.OrderID);
+//
+//                Assert.Equal(expected, actual);
+//            }
+                        base.Convert_ToDouble();
+        }
+
+        [Fact]
         public override void String_Contains_Literal()
         {
             base.String_Contains_Literal();
