@@ -17,7 +17,6 @@ using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -291,6 +290,57 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 () => client.ReadRow(tableName, rowKey, filter));
             await Assert.ThrowsAsync<TException>(
                 () => client.ReadRowAsync(tableName, rowKey, filter));
+        }
+
+        [Fact]
+        public async Task ReadRows_Family_Order()
+        {
+            var stream = new MockReadRowsStream(
+                new ReadRowsResponse
+                {
+                    Chunks =
+                    {
+                        new ReadRowsResponse.Types.CellChunk
+                        {
+                            RowKey = ByteString.CopyFromUtf8("abc"),
+                            FamilyName = "z",
+                            Qualifier = ByteString.CopyFromUtf8("column1"),
+                            Value = ByteString.CopyFromUtf8("value1")
+                        },
+                        new ReadRowsResponse.Types.CellChunk
+                        {
+                            RowKey = ByteString.CopyFromUtf8("abc"),
+                            FamilyName = "A",
+                            Qualifier = ByteString.CopyFromUtf8("column2"),
+                            Value = ByteString.CopyFromUtf8("value2")
+                        }
+                    }
+                },
+                new ReadRowsResponse
+                {
+                    Chunks =
+                    {
+                        new ReadRowsResponse.Types.CellChunk
+                        {
+                            RowKey = ByteString.CopyFromUtf8("abc"),
+                            FamilyName = "a",
+                            Qualifier = ByteString.CopyFromUtf8("column3"),
+                            Value = ByteString.CopyFromUtf8("value3"),
+                            CommitRow = true
+                        }
+                    }
+                });
+
+            int rowCount = 0;
+            await stream.AsAsyncEnumerable().ForEachAsync(row =>
+            {
+                rowCount++;
+                var familyNames = row.Families.Select(r => r.Name).ToArray();
+                Assert.Equal("A", familyNames[0]);
+                Assert.Equal("a", familyNames[1]);
+                Assert.Equal("z", familyNames[2]);
+            });
+            Assert.Equal(1, rowCount);
         }
 
         [Fact]

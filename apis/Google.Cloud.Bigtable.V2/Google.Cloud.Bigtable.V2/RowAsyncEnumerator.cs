@@ -33,6 +33,7 @@ namespace Google.Cloud.Bigtable.V2
     internal sealed class RowAsyncEnumerator : IAsyncEnumerator<Row>
     {
         private CellInfo _currentCell;
+        private SortedList<string, Family> _currentFamilies = new SortedList<string, Family>(StringComparer.Ordinal);
         private RowMergeState _rowMergeState = NewRow.Instance;
         private IEnumerator<Row> _singleResponseRowEnumerator;
         private readonly ReadRowsStream _stream;
@@ -49,7 +50,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         public bool HadSplitCell { get; private set; }
 
-        public void Dispose() => _stream.GrpcCall.Dispose();
+        public void Dispose() => _stream.GrpcCall?.Dispose();
 
         public async Task<bool> MoveNext(CancellationToken cancellationToken)
         {
@@ -81,7 +82,7 @@ namespace Google.Cloud.Bigtable.V2
             }
 
             if (IsRowInProgress &&
-                _stream.GrpcCall.GetStatus().StatusCode != StatusCode.Cancelled)
+                _stream.GrpcCall?.GetStatus().StatusCode != StatusCode.Cancelled)
             {
                 // TODO: Is there something we could/should do here? Stream prematurely closed
                 //       with a row in progress
@@ -137,7 +138,11 @@ namespace Google.Cloud.Bigtable.V2
             }
         }
 
-        private void Reset() => _currentCell = new CellInfo();
+        private void Reset()
+        {
+            _currentCell = new CellInfo();
+            _currentFamilies.Clear();
+        }
 
         private struct CellInfo
         {
@@ -190,6 +195,7 @@ namespace Google.Cloud.Bigtable.V2
                 owner._currentCell.Column = null;
                 owner._currentCell.Timestamp = 0;
                 owner._currentCell.Labels = null;
+                owner._currentFamilies.Clear();
 
                 // auto transition
                 return NewCell.Instance.HandleChunk(owner, chunk);
@@ -217,7 +223,8 @@ namespace Google.Cloud.Bigtable.V2
                     {
                         idChanged = true;
                         owner._currentCell.Family = new Family { Name = chunk.FamilyName };
-                        owner._currentCell.Row.Families.Add(owner._currentCell.Family);
+                        Debug.Assert(!owner._currentFamilies.ContainsKey(chunk.FamilyName));
+                        owner._currentFamilies[chunk.FamilyName] = owner._currentCell.Family;
                     }
                     owner.Assert(chunk.Qualifier != null, "NewCell has a familyName, but no qualifier");
                 }
@@ -271,6 +278,7 @@ namespace Google.Cloud.Bigtable.V2
             public override RowMergeState CommitRow(RowAsyncEnumerator owner)
             {
                 Debug.Assert(owner._currentCell.ValueSizeRemaining == 0);
+                owner._currentCell.Row.Families.AddRange(owner._currentFamilies.Values);
                 return NewRow.Instance;
             }
         }
