@@ -46,10 +46,10 @@ namespace Google.Cloud.Bigtable.V2
         public static IEnumerable<T> ValidateCollection<T>(
             IEnumerable<T> items,
             string paramName,
-            bool canBeEmpty = false)
+            bool allowNullCollection = false)
             where T : class
         {
-            if (canBeEmpty && items == null)
+            if (allowNullCollection && items == null)
             {
                 return Enumerable.Empty<T>();
             }

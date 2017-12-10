@@ -237,8 +237,8 @@ namespace Google.Cloud.Bigtable.V2
                 TableNameAsTableName = tableName,
                 RowKey = rowKey.Value,
                 PredicateFilter = predicateFilter,
-                TrueMutations = { Utilities.ValidateCollection(trueMutations, nameof(trueMutations), canBeEmpty: true) },
-                FalseMutations = { Utilities.ValidateCollection(falseMutations, nameof(falseMutations), canBeEmpty: true) }
+                TrueMutations = { Utilities.ValidateCollection(trueMutations, nameof(trueMutations), allowNullCollection: true) },
+                FalseMutations = { Utilities.ValidateCollection(falseMutations, nameof(falseMutations), allowNullCollection: true) }
             };
 
             GaxPreconditions.CheckArgument(
@@ -417,6 +417,76 @@ namespace Google.Cloud.Bigtable.V2
                 request.Mutations.Count != 0, nameof(mutations), "There must be at least one entry.");
             return request;
         }
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in <see cref="MutateRow(MutateRowRequest, CallSettings)"/>,
+        /// but the entire batch is not executed atomically.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="MutateRows(MutateRowsRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the mutations should be applied. Must not be null.
+        /// </param>
+        /// <param name="entries">
+        /// The row keys and corresponding mutations to be applied in bulk.
+        /// Each entry is applied as an atomic mutation, but the entries may be
+        /// applied in arbitrary order (even between entries for the same row).
+        /// At least one entry must be specified, and in total the entries can
+        /// contain at most 100000 mutations. Must not be null, or contain null
+        /// elements.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual MutateRowsStream MutateRows(
+            TableName tableName,
+            IEnumerable<MutateRowsRequest.Types.Entry> entries,
+            CallSettings callSettings = null)
+        {
+            var request = new MutateRowsRequest
+            {
+                TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                Entries = { Utilities.ValidateCollection(entries, nameof(entries)) }
+            };
+            GaxPreconditions.CheckArgument(
+                request.Entries.Count != 0, nameof(entries), "There must be at least one entry.");
+            return MutateRows(request, callSettings);
+        }
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in <see cref="MutateRow(MutateRowRequest, CallSettings)"/>,
+        /// but the entire batch is not executed atomically.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="MutateRows(TableName, IEnumerable{MutateRowsRequest.Types.Entry}, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the mutations should be applied. Must not be null.
+        /// </param>
+        /// <param name="entries">
+        /// The row keys and corresponding mutations to be applied in bulk.
+        /// Each entry is applied as an atomic mutation, but the entries may be
+        /// applied in arbitrary order (even between entries for the same row).
+        /// At least one entry must be specified, and in total the entries can
+        /// contain at most 100000 mutations.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual MutateRowsStream MutateRows(
+            TableName tableName,
+            params MutateRowsRequest.Types.Entry[] entries) =>
+            MutateRows(tableName, entries, callSettings: null);
 
         /// <summary>
         /// Modifies a row atomically on the server. The method reads the latest existing version

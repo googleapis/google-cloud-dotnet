@@ -25,7 +25,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
     public class BigtableClientTest
     {
         private class TestBigtableClient : BigtableClient { }
-        
+
         public static TheoryData<BigtableByteString> InvalidRowKeys { get; } = new TheoryData<BigtableByteString>
         {
             "",
@@ -192,6 +192,50 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 () => client.MutateRowAsync(tableName, rowKey, mutations?.ToArray()));
             await Assert.ThrowsAsync<TException>(
                 () => client.MutateRowAsync(tableName, rowKey, mutations, CallSettings.FromCancellationToken(default)));
+        }
+
+        [Fact]
+        public void MutateRows_Valid_Request()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+
+            // NotImplementedException means it got through the normal validations and tried to actually
+            // make the request on the TestBigtableClient.
+            MutateRows_ValidateArguments<NotImplementedException>(
+                tableName,
+                new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
+        }
+
+        [Fact]
+        public void MutateRows_Validate_TableName()
+        {
+            var client = new TestBigtableClient();
+            MutateRows_ValidateArguments<ArgumentNullException>(
+                null,
+                new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
+        }
+
+        [Fact]
+        public void MutateRows_Validate_Mutations()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+            MutateRows_ValidateArguments<ArgumentNullException>(tableName, null);
+            MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[0]);
+            MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[] { null });
+        }
+
+        private void MutateRows_ValidateArguments<TException>(
+            TableName tableName,
+            IEnumerable<MutateRowsRequest.Types.Entry> entries)
+            where TException : Exception
+        {
+            var client = new TestBigtableClient();
+            Assert.Throws<TException>(
+                () => client.MutateRows(tableName, entries?.ToArray()));
+            Assert.Throws<TException>(
+                () => client.MutateRows(tableName, entries, CallSettings.FromCancellationToken(default)));
         }
 
         [Fact]
