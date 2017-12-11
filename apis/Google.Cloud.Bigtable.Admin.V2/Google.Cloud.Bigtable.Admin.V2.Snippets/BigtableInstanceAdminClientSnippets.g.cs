@@ -17,6 +17,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Admin.V2;
+using Google.Cloud.Iam.V1;
 using Google.LongRunning;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -300,37 +301,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateInstanceAsync</summary>
-        public async Task UpdateInstanceAsync()
-        {
-            // Snippet: UpdateInstanceAsync(InstanceName,string,Instance.Types.Type,CallSettings)
-            // Additional: UpdateInstanceAsync(InstanceName,string,Instance.Types.Type,CancellationToken)
-            // Create client
-            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
-            // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
-            string displayName = "";
-            Instance.Types.Type type = Instance.Types.Type.Unspecified;
-            // Make the request
-            Instance response = await bigtableInstanceAdminClient.UpdateInstanceAsync(name, displayName, type);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateInstance</summary>
-        public void UpdateInstance()
-        {
-            // Snippet: UpdateInstance(InstanceName,string,Instance.Types.Type,CallSettings)
-            // Create client
-            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
-            // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
-            string displayName = "";
-            Instance.Types.Type type = Instance.Types.Type.Unspecified;
-            // Make the request
-            Instance response = bigtableInstanceAdminClient.UpdateInstance(name, displayName, type);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateInstanceAsync</summary>
         public async Task UpdateInstanceAsync_RequestObject()
         {
             // Snippet: UpdateInstanceAsync(Instance,CallSettings)
@@ -342,6 +312,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "",
                 Type = Instance.Types.Type.Unspecified,
+                Labels = { },
             };
             // Make the request
             Instance response = await bigtableInstanceAdminClient.UpdateInstanceAsync(request);
@@ -360,9 +331,73 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 DisplayName = "",
                 Type = Instance.Types.Type.Unspecified,
+                Labels = { },
             };
             // Make the request
             Instance response = bigtableInstanceAdminClient.UpdateInstance(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PartialUpdateInstanceAsync</summary>
+        public async Task PartialUpdateInstanceAsync()
+        {
+            // Snippet: PartialUpdateInstanceAsync(Instance,FieldMask,CallSettings)
+            // Additional: PartialUpdateInstanceAsync(Instance,FieldMask,CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            Instance instance = new Instance();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation response = await bigtableInstanceAdminClient.PartialUpdateInstanceAsync(instance, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PartialUpdateInstance</summary>
+        public void PartialUpdateInstance()
+        {
+            // Snippet: PartialUpdateInstance(Instance,FieldMask,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            Instance instance = new Instance();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation response = bigtableInstanceAdminClient.PartialUpdateInstance(instance, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PartialUpdateInstanceAsync</summary>
+        public async Task PartialUpdateInstanceAsync_RequestObject()
+        {
+            // Snippet: PartialUpdateInstanceAsync(PartialUpdateInstanceRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            PartialUpdateInstanceRequest request = new PartialUpdateInstanceRequest
+            {
+                Instance = new Instance(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation response = await bigtableInstanceAdminClient.PartialUpdateInstanceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PartialUpdateInstance</summary>
+        public void PartialUpdateInstance_RequestObject()
+        {
+            // Snippet: PartialUpdateInstance(PartialUpdateInstanceRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            PartialUpdateInstanceRequest request = new PartialUpdateInstanceRequest
+            {
+                Instance = new Instance(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation response = bigtableInstanceAdminClient.PartialUpdateInstance(request);
             // End snippet
         }
 
@@ -687,77 +722,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
         }
 
         /// <summary>Snippet for UpdateClusterAsync</summary>
-        public async Task UpdateClusterAsync()
-        {
-            // Snippet: UpdateClusterAsync(ClusterName,LocationName,int,StorageType,CallSettings)
-            // Additional: UpdateClusterAsync(ClusterName,LocationName,int,StorageType,CancellationToken)
-            // Create client
-            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
-            // Initialize request argument(s)
-            ClusterName name = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
-            LocationName location = new LocationName("[PROJECT]", "[LOCATION]");
-            int serveNodes = 0;
-            StorageType defaultStorageType = StorageType.Unspecified;
-            // Make the request
-            Operation<Cluster, UpdateClusterMetadata> response =
-                await bigtableInstanceAdminClient.UpdateClusterAsync(name, location, serveNodes, defaultStorageType);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Cluster, UpdateClusterMetadata> completedResponse =
-                await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            Cluster result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Cluster, UpdateClusterMetadata> retrievedResponse =
-                await bigtableInstanceAdminClient.PollOnceUpdateClusterAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                Cluster retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateCluster</summary>
-        public void UpdateCluster()
-        {
-            // Snippet: UpdateCluster(ClusterName,LocationName,int,StorageType,CallSettings)
-            // Create client
-            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
-            // Initialize request argument(s)
-            ClusterName name = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
-            LocationName location = new LocationName("[PROJECT]", "[LOCATION]");
-            int serveNodes = 0;
-            StorageType defaultStorageType = StorageType.Unspecified;
-            // Make the request
-            Operation<Cluster, UpdateClusterMetadata> response =
-                bigtableInstanceAdminClient.UpdateCluster(name, location, serveNodes, defaultStorageType);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Cluster, UpdateClusterMetadata> completedResponse =
-                response.PollUntilCompleted();
-            // Retrieve the operation result
-            Cluster result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Cluster, UpdateClusterMetadata> retrievedResponse =
-                bigtableInstanceAdminClient.PollOnceUpdateCluster(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                Cluster retrievedResult = retrievedResponse.Result;
-            }
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateClusterAsync</summary>
         public async Task UpdateClusterAsync_RequestObject()
         {
             // Snippet: UpdateClusterAsync(Cluster,CallSettings)
@@ -769,7 +733,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
                 LocationAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ServeNodes = 0,
-                DefaultStorageType = StorageType.Unspecified,
             };
             // Make the request
             Operation<Cluster, UpdateClusterMetadata> response =
@@ -807,7 +770,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 ClusterName = new ClusterName("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
                 LocationAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ServeNodes = 0,
-                DefaultStorageType = StorageType.Unspecified,
             };
             // Make the request
             Operation<Cluster, UpdateClusterMetadata> response =
@@ -889,6 +851,623 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             };
             // Make the request
             bigtableInstanceAdminClient.DeleteCluster(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAppProfileAsync</summary>
+        public async Task CreateAppProfileAsync()
+        {
+            // Snippet: CreateAppProfileAsync(InstanceName,string,AppProfile,CallSettings)
+            // Additional: CreateAppProfileAsync(InstanceName,string,AppProfile,CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
+            string appProfileId = "";
+            AppProfile appProfile = new AppProfile();
+            // Make the request
+            AppProfile response = await bigtableInstanceAdminClient.CreateAppProfileAsync(parent, appProfileId, appProfile);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAppProfile</summary>
+        public void CreateAppProfile()
+        {
+            // Snippet: CreateAppProfile(InstanceName,string,AppProfile,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
+            string appProfileId = "";
+            AppProfile appProfile = new AppProfile();
+            // Make the request
+            AppProfile response = bigtableInstanceAdminClient.CreateAppProfile(parent, appProfileId, appProfile);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAppProfileAsync</summary>
+        public async Task CreateAppProfileAsync_RequestObject()
+        {
+            // Snippet: CreateAppProfileAsync(CreateAppProfileRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAppProfileRequest request = new CreateAppProfileRequest
+            {
+                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "",
+                AppProfile = new AppProfile(),
+            };
+            // Make the request
+            AppProfile response = await bigtableInstanceAdminClient.CreateAppProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAppProfile</summary>
+        public void CreateAppProfile_RequestObject()
+        {
+            // Snippet: CreateAppProfile(CreateAppProfileRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            CreateAppProfileRequest request = new CreateAppProfileRequest
+            {
+                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "",
+                AppProfile = new AppProfile(),
+            };
+            // Make the request
+            AppProfile response = bigtableInstanceAdminClient.CreateAppProfile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAppProfileAsync</summary>
+        public async Task GetAppProfileAsync()
+        {
+            // Snippet: GetAppProfileAsync(AppProfileName,CallSettings)
+            // Additional: GetAppProfileAsync(AppProfileName,CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            AppProfileName name = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
+            // Make the request
+            AppProfile response = await bigtableInstanceAdminClient.GetAppProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAppProfile</summary>
+        public void GetAppProfile()
+        {
+            // Snippet: GetAppProfile(AppProfileName,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            AppProfileName name = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
+            // Make the request
+            AppProfile response = bigtableInstanceAdminClient.GetAppProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAppProfileAsync</summary>
+        public async Task GetAppProfileAsync_RequestObject()
+        {
+            // Snippet: GetAppProfileAsync(GetAppProfileRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAppProfileRequest request = new GetAppProfileRequest
+            {
+                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            // Make the request
+            AppProfile response = await bigtableInstanceAdminClient.GetAppProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAppProfile</summary>
+        public void GetAppProfile_RequestObject()
+        {
+            // Snippet: GetAppProfile(GetAppProfileRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            GetAppProfileRequest request = new GetAppProfileRequest
+            {
+                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+            };
+            // Make the request
+            AppProfile response = bigtableInstanceAdminClient.GetAppProfile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppProfilesAsync</summary>
+        public async Task ListAppProfilesAsync()
+        {
+            // Snippet: ListAppProfilesAsync(InstanceName,string,int?,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> response =
+                bigtableInstanceAdminClient.ListAppProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AppProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAppProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppProfile item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppProfile item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppProfiles</summary>
+        public void ListAppProfiles()
+        {
+            // Snippet: ListAppProfiles(InstanceName,string,int?,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PagedEnumerable<ListAppProfilesResponse, AppProfile> response =
+                bigtableInstanceAdminClient.ListAppProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AppProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAppProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppProfile item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppProfile item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppProfilesAsync</summary>
+        public async Task ListAppProfilesAsync_RequestObject()
+        {
+            // Snippet: ListAppProfilesAsync(ListAppProfilesRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAppProfilesRequest request = new ListAppProfilesRequest
+            {
+                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> response =
+                bigtableInstanceAdminClient.ListAppProfilesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AppProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAppProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppProfile item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppProfile item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppProfiles</summary>
+        public void ListAppProfiles_RequestObject()
+        {
+            // Snippet: ListAppProfiles(ListAppProfilesRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ListAppProfilesRequest request = new ListAppProfilesRequest
+            {
+                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAppProfilesResponse, AppProfile> response =
+                bigtableInstanceAdminClient.ListAppProfiles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AppProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAppProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppProfile item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppProfile item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAppProfileAsync</summary>
+        public async Task UpdateAppProfileAsync()
+        {
+            // Snippet: UpdateAppProfileAsync(AppProfile,FieldMask,CallSettings)
+            // Additional: UpdateAppProfileAsync(AppProfile,FieldMask,CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            AppProfile appProfile = new AppProfile();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation response = await bigtableInstanceAdminClient.UpdateAppProfileAsync(appProfile, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAppProfile</summary>
+        public void UpdateAppProfile()
+        {
+            // Snippet: UpdateAppProfile(AppProfile,FieldMask,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            AppProfile appProfile = new AppProfile();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation response = bigtableInstanceAdminClient.UpdateAppProfile(appProfile, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAppProfileAsync</summary>
+        public async Task UpdateAppProfileAsync_RequestObject()
+        {
+            // Snippet: UpdateAppProfileAsync(UpdateAppProfileRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAppProfileRequest request = new UpdateAppProfileRequest
+            {
+                AppProfile = new AppProfile(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation response = await bigtableInstanceAdminClient.UpdateAppProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAppProfile</summary>
+        public void UpdateAppProfile_RequestObject()
+        {
+            // Snippet: UpdateAppProfile(UpdateAppProfileRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateAppProfileRequest request = new UpdateAppProfileRequest
+            {
+                AppProfile = new AppProfile(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation response = bigtableInstanceAdminClient.UpdateAppProfile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAppProfileAsync</summary>
+        public async Task DeleteAppProfileAsync()
+        {
+            // Snippet: DeleteAppProfileAsync(AppProfileName,CallSettings)
+            // Additional: DeleteAppProfileAsync(AppProfileName,CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            AppProfileName name = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
+            // Make the request
+            await bigtableInstanceAdminClient.DeleteAppProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAppProfile</summary>
+        public void DeleteAppProfile()
+        {
+            // Snippet: DeleteAppProfile(AppProfileName,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            AppProfileName name = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
+            // Make the request
+            bigtableInstanceAdminClient.DeleteAppProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAppProfileAsync</summary>
+        public async Task DeleteAppProfileAsync_RequestObject()
+        {
+            // Snippet: DeleteAppProfileAsync(DeleteAppProfileRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAppProfileRequest request = new DeleteAppProfileRequest
+            {
+                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                IgnoreWarnings = false,
+            };
+            // Make the request
+            await bigtableInstanceAdminClient.DeleteAppProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAppProfile</summary>
+        public void DeleteAppProfile_RequestObject()
+        {
+            // Snippet: DeleteAppProfile(DeleteAppProfileRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteAppProfileRequest request = new DeleteAppProfileRequest
+            {
+                AppProfileName = new AppProfileName("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]"),
+                IgnoreWarnings = false,
+            };
+            // Make the request
+            bigtableInstanceAdminClient.DeleteAppProfile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string,CallSettings)
+            // Additional: GetIamPolicyAsync(string,CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            // Make the request
+            Policy response = await bigtableInstanceAdminClient.GetIamPolicyAsync(formattedResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            // Make the request
+            Policy response = bigtableInstanceAdminClient.GetIamPolicy(formattedResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync_RequestObject()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+            };
+            // Make the request
+            Policy response = await bigtableInstanceAdminClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy_RequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+            };
+            // Make the request
+            Policy response = bigtableInstanceAdminClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
+            // Additional: SetIamPolicyAsync(string,Policy,CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await bigtableInstanceAdminClient.SetIamPolicyAsync(formattedResource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string,Policy,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = bigtableInstanceAdminClient.SetIamPolicy(formattedResource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync_RequestObject()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                Policy = new Policy(),
+            };
+            // Make the request
+            Policy response = await bigtableInstanceAdminClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy_RequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                Policy = new Policy(),
+            };
+            // Make the request
+            Policy response = bigtableInstanceAdminClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
+            // Additional: TestIamPermissionsAsync(string,IEnumerable<string>,CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IEnumerable<string> permissions = new List<string>();
+            // Make the request
+            TestIamPermissionsResponse response = await bigtableInstanceAdminClient.TestIamPermissionsAsync(formattedResource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            IEnumerable<string> permissions = new List<string>();
+            // Make the request
+            TestIamPermissionsResponse response = bigtableInstanceAdminClient.TestIamPermissions(formattedResource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync_RequestObject()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                Permissions = { },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = await bigtableInstanceAdminClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions_RequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                Permissions = { },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = bigtableInstanceAdminClient.TestIamPermissions(request);
             // End snippet
         }
 

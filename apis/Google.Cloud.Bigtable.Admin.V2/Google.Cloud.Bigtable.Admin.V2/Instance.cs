@@ -25,28 +25,41 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "Cidnb29nbGUvYmlndGFibGUvYWRtaW4vdjIvaW5zdGFuY2UucHJvdG8SGGdv",
             "b2dsZS5iaWd0YWJsZS5hZG1pbi52MhocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
             "cy5wcm90bxolZ29vZ2xlL2JpZ3RhYmxlL2FkbWluL3YyL2NvbW1vbi5wcm90",
-            "byKUAgoISW5zdGFuY2USDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUY",
+            "byKDAwoISW5zdGFuY2USDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUY",
             "AiABKAkSNwoFc3RhdGUYAyABKA4yKC5nb29nbGUuYmlndGFibGUuYWRtaW4u",
             "djIuSW5zdGFuY2UuU3RhdGUSNQoEdHlwZRgEIAEoDjInLmdvb2dsZS5iaWd0",
-            "YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5UeXBlIjUKBVN0YXRlEhMKD1NUQVRF",
-            "X05PVF9LTk9XThAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAiI9CgRUeXBl",
-            "EhQKEFRZUEVfVU5TUEVDSUZJRUQQABIOCgpQUk9EVUNUSU9OEAESDwoLREVW",
-            "RUxPUE1FTlQQAiKOAgoHQ2x1c3RlchIMCgRuYW1lGAEgASgJEhAKCGxvY2F0",
-            "aW9uGAIgASgJEjYKBXN0YXRlGAMgASgOMicuZ29vZ2xlLmJpZ3RhYmxlLmFk",
-            "bWluLnYyLkNsdXN0ZXIuU3RhdGUSEwoLc2VydmVfbm9kZXMYBCABKAUSQwoU",
-            "ZGVmYXVsdF9zdG9yYWdlX3R5cGUYBSABKA4yJS5nb29nbGUuYmlndGFibGUu",
-            "YWRtaW4udjIuU3RvcmFnZVR5cGUiUQoFU3RhdGUSEwoPU1RBVEVfTk9UX0tO",
-            "T1dOEAASCQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCFJFU0laSU5HEAMS",
-            "DAoIRElTQUJMRUQQBEKwAQocY29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
-            "MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIeR29vZ2xl",
-            "LkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3VkXEJpZ3Rh",
-            "YmxlXEFkbWluXFYyYgZwcm90bzM="));
+            "YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5UeXBlEj4KBmxhYmVscxgFIAMoCzIu",
+            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZS5MYWJlbHNFbnRy",
+            "eRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBIjUKBVN0YXRlEhMKD1NUQVRFX05PVF9LTk9XThAAEgkKBVJFQURZEAES",
+            "DAoIQ1JFQVRJTkcQAiI9CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIO",
+            "CgpQUk9EVUNUSU9OEAESDwoLREVWRUxPUE1FTlQQAiKOAgoHQ2x1c3RlchIM",
+            "CgRuYW1lGAEgASgJEhAKCGxvY2F0aW9uGAIgASgJEjYKBXN0YXRlGAMgASgO",
+            "MicuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNsdXN0ZXIuU3RhdGUSEwoL",
+            "c2VydmVfbm9kZXMYBCABKAUSQwoUZGVmYXVsdF9zdG9yYWdlX3R5cGUYBSAB",
+            "KA4yJS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuU3RvcmFnZVR5cGUiUQoF",
+            "U3RhdGUSEwoPU1RBVEVfTk9UX0tOT1dOEAASCQoFUkVBRFkQARIMCghDUkVB",
+            "VElORxACEgwKCFJFU0laSU5HEAMSDAoIRElTQUJMRUQQBCKCAwoKQXBwUHJv",
+            "ZmlsZRIMCgRuYW1lGAEgASgJEgwKBGV0YWcYAiABKAkSEwoLZGVzY3JpcHRp",
+            "b24YAyABKAkSZwodbXVsdGlfY2x1c3Rlcl9yb3V0aW5nX3VzZV9hbnkYBSAB",
+            "KAsyPi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5NdWx0",
+            "aUNsdXN0ZXJSb3V0aW5nVXNlQW55SAASWwoWc2luZ2xlX2NsdXN0ZXJfcm91",
+            "dGluZxgGIAEoCzI5Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9m",
+            "aWxlLlNpbmdsZUNsdXN0ZXJSb3V0aW5nSAAaGwoZTXVsdGlDbHVzdGVyUm91",
+            "dGluZ1VzZUFueRpOChRTaW5nbGVDbHVzdGVyUm91dGluZxISCgpjbHVzdGVy",
+            "X2lkGAEgASgJEiIKGmFsbG93X3RyYW5zYWN0aW9uYWxfd3JpdGVzGAIgASgI",
+            "QhAKDnJvdXRpbmdfcG9saWN5QrABChxjb20uZ29vZ2xlLmJpZ3RhYmxlLmFk",
+            "bWluLnYyQg1JbnN0YW5jZVByb3RvUAFaPWdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvYmlndGFibGUvYWRtaW4vdjI7YWRtaW6qAh5H",
+            "b29nbGUuQ2xvdWQuQmlndGFibGUuQWRtaW4uVjLKAh5Hb29nbGVcQ2xvdWRc",
+            "QmlndGFibGVcQWRtaW5cVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "DefaultStorageType" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "DefaultStorageType" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null)})
           }));
     }
     #endregion
@@ -87,6 +100,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       displayName_ = other.displayName_;
       state_ = other.state_;
       type_ = other.type_;
+      labels_ = other.labels_.Clone();
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -155,6 +169,29 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 42);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Labels are a flexible and lightweight mechanism for organizing cloud
+    /// resources into groups that reflect a customer's organizational needs and
+    /// deployment strategies. They can be used to filter resources and aggregate
+    /// metrics.
+    ///
+    /// * Label keys must be between 1 and 63 characters long and must conform to
+    ///   the regular expression: `[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}`.
+    /// * Label values must be between 0 and 63 characters long and must conform to
+    ///   the regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`.
+    /// * No more than 64 labels can be associated with a given resource.
+    /// * Keys and values must both be under 128 bytes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Instance);
@@ -172,6 +209,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (DisplayName != other.DisplayName) return false;
       if (State != other.State) return false;
       if (Type != other.Type) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return true;
     }
 
@@ -182,6 +220,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
+      hash ^= Labels.GetHashCode();
       return hash;
     }
 
@@ -208,6 +247,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
+      labels_.WriteTo(output, _map_labels_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -225,6 +265,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Type != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       return size;
     }
 
@@ -245,6 +286,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (other.Type != 0) {
         Type = other.Type;
       }
+      labels_.Add(other.labels_);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -269,6 +311,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 32: {
             type_ = (global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
         }
@@ -394,9 +440,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// (`CreationOnly`)
     /// The location where this cluster's nodes and storage reside. For best
-    /// performance, clients should be located as close as possible to this cluster.
-    /// Currently only zones are supported, so values should be of the form
-    /// `projects/&lt;project>/locations/&lt;zone>`.
+    /// performance, clients should be located as close as possible to this
+    /// cluster. Currently only zones are supported, so values should be of the
+    /// form `projects/&lt;project>/locations/&lt;zone>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Location {
@@ -623,6 +669,569 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         /// exist, but no operations can be performed on the cluster.
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// This is a private alpha release of Cloud Bigtable replication. This feature
+  /// is not currently available to most Cloud Bigtable customers. This feature
+  /// might be changed in backward-incompatible ways and is not recommended for
+  /// production use. It is not subject to any SLA or deprecation policy.
+  ///
+  /// A configuration object describing how Cloud Bigtable should treat traffic
+  /// from a particular end user application.
+  /// </summary>
+  public sealed partial class AppProfile : pb::IMessage<AppProfile> {
+    private static readonly pb::MessageParser<AppProfile> _parser = new pb::MessageParser<AppProfile>(() => new AppProfile());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AppProfile> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AppProfile() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AppProfile(AppProfile other) : this() {
+      name_ = other.name_;
+      etag_ = other.etag_;
+      description_ = other.description_;
+      switch (other.RoutingPolicyCase) {
+        case RoutingPolicyOneofCase.MultiClusterRoutingUseAny:
+          MultiClusterRoutingUseAny = other.MultiClusterRoutingUseAny.Clone();
+          break;
+        case RoutingPolicyOneofCase.SingleClusterRouting:
+          SingleClusterRouting = other.SingleClusterRouting.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AppProfile Clone() {
+      return new AppProfile(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// (`OutputOnly`)
+    /// The unique name of the app profile. Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/appProfiles/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 2;
+    private string etag_ = "";
+    /// <summary>
+    /// Strongly validated etag for optimistic concurrency control. Preserve the
+    /// value returned from `GetAppProfile` when calling `UpdateAppProfile` to
+    /// fail the request if there has been a modification in the mean time. The
+    /// `update_mask` of the request need not include `etag` for this protection
+    /// to apply.
+    /// See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and
+    /// [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more
+    /// details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// Optional long form description of the use case for this AppProfile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "multi_cluster_routing_use_any" field.</summary>
+    public const int MultiClusterRoutingUseAnyFieldNumber = 5;
+    /// <summary>
+    /// Use a multi-cluster routing policy that may pick any cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny MultiClusterRoutingUseAny {
+      get { return routingPolicyCase_ == RoutingPolicyOneofCase.MultiClusterRoutingUseAny ? (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny) routingPolicy_ : null; }
+      set {
+        routingPolicy_ = value;
+        routingPolicyCase_ = value == null ? RoutingPolicyOneofCase.None : RoutingPolicyOneofCase.MultiClusterRoutingUseAny;
+      }
+    }
+
+    /// <summary>Field number for the "single_cluster_routing" field.</summary>
+    public const int SingleClusterRoutingFieldNumber = 6;
+    /// <summary>
+    /// Use a single-cluster routing policy.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting SingleClusterRouting {
+      get { return routingPolicyCase_ == RoutingPolicyOneofCase.SingleClusterRouting ? (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting) routingPolicy_ : null; }
+      set {
+        routingPolicy_ = value;
+        routingPolicyCase_ = value == null ? RoutingPolicyOneofCase.None : RoutingPolicyOneofCase.SingleClusterRouting;
+      }
+    }
+
+    private object routingPolicy_;
+    /// <summary>Enum of possible cases for the "routing_policy" oneof.</summary>
+    public enum RoutingPolicyOneofCase {
+      None = 0,
+      MultiClusterRoutingUseAny = 5,
+      SingleClusterRouting = 6,
+    }
+    private RoutingPolicyOneofCase routingPolicyCase_ = RoutingPolicyOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RoutingPolicyOneofCase RoutingPolicyCase {
+      get { return routingPolicyCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearRoutingPolicy() {
+      routingPolicyCase_ = RoutingPolicyOneofCase.None;
+      routingPolicy_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AppProfile);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AppProfile other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Etag != other.Etag) return false;
+      if (Description != other.Description) return false;
+      if (!object.Equals(MultiClusterRoutingUseAny, other.MultiClusterRoutingUseAny)) return false;
+      if (!object.Equals(SingleClusterRouting, other.SingleClusterRouting)) return false;
+      if (RoutingPolicyCase != other.RoutingPolicyCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (routingPolicyCase_ == RoutingPolicyOneofCase.MultiClusterRoutingUseAny) hash ^= MultiClusterRoutingUseAny.GetHashCode();
+      if (routingPolicyCase_ == RoutingPolicyOneofCase.SingleClusterRouting) hash ^= SingleClusterRouting.GetHashCode();
+      hash ^= (int) routingPolicyCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (routingPolicyCase_ == RoutingPolicyOneofCase.MultiClusterRoutingUseAny) {
+        output.WriteRawTag(42);
+        output.WriteMessage(MultiClusterRoutingUseAny);
+      }
+      if (routingPolicyCase_ == RoutingPolicyOneofCase.SingleClusterRouting) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SingleClusterRouting);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (routingPolicyCase_ == RoutingPolicyOneofCase.MultiClusterRoutingUseAny) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MultiClusterRoutingUseAny);
+      }
+      if (routingPolicyCase_ == RoutingPolicyOneofCase.SingleClusterRouting) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SingleClusterRouting);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AppProfile other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      switch (other.RoutingPolicyCase) {
+        case RoutingPolicyOneofCase.MultiClusterRoutingUseAny:
+          MultiClusterRoutingUseAny = other.MultiClusterRoutingUseAny;
+          break;
+        case RoutingPolicyOneofCase.SingleClusterRouting:
+          SingleClusterRouting = other.SingleClusterRouting;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny();
+            if (routingPolicyCase_ == RoutingPolicyOneofCase.MultiClusterRoutingUseAny) {
+              subBuilder.MergeFrom(MultiClusterRoutingUseAny);
+            }
+            input.ReadMessage(subBuilder);
+            MultiClusterRoutingUseAny = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting();
+            if (routingPolicyCase_ == RoutingPolicyOneofCase.SingleClusterRouting) {
+              subBuilder.MergeFrom(SingleClusterRouting);
+            }
+            input.ReadMessage(subBuilder);
+            SingleClusterRouting = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AppProfile message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Read/write requests may be routed to any cluster in the instance, and will
+      /// fail over to another cluster in the event of transient errors or delays.
+      /// Choosing this option sacrifices read-your-writes consistency to improve
+      /// availability.
+      /// </summary>
+      public sealed partial class MultiClusterRoutingUseAny : pb::IMessage<MultiClusterRoutingUseAny> {
+        private static readonly pb::MessageParser<MultiClusterRoutingUseAny> _parser = new pb::MessageParser<MultiClusterRoutingUseAny>(() => new MultiClusterRoutingUseAny());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<MultiClusterRoutingUseAny> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public MultiClusterRoutingUseAny() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public MultiClusterRoutingUseAny(MultiClusterRoutingUseAny other) : this() {
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public MultiClusterRoutingUseAny Clone() {
+          return new MultiClusterRoutingUseAny(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as MultiClusterRoutingUseAny);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(MultiClusterRoutingUseAny other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(MultiClusterRoutingUseAny other) {
+          if (other == null) {
+            return;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// Unconditionally routes all read/write requests to a specific cluster.
+      /// This option preserves read-your-writes consistency, but does not improve
+      /// availability.
+      /// </summary>
+      public sealed partial class SingleClusterRouting : pb::IMessage<SingleClusterRouting> {
+        private static readonly pb::MessageParser<SingleClusterRouting> _parser = new pb::MessageParser<SingleClusterRouting>(() => new SingleClusterRouting());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<SingleClusterRouting> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SingleClusterRouting() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SingleClusterRouting(SingleClusterRouting other) : this() {
+          clusterId_ = other.clusterId_;
+          allowTransactionalWrites_ = other.allowTransactionalWrites_;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SingleClusterRouting Clone() {
+          return new SingleClusterRouting(this);
+        }
+
+        /// <summary>Field number for the "cluster_id" field.</summary>
+        public const int ClusterIdFieldNumber = 1;
+        private string clusterId_ = "";
+        /// <summary>
+        /// The cluster to which read/write requests should be routed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string ClusterId {
+          get { return clusterId_; }
+          set {
+            clusterId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "allow_transactional_writes" field.</summary>
+        public const int AllowTransactionalWritesFieldNumber = 2;
+        private bool allowTransactionalWrites_;
+        /// <summary>
+        /// Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are
+        /// allowed by this app profile. It is unsafe to send these requests to
+        /// the same table/row/column in multiple clusters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool AllowTransactionalWrites {
+          get { return allowTransactionalWrites_; }
+          set {
+            allowTransactionalWrites_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as SingleClusterRouting);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(SingleClusterRouting other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ClusterId != other.ClusterId) return false;
+          if (AllowTransactionalWrites != other.AllowTransactionalWrites) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
+          if (AllowTransactionalWrites != false) hash ^= AllowTransactionalWrites.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (ClusterId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ClusterId);
+          }
+          if (AllowTransactionalWrites != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(AllowTransactionalWrites);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (ClusterId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
+          }
+          if (AllowTransactionalWrites != false) {
+            size += 1 + 1;
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(SingleClusterRouting other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ClusterId.Length != 0) {
+            ClusterId = other.ClusterId;
+          }
+          if (other.AllowTransactionalWrites != false) {
+            AllowTransactionalWrites = other.AllowTransactionalWrites;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                ClusterId = input.ReadString();
+                break;
+              }
+              case 16: {
+                AllowTransactionalWrites = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+
       }
 
     }

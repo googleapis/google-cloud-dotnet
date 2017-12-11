@@ -25,25 +25,42 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "CiRnb29nbGUvYmlndGFibGUvYWRtaW4vdjIvdGFibGUucHJvdG8SGGdvb2ds",
             "ZS5iaWd0YWJsZS5hZG1pbi52MhocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
             "cm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqADCgVUYWJsZRIMCgRuYW1lGAEg",
-            "ASgJEkwKD2NvbHVtbl9mYW1pbGllcxgDIAMoCzIzLmdvb2dsZS5iaWd0YWJs",
-            "ZS5hZG1pbi52Mi5UYWJsZS5Db2x1bW5GYW1pbGllc0VudHJ5EkkKC2dyYW51",
-            "bGFyaXR5GAQgASgOMjQuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxl",
-            "LlRpbWVzdGFtcEdyYW51bGFyaXR5Gl0KE0NvbHVtbkZhbWlsaWVzRW50cnkS",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIssGCgVUYWJsZRIMCgRuYW1lGAEg",
+            "ASgJEkoKDmNsdXN0ZXJfc3RhdGVzGAIgAygLMjIuZ29vZ2xlLmJpZ3RhYmxl",
+            "LmFkbWluLnYyLlRhYmxlLkNsdXN0ZXJTdGF0ZXNFbnRyeRJMCg9jb2x1bW5f",
+            "ZmFtaWxpZXMYAyADKAsyMy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVGFi",
+            "bGUuQ29sdW1uRmFtaWxpZXNFbnRyeRJJCgtncmFudWxhcml0eRgEIAEoDjI0",
+            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5UaW1lc3RhbXBHcmFu",
+            "dWxhcml0eRriAQoMQ2x1c3RlclN0YXRlElgKEXJlcGxpY2F0aW9uX3N0YXRl",
+            "GAEgASgOMj0uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxlLkNsdXN0",
+            "ZXJTdGF0ZS5SZXBsaWNhdGlvblN0YXRlIngKEFJlcGxpY2F0aW9uU3RhdGUS",
+            "EwoPU1RBVEVfTk9UX0tOT1dOEAASEAoMSU5JVElBTElaSU5HEAESFwoTUExB",
+            "Tk5FRF9NQUlOVEVOQU5DRRACEhkKFVVOUExBTk5FRF9NQUlOVEVOQU5DRRAD",
+            "EgkKBVJFQURZEAQaYgoSQ2x1c3RlclN0YXRlc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRI7CgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5U",
+            "YWJsZS5DbHVzdGVyU3RhdGU6AjgBGl0KE0NvbHVtbkZhbWlsaWVzRW50cnkS",
             "CwoDa2V5GAEgASgJEjUKBXZhbHVlGAIgASgLMiYuZ29vZ2xlLmJpZ3RhYmxl",
             "LmFkbWluLnYyLkNvbHVtbkZhbWlseToCOAEiSQoUVGltZXN0YW1wR3JhbnVs",
             "YXJpdHkSJQohVElNRVNUQU1QX0dSQU5VTEFSSVRZX1VOU1BFQ0lGSUVEEAAS",
-            "CgoGTUlMTElTEAEiRgoEVmlldxIUChBWSUVXX1VOU1BFQ0lGSUVEEAASDQoJ",
-            "TkFNRV9PTkxZEAESDwoLU0NIRU1BX1ZJRVcQAhIICgRGVUxMEAQiQQoMQ29s",
-            "dW1uRmFtaWx5EjEKB2djX3J1bGUYASABKAsyIC5nb29nbGUuYmlndGFibGUu",
-            "YWRtaW4udjIuR2NSdWxlItUCCgZHY1J1bGUSGgoQbWF4X251bV92ZXJzaW9u",
-            "cxgBIAEoBUgAEiwKB21heF9hZ2UYAiABKAsyGS5nb29nbGUucHJvdG9idWYu",
-            "RHVyYXRpb25IABJFCgxpbnRlcnNlY3Rpb24YAyABKAsyLS5nb29nbGUuYmln",
-            "dGFibGUuYWRtaW4udjIuR2NSdWxlLkludGVyc2VjdGlvbkgAEjcKBXVuaW9u",
-            "GAQgASgLMiYuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdjUnVsZS5Vbmlv",
-            "bkgAGj8KDEludGVyc2VjdGlvbhIvCgVydWxlcxgBIAMoCzIgLmdvb2dsZS5i",
-            "aWd0YWJsZS5hZG1pbi52Mi5HY1J1bGUaOAoFVW5pb24SLwoFcnVsZXMYASAD",
-            "KAsyIC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuR2NSdWxlQgYKBHJ1bGVC",
+            "CgoGTUlMTElTEAEiXAoEVmlldxIUChBWSUVXX1VOU1BFQ0lGSUVEEAASDQoJ",
+            "TkFNRV9PTkxZEAESDwoLU0NIRU1BX1ZJRVcQAhIUChBSRVBMSUNBVElPTl9W",
+            "SUVXEAMSCAoERlVMTBAEIkEKDENvbHVtbkZhbWlseRIxCgdnY19ydWxlGAEg",
+            "ASgLMiAuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdjUnVsZSLVAgoGR2NS",
+            "dWxlEhoKEG1heF9udW1fdmVyc2lvbnMYASABKAVIABIsCgdtYXhfYWdlGAIg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSAASRQoMaW50ZXJzZWN0",
+            "aW9uGAMgASgLMi0uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdjUnVsZS5J",
+            "bnRlcnNlY3Rpb25IABI3CgV1bmlvbhgEIAEoCzImLmdvb2dsZS5iaWd0YWJs",
+            "ZS5hZG1pbi52Mi5HY1J1bGUuVW5pb25IABo/CgxJbnRlcnNlY3Rpb24SLwoF",
+            "cnVsZXMYASADKAsyIC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuR2NSdWxl",
+            "GjgKBVVuaW9uEi8KBXJ1bGVzGAEgAygLMiAuZ29vZ2xlLmJpZ3RhYmxlLmFk",
+            "bWluLnYyLkdjUnVsZUIGCgRydWxlIs8CCghTbmFwc2hvdBIMCgRuYW1lGAEg",
+            "ASgJEjUKDHNvdXJjZV90YWJsZRgCIAEoCzIfLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52Mi5UYWJsZRIXCg9kYXRhX3NpemVfYnl0ZXMYAyABKAMSLwoLY3Jl",
+            "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8K",
+            "C2RlbGV0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBI3CgVzdGF0ZRgGIAEoDjIoLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5T",
+            "bmFwc2hvdC5TdGF0ZRITCgtkZXNjcmlwdGlvbhgHIAEoCSI1CgVTdGF0ZRIT",
+            "Cg9TVEFURV9OT1RfS05PV04QABIJCgVSRUFEWRABEgwKCENSRUFUSU5HEAJC",
             "rQEKHGNvbS5nb29nbGUuYmlndGFibGUuYWRtaW4udjJCClRhYmxlUHJvdG9Q",
             "AVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9iaWd0",
             "YWJsZS9hZG1pbi92MjthZG1pbqoCHkdvb2dsZS5DbG91ZC5CaWd0YWJsZS5B",
@@ -52,10 +69,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table), global::Google.Cloud.Bigtable.Admin.V2.Table.Parser, new[]{ "Name", "ColumnFamilies", "Granularity" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity), typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.View) }, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table), global::Google.Cloud.Bigtable.Admin.V2.Table.Parser, new[]{ "Name", "ClusterStates", "ColumnFamilies", "Granularity" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity), typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.View) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState), global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Parser, new[]{ "ReplicationState" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) }, null),
+            null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily), global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily.Parser, new[]{ "GcRule" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Parser, new[]{ "MaxNumVersions", "MaxAge", "Intersection", "Union" }, new[]{ "Rule" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Intersection), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Intersection.Parser, new[]{ "Rules" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union.Parser, new[]{ "Rules" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union.Parser, new[]{ "Rules" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Snapshot), global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Parser, new[]{ "Name", "SourceTable", "DataSizeBytes", "CreateTime", "DeleteTime", "State", "Description" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State) }, null)
           }));
     }
     #endregion
@@ -91,6 +110,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Table(Table other) : this() {
       name_ = other.name_;
+      clusterStates_ = other.clusterStates_.Clone();
       columnFamilies_ = other.columnFamilies_.Clone();
       granularity_ = other.granularity_;
     }
@@ -115,6 +135,29 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "cluster_states" field.</summary>
+    public const int ClusterStatesFieldNumber = 2;
+    private static readonly pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState>.Codec _map_clusterStates_codec
+        = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Parser), 18);
+    private readonly pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState> clusterStates_ = new pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState>();
+    /// <summary>
+    /// This is a private alpha release of Cloud Bigtable replication. This feature
+    /// is not currently available to most Cloud Bigtable customers. This feature
+    /// might be changed in backward-incompatible ways and is not recommended for
+    /// production use. It is not subject to any SLA or deprecation policy.
+    ///
+    /// (`OutputOnly`)
+    /// Map from cluster ID to per-cluster table state.
+    /// If it could not be determined whether or not the table has data in a
+    /// particular cluster (for example, if its zone is unavailable), then
+    /// there will be an entry for the cluster with UNKNOWN `replication_status`.
+    /// Views: `FULL`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState> ClusterStates {
+      get { return clusterStates_; }
     }
 
     /// <summary>Field number for the "column_families" field.</summary>
@@ -164,6 +207,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (!ClusterStates.Equals(other.ClusterStates)) return false;
       if (!ColumnFamilies.Equals(other.ColumnFamilies)) return false;
       if (Granularity != other.Granularity) return false;
       return true;
@@ -173,6 +217,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= ClusterStates.GetHashCode();
       hash ^= ColumnFamilies.GetHashCode();
       if (Granularity != 0) hash ^= Granularity.GetHashCode();
       return hash;
@@ -189,6 +234,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      clusterStates_.WriteTo(output, _map_clusterStates_codec);
       columnFamilies_.WriteTo(output, _map_columnFamilies_codec);
       if (Granularity != 0) {
         output.WriteRawTag(32);
@@ -202,6 +248,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
+      size += clusterStates_.CalculateSize(_map_clusterStates_codec);
       size += columnFamilies_.CalculateSize(_map_columnFamilies_codec);
       if (Granularity != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Granularity);
@@ -217,6 +264,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
+      clusterStates_.Add(other.clusterStates_);
       columnFamilies_.Add(other.columnFamilies_);
       if (other.Granularity != 0) {
         Granularity = other.Granularity;
@@ -233,6 +281,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            clusterStates_.AddEntriesFrom(input, _map_clusterStates_codec);
             break;
           }
           case 26: {
@@ -284,9 +336,192 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         /// </summary>
         [pbr::OriginalName("SCHEMA_VIEW")] SchemaView = 2,
         /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This
+        /// feature is not currently available to most Cloud Bigtable customers. This
+        /// feature might be changed in backward-incompatible ways and is not
+        /// recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Only populates `name` and fields related to the table's
+        /// replication state.
+        /// </summary>
+        [pbr::OriginalName("REPLICATION_VIEW")] ReplicationView = 3,
+        /// <summary>
         /// Populates all fields.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 4,
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// The state of a table's data in a particular cluster.
+      /// </summary>
+      public sealed partial class ClusterState : pb::IMessage<ClusterState> {
+        private static readonly pb::MessageParser<ClusterState> _parser = new pb::MessageParser<ClusterState>(() => new ClusterState());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ClusterState> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.Table.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ClusterState() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ClusterState(ClusterState other) : this() {
+          replicationState_ = other.replicationState_;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ClusterState Clone() {
+          return new ClusterState(this);
+        }
+
+        /// <summary>Field number for the "replication_state" field.</summary>
+        public const int ReplicationStateFieldNumber = 1;
+        private global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState replicationState_ = 0;
+        /// <summary>
+        /// (`OutputOnly`)
+        /// The state of replication for the table in this cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState ReplicationState {
+          get { return replicationState_; }
+          set {
+            replicationState_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ClusterState);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ClusterState other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ReplicationState != other.ReplicationState) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ReplicationState != 0) hash ^= ReplicationState.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (ReplicationState != 0) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ReplicationState);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (ReplicationState != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReplicationState);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ClusterState other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ReplicationState != 0) {
+            ReplicationState = other.ReplicationState;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 8: {
+                replicationState_ = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ClusterState message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// Table replication states.
+          /// </summary>
+          public enum ReplicationState {
+            /// <summary>
+            /// The replication state of the table is unknown in this cluster.
+            /// </summary>
+            [pbr::OriginalName("STATE_NOT_KNOWN")] StateNotKnown = 0,
+            /// <summary>
+            /// The cluster was recently created, and the table must finish copying
+            /// over pre-existing data from other clusters before it can begin
+            /// receiving live replication updates and serving
+            /// [Data API][google.bigtable.v2.Bigtable] requests.
+            /// </summary>
+            [pbr::OriginalName("INITIALIZING")] Initializing = 1,
+            /// <summary>
+            /// The table is temporarily unable to serve
+            /// [Data API][google.bigtable.v2.Bigtable] requests from this
+            /// cluster due to planned internal maintenance.
+            /// </summary>
+            [pbr::OriginalName("PLANNED_MAINTENANCE")] PlannedMaintenance = 2,
+            /// <summary>
+            /// The table is temporarily unable to serve
+            /// [Data API][google.bigtable.v2.Bigtable] requests from this
+            /// cluster due to unplanned or emergency maintenance.
+            /// </summary>
+            [pbr::OriginalName("UNPLANNED_MAINTENANCE")] UnplannedMaintenance = 3,
+            /// <summary>
+            /// The table can serve
+            /// [Data API][google.bigtable.v2.Bigtable] requests from this
+            /// cluster. Depending on replication delay, reads may not immediately
+            /// reflect the state of the table in other clusters.
+            /// </summary>
+            [pbr::OriginalName("READY")] Ready = 4,
+          }
+
+        }
+        #endregion
+
       }
 
     }
@@ -928,6 +1163,379 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
 
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+  /// is not currently available to most Cloud Bigtable customers. This feature
+  /// might be changed in backward-incompatible ways and is not recommended for
+  /// production use. It is not subject to any SLA or deprecation policy.
+  ///
+  /// A snapshot of a table at a particular time. A snapshot can be used as a
+  /// checkpoint for data restoration or a data source for a new table.
+  /// </summary>
+  public sealed partial class Snapshot : pb::IMessage<Snapshot> {
+    private static readonly pb::MessageParser<Snapshot> _parser = new pb::MessageParser<Snapshot>(() => new Snapshot());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Snapshot> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.TableReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Snapshot() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Snapshot(Snapshot other) : this() {
+      name_ = other.name_;
+      SourceTable = other.sourceTable_ != null ? other.SourceTable.Clone() : null;
+      dataSizeBytes_ = other.dataSizeBytes_;
+      CreateTime = other.createTime_ != null ? other.CreateTime.Clone() : null;
+      DeleteTime = other.deleteTime_ != null ? other.DeleteTime.Clone() : null;
+      state_ = other.state_;
+      description_ = other.description_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Snapshot Clone() {
+      return new Snapshot(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// (`OutputOnly`)
+    /// The unique name of the snapshot.
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/clusters/&lt;cluster>/snapshots/&lt;snapshot>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_table" field.</summary>
+    public const int SourceTableFieldNumber = 2;
+    private global::Google.Cloud.Bigtable.Admin.V2.Table sourceTable_;
+    /// <summary>
+    /// (`OutputOnly`)
+    /// The source table at the time the snapshot was taken.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.Table SourceTable {
+      get { return sourceTable_; }
+      set {
+        sourceTable_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data_size_bytes" field.</summary>
+    public const int DataSizeBytesFieldNumber = 3;
+    private long dataSizeBytes_;
+    /// <summary>
+    /// (`OutputOnly`)
+    /// The size of the data in the source table at the time the snapshot was
+    /// taken. In some cases, this value may be computed asynchronously via a
+    /// background process and a placeholder of 0 will be used in the meantime.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long DataSizeBytes {
+      get { return dataSizeBytes_; }
+      set {
+        dataSizeBytes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// (`OutputOnly`)
+    /// The time when the snapshot is created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "delete_time" field.</summary>
+    public const int DeleteTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
+    /// <summary>
+    /// (`OutputOnly`)
+    /// The time when the snapshot will be deleted. The maximum amount of time a
+    /// snapshot can stay active is 365 days. If 'ttl' is not specified,
+    /// the default maximum of 365 days will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DeleteTime {
+      get { return deleteTime_; }
+      set {
+        deleteTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 6;
+    private global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State state_ = 0;
+    /// <summary>
+    /// (`OutputOnly`)
+    /// The current state of the snapshot.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 7;
+    private string description_ = "";
+    /// <summary>
+    /// (`OutputOnly`)
+    /// Description of the snapshot.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Snapshot);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Snapshot other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(SourceTable, other.SourceTable)) return false;
+      if (DataSizeBytes != other.DataSizeBytes) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
+      if (State != other.State) return false;
+      if (Description != other.Description) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (sourceTable_ != null) hash ^= SourceTable.GetHashCode();
+      if (DataSizeBytes != 0L) hash ^= DataSizeBytes.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
+      if (State != 0) hash ^= State.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (sourceTable_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SourceTable);
+      }
+      if (DataSizeBytes != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(DataSizeBytes);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateTime);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DeleteTime);
+      }
+      if (State != 0) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Description);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (sourceTable_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SourceTable);
+      }
+      if (DataSizeBytes != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DataSizeBytes);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (deleteTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
+      }
+      if (State != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Snapshot other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.sourceTable_ != null) {
+        if (sourceTable_ == null) {
+          sourceTable_ = new global::Google.Cloud.Bigtable.Admin.V2.Table();
+        }
+        SourceTable.MergeFrom(other.SourceTable);
+      }
+      if (other.DataSizeBytes != 0L) {
+        DataSizeBytes = other.DataSizeBytes;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.deleteTime_ != null) {
+        if (deleteTime_ == null) {
+          deleteTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DeleteTime.MergeFrom(other.DeleteTime);
+      }
+      if (other.State != 0) {
+        State = other.State;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (sourceTable_ == null) {
+              sourceTable_ = new global::Google.Cloud.Bigtable.Admin.V2.Table();
+            }
+            input.ReadMessage(sourceTable_);
+            break;
+          }
+          case 24: {
+            DataSizeBytes = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            if (createTime_ == null) {
+              createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(createTime_);
+            break;
+          }
+          case 42: {
+            if (deleteTime_ == null) {
+              deleteTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(deleteTime_);
+            break;
+          }
+          case 48: {
+            state_ = (global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Snapshot message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Possible states of a snapshot.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The state of the snapshot could not be determined.
+        /// </summary>
+        [pbr::OriginalName("STATE_NOT_KNOWN")] NotKnown = 0,
+        /// <summary>
+        /// The snapshot has been successfully created and can serve all requests.
+        /// </summary>
+        [pbr::OriginalName("READY")] Ready = 1,
+        /// <summary>
+        /// The snapshot is currently being created, and may be destroyed if the
+        /// creation process encounters an error. A snapshot may not be restored to a
+        /// table while it is being created.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 2,
       }
 
     }
