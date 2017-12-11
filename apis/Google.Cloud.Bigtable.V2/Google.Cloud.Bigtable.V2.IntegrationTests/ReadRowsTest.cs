@@ -46,7 +46,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             rnd.NextBytes(buffer);
             var rowKey = await _fixture.InsertRowAsync(
                 tableName,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "large_value",
                 buffer);
 
@@ -65,7 +65,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         Assert.Equal(rowKey.Value, row.Key);
                         BigtableAssert.HasSingleValue(
                             row,
-                            BigtableFixture.ColumnFamily1,
+                            BigtableFixture.DefaultColumnFamily,
                             "large_value",
                             allData.ToArray());
                     }
@@ -85,7 +85,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     {
                         new ReadModifyWriteRule
                         {
-                            FamilyName = BigtableFixture.ColumnFamily1,
+                            FamilyName = BigtableFixture.DefaultColumnFamily,
                             ColumnQualifier = ByteString.CopyFromUtf8("large_value"),
                             AppendValue = ByteString.CopyFrom(buffer)
                         }
@@ -109,9 +109,9 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             Assert.Equal(rowKey.Value, row.Key);
             BigtableAssert.HasSingleValue(
                 row,
-                BigtableFixture.ColumnFamily1,
-                "row_exists",
-                "true",
+                BigtableFixture.DefaultColumnFamily,
+                BigtableFixture.DefaultColumnQualifier,
+                BigtableFixture.DefaultValue,
                 new BigtableVersion(1));
         }
 
@@ -126,9 +126,9 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             Assert.Equal(rowKey.Value, row.Key);
             BigtableAssert.HasSingleValue(
                 row,
-                BigtableFixture.ColumnFamily1,
-                "row_exists",
-                "true",
+                BigtableFixture.DefaultColumnFamily,
+                BigtableFixture.DefaultColumnQualifier,
+                BigtableFixture.DefaultValue,
                 new BigtableVersion(1));
         }
 
@@ -163,23 +163,23 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 Mutations.SetCell(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     "0",
                     new BigtableVersion(1)),
                 Mutations.SetCell(
                     BigtableFixture.OtherColumnFamily,
-                    "row_exists",
-                    "true",
+                    BigtableFixture.DefaultColumnQualifier,
+                    BigtableFixture.DefaultValue,
                     new BigtableVersion(2)));
 
-            var row = client.ReadRow(tableName, rowKey, RowFilters.ValueRegex("true"));
+            var row = client.ReadRow(tableName, rowKey, RowFilters.ValueRegex(BigtableFixture.DefaultValue));
             Assert.Equal(rowKey.Value, row.Key);
             BigtableAssert.HasSingleValue(
                 row,
                 BigtableFixture.OtherColumnFamily,
-                "row_exists",
-                "true",
+                BigtableFixture.DefaultColumnQualifier,
+                BigtableFixture.DefaultValue,
                 new BigtableVersion(2));
         }
 
@@ -194,23 +194,23 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 Mutations.SetCell(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     "0",
                     new BigtableVersion(1)),
                 Mutations.SetCell(
                     BigtableFixture.OtherColumnFamily,
-                    "row_exists",
-                    "true",
+                    BigtableFixture.DefaultColumnQualifier,
+                    BigtableFixture.DefaultValue,
                     new BigtableVersion(2)));
 
-            var row = await client.ReadRowAsync(tableName, rowKey, RowFilters.ValueRegex("true"));
+            var row = await client.ReadRowAsync(tableName, rowKey, RowFilters.ValueRegex(BigtableFixture.DefaultValue));
             Assert.Equal(rowKey.Value, row.Key);
             BigtableAssert.HasSingleValue(
                 row,
                 BigtableFixture.OtherColumnFamily,
-                "row_exists",
-                "true",
+                BigtableFixture.DefaultColumnQualifier,
+                BigtableFixture.DefaultValue,
                 new BigtableVersion(2));
         }
 
@@ -226,7 +226,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             {
                 rowKeys.Add(await _fixture.InsertRowAsync(
                     tableName,
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     i,
                     new BigtableVersion(1)));
@@ -249,7 +249,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
                 BigtableAssert.HasSingleValue(
                     row,
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     new BigtableByteString(originalIndexes[currentRowKey]),
                     new BigtableVersion(1));
@@ -269,7 +269,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             {
                 rowKeys.Add(await _fixture.InsertRowAsync(
                     tableName,
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     i,
                     new BigtableVersion(i + 1)));
@@ -298,7 +298,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
                 BigtableAssert.HasSingleValue(
                     row,
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     new BigtableByteString(index),
                     new BigtableVersion(version));
@@ -318,7 +318,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             {
                 rowKeys.Add(await _fixture.InsertRowAsync(
                     tableName,
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     i,
                     new BigtableVersion(i + 1)));
@@ -343,7 +343,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
                 BigtableAssert.HasSingleValue(
                     row,
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     new BigtableByteString(index),
                     new BigtableVersion(version));
@@ -383,7 +383,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             {
                 BigtableAssert.HasSingleValue(
                     row,
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     new BigtableByteString(currentRowIndex++),
                     new BigtableVersion(1));
@@ -425,7 +425,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             {
                 BigtableAssert.HasSingleValue(
                     row,
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     new BigtableByteString(currentRowIndex++),
                     new BigtableVersion(1));
@@ -466,7 +466,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             {
                 BigtableAssert.HasSingleValue(
                     row,
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     new BigtableByteString(currentRowIndex++),
                     new BigtableVersion(1));

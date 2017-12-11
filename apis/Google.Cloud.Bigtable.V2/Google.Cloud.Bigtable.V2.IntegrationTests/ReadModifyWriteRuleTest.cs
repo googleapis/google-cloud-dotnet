@@ -33,7 +33,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(
                 tableName,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "log",
                 "initial state\\n");
 
@@ -41,7 +41,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 ReadModifyWriteRules.Append(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "log",
                     "2017-11-08 02:35:34Z - updated value\\n"));
             
@@ -51,7 +51,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowFilters.CellsPerColumnLimit(1));
             BigtableAssert.HasSingleValue(
                 row,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "log",
                 "initial state\\n2017-11-08 02:35:34Z - updated value\\n");
         }
@@ -63,7 +63,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(
                 tableName,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "log",
                 "initial state\\n");
 
@@ -71,7 +71,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 ReadModifyWriteRules.Append(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "log",
                     "2017-11-08 02:35:34Z - updated value\\n"));
             
@@ -81,7 +81,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowFilters.CellsPerColumnLimit(1));
             BigtableAssert.HasSingleValue(
                 row,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "log",
                 "initial state\\n2017-11-08 02:35:34Z - updated value\\n");
         }
@@ -97,7 +97,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 ReadModifyWriteRules.Append(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "log",
                     "2017-11-08 02:35:34Z - updated value\\n"));
             
@@ -105,7 +105,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "log",
                 "2017-11-08 02:35:34Z - updated value\\n");
         }
@@ -121,7 +121,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 ReadModifyWriteRules.Append(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "log",
                     "2017-11-08 02:35:34Z - updated value\\n"));
             
@@ -129,7 +129,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "log",
                 "2017-11-08 02:35:34Z - updated value\\n");
         }
@@ -141,7 +141,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(
                 tableName,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "value",
                 7);
 
@@ -149,7 +149,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 ReadModifyWriteRules.Increment(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "value",
                     31));
 
@@ -159,7 +159,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowFilters.CellsPerColumnLimit(1));
             BigtableAssert.HasSingleValue(
                 row,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "value",
                 38);
         }
@@ -171,7 +171,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(
                 tableName,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "value",
                 7);
 
@@ -179,7 +179,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 ReadModifyWriteRules.Increment(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "value",
                     31));
 
@@ -189,7 +189,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowFilters.CellsPerColumnLimit(1));
             BigtableAssert.HasSingleValue(
                 row,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "value",
                 38);
         }
@@ -205,7 +205,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 ReadModifyWriteRules.Increment(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "value",
                     31));
 
@@ -213,7 +213,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "value",
                 31);
         }
@@ -229,7 +229,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 ReadModifyWriteRules.Increment(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "value",
                     31));
 
@@ -237,7 +237,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "value",
                 31);
         }
@@ -253,23 +253,23 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 ReadModifyWriteRules.Increment(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "a",
                     1),
                 ReadModifyWriteRules.Append(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "b",
                     "x"),
                 ReadModifyWriteRules.Increment(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "c",
                     2),
                 ReadModifyWriteRules.Increment(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "a",
                     3),
                 ReadModifyWriteRules.Append(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "b",
                     "yz"));
 
@@ -277,7 +277,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 RowFilters.CellsPerColumnLimit(1));
-            var family = row.Families.SingleOrDefault(f => f.Name == BigtableFixture.ColumnFamily1);
+            var family = row.Families.SingleOrDefault(f => f.Name == BigtableFixture.DefaultColumnFamily);
 
             var column = family.Columns[0];
             Assert.Equal("a", column.Qualifier.ToStringUtf8());

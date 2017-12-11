@@ -24,8 +24,30 @@ namespace Google.Cloud.Bigtable.V2.Tests
 {
     public class BigtableClientTest
     {
-        private class TestBigtableClient : BigtableClient { }
-        
+        private class RequestMadeException : Exception { }
+
+        private class TestBigtableClient : BigtableClient
+        {
+            public override CheckAndMutateRowResponse CheckAndMutateRow(CheckAndMutateRowRequest request, CallSettings callSettings = null) =>
+                throw new RequestMadeException();
+            public override Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(CheckAndMutateRowRequest request, CallSettings callSettings = null) =>
+                throw new RequestMadeException();
+            public override MutateRowResponse MutateRow(MutateRowRequest request, CallSettings callSettings = null) =>
+                throw new RequestMadeException();
+            public override Task<MutateRowResponse> MutateRowAsync(MutateRowRequest request, CallSettings callSettings = null) =>
+                throw new RequestMadeException();
+            public override MutateRowsStream MutateRows(MutateRowsRequest request, CallSettings callSettings = null) =>
+                throw new RequestMadeException();
+            public override ReadModifyWriteRowResponse ReadModifyWriteRow(ReadModifyWriteRowRequest request, CallSettings callSettings = null) =>
+                throw new RequestMadeException();
+            public override Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, CallSettings callSettings = null) =>
+                throw new RequestMadeException();
+            public override ReadRowsStream ReadRows(ReadRowsRequest request, CallSettings callSettings = null) =>
+                throw new RequestMadeException();
+            public override SampleRowKeysStream SampleRowKeys(SampleRowKeysRequest request, CallSettings callSettings = null) =>
+                throw new RequestMadeException();
+        }
+
         public static TheoryData<BigtableByteString> InvalidRowKeys { get; } = new TheoryData<BigtableByteString>
         {
             "",
@@ -40,9 +62,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
 
-            // NotImplementedException means it got through the normal validations and tried to actually
-            // make the request on the TestBigtableClient.
-            await CheckAndMutateRow_ValidateArguments<NotImplementedException>(
+            await CheckAndMutateRow_ValidateArguments<RequestMadeException>(
                 tableName,
                 "abc",
                 RowFilters.PassAllFilter(),
@@ -146,9 +166,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
 
-            // NotImplementedException means it got through the normal validations and tried to actually
-            // make the request on the TestBigtableClient.
-            await MutateRow_ValidateArguments<NotImplementedException>(tableName, "abc", new[] { Mutations.DeleteFromRow() });
+            await MutateRow_ValidateArguments<RequestMadeException>(tableName, "abc", new[] { Mutations.DeleteFromRow() });
         }
 
         [Fact]
@@ -195,14 +213,54 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
+        public void MutateRows_Valid_Request()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+
+            MutateRows_ValidateArguments<RequestMadeException>(
+                tableName,
+                new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
+        }
+
+        [Fact]
+        public void MutateRows_Validate_TableName()
+        {
+            var client = new TestBigtableClient();
+            MutateRows_ValidateArguments<ArgumentNullException>(
+                null,
+                new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
+        }
+
+        [Fact]
+        public void MutateRows_Validate_Mutations()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+            MutateRows_ValidateArguments<ArgumentNullException>(tableName, null);
+            MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[0]);
+            MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[] { null });
+        }
+
+        private void MutateRows_ValidateArguments<TException>(
+            TableName tableName,
+            IEnumerable<MutateRowsRequest.Types.Entry> entries)
+            where TException : Exception
+        {
+            var client = new TestBigtableClient();
+            Assert.Throws<TException>(
+                () => client.MutateRows(tableName, entries?.ToArray()));
+            Assert.Throws<TException>(
+                () => client.MutateRows(tableName, entries, CallSettings.FromCancellationToken(default)));
+        }
+
+        [Fact]
         public async Task ReadModifyWriteRow_Valid_Request()
         {
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
 
-            // NotImplementedException means it got through the normal validations and tried to actually
-            // make the request on the TestBigtableClient.
-            await ReadModifyWriteRow_ValidateArguments<NotImplementedException>(
+            await ReadModifyWriteRow_ValidateArguments<RequestMadeException>(
                 tableName, "abc", new[] { ReadModifyWriteRules.Append("a", "b", "c") } );
         }
 
@@ -257,10 +315,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
 
-            // NotImplementedException means it got through the normal validations and tried to actually
-            // make the request on the TestBigtableClient.
-            await ReadRow_ValidateArguments<NotImplementedException>(tableName, "abc", null);
-            await ReadRow_ValidateArguments<NotImplementedException>(tableName, "abc", RowFilters.CellsPerColumnLimit(1));
+            await ReadRow_ValidateArguments<RequestMadeException>(tableName, "abc", null);
+            await ReadRow_ValidateArguments<RequestMadeException>(tableName, "abc", RowFilters.CellsPerColumnLimit(1));
         }
 
         [Fact]
@@ -369,16 +425,14 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
 
-            // NotImplementedException means it got through the normal validations and tried to actually
-            // make the request on the TestBigtableClient.
-            ReadRows_ValidateArguments<NotImplementedException>(tableName, null, null, null);
-            ReadRows_ValidateArguments<NotImplementedException>(
+            ReadRows_ValidateArguments<RequestMadeException>(tableName, null, null, null);
+            ReadRows_ValidateArguments<RequestMadeException>(
                 tableName,
                 // TODO: Maybe add RowSet helpers to help with this
                 new RowSet { RowKeys = { ByteString.CopyFromUtf8("abc") } },
                 RowFilters.BlockAllFilter(),
                 0);
-            ReadRows_ValidateArguments<NotImplementedException>(
+            ReadRows_ValidateArguments<RequestMadeException>(
                 tableName,
                 // TODO: Use RowRange helpers when available.
                 new RowSet { RowRanges = { new RowRange {
