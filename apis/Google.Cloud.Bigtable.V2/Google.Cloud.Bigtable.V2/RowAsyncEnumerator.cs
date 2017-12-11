@@ -33,7 +33,7 @@ namespace Google.Cloud.Bigtable.V2
     internal sealed class RowAsyncEnumerator : IAsyncEnumerator<Row>
     {
         private CellInfo _currentCell;
-        private SortedList<string, Family> _currentFamilies = new SortedList<string, Family>(StringComparer.Ordinal);
+        private readonly SortedList<string, Family> _currentFamilies = new SortedList<string, Family>(StringComparer.Ordinal);
         private RowMergeState _rowMergeState = NewRow.Instance;
         private IEnumerator<Row> _singleResponseRowEnumerator;
         private readonly ReadRowsStream _stream;

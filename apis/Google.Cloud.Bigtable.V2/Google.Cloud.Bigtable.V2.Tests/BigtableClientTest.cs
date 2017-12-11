@@ -325,7 +325,14 @@ namespace Google.Cloud.Bigtable.V2.Tests
                             RowKey = ByteString.CopyFromUtf8("abc"),
                             FamilyName = "a",
                             Qualifier = ByteString.CopyFromUtf8("column3"),
-                            Value = ByteString.CopyFromUtf8("value3"),
+                            Value = ByteString.CopyFromUtf8("value3")
+                        },
+                        new ReadRowsResponse.Types.CellChunk
+                        {
+                            RowKey = ByteString.CopyFromUtf8("abc"),
+                            FamilyName = "Z",
+                            Qualifier = ByteString.CopyFromUtf8("column4"),
+                            Value = ByteString.CopyFromUtf8("value4"),
                             CommitRow = true
                         }
                     }
@@ -335,10 +342,23 @@ namespace Google.Cloud.Bigtable.V2.Tests
             await stream.AsAsyncEnumerable().ForEachAsync(row =>
             {
                 rowCount++;
-                var familyNames = row.Families.Select(r => r.Name).ToArray();
-                Assert.Equal("A", familyNames[0]);
-                Assert.Equal("a", familyNames[1]);
-                Assert.Equal("z", familyNames[2]);
+
+                var family = row.Families[0];
+                Assert.Equal("A", family.Name);
+                Assert.Equal("column2", family.Columns[0].Qualifier.ToStringUtf8());
+                Assert.Equal("value2", family.Columns[0].Cells[0].Value.ToStringUtf8());
+                family = row.Families[1];
+                Assert.Equal("Z", family.Name);
+                Assert.Equal("column4", family.Columns[0].Qualifier.ToStringUtf8());
+                Assert.Equal("value4", family.Columns[0].Cells[0].Value.ToStringUtf8());
+                family = row.Families[2];
+                Assert.Equal("a", family.Name);
+                Assert.Equal("column3", family.Columns[0].Qualifier.ToStringUtf8());
+                Assert.Equal("value3", family.Columns[0].Cells[0].Value.ToStringUtf8());
+                family = row.Families[3];
+                Assert.Equal("z", family.Name);
+                Assert.Equal("column1", family.Columns[0].Qualifier.ToStringUtf8());
+                Assert.Equal("value1", family.Columns[0].Cells[0].Value.ToStringUtf8());
             });
             Assert.Equal(1, rowCount);
         }
