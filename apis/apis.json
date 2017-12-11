@@ -35,12 +35,12 @@
     "id": "Google.Cloud.BigQuery.V2",
     "productName": "Google BigQuery",
     "productUrl": "https://cloud.google.com/bigquery/",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "rest",
     "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
     "dependencies": {
       "Google.Api.Gax.Rest": "2.2.1",
-      "Google.Apis.Bigquery.v2": "1.31.0.1044"
+      "Google.Apis.Bigquery.v2": "1.31.1.1066"
     },
     "testDependencies": {
       "Google.Cloud.Storage.V1": "project"
@@ -479,11 +479,11 @@
     "id": "Google.Cloud.Storage.V1",
     "productName": "Google Cloud Storage",
     "productUrl": "https://cloud.google.com/storage/",
-    "version": "2.1.0-beta02",
+    "version": "2.1.0-beta03",
     "type": "rest",
     "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
     "dependencies": {
-      "Google.Apis.Storage.v1": "1.31.0.1035"
+      "Google.Apis.Storage.v1": "1.31.1.1035"
     },
     "testDependencies": {
       "Google.Cloud.Iam.V1": "1.0.0",
