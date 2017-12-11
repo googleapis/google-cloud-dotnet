@@ -77,15 +77,14 @@ namespace Google.Cloud.MetadataTesting
             var stopwatch = Stopwatch.StartNew();
             var response = await httpClient.SendAsync(httpRequest, cts.Token).ConfigureAwait(false);
             stopwatch.Stop();
-            Log($"Status code: {response.StatusCode}");
 
             bool googleFlavor = false;
-            if (response.Headers.TryGetValues("Metadata-Flavor", out var headerValues))
+            if (response.IsSuccessStatusCode && response.Headers.TryGetValues("Metadata-Flavor", out var headerValues))
             {
                 googleFlavor = headerValues.Contains("Google");
             }
 
-            return $"{response.StatusCode} / ({(int) stopwatch.ElapsedMilliseconds}ms) / Google flavor ? {googleFlavor}";
+            return $"{response.StatusCode} ({(int) stopwatch.ElapsedMilliseconds}ms) / Google flavor ? {googleFlavor}";
         }
 
         static string ShowRunningOnComputeEngine() =>
