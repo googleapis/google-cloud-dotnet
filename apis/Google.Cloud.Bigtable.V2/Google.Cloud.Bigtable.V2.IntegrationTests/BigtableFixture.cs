@@ -32,7 +32,9 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         private const string TestInstanceEnvironmentVariable = "BIGTABLE_TEST_INSTANCE";
         private const string TestProjectEnvironmentVariable = CloudProjectFixtureBase.TestProjectEnvironmentVariable;
 
-        public const string ColumnFamily1 = "cf1";
+        public const string DefaultColumnFamily = "cf1";
+        public const string DefaultColumnQualifier = "row_exists";
+        public const string DefaultValue = "true";
         public const string OtherColumnFamily = "test_data";
 
         public ProjectName ProjectName { get; private set; }
@@ -94,7 +96,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     Granularity = Table.Types.TimestampGranularity.Millis,
                     ColumnFamilies =
                     {
-                        { ColumnFamily1, new ColumnFamily { GcRule = new GcRule { MaxNumVersions = 3 } } },
+                        { DefaultColumnFamily, new ColumnFamily { GcRule = new GcRule { MaxNumVersions = 3 } } },
                         { OtherColumnFamily, new ColumnFamily { GcRule = new GcRule { MaxNumVersions = 3 } } }
                     }
                 });
@@ -136,9 +138,9 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
-            familyName = familyName ?? ColumnFamily1;
-            qualifierName = qualifierName ?? "row_exists";
-            value = value ?? "true";
+            familyName = familyName ?? DefaultColumnFamily;
+            qualifierName = qualifierName ?? DefaultColumnQualifier;
+            value = value ?? DefaultValue;
 
             await TableClient.MutateRowAsync(
                 tableName,
@@ -171,7 +173,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
-            familyName = familyName ?? ColumnFamily1;
+            familyName = familyName ?? DefaultColumnFamily;
             qualifierName = qualifierName ?? "row_index";
             valuePrefix = valuePrefix ?? "";
 

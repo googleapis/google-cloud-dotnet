@@ -39,14 +39,14 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 trueMutations: new[]
                 {
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "original_row_status",
                         "row_had_cells")
                 },
                 falseMutations: new[]
                 {
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "original_row_status",
                         "row_had_no_cells")
                 });
@@ -65,7 +65,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "original_row_status",
                 "row_had_cells");
         }
@@ -84,14 +84,14 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 trueMutations: new[]
                 {
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "original_row_status",
                         "row_had_cells")
                 },
                 falseMutations: new[]
                 {
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "original_row_status",
                         "row_had_no_cells")
                 });
@@ -110,7 +110,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "original_row_status",
                 "row_had_cells");
         }
@@ -129,14 +129,14 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 trueMutations: new[]
                 {
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "original_row_status",
                         "row_had_cells")
                 },
                 falseMutations: new[]
                 {
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "original_row_status",
                         "row_had_no_cells")
                 });
@@ -146,7 +146,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "original_row_status",
                 "row_had_no_cells");
         }
@@ -165,14 +165,14 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 trueMutations: new[]
                 {
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "original_row_status",
                         "row_had_cells")
                 },
                 falseMutations: new[]
                 {
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "original_row_status",
                         "row_had_no_cells")
                 });
@@ -182,7 +182,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "original_row_status",
                 "row_had_no_cells");
         }
@@ -201,7 +201,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     RowFilters.CellsPerColumnLimit(1),
                     RowFilters.ValueRegex(@"^[a-z]\d+$")),
                 Mutations.SetCell(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "found_recent_value",
                     "true"));
 
@@ -210,7 +210,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "found_recent_value",
                 "true");
         }
@@ -229,7 +229,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     RowFilters.CellsPerColumnLimit(1),
                     RowFilters.ValueRegex(@"^[a-z]\d+$")),
                 Mutations.SetCell(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "found_recent_value",
                     "true"));
 
@@ -238,7 +238,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "found_recent_value",
                 "true");
         }
@@ -258,7 +258,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     RowFilters.ValueRegex(@"^[a-z]\d+$"),
                     RowFilters.CellsPerRowOffset(1)),
                 Mutations.SetCell(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "found_recent_value",
                     "true"));
 
@@ -267,7 +267,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "found_recent_value",
                 "true");
         }
@@ -287,7 +287,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     RowFilters.ValueRegex(@"^[a-z]\d+$"),
                     RowFilters.CellsPerRowOffset(1)),
                 Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "found_recent_value",
                         "true"));
 
@@ -296,7 +296,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "found_recent_value",
                 "true");
         }

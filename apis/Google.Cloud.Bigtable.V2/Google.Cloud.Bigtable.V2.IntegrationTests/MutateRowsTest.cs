@@ -38,7 +38,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 Mutations.CreateEntry(
                     rowKey,
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "column_name",
                         "test12345",
                         new BigtableVersion(1))));
@@ -50,7 +50,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "column_name",
                 "test12345",
                 new BigtableVersion(1));
@@ -68,7 +68,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 Mutations.CreateEntry(
                     rowKey,
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "modify_row_column",
                         "new_cell_value",
                         new BigtableVersion(1))));
@@ -80,7 +80,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "modify_row_column",
                 "new_cell_value",
                 new BigtableVersion(1));
@@ -96,7 +96,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 rowKey,
                 Mutations.SetCell(
-                    BigtableFixture.ColumnFamily1,
+                    BigtableFixture.DefaultColumnFamily,
                     "column_name",
                     "abcd",
                     new BigtableVersion(2)));
@@ -106,8 +106,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 Mutations.CreateEntry(
                     rowKey,
                     Mutations.DeleteFromColumn(
-                        BigtableFixture.ColumnFamily1,
-                        "row_exists",
+                        BigtableFixture.DefaultColumnFamily,
+                        BigtableFixture.DefaultColumnQualifier,
                         new BigtableVersionRange(1, 2))));
 
             var entries = await stream.GetResponseEntries();
@@ -117,7 +117,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "column_name",
                 "abcd",
                 new BigtableVersion(2));
@@ -142,7 +142,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 tableName,
                 Mutations.CreateEntry(
                     rowKey,
-                    Mutations.DeleteFromFamily(BigtableFixture.ColumnFamily1)));
+                    Mutations.DeleteFromFamily(BigtableFixture.DefaultColumnFamily)));
 
             var entries = await stream.GetResponseEntries();
             Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
@@ -187,17 +187,24 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var stream = client.MutateRows(
                 tableName,
                 Mutations.CreateEntry(
+                    rowKey2,
+                    Mutations.SetCell(
+                        BigtableFixture.DefaultColumnFamily,
+                        "column_name1",
+                        "test12345",
+                        new BigtableVersion(1)),
+                    Mutations.SetCell(
+                        BigtableFixture.OtherColumnFamily,
+                        "column_name3",
+                        "valueABC",
+                        new BigtableVersion(3))),
+                Mutations.CreateEntry(
                     rowKey1,
                     Mutations.DeleteFromRow()),
                 Mutations.CreateEntry(
                     rowKey2,
                     Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
-                        "column_name1",
-                        "test12345",
-                        new BigtableVersion(1)),
-                    Mutations.SetCell(
-                        BigtableFixture.ColumnFamily1,
+                        BigtableFixture.DefaultColumnFamily,
                         "column_name2",
                         "valueXYZ",
                         new BigtableVersion(2))));
@@ -213,7 +220,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey2,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "column_name1",
                 "test12345",
                 new BigtableVersion(1));
@@ -221,10 +228,18 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 client,
                 tableName,
                 rowKey2,
-                BigtableFixture.ColumnFamily1,
+                BigtableFixture.DefaultColumnFamily,
                 "column_name2",
                 "valueXYZ",
                 new BigtableVersion(2));
+            await BigtableAssert.HasValueAsync(
+                client,
+                tableName,
+                rowKey2,
+                BigtableFixture.OtherColumnFamily,
+                "column_name3",
+                "valueABC",
+                new BigtableVersion(3));
         }
     }
 }

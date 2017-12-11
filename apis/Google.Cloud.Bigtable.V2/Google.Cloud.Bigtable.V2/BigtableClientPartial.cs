@@ -425,6 +425,10 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
+        /// Note this method executes a server streaming RPC. It is not a synchronous call. The caller must process the responses from
+        /// stream as they are returned from the server. Each response will indicate the status for one or more entry of mutations.
+        /// </para>
+        /// <para>
         /// This method simply delegates to <see cref="MutateRows(MutateRowsRequest, CallSettings)"/>.
         /// </para>
         /// </remarks>
@@ -466,6 +470,10 @@ namespace Google.Cloud.Bigtable.V2
         /// but the entire batch is not executed atomically.
         /// </summary>
         /// <remarks>
+        /// <para>
+        /// Note this method executes a server streaming RPC. It is not a synchronous call. The caller must process the responses from
+        /// stream as they are returned from the server. Each response will indicate the status for one or more entry of mutations.
+        /// </para>
         /// <para>
         /// This method simply delegates to <see cref="MutateRows(TableName, IEnumerable{MutateRowsRequest.Types.Entry}, CallSettings)"/>.
         /// </para>

@@ -25,7 +25,7 @@ namespace Google.Cloud.Bigtable.V2
         private static readonly Regex FamilyNameRegex =
             new Regex("^[-_.a-zA-Z0-9]+$", RegexOptions.Compiled);
 
-        public static ByteString Concat(this ByteString left, ByteString right)
+        internal static ByteString Concat(this ByteString left, ByteString right)
         {
             if ((right?.Length).GetValueOrDefault(0) == 0)
             {
@@ -43,7 +43,7 @@ namespace Google.Cloud.Bigtable.V2
             return ByteString.CopyFrom(buffer);
         }
 
-        public static IEnumerable<T> ValidateCollection<T>(
+        internal static IEnumerable<T> ValidateCollection<T>(
             IEnumerable<T> items,
             string paramName,
             bool allowNullCollection = false)
@@ -63,7 +63,7 @@ namespace Google.Cloud.Bigtable.V2
             return result;
         }
 
-        public static string ValidateFamilyName(string familyName)
+        internal static string ValidateFamilyName(string familyName)
         {
             GaxPreconditions.CheckArgument(
                 familyName != null && FamilyNameRegex.IsMatch(familyName),
