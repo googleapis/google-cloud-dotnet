@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Protobuf;
 using System;
 using Xunit;
 
@@ -34,6 +35,37 @@ namespace Google.Cloud.Bigtable.V2.Tests
             "abc ",
             "a=b"
         };
+
+        public static TheoryData<BigtableByteString> InvalidRowKeys { get; } = new TheoryData<BigtableByteString>
+        {
+            "",
+            new byte[0],
+            ByteString.Empty,
+            default
+        };
+
+        [Fact]
+        public void CreateEntry()
+        {
+            var entry = Mutations.CreateEntry("abc", Mutations.DeleteFromRow());
+            Assert.Equal("abc", entry.RowKey.ToStringUtf8());
+            Assert.Equal(1, entry.Mutations.Count);
+            Assert.NotNull(entry.Mutations[0].DeleteFromRow);
+        }
+        [Theory]
+        [MemberData(nameof(InvalidRowKeys))]
+        public void CreateEntryInvalidRowKey(BigtableByteString rowKey)
+        {
+            Assert.Throws<ArgumentException>(() => Mutations.CreateEntry(rowKey, Mutations.DeleteFromRow()));
+        }
+
+        [Fact]
+        public void CreateEntryInvalidMutations()
+        {
+            Assert.Throws<ArgumentNullException>(() => Mutations.CreateEntry("abc", null));
+            Assert.Throws<ArgumentException>(() => Mutations.CreateEntry("abc", new Mutation[0]));
+            Assert.Throws<ArgumentException>(() => Mutations.CreateEntry("abc", new Mutation[] { null }));
+        }
 
         [Theory]
         [MemberData(nameof(ValidFamilyNames))]

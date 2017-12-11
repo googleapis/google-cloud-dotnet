@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Protobuf;
+
 namespace Google.Cloud.Bigtable.V2
 {
     /// <summary>
@@ -19,6 +22,42 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     public static class Mutations
     {
+        /// <summary>
+        /// Creates a <see cref="MutateRowsRequest.Types.Entry"/> to use with MutateRows requests.
+        /// Each Entry is an atomic, ordered set of mutations for a particular row.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="rowKey"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// </remarks>
+        /// <param name="rowKey">
+        /// The key of the row to which the <paramref name="mutations"/> should be applied. Must not be empty.
+        /// </param>
+        /// <param name="mutations">
+        /// Changes to be atomically applied to the specified row. Mutations are
+        /// applied in order, meaning that earlier mutations can be masked by
+        /// later ones. You must specify at least one mutation. Must not be null, or contain null
+        /// elements.
+        /// </param>
+        /// <returns>The MutateRows entry describing mutations for a single row.</returns>
+        /// <seealso cref="BigtableClient.MutateRows(MutateRowsRequest, Api.Gax.Grpc.CallSettings)"/>
+        /// <seealso cref="BigtableClient.MutateRows(TableName, MutateRowsRequest.Types.Entry[])"/>
+        /// <seealso cref="BigtableClient.MutateRows(TableName, System.Collections.Generic.IEnumerable{MutateRowsRequest.Types.Entry}, Api.Gax.Grpc.CallSettings)"/>
+        public static MutateRowsRequest.Types.Entry CreateEntry(BigtableByteString rowKey, params Mutation[] mutations)
+        {
+            GaxPreconditions.CheckArgument(rowKey.Length != 0, nameof(rowKey), "The row key must not empty");
+            var entry = new MutateRowsRequest.Types.Entry
+            {
+                RowKey = (ByteString)rowKey,
+                Mutations = { Utilities.ValidateCollection(mutations, nameof(mutations)) }
+            };
+            GaxPreconditions.CheckArgument(
+                entry.Mutations.Count != 0, nameof(mutations), "There must be at least one entry.");
+            return entry;
+        }
+
         /// <summary>
         /// Creates a <see cref="Mutation"/> which deletes cells from the specified column, optionally
         /// restricting the deletions to a given version range.
