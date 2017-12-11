@@ -25,87 +25,144 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "CjZnb29nbGUvYmlndGFibGUvYWRtaW4vdjIvYmlndGFibGVfaW5zdGFuY2Vf",
             "YWRtaW4ucHJvdG8SGGdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MhocZ29vZ2xl",
             "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxonZ29vZ2xlL2JpZ3RhYmxlL2FkbWlu",
-            "L3YyL2luc3RhbmNlLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0",
-            "aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIpcCChVDcmVhdGVJbnN0YW5j",
-            "ZVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhMKC2luc3RhbmNlX2lkGAIgASgJ",
-            "EjQKCGluc3RhbmNlGAMgASgLMiIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYy",
-            "Lkluc3RhbmNlEk8KCGNsdXN0ZXJzGAQgAygLMj0uZ29vZ2xlLmJpZ3RhYmxl",
-            "LmFkbWluLnYyLkNyZWF0ZUluc3RhbmNlUmVxdWVzdC5DbHVzdGVyc0VudHJ5",
-            "GlIKDUNsdXN0ZXJzRW50cnkSCwoDa2V5GAEgASgJEjAKBXZhbHVlGAIgASgL",
-            "MiEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNsdXN0ZXI6AjgBIiIKEkdl",
-            "dEluc3RhbmNlUmVxdWVzdBIMCgRuYW1lGAEgASgJIjoKFExpc3RJbnN0YW5j",
-            "ZXNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRISCgpwYWdlX3Rva2VuGAIgASgJ",
-            "IoEBChVMaXN0SW5zdGFuY2VzUmVzcG9uc2USNQoJaW5zdGFuY2VzGAEgAygL",
-            "MiIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkluc3RhbmNlEhgKEGZhaWxl",
-            "ZF9sb2NhdGlvbnMYAiADKAkSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJIiUK",
-            "FURlbGV0ZUluc3RhbmNlUmVxdWVzdBIMCgRuYW1lGAEgASgJIm4KFENyZWF0",
-            "ZUNsdXN0ZXJSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRISCgpjbHVzdGVyX2lk",
-            "GAIgASgJEjIKB2NsdXN0ZXIYAyABKAsyIS5nb29nbGUuYmlndGFibGUuYWRt",
-            "aW4udjIuQ2x1c3RlciIhChFHZXRDbHVzdGVyUmVxdWVzdBIMCgRuYW1lGAEg",
-            "ASgJIjkKE0xpc3RDbHVzdGVyc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhIK",
-            "CnBhZ2VfdG9rZW4YAiABKAkifgoUTGlzdENsdXN0ZXJzUmVzcG9uc2USMwoI",
-            "Y2x1c3RlcnMYASADKAsyIS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2x1",
-            "c3RlchIYChBmYWlsZWRfbG9jYXRpb25zGAIgAygJEhcKD25leHRfcGFnZV90",
-            "b2tlbhgDIAEoCSIkChREZWxldGVDbHVzdGVyUmVxdWVzdBIMCgRuYW1lGAEg",
-            "ASgJIsYBChZDcmVhdGVJbnN0YW5jZU1ldGFkYXRhEkkKEG9yaWdpbmFsX3Jl",
-            "cXVlc3QYASABKAsyLy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ3JlYXRl",
-            "SW5zdGFuY2VSZXF1ZXN0EjAKDHJlcXVlc3RfdGltZRgCIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLZmluaXNoX3RpbWUYAyABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wIsQBChVDcmVhdGVDbHVzdGVyTWV0",
-            "YWRhdGESSAoQb3JpZ2luYWxfcmVxdWVzdBgBIAEoCzIuLmdvb2dsZS5iaWd0",
-            "YWJsZS5hZG1pbi52Mi5DcmVhdGVDbHVzdGVyUmVxdWVzdBIwCgxyZXF1ZXN0",
-            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2Zp",
-            "bmlzaF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCK3",
-            "AQoVVXBkYXRlQ2x1c3Rlck1ldGFkYXRhEjsKEG9yaWdpbmFsX3JlcXVlc3QY",
-            "ASABKAsyIS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3RlchIwCgxy",
-            "ZXF1ZXN0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "Ei8KC2ZpbmlzaF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcDLbCwoVQmlndGFibGVJbnN0YW5jZUFkbWluEo4BCg5DcmVhdGVJbnN0",
-            "YW5jZRIvLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DcmVhdGVJbnN0YW5j",
-            "ZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIiyC0+ST",
-            "AiYiIS92Mi97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlczoBKhKKAQoL",
-            "R2V0SW5zdGFuY2USLC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuR2V0SW5z",
-            "dGFuY2VSZXF1ZXN0GiIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkluc3Rh",
-            "bmNlIimC0+STAiMSIS92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
-            "fRKbAQoNTGlzdEluc3RhbmNlcxIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
-            "Mi5MaXN0SW5zdGFuY2VzUmVxdWVzdBovLmdvb2dsZS5iaWd0YWJsZS5hZG1p",
-            "bi52Mi5MaXN0SW5zdGFuY2VzUmVzcG9uc2UiKYLT5JMCIxIhL3YyL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vaW5zdGFuY2VzEoYBCg5VcGRhdGVJbnN0YW5jZRIi",
-            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZRoiLmdvb2dsZS5i",
-            "aWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZSIsgtPkkwImGiEvdjIve25hbWU9",
-            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06ASoShAEKDkRlbGV0ZUluc3RhbmNl",
-            "Ei8uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkRlbGV0ZUluc3RhbmNlUmVx",
-            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIpgtPkkwIjKiEvdjIve25h",
-            "bWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn0SnQEKDUNyZWF0ZUNsdXN0ZXIS",
-            "Li5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ3JlYXRlQ2x1c3RlclJlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIj2C0+STAjciLC92",
-            "Mi97cGFyZW50PXByb2plY3RzLyovaW5zdGFuY2VzLyp9L2NsdXN0ZXJzOgdj",
-            "bHVzdGVyEpIBCgpHZXRDbHVzdGVyEisuZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
-            "LnYyLkdldENsdXN0ZXJSZXF1ZXN0GiEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
-            "LnYyLkNsdXN0ZXIiNILT5JMCLhIsL3YyL3tuYW1lPXByb2plY3RzLyovaW5z",
-            "dGFuY2VzLyovY2x1c3RlcnMvKn0SowEKDExpc3RDbHVzdGVycxItLmdvb2ds",
-            "ZS5iaWd0YWJsZS5hZG1pbi52Mi5MaXN0Q2x1c3RlcnNSZXF1ZXN0Gi4uZ29v",
-            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RDbHVzdGVyc1Jlc3BvbnNlIjSC",
-            "0+STAi4SLC92Mi97cGFyZW50PXByb2plY3RzLyovaW5zdGFuY2VzLyp9L2Ns",
-            "dXN0ZXJzEooBCg1VcGRhdGVDbHVzdGVyEiEuZ29vZ2xlLmJpZ3RhYmxlLmFk",
-            "bWluLnYyLkNsdXN0ZXIaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "IjeC0+STAjEaLC92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2Ns",
-            "dXN0ZXJzLyp9OgEqEo0BCg1EZWxldGVDbHVzdGVyEi4uZ29vZ2xlLmJpZ3Rh",
-            "YmxlLmFkbWluLnYyLkRlbGV0ZUNsdXN0ZXJSZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IjSC0+STAi4qLC92Mi97bmFtZT1wcm9qZWN0cy8qL2lu",
-            "c3RhbmNlcy8qL2NsdXN0ZXJzLyp9Qr0BChxjb20uZ29vZ2xlLmJpZ3RhYmxl",
-            "LmFkbWluLnYyQhpCaWd0YWJsZUluc3RhbmNlQWRtaW5Qcm90b1ABWj1nb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2Fk",
-            "bWluL3YyO2FkbWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYy",
-            "ygIeR29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYyYgZwcm90bzM="));
+            "L3YyL2luc3RhbmNlLnByb3RvGh5nb29nbGUvaWFtL3YxL2lhbV9wb2xpY3ku",
+            "cHJvdG8aGmdvb2dsZS9pYW0vdjEvcG9saWN5LnByb3RvGiNnb29nbGUvbG9u",
+            "Z3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2Vt",
+            "cHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKXAgoVQ3JlYXRlSW5z",
+            "dGFuY2VSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRITCgtpbnN0YW5jZV9pZBgC",
+            "IAEoCRI0CghpbnN0YW5jZRgDIAEoCzIiLmdvb2dsZS5iaWd0YWJsZS5hZG1p",
+            "bi52Mi5JbnN0YW5jZRJPCghjbHVzdGVycxgEIAMoCzI9Lmdvb2dsZS5iaWd0",
+            "YWJsZS5hZG1pbi52Mi5DcmVhdGVJbnN0YW5jZVJlcXVlc3QuQ2x1c3RlcnNF",
+            "bnRyeRpSCg1DbHVzdGVyc0VudHJ5EgsKA2tleRgBIAEoCRIwCgV2YWx1ZRgC",
+            "IAEoCzIhLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DbHVzdGVyOgI4ASIi",
+            "ChJHZXRJbnN0YW5jZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSI6ChRMaXN0SW5z",
+            "dGFuY2VzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEgoKcGFnZV90b2tlbhgC",
+            "IAEoCSKBAQoVTGlzdEluc3RhbmNlc1Jlc3BvbnNlEjUKCWluc3RhbmNlcxgB",
+            "IAMoCzIiLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZRIYChBm",
+            "YWlsZWRfbG9jYXRpb25zGAIgAygJEhcKD25leHRfcGFnZV90b2tlbhgDIAEo",
+            "CSKFAQocUGFydGlhbFVwZGF0ZUluc3RhbmNlUmVxdWVzdBI0CghpbnN0YW5j",
+            "ZRgBIAEoCzIiLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZRIv",
+            "Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2siJQoVRGVsZXRlSW5zdGFuY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkibgoU",
+            "Q3JlYXRlQ2x1c3RlclJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhIKCmNsdXN0",
+            "ZXJfaWQYAiABKAkSMgoHY2x1c3RlchgDIAEoCzIhLmdvb2dsZS5iaWd0YWJs",
+            "ZS5hZG1pbi52Mi5DbHVzdGVyIiEKEUdldENsdXN0ZXJSZXF1ZXN0EgwKBG5h",
+            "bWUYASABKAkiOQoTTGlzdENsdXN0ZXJzUmVxdWVzdBIOCgZwYXJlbnQYASAB",
+            "KAkSEgoKcGFnZV90b2tlbhgCIAEoCSJ+ChRMaXN0Q2x1c3RlcnNSZXNwb25z",
+            "ZRIzCghjbHVzdGVycxgBIAMoCzIhLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
+            "Mi5DbHVzdGVyEhgKEGZhaWxlZF9sb2NhdGlvbnMYAiADKAkSFwoPbmV4dF9w",
+            "YWdlX3Rva2VuGAMgASgJIiQKFERlbGV0ZUNsdXN0ZXJSZXF1ZXN0EgwKBG5h",
+            "bWUYASABKAkixgEKFkNyZWF0ZUluc3RhbmNlTWV0YWRhdGESSQoQb3JpZ2lu",
+            "YWxfcmVxdWVzdBgBIAEoCzIvLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5D",
+            "cmVhdGVJbnN0YW5jZVJlcXVlc3QSMAoMcmVxdWVzdF90aW1lGAIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtmaW5pc2hfdGltZRgDIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAizQEKFlVwZGF0ZUluc3Rh",
+            "bmNlTWV0YWRhdGESUAoQb3JpZ2luYWxfcmVxdWVzdBgBIAEoCzI2Lmdvb2ds",
+            "ZS5iaWd0YWJsZS5hZG1pbi52Mi5QYXJ0aWFsVXBkYXRlSW5zdGFuY2VSZXF1",
+            "ZXN0EjAKDHJlcXVlc3RfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASLwoLZmluaXNoX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wIsQBChVDcmVhdGVDbHVzdGVyTWV0YWRhdGESSAoQb3Jp",
+            "Z2luYWxfcmVxdWVzdBgBIAEoCzIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
+            "Mi5DcmVhdGVDbHVzdGVyUmVxdWVzdBIwCgxyZXF1ZXN0X3RpbWUYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2ZpbmlzaF90aW1lGAMg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCK3AQoVVXBkYXRlQ2x1",
+            "c3Rlck1ldGFkYXRhEjsKEG9yaWdpbmFsX3JlcXVlc3QYASABKAsyIS5nb29n",
+            "bGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3RlchIwCgxyZXF1ZXN0X3RpbWUY",
+            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2ZpbmlzaF90",
+            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKVAQoXQ3Jl",
+            "YXRlQXBwUHJvZmlsZVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhYKDmFwcF9w",
+            "cm9maWxlX2lkGAIgASgJEjkKC2FwcF9wcm9maWxlGAMgASgLMiQuZ29vZ2xl",
+            "LmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUSFwoPaWdub3JlX3dhcm5p",
+            "bmdzGAQgASgIIiQKFEdldEFwcFByb2ZpbGVSZXF1ZXN0EgwKBG5hbWUYASAB",
+            "KAkiPAoWTGlzdEFwcFByb2ZpbGVzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkS",
+            "EgoKcGFnZV90b2tlbhgCIAEoCSJuChdMaXN0QXBwUHJvZmlsZXNSZXNwb25z",
+            "ZRI6CgxhcHBfcHJvZmlsZXMYASADKAsyJC5nb29nbGUuYmlndGFibGUuYWRt",
+            "aW4udjIuQXBwUHJvZmlsZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkingEK",
+            "F1VwZGF0ZUFwcFByb2ZpbGVSZXF1ZXN0EjkKC2FwcF9wcm9maWxlGAEgASgL",
+            "MiQuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUSLwoLdXBk",
+            "YXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhcK",
+            "D2lnbm9yZV93YXJuaW5ncxgDIAEoCCJAChdEZWxldGVBcHBQcm9maWxlUmVx",
+            "dWVzdBIMCgRuYW1lGAEgASgJEhcKD2lnbm9yZV93YXJuaW5ncxgCIAEoCDKq",
+            "FwoVQmlndGFibGVJbnN0YW5jZUFkbWluEo4BCg5DcmVhdGVJbnN0YW5jZRIv",
+            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DcmVhdGVJbnN0YW5jZVJlcXVl",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIiyC0+STAiYiIS92",
+            "Mi97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlczoBKhKKAQoLR2V0SW5z",
+            "dGFuY2USLC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuR2V0SW5zdGFuY2VS",
+            "ZXF1ZXN0GiIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkluc3RhbmNlIimC",
+            "0+STAiMSIS92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfRKbAQoN",
+            "TGlzdEluc3RhbmNlcxIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5MaXN0",
+            "SW5zdGFuY2VzUmVxdWVzdBovLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5M",
+            "aXN0SW5zdGFuY2VzUmVzcG9uc2UiKYLT5JMCIxIhL3YyL3twYXJlbnQ9cHJv",
+            "amVjdHMvKn0vaW5zdGFuY2VzEoYBCg5VcGRhdGVJbnN0YW5jZRIiLmdvb2ds",
+            "ZS5iaWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZRoiLmdvb2dsZS5iaWd0YWJs",
+            "ZS5hZG1pbi52Mi5JbnN0YW5jZSIsgtPkkwImGiEvdjIve25hbWU9cHJvamVj",
+            "dHMvKi9pbnN0YW5jZXMvKn06ASoSrAEKFVBhcnRpYWxVcGRhdGVJbnN0YW5j",
+            "ZRI2Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5QYXJ0aWFsVXBkYXRlSW5z",
+            "dGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiI8",
+            "gtPkkwI2MiovdjIve2luc3RhbmNlLm5hbWU9cHJvamVjdHMvKi9pbnN0YW5j",
+            "ZXMvKn06CGluc3RhbmNlEoQBCg5EZWxldGVJbnN0YW5jZRIvLmdvb2dsZS5i",
+            "aWd0YWJsZS5hZG1pbi52Mi5EZWxldGVJbnN0YW5jZVJlcXVlc3QaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkiKYLT5JMCIyohL3YyL3tuYW1lPXByb2plY3Rz",
+            "LyovaW5zdGFuY2VzLyp9Ep0BCg1DcmVhdGVDbHVzdGVyEi4uZ29vZ2xlLmJp",
+            "Z3RhYmxlLmFkbWluLnYyLkNyZWF0ZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiI9gtPkkwI3IiwvdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2luc3RhbmNlcy8qfS9jbHVzdGVyczoHY2x1c3RlchKSAQoK",
+            "R2V0Q2x1c3RlchIrLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5HZXRDbHVz",
+            "dGVyUmVxdWVzdBohLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DbHVzdGVy",
+            "IjSC0+STAi4SLC92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2Ns",
+            "dXN0ZXJzLyp9EqMBCgxMaXN0Q2x1c3RlcnMSLS5nb29nbGUuYmlndGFibGUu",
+            "YWRtaW4udjIuTGlzdENsdXN0ZXJzUmVxdWVzdBouLmdvb2dsZS5iaWd0YWJs",
+            "ZS5hZG1pbi52Mi5MaXN0Q2x1c3RlcnNSZXNwb25zZSI0gtPkkwIuEiwvdjIv",
+            "e3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfS9jbHVzdGVycxKKAQoN",
+            "VXBkYXRlQ2x1c3RlchIhLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DbHVz",
+            "dGVyGh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiI3gtPkkwIxGiwv",
+            "djIve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9jbHVzdGVycy8qfToB",
+            "KhKNAQoNRGVsZXRlQ2x1c3RlchIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
+            "Mi5EZWxldGVDbHVzdGVyUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eSI0gtPkkwIuKiwvdjIve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9j",
+            "bHVzdGVycy8qfRKxAQoQQ3JlYXRlQXBwUHJvZmlsZRIxLmdvb2dsZS5iaWd0",
+            "YWJsZS5hZG1pbi52Mi5DcmVhdGVBcHBQcm9maWxlUmVxdWVzdBokLmdvb2ds",
+            "ZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlIkSC0+STAj4iLy92Mi97",
+            "cGFyZW50PXByb2plY3RzLyovaW5zdGFuY2VzLyp9L2FwcFByb2ZpbGVzOgth",
+            "cHBfcHJvZmlsZRKeAQoNR2V0QXBwUHJvZmlsZRIuLmdvb2dsZS5iaWd0YWJs",
+            "ZS5hZG1pbi52Mi5HZXRBcHBQcm9maWxlUmVxdWVzdBokLmdvb2dsZS5iaWd0",
+            "YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlIjeC0+STAjESLy92Mi97bmFtZT1w",
+            "cm9qZWN0cy8qL2luc3RhbmNlcy8qL2FwcFByb2ZpbGVzLyp9Eq8BCg9MaXN0",
+            "QXBwUHJvZmlsZXMSMC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuTGlzdEFw",
+            "cFByb2ZpbGVzUmVxdWVzdBoxLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5M",
+            "aXN0QXBwUHJvZmlsZXNSZXNwb25zZSI3gtPkkwIxEi8vdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2luc3RhbmNlcy8qfS9hcHBQcm9maWxlcxK2AQoQVXBkYXRl",
+            "QXBwUHJvZmlsZRIxLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5VcGRhdGVB",
+            "cHBQcm9maWxlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24iUILT5JMCSjI7L3YyL3thcHBfcHJvZmlsZS5uYW1lPXByb2plY3RzLyov",
+            "aW5zdGFuY2VzLyovYXBwUHJvZmlsZXMvKn06C2FwcF9wcm9maWxlEpYBChBE",
+            "ZWxldGVBcHBQcm9maWxlEjEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkRl",
+            "bGV0ZUFwcFByb2ZpbGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IjeC0+STAjEqLy92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2Fw",
+            "cFByb2ZpbGVzLyp9EogBCgxHZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYx",
+            "LkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSI9",
+            "gtPkkwI3IjIvdjIve3Jlc291cmNlPXByb2plY3RzLyovaW5zdGFuY2VzLyp9",
+            "OmdldElhbVBvbGljeToBKhKIAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlh",
+            "bS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xp",
+            "Y3kiPYLT5JMCNyIyL3YyL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2luc3RhbmNl",
+            "cy8qfTpzZXRJYW1Qb2xpY3k6ASoSrgEKElRlc3RJYW1QZXJtaXNzaW9ucxIo",
+            "Lmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBopLmdv",
+            "b2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2UiQ4LT5JMC",
+            "PSI4L3YyL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfTp0ZXN0",
+            "SWFtUGVybWlzc2lvbnM6ASpCvQEKHGNvbS5nb29nbGUuYmlndGFibGUuYWRt",
+            "aW4udjJCGkJpZ3RhYmxlSW5zdGFuY2VBZG1pblByb3RvUAFaPWdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYmlndGFibGUvYWRtaW4v",
+            "djI7YWRtaW6qAh5Hb29nbGUuQ2xvdWQuQmlndGFibGUuQWRtaW4uVjLKAh5H",
+            "b29nbGVcQ2xvdWRcQmlndGFibGVcQWRtaW5cVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance", "Clusters" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest.Parser, new[]{ "Parent", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.Parser, new[]{ "Instances", "FailedLocations", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.Parser, new[]{ "Instance", "UpdateMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest), global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest.Parser, new[]{ "Parent", "ClusterId", "Cluster" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest), global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest.Parser, new[]{ "Name" }, null, null, null),
@@ -113,8 +170,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse), global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse.Parser, new[]{ "Clusters", "FailedLocations", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata), global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata), global::Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.Parser, new[]{ "Parent", "AppProfileId", "AppProfile", "IgnoreWarnings" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.Parser, new[]{ "Parent", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.Parser, new[]{ "AppProfiles", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.Parser, new[]{ "AppProfile", "UpdateMask", "IgnoreWarnings" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.Parser, new[]{ "Name", "IgnoreWarnings" }, null, null, null)
           }));
     }
     #endregion
@@ -798,6 +862,173 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
+  /// Request message for BigtableInstanceAdmin.PartialUpdateInstance.
+  /// </summary>
+  public sealed partial class PartialUpdateInstanceRequest : pb::IMessage<PartialUpdateInstanceRequest> {
+    private static readonly pb::MessageParser<PartialUpdateInstanceRequest> _parser = new pb::MessageParser<PartialUpdateInstanceRequest>(() => new PartialUpdateInstanceRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PartialUpdateInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PartialUpdateInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PartialUpdateInstanceRequest(PartialUpdateInstanceRequest other) : this() {
+      Instance = other.instance_ != null ? other.Instance.Clone() : null;
+      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PartialUpdateInstanceRequest Clone() {
+      return new PartialUpdateInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "instance" field.</summary>
+    public const int InstanceFieldNumber = 1;
+    private global::Google.Cloud.Bigtable.Admin.V2.Instance instance_;
+    /// <summary>
+    /// The Instance which will (partially) replace the current value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.Instance Instance {
+      get { return instance_; }
+      set {
+        instance_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// The subset of Instance fields which should be replaced.
+    /// Must be explicitly set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PartialUpdateInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PartialUpdateInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Instance, other.Instance)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (instance_ != null) hash ^= Instance.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (instance_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Instance);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (instance_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Instance);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PartialUpdateInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.instance_ != null) {
+        if (instance_ == null) {
+          instance_ = new global::Google.Cloud.Bigtable.Admin.V2.Instance();
+        }
+        Instance.MergeFrom(other.Instance);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (instance_ == null) {
+              instance_ = new global::Google.Cloud.Bigtable.Admin.V2.Instance();
+            }
+            input.ReadMessage(instance_);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(updateMask_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Request message for BigtableInstanceAdmin.DeleteInstance.
   /// </summary>
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest> {
@@ -807,7 +1038,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -931,7 +1162,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1127,7 +1358,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1251,7 +1482,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1408,7 +1639,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1582,7 +1813,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1706,7 +1937,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1900,6 +2131,209 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
+  /// The metadata for the Operation returned by UpdateInstance.
+  /// </summary>
+  public sealed partial class UpdateInstanceMetadata : pb::IMessage<UpdateInstanceMetadata> {
+    private static readonly pb::MessageParser<UpdateInstanceMetadata> _parser = new pb::MessageParser<UpdateInstanceMetadata>(() => new UpdateInstanceMetadata());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateInstanceMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateInstanceMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateInstanceMetadata(UpdateInstanceMetadata other) : this() {
+      OriginalRequest = other.originalRequest_ != null ? other.OriginalRequest.Clone() : null;
+      RequestTime = other.requestTime_ != null ? other.RequestTime.Clone() : null;
+      FinishTime = other.finishTime_ != null ? other.FinishTime.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateInstanceMetadata Clone() {
+      return new UpdateInstanceMetadata(this);
+    }
+
+    /// <summary>Field number for the "original_request" field.</summary>
+    public const int OriginalRequestFieldNumber = 1;
+    private global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest originalRequest_;
+    /// <summary>
+    /// The request that prompted the initiation of this UpdateInstance operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest OriginalRequest {
+      get { return originalRequest_; }
+      set {
+        originalRequest_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_time" field.</summary>
+    public const int RequestTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp requestTime_;
+    /// <summary>
+    /// The time at which the original request was received.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp RequestTime {
+      get { return requestTime_; }
+      set {
+        requestTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "finish_time" field.</summary>
+    public const int FinishTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp finishTime_;
+    /// <summary>
+    /// The time at which the operation failed or was completed successfully.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp FinishTime {
+      get { return finishTime_; }
+      set {
+        finishTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateInstanceMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateInstanceMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OriginalRequest, other.OriginalRequest)) return false;
+      if (!object.Equals(RequestTime, other.RequestTime)) return false;
+      if (!object.Equals(FinishTime, other.FinishTime)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (originalRequest_ != null) hash ^= OriginalRequest.GetHashCode();
+      if (requestTime_ != null) hash ^= RequestTime.GetHashCode();
+      if (finishTime_ != null) hash ^= FinishTime.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (originalRequest_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OriginalRequest);
+      }
+      if (requestTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RequestTime);
+      }
+      if (finishTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FinishTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (originalRequest_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OriginalRequest);
+      }
+      if (requestTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestTime);
+      }
+      if (finishTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishTime);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateInstanceMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.originalRequest_ != null) {
+        if (originalRequest_ == null) {
+          originalRequest_ = new global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest();
+        }
+        OriginalRequest.MergeFrom(other.OriginalRequest);
+      }
+      if (other.requestTime_ != null) {
+        if (requestTime_ == null) {
+          requestTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        RequestTime.MergeFrom(other.RequestTime);
+      }
+      if (other.finishTime_ != null) {
+        if (finishTime_ == null) {
+          finishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        FinishTime.MergeFrom(other.FinishTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (originalRequest_ == null) {
+              originalRequest_ = new global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest();
+            }
+            input.ReadMessage(originalRequest_);
+            break;
+          }
+          case 18: {
+            if (requestTime_ == null) {
+              requestTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(requestTime_);
+            break;
+          }
+          case 26: {
+            if (finishTime_ == null) {
+              finishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(finishTime_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// The metadata for the Operation returned by CreateCluster.
   /// </summary>
   public sealed partial class CreateClusterMetadata : pb::IMessage<CreateClusterMetadata> {
@@ -1909,7 +2343,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2112,7 +2546,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2297,6 +2731,1044 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
               finishTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(finishTime_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// This is a private alpha release of Cloud Bigtable replication. This feature
+  /// is not currently available to most Cloud Bigtable customers. This feature
+  /// might be changed in backward-incompatible ways and is not recommended for
+  /// production use. It is not subject to any SLA or deprecation policy.
+  ///
+  /// Request message for BigtableInstanceAdmin.CreateAppProfile.
+  /// </summary>
+  public sealed partial class CreateAppProfileRequest : pb::IMessage<CreateAppProfileRequest> {
+    private static readonly pb::MessageParser<CreateAppProfileRequest> _parser = new pb::MessageParser<CreateAppProfileRequest>(() => new CreateAppProfileRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateAppProfileRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateAppProfileRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateAppProfileRequest(CreateAppProfileRequest other) : this() {
+      parent_ = other.parent_;
+      appProfileId_ = other.appProfileId_;
+      AppProfile = other.appProfile_ != null ? other.AppProfile.Clone() : null;
+      ignoreWarnings_ = other.ignoreWarnings_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateAppProfileRequest Clone() {
+      return new CreateAppProfileRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// The unique name of the instance in which to create the new app profile.
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "app_profile_id" field.</summary>
+    public const int AppProfileIdFieldNumber = 2;
+    private string appProfileId_ = "";
+    /// <summary>
+    /// The ID to be used when referring to the new app profile within its
+    /// instance, e.g., just `myprofile` rather than
+    /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AppProfileId {
+      get { return appProfileId_; }
+      set {
+        appProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "app_profile" field.</summary>
+    public const int AppProfileFieldNumber = 3;
+    private global::Google.Cloud.Bigtable.Admin.V2.AppProfile appProfile_;
+    /// <summary>
+    /// The app profile to be created.
+    /// Fields marked `OutputOnly` will be ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.AppProfile AppProfile {
+      get { return appProfile_; }
+      set {
+        appProfile_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ignore_warnings" field.</summary>
+    public const int IgnoreWarningsFieldNumber = 4;
+    private bool ignoreWarnings_;
+    /// <summary>
+    /// If true, ignore safety checks when creating the app profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IgnoreWarnings {
+      get { return ignoreWarnings_; }
+      set {
+        ignoreWarnings_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateAppProfileRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateAppProfileRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (AppProfileId != other.AppProfileId) return false;
+      if (!object.Equals(AppProfile, other.AppProfile)) return false;
+      if (IgnoreWarnings != other.IgnoreWarnings) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
+      if (appProfile_ != null) hash ^= AppProfile.GetHashCode();
+      if (IgnoreWarnings != false) hash ^= IgnoreWarnings.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (AppProfileId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AppProfileId);
+      }
+      if (appProfile_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AppProfile);
+      }
+      if (IgnoreWarnings != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IgnoreWarnings);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (AppProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
+      }
+      if (appProfile_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AppProfile);
+      }
+      if (IgnoreWarnings != false) {
+        size += 1 + 1;
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateAppProfileRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.AppProfileId.Length != 0) {
+        AppProfileId = other.AppProfileId;
+      }
+      if (other.appProfile_ != null) {
+        if (appProfile_ == null) {
+          appProfile_ = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile();
+        }
+        AppProfile.MergeFrom(other.AppProfile);
+      }
+      if (other.IgnoreWarnings != false) {
+        IgnoreWarnings = other.IgnoreWarnings;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            AppProfileId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (appProfile_ == null) {
+              appProfile_ = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile();
+            }
+            input.ReadMessage(appProfile_);
+            break;
+          }
+          case 32: {
+            IgnoreWarnings = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// This is a private alpha release of Cloud Bigtable replication. This feature
+  /// is not currently available to most Cloud Bigtable customers. This feature
+  /// might be changed in backward-incompatible ways and is not recommended for
+  /// production use. It is not subject to any SLA or deprecation policy.
+  ///
+  /// Request message for BigtableInstanceAdmin.GetAppProfile.
+  /// </summary>
+  public sealed partial class GetAppProfileRequest : pb::IMessage<GetAppProfileRequest> {
+    private static readonly pb::MessageParser<GetAppProfileRequest> _parser = new pb::MessageParser<GetAppProfileRequest>(() => new GetAppProfileRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetAppProfileRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetAppProfileRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetAppProfileRequest(GetAppProfileRequest other) : this() {
+      name_ = other.name_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetAppProfileRequest Clone() {
+      return new GetAppProfileRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The unique name of the requested app profile. Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/appProfiles/&lt;app_profile>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetAppProfileRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetAppProfileRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetAppProfileRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// This is a private alpha release of Cloud Bigtable replication. This feature
+  /// is not currently available to most Cloud Bigtable customers. This feature
+  /// might be changed in backward-incompatible ways and is not recommended for
+  /// production use. It is not subject to any SLA or deprecation policy.
+  ///
+  /// Request message for BigtableInstanceAdmin.ListAppProfiles.
+  /// </summary>
+  public sealed partial class ListAppProfilesRequest : pb::IMessage<ListAppProfilesRequest> {
+    private static readonly pb::MessageParser<ListAppProfilesRequest> _parser = new pb::MessageParser<ListAppProfilesRequest>(() => new ListAppProfilesRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListAppProfilesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListAppProfilesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListAppProfilesRequest(ListAppProfilesRequest other) : this() {
+      parent_ = other.parent_;
+      pageToken_ = other.pageToken_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListAppProfilesRequest Clone() {
+      return new ListAppProfilesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// The unique name of the instance for which a list of app profiles is
+    /// requested. Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 2;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The value of `next_page_token` returned by a previous call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListAppProfilesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListAppProfilesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageToken != other.PageToken) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PageToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListAppProfilesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// This is a private alpha release of Cloud Bigtable replication. This feature
+  /// is not currently available to most Cloud Bigtable customers. This feature
+  /// might be changed in backward-incompatible ways and is not recommended for
+  /// production use. It is not subject to any SLA or deprecation policy.
+  ///
+  /// Response message for BigtableInstanceAdmin.ListAppProfiles.
+  /// </summary>
+  public sealed partial class ListAppProfilesResponse : pb::IMessage<ListAppProfilesResponse> {
+    private static readonly pb::MessageParser<ListAppProfilesResponse> _parser = new pb::MessageParser<ListAppProfilesResponse>(() => new ListAppProfilesResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListAppProfilesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListAppProfilesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListAppProfilesResponse(ListAppProfilesResponse other) : this() {
+      appProfiles_ = other.appProfiles_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListAppProfilesResponse Clone() {
+      return new ListAppProfilesResponse(this);
+    }
+
+    /// <summary>Field number for the "app_profiles" field.</summary>
+    public const int AppProfilesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> _repeated_appProfiles_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> appProfiles_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.Admin.V2.AppProfile>();
+    /// <summary>
+    /// The list of requested app profiles.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> AppProfiles {
+      get { return appProfiles_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// Set if not all app profiles could be returned in a single response.
+    /// Pass this value to `page_token` in another request to get the next
+    /// page of results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListAppProfilesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListAppProfilesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!appProfiles_.Equals(other.appProfiles_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= appProfiles_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      appProfiles_.WriteTo(output, _repeated_appProfiles_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += appProfiles_.CalculateSize(_repeated_appProfiles_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListAppProfilesResponse other) {
+      if (other == null) {
+        return;
+      }
+      appProfiles_.Add(other.appProfiles_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            appProfiles_.AddEntriesFrom(input, _repeated_appProfiles_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// This is a private alpha release of Cloud Bigtable replication. This feature
+  /// is not currently available to most Cloud Bigtable customers. This feature
+  /// might be changed in backward-incompatible ways and is not recommended for
+  /// production use. It is not subject to any SLA or deprecation policy.
+  ///
+  /// Request message for BigtableInstanceAdmin.UpdateAppProfile.
+  /// </summary>
+  public sealed partial class UpdateAppProfileRequest : pb::IMessage<UpdateAppProfileRequest> {
+    private static readonly pb::MessageParser<UpdateAppProfileRequest> _parser = new pb::MessageParser<UpdateAppProfileRequest>(() => new UpdateAppProfileRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateAppProfileRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateAppProfileRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateAppProfileRequest(UpdateAppProfileRequest other) : this() {
+      AppProfile = other.appProfile_ != null ? other.AppProfile.Clone() : null;
+      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+      ignoreWarnings_ = other.ignoreWarnings_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateAppProfileRequest Clone() {
+      return new UpdateAppProfileRequest(this);
+    }
+
+    /// <summary>Field number for the "app_profile" field.</summary>
+    public const int AppProfileFieldNumber = 1;
+    private global::Google.Cloud.Bigtable.Admin.V2.AppProfile appProfile_;
+    /// <summary>
+    /// The app profile which will (partially) replace the current value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.AppProfile AppProfile {
+      get { return appProfile_; }
+      set {
+        appProfile_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// The subset of app profile fields which should be replaced.
+    /// If unset, all fields will be replaced.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ignore_warnings" field.</summary>
+    public const int IgnoreWarningsFieldNumber = 3;
+    private bool ignoreWarnings_;
+    /// <summary>
+    /// If true, ignore safety checks when updating the app profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IgnoreWarnings {
+      get { return ignoreWarnings_; }
+      set {
+        ignoreWarnings_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateAppProfileRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateAppProfileRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AppProfile, other.AppProfile)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (IgnoreWarnings != other.IgnoreWarnings) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (appProfile_ != null) hash ^= AppProfile.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (IgnoreWarnings != false) hash ^= IgnoreWarnings.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (appProfile_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AppProfile);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (IgnoreWarnings != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IgnoreWarnings);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (appProfile_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AppProfile);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (IgnoreWarnings != false) {
+        size += 1 + 1;
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateAppProfileRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.appProfile_ != null) {
+        if (appProfile_ == null) {
+          appProfile_ = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile();
+        }
+        AppProfile.MergeFrom(other.AppProfile);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.IgnoreWarnings != false) {
+        IgnoreWarnings = other.IgnoreWarnings;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (appProfile_ == null) {
+              appProfile_ = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile();
+            }
+            input.ReadMessage(appProfile_);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(updateMask_);
+            break;
+          }
+          case 24: {
+            IgnoreWarnings = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// This is a private alpha release of Cloud Bigtable replication. This feature
+  /// is not currently available to most Cloud Bigtable customers. This feature
+  /// might be changed in backward-incompatible ways and is not recommended for
+  /// production use. It is not subject to any SLA or deprecation policy.
+  ///
+  /// Request message for BigtableInstanceAdmin.DeleteAppProfile.
+  /// </summary>
+  public sealed partial class DeleteAppProfileRequest : pb::IMessage<DeleteAppProfileRequest> {
+    private static readonly pb::MessageParser<DeleteAppProfileRequest> _parser = new pb::MessageParser<DeleteAppProfileRequest>(() => new DeleteAppProfileRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteAppProfileRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteAppProfileRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteAppProfileRequest(DeleteAppProfileRequest other) : this() {
+      name_ = other.name_;
+      ignoreWarnings_ = other.ignoreWarnings_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteAppProfileRequest Clone() {
+      return new DeleteAppProfileRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The unique name of the app profile to be deleted. Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/appProfiles/&lt;app_profile>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ignore_warnings" field.</summary>
+    public const int IgnoreWarningsFieldNumber = 2;
+    private bool ignoreWarnings_;
+    /// <summary>
+    /// If true, ignore safety checks when deleting the app profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IgnoreWarnings {
+      get { return ignoreWarnings_; }
+      set {
+        ignoreWarnings_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteAppProfileRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteAppProfileRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (IgnoreWarnings != other.IgnoreWarnings) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (IgnoreWarnings != false) hash ^= IgnoreWarnings.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (IgnoreWarnings != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IgnoreWarnings);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (IgnoreWarnings != false) {
+        size += 1 + 1;
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteAppProfileRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.IgnoreWarnings != false) {
+        IgnoreWarnings = other.IgnoreWarnings;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            IgnoreWarnings = input.ReadBool();
             break;
           }
         }

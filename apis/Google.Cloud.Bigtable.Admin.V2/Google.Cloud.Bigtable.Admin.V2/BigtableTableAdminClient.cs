@@ -16,7 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Protobuf;
+using Google.LongRunning;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -50,11 +50,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateTableSettings = existing.CreateTableSettings;
+            CreateTableFromSnapshotSettings = existing.CreateTableFromSnapshotSettings;
+            CreateTableFromSnapshotOperationsSettings = existing.CreateTableFromSnapshotOperationsSettings?.Clone();
             ListTablesSettings = existing.ListTablesSettings;
             GetTableSettings = existing.GetTableSettings;
             DeleteTableSettings = existing.DeleteTableSettings;
             ModifyColumnFamiliesSettings = existing.ModifyColumnFamiliesSettings;
             DropRowRangeSettings = existing.DropRowRangeSettings;
+            GenerateConsistencyTokenSettings = existing.GenerateConsistencyTokenSettings;
+            CheckConsistencySettings = existing.CheckConsistencySettings;
+            SnapshotTableSettings = existing.SnapshotTableSettings;
+            GetSnapshotSettings = existing.GetSnapshotSettings;
+            ListSnapshotsSettings = existing.ListSnapshotsSettings;
+            DeleteSnapshotSettings = existing.DeleteSnapshotSettings;
             OnCopy(existing);
         }
 
@@ -152,6 +160,56 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.CreateTableFromSnapshot</c> and <c>BigtableTableAdminClient.CreateTableFromSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableTableAdminClient.CreateTableFromSnapshot</c> and
+        /// <c>BigtableTableAdminClient.CreateTableFromSnapshotAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings CreateTableFromSnapshotSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.CreateTableFromSnapshot</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings CreateTableFromSnapshotOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
+                TimeSpan.FromMilliseconds(500L),
+                1.5,
+                TimeSpan.FromMilliseconds(5000L))
+        };
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -294,6 +352,183 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings DropRowRangeSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.GenerateConsistencyToken</c> and <c>BigtableTableAdminClient.GenerateConsistencyTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableTableAdminClient.GenerateConsistencyToken</c> and
+        /// <c>BigtableTableAdminClient.GenerateConsistencyTokenAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings GenerateConsistencyTokenSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.CheckConsistency</c> and <c>BigtableTableAdminClient.CheckConsistencyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableTableAdminClient.CheckConsistency</c> and
+        /// <c>BigtableTableAdminClient.CheckConsistencyAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings CheckConsistencySettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.SnapshotTable</c> and <c>BigtableTableAdminClient.SnapshotTableAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableTableAdminClient.SnapshotTable</c> and
+        /// <c>BigtableTableAdminClient.SnapshotTableAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings SnapshotTableSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.GetSnapshot</c> and <c>BigtableTableAdminClient.GetSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableTableAdminClient.GetSnapshot</c> and
+        /// <c>BigtableTableAdminClient.GetSnapshotAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings GetSnapshotSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.ListSnapshots</c> and <c>BigtableTableAdminClient.ListSnapshotsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableTableAdminClient.ListSnapshots</c> and
+        /// <c>BigtableTableAdminClient.ListSnapshotsAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings ListSnapshotsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.DeleteSnapshot</c> and <c>BigtableTableAdminClient.DeleteSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableTableAdminClient.DeleteSnapshot</c> and
+        /// <c>BigtableTableAdminClient.DeleteSnapshotAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings DeleteSnapshotSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -559,6 +794,213 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new table from the specified snapshot. The target table must
+        /// not exist. The snapshot and the table must be in the same instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="tableId">
+        /// The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// </param>
+        /// <param name="sourceSnapshot">
+        /// The unique name of the snapshot from which to restore the table. The
+        /// snapshot and the table must be in the same instance.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
+            InstanceName parent,
+            string tableId,
+            string sourceSnapshot,
+            CallSettings callSettings = null) => CreateTableFromSnapshotAsync(
+                new CreateTableFromSnapshotRequest
+                {
+                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    TableId = GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
+                    SourceSnapshot = GaxPreconditions.CheckNotNullOrEmpty(sourceSnapshot, nameof(sourceSnapshot)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new table from the specified snapshot. The target table must
+        /// not exist. The snapshot and the table must be in the same instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="tableId">
+        /// The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// </param>
+        /// <param name="sourceSnapshot">
+        /// The unique name of the snapshot from which to restore the table. The
+        /// snapshot and the table must be in the same instance.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
+            InstanceName parent,
+            string tableId,
+            string sourceSnapshot,
+            CancellationToken cancellationToken) => CreateTableFromSnapshotAsync(
+                parent,
+                tableId,
+                sourceSnapshot,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new table from the specified snapshot. The target table must
+        /// not exist. The snapshot and the table must be in the same instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="tableId">
+        /// The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// </param>
+        /// <param name="sourceSnapshot">
+        /// The unique name of the snapshot from which to restore the table. The
+        /// snapshot and the table must be in the same instance.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(
+            InstanceName parent,
+            string tableId,
+            string sourceSnapshot,
+            CallSettings callSettings = null) => CreateTableFromSnapshot(
+                new CreateTableFromSnapshotRequest
+                {
+                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    TableId = GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
+                    SourceSnapshot = GaxPreconditions.CheckNotNullOrEmpty(sourceSnapshot, nameof(sourceSnapshot)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new table from the specified snapshot. The target table must
+        /// not exist. The snapshot and the table must be in the same instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
+            CreateTableFromSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateTableFromSnapshotAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual Task<Operation<Table, CreateTableFromSnapshotMetadata>> PollOnceCreateTableFromSnapshotAsync(
+            string operationName,
+            CallSettings callSettings = null) => Operation<Table, CreateTableFromSnapshotMetadata>.PollOnceFromNameAsync(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                CreateTableFromSnapshotOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new table from the specified snapshot. The target table must
+        /// not exist. The snapshot and the table must be in the same instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(
+            CreateTableFromSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>CreateTableFromSnapshot</c>.
+        /// </summary>
+        public virtual OperationsClient CreateTableFromSnapshotOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateTableFromSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual Operation<Table, CreateTableFromSnapshotMetadata> PollOnceCreateTableFromSnapshot(
+            string operationName,
+            CallSettings callSettings = null) => Operation<Table, CreateTableFromSnapshotMetadata>.PollOnceFromName(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                CreateTableFromSnapshotOperationsClient,
+                callSettings);
 
         /// <summary>
         /// Lists all tables served from a specified instance.
@@ -1022,96 +1464,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// specify whether to delete all rows in a table, or only those that match a
         /// particular prefix.
         /// </summary>
-        /// <param name="name">
-        /// The unique name of the table on which to drop a range of rows.
-        /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
-        /// </param>
-        /// <param name="rowKeyPrefix">
-        /// Delete all rows that start with this row key prefix. Prefix cannot be
-        /// zero length.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task DropRowRangeAsync(
-            string name,
-            ByteString rowKeyPrefix,
-            CallSettings callSettings = null) => DropRowRangeAsync(
-                new DropRowRangeRequest
-                {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                    RowKeyPrefix = rowKeyPrefix ?? ByteString.Empty, // Optional
-                },
-                callSettings);
-
-        /// <summary>
-        /// Permanently drop/delete a row range from a specified table. The request can
-        /// specify whether to delete all rows in a table, or only those that match a
-        /// particular prefix.
-        /// </summary>
-        /// <param name="name">
-        /// The unique name of the table on which to drop a range of rows.
-        /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
-        /// </param>
-        /// <param name="rowKeyPrefix">
-        /// Delete all rows that start with this row key prefix. Prefix cannot be
-        /// zero length.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task DropRowRangeAsync(
-            string name,
-            ByteString rowKeyPrefix,
-            CancellationToken cancellationToken) => DropRowRangeAsync(
-                name,
-                rowKeyPrefix,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Permanently drop/delete a row range from a specified table. The request can
-        /// specify whether to delete all rows in a table, or only those that match a
-        /// particular prefix.
-        /// </summary>
-        /// <param name="name">
-        /// The unique name of the table on which to drop a range of rows.
-        /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
-        /// </param>
-        /// <param name="rowKeyPrefix">
-        /// Delete all rows that start with this row key prefix. Prefix cannot be
-        /// zero length.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual void DropRowRange(
-            string name,
-            ByteString rowKeyPrefix,
-            CallSettings callSettings = null) => DropRowRange(
-                new DropRowRangeRequest
-                {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                    RowKeyPrefix = rowKeyPrefix ?? ByteString.Empty, // Optional
-                },
-                callSettings);
-
-        /// <summary>
-        /// Permanently drop/delete a row range from a specified table. The request can
-        /// specify whether to delete all rows in a table, or only those that match a
-        /// particular prefix.
-        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1144,6 +1496,744 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual void DropRowRange(
             DropRowRangeRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to create a consistency token.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+            TableName name,
+            CallSettings callSettings = null) => GenerateConsistencyTokenAsync(
+                new GenerateConsistencyTokenRequest
+                {
+                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to create a consistency token.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+            TableName name,
+            CancellationToken cancellationToken) => GenerateConsistencyTokenAsync(
+                name,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to create a consistency token.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual GenerateConsistencyTokenResponse GenerateConsistencyToken(
+            TableName name,
+            CallSettings callSettings = null) => GenerateConsistencyToken(
+                new GenerateConsistencyTokenRequest
+                {
+                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+            GenerateConsistencyTokenRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual GenerateConsistencyTokenResponse GenerateConsistencyToken(
+            GenerateConsistencyTokenRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to check replication consistency.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="consistencyToken">
+        /// The token created using GenerateConsistencyToken for the Table.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<CheckConsistencyResponse> CheckConsistencyAsync(
+            TableName name,
+            string consistencyToken,
+            CallSettings callSettings = null) => CheckConsistencyAsync(
+                new CheckConsistencyRequest
+                {
+                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ConsistencyToken = GaxPreconditions.CheckNotNullOrEmpty(consistencyToken, nameof(consistencyToken)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to check replication consistency.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="consistencyToken">
+        /// The token created using GenerateConsistencyToken for the Table.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<CheckConsistencyResponse> CheckConsistencyAsync(
+            TableName name,
+            string consistencyToken,
+            CancellationToken cancellationToken) => CheckConsistencyAsync(
+                name,
+                consistencyToken,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to check replication consistency.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="consistencyToken">
+        /// The token created using GenerateConsistencyToken for the Table.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CheckConsistencyResponse CheckConsistency(
+            TableName name,
+            string consistencyToken,
+            CallSettings callSettings = null) => CheckConsistency(
+                new CheckConsistencyRequest
+                {
+                    TableName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ConsistencyToken = GaxPreconditions.CheckNotNullOrEmpty(consistencyToken, nameof(consistencyToken)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<CheckConsistencyResponse> CheckConsistencyAsync(
+            CheckConsistencyRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CheckConsistencyResponse CheckConsistency(
+            CheckConsistencyRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new snapshot in the specified cluster from the specified
+        /// source table. The cluster and the table must be in the same instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> SnapshotTableAsync(
+            SnapshotTableRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new snapshot in the specified cluster from the specified
+        /// source table. The cluster and the table must be in the same instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation SnapshotTable(
+            SnapshotTableRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets metadata information about the specified snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested snapshot.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Snapshot> GetSnapshotAsync(
+            SnapshotName name,
+            CallSettings callSettings = null) => GetSnapshotAsync(
+                new GetSnapshotRequest
+                {
+                    SnapshotName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets metadata information about the specified snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested snapshot.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Snapshot> GetSnapshotAsync(
+            SnapshotName name,
+            CancellationToken cancellationToken) => GetSnapshotAsync(
+                name,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets metadata information about the specified snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested snapshot.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Snapshot GetSnapshot(
+            SnapshotName name,
+            CallSettings callSettings = null) => GetSnapshot(
+                new GetSnapshotRequest
+                {
+                    SnapshotName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets metadata information about the specified snapshot.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Snapshot> GetSnapshotAsync(
+            GetSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets metadata information about the specified snapshot.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Snapshot GetSnapshot(
+            GetSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists all snapshots associated with the specified cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the cluster for which snapshots should be listed.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// Use `&lt;cluster&gt; = '-'` to list snapshots for all clusters in an instance,
+        /// e.g., `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Snapshot"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(
+            ClusterName parent,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => ListSnapshotsAsync(
+                new ListSnapshotsRequest
+                {
+                    ParentAsClusterName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists all snapshots associated with the specified cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the cluster for which snapshots should be listed.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// Use `&lt;cluster&gt; = '-'` to list snapshots for all clusters in an instance,
+        /// e.g., `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Snapshot"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(
+            ClusterName parent,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => ListSnapshots(
+                new ListSnapshotsRequest
+                {
+                    ParentAsClusterName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists all snapshots associated with the specified cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Snapshot"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(
+            ListSnapshotsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists all snapshots associated with the specified cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Snapshot"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(
+            ListSnapshotsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Permanently deletes the specified snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the snapshot to be deleted.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteSnapshotAsync(
+            SnapshotName name,
+            CallSettings callSettings = null) => DeleteSnapshotAsync(
+                new DeleteSnapshotRequest
+                {
+                    SnapshotName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Permanently deletes the specified snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the snapshot to be deleted.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteSnapshotAsync(
+            SnapshotName name,
+            CancellationToken cancellationToken) => DeleteSnapshotAsync(
+                name,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Permanently deletes the specified snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the snapshot to be deleted.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/snapshots/&lt;snapshot&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteSnapshot(
+            SnapshotName name,
+            CallSettings callSettings = null) => DeleteSnapshot(
+                new DeleteSnapshotRequest
+                {
+                    SnapshotName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Permanently deletes the specified snapshot.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteSnapshotAsync(
+            DeleteSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Permanently deletes the specified snapshot.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteSnapshot(
+            DeleteSnapshotRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1157,11 +2247,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
     public sealed partial class BigtableTableAdminClientImpl : BigtableTableAdminClient
     {
         private readonly ApiCall<CreateTableRequest, Table> _callCreateTable;
+        private readonly ApiCall<CreateTableFromSnapshotRequest, Operation> _callCreateTableFromSnapshot;
         private readonly ApiCall<ListTablesRequest, ListTablesResponse> _callListTables;
         private readonly ApiCall<GetTableRequest, Table> _callGetTable;
         private readonly ApiCall<DeleteTableRequest, Empty> _callDeleteTable;
         private readonly ApiCall<ModifyColumnFamiliesRequest, Table> _callModifyColumnFamilies;
         private readonly ApiCall<DropRowRangeRequest, Empty> _callDropRowRange;
+        private readonly ApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse> _callGenerateConsistencyToken;
+        private readonly ApiCall<CheckConsistencyRequest, CheckConsistencyResponse> _callCheckConsistency;
+        private readonly ApiCall<SnapshotTableRequest, Operation> _callSnapshotTable;
+        private readonly ApiCall<GetSnapshotRequest, Snapshot> _callGetSnapshot;
+        private readonly ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> _callListSnapshots;
+        private readonly ApiCall<DeleteSnapshotRequest, Empty> _callDeleteSnapshot;
 
         /// <summary>
         /// Constructs a client wrapper for the BigtableTableAdmin service, with the specified gRPC client and settings.
@@ -1173,8 +2270,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GrpcClient = grpcClient;
             BigtableTableAdminSettings effectiveSettings = settings ?? BigtableTableAdminSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            CreateTableFromSnapshotOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.CreateTableFromSnapshotOperationsSettings);
             _callCreateTable = clientHelper.BuildApiCall<CreateTableRequest, Table>(
                 GrpcClient.CreateTableAsync, GrpcClient.CreateTable, effectiveSettings.CreateTableSettings);
+            _callCreateTableFromSnapshot = clientHelper.BuildApiCall<CreateTableFromSnapshotRequest, Operation>(
+                GrpcClient.CreateTableFromSnapshotAsync, GrpcClient.CreateTableFromSnapshot, effectiveSettings.CreateTableFromSnapshotSettings);
             _callListTables = clientHelper.BuildApiCall<ListTablesRequest, ListTablesResponse>(
                 GrpcClient.ListTablesAsync, GrpcClient.ListTables, effectiveSettings.ListTablesSettings);
             _callGetTable = clientHelper.BuildApiCall<GetTableRequest, Table>(
@@ -1185,6 +2286,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 GrpcClient.ModifyColumnFamiliesAsync, GrpcClient.ModifyColumnFamilies, effectiveSettings.ModifyColumnFamiliesSettings);
             _callDropRowRange = clientHelper.BuildApiCall<DropRowRangeRequest, Empty>(
                 GrpcClient.DropRowRangeAsync, GrpcClient.DropRowRange, effectiveSettings.DropRowRangeSettings);
+            _callGenerateConsistencyToken = clientHelper.BuildApiCall<GenerateConsistencyTokenRequest, GenerateConsistencyTokenResponse>(
+                GrpcClient.GenerateConsistencyTokenAsync, GrpcClient.GenerateConsistencyToken, effectiveSettings.GenerateConsistencyTokenSettings);
+            _callCheckConsistency = clientHelper.BuildApiCall<CheckConsistencyRequest, CheckConsistencyResponse>(
+                GrpcClient.CheckConsistencyAsync, GrpcClient.CheckConsistency, effectiveSettings.CheckConsistencySettings);
+            _callSnapshotTable = clientHelper.BuildApiCall<SnapshotTableRequest, Operation>(
+                GrpcClient.SnapshotTableAsync, GrpcClient.SnapshotTable, effectiveSettings.SnapshotTableSettings);
+            _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>(
+                GrpcClient.GetSnapshotAsync, GrpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings);
+            _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>(
+                GrpcClient.ListSnapshotsAsync, GrpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings);
+            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, Empty>(
+                GrpcClient.DeleteSnapshotAsync, GrpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1197,11 +2310,18 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_CreateTableRequest(ref CreateTableRequest request, ref CallSettings settings);
+        partial void Modify_CreateTableFromSnapshotRequest(ref CreateTableFromSnapshotRequest request, ref CallSettings settings);
         partial void Modify_ListTablesRequest(ref ListTablesRequest request, ref CallSettings settings);
         partial void Modify_GetTableRequest(ref GetTableRequest request, ref CallSettings settings);
         partial void Modify_DeleteTableRequest(ref DeleteTableRequest request, ref CallSettings settings);
         partial void Modify_ModifyColumnFamiliesRequest(ref ModifyColumnFamiliesRequest request, ref CallSettings settings);
         partial void Modify_DropRowRangeRequest(ref DropRowRangeRequest request, ref CallSettings settings);
+        partial void Modify_GenerateConsistencyTokenRequest(ref GenerateConsistencyTokenRequest request, ref CallSettings settings);
+        partial void Modify_CheckConsistencyRequest(ref CheckConsistencyRequest request, ref CallSettings settings);
+        partial void Modify_SnapshotTableRequest(ref SnapshotTableRequest request, ref CallSettings settings);
+        partial void Modify_GetSnapshotRequest(ref GetSnapshotRequest request, ref CallSettings settings);
+        partial void Modify_ListSnapshotsRequest(ref ListSnapshotsRequest request, ref CallSettings settings);
+        partial void Modify_DeleteSnapshotRequest(ref DeleteSnapshotRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Creates a new table in the specified instance.
@@ -1246,6 +2366,65 @@ namespace Google.Cloud.Bigtable.Admin.V2
             Modify_CreateTableRequest(ref request, ref callSettings);
             return _callCreateTable.Sync(request, callSettings);
         }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new table from the specified snapshot. The target table must
+        /// not exist. The snapshot and the table must be in the same instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async Task<Operation<Table, CreateTableFromSnapshotMetadata>> CreateTableFromSnapshotAsync(
+            CreateTableFromSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_CreateTableFromSnapshotRequest(ref request, ref callSettings);
+            return new Operation<Table, CreateTableFromSnapshotMetadata>(
+                await _callCreateTableFromSnapshot.Async(request, callSettings).ConfigureAwait(false), CreateTableFromSnapshotOperationsClient);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new table from the specified snapshot. The target table must
+        /// not exist. The snapshot and the table must be in the same instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Operation<Table, CreateTableFromSnapshotMetadata> CreateTableFromSnapshot(
+            CreateTableFromSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_CreateTableFromSnapshotRequest(ref request, ref callSettings);
+            return new Operation<Table, CreateTableFromSnapshotMetadata>(
+                _callCreateTableFromSnapshot.Sync(request, callSettings), CreateTableFromSnapshotOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>CreateTableFromSnapshot</c>.
+        /// </summary>
+        public override OperationsClient CreateTableFromSnapshotOperationsClient { get; }
 
         /// <summary>
         /// Lists all tables served from a specified instance.
@@ -1457,6 +2636,318 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callDropRowRange.Sync(request, callSettings);
         }
 
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+            GenerateConsistencyTokenRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GenerateConsistencyTokenRequest(ref request, ref callSettings);
+            return _callGenerateConsistencyToken.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override GenerateConsistencyTokenResponse GenerateConsistencyToken(
+            GenerateConsistencyTokenRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GenerateConsistencyTokenRequest(ref request, ref callSettings);
+            return _callGenerateConsistencyToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<CheckConsistencyResponse> CheckConsistencyAsync(
+            CheckConsistencyRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_CheckConsistencyRequest(ref request, ref callSettings);
+            return _callCheckConsistency.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override CheckConsistencyResponse CheckConsistency(
+            CheckConsistencyRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_CheckConsistencyRequest(ref request, ref callSettings);
+            return _callCheckConsistency.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new snapshot in the specified cluster from the specified
+        /// source table. The cluster and the table must be in the same instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Operation> SnapshotTableAsync(
+            SnapshotTableRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_SnapshotTableRequest(ref request, ref callSettings);
+            return _callSnapshotTable.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates a new snapshot in the specified cluster from the specified
+        /// source table. The cluster and the table must be in the same instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Operation SnapshotTable(
+            SnapshotTableRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_SnapshotTableRequest(ref request, ref callSettings);
+            return _callSnapshotTable.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets metadata information about the specified snapshot.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Snapshot> GetSnapshotAsync(
+            GetSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GetSnapshotRequest(ref request, ref callSettings);
+            return _callGetSnapshot.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets metadata information about the specified snapshot.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Snapshot GetSnapshot(
+            GetSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GetSnapshotRequest(ref request, ref callSettings);
+            return _callGetSnapshot.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists all snapshots associated with the specified cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Snapshot"/> resources.
+        /// </returns>
+        public override PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(
+            ListSnapshotsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListSnapshotsRequest(ref request, ref callSettings);
+            return new GrpcPagedAsyncEnumerable<ListSnapshotsRequest, ListSnapshotsResponse, Snapshot>(_callListSnapshots, request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists all snapshots associated with the specified cluster.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Snapshot"/> resources.
+        /// </returns>
+        public override PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(
+            ListSnapshotsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListSnapshotsRequest(ref request, ref callSettings);
+            return new GrpcPagedEnumerable<ListSnapshotsRequest, ListSnapshotsResponse, Snapshot>(_callListSnapshots, request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Permanently deletes the specified snapshot.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task DeleteSnapshotAsync(
+            DeleteSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_DeleteSnapshotRequest(ref request, ref callSettings);
+            return _callDeleteSnapshot.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Permanently deletes the specified snapshot.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override void DeleteSnapshot(
+            DeleteSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_DeleteSnapshotRequest(ref request, ref callSettings);
+            _callDeleteSnapshot.Sync(request, callSettings);
+        }
+
     }
 
     // Partial classes to enable page-streaming
@@ -1471,6 +2962,31 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSnapshotsRequest : IPageRequest { }
+    public partial class ListSnapshotsResponse : IPageResponse<Snapshot>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public IEnumerator<Snapshot> GetEnumerator() => Snapshots.GetEnumerator();
+
+        /// <inheritdoc/>
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    // Partial Grpc class to enable LRO client creation
+    public static partial class BigtableTableAdmin
+    {
+        public partial class BigtableTableAdminClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="Operations.OperationsClient"/> using the same call invoker as this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual Operations.OperationsClient CreateOperationsClient() => new Operations.OperationsClient(CallInvoker);
+        }
     }
 
 

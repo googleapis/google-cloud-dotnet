@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Iam.V1;
 using Google.LongRunning;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -54,6 +55,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetInstanceSettings = existing.GetInstanceSettings;
             ListInstancesSettings = existing.ListInstancesSettings;
             UpdateInstanceSettings = existing.UpdateInstanceSettings;
+            PartialUpdateInstanceSettings = existing.PartialUpdateInstanceSettings;
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             CreateClusterSettings = existing.CreateClusterSettings;
             CreateClusterOperationsSettings = existing.CreateClusterOperationsSettings?.Clone();
@@ -62,6 +64,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
             UpdateClusterSettings = existing.UpdateClusterSettings;
             UpdateClusterOperationsSettings = existing.UpdateClusterOperationsSettings?.Clone();
             DeleteClusterSettings = existing.DeleteClusterSettings;
+            CreateAppProfileSettings = existing.CreateAppProfileSettings;
+            GetAppProfileSettings = existing.GetAppProfileSettings;
+            ListAppProfilesSettings = existing.ListAppProfilesSettings;
+            UpdateAppProfileSettings = existing.UpdateAppProfileSettings;
+            DeleteAppProfileSettings = existing.DeleteAppProfileSettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
+            SetIamPolicySettings = existing.SetIamPolicySettings;
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             OnCopy(existing);
         }
 
@@ -267,6 +277,36 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings UpdateInstanceSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.PartialUpdateInstance</c> and <c>BigtableInstanceAdminClient.PartialUpdateInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableInstanceAdminClient.PartialUpdateInstance</c> and
+        /// <c>BigtableInstanceAdminClient.PartialUpdateInstanceAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings PartialUpdateInstanceSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -488,6 +528,243 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings DeleteClusterSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.CreateAppProfile</c> and <c>BigtableInstanceAdminClient.CreateAppProfileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableInstanceAdminClient.CreateAppProfile</c> and
+        /// <c>BigtableInstanceAdminClient.CreateAppProfileAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings CreateAppProfileSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.GetAppProfile</c> and <c>BigtableInstanceAdminClient.GetAppProfileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableInstanceAdminClient.GetAppProfile</c> and
+        /// <c>BigtableInstanceAdminClient.GetAppProfileAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings GetAppProfileSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.ListAppProfiles</c> and <c>BigtableInstanceAdminClient.ListAppProfilesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableInstanceAdminClient.ListAppProfiles</c> and
+        /// <c>BigtableInstanceAdminClient.ListAppProfilesAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings ListAppProfilesSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.UpdateAppProfile</c> and <c>BigtableInstanceAdminClient.UpdateAppProfileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableInstanceAdminClient.UpdateAppProfile</c> and
+        /// <c>BigtableInstanceAdminClient.UpdateAppProfileAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings UpdateAppProfileSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.DeleteAppProfile</c> and <c>BigtableInstanceAdminClient.DeleteAppProfileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableInstanceAdminClient.DeleteAppProfile</c> and
+        /// <c>BigtableInstanceAdminClient.DeleteAppProfileAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings DeleteAppProfileSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.GetIamPolicy</c> and <c>BigtableInstanceAdminClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableInstanceAdminClient.GetIamPolicy</c> and
+        /// <c>BigtableInstanceAdminClient.GetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings GetIamPolicySettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.SetIamPolicy</c> and <c>BigtableInstanceAdminClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableInstanceAdminClient.SetIamPolicy</c> and
+        /// <c>BigtableInstanceAdminClient.SetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings SetIamPolicySettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.TestIamPermissions</c> and <c>BigtableInstanceAdminClient.TestIamPermissionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>BigtableInstanceAdminClient.TestIamPermissions</c> and
+        /// <c>BigtableInstanceAdminClient.TestIamPermissionsAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 2.0</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings TestIamPermissionsSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -1016,108 +1293,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Updates an instance within a project.
         /// </summary>
-        /// <param name="name">
-        /// (`OutputOnly`)
-        /// The unique name of the instance. Values are of the form
-        /// `projects/&lt;project&gt;/instances/[a-z][a-z0-9\\-]+[a-z0-9]`.
-        /// </param>
-        /// <param name="displayName">
-        /// The descriptive name for this instance as it appears in UIs.
-        /// Can be changed at any time, but should be kept globally unique
-        /// to avoid confusion.
-        /// </param>
-        /// <param name="type">
-        /// The type of the instance. Defaults to `PRODUCTION`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Instance> UpdateInstanceAsync(
-            InstanceName name,
-            string displayName,
-            Instance.Types.Type type,
-            CallSettings callSettings = null) => UpdateInstanceAsync(
-                new Instance
-                {
-                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    DisplayName = GaxPreconditions.CheckNotNullOrEmpty(displayName, nameof(displayName)),
-                    Type = type,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Updates an instance within a project.
-        /// </summary>
-        /// <param name="name">
-        /// (`OutputOnly`)
-        /// The unique name of the instance. Values are of the form
-        /// `projects/&lt;project&gt;/instances/[a-z][a-z0-9\\-]+[a-z0-9]`.
-        /// </param>
-        /// <param name="displayName">
-        /// The descriptive name for this instance as it appears in UIs.
-        /// Can be changed at any time, but should be kept globally unique
-        /// to avoid confusion.
-        /// </param>
-        /// <param name="type">
-        /// The type of the instance. Defaults to `PRODUCTION`.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Instance> UpdateInstanceAsync(
-            InstanceName name,
-            string displayName,
-            Instance.Types.Type type,
-            CancellationToken cancellationToken) => UpdateInstanceAsync(
-                name,
-                displayName,
-                type,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates an instance within a project.
-        /// </summary>
-        /// <param name="name">
-        /// (`OutputOnly`)
-        /// The unique name of the instance. Values are of the form
-        /// `projects/&lt;project&gt;/instances/[a-z][a-z0-9\\-]+[a-z0-9]`.
-        /// </param>
-        /// <param name="displayName">
-        /// The descriptive name for this instance as it appears in UIs.
-        /// Can be changed at any time, but should be kept globally unique
-        /// to avoid confusion.
-        /// </param>
-        /// <param name="type">
-        /// The type of the instance. Defaults to `PRODUCTION`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Instance UpdateInstance(
-            InstanceName name,
-            string displayName,
-            Instance.Types.Type type,
-            CallSettings callSettings = null) => UpdateInstance(
-                new Instance
-                {
-                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    DisplayName = GaxPreconditions.CheckNotNullOrEmpty(displayName, nameof(displayName)),
-                    Type = type,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Updates an instance within a project.
-        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1148,6 +1323,122 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual Instance UpdateInstance(
             Instance request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Partially updates an instance within a project.
+        /// </summary>
+        /// <param name="instance">
+        /// The Instance which will (partially) replace the current value.
+        /// </param>
+        /// <param name="updateMask">
+        /// The subset of Instance fields which should be replaced.
+        /// Must be explicitly set.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> PartialUpdateInstanceAsync(
+            Instance instance,
+            FieldMask updateMask,
+            CallSettings callSettings = null) => PartialUpdateInstanceAsync(
+                new PartialUpdateInstanceRequest
+                {
+                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Partially updates an instance within a project.
+        /// </summary>
+        /// <param name="instance">
+        /// The Instance which will (partially) replace the current value.
+        /// </param>
+        /// <param name="updateMask">
+        /// The subset of Instance fields which should be replaced.
+        /// Must be explicitly set.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> PartialUpdateInstanceAsync(
+            Instance instance,
+            FieldMask updateMask,
+            CancellationToken cancellationToken) => PartialUpdateInstanceAsync(
+                instance,
+                updateMask,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Partially updates an instance within a project.
+        /// </summary>
+        /// <param name="instance">
+        /// The Instance which will (partially) replace the current value.
+        /// </param>
+        /// <param name="updateMask">
+        /// The subset of Instance fields which should be replaced.
+        /// Must be explicitly set.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation PartialUpdateInstance(
+            Instance instance,
+            FieldMask updateMask,
+            CallSettings callSettings = null) => PartialUpdateInstance(
+                new PartialUpdateInstanceRequest
+                {
+                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Partially updates an instance within a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> PartialUpdateInstanceAsync(
+            PartialUpdateInstanceRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Partially updates an instance within a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation PartialUpdateInstance(
+            PartialUpdateInstanceRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1642,138 +1933,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Updates a cluster within an instance.
         /// </summary>
-        /// <param name="name">
-        /// (`OutputOnly`)
-        /// The unique name of the cluster. Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/[a-z][-a-z0-9]*`.
-        /// </param>
-        /// <param name="location">
-        /// (`CreationOnly`)
-        /// The location where this cluster's nodes and storage reside. For best
-        /// performance, clients should be located as close as possible to this cluster.
-        /// Currently only zones are supported, so values should be of the form
-        /// `projects/&lt;project&gt;/locations/&lt;zone&gt;`.
-        /// </param>
-        /// <param name="serveNodes">
-        /// The number of nodes allocated to this cluster. More nodes enable higher
-        /// throughput and more consistent performance.
-        /// </param>
-        /// <param name="defaultStorageType">
-        /// (`CreationOnly`)
-        /// The type of storage used by this cluster to serve its
-        /// parent instance's tables, unless explicitly overridden.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Operation<Cluster, UpdateClusterMetadata>> UpdateClusterAsync(
-            ClusterName name,
-            LocationName location,
-            int serveNodes,
-            StorageType defaultStorageType,
-            CallSettings callSettings = null) => UpdateClusterAsync(
-                new Cluster
-                {
-                    ClusterName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    LocationAsLocationName = GaxPreconditions.CheckNotNull(location, nameof(location)),
-                    ServeNodes = serveNodes,
-                    DefaultStorageType = defaultStorageType,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Updates a cluster within an instance.
-        /// </summary>
-        /// <param name="name">
-        /// (`OutputOnly`)
-        /// The unique name of the cluster. Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/[a-z][-a-z0-9]*`.
-        /// </param>
-        /// <param name="location">
-        /// (`CreationOnly`)
-        /// The location where this cluster's nodes and storage reside. For best
-        /// performance, clients should be located as close as possible to this cluster.
-        /// Currently only zones are supported, so values should be of the form
-        /// `projects/&lt;project&gt;/locations/&lt;zone&gt;`.
-        /// </param>
-        /// <param name="serveNodes">
-        /// The number of nodes allocated to this cluster. More nodes enable higher
-        /// throughput and more consistent performance.
-        /// </param>
-        /// <param name="defaultStorageType">
-        /// (`CreationOnly`)
-        /// The type of storage used by this cluster to serve its
-        /// parent instance's tables, unless explicitly overridden.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Operation<Cluster, UpdateClusterMetadata>> UpdateClusterAsync(
-            ClusterName name,
-            LocationName location,
-            int serveNodes,
-            StorageType defaultStorageType,
-            CancellationToken cancellationToken) => UpdateClusterAsync(
-                name,
-                location,
-                serveNodes,
-                defaultStorageType,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates a cluster within an instance.
-        /// </summary>
-        /// <param name="name">
-        /// (`OutputOnly`)
-        /// The unique name of the cluster. Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/[a-z][-a-z0-9]*`.
-        /// </param>
-        /// <param name="location">
-        /// (`CreationOnly`)
-        /// The location where this cluster's nodes and storage reside. For best
-        /// performance, clients should be located as close as possible to this cluster.
-        /// Currently only zones are supported, so values should be of the form
-        /// `projects/&lt;project&gt;/locations/&lt;zone&gt;`.
-        /// </param>
-        /// <param name="serveNodes">
-        /// The number of nodes allocated to this cluster. More nodes enable higher
-        /// throughput and more consistent performance.
-        /// </param>
-        /// <param name="defaultStorageType">
-        /// (`CreationOnly`)
-        /// The type of storage used by this cluster to serve its
-        /// parent instance's tables, unless explicitly overridden.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Operation<Cluster, UpdateClusterMetadata> UpdateCluster(
-            ClusterName name,
-            LocationName location,
-            int serveNodes,
-            StorageType defaultStorageType,
-            CallSettings callSettings = null) => UpdateCluster(
-                new Cluster
-                {
-                    ClusterName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    LocationAsLocationName = GaxPreconditions.CheckNotNull(location, nameof(location)),
-                    ServeNodes = serveNodes,
-                    DefaultStorageType = defaultStorageType,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Updates a cluster within an instance.
-        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1944,6 +2103,1155 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates an app profile within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the new app profile.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// The ID to be used when referring to the new app profile within its
+        /// instance, e.g., just `myprofile` rather than
+        /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+        /// </param>
+        /// <param name="appProfile">
+        /// The app profile to be created.
+        /// Fields marked `OutputOnly` will be ignored.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AppProfile> CreateAppProfileAsync(
+            InstanceName parent,
+            string appProfileId,
+            AppProfile appProfile,
+            CallSettings callSettings = null) => CreateAppProfileAsync(
+                new CreateAppProfileRequest
+                {
+                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    AppProfileId = GaxPreconditions.CheckNotNullOrEmpty(appProfileId, nameof(appProfileId)),
+                    AppProfile = GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates an app profile within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the new app profile.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// The ID to be used when referring to the new app profile within its
+        /// instance, e.g., just `myprofile` rather than
+        /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+        /// </param>
+        /// <param name="appProfile">
+        /// The app profile to be created.
+        /// Fields marked `OutputOnly` will be ignored.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AppProfile> CreateAppProfileAsync(
+            InstanceName parent,
+            string appProfileId,
+            AppProfile appProfile,
+            CancellationToken cancellationToken) => CreateAppProfileAsync(
+                parent,
+                appProfileId,
+                appProfile,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates an app profile within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the new app profile.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// The ID to be used when referring to the new app profile within its
+        /// instance, e.g., just `myprofile` rather than
+        /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+        /// </param>
+        /// <param name="appProfile">
+        /// The app profile to be created.
+        /// Fields marked `OutputOnly` will be ignored.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AppProfile CreateAppProfile(
+            InstanceName parent,
+            string appProfileId,
+            AppProfile appProfile,
+            CallSettings callSettings = null) => CreateAppProfile(
+                new CreateAppProfileRequest
+                {
+                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    AppProfileId = GaxPreconditions.CheckNotNullOrEmpty(appProfileId, nameof(appProfileId)),
+                    AppProfile = GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates an app profile within an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AppProfile> CreateAppProfileAsync(
+            CreateAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates an app profile within an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AppProfile CreateAppProfile(
+            CreateAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested app profile. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AppProfile> GetAppProfileAsync(
+            AppProfileName name,
+            CallSettings callSettings = null) => GetAppProfileAsync(
+                new GetAppProfileRequest
+                {
+                    AppProfileName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested app profile. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AppProfile> GetAppProfileAsync(
+            AppProfileName name,
+            CancellationToken cancellationToken) => GetAppProfileAsync(
+                name,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested app profile. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AppProfile GetAppProfile(
+            AppProfileName name,
+            CallSettings callSettings = null) => GetAppProfile(
+                new GetAppProfileRequest
+                {
+                    AppProfileName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AppProfile> GetAppProfileAsync(
+            GetAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AppProfile GetAppProfile(
+            GetAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists information about app profiles in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance for which a list of app profiles is
+        /// requested. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="AppProfile"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
+            InstanceName parent,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => ListAppProfilesAsync(
+                new ListAppProfilesRequest
+                {
+                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists information about app profiles in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance for which a list of app profiles is
+        /// requested. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="AppProfile"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
+            InstanceName parent,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => ListAppProfiles(
+                new ListAppProfilesRequest
+                {
+                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists information about app profiles in an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="AppProfile"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
+            ListAppProfilesRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists information about app profiles in an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="AppProfile"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
+            ListAppProfilesRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Updates an app profile within an instance.
+        /// </summary>
+        /// <param name="appProfile">
+        /// The app profile which will (partially) replace the current value.
+        /// </param>
+        /// <param name="updateMask">
+        /// The subset of app profile fields which should be replaced.
+        /// If unset, all fields will be replaced.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> UpdateAppProfileAsync(
+            AppProfile appProfile,
+            FieldMask updateMask,
+            CallSettings callSettings = null) => UpdateAppProfileAsync(
+                new UpdateAppProfileRequest
+                {
+                    AppProfile = GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
+                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Updates an app profile within an instance.
+        /// </summary>
+        /// <param name="appProfile">
+        /// The app profile which will (partially) replace the current value.
+        /// </param>
+        /// <param name="updateMask">
+        /// The subset of app profile fields which should be replaced.
+        /// If unset, all fields will be replaced.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> UpdateAppProfileAsync(
+            AppProfile appProfile,
+            FieldMask updateMask,
+            CancellationToken cancellationToken) => UpdateAppProfileAsync(
+                appProfile,
+                updateMask,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Updates an app profile within an instance.
+        /// </summary>
+        /// <param name="appProfile">
+        /// The app profile which will (partially) replace the current value.
+        /// </param>
+        /// <param name="updateMask">
+        /// The subset of app profile fields which should be replaced.
+        /// If unset, all fields will be replaced.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation UpdateAppProfile(
+            AppProfile appProfile,
+            FieldMask updateMask,
+            CallSettings callSettings = null) => UpdateAppProfile(
+                new UpdateAppProfileRequest
+                {
+                    AppProfile = GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
+                    UpdateMask = GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Updates an app profile within an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> UpdateAppProfileAsync(
+            UpdateAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Updates an app profile within an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation UpdateAppProfile(
+            UpdateAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the app profile to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteAppProfileAsync(
+            AppProfileName name,
+            CallSettings callSettings = null) => DeleteAppProfileAsync(
+                new DeleteAppProfileRequest
+                {
+                    AppProfileName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the app profile to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteAppProfileAsync(
+            AppProfileName name,
+            CancellationToken cancellationToken) => DeleteAppProfileAsync(
+                name,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the app profile to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteAppProfile(
+            AppProfileName name,
+            CallSettings callSettings = null) => DeleteAppProfile(
+                new DeleteAppProfileRequest
+                {
+                    AppProfileName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteAppProfileAsync(
+            DeleteAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteAppProfile(
+            DeleteAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            string resource,
+            CallSettings callSettings = null) => GetIamPolicyAsync(
+                new GetIamPolicyRequest
+                {
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            string resource,
+            CancellationToken cancellationToken) => GetIamPolicyAsync(
+                resource,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Policy GetIamPolicy(
+            string resource,
+            CallSettings callSettings = null) => GetIamPolicy(
+                new GetIamPolicyRequest
+                {
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            GetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Policy GetIamPolicy(
+            GetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null) => SetIamPolicyAsync(
+                new SetIamPolicyRequest
+                {
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            string resource,
+            Policy policy,
+            CancellationToken cancellationToken) => SetIamPolicyAsync(
+                resource,
+                policy,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Policy SetIamPolicy(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null) => SetIamPolicy(
+                new SetIamPolicyRequest
+                {
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            SetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Policy SetIamPolicy(
+            SetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Returns permissions that the caller has on the specified instance resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null) => TestIamPermissionsAsync(
+                new TestIamPermissionsRequest
+                {
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Returns permissions that the caller has on the specified instance resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            IEnumerable<string> permissions,
+            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                resource,
+                permissions,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Returns permissions that the caller has on the specified instance resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual TestIamPermissionsResponse TestIamPermissions(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null) => TestIamPermissions(
+                new TestIamPermissionsRequest
+                {
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Returns permissions that the caller has on the specified instance resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            TestIamPermissionsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Returns permissions that the caller has on the specified instance resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual TestIamPermissionsResponse TestIamPermissions(
+            TestIamPermissionsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -1955,12 +3263,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
         private readonly ApiCall<GetInstanceRequest, Instance> _callGetInstance;
         private readonly ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
         private readonly ApiCall<Instance, Instance> _callUpdateInstance;
+        private readonly ApiCall<PartialUpdateInstanceRequest, Operation> _callPartialUpdateInstance;
         private readonly ApiCall<DeleteInstanceRequest, Empty> _callDeleteInstance;
         private readonly ApiCall<CreateClusterRequest, Operation> _callCreateCluster;
         private readonly ApiCall<GetClusterRequest, Cluster> _callGetCluster;
         private readonly ApiCall<ListClustersRequest, ListClustersResponse> _callListClusters;
         private readonly ApiCall<Cluster, Operation> _callUpdateCluster;
         private readonly ApiCall<DeleteClusterRequest, Empty> _callDeleteCluster;
+        private readonly ApiCall<CreateAppProfileRequest, AppProfile> _callCreateAppProfile;
+        private readonly ApiCall<GetAppProfileRequest, AppProfile> _callGetAppProfile;
+        private readonly ApiCall<ListAppProfilesRequest, ListAppProfilesResponse> _callListAppProfiles;
+        private readonly ApiCall<UpdateAppProfileRequest, Operation> _callUpdateAppProfile;
+        private readonly ApiCall<DeleteAppProfileRequest, Empty> _callDeleteAppProfile;
+        private readonly ApiCall<GetIamPolicyRequest, Policy> _callGetIamPolicy;
+        private readonly ApiCall<SetIamPolicyRequest, Policy> _callSetIamPolicy;
+        private readonly ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
         /// Constructs a client wrapper for the BigtableInstanceAdmin service, with the specified gRPC client and settings.
@@ -1986,6 +3303,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 GrpcClient.ListInstancesAsync, GrpcClient.ListInstances, effectiveSettings.ListInstancesSettings);
             _callUpdateInstance = clientHelper.BuildApiCall<Instance, Instance>(
                 GrpcClient.UpdateInstanceAsync, GrpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings);
+            _callPartialUpdateInstance = clientHelper.BuildApiCall<PartialUpdateInstanceRequest, Operation>(
+                GrpcClient.PartialUpdateInstanceAsync, GrpcClient.PartialUpdateInstance, effectiveSettings.PartialUpdateInstanceSettings);
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, Empty>(
                 GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings);
             _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, Operation>(
@@ -1998,6 +3317,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 GrpcClient.UpdateClusterAsync, GrpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings);
             _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, Empty>(
                 GrpcClient.DeleteClusterAsync, GrpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings);
+            _callCreateAppProfile = clientHelper.BuildApiCall<CreateAppProfileRequest, AppProfile>(
+                GrpcClient.CreateAppProfileAsync, GrpcClient.CreateAppProfile, effectiveSettings.CreateAppProfileSettings);
+            _callGetAppProfile = clientHelper.BuildApiCall<GetAppProfileRequest, AppProfile>(
+                GrpcClient.GetAppProfileAsync, GrpcClient.GetAppProfile, effectiveSettings.GetAppProfileSettings);
+            _callListAppProfiles = clientHelper.BuildApiCall<ListAppProfilesRequest, ListAppProfilesResponse>(
+                GrpcClient.ListAppProfilesAsync, GrpcClient.ListAppProfiles, effectiveSettings.ListAppProfilesSettings);
+            _callUpdateAppProfile = clientHelper.BuildApiCall<UpdateAppProfileRequest, Operation>(
+                GrpcClient.UpdateAppProfileAsync, GrpcClient.UpdateAppProfile, effectiveSettings.UpdateAppProfileSettings);
+            _callDeleteAppProfile = clientHelper.BuildApiCall<DeleteAppProfileRequest, Empty>(
+                GrpcClient.DeleteAppProfileAsync, GrpcClient.DeleteAppProfile, effectiveSettings.DeleteAppProfileSettings);
+            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
+                GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
+            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
+                GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
+                GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2013,12 +3348,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref CallSettings settings);
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref CallSettings settings);
         partial void Modify_Instance(ref Instance request, ref CallSettings settings);
+        partial void Modify_PartialUpdateInstanceRequest(ref PartialUpdateInstanceRequest request, ref CallSettings settings);
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref CallSettings settings);
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref CallSettings settings);
         partial void Modify_GetClusterRequest(ref GetClusterRequest request, ref CallSettings settings);
         partial void Modify_ListClustersRequest(ref ListClustersRequest request, ref CallSettings settings);
         partial void Modify_Cluster(ref Cluster request, ref CallSettings settings);
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref CallSettings settings);
+        partial void Modify_CreateAppProfileRequest(ref CreateAppProfileRequest request, ref CallSettings settings);
+        partial void Modify_GetAppProfileRequest(ref GetAppProfileRequest request, ref CallSettings settings);
+        partial void Modify_ListAppProfilesRequest(ref ListAppProfilesRequest request, ref CallSettings settings);
+        partial void Modify_UpdateAppProfileRequest(ref UpdateAppProfileRequest request, ref CallSettings settings);
+        partial void Modify_DeleteAppProfileRequest(ref DeleteAppProfileRequest request, ref CallSettings settings);
+        partial void Modify_GetIamPolicyRequest(ref GetIamPolicyRequest request, ref CallSettings settings);
+        partial void Modify_SetIamPolicyRequest(ref SetIamPolicyRequest request, ref CallSettings settings);
+        partial void Modify_TestIamPermissionsRequest(ref TestIamPermissionsRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Create an instance within a project.
@@ -2185,6 +3529,46 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_Instance(ref request, ref callSettings);
             return _callUpdateInstance.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Partially updates an instance within a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Operation> PartialUpdateInstanceAsync(
+            PartialUpdateInstanceRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_PartialUpdateInstanceRequest(ref request, ref callSettings);
+            return _callPartialUpdateInstance.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Partially updates an instance within a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Operation PartialUpdateInstance(
+            PartialUpdateInstanceRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_PartialUpdateInstanceRequest(ref request, ref callSettings);
+            return _callPartialUpdateInstance.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -2441,9 +3825,431 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callDeleteCluster.Sync(request, callSettings);
         }
 
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates an app profile within an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<AppProfile> CreateAppProfileAsync(
+            CreateAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_CreateAppProfileRequest(ref request, ref callSettings);
+            return _callCreateAppProfile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Creates an app profile within an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override AppProfile CreateAppProfile(
+            CreateAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_CreateAppProfileRequest(ref request, ref callSettings);
+            return _callCreateAppProfile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<AppProfile> GetAppProfileAsync(
+            GetAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GetAppProfileRequest(ref request, ref callSettings);
+            return _callGetAppProfile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override AppProfile GetAppProfile(
+            GetAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GetAppProfileRequest(ref request, ref callSettings);
+            return _callGetAppProfile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists information about app profiles in an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="AppProfile"/> resources.
+        /// </returns>
+        public override PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
+            ListAppProfilesRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListAppProfilesRequest(ref request, ref callSettings);
+            return new GrpcPagedAsyncEnumerable<ListAppProfilesRequest, ListAppProfilesResponse, AppProfile>(_callListAppProfiles, request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Lists information about app profiles in an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="AppProfile"/> resources.
+        /// </returns>
+        public override PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
+            ListAppProfilesRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListAppProfilesRequest(ref request, ref callSettings);
+            return new GrpcPagedEnumerable<ListAppProfilesRequest, ListAppProfilesResponse, AppProfile>(_callListAppProfiles, request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Updates an app profile within an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Operation> UpdateAppProfileAsync(
+            UpdateAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_UpdateAppProfileRequest(ref request, ref callSettings);
+            return _callUpdateAppProfile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Updates an app profile within an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Operation UpdateAppProfile(
+            UpdateAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_UpdateAppProfileRequest(ref request, ref callSettings);
+            return _callUpdateAppProfile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task DeleteAppProfileAsync(
+            DeleteAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_DeleteAppProfileRequest(ref request, ref callSettings);
+            return _callDeleteAppProfile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override void DeleteAppProfile(
+            DeleteAppProfileRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_DeleteAppProfileRequest(ref request, ref callSettings);
+            _callDeleteAppProfile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Policy> GetIamPolicyAsync(
+            GetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Gets the access control policy for an instance resource. Returns an empty
+        /// policy if an instance exists but does not have a policy set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Policy GetIamPolicy(
+            GetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Policy> SetIamPolicyAsync(
+            SetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Sets the access control policy on an instance resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Policy SetIamPolicy(
+            SetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Returns permissions that the caller has on the specified instance resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            TestIamPermissionsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This is a private alpha release of Cloud Bigtable instance level
+        /// permissions. This feature is not currently available to most Cloud Bigtable
+        /// customers. This feature might be changed in backward-incompatible ways and
+        /// is not recommended for production use. It is not subject to any SLA or
+        /// deprecation policy.
+        ///
+        /// Returns permissions that the caller has on the specified instance resource.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override TestIamPermissionsResponse TestIamPermissions(
+            TestIamPermissionsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
+
     }
 
     // Partial classes to enable page-streaming
+
+    public partial class ListAppProfilesRequest : IPageRequest { }
+    public partial class ListAppProfilesResponse : IPageResponse<AppProfile>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public IEnumerator<AppProfile> GetEnumerator() => AppProfiles.GetEnumerator();
+
+        /// <inheritdoc/>
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
 
     // Partial Grpc class to enable LRO client creation
     public static partial class BigtableInstanceAdmin

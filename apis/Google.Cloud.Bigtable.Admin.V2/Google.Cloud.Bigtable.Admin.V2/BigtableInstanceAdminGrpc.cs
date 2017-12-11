@@ -39,6 +39,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Instance> __Marshaller_Instance = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest> __Marshaller_ListInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse> __Marshaller_ListInstancesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest> __Marshaller_PartialUpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest> __Marshaller_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest> __Marshaller_CreateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest.Parser.ParseFrom);
@@ -47,6 +48,18 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest> __Marshaller_ListClustersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse> __Marshaller_ListClustersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest> __Marshaller_DeleteClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest> __Marshaller_CreateAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> __Marshaller_AppProfile = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest> __Marshaller_GetAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest> __Marshaller_ListAppProfilesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse> __Marshaller_ListAppProfilesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest> __Marshaller_UpdateAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest> __Marshaller_DeleteAppProfileRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest, global::Google.LongRunning.Operation> __Method_CreateInstance = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
@@ -75,6 +88,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         "UpdateInstance",
         __Marshaller_Instance,
         __Marshaller_Instance);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest, global::Google.LongRunning.Operation> __Method_PartialUpdateInstance = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PartialUpdateInstance",
+        __Marshaller_PartialUpdateInstanceRequest,
+        __Marshaller_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteInstance = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
@@ -117,6 +137,62 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         "DeleteCluster",
         __Marshaller_DeleteClusterRequest,
         __Marshaller_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile> __Method_CreateAppProfile = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAppProfile",
+        __Marshaller_CreateAppProfileRequest,
+        __Marshaller_AppProfile);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile> __Method_GetAppProfile = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAppProfile",
+        __Marshaller_GetAppProfileRequest,
+        __Marshaller_AppProfile);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse> __Method_ListAppProfiles = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAppProfiles",
+        __Marshaller_ListAppProfilesRequest,
+        __Marshaller_ListAppProfilesResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest, global::Google.LongRunning.Operation> __Method_UpdateAppProfile = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAppProfile",
+        __Marshaller_UpdateAppProfileRequest,
+        __Marshaller_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAppProfile = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAppProfile",
+        __Marshaller_DeleteAppProfileRequest,
+        __Marshaller_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetIamPolicy",
+        __Marshaller_GetIamPolicyRequest,
+        __Marshaller_Policy);
+
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetIamPolicy",
+        __Marshaller_SetIamPolicyRequest,
+        __Marshaller_Policy);
+
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TestIamPermissions",
+        __Marshaller_TestIamPermissionsRequest,
+        __Marshaller_TestIamPermissionsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -167,6 +243,17 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.Instance> UpdateInstance(global::Google.Cloud.Bigtable.Admin.V2.Instance request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Partially updates an instance within a project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PartialUpdateInstance(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -233,6 +320,139 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCluster(global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates an app profile within an instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> CreateAppProfile(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Gets information about an app profile.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> GetAppProfile(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Lists information about app profiles in an instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse> ListAppProfiles(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Updates an app profile within an instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAppProfile(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Deletes an app profile from an instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAppProfile(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Gets the access control policy for an instance resource. Returns an empty
+      /// policy if an instance exists but does not have a policy set.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Sets the access control policy on an instance resource. Replaces any
+      /// existing policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Returns permissions that the caller has on the specified instance resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -437,6 +657,50 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Instance> UpdateInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.Instance request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
+      }
+      /// <summary>
+      /// Partially updates an instance within a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation PartialUpdateInstance(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return PartialUpdateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Partially updates an instance within a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation PartialUpdateInstance(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PartialUpdateInstance, null, options, request);
+      }
+      /// <summary>
+      /// Partially updates an instance within a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PartialUpdateInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return PartialUpdateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Partially updates an instance within a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PartialUpdateInstanceAsync(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PartialUpdateInstance, null, options, request);
       }
       /// <summary>
       /// Delete an instance from a project.
@@ -702,6 +966,538 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCluster, null, options, request);
       }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates an app profile within an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.AppProfile CreateAppProfile(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return CreateAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates an app profile within an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.AppProfile CreateAppProfile(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAppProfile, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates an app profile within an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> CreateAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return CreateAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates an app profile within an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> CreateAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAppProfile, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Gets information about an app profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.AppProfile GetAppProfile(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Gets information about an app profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.AppProfile GetAppProfile(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAppProfile, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Gets information about an app profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> GetAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Gets information about an app profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> GetAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAppProfile, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Lists information about app profiles in an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse ListAppProfiles(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListAppProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Lists information about app profiles in an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse ListAppProfiles(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAppProfiles, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Lists information about app profiles in an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse> ListAppProfilesAsync(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListAppProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Lists information about app profiles in an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse> ListAppProfilesAsync(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAppProfiles, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Updates an app profile within an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation UpdateAppProfile(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return UpdateAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Updates an app profile within an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation UpdateAppProfile(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAppProfile, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Updates an app profile within an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return UpdateAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Updates an app profile within an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAppProfile, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Deletes an app profile from an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAppProfile(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return DeleteAppProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Deletes an app profile from an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAppProfile(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAppProfile, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Deletes an app profile from an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return DeleteAppProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Deletes an app profile from an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAppProfileAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAppProfile, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Gets the access control policy for an instance resource. Returns an empty
+      /// policy if an instance exists but does not have a policy set.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Gets the access control policy for an instance resource. Returns an empty
+      /// policy if an instance exists but does not have a policy set.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Gets the access control policy for an instance resource. Returns an empty
+      /// policy if an instance exists but does not have a policy set.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Gets the access control policy for an instance resource. Returns an empty
+      /// policy if an instance exists but does not have a policy set.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Sets the access control policy on an instance resource. Replaces any
+      /// existing policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Sets the access control policy on an instance resource. Replaces any
+      /// existing policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Sets the access control policy on an instance resource. Replaces any
+      /// existing policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Sets the access control policy on an instance resource. Replaces any
+      /// existing policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Returns permissions that the caller has on the specified instance resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Returns permissions that the caller has on the specified instance resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Returns permissions that the caller has on the specified instance resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable instance level
+      /// permissions. This feature is not currently available to most Cloud Bigtable
+      /// customers. This feature might be changed in backward-incompatible ways and
+      /// is not recommended for production use. It is not subject to any SLA or
+      /// deprecation policy.
+      ///
+      /// Returns permissions that the caller has on the specified instance resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override BigtableInstanceAdminClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -718,12 +1514,21 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           .AddMethod(__Method_GetInstance, serviceImpl.GetInstance)
           .AddMethod(__Method_ListInstances, serviceImpl.ListInstances)
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
+          .AddMethod(__Method_PartialUpdateInstance, serviceImpl.PartialUpdateInstance)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
           .AddMethod(__Method_CreateCluster, serviceImpl.CreateCluster)
           .AddMethod(__Method_GetCluster, serviceImpl.GetCluster)
           .AddMethod(__Method_ListClusters, serviceImpl.ListClusters)
           .AddMethod(__Method_UpdateCluster, serviceImpl.UpdateCluster)
-          .AddMethod(__Method_DeleteCluster, serviceImpl.DeleteCluster).Build();
+          .AddMethod(__Method_DeleteCluster, serviceImpl.DeleteCluster)
+          .AddMethod(__Method_CreateAppProfile, serviceImpl.CreateAppProfile)
+          .AddMethod(__Method_GetAppProfile, serviceImpl.GetAppProfile)
+          .AddMethod(__Method_ListAppProfiles, serviceImpl.ListAppProfiles)
+          .AddMethod(__Method_UpdateAppProfile, serviceImpl.UpdateAppProfile)
+          .AddMethod(__Method_DeleteAppProfile, serviceImpl.DeleteAppProfile)
+          .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
+          .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
+          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
     }
 
   }
