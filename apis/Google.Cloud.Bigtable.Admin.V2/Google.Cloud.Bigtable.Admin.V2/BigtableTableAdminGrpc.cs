@@ -36,6 +36,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest> __Marshaller_CreateTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Table> __Marshaller_Table = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Table.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest> __Marshaller_CreateTableFromSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest> __Marshaller_ListTablesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse> __Marshaller_ListTablesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest> __Marshaller_GetTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest.Parser.ParseFrom);
@@ -43,6 +45,16 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest> __Marshaller_ModifyColumnFamiliesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest> __Marshaller_DropRowRangeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest> __Marshaller_GenerateConsistencyTokenRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> __Marshaller_GenerateConsistencyTokenResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest> __Marshaller_CheckConsistencyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> __Marshaller_CheckConsistencyResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest> __Marshaller_SnapshotTableRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest> __Marshaller_GetSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Snapshot> __Marshaller_Snapshot = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest> __Marshaller_ListSnapshotsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> __Marshaller_ListSnapshotsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest> __Marshaller_DeleteSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table> __Method_CreateTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(
         grpc::MethodType.Unary,
@@ -50,6 +62,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         "CreateTable",
         __Marshaller_CreateTableRequest,
         __Marshaller_Table);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest, global::Google.LongRunning.Operation> __Method_CreateTableFromSnapshot = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateTableFromSnapshot",
+        __Marshaller_CreateTableFromSnapshotRequest,
+        __Marshaller_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse> __Method_ListTables = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse>(
         grpc::MethodType.Unary,
@@ -86,6 +105,48 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_DropRowRangeRequest,
         __Marshaller_Empty);
 
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest, global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> __Method_GenerateConsistencyToken = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest, global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateConsistencyToken",
+        __Marshaller_GenerateConsistencyTokenRequest,
+        __Marshaller_GenerateConsistencyTokenResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest, global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> __Method_CheckConsistency = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest, global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CheckConsistency",
+        __Marshaller_CheckConsistencyRequest,
+        __Marshaller_CheckConsistencyResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest, global::Google.LongRunning.Operation> __Method_SnapshotTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SnapshotTable",
+        __Marshaller_SnapshotTableRequest,
+        __Marshaller_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest, global::Google.Cloud.Bigtable.Admin.V2.Snapshot> __Method_GetSnapshot = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest, global::Google.Cloud.Bigtable.Admin.V2.Snapshot>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSnapshot",
+        __Marshaller_GetSnapshotRequest,
+        __Marshaller_Snapshot);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> __Method_ListSnapshots = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSnapshots",
+        __Marshaller_ListSnapshotsRequest,
+        __Marshaller_ListSnapshotsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSnapshot = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSnapshot",
+        __Marshaller_DeleteSnapshotRequest,
+        __Marshaller_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -104,6 +165,23 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.Table> CreateTable(global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates a new table from the specified snapshot. The target table must
+      /// not exist. The snapshot and the table must be in the same instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateTableFromSnapshot(global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -164,6 +242,108 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DropRowRange(global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Generates a consistency token for a Table, which can be used in
+      /// CheckConsistency to check whether mutations to the table that finished
+      /// before this call started have been replicated. The tokens will be available
+      /// for 90 days.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> GenerateConsistencyToken(global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Checks replication consistency based on a consistency token, that is, if
+      /// replication has caught up based on the conditions specified in the token
+      /// and the check request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> CheckConsistency(global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates a new snapshot in the specified cluster from the specified
+      /// source table. The cluster and the table must be in the same instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SnapshotTable(global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Gets metadata information about the specified snapshot.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.Snapshot> GetSnapshot(global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Lists all snapshots associated with the specified cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> ListSnapshots(global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Permanently deletes the specified snapshot.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSnapshot(global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -244,6 +424,74 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Table> CreateTableAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTable, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates a new table from the specified snapshot. The target table must
+      /// not exist. The snapshot and the table must be in the same instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation CreateTableFromSnapshot(global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return CreateTableFromSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates a new table from the specified snapshot. The target table must
+      /// not exist. The snapshot and the table must be in the same instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation CreateTableFromSnapshot(global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateTableFromSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates a new table from the specified snapshot. The target table must
+      /// not exist. The snapshot and the table must be in the same instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateTableFromSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return CreateTableFromSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates a new table from the specified snapshot. The target table must
+      /// not exist. The snapshot and the table must be in the same instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateTableFromSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateTableFromSnapshot, null, options, request);
       }
       /// <summary>
       /// Lists all tables served from a specified instance.
@@ -485,6 +733,414 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DropRowRange, null, options, request);
       }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Generates a consistency token for a Table, which can be used in
+      /// CheckConsistency to check whether mutations to the table that finished
+      /// before this call started have been replicated. The tokens will be available
+      /// for 90 days.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse GenerateConsistencyToken(global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GenerateConsistencyToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Generates a consistency token for a Table, which can be used in
+      /// CheckConsistency to check whether mutations to the table that finished
+      /// before this call started have been replicated. The tokens will be available
+      /// for 90 days.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse GenerateConsistencyToken(global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateConsistencyToken, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Generates a consistency token for a Table, which can be used in
+      /// CheckConsistency to check whether mutations to the table that finished
+      /// before this call started have been replicated. The tokens will be available
+      /// for 90 days.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GenerateConsistencyTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Generates a consistency token for a Table, which can be used in
+      /// CheckConsistency to check whether mutations to the table that finished
+      /// before this call started have been replicated. The tokens will be available
+      /// for 90 days.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateConsistencyToken, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Checks replication consistency based on a consistency token, that is, if
+      /// replication has caught up based on the conditions specified in the token
+      /// and the check request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse CheckConsistency(global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return CheckConsistency(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Checks replication consistency based on a consistency token, that is, if
+      /// replication has caught up based on the conditions specified in the token
+      /// and the check request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse CheckConsistency(global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CheckConsistency, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Checks replication consistency based on a consistency token, that is, if
+      /// replication has caught up based on the conditions specified in the token
+      /// and the check request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> CheckConsistencyAsync(global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return CheckConsistencyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable replication. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Checks replication consistency based on a consistency token, that is, if
+      /// replication has caught up based on the conditions specified in the token
+      /// and the check request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> CheckConsistencyAsync(global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CheckConsistency, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates a new snapshot in the specified cluster from the specified
+      /// source table. The cluster and the table must be in the same instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation SnapshotTable(global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SnapshotTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates a new snapshot in the specified cluster from the specified
+      /// source table. The cluster and the table must be in the same instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation SnapshotTable(global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SnapshotTable, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates a new snapshot in the specified cluster from the specified
+      /// source table. The cluster and the table must be in the same instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SnapshotTableAsync(global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SnapshotTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Creates a new snapshot in the specified cluster from the specified
+      /// source table. The cluster and the table must be in the same instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SnapshotTableAsync(global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SnapshotTable, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Gets metadata information about the specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.Snapshot GetSnapshot(global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Gets metadata information about the specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.Snapshot GetSnapshot(global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Gets metadata information about the specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Snapshot> GetSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Gets metadata information about the specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Snapshot> GetSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Lists all snapshots associated with the specified cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse ListSnapshots(global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListSnapshots(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Lists all snapshots associated with the specified cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse ListSnapshots(global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSnapshots, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Lists all snapshots associated with the specified cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> ListSnapshotsAsync(global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListSnapshotsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Lists all snapshots associated with the specified cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> ListSnapshotsAsync(global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSnapshots, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Permanently deletes the specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSnapshot(global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return DeleteSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Permanently deletes the specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSnapshot(global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Permanently deletes the specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return DeleteSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a private alpha release of Cloud Bigtable snapshots. This feature
+      /// is not currently available to most Cloud Bigtable customers. This feature
+      /// might be changed in backward-incompatible ways and is not recommended for
+      /// production use. It is not subject to any SLA or deprecation policy.
+      ///
+      /// Permanently deletes the specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSnapshot, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override BigtableTableAdminClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -498,11 +1154,18 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateTable, serviceImpl.CreateTable)
+          .AddMethod(__Method_CreateTableFromSnapshot, serviceImpl.CreateTableFromSnapshot)
           .AddMethod(__Method_ListTables, serviceImpl.ListTables)
           .AddMethod(__Method_GetTable, serviceImpl.GetTable)
           .AddMethod(__Method_DeleteTable, serviceImpl.DeleteTable)
           .AddMethod(__Method_ModifyColumnFamilies, serviceImpl.ModifyColumnFamilies)
-          .AddMethod(__Method_DropRowRange, serviceImpl.DropRowRange).Build();
+          .AddMethod(__Method_DropRowRange, serviceImpl.DropRowRange)
+          .AddMethod(__Method_GenerateConsistencyToken, serviceImpl.GenerateConsistencyToken)
+          .AddMethod(__Method_CheckConsistency, serviceImpl.CheckConsistency)
+          .AddMethod(__Method_SnapshotTable, serviceImpl.SnapshotTable)
+          .AddMethod(__Method_GetSnapshot, serviceImpl.GetSnapshot)
+          .AddMethod(__Method_ListSnapshots, serviceImpl.ListSnapshots)
+          .AddMethod(__Method_DeleteSnapshot, serviceImpl.DeleteSnapshot).Build();
     }
 
   }
