@@ -887,27 +887,27 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
         /// <summary>Snippet for GetIamPolicyAsync</summary>
         public async Task GetIamPolicyAsync()
         {
-            // Snippet: GetIamPolicyAsync(FolderName,CallSettings)
-            // Additional: GetIamPolicyAsync(FolderName,CancellationToken)
+            // Snippet: GetIamPolicyAsync(string,CallSettings)
+            // Additional: GetIamPolicyAsync(string,CancellationToken)
             // Create client
             FoldersClient foldersClient = await FoldersClient.CreateAsync();
             // Initialize request argument(s)
-            FolderName resource = new FolderName("[FOLDER]");
+            string formattedResource = new FolderName("[FOLDER]").ToString();
             // Make the request
-            Policy response = await foldersClient.GetIamPolicyAsync(resource);
+            Policy response = await foldersClient.GetIamPolicyAsync(formattedResource);
             // End snippet
         }
 
         /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicy()
         {
-            // Snippet: GetIamPolicy(FolderName,CallSettings)
+            // Snippet: GetIamPolicy(string,CallSettings)
             // Create client
             FoldersClient foldersClient = FoldersClient.Create();
             // Initialize request argument(s)
-            FolderName resource = new FolderName("[FOLDER]");
+            string formattedResource = new FolderName("[FOLDER]").ToString();
             // Make the request
-            Policy response = foldersClient.GetIamPolicy(resource);
+            Policy response = foldersClient.GetIamPolicy(formattedResource);
             // End snippet
         }
 
@@ -920,7 +920,7 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new FolderName("[FOLDER]"),
+                Resource = new FolderName("[FOLDER]").ToString(),
             };
             // Make the request
             Policy response = await foldersClient.GetIamPolicyAsync(request);
@@ -936,7 +936,7 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsResourceName = new FolderName("[FOLDER]"),
+                Resource = new FolderName("[FOLDER]").ToString(),
             };
             // Make the request
             Policy response = foldersClient.GetIamPolicy(request);
@@ -946,29 +946,29 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
         /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync()
         {
-            // Snippet: SetIamPolicyAsync(FolderName,Policy,CallSettings)
-            // Additional: SetIamPolicyAsync(FolderName,Policy,CancellationToken)
+            // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
+            // Additional: SetIamPolicyAsync(string,Policy,CancellationToken)
             // Create client
             FoldersClient foldersClient = await FoldersClient.CreateAsync();
             // Initialize request argument(s)
-            FolderName resource = new FolderName("[FOLDER]");
+            string formattedResource = new FolderName("[FOLDER]").ToString();
             Policy policy = new Policy();
             // Make the request
-            Policy response = await foldersClient.SetIamPolicyAsync(resource, policy);
+            Policy response = await foldersClient.SetIamPolicyAsync(formattedResource, policy);
             // End snippet
         }
 
         /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicy()
         {
-            // Snippet: SetIamPolicy(FolderName,Policy,CallSettings)
+            // Snippet: SetIamPolicy(string,Policy,CallSettings)
             // Create client
             FoldersClient foldersClient = FoldersClient.Create();
             // Initialize request argument(s)
-            FolderName resource = new FolderName("[FOLDER]");
+            string formattedResource = new FolderName("[FOLDER]").ToString();
             Policy policy = new Policy();
             // Make the request
-            Policy response = foldersClient.SetIamPolicy(resource, policy);
+            Policy response = foldersClient.SetIamPolicy(formattedResource, policy);
             // End snippet
         }
 
@@ -981,7 +981,7 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new FolderName("[FOLDER]"),
+                Resource = new FolderName("[FOLDER]").ToString(),
                 Policy = new Policy(),
             };
             // Make the request
@@ -998,7 +998,7 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsResourceName = new FolderName("[FOLDER]"),
+                Resource = new FolderName("[FOLDER]").ToString(),
                 Policy = new Policy(),
             };
             // Make the request
@@ -1009,29 +1009,29 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
         /// <summary>Snippet for TestIamPermissionsAsync</summary>
         public async Task TestIamPermissionsAsync()
         {
-            // Snippet: TestIamPermissionsAsync(FolderName,IEnumerable<string>,CallSettings)
-            // Additional: TestIamPermissionsAsync(FolderName,IEnumerable<string>,CancellationToken)
+            // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
+            // Additional: TestIamPermissionsAsync(string,IEnumerable<string>,CancellationToken)
             // Create client
             FoldersClient foldersClient = await FoldersClient.CreateAsync();
             // Initialize request argument(s)
-            FolderName resource = new FolderName("[FOLDER]");
+            string formattedResource = new FolderName("[FOLDER]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
-            TestIamPermissionsResponse response = await foldersClient.TestIamPermissionsAsync(resource, permissions);
+            TestIamPermissionsResponse response = await foldersClient.TestIamPermissionsAsync(formattedResource, permissions);
             // End snippet
         }
 
         /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissions()
         {
-            // Snippet: TestIamPermissions(FolderName,IEnumerable<string>,CallSettings)
+            // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
             // Create client
             FoldersClient foldersClient = FoldersClient.Create();
             // Initialize request argument(s)
-            FolderName resource = new FolderName("[FOLDER]");
+            string formattedResource = new FolderName("[FOLDER]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
-            TestIamPermissionsResponse response = foldersClient.TestIamPermissions(resource, permissions);
+            TestIamPermissionsResponse response = foldersClient.TestIamPermissions(formattedResource, permissions);
             // End snippet
         }
 
@@ -1044,7 +1044,7 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new FolderName("[FOLDER]"),
+                Resource = new FolderName("[FOLDER]").ToString(),
                 Permissions = { },
             };
             // Make the request
@@ -1061,7 +1061,7 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsResourceName = new FolderName("[FOLDER]"),
+                Resource = new FolderName("[FOLDER]").ToString(),
                 Permissions = { },
             };
             // Make the request

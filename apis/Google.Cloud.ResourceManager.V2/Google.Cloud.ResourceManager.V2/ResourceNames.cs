@@ -456,19 +456,6 @@ namespace Google.Cloud.ResourceManager.V2
 
     }
 
-    public partial class GetIamPolicyRequest
-    {
-        /// <summary>
-        /// <see cref="IResourceName"/>-typed view over the <see cref="Resource"/> resource name property.
-        /// </summary>
-        public IResourceName ResourceAsResourceName
-        {
-            get { return string.IsNullOrEmpty(Resource) ? null : UnknownResourceName.Parse(Resource); }
-            set { Resource = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
     public partial class ListFoldersRequest
     {
         /// <summary>
@@ -500,32 +487,6 @@ namespace Google.Cloud.ResourceManager.V2
         {
             get { return string.IsNullOrEmpty(DestinationParent) ? null : Google.Cloud.ResourceManager.V2.ParentNameOneof.Parse(DestinationParent, true); }
             set { DestinationParent = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
-    public partial class SetIamPolicyRequest
-    {
-        /// <summary>
-        /// <see cref="IResourceName"/>-typed view over the <see cref="Resource"/> resource name property.
-        /// </summary>
-        public IResourceName ResourceAsResourceName
-        {
-            get { return string.IsNullOrEmpty(Resource) ? null : UnknownResourceName.Parse(Resource); }
-            set { Resource = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
-    public partial class TestIamPermissionsRequest
-    {
-        /// <summary>
-        /// <see cref="IResourceName"/>-typed view over the <see cref="Resource"/> resource name property.
-        /// </summary>
-        public IResourceName ResourceAsResourceName
-        {
-            get { return string.IsNullOrEmpty(Resource) ? null : UnknownResourceName.Parse(Resource); }
-            set { Resource = value != null ? value.ToString() : ""; }
         }
 
     }

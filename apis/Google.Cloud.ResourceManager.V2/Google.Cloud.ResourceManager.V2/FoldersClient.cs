@@ -2077,11 +2077,11 @@ namespace Google.Cloud.ResourceManager.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Policy> GetIamPolicyAsync(
-            FolderName resource,
+            string resource,
             CallSettings callSettings = null) => GetIamPolicyAsync(
                 new GetIamPolicyRequest
                 {
-                    ResourceAsResourceName = GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -2104,7 +2104,7 @@ namespace Google.Cloud.ResourceManager.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Policy> GetIamPolicyAsync(
-            FolderName resource,
+            string resource,
             CancellationToken cancellationToken) => GetIamPolicyAsync(
                 resource,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -2128,11 +2128,11 @@ namespace Google.Cloud.ResourceManager.V2
         /// The RPC response.
         /// </returns>
         public virtual Policy GetIamPolicy(
-            FolderName resource,
+            string resource,
             CallSettings callSettings = null) => GetIamPolicy(
                 new GetIamPolicyRequest
                 {
-                    ResourceAsResourceName = GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -2207,12 +2207,12 @@ namespace Google.Cloud.ResourceManager.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Policy> SetIamPolicyAsync(
-            FolderName resource,
+            string resource,
             Policy policy,
             CallSettings callSettings = null) => SetIamPolicyAsync(
                 new SetIamPolicyRequest
                 {
-                    ResourceAsResourceName = GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                     Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
@@ -2242,7 +2242,7 @@ namespace Google.Cloud.ResourceManager.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Policy> SetIamPolicyAsync(
-            FolderName resource,
+            string resource,
             Policy policy,
             CancellationToken cancellationToken) => SetIamPolicyAsync(
                 resource,
@@ -2274,12 +2274,12 @@ namespace Google.Cloud.ResourceManager.V2
         /// The RPC response.
         /// </returns>
         public virtual Policy SetIamPolicy(
-            FolderName resource,
+            string resource,
             Policy policy,
             CallSettings callSettings = null) => SetIamPolicy(
                 new SetIamPolicyRequest
                 {
-                    ResourceAsResourceName = GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                     Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
@@ -2355,12 +2355,12 @@ namespace Google.Cloud.ResourceManager.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            FolderName resource,
+            string resource,
             IEnumerable<string> permissions,
             CallSettings callSettings = null) => TestIamPermissionsAsync(
                 new TestIamPermissionsRequest
                 {
-                    ResourceAsResourceName = GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                     Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
@@ -2390,7 +2390,7 @@ namespace Google.Cloud.ResourceManager.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            FolderName resource,
+            string resource,
             IEnumerable<string> permissions,
             CancellationToken cancellationToken) => TestIamPermissionsAsync(
                 resource,
@@ -2422,12 +2422,12 @@ namespace Google.Cloud.ResourceManager.V2
         /// The RPC response.
         /// </returns>
         public virtual TestIamPermissionsResponse TestIamPermissions(
-            FolderName resource,
+            string resource,
             IEnumerable<string> permissions,
             CallSettings callSettings = null) => TestIamPermissions(
                 new TestIamPermissionsRequest
                 {
-                    ResourceAsResourceName = GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                     Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
