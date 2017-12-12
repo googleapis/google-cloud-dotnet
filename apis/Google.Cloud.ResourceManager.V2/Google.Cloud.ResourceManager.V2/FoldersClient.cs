@@ -836,7 +836,7 @@ namespace Google.Cloud.ResourceManager.V2
             CallSettings callSettings = null) => SearchFoldersAsync(
                 new SearchFoldersRequest
                 {
-                    Query = GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+                    Query = query ?? "", // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -889,7 +889,7 @@ namespace Google.Cloud.ResourceManager.V2
             CallSettings callSettings = null) => SearchFolders(
                 new SearchFoldersRequest
                 {
-                    Query = GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+                    Query = query ?? "", // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },

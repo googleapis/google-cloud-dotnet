@@ -402,10 +402,7 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
             // Create client
             FoldersClient foldersClient = await FoldersClient.CreateAsync();
             // Initialize request argument(s)
-            SearchFoldersRequest request = new SearchFoldersRequest
-            {
-                Query = "",
-            };
+            SearchFoldersRequest request = new SearchFoldersRequest();
             // Make the request
             PagedAsyncEnumerable<SearchFoldersResponse, Folder> response =
                 foldersClient.SearchFoldersAsync(request);
@@ -449,10 +446,7 @@ namespace Google.Cloud.ResourceManager.V2.Snippets
             // Create client
             FoldersClient foldersClient = FoldersClient.Create();
             // Initialize request argument(s)
-            SearchFoldersRequest request = new SearchFoldersRequest
-            {
-                Query = "",
-            };
+            SearchFoldersRequest request = new SearchFoldersRequest();
             // Make the request
             PagedEnumerable<SearchFoldersResponse, Folder> response =
                 foldersClient.SearchFolders(request);
