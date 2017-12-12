@@ -205,6 +205,7 @@ generate_api Google.Cloud.Firestore.V1Beta1 google/firestore/v1beta1 firestore.y
 generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language_v1.yaml
 generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml
 generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
+generate_api Google.Cloud.ResourceManager.V2 google/cloud/resourcemanager/v2 cloudresourcemanager.yaml
 generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
 generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml
 generate_api Google.Cloud.Spanner.Admin.Instance.V1 google/spanner/admin/instance/v1 spanner_admin_instance.yaml
