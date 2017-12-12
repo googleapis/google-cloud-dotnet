@@ -381,6 +381,98 @@ namespace Google.Cloud.Monitoring.V3
         public static bool operator !=(GroupName a, GroupName b) => !(a == b);
     }
 
+    /// <summary>
+    /// Resource name for the 'uptime_check_config' resource.
+    /// </summary>
+    public sealed partial class UptimeCheckConfigName : IResourceName, IEquatable<UptimeCheckConfigName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/uptimeCheckConfigs/{uptime_check_config}");
+
+        /// <summary>
+        /// Parses the given uptime_check_config resource name in string form into a new
+        /// <see cref="UptimeCheckConfigName"/> instance.
+        /// </summary>
+        /// <param name="uptimeCheckConfigName">The uptime_check_config resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="UptimeCheckConfigName"/> if successful.</returns>
+        public static UptimeCheckConfigName Parse(string uptimeCheckConfigName)
+        {
+            GaxPreconditions.CheckNotNull(uptimeCheckConfigName, nameof(uptimeCheckConfigName));
+            TemplatedResourceName resourceName = s_template.ParseName(uptimeCheckConfigName);
+            return new UptimeCheckConfigName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given uptime_check_config resource name in string form into a new
+        /// <see cref="UptimeCheckConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="uptimeCheckConfigName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="uptimeCheckConfigName">The uptime_check_config resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="UptimeCheckConfigName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string uptimeCheckConfigName, out UptimeCheckConfigName result)
+        {
+            GaxPreconditions.CheckNotNull(uptimeCheckConfigName, nameof(uptimeCheckConfigName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(uptimeCheckConfigName, out resourceName))
+            {
+                result = new UptimeCheckConfigName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="UptimeCheckConfigName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="uptimeCheckConfigId">The uptimeCheckConfig ID. Must not be <c>null</c>.</param>
+        public UptimeCheckConfigName(string projectId, string uptimeCheckConfigId)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            UptimeCheckConfigId = GaxPreconditions.CheckNotNull(uptimeCheckConfigId, nameof(uptimeCheckConfigId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The uptimeCheckConfig ID. Never <c>null</c>.
+        /// </summary>
+        public string UptimeCheckConfigId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, UptimeCheckConfigId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as UptimeCheckConfigName);
+
+        /// <inheritdoc />
+        public bool Equals(UptimeCheckConfigName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(UptimeCheckConfigName a, UptimeCheckConfigName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(UptimeCheckConfigName a, UptimeCheckConfigName b) => !(a == b);
+    }
+
 
     public partial class CreateGroupRequest
     {
