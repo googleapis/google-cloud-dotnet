@@ -12,6 +12,7 @@ ROOT_DIR=$(dirname "$SCRIPT")
 APIS=()
 RETRY_ARG=
 COVERAGE_ARG=
+SMOKE_ARG=
 
 while (( "$#" )); do
   if [[ "$1" == "--retry" ]]
@@ -21,6 +22,9 @@ while (( "$#" )); do
   then
     install_dotcover
     COVERAGE_ARG=yes
+  elif [[ "$1" == "--smoke" ]]
+  then
+    SMOKE_ARG=yes
   else 
     APIS+=($1)
   fi
@@ -53,13 +57,13 @@ then
   for api in ${APIS[*]}
   do
     int_dir="${api}/${api}.IntegrationTests"
-    if [[ -d "$int_dir" ]]
+    if [[ -d "$int_dir" && "$SMOKE_ARG" != "yes" ]]
     then
       temp_testdirs+=($int_dir)
     fi
     
     snip_dir="${api}/${api}.Snippets"
-    if [[ -d "$snip_dir" ]]
+    if [[ -d "$snip_dir" && "$SMOKE_ARG" != "yes" ]]
     then
       temp_testdirs+=($snip_dir)
     fi 
@@ -74,6 +78,9 @@ then
 elif [[ "$RETRY_ARG" == "yes" && (-f "$FAILURE_FILE")]]
 then
   declare -r testdirs=$(cat $FAILURE_FILE)
+elif [[ "$SMOKE_ARG" == "yes" ]]
+then
+  declare -r testdirs=$(echo */*.SmokeTests)
 else
   declare -r testdirs=$(echo */*.IntegrationTests */*.Snippets */*.SmokeTests)
 fi
