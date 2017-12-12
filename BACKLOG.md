@@ -51,7 +51,7 @@ the request and want to put work into it.
 - Status: Prototyped, but complex due to considerations for
   parallelism. May not be worth the complexity.
 
-# Improve handling of Markdown from protos
+## Improve handling of Markdown from protos
 
 - Issue: [#110](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/110)
 - Status: Ideally, protoc should do this. Massive work item, no
