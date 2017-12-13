@@ -36,6 +36,8 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             = new DoubleTypeMapping(SpannerDbType.Float64.ToString());
         private static readonly LongTypeMapping s_long 
             = new LongTypeMapping(SpannerDbType.Int64.ToString(), DbType.Int64);
+        private static readonly DecimalTypeMapping s_decimal
+            = new DecimalTypeMapping(SpannerDbType.Float64.ToString());
 
         private static readonly SpannerComplexTypeMapping s_stringArray
             = new SpannerComplexTypeMapping(SpannerDbType.ArrayOf(SpannerDbType.String));
@@ -54,7 +56,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
                 {typeof(short), s_long},
                 {typeof(int), s_long},
                 {typeof(long), s_long},
-                {typeof(decimal), s_defaultString},
+                {typeof(decimal), s_decimal},
                 {typeof(uint), s_long},
                 {typeof(bool), s_bool},
                 {typeof(DateTime), s_datetime},

@@ -12,10 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Linq.Expressions;
 using Google.Api.Gax;
 using Microsoft.EntityFrameworkCore.Query.Expressions;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.EntityFrameworkCore.Storage;
+using Remotion.Linq.Clauses.Expressions;
 
 namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
 {
@@ -42,25 +45,49 @@ namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
                 : base.GenerateOperator(expression);
 
         /// <inheritdoc />
+        public override Expression VisitAlias(AliasExpression aliasExpression)
+        {
+            var validatedAlias = SpannerQueryCompilationContext.GetValidSymbol(aliasExpression.Alias);
+            return base.VisitAlias(validatedAlias != aliasExpression.Alias 
+                ? new AliasExpression(validatedAlias, aliasExpression.Expression)
+                : aliasExpression);
+        }
+
+        /// <inheritdoc />
         public override Expression VisitSqlFunction(SqlFunctionExpression sqlFunctionExpression)
         {
             switch (sqlFunctionExpression.FunctionName)
             {
                 case "CAST":
-                    {
-                        Sql.Append(sqlFunctionExpression.FunctionName);
-                        Sql.Append("(");
+                {
+                    Sql.Append(sqlFunctionExpression.FunctionName);
+                    Sql.Append("(");
 
-                        Visit(sqlFunctionExpression.Arguments[0]);
+                    Visit(sqlFunctionExpression.Arguments[0]);
 
-                        Sql.Append(" AS ");
+                    Sql.Append(" AS ");
 
-                        Visit(sqlFunctionExpression.Arguments[1]);
+                    Visit(sqlFunctionExpression.Arguments[1]);
 
-                        Sql.Append(")");
+                    Sql.Append(")");
 
-                        return sqlFunctionExpression;
-                    }
+                    return sqlFunctionExpression;
+                }
+                case "EXTRACT":
+                {
+                    Sql.Append(sqlFunctionExpression.FunctionName);
+                    Sql.Append("(");
+
+                    Visit(sqlFunctionExpression.Arguments[0]);
+
+                    Sql.Append(" FROM ");
+
+                    Visit(sqlFunctionExpression.Arguments[1]);
+
+                    Sql.Append(")");
+
+                    return sqlFunctionExpression;
+                }
             }
 
             return base.VisitSqlFunction(sqlFunctionExpression);
@@ -81,20 +108,18 @@ namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
                 Sql.AppendLine().Append("LIMIT ");
                 Visit(selectExpression.Limit);
             }
-
-            if (selectExpression.Offset != null)
+            else if (selectExpression.Offset != null)
             {
-                if (selectExpression.Limit == null)
-                {
-                    Sql.AppendLine();
-                }
-                else
-                {
-                    Sql.Append(' ');
-                }
-                Sql.Append("OFFSET ");
-                Visit(selectExpression.Offset);
+                // Cloud Spanner requires limit if offset is specified.
+                Sql.AppendLine().Append($"LIMIT {int.MaxValue}");
             }
+
+            if (selectExpression.Offset == null)
+            {
+                return;
+            }
+            Sql.Append(" OFFSET ");
+            Visit(selectExpression.Offset);
         }
 
         /// <inheritdoc />

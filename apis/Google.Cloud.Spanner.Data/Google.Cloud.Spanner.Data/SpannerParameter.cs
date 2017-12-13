@@ -30,6 +30,8 @@ namespace Google.Cloud.Spanner.Data
         , ICloneable
 #endif
     {
+        private SpannerDbType _spannerDbType;
+
         /// <inheritdoc />
         public override DbType DbType
         {
@@ -111,7 +113,18 @@ namespace Google.Cloud.Spanner.Data
         /// The <see cref="SpannerDbType" /> of the parameter or column. This should match the type as defined in Spanner
         /// or as defined by the result of a SQL Query.
         /// </summary>
-        public SpannerDbType SpannerDbType { get; set; }
+        public SpannerDbType SpannerDbType
+        {
+            get
+            {
+                if (_spannerDbType != null)
+                {
+                    return _spannerDbType;
+                }
+                return Value != null ? SpannerDbType.FromClrType(Value.GetType()) : SpannerDbType.Unspecified;
+            }
+            set => _spannerDbType = value;
+        }
 
         /// <inheritdoc />
         public override object Value { get; set; }

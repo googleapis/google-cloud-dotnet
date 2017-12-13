@@ -55,17 +55,17 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
                 case nameof(DateTime.DayOfWeek):
                     return GetDatePartExpression(e, "DAYOFWEEK");
                 case nameof(DateTime.Date):
-                    return GetDatePartExpression(e, "DATE");
+                    return GetDatePartExpression(e, "DATE", typeof(DateTime));
                 default:
                     return null;
             }
         }
 
-        static Expression GetDatePartExpression(MemberExpression e, string partName)
+        static Expression GetDatePartExpression(MemberExpression e, string partName, Type type = null)
             =>
                 new SqlFunctionExpression(
                     functionName: "EXTRACT",
-                    returnType: e.Expression.Type,
+                    returnType: type ?? typeof(int),
                     arguments: new[]
                     {
                         new SqlFragmentExpression(partName),

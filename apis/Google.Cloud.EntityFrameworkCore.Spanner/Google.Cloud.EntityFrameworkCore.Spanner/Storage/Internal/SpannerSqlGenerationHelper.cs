@@ -35,6 +35,15 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             builder.Append(GenerateParameterName(name));
         }
 
+        //Note we remove the shema because spanner does not support schema based names.
+        /// <inheritdoc />
+        public override string DelimitIdentifier(string name, string schema)
+            => DelimitIdentifier(name);
+
+        /// <inheritdoc />
+        public override void DelimitIdentifier(StringBuilder builder, string name, string schema)
+            => DelimitIdentifier(builder, name);
+
         /// <inheritdoc />
         public override string DelimitIdentifier(string identifier)
             => $"{EscapeIdentifier(GaxPreconditions.CheckNotNullOrEmpty(identifier, nameof(identifier)))}";

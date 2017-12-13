@@ -44,6 +44,82 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
                         base.Convert_ToDouble();
         }
 
+
+        [ConditionalFact]
+        public override void Average_with_no_arg()
+        {
+            //b/70403058
+            AssertSingleResult<Order>(os => os.Select(o => o.OrderID).Average(),
+                asserter: (e, a) => Assert.InRange((double)e - (double)a, -0.1D, 0.1D));
+        }
+
+        [ConditionalFact]
+        public override void Average_with_binary_expression()
+        {
+            //b/70403058
+            AssertSingleResult<Order>(os => os.Select(o => o.OrderID * 2).Average(),
+                asserter: (e, a) => Assert.InRange((double)e - (double)a, -0.1D, 0.1D));
+        }
+
+        [ConditionalFact]
+        public override void Average_with_arg()
+        {
+            //b/70403058
+            AssertSingleResult<Order>(os => os.Average(o => o.OrderID),
+                asserter: (e, a) => Assert.InRange((double)e - (double)a, -0.1D, 0.1D));
+        }
+
+        [ConditionalFact]
+        public override void Average_with_arg_expression()
+        {
+            //b/70403058
+            AssertSingleResult<Order>(os => os.Average(o => o.OrderID + o.OrderID),
+                asserter: (e, a) => Assert.InRange((double)e - (double)a, -0.1D, 0.1D));
+        }
+
+        [ConditionalFact]
+        public override void Average_with_division_on_decimal()
+        {
+            //b/70403058
+            AssertSingleResult<OrderDetail>(
+                ods => ods.Average(od => od.Quantity / 2.09m),
+                asserter: (e, a) => Assert.InRange((decimal)e - (decimal)a, -0.1M, 0.1M));
+        }
+
+        [ConditionalFact]
+        public override void Average_with_division_on_decimal_no_significant_digits()
+        {
+            //b/70403058
+            AssertSingleResult<OrderDetail>(
+                ods => ods.Average(od => od.Quantity / 2m),
+                asserter: (e, a) => Assert.InRange((decimal)e - (decimal)a, -0.1M, 0.1M));
+        }
+
+        [ConditionalFact]
+        public override void Average_with_coalesce()
+        {
+            //b/70403058
+            AssertSingleResult<Product>(
+                ps => ps.Where(p => p.ProductID < 40).Average(p => p.UnitPrice ?? 0),
+                asserter: (e, a) => Assert.InRange((decimal)e - (decimal)a, -0.1M, 0.1M));
+        }
+
+        [ConditionalFact]
+        public override void Average_over_subquery_is_client_eval()
+        {
+            //b/70403058
+            AssertSingleResult<Customer>(cs => cs.Average(c => c.Orders.Sum(o => o.OrderID)),
+                asserter: (e, a) => Assert.InRange((double)e - (double)a, -0.1D, 0.1D));
+        }
+
+        [ConditionalFact]
+        public override void Average_on_float_column()
+        {
+            //b/70403058
+            AssertSingleResult<OrderDetail>(ods => ods.Where(od => od.ProductID == 1).Average(od => od.Discount),
+                asserter: (e, a) => Assert.InRange((float)e - (float)a, -0.1, 0.1));
+        }
+
         [Fact]
         public override void String_Contains_Literal()
         {
@@ -175,49 +251,49 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         public override void Where_datetime_year_component()
         {
             base.Where_datetime_year_component();
-            AssertContainsInSql("DATE_PART('year', o.OrderDate)");
+            AssertContainsInSql("EXTRACT(YEAR FROM o.OrderDate)");
         }
 
         [Fact]
         public override void Where_datetime_month_component()
         {
             base.Where_datetime_month_component();
-            AssertContainsInSql("DATE_PART('month', o.OrderDate)");
+            AssertContainsInSql("EXTRACT(MONTH FROM o.OrderDate)");
         }
 
         [Fact]
         public override void Where_datetime_dayOfYear_component()
         {
             base.Where_datetime_dayOfYear_component();
-            AssertContainsInSql("DATE_PART('doy', o.OrderDate)");
+            AssertContainsInSql("EXTRACT(DAYOFYEAR FROM o.OrderDate)");
         }
 
         [Fact]
         public override void Where_datetime_day_component()
         {
             base.Where_datetime_day_component();
-            AssertContainsInSql("DATE_PART('day', o.OrderDate)");
+            AssertContainsInSql("EXTRACT(DAY FROM o.OrderDate)");
         }
 
         [Fact]
         public override void Where_datetime_hour_component()
         {
             base.Where_datetime_hour_component();
-            AssertContainsInSql("DATE_PART('hour', o.OrderDate)");
+            AssertContainsInSql("EXTRACT(HOUR FROM o.OrderDate)");
         }
 
         [Fact]
         public override void Where_datetime_minute_component()
         {
             base.Where_datetime_minute_component();
-            AssertContainsInSql("DATE_PART('minute', o.OrderDate)");
+            AssertContainsInSql("EXTRACT(MINUTE FROM o.OrderDate)");
         }
 
         [Fact]
         public override void Where_datetime_second_component()
         {
             base.Where_datetime_second_component();
-            AssertContainsInSql("DATE_PART('second', o.OrderDate)");
+            AssertContainsInSql("EXTRACT(SECOND FROM o.OrderDate)");
         }
 
         // ReSharper disable once RedundantOverriddenMember
@@ -354,7 +430,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
                 oc => oc.Where(o =>
                     o.OrderDate.Value.DayOfWeek == DayOfWeek.Tuesday),
                 entryCount: 168);
-            AssertContainsInSql("WHERE CAST(FLOOR(DATE_PART('dow', o.OrderDate)) AS int4)");
+            AssertContainsInSql("EXTRACT(DAYOFWEEK FROM o.OrderDate)");
         }
 
     }

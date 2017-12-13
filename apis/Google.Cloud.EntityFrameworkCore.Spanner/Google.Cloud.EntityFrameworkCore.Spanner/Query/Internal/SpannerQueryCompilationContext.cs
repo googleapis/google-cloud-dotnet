@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Collections.Generic;
+
 namespace Microsoft.EntityFrameworkCore.Query.Internal
 {
     /// <summary>
@@ -35,6 +37,129 @@ namespace Microsoft.EntityFrameworkCore.Query.Internal
                 queryMethodProvider,
                 trackQueryResults)
         {
+        }
+
+        private static readonly HashSet<string> s_reservedSymbols
+            = new HashSet<string>
+            {
+                "ALL",
+                "AND",
+                "ANY",
+                "ARRAY",
+                "AS",
+                "ASC",
+                "ASSERT_ROWS_MODIFIED",
+                "AT",
+                "BETWEEN",
+                "BY",
+                "CASE",
+                "CAST",
+                "COLLATE",
+                "CONTAINS",
+                "CREATE",
+                "CROSS",
+                "CUBE",
+                "CURRENT",
+                "DEFAULT",
+                "DEFINE",
+                "DESC",
+                "DISTINCT",
+                "ELSE",
+                "END",
+                "ENUM",
+                "ESCAPE",
+                "EXCEPT",
+                "EXCLUDE",
+                "EXISTS",
+                "EXTRACT",
+                "FALSE",
+                "FETCH",
+                "FOLLOWING",
+                "FOR",
+                "FROM",
+                "FULL",
+                "GROUP",
+                "GROUPING",
+                "GROUPS",
+                "HASH",
+                "HAVING",
+                "IF",
+                "IGNORE",
+                "IN",
+                "INNER",
+                "INTERSECT",
+                "INTERVAL",
+                "INTO",
+                "IS",
+                "JOIN",
+                "LATERAL",
+                "LEFT",
+                "LIKE",
+                "LIMIT",
+                "LOOKUP",
+                "MERGE",
+                "NATURAL",
+                "NEW",
+                "NO",
+                "NOT",
+                "NULL",
+                "NULLS",
+                "OF",
+                "ON",
+                "OR",
+                "ORDER",
+                "OUTER",
+                "OVER",
+                "PARTITION",
+                "PRECEDING",
+                "PROTO",
+                "RANGE",
+                "RECURSIVE",
+                "RESPECT",
+                "RIGHT",
+                "ROLLUP",
+                "ROWS",
+                "SELECT",
+                "SET",
+                "SOME",
+                "STRUCT",
+                "TABLESAMPLE",
+                "THEN",
+                "TO",
+                "TREAT",
+                "TRUE",
+                "UNBOUNDED",
+                "UNION",
+                "UNNEST",
+                "USING",
+                "WHEN",
+                "WHERE",
+                "WINDOW",
+                "WITH",
+                "WITHIN"
+            };
+
+        /// <summary>
+        /// Returns a valid symbol given a proposed one.
+        /// </summary>
+        public static string GetValidSymbol(string proposedSymbol)
+        {
+            if (string.IsNullOrEmpty(proposedSymbol))
+            {
+                return proposedSymbol;
+            }
+            proposedSymbol = proposedSymbol.Replace(".", "_");
+            if (s_reservedSymbols.Contains(proposedSymbol.ToUpperInvariant()))
+            {
+                proposedSymbol += "_";
+            }
+            return proposedSymbol;
+        }
+
+        /// <inheritdoc />
+        public override string CreateUniqueTableAlias( string currentAlias)
+        {
+            return base.CreateUniqueTableAlias(GetValidSymbol(currentAlias));
         }
     }
 }
