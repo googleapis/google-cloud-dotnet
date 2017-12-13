@@ -207,7 +207,7 @@ Authentication](https://cloud.google.com/docs/authentication/getting-started) gu
 
             string clientConstruction =
 @"Create a client instance by calling the static `Create` method, optionally
-specifying an end-point or channel and settings";
+specifying an end-point or channel and settings.";
 
             return text
                 .Replace("{{title}}", title)
