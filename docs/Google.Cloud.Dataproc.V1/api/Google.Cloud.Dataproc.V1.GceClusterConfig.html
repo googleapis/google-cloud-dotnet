@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GceClusterConfig
+   | Google.Cloud.Dataproc.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GceClusterConfig
+   | Google.Cloud.Dataproc.V1 ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig">
+  
+  
+  <h1 id="Google_Cloud_Dataproc_V1_GceClusterConfig" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig" class="text-break">Class GceClusterConfig
+  </h1>
+  <div class="markdown level0 summary"><p>Common config settings for resources of Google Compute Engine cluster
+instances, applicable to all instances in the cluster.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GceClusterConfig</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Google.Protobuf.IMessage-1.html">IMessage</a>&lt;<a class="xref" href="Google.Cloud.Dataproc.V1.GceClusterConfig.html">GceClusterConfig</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Dataproc.V1.GceClusterConfig.html">GceClusterConfig</a>&gt;</div>
+    <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="Google.Cloud.Dataproc.V1.GceClusterConfig.html">GceClusterConfig</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Dataproc.V1.html">Google.Cloud.Dataproc.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Dataproc.V1.dll</h6>
+  <h5 id="Google_Cloud_Dataproc_V1_GceClusterConfig_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class GceClusterConfig : IMessage&lt;GceClusterConfig&gt;, IMessage, IEquatable&lt;GceClusterConfig&gt;, IDeepCloneable&lt;GceClusterConfig&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Dataproc_V1_GceClusterConfig_InternalIpOnly_" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.InternalIpOnly*"></a>
+  <h4 id="Google_Cloud_Dataproc_V1_GceClusterConfig_InternalIpOnly" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.InternalIpOnly">InternalIpOnly</h4>
+  <div class="markdown level1 summary"><p>Optional. If true, all instances in the cluster will only have internal IP
+addresses. By default, clusters are not restricted to internal IP addresses,
+and will have ephemeral external IP addresses assigned to each instance.
+This <code>internal_ip_only</code> restriction can only be enabled for subnetwork
+enabled networks, and all off-cluster dependencies must be configured to be
+accessible without external IP addresses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InternalIpOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Dataproc_V1_GceClusterConfig_Metadata_" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.Metadata*"></a>
+  <h4 id="Google_Cloud_Dataproc_V1_GceClusterConfig_Metadata" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.Metadata">Metadata</h4>
+  <div class="markdown level1 summary"><p>The Google Compute Engine metadata entries to add to all instances (see
+<a href="https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata">Project and instance metadata</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Metadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Dataproc_V1_GceClusterConfig_NetworkUri_" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.NetworkUri*"></a>
+  <h4 id="Google_Cloud_Dataproc_V1_GceClusterConfig_NetworkUri" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.NetworkUri">NetworkUri</h4>
+  <div class="markdown level1 summary"><p>Optional. The Google Compute Engine network to be used for machine
+communications. Cannot be specified with subnetwork_uri. If neither
+<code>network_uri</code> nor <code>subnetwork_uri</code> is specified, the &quot;default&quot; network of
+the project is used, if it exists. Cannot be a &quot;Custom Subnet Network&quot; (see
+<a href="/compute/docs/subnetworks">Using Subnetworks</a> for more information).</p>
+<p>A full URL, partial URI, or short name are valid. Examples:</p>
+<ul>
+<li><code>https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default</code></li>
+<li><code>projects/[project_id]/regions/global/default</code></li>
+<li><code>default</code></li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NetworkUri { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Dataproc_V1_GceClusterConfig_ServiceAccount_" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.ServiceAccount*"></a>
+  <h4 id="Google_Cloud_Dataproc_V1_GceClusterConfig_ServiceAccount" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.ServiceAccount">ServiceAccount</h4>
+  <div class="markdown level1 summary"><p>Optional. The service account of the instances. Defaults to the default
+Google Compute Engine service account. Custom service accounts need
+permissions equivalent to the folloing IAM roles:</p>
+<ul>
+<li>roles/logging.logWriter</li>
+<li>roles/storage.objectAdmin</li>
+</ul>
+<p>(see <a href="https://cloud.google.com/compute/docs/access/service-accounts#custom_service_accounts">https://cloud.google.com/compute/docs/access/service-accounts#custom_service_accounts</a>
+for more information).
+Example: <code>[account_id]@[project_id].iam.gserviceaccount.com</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ServiceAccount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Dataproc_V1_GceClusterConfig_ServiceAccountScopes_" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.ServiceAccountScopes*"></a>
+  <h4 id="Google_Cloud_Dataproc_V1_GceClusterConfig_ServiceAccountScopes" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.ServiceAccountScopes">ServiceAccountScopes</h4>
+  <div class="markdown level1 summary"><p>Optional. The URIs of service account scopes to be included in Google
+Compute Engine instances. The following base set of scopes is always
+included:</p>
+<ul>
+<li><a href="https://www.googleapis.com/auth/cloud.useraccounts.readonly">https://www.googleapis.com/auth/cloud.useraccounts.readonly</a></li>
+<li><a href="https://www.googleapis.com/auth/devstorage.read_write">https://www.googleapis.com/auth/devstorage.read_write</a></li>
+<li><a href="https://www.googleapis.com/auth/logging.write">https://www.googleapis.com/auth/logging.write</a></li>
+</ul>
+<p>If no scopes are specified, the following defaults are also provided:</p>
+<ul>
+<li><a href="https://www.googleapis.com/auth/bigquery">https://www.googleapis.com/auth/bigquery</a></li>
+<li><a href="https://www.googleapis.com/auth/bigtable.admin.table">https://www.googleapis.com/auth/bigtable.admin.table</a></li>
+<li><a href="https://www.googleapis.com/auth/bigtable.data">https://www.googleapis.com/auth/bigtable.data</a></li>
+<li><a href="https://www.googleapis.com/auth/devstorage.full_control">https://www.googleapis.com/auth/devstorage.full_control</a></li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; ServiceAccountScopes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Dataproc_V1_GceClusterConfig_SubnetworkUri_" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.SubnetworkUri*"></a>
+  <h4 id="Google_Cloud_Dataproc_V1_GceClusterConfig_SubnetworkUri" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.SubnetworkUri">SubnetworkUri</h4>
+  <div class="markdown level1 summary"><p>Optional. The Google Compute Engine subnetwork to be used for machine
+communications. Cannot be specified with network_uri.</p>
+<p>A full URL, partial URI, or short name are valid. Examples:</p>
+<ul>
+<li><code>https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/sub0</code></li>
+<li><code>projects/[project_id]/regions/us-east1/sub0</code></li>
+<li><code>sub0</code></li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SubnetworkUri { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Dataproc_V1_GceClusterConfig_Tags_" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.Tags*"></a>
+  <h4 id="Google_Cloud_Dataproc_V1_GceClusterConfig_Tags" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>The Google Compute Engine tags to add to all instances (see
+<a href="/compute/docs/label-or-tag-resources#tags">Tagging instances</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Dataproc_V1_GceClusterConfig_ZoneUri_" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.ZoneUri*"></a>
+  <h4 id="Google_Cloud_Dataproc_V1_GceClusterConfig_ZoneUri" data-uid="Google.Cloud.Dataproc.V1.GceClusterConfig.ZoneUri">ZoneUri</h4>
+  <div class="markdown level1 summary"><p>Optional. The zone where the Google Compute Engine cluster will be located.
+On a create request, it is required in the &quot;global&quot; region. If omitted
+in a non-global Cloud Dataproc region, the service will pick a zone in the
+corresponding Compute Engine region. On a get request, zone will
+always be present.</p>
+<p>A full URL, partial URI, or short name are valid. Examples:</p>
+<ul>
+<li><code>https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]</code></li>
+<li><code>projects/[project_id]/zones/[zone]</code></li>
+<li><code>us-central1-f</code></li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ZoneUri { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
