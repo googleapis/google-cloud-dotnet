@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Download;
+using Google.Apis.Http;
 using Google.Apis.Services;
 using System;
 using System.Collections.Generic;
@@ -34,12 +35,11 @@ namespace Google.Cloud.Storage.V1
         /// <summary>Constructs a new downloader with the given client service.</summary>
         internal HashValidatingDownloader(IClientService service) : base(service)
         {
+            ResponseStreamInterceptorProvider = CreateInterceptor;
         }
 
-        protected override void OnResponseReceived(HttpResponseMessage response)
+        private StreamInterceptor CreateInterceptor(HttpResponseMessage response)
         {
-            base.OnResponseReceived(response);
-
             crc32cHashBase64 = null;
             hasher = null;
 
@@ -53,16 +53,11 @@ namespace Google.Cloud.Storage.V1
                     {
                         hasher = new Crc32c();
                         crc32cHashBase64 = value.Substring(prefix.Length);
-                        break;
+                        return hasher.UpdateHash;
                     }
                 }
             }
-        }
-
-        protected override void OnDataReceived(byte[] data, int length)
-        {
-            base.OnDataReceived(data, length);
-            hasher?.UpdateHash(data, 0, length);
+            return null;
         }
 
         protected override void OnDownloadCompleted()
