@@ -7,13 +7,19 @@ parties.
 
 Prerequisites:
 
-- A Linux machine with git and Java 8+ installed
-- A Windows machine with Git for Windows and Visual Studio 2017
+- A Windows machine with Git for Windows, Visual Studio 2017
   (including .NET Core tools) installed
+- A Linux environment equivalent to Ubuntu 16.04 or higher.
+  The simplest way to accomplish this is usually to use the Linux
+  Subsystem for Windows, as you can then use a single fork for all
+  instructions here. This environment must include:
+  - git
+  - unzip
+  - jdk8
 
 Note that Git for Windows includes bash, and that's what our scripts
 have all been written to use. Do not try to use the Linux subsystem
-for Windows to run the scripts - at least not yet.
+for Windows to run the scripts *except* `generateapis.sh`
 
 Relevant repositories:
 
@@ -51,16 +57,7 @@ same namespace should be specified in the GAPIC YAML file under
 If anything doesn't match your expectations, please file an issue in
 this repo and we'll get it sorted. (There are complexities here around internal processes.)
 
-Step 3: Clone your fork on the Linux machine
---------------------------------------------
-
-If you're going to do this regularly, you may wish to add remotes
-for both your fork and this one, so you can easily get up-to-date.
-
-My personal preference is to then create a branch in the clone,
-rather than making the change in master, but it doesn't matter too much.
-
-Step 4: Add the API to generateapis.sh
+Step 3: Add the API to generateapis.sh
 --------------------------------------
 
 Adding an API will usually be as simple as adding a line like this
@@ -80,8 +77,10 @@ ending with `_gapic.yaml`.)
 
 Please keep the list of `generate_api` calls in alphabetical order.
 
-Step 5: Run generateapis.sh
+Step 4: Run generateapis.sh
 ---------------------------
+
+This needs to be performed in the Linux environment
 
 This will clone both the `googleapis` and `toolkit` repos as
 subdirectories, or pull them if they already exist.
@@ -91,26 +90,19 @@ with a Java exception, that's probably due to a configuration issue
 somewhere. You can try to fix it yourself, but it's probably worth
 reaching out at that point.
 
-Step 6: Commit just the changes for your API
+Step 5: Commit just the changes for your API
 --------------------------------------------
 
-You may see changes for other APIs, and right now (August 2017)
-you'll also see some new files to do with the Natural Language beta
-API. Ignore those. Create a commit containing:
+You may see changes for other APIs. Ignore those. Create a commit containing:
 
 - Your `generateapis.sh` change
 - The new directory under `apis`
 
-Push this change up to your fork on github. Don't create a PR yet.
+If you're using separate machine for the Linux part, push the change
+up to your fork on github, so you can pull it down to the Windows
+machine.
 
-Step 7: Pull your change on Windows
------------------------------------
-
-Clone your fork on Windows if you haven't already, and pull your
-change. (I find `git fetch --all` handy here, then just checkout
-your new branch.)
-
-Step 8: Modify the API catalog
+Step 6: Modify the API catalog
 ------------------------------
 
 Edit `apis/apis.json`. Again, this is in alphabetical order - please keep it that way.
@@ -121,7 +113,7 @@ You'll typically want JSON like this:
   "id": "FIXME",
   "productName": "FIXME",
   "productUrl": "FIXME",
-  "version": "1.0.0-alpha00",
+  "version": "1.0.0-beta01",
   "type": "grpc",
   "description": "FIXME",
   "tags": [ "FIXME_1", "FIXME_2" ],
@@ -131,22 +123,24 @@ You'll typically want JSON like this:
 Fix everything with "FIXME". There's no set number of tags, but these are used for the NuGet package,
 so consider what users will search for.
 
-The version number of "1.0.0-alpha00" is used to indicate that there
-hasn't been a release of this API yet. It will be incremented to
-`1.0.0-alpha01` as part of the first release.
+The above assumes you're happy to create an initial beta release for
+the generated code immediately. As of late 2017, that's usually
+fine. If you want to avoid creating a release, use a version of
+`1.0.0-alpha00` or `1.0.0-beta00` depending on whether or not you
+expect to perform alpha releases.
 
 If your project uses the IAM or long-running operations APIs, you'll need to add dependencies for those, e.g.
 
 ```json
 "dependencies": {
-  "Google.LongRunning": "project",
-  "Google.Cloud.Iam.V1": "project"
+  "Google.LongRunning": "1.0.0",
+  "Google.Cloud.Iam.V1": "1.0.0"
 }
 ```
 
 Look at other APIs for example values.
 
-Step 9: Generate files
+Step 7: Generate files
 ----------------------
 
 Run `generateprojects.sh`. This should create:
@@ -155,58 +149,40 @@ Run `generateprojects.sh`. This should create:
 - Project files for the production project and the snippets
 - A stub documentation file
 
-Open the solution file in Visual Studio, to check that everything
-builds.
+Step 8: Run the smoke test
+--------------------------
 
-Step 10: Commit changes
------------------------
+New APIs should come with a smoke test, just to check we can at
+least make a single request.
 
-Commit the change to `apis.json` and the generated files.
+- Ensure the `TEST_PROJECT` environment variable is set to your GCP
+  project ID.
+- Ensure the API is enabled for your project
+- Run `runintegrationtests.sh --smoke Your.ApiName.Here`
 
-Step 11: Create at least one snippet
-------------------------------------
+Step 9: Create a PR
+-------------------
 
-In the Snippets project, add a new test class for the main client class,
-e.g. `FooClientSnippets.cs`. Add a snippet to test at least one API
-method. This has two benefits:
+You should now have a lot of new project/coverage/doc/solution files, and
+your modified API catalog.
 
-- It checks the API works
-- It provides the first piece of concrete documentation
+Commit all of these, push and create a pull request. This should
+consist of two commits: one for the original codegen, and one for
+the API catalog and project files.
 
-You may choose to add a fixture class and write a whole bunch of
-snippets as integration tests now, but at least create a snippet to
-include in the documentation. See
-[SpeechClientSnippets.cs](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/apis/Google.Cloud.Speech.V1/Google.Cloud.Speech.V1.Snippets/SpeechClientSnippets.cs)
-for an example.
+(You *can* do all of this in a single commit, but we've typically
+found that separating them helps diagnose issues with one part or
+another.)
 
-Step 12: Edit documentation
----------------------------
+Step 10: Merge the PR
+---------------------
 
-In step 9, a `docs/index.md` file will have been generated. Edit it
-now:
+As everything is generated other than the API catalog change, the PR
+can be merged on green.
 
-- Give a link to the client classes
-- Include the snippet you wrote in step 11
+Step 11 (Optional): Release the first package for the API
+---------------------------------------------------------
 
-See the [Speech
-docs](https://raw.githubusercontent.com/GoogleCloudPlatform/google-cloud-dotnet/master/apis/Google.Cloud.Speech.V1/docs/index.md)
-for an example.
-
-Note that the template-like `{{title}}` lines can be left as they
-are - they will be filled in by the documentation process
-automatically.
-
-Step 13: Commit changes
------------------------
-
-Commit the new snippet and documentation changes.
-
-Step 14: Push and create a PR
------------------------------
-
-Push your extra commits back to github, then create a PR to merge into the master branch of `google-cloud-dotnet`.
-You should have three commits - it's handy to preserve those for clarity:
-
-- Modification of `generateapis.sh` and the generated code
-- Modification of `apis.json` and the generate project files
-- First snippet and documentation changes
+Follow the [releasing process](PROCESSES.md) to push a package to
+nuget.org. If you do this, also update the root documentation
+(`README.md` and `docs/root/index.md`) to indicate this.
