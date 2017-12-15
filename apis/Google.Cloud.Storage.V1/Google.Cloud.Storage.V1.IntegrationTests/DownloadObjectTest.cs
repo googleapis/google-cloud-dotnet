@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Apis.Download;
+using Google.Apis.Services;
+using Google.Apis.Storage.v1;
 using System;
 using System.IO;
 using System.Linq;
@@ -284,7 +286,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        [Fact(Skip = "Issue 1641; not fixed yet")]
+        [Fact]
         public void DownloadGzippedFile()
         {
             // The file has a Content-Encoding of gzip, and it's stored compressed.
@@ -296,13 +298,35 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void DownloadGzippedFile_IgnoreHash()
+        // See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1784 for the background to
+        // the following two tests.
+        [Fact(Skip = "https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1784")]
+        public void DownloadGzippedFile_NoClientDecompression()
         {
-            // The file has a Content-Encoding of gzip, and it's stored compressed.
-            // We can't currently validate the hash, but the escape hatch allows us to download it anyway.
+            var service = new StorageService(new BaseClientService.Initializer
+            {
+                HttpClientInitializer = _fixture.Client.Service.HttpClientInitializer,
+                GZipEnabled = false
+            });
+            var client = new StorageClientImpl(service);
             var stream = new MemoryStream();
-            _fixture.Client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream,
+            client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream);
+            var expected = Encoding.UTF8.GetBytes("hello world");
+            var actual = stream.ToArray();
+            Assert.Equal(expected, actual);
+        }
+        
+        [Fact]
+        public void DownloadGzippedFile_NoClientDecompression_IgnoreHash()
+        {
+            var service = new StorageService(new BaseClientService.Initializer
+            {
+                HttpClientInitializer = _fixture.Client.Service.HttpClientInitializer,
+                GZipEnabled = false
+            });
+            var client = new StorageClientImpl(service);
+            var stream = new MemoryStream();
+            client.DownloadObject(StorageFixture.CrossLanguageTestBucket, "gzipped-text.txt", stream,
                 new DownloadObjectOptions { DownloadValidationMode = DownloadValidationMode.Never });
             var expected = Encoding.UTF8.GetBytes("hello world");
             var actual = stream.ToArray();

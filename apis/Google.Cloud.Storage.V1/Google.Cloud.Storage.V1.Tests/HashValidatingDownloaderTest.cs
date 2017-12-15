@@ -38,7 +38,7 @@ namespace Google.Cloud.Storage.V1.Tests
         [InlineData(Crc32Value)]
         public void Valid(string headerValue)
         {
-            HashValidatingDownloader downloader = CreateDownloader(request => CreateResponse(headerValue));
+            HashValidatingDownloader downloader = CreateDownloader(request => CreateResponse(request, headerValue));
             for (int chunks = 1; chunks < 5; chunks++)
             {
                 // Make sure it definitely fits...
@@ -57,7 +57,7 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void Invalid()
         {
-            HashValidatingDownloader downloader = CreateDownloader(request => CreateResponse("crc32c=Bogus1=="));
+            HashValidatingDownloader downloader = CreateDownloader(request => CreateResponse(request, "crc32c=Bogus1=="));
             for (int chunks = 1; chunks < 5; chunks++)
             {
                 // Make sure it definitely fits...
@@ -96,14 +96,34 @@ namespace Google.Cloud.Storage.V1.Tests
             }
         }
 
-        private static HttpResponseMessage CreateResponse(string headerValue)
+        private static HttpResponseMessage CreateResponse(HttpRequestMessage request, string headerValue)
         {
             HttpResponseMessage response = new HttpResponseMessage { Content = new ByteArrayContent(s_data) };
             if (headerValue != null)
             {
                 response.Headers.Add(Crc32c.HashHeaderName, headerValue);
             }
+            MaybeIntercept(request, response);
             return response;
+        }
+
+        // This is ugly - it's effectively mimicing the code in the REST support library for response stream
+        // interception. We basically want to use Google.Apis.Http.StreamInterceptionHandler, but that's (understandably)
+        // internal. Fake it for now. An alternative might be to use reflection, but that's brittle too.
+        private static void MaybeIntercept(HttpRequestMessage request, HttpResponseMessage response)
+        {
+            var provider = request.Properties[ConfigurableMessageHandler.ResponseStreamInterceptorProviderKey] as Func<HttpResponseMessage, StreamInterceptor>;
+            if (provider == null)
+            {
+                return;
+            }
+            var interceptor = provider(response);
+            if (interceptor == null)
+            {
+                return;
+            }
+            interceptor(s_data, 0, s_data.Length);
+            return;
         }
     }
 }
