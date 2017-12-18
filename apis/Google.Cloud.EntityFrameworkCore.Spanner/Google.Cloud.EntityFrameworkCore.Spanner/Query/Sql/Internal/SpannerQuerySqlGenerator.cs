@@ -122,6 +122,50 @@ namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
             Visit(selectExpression.Offset);
         }
 
+        private void VisitNumericOperand(Expression expression)
+        {
+            if (expression.Type == typeof(bool))
+            {
+                Sql.Append("CAST(");
+                Visit(expression);
+                Sql.Append(" AS INT64)");
+            }
+            else
+            {
+                Visit(expression);
+            }
+        }
+
+        private void VisitBoolOperand(Expression expression)
+        {
+            if (expression.Type != typeof(bool))
+            {
+                Sql.Append("CAST(");
+                Visit(expression);
+                Sql.Append(" AS BOOL)");
+            }
+            else
+            {
+                Visit(expression);
+            }
+        }
+
+        private void BeginNumericReturnCast(BinaryExpression expression)
+        {
+            if (expression.Type == typeof(bool))
+            {
+                Sql.Append("CAST(");
+            }
+        }
+
+        private void EndNumericReturnCast(BinaryExpression expression)
+        {
+            if (expression.Type == typeof(bool))
+            {
+                Sql.Append(" AS BOOL)");
+            }
+        }
+
         /// <inheritdoc />
         protected override Expression VisitBinary(BinaryExpression binaryExpression)
         {
@@ -145,34 +189,93 @@ namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
                 }
                 case ExpressionType.And:
                 {
-                    Sql.Append("BIT_AND(");
-                    Visit(binaryExpression.Left);
-                    Sql.Append(", ");
-                    Visit(binaryExpression.Right);
+                    BeginNumericReturnCast(binaryExpression);
+                    Sql.Append("(");
+                    VisitNumericOperand(binaryExpression.Left);
+                    Sql.Append(" & ");
+                    VisitNumericOperand(binaryExpression.Right);
                     Sql.Append(")");
+                    EndNumericReturnCast(binaryExpression);
 
                     return binaryExpression;
                 }
                 case ExpressionType.Or:
                 {
-                    Sql.Append("BIT_OR(");
-                    Visit(binaryExpression.Left);
-                    Sql.Append(", ");
-                    Visit(binaryExpression.Right);
+                    BeginNumericReturnCast(binaryExpression);
+                    Sql.Append("(");
+                    VisitNumericOperand(binaryExpression.Left);
+                    Sql.Append(" | ");
+                    VisitNumericOperand(binaryExpression.Right);
                     Sql.Append(")");
-
-                    return binaryExpression;
-                    }
-                case ExpressionType.Modulo:
-                {
-                    Sql.Append("MOD(");
-                    Visit(binaryExpression.Left);
-                    Sql.Append(", ");
-                    Visit(binaryExpression.Right);
-                    Sql.Append(")");
+                    EndNumericReturnCast(binaryExpression);
 
                     return binaryExpression;
                 }
+                case ExpressionType.ExclusiveOr:
+                {
+                    BeginNumericReturnCast(binaryExpression);
+                    Sql.Append("(");
+                    VisitNumericOperand(binaryExpression.Left);
+                    Sql.Append(" ^ ");
+                    VisitNumericOperand(binaryExpression.Right);
+                    Sql.Append(")");
+                    EndNumericReturnCast(binaryExpression);
+
+                    return binaryExpression;
+                }
+                case ExpressionType.LeftShift:
+                {
+                    BeginNumericReturnCast(binaryExpression);
+                    Sql.Append("(");
+                    VisitNumericOperand(binaryExpression.Left);
+                    Sql.Append(" << ");
+                    VisitNumericOperand(binaryExpression.Right);
+                    Sql.Append(")");
+                    EndNumericReturnCast(binaryExpression);
+
+                    return binaryExpression;
+                }
+                case ExpressionType.RightShift:
+                {
+                    BeginNumericReturnCast(binaryExpression);
+                    Sql.Append("(");
+                    VisitNumericOperand(binaryExpression.Left);
+                    Sql.Append(" >> ");
+                    VisitNumericOperand(binaryExpression.Right);
+                    Sql.Append(")");
+                    EndNumericReturnCast(binaryExpression);
+
+                    return binaryExpression;
+                }
+                case ExpressionType.Modulo:
+                {
+                    BeginNumericReturnCast(binaryExpression);
+                    Sql.Append("MOD(");
+                    VisitNumericOperand(binaryExpression.Left);
+                    Sql.Append(", ");
+                    VisitNumericOperand(binaryExpression.Right);
+                    Sql.Append(")");
+                    EndNumericReturnCast(binaryExpression);
+
+                    return binaryExpression;
+                }
+//                case ExpressionType.Equal:
+//                case ExpressionType.NotEqual:
+//                {
+//                    //if one side is bool, we force both to bool due
+//                    //to expectations that "1" is true.
+//                    if (binaryExpression.Left.Type != typeof(bool)
+//                        && binaryExpression.Right.Type != typeof(bool))
+//                    {
+//                        return base.VisitBinary(binaryExpression);
+//                    }
+//                    // one or both sides are bool, so we may be forced
+//                    // to CAST.
+//                    VisitBoolOperand(binaryExpression.Left);
+//                    Sql.Append(" = ");
+//                    VisitBoolOperand(binaryExpression.Right);
+//                    return binaryExpression;
+//                }
             }
 
             return base.VisitBinary(binaryExpression);

@@ -30,20 +30,12 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             Fixture.TestSqlLoggerFactory.Clear();
         }
 
-        [Fact]
-        public override void Convert_ToDouble()
+        [ConditionalFact]
+        public override void Select_distinct_average()
         {
-//            AssertSingleResult<Order>(os => os.Average(o => o.OrderID));
-//            using (var context = Fixture.CreateContext())
-//            {
-//                var actual = context.Set<Order>().Average(o => o.OrderID);
-//                var expected = NorthwindData.CreateOrders().Average(o => o.OrderID);
-//
-//                Assert.Equal(expected, actual);
-//            }
-                        base.Convert_ToDouble();
+            AssertSingleResult<Order>(os => os.Select(o => o.OrderID).Distinct().Average(),
+                asserter: (e, a) => Assert.InRange((double)e - (double)a, -0.1D, 0.1D));
         }
-
 
         [ConditionalFact]
         public override void Average_with_no_arg()
@@ -131,7 +123,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         public override void String_StartsWith_Literal()
         {
             base.String_StartsWith_Literal();
-            AssertContainsInSql("WHERE c.ContactName LIKE 'M%'");
+            AssertContainsInSql("STARTS_WITH");
         }
 
         [Fact]
@@ -139,28 +131,21 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         {
             AssertQuery<Customer>(cs => cs.Where(c => c.ContactName.StartsWith(c.City)));
             AssertContainsInSql(
-                @"WHERE c.ContactName LIKE (c.City || '%') AND (LEFT(c.ContactName, LENGTH(c.City)) = c.City)");
+                @"STARTS_WITH");
         }
 
         [Fact]
         public override void String_EndsWith_Literal()
         {
             base.String_EndsWith_Literal();
-            AssertContainsInSql("WHERE RIGHT(c.ContactName, LENGTH('b')) = 'b'");
+            AssertContainsInSql("WHERE ENDS_WITH");
         }
 
         [Fact]
         public override void Trim_without_argument_in_predicate()
         {
             base.Trim_without_argument_in_predicate();
-            AssertContainsInSql(@"WHERE REGEXP_REPLACE(c.ContactTitle, '^\s*(.*?)\s*$', '\1') = 'Owner'");
-        }
-
-        [Fact]
-        public override void Trim_with_char_argument_in_predicate()
-        {
-            base.Trim_with_char_argument_in_predicate();
-            AssertContainsInSql("WHERE TRIM(c.ContactTitle, 'O')");
+            AssertContainsInSql(@"WHERE TRIM");
         }
 
         [Fact]
@@ -178,13 +163,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         }
 
         [Fact]
-        public override void TrimStart_with_char_argument_in_predicate()
-        {
-            base.TrimStart_with_char_argument_in_predicate();
-            AssertContainsInSql("WHERE LTRIM(c.ContactTitle, 'O')");
-        }
-
-        [Fact]
         public override void TrimStart_with_char_array_argument_in_predicate()
         {
             base.TrimStart_with_char_array_argument_in_predicate();
@@ -196,13 +174,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         {
             base.TrimEnd_without_arguments_in_predicate();
             AssertContainsInSql("WHERE REGEXP_REPLACE(c.ContactTitle, '\\s*$', '') = 'Owner'");
-        }
-
-        [Fact]
-        public override void TrimEnd_with_char_argument_in_predicate()
-        {
-            base.TrimEnd_with_char_argument_in_predicate();
-            AssertContainsInSql("WHERE RTRIM(c.ContactTitle, 'r')");
         }
 
         [Fact]
@@ -223,21 +194,14 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         public override void Query_expression_with_to_string_and_contains()
         {
             base.Query_expression_with_to_string_and_contains();
-            AssertContainsInSql("STRPOS(CAST(o.EmployeeID AS text), '10') > 0");
-        }
-
-        [Fact]
-        public override void Where_datetime_now()
-        {
-            base.Where_datetime_now();
-            AssertContainsInSql("WHERE NOW() <>");
+            AssertContainsInSql("STRPOS(CAST(o.EmployeeID AS STRING), '10') > 0");
         }
 
         [Fact]
         public override void Where_datetime_utcnow()
         {
             base.Where_datetime_utcnow();
-            AssertContainsInSql("WHERE NOW() AT TIME ZONE 'UTC' <>");
+            AssertContainsInSql("WHERE CURRENT_TIMESTAMP");
         }
 
         [Fact]
@@ -332,70 +296,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             AssertQuery<Customer>(
                 cs => cs.Where(c => Regex.IsMatch(c.CompanyName, "^A")),
                 entryCount: 4);
-            AssertContainsInSql("WHERE c.CompanyName ~ ('(?p)' || '^A')");
-        }
-
-        [Fact]
-        public void Regex_IsMatchOptionsIgnoreCase()
-        {
-            AssertQuery<Customer>(
-                cs => cs.Where(c => Regex.IsMatch(c.CompanyName, "^a", RegexOptions.IgnoreCase)),
-                entryCount: 4);
-            AssertContainsInSql("WHERE c.CompanyName ~ ('(?ip)' || '^a')");
-        }
-
-        [Fact]
-        public void Regex_IsMatchOptionsIgnorePatternWhitespace()
-        {
-            AssertQuery<Customer>(
-                cs => cs.Where(c => Regex.IsMatch(c.CompanyName, "^ A", RegexOptions.IgnorePatternWhitespace)),
-                entryCount: 4);
-            AssertContainsInSql("WHERE c.CompanyName ~ ('(?px)' || '^ A')");
-        }
-
-        [Fact]
-        public void Regex_IsMatchOptionsMultiline()
-        {
-            AssertQuery<Customer>(
-                cs => cs.Where(c => Regex.IsMatch(c.CompanyName, "^A", RegexOptions.Multiline)),
-                entryCount: 4);
-            AssertContainsInSql("WHERE c.CompanyName ~ ('(?n)' || '^A')");
-        }
-
-        [Fact]
-        public void Regex_IsMatchOptionsNone()
-        {
-            AssertQuery<Customer>(
-                cs => cs.Where(c => Regex.IsMatch(c.CompanyName, "^A", RegexOptions.None)),
-                entryCount: 4);
-            AssertContainsInSql("WHERE c.CompanyName ~ ('(?p)' || '^A')");
-        }
-
-        [Fact]
-        public void Regex_IsMatchOptionsSingleline()
-        {
-            AssertQuery<Customer>(
-                cs => cs.Where(c => Regex.IsMatch(c.CompanyName, "^A", RegexOptions.Singleline)),
-                entryCount: 4);
-            AssertContainsInSql("WHERE c.CompanyName ~ '^A'");
-        }
-
-        [Fact]
-        public void Regex_IsMatchOptionsUnsupported()
-        {
-            AssertQuery<Customer>(
-                cs => cs.Where(c => Regex.IsMatch(c.CompanyName, "^A", RegexOptions.RightToLeft)),
-                entryCount: 4);
-            Assert.DoesNotContain("WHERE c.CompanyName ~ ", Fixture.TestSqlLoggerFactory.Sql);
-        }
-
-        [Fact]
-        public void String_IndexOf_Char()
-        {
-            AssertQuery<Customer>(
-                cs => cs.Where(c => c.CompanyName.IndexOf('A') > 5),
-                entryCount: 9);
-            AssertContainsInSql("WHERE (STRPOS(c.CompanyName, 'A') - 1) > 5");
+            AssertContainsInSql("WHERE REGEXP_CONTAINS(c.CompanyName, '^A')");
         }
 
         [Fact]
@@ -420,7 +321,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         public void String_StartsWith_Literal_with_escaping()
         {
             AssertQuery<Customer>(cs => cs.Where(c => c.ContactName.StartsWith(@"_a%b\c")));
-            AssertContainsInSql(@"WHERE c.ContactName LIKE '\_a\%b\\c%'");
+            AssertContainsInSql(@"STARTS_WITH");
         }
 
         [Fact]

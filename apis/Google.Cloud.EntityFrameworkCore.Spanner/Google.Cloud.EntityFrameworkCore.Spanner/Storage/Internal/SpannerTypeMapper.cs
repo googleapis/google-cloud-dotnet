@@ -33,7 +33,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
         private static readonly StringTypeMapping s_defaultString
             = new StringTypeMapping(SpannerDbType.String.ToString(), DbType.String, true);
         private static readonly DoubleTypeMapping s_double
-            = new DoubleTypeMapping(SpannerDbType.Float64.ToString());
+            = new SpannerDoubleTypeMapping();
         private static readonly LongTypeMapping s_long 
             = new LongTypeMapping(SpannerDbType.Int64.ToString(), DbType.Int64);
         private static readonly DecimalTypeMapping s_decimal

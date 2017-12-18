@@ -122,7 +122,7 @@ CREATE TABLE Products (
     UnitsInStock FLOAT64,
     UnitsOnOrder FLOAT64,
     ReorderLevel FLOAT64,
-    Discontinued FLOAT64 NOT NULL
+    Discontinued BOOL NOT NULL
 ) PRIMARY KEY (ProductID);
 
 CREATE  INDEX Prod_CategoryID ON Products(CategoryID);

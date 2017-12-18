@@ -280,7 +280,15 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                             }
                             for (var j = 0; j < command.Parameters.Count; j++)
                             {
-                                command.Parameters[j].Value = values[j];
+                                if (Equals(((SpannerParameter) command.Parameters[j]).SpannerDbType, SpannerDbType.Bool)
+                                    && (values[j].Contains("0") || values[j].Contains("1")))
+                                {
+                                    command.Parameters[j].Value = Convert.ToInt32(values[j]);
+                                }
+                                else
+                                {
+                                    command.Parameters[j].Value = values[j];
+                                }
                             }
                         }
                         if (s_gStatements < SkipToLine) continue;
