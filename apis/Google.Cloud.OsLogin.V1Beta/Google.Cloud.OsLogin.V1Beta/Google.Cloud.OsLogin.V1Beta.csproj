@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+
+    <!-- TODO: Version defaults to 1.0.0, edit as required -->
+    <Version>1.0.0</Version>
+
+    <!-- TODO: NuGet packaging options -->
+    <!--
+      <Description>
+        Google Cloud OS Login API
+        Manages OS login configuration for Google account users.
+      </Description>
+      <PackageTags>PubSub;Google;Cloud</PackageTags>
+      <Copyright>Copyright 2017 Google LLC</Copyright>
+      <Authors>Google LLC</Authors>
+      *** TODO: These Icon, License, Project, and repo settings *MUST* be checked and edited ***
+      *** The values given are just examples ***
+      <PackageIconUrl>TODO: https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
+      <PackageLicenseUrl>TODO: https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+      <PackageProjectUrl>TODO: https://github.com/GoogleCloudPlatform/google-cloud-dotnet</PackageProjectUrl>
+      <RepositoryType>TODO: git</RepositoryType>
+      <RepositoryUrl>TODO: https://github.com/GoogleCloudPlatform/google-cloud-dotnet</RepositoryUrl>
+    -->
+
+    <!-- TODO: Configure package signing -->
+    <!--
+      <AssemblyOriginatorKeyFile>...</AssemblyOriginatorKeyFile>
+      <SignAssembly>true</SignAssembly>
+      <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    -->
+
+    <!-- These items should not require editing -->
+    <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Deterministic>true</Deterministic>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.2.0" />
+    <PackageReference Include="Grpc.Core" Version="1.7.0" />
+  </ItemGroup>
+
+</Project>
