@@ -20,30 +20,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
 {
     public class MutationsTest
     {
-        public static TheoryData<string> ValidFamilyNames { get; } = new TheoryData<string>
-        {
-            "a",
-            "A",
-            "-_.aZ09"
-        };
-
-        public static TheoryData<string> InvalidFamilyNames { get; } = new TheoryData<string>
-        {
-            default,
-            "",
-            "abc*",
-            "abc ",
-            "a=b"
-        };
-
-        public static TheoryData<BigtableByteString> InvalidRowKeys { get; } = new TheoryData<BigtableByteString>
-        {
-            "",
-            new byte[0],
-            ByteString.Empty,
-            default
-        };
-
         [Fact]
         public void CreateEntry()
         {
@@ -52,8 +28,9 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal(1, entry.Mutations.Count);
             Assert.NotNull(entry.Mutations[0].DeleteFromRow);
         }
+
         [Theory]
-        [MemberData(nameof(InvalidRowKeys))]
+        [MemberData(nameof(TestData.InvalidRowKeys), MemberType = typeof(TestData))]
         public void CreateEntryInvalidRowKey(BigtableByteString rowKey)
         {
             Assert.Throws<ArgumentException>(() => Mutations.CreateEntry(rowKey, Mutations.DeleteFromRow()));
@@ -68,7 +45,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ValidFamilyNames))]
+        [MemberData(nameof(TestData.ValidFamilyNames), MemberType = typeof(TestData))]
         public void DeleteFromColumn(string familyName)
         {
             var mutation =
@@ -81,7 +58,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidFamilyNames))]
+        [MemberData(nameof(TestData.InvalidFamilyNames), MemberType = typeof(TestData))]
         public void DeleteFromColumnInvalidFamilyName(string familyName)
         {
             Assert.Throws<ArgumentException>(
@@ -89,7 +66,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ValidFamilyNames))]
+        [MemberData(nameof(TestData.ValidFamilyNames), MemberType = typeof(TestData))]
         public void DeleteFromFamily(string familyName)
         {
             var mutation = Mutations.DeleteFromFamily(familyName);
@@ -98,7 +75,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidFamilyNames))]
+        [MemberData(nameof(TestData.InvalidFamilyNames), MemberType = typeof(TestData))]
         public void DeleteFromFamilyInvalidFamilyName(string familyName)
         {
             Assert.Throws<ArgumentException>(() => Mutations.DeleteFromFamily(familyName));
@@ -112,7 +89,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ValidFamilyNames))]
+        [MemberData(nameof(TestData.ValidFamilyNames), MemberType = typeof(TestData))]
         public void SetCell_Bytes(string familyName)
         {
             var mutation =
@@ -126,7 +103,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ValidFamilyNames))]
+        [MemberData(nameof(TestData.ValidFamilyNames), MemberType = typeof(TestData))]
         public void SetCell_Long(string familyName)
         {
             var mutation =
@@ -144,7 +121,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ValidFamilyNames))]
+        [MemberData(nameof(TestData.ValidFamilyNames), MemberType = typeof(TestData))]
         public void SetCell_String(string familyName)
         {
             var mutation =
@@ -157,7 +134,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidFamilyNames))]
+        [MemberData(nameof(TestData.InvalidFamilyNames), MemberType = typeof(TestData))]
         public void SetCellInvalidFamilyName(string familyName)
         {
             Assert.Throws<ArgumentException>(
