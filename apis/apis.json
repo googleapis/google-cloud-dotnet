@@ -374,11 +374,11 @@
 
   {
     "id": "Google.Cloud.OsLogin.V1Beta",
-	"productName": "Google Cloud OS Login API",
-	"version": "1.0.0-beta01",
-	"type": "grpc",
-	"description": "Manages OS login configuration for Google account users.",
-	"tags": [ "OsLogin" ],
+    "productName": "Google Cloud OS Login API",
+    "version": "1.0.0-beta01",
+    "type": "grpc",
+    "description": "Recommended Google client library to manages OS login configuration for Google account users.",
+    "tags": [ "OsLogin", "Login" ],
   },
 
   {

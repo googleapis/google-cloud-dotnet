@@ -12,8 +12,8 @@
     <Deterministic>true</Deterministic>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Manages OS login configuration for Google account users.</Description>
-    <PackageTags>OsLogin;Google;Cloud</PackageTags>
+    <Description>Recommended Google client library to manages OS login configuration for Google account users.</Description>
+    <PackageTags>OsLogin;Login;Google;Cloud</PackageTags>
     <Copyright>Copyright 2017 Google Inc.</Copyright>
     <Authors>Google Inc.</Authors>
     <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
