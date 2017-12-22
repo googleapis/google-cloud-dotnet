@@ -47,6 +47,20 @@ namespace Google.Cloud.Bigtable.V2
 
         private long _micros;
 
+        private BigtableVersion(long value, bool valueIsMillis)
+        {
+            if (valueIsMillis)
+            {
+                GaxPreconditions.CheckArgumentRange(value, nameof(value), -1, long.MaxValue / MillisPerMicro);
+                _micros = value == -1 ? MicrosFromTimestamp(DateTime.UtcNow) : value * MillisPerMicro;
+            }
+            else
+            {
+                GaxPreconditions.CheckArgumentRange(value, nameof(value), -1, long.MaxValue);
+                _micros = value;
+            }
+        }
+
         /// <summary>
         /// Creates a new <see cref="BigtableVersion"/> value from a 64-bit value.
         /// </summary>
@@ -70,11 +84,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The non-negative version value, or -1 to initialize from the milliseconds of DateTime.UtcNow.
         /// Must be less than or equal to 9223372036854775.
         /// </param>
-        public BigtableVersion(long value)
-        {
-            GaxPreconditions.CheckArgumentRange(value, nameof(value), -1, long.MaxValue / MillisPerMicro);
-            _micros = value == -1 ? MicrosFromTimestamp(DateTime.UtcNow) : value * MillisPerMicro;
-        }
+        public BigtableVersion(long value) : this(value, valueIsMillis: true) { }
 
         /// <summary>
         /// Creates a new <see cref="BigtableVersion"/> value from the milliseconds of a timestamp since the Unix epoch.
@@ -112,6 +122,8 @@ namespace Google.Cloud.Bigtable.V2
 
             _micros = MicrosFromTimestamp(timestamp);
         }
+
+        internal static BigtableVersion FromMicros(long value) => new BigtableVersion(value, valueIsMillis: false);
 
         private static long MicrosFromTimestamp(DateTime timestamp) => ((timestamp.Ticks - UnixEpoch.Ticks) / TicksPerMilli) * MillisPerMicro;
 

@@ -21,15 +21,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
 {
     public class ReadModifyWriteRulesTest
     {
-        public static TheoryData<string> InvalidFamilyNames { get; } = new TheoryData<string>
-        {
-            default(string),
-            "",
-            "abc*",
-            "abc ",
-            "a=b"
-        };
-
         [Fact]
         public void AppendRule()
         {
@@ -40,7 +31,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidFamilyNames))]
+        [MemberData(nameof(TestData.InvalidFamilyNames), MemberType = typeof(TestData))]
         public void AppendRule_Validations(string familyName)
         {
             Assert.Throws<ArgumentException>(
@@ -57,7 +48,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidFamilyNames))]
+        [MemberData(nameof(TestData.InvalidFamilyNames), MemberType = typeof(TestData))]
         public void IncrementRule_Validations(string familyName)
         {
             Assert.Throws<ArgumentException>(

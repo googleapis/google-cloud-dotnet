@@ -47,7 +47,6 @@ namespace Google.Cloud.Bigtable.V2
             IEnumerable<T> items,
             string paramName,
             bool allowNullCollection = false)
-            where T : class
         {
             if (allowNullCollection && items == null)
             {
