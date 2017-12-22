@@ -54,16 +54,17 @@ namespace Google.Cloud.Bigtable.V2.Tests
                     Chunks = { testCase.Chunks.Select(json => CellChunk.Parser.ParseJson(json)) }
                 });
 
-            var responses = new List<Row>();
-            try
+            List<Row> responses;
+            if (testCase.ExpectsError)
             {
                 // Do not use ToList() here. We want to get all results before the first failure.
-                await stream.AsAsyncEnumerable().ForEachAsync(row => responses.Add(row));
-                Assert.False(testCase.ExpectsError, testCase.Name);
+                responses = new List<Row>();
+                await Assert.ThrowsAsync<InvalidOperationException>(
+                    () => stream.AsAsyncEnumerable().ForEachAsync(row => responses.Add(row)));
             }
-            catch (InvalidOperationException)
+            else
             {
-                Assert.True(testCase.ExpectsError, testCase.Name);
+                responses = await stream.AsAsyncEnumerable().ToList();
             }
 
             var results = from row in responses
