@@ -373,6 +373,15 @@
   },
 
   {
+    "id": "Google.Cloud.OsLogin.V1Beta",
+    "productName": "Google Cloud OS Login API",
+    "version": "1.0.0-beta01",
+    "type": "grpc",
+    "description": "Recommended Google client library to manages OS login configuration for Google account users.",
+    "tags": [ "OsLogin", "Login" ],
+  },
+
+  {
     "id": "Google.Cloud.PubSub.V1",
     "productName": "Cloud Pub/Sub",
     "productUrl": "https://cloud.google.com/pubsub/",
