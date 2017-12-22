@@ -48,14 +48,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 throw new RequestMadeException();
         }
 
-        public static TheoryData<BigtableByteString> InvalidRowKeys { get; } = new TheoryData<BigtableByteString>
-        {
-            "",
-            new byte[0],
-            ByteString.Empty,
-            default
-        };
-
         [Fact]
         public async Task CheckAndMutateRow_Valid_Request()
         {
@@ -83,7 +75,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidRowKeys))]
+        [MemberData(nameof(TestData.InvalidRowKeys), MemberType = typeof(TestData))]
         public async Task CheckAndMutateRow_Validate_RowKey(BigtableByteString rowKey)
         {
             var client = new TestBigtableClient();
@@ -177,7 +169,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidRowKeys))]
+        [MemberData(nameof(TestData.InvalidRowKeys), MemberType = typeof(TestData))]
         public async Task MutateRow_Validate_RowKey(BigtableByteString rowKey)
         {
             var client = new TestBigtableClient();
@@ -273,7 +265,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidRowKeys))]
+        [MemberData(nameof(TestData.InvalidRowKeys), MemberType = typeof(TestData))]
         public async Task ReadModifyWriteRow_Validate_RowKey(BigtableByteString rowKey)
         {
             var client = new TestBigtableClient();
@@ -327,7 +319,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidRowKeys))]
+        [MemberData(nameof(TestData.InvalidRowKeys), MemberType = typeof(TestData))]
         public async Task ReadRow_Validate_RowKey(BigtableByteString rowKey)
         {
             var client = new TestBigtableClient();
