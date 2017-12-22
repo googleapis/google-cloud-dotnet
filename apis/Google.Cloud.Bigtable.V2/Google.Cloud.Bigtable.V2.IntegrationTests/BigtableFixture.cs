@@ -14,6 +14,7 @@
 
 using Google.Cloud.Bigtable.Admin.V2;
 using Google.Cloud.ClientTesting;
+using Google.Rpc;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -177,31 +178,20 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             qualifierName = qualifierName ?? "row_index";
             valuePrefix = valuePrefix ?? "";
 
-            // TODO: Use cleaner API when available.
             int counter = 0;
-            var request = new MutateRowsRequest
-            {
-                TableNameAsTableName = tableName,
-                Entries =
-                {
-                    rowKeys.Select(k => new MutateRowsRequest.Types.Entry
-                    {
-                        RowKey = k.Value,
-                        Mutations =
-                        {
+            var entries =
+                await TableClient.MutateRows(
+                    tableName,
+                    rowKeys.Select(k =>
+                        Mutations.CreateEntry(
+                            k.Value,
                             Mutations.SetCell(
                                 familyName,
                                 qualifierName.Value,
-                                valuePrefix.Value.Value.Concat(new BigtableByteString(counter++).Value),
-                                version)
-                        }
-                    })
-                }
-            };
-
-            var response = TableClient.MutateRows(request);
-            while (await response.ResponseStream.MoveNext(default))
-                ;
+                                valuePrefix.Value.Value.Concat(
+                                    new BigtableByteString(counter++).Value),
+                                version))).ToArray()).GetResponseEntries();
+            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
         }
 
         public void Dispose()

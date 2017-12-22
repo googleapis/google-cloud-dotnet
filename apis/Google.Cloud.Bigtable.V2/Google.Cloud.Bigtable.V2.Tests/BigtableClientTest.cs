@@ -51,7 +51,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task CheckAndMutateRow_Valid_Request()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
 
             await CheckAndMutateRow_ValidateArguments<RequestMadeException>(
@@ -65,7 +64,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task CheckAndMutateRow_Validate_TableName()
         {
-            var client = new TestBigtableClient();
             await CheckAndMutateRow_ValidateArguments<ArgumentNullException>(
                 null,
                 "abc",
@@ -78,7 +76,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [MemberData(nameof(TestData.InvalidRowKeys), MemberType = typeof(TestData))]
         public async Task CheckAndMutateRow_Validate_RowKey(BigtableByteString rowKey)
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await CheckAndMutateRow_ValidateArguments<ArgumentException>(
                 tableName,
@@ -91,7 +88,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task CheckAndMutateRow_Validate_Mutations()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await CheckAndMutateRow_ValidateArguments<ArgumentException>(
                 tableName,
@@ -155,7 +151,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task MutateRow_Valid_Request()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
 
             await MutateRow_ValidateArguments<RequestMadeException>(tableName, "abc", new[] { Mutations.DeleteFromRow() });
@@ -164,7 +159,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task MutateRow_Validate_TableName()
         {
-            var client = new TestBigtableClient();
             await MutateRow_ValidateArguments<ArgumentNullException>(null, "abc", new[] { Mutations.DeleteFromRow() });
         }
 
@@ -172,7 +166,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [MemberData(nameof(TestData.InvalidRowKeys), MemberType = typeof(TestData))]
         public async Task MutateRow_Validate_RowKey(BigtableByteString rowKey)
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await MutateRow_ValidateArguments<ArgumentException>(tableName, rowKey, new[] { Mutations.DeleteFromRow() });
         }
@@ -180,7 +173,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task MutateRow_Validate_Mutations()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await MutateRow_ValidateArguments<ArgumentNullException>(tableName, "abc", null);
             await MutateRow_ValidateArguments<ArgumentException>(tableName, "abc", new Mutation[0]);
@@ -207,9 +199,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void MutateRows_Valid_Request()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
-
             MutateRows_ValidateArguments<RequestMadeException>(
                 tableName,
                 new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
@@ -218,7 +208,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void MutateRows_Validate_TableName()
         {
-            var client = new TestBigtableClient();
             MutateRows_ValidateArguments<ArgumentNullException>(
                 null,
                 new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
@@ -227,7 +216,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void MutateRows_Validate_Mutations()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             MutateRows_ValidateArguments<ArgumentNullException>(tableName, null);
             MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[0]);
@@ -249,9 +237,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task ReadModifyWriteRow_Valid_Request()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
-
             await ReadModifyWriteRow_ValidateArguments<RequestMadeException>(
                 tableName, "abc", new[] { ReadModifyWriteRules.Append("a", "b", "c") } );
         }
@@ -259,7 +245,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task ReadModifyWriteRow_Validate_TableName()
         {
-            var client = new TestBigtableClient();
             await ReadModifyWriteRow_ValidateArguments<ArgumentNullException>(
                 null, "abc", new[] { ReadModifyWriteRules.Append("a", "b", "c") });
         }
@@ -268,7 +253,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [MemberData(nameof(TestData.InvalidRowKeys), MemberType = typeof(TestData))]
         public async Task ReadModifyWriteRow_Validate_RowKey(BigtableByteString rowKey)
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await ReadModifyWriteRow_ValidateArguments<ArgumentException>(
                 tableName, rowKey, new[] { ReadModifyWriteRules.Append("a", "b", "c") });
@@ -277,7 +261,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task ReadModifyWriteRow_Validate_Rules()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await ReadModifyWriteRow_ValidateArguments<ArgumentNullException>(tableName, "abc", null);
             await ReadModifyWriteRow_ValidateArguments<ArgumentException>(tableName, "abc", new ReadModifyWriteRule[0]);
@@ -304,9 +287,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task ReadRow_Valid_Request()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
-
             await ReadRow_ValidateArguments<RequestMadeException>(tableName, "abc", null);
             await ReadRow_ValidateArguments<RequestMadeException>(tableName, "abc", RowFilters.CellsPerColumnLimit(1));
         }
@@ -314,7 +295,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public async Task ReadRow_Validate_TableName()
         {
-            var client = new TestBigtableClient();
             await ReadRow_ValidateArguments<ArgumentNullException>(null, "abc", null);
         }
 
@@ -322,7 +302,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [MemberData(nameof(TestData.InvalidRowKeys), MemberType = typeof(TestData))]
         public async Task ReadRow_Validate_RowKey(BigtableByteString rowKey)
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             await ReadRow_ValidateArguments<ArgumentException>(tableName, rowKey, null);
         }
@@ -414,7 +393,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void ReadRows_Valid_Request()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
 
             ReadRows_ValidateArguments<RequestMadeException>(tableName, null, null, null);
@@ -437,7 +415,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void ReadRows_Validate_TableName()
         {
-            var client = new TestBigtableClient();
             var rows = new RowSet { RowKeys = { ByteString.CopyFromUtf8("abc") } };
             ReadRows_ValidateArguments<ArgumentNullException>(null, rows, null, null);
         }
@@ -445,7 +422,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void ReadRows_Validate_RowsLimit()
         {
-            var client = new TestBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             var rows = new RowSet { RowKeys = { ByteString.CopyFromUtf8("abc") } };
             ReadRows_ValidateArguments<ArgumentOutOfRangeException>(tableName, rows, null, -1);
@@ -461,6 +437,21 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var client = new TestBigtableClient();
             Assert.Throws<TException>(
                 () => client.ReadRows(tableName, rows, filter, rowsLimit));
+        }
+
+        [Fact]
+        public void SampleRowKeys_Valid_Request()
+        {
+            var client = new TestBigtableClient();
+            var tableName = new TableName("project", "instance", "table");
+            Assert.Throws<RequestMadeException>(() => client.SampleRowKeys(tableName));
+        }
+
+        [Fact]
+        public void SampleRowKeys_Validate_TableName()
+        {
+            var client = new TestBigtableClient();
+            Assert.Throws<ArgumentNullException>(() => client.SampleRowKeys((TableName)null));
         }
     }
 }
