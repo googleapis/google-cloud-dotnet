@@ -84,8 +84,7 @@ namespace Google.Cloud.Bigtable.V2
             if (IsRowInProgress &&
                 _stream.GrpcCall?.GetStatus().StatusCode != StatusCode.Cancelled)
             {
-                // TODO: Is there something we could/should do here? Stream prematurely closed
-                //       with a row in progress
+                throw new InvalidOperationException("The ReadRows stream has ended with a row in progress.");
             }
 
             return false;
@@ -140,6 +139,7 @@ namespace Google.Cloud.Bigtable.V2
 
         private void Reset()
         {
+            _rowMergeState = NewRow.Instance;
             _currentCell = new CellInfo();
             _currentFamilies.Clear();
         }
@@ -215,13 +215,14 @@ namespace Google.Cloud.Bigtable.V2
 
             public override RowMergeState HandleChunk(RowAsyncEnumerator owner, CellChunk chunk)
             {
-                // update name & make sure it changed
-                bool idChanged = false;
+                owner.Assert(
+                    chunk.RowKey.IsEmpty || chunk.RowKey == owner._currentCell.Row.Key,
+                    "NewCell must have the same key as the current row");
+
                 if (chunk.FamilyName != null)
                 {
                     if (chunk.FamilyName != owner._currentCell.Family?.Name)
                     {
-                        idChanged = true;
                         owner._currentCell.Family = new Family { Name = chunk.FamilyName };
                         Debug.Assert(!owner._currentFamilies.ContainsKey(chunk.FamilyName));
                         owner._currentFamilies[chunk.FamilyName] = owner._currentCell.Family;
@@ -231,7 +232,6 @@ namespace Google.Cloud.Bigtable.V2
 
                 if (chunk.Qualifier != null && chunk.Qualifier != owner._currentCell.Column?.Qualifier)
                 {
-                    idChanged = true;
                     owner._currentCell.Column = new Column { Qualifier = chunk.Qualifier };
                     owner.Assert(
                         owner._currentCell.Family != null,
@@ -239,15 +239,9 @@ namespace Google.Cloud.Bigtable.V2
                     owner._currentCell.Family.Columns.Add(owner._currentCell.Column);
                 }
 
-                idChanged = idChanged ||
-                    owner._currentCell.Timestamp != chunk.TimestampMicros;
                 owner._currentCell.Timestamp = chunk.TimestampMicros;
-
-                idChanged = idChanged ||
-                    !chunk.Labels.SequenceEqual(owner._currentCell.Labels ?? Enumerable.Empty<string>());
                 owner._currentCell.Labels = chunk.Labels;
 
-                owner.Assert(idChanged, "NewCell must have a new identifier");
                 owner.Assert(chunk.Value != null, "NewCell must have a value");
 
                 // calculate cell size
@@ -318,9 +312,9 @@ namespace Google.Cloud.Bigtable.V2
 
                 if (!isLast)
                 {
-                    return CellInProgress.Instance;    
+                    return CellInProgress.Instance;
                 }
-                
+
                 owner.AddCompletedCellToRow(ByteString.CopyFrom(accumulator.ToArray()));
                 accumulator.Clear();
                 return NewCell.Instance;
