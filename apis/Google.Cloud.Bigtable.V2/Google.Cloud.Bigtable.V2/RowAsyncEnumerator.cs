@@ -95,6 +95,14 @@ namespace Google.Cloud.Bigtable.V2
                 {
                     if (chunk.ResetRow)
                     {
+                        Assert(
+                            (chunk.RowKey == null || chunk.RowKey.IsEmpty) &&
+                            chunk.FamilyName == null &&
+                            chunk.Qualifier == null &&
+                            (chunk.Value == null || chunk.Value.IsEmpty) &&
+                            chunk.TimestampMicros == 0,
+                            "A reset should have no data");
+                        Assert(_rowMergeState != NewRow.Instance, "NewRow must have a rowKey");
                         Reset();
                         continue;
                     }
