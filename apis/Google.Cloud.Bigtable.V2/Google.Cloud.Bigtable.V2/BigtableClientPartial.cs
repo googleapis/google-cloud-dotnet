@@ -829,6 +829,7 @@ namespace Google.Cloud.Bigtable.V2
                 },
                 callSettings);
 
+        // TODO: Remove when generator supports flattening of server streaming methods.
         /// <summary>
         /// Returns a sample of row keys in the table. The returned row keys will
         /// delimit contiguous sections of the table of approximately equal size,
