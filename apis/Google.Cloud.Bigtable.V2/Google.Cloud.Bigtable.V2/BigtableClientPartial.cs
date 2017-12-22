@@ -231,7 +231,7 @@ namespace Google.Cloud.Bigtable.V2
         {
             GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
             GaxPreconditions.CheckArgument(rowKey.Length != 0, nameof(rowKey), "The row key must not empty");
-            
+
             var request = new CheckAndMutateRowRequest
             {
                 TableNameAsTableName = tableName,
@@ -829,6 +829,36 @@ namespace Google.Cloud.Bigtable.V2
                 },
                 callSettings);
 
+        // TODO: Remove when generator supports flattening of server streaming methods.
+        /// <summary>
+        /// Returns a sample of row keys in the table. The returned row keys will
+        /// delimit contiguous sections of the table of approximately equal size,
+        /// which can be used to break up the data for distributed tasks like
+        /// mapreduces.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="SampleRowKeys(SampleRowKeysRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table from which to sample row keys. Must not be null.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream with the row key samples.
+        /// </returns>
+        public virtual SampleRowKeysStream SampleRowKeys(
+            TableName tableName,
+            CallSettings callSettings = null) =>
+            SampleRowKeys(new SampleRowKeysRequest
+                {
+                    TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName))
+                },
+                callSettings);
+
         public partial class ReadRowsStream
         {
             private RowAsyncEnumerable _rowEnumerable;
@@ -860,6 +890,32 @@ namespace Google.Cloud.Bigtable.V2
 
                     return new RowAsyncEnumerator(_stream);
                 }
+            }
+        }
+
+        public partial class SampleRowKeysStream
+        {
+            /// <summary>
+            /// Gets all responses from the stream.
+            /// </summary>
+            /// <returns>The collection of all row key samples.</returns>
+            public IList<SampleRowKeysResponse> ToList() =>
+                Task.Run(() => ToListAsync()).ResultWithUnwrappedExceptions();
+
+            /// <summary>
+            /// Gets all responses from the stream asynchronously.
+            /// </summary>
+            /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+            /// <returns>The collection of all row key samples.</returns>
+            public async Task<IList<SampleRowKeysResponse>> ToListAsync(
+                CancellationToken cancellationToken = default)
+            {
+                var responses = new List<SampleRowKeysResponse>();
+                while (await ResponseStream.MoveNext(cancellationToken).ConfigureAwait(false))
+                {
+                    responses.Add(ResponseStream.Current);
+                }
+                return responses;
             }
         }
     }
