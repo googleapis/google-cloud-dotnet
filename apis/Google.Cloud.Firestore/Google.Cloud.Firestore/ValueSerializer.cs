@@ -114,8 +114,11 @@ namespace Google.Cloud.Firestore
         /// This is effectively the map-only part of <see cref="Serialize"/>, but without wrapping the
         /// result in a Value.
         /// </summary>
-        internal static Dictionary<string, Value> SerializeMap(object value)
+        internal static IDictionary<string, Value> SerializeMap(object value)
         {
+            if(value is IDictionary<string, Value> dict)
+                return dict;
+
             GaxPreconditions.CheckNotNull(value, nameof(value));
             switch (value)
             {
