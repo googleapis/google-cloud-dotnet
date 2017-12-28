@@ -119,8 +119,10 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(value, nameof(value));
             switch (value)
             {
+                case IDictionary<string, Value> map:
+                    return map.ToDictionary(pair => pair.Key, pair => pair.Value);
                 case IDictionary<string, object> map:
-                    return map.ToDictionary(pair => pair.Key, pair => Serialize(pair.Value));
+                    return map.ToDictionary(pair => pair.Key, pair => (pair.Value as Value) ?? Serialize(pair.Value));
                 case object anon when IsAnonymousType(anon.GetType()):
                     return ConvertAnonymousType(anon);
                 case object attributed when IsFirestoreAttributedType(attributed.GetType()):
