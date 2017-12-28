@@ -19,7 +19,7 @@ namespace Google.Cloud.Bigtable.V2
     /// <summary>
     /// Performs retries for <see cref="BigtableClient.MutateRows"/> operations.
     /// </summary>
-    class BigtableMutateRowsRequestManager
+    public class BigtableMutateRowsRequestManager
     {
         private readonly MutateRowsRequest _originalRequest;
 
@@ -67,6 +67,9 @@ namespace Google.Cloud.Bigtable.V2
             return new MutateRowsResponse.Types.Entry { Index = i, Status = status };
         }
 
+        /// <summary>
+        /// Containes possible processing statuses
+        /// </summary>
         public enum ProcessingStatus
         {
             /// <summary> All responses produced OK. </summary>
@@ -82,6 +85,11 @@ namespace Google.Cloud.Bigtable.V2
             INVALID
         }
 
+        /// <summary>
+        /// Constructor for retrying failed mutation entries
+        /// </summary>
+        /// <param name="retryStatuses"></param>
+        /// <param name="mutateRowsRequest"></param>
         public BigtableMutateRowsRequestManager(IEnumerable<Grpc.Core.StatusCode> retryStatuses, MutateRowsRequest mutateRowsRequest)
         {
             _originalRequest = mutateRowsRequest;
@@ -194,6 +202,10 @@ namespace Google.Cloud.Bigtable.V2
             return processingStatus;
         }
 
+        /// <summary>
+        /// Returns modified MutateRowsRequest.
+        /// </summary>
+        /// <returns></returns>
         public MutateRowsRequest GetRetryRequest()
         {
             return _modifiedRequest;

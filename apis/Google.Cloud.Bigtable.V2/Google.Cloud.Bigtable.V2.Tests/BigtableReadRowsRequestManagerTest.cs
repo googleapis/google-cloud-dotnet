@@ -8,7 +8,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
     /// <summary>
     /// Test for <see cref="BigtableReadRowsRequestManager"/>.
     /// </summary>
-    public class BigtableBigtableReadRowsRequestManagerTest
+    public class BigtableReadRowsRequestManagerTest
     {
         private readonly ByteString BLANC = ByteString.Empty;
 

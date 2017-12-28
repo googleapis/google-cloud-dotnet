@@ -22,7 +22,7 @@ namespace Google.Cloud.Bigtable.V2
     /// Keeps track of Rows returned from a readRows RPC for information relevant to resuming the RPC
     /// after temporary problems.
     /// </summary>
-    class BigtableReadRowsRequestManager
+    public class BigtableReadRowsRequestManager
     {
         /// <summary>
         /// Compares two <see cref="ByteString"/>s
@@ -66,14 +66,24 @@ namespace Google.Cloud.Bigtable.V2
             _originalRequest = originalRequest;
         }
 
+        /// <summary>
+        /// Update last found Rowkey
+        /// </summary>
         public ByteString LastFoundKey { get; set; }
 
+        /// <summary>
+        /// Update amount of rows read so far
+        /// </summary>
         public long RowCount
         {
             get => _rowCount;
             set => _rowCount += value;
         }
 
+        /// <summary>
+        /// Builds and returns updated subrequest
+        /// </summary>
+        /// <returns></returns>
         public ReadRowsRequest BuildUpdatedRequest()
         {
             ReadRowsRequest newReadRowsRequest = new ReadRowsRequest()
