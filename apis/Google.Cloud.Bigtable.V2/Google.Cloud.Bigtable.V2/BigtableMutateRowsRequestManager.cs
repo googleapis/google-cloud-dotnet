@@ -1,10 +1,10 @@
-﻿// Copyright 2017 Google Inc.
+﻿// Copyright 2017 Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//     http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,11 +13,12 @@
 // limitations under the License.
 
 using System.Collections.Generic;
+using Google.Api.Gax.Grpc;
 
 namespace Google.Cloud.Bigtable.V2
 {
     /// <summary>
-    /// Performs retries for <see cref="BigtableClient.MutateRows"/> operations.
+    /// Performs retries for <see cref="BigtableClient.MutateRows(MutateRowsRequest, CallSettings)"/> operations.
     /// </summary>
     public class BigtableMutateRowsRequestManager
     {
