@@ -36,11 +36,7 @@ namespace Google.Cloud.Bigtable.V2
 
             for (int i = 0; i < size; i++)
             {
-                // compare bytes as unsigned.
-                int byte1 = key1[i] & 0xff;
-                int byte2 = key2[i] & 0xff;
-
-                int comparison = byte1.CompareTo(byte2);
+                int comparison = key1[i].CompareTo(key2[i]);
                 if (comparison != 0)
                 {
                     return comparison;
