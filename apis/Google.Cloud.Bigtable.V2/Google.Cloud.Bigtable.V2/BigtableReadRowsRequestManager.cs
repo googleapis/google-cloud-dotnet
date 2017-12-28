@@ -22,7 +22,7 @@ namespace Google.Cloud.Bigtable.V2
     /// Keeps track of Rows returned from a readRows RPC for information relevant to resuming the RPC
     /// after temporary problems.
     /// </summary>
-    public class BigtableReadRowsRequestManager
+    internal class BigtableReadRowsRequestManager
     {
         /// <summary>
         /// Compares two <see cref="ByteString"/>s

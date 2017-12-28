@@ -20,7 +20,7 @@ namespace Google.Cloud.Bigtable.V2
     /// <summary>
     /// Performs retries for <see cref="BigtableClient.MutateRows(MutateRowsRequest, CallSettings)"/> operations.
     /// </summary>
-    public class BigtableMutateRowsRequestManager
+    internal class BigtableMutateRowsRequestManager
     {
         private readonly MutateRowsRequest _originalRequest;
 
