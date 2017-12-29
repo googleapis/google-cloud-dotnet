@@ -59,7 +59,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Test rowfilter appearse in the <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
         /// </summary>
         [Fact]
-        public void Test_rowFilter()
+        public void TestRowFilter()
         {
             RowFilter[] rowFiltersRange = { RowFilters.CellsPerColumnLimit(1), RowFilters.CellsPerRowOffset(2), RowFilters.CellsPerRowLimit(10) };
 
@@ -78,7 +78,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Test a single, full table scan scenario for updating <see cref="BigtableReadRowsRequestManager.LastFoundKey"/>.
         /// </summary>
         [Fact]
-        public void Test_filterRows_testAllRange()
+        public void TestFilterRowsTestAllRange()
         {
             ByteString key1 = ByteString.CopyFromUtf8("row1");
             ReadRowsRequest originalRequest =
@@ -94,7 +94,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         ///  Test rowKeys scenario for <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>.
         /// </summary>
         [Fact]
-        public void Test_filterRows_rowKeys()
+        public void TestFilterRowsRowKeys()
         {
             ByteString key1 = ByteString.CopyFromUtf8("row1");
             ByteString key2 = ByteString.CopyFromUtf8("row2");
@@ -114,7 +114,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Test multiple rowset filter scenarios for <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>.
         /// </summary>
         [Fact]
-        public void Test_filterRows_multiRowSetFilters()
+        public void TestFilterRowsMultiRowSetFilters()
         {
             ByteString key1 = ByteString.CopyFromUtf8("row1");
             ByteString key2 = ByteString.CopyFromUtf8("row2");
@@ -162,7 +162,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Test that resume handles key requests as unsigned bytes
         /// </summary>
         [Fact]
-        public void Test_filterRows_unsignedRange()
+        public void TestFilterRowsUnsignedRange()
         {
             ByteString key1 = ByteString.CopyFrom(0x7f);
             ByteString key2 = ByteString.CopyFrom((byte)0x80);
@@ -181,7 +181,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Test that resume handles row ranges as unsigned bytes
         /// </summary>
         [Fact]
-        public void Test_filterRows_unsignedRows()
+        public void TestFilterRowsUnsignedRows()
         {
             ByteString key1 = ByteString.CopyFrom(0x7f);
             ByteString key2 = ByteString.CopyFrom((byte)0x80);

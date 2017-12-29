@@ -102,7 +102,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// An empty request should return an empty response.
         /// </summary>
         [Fact]
-        public void Test_empty_success()
+        public void TestEmptySuccess()
         {
             BigtableMutateRowsRequestManager underTest =
                 new BigtableMutateRowsRequestManager(_retryStatuses, CreateRequest(0));
@@ -115,7 +115,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// A single successful entry should work.
         /// </summary>
         [Fact]
-        public void Test_single_success()
+        public void TestSingleSuccess()
         {
             BigtableMutateRowsRequestManager underTest =
                 new BigtableMutateRowsRequestManager(_retryStatuses, CreateRequest(1));
@@ -128,7 +128,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Two individual calls with one retry should work.
         /// </summary>
         [Fact]
-        public void Test_two_try_success_one_failure()
+        public void TestTwoTrySuccessOneFailure()
         {
             MutateRowsRequest originalRequest = CreateRequest(3);
             BigtableMutateRowsRequestManager underTest =
@@ -146,7 +146,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Two individual calls in a more complicated case with one retry should work.
         /// </summary>
         [Fact]
-        public void Test_Multi_Success()
+        public void TestMultiSuccess()
         {
             MutateRowsRequest originalRequest = CreateRequest(10);
             BigtableMutateRowsRequestManager underTest =
@@ -177,7 +177,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// status for 9 rounds until 1 mutation is left.Each success shows up in a random location.
         /// </summary>
         [Fact]
-        public void Test_multi_attempt()
+        public void TestMultiAttempt()
         {
             Random rand = new Random();
             MutateRowsRequest originalRequest = CreateRequest(10);
@@ -227,7 +227,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Processing status should return NOT_RETRIABLE if even a single response is not retryable.
         /// </summary>
         [Fact]
-        public void Test_not_retriable()
+        public void TestNotRetriable()
         {
             BigtableMutateRowsRequestManager underTest =
                 new BigtableMutateRowsRequestManager(_retryStatuses, CreateRequest(3));
@@ -242,7 +242,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Or response has an extra entry
         /// </summary>
         [Fact]
-        public void Test_invalid()
+        public void TestInvalid()
         {
             // Create 3 muntations, but only 2 OKs. That should be invalid
             BigtableMutateRowsRequestManager underTest =
