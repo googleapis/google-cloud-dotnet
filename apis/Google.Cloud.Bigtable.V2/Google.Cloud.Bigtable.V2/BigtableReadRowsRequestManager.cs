@@ -45,17 +45,17 @@ namespace Google.Cloud.Bigtable.V2
             return size1.CompareTo(size2);
         }
 
-        // Memeber variables form the constructor.
+        // Member variables from the constructor.
         private readonly ReadRowsRequest _originalRequest;
 
         // The number of rows read so far.
         private long _rowCount;
 
         /// <summary>
-        /// Constructor for ResumingStreamingResultScanner.
+        /// Constructor for <see cref="BigtableReadRowsRequestManager"/>.
         /// </summary>
         /// <param name="originalRequest">
-        /// Original ReadRowsRequest containg all of the parameters of the API call.
+        /// Original ReadRowsRequest containing all of the parameters of the API call.
         /// </param>
         public BigtableReadRowsRequestManager(ReadRowsRequest originalRequest)
         {
@@ -77,13 +77,11 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
-        /// Builds and returns updated subrequest
+        /// Builds and returns updated subrequest that excludes all rowKeys that have already been found.
         /// </summary>
-        /// <returns></returns>
         public ReadRowsRequest BuildUpdatedRequest()
         {
-            ReadRowsRequest newReadRowsRequest = new ReadRowsRequest()
-
+            ReadRowsRequest newReadRowsRequest = new ReadRowsRequest
             {
                 TableNameAsTableName = _originalRequest.TableNameAsTableName,
             };
@@ -164,7 +162,7 @@ namespace Google.Cloud.Bigtable.V2
                 {
                     newRange.StartKeyOpen = LastFoundKey;
                 }
-                newRowSet.RowRanges.AddRange(new List<RowRange> { newRange });
+                newRowSet.RowRanges.Add(newRange);
             }
 
             return newRowSet;
@@ -179,7 +177,7 @@ namespace Google.Cloud.Bigtable.V2
 
         private bool EndKeyIsAlreadyRead(ByteString endKey)
         {
-            // empty string emplies the largest key.
+            // empty string implies the largest key.
             return LastFoundKey != null && !endKey.IsEmpty
                    && ByteStringCompare(endKey, LastFoundKey) <= 0;
         }

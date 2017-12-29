@@ -56,7 +56,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         /// <summary>
-        /// Test rowfilter appearse in the <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
+        /// Test rowfilter appears in the <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
         /// </summary>
         [Fact]
         public void TestRowFilter()
@@ -181,7 +181,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Test that resume handles row ranges as unsigned bytes
         /// </summary>
         [Fact]
-        public void TestFilterRowsUnsignedRows()
+        public void TestFilterRowsUnsignedRows()    
         {
             ByteString key1 = ByteString.CopyFrom(0x7f);
             ByteString key2 = ByteString.CopyFrom((byte)0x80);
