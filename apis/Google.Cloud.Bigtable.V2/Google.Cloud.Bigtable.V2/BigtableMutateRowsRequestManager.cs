@@ -47,7 +47,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary> 
         private Rpc.Status[] Results { get; }
 
-        private readonly Rpc.Status STATUS_INTERNAL = new Rpc.Status
+        private readonly Rpc.Status _statusInternal = new Rpc.Status
         {
             Code = GetGrpcCode(Grpc.Core.StatusCode.Internal),
             Message = "Response Was Not Returned For This Index"
@@ -245,7 +245,7 @@ namespace Google.Cloud.Bigtable.V2
 
             for (int i = 0; i < Results.Length; i++)
             {
-                Rpc.Status status = Results[i] == null ? STATUS_INTERNAL : Results[i];
+                Rpc.Status status = Results[i] == null ? _statusInternal : Results[i];
                 entries.Add(CreateEntry(i, status));
             }
             return new MutateRowsResponse { Entries = { entries } };
