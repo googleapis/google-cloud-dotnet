@@ -14,6 +14,7 @@
 
 using System.Collections.Generic;
 using Google.Api.Gax.Grpc;
+using Grpc.Core;
 
 namespace Google.Cloud.Bigtable.V2
 {
@@ -49,16 +50,16 @@ namespace Google.Cloud.Bigtable.V2
 
         private readonly Rpc.Status _statusInternal = new Rpc.Status
         {
-            Code = GetGrpcCode(Grpc.Core.StatusCode.Internal),
+            Code = GetGrpcCode(StatusCode.Internal),
             Message = "Response was not returned for this index"
         };
 
         private bool _messageIsInvalid;
 
         /// <summary>
-        /// This method returns code digit from <see cref="Grpc.Core.StatusCode"/>.
+        /// This method returns code digit from <see cref="StatusCode"/>.
         /// </summary>
-        private static int GetGrpcCode(Grpc.Core.StatusCode status)
+        private static int GetGrpcCode(StatusCode status)
         {
             return (int)status;
         }
@@ -93,7 +94,7 @@ namespace Google.Cloud.Bigtable.V2
         /// Collection of Grpc status codes to retry on.</param>
         /// <param name="mutateRowsRequest">
         /// <see cref="MutateRowsRequest"/> that was received from the user.</param>
-        public BigtableMutateRowsRequestManager(IEnumerable<Grpc.Core.StatusCode> retryStatuses, MutateRowsRequest mutateRowsRequest)
+        public BigtableMutateRowsRequestManager(IEnumerable<StatusCode> retryStatuses, MutateRowsRequest mutateRowsRequest)
         {
             _originalRequest = mutateRowsRequest;
             RetryRequest = mutateRowsRequest;
@@ -111,7 +112,7 @@ namespace Google.Cloud.Bigtable.V2
             _rertriableCodes = GetRetriableCodes(retryStatuses);
         }
 
-        private List<int> GetRetriableCodes(IEnumerable<Grpc.Core.StatusCode> statusCode)
+        private List<int> GetRetriableCodes(IEnumerable<StatusCode> statusCode)
         {
             var codes = new List<int>();
             foreach (var status in statusCode)
@@ -178,7 +179,7 @@ namespace Google.Cloud.Bigtable.V2
             for (int i = 0; i < Results.Length; i++)
             {
                 Rpc.Status status = Results[i];
-                if (status.Code == GetGrpcCode(Grpc.Core.StatusCode.OK))
+                if (status.Code == GetGrpcCode(StatusCode.OK))
                 {
                     continue;
                 }

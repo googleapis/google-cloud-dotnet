@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using System.Collections.Generic;
+using System.Linq;
+using Grpc.Core;
 using System;
 using Xunit;
 
@@ -24,70 +26,61 @@ namespace Google.Cloud.Bigtable.V2.Tests
     public class BigtableMutateRowsRequestManagerTest
     {
         private static readonly Rpc.Status Ok =
-            new Rpc.Status {Code = (int) Grpc.Core.StatusCode.OK};
+            new Rpc.Status {Code = (int) StatusCode.OK};
 
         private static readonly Rpc.Status DeadlineExceeded =
-            new Rpc.Status {Code = (int) Grpc.Core.StatusCode.DeadlineExceeded};
+            new Rpc.Status {Code = (int) StatusCode.DeadlineExceeded};
 
         private static readonly Rpc.Status NotFound =
-            new Rpc.Status {Code = (int) Grpc.Core.StatusCode.NotFound};
+            new Rpc.Status {Code = (int) StatusCode.NotFound};
 
-        private static List<T> Fill<T>(T value, int size)
+        private static List<T> Fill<T>(T value, int size) => Enumerable.Repeat(value, size).ToList();
+
+        private static MutateRowsRequest CreateRequest(int entryCount) => new MutateRowsRequest
         {
-            List<T> list = new List<T>();
-            while (--size >= 0)
+            Entries =
             {
-                list.Add(value);
+                Enumerable.Range(0, entryCount).Select(i => new MutateRowsRequest.Types.Entry
+                    {Mutations = {new Mutation {SetCell = new Mutation.Types.SetCell {FamilyName = "Family" + i}}}})
             }
-            return list;
-        }
+        };
 
-        private static MutateRowsRequest CreateRequest(int entryCount)
-        {
-            MutateRowsRequest request = new MutateRowsRequest();
-            for (int i = 0; i < entryCount; i++)
+        private static MutateRowsRequest CreateRetryRequest(MutateRowsRequest original, params int[] indices) =>
+            new MutateRowsRequest
             {
-                Mutation mutation = new Mutation {SetCell = new Mutation.Types.SetCell {FamilyName = "Family" + i}};
-                request.Entries.Add(new MutateRowsRequest.Types.Entry {Mutations = {mutation}});
-            }
-            return request;
-        }
+                Entries =
+                {
+                    Enumerable.Range(0, indices.Length).Select(i => original.Entries[indices[i]])
+                }
+            };
 
-        private static MutateRowsRequest CreateRequest(MutateRowsRequest original, params int[] indices)
+        private static MutateRowsResponse CreateResponse(params Rpc.Status[] statuses) => new MutateRowsResponse
         {
-            MutateRowsRequest request = new MutateRowsRequest();
-            foreach (int i in indices)
-            {
-                request.Entries.Add(original.Entries[i]);
-            }
-            return request;
-        }
+            Entries = {Enumerable.Range(0, statuses.Length).Select(i => ToEntry(i, statuses[i]))}
+        };
 
-        private static MutateRowsResponse CreateResponse(params Rpc.Status[] statuses)
-        {
-            MutateRowsResponse response = new MutateRowsResponse();
-            for (int i = 0; i < statuses.Length; i++)
-            {
-                response.Entries.Add(ToEntry(i, statuses[i]));
-            }
-            return response;
-        }
-
-        private static MutateRowsResponse.Types.Entry ToEntry(int i, Rpc.Status status)
-        {
-            return new MutateRowsResponse.Types.Entry {Index = i, Status = status};
-        }
+        /// <summary>
+        /// This method builds a MutateRowsResponse Entry 
+        /// </summary>
+        /// <param name="i">
+        /// An integer that represents an index of an Entry</param>
+        /// <param name="status">
+        /// Rpc.Status that indicates whether requested mutation succeeded or not</param>
+        /// <returns></returns>
+        private static MutateRowsResponse.Types.Entry ToEntry(int i, Rpc.Status status) =>
+            new MutateRowsResponse.Types.Entry {Index = i, Status = status};
 
         /// <summary>
         /// This method sends MutateRowsResponse message to MutateRowsRequestManger 
         /// and requests back <see cref="BigtableMutateRowsRequestManager.ProcessingStatus"/> based on the message sent.
         /// </summary>
-        /// <param name="underTest"></param>
-        /// <param name="response"></param>
+        /// <param name="underTest">
+        /// An object of <see cref="BigtableMutateRowsRequestManager"/> class that is being tested</param>
+        /// <param name="response">,
+        /// A MutateRowsResponse message</param>
         /// <returns>ProcessingStatus - OK, RETRYABLE, NOT_RETRYABLE, INVALID.</returns>
         private static BigtableMutateRowsRequestManager.ProcessingStatus Send(
-            BigtableMutateRowsRequestManager underTest,
-            MutateRowsResponse response)
+            BigtableMutateRowsRequestManager underTest, MutateRowsResponse response)
         {
             underTest.SetStatus(response);
             return underTest.OnOk();
@@ -96,7 +89,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// <summary>
         /// This array holds statuses to retry on.
         /// </summary>
-        private readonly Grpc.Core.StatusCode[] _retryStatuses = {Grpc.Core.StatusCode.DeadlineExceeded};
+        private readonly StatusCode[] _retryStatuses = {StatusCode.DeadlineExceeded};
 
         /// <summary>
         /// An empty request should return an empty response.
@@ -135,7 +128,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 new BigtableMutateRowsRequestManager(_retryStatuses, originalRequest);
 
             Send(underTest, CreateResponse(Ok, DeadlineExceeded, Ok));
-            Assert.Equal(CreateRequest(originalRequest, 1), underTest.RetryRequest);
+            Assert.Equal(CreateRetryRequest(originalRequest, 1), underTest.RetryRequest);
             Assert.Equal(CreateResponse(Ok, DeadlineExceeded, Ok), underTest.BuildResponse());
 
             Send(underTest, CreateResponse(Ok));
@@ -156,12 +149,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
             MutateRowsResponse firstResponse = CreateResponse(Ok, DeadlineExceeded, Ok, DeadlineExceeded,
                 Ok, DeadlineExceeded, Ok, DeadlineExceeded, Ok, DeadlineExceeded);
             Send(underTest, firstResponse);
-            Assert.Equal(CreateRequest(originalRequest, 1, 3, 5, 7, 9), underTest.RetryRequest);
+            Assert.Equal(CreateRetryRequest(originalRequest, 1, 3, 5, 7, 9), underTest.RetryRequest);
             Assert.Equal(firstResponse, underTest.BuildResponse());
 
             // 3 mutations succeed, 2 mutations are retryable.
             Send(underTest, CreateResponse(Ok, DeadlineExceeded, Ok, Ok, DeadlineExceeded));
-            Assert.Equal(CreateRequest(originalRequest, 3, 9), underTest.RetryRequest);
+            Assert.Equal(CreateRetryRequest(originalRequest, 3, 9), underTest.RetryRequest);
             MutateRowsResponse secondResponse = CreateResponse(Ok, Ok, Ok, DeadlineExceeded,
                 Ok, Ok, Ok, Ok, Ok, DeadlineExceeded);
             Assert.Equal(secondResponse, underTest.BuildResponse());
@@ -179,17 +172,14 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void TestMultiAttempt()
         {
-            Random rand = new Random();
+            int seed = Environment.TickCount;
+            Random rand = new Random(seed);
             MutateRowsRequest originalRequest = CreateRequest(10);
             BigtableMutateRowsRequestManager underTest =
                 new BigtableMutateRowsRequestManager(_retryStatuses, originalRequest);
 
             // At the beginning, all mutations are outstanding
-            List<int> remaining = new List<int>();
-            for (int i = 0; i < 10; i++)
-            {
-                remaining.Add(i);
-            }
+            List<int> remaining = Enumerable.Range(0, 10).ToList();
 
             // Create a List<Status> filled with DEADLINE_EXCEEDED
             List<Rpc.Status> statuses = Fill(DeadlineExceeded, originalRequest.Entries.Count);
@@ -209,7 +199,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 // Make sure that the request is retryable, and that the retry request looks reasonable.
                 Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.RETRYABLE,
                     Send(underTest, CreateResponse(statuses.ToArray())));
-                Assert.Equal(CreateRequest(originalRequest, remaining.ToArray()), underTest.RetryRequest);
+                Assert.True(CreateRetryRequest(originalRequest, remaining.ToArray()).Equals(underTest.RetryRequest), $"Seed value is {seed} ");
 
                 // Remove Successful status from statuses.
                 statuses.RemoveAt(successIndex);
@@ -251,9 +241,9 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 Send(underTest, CreateResponse(Ok, Ok)));
 
             // Same 3 original mutations, but 4 entries in the response. That should be invalid
+            underTest = new BigtableMutateRowsRequestManager(_retryStatuses, CreateRequest(3));
             Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.INVALID,
                 Send(underTest, CreateResponse(Ok, Ok, Ok, Ok)));
         }
     }
-
 }
