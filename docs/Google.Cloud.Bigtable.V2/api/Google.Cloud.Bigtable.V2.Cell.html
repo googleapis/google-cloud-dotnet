@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Cell
    | Google.Cloud.Bigtable.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -190,6 +190,46 @@ length.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Bigtable_V2_Cell_Version_" data-uid="Google.Cloud.Bigtable.V2.Cell.Version*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_Cell_Version" data-uid="Google.Cloud.Bigtable.V2.Cell.Version">Version</h4>
+  <div class="markdown level1 summary"><p>Gets the version of the cell, which uniquely identifies it within its column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BigtableVersion Version { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html">BigtableVersion</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_Cell_Version_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note: version values are stored on the server as if they are microseconds since the Unix epoch.
+However, the server only supports millisecond granularity, so the server only allows microseconds
+in multiples of 1,000. <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html">BigtableVersion</a> attempts to hide this complexity by exposing
+its underlying <a class="xref" href="Google.Cloud.Bigtable.V2.Cell.html#Google_Cloud_Bigtable_V2_Cell_Value">Value</a> in terms of milliseconds, so if desired, a custom versioning
+scheme of 1, 2, ... can be used rather than 1000, 2000, ... However, access to the underlying
+microsecond value is still provided via <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html#Google_Cloud_Bigtable_V2_BigtableVersion_Micros">Micros</a>.
+</p>
+<p>
+Note: when using ReadModifyWriteRow, modified columns automatically use a server version, which
+is based on the current timestamp since the Unix epoch. For those columns, other reads and writes
+should use <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableVersion.html">BigtableVersion</a> values constructed from DateTime values, as opposed to
+using a custom versioning scheme with 64-bit values.
+</p>
+</div>
 </article>
           </div>
           

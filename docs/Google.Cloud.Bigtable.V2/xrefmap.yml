@@ -16941,6 +16941,24 @@ references:
   commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.MutateRowsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.MutateRowsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: BigtableClient.MutateRows(MutateRowsRequest, CallSettings)
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry[])
+  name: MutateRows(TableName, MutateRowsRequest.Types.Entry[])
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_MutateRowsRequest_Types_Entry___
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry[])
+  name.vb: MutateRows(TableName, MutateRowsRequest.Types.Entry())
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry[])
+  fullName.vb: Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.TableName, Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry())
+  nameWithType: BigtableClient.MutateRows(TableName, MutateRowsRequest.Types.Entry[])
+  nameWithType.vb: BigtableClient.MutateRows(TableName, MutateRowsRequest.Types.Entry())
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.TableName,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry},Google.Api.Gax.Grpc.CallSettings)
+  name: MutateRows(TableName, IEnumerable<MutateRowsRequest.Types.Entry>, CallSettings)
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_TableName_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_MutateRowsRequest_Types_Entry__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.TableName,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: MutateRows(TableName, IEnumerable(Of MutateRowsRequest.Types.Entry), CallSettings)
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.TableName, System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.TableName, System.Collections.Generic.IEnumerable(Of Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: BigtableClient.MutateRows(TableName, IEnumerable<MutateRowsRequest.Types.Entry>, CallSettings)
+  nameWithType.vb: BigtableClient.MutateRows(TableName, IEnumerable(Of MutateRowsRequest.Types.Entry), CallSettings)
 - uid: Google.Cloud.Bigtable.V2.BigtableClient.MutateRows*
   name: MutateRows
   href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_
@@ -17109,6 +17127,12 @@ references:
   commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys(Google.Cloud.Bigtable.V2.SampleRowKeysRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys(Google.Cloud.Bigtable.V2.SampleRowKeysRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: BigtableClient.SampleRowKeys(SampleRowKeysRequest, CallSettings)
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys(Google.Cloud.Bigtable.V2.TableName,Google.Api.Gax.Grpc.CallSettings)
+  name: SampleRowKeys(TableName, CallSettings)
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_TableName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys(Google.Cloud.Bigtable.V2.TableName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys(Google.Cloud.Bigtable.V2.TableName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: BigtableClient.SampleRowKeys(TableName, CallSettings)
 - uid: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys*
   name: SampleRowKeys
   href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_
@@ -17121,6 +17145,30 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream
   fullName: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream
   nameWithType: BigtableClient.SampleRowKeysStream
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToList
+  name: ToList()
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.html#Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeysStream_ToList
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToList
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToList()
+  nameWithType: BigtableClient.SampleRowKeysStream.ToList()
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToList*
+  name: ToList
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.html#Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeysStream_ToList_
+  commentId: Overload:Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToList
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToList
+  nameWithType: BigtableClient.SampleRowKeysStream.ToList
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToListAsync(System.Threading.CancellationToken)
+  name: ToListAsync(CancellationToken)
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.html#Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeysStream_ToListAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToListAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToListAsync(System.Threading.CancellationToken)
+  nameWithType: BigtableClient.SampleRowKeysStream.ToListAsync(CancellationToken)
+- uid: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToListAsync*
+  name: ToListAsync
+  href: api/Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.html#Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeysStream_ToListAsync_
+  commentId: Overload:Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToListAsync
+  fullName: Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.ToListAsync
+  nameWithType: BigtableClient.SampleRowKeysStream.ToListAsync
 - uid: Google.Cloud.Bigtable.V2.BigtableClient.ShutdownDefaultChannelsAsync
   name: ShutdownDefaultChannelsAsync()
   href: api/Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ShutdownDefaultChannelsAsync
@@ -17751,12 +17799,36 @@ references:
   commentId: Overload:Google.Cloud.Bigtable.V2.Cell.Value
   fullName: Google.Cloud.Bigtable.V2.Cell.Value
   nameWithType: Cell.Value
+- uid: Google.Cloud.Bigtable.V2.Cell.Version
+  name: Version
+  href: api/Google.Cloud.Bigtable.V2.Cell.html#Google_Cloud_Bigtable_V2_Cell_Version
+  commentId: P:Google.Cloud.Bigtable.V2.Cell.Version
+  fullName: Google.Cloud.Bigtable.V2.Cell.Version
+  nameWithType: Cell.Version
+- uid: Google.Cloud.Bigtable.V2.Cell.Version*
+  name: Version
+  href: api/Google.Cloud.Bigtable.V2.Cell.html#Google_Cloud_Bigtable_V2_Cell_Version_
+  commentId: Overload:Google.Cloud.Bigtable.V2.Cell.Version
+  fullName: Google.Cloud.Bigtable.V2.Cell.Version
+  nameWithType: Cell.Version
 - uid: Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest
   name: CheckAndMutateRowRequest
   href: api/Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.html
   commentId: T:Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest
   fullName: Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest
   nameWithType: CheckAndMutateRowRequest
+- uid: Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.AppProfileId
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.html#Google_Cloud_Bigtable_V2_CheckAndMutateRowRequest_AppProfileId
+  commentId: P:Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.AppProfileId
+  nameWithType: CheckAndMutateRowRequest.AppProfileId
+- uid: Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.AppProfileId*
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.html#Google_Cloud_Bigtable_V2_CheckAndMutateRowRequest_AppProfileId_
+  commentId: Overload:Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.AppProfileId
+  nameWithType: CheckAndMutateRowRequest.AppProfileId
 - uid: Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.FalseMutations
   name: FalseMutations
   href: api/Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.html#Google_Cloud_Bigtable_V2_CheckAndMutateRowRequest_FalseMutations
@@ -17883,6 +17955,36 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.ColumnRange
   fullName: Google.Cloud.Bigtable.V2.ColumnRange
   nameWithType: ColumnRange
+- uid: Google.Cloud.Bigtable.V2.ColumnRange.Closed(System.String,System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: Closed(String, Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.ColumnRange.html#Google_Cloud_Bigtable_V2_ColumnRange_Closed_System_String_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.ColumnRange.Closed(System.String,System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: Closed(String, Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.ColumnRange.Closed(System.String, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.ColumnRange.Closed(System.String, System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: ColumnRange.Closed(String, Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: ColumnRange.Closed(String, Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.ColumnRange.Closed*
+  name: Closed
+  href: api/Google.Cloud.Bigtable.V2.ColumnRange.html#Google_Cloud_Bigtable_V2_ColumnRange_Closed_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ColumnRange.Closed
+  fullName: Google.Cloud.Bigtable.V2.ColumnRange.Closed
+  nameWithType: ColumnRange.Closed
+- uid: Google.Cloud.Bigtable.V2.ColumnRange.ClosedOpen(System.String,System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: ClosedOpen(String, Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.ColumnRange.html#Google_Cloud_Bigtable_V2_ColumnRange_ClosedOpen_System_String_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.ColumnRange.ClosedOpen(System.String,System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: ClosedOpen(String, Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.ColumnRange.ClosedOpen(System.String, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.ColumnRange.ClosedOpen(System.String, System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: ColumnRange.ClosedOpen(String, Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: ColumnRange.ClosedOpen(String, Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.ColumnRange.ClosedOpen*
+  name: ClosedOpen
+  href: api/Google.Cloud.Bigtable.V2.ColumnRange.html#Google_Cloud_Bigtable_V2_ColumnRange_ClosedOpen_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ColumnRange.ClosedOpen
+  fullName: Google.Cloud.Bigtable.V2.ColumnRange.ClosedOpen
+  nameWithType: ColumnRange.ClosedOpen
 - uid: Google.Cloud.Bigtable.V2.ColumnRange.EndQualifierCase
   name: EndQualifierCase
   href: api/Google.Cloud.Bigtable.V2.ColumnRange.html#Google_Cloud_Bigtable_V2_ColumnRange_EndQualifierCase
@@ -17955,6 +18057,36 @@ references:
   commentId: Overload:Google.Cloud.Bigtable.V2.ColumnRange.FamilyName
   fullName: Google.Cloud.Bigtable.V2.ColumnRange.FamilyName
   nameWithType: ColumnRange.FamilyName
+- uid: Google.Cloud.Bigtable.V2.ColumnRange.Open(System.String,System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: Open(String, Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.ColumnRange.html#Google_Cloud_Bigtable_V2_ColumnRange_Open_System_String_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.ColumnRange.Open(System.String,System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: Open(String, Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.ColumnRange.Open(System.String, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.ColumnRange.Open(System.String, System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: ColumnRange.Open(String, Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: ColumnRange.Open(String, Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.ColumnRange.Open*
+  name: Open
+  href: api/Google.Cloud.Bigtable.V2.ColumnRange.html#Google_Cloud_Bigtable_V2_ColumnRange_Open_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ColumnRange.Open
+  fullName: Google.Cloud.Bigtable.V2.ColumnRange.Open
+  nameWithType: ColumnRange.Open
+- uid: Google.Cloud.Bigtable.V2.ColumnRange.OpenClosed(System.String,System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: OpenClosed(String, Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.ColumnRange.html#Google_Cloud_Bigtable_V2_ColumnRange_OpenClosed_System_String_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.ColumnRange.OpenClosed(System.String,System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: OpenClosed(String, Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.ColumnRange.OpenClosed(System.String, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.ColumnRange.OpenClosed(System.String, System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: ColumnRange.OpenClosed(String, Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: ColumnRange.OpenClosed(String, Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.ColumnRange.OpenClosed*
+  name: OpenClosed
+  href: api/Google.Cloud.Bigtable.V2.ColumnRange.html#Google_Cloud_Bigtable_V2_ColumnRange_OpenClosed_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ColumnRange.OpenClosed
+  fullName: Google.Cloud.Bigtable.V2.ColumnRange.OpenClosed
+  nameWithType: ColumnRange.OpenClosed
 - uid: Google.Cloud.Bigtable.V2.ColumnRange.StartQualifierCase
   name: StartQualifierCase
   href: api/Google.Cloud.Bigtable.V2.ColumnRange.html#Google_Cloud_Bigtable_V2_ColumnRange_StartQualifierCase
@@ -18051,6 +18183,18 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.MutateRowRequest
   fullName: Google.Cloud.Bigtable.V2.MutateRowRequest
   nameWithType: MutateRowRequest
+- uid: Google.Cloud.Bigtable.V2.MutateRowRequest.AppProfileId
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.MutateRowRequest.html#Google_Cloud_Bigtable_V2_MutateRowRequest_AppProfileId
+  commentId: P:Google.Cloud.Bigtable.V2.MutateRowRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.MutateRowRequest.AppProfileId
+  nameWithType: MutateRowRequest.AppProfileId
+- uid: Google.Cloud.Bigtable.V2.MutateRowRequest.AppProfileId*
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.MutateRowRequest.html#Google_Cloud_Bigtable_V2_MutateRowRequest_AppProfileId_
+  commentId: Overload:Google.Cloud.Bigtable.V2.MutateRowRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.MutateRowRequest.AppProfileId
+  nameWithType: MutateRowRequest.AppProfileId
 - uid: Google.Cloud.Bigtable.V2.MutateRowRequest.Mutations
   name: Mutations
   href: api/Google.Cloud.Bigtable.V2.MutateRowRequest.html#Google_Cloud_Bigtable_V2_MutateRowRequest_Mutations
@@ -18111,6 +18255,18 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.MutateRowsRequest
   fullName: Google.Cloud.Bigtable.V2.MutateRowsRequest
   nameWithType: MutateRowsRequest
+- uid: Google.Cloud.Bigtable.V2.MutateRowsRequest.AppProfileId
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.MutateRowsRequest.html#Google_Cloud_Bigtable_V2_MutateRowsRequest_AppProfileId
+  commentId: P:Google.Cloud.Bigtable.V2.MutateRowsRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.MutateRowsRequest.AppProfileId
+  nameWithType: MutateRowsRequest.AppProfileId
+- uid: Google.Cloud.Bigtable.V2.MutateRowsRequest.AppProfileId*
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.MutateRowsRequest.html#Google_Cloud_Bigtable_V2_MutateRowsRequest_AppProfileId_
+  commentId: Overload:Google.Cloud.Bigtable.V2.MutateRowsRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.MutateRowsRequest.AppProfileId
+  nameWithType: MutateRowsRequest.AppProfileId
 - uid: Google.Cloud.Bigtable.V2.MutateRowsRequest.Entries
   name: Entries
   href: api/Google.Cloud.Bigtable.V2.MutateRowsRequest.html#Google_Cloud_Bigtable_V2_MutateRowsRequest_Entries
@@ -18471,6 +18627,21 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.Mutations
   fullName: Google.Cloud.Bigtable.V2.Mutations
   nameWithType: Mutations
+- uid: Google.Cloud.Bigtable.V2.Mutations.CreateEntry(Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.Mutation[])
+  name: CreateEntry(BigtableByteString, Mutation[])
+  href: api/Google.Cloud.Bigtable.V2.Mutations.html#Google_Cloud_Bigtable_V2_Mutations_CreateEntry_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_Mutation___
+  commentId: M:Google.Cloud.Bigtable.V2.Mutations.CreateEntry(Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.Mutation[])
+  name.vb: CreateEntry(BigtableByteString, Mutation())
+  fullName: Google.Cloud.Bigtable.V2.Mutations.CreateEntry(Google.Cloud.Bigtable.V2.BigtableByteString, Google.Cloud.Bigtable.V2.Mutation[])
+  fullName.vb: Google.Cloud.Bigtable.V2.Mutations.CreateEntry(Google.Cloud.Bigtable.V2.BigtableByteString, Google.Cloud.Bigtable.V2.Mutation())
+  nameWithType: Mutations.CreateEntry(BigtableByteString, Mutation[])
+  nameWithType.vb: Mutations.CreateEntry(BigtableByteString, Mutation())
+- uid: Google.Cloud.Bigtable.V2.Mutations.CreateEntry*
+  name: CreateEntry
+  href: api/Google.Cloud.Bigtable.V2.Mutations.html#Google_Cloud_Bigtable_V2_Mutations_CreateEntry_
+  commentId: Overload:Google.Cloud.Bigtable.V2.Mutations.CreateEntry
+  fullName: Google.Cloud.Bigtable.V2.Mutations.CreateEntry
+  nameWithType: Mutations.CreateEntry
 - uid: Google.Cloud.Bigtable.V2.Mutations.DeleteFromColumn(System.String,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.BigtableVersionRange)
   name: DeleteFromColumn(String, BigtableByteString, BigtableVersionRange)
   href: api/Google.Cloud.Bigtable.V2.Mutations.html#Google_Cloud_Bigtable_V2_Mutations_DeleteFromColumn_System_String_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_BigtableVersionRange_
@@ -18528,6 +18699,18 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest
   fullName: Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest
   nameWithType: ReadModifyWriteRowRequest
+- uid: Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.AppProfileId
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.html#Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_AppProfileId
+  commentId: P:Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.AppProfileId
+  nameWithType: ReadModifyWriteRowRequest.AppProfileId
+- uid: Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.AppProfileId*
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.html#Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_AppProfileId_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.AppProfileId
+  nameWithType: ReadModifyWriteRowRequest.AppProfileId
 - uid: Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.RowKey
   name: RowKey
   href: api/Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.html#Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_RowKey
@@ -18720,6 +18903,18 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.ReadRowsRequest
   fullName: Google.Cloud.Bigtable.V2.ReadRowsRequest
   nameWithType: ReadRowsRequest
+- uid: Google.Cloud.Bigtable.V2.ReadRowsRequest.AppProfileId
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.ReadRowsRequest.html#Google_Cloud_Bigtable_V2_ReadRowsRequest_AppProfileId
+  commentId: P:Google.Cloud.Bigtable.V2.ReadRowsRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.ReadRowsRequest.AppProfileId
+  nameWithType: ReadRowsRequest.AppProfileId
+- uid: Google.Cloud.Bigtable.V2.ReadRowsRequest.AppProfileId*
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.ReadRowsRequest.html#Google_Cloud_Bigtable_V2_ReadRowsRequest_AppProfileId_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ReadRowsRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.ReadRowsRequest.AppProfileId
+  nameWithType: ReadRowsRequest.AppProfileId
 - uid: Google.Cloud.Bigtable.V2.ReadRowsRequest.Filter
   name: Filter
   href: api/Google.Cloud.Bigtable.V2.ReadRowsRequest.html#Google_Cloud_Bigtable_V2_ReadRowsRequest_Filter
@@ -19689,6 +19884,36 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.RowRange
   fullName: Google.Cloud.Bigtable.V2.RowRange
   nameWithType: RowRange
+- uid: Google.Cloud.Bigtable.V2.RowRange.Closed(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: Closed(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.RowRange.html#Google_Cloud_Bigtable_V2_RowRange_Closed_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.RowRange.Closed(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: Closed(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.RowRange.Closed(System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.RowRange.Closed(System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: RowRange.Closed(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: RowRange.Closed(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.RowRange.Closed*
+  name: Closed
+  href: api/Google.Cloud.Bigtable.V2.RowRange.html#Google_Cloud_Bigtable_V2_RowRange_Closed_
+  commentId: Overload:Google.Cloud.Bigtable.V2.RowRange.Closed
+  fullName: Google.Cloud.Bigtable.V2.RowRange.Closed
+  nameWithType: RowRange.Closed
+- uid: Google.Cloud.Bigtable.V2.RowRange.ClosedOpen(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: ClosedOpen(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.RowRange.html#Google_Cloud_Bigtable_V2_RowRange_ClosedOpen_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.RowRange.ClosedOpen(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: ClosedOpen(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.RowRange.ClosedOpen(System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.RowRange.ClosedOpen(System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: RowRange.ClosedOpen(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: RowRange.ClosedOpen(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.RowRange.ClosedOpen*
+  name: ClosedOpen
+  href: api/Google.Cloud.Bigtable.V2.RowRange.html#Google_Cloud_Bigtable_V2_RowRange_ClosedOpen_
+  commentId: Overload:Google.Cloud.Bigtable.V2.RowRange.ClosedOpen
+  fullName: Google.Cloud.Bigtable.V2.RowRange.ClosedOpen
+  nameWithType: RowRange.ClosedOpen
 - uid: Google.Cloud.Bigtable.V2.RowRange.EndKeyCase
   name: EndKeyCase
   href: api/Google.Cloud.Bigtable.V2.RowRange.html#Google_Cloud_Bigtable_V2_RowRange_EndKeyCase
@@ -19749,6 +19974,36 @@ references:
   commentId: Overload:Google.Cloud.Bigtable.V2.RowRange.EndKeyOpen
   fullName: Google.Cloud.Bigtable.V2.RowRange.EndKeyOpen
   nameWithType: RowRange.EndKeyOpen
+- uid: Google.Cloud.Bigtable.V2.RowRange.Open(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: Open(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.RowRange.html#Google_Cloud_Bigtable_V2_RowRange_Open_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.RowRange.Open(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: Open(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.RowRange.Open(System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.RowRange.Open(System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: RowRange.Open(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: RowRange.Open(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.RowRange.Open*
+  name: Open
+  href: api/Google.Cloud.Bigtable.V2.RowRange.html#Google_Cloud_Bigtable_V2_RowRange_Open_
+  commentId: Overload:Google.Cloud.Bigtable.V2.RowRange.Open
+  fullName: Google.Cloud.Bigtable.V2.RowRange.Open
+  nameWithType: RowRange.Open
+- uid: Google.Cloud.Bigtable.V2.RowRange.OpenClosed(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: OpenClosed(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.RowRange.html#Google_Cloud_Bigtable_V2_RowRange_OpenClosed_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.RowRange.OpenClosed(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: OpenClosed(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.RowRange.OpenClosed(System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.RowRange.OpenClosed(System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: RowRange.OpenClosed(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: RowRange.OpenClosed(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.RowRange.OpenClosed*
+  name: OpenClosed
+  href: api/Google.Cloud.Bigtable.V2.RowRange.html#Google_Cloud_Bigtable_V2_RowRange_OpenClosed_
+  commentId: Overload:Google.Cloud.Bigtable.V2.RowRange.OpenClosed
+  fullName: Google.Cloud.Bigtable.V2.RowRange.OpenClosed
+  nameWithType: RowRange.OpenClosed
 - uid: Google.Cloud.Bigtable.V2.RowRange.StartKeyCase
   name: StartKeyCase
   href: api/Google.Cloud.Bigtable.V2.RowRange.html#Google_Cloud_Bigtable_V2_RowRange_StartKeyCase
@@ -19815,6 +20070,48 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.RowSet
   fullName: Google.Cloud.Bigtable.V2.RowSet
   nameWithType: RowSet
+- uid: Google.Cloud.Bigtable.V2.RowSet.FromRowKey(Google.Cloud.Bigtable.V2.BigtableByteString)
+  name: FromRowKey(BigtableByteString)
+  href: api/Google.Cloud.Bigtable.V2.RowSet.html#Google_Cloud_Bigtable_V2_RowSet_FromRowKey_Google_Cloud_Bigtable_V2_BigtableByteString_
+  commentId: M:Google.Cloud.Bigtable.V2.RowSet.FromRowKey(Google.Cloud.Bigtable.V2.BigtableByteString)
+  fullName: Google.Cloud.Bigtable.V2.RowSet.FromRowKey(Google.Cloud.Bigtable.V2.BigtableByteString)
+  nameWithType: RowSet.FromRowKey(BigtableByteString)
+- uid: Google.Cloud.Bigtable.V2.RowSet.FromRowKey*
+  name: FromRowKey
+  href: api/Google.Cloud.Bigtable.V2.RowSet.html#Google_Cloud_Bigtable_V2_RowSet_FromRowKey_
+  commentId: Overload:Google.Cloud.Bigtable.V2.RowSet.FromRowKey
+  fullName: Google.Cloud.Bigtable.V2.RowSet.FromRowKey
+  nameWithType: RowSet.FromRowKey
+- uid: Google.Cloud.Bigtable.V2.RowSet.FromRowKeys(Google.Cloud.Bigtable.V2.BigtableByteString[])
+  name: FromRowKeys(BigtableByteString[])
+  href: api/Google.Cloud.Bigtable.V2.RowSet.html#Google_Cloud_Bigtable_V2_RowSet_FromRowKeys_Google_Cloud_Bigtable_V2_BigtableByteString___
+  commentId: M:Google.Cloud.Bigtable.V2.RowSet.FromRowKeys(Google.Cloud.Bigtable.V2.BigtableByteString[])
+  name.vb: FromRowKeys(BigtableByteString())
+  fullName: Google.Cloud.Bigtable.V2.RowSet.FromRowKeys(Google.Cloud.Bigtable.V2.BigtableByteString[])
+  fullName.vb: Google.Cloud.Bigtable.V2.RowSet.FromRowKeys(Google.Cloud.Bigtable.V2.BigtableByteString())
+  nameWithType: RowSet.FromRowKeys(BigtableByteString[])
+  nameWithType.vb: RowSet.FromRowKeys(BigtableByteString())
+- uid: Google.Cloud.Bigtable.V2.RowSet.FromRowKeys*
+  name: FromRowKeys
+  href: api/Google.Cloud.Bigtable.V2.RowSet.html#Google_Cloud_Bigtable_V2_RowSet_FromRowKeys_
+  commentId: Overload:Google.Cloud.Bigtable.V2.RowSet.FromRowKeys
+  fullName: Google.Cloud.Bigtable.V2.RowSet.FromRowKeys
+  nameWithType: RowSet.FromRowKeys
+- uid: Google.Cloud.Bigtable.V2.RowSet.FromRowRanges(Google.Cloud.Bigtable.V2.RowRange[])
+  name: FromRowRanges(RowRange[])
+  href: api/Google.Cloud.Bigtable.V2.RowSet.html#Google_Cloud_Bigtable_V2_RowSet_FromRowRanges_Google_Cloud_Bigtable_V2_RowRange___
+  commentId: M:Google.Cloud.Bigtable.V2.RowSet.FromRowRanges(Google.Cloud.Bigtable.V2.RowRange[])
+  name.vb: FromRowRanges(RowRange())
+  fullName: Google.Cloud.Bigtable.V2.RowSet.FromRowRanges(Google.Cloud.Bigtable.V2.RowRange[])
+  fullName.vb: Google.Cloud.Bigtable.V2.RowSet.FromRowRanges(Google.Cloud.Bigtable.V2.RowRange())
+  nameWithType: RowSet.FromRowRanges(RowRange[])
+  nameWithType.vb: RowSet.FromRowRanges(RowRange())
+- uid: Google.Cloud.Bigtable.V2.RowSet.FromRowRanges*
+  name: FromRowRanges
+  href: api/Google.Cloud.Bigtable.V2.RowSet.html#Google_Cloud_Bigtable_V2_RowSet_FromRowRanges_
+  commentId: Overload:Google.Cloud.Bigtable.V2.RowSet.FromRowRanges
+  fullName: Google.Cloud.Bigtable.V2.RowSet.FromRowRanges
+  nameWithType: RowSet.FromRowRanges
 - uid: Google.Cloud.Bigtable.V2.RowSet.RowKeys
   name: RowKeys
   href: api/Google.Cloud.Bigtable.V2.RowSet.html#Google_Cloud_Bigtable_V2_RowSet_RowKeys
@@ -19845,6 +20142,18 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.SampleRowKeysRequest
   fullName: Google.Cloud.Bigtable.V2.SampleRowKeysRequest
   nameWithType: SampleRowKeysRequest
+- uid: Google.Cloud.Bigtable.V2.SampleRowKeysRequest.AppProfileId
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.SampleRowKeysRequest.html#Google_Cloud_Bigtable_V2_SampleRowKeysRequest_AppProfileId
+  commentId: P:Google.Cloud.Bigtable.V2.SampleRowKeysRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.SampleRowKeysRequest.AppProfileId
+  nameWithType: SampleRowKeysRequest.AppProfileId
+- uid: Google.Cloud.Bigtable.V2.SampleRowKeysRequest.AppProfileId*
+  name: AppProfileId
+  href: api/Google.Cloud.Bigtable.V2.SampleRowKeysRequest.html#Google_Cloud_Bigtable_V2_SampleRowKeysRequest_AppProfileId_
+  commentId: Overload:Google.Cloud.Bigtable.V2.SampleRowKeysRequest.AppProfileId
+  fullName: Google.Cloud.Bigtable.V2.SampleRowKeysRequest.AppProfileId
+  nameWithType: SampleRowKeysRequest.AppProfileId
 - uid: Google.Cloud.Bigtable.V2.SampleRowKeysRequest.TableName
   name: TableName
   href: api/Google.Cloud.Bigtable.V2.SampleRowKeysRequest.html#Google_Cloud_Bigtable_V2_SampleRowKeysRequest_TableName
@@ -20076,6 +20385,36 @@ references:
   commentId: T:Google.Cloud.Bigtable.V2.ValueRange
   fullName: Google.Cloud.Bigtable.V2.ValueRange
   nameWithType: ValueRange
+- uid: Google.Cloud.Bigtable.V2.ValueRange.Closed(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: Closed(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.ValueRange.html#Google_Cloud_Bigtable_V2_ValueRange_Closed_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.ValueRange.Closed(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: Closed(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.ValueRange.Closed(System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.ValueRange.Closed(System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: ValueRange.Closed(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: ValueRange.Closed(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.ValueRange.Closed*
+  name: Closed
+  href: api/Google.Cloud.Bigtable.V2.ValueRange.html#Google_Cloud_Bigtable_V2_ValueRange_Closed_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ValueRange.Closed
+  fullName: Google.Cloud.Bigtable.V2.ValueRange.Closed
+  nameWithType: ValueRange.Closed
+- uid: Google.Cloud.Bigtable.V2.ValueRange.ClosedOpen(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: ClosedOpen(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.ValueRange.html#Google_Cloud_Bigtable_V2_ValueRange_ClosedOpen_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.ValueRange.ClosedOpen(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: ClosedOpen(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.ValueRange.ClosedOpen(System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.ValueRange.ClosedOpen(System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: ValueRange.ClosedOpen(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: ValueRange.ClosedOpen(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.ValueRange.ClosedOpen*
+  name: ClosedOpen
+  href: api/Google.Cloud.Bigtable.V2.ValueRange.html#Google_Cloud_Bigtable_V2_ValueRange_ClosedOpen_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ValueRange.ClosedOpen
+  fullName: Google.Cloud.Bigtable.V2.ValueRange.ClosedOpen
+  nameWithType: ValueRange.ClosedOpen
 - uid: Google.Cloud.Bigtable.V2.ValueRange.EndValueCase
   name: EndValueCase
   href: api/Google.Cloud.Bigtable.V2.ValueRange.html#Google_Cloud_Bigtable_V2_ValueRange_EndValueCase
@@ -20136,6 +20475,36 @@ references:
   commentId: Overload:Google.Cloud.Bigtable.V2.ValueRange.EndValueOpen
   fullName: Google.Cloud.Bigtable.V2.ValueRange.EndValueOpen
   nameWithType: ValueRange.EndValueOpen
+- uid: Google.Cloud.Bigtable.V2.ValueRange.Open(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: Open(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.ValueRange.html#Google_Cloud_Bigtable_V2_ValueRange_Open_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.ValueRange.Open(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: Open(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.ValueRange.Open(System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.ValueRange.Open(System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: ValueRange.Open(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: ValueRange.Open(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.ValueRange.Open*
+  name: Open
+  href: api/Google.Cloud.Bigtable.V2.ValueRange.html#Google_Cloud_Bigtable_V2_ValueRange_Open_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ValueRange.Open
+  fullName: Google.Cloud.Bigtable.V2.ValueRange.Open
+  nameWithType: ValueRange.Open
+- uid: Google.Cloud.Bigtable.V2.ValueRange.OpenClosed(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name: OpenClosed(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  href: api/Google.Cloud.Bigtable.V2.ValueRange.html#Google_Cloud_Bigtable_V2_ValueRange_OpenClosed_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__
+  commentId: M:Google.Cloud.Bigtable.V2.ValueRange.OpenClosed(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})
+  name.vb: OpenClosed(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+  fullName: Google.Cloud.Bigtable.V2.ValueRange.OpenClosed(System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>, System.Nullable<Google.Cloud.Bigtable.V2.BigtableByteString>)
+  fullName.vb: Google.Cloud.Bigtable.V2.ValueRange.OpenClosed(System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString), System.Nullable(Of Google.Cloud.Bigtable.V2.BigtableByteString))
+  nameWithType: ValueRange.OpenClosed(Nullable<BigtableByteString>, Nullable<BigtableByteString>)
+  nameWithType.vb: ValueRange.OpenClosed(Nullable(Of BigtableByteString), Nullable(Of BigtableByteString))
+- uid: Google.Cloud.Bigtable.V2.ValueRange.OpenClosed*
+  name: OpenClosed
+  href: api/Google.Cloud.Bigtable.V2.ValueRange.html#Google_Cloud_Bigtable_V2_ValueRange_OpenClosed_
+  commentId: Overload:Google.Cloud.Bigtable.V2.ValueRange.OpenClosed
+  fullName: Google.Cloud.Bigtable.V2.ValueRange.OpenClosed
+  nameWithType: ValueRange.OpenClosed
 - uid: Google.Cloud.Bigtable.V2.ValueRange.StartValueCase
   name: StartValueCase
   href: api/Google.Cloud.Bigtable.V2.ValueRange.html#Google_Cloud_Bigtable_V2_ValueRange_StartValueCase

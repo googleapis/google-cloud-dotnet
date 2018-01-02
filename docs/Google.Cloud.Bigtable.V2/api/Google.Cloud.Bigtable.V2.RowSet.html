@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RowSet
    | Google.Cloud.Bigtable.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -156,6 +156,137 @@
       <tr>
         <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.RowRange.html">RowRange</a>&gt;</td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Bigtable_V2_RowSet_FromRowKey_" data-uid="Google.Cloud.Bigtable.V2.RowSet.FromRowKey*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowSet_FromRowKey_Google_Cloud_Bigtable_V2_BigtableByteString_" data-uid="Google.Cloud.Bigtable.V2.RowSet.FromRowKey(Google.Cloud.Bigtable.V2.BigtableByteString)">FromRowKey(BigtableByteString)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Bigtable.V2.RowSet.html">RowSet</a> instance from a single row key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowSet FromRowKey(BigtableByteString rowKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of row included in the set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowSet.html">RowSet</a></td>
+        <td><p>The created set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowSet_FromRowKeys_" data-uid="Google.Cloud.Bigtable.V2.RowSet.FromRowKeys*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowSet_FromRowKeys_Google_Cloud_Bigtable_V2_BigtableByteString___" data-uid="Google.Cloud.Bigtable.V2.RowSet.FromRowKeys(Google.Cloud.Bigtable.V2.BigtableByteString[])">FromRowKeys(BigtableByteString[])</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Bigtable.V2.RowSet.html">RowSet</a> instance from individual row keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowSet FromRowKeys(params BigtableByteString[] rowKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>[]</td>
+        <td><span class="parametername">rowKeys</span></td>
+        <td><p>The keys of single rows included in the set. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowSet.html">RowSet</a></td>
+        <td><p>The created set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowSet_FromRowRanges_" data-uid="Google.Cloud.Bigtable.V2.RowSet.FromRowRanges*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowSet_FromRowRanges_Google_Cloud_Bigtable_V2_RowRange___" data-uid="Google.Cloud.Bigtable.V2.RowSet.FromRowRanges(Google.Cloud.Bigtable.V2.RowRange[])">FromRowRanges(RowRange[])</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Bigtable.V2.RowSet.html">RowSet</a> instance from contiguous row ranges.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RowSet FromRowRanges(params RowRange[] rowRanges)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowRange.html">RowRange</a>[]</td>
+        <td><span class="parametername">rowRanges</span></td>
+        <td><p>Contiguous row ranges included in the set. Must not be null or contain null entries.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowSet.html">RowSet</a></td>
+        <td><p>The created set.</p>
+</td>
       </tr>
     </tbody>
   </table>

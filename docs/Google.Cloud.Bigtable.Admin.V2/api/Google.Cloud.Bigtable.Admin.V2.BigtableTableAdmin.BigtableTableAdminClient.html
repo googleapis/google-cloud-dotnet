@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigtableTableAdmin.BigtableTableAdminClient
    | Google.Cloud.Bigtable.Admin.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -204,6 +204,275 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CheckConsistency_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CheckConsistency*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CheckConsistency_Google_Cloud_Bigtable_Admin_V2_CheckConsistencyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CheckConsistency(Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest,Grpc.Core.CallOptions)">CheckConsistency(CheckConsistencyRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Checks replication consistency based on a consistency token, that is, if
+replication has caught up based on the conditions specified in the token
+and the check request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CheckConsistencyResponse CheckConsistency(CheckConsistencyRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest.html">CheckConsistencyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse.html">CheckConsistencyResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CheckConsistency_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CheckConsistency*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CheckConsistency_Google_Cloud_Bigtable_Admin_V2_CheckConsistencyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CheckConsistency(Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CheckConsistency(CheckConsistencyRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Checks replication consistency based on a consistency token, that is, if
+replication has caught up based on the conditions specified in the token
+and the check request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CheckConsistencyResponse CheckConsistency(CheckConsistencyRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest.html">CheckConsistencyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse.html">CheckConsistencyResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CheckConsistencyAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CheckConsistencyAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CheckConsistencyAsync_Google_Cloud_Bigtable_Admin_V2_CheckConsistencyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CheckConsistencyAsync(Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest,Grpc.Core.CallOptions)">CheckConsistencyAsync(CheckConsistencyRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Checks replication consistency based on a consistency token, that is, if
+replication has caught up based on the conditions specified in the token
+and the check request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;CheckConsistencyResponse&gt; CheckConsistencyAsync(CheckConsistencyRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest.html">CheckConsistencyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse.html">CheckConsistencyResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CheckConsistencyAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CheckConsistencyAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CheckConsistencyAsync_Google_Cloud_Bigtable_Admin_V2_CheckConsistencyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CheckConsistencyAsync(Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CheckConsistencyAsync(CheckConsistencyRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Checks replication consistency based on a consistency token, that is, if
+replication has caught up based on the conditions specified in the token
+and the check request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;CheckConsistencyResponse&gt; CheckConsistencyAsync(CheckConsistencyRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest.html">CheckConsistencyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse.html">CheckConsistencyResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateOperationsClient_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateOperationsClient*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateOperationsClient" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateOperationsClient">CreateOperationsClient()</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="Google.LongRunning.Operations.OperationsClient.html">Operations.OperationsClient</a> using the same call invoker as this client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operations.OperationsClient CreateOperationsClient()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operations.OperationsClient.html">Operations.OperationsClient</a></td>
+        <td><p>A new Operations client for the same target as this client.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateTable_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateTable*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateTable_Google_Cloud_Bigtable_Admin_V2_CreateTableRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateTable(Google.Cloud.Bigtable.Admin.V2.CreateTableRequest,Grpc.Core.CallOptions)">CreateTable(CreateTableRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a new table in the specified instance.
@@ -427,6 +696,482 @@ specified in the request.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.html">Table</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateTableFromSnapshot_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateTableFromSnapshot*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateTableFromSnapshot_Google_Cloud_Bigtable_Admin_V2_CreateTableFromSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateTableFromSnapshot(Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest,Grpc.Core.CallOptions)">CreateTableFromSnapshot(CreateTableFromSnapshotRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates a new table from the specified snapshot. The target table must
+not exist. The snapshot and the table must be in the same instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation CreateTableFromSnapshot(CreateTableFromSnapshotRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest.html">CreateTableFromSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateTableFromSnapshot_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateTableFromSnapshot*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateTableFromSnapshot_Google_Cloud_Bigtable_Admin_V2_CreateTableFromSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateTableFromSnapshot(Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateTableFromSnapshot(CreateTableFromSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates a new table from the specified snapshot. The target table must
+not exist. The snapshot and the table must be in the same instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation CreateTableFromSnapshot(CreateTableFromSnapshotRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest.html">CreateTableFromSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateTableFromSnapshotAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateTableFromSnapshotAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateTableFromSnapshotAsync_Google_Cloud_Bigtable_Admin_V2_CreateTableFromSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateTableFromSnapshotAsync(Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest,Grpc.Core.CallOptions)">CreateTableFromSnapshotAsync(CreateTableFromSnapshotRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates a new table from the specified snapshot. The target table must
+not exist. The snapshot and the table must be in the same instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; CreateTableFromSnapshotAsync(CreateTableFromSnapshotRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest.html">CreateTableFromSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateTableFromSnapshotAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateTableFromSnapshotAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_CreateTableFromSnapshotAsync_Google_Cloud_Bigtable_Admin_V2_CreateTableFromSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.CreateTableFromSnapshotAsync(Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateTableFromSnapshotAsync(CreateTableFromSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates a new table from the specified snapshot. The target table must
+not exist. The snapshot and the table must be in the same instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; CreateTableFromSnapshotAsync(CreateTableFromSnapshotRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest.html">CreateTableFromSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_DeleteSnapshot_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.DeleteSnapshot*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_DeleteSnapshot_Google_Cloud_Bigtable_Admin_V2_DeleteSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.DeleteSnapshot(Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest,Grpc.Core.CallOptions)">DeleteSnapshot(DeleteSnapshotRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Permanently deletes the specified snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Empty DeleteSnapshot(DeleteSnapshotRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_DeleteSnapshot_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.DeleteSnapshot*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_DeleteSnapshot_Google_Cloud_Bigtable_Admin_V2_DeleteSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.DeleteSnapshot(Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSnapshot(DeleteSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Permanently deletes the specified snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Empty DeleteSnapshot(DeleteSnapshotRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_DeleteSnapshotAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.DeleteSnapshotAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_DeleteSnapshotAsync_Google_Cloud_Bigtable_Admin_V2_DeleteSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.DeleteSnapshotAsync(Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest,Grpc.Core.CallOptions)">DeleteSnapshotAsync(DeleteSnapshotRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Permanently deletes the specified snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteSnapshotAsync(DeleteSnapshotRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_DeleteSnapshotAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.DeleteSnapshotAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_DeleteSnapshotAsync_Google_Cloud_Bigtable_Admin_V2_DeleteSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.DeleteSnapshotAsync(Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSnapshotAsync(DeleteSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Permanently deletes the specified snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteSnapshotAsync(DeleteSnapshotRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -880,6 +1625,490 @@ particular prefix.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GenerateConsistencyToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GenerateConsistencyToken*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GenerateConsistencyToken_Google_Cloud_Bigtable_Admin_V2_GenerateConsistencyTokenRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GenerateConsistencyToken(Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest,Grpc.Core.CallOptions)">GenerateConsistencyToken(GenerateConsistencyTokenRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Generates a consistency token for a Table, which can be used in
+CheckConsistency to check whether mutations to the table that finished
+before this call started have been replicated. The tokens will be available
+for 90 days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual GenerateConsistencyTokenResponse GenerateConsistencyToken(GenerateConsistencyTokenRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest.html">GenerateConsistencyTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse.html">GenerateConsistencyTokenResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GenerateConsistencyToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GenerateConsistencyToken*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GenerateConsistencyToken_Google_Cloud_Bigtable_Admin_V2_GenerateConsistencyTokenRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GenerateConsistencyToken(Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GenerateConsistencyToken(GenerateConsistencyTokenRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Generates a consistency token for a Table, which can be used in
+CheckConsistency to check whether mutations to the table that finished
+before this call started have been replicated. The tokens will be available
+for 90 days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual GenerateConsistencyTokenResponse GenerateConsistencyToken(GenerateConsistencyTokenRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest.html">GenerateConsistencyTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse.html">GenerateConsistencyTokenResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GenerateConsistencyTokenAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GenerateConsistencyTokenAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GenerateConsistencyTokenAsync_Google_Cloud_Bigtable_Admin_V2_GenerateConsistencyTokenRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GenerateConsistencyTokenAsync(Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest,Grpc.Core.CallOptions)">GenerateConsistencyTokenAsync(GenerateConsistencyTokenRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Generates a consistency token for a Table, which can be used in
+CheckConsistency to check whether mutations to the table that finished
+before this call started have been replicated. The tokens will be available
+for 90 days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;GenerateConsistencyTokenResponse&gt; GenerateConsistencyTokenAsync(GenerateConsistencyTokenRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest.html">GenerateConsistencyTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse.html">GenerateConsistencyTokenResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GenerateConsistencyTokenAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GenerateConsistencyTokenAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GenerateConsistencyTokenAsync_Google_Cloud_Bigtable_Admin_V2_GenerateConsistencyTokenRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GenerateConsistencyTokenAsync(Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GenerateConsistencyTokenAsync(GenerateConsistencyTokenRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Generates a consistency token for a Table, which can be used in
+CheckConsistency to check whether mutations to the table that finished
+before this call started have been replicated. The tokens will be available
+for 90 days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;GenerateConsistencyTokenResponse&gt; GenerateConsistencyTokenAsync(GenerateConsistencyTokenRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest.html">GenerateConsistencyTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse.html">GenerateConsistencyTokenResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GetSnapshot_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GetSnapshot*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GetSnapshot_Google_Cloud_Bigtable_Admin_V2_GetSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GetSnapshot(Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest,Grpc.Core.CallOptions)">GetSnapshot(GetSnapshotRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Gets metadata information about the specified snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Snapshot GetSnapshot(GetSnapshotRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest.html">GetSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Snapshot.html">Snapshot</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GetSnapshot_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GetSnapshot*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GetSnapshot_Google_Cloud_Bigtable_Admin_V2_GetSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GetSnapshot(Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetSnapshot(GetSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Gets metadata information about the specified snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Snapshot GetSnapshot(GetSnapshotRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest.html">GetSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Snapshot.html">Snapshot</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GetSnapshotAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GetSnapshotAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GetSnapshotAsync_Google_Cloud_Bigtable_Admin_V2_GetSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GetSnapshotAsync(Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest,Grpc.Core.CallOptions)">GetSnapshotAsync(GetSnapshotRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Gets metadata information about the specified snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Snapshot&gt; GetSnapshotAsync(GetSnapshotRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest.html">GetSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Snapshot.html">Snapshot</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GetSnapshotAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GetSnapshotAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GetSnapshotAsync_Google_Cloud_Bigtable_Admin_V2_GetSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GetSnapshotAsync(Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetSnapshotAsync(GetSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Gets metadata information about the specified snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Snapshot&gt; GetSnapshotAsync(GetSnapshotRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest.html">GetSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Snapshot.html">Snapshot</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GetTable_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GetTable*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_GetTable_Google_Cloud_Bigtable_Admin_V2_GetTableRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.GetTable(Google.Cloud.Bigtable.Admin.V2.GetTableRequest,Grpc.Core.CallOptions)">GetTable(GetTableRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets metadata information about the specified table.</p>
@@ -1095,6 +2324,242 @@ particular prefix.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.html">Table</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_ListSnapshots_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.ListSnapshots*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_ListSnapshots_Google_Cloud_Bigtable_Admin_V2_ListSnapshotsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.ListSnapshots(Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest,Grpc.Core.CallOptions)">ListSnapshots(ListSnapshotsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Lists all snapshots associated with the specified cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ListSnapshotsResponse ListSnapshots(ListSnapshotsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest.html">ListSnapshotsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse.html">ListSnapshotsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_ListSnapshots_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.ListSnapshots*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_ListSnapshots_Google_Cloud_Bigtable_Admin_V2_ListSnapshotsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.ListSnapshots(Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSnapshots(ListSnapshotsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Lists all snapshots associated with the specified cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ListSnapshotsResponse ListSnapshots(ListSnapshotsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest.html">ListSnapshotsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse.html">ListSnapshotsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_ListSnapshotsAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.ListSnapshotsAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_ListSnapshotsAsync_Google_Cloud_Bigtable_Admin_V2_ListSnapshotsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.ListSnapshotsAsync(Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest,Grpc.Core.CallOptions)">ListSnapshotsAsync(ListSnapshotsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Lists all snapshots associated with the specified cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListSnapshotsResponse&gt; ListSnapshotsAsync(ListSnapshotsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest.html">ListSnapshotsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse.html">ListSnapshotsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_ListSnapshotsAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.ListSnapshotsAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_ListSnapshotsAsync_Google_Cloud_Bigtable_Admin_V2_ListSnapshotsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.ListSnapshotsAsync(Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSnapshotsAsync(ListSnapshotsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Lists all snapshots associated with the specified cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListSnapshotsResponse&gt; ListSnapshotsAsync(ListSnapshotsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest.html">ListSnapshotsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse.html">ListSnapshotsResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -1595,6 +3060,246 @@ where only some modifications have taken effect.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_SnapshotTable_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.SnapshotTable*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_SnapshotTable_Google_Cloud_Bigtable_Admin_V2_SnapshotTableRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.SnapshotTable(Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest,Grpc.Core.CallOptions)">SnapshotTable(SnapshotTableRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates a new snapshot in the specified cluster from the specified
+source table. The cluster and the table must be in the same instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation SnapshotTable(SnapshotTableRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest.html">SnapshotTableRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_SnapshotTable_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.SnapshotTable*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_SnapshotTable_Google_Cloud_Bigtable_Admin_V2_SnapshotTableRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.SnapshotTable(Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">SnapshotTable(SnapshotTableRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates a new snapshot in the specified cluster from the specified
+source table. The cluster and the table must be in the same instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation SnapshotTable(SnapshotTableRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest.html">SnapshotTableRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_SnapshotTableAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.SnapshotTableAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_SnapshotTableAsync_Google_Cloud_Bigtable_Admin_V2_SnapshotTableRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.SnapshotTableAsync(Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest,Grpc.Core.CallOptions)">SnapshotTableAsync(SnapshotTableRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates a new snapshot in the specified cluster from the specified
+source table. The cluster and the table must be in the same instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; SnapshotTableAsync(SnapshotTableRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest.html">SnapshotTableRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_SnapshotTableAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.SnapshotTableAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminClient_SnapshotTableAsync_Google_Cloud_Bigtable_Admin_V2_SnapshotTableRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminClient.SnapshotTableAsync(Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">SnapshotTableAsync(SnapshotTableRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates a new snapshot in the specified cluster from the specified
+source table. The cluster and the table must be in the same instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; SnapshotTableAsync(SnapshotTableRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest.html">SnapshotTableRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

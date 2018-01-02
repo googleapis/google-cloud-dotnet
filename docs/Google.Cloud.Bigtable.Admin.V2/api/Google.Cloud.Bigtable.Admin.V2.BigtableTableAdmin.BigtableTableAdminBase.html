@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigtableTableAdmin.BigtableTableAdminBase
    | Google.Cloud.Bigtable.Admin.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -104,6 +104,61 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_CheckConsistency_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.CheckConsistency*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_CheckConsistency_Google_Cloud_Bigtable_Admin_V2_CheckConsistencyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.CheckConsistency(Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest,Grpc.Core.ServerCallContext)">CheckConsistency(CheckConsistencyRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Checks replication consistency based on a consistency token, that is, if
+replication has caught up based on the conditions specified in the token
+and the check request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CheckConsistencyResponse&gt; CheckConsistency(CheckConsistencyRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest.html">CheckConsistencyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse.html">CheckConsistencyResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_CreateTable_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.CreateTable*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_CreateTable_Google_Cloud_Bigtable_Admin_V2_CreateTableRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.CreateTable(Google.Cloud.Bigtable.Admin.V2.CreateTableRequest,Grpc.Core.ServerCallContext)">CreateTable(CreateTableRequest, ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Creates a new table in the specified instance.
@@ -150,6 +205,113 @@ specified in the request.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.html">Table</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_CreateTableFromSnapshot_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.CreateTableFromSnapshot*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_CreateTableFromSnapshot_Google_Cloud_Bigtable_Admin_V2_CreateTableFromSnapshotRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.CreateTableFromSnapshot(Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest,Grpc.Core.ServerCallContext)">CreateTableFromSnapshot(CreateTableFromSnapshotRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates a new table from the specified snapshot. The target table must
+not exist. The snapshot and the table must be in the same instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; CreateTableFromSnapshot(CreateTableFromSnapshotRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest.html">CreateTableFromSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_DeleteSnapshot_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.DeleteSnapshot*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_DeleteSnapshot_Google_Cloud_Bigtable_Admin_V2_DeleteSnapshotRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.DeleteSnapshot(Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest,Grpc.Core.ServerCallContext)">DeleteSnapshot(DeleteSnapshotRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Permanently deletes the specified snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteSnapshot(DeleteSnapshotRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
         <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
       </tr>
@@ -255,6 +417,115 @@ particular prefix.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_GenerateConsistencyToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.GenerateConsistencyToken*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_GenerateConsistencyToken_Google_Cloud_Bigtable_Admin_V2_GenerateConsistencyTokenRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.GenerateConsistencyToken(Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest,Grpc.Core.ServerCallContext)">GenerateConsistencyToken(GenerateConsistencyTokenRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Generates a consistency token for a Table, which can be used in
+CheckConsistency to check whether mutations to the table that finished
+before this call started have been replicated. The tokens will be available
+for 90 days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;GenerateConsistencyTokenResponse&gt; GenerateConsistencyToken(GenerateConsistencyTokenRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest.html">GenerateConsistencyTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse.html">GenerateConsistencyTokenResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_GetSnapshot_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.GetSnapshot*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_GetSnapshot_Google_Cloud_Bigtable_Admin_V2_GetSnapshotRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.GetSnapshot(Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest,Grpc.Core.ServerCallContext)">GetSnapshot(GetSnapshotRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Gets metadata information about the specified snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Snapshot&gt; GetSnapshot(GetSnapshotRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest.html">GetSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Snapshot.html">Snapshot</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_GetTable_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.GetTable*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_GetTable_Google_Cloud_Bigtable_Admin_V2_GetTableRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.GetTable(Google.Cloud.Bigtable.Admin.V2.GetTableRequest,Grpc.Core.ServerCallContext)">GetTable(GetTableRequest, ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Gets metadata information about the specified table.</p>
@@ -299,6 +570,59 @@ particular prefix.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.html">Table</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_ListSnapshots_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.ListSnapshots*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_ListSnapshots_Google_Cloud_Bigtable_Admin_V2_ListSnapshotsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.ListSnapshots(Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest,Grpc.Core.ServerCallContext)">ListSnapshots(ListSnapshotsRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Lists all snapshots associated with the specified cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListSnapshotsResponse&gt; ListSnapshots(ListSnapshotsRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest.html">ListSnapshotsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse.html">ListSnapshotsResponse</a>&gt;</td>
         <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
       </tr>
@@ -400,6 +724,60 @@ where only some modifications have taken effect.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.html">Table</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_SnapshotTable_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.SnapshotTable*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableTableAdmin_BigtableTableAdminBase_SnapshotTable_Google_Cloud_Bigtable_Admin_V2_SnapshotTableRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdmin.BigtableTableAdminBase.SnapshotTable(Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest,Grpc.Core.ServerCallContext)">SnapshotTable(SnapshotTableRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates a new snapshot in the specified cluster from the specified
+source table. The cluster and the table must be in the same instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; SnapshotTable(SnapshotTableRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest.html">SnapshotTableRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
         <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
       </tr>

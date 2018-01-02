@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigtableInstanceAdmin.BigtableInstanceAdminClient
    | Google.Cloud.Bigtable.Admin.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -204,6 +204,242 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_CreateAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.CreateAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_CreateAppProfile_Google_Cloud_Bigtable_Admin_V2_CreateAppProfileRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.CreateAppProfile(Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest,Grpc.Core.CallOptions)">CreateAppProfile(CreateAppProfileRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates an app profile within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AppProfile CreateAppProfile(CreateAppProfileRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.html">CreateAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_CreateAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.CreateAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_CreateAppProfile_Google_Cloud_Bigtable_Admin_V2_CreateAppProfileRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.CreateAppProfile(Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateAppProfile(CreateAppProfileRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates an app profile within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AppProfile CreateAppProfile(CreateAppProfileRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.html">CreateAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_CreateAppProfileAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.CreateAppProfileAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_CreateAppProfileAsync_Google_Cloud_Bigtable_Admin_V2_CreateAppProfileRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.CreateAppProfileAsync(Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest,Grpc.Core.CallOptions)">CreateAppProfileAsync(CreateAppProfileRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates an app profile within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;AppProfile&gt; CreateAppProfileAsync(CreateAppProfileRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.html">CreateAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_CreateAppProfileAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.CreateAppProfileAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_CreateAppProfileAsync_Google_Cloud_Bigtable_Admin_V2_CreateAppProfileRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.CreateAppProfileAsync(Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateAppProfileAsync(CreateAppProfileRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates an app profile within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;AppProfile&gt; CreateAppProfileAsync(CreateAppProfileRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.html">CreateAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_CreateCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.CreateCluster*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_CreateCluster_Google_Cloud_Bigtable_Admin_V2_CreateClusterRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.CreateCluster(Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest,Grpc.Core.CallOptions)">CreateCluster(CreateClusterRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a cluster within an instance.</p>
@@ -669,6 +905,242 @@
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_DeleteAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.DeleteAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_DeleteAppProfile_Google_Cloud_Bigtable_Admin_V2_DeleteAppProfileRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.DeleteAppProfile(Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest,Grpc.Core.CallOptions)">DeleteAppProfile(DeleteAppProfileRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Deletes an app profile from an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Empty DeleteAppProfile(DeleteAppProfileRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.html">DeleteAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_DeleteAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.DeleteAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_DeleteAppProfile_Google_Cloud_Bigtable_Admin_V2_DeleteAppProfileRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.DeleteAppProfile(Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteAppProfile(DeleteAppProfileRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Deletes an app profile from an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Empty DeleteAppProfile(DeleteAppProfileRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.html">DeleteAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_DeleteAppProfileAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.DeleteAppProfileAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_DeleteAppProfileAsync_Google_Cloud_Bigtable_Admin_V2_DeleteAppProfileRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.DeleteAppProfileAsync(Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest,Grpc.Core.CallOptions)">DeleteAppProfileAsync(DeleteAppProfileRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Deletes an app profile from an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteAppProfileAsync(DeleteAppProfileRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.html">DeleteAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_DeleteAppProfileAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.DeleteAppProfileAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_DeleteAppProfileAsync_Google_Cloud_Bigtable_Admin_V2_DeleteAppProfileRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.DeleteAppProfileAsync(Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteAppProfileAsync(DeleteAppProfileRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Deletes an app profile from an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteAppProfileAsync(DeleteAppProfileRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.html">DeleteAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_DeleteCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.DeleteCluster*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_DeleteCluster_Google_Cloud_Bigtable_Admin_V2_DeleteClusterRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.DeleteCluster(Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest,Grpc.Core.CallOptions)">DeleteCluster(DeleteClusterRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Deletes a cluster from an instance.</p>
@@ -1109,6 +1581,242 @@
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetAppProfile_Google_Cloud_Bigtable_Admin_V2_GetAppProfileRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetAppProfile(Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest,Grpc.Core.CallOptions)">GetAppProfile(GetAppProfileRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Gets information about an app profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AppProfile GetAppProfile(GetAppProfileRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.html">GetAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetAppProfile_Google_Cloud_Bigtable_Admin_V2_GetAppProfileRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetAppProfile(Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetAppProfile(GetAppProfileRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Gets information about an app profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AppProfile GetAppProfile(GetAppProfileRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.html">GetAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetAppProfileAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetAppProfileAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetAppProfileAsync_Google_Cloud_Bigtable_Admin_V2_GetAppProfileRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetAppProfileAsync(Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest,Grpc.Core.CallOptions)">GetAppProfileAsync(GetAppProfileRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Gets information about an app profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;AppProfile&gt; GetAppProfileAsync(GetAppProfileRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.html">GetAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetAppProfileAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetAppProfileAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetAppProfileAsync_Google_Cloud_Bigtable_Admin_V2_GetAppProfileRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetAppProfileAsync(Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetAppProfileAsync(GetAppProfileRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Gets information about an app profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;AppProfile&gt; GetAppProfileAsync(GetAppProfileRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.html">GetAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetCluster*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetCluster_Google_Cloud_Bigtable_Admin_V2_GetClusterRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetCluster(Google.Cloud.Bigtable.Admin.V2.GetClusterRequest,Grpc.Core.CallOptions)">GetCluster(GetClusterRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets information about a cluster.</p>
@@ -1329,6 +2037,250 @@
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetIamPolicy_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.CallOptions)">GetIamPolicy(GetIamPolicyRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Gets the access control policy for an instance resource. Returns an empty
+policy if an instance exists but does not have a policy set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Policy GetIamPolicy(GetIamPolicyRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.GetIamPolicyRequest.html">GetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetIamPolicy_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetIamPolicy(GetIamPolicyRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Gets the access control policy for an instance resource. Returns an empty
+policy if an instance exists but does not have a policy set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Policy GetIamPolicy(GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.GetIamPolicyRequest.html">GetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetIamPolicyAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetIamPolicyAsync(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.CallOptions)">GetIamPolicyAsync(GetIamPolicyRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Gets the access control policy for an instance resource. Returns an empty
+policy if an instance exists but does not have a policy set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Policy&gt; GetIamPolicyAsync(GetIamPolicyRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.GetIamPolicyRequest.html">GetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetIamPolicyAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetIamPolicyAsync(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetIamPolicyAsync(GetIamPolicyRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Gets the access control policy for an instance resource. Returns an empty
+policy if an instance exists but does not have a policy set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Policy&gt; GetIamPolicyAsync(GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.GetIamPolicyRequest.html">GetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetInstance*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_GetInstance_Google_Cloud_Bigtable_Admin_V2_GetInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.GetInstance(Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest,Grpc.Core.CallOptions)">GetInstance(GetInstanceRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets information about an instance.</p>
@@ -1544,6 +2496,242 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_ListAppProfiles_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.ListAppProfiles*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_ListAppProfiles_Google_Cloud_Bigtable_Admin_V2_ListAppProfilesRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.ListAppProfiles(Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest,Grpc.Core.CallOptions)">ListAppProfiles(ListAppProfilesRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Lists information about app profiles in an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ListAppProfilesResponse ListAppProfiles(ListAppProfilesRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.html">ListAppProfilesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.html">ListAppProfilesResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_ListAppProfiles_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.ListAppProfiles*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_ListAppProfiles_Google_Cloud_Bigtable_Admin_V2_ListAppProfilesRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.ListAppProfiles(Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListAppProfiles(ListAppProfilesRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Lists information about app profiles in an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ListAppProfilesResponse ListAppProfiles(ListAppProfilesRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.html">ListAppProfilesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.html">ListAppProfilesResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_ListAppProfilesAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.ListAppProfilesAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_ListAppProfilesAsync_Google_Cloud_Bigtable_Admin_V2_ListAppProfilesRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.ListAppProfilesAsync(Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest,Grpc.Core.CallOptions)">ListAppProfilesAsync(ListAppProfilesRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Lists information about app profiles in an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListAppProfilesResponse&gt; ListAppProfilesAsync(ListAppProfilesRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.html">ListAppProfilesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.html">ListAppProfilesResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_ListAppProfilesAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.ListAppProfilesAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_ListAppProfilesAsync_Google_Cloud_Bigtable_Admin_V2_ListAppProfilesRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.ListAppProfilesAsync(Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListAppProfilesAsync(ListAppProfilesRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Lists information about app profiles in an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListAppProfilesResponse&gt; ListAppProfilesAsync(ListAppProfilesRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.html">ListAppProfilesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.html">ListAppProfilesResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -2032,6 +3220,946 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_PartialUpdateInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.PartialUpdateInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_PartialUpdateInstance_Google_Cloud_Bigtable_Admin_V2_PartialUpdateInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.PartialUpdateInstance(Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest,Grpc.Core.CallOptions)">PartialUpdateInstance(PartialUpdateInstanceRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Partially updates an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation PartialUpdateInstance(PartialUpdateInstanceRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.html">PartialUpdateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_PartialUpdateInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.PartialUpdateInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_PartialUpdateInstance_Google_Cloud_Bigtable_Admin_V2_PartialUpdateInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.PartialUpdateInstance(Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">PartialUpdateInstance(PartialUpdateInstanceRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Partially updates an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation PartialUpdateInstance(PartialUpdateInstanceRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.html">PartialUpdateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_PartialUpdateInstanceAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.PartialUpdateInstanceAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_PartialUpdateInstanceAsync_Google_Cloud_Bigtable_Admin_V2_PartialUpdateInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.PartialUpdateInstanceAsync(Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest,Grpc.Core.CallOptions)">PartialUpdateInstanceAsync(PartialUpdateInstanceRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Partially updates an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; PartialUpdateInstanceAsync(PartialUpdateInstanceRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.html">PartialUpdateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_PartialUpdateInstanceAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.PartialUpdateInstanceAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_PartialUpdateInstanceAsync_Google_Cloud_Bigtable_Admin_V2_PartialUpdateInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.PartialUpdateInstanceAsync(Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">PartialUpdateInstanceAsync(PartialUpdateInstanceRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Partially updates an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; PartialUpdateInstanceAsync(PartialUpdateInstanceRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.html">PartialUpdateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_SetIamPolicy_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.SetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.CallOptions)">SetIamPolicy(SetIamPolicyRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Sets the access control policy on an instance resource. Replaces any
+existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Policy SetIamPolicy(SetIamPolicyRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.SetIamPolicyRequest.html">SetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_SetIamPolicy_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.SetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">SetIamPolicy(SetIamPolicyRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Sets the access control policy on an instance resource. Replaces any
+existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Policy SetIamPolicy(SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.SetIamPolicyRequest.html">SetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_SetIamPolicyAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.SetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.SetIamPolicyAsync(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.CallOptions)">SetIamPolicyAsync(SetIamPolicyRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Sets the access control policy on an instance resource. Replaces any
+existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Policy&gt; SetIamPolicyAsync(SetIamPolicyRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.SetIamPolicyRequest.html">SetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_SetIamPolicyAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.SetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.SetIamPolicyAsync(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">SetIamPolicyAsync(SetIamPolicyRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Sets the access control policy on an instance resource. Replaces any
+existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Policy&gt; SetIamPolicyAsync(SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.SetIamPolicyRequest.html">SetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_TestIamPermissions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.TestIamPermissions*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.CallOptions)">TestIamPermissions(TestIamPermissionsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Returns permissions that the caller has on the specified instance resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TestIamPermissionsResponse TestIamPermissions(TestIamPermissionsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsRequest.html">TestIamPermissionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html">TestIamPermissionsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_TestIamPermissions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.TestIamPermissions*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">TestIamPermissions(TestIamPermissionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Returns permissions that the caller has on the specified instance resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TestIamPermissionsResponse TestIamPermissions(TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsRequest.html">TestIamPermissionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html">TestIamPermissionsResponse</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_TestIamPermissionsAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.TestIamPermissionsAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.TestIamPermissionsAsync(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.CallOptions)">TestIamPermissionsAsync(TestIamPermissionsRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Returns permissions that the caller has on the specified instance resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;TestIamPermissionsResponse&gt; TestIamPermissionsAsync(TestIamPermissionsRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsRequest.html">TestIamPermissionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html">TestIamPermissionsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_TestIamPermissionsAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.TestIamPermissionsAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.TestIamPermissionsAsync(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">TestIamPermissionsAsync(TestIamPermissionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Returns permissions that the caller has on the specified instance resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;TestIamPermissionsResponse&gt; TestIamPermissionsAsync(TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsRequest.html">TestIamPermissionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html">TestIamPermissionsResponse</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_UpdateAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.UpdateAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_UpdateAppProfile_Google_Cloud_Bigtable_Admin_V2_UpdateAppProfileRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.UpdateAppProfile(Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest,Grpc.Core.CallOptions)">UpdateAppProfile(UpdateAppProfileRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Updates an app profile within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation UpdateAppProfile(UpdateAppProfileRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.html">UpdateAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_UpdateAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.UpdateAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_UpdateAppProfile_Google_Cloud_Bigtable_Admin_V2_UpdateAppProfileRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.UpdateAppProfile(Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateAppProfile(UpdateAppProfileRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Updates an app profile within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation UpdateAppProfile(UpdateAppProfileRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.html">UpdateAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_UpdateAppProfileAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.UpdateAppProfileAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_UpdateAppProfileAsync_Google_Cloud_Bigtable_Admin_V2_UpdateAppProfileRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.UpdateAppProfileAsync(Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest,Grpc.Core.CallOptions)">UpdateAppProfileAsync(UpdateAppProfileRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Updates an app profile within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; UpdateAppProfileAsync(UpdateAppProfileRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.html">UpdateAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_UpdateAppProfileAsync_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.UpdateAppProfileAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_UpdateAppProfileAsync_Google_Cloud_Bigtable_Admin_V2_UpdateAppProfileRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.UpdateAppProfileAsync(Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateAppProfileAsync(UpdateAppProfileRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Updates an app profile within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; UpdateAppProfileAsync(UpdateAppProfileRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.html">UpdateAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_UpdateCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.UpdateCluster*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminClient_UpdateCluster_Google_Cloud_Bigtable_Admin_V2_Cluster_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminClient.UpdateCluster(Google.Cloud.Bigtable.Admin.V2.Cluster,Grpc.Core.CallOptions)">UpdateCluster(Cluster, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Updates a cluster within an instance.</p>

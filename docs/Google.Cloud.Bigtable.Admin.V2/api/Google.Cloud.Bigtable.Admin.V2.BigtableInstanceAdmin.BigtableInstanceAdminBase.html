@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigtableInstanceAdmin.BigtableInstanceAdminBase
    | Google.Cloud.Bigtable.Admin.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -104,6 +104,59 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_CreateAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.CreateAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_CreateAppProfile_Google_Cloud_Bigtable_Admin_V2_CreateAppProfileRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.CreateAppProfile(Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest,Grpc.Core.ServerCallContext)">CreateAppProfile(CreateAppProfileRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Creates an app profile within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;AppProfile&gt; CreateAppProfile(CreateAppProfileRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.html">CreateAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_CreateCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.CreateCluster*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_CreateCluster_Google_Cloud_Bigtable_Admin_V2_CreateClusterRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.CreateCluster(Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest,Grpc.Core.ServerCallContext)">CreateCluster(CreateClusterRequest, ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Creates a cluster within an instance.</p>
@@ -197,6 +250,59 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_DeleteAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.DeleteAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_DeleteAppProfile_Google_Cloud_Bigtable_Admin_V2_DeleteAppProfileRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.DeleteAppProfile(Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest,Grpc.Core.ServerCallContext)">DeleteAppProfile(DeleteAppProfileRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Deletes an app profile from an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteAppProfile(DeleteAppProfileRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.html">DeleteAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
         <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
       </tr>
@@ -300,6 +406,59 @@
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetAppProfile_Google_Cloud_Bigtable_Admin_V2_GetAppProfileRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetAppProfile(Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest,Grpc.Core.ServerCallContext)">GetAppProfile(GetAppProfileRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Gets information about an app profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;AppProfile&gt; GetAppProfile(GetAppProfileRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.html">GetAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetCluster_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetCluster*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetCluster_Google_Cloud_Bigtable_Admin_V2_GetClusterRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetCluster(Google.Cloud.Bigtable.Admin.V2.GetClusterRequest,Grpc.Core.ServerCallContext)">GetCluster(GetClusterRequest, ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Gets information about a cluster.</p>
@@ -349,6 +508,61 @@
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetIamPolicy_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.ServerCallContext)">GetIamPolicy(GetIamPolicyRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Gets the access control policy for an instance resource. Returns an empty
+policy if an instance exists but does not have a policy set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; GetIamPolicy(GetIamPolicyRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.GetIamPolicyRequest.html">GetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetInstance*"></a>
   <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_GetInstance_Google_Cloud_Bigtable_Admin_V2_GetInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.GetInstance(Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest,Grpc.Core.ServerCallContext)">GetInstance(GetInstanceRequest, ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Gets information about an instance.</p>
@@ -393,6 +607,59 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Instance.html">Instance</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_ListAppProfiles_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.ListAppProfiles*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_ListAppProfiles_Google_Cloud_Bigtable_Admin_V2_ListAppProfilesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.ListAppProfiles(Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest,Grpc.Core.ServerCallContext)">ListAppProfiles(ListAppProfilesRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Lists information about app profiles in an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListAppProfilesResponse&gt; ListAppProfiles(ListAppProfilesRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.html">ListAppProfilesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.html">ListAppProfilesResponse</a>&gt;</td>
         <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
       </tr>
@@ -491,6 +758,217 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.html">ListInstancesResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_PartialUpdateInstance_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.PartialUpdateInstance*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_PartialUpdateInstance_Google_Cloud_Bigtable_Admin_V2_PartialUpdateInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.PartialUpdateInstance(Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest,Grpc.Core.ServerCallContext)">PartialUpdateInstance(PartialUpdateInstanceRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Partially updates an instance within a project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; PartialUpdateInstance(PartialUpdateInstanceRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.html">PartialUpdateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_SetIamPolicy_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.SetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.ServerCallContext)">SetIamPolicy(SetIamPolicyRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Sets the access control policy on an instance resource. Replaces any
+existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; SetIamPolicy(SetIamPolicyRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.SetIamPolicyRequest.html">SetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_TestIamPermissions_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.TestIamPermissions*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.ServerCallContext)">TestIamPermissions(TestIamPermissionsRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable instance level
+permissions. This feature is not currently available to most Cloud Bigtable
+customers. This feature might be changed in backward-incompatible ways and
+is not recommended for production use. It is not subject to any SLA or
+deprecation policy.</p>
+<p>Returns permissions that the caller has on the specified instance resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;TestIamPermissionsResponse&gt; TestIamPermissions(TestIamPermissionsRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsRequest.html">TestIamPermissionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html">TestIamPermissionsResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_UpdateAppProfile_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.UpdateAppProfile*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_BigtableInstanceAdmin_BigtableInstanceAdminBase_UpdateAppProfile_Google_Cloud_Bigtable_Admin_V2_UpdateAppProfileRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.BigtableInstanceAdminBase.UpdateAppProfile(Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest,Grpc.Core.ServerCallContext)">UpdateAppProfile(UpdateAppProfileRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Updates an app profile within an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; UpdateAppProfile(UpdateAppProfileRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.html">UpdateAppProfileRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
         <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
       </tr>

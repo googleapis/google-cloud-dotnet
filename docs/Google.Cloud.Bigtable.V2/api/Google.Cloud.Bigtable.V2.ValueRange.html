@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ValueRange
    | Google.Cloud.Bigtable.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -253,6 +253,228 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Bigtable_V2_ValueRange_Closed_" data-uid="Google.Cloud.Bigtable.V2.ValueRange.Closed*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_ValueRange_Closed_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__" data-uid="Google.Cloud.Bigtable.V2.ValueRange.Closed(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})">Closed(Nullable&lt;BigtableByteString&gt;, Nullable&lt;BigtableByteString&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Bigtable.V2.ValueRange.html">ValueRange</a> instance with inclusive bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ValueRange Closed(BigtableByteString? startValueClosed, BigtableByteString? endValueClosed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>&gt;</td>
+        <td><span class="parametername">startValueClosed</span></td>
+        <td><p>The inclusive lower bound for the range. If null or empty, it is interpreted as the empty string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>&gt;</td>
+        <td><span class="parametername">endValueClosed</span></td>
+        <td><p>The inclusive upper bound for the range. If null or empty, it is interpreted as the infinite value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ValueRange.html">ValueRange</a></td>
+        <td><p>The created range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_ValueRange_Closed_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>, so the ranges can
+be specified using strings as well and their UTF-8 representations will be used for the value.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_ValueRange_ClosedOpen_" data-uid="Google.Cloud.Bigtable.V2.ValueRange.ClosedOpen*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_ValueRange_ClosedOpen_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__" data-uid="Google.Cloud.Bigtable.V2.ValueRange.ClosedOpen(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})">ClosedOpen(Nullable&lt;BigtableByteString&gt;, Nullable&lt;BigtableByteString&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Bigtable.V2.ValueRange.html">ValueRange</a> instance with an inclusive lower bound and an exclusive upper bound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ValueRange ClosedOpen(BigtableByteString? startValueClosed, BigtableByteString? endValueOpen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>&gt;</td>
+        <td><span class="parametername">startValueClosed</span></td>
+        <td><p>The inclusive lower bound for the range. If null or empty, it is interpreted as the empty string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>&gt;</td>
+        <td><span class="parametername">endValueOpen</span></td>
+        <td><p>The exclusive upper bound for the range. If null or empty, it is interpreted as the infinite value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ValueRange.html">ValueRange</a></td>
+        <td><p>The created range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_ValueRange_ClosedOpen_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>, so the ranges can
+be specified using strings as well and their UTF-8 representations will be used for the value.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_ValueRange_Open_" data-uid="Google.Cloud.Bigtable.V2.ValueRange.Open*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_ValueRange_Open_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__" data-uid="Google.Cloud.Bigtable.V2.ValueRange.Open(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})">Open(Nullable&lt;BigtableByteString&gt;, Nullable&lt;BigtableByteString&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Bigtable.V2.ValueRange.html">ValueRange</a> instance with exclusive bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ValueRange Open(BigtableByteString? startValueOpen, BigtableByteString? endValueOpen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>&gt;</td>
+        <td><span class="parametername">startValueOpen</span></td>
+        <td><p>The exclusive lower bound for the range. If null or empty, it is interpreted as the empty string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>&gt;</td>
+        <td><span class="parametername">endValueOpen</span></td>
+        <td><p>The exclusive upper bound for the range. If null or empty, it is interpreted as the infinite value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ValueRange.html">ValueRange</a></td>
+        <td><p>The created range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_ValueRange_Open_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>, so the ranges can
+be specified using strings as well and their UTF-8 representations will be used for the value.
+</p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_ValueRange_OpenClosed_" data-uid="Google.Cloud.Bigtable.V2.ValueRange.OpenClosed*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_ValueRange_OpenClosed_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__" data-uid="Google.Cloud.Bigtable.V2.ValueRange.OpenClosed(System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString},System.Nullable{Google.Cloud.Bigtable.V2.BigtableByteString})">OpenClosed(Nullable&lt;BigtableByteString&gt;, Nullable&lt;BigtableByteString&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Bigtable.V2.ValueRange.html">ValueRange</a> instance with an exclusive lower bound and an inclusive upper bound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ValueRange OpenClosed(BigtableByteString? startValueOpen, BigtableByteString? endValueClosed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>&gt;</td>
+        <td><span class="parametername">startValueOpen</span></td>
+        <td><p>The exclusive lower bound for the range. If null or empty, it is interpreted as the empty string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>&gt;</td>
+        <td><span class="parametername">endValueClosed</span></td>
+        <td><p>The inclusive upper bound for the range. If null or empty, it is interpreted as the infinite value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ValueRange.html">ValueRange</a></td>
+        <td><p>The created range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_ValueRange_OpenClosed_System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString__System_Nullable_Google_Cloud_Bigtable_V2_BigtableByteString___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note that string is implicitly convertible to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableByteString.html">BigtableByteString</a>, so the ranges can
+be specified using strings as well and their UTF-8 representations will be used for the value.
+</p>
+</div>
 </article>
           </div>
           

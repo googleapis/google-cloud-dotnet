@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Cloud.Bigtable.Admin.V2
    | Google.Cloud.Bigtable.Admin.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -77,6 +77,31 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.html">AppProfile</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>A configuration object describing how Cloud Bigtable should treat traffic
+from a particular end user application.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.html">AppProfile.Types</a></h4>
+      <section><p>Container for nested types declared in the AppProfile message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.html">AppProfile.Types.MultiClusterRoutingUseAny</a></h4>
+      <section><p>Read/write requests may be routed to any cluster in the instance, and will
+fail over to another cluster in the event of transient errors or delays.
+Choosing this option sacrifices read-your-writes consistency to improve
+availability.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.html">AppProfile.Types.SingleClusterRouting</a></h4>
+      <section><p>Unconditionally routes all read/write requests to a specific cluster.
+This option preserves read-your-writes consistency, but does not improve
+availability.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfileName.html">AppProfileName</a></h4>
+      <section><p>Resource name for the &apos;app_profile&apos; resource.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdmin.html">BigtableInstanceAdmin</a></h4>
       <section><p>Service for creating, configuring, and deleting Cloud Bigtable Instances and
 Clusters. Provides access to the Instance and Cluster schemas only, not the
@@ -117,6 +142,22 @@ the tables.</p>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminSettings.html">BigtableTableAdminSettings</a></h4>
       <section><p>Settings for a <a class="xref" href="Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.html">BigtableTableAdminClient</a>.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest.html">CheckConsistencyRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for
+[google.bigtable.admin.v2.BigtableTableAdmin.CheckConsistency][google.bigtable.admin.v2.BigtableTableAdmin.CheckConsistency]</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse.html">CheckConsistencyResponse</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Response message for
+[google.bigtable.admin.v2.BigtableTableAdmin.CheckConsistency][google.bigtable.admin.v2.BigtableTableAdmin.CheckConsistency]</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.html">Cluster</a></h4>
       <section><p>A resizable group of nodes in a particular cloud location, capable
 of serving all [Tables][google.bigtable.admin.v2.Table] in the parent
@@ -131,6 +172,13 @@ of serving all [Tables][google.bigtable.admin.v2.Table] in the parent
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ColumnFamily.html">ColumnFamily</a></h4>
       <section><p>A set of columns within a table which share a common configuration.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.html">CreateAppProfileRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for BigtableInstanceAdmin.CreateAppProfile.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata.html">CreateClusterMetadata</a></h4>
       <section><p>The metadata for the Operation returned by CreateCluster.</p>
 </section>
@@ -143,6 +191,21 @@ of serving all [Tables][google.bigtable.admin.v2.Table] in the parent
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest.html">CreateInstanceRequest</a></h4>
       <section><p>Request message for BigtableInstanceAdmin.CreateInstance.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotMetadata.html">CreateTableFromSnapshotMetadata</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>The metadata for the Operation returned by CreateTableFromSnapshot.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest.html">CreateTableFromSnapshotRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for
+[google.bigtable.admin.v2.BigtableTableAdmin.CreateTableFromSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.CreateTableFromSnapshot]</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateTableRequest.html">CreateTableRequest</a></h4>
       <section><p>Request message for
 [google.bigtable.admin.v2.BigtableTableAdmin.CreateTable][google.bigtable.admin.v2.BigtableTableAdmin.CreateTable]</p>
@@ -153,11 +216,26 @@ of serving all [Tables][google.bigtable.admin.v2.Table] in the parent
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.CreateTableRequest.Types.Split.html">CreateTableRequest.Types.Split</a></h4>
       <section><p>An initial split point for a newly created table.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.html">DeleteAppProfileRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for BigtableInstanceAdmin.DeleteAppProfile.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.html">DeleteClusterRequest</a></h4>
       <section><p>Request message for BigtableInstanceAdmin.DeleteCluster.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest.html">DeleteInstanceRequest</a></h4>
       <section><p>Request message for BigtableInstanceAdmin.DeleteInstance.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for
+[google.bigtable.admin.v2.BigtableTableAdmin.DeleteSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.DeleteSnapshot]</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest.html">DeleteTableRequest</a></h4>
       <section><p>Request message for
@@ -179,11 +257,42 @@ of serving all [Tables][google.bigtable.admin.v2.Table] in the parent
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union.html">GcRule.Types.Union</a></h4>
       <section><p>A GcRule which deletes cells matching any of the given rules.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest.html">GenerateConsistencyTokenRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for
+[google.bigtable.admin.v2.BigtableTableAdmin.GenerateConsistencyToken][google.bigtable.admin.v2.BigtableTableAdmin.GenerateConsistencyToken]</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse.html">GenerateConsistencyTokenResponse</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Response message for
+[google.bigtable.admin.v2.BigtableTableAdmin.GenerateConsistencyToken][google.bigtable.admin.v2.BigtableTableAdmin.GenerateConsistencyToken]</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.html">GetAppProfileRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for BigtableInstanceAdmin.GetAppProfile.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetClusterRequest.html">GetClusterRequest</a></h4>
       <section><p>Request message for BigtableInstanceAdmin.GetCluster.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest.html">GetInstanceRequest</a></h4>
       <section><p>Request message for BigtableInstanceAdmin.GetInstance.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest.html">GetSnapshotRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for
+[google.bigtable.admin.v2.BigtableTableAdmin.GetSnapshot][google.bigtable.admin.v2.BigtableTableAdmin.GetSnapshot]</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.GetTableRequest.html">GetTableRequest</a></h4>
       <section><p>Request message for
@@ -201,6 +310,20 @@ All tables in an instance are served from a single
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.InstanceName.html">InstanceName</a></h4>
       <section><p>Resource name for the &apos;instance&apos; resource.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.html">ListAppProfilesRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for BigtableInstanceAdmin.ListAppProfiles.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.html">ListAppProfilesResponse</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Response message for BigtableInstanceAdmin.ListAppProfiles.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListClustersRequest.html">ListClustersRequest</a></h4>
       <section><p>Request message for BigtableInstanceAdmin.ListClusters.</p>
 </section>
@@ -212,6 +335,22 @@ All tables in an instance are served from a single
 </section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse.html">ListInstancesResponse</a></h4>
       <section><p>Response message for BigtableInstanceAdmin.ListInstances.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest.html">ListSnapshotsRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for
+[google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots][google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots]</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse.html">ListSnapshotsResponse</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Response message for
+[google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots][google.bigtable.admin.v2.BigtableTableAdmin.ListSnapshots]</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ListTablesRequest.html">ListTablesRequest</a></h4>
       <section><p>Request message for
@@ -234,8 +373,40 @@ All tables in an instance are served from a single
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest.Types.Modification.html">ModifyColumnFamiliesRequest.Types.Modification</a></h4>
       <section><p>A create, update, or delete of a particular column family.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest.html">PartialUpdateInstanceRequest</a></h4>
+      <section><p>Request message for BigtableInstanceAdmin.PartialUpdateInstance.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ProjectName.html">ProjectName</a></h4>
       <section><p>Resource name for the &apos;project&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Snapshot.html">Snapshot</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>A snapshot of a table at a particular time. A snapshot can be used as a
+checkpoint for data restoration or a data source for a new table.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.html">Snapshot.Types</a></h4>
+      <section><p>Container for nested types declared in the Snapshot message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.SnapshotName.html">SnapshotName</a></h4>
+      <section><p>Resource name for the &apos;snapshot&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.SnapshotTableMetadata.html">SnapshotTableMetadata</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>The metadata for the Operation returned by SnapshotTable.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest.html">SnapshotTableRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable snapshots. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for
+[google.bigtable.admin.v2.BigtableTableAdmin.SnapshotTable][google.bigtable.admin.v2.BigtableTableAdmin.SnapshotTable]</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.html">Table</a></h4>
       <section><p>A collection of user data indexed by row, column, and timestamp.
@@ -244,14 +415,37 @@ Each table is served using the resources of its parent cluster.</p>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.Types.html">Table.Types</a></h4>
       <section><p>Container for nested types declared in the Table message type.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.html">Table.Types.ClusterState</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>The state of a table&apos;s data in a particular cluster.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.html">Table.Types.ClusterState.Types</a></h4>
+      <section><p>Container for nested types declared in the ClusterState message type.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.TableName.html">TableName</a></h4>
       <section><p>Resource name for the &apos;table&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.html">UpdateAppProfileRequest</a></h4>
+      <section><p>This is a private alpha release of Cloud Bigtable replication. This feature
+is not currently available to most Cloud Bigtable customers. This feature
+might be changed in backward-incompatible ways and is not recommended for
+production use. It is not subject to any SLA or deprecation policy.</p>
+<p>Request message for BigtableInstanceAdmin.UpdateAppProfile.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata.html">UpdateClusterMetadata</a></h4>
       <section><p>The metadata for the Operation returned by UpdateCluster.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata.html">UpdateInstanceMetadata</a></h4>
+      <section><p>The metadata for the Operation returned by UpdateInstance.</p>
+</section>
     <h3 id="enums">Enums
   </h3>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.AppProfile.RoutingPolicyOneofCase.html">AppProfile.RoutingPolicyOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;routing_policy&quot; oneof.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.html">Cluster.Types.State</a></h4>
       <section><p>Possible states of a cluster.</p>
 </section>
@@ -270,8 +464,14 @@ Each table is served using the resources of its parent cluster.</p>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest.Types.Modification.ModOneofCase.html">ModifyColumnFamiliesRequest.Types.Modification.ModOneofCase</a></h4>
       <section><p>Enum of possible cases for the &quot;mod&quot; oneof.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State.html">Snapshot.Types.State</a></h4>
+      <section><p>Possible states of a snapshot.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.StorageType.html">StorageType</a></h4>
       <section><p>Storage media types for persisting Bigtable data.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.html">Table.Types.ClusterState.Types.ReplicationState</a></h4>
+      <section><p>Table replication states.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity.html">Table.Types.TimestampGranularity</a></h4>
       <section><p>Possible timestamp granularities to use when keeping multiple versions

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Instance
    | Google.Cloud.Bigtable.Admin.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -160,6 +160,41 @@ to avoid confusion.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Cloud.Bigtable.Admin.V2.InstanceName.html">InstanceName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_Admin_V2_Instance_Labels_" data-uid="Google.Cloud.Bigtable.Admin.V2.Instance.Labels*"></a>
+  <h4 id="Google_Cloud_Bigtable_Admin_V2_Instance_Labels" data-uid="Google.Cloud.Bigtable.Admin.V2.Instance.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>Labels are a flexible and lightweight mechanism for organizing cloud
+resources into groups that reflect a customer&apos;s organizational needs and
+deployment strategies. They can be used to filter resources and aggregate
+metrics.</p>
+<ul>
+<li>Label keys must be between 1 and 63 characters long and must conform to
+the regular expression: <code>[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}</code>.</li>
+<li>Label values must be between 0 and 63 characters long and must conform to
+the regular expression: <code>[\p{Ll}\p{Lo}\p{N}_-]{0,63}</code>.</li>
+<li>No more than 64 labels can be associated with a given resource.</li>
+<li>Keys and values must both be under 128 bytes.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

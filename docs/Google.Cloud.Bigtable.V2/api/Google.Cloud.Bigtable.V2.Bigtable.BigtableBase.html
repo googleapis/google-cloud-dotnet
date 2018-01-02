@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Bigtable.BigtableBase
    | Google.Cloud.Bigtable.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -262,11 +262,11 @@ atomically.</p>
   </table>
   <a id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_ReadModifyWriteRow_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.ReadModifyWriteRow*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest,Grpc.Core.ServerCallContext)">ReadModifyWriteRow(ReadModifyWriteRowRequest, ServerCallContext)</h4>
-  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
-and value from the specified columns and writes a new entry based on
-pre-defined read/modify/write rules. The new value for the timestamp is the
-greater of the existing timestamp or the current server time. The method
-returns the new contents of all modified cells.</p>
+  <div class="markdown level1 summary"><p>Modifies a row atomically on the server. The method reads the latest
+existing timestamp and value from the specified columns and writes a new
+entry based on pre-defined read/modify/write rules. The new value for the
+timestamp is the greater of the existing timestamp or the current server
+time. The method returns the new contents of all modified cells.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

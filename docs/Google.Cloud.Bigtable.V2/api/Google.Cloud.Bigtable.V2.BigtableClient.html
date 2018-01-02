@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigtableClient
    | Google.Cloud.Bigtable.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -659,6 +659,31 @@ be specified using a string as well and its UTF-8 representations will be used.
 This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_Google_Cloud_Bigtable_V2_CheckAndMutateRowRequest_Google_Api_Gax_Grpc_CallSettings_">CheckAndMutateRowAsync(CheckAndMutateRowRequest, CallSettings)</a>.
 </p>
 </div>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_RowFilter_Google_Cloud_Bigtable_V2_Mutation____snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">CheckAndMutateRowResponse response = await client.CheckAndMutateRowAsync(
+    new TableName(projectId, instanceId, tableId),
+    &quot;user12345&quot;,
+    // If the latest value in the &quot;Address:Country&quot; column is &quot;USA&quot;...
+    RowFilters.Chain(
+        RowFilters.FamilyNameRegex(&quot;Address&quot;),
+        RowFilters.ColumnQualifierRegex(&quot;Country&quot;),
+        RowFilters.CellsPerColumnLimit(1),
+        RowFilters.ValueRegex(&quot;USA&quot;)),
+    // ...remove all previous Level 1 scores and set the value to 0.
+    Mutations.DeleteFromColumn(&quot;Score&quot;, &quot;Level 1&quot;),
+    Mutations.SetCell(&quot;Score&quot;, &quot;Level 1&quot;, 0, new BigtableVersion(1)));
+
+if (response.PredicateMatched)
+{
+    Console.WriteLine(&quot;The level 1 scores have been reset&quot;);
+}
+else
+{
+    Console.WriteLine(&quot;The level 1 scores were not modified.&quot;);
+}
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRowAsync*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_RowFilter_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,Google.Cloud.Bigtable.V2.RowFilter,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},Google.Api.Gax.Grpc.CallSettings)">CheckAndMutateRowAsync(TableName, BigtableByteString, RowFilter, IEnumerable&lt;Mutation&gt;, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Asynchronously mutates a row atomically based on the output of a predicate Reader filter.</p>
@@ -1525,6 +1550,22 @@ be specified using a string as well and its UTF-8 representations will be used.
 This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_Google_Cloud_Bigtable_V2_MutateRowRequest_Google_Api_Gax_Grpc_CallSettings_">MutateRowAsync(MutateRowRequest, CallSettings)</a>.
 </p>
 </div>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_Mutation____snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">await client.MutateRowAsync(
+    new TableName(projectId, instanceId, tableId),
+    // From the row with key &#39;0xABCD1234&#39;...
+    new byte[] { 0xAB, 0xCD, 0x12, 0x34 },
+    // delete all cells from the column family &quot;Address&quot;,
+    Mutations.DeleteFromFamily(&quot;Address&quot;),
+    // and all cells from the &quot;Score:Level 1&quot; column which are older than a day (assuming UTC
+    // timestamp micros have been used as version values in this column).
+    Mutations.DeleteFromColumn(
+        &quot;Score&quot;,
+        &quot;Level 1&quot;,
+        new BigtableVersionRange(null, DateTime.UtcNow.AddDays(-1))));
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowAsync*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},Google.Api.Gax.Grpc.CallSettings)">MutateRowAsync(TableName, BigtableByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Asynchronously mutates a row atomically. Cells already present in the row are left
@@ -1829,13 +1870,187 @@ while (await responseStream.MoveNext())
 // The response stream has completed
 </code></pre></div>
   </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRows*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_MutateRowsRequest_Types_Entry___" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry[])">MutateRows(TableName, MutateRowsRequest.Types.Entry[])</h4>
+  <div class="markdown level1 summary"><p>Mutates multiple rows in a batch. Each individual row is mutated
+atomically as in <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRow_Google_Cloud_Bigtable_V2_MutateRowRequest_Google_Api_Gax_Grpc_CallSettings_">MutateRow(MutateRowRequest, CallSettings)</a>,
+but the entire batch is not executed atomically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BigtableClient.MutateRowsStream MutateRows(TableName tableName, params MutateRowsRequest.Types.Entry[] entries)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TableName.html">TableName</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the mutations should be applied. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry.html">MutateRowsRequest.Types.Entry</a>[]</td>
+        <td><span class="parametername">entries</span></td>
+        <td><p>The row keys and corresponding mutations to be applied in bulk.
+Each entry is applied as an atomic mutation, but the entries may be
+applied in arbitrary order (even between entries for the same row).
+At least one entry must be specified, and in total the entries can
+contain at most 100000 mutations.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowsStream.html">BigtableClient.MutateRowsStream</a></td>
+        <td><p>The server stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_MutateRowsRequest_Types_Entry____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note this method executes a server streaming RPC. It is not a synchronous call. The caller must process the responses from
+stream as they are returned from the server. Each response will indicate the status for one or more entry of mutations.
+</p>
+<p>
+This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_TableName_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_MutateRowsRequest_Types_Entry__Google_Api_Gax_Grpc_CallSettings_">MutateRows(TableName, IEnumerable&lt;MutateRowsRequest.Types.Entry&gt;, CallSettings)</a>.
+</p>
+</div>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_MutateRowsRequest_Types_Entry____snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">BigtableClient.MutateRowsStream streamingResponse = client.MutateRows(
+    new TableName(projectId, instanceId, tableId),
+    // From row &#39;user12345&#39;...
+    Mutations.CreateEntry(&quot;user12345&quot;,
+        // delete all cells from the column family &quot;Score&quot;,
+        Mutations.DeleteFromFamily(&quot;Score&quot;),
+        // and all cells from the &quot;metrics:clicks&quot; column which are older than a day (assuming UTC
+        // timestamp micros have been used as version values in this column).
+        Mutations.DeleteFromColumn(
+            &quot;metrics&quot;,
+            &quot;clicks&quot;,
+            new BigtableVersionRange(null, DateTime.UtcNow.AddDays(-1)))),
+    // Delete all data from row &#39;user23456&#39;
+    Mutations.CreateEntry(&quot;user23456&quot;, Mutations.DeleteFromRow()));
+
+// Read streaming responses from server until complete
+IAsyncEnumerator&lt;MutateRowsResponse&gt; responseStream = streamingResponse.ResponseStream;
+while (await responseStream.MoveNext(cancellationToken))
+{
+    MutateRowsResponse response = responseStream.Current;
+    foreach (MutateRowsResponse.Types.Entry entry in response.Entries)
+    {
+        switch (entry.Index)
+        {
+            case 0:
+                Console.WriteLine($&quot;The mutations to row &#39;user12345&#39; finished with status code {entry.Status.Code}&quot;);
+                break;
+            case 1:
+                Console.WriteLine($&quot;The mutations to row &#39;user23456&#39; finished with status code {entry.Status.Code}&quot;);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRows*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_TableName_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_MutateRowsRequest_Types_Entry__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.TableName,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry},Google.Api.Gax.Grpc.CallSettings)">MutateRows(TableName, IEnumerable&lt;MutateRowsRequest.Types.Entry&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Mutates multiple rows in a batch. Each individual row is mutated
+atomically as in <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRow_Google_Cloud_Bigtable_V2_MutateRowRequest_Google_Api_Gax_Grpc_CallSettings_">MutateRow(MutateRowRequest, CallSettings)</a>,
+but the entire batch is not executed atomically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BigtableClient.MutateRowsStream MutateRows(TableName tableName, IEnumerable&lt;MutateRowsRequest.Types.Entry&gt; entries, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TableName.html">TableName</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the mutations should be applied. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry.html">MutateRowsRequest.Types.Entry</a>&gt;</td>
+        <td><span class="parametername">entries</span></td>
+        <td><p>The row keys and corresponding mutations to be applied in bulk.
+Each entry is applied as an atomic mutation, but the entries may be
+applied in arbitrary order (even between entries for the same row).
+At least one entry must be specified, and in total the entries can
+contain at most 100000 mutations. Must not be null, or contain null
+elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowsStream.html">BigtableClient.MutateRowsStream</a></td>
+        <td><p>The server stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_TableName_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_MutateRowsRequest_Types_Entry__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Note this method executes a server streaming RPC. It is not a synchronous call. The caller must process the responses from
+stream as they are returned from the server. Each response will indicate the status for one or more entry of mutations.
+</p>
+<p>
+This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_MutateRowsRequest_Google_Api_Gax_Grpc_CallSettings_">MutateRows(MutateRowsRequest, CallSettings)</a>.
+</p>
+</div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest,Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
-and value from the specified columns and writes a new entry based on
-pre-defined read/modify/write rules. The new value for the timestamp is the
-greater of the existing timestamp or the current server time. The method
-returns the new contents of all modified cells.</p>
+  <div class="markdown level1 summary"><p>Modifies a row atomically on the server. The method reads the latest
+existing timestamp and value from the specified columns and writes a new
+entry based on pre-defined read/modify/write rules. The new value for the
+timestamp is the greater of the existing timestamp or the current server
+time. The method returns the new contents of all modified cells.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2063,11 +2278,11 @@ This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.B
 </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_TableName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.TableName,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRow(TableName, ByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
-and value from the specified columns and writes a new entry based on
-pre-defined read/modify/write rules. The new value for the timestamp is the
-greater of the existing timestamp or the current server time. The method
-returns the new contents of all modified cells.</p>
+  <div class="markdown level1 summary"><p>Modifies a row atomically on the server. The method reads the latest
+existing timestamp and value from the specified columns and writes a new
+entry based on pre-defined read/modify/write rules. The new value for the
+timestamp is the greater of the existing timestamp or the current server
+time. The method returns the new contents of all modified cells.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2145,11 +2360,11 @@ ReadModifyWriteRowResponse response = bigtableClient.ReadModifyWriteRow(tableNam
   </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest,Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
-and value from the specified columns and writes a new entry based on
-pre-defined read/modify/write rules. The new value for the timestamp is the
-greater of the existing timestamp or the current server time. The method
-returns the new contents of all modified cells.</p>
+  <div class="markdown level1 summary"><p>Modifies a row atomically on the server. The method reads the latest
+existing timestamp and value from the specified columns and writes a new
+entry based on pre-defined read/modify/write rules. The new value for the
+timestamp is the greater of the existing timestamp or the current server
+time. The method returns the new contents of all modified cells.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2290,6 +2505,26 @@ be specified using a string as well and its UTF-8 representations will be used.
 This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_">ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)</a>.
 </p>
 </div>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_ReadModifyWriteRule____snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Increase the value of the cell with the &quot;Level 1&quot; qualifier in the
+// &quot;Score&quot; column family by 55.
+ReadModifyWriteRowResponse response = await client.ReadModifyWriteRowAsync(
+    new TableName(projectId, instanceId, tableId),
+    &quot;user12345&quot;,
+    ReadModifyWriteRules.Increment(&quot;Score&quot;, &quot;Level 1&quot;, 55));
+
+Cell modifiedCell = response.Row.Families[0].Columns[0].Cells[0];
+
+// Implicitly convert the ByteString Value into a BigtableByteString,
+// which supports additional conversions specific to Bigtable.
+BigtableByteString value = modifiedCell.Value;
+
+// Convert the BigtableByteString to a long to obtain the updated value.
+long newScore = (long) value;
+Console.WriteLine($&quot;The total score for level 1 is now {newScore}&quot;);
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Cloud.Bigtable.V2.BigtableByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRowAsync(TableName, BigtableByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Asynchronously modifies a row atomically on the server. The method reads the latest existing version
@@ -2377,11 +2612,11 @@ This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.B
 </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
-and value from the specified columns and writes a new entry based on
-pre-defined read/modify/write rules. The new value for the timestamp is the
-greater of the existing timestamp or the current server time. The method
-returns the new contents of all modified cells.</p>
+  <div class="markdown level1 summary"><p>Modifies a row atomically on the server. The method reads the latest
+existing timestamp and value from the specified columns and writes a new
+entry based on pre-defined read/modify/write rules. The new value for the
+timestamp is the greater of the existing timestamp or the current server
+time. The method returns the new contents of all modified cells.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2459,11 +2694,11 @@ ReadModifyWriteRowResponse response = await bigtableClient.ReadModifyWriteRowAsy
   </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.TableName,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},System.Threading.CancellationToken)">ReadModifyWriteRowAsync(TableName, ByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
-and value from the specified columns and writes a new entry based on
-pre-defined read/modify/write rules. The new value for the timestamp is the
-greater of the existing timestamp or the current server time. The method
-returns the new contents of all modified cells.</p>
+  <div class="markdown level1 summary"><p>Modifies a row atomically on the server. The method reads the latest
+existing timestamp and value from the specified columns and writes a new
+entry based on pre-defined read/modify/write rules. The new value for the
+timestamp is the greater of the existing timestamp or the current server
+time. The method returns the new contents of all modified cells.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2674,6 +2909,36 @@ This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.B
 and takes the single row result or null if no rows are returned.
 </p>
 </div>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_RowFilter_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Only read cells from the &quot;Line X&quot; columns, where X is some
+// digit, in the Address column family and only take the most
+// recent cell from each column.
+Row row = await client.ReadRowAsync(
+    new TableName(projectId, instanceId, tableId),
+    &quot;user12345&quot;,
+    RowFilters.Chain(
+        RowFilters.FamilyNameRegex(&quot;Address&quot;),
+        RowFilters.ColumnQualifierRegex(@&quot;Line \d&quot;),
+        RowFilters.CellsPerColumnLimit(1)),
+    CallSettings.FromCancellationToken(cancellationToken));
+
+Family addressFamily = row.Families.FirstOrDefault();
+if (addressFamily != null)
+{
+    foreach (Column column in addressFamily.Columns)
+    {
+        Console.WriteLine($&quot;    Column qualifier: {column.Qualifier.ToStringUtf8()}&quot;);
+        foreach (Cell cell in column.Cells)
+        {
+            Console.WriteLine($&quot;      Cell value: {cell.Value.ToStringUtf8()}&quot;);
+            Console.WriteLine($&quot;      Timestamp: {cell.Version.ToDateTime()}&quot;);
+            Console.WriteLine($&quot;      Labels: {string.Join(&quot;, &quot;, cell.Labels)}&quot;);
+        }
+    }
+}
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRows*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_ReadRowsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.ReadRowsRequest,Google.Api.Gax.Grpc.CallSettings)">ReadRows(ReadRowsRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Streams back the contents of all requested rows in key order, optionally
@@ -2824,6 +3089,52 @@ If null or 0, returns all results.</p>
 This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_ReadRowsRequest_Google_Api_Gax_Grpc_CallSettings_">ReadRows(ReadRowsRequest, CallSettings)</a>.
 </p>
 </div>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_RowSet_Google_Cloud_Bigtable_V2_RowFilter_System_Nullable_System_Int64__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">TableName tableName = new TableName(projectId, instanceId, tableId);
+
+// Read rows whose keys are greater than or equal to &#39;user00000&#39;
+// and less than &#39;user99999&#39;.
+RowSet rows = RowSet.FromRowRanges(
+    RowRange.ClosedOpen(&quot;user00000&quot;, &quot;user99999&quot;));
+
+// Only read cells from the &quot;Address&quot; column family and only take the most recent cell from each column.
+RowFilter filter = RowFilters.Chain(
+    RowFilters.FamilyNameRegex(&quot;Address&quot;),
+    RowFilters.CellsPerColumnLimit(1));
+
+// Just read the first 10 rows.
+long rowsLimit = 10;
+
+// Make the request
+BigtableClient.ReadRowsStream streamingResponse = client.ReadRows(
+    tableName,
+    rows,
+    filter,
+    rowsLimit,
+    CallSettings.FromCancellationToken(cancellationToken));
+
+// Read streaming responses from server until complete
+await streamingResponse.AsAsyncEnumerable().ForEachAsync(row =&gt;
+{
+    Console.WriteLine($&quot;Row key: {row.Key.ToStringUtf8()}&quot;);
+    foreach (Family family in row.Families)
+    {
+        Console.WriteLine($&quot;  Family name: {family.Name}&quot;);
+        foreach (Column column in family.Columns)
+        {
+            Console.WriteLine($&quot;    Column qualifier: {column.Qualifier.ToStringUtf8()}&quot;);
+            foreach (Cell cell in column.Cells)
+            {
+                Console.WriteLine($&quot;      Cell value: {cell.Value.ToStringUtf8()}&quot;);
+                Console.WriteLine($&quot;      Timestamp: {cell.Version.ToDateTime()}&quot;);
+                Console.WriteLine($&quot;      Labels: {string.Join(&quot;, &quot;, cell.Labels)}&quot;);
+            }
+        }
+    }
+});
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_SampleRowKeysRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys(Google.Cloud.Bigtable.V2.SampleRowKeysRequest,Google.Api.Gax.Grpc.CallSettings)">SampleRowKeys(SampleRowKeysRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Returns a sample of row keys in the table. The returned row keys will
@@ -2896,6 +3207,86 @@ while (await responseStream.MoveNext())
     // Do something with streamed response
 }
 // The response stream has completed
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_TableName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys(Google.Cloud.Bigtable.V2.TableName,Google.Api.Gax.Grpc.CallSettings)">SampleRowKeys(TableName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns a sample of row keys in the table. The returned row keys will
+delimit contiguous sections of the table of approximately equal size,
+which can be used to break up the data for distributed tasks like
+mapreduces.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BigtableClient.SampleRowKeysStream SampleRowKeys(TableName tableName, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TableName.html">TableName</a></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table from which to sample row keys. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.html">BigtableClient.SampleRowKeysStream</a></td>
+        <td><p>The server stream with the row key samples.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_TableName_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This method simply delegates to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_SampleRowKeysRequest_Google_Api_Gax_Grpc_CallSettings_">SampleRowKeys(SampleRowKeysRequest, CallSettings)</a>.
+</p>
+</div>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_TableName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">BigtableClient.SampleRowKeysStream streamingResponse = client.SampleRowKeys(
+    new TableName(projectId, instanceId, tableId),
+    CallSettings.FromCancellationToken(cancellationToken));
+
+// Get all streaming responses from server in a list so they can be easily iterated.
+IList&lt;SampleRowKeysResponse&gt; rowKeySamples =
+    await streamingResponse.ToListAsync(cancellationToken);
+
+long previousRowOffsetBytes = 0;
+foreach (SampleRowKeysResponse rowKeySample in rowKeySamples)
+{
+    // The OffsetBytes are non-decreasing, so their difference should always be 0 or more.
+    long offsetDifference = rowKeySample.OffsetBytes - previousRowOffsetBytes;
+
+    Console.WriteLine($&quot;Row key: {rowKeySample.RowKey.ToStringUtf8()}, at offset ${rowKeySample.OffsetBytes}&quot;);
+    Console.WriteLine($&quot;  Approximate bytes since previous row sample: ${offsetDifference}&quot;);
+
+    previousRowOffsetBytes = rowKeySample.OffsetBytes;
+}
 </code></pre></div>
   </div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ShutdownDefaultChannelsAsync*"></a>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigtableClientImpl
    | Google.Cloud.Bigtable.V2 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -154,6 +154,12 @@
       <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_Google_Cloud_Bigtable_V2_Mutation___">BigtableClient.MutateRowAsync(TableName, BigtableByteString, Mutation[])</a>
     </div>
     <div>
+      <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_TableName_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_MutateRowsRequest_Types_Entry__Google_Api_Gax_Grpc_CallSettings_">BigtableClient.MutateRows(TableName, IEnumerable&lt;MutateRowsRequest.Types.Entry&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_MutateRowsRequest_Types_Entry___">BigtableClient.MutateRows(TableName, MutateRowsRequest.Types.Entry[])</a>
+    </div>
+    <div>
       <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_BigtableByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_">BigtableClient.ReadModifyWriteRow(TableName, BigtableByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CallSettings)</a>
     </div>
     <div>
@@ -173,6 +179,9 @@
     </div>
     <div>
       <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_TableName_Google_Cloud_Bigtable_V2_RowSet_Google_Cloud_Bigtable_V2_RowFilter_System_Nullable_System_Int64__Google_Api_Gax_Grpc_CallSettings_">BigtableClient.ReadRows(TableName, RowSet, RowFilter, Nullable&lt;Int64&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_TableName_Google_Api_Gax_Grpc_CallSettings_">BigtableClient.SampleRowKeys(TableName, CallSettings)</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -519,11 +528,11 @@ atomically.</p>
   <div><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_MutateRowsRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableClient.MutateRows(MutateRowsRequest, CallSettings)</a></div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClientImpl_ReadModifyWriteRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClientImpl.ReadModifyWriteRow*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClientImpl_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClientImpl.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest,Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
-and value from the specified columns and writes a new entry based on
-pre-defined read/modify/write rules. The new value for the timestamp is the
-greater of the existing timestamp or the current server time. The method
-returns the new contents of all modified cells.</p>
+  <div class="markdown level1 summary"><p>Modifies a row atomically on the server. The method reads the latest
+existing timestamp and value from the specified columns and writes a new
+entry based on pre-defined read/modify/write rules. The new value for the
+timestamp is the greater of the existing timestamp or the current server
+time. The method returns the new contents of all modified cells.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -574,11 +583,11 @@ returns the new contents of all modified cells.</p>
   <div><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_">BigtableClient.ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)</a></div>
   <a id="Google_Cloud_Bigtable_V2_BigtableClientImpl_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClientImpl.ReadModifyWriteRowAsync*"></a>
   <h4 id="Google_Cloud_Bigtable_V2_BigtableClientImpl_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClientImpl.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest,Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)</h4>
-  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
-and value from the specified columns and writes a new entry based on
-pre-defined read/modify/write rules. The new value for the timestamp is the
-greater of the existing timestamp or the current server time. The method
-returns the new contents of all modified cells.</p>
+  <div class="markdown level1 summary"><p>Modifies a row atomically on the server. The method reads the latest
+existing timestamp and value from the specified columns and writes a new
+entry based on pre-defined read/modify/write rules. The new value for the
+timestamp is the greater of the existing timestamp or the current server
+time. The method returns the new contents of all modified cells.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
