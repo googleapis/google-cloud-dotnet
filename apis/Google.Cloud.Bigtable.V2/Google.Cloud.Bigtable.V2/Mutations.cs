@@ -92,7 +92,7 @@ namespace Google.Cloud.Bigtable.V2
                 {
                     FamilyName = Utilities.ValidateFamilyName(familyName),
                     ColumnQualifier = columnQualifier.Value,
-                    TimeRange = versionRange.ToTimestampRange()
+                    TimeRange = versionRange?.ToTimestampRange()
                 }
             };
 
