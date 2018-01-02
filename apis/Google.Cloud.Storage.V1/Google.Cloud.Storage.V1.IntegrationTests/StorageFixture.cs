@@ -26,6 +26,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -189,6 +190,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             string name = "dotnet-requesterpays-" + Guid.NewGuid().ToString().ToLowerInvariant();
             RequesterPaysClient.CreateBucket(RequesterPaysProjectId, new Bucket { Name = name, Billing = new Bucket.BillingData { RequesterPays = true } },
                 new CreateBucketOptions { PredefinedAcl = PredefinedBucketAcl.PublicReadWrite, PredefinedDefaultObjectAcl = PredefinedObjectAcl.PublicRead });
+            SleepAfterBucketCreateDelete();
             // TODO: We shouldn't need the project ID here.
             RequesterPaysClient.UploadObject(name, SmallObject, "text/plain", new MemoryStream(SmallContent),
                 new UploadObjectOptions { UserProject = RequesterPaysProjectId });
@@ -198,6 +200,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         internal void CreateBucket(string name, bool multiVersion)
         {
             Client.CreateBucket(ProjectId, new Bucket { Name = name, Versioning = new Bucket.VersioningData { Enabled = multiVersion } });
+            SleepAfterBucketCreateDelete();
             RegisterBucketToDelete(name);
         }
 
@@ -213,6 +216,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 Client.UploadObject(ReadBucket, name, "text/plain", new MemoryStream(SmallContent));
             }
         }
+
+        /// <summary>
+        /// Bucket creation/deletion is rate-limited. To avoid making the tests flaky, we sleep after each operation.
+        /// </summary>
+        internal static void SleepAfterBucketCreateDelete() => Thread.Sleep(2000);
 
         internal void RegisterBucketToDelete(string bucket)
         {
@@ -310,6 +318,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation, UserProject = userProject });
             }
             client.DeleteBucket(bucket, new DeleteBucketOptions { UserProject = userProject });
+            SleepAfterBucketCreateDelete();
         }
 
         /// <summary>
