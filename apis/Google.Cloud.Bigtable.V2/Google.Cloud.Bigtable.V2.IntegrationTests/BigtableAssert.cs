@@ -18,14 +18,18 @@ using Xunit;
 
 namespace Google.Cloud.Bigtable.V2.IntegrationTests
 {
-    internal static class BigtableAssert
+    public static class BigtableAssert
     {
         public static async Task HasNoValuesAsync(
             BigtableClient client,
             TableName tableName,
-            BigtableByteString rowKey)
+            BigtableByteString rowKey,
+            string familyName = null)
         {
-            Assert.Null(await client.ReadRowAsync(tableName, rowKey));
+            var filter = familyName == null
+                ? RowFilters.PassAllFilter()
+                : RowFilters.FamilyNameRegex(familyName);
+            Assert.Null(await client.ReadRowAsync(tableName, rowKey, filter));
         }
 
         public static async Task HasSingleValueAsync(
