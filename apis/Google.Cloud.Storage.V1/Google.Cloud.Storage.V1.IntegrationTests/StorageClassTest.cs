@@ -46,6 +46,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
 
             client.CreateBucket(_fixture.ProjectId, new Bucket { Name = bucketName, StorageClass = initialBucketStorageClass });
+            StorageFixture.SleepAfterBucketCreateDelete();
             _fixture.RegisterBucketToDelete(bucketName);
 
             var bucket = client.GetBucket(bucketName);
