@@ -35,23 +35,20 @@ namespace Google.Cloud.Bigtable.V2.Tests
             new Rpc.Status {Code = (int) StatusCode.NotFound};
 
         private static List<T> Fill<T>(T value, int size) => Enumerable.Repeat(value, size).ToList();
-
+        
         private static MutateRowsRequest CreateRequest(int entryCount) => new MutateRowsRequest
         {
             Entries =
             {
-                Enumerable.Range(0, entryCount).Select(i => new MutateRowsRequest.Types.Entry
-                    {Mutations = {new Mutation {SetCell = new Mutation.Types.SetCell {FamilyName = "Family" + i}}}})
+                Enumerable.Range(0, entryCount).Select(i =>
+                    Mutations.CreateEntry("Row" + i, Mutations.SetCell("Family" + i, default, default)))
             }
         };
 
         private static MutateRowsRequest CreateRetryRequest(MutateRowsRequest original, params int[] indices) =>
             new MutateRowsRequest
             {
-                Entries =
-                {
-                    Enumerable.Range(0, indices.Length).Select(i => original.Entries[indices[i]])
-                }
+                Entries = {Enumerable.Range(0, indices.Length).Select(i => original.Entries[indices[i]])}
             };
 
         private static MutateRowsResponse CreateResponse(params Rpc.Status[] statuses) => new MutateRowsResponse
