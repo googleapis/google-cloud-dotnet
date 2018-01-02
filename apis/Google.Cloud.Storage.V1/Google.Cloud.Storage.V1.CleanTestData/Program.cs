@@ -59,6 +59,8 @@ namespace Google.Storage.V2.CleanTestData
                 Console.WriteLine($"Deleted {bucket} / {obj.Name} / v{obj.Generation}");
             }
             client.DeleteBucket(bucket);
+            // Avoid running into quota issues
+            Thread.Sleep(2000);
             Console.WriteLine($"Deleted {bucket}");
         }
 

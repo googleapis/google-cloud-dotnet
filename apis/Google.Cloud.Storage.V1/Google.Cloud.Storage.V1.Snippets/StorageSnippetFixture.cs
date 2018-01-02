@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.Snippets
@@ -61,6 +62,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             var client = StorageClient.Create();
             client.CreateBucket(ProjectId, BucketName);
+            SleepAfterBucketCreateDelete();
             byte[] content = Encoding.UTF8.GetBytes(HelloWorldContent);
             client.UploadObject(BucketName, HelloStorageObjectName, "text/plain", new MemoryStream(content));
             File.WriteAllText(WorldLocalFileName, HelloWorldContent);
@@ -74,7 +76,13 @@ namespace Google.Cloud.Storage.V1.Snippets
             var topicName = new TopicName(ProjectId, bucket);
             var storageClient = StorageClient.Create();
             storageClient.CreateBucket(ProjectId, bucket);
+            SleepAfterBucketCreateDelete();
         }
+
+        /// <summary>
+        /// Bucket creation/deletion is rate-limited. To avoid making the tests flaky, we sleep after each operation.
+        /// </summary>
+        internal static void SleepAfterBucketCreateDelete() => Thread.Sleep(2000);
 
         internal Notification CreateNotification(string prefix)
         {
@@ -122,6 +130,7 @@ namespace Google.Cloud.Storage.V1.Snippets
                     client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation });
                 }
                 client.DeleteBucket(bucket);
+                SleepAfterBucketCreateDelete();
             }
             foreach (var file in _localFilesToDelete)
             {
