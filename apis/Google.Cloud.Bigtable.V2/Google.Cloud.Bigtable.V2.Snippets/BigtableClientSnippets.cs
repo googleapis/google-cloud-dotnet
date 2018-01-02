@@ -196,8 +196,8 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             BigtableByteString value = modifiedCell.Value;
 
             // Convert the BigtableByteString to a long to obtain the updated value.
-            long newScore = (long)value;
-
+            long newScore = (long) value;
+            Console.WriteLine($"The total score for level 1 is now {newScore}");
             // End snippet
 
             Assert.Equal(67, newScore);
@@ -223,9 +223,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 Mutations.SetCell("Score", "Level 1", 12));
 
             // Snippet: ReadRowAsync(TableName,BigtableByteString,RowFilter,CallSettings)
-            // Only read cells from the "Line 1" and "Line 2" columns in the
-            // Address column family and only take the most recent cell from
-            // each column.
+            // Only read cells from the "Line X" columns, where X is some
+            // digit, in the Address column family and only take the most
+            // recent cell from each column.
             Row row = await client.ReadRowAsync(
                 new TableName(projectId, instanceId, tableId),
                 "user12345",
@@ -249,7 +249,6 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                     }
                 }
             }
-
             // End snippet
 
             foreach (Family family in row.Families)
@@ -286,7 +285,6 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             var tableId = _fixture.TableName.TableId;
 
             // Snippet: ReadRows(TableName,RowSet,RowFilter,long?,CallSettings)
-            // Initialize request arguments
             TableName tableName = new TableName(projectId, instanceId, tableId);
 
             // Read rows whose keys are greater than or equal to 'user00000'

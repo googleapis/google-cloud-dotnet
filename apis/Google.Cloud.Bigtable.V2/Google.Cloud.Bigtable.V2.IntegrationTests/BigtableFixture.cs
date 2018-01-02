@@ -79,7 +79,6 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             return rowKey;
         }
 
-
         public async Task InsertRowsAsync(
             TableName tableName,
             IEnumerable<BigtableByteString> rowKeys,
