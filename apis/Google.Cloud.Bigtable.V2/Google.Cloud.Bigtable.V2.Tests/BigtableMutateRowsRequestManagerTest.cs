@@ -91,7 +91,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             new MutateRowsResponse.Types.Entry {Index = i, Status = status};
 
         /// <summary>
-        /// This method sends <see cref="MutateRowsResponse"/> message to <see cref="BigtableMutateRowsRequestManager"/> 
+        /// Sends <see cref="MutateRowsResponse"/> message to <see cref="BigtableMutateRowsRequestManager"/> 
         /// and requests back <see cref="BigtableMutateRowsRequestManager.ProcessingStatus"/> based on the message sent.
         /// </summary>
         /// <param name="underTest">
@@ -246,6 +246,29 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal(BigtableMutateRowsRequestManager.ProcessingStatus.NOT_RETRYABLE,
                 Send(underTest, CreateResponse(Ok, Ok, NotFound)));
             Assert.Equal(CreateResponse(Ok, Ok, NotFound), underTest.BuildResponse());
+            Assert.Null(underTest.RetryRequest);
+        }
+
+        /// <summary>
+        /// Two calls, retry call has one of the resonses with non-retryable status.
+        /// In this case we should not retry, RetryRequest should be null. 
+        /// </summary>
+        [Fact]
+        public void TestTwoTryPartialFailNotRetryable()
+        {
+            MutateRowsRequest originalRequest = CreateRequest(4);
+            BigtableMutateRowsRequestManager underTest =
+                new BigtableMutateRowsRequestManager(_retryStatuses, originalRequest);
+
+            Send(underTest, CreateResponse(Ok, Ok, DeadlineExceeded, DeadlineExceeded));
+            Assert.Equal(CreateRetryRequest(originalRequest, 2, 3), underTest.RetryRequest);
+            Assert.Equal(CreateResponse(Ok, Ok, DeadlineExceeded, DeadlineExceeded), underTest.BuildResponse());
+
+            Send(underTest, CreateResponse(DeadlineExceeded, NotFound));
+            // Don't retry if even a single response is not retryable.
+            // RetryRequest should be null.
+            Assert.Null(underTest.RetryRequest);
+            Assert.Equal(CreateResponse(Ok, Ok, DeadlineExceeded, NotFound), underTest.BuildResponse());
         }
 
         /// <summary>
