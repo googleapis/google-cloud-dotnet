@@ -77,14 +77,12 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
             {
                 // Trim whitespace
                 return new SqlFunctionExpression(
-                    "REGEXP_REPLACE",
+                    "LTRIM",
                     typeof(string),
                     new[]
                     {
-                    methodCallExpression.Object,
-                    Expression.Constant(@"^\s*"),
-                    Expression.Constant(string.Empty)
-                });
+                        methodCallExpression.Object
+                    });
             }
 
             return new SqlFunctionExpression(

@@ -15,6 +15,7 @@
 using System;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Google.Cloud.Spanner.Data;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.EntityFrameworkCore.TestModels.Northwind;
 using Microsoft.EntityFrameworkCore.TestUtilities.Xunit;
@@ -159,7 +160,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         public override void TrimStart_without_arguments_in_predicate()
         {
             base.TrimStart_without_arguments_in_predicate();
-            AssertContainsInSql("WHERE REGEXP_REPLACE(c.ContactTitle, '^\\s*', '') = 'Owner'");
+            AssertContainsInSql("WHERE LTRIM");
         }
 
         [Fact]
@@ -173,7 +174,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         public override void TrimEnd_without_arguments_in_predicate()
         {
             base.TrimEnd_without_arguments_in_predicate();
-            AssertContainsInSql("WHERE REGEXP_REPLACE(c.ContactTitle, '\\s*$', '') = 'Owner'");
+            AssertContainsInSql("WHERE RTRIM");
         }
 
         [Fact]
@@ -187,7 +188,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         public override void IsNullOrWhiteSpace_in_predicate()
         {
             base.IsNullOrWhiteSpace_in_predicate();
-            AssertContainsInSql("WHERE c.Region IS NULL OR (c.Region ~ '^\\s*$' = TRUE)");
+            AssertContainsInSql("WHERE c.Region IS NULL OR (REGEXP_CONTAINS(c.Region, '^\\\\s*$')");
         }
 
         [Fact]
@@ -205,59 +206,52 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         }
 
         [Fact]
-        public override void Where_datetime_date_component()
-        {
-            base.Where_datetime_date_component();
-            AssertContainsInSql("WHERE DATE_TRUNC('day', o.OrderDate)");
-        }
-
-        [Fact]
         public override void Where_datetime_year_component()
         {
             base.Where_datetime_year_component();
-            AssertContainsInSql("EXTRACT(YEAR FROM o.OrderDate)");
+            AssertContainsInSql("EXTRACT(YEAR");
         }
 
         [Fact]
         public override void Where_datetime_month_component()
         {
             base.Where_datetime_month_component();
-            AssertContainsInSql("EXTRACT(MONTH FROM o.OrderDate)");
+            AssertContainsInSql("EXTRACT(MONTH");
         }
 
         [Fact]
         public override void Where_datetime_dayOfYear_component()
         {
             base.Where_datetime_dayOfYear_component();
-            AssertContainsInSql("EXTRACT(DAYOFYEAR FROM o.OrderDate)");
+            AssertContainsInSql("EXTRACT(DAYOFYEAR");
         }
 
         [Fact]
         public override void Where_datetime_day_component()
         {
             base.Where_datetime_day_component();
-            AssertContainsInSql("EXTRACT(DAY FROM o.OrderDate)");
+            AssertContainsInSql("EXTRACT(DAY");
         }
 
         [Fact]
         public override void Where_datetime_hour_component()
         {
             base.Where_datetime_hour_component();
-            AssertContainsInSql("EXTRACT(HOUR FROM o.OrderDate)");
+            AssertContainsInSql("EXTRACT(HOUR");
         }
 
         [Fact]
         public override void Where_datetime_minute_component()
         {
             base.Where_datetime_minute_component();
-            AssertContainsInSql("EXTRACT(MINUTE FROM o.OrderDate)");
+            AssertContainsInSql("EXTRACT(MINUTE");
         }
 
         [Fact]
         public override void Where_datetime_second_component()
         {
             base.Where_datetime_second_component();
-            AssertContainsInSql("EXTRACT(SECOND FROM o.OrderDate)");
+            AssertContainsInSql("EXTRACT(SECOND");
         }
 
         // ReSharper disable once RedundantOverriddenMember
@@ -318,21 +312,40 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         }
 
         [Fact]
-        public void String_StartsWith_Literal_with_escaping()
-        {
-            AssertQuery<Customer>(cs => cs.Where(c => c.ContactName.StartsWith(@"_a%b\c")));
-            AssertContainsInSql(@"STARTS_WITH");
-        }
-
-        [Fact]
         public void Where_datetime_dayOfWeek_component()
         {
             AssertQuery<Order>(
                 oc => oc.Where(o =>
                     o.OrderDate.Value.DayOfWeek == DayOfWeek.Tuesday),
                 entryCount: 168);
-            AssertContainsInSql("EXTRACT(DAYOFWEEK FROM o.OrderDate)");
+            AssertContainsInSql("EXTRACT(DAYOFWEEK");
         }
 
+        [Fact]
+        public override void Select_non_matching_value_types_from_anonymous_type_introduces_explicit_cast()
+        {
+            //Overridden because "Order" is a reserved keyword in cloud spanner.
+            AssertQuery<Order>(
+                os => os
+                    .Where(o => o.CustomerID == "ALFKI")
+                    .OrderBy(o => o.OrderID)
+                    .Select(o => new { LongOrder = (long)o.OrderID, ShortOrder = (short)o.OrderID, BaseOrder = o.OrderID }),
+                assertOrder: true);
+        }
+
+        [Fact]
+        public override void Contains_with_local_collection_sql_injection()
+        {
+            //a sql injection attempt should result in a spanner exception.
+            string[] ids = { "ALFKI", "ABC')); GO; DROP TABLE Orders; GO; --" };
+
+            Assert.Throws<SpannerException>(
+                () =>
+                    AssertQuery<Customer>(
+                        cs =>
+                            cs.Where(c => ids.Contains(c.CustomerID) ||
+                                          (c.CustomerID == "ALFKI" || c.CustomerID == "ABCDE")), entryCount: 1)
+            );
+        }
     }
 }

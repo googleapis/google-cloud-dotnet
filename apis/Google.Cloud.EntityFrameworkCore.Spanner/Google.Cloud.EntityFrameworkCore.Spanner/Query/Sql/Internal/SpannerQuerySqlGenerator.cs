@@ -80,14 +80,30 @@ namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
 
                     Visit(sqlFunctionExpression.Arguments[0]);
 
-                    Sql.Append(" FROM ");
+                    Sql.Append(" FROM CAST(");
 
                     Visit(sqlFunctionExpression.Arguments[1]);
 
-                    Sql.Append(")");
+                    Sql.Append(" AS TIMESTAMP) AT TIME ZONE '+0')");
 
                     return sqlFunctionExpression;
                 }
+                case "LN":
+                case "LOG":
+                case "LOG10":
+                    //Since spanner does not attempt any short circuit eval,
+                    //we make these methods return NaN instead of throw
+                    //Otherwise, where clauses such as WHERE x > 0 AND LN(x) < [foo]
+                    //will throws because the protection of "x > 0" does not stop LN(0)
+                    //from being evaluated.
+                    Sql.Append("IF(");
+                    Visit(sqlFunctionExpression.Arguments[0]);
+                    Sql.Append("<=0, CAST('NaN' AS FLOAT64), ");
+
+                    base.VisitSqlFunction(sqlFunctionExpression);
+
+                    Sql.Append(")");
+                    return sqlFunctionExpression;
             }
 
             return base.VisitSqlFunction(sqlFunctionExpression);

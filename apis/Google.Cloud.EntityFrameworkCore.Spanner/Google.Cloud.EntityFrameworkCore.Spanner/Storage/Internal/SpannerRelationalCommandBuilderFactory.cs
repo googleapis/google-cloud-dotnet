@@ -336,13 +336,6 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
                             {
                                 type = Nullable.GetUnderlyingType(type) ?? type;
 
-                                if (type == typeof(bool))
-                                {
-                                    var b = (bool) kv.Value;
-
-                                    return b ? 1 : 0;
-                                }
-
                                 if (type == typeof(Guid))
                                 {
                                     var g = (Guid) kv.Value;

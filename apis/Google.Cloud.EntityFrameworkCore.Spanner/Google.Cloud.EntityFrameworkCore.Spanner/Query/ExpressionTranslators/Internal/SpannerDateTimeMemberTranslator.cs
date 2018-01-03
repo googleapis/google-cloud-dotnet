@@ -22,6 +22,7 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
     internal class SpannerDateTimeMemberTranslator : IMemberTranslator
     {
         static readonly PropertyInfo s_utcNow = typeof(DateTime).GetProperty(nameof(DateTime.UtcNow));
+        static readonly PropertyInfo s_now = typeof(DateTime).GetProperty(nameof(DateTime.Now));
 
         public virtual Expression Translate(MemberExpression e)
         {
@@ -53,19 +54,18 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
                 case nameof(DateTime.Millisecond):
                     return GetDatePartExpression(e, "MILLISECOND");
                 case nameof(DateTime.DayOfWeek):
-                    return GetDatePartExpression(e, "DAYOFWEEK");
-                case nameof(DateTime.Date):
-                    return GetDatePartExpression(e, "DATE", typeof(DateTime));
+                    return Expression.Subtract(GetDatePartExpression(e, "DAYOFWEEK"),
+                        Expression.Constant(1));
                 default:
                     return null;
             }
         }
 
-        static Expression GetDatePartExpression(MemberExpression e, string partName, Type type = null)
+        static Expression GetDatePartExpression(MemberExpression e, string partName)
             =>
                 new SqlFunctionExpression(
                     functionName: "EXTRACT",
-                    returnType: type ?? typeof(int),
+                    returnType: typeof(int),
                     arguments: new[]
                     {
                         new SqlFragmentExpression(partName),
@@ -74,7 +74,7 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 
         Expression TranslateStatic(MemberExpression e)
         {
-            if (e.Member.Equals(s_utcNow))
+            if (e.Member.Equals(s_utcNow) || e.Member.Equals(s_now))
                 return new SqlFunctionExpression("CURRENT_TIMESTAMP", e.Type);
             return null;
         }

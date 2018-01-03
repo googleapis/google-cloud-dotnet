@@ -76,16 +76,13 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 
             if (trimChars == null || trimChars.Length == 0)
             {
-                // Trim whitespace
                 return new SqlFunctionExpression(
-                    "REGEXP_REPLACE",
+                    "RTRIM",
                     typeof(string),
                     new[]
                     {
-                    methodCallExpression.Object,
-                    Expression.Constant(@"\s*$"),
-                    Expression.Constant(string.Empty)
-                });
+                        methodCallExpression.Object
+                    });
             }
 
             return new SqlFunctionExpression(

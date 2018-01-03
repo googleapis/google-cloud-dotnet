@@ -31,7 +31,7 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
                     new SqlFunctionExpression(
                             "REGEXP_CONTAINS",
                         typeof(bool),
-                        new [] { methodCallExpression.Arguments[0], Expression.Constant(@"^\s*$") })
+                        new [] { methodCallExpression.Arguments[0], Expression.Constant(@"^\\s*$") })
                 )
                 : null;
     }

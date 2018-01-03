@@ -231,6 +231,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                                 var valueToken = valueTokens[i].Replace("''", "'");
                                 if (sb != null)
                                 {
+                                    sb.Append(',');
                                     sb.Append(valueToken);
                                     if (sb[sb.Length - 1] == '\'')
                                     {
