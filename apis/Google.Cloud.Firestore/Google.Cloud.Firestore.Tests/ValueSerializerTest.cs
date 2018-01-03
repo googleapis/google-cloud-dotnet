@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Firestore.V1Beta1;
+using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -77,6 +78,17 @@ namespace Google.Cloud.Firestore.Tests
             {
                 Assert.Equal(expectedOutput, actual);
             }
+        }
+
+        [Theory]
+        [MemberData(nameof(SerializationTestData.ProtoValues), MemberType = typeof(SerializationTestData))]
+        public void ValueIsCloned(IMessage proto, Func<Value, IMessage> selector)
+        {
+            // Protos should be accepted, but cloned (as they're mutable, and we mutate things too)
+            var value = ValueSerializer.Serialize(proto);
+            var actual = selector(value);
+            Assert.NotSame(proto, actual);
+            Assert.Equal(proto, actual);
         }
 
         [Fact]

@@ -68,6 +68,13 @@ namespace Google.Cloud.Firestore
         {
             GaxPreconditions.CheckNotNull(db, nameof(db));
             GaxPreconditions.CheckNotNull(value, nameof(value));
+
+            // If we're asked for a Value, just provide it directly, even for null values.
+            if (targetType == typeof(Value))
+            {
+                return value;
+            }
+
             checked
             {
                 switch (value.ValueTypeCase)

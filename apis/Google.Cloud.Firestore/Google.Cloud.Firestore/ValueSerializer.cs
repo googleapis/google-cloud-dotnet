@@ -54,23 +54,28 @@ namespace Google.Cloud.Firestore
             (float x) => new Value { DoubleValue = x },
             (double x) => new Value { DoubleValue = x },
             (bool x) => new Value { BooleanValue = x },
-            // TODO: Clone?
-            (wkt::Timestamp x) => new Value { TimestampValue = x },
             (Timestamp x) => new Value { TimestampValue = x.ToProto() },
             (DateTime x) => new Value { TimestampValue = wkt::Timestamp.FromDateTime(x) },
             (DateTimeOffset x) => new Value { TimestampValue = wkt::Timestamp.FromDateTimeOffset(x) },
             (byte[] x) => new Value { BytesValue = ByteString.CopyFrom(x) },
             (ByteString x) => new Value { BytesValue = x },
             (Blob x) => new Value { BytesValue = x.ByteString },
-            // TODO: Clone?
-            (LatLng x) => new Value { GeoPointValue = x },
             (GeoPoint x) => new Value { GeoPointValue = x.ToProto() },
-            (DocumentReference x) => new Value { ReferenceValue = x.Path }
+            (DocumentReference x) => new Value { ReferenceValue = x.Path },
+            // Proto inputs that need cloning
+            (LatLng x) => new Value { GeoPointValue = x.Clone() },
+            (wkt::Timestamp x) => new Value { TimestampValue = x.Clone() },
+            (Value x) => x.Clone()
         };
 
         /// <summary>
         /// Serializes a single input to a Value.
         /// </summary>
+        /// <remarks>
+        /// It's important that this always clones any mutable values - which is really only
+        /// relevant when the input is already a proto. That allows the caller to then mutate the result
+        /// where appropriate.
+        /// </remarks>
         /// <param name="value">The value to serialize.</param>
         /// <returns>A Firestore Value proto.</returns>
         internal static Value Serialize(object value)

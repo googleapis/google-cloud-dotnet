@@ -116,6 +116,20 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Null(DeserializeDefault(value, targetType));
         }
 
+        [Fact]
+        public void DeserializeNullToValue()
+        {
+            var value = new Value { NullValue = wkt::NullValue.NullValue };
+            Assert.Same(value, DeserializeDefault(value, typeof(Value)));
+        }
+
+        [Fact]
+        public void DeserializeToValue()
+        {
+            var value = new Value { DoubleValue = 1.234 };
+            Assert.Same(value, DeserializeDefault(value, typeof(Value)));
+        }
+
         // Just a convenience method to avoid having to specify all of this on each call.
         private static object DeserializeDefault(Value value, BclType targetType) =>
             ValueDeserializer.Default.Deserialize(SerializationTestData.Database, value, targetType);
