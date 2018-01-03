@@ -1,0 +1,103 @@
+﻿// Copyright 2018 Google Inc. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Google.Cloud.Tools.Common;
+using LibGit2Sharp;
+using System;
+using System.Linq;
+
+namespace Google.Cloud.Tools.GenerateReleaseNotes
+{
+    /// <summary>
+    /// Tool to generate the first pass at release notes for an API. These then need to be
+    /// examined by a human to turn them into *real* release notes.
+    /// </summary>
+    class Program
+    {
+        static int Main(string[] args)
+        {
+            if (args.Length != 1)
+            {
+                Console.WriteLine("Arguments: <api>");
+                return 1;
+            }
+            try
+            {
+                GenerateNotes(args[0]);
+                return 0;
+            }
+            catch (UserErrorException e)
+            {
+                Console.WriteLine($"Configuration error: {e.Message}");
+                return 1;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e}");
+                return 1;
+            }
+        }
+
+        static void GenerateNotes(string api)
+        {
+            var apiDirectory = $"apis\\{api}\\";
+            var tagPrefix = $"{api}-";
+
+            Console.WriteLine($"Changes for {api}");
+
+            var root = DirectoryLayout.DetermineRootDirectory();
+            using (var repo = new Repository(root))
+            {
+                var diff = repo.Diff;
+                var apiTags = repo.Tags
+                    .Where(tag => tag.FriendlyName.StartsWith(tagPrefix))
+                    .ToList();
+                var idToTagName = apiTags.ToDictionary(tag => tag.Target.Id, tag => tag.FriendlyName.Substring(tagPrefix.Length));
+
+                foreach (var commit in repo.Branches["master"].Commits)
+                {
+                    if (idToTagName.TryGetValue(commit.Id, out string version))
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine($"Release: {version}");
+                        Console.WriteLine($"---------{new string('-', version.Length)}");
+                    }
+                    if (CommitContainsApi(diff, commit, apiDirectory))
+                    {
+                        var message = commit.MessageShort;
+                        if (message.Length > 75)
+                        {
+                            message = message.Substring(0, 72) + "...";
+                        }
+                        Console.WriteLine(message);
+                        Console.WriteLine($"https://github.com/GoogleCloudPlatform/google-cloud-dotnet/commit/{commit.Sha.Substring(0, 7)}");
+                        Console.WriteLine();
+                    }
+                }
+            }
+        }
+
+        static bool CommitContainsApi(Diff diff, Commit commit, string apiDirectory)
+        {
+            if (commit.Parents.Count() != 1)
+            {
+                return false;
+            }
+            var tree = commit.Tree;
+            var parentTree = commit.Parents.First().Tree;
+            var comparison = diff.Compare<TreeChanges>(parentTree, tree);
+            return comparison.Any(change => change.Path.StartsWith(apiDirectory));            
+        }
+    }
+}
