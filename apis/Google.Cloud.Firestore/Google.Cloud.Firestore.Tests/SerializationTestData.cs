@@ -20,6 +20,7 @@ using System.Dynamic;
 using System.Linq;
 using wkt = Google.Protobuf.WellKnownTypes;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
+using Xunit;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -130,6 +131,13 @@ namespace Google.Cloud.Firestore.Tests
             // Document references
             { Database.Document("a/b"),
                 new Value { ReferenceValue = "projects/proj/databases/db/documents/a/b" } },
+        };
+
+        public static TheoryData<IMessage, Func<Value, IMessage>> ProtoValues { get; } = new TheoryData<IMessage, Func<Value, IMessage>>
+        {
+            { new Value { DoubleValue = 1.2345 }, v => v },
+            { CreateProtoTimestamp(1, 2345), v => v.TimestampValue },
+            { new Type.LatLng { Latitude = 1.5, Longitude = 1.5 }, v => v.GeoPointValue }
         };
 
         // Only equatable for the sake of testing; that's not a requirement of the serialization code.
