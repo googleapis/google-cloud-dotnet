@@ -22,13 +22,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
     public class BigtableReadRowsRequestManagerTest
     {
         private static ReadRowsRequest CreateRowRangeRequest(RowRange rowRange) =>
-            new ReadRowsRequest {Rows = RowSet.FromRowRanges(rowRange)};
+            new ReadRowsRequest { Rows = RowSet.FromRowRanges(rowRange) };
 
         private static ReadRowsRequest CreateRowKeysRequest(params BigtableByteString[] keys) =>
-            new ReadRowsRequest {Rows = RowSet.FromRowKeys(keys)};
+            new ReadRowsRequest { Rows = RowSet.FromRowKeys(keys) };
 
         private static ReadRowsRequest CreateRowFilterRequest(RowFilter rowFilter) =>
-            new ReadRowsRequest {Filter = rowFilter};
+            new ReadRowsRequest { Filter = rowFilter };
 
         /// <summary>
         /// Test rowfilter appears in the <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
@@ -96,7 +96,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             BigtableByteString key3 = "row3";
 
             RowSet fullRowSet = RowSet.FromRowKeys(key1, key2, key3);
-            fullRowSet.RowRanges.Add(new []
+            fullRowSet.RowRanges.Add(new[]
             {
                 RowRange.OpenClosed(null, key1), // should be filtered out
                 RowRange.Open(null, key1), // should be filtered out
@@ -127,6 +127,29 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         /// <summary>
+        /// For this test we will assume that the table contains sequentially numbered rowkeys from "row000" to "row999"
+        /// </summary>
+        [Fact]
+        public void TestRowsLimit()
+        {
+            BigtableByteString key1 = "row050";
+            BigtableByteString key2 = "row100";
+
+            ReadRowsRequest originalRequest = CreateRowRangeRequest(RowRange.OpenClosed(key1, null));
+            originalRequest.RowsLimit = 100;
+
+            ReadRowsRequest updatedRequest = CreateRowRangeRequest(RowRange.OpenClosed(key2, null));
+            updatedRequest.RowsLimit = 50;
+
+            BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
+            Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
+
+            underTest.LastFoundKey = key2;
+            underTest.IncrementRowCount(50);
+            Assert.Equal(updatedRequest, underTest.BuildUpdatedRequest());
+        }
+
+        /// <summary>
         /// Test that resume handles key requests as unsigned bytes
         /// </summary>
         [Fact]
@@ -135,8 +158,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             BigtableByteString key1 = 0x7f;
             BigtableByteString key2 = 0x80;
 
-            ReadRowsRequest originalRequest =
-                CreateRowRangeRequest(RowRange.ClosedOpen(key1, null));
+            ReadRowsRequest originalRequest = CreateRowRangeRequest(RowRange.ClosedOpen(key1, null));
 
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
             underTest.LastFoundKey = key2;
@@ -149,7 +171,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// Test that resume handles row ranges as unsigned bytes
         /// </summary>
         [Fact]
-        public void TestFilterRowsUnsignedRows()    
+        public void TestFilterRowsUnsignedRows()
         {
             BigtableByteString key1 = 0x7f;
             BigtableByteString key2 = 0x80;
