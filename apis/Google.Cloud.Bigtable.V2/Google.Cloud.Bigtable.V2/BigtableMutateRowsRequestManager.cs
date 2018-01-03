@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System.Collections.Generic;
+using System.Linq;
 using Google.Api.Gax.Grpc;
 using Grpc.Core;
 
@@ -29,7 +30,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The new request to send. This starts as the original request. If retries occur, this
         /// request will contain the subset of Entries that need to be retried.
         /// </summary>
-        public MutateRowsRequest RetryRequest { get; private set; }
+        internal MutateRowsRequest RetryRequest { get; private set; }
         
         /// <summary>
         /// When doing retries, the retry sends a partial set of the original Entries that failed with a
@@ -41,28 +42,21 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// This list tracks failed RPC status codes thats should be retried
         /// </summary> 
-        private readonly List<int> _rertriableCodes;
+        private readonly HashSet<int> _rertriableCodes;
 
         /// <summary>
         /// This array tracks the cumulative set of results across all RPC requests.
+        /// Maps to the original request's entries indices.
         /// </summary> 
-        private Rpc.Status[] Results { get; }
+        private readonly Rpc.Status[] _results;
 
-        private readonly Rpc.Status _statusInternal = new Rpc.Status
+        private static readonly Rpc.Status StatusInternal = new Rpc.Status
         {
-            Code = GetGrpcCode(StatusCode.Internal),
+            Code = (int)StatusCode.Internal,
             Message = "Response was not returned for this index"
         };
 
         private bool _messageIsInvalid;
-
-        /// <summary>
-        /// This method returns code digit from <see cref="StatusCode"/>.
-        /// </summary>
-        private static int GetGrpcCode(StatusCode status)
-        {
-            return (int)status;
-        }
 
         private static MutateRowsResponse.Types.Entry CreateEntry(int i, Rpc.Status status)
         {
@@ -72,7 +66,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Contains possible processing statuses
         /// </summary>
-        public enum ProcessingStatus
+        internal enum ProcessingStatus
         {
             /// <summary> All responses produced OK. </summary>
             SUCCESS,
@@ -80,7 +74,7 @@ namespace Google.Cloud.Bigtable.V2
             /// <summary> All responses produced OK or a retryable code. </summary>
             RETRYABLE,
 
-            /// <summary> Some responses had a non-retryable code. </summary>
+            /// <summary> All responses had a non-retryable code. </summary>
             NOT_RETRYABLE,
 
             /// <summary> The response was invalid, missing index, etc. </summary>
@@ -94,40 +88,26 @@ namespace Google.Cloud.Bigtable.V2
         /// Collection of Grpc status codes to retry on.</param>
         /// <param name="mutateRowsRequest">
         /// <see cref="MutateRowsRequest"/> that was received from the user.</param>
-        public BigtableMutateRowsRequestManager(IEnumerable<StatusCode> retryStatuses, MutateRowsRequest mutateRowsRequest)
+        internal BigtableMutateRowsRequestManager(IEnumerable<StatusCode> retryStatuses, MutateRowsRequest mutateRowsRequest)
         {
             _originalRequest = mutateRowsRequest;
-            RetryRequest = mutateRowsRequest;
+            //RetryRequest = null;
 
-            Results = new Rpc.Status[_originalRequest.Entries.Count];
+            _results = new Rpc.Status[_originalRequest.Entries.Count];
 
             // This is a map between RetryRequest and _originalRequest. For now, 
             //RetryRequest == _originalRequest, but they could diverge if a retry occurs.
-            _mapToOriginalIndex = new int[_originalRequest.Entries.Count];
-            for (int i = 0; i < _mapToOriginalIndex.Length; i++)
-            {
-                _mapToOriginalIndex[i] = i;
-            }
-
-            _rertriableCodes = GetRetriableCodes(retryStatuses);
-        }
-
-        private List<int> GetRetriableCodes(IEnumerable<StatusCode> statusCode)
-        {
-            var codes = new List<int>();
-            foreach (var status in statusCode)
-            {
-                codes.Add(GetGrpcCode(status));
-            }
-            return codes;
+            _mapToOriginalIndex = Enumerable.Range(0, _originalRequest.Entries.Count).ToArray();
+            
+            _rertriableCodes = new HashSet<int>(retryStatuses.Select(status => (int)status));
         }
 
         /// <summary>
-        /// Adds the content of the MutateRowsResponse message to the <see cref="Results"/>
+        /// Adds the content of the MutateRowsResponse message to the <see cref="_results"/>
         /// </summary>
         /// <param name="response">
         /// A MutateRowsResponse message received from MutateRows call.</param>
-        public void SetStatus(MutateRowsResponse response)
+        internal void SetStatus(MutateRowsResponse response)
         {
             foreach (var entry in response.Entries)
             {
@@ -139,7 +119,7 @@ namespace Google.Cloud.Bigtable.V2
                     break;
                 }
                 // Set the result
-                Results[_mapToOriginalIndex[index]] = entry.Status;
+                _results[_mapToOriginalIndex[index]] = entry.Status;
             }
         }
 
@@ -149,21 +129,11 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// ProcessingStatus of the accumulated responses - success, invalid, retryable, non-retryable.
         /// </returns>
-        public ProcessingStatus OnOk()
+        internal ProcessingStatus OnOk()
         {
             // Sanity check to make sure that every mutation received a response.
-            if (!_messageIsInvalid)
-            {
-                for (int i = 0; i < Results.Length; i++)
-                {
-                    if (Results[i] == null)
-                    {
-                        _messageIsInvalid = true;
-                        break;
-                    }
-                }
-            }
-
+            _messageIsInvalid = _messageIsInvalid || _results.Any(result => result == null);
+            
             // There was a problem in the data found in SetStatus(), so fail the RPC.
             if (_messageIsInvalid)
             {
@@ -176,10 +146,10 @@ namespace Google.Cloud.Bigtable.V2
 
             // Check the current state to determine the state of the results.
             // There are three states: OK, Fail, or Partial Retry.
-            for (int i = 0; i < Results.Length; i++)
+            for (int i = 0; i < _results.Length; i++)
             {
-                Rpc.Status status = Results[i];
-                if (status.Code == GetGrpcCode(StatusCode.OK))
+                Rpc.Status status = _results[i];
+                if (status.Code == (int)StatusCode.OK)
                 {
                     continue;
                 }
@@ -196,11 +166,12 @@ namespace Google.Cloud.Bigtable.V2
                 {
                     // Don't retry if even a single response is not retryable.
                     processingStatus = ProcessingStatus.NOT_RETRYABLE;
+                    RetryRequest = null;
                     break;
                 }
             }
 
-            if (toRetry.Count > 0)
+            if (processingStatus == ProcessingStatus.RETRYABLE)
             {
                 CreateRetryRequest(toRetry);
             }
@@ -233,16 +204,9 @@ namespace Google.Cloud.Bigtable.V2
         /// onMessage/onOK.
         /// </summary>
         /// <returns>MutateRowsResponse</returns>
-        public MutateRowsResponse BuildResponse()
+        internal MutateRowsResponse BuildResponse() => new MutateRowsResponse
         {
-            List<MutateRowsResponse.Types.Entry> entries = new List<MutateRowsResponse.Types.Entry>();
-
-            for (int i = 0; i < Results.Length; i++)
-            {
-                Rpc.Status status = Results[i] == null ? _statusInternal : Results[i];
-                entries.Add(CreateEntry(i, status));
-            }
-            return new MutateRowsResponse { Entries = { entries } };
-        }
+            Entries = { _results.Select((result, i) => CreateEntry(i, result ?? StatusInternal))}
+        };
     }
 }
