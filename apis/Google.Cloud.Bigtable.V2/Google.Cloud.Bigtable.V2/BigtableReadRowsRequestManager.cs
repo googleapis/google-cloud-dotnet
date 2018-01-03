@@ -15,6 +15,9 @@
 using System.Collections.Generic;
 using Google.Protobuf;
 using System;
+using System.Diagnostics;
+using System.Dynamic;
+using System.Linq;
 
 namespace Google.Cloud.Bigtable.V2
 {
@@ -28,7 +31,7 @@ namespace Google.Cloud.Bigtable.V2
         private readonly ReadRowsRequest _originalRequest;
 
         // The number of rows read so far.
-        private long _rowCount;
+        internal long RowCount { get; private set; }
 
         /// <summary>
         /// Constructor for <see cref="BigtableReadRowsRequestManager"/>.
@@ -36,69 +39,53 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="originalRequest">
         /// Original ReadRowsRequest containing all of the parameters of the API call.
         /// </param>
-        public BigtableReadRowsRequestManager(ReadRowsRequest originalRequest)
-        {
-            _originalRequest = originalRequest;
-        }
+        internal BigtableReadRowsRequestManager(ReadRowsRequest originalRequest) => _originalRequest = originalRequest;
 
         /// <summary>
         /// Update last found Rowkey
         /// </summary>
-        public BigtableByteString LastFoundKey { get; set; }
+        internal BigtableByteString LastFoundKey { get; set; }
 
         /// <summary>
         /// Update amount of rows read so far
         /// </summary>
-        public long RowCount
+        internal void IncrementRowCount(int count)
         {
-            get => _rowCount;
-            set => _rowCount += value;
+            RowCount += count;
         }
 
         /// <summary>
         /// Builds and returns updated subrequest that excludes all rowKeys that have already been found.
         /// </summary>
-        public ReadRowsRequest BuildUpdatedRequest()
+        internal ReadRowsRequest BuildUpdatedRequest()
         {
             ReadRowsRequest newReadRowsRequest = new ReadRowsRequest
             {
                 TableNameAsTableName = _originalRequest.TableNameAsTableName,
             };
-
-            #region Set up RowFilter
-
-            if (_originalRequest.Filter != null)
-            {
-                newReadRowsRequest.Filter = new RowFilter();
-                newReadRowsRequest.Filter = _originalRequest.Filter;
-            }
-
-            #endregion
-
-            #region Set up RowsLimit
-
+            
+            // Transfer RowFilter.
+            newReadRowsRequest.Filter = _originalRequest.Filter;
+            
             // If the row limit is set, update it.
-            long numRowsLimit = _originalRequest.RowsLimit;
-
-            // Update <see cref="numRowsLimit"/> by removing the number of rows already read.
-            if ((numRowsLimit -= RowCount) > 0)
-            // The remaining number of rows must be greater than 0.
+            if (_originalRequest.RowsLimit != 0)
             {
-                newReadRowsRequest.RowsLimit = numRowsLimit;
+                long rowsRemaining = _originalRequest.RowsLimit - RowCount; 
+                Debug.Assert(rowsRemaining > 0, "The remaining number of rows must be greater than 0.");
+                newReadRowsRequest.RowsLimit = Math.Max(1, rowsRemaining);
             }
 
-            #endregion
-
-            #region Set up RowSet
-
-            //newReadRowsRequest.Rows = new RowSet();
+            // Remove received rows form RowSet.
             newReadRowsRequest.Rows = FilterRows();
-
-            #endregion
 
             return newReadRowsRequest;
         }
 
+        /// <summary>
+        /// Removes receied rows from the RowSet.
+        /// </summary>
+        /// <returns>
+        /// New RowSet with not received rows.</returns>
         private RowSet FilterRows()
         {
             RowSet originalRows = _originalRequest.Rows;
@@ -110,14 +97,7 @@ namespace Google.Cloud.Bigtable.V2
 
             RowSet newRowSet = new RowSet();
 
-            foreach (var key in originalRows.RowKeys)
-            {
-                var stat = !StartKeyIsAlreadyRead(key);
-                if (!StartKeyIsAlreadyRead(key))
-                {
-                    newRowSet.RowKeys.Add(key);
-                }
-            }
+            newRowSet.RowKeys.AddRange(originalRows.RowKeys.Where(key => !StartKeyIsAlreadyRead(key)));
 
             foreach (RowRange rowRange in originalRows.RowRanges)
             {
