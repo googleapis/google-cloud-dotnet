@@ -28,19 +28,19 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// <summary>
         /// <see cref="Rpc.Status"/> indicating that requested mutation succeded.
         /// </summary>
-        private static readonly Rpc.Status Ok =
+        private static Rpc.Status Ok =>
             new Rpc.Status {Code = (int) StatusCode.OK};
 
         /// <summary>
         /// <see cref="Rpc.Status"/> indicating that requested mutation failed, the mutation should be retried.
         /// </summary>
-        private static readonly Rpc.Status DeadlineExceeded =
+        private static Rpc.Status DeadlineExceeded =>
             new Rpc.Status {Code = (int) StatusCode.DeadlineExceeded};
 
         /// <summary>
         /// <see cref="Rpc.Status"/> indicating that requested mutation failed, the mutation should not be retried.
         /// </summary>
-        private static readonly Rpc.Status NotFound =
+        private static Rpc.Status NotFound =>
             new Rpc.Status {Code = (int) StatusCode.NotFound};
 
         private static List<T> Fill<T>(T value, int size) => Enumerable.Repeat(value, size).ToList();

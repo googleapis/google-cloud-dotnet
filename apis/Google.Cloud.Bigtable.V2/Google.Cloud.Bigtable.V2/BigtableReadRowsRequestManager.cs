@@ -12,12 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Collections.Generic;
-using Google.Protobuf;
-using System;
 using System.Diagnostics;
-using System.Dynamic;
+using Google.Protobuf;
 using System.Linq;
+using System;
 
 namespace Google.Cloud.Bigtable.V2
 {

@@ -50,7 +50,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary> 
         private readonly Rpc.Status[] _results;
 
-        private static readonly Rpc.Status StatusInternal = new Rpc.Status
+        private static Rpc.Status StatusInternal => new Rpc.Status
         {
             Code = (int)StatusCode.Internal,
             Message = "Response was not returned for this index"
