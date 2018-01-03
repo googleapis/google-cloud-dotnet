@@ -24,27 +24,6 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     internal class BigtableReadRowsRequestManager
     {
-        /// <summary>
-        /// Compares two <see cref="ByteString"/>s
-        /// </summary>
-        /// <returns>integer that indicates their relative position in the lexicographical order.</returns>
-        private int ByteStringCompare(ByteString key1, ByteString key2)
-        {
-            int size1 = key1.Length;
-            int size2 = key2.Length;
-            int size = Math.Min(size1, size2);
-
-            for (int i = 0; i < size; i++)
-            {
-                int comparison = key1[i].CompareTo(key2[i]);
-                if (comparison != 0)
-                {
-                    return comparison;
-                }
-            }
-            return size1.CompareTo(size2);
-        }
-
         // Member variables from the constructor.
         private readonly ReadRowsRequest _originalRequest;
 
@@ -65,7 +44,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Update last found Rowkey
         /// </summary>
-        public ByteString LastFoundKey { get; set; }
+        public BigtableByteString LastFoundKey { get; set; }
 
         /// <summary>
         /// Update amount of rows read so far
@@ -112,7 +91,7 @@ namespace Google.Cloud.Bigtable.V2
 
             #region Set up RowSet
 
-            newReadRowsRequest.Rows = new RowSet();
+            //newReadRowsRequest.Rows = new RowSet();
             newReadRowsRequest.Rows = FilterRows();
 
             #endregion
@@ -124,15 +103,16 @@ namespace Google.Cloud.Bigtable.V2
         {
             RowSet originalRows = _originalRequest.Rows;
 
-            if (LastFoundKey == null)
+            if (LastFoundKey.Value.IsEmpty)
             {
                 return originalRows;
             }
 
             RowSet newRowSet = new RowSet();
 
-            foreach (ByteString key in originalRows.RowKeys)
+            foreach (var key in originalRows.RowKeys)
             {
+                var stat = !StartKeyIsAlreadyRead(key);
                 if (!StartKeyIsAlreadyRead(key))
                 {
                     newRowSet.RowKeys.Add(key);
@@ -142,11 +122,10 @@ namespace Google.Cloud.Bigtable.V2
             foreach (RowRange rowRange in originalRows.RowRanges)
             {
                 RowRange.EndKeyOneofCase endKeyOneofCase = rowRange.EndKeyCase;
-
-                if (endKeyOneofCase == RowRange.EndKeyOneofCase.EndKeyClosed
-                    && EndKeyIsAlreadyRead(rowRange.EndKeyClosed)
-                    || endKeyOneofCase == RowRange.EndKeyOneofCase.EndKeyOpen
-                    && EndKeyIsAlreadyRead(rowRange.EndKeyOpen))
+                if (endKeyOneofCase == RowRange.EndKeyOneofCase.EndKeyClosed &&
+                    EndKeyIsAlreadyRead(rowRange.EndKeyClosed)
+                    || endKeyOneofCase == RowRange.EndKeyOneofCase.EndKeyOpen &&
+                    EndKeyIsAlreadyRead(rowRange.EndKeyOpen))
                 {
                     continue;
                 }
@@ -154,13 +133,13 @@ namespace Google.Cloud.Bigtable.V2
                 RowRange newRange = rowRange;
                 RowRange.StartKeyOneofCase startKeyOneofCase = rowRange.StartKeyCase;
 
-                if (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyClosed
-                    && StartKeyIsAlreadyRead(rowRange.StartKeyClosed)
-                    || (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyOpen
-                        && StartKeyIsAlreadyRead(rowRange.StartKeyOpen))
+                if (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyClosed &&
+                    StartKeyIsAlreadyRead(rowRange.StartKeyClosed)
+                    || (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyOpen &&
+                        StartKeyIsAlreadyRead(rowRange.StartKeyOpen))
                     || startKeyOneofCase == RowRange.StartKeyOneofCase.None)
                 {
-                    newRange.StartKeyOpen = LastFoundKey;
+                    newRange.StartKeyOpen = (ByteString) LastFoundKey;
                 }
                 newRowSet.RowRanges.Add(newRange);
             }
@@ -168,18 +147,10 @@ namespace Google.Cloud.Bigtable.V2
             return newRowSet;
         }
 
-        private bool StartKeyIsAlreadyRead(ByteString startKey)
-        {
-            // empty start key emplies the smallest key.
-            return LastFoundKey != null && (startKey.IsEmpty
-                                            || ByteStringCompare(startKey, LastFoundKey) <= 0);
-        }
+        private bool StartKeyIsAlreadyRead(BigtableByteString startKey) =>
+            !LastFoundKey.Value.IsEmpty && (startKey.Value.IsEmpty || startKey <= LastFoundKey);
 
-        private bool EndKeyIsAlreadyRead(ByteString endKey)
-        {
-            // empty string implies the largest key.
-            return LastFoundKey != null && !endKey.IsEmpty
-                   && ByteStringCompare(endKey, LastFoundKey) <= 0;
-        }
+        private bool EndKeyIsAlreadyRead(BigtableByteString endKey) => 
+            !LastFoundKey.Value.IsEmpty && (!endKey.Value.IsEmpty && endKey <= LastFoundKey);
     }
 }

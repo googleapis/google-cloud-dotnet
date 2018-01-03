@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Collections.Generic;
-using Google.Protobuf;
 using Xunit;
 
 namespace Google.Cloud.Bigtable.V2.Tests
@@ -23,37 +21,14 @@ namespace Google.Cloud.Bigtable.V2.Tests
     /// </summary>
     public class BigtableReadRowsRequestManagerTest
     {
-        private readonly ByteString BLANC = ByteString.Empty;
+        private static ReadRowsRequest CreateRowRangeRequest(RowRange rowRange) =>
+            new ReadRowsRequest {Rows = RowSet.FromRowRanges(rowRange)};
 
-        private static ReadRowsRequest CreateRowRangeRequest(RowRange rowRange)
-        {
-            return new ReadRowsRequest { Rows = new RowSet { RowRanges = { rowRange } } };
-        }
+        private static ReadRowsRequest CreateRowKeysRequest(params BigtableByteString[] keys) =>
+            new ReadRowsRequest {Rows = RowSet.FromRowKeys(keys)};
 
-        private ReadRowsRequest CreateRowKeysRequest(IEnumerable<ByteString> keys)
-        {
-            return new ReadRowsRequest { Rows = CreateRowSet(keys) };
-        }
-
-        private static ReadRowsRequest CreateRowFilterRequest(RowFilter rowFilter)
-        {
-            return new ReadRowsRequest { Filter = rowFilter };
-        }
-
-        private static RowRange CreateRowRangeClosedStart(ByteString startClosed, ByteString endOpen)
-        {
-            return new RowRange { StartKeyClosed = startClosed, EndKeyOpen = endOpen };
-        }
-
-        private static RowRange CreateRowRangeOpenedStart(ByteString startOpen, ByteString endOpen)
-        {
-            return new RowRange { StartKeyOpen = startOpen, EndKeyOpen = endOpen };
-        }
-
-        private RowSet CreateRowSet(IEnumerable<ByteString> keys)
-        {
-            return new RowSet { RowKeys = { keys } };
-        }
+        private static ReadRowsRequest CreateRowFilterRequest(RowFilter rowFilter) =>
+            new ReadRowsRequest {Filter = rowFilter};
 
         /// <summary>
         /// Test rowfilter appears in the <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
@@ -61,11 +36,10 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void TestRowFilter()
         {
-            RowFilter[] rowFiltersRange = { RowFilters.CellsPerColumnLimit(1), RowFilters.CellsPerRowOffset(2), RowFilters.CellsPerRowLimit(10) };
-
-            RowFilter rowFilter = new RowFilter();
-            rowFilter.Chain = new RowFilter.Types.Chain();
-            rowFilter.Chain.Filters.AddRange(rowFiltersRange);
+            var rowFilter = RowFilters.Chain(
+                RowFilters.CellsPerColumnLimit(1),
+                RowFilters.CellsPerRowOffset(2),
+                RowFilters.CellsPerRowLimit(10));
 
             ReadRowsRequest originalRequest = CreateRowFilterRequest(rowFilter);
 
@@ -80,14 +54,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void TestFilterRowsTestAllRange()
         {
-            ByteString key1 = ByteString.CopyFromUtf8("row1");
-            ReadRowsRequest originalRequest =
-                CreateRowRangeRequest(CreateRowRangeClosedStart(BLANC, BLANC));
+            BigtableByteString key1 = "row1";
+
+            ReadRowsRequest originalRequest = CreateRowRangeRequest(RowRange.ClosedOpen(null, null));
 
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
 
             underTest.LastFoundKey = key1;
-            Assert.Equal(CreateRowRangeRequest(CreateRowRangeOpenedStart(key1, BLANC)), underTest.BuildUpdatedRequest());
+            Assert.Equal(CreateRowRangeRequest(RowRange.Open(key1, null)), underTest.BuildUpdatedRequest());
+
         }
 
         /// <summary>
@@ -96,18 +71,18 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void TestFilterRowsRowKeys()
         {
-            ByteString key1 = ByteString.CopyFromUtf8("row1");
-            ByteString key2 = ByteString.CopyFromUtf8("row2");
-            ByteString key3 = ByteString.CopyFromUtf8("row3");
+            BigtableByteString key1 = "row1";
+            BigtableByteString key2 = "row2";
+            BigtableByteString key3 = "row3";
 
-            ReadRowsRequest originalRequest = CreateRowKeysRequest(new[] { key1, key2, key3 });
+            ReadRowsRequest originalRequest = CreateRowKeysRequest(key1, key2, key3);
 
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
 
             Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
             underTest.LastFoundKey = key1;
 
-            Assert.Equal(CreateRowKeysRequest(new[] { key2, key3 }), underTest.BuildUpdatedRequest());
+            Assert.Equal(CreateRowKeysRequest(key2, key3), underTest.BuildUpdatedRequest());
         }
 
         /// <summary>
@@ -116,38 +91,31 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void TestFilterRowsMultiRowSetFilters()
         {
-            ByteString key1 = ByteString.CopyFromUtf8("row1");
-            ByteString key2 = ByteString.CopyFromUtf8("row2");
-            ByteString key3 = ByteString.CopyFromUtf8("row3");
+            BigtableByteString key1 = "row1";
+            BigtableByteString key2 = "row2";
+            BigtableByteString key3 = "row3";
 
-            RowSet fullRowSet = new RowSet
+            RowSet fullRowSet = RowSet.FromRowKeys(key1, key2, key3);
+            fullRowSet.RowRanges.Add(new []
             {
-                RowKeys = { new[] { key1, key2, key3 } }, // row1 should be filtered out
-                RowRanges =
-                {
-                    new RowRange {StartKeyOpen = BLANC, EndKeyClosed = key1}, // should be filtered out
-                    new RowRange {StartKeyOpen = BLANC, EndKeyOpen = key1}, // should be filtered out
-                    new RowRange {StartKeyOpen = key1, EndKeyOpen = key2}, // should stay
-                    new RowRange {StartKeyClosed = key1, EndKeyOpen = key2}, // should be converted (key1 -> key2)
-                    new RowRange {StartKeyClosed = key1, EndKeyClosed = key2}, // should be converted (key1 -> key2]
-                    new RowRange {StartKeyOpen = key2, EndKeyOpen = key3}, // should stay
-                    new RowRange {StartKeyClosed = key2, EndKeyOpen = key3} // should stay
-                }
-            };
+                RowRange.OpenClosed(null, key1), // should be filtered out
+                RowRange.Open(null, key1), // should be filtered out
+                RowRange.Open(key1, key2), // should stay
+                RowRange.ClosedOpen(key1, key2), // should be converted (key1 -> key2)
+                RowRange.Closed(key1, key2), // should be converted (key1 -> key2]
+                RowRange.Open(key2, key3), // should stay
+                RowRange.ClosedOpen(key2, key3) // should stay
+            });
 
-
-            RowSet filteredRowSet = new RowSet
+            RowSet filteredRowSet = RowSet.FromRowKeys(key2, key3);
+            filteredRowSet.RowRanges.Add(new[]
             {
-                RowKeys = { new[] { key2, key3 } }, // row1 should be filtered out
-                RowRanges =
-                {
-                    new RowRange {StartKeyOpen = key1, EndKeyOpen = key2}, // should stay
-                    new RowRange {StartKeyOpen = key1, EndKeyOpen = key2}, // should be converted (key1 -> key2)
-                    new RowRange {StartKeyOpen = key1, EndKeyClosed = key2}, // should be converted (key1 -> key2]
-                    new RowRange {StartKeyOpen = key2, EndKeyOpen = key3}, // should stay
-                    new RowRange {StartKeyClosed = key2, EndKeyOpen = key3} // should stay
-                }
-            };
+                RowRange.Open(key1, key2), // should stay
+                RowRange.Open(key1, key2), // should be converted (key1 -> key2)
+                RowRange.OpenClosed(key1, key2), // should be converted (key1 -> key2]
+                RowRange.Open(key2, key3), // should stay
+                RowRange.ClosedOpen(key2, key3)// should stay
+            });
 
             ReadRowsRequest originalRequest = new ReadRowsRequest { Rows = fullRowSet };
             ReadRowsRequest filteredRequest = new ReadRowsRequest { Rows = filteredRowSet };
@@ -164,16 +132,16 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void TestFilterRowsUnsignedRange()
         {
-            ByteString key1 = ByteString.CopyFrom(0x7f);
-            ByteString key2 = ByteString.CopyFrom((byte)0x80);
+            BigtableByteString key1 = 0x7f;
+            BigtableByteString key2 = 0x80;
 
             ReadRowsRequest originalRequest =
-                CreateRowRangeRequest(CreateRowRangeClosedStart(key1, BLANC));
+                CreateRowRangeRequest(RowRange.ClosedOpen(key1, null));
 
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
             underTest.LastFoundKey = key2;
 
-            Assert.Equal(CreateRowRangeRequest(CreateRowRangeOpenedStart(key2, BLANC)),
+            Assert.Equal(CreateRowRangeRequest(RowRange.Open(key2, null)),
                 underTest.BuildUpdatedRequest());
         }
 
@@ -183,15 +151,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void TestFilterRowsUnsignedRows()    
         {
-            ByteString key1 = ByteString.CopyFrom(0x7f);
-            ByteString key2 = ByteString.CopyFrom((byte)0x80);
+            BigtableByteString key1 = 0x7f;
+            BigtableByteString key2 = 0x80;
 
-            ReadRowsRequest originalRequest = CreateRowKeysRequest(new[] { key1, key2 });
+            ReadRowsRequest originalRequest = CreateRowKeysRequest(key1, key2);
 
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
             underTest.LastFoundKey = key1;
 
-            Assert.Equal(CreateRowKeysRequest(new[] { key2 }), underTest.BuildUpdatedRequest());
+            Assert.Equal(CreateRowKeysRequest(key2), underTest.BuildUpdatedRequest());
         }
     }
 }
