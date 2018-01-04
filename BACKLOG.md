@@ -45,12 +45,6 @@ the request and want to put work into it.
 - Status: No customer requests for this yet; can implement when
   reqiured.
 
-## Allow Storage "delete bucket and content" in single call
-
-- Issue: [#187](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/187)
-- Status: Prototyped, but complex due to considerations for
-  parallelism. May not be worth the complexity.
-
 ## Improve handling of Markdown from protos
 
 - Issue: [#110](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/110)
