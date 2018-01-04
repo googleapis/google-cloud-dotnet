@@ -46,7 +46,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private const string DefaultVersionValue = "default";
         private const string GrpcPackage = "Grpc.Core";
         private const string DefaultGaxVersion = "2.2.1";
-        private const string GrpcVersion = "1.7.1";
+        private const string GrpcVersion = "1.8.0";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
             { "Google.Api.Gax", DefaultGaxVersion },
