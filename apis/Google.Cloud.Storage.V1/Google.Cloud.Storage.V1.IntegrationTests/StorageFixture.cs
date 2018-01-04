@@ -246,10 +246,13 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             }
 
             currentTestInfo.OnTestFinalizing();
+            // Add some additional delay just in case there is a minor difference in times between
+            // this machine and the server.
+            var resolvedExpiration = currentTestInfo.DelayExpiration.Value + TimeSpan.FromSeconds(3);
             var now = DateTimeOffset.UtcNow;
-            if (now < currentTestInfo.DelayExpiration.Value)
+            if (now < resolvedExpiration)
             {
-                await Task.Delay(currentTestInfo.DelayExpiration.Value - now);
+                await Task.Delay(resolvedExpiration - now);
             }
 
             await currentTestInfo.AfterDelayAction();
