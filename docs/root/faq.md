@@ -58,6 +58,13 @@ ChannelCredentials channelCredentials = credential.ToChannelCredentials();
 ...
 ```
 
+We know that it's annoying to have to specify the scopes. An
+alternative is to use `Grpc.Core` version 1.8.0 or higher. If you
+add a dependency for that, the `CreateScoped` call above is not
+required. Over time, all released libraries will depend on the newer
+version directly, so your project won't require a dependency on
+`Grpc.Core` itself.
+
 It's also possible to specify credentials for an
 individual RPC call. For example, you can create a channel using the
 default application credentials, then specify a `CallCredentials` in
