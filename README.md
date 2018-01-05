@@ -34,7 +34,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 
 The following libraries are available at a [beta](#versioning) quality level:
 
-* [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.DataTransfer.V1/) (beta)
+* [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.DataTransfer.V1/) (beta)
 * [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Container.V1) (beta)
 * [Google Cloud Dataproc](https://cloud.google.com/dataproc/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Dataproc.V1/) (beta)
 * [Google Cloud Debugger](https://cloud.google.com/debugger/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Debugger.V2) (beta)
