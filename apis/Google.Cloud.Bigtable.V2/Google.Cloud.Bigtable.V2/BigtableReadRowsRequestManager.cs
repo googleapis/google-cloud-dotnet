@@ -12,10 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Protobuf.Collections;
 using System.Diagnostics;
 using Google.Protobuf;
 using System.Linq;
 using System;
+using System.Collections.Generic;
 
 namespace Google.Cloud.Bigtable.V2
 {
@@ -47,10 +49,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Update amount of rows read so far
         /// </summary>
-        internal void IncrementRowCount(int count)
-        {
-            RowCount += count;
-        }
+        internal void IncrementRowCount(int count) => RowCount += count;
 
         /// <summary>
         /// Builds and returns updated subrequest that excludes all rowKeys that have already been found.
@@ -59,28 +58,27 @@ namespace Google.Cloud.Bigtable.V2
         {
             ReadRowsRequest newReadRowsRequest = new ReadRowsRequest
             {
+                // Transfer TableName
                 TableNameAsTableName = _originalRequest.TableNameAsTableName,
+                // Transfer RowFilter.
+                Filter = _originalRequest.Filter,
+                // Remove received rowKeys form Rows.
+                Rows = FilterRows()
             };
-            
-            // Transfer RowFilter.
-            newReadRowsRequest.Filter = _originalRequest.Filter;
-            
+
             // If the row limit is set, update it.
             if (_originalRequest.RowsLimit != 0)
             {
-                long rowsRemaining = _originalRequest.RowsLimit - RowCount; 
+                long rowsRemaining = _originalRequest.RowsLimit - RowCount;
                 Debug.Assert(rowsRemaining > 0, "The remaining number of rows must be greater than 0.");
                 newReadRowsRequest.RowsLimit = Math.Max(1, rowsRemaining);
             }
-
-            // Remove received rows form RowSet.
-            newReadRowsRequest.Rows = FilterRows();
 
             return newReadRowsRequest;
         }
 
         /// <summary>
-        /// Removes receied rows from the RowSet.
+        /// Removes received rows from the RowSet.
         /// </summary>
         /// <returns>
         /// New RowSet with not received rows.</returns>
@@ -93,9 +91,10 @@ namespace Google.Cloud.Bigtable.V2
                 return originalRows;
             }
 
-            RowSet newRowSet = new RowSet();
-
-            newRowSet.RowKeys.AddRange(originalRows.RowKeys.Where(key => !StartKeyIsAlreadyRead(key)));
+            RowSet newRowSet = new RowSet
+            {
+                RowKeys = { originalRows.RowKeys.Where(key => !StartKeyIsAlreadyRead(key)) }
+            };
 
             foreach (RowRange rowRange in originalRows.RowRanges)
             {
@@ -124,8 +123,9 @@ namespace Google.Cloud.Bigtable.V2
 
             return newRowSet;
         }
+    
 
-        private bool StartKeyIsAlreadyRead(BigtableByteString startKey) =>
+    private bool StartKeyIsAlreadyRead(BigtableByteString startKey) =>
             !LastFoundKey.Value.IsEmpty && (startKey.Value.IsEmpty || startKey <= LastFoundKey);
 
         private bool EndKeyIsAlreadyRead(BigtableByteString endKey) => 

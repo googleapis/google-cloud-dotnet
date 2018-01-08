@@ -27,7 +27,7 @@ namespace Google.Cloud.Bigtable.V2
         private readonly MutateRowsRequest _originalRequest;
 
         /// <summary>
-        /// The new request to send. This starts as the original request. If retries occur, this
+        /// The new request to send. This starts as a null. If retries occur, this
         /// request will contain the subset of Entries that need to be retried.
         /// </summary>
         internal MutateRowsRequest RetryRequest { get; private set; }
@@ -40,9 +40,9 @@ namespace Google.Cloud.Bigtable.V2
         private int[] _mapToOriginalIndex;
 
         /// <summary>
-        /// This list tracks failed RPC status codes thats should be retried
+        /// This set tracks failed RPC status codes thats should be retried
         /// </summary> 
-        private readonly HashSet<int> _rertriableCodes;
+        private readonly HashSet<int> _rertryableCodes;
 
         /// <summary>
         /// This array tracks the cumulative set of results across all RPC requests.
@@ -68,21 +68,18 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         internal enum ProcessingStatus
         {
-            /// <summary> All responses produced OK. </summary>
-            SUCCESS,
-
             /// <summary> All responses produced OK or a retryable code. </summary>
-            RETRYABLE,
+            Retryable,
 
-            /// <summary> All responses had a non-retryable code. </summary>
-            NOT_RETRYABLE,
+            /// <summary> At least one response had a non-retryable code. </summary>
+            NotRetryable,
 
             /// <summary> The response was invalid, missing index, etc. </summary>
-            INVALID
+            Invalid
         }
 
         /// <summary>
-        /// Constructor for retrying failed mutation entries.
+        /// Constructor for <see cref="BigtableMutateRowsRequestManager"/>.
         /// </summary>
         /// <param name="retryStatuses">
         /// Collection of Grpc status codes to retry on.</param>
@@ -91,19 +88,18 @@ namespace Google.Cloud.Bigtable.V2
         internal BigtableMutateRowsRequestManager(IEnumerable<StatusCode> retryStatuses, MutateRowsRequest mutateRowsRequest)
         {
             _originalRequest = mutateRowsRequest;
-            //RetryRequest = null;
 
             _results = new Rpc.Status[_originalRequest.Entries.Count];
 
-            // This is a map between RetryRequest and _originalRequest. For now, 
-            //RetryRequest == _originalRequest, but they could diverge if a retry occurs.
+            // This is a map between RetryRequest and _originalRequest
+            // as they could diverge if a retry occurs.
             _mapToOriginalIndex = Enumerable.Range(0, _originalRequest.Entries.Count).ToArray();
             
-            _rertriableCodes = new HashSet<int>(retryStatuses.Select(status => (int)status));
+            _rertryableCodes = new HashSet<int>(retryStatuses.Select(status => (int)status));
         }
 
         /// <summary>
-        /// Adds the content of the MutateRowsResponse message to the <see cref="_results"/>
+        /// Reads MutateRowsResponse message and saves the statuses of all request Entries.
         /// </summary>
         /// <param name="response">
         /// A MutateRowsResponse message received from MutateRows call.</param>
@@ -127,7 +123,7 @@ namespace Google.Cloud.Bigtable.V2
         /// This method is called when all calls to <see cref="SetStatus(MutateRowsResponse)"/> are complete.
         /// </summary>
         /// <returns>
-        /// ProcessingStatus of the accumulated responses - success, invalid, retryable, non-retryable.
+        /// ProcessingStatus of the accumulated responses - invalid, retryable, non-retryable.
         /// </returns>
         internal ProcessingStatus OnOk()
         {
@@ -137,12 +133,12 @@ namespace Google.Cloud.Bigtable.V2
             // There was a problem in the data found in SetStatus(), so fail the RPC.
             if (_messageIsInvalid)
             {
-                return ProcessingStatus.INVALID;
+                return ProcessingStatus.Invalid;
             }
 
             // This list hold indices of entries to be included in retry request
             List<int> toRetry = new List<int>();
-            ProcessingStatus processingStatus = ProcessingStatus.SUCCESS;
+            ProcessingStatus processingStatus = ProcessingStatus.NotRetryable;
 
             // Check the current state to determine the state of the results.
             // There are three states: OK, Fail, or Partial Retry.
@@ -153,27 +149,27 @@ namespace Google.Cloud.Bigtable.V2
                 {
                     continue;
                 }
-                if (_rertriableCodes.Contains(status.Code))
+                if (_rertryableCodes.Contains(status.Code))
                 {
                     // An individual mutation failed with a retryable code, usually DEADLINE_EXCEEDED.
                     toRetry.Add(i);
-                    if (processingStatus == ProcessingStatus.SUCCESS)
-                    {
-                        processingStatus = ProcessingStatus.RETRYABLE;
-                    }
+                    processingStatus = ProcessingStatus.Retryable;
                 }
                 else
                 {
                     // Don't retry if even a single response is not retryable.
-                    processingStatus = ProcessingStatus.NOT_RETRYABLE;
-                    RetryRequest = null;
+                    processingStatus = ProcessingStatus.NotRetryable;
                     break;
                 }
             }
 
-            if (processingStatus == ProcessingStatus.RETRYABLE)
+            if (processingStatus == ProcessingStatus.Retryable)
             {
                 CreateRetryRequest(toRetry);
+            }
+            else
+            {
+                RetryRequest = null;
             }
             return processingStatus;
         }
@@ -183,11 +179,8 @@ namespace Google.Cloud.Bigtable.V2
         /// corresponds to a set of indices.
         /// </summary>
         /// <param name="indiciesToRetry">
-        /// LIst of ints that represents indicies of entries that failed.
+        /// List of ints that represents indicies of entries that failed.
         /// </param>
-        /// <returns>
-        /// Returns new <see cref="MutateRowRequest"/>.
-        /// </returns>
         private void CreateRetryRequest(List<int> indiciesToRetry)
         {
             RetryRequest = new MutateRowsRequest();
@@ -201,7 +194,7 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <summary>
         /// Builds full response from the accumulation of all calls to
-        /// onMessage/onOK.
+        /// <see cref="SetStatus"/> and <see cref="OnOk"/>.
         /// </summary>
         /// <returns>MutateRowsResponse</returns>
         internal MutateRowsResponse BuildResponse() => new MutateRowsResponse

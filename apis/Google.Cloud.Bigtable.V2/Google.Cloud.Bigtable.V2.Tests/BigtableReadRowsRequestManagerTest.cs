@@ -66,7 +66,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         /// <summary>
-        ///  Test rowKeys scenario for <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>.
+        /// Test rowKeys scenario for <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>.
         /// </summary>
         [Fact]
         public void TestFilterRowsRowKeys()
@@ -83,6 +83,71 @@ namespace Google.Cloud.Bigtable.V2.Tests
             underTest.LastFoundKey = key1;
 
             Assert.Equal(CreateRowKeysRequest(key2, key3), underTest.BuildUpdatedRequest());
+        }
+
+        /// <summary>
+        /// Test rowKeys scenario for <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
+        /// with <see cref="BigtableReadRowsRequestManager.LastFoundKey"/> in between key1 and key2.
+        /// </summary>
+        [Fact]
+        public void TestFilterRowsRowKeysLastFoundKeyInBetween()
+        {
+            BigtableByteString key1 = "row1";
+            BigtableByteString lastScannedKey = "row1a";
+            BigtableByteString key2 = "row2";
+            BigtableByteString key3 = "row3";
+
+            ReadRowsRequest originalRequest = CreateRowKeysRequest(key1, key2, key3);
+
+            BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
+
+            Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
+            underTest.LastFoundKey = lastScannedKey;
+
+            Assert.Equal(CreateRowKeysRequest(key2, key3), underTest.BuildUpdatedRequest());
+        }
+
+        /// <summary>
+        /// Test multiple rowset filter scenarios for <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
+        /// with with <see cref="BigtableReadRowsRequestManager.LastFoundKey"/> in between key1 and key2.
+        /// </summary>
+        [Fact]
+        public void TestFilterRowsRowRangesKeyInMiddle()
+        {
+            BigtableByteString key1 = "row1";
+            BigtableByteString key2 = "row2";
+            BigtableByteString key3 = "row3";
+            BigtableByteString lastFoundKey = "row1a";
+
+            RowSet fullRowSet = RowSet.FromRowKeys(key1, key2, key3);
+            fullRowSet.RowRanges.Add(new[]
+            {
+                RowRange.OpenClosed(null, key1), // should be filtered out
+                RowRange.Open(null, key1), // should be filtered out
+                RowRange.Open(key1, key2), // should stay
+                RowRange.ClosedOpen(key1, key2), // should be converted (key1 -> key2)
+                RowRange.Closed(key1, key2), // should be converted (key1 -> key2]
+                RowRange.Open(key2, key3), // should stay
+                RowRange.ClosedOpen(key2, key3) // should stay
+            });
+
+            RowSet filteredRowSet = RowSet.FromRowKeys(key2, key3);
+            filteredRowSet.RowRanges.Add(new[]
+            {
+                RowRange.Open(lastFoundKey, key2), // should be converted (lastFoundKey, key2)
+                RowRange.Open(lastFoundKey, key2), // should be converted (lastFoundKey, key2)
+                RowRange.OpenClosed(lastFoundKey, key2), // should be converted (lastFoundKey, key2]
+                RowRange.Open(key2, key3), // should stay
+                RowRange.ClosedOpen(key2, key3)// should stay
+            });
+
+            ReadRowsRequest originalRequest = new ReadRowsRequest { Rows = fullRowSet };
+            ReadRowsRequest filteredRequest = new ReadRowsRequest { Rows = filteredRowSet };
+
+            BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
+            Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
+            underTest.LastFoundKey = lastFoundKey;
+            Assert.Equal(filteredRequest, underTest.BuildUpdatedRequest());
         }
 
         /// <summary>
@@ -132,31 +197,33 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void TestRowsLimit()
         {
-            BigtableByteString key1 = "row050";
-            BigtableByteString key2 = "row100";
+            BigtableByteString startKeyOpenOriginal = "row050";
+            BigtableByteString lastFoundKey = "row125";
+            const int rowsLimit = 100;
+            const int rowsFound = 75;
 
-            ReadRowsRequest originalRequest = CreateRowRangeRequest(RowRange.OpenClosed(key1, null));
-            originalRequest.RowsLimit = 100;
+            ReadRowsRequest originalRequest = CreateRowRangeRequest(RowRange.OpenClosed(startKeyOpenOriginal, null));
+            originalRequest.RowsLimit = rowsLimit;
 
-            ReadRowsRequest updatedRequest = CreateRowRangeRequest(RowRange.OpenClosed(key2, null));
-            updatedRequest.RowsLimit = 50;
+            ReadRowsRequest updatedRequest = CreateRowRangeRequest(RowRange.OpenClosed(lastFoundKey, null));
+            updatedRequest.RowsLimit = rowsLimit - rowsFound;
 
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
             Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
 
-            underTest.LastFoundKey = key2;
-            underTest.IncrementRowCount(50);
+            underTest.LastFoundKey = lastFoundKey;
+            underTest.IncrementRowCount(rowsFound);
             Assert.Equal(updatedRequest, underTest.BuildUpdatedRequest());
         }
 
         /// <summary>
-        /// Test that resume handles key requests as unsigned bytes
+        /// Test that resume handles row ranges as unsigned bytes.
         /// </summary>
         [Fact]
         public void TestFilterRowsUnsignedRange()
         {
-            BigtableByteString key1 = 0x7f;
-            BigtableByteString key2 = 0x80;
+            BigtableByteString key1 = new byte[] { 0x7f };
+            BigtableByteString key2 = new byte[] { 0x80 };
 
             ReadRowsRequest originalRequest = CreateRowRangeRequest(RowRange.ClosedOpen(key1, null));
 
@@ -168,13 +235,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         /// <summary>
-        /// Test that resume handles row ranges as unsigned bytes
+        /// Test that resume handles key requests as unsigned bytes.
         /// </summary>
         [Fact]
         public void TestFilterRowsUnsignedRows()
         {
-            BigtableByteString key1 = 0x7f;
-            BigtableByteString key2 = 0x80;
+            BigtableByteString key1 = new byte[] { 0x7f };
+            BigtableByteString key2 = new byte[] { 0x80 };
 
             ReadRowsRequest originalRequest = CreateRowKeysRequest(key1, key2);
 
