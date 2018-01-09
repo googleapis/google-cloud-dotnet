@@ -28,7 +28,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         {
             var filter = familyName == null
                 ? RowFilters.PassAllFilter()
-                : RowFilters.FamilyNameRegex(familyName);
+                : RowFilters.FamilyNameExact(familyName);
             Assert.Null(await client.ReadRowAsync(tableName, rowKey, filter));
         }
 

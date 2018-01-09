@@ -17,11 +17,15 @@ using Google.Protobuf;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System;
+using System.Text;
 
 namespace Google.Cloud.Bigtable.V2
 {
     internal static class Utilities
     {
+        private const byte EscapeByte = (byte)'\\';
+        private static readonly byte[] EscapedNullBytes = Encoding.UTF8.GetBytes(@"\x00");
         private static readonly Regex FamilyNameRegex =
             new Regex("^[-_.a-zA-Z0-9]+$", RegexOptions.Compiled);
 
@@ -41,6 +45,58 @@ namespace Google.Cloud.Bigtable.V2
             left.CopyTo(buffer, 0);
             right.CopyTo(buffer, left.Length);
             return ByteString.CopyFrom(buffer);
+        }
+
+        internal static ByteString RegexEscape(ByteString value)
+        {
+            // Logic taken from
+            // https://github.com/google/re2/blob/70f66454c255080a54a8da806c52d1f618707f8a/re2/re2.cc#L456
+            var result = new List<byte>(value.Length * 2);
+            foreach (byte b in value)
+            {
+                // Special handling for null chars.
+                if (b == 0)
+                {
+                    // Note that this special handling is not strictly required for RE2,
+                    // but this quoting is required for other regexp libraries such as
+                    // PCRE.
+                    // Can't use @"\0" since the next character might be a digit.
+                    result.AddRange(EscapedNullBytes);
+                }
+                else
+                {
+                    if (ShouldEscape(b))
+                    {
+                        result.Add(EscapeByte);
+                    }
+                    result.Add(b);
+                }
+            }
+
+            return ByteString.CopyFrom(result.ToArray());
+
+            // Escape any ascii character not in [A-Za-z_0-9].
+            //
+            // Note that it's legal to escape a character even if it has no
+            // special meaning in a regular expression -- so this function does
+            // that.  (This also makes it identical to the perl function of the
+            // same name except for the null-character special case;
+            // see `perldoc -f quotemeta`.)
+            bool ShouldEscape(byte b)
+            {
+                if (b == '_' ||
+                    // If this is the part of a UTF8 or Latin1 character, we need
+                    // to copy this byte without escaping.  Experimentally this is
+                    // what works correctly with the regexp library.
+                    (b & 0x80) == 0x80 ||
+                    ('a' <= b && b <= 'z') ||
+                    ('A' <= b && b <= 'Z') ||
+                    ('0' <= b && b <= '9'))
+                {
+                    return false;
+                }
+                return true;
+            }
         }
 
         internal static IEnumerable<T> ValidateCollection<T>(

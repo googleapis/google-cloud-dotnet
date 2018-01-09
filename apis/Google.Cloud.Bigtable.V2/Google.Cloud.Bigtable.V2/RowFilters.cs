@@ -109,6 +109,23 @@ namespace Google.Cloud.Bigtable.V2
             };
 
         /// <summary>
+        /// Creates a new <see cref="RowFilter"/> instance which matches only cells
+        /// from columns whose qualifiers match the exact byte string specified.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="value"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// </remarks>
+        /// <param name="value">
+        /// The exact value used to match column qualifiers.
+        /// </param>
+        /// <returns>The created row filter.</returns>
+        public static RowFilter ColumnQualifierExact(BigtableByteString value) =>
+            new RowFilter { ColumnQualifierRegexFilter = Utilities.RegexEscape(value.Value) };
+
+        /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which matches only cells from
         /// columns whose qualifiers satisfy the given RE2 regex.
         /// </summary>
@@ -179,6 +196,28 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which matches only cells
+        /// from column families whose names match the exact string specified.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="value"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// </remarks>
+        /// <param name="value">
+        /// The exact value used to match column families. Must not be null
+        /// </param>
+        /// <returns>The created row filter.</returns>
+        public static RowFilter FamilyNameExact(string value) =>
+            new RowFilter
+            {
+                FamilyNameRegexFilter = Utilities.RegexEscape(
+                    ByteString.CopyFromUtf8(GaxPreconditions.CheckNotNull(value, nameof(value)))
+                    ).ToStringUtf8()
+            };
+
+        /// <summary>
+        /// Creates a new <see cref="RowFilter"/> instance which matches only cells
         /// from columns whose families satisfy the given RE2 regex.
         /// </summary>
         /// <remarks>
@@ -222,6 +261,23 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>The created row filter.</returns>
         public static RowFilter PassAllFilter() =>
             new RowFilter { PassAllFilter = true };
+
+        /// <summary>
+        /// Creates a new <see cref="RowFilter"/> instance which matches only cells
+        /// from rows whose keys match the exact byte string specified.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="value"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// </remarks>
+        /// <param name="value">
+        /// The exact value used to match row keys.
+        /// </param>
+        /// <returns>The created row filter.</returns>
+        public static RowFilter RowKeyExact(BigtableByteString value) =>
+            new RowFilter { RowKeyRegexFilter = Utilities.RegexEscape(value.Value) };
 
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which matches only cells
@@ -302,6 +358,23 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>The created row filter.</returns>
         public static RowFilter TimestampRange(DateTime? startTimestamp, DateTime? endTimestamp) =>
             VersionRange(new BigtableVersionRange(startTimestamp, endTimestamp));
+
+        /// <summary>
+        /// Creates a new <see cref="RowFilter"/> instance which matches only cells
+        /// with values that match the exact byte string specified.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>, so <paramref name="value"/> can
+        /// be specified using a string as well and its UTF-8 representations will be used.
+        /// </para>
+        /// </remarks>
+        /// <param name="value">
+        /// The exact value used to match cell values.
+        /// </param>
+        /// <returns>The created row filter.</returns>
+        public static RowFilter ValueExact(BigtableByteString value) =>
+            new RowFilter { ValueRegexFilter = Utilities.RegexEscape(value.Value) };
 
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which matches only cells
