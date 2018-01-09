@@ -96,10 +96,10 @@ namespace Google.Cloud.Bigtable.V2
                     if (chunk.ResetRow)
                     {
                         Assert(
-                            (chunk.RowKey == null || chunk.RowKey.IsEmpty) &&
+                            chunk.RowKey.IsEmpty &&
                             chunk.FamilyName == null &&
                             chunk.Qualifier == null &&
-                            (chunk.Value == null || chunk.Value.IsEmpty) &&
+                            chunk.Value.IsEmpty &&
                             chunk.TimestampMicros == 0,
                             "A reset should have no data");
                         Assert(_rowMergeState != NewRow.Instance, "NewRow must have a rowKey");
@@ -190,7 +190,7 @@ namespace Google.Cloud.Bigtable.V2
 
             public override RowMergeState HandleChunk(RowAsyncEnumerator owner, CellChunk chunk)
             {
-                owner.Assert(chunk.RowKey != null && !chunk.RowKey.IsEmpty, "NewRow must have a rowKey");
+                owner.Assert(!chunk.RowKey.IsEmpty, "NewRow must have a rowKey");
                 owner.Assert(chunk.FamilyName != null, "NewRow must have a family");
                 owner.Assert(chunk.Qualifier != null, "NewRow must have a qualifier");
                 owner.Assert(
@@ -250,8 +250,6 @@ namespace Google.Cloud.Bigtable.V2
                 owner._currentCell.Timestamp = chunk.TimestampMicros;
                 owner._currentCell.Labels = chunk.Labels;
 
-                owner.Assert(chunk.Value != null, "NewCell must have a value");
-
                 // calculate cell size
                 owner._currentCell.ValueSizeExpected = chunk.ValueSize > 0 ? chunk.ValueSize : chunk.Value.Length;
                 owner._currentCell.ValueSizeRemaining = owner._currentCell.ValueSizeExpected - chunk.Value.Length;
@@ -303,7 +301,6 @@ namespace Google.Cloud.Bigtable.V2
                 owner.Assert(chunk.Qualifier == null, "CellInProgress can't have a qualifier");
                 owner.Assert(chunk.TimestampMicros == 0, "CellInProgress can't have a timestamp");
                 owner.Assert(chunk.Labels.Count == 0, "CellInProgress can't have labels");
-                owner.Assert(chunk.Value != null, "CellInProgress must have a value");
 
                 owner._currentCell.ValueSizeRemaining -= chunk.Value.Length;
 
