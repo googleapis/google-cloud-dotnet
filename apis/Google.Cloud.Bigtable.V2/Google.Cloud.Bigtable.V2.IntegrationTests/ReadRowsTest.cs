@@ -77,19 +77,13 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 }
 
                 rnd.NextBytes(buffer);
-                // TODO: Use cleaner API when available
                 await client.ReadModifyWriteRowAsync(
                     tableName,
                     rowKey.Value,
-                    new[]
-                    {
-                        new ReadModifyWriteRule
-                        {
-                            FamilyName = BigtableFixture.DefaultColumnFamily,
-                            ColumnQualifier = ByteString.CopyFromUtf8("large_value"),
-                            AppendValue = ByteString.CopyFrom(buffer)
-                        }
-                    });
+                    ReadModifyWriteRules.Append(
+                        BigtableFixture.DefaultColumnFamily,
+                        "large_value",
+                        buffer));
 
                 allData.AddRange(buffer);
 
@@ -220,26 +214,23 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
             var originalIndexes = new Dictionary<BigtableByteString, int>();
-            var rowKeys = new List<BigtableByteString>();
             int endRowIndex = 100;
+            var rowKeys = new BigtableByteString[endRowIndex];
             for (int i = 0; i < endRowIndex; i++)
             {
-                rowKeys.Add(await _fixture.InsertRowAsync(
+                rowKeys[i] = await _fixture.InsertRowAsync(
                     tableName,
                     BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     i,
-                    new BigtableVersion(1)));
+                    new BigtableVersion(1));
 
                 originalIndexes[rowKeys[i]] = i;
             }
 
-            var response = client.ReadRows(
-                tableName,
-                // TODO: Use RowSet helpers when available
-                new RowSet { RowKeys = { rowKeys.Select(s => s.Value) } });
+            var response = client.ReadRows(tableName, RowSet.FromRowKeys(rowKeys));
 
-            rowKeys.Sort();
+            Array.Sort(rowKeys);
 
             int currentRowIndex = 0;
             await response.AsAsyncEnumerable().ForEachAsync(row =>
@@ -264,28 +255,27 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
             var originalIndexes = new Dictionary<BigtableByteString, int>();
-            var rowKeys = new List<BigtableByteString>();
-            for (int i = 0; i < 100; i++)
+            var rowKeys = new BigtableByteString[100];
+            for (int i = 0; i < rowKeys.Length; i++)
             {
-                rowKeys.Add(await _fixture.InsertRowAsync(
+                rowKeys[i] = await _fixture.InsertRowAsync(
                     tableName,
                     BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     i,
-                    new BigtableVersion(i + 1)));
+                    new BigtableVersion(i + 1));
 
                 originalIndexes[rowKeys[i]] = i;
             }
 
             var response = client.ReadRows(
                 tableName,
-                // TODO: Use RowSet helpers when available?
-                new RowSet { RowKeys = { rowKeys.Select(s => s.Value) } },
+                RowSet.FromRowKeys(rowKeys),
                 RowFilters.Interleave(
                     RowFilters.VersionRange(new BigtableVersionRange(1, 26)),
                     RowFilters.VersionRange(new BigtableVersionRange(76, 101))));
 
-            rowKeys.Sort();
+            Array.Sort(rowKeys);
 
             int rowCount = 0;
             await response.AsAsyncEnumerable().ForEachAsync(row =>
@@ -313,26 +303,25 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
             var originalIndexes = new Dictionary<BigtableByteString, int>();
-            var rowKeys = new List<BigtableByteString>();
-            for (int i = 0; i < 100; i++)
+            var rowKeys = new BigtableByteString[100];
+            for (int i = 0; i < rowKeys.Length; i++)
             {
-                rowKeys.Add(await _fixture.InsertRowAsync(
+                rowKeys[i] = await _fixture.InsertRowAsync(
                     tableName,
                     BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     i,
-                    new BigtableVersion(i + 1)));
+                    new BigtableVersion(i + 1));
 
                 originalIndexes[rowKeys[i]] = i;
             }
 
             var response = client.ReadRows(
                 tableName,
-                // TODO: Use RowSet helpers when available?
-                new RowSet { RowKeys = { rowKeys.Select(s => s.Value) } },
+                RowSet.FromRowKeys(rowKeys),
                 rowsLimit: 37);
 
-            rowKeys.Sort();
+            Array.Sort(rowKeys);
 
             int rowCount = 0;
             await response.AsAsyncEnumerable().ForEachAsync(row =>
@@ -369,14 +358,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var endRange = (BigtableByteString)(rowKeyPrefix + "z");
             var response = client.ReadRows(
                 tableName,
-                // TODO: Use RowSet helpers when available
-                new RowSet
-                {
-                    RowRanges =
-                    {
-                        new RowRange { StartKeyClosed = startRange.Value, EndKeyOpen = endRange.Value }
-                    }
-                });
+                RowSet.FromRowRanges(RowRange.ClosedOpen(startRange, endRange)));
 
             int currentRowIndex = 0;
             await response.AsAsyncEnumerable().ForEachAsync(row =>
@@ -409,14 +391,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var endRange = (BigtableByteString)(rowKeyPrefix + "z");
             var response = client.ReadRows(
                 tableName,
-                // TODO: Use RowSet helpers when available
-                new RowSet
-                {
-                    RowRanges =
-                    {
-                    new RowRange { StartKeyClosed = startRange.Value, EndKeyOpen = endRange.Value }
-                    }
-                },
+                RowSet.FromRowRanges(RowRange.ClosedOpen(startRange, endRange)),
                 // Get all values ending in a byte which is a UTF-8 lowercase letter
                 RowFilters.ValueRegex(".*[a-z]$"));
 
@@ -451,14 +426,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var endRange = (BigtableByteString)(rowKeyPrefix + "z");
             var response = client.ReadRows(
                 tableName,
-                // TODO: Use RowSet helpers when available
-                new RowSet
-                {
-                    RowRanges =
-                    {
-                        new RowRange { StartKeyClosed = startRange.Value, EndKeyOpen = endRange.Value }
-                    }
-                },
+                RowSet.FromRowRanges(RowRange.ClosedOpen(startRange, endRange)),
                 rowsLimit: 37);
 
             int currentRowIndex = 0;
