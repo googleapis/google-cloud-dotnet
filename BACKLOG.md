@@ -6,6 +6,13 @@ radar. Using this single document is simpler than keeping all the
 corresponding issues open, but we'll reopen the issue if we revisit
 the request and want to put work into it.
 
+
+## Make ValueSerializer public (Firestore)
+
+- Issue: [#1818](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1709)
+- Status: For consideration when everything is very stable. Making
+  something part of the public API is a big decision.
+
 ## Static code analysis
 
 - Issue: [#1709](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1709)
