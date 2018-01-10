@@ -23,7 +23,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
     public class F1SpannerFixture : F1RelationalFixture<SpannerTestStore>
     {
-        public static readonly string DatabaseName = "OptimisticConcurrencyTest";
+        public static readonly string DatabaseName = "optimisticconcurrencytest";
 
         private readonly string _connectionString = SpannerTestStore.CreateConnectionString(DatabaseName);
 

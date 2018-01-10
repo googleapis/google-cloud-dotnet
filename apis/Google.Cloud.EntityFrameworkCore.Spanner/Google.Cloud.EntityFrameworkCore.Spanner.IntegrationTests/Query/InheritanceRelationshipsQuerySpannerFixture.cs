@@ -25,7 +25,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
     public class
         InheritanceRelationshipsQuerySpannerFixture : InheritanceRelationshipsQueryRelationalFixture<SpannerTestStore>
     {
-        public static readonly string DatabaseName = "InheritanceRelationships";
+        public static readonly string DatabaseName = "inheritancerelationships";
 
         private readonly string _connectionString = SpannerTestStore.CreateConnectionString(DatabaseName);
 

@@ -25,7 +25,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
     public class ComplexNavigationsQuerySpannerFixture
         : ComplexNavigationsQueryFixtureBase<SpannerTestStore>
     {
-        public static readonly string DatabaseName = "ComplexNavigations";
+        public static readonly string DatabaseName = "complexnavigations";
 
         private readonly string _connectionString =
             SpannerTestStore.CreateConnectionString(DatabaseName);

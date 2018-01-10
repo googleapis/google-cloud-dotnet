@@ -12,17 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Utilities;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
     public class DataAnnotationSpannerFixture : DataAnnotationFixtureBase<SpannerTestStore>
     {
-        public static readonly string DatabaseName = "DataAnnotations";
+        public static readonly string DatabaseName = "dataannotations";
 
         private readonly string _connectionString = SpannerTestStore.CreateConnectionString(DatabaseName);
         private readonly DbContextOptions _options;
@@ -70,6 +72,15 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             var context = new DataAnnotationContext(options);
             context.Database.UseTransaction(testStore.Transaction);
             return context;
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<One>()
+                .Property(c => c.RowVersion)
+                .HasColumnType("STRING(100)");
         }
     }
 }

@@ -333,7 +333,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                     var reader = targetDb.CreateSelectCommand("SELECT COUNT(*) FROM information_schema.tables").ExecuteReader();
                     reader.Dispose();
                 }
-                catch (SpannerException e) when (e.ErrorCode == ErrorCode.NotFound)
+                catch (SpannerException e) when (e.ErrorCode == ErrorCode.NotFound || e.ErrorCode == ErrorCode.InvalidArgument)
                 {
                     return false;
                 }

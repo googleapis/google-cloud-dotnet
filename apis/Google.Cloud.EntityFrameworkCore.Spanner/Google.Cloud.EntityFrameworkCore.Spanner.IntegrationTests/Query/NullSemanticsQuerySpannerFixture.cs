@@ -23,7 +23,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
     public class NullSemanticsQuerySpannerFixture : NullSemanticsQueryRelationalFixture<SpannerTestStore>
     {
-        public static readonly string DatabaseName = "NullSemanticsQueryTest";
+        public static readonly string DatabaseName = "nullsemanticsquerytest";
 
         private readonly string _connectionString = SpannerTestStore.CreateConnectionString(DatabaseName);
 

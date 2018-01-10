@@ -279,11 +279,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact(Skip = "https://github.com/aspnet/EntityFramework/issues/8606")]
-        public override void OrderBy_coalesce_skip_take_distinct_take()
-        {
-        }
-
         [Fact]
         public void Regex_IsMatch()
         {
