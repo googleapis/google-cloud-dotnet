@@ -215,22 +215,22 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var client = _fixture.TableClient;
             var originalIndexes = new Dictionary<BigtableByteString, int>();
             int endRowIndex = 100;
-            var rowKeys = new BigtableByteString[endRowIndex];
+            var rowKeys = new List<BigtableByteString>();
             for (int i = 0; i < endRowIndex; i++)
             {
-                rowKeys[i] = await _fixture.InsertRowAsync(
+                rowKeys.Add(await _fixture.InsertRowAsync(
                     tableName,
                     BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     i,
-                    new BigtableVersion(1));
+                    new BigtableVersion(1)));
 
                 originalIndexes[rowKeys[i]] = i;
             }
 
             var response = client.ReadRows(tableName, RowSet.FromRowKeys(rowKeys));
 
-            Array.Sort(rowKeys);
+            rowKeys.Sort();
 
             int currentRowIndex = 0;
             await response.AsAsyncEnumerable().ForEachAsync(row =>
@@ -255,15 +255,15 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
             var originalIndexes = new Dictionary<BigtableByteString, int>();
-            var rowKeys = new BigtableByteString[100];
-            for (int i = 0; i < rowKeys.Length; i++)
+            var rowKeys = new List<BigtableByteString>();
+            for (int i = 0; i < 100; i++)
             {
-                rowKeys[i] = await _fixture.InsertRowAsync(
+                rowKeys.Add(await _fixture.InsertRowAsync(
                     tableName,
                     BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     i,
-                    new BigtableVersion(i + 1));
+                    new BigtableVersion(i + 1)));
 
                 originalIndexes[rowKeys[i]] = i;
             }
@@ -275,7 +275,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     RowFilters.VersionRange(new BigtableVersionRange(1, 26)),
                     RowFilters.VersionRange(new BigtableVersionRange(76, 101))));
 
-            Array.Sort(rowKeys);
+            rowKeys.Sort();
 
             int rowCount = 0;
             await response.AsAsyncEnumerable().ForEachAsync(row =>
@@ -303,15 +303,15 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
             var originalIndexes = new Dictionary<BigtableByteString, int>();
-            var rowKeys = new BigtableByteString[100];
-            for (int i = 0; i < rowKeys.Length; i++)
+            var rowKeys = new List<BigtableByteString>();
+            for (int i = 0; i < 100; i++)
             {
-                rowKeys[i] = await _fixture.InsertRowAsync(
+                rowKeys.Add(await _fixture.InsertRowAsync(
                     tableName,
                     BigtableFixture.DefaultColumnFamily,
                     "row_index",
                     i,
-                    new BigtableVersion(i + 1));
+                    new BigtableVersion(i + 1)));
 
                 originalIndexes[rowKeys[i]] = i;
             }
@@ -321,7 +321,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowSet.FromRowKeys(rowKeys),
                 rowsLimit: 37);
 
-            Array.Sort(rowKeys);
+            rowKeys.Sort();
 
             int rowCount = 0;
             await response.AsAsyncEnumerable().ForEachAsync(row =>
