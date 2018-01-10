@@ -93,9 +93,9 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public void TestFilterRowsRowKeysLastFoundKeyInBetween()
         {
             BigtableByteString key1 = "row1";
-            BigtableByteString lastScannedKey = "row1a";
             BigtableByteString key2 = "row2";
             BigtableByteString key3 = "row3";
+            BigtableByteString lastScannedKey = "row1a";
 
             ReadRowsRequest originalRequest = CreateRowKeysRequest(key1, key2, key3);
 
@@ -105,49 +105,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
             underTest.LastFoundKey = lastScannedKey;
 
             Assert.Equal(CreateRowKeysRequest(key2, key3), underTest.BuildUpdatedRequest());
-        }
-
-        /// <summary>
-        /// Test multiple rowset filter scenarios for <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
-        /// with with <see cref="BigtableReadRowsRequestManager.LastFoundKey"/> in between key1 and key2.
-        /// </summary>
-        [Fact]
-        public void TestFilterRowsRowRangesKeyInMiddle()
-        {
-            BigtableByteString key1 = "row1";
-            BigtableByteString key2 = "row2";
-            BigtableByteString key3 = "row3";
-            BigtableByteString lastFoundKey = "row1a";
-
-            RowSet fullRowSet = RowSet.FromRowKeys(key1, key2, key3);
-            fullRowSet.RowRanges.Add(new[]
-            {
-                RowRange.OpenClosed(null, key1), // should be filtered out
-                RowRange.Open(null, key1), // should be filtered out
-                RowRange.Open(key1, key2), // should stay
-                RowRange.ClosedOpen(key1, key2), // should be converted (key1 -> key2)
-                RowRange.Closed(key1, key2), // should be converted (key1 -> key2]
-                RowRange.Open(key2, key3), // should stay
-                RowRange.ClosedOpen(key2, key3) // should stay
-            });
-
-            RowSet filteredRowSet = RowSet.FromRowKeys(key2, key3);
-            filteredRowSet.RowRanges.Add(new[]
-            {
-                RowRange.Open(lastFoundKey, key2), // should be converted (lastFoundKey, key2)
-                RowRange.Open(lastFoundKey, key2), // should be converted (lastFoundKey, key2)
-                RowRange.OpenClosed(lastFoundKey, key2), // should be converted (lastFoundKey, key2]
-                RowRange.Open(key2, key3), // should stay
-                RowRange.ClosedOpen(key2, key3)// should stay
-            });
-
-            ReadRowsRequest originalRequest = new ReadRowsRequest { Rows = fullRowSet };
-            ReadRowsRequest filteredRequest = new ReadRowsRequest { Rows = filteredRowSet };
-
-            BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
-            Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
-            underTest.LastFoundKey = lastFoundKey;
-            Assert.Equal(filteredRequest, underTest.BuildUpdatedRequest());
         }
 
         /// <summary>
@@ -192,6 +149,49 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         /// <summary>
+        /// Test multiple rowset filter scenarios for <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
+        /// with with <see cref="BigtableReadRowsRequestManager.LastFoundKey"/> in between key1 and key2.
+        /// </summary>
+        [Fact]
+        public void TestFilterRowsRowRangesKeyInMiddle()
+        {
+            BigtableByteString key1 = "row1";
+            BigtableByteString key2 = "row2";
+            BigtableByteString key3 = "row3";
+            BigtableByteString lastFoundKey = "row1a";
+
+            RowSet fullRowSet = RowSet.FromRowKeys(key1, key2, key3);
+            fullRowSet.RowRanges.Add(new[]
+            {
+                RowRange.OpenClosed(null, key1), // should be filtered out
+                RowRange.Open(null, key1), // should be filtered out
+                RowRange.Open(key1, key2), // should be converted (lastFoundKey, key2)
+                RowRange.ClosedOpen(key1, key2), // should be converted (lastFoundKey, key2)
+                RowRange.Closed(key1, key2), // should be converted (lastFoundKey, key2]
+                RowRange.Open(key2, key3), // should stay
+                RowRange.ClosedOpen(key2, key3) // should stay
+            });
+
+            RowSet filteredRowSet = RowSet.FromRowKeys(key2, key3);
+            filteredRowSet.RowRanges.Add(new[]
+            {
+                RowRange.Open(lastFoundKey, key2), // should be converted (lastFoundKey, key2)
+                RowRange.Open(lastFoundKey, key2), // should be converted (lastFoundKey, key2)
+                RowRange.OpenClosed(lastFoundKey, key2), // should be converted (lastFoundKey, key2]
+                RowRange.Open(key2, key3), // should stay
+                RowRange.ClosedOpen(key2, key3)// should stay
+            });
+
+            ReadRowsRequest originalRequest = new ReadRowsRequest { Rows = fullRowSet };
+            ReadRowsRequest filteredRequest = new ReadRowsRequest { Rows = filteredRowSet };
+
+            BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
+            Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
+            underTest.LastFoundKey = lastFoundKey;
+            Assert.Equal(filteredRequest, underTest.BuildUpdatedRequest());
+        }
+        
+        /// <summary>
         /// For this test we will assume that the table contains sequentially numbered rowkeys from "row000" to "row999"
         /// </summary>
         [Fact]
@@ -199,20 +199,17 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             BigtableByteString startKeyOpenOriginal = "row050";
             BigtableByteString lastFoundKey = "row125";
-            const int rowsLimit = 100;
-            const int rowsFound = 75;
-
             ReadRowsRequest originalRequest = CreateRowRangeRequest(RowRange.OpenClosed(startKeyOpenOriginal, null));
-            originalRequest.RowsLimit = rowsLimit;
+            originalRequest.RowsLimit = 100;
 
             ReadRowsRequest updatedRequest = CreateRowRangeRequest(RowRange.OpenClosed(lastFoundKey, null));
-            updatedRequest.RowsLimit = rowsLimit - rowsFound;
+            updatedRequest.RowsLimit = 25;
 
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
             Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
 
             underTest.LastFoundKey = lastFoundKey;
-            underTest.IncrementRowCount(rowsFound);
+            underTest.IncrementRowCount(75);
             Assert.Equal(updatedRequest, underTest.BuildUpdatedRequest());
         }
 

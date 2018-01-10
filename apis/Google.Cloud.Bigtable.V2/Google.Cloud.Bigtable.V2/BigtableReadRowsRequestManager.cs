@@ -12,12 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Protobuf.Collections;
 using System.Diagnostics;
 using Google.Protobuf;
 using System.Linq;
 using System;
-using System.Collections.Generic;
 
 namespace Google.Cloud.Bigtable.V2
 {
@@ -93,7 +91,7 @@ namespace Google.Cloud.Bigtable.V2
 
             RowSet newRowSet = new RowSet
             {
-                RowKeys = { originalRows.RowKeys.Where(key => !StartKeyIsAlreadyRead(key)) }
+                RowKeys = {originalRows.RowKeys.Where(key => !StartKeyIsAlreadyRead(key))}
             };
 
             foreach (RowRange rowRange in originalRows.RowRanges)
@@ -107,7 +105,7 @@ namespace Google.Cloud.Bigtable.V2
                     continue;
                 }
 
-                RowRange newRange = rowRange;
+                RowRange newRange = rowRange.Clone();
                 RowRange.StartKeyOneofCase startKeyOneofCase = rowRange.StartKeyCase;
 
                 if (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyClosed &&
@@ -123,9 +121,8 @@ namespace Google.Cloud.Bigtable.V2
 
             return newRowSet;
         }
-    
-
-    private bool StartKeyIsAlreadyRead(BigtableByteString startKey) =>
+        
+        private bool StartKeyIsAlreadyRead(BigtableByteString startKey) =>
             !LastFoundKey.Value.IsEmpty && (startKey.Value.IsEmpty || startKey <= LastFoundKey);
 
         private bool EndKeyIsAlreadyRead(BigtableByteString endKey) => 

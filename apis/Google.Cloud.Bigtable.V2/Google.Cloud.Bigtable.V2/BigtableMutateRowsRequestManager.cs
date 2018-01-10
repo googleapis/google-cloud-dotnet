@@ -50,18 +50,16 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary> 
         private readonly Rpc.Status[] _results;
 
+        private bool _messageIsInvalid;
+
         private static Rpc.Status StatusInternal => new Rpc.Status
         {
             Code = (int)StatusCode.Internal,
             Message = "Response was not returned for this index"
         };
 
-        private bool _messageIsInvalid;
-
-        private static MutateRowsResponse.Types.Entry CreateEntry(int i, Rpc.Status status)
-        {
-            return new MutateRowsResponse.Types.Entry { Index = i, Status = status };
-        }
+        private static MutateRowsResponse.Types.Entry CreateEntry(int i, Rpc.Status status) =>
+            new MutateRowsResponse.Types.Entry {Index = i, Status = status};
 
         /// <summary>
         /// Contains possible processing statuses
@@ -71,7 +69,7 @@ namespace Google.Cloud.Bigtable.V2
             /// <summary> All responses produced OK or a retryable code. </summary>
             Retryable,
 
-            /// <summary> At least one response had a non-retryable code. </summary>
+            /// <summary> All responses produced OK or at least one response had a non-retryable code. </summary>
             NotRetryable,
 
             /// <summary> The response was invalid, missing index, etc. </summary>
@@ -93,7 +91,7 @@ namespace Google.Cloud.Bigtable.V2
 
             // This is a map between RetryRequest and _originalRequest
             // as they could diverge if a retry occurs.
-            _mapToOriginalIndex = Enumerable.Range(0, _originalRequest.Entries.Count).ToArray();
+            //_mapToOriginalIndex = Enumerable.Range(0, _originalRequest.Entries.Count).ToArray();
             
             _rertryableCodes = new HashSet<int>(retryStatuses.Select(status => (int)status));
         }
@@ -108,14 +106,22 @@ namespace Google.Cloud.Bigtable.V2
             foreach (var entry in response.Entries)
             {
                 int index = (int)entry.Index;
-
-                if (index >= _mapToOriginalIndex.Length || index < 0)
+                if (_mapToOriginalIndex != null)
+                {
+                    if (index >= _mapToOriginalIndex.Length || index < 0)
+                    {
+                        _messageIsInvalid = true;
+                        break;
+                    }
+                    index = _mapToOriginalIndex[index];
+                }
+                if (index >= _results.Length || index < 0)
                 {
                     _messageIsInvalid = true;
                     break;
                 }
                 // Set the result
-                _results[_mapToOriginalIndex[index]] = entry.Status;
+                _results[index] = entry.Status;
             }
         }
 
@@ -137,7 +143,7 @@ namespace Google.Cloud.Bigtable.V2
             }
 
             // This list hold indices of entries to be included in retry request
-            List<int> toRetry = new List<int>();
+            List<int> toRetry = null;
             ProcessingStatus processingStatus = ProcessingStatus.NotRetryable;
 
             // Check the current state to determine the state of the results.
@@ -151,6 +157,10 @@ namespace Google.Cloud.Bigtable.V2
                 }
                 if (_rertryableCodes.Contains(status.Code))
                 {
+                    if (toRetry == null)
+                    {
+                        toRetry = new List<int>();
+                    }
                     // An individual mutation failed with a retryable code, usually DEADLINE_EXCEEDED.
                     toRetry.Add(i);
                     processingStatus = ProcessingStatus.Retryable;
