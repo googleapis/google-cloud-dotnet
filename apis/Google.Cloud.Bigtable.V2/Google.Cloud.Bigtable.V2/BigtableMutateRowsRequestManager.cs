@@ -88,10 +88,6 @@ namespace Google.Cloud.Bigtable.V2
             _originalRequest = mutateRowsRequest;
 
             _results = new Rpc.Status[_originalRequest.Entries.Count];
-
-            // This is a map between RetryRequest and _originalRequest
-            // as they could diverge if a retry occurs.
-            //_mapToOriginalIndex = Enumerable.Range(0, _originalRequest.Entries.Count).ToArray();
             
             _rertryableCodes = new HashSet<int>(retryStatuses.Select(status => (int)status));
         }
