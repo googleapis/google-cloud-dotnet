@@ -144,8 +144,20 @@ namespace Google.Cloud.Bigtable.V2.Tests
 
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
             Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
+
             underTest.LastFoundKey = key1;
+
+            ReadRowsRequest originalRequestClone = originalRequest.Clone();
+
+            // Assert that originalRequest and originalRequestClone are different objects.
+            Assert.False(ReferenceEquals(originalRequest, originalRequestClone));
+            // Assert that originalRequest and originalRequestClone have same value before calling BuildUpdatedRequest.
+            Assert.Equal(originalRequest, originalRequestClone);
+
             Assert.Equal(filteredRequest, underTest.BuildUpdatedRequest());
+
+            // Assert that BuildUpdatedRequest did not modify the original RowSet.
+            Assert.Equal(originalRequest, originalRequestClone);
         }
 
         /// <summary>
@@ -184,11 +196,22 @@ namespace Google.Cloud.Bigtable.V2.Tests
 
             ReadRowsRequest originalRequest = new ReadRowsRequest { Rows = fullRowSet };
             ReadRowsRequest filteredRequest = new ReadRowsRequest { Rows = filteredRowSet };
-
+            
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
             Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
             underTest.LastFoundKey = lastFoundKey;
+
+            ReadRowsRequest originalRequestClone = originalRequest.Clone();
+
+            // Assert that originalRequest and originalRequestClone are different objects.
+            Assert.False(ReferenceEquals(originalRequest, originalRequestClone));
+            // Assert that originalRequest and originalRequestClone have same value before calling BuildUpdatedRequest.
+            Assert.Equal(originalRequest, originalRequestClone);
+
             Assert.Equal(filteredRequest, underTest.BuildUpdatedRequest());
+
+            // Assert that BuildUpdatedRequest did not modify the original RowSet.
+            Assert.Equal(originalRequest, originalRequestClone);
         }
         
         /// <summary>
