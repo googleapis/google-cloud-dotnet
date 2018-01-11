@@ -83,7 +83,7 @@ namespace Google.Cloud.Bigtable.V2
         private RowSet FilterRows()
         {
             RowSet originalRows = _originalRequest.Rows;
-
+            
             if (LastFoundKey.Value.IsEmpty)
             {
                 return originalRows;
@@ -104,8 +104,7 @@ namespace Google.Cloud.Bigtable.V2
                 {
                     continue;
                 }
-
-                RowRange newRange = rowRange.Clone();
+                
                 RowRange.StartKeyOneofCase startKeyOneofCase = rowRange.StartKeyCase;
 
                 if (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyClosed &&
@@ -114,9 +113,14 @@ namespace Google.Cloud.Bigtable.V2
                         StartKeyIsAlreadyRead(rowRange.StartKeyOpen))
                     || startKeyOneofCase == RowRange.StartKeyOneofCase.None)
                 {
-                    newRange.StartKeyOpen = (ByteString) LastFoundKey;
+                    RowRange newRange = rowRange.Clone();
+                    newRange.StartKeyOpen = LastFoundKey.Value;
+                    newRowSet.RowRanges.Add(newRange);
                 }
-                newRowSet.RowRanges.Add(newRange);
+                else
+                {
+                    newRowSet.RowRanges.Add(rowRange);
+                }
             }
 
             return newRowSet;
