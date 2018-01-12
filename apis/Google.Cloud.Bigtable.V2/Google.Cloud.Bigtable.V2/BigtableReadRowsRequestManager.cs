@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using System.Diagnostics;
-using Google.Protobuf;
 using System.Linq;
 using System;
 
@@ -106,21 +105,17 @@ namespace Google.Cloud.Bigtable.V2
                 }
                 
                 RowRange.StartKeyOneofCase startKeyOneofCase = rowRange.StartKeyCase;
-
+                RowRange newRange = rowRange;
                 if (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyClosed &&
                     StartKeyIsAlreadyRead(rowRange.StartKeyClosed)
                     || (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyOpen &&
                         StartKeyIsAlreadyRead(rowRange.StartKeyOpen))
                     || startKeyOneofCase == RowRange.StartKeyOneofCase.None)
                 {
-                    RowRange newRange = rowRange.Clone();
+                    newRange = newRange.Clone();
                     newRange.StartKeyOpen = LastFoundKey.Value;
-                    newRowSet.RowRanges.Add(newRange);
                 }
-                else
-                {
-                    newRowSet.RowRanges.Add(rowRange);
-                }
+                newRowSet.RowRanges.Add(newRange);
             }
 
             return newRowSet;
