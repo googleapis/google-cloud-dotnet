@@ -21,7 +21,10 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
-    public class FieldMappingSpannerTest
+    /// <summary>
+    /// TODO: implement tests for Spanner
+    /// </summary>
+    internal class FieldMappingSpannerTest
         : FieldMappingTestBase<SpannerTestStore, FieldMappingSpannerTest.FieldMappingSpannerFixture>
     {
         public FieldMappingSpannerTest(FieldMappingSpannerFixture fixture)
