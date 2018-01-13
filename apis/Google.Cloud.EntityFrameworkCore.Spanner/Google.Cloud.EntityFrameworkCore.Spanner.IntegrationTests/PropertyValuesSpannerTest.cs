@@ -29,7 +29,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
         public class PropertyValuesSpannerFixture : PropertyValuesFixtureBase
         {
-            private const string DatabaseName = "PropertyValues";
+            private const string DatabaseName = "propertyvalues";
 
             private readonly IServiceProvider _serviceProvider;
 
@@ -57,10 +57,10 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                 base.OnModelCreating(modelBuilder);
 
                 modelBuilder.Entity<Building>()
-                    .Property(b => b.Value).HasColumnType("decimal(18,2)");
+                    .Property(b => b.Value).HasColumnType("FLOAT64");
 
                 modelBuilder.Entity<CurrentEmployee>()
-                    .Property(ce => ce.LeaveBalance).HasColumnType("decimal(18,2)");
+                    .Property(ce => ce.LeaveBalance).HasColumnType("FLOAT64");
             }
 
             public override DbContext CreateContext(SpannerTestStore testStore)

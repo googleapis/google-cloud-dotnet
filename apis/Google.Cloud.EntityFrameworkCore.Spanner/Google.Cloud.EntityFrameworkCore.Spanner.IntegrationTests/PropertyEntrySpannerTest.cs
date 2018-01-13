@@ -17,7 +17,10 @@ using Microsoft.EntityFrameworkCore.Utilities;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
-    public class PropertyEntrySpannerTest : PropertyEntryTestBase<SpannerTestStore, F1SpannerFixture>
+    /// <summary>
+    /// TODO: implement tests for Spanner
+    /// </summary>
+    internal class PropertyEntrySpannerTest : PropertyEntryTestBase<SpannerTestStore, F1SpannerFixture>
     {
         public PropertyEntrySpannerTest(F1SpannerFixture fixture)
             : base(fixture)

@@ -17,6 +17,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
     public class FiltersInheritanceSpannerFixture : InheritanceSpannerFixture
     {
         protected override bool EnableFilters => true;
-        protected override string DatabaseName => "FiltersInheritanceSqlServerTest";
+        protected override string DatabaseName => "filtersinheritancesqlservertest";
     }
 }

@@ -21,7 +21,10 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
-    public class GraphUpdatesSpannerTest
+    /// <summary>
+    /// TODO: implement tests for Spanner
+    /// </summary>
+    internal class GraphUpdatesSpannerTest
         : GraphUpdatesTestBase<SpannerTestStore, GraphUpdatesSpannerTest.GraphUpdatesSpannerFixture>
     {
         public GraphUpdatesSpannerTest(GraphUpdatesSpannerFixture fixture)
@@ -34,7 +37,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
         public class GraphUpdatesSpannerFixture : GraphUpdatesFixtureBase
         {
-            private const string DatabaseName = "GraphUpdatesTest";
+            private const string DatabaseName = "graphupdatestest";
 
             private readonly IServiceProvider _serviceProvider;
 

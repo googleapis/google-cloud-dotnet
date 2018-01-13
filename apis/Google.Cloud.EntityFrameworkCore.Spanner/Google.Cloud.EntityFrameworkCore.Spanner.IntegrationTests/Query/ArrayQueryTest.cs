@@ -40,7 +40,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         private void AssertDoesNotContainInSql(string expected)
             => Assert.DoesNotContain(expected, Fixture.TestSqlLoggerFactory.Sql);
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Contains_with_column()
         {
             using (var ctx = CreateContext())
@@ -51,7 +51,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Contains_with_literal()
         {
             using (var ctx = CreateContext())
@@ -62,7 +62,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Contains_with_parameter()
         {
             using (var ctx = CreateContext())
@@ -74,7 +74,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Index_bytea_with_constant()
         {
             using (var ctx = CreateContext())
@@ -85,7 +85,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Index_multidimensional()
         {
             using (var ctx = CreateContext())
@@ -96,7 +96,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Index_with_constant()
         {
             using (var ctx = CreateContext())
@@ -107,7 +107,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Index_with_non_constant()
         {
             using (var ctx = CreateContext())
@@ -119,7 +119,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Length()
         {
             using (var ctx = CreateContext())
@@ -130,7 +130,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact(Skip = "https://github.com/aspnet/EntityFramework/issues/9242")]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Length_on_EF_Property()
         {
             using (var ctx = CreateContext())
@@ -142,7 +142,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Length_on_literal_not_translated()
         {
             using (var ctx = CreateContext())
@@ -152,7 +152,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void Roundtrip()
         {
             using (var ctx = CreateContext())
@@ -162,7 +162,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void SequenceEqual_with_array_literal()
         {
             using (var ctx = CreateContext())
@@ -173,7 +173,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "of type 'Int32[]' which is not a supported primitive type")]
         public void SequenceEqual_with_parameter()
         {
             using (var ctx = CreateContext())

@@ -12,21 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.EntityFrameworkCore.Query;
-using Microsoft.EntityFrameworkCore.Utilities;
-using Xunit;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.ValueGeneration;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
+namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
-    /// <summary>
-    /// TODO: implement tests for Spanner
-    /// </summary>
-    internal class ComplexNavigationsQuerySpannerTest
-        : ComplexNavigationsQueryTestBase<SpannerTestStore, ComplexNavigationsQuerySpannerFixture>
+    class IntGenerator : ValueGenerator<int>
     {
-        public ComplexNavigationsQuerySpannerTest(ComplexNavigationsQuerySpannerFixture fixture)
-            : base(fixture)
+        private int _generatedValue = 0;
+
+        public override int Next(EntityEntry entry)
         {
+            return _generatedValue++;
         }
+
+        public override bool GeneratesTemporaryValues { get; } = false;
     }
 }

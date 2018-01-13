@@ -18,7 +18,10 @@ using Microsoft.EntityFrameworkCore.Utilities;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
-    public class InheritanceRelationshipsQuerySpannerTest :
+    /// <summary>
+    /// TODO: implement tests for Spanner
+    /// </summary>
+    internal class InheritanceRelationshipsQuerySpannerTest :
         InheritanceRelationshipsQueryTestBase<SpannerTestStore, InheritanceRelationshipsQuerySpannerFixture>
     {
         public InheritanceRelationshipsQuerySpannerTest(InheritanceRelationshipsQuerySpannerFixture fixture)

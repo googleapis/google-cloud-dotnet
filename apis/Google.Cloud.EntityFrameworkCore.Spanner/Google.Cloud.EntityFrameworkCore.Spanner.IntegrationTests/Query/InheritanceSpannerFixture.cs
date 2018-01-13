@@ -39,7 +39,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
                 .Options;
         }
 
-        protected virtual string DatabaseName => "InheritanceSpannerTest";
+        protected virtual string DatabaseName => "inheritancespannertest";
 
         public TestSqlLoggerFactory TestSqlLoggerFactory { get; } = new TestSqlLoggerFactory();
 

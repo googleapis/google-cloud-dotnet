@@ -40,10 +40,13 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
                 using (var context = new DbContext(optionsBuilder.Options))
                 {
-                    context.Database.EnsureClean();
+                    context.Database.EnsureDeleted();
+                    context.Database.EnsureCreated();
                 }
             });
         }
+
+        protected override string DatabaseName { get; } = "transactiontest";
 
         public override DbContext CreateContext(SpannerTestStore testStore)
             => new DbContext(new DbContextOptionsBuilder()

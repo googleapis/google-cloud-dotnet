@@ -38,7 +38,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
         public void Dispose() => _testStore.Dispose();
 
-        [Theory]
+        [Theory(Skip = "'Order' is a reserved word in Spanner can cannot be used as a column name.")]
         [InlineData(true, true, true)]
         [InlineData(false, true, true)]
         [InlineData(true, false, true)]

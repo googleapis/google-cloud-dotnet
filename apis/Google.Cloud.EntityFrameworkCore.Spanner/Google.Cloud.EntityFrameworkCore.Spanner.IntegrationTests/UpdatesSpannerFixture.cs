@@ -29,7 +29,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             .AddSingleton(TestModelSource.GetFactory(OnModelCreating))
             .BuildServiceProvider();
 
-        protected virtual string DatabaseName => "PartialUpdateSpannerTest";
+        protected virtual string DatabaseName => "partialupdatespannertest";
 
         public override SpannerTestStore CreateTestStore()
             => SpannerTestStore.GetOrCreateShared(DatabaseName, () =>
@@ -59,9 +59,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Product>()
-                .Property(p => p.Price).HasColumnType("decimal(18,2)");
         }
     }
 }

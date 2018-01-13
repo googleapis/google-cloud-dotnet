@@ -72,7 +72,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
         public class FindSpannerFixture : FindFixtureBase
         {
-            private const string DatabaseName = "FindTest";
+            private const string DatabaseName = "findtest";
             private readonly DbContextOptions _options;
 
             public FindSpannerFixture()

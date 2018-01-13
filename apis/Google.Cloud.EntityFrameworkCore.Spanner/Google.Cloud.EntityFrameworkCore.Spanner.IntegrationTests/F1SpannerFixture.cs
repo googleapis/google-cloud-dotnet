@@ -53,6 +53,43 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             });
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Chassis>()
+                .Property(c => c.TeamId)
+                .HasValueGenerator<IntGenerator>();
+
+            modelBuilder.Entity<Gearbox>()
+                .Property(c => c.Id)
+                .HasValueGenerator<IntGenerator>();
+
+            modelBuilder.Entity<Team>()
+                .Property(c => c.Id)
+                .HasValueGenerator<IntGenerator>();
+
+            modelBuilder.Entity<Driver>()
+                .Property(c => c.Id)
+                .HasValueGenerator<IntGenerator>();
+
+            modelBuilder.Entity<Sponsor>()
+                .Property(c => c.Id)
+                .HasValueGenerator<IntGenerator>();
+
+            modelBuilder.Entity<Engine>()
+                .Property(c => c.Id)
+                .HasValueGenerator<IntGenerator>();
+
+            modelBuilder.Entity<Engine>()
+                .Property(c => c.EngineSupplierId)
+                .HasValueGenerator<IntGenerator>();
+
+            modelBuilder.Entity<EngineSupplier>()
+                .Property(c => c.Id)
+                .HasValueGenerator<IntGenerator>();
+        }
+
         public override F1Context CreateContext(SpannerTestStore testStore)
         {
             var optionsBuilder = new DbContextOptionsBuilder()

@@ -336,12 +336,6 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
                             {
                                 type = Nullable.GetUnderlyingType(type) ?? type;
 
-                                if (type == typeof(Guid))
-                                {
-                                    var g = (Guid) kv.Value;
-
-                                    return g.ToByteArray();
-                                }
 
                                 if (type.IsEnum)
                                 {
@@ -354,7 +348,6 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
                                 {
                                     throw new NotSupportedException("DateTimeOffset is not supported.");
                                 }
-                                //TODO(benwu): test all types.
                             }
 
                             return kv.Value;

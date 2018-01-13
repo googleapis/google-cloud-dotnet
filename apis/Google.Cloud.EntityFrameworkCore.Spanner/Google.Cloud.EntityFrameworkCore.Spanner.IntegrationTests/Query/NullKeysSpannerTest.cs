@@ -20,7 +20,10 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
-    public class NullKeysSpannerTest : NullKeysTestBase<NullKeysSpannerTest.NullKeysSpannerFixture>
+    /// <summary>
+    /// TODO: implement tests for Spanner
+    /// </summary>
+    internal class NullKeysSpannerTest : NullKeysTestBase<NullKeysSpannerTest.NullKeysSpannerFixture>
     {
         public NullKeysSpannerTest(NullKeysSpannerFixture fixture)
             : base(fixture)
@@ -34,7 +37,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 
             public NullKeysSpannerFixture()
             {
-                var name = "StringsContext";
+                var name = "stringscontext";
                 var connectionString = SpannerTestStore.CreateConnectionString(name);
 
                 _options = new DbContextOptionsBuilder()

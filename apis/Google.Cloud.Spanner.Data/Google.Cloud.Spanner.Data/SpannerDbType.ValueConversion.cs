@@ -100,7 +100,7 @@ namespace Google.Cloud.Spanner.Data
 
         internal Value ToProtobufValue(object value)
         {
-            if (value == null)
+            if (value == null || value is DBNull)
             {
                 return Value.ForNull();
             }

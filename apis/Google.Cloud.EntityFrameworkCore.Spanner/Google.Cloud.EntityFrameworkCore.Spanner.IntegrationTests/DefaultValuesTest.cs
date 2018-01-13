@@ -15,17 +15,24 @@
 using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Utilities;
+using Microsoft.EntityFrameworkCore.ValueGeneration;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
-    public class DefaultValuesTest : IDisposable
+#pragma warning disable xUnit1000 // Test classes must be public
+    /// <summary>
+    /// TODO: implement tests for Spanner
+    /// </summary>
+    internal class DefaultValuesTest : IDisposable
+#pragma warning restore xUnit1000 // Test classes must be public
     {
         public void Dispose()
         {
-            using (var context = new ChipsContext(_serviceProvider, "DefaultKettleChips"))
+            using (var context = new ChipsContext(_serviceProvider, "defaultkettlechips"))
             {
                 context.Database.EnsureDeleted();
             }
@@ -54,10 +61,15 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                     .UseInternalServiceProvider(_serviceProvider);
 
             protected override void OnModelCreating(ModelBuilder modelBuilder)
-                => modelBuilder.Entity<KettleChips>()
-                    .Property(e => e.BestBuyDate)
-                    .ValueGeneratedOnAdd()
-                    .HasDefaultValue(new DateTime(2035, 9, 25));
+            {
+                modelBuilder.Entity<KettleChips>()
+                                   .Property(e => e.BestBuyDate)
+                                   .HasDefaultValue(new DateTime(2035, 9, 25));
+
+                modelBuilder.Entity<KettleChips>()
+                    .Property(e => e.Id)
+                    .HasValueGenerator<IntGenerator>();
+            }
         }
 
         private class KettleChips
@@ -70,7 +82,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         [Fact]
         public void Can_use_Spanner_default_values()
         {
-            using (var context = new ChipsContext(_serviceProvider, "DefaultKettleChips"))
+            using (var context = new ChipsContext(_serviceProvider, "defaultkettlechips"))
             {
                 context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
@@ -85,7 +97,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                 Assert.Equal(new DateTime(2111, 1, 11), buffaloBleu.BestBuyDate);
             }
 
-            using (var context = new ChipsContext(_serviceProvider, "DefaultKettleChips"))
+            using (var context = new ChipsContext(_serviceProvider, "defaultkettlechips"))
             {
                 Assert.Equal(new DateTime(2035, 9, 25), context.Chips.Single(c => c.Name == "Honey Dijon").BestBuyDate);
                 Assert.Equal(new DateTime(2111, 1, 11),

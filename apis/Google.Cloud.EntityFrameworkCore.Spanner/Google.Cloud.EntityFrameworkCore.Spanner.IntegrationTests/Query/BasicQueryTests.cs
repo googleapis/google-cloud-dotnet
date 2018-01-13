@@ -33,7 +33,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 
         private readonly TestDatabaseFixture _testFixture;
 
-        [Fact]
+        [Fact(Skip = "test is too slow and is covered by EF specification tests.")]
         public async Task All()
         {
             using (var db = await _testFixture.CreateContextAsync(
@@ -47,7 +47,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "test is too slow and is covered by EF specification tests.")]
         public async Task Any()
         {
             using (var db = await _testFixture.CreateContextAsync(
@@ -68,8 +68,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        //TODO(benwu): review possible client side eval
-        [Fact]
+        [Fact(Skip = "test is too slow and is covered by EF specification tests.")]
         public async Task AverageAsync()
         {
             using (var db = await _testFixture.CreateContextAsync(
@@ -77,14 +76,12 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             {
                 var average = await db.StringTable.AverageAsync(x => x.StringValue.Length);
                 Assert.Equal((10 * 2D + 5 * 3D) / 15, average);
-                Assert.Equal(
-                    @"message:SpannerCommand.ExecuteReader.Query=SELECT x.StringValue FROM StringTable AS x",
-                    db.GetCurrentLog());
+                Assert.Contains("SELECT AVG(CAST(CHAR_LENGTH(x.StringValue)", db.GetCurrentLog());
             }
         }
 
 
-        [Fact]
+        [Fact(Skip = "test is too slow and is covered by EF specification tests.")]
         public async Task ContainsAsync()
         {
             using (var db = await _testFixture.CreateContextAsync(
@@ -105,7 +102,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             }
         }
 
-        [Fact]
+        [Fact(Skip = "test is too slow and is covered by EF specification tests.")]
         public async Task FirstAsync()
         {
             using (var db = await _testFixture.CreateContextAsync(
@@ -113,13 +110,11 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             {
                 var firstEntry = await db.StringTable.Where(x => x.Key.StartsWith("k")).FirstAsync();
                 Assert.StartsWith("k", firstEntry.Key);
-                Assert.Equal(
-                    @"message:SpannerCommand.ExecuteReader.Query=SELECT s.Key, s.StringValue FROM StringTable AS s",
-                    db.GetCurrentLog());
+                Assert.Contains("LIMIT 1", db.GetCurrentLog());
             }
         }
 
-        [Fact]
+        [Fact(Skip = "test is too slow and is covered by EF specification tests.")]
         public async Task FirstOrDefaultNullAsync()
         {
             using (var db = await _testFixture.CreateContextAsync(
@@ -127,9 +122,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             {
                 var firstEntry = await db.StringTable.Where(x => x.Key.StartsWith("vk")).FirstOrDefaultAsync();
                 Assert.Null(firstEntry);
-                Assert.Equal(
-                    @"message:SpannerCommand.ExecuteReader.Query=SELECT s.Key, s.StringValue FROM StringTable AS s",
-                    db.GetCurrentLog());
+                Assert.Contains("SELECT x.Key, x.StringValue FROM StringTable", db.GetCurrentLog());
             }
         }
     }

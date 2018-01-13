@@ -29,7 +29,12 @@ using Xunit;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
-    public class ExecutionStrategyTest : IClassFixture<ExecutionStrategyTest.ExecutionStrategyFixture>, IDisposable
+#pragma warning disable xUnit1000 // Test classes must be public
+    /// <summary>
+    /// TODO: implement tests for Spanner
+    /// </summary>
+    internal class ExecutionStrategyTest : IClassFixture<ExecutionStrategyTest.ExecutionStrategyFixture>, IDisposable
+#pragma warning restore xUnit1000 // Test classes must be public
     {
         public ExecutionStrategyTest(ExecutionStrategyFixture fixture)
         {
@@ -285,7 +290,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             public string Name { get; set; }
         }
 
-        private const string DatabaseName = nameof(ExecutionStrategyTest);
+        private const string DatabaseName = "executionstrategytest";
 
         protected ExecutionStrategyFixture Fixture { get; }
         protected SpannerTestStore TestStore { get; }

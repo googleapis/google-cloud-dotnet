@@ -18,7 +18,10 @@ using Xunit;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
-    public class GearsOfWarQuerySpannerTest : GearsOfWarQueryTestBase<SpannerTestStore, GearsOfWarQuerySpannerFixture>
+    /// <summary>
+    /// TODO: implement gears of war tests for Spanner
+    /// </summary>
+    internal class GearsOfWarQuerySpannerTest : GearsOfWarQueryTestBase<SpannerTestStore, GearsOfWarQuerySpannerFixture>
     {
         public GearsOfWarQuerySpannerTest(GearsOfWarQuerySpannerFixture fixture)
             : base(fixture)

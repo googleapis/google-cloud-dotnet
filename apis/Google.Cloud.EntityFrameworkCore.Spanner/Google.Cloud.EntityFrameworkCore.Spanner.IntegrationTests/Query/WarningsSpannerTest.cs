@@ -27,18 +27,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             fixture.TestSqlLoggerFactory.Clear();
         }
 
-        public override void Does_not_throw_for_top_level_single()
-        {
-            base.Does_not_throw_for_top_level_single();
-
-            Assert.Equal(
-                @"SELECT ""x"".""OrderID"", ""x"".""CustomerID"", ""x"".""EmployeeID"", ""x"".""OrderDate""
-FROM ""Orders"" AS ""x""
-WHERE ""x"".""OrderID"" = 10248
-LIMIT 2",
-                Sql);
-        }
-
         public override void Paging_operation_without_orderby_issues_warning()
         {
             base.Paging_operation_without_orderby_issues_warning();

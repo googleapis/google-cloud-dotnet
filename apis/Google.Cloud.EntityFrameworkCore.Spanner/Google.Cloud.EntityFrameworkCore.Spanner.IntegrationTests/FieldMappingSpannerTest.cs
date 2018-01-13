@@ -34,7 +34,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
         public class FieldMappingSpannerFixture : FieldMappingFixtureBase
         {
-            private const string DatabaseName = "FieldMapping";
+            private const string DatabaseName = "fieldmapping";
 
             private readonly IServiceProvider _serviceProvider;
 
@@ -57,6 +57,26 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                         Seed(context);
                     }
                 });
+            }
+
+            protected override void OnModelCreating(ModelBuilder modelBuilder)
+            {
+                base.OnModelCreating(modelBuilder);
+
+                modelBuilder.Entity<PostFields>(
+                    b =>
+                    {
+                        b.Property("_id").HasColumnName("Id");
+                        b.Property("_title").HasColumnName("Title");
+                        b.Property("_blogId").HasColumnName("BlogId");
+                    });
+
+                modelBuilder.Entity<BlogFields>(
+                    b =>
+                    {
+                        b.Property("_id").HasColumnName("Id");
+                        b.Property("_title").HasColumnName("Title");
+                    });
             }
 
             public override DbContext CreateContext(SpannerTestStore testStore)

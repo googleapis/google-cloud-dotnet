@@ -18,7 +18,10 @@ using Microsoft.EntityFrameworkCore.Utilities;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
-    public class NullSemanticsQuerySpannerTest : NullSemanticsQueryTestBase<SpannerTestStore,
+    /// <summary>
+    /// TODO: implement tests for Spanner
+    /// </summary>
+    internal class NullSemanticsQuerySpannerTest : NullSemanticsQueryTestBase<SpannerTestStore,
         NullSemanticsQuerySpannerFixture>
     {
         public NullSemanticsQuerySpannerTest(NullSemanticsQuerySpannerFixture fixture)

@@ -18,7 +18,10 @@ using Xunit;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
-    public class IncludeOneToOneSpannerTest : IncludeOneToOneTestBase, IClassFixture<OneToOneQuerySpannerFixture>
+    /// <summary>
+    /// TODO: implement tests for Spanner
+    /// </summary>
+    internal class IncludeOneToOneSpannerTest : IncludeOneToOneTestBase, IClassFixture<OneToOneQuerySpannerFixture>
     {
         private readonly OneToOneQuerySpannerFixture _fixture;
 

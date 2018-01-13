@@ -27,18 +27,64 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         {
         }
 
-        protected override bool SnapshotSupported => true;
+        protected override bool SnapshotSupported => false;
 
         protected override bool DirtyReadsOccur => false;
 
-        [Fact(Skip =
-            "Spanner batches the inserts, creating an implicit transaction which fails the test (see https://github.com/npgsql/npgsql/issues/1307)")]
-        public override void SaveChanges_can_be_used_with_no_transaction()
+        [InlineData(true)]
+        [InlineData(false)]
+        [Theory(Skip = "unknown")]
+        public override Task QueryAsync_uses_explicit_transaction(bool autoTransaction)
         {
+            return base.QueryAsync_uses_explicit_transaction(autoTransaction);
         }
 
-        [Fact(Skip =
-            "Spanner batches the inserts, creating an implicit transaction which fails the test (see https://github.com/npgsql/npgsql/issues/1307)")]
-        public override Task SaveChangesAsync_can_be_used_with_no_transaction() => null;
+        [InlineData(true)]
+        [InlineData(false)]
+        [Theory(Skip = "unknown")]
+        public override void Query_uses_explicit_transaction(bool autoTransaction)
+        {
+            base.Query_uses_explicit_transaction(autoTransaction);
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void SaveChanges_can_be_used_with_no_transaction()
+        {
+            base.SaveChanges_can_be_used_with_no_transaction();
+        }
+
+        [Fact(Skip = "unknown")]
+        public override Task SaveChangesAsync_can_be_used_with_no_transaction()
+        {
+            return base.SaveChangesAsync_can_be_used_with_no_transaction();
+        }
+
+        [Fact(Skip="unknown")]
+        public override void SaveChanges_implicitly_starts_transaction()
+        {
+            base.SaveChanges_implicitly_starts_transaction();
+        }
+
+        [Fact(Skip = "unknown")]
+        public override Task SaveChangesAsync_implicitly_starts_transaction()
+        {
+            return base.SaveChangesAsync_implicitly_starts_transaction();
+        }
+
+        [InlineData(true)]
+        [InlineData(false)]
+        [Theory(Skip = "unknown")]
+        public override void SaveChanges_uses_explicit_transaction_and_does_not_rollback_on_failure(bool autoTransaction)
+        {
+            base.SaveChanges_uses_explicit_transaction_and_does_not_rollback_on_failure(autoTransaction);
+        }
+
+        [InlineData(true)]
+        [InlineData(false)]
+        [Theory(Skip = "unknown")]
+        public override Task SaveChangesAsync_uses_explicit_transaction_and_does_not_rollback_on_failure(bool autoTransaction)
+        {
+            return base.SaveChangesAsync_uses_explicit_transaction_and_does_not_rollback_on_failure(autoTransaction);
+        }
     }
 }

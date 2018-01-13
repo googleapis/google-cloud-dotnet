@@ -32,7 +32,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
         public BuiltInDataTypesSpannerFixture()
         {
-            _testStore = SpannerTestStore.Create("BuiltInDataTypes");
+            _testStore = SpannerTestStore.Create("builtindatatypes");
 
             var serviceProvider = new ServiceCollection()
                 .AddEntityFrameworkSpanner()

@@ -41,7 +41,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
         public class LoadSpannerFixture : LoadFixtureBase
         {
-            private const string DatabaseName = "LoadTest";
+            private const string DatabaseName = "loadtest";
             private readonly DbContextOptions _options;
 
             public LoadSpannerFixture()
@@ -71,6 +71,13 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                         Seed(context);
                     }
                 });
+            }
+
+            protected override void OnModelCreating(ModelBuilder modelBuilder)
+            {
+                base.OnModelCreating(modelBuilder);
+
+                modelBuilder.Entity<Parent>().ToTable("ParentTable");
             }
 
             public override DbContext CreateContext(SpannerTestStore testStore)

@@ -22,7 +22,8 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
-    public class MonsterFixupSpannerTest : MonsterFixupTestBase, IDisposable
+    //TODO: monster fixup support.
+    internal class MonsterFixupSpannerTest : MonsterFixupTestBase, IDisposable
     {
         private SpannerTestStore _testStore;
 

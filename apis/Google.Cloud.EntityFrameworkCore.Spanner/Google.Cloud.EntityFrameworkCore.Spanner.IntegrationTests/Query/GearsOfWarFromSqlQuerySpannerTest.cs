@@ -19,7 +19,10 @@ using Xunit.Abstractions;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
-    public class GearsOfWarFromSqlQuerySpannerTest : GearsOfWarFromSqlQueryTestBase<SpannerTestStore,
+    /// <summary>
+    /// TODO: implement gears of war tests for Spanner
+    /// </summary>
+    internal class GearsOfWarFromSqlQuerySpannerTest : GearsOfWarFromSqlQueryTestBase<SpannerTestStore,
         GearsOfWarQuerySpannerFixture>
     {
         public GearsOfWarFromSqlQuerySpannerTest(GearsOfWarQuerySpannerFixture fixture,

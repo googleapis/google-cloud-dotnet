@@ -12,22 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Api.Gax;
 using Google.Cloud.Spanner.Data;
-using JetBrains.Annotations;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Migrations.Internal;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
-using Microsoft.EntityFrameworkCore.Utilities;
 
 namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
@@ -85,8 +76,8 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             => _rawSqlCommandBuilder
                 .Build(@"
                     SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
-                    FROM information_schema.tables
-                    WHERE table_type = 'BASE TABLE' AND table_schema NOT IN ('pg_catalog', 'information_schema')
+                    FROM information_schema.tables AS t
+                    WHERE t.table_catalog = '' and t.table_schema = ''
                 ");
 
         IReadOnlyList<MigrationCommand> CreateCreateOperations()
@@ -101,25 +92,29 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
         /// <inheritdoc />
         public override bool Exists()
         {
-            //TODO(benwu)
-            return false;
+            return ExistsAsync().ResultWithUnwrappedExceptions();
         }
 
         /// <inheritdoc />
         public override async Task<bool> ExistsAsync(CancellationToken cancellationToken = default)
         {
-            //TODO(benwu)
-            await Task.Delay(1, cancellationToken).ConfigureAwait(false);
-            return false;
+            try
+            {
+                await _rawSqlCommandBuilder
+                    .Build(@"SELECT COUNT(*) FROM information_schema.tables").ExecuteReaderAsync(_connection)
+                    .ConfigureAwait(false);
+            }
+            catch (SpannerException e) when (e.ErrorCode == ErrorCode.NotFound ||
+                                             e.ErrorCode == ErrorCode.InvalidArgument)
+            {
+                return false;
+            }
+            return true;
         }
-
-        static bool IsDoesNotExist(SpannerException exception) => exception.ErrorCode == ErrorCode.NotFound;
 
         /// <inheritdoc />
         public override void Delete()
         {
-            ClearAllPools();
-
             using (var masterConnection = _connection.CreateMasterConnection())
             {
                 Dependencies.MigrationCommandExecutor
@@ -130,8 +125,6 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
         /// <inheritdoc />
         public override async Task DeleteAsync(CancellationToken cancellationToken = default)
         {
-            ClearAllPools();
-
             using (var masterConnection = _connection.CreateMasterConnection())
             {
                 await Dependencies.MigrationCommandExecutor
@@ -158,20 +151,14 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
                 cancellationToken).ConfigureAwait(false);
         }
 
-        IReadOnlyList<MigrationCommand> CreateDropCommands()
+        private IReadOnlyList<MigrationCommand> CreateDropCommands()
         {
             var operations = new MigrationOperation[]
             {
-                // TODO Check DbConnection.Database always gives us what we want
-                // Issue #775
                 new SpannerDropDatabaseOperation { Name = _connection.DbConnection.Database }
             };
 
             return Dependencies.MigrationsSqlGenerator.Generate(operations);
         }
-
-        // Clear connection pools in case there are active connections that are pooled
-        private static void ClearAllPools() => SpannerConnection.ClearPooledResourcesAsync().Wait();
-
     }
 }

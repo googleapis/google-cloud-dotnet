@@ -12,21 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.EntityFrameworkCore.Query;
-using Microsoft.EntityFrameworkCore.Utilities;
 using Xunit;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
-{
-    /// <summary>
-    /// TODO: implement tests for Spanner
-    /// </summary>
-    internal class ComplexNavigationsQuerySpannerTest
-        : ComplexNavigationsQueryTestBase<SpannerTestStore, ComplexNavigationsQuerySpannerFixture>
-    {
-        public ComplexNavigationsQuerySpannerTest(ComplexNavigationsQuerySpannerFixture fixture)
-            : base(fixture)
-        {
-        }
-    }
-}
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+[assembly: CollectionBehavior(DisableTestParallelization = true)]

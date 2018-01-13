@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Microsoft.EntityFrameworkCore.Query;
+using Xunit;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
@@ -21,6 +22,12 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         public QueryNoClientEvalSpannerTest(QueryNoClientEvalSpannerFixture fixture)
             : base(fixture)
         {
+        }
+
+        [Fact(Skip="unknown")]
+        public override void Doesnt_throw_when_from_sql_not_composed()
+        {
+            base.Doesnt_throw_when_from_sql_not_composed();
         }
     }
 }

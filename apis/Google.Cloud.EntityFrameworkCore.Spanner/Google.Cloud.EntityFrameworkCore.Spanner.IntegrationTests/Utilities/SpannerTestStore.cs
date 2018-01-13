@@ -21,6 +21,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Data;
@@ -45,6 +46,11 @@ namespace Microsoft.EntityFrameworkCore.Utilities
 
         private SpannerTestStore(string name, bool cleanDatabase = true)
         {
+            name = name.ToLowerInvariant();
+            if (name.Length > 30)
+            {
+                name = name.Substring(0, 30);
+            }
             Name = name;
             _cleanDatabase = cleanDatabase;
         }
@@ -65,7 +71,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                 false);
 
         public static SpannerTestStore GetOrCreateShared(string name, Action initializeDatabase,
-            bool cleanDatabase = true)
+            bool cleanDatabase = false)
             => new SpannerTestStore(name, cleanDatabase).CreateShared(initializeDatabase);
 
         public static SpannerTestStore Create(string name)
@@ -79,7 +85,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             string name;
             do
             {
-                name = "Scratch_" + Guid.NewGuid();
+                name = "s" + Guid.NewGuid().ToString().Replace("-", "");
             } while (DatabaseExists(name));
 
             return name;
@@ -372,7 +378,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
 
         private static Task<T> ExecuteScalarAsync<T>(SpannerConnection connection, string sql,
             object[] parameters = null)
-            => ExecuteAsync(connection, async command => (T) await command.ExecuteScalarAsync(), sql, false,
+            => ExecuteAsync(connection, async command => (T) await command.ExecuteScalarAsync().ConfigureAwait(false), sql, false,
                 parameters);
 
         public int ExecuteNonQuery(string sql, params object[] parameters)
@@ -410,11 +416,11 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             object[] parameters = null)
             => ExecuteAsync(connection, async command =>
             {
-                using (var dataReader = await command.ExecuteReaderAsync())
+                using (var dataReader = await command.ExecuteReaderAsync().ConfigureAwait(false))
                 {
                     var results = Enumerable.Empty<T>();
-                    while (await dataReader.ReadAsync())
-                        results = results.Concat(new[] {await dataReader.GetFieldValueAsync<T>(0)});
+                    while (await dataReader.ReadAsync().ConfigureAwait(false))
+                        results = results.Concat(new[] {await dataReader.GetFieldValueAsync<T>(0).ConfigureAwait(false) });
                     return results;
                 }
             }, sql, false, parameters);
@@ -473,7 +479,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             {
                 connection.Close();
             }
-            await connection.OpenAsync();
+            await connection.OpenAsync().ConfigureAwait(false);
             try
             {
                 using (var transaction = useTransaction ? connection.BeginTransaction() : null)
@@ -481,7 +487,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                     T result;
                     using (var command = CreateCommand(connection, sql, parameters))
                     {
-                        result = await executeAsync(command);
+                        result = await executeAsync(command).ConfigureAwait(false);
                     }
                     transaction?.Commit();
 

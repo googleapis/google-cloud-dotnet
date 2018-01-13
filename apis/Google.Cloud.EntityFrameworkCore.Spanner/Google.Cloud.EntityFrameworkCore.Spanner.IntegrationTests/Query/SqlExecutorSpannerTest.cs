@@ -15,28 +15,27 @@
 using System.Data.Common;
 using Google.Cloud.Spanner.Data;
 using Microsoft.EntityFrameworkCore.Query;
+// ReSharper disable UnassignedGetOnlyAutoProperty
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
-    public class SqlExecutorSpannerTest : SqlExecutorTestBase<NorthwindQuerySpannerFixture>
+    /**
+     * Stored procs not supported in cloud spanner
+    */
+    internal class SqlExecutorSpannerTest : SqlExecutorTestBase<NorthwindQuerySpannerFixture>
     {
         public SqlExecutorSpannerTest(NorthwindQuerySpannerFixture fixture)
             : base(fixture)
         {
         }
 
-        protected override string TenMostExpensiveProductsSproc => @"SELECT * FROM ""Ten Most Expensive Products""()";
-
-        protected override string CustomerOrderHistorySproc => @"SELECT * FROM ""CustOrderHist""(@CustomerID)";
-
-        protected override string CustomerOrderHistoryWithGeneratedParameterSproc =>
-            @"SELECT * FROM ""CustOrderHist""({0})";
-
         protected override DbParameter CreateDbParameter(string name, object value)
-            => new SpannerParameter
-            {
-                ParameterName = name,
-                Value = value
-            };
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected override string TenMostExpensiveProductsSproc { get; }
+        protected override string CustomerOrderHistorySproc { get; }
+        protected override string CustomerOrderHistoryWithGeneratedParameterSproc { get; }
     }
 }

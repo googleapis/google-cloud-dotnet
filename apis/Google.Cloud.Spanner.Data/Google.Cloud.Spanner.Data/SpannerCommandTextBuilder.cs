@@ -84,7 +84,7 @@ namespace Google.Cloud.Spanner.Data
         public SpannerCommandTextBuilder(string commandText)
         {
             GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
-            var commandSections = commandText.Split(' ');
+            var commandSections = commandText.Trim().Split(' ');
             if (commandSections.Length < 2)
             {
                 throw new InvalidOperationException($"'{commandText}' is not a recognized Spanner command.");

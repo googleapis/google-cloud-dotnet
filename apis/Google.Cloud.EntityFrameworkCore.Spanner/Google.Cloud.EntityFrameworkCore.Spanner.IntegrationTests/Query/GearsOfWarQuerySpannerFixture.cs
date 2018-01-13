@@ -24,7 +24,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
     public class GearsOfWarQuerySpannerFixture : GearsOfWarQueryRelationalFixture<SpannerTestStore>
     {
-        public const string DatabaseName = "GearsOfWarQueryTest";
+        public const string DatabaseName = "gearsofwarquerytest";
 
         private readonly string _connectionString = SpannerTestStore.CreateConnectionString(DatabaseName);
 

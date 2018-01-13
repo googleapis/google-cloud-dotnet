@@ -18,7 +18,8 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
-    public class NotificationEntitiesSpannerTest
+    //TODO: enable notificationentities tests.
+    internal class NotificationEntitiesSpannerTest
         : NotificationEntitiesTestBase<SpannerTestStore,
             NotificationEntitiesSpannerTest.NotificationEntitiesSpannerFixture>
     {
@@ -29,7 +30,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
         public class NotificationEntitiesSpannerFixture : NotificationEntitiesFixtureBase
         {
-            public const string DatabaseName = "NotificationEntities";
+            public const string DatabaseName = "notificationentities";
 
             private readonly DbContextOptions _options;
 

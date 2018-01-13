@@ -41,8 +41,8 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
         private static readonly GuidTypeMapping s_guid
             = new GuidTypeMapping(SpannerDbType.String.ToString(), DbType.String);
 
-        private static readonly ByteArrayTypeMapping s_byteArray
-            = new ByteArrayTypeMapping(SpannerDbType.Bytes.ToString());
+        private static readonly SpannerComplexTypeMapping s_byteArray
+            = new SpannerComplexTypeMapping(SpannerDbType.Bytes);
 
         private static readonly SpannerComplexTypeMapping s_stringArray
             = new SpannerComplexTypeMapping(SpannerDbType.ArrayOf(SpannerDbType.String));
@@ -81,7 +81,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             = new Dictionary<SpannerDbType, RelationalTypeMapping>
             {
                 { SpannerDbType.Bool, s_bool },
-                { SpannerDbType.Bytes, null },
+                { SpannerDbType.Bytes, s_byteArray },
                 { SpannerDbType.Date, s_date },
                 { SpannerDbType.Float64, s_double },
                 { SpannerDbType.Int64, s_long },

@@ -12,20 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.EntityFrameworkCore.Query;
-using Microsoft.EntityFrameworkCore.Utilities;
-using Xunit;
-
-namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
+namespace Microsoft.EntityFrameworkCore.Migrations.Internal
 {
-    /// <summary>
-    /// TODO: implement tests for Spanner
-    /// </summary>
-    internal class ComplexNavigationsQuerySpannerTest
-        : ComplexNavigationsQueryTestBase<SpannerTestStore, ComplexNavigationsQuerySpannerFixture>
+    internal class SpannerMigrationsAnnotationProvider : MigrationsAnnotationProvider
     {
-        public ComplexNavigationsQuerySpannerTest(ComplexNavigationsQuerySpannerFixture fixture)
-            : base(fixture)
+        /// <summary>
+        ///     Initializes a new instance of this class.
+        /// </summary>
+        /// <param name="dependencies"> Parameter object containing dependencies for this service. </param>
+        public SpannerMigrationsAnnotationProvider(MigrationsAnnotationProviderDependencies dependencies)
+            : base(dependencies)
         {
         }
     }

@@ -17,7 +17,10 @@ using Microsoft.EntityFrameworkCore.Utilities;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
-    public class DatabindingSpannerTest : DatabindingTestBase<SpannerTestStore, F1SpannerFixture>
+    /// <summary>
+    /// TODO: implement tests for Spanner
+    /// </summary>
+    internal class DatabindingSpannerTest : DatabindingTestBase<SpannerTestStore, F1SpannerFixture>
     {
         public DatabindingSpannerTest(F1SpannerFixture fixture)
             : base(fixture)

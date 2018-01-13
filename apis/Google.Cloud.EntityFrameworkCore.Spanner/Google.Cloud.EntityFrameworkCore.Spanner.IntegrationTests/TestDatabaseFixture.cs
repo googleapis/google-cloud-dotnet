@@ -116,8 +116,8 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                                             StringValue        STRING(MAX),
                                           ) PRIMARY KEY (Key)";
 
-            var index1 = "CREATE INDEX TestTableByValue ON TestTable(StringValue)";
-            var index2 = "CREATE INDEX TestTableByValueDesc ON TestTable(StringValue DESC)";
+            var index1 = $"CREATE INDEX TestTableByValue ON {TestTable}(StringValue)";
+            var index2 = $"CREATE INDEX TestTableByValueDesc ON {TestTable}(StringValue DESC)";
 
             await ExecuteDdlAsync(createTableStatement);
             await ExecuteDdlAsync(index1);
