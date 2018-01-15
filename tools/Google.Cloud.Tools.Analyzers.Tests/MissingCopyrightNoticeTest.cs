@@ -33,13 +33,13 @@ namespace Google.Cloud.Tools.Analyzers.Test
             VerifyCSharpDiagnostic(test, expected);
 
             var newSource =
-@"// Copyright 1234 Google Inc. All rights reserved.
+@"// Copyright 1234 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the ""License"");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an ""AS IS"" BASIS,
@@ -52,7 +52,7 @@ using System;";
 
             newSource =
 @"/*
- * Copyright 1234 Google Inc. All Rights Reserved.
+ * Copyright 1234 Google LLC All Rights Reserved.
  * Use of this source code is governed by a BSD-style
  * license that can be found in the LICENSE file or at
  * https://developers.google.com/open-source/licenses/bsd
@@ -126,7 +126,7 @@ using System;";
         }
 
         [Fact]
-        public void CopyrightApacheWithLlc()
+        public void CopyrightApacheWithLlc_OldStyle()
         {
             var test =
 @"// Copyright 2017, Google LLC All rights reserved.
@@ -136,6 +136,29 @@ using System;";
 // You may obtain a copy of the License at
 //
 //     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an ""AS IS"" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using System;";
+
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
+        public void CopyrightApacheWithLlc_NewStyle()
+        {
+            var test =
+@"// Copyright 2017 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the ""License"");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an ""AS IS"" BASIS,
