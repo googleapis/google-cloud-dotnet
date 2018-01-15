@@ -55,7 +55,7 @@ namespace Google.Cloud.Tools.Analyzers
                 CodeAction.Create(
                     title: TitleApache,
                     createChangedDocument: c => Task.FromResult(
-                        AddCopyrightToDocument(document, rootNode, MissingCopyrightNoticeAnalyzer.CopyrightApacheTemplate)),
+                        AddCopyrightToDocument(document, rootNode, MissingCopyrightNoticeAnalyzer.NewCopyrightApacheTemplate)),
                     equivalenceKey: TitleApache),
                 context.Diagnostics);
 

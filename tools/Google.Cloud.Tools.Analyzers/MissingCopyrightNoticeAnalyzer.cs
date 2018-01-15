@@ -44,8 +44,8 @@ namespace Google.Cloud.Tools.Analyzers
                 isEnabledByDefault: true,
                 description: Description);
 
-        internal const string CopyrightApacheTemplate =
-@"// Copyright ____ Google Inc. All rights reserved.
+        internal const string OldCopyrightApacheTemplate =
+@"// Copyright ____ Google LLC All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the ""License"");
 // you may not use this file except in compliance with the License.
@@ -59,15 +59,31 @@ namespace Google.Cloud.Tools.Analyzers
 // See the License for the specific language governing permissions and
 // limitations under the License.";
 
+        internal const string NewCopyrightApacheTemplate =
+@"// Copyright ____ Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the ""License"");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an ""AS IS"" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.";
+
         internal const string CopyrightBsdTemplate =
 @"/*
- * Copyright ____ Google Inc. All Rights Reserved.
+ * Copyright ____ Google LLC All Rights Reserved.
  * Use of this source code is governed by a BSD-style
  * license that can be found in the LICENSE file or at
  * https://developers.google.com/open-source/licenses/bsd
  */";
 
-        private static readonly Regex CopyrightApacheRegex = CreateCopyrightRegex(CopyrightApacheTemplate);
+        private static readonly Regex OldCopyrightApacheRegex = CreateCopyrightRegex(OldCopyrightApacheTemplate);
+        private static readonly Regex NewCopyrightApacheRegex = CreateCopyrightRegex(NewCopyrightApacheTemplate);
         private static readonly Regex CopyrightBsdRegex = CreateCopyrightRegex(CopyrightBsdTemplate);
 
         private static readonly ImmutableArray<string> AutoGenerationComments =
@@ -115,8 +131,9 @@ namespace Google.Cloud.Tools.Analyzers
             }
 
             var leadingTriviaText = leadingTriviaList.ToFullString();
-            if (AutoGenerationComments.Any(leadingTriviaText.StartsWith)||
-                CopyrightApacheRegex.IsMatch(leadingTriviaText) ||
+            if (AutoGenerationComments.Any(leadingTriviaText.StartsWith) ||
+                OldCopyrightApacheRegex.IsMatch(leadingTriviaText) ||
+                NewCopyrightApacheRegex.IsMatch(leadingTriviaText) ||
                 CopyrightBsdRegex.IsMatch(leadingTriviaText))
             {
                 return false;
@@ -129,7 +146,7 @@ namespace Google.Cloud.Tools.Analyzers
         {
             var pattern = Regex.Escape(copyrightTemplate)
                 .Replace("____", @"\d{4}\,?")
-                .Replace(@"Google\ Inc\.", @"Google\ (Inc\.|LLC)");
+                .Replace(@"Google\ LLC", @"Google\ (Inc\.|LLC)");
             pattern = Regex.Replace(pattern, @"(\\r\\n|\\n)", @"\ *\r?\n");
             return new Regex(@"\A\s*" + pattern, RegexOptions.Compiled | RegexOptions.IgnoreCase);
         }
