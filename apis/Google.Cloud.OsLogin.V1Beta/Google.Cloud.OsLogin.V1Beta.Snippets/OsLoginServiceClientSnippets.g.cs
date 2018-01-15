@@ -1,10 +1,10 @@
-// Copyright 2017, Google LLC All rights reserved.
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -271,7 +271,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for ImportSshPublicKeyAsync</summary>
-        public async Task ImportSshPublicKeyAsync()
+        public async Task ImportSshPublicKeyAsync1()
         {
             // Snippet: ImportSshPublicKeyAsync(UserName,SshPublicKey,CallSettings)
             // Additional: ImportSshPublicKeyAsync(UserName,SshPublicKey,CancellationToken)
@@ -286,7 +286,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for ImportSshPublicKey</summary>
-        public void ImportSshPublicKey()
+        public void ImportSshPublicKey1()
         {
             // Snippet: ImportSshPublicKey(UserName,SshPublicKey,CallSettings)
             // Create client
@@ -296,6 +296,37 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
             SshPublicKey sshPublicKey = new SshPublicKey();
             // Make the request
             ImportSshPublicKeyResponse response = osLoginServiceClient.ImportSshPublicKey(parent, sshPublicKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportSshPublicKeyAsync</summary>
+        public async Task ImportSshPublicKeyAsync2()
+        {
+            // Snippet: ImportSshPublicKeyAsync(UserName,SshPublicKey,string,CallSettings)
+            // Additional: ImportSshPublicKeyAsync(UserName,SshPublicKey,string,CancellationToken)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UserName parent = new UserName("[USER]");
+            SshPublicKey sshPublicKey = new SshPublicKey();
+            string projectId = "";
+            // Make the request
+            ImportSshPublicKeyResponse response = await osLoginServiceClient.ImportSshPublicKeyAsync(parent, sshPublicKey, projectId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportSshPublicKey</summary>
+        public void ImportSshPublicKey2()
+        {
+            // Snippet: ImportSshPublicKey(UserName,SshPublicKey,string,CallSettings)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = OsLoginServiceClient.Create();
+            // Initialize request argument(s)
+            UserName parent = new UserName("[USER]");
+            SshPublicKey sshPublicKey = new SshPublicKey();
+            string projectId = "";
+            // Make the request
+            ImportSshPublicKeyResponse response = osLoginServiceClient.ImportSshPublicKey(parent, sshPublicKey, projectId);
             // End snippet
         }
 
@@ -334,7 +365,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for UpdateSshPublicKeyAsync</summary>
-        public async Task UpdateSshPublicKeyAsync()
+        public async Task UpdateSshPublicKeyAsync1()
         {
             // Snippet: UpdateSshPublicKeyAsync(FingerprintName,SshPublicKey,CallSettings)
             // Additional: UpdateSshPublicKeyAsync(FingerprintName,SshPublicKey,CancellationToken)
@@ -349,7 +380,7 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
         }
 
         /// <summary>Snippet for UpdateSshPublicKey</summary>
-        public void UpdateSshPublicKey()
+        public void UpdateSshPublicKey1()
         {
             // Snippet: UpdateSshPublicKey(FingerprintName,SshPublicKey,CallSettings)
             // Create client
@@ -359,6 +390,37 @@ namespace Google.Cloud.OsLogin.V1Beta.Snippets
             SshPublicKey sshPublicKey = new SshPublicKey();
             // Make the request
             SshPublicKey response = osLoginServiceClient.UpdateSshPublicKey(name, sshPublicKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSshPublicKeyAsync</summary>
+        public async Task UpdateSshPublicKeyAsync2()
+        {
+            // Snippet: UpdateSshPublicKeyAsync(FingerprintName,SshPublicKey,FieldMask,CallSettings)
+            // Additional: UpdateSshPublicKeyAsync(FingerprintName,SshPublicKey,FieldMask,CancellationToken)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
+            SshPublicKey sshPublicKey = new SshPublicKey();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SshPublicKey response = await osLoginServiceClient.UpdateSshPublicKeyAsync(name, sshPublicKey, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSshPublicKey</summary>
+        public void UpdateSshPublicKey2()
+        {
+            // Snippet: UpdateSshPublicKey(FingerprintName,SshPublicKey,FieldMask,CallSettings)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = OsLoginServiceClient.Create();
+            // Initialize request argument(s)
+            FingerprintName name = new FingerprintName("[USER]", "[FINGERPRINT]");
+            SshPublicKey sshPublicKey = new SshPublicKey();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SshPublicKey response = osLoginServiceClient.UpdateSshPublicKey(name, sshPublicKey, updateMask);
             // End snippet
         }
 
