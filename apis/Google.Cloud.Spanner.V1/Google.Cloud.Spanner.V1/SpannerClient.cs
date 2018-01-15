@@ -60,6 +60,8 @@ namespace Google.Cloud.Spanner.V1
             BeginTransactionSettings = existing.BeginTransactionSettings;
             CommitSettings = existing.CommitSettings;
             RollbackSettings = existing.RollbackSettings;
+            PartitionQuerySettings = existing.PartitionQuerySettings;
+            PartitionReadSettings = existing.PartitionReadSettings;
             OnCopy(existing);
         }
 
@@ -470,6 +472,66 @@ namespace Google.Cloud.Spanner.V1
             )));
 
         /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpannerClient.PartitionQuery</c> and <c>SpannerClient.PartitionQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>SpannerClient.PartitionQuery</c> and
+        /// <c>SpannerClient.PartitionQueryAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings PartitionQuerySettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpannerClient.PartitionRead</c> and <c>SpannerClient.PartitionReadAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>SpannerClient.PartitionRead</c> and
+        /// <c>SpannerClient.PartitionReadAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings PartitionReadSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this <see cref="SpannerSettings"/> object.</returns>
@@ -493,11 +555,13 @@ namespace Google.Cloud.Spanner.V1
         /// The default Spanner scopes are:
         /// <list type="bullet">
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/spanner.admin"</description></item>
         /// <item><description>"https://www.googleapis.com/auth/spanner.data"</description></item>
         /// </list>
         /// </remarks>
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/spanner.admin",
             "https://www.googleapis.com/auth/spanner.data",
         });
 
@@ -1834,6 +1898,110 @@ namespace Google.Cloud.Spanner.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Creates a set of partition tokens that can be used to execute a query
+        /// operation in parallel.  Each of the returned partition tokens can be used
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
+        /// of the query result to read.  The same session and read-only transaction
+        /// must be used by the PartitionQueryRequest used to create the
+        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
+        /// Partition tokens become invalid when the session used to create them
+        /// is deleted or begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<PartitionResponse> PartitionQueryAsync(
+            PartitionQueryRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a set of partition tokens that can be used to execute a query
+        /// operation in parallel.  Each of the returned partition tokens can be used
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
+        /// of the query result to read.  The same session and read-only transaction
+        /// must be used by the PartitionQueryRequest used to create the
+        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
+        /// Partition tokens become invalid when the session used to create them
+        /// is deleted or begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual PartitionResponse PartitionQuery(
+            PartitionQueryRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a set of partition tokens that can be used to execute a read
+        /// operation in parallel.  Each of the returned partition tokens can be used
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
+        /// result to read.  The same session and read-only transaction must be used by
+        /// the PartitionReadRequest used to create the partition tokens and the
+        /// ReadRequests that use the partition tokens.
+        /// Partition tokens become invalid when the session used to create them
+        /// is deleted or begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<PartitionResponse> PartitionReadAsync(
+            PartitionReadRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a set of partition tokens that can be used to execute a read
+        /// operation in parallel.  Each of the returned partition tokens can be used
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
+        /// result to read.  The same session and read-only transaction must be used by
+        /// the PartitionReadRequest used to create the partition tokens and the
+        /// ReadRequests that use the partition tokens.
+        /// Partition tokens become invalid when the session used to create them
+        /// is deleted or begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual PartitionResponse PartitionRead(
+            PartitionReadRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -1852,6 +2020,8 @@ namespace Google.Cloud.Spanner.V1
         private readonly ApiCall<BeginTransactionRequest, Transaction> _callBeginTransaction;
         private readonly ApiCall<CommitRequest, CommitResponse> _callCommit;
         private readonly ApiCall<RollbackRequest, Empty> _callRollback;
+        private readonly ApiCall<PartitionQueryRequest, PartitionResponse> _callPartitionQuery;
+        private readonly ApiCall<PartitionReadRequest, PartitionResponse> _callPartitionRead;
 
         /// <summary>
         /// Constructs a client wrapper for the Spanner service, with the specified gRPC client and settings.
@@ -1885,6 +2055,10 @@ namespace Google.Cloud.Spanner.V1
                 GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings);
             _callRollback = clientHelper.BuildApiCall<RollbackRequest, Empty>(
                 GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings);
+            _callPartitionQuery = clientHelper.BuildApiCall<PartitionQueryRequest, PartitionResponse>(
+                GrpcClient.PartitionQueryAsync, GrpcClient.PartitionQuery, effectiveSettings.PartitionQuerySettings);
+            _callPartitionRead = clientHelper.BuildApiCall<PartitionReadRequest, PartitionResponse>(
+                GrpcClient.PartitionReadAsync, GrpcClient.PartitionRead, effectiveSettings.PartitionReadSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1905,6 +2079,8 @@ namespace Google.Cloud.Spanner.V1
         partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings);
         partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings);
         partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings);
+        partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref CallSettings settings);
+        partial void Modify_PartitionReadRequest(ref PartitionReadRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Creates a new session. A session can be used to perform
@@ -2466,6 +2642,114 @@ namespace Google.Cloud.Spanner.V1
         {
             Modify_RollbackRequest(ref request, ref callSettings);
             _callRollback.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a set of partition tokens that can be used to execute a query
+        /// operation in parallel.  Each of the returned partition tokens can be used
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
+        /// of the query result to read.  The same session and read-only transaction
+        /// must be used by the PartitionQueryRequest used to create the
+        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
+        /// Partition tokens become invalid when the session used to create them
+        /// is deleted or begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<PartitionResponse> PartitionQueryAsync(
+            PartitionQueryRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_PartitionQueryRequest(ref request, ref callSettings);
+            return _callPartitionQuery.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a set of partition tokens that can be used to execute a query
+        /// operation in parallel.  Each of the returned partition tokens can be used
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
+        /// of the query result to read.  The same session and read-only transaction
+        /// must be used by the PartitionQueryRequest used to create the
+        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
+        /// Partition tokens become invalid when the session used to create them
+        /// is deleted or begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override PartitionResponse PartitionQuery(
+            PartitionQueryRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_PartitionQueryRequest(ref request, ref callSettings);
+            return _callPartitionQuery.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a set of partition tokens that can be used to execute a read
+        /// operation in parallel.  Each of the returned partition tokens can be used
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
+        /// result to read.  The same session and read-only transaction must be used by
+        /// the PartitionReadRequest used to create the partition tokens and the
+        /// ReadRequests that use the partition tokens.
+        /// Partition tokens become invalid when the session used to create them
+        /// is deleted or begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<PartitionResponse> PartitionReadAsync(
+            PartitionReadRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_PartitionReadRequest(ref request, ref callSettings);
+            return _callPartitionRead.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a set of partition tokens that can be used to execute a read
+        /// operation in parallel.  Each of the returned partition tokens can be used
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
+        /// result to read.  The same session and read-only transaction must be used by
+        /// the PartitionReadRequest used to create the partition tokens and the
+        /// ReadRequests that use the partition tokens.
+        /// Partition tokens become invalid when the session used to create them
+        /// is deleted or begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override PartitionResponse PartitionRead(
+            PartitionReadRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_PartitionReadRequest(ref request, ref callSettings);
+            return _callPartitionRead.Sync(request, callSettings);
         }
 
     }
