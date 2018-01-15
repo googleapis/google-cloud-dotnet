@@ -398,6 +398,20 @@
   },
 
   {
+    "id": "Google.Cloud.ResourceManager.V2",
+    "productName": "Google Cloud Resource Manager",
+    "productUrl": "https://cloud.google.com/resource-manager/",
+    "version": "1.0.0-beta01",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Resource Manager, which provides methods for creating, reading, and updating project metadata.",
+    "tags": [ "metadata", "resources" ],
+    "dependencies": {
+      "Google.Cloud.Iam.V1": "1.0.0",
+      "Google.LongRunning": "1.0.0"
+    }
+  },
+
+  {
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
     "productName": "Google Cloud Spanner Database Administration",
     "productUrl": "https://cloud.google.com/spanner/",
