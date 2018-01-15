@@ -740,5 +740,75 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PartitionQueryAsync</summary>
+        public async Task PartitionQueryAsync_RequestObject()
+        {
+            // Snippet: PartitionQueryAsync(PartitionQueryRequest,CallSettings)
+            // Create client
+            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            // Initialize request argument(s)
+            PartitionQueryRequest request = new PartitionQueryRequest
+            {
+                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                Sql = "",
+            };
+            // Make the request
+            PartitionResponse response = await spannerClient.PartitionQueryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PartitionQuery</summary>
+        public void PartitionQuery_RequestObject()
+        {
+            // Snippet: PartitionQuery(PartitionQueryRequest,CallSettings)
+            // Create client
+            SpannerClient spannerClient = SpannerClient.Create();
+            // Initialize request argument(s)
+            PartitionQueryRequest request = new PartitionQueryRequest
+            {
+                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                Sql = "",
+            };
+            // Make the request
+            PartitionResponse response = spannerClient.PartitionQuery(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PartitionReadAsync</summary>
+        public async Task PartitionReadAsync_RequestObject()
+        {
+            // Snippet: PartitionReadAsync(PartitionReadRequest,CallSettings)
+            // Create client
+            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            // Initialize request argument(s)
+            PartitionReadRequest request = new PartitionReadRequest
+            {
+                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                Table = "",
+                KeySet = new KeySet(),
+            };
+            // Make the request
+            PartitionResponse response = await spannerClient.PartitionReadAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PartitionRead</summary>
+        public void PartitionRead_RequestObject()
+        {
+            // Snippet: PartitionRead(PartitionReadRequest,CallSettings)
+            // Create client
+            SpannerClient spannerClient = SpannerClient.Create();
+            // Initialize request argument(s)
+            PartitionReadRequest request = new PartitionReadRequest
+            {
+                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                Table = "",
+                KeySet = new KeySet(),
+            };
+            // Make the request
+            PartitionResponse response = spannerClient.PartitionRead(request);
+            // End snippet
+        }
+
     }
 }
