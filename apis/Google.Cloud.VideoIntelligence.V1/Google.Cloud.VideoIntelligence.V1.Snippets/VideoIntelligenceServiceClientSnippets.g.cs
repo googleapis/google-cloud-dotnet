@@ -1,10 +1,10 @@
-// Copyright 2017, Google LLC All rights reserved.
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -114,7 +114,13 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             // Create client
             VideoIntelligenceServiceClient videoIntelligenceServiceClient = await VideoIntelligenceServiceClient.CreateAsync();
             // Initialize request argument(s)
-            AnnotateVideoRequest request = new AnnotateVideoRequest();
+            AnnotateVideoRequest request = new AnnotateVideoRequest
+            {
+                InputUri = "gs://demomaker/cat.mp4",
+                Features = {
+                               Feature.LabelDetection,
+                           },
+            };
             // Make the request
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
                 await videoIntelligenceServiceClient.AnnotateVideoAsync(request);
@@ -146,7 +152,13 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             // Create client
             VideoIntelligenceServiceClient videoIntelligenceServiceClient = VideoIntelligenceServiceClient.Create();
             // Initialize request argument(s)
-            AnnotateVideoRequest request = new AnnotateVideoRequest();
+            AnnotateVideoRequest request = new AnnotateVideoRequest
+            {
+                InputUri = "gs://demomaker/cat.mp4",
+                Features = {
+                               Feature.LabelDetection,
+                           },
+            };
             // Make the request
             Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
                 videoIntelligenceServiceClient.AnnotateVideo(request);
