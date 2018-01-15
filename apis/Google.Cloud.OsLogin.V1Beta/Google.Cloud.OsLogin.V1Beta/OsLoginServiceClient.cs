@@ -1,10 +1,10 @@
-// Copyright 2017, Google LLC All rights reserved.
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -910,6 +910,102 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// account information is set when no username and UID exist as part of the
         /// login profile.
         /// </summary>
+        /// <param name="parent">
+        /// The unique ID for the user in format `users/{user}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// The SSH public key and expiration time.
+        /// </param>
+        /// <param name="projectId">
+        /// The project ID of the Google Cloud Platform project.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(
+            UserName parent,
+            SshPublicKey sshPublicKey,
+            string projectId,
+            CallSettings callSettings = null) => ImportSshPublicKeyAsync(
+                new ImportSshPublicKeyRequest
+                {
+                    ParentAsUserName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    SshPublicKey = GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    ProjectId = projectId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Adds an SSH public key and returns the profile information. Default POSIX
+        /// account information is set when no username and UID exist as part of the
+        /// login profile.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique ID for the user in format `users/{user}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// The SSH public key and expiration time.
+        /// </param>
+        /// <param name="projectId">
+        /// The project ID of the Google Cloud Platform project.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(
+            UserName parent,
+            SshPublicKey sshPublicKey,
+            string projectId,
+            CancellationToken cancellationToken) => ImportSshPublicKeyAsync(
+                parent,
+                sshPublicKey,
+                projectId,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds an SSH public key and returns the profile information. Default POSIX
+        /// account information is set when no username and UID exist as part of the
+        /// login profile.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique ID for the user in format `users/{user}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// The SSH public key and expiration time.
+        /// </param>
+        /// <param name="projectId">
+        /// The project ID of the Google Cloud Platform project.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ImportSshPublicKeyResponse ImportSshPublicKey(
+            UserName parent,
+            SshPublicKey sshPublicKey,
+            string projectId,
+            CallSettings callSettings = null) => ImportSshPublicKey(
+                new ImportSshPublicKeyRequest
+                {
+                    ParentAsUserName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    SshPublicKey = GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    ProjectId = projectId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Adds an SSH public key and returns the profile information. Default POSIX
+        /// account information is set when no username and UID exist as part of the
+        /// login profile.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1028,6 +1124,105 @@ namespace Google.Cloud.OsLogin.V1Beta
                 {
                     FingerprintName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                     SshPublicKey = GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates an SSH public key and returns the profile information. This method
+        /// supports patch semantics.
+        /// </summary>
+        /// <param name="name">
+        /// The fingerprint of the public key to update. Public keys are identified by
+        /// their SHA-256 fingerprint. The fingerprint of the public key is in format
+        /// `users/{user}/sshPublicKeys/{fingerprint}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// The SSH public key and expiration time.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask to control which fields get updated. Updates all if not present.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<SshPublicKey> UpdateSshPublicKeyAsync(
+            FingerprintName name,
+            SshPublicKey sshPublicKey,
+            FieldMask updateMask,
+            CallSettings callSettings = null) => UpdateSshPublicKeyAsync(
+                new UpdateSshPublicKeyRequest
+                {
+                    FingerprintName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SshPublicKey = GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    UpdateMask = updateMask, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates an SSH public key and returns the profile information. This method
+        /// supports patch semantics.
+        /// </summary>
+        /// <param name="name">
+        /// The fingerprint of the public key to update. Public keys are identified by
+        /// their SHA-256 fingerprint. The fingerprint of the public key is in format
+        /// `users/{user}/sshPublicKeys/{fingerprint}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// The SSH public key and expiration time.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask to control which fields get updated. Updates all if not present.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<SshPublicKey> UpdateSshPublicKeyAsync(
+            FingerprintName name,
+            SshPublicKey sshPublicKey,
+            FieldMask updateMask,
+            CancellationToken cancellationToken) => UpdateSshPublicKeyAsync(
+                name,
+                sshPublicKey,
+                updateMask,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an SSH public key and returns the profile information. This method
+        /// supports patch semantics.
+        /// </summary>
+        /// <param name="name">
+        /// The fingerprint of the public key to update. Public keys are identified by
+        /// their SHA-256 fingerprint. The fingerprint of the public key is in format
+        /// `users/{user}/sshPublicKeys/{fingerprint}`.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// The SSH public key and expiration time.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask to control which fields get updated. Updates all if not present.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual SshPublicKey UpdateSshPublicKey(
+            FingerprintName name,
+            SshPublicKey sshPublicKey,
+            FieldMask updateMask,
+            CallSettings callSettings = null) => UpdateSshPublicKey(
+                new UpdateSshPublicKeyRequest
+                {
+                    FingerprintName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    SshPublicKey = GaxPreconditions.CheckNotNull(sshPublicKey, nameof(sshPublicKey)),
+                    UpdateMask = updateMask, // Optional
                 },
                 callSettings);
 
