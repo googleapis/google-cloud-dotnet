@@ -55,11 +55,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var filter = RowFilters.Chain(
                 RowFilters.CellsPerRowLimit(1),
-                RowFilters.ValueRegex("abc"));
+                RowFilters.ValueExact("abc"));
             Assert.NotNull(filter.Chain);
             Assert.Equal(2, filter.Chain.Filters.Count);
             Assert.Equal(RowFilters.CellsPerRowLimit(1), filter.Chain.Filters[0]);
-            Assert.Equal(RowFilters.ValueRegex("abc"), filter.Chain.Filters[1]);
+            Assert.Equal(RowFilters.ValueExact("abc"), filter.Chain.Filters[1]);
         }
 
         [Fact]
@@ -67,6 +67,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             Assert.Throws<ArgumentNullException>(() => RowFilters.Chain(default(RowFilter[])));
             Assert.Throws<ArgumentException>(() => RowFilters.Chain(new RowFilter[] { null }));
+        }
+
+        [Fact]
+        public void ColumnQualifierExact()
+        {
+            var filter = RowFilters.ColumnQualifierExact("a\\b\0c\t");
+            Assert.Equal(ByteString.CopyFromUtf8(@"a\\b\x00c\	"), filter.ColumnQualifierRegexFilter);
         }
 
         [Fact]
@@ -100,13 +107,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var filter = RowFilters.Condition(
                 RowFilters.ColumnQualifierRegex("last_name"),
                 RowFilters.RowSample(0.5),
-                RowFilters.FamilyNameRegex("address"));
+                RowFilters.FamilyNameExact("address"));
             Assert.NotNull(filter.Condition);
             Assert.Equal(
                 RowFilters.ColumnQualifierRegex("last_name"),
                 filter.Condition.PredicateFilter);
             Assert.Equal(RowFilters.RowSample(0.5), filter.Condition.TrueFilter);
-            Assert.Equal(RowFilters.FamilyNameRegex("address"), filter.Condition.FalseFilter);
+            Assert.Equal(RowFilters.FamilyNameExact("address"), filter.Condition.FalseFilter);
         }
 
         [Fact]
@@ -117,6 +124,19 @@ namespace Google.Cloud.Bigtable.V2.Tests
             
             // The true/false mutations are allowed to be null.
             RowFilters.Condition(RowFilters.PassAllFilter(), null, null);
+        }
+
+        [Fact]
+        public void FamilyNameExact()
+        {
+            var filter = RowFilters.FamilyNameExact("a\\b\0c\t");
+            Assert.Equal(@"a\\b\x00c\	", filter.FamilyNameRegexFilter);
+        }
+
+        [Fact]
+        public void FamilyNameExact_Validations()
+        {
+            Assert.Throws<ArgumentNullException>(() => RowFilters.FamilyNameExact(null));
         }
 
         [Fact]
@@ -137,11 +157,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var filter = RowFilters.Interleave(
                 RowFilters.CellsPerRowLimit(1),
-                RowFilters.ValueRegex("abc"));
+                RowFilters.ValueExact("abc"));
             Assert.NotNull(filter.Interleave);
             Assert.Equal(2, filter.Interleave.Filters.Count);
             Assert.Equal(RowFilters.CellsPerRowLimit(1), filter.Interleave.Filters[0]);
-            Assert.Equal(RowFilters.ValueRegex("abc"), filter.Interleave.Filters[1]);
+            Assert.Equal(RowFilters.ValueExact("abc"), filter.Interleave.Filters[1]);
         }
 
         [Fact]
@@ -156,6 +176,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var filter = RowFilters.PassAllFilter();
             Assert.True(filter.PassAllFilter);
+        }
+
+        [Fact]
+        public void RowKeyExact()
+        {
+            var filter = RowFilters.RowKeyExact("a\\b\0c\t");
+            Assert.Equal(ByteString.CopyFromUtf8(@"a\\b\x00c\	"), filter.RowKeyRegexFilter);
         }
 
         [Fact]
@@ -178,7 +205,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var filter = RowFilters.StripValueTransformer();
             Assert.True(filter.StripValueTransformer);
         }
-        
+
         [Fact]
         public void TimestampRange()
         {
@@ -190,6 +217,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var endMicros = ((end.Ticks - BigtableVersion.UnixEpoch.Ticks) / 10000) * 1000;
             Assert.Equal(startMicros, filter.TimestampRangeFilter.StartTimestampMicros);
             Assert.Equal(endMicros, filter.TimestampRangeFilter.EndTimestampMicros);
+        }
+
+        [Fact]
+        public void ValueExact()
+        {
+            var filter = RowFilters.ValueExact("a\\b\0c\t");
+            Assert.Equal(ByteString.CopyFromUtf8(@"a\\b\x00c\	"), filter.ValueRegexFilter);
         }
 
         [Fact]

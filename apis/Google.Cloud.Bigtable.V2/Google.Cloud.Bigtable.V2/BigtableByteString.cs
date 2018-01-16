@@ -14,6 +14,8 @@
 
 using Google.Protobuf;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 
 namespace Google.Cloud.Bigtable.V2
@@ -21,7 +23,7 @@ namespace Google.Cloud.Bigtable.V2
     /// <summary>
     /// A sequence of bytes which can be used for a row key, column qualifier, or cell value.
     /// </summary>
-    public struct BigtableByteString : IComparable, IComparable<BigtableByteString>, IEquatable<BigtableByteString>
+    public struct BigtableByteString : IComparable, IComparable<BigtableByteString>, IEquatable<BigtableByteString>, IEnumerable<byte>, IEnumerable
     {
         private readonly ByteString _value;
 
@@ -99,6 +101,11 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc />
         public override bool Equals(object obj) => obj is BigtableByteString other && Equals(other);
+
+        IEnumerator IEnumerable.GetEnumerator() => Value.GetEnumerator();
+
+        /// <inheritdoc />
+        public IEnumerator<byte> GetEnumerator() => Value.GetEnumerator();
 
         /// <inheritdoc />
         public override int GetHashCode() => Value.GetHashCode();

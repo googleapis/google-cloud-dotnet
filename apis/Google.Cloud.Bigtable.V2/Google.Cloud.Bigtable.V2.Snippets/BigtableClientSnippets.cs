@@ -52,10 +52,10 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 "user12345",
                 // If the latest value in the "Address:Country" column is "USA"...
                 RowFilters.Chain(
-                    RowFilters.FamilyNameRegex("Address"),
-                    RowFilters.ColumnQualifierRegex("Country"),
+                    RowFilters.FamilyNameExact("Address"),
+                    RowFilters.ColumnQualifierExact("Country"),
                     RowFilters.CellsPerColumnLimit(1),
-                    RowFilters.ValueRegex("USA")),
+                    RowFilters.ValueExact("USA")),
                 // ...remove all previous Level 1 scores and set the value to 0.
                 Mutations.DeleteFromColumn("Score", "Level 1"),
                 Mutations.SetCell("Score", "Level 1", 0, new BigtableVersion(1)));
@@ -230,7 +230,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 new TableName(projectId, instanceId, tableId),
                 "user12345",
                 RowFilters.Chain(
-                    RowFilters.FamilyNameRegex("Address"),
+                    RowFilters.FamilyNameExact("Address"),
                     RowFilters.ColumnQualifierRegex(@"Line \d"),
                     RowFilters.CellsPerColumnLimit(1)),
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -294,7 +294,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
 
             // Only read cells from the "Address" column family and only take the most recent cell from each column.
             RowFilter filter = RowFilters.Chain(
-                RowFilters.FamilyNameRegex("Address"),
+                RowFilters.FamilyNameExact("Address"),
                 RowFilters.CellsPerColumnLimit(1));
 
             // Just read the first 10 rows.

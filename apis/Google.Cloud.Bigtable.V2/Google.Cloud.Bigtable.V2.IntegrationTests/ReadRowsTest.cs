@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Protobuf;
+using Google.Rpc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -167,7 +168,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.DefaultValue,
                     new BigtableVersion(2)));
 
-            var row = client.ReadRow(tableName, rowKey, RowFilters.ValueRegex(BigtableFixture.DefaultValue));
+            var row = client.ReadRow(tableName, rowKey, RowFilters.ValueExact(BigtableFixture.DefaultValue));
             Assert.Equal(rowKey.Value, row.Key);
             BigtableAssert.HasSingleValue(
                 row,
@@ -198,7 +199,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.DefaultValue,
                     new BigtableVersion(2)));
 
-            var row = await client.ReadRowAsync(tableName, rowKey, RowFilters.ValueRegex(BigtableFixture.DefaultValue));
+            var row = await client.ReadRowAsync(tableName, rowKey, RowFilters.ValueExact(BigtableFixture.DefaultValue));
             Assert.Equal(rowKey.Value, row.Key);
             BigtableAssert.HasSingleValue(
                 row,
@@ -460,6 +461,52 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
             var enumerable = response.AsAsyncEnumerable();
             Assert.Throws<InvalidOperationException>(() => enumerable.GetEnumerator());
+        }
+
+        [Fact]
+        public async Task ReadRowsRowKeyExactFilter()
+        {
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
+
+            // Reset the rows we want to target
+            var response = client.MutateRows(
+                tableName,
+                Mutations.CreateEntry(@"arow\1", Mutations.DeleteFromRow()),
+                Mutations.CreateEntry(@"row\1", Mutations.DeleteFromRow()),
+                Mutations.CreateEntry("row\0\\1", Mutations.DeleteFromRow()),
+                Mutations.CreateEntry(@"row1", Mutations.DeleteFromRow()),
+                Mutations.CreateEntry(@"row\2", Mutations.DeleteFromRow()));
+            var entries = await response.GetResponseEntries();
+            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+
+            response = client.MutateRows(
+                tableName,
+                Mutations.CreateEntry(@"row\1", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 0)),
+                Mutations.CreateEntry(@"arow\1", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 1)),
+                Mutations.CreateEntry("row\0\\1", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 2)),
+                Mutations.CreateEntry(@"row1", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 3)),
+                Mutations.CreateEntry(@"row\2", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 4)));
+            entries = await response.GetResponseEntries();
+            Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
+
+            var rowsStream = client.ReadRows(
+                tableName,
+                RowSet.FromRowRanges(RowRange.Open(null, null)),
+                RowFilters.RowKeyExact("row\0\\1"));
+
+            int rowCount = 0;
+            await rowsStream.AsAsyncEnumerable().ForEachAsync(row =>
+            {
+                rowCount++;
+                Assert.Equal("row\0\\1", row.Key.ToStringUtf8());
+                BigtableAssert.HasSingleValue(
+                    row,
+                    BigtableFixture.DefaultColumnFamily,
+                    "i",
+                    2);
+            });
+            Assert.Equal(1, rowCount);
         }
     }
 }
