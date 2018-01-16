@@ -47,6 +47,9 @@ namespace Google.Cloud.Firestore.Tests
         {
             { new Dictionary<string, object> { { "name", "Jon" }, { "score", 10 }  },
                 new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } },
+            // Use SortedDictionary to prove we accept any IDictionary<string,*>, not just Dictionary<string,*>
+            { new SortedDictionary<string, int> { { "x", 10 }, { "y", 20 }  },
+                new Dictionary<string, Value> { { "x", new Value { IntegerValue = 10 } }, { "y", new Value { IntegerValue = 20L } } } },
             { new { name = "Jon", score = 10 },
                 new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } },
             { new SerializationTestData.GameResult { Name = "Jon", Score = 10 },

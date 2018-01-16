@@ -48,7 +48,7 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public void DeserializeToDictionary()
+        public void DeserializeToObjectDictionary()
         {
             var value = new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } };
             var result = ValueDeserializer.Dictionary.Deserialize(SerializationTestData.Database, value, typeof(object));
@@ -57,6 +57,20 @@ namespace Google.Cloud.Firestore.Tests
             {
                 ["name"] = "Jon",
                 ["score"] = 10L
+            };
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void DeserializeToSpecificDictionary()
+        {
+            var value = new Value { MapValue = new MapValue { Fields = { { "x", new Value { IntegerValue = 10L } }, { "y", new Value { IntegerValue = 20L } } } } };
+            var result = ValueDeserializer.Dictionary.Deserialize(SerializationTestData.Database, value, typeof(Dictionary<string, int>));
+            Assert.IsType<Dictionary<string, int>>(result);
+            var expected = new Dictionary<string, int>
+            {
+                ["x"] = 10,
+                ["y"] = 20
             };
             Assert.Equal(expected, result);
         }
