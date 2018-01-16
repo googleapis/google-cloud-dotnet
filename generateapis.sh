@@ -5,22 +5,41 @@ set -e
 # This script generates all APIs from the googleapis/googleapis github repository,
 # using the API toolkit from googleapis/toolkit. It will fetch both repositories if
 # necessary.
-# This script can be run on Linux, or Windows from the "Linux for Windows" subsystem.
-# Prerequisites:
-# - Ubuntu 16.04 (other versions may work too)
+
+# Running on Windows
+# Most of the script can be run directly in Windows, but the codegen itself has to be
+# run via Windows Subsystem for Linux. (Unclear why as yet.)
+# Prerequisites
+# - Bash as supplied with Windows git
+# - Windows Subsystem for Linux with Ubuntu 16.04, including Java 8 (e.g. openjdk-8-jdk-headless)
 # - git
-# - Java 8 (e.g. openjdk-8-jdk-headless)
 # - wget
 # - unzip
+
+# Running on Linux
+# Prerequisites:
+# - git
+# - wget
+# - unzip
+# - Java 8 (e.g. openjdk-8-jdk-headless)
 
 # TODO: Use toolversions.sh
 # This script needs to work on Linux machines without nuget, unlike other scripts...
 GRPC_VERSION=1.7.0
 PROTOBUF_VERSION=3.4.0
-PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/protoc
-GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/grpc_csharp_plugin
 CORE_PROTOS_ROOT=packages/Google.Protobuf.Tools.$PROTOBUF_VERSION/tools
 OUTDIR=tmp
+
+if [[ "$OS" == "Windows_NT" ]]
+then
+  PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/windows_x64/protoc.exe
+  GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/windows_x64/grpc_csharp_plugin.exe
+  BASH=/c/Windows/System32/bash.exe
+else
+  PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/protoc
+  GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/grpc_csharp_plugin
+  BASH=/bin/bash
+fi
 
 # Fake nuget installation by downloading and unpacking a zip file
 nuget_install() {
@@ -54,7 +73,9 @@ install_dependencies() {
     git submodule update
     popd > /dev/null
   else
-    git clone --recursive  https://github.com/googleapis/toolkit
+    git clone --recursive https://github.com/googleapis/toolkit \
+      --config core.autocrlf=false \
+      --config core.eol=lf
   fi
           
   if [ -d "googleapis" ]
@@ -94,16 +115,14 @@ generator:
   id: csharp
 EOF
   
-  pushd toolkit > /dev/null
   args=()
-  args+=(--descriptor_set=../$OUTDIR/protos.desc)
-  args+=(--service_yaml=../$API_YAML)
-  args+=(--gapic_yaml=../$API_TMP_DIR/gapic.yaml)
-  args+=(--package_yaml=../$OUTDIR/package.yaml)
-  args+=(--output=../$API_TMP_DIR)
+  args+=(--descriptor_set=$OUTDIR/protos.desc)
+  args+=(--service_yaml=$API_YAML)
+  args+=(--gapic_yaml=$API_TMP_DIR/gapic.yaml)
+  args+=(--package_yaml=$OUTDIR/package.yaml)
+  args+=(--output=$API_TMP_DIR)
   
-  ./gradlew -q runCodeGen -Pclargs=$(IFS=','; echo "${args[*]}")
-  popd > /dev/null
+  $BASH -c "java -cp toolkit/build/libs/toolkit-${TOOLKIT_VERSION}-all.jar com.google.api.codegen.CodeGeneratorTool ${args[*]}"
   
   # We don't want to copy the snippet/prod project files,
   # but the smoke test project file is okay, as we don't
@@ -126,6 +145,11 @@ EOF
 # Entry point
 
 install_dependencies
+TOOLKIT_VERSION=$(cat toolkit/version.txt)
+
+# Build toolkit once with gradle so we can invoke it from Java directly
+# once per API.
+(cd toolkit; ./gradlew shadowJar)
 
 OUTDIR=tmp
 rm -rf $OUTDIR

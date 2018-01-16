@@ -12,14 +12,11 @@ Prerequisites:
 - A Linux environment equivalent to Ubuntu 16.04 or higher.
   The simplest way to accomplish this is usually to use the Linux
   Subsystem for Windows, as you can then use a single fork for all
-  instructions here. This environment must include:
-  - git
-  - unzip
-  - jdk8
+  instructions here. This environment must include jdk8.
 
 Note that Git for Windows includes bash, and that's what our scripts
 have all been written to use. Do not try to use the Linux subsystem
-for Windows to run the scripts *except* `generateapis.sh`
+for Windows to run the scripts.
 
 Relevant repositories:
 
@@ -79,8 +76,6 @@ Please keep the list of `generate_api` calls in alphabetical order.
 
 Step 4: Run generateapis.sh
 ---------------------------
-
-This needs to be performed in the Linux environment
 
 This will clone both the `googleapis` and `toolkit` repos as
 subdirectories, or pull them if they already exist.
