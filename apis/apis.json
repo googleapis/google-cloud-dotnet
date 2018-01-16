@@ -477,7 +477,7 @@
       "Google.Cloud.Spanner.Admin.Database.V1": "project",
       "Google.Cloud.Spanner.Admin.Instance.V1": "project",
       "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
-      "Grpc.Core": "default"
+      "Grpc.Core": "1.7.1"
     },
     "testDependencies": {
       "Microsoft.EntityFrameworkCore.Relational.Specification.Tests": "2.0.1",
