@@ -74,6 +74,11 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
+        /// Returns true if the byte string is empty, false otherwise.
+        /// </summary>
+        public bool IsEmpty => Value.IsEmpty;
+
+        /// <summary>
         /// Gets the number of bytes in the byte string.
         /// </summary>
         public int Length => Value.Length;

@@ -355,8 +355,8 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 // The OffsetBytes are non-decreasing, so their difference should always be 0 or more.
                 long offsetDifference = rowKeySample.OffsetBytes - previousRowOffsetBytes;
 
-                Console.WriteLine($"Row key: {rowKeySample.RowKey.ToStringUtf8()}, at offset ${rowKeySample.OffsetBytes}");
-                Console.WriteLine($"  Approximate bytes since previous row sample: ${offsetDifference}");
+                Console.WriteLine($"Row key: {rowKeySample.RowKey.ToStringUtf8()}, at offset {rowKeySample.OffsetBytes}");
+                Console.WriteLine($"  Approximate bytes since previous row sample: {offsetDifference}");
 
                 previousRowOffsetBytes = rowKeySample.OffsetBytes;
             }

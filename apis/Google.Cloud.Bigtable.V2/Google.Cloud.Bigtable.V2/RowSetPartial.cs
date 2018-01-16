@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Google.Cloud.Bigtable.V2
@@ -40,6 +41,16 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <returns>The created set.</returns>
         public static RowSet FromRowKeys(params BigtableByteString[] rowKeys) =>
+            FromRowKeys((IEnumerable<BigtableByteString>)rowKeys);
+
+        /// <summary>
+        /// Creates a <see cref="RowSet"/> instance from individual row keys.
+        /// </summary>
+        /// <param name="rowKeys">
+        /// The keys of single rows included in the set. Must not be null.
+        /// </param>
+        /// <returns>The created set.</returns>
+        public static RowSet FromRowKeys(IEnumerable<BigtableByteString> rowKeys) =>
             new RowSet
             {
                 RowKeys = { Utilities.ValidateCollection(rowKeys, nameof(rowKeys)).Select(k => k.Value) }
@@ -53,6 +64,16 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <returns>The created set.</returns>
         public static RowSet FromRowRanges(params RowRange[] rowRanges) =>
+            FromRowRanges((IEnumerable<RowRange>)rowRanges);
+
+        /// <summary>
+        /// Creates a <see cref="RowSet"/> instance from contiguous row ranges.
+        /// </summary>
+        /// <param name="rowRanges">
+        /// Contiguous row ranges included in the set. Must not be null or contain null entries.
+        /// </param>
+        /// <returns>The created set.</returns>
+        public static RowSet FromRowRanges(IEnumerable<RowRange> rowRanges) =>
             new RowSet
             {
                 RowRanges = { Utilities.ValidateCollection(rowRanges, nameof(rowRanges)) }
