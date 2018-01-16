@@ -35,6 +35,9 @@ namespace Google.Cloud.Firestore
     /// </summary>
     internal static class ValueSerializer
     {
+        private static readonly MethodInfo s_serializeDictionaryMethod =
+            typeof(ValueSerializer).GetTypeInfo().GetMethod(nameof(SerializeDictionary), BindingFlags.Static | BindingFlags.NonPublic);
+
         // Extension method to make the collection initializer below work
         private static void Add<T>(this Dictionary<System.Type, Func<object, Value>> dictionary, Func<T, Value> converter) =>
             dictionary.Add(typeof(T), obj => converter((T) obj));
@@ -94,11 +97,12 @@ namespace Google.Cloud.Firestore
                     return sentinel.ToProtoValue();
                 // Shortcut to avoid reflection for a common case
                 case IDictionary<string, object> map:
-                    return ExtractDictionary(map);
+                    return CreateMapValue(SerializeDictionary(map));
                 // Now all other IDictionary<string,*> types, invoking our helper with reflection.
                 case object dict when TryGetStringDictionaryValueType(value.GetType(), out var dictionaryElementType):
-                    var method = typeof(ValueSerializer).GetTypeInfo().GetMethod(nameof(ExtractDictionary), BindingFlags.Static | BindingFlags.NonPublic);
-                    return (Value) method.MakeGenericMethod(dictionaryElementType).Invoke(null, new object[] { value });
+                    var method = s_serializeDictionaryMethod.MakeGenericMethod(dictionaryElementType);
+                    var result = (Dictionary<string, Value>) method.Invoke(null, new object[] { value });
+                    return CreateMapValue(result);
                 case object anon when IsAnonymousType(anon.GetType()):
                     return CreateMapValue(ConvertAnonymousType(anon));
                 case object attributed when IsFirestoreAttributedType(attributed.GetType()):
@@ -111,8 +115,8 @@ namespace Google.Cloud.Firestore
         }
 
         // Helper method called directly and via reflection
-        private static Value ExtractDictionary<TValue>(IDictionary<string, TValue> map) =>
-            CreateMapValue(map.ToDictionary(pair => pair.Key, pair => Serialize(pair.Value)));
+        private static Dictionary<string, Value> SerializeDictionary<TValue>(IDictionary<string, TValue> map) =>
+            map.ToDictionary(pair => pair.Key, pair => Serialize(pair.Value));
 
         /// <summary>
         /// Serializes a map-based input to a dictionary of fields to values.
@@ -124,8 +128,13 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(value, nameof(value));
             switch (value)
             {
+                // Shortcut to avoid reflection for a common case
                 case IDictionary<string, object> map:
-                    return map.ToDictionary(pair => pair.Key, pair => Serialize(pair.Value));
+                    return SerializeDictionary(map);
+                // Now all other IDictionary<string,*> types, invoking our helper with reflection.
+                case object dict when TryGetStringDictionaryValueType(value.GetType(), out var dictionaryElementType):
+                    var method = s_serializeDictionaryMethod.MakeGenericMethod(dictionaryElementType);
+                    return (Dictionary<string, Value>) method.Invoke(null, new object[] { value });
                 case object anon when IsAnonymousType(anon.GetType()):
                     return ConvertAnonymousType(anon);
                 case object attributed when IsFirestoreAttributedType(attributed.GetType()):
