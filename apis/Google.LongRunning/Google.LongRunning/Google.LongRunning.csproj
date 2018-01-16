@@ -28,6 +28,7 @@
     <PackageReference Include="Google.Api.Gax.Grpc" Version="2.1.0" />
     <PackageReference Include="Google.Protobuf" Version="3.4.1" />
     <PackageReference Include="Grpc.Core" Version="1.6.1" PrivateAssets="None" />
+    <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.1.2-alpha" PrivateAssets="All" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.5.0" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
