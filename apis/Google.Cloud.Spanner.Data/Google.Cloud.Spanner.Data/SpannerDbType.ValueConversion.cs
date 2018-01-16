@@ -381,7 +381,9 @@ namespace Google.Cloud.Spanner.Data
             {
                 if (targetClrType == typeof(IDictionary))
                 {
+#pragma warning disable DE0006
                     targetClrType = typeof(Hashtable);
+#pragma warning restore DE0006
                 }
                 //a bit of recursion here...
                 IDictionary dictionary = (IDictionary)Activator.CreateInstance(targetClrType);
