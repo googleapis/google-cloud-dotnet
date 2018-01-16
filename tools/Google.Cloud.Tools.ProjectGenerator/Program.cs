@@ -72,11 +72,13 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // The relationship between this and PrivateAssets is tested on startup.
         private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
         {
+            { CompatibilityAnalyzer, "0.1.2-alpha" },
             { ConfigureAwaitAnalyzer, "1.0.0" },
             { SourceLinkPackage, "2.5.0" }
         };
 
         private const string DotnetPackInstructionsLabel = "dotnet pack instructions";
+        private const string CompatibilityAnalyzer = "Microsoft.DotNet.Analyzers.Compatibility";
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
         private const string SourceLinkPackage = "SourceLink.Create.CommandLine";
 
@@ -86,6 +88,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private static readonly Dictionary<string, string> PrivateAssets = new Dictionary<string, string>
         {
             { GrpcPackage, "None" },
+            { CompatibilityAnalyzer, "All" },
             { ConfigureAwaitAnalyzer, "All" },
             { SourceLinkPackage, "All" }
         };

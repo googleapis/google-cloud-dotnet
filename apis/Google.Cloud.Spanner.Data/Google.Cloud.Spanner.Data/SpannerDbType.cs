@@ -182,7 +182,9 @@ namespace Google.Cloud.Spanner.Data
                     case TypeCode.Array:
                         return typeof(List<>).MakeGenericType(ArrayElementType.DefaultClrType);
                     case TypeCode.Struct:
+#pragma warning disable DE0006
                         return typeof(Hashtable);
+#pragma warning restore DE0006
                     default:
                         //if we don't recognize it (or its a struct), we use the google native wellknown type.
                         return typeof(Value);
@@ -250,6 +252,7 @@ namespace Google.Cloud.Spanner.Data
             new SpannerDbType(TypeCode.Array, elementType);
 
 
+#pragma warning disable DE0006
         /// <summary>
         /// Creates a struct of the specified type.
         /// A struct has field names and field values.
@@ -262,6 +265,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="structMembers">A dictionary containing the field names and types of each member of the struct.</param>
         /// <returns></returns>
+#pragma warning restore DE0006
         public static SpannerDbType StructOf(IDictionary<string, SpannerDbType> structMembers) => new SpannerDbType(
             TypeCode.Struct, structMembers.Select(x => new Tuple<string, SpannerDbType>(x.Key, x.Value)));
 

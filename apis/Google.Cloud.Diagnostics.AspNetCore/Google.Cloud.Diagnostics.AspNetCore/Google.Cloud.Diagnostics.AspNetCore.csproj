@@ -31,6 +31,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="1.0.2" />
+    <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.1.2-alpha" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="1.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.2" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.5.0" PrivateAssets="All" />
