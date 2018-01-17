@@ -14,7 +14,7 @@ the nuget package for EntityFrameworkCore Spanner and call the "UseSpanner"
 method extension to configure your DbContext with Spanner support.
 
 # Sample code
-[!code-cs[](obj/snippets/Microsoft.EntityFrameworkCore.SpannerDbContextOptionsExtensions.txt#UseSpanner)]
+[!code-cs[](obj/snippets/Google.Cloud.EntityFrameworkCore.Spanner.SpannerDbContextOptionsExtensions.txt#UseSpanner)]
 
 # Query Limitations
 * The EFCore provider for Spanner defaults its timezone to GMT
