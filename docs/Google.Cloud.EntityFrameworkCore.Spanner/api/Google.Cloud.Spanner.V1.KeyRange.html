@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class KeyRange
+   | Google.Cloud.EntityFrameworkCore.Spanner </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class KeyRange
+   | Google.Cloud.EntityFrameworkCore.Spanner ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.V1.KeyRange">
+  
+  
+  <h1 id="Google_Cloud_Spanner_V1_KeyRange" data-uid="Google.Cloud.Spanner.V1.KeyRange" class="text-break">Class KeyRange
+  </h1>
+  <div class="markdown level0 summary"><p>KeyRange represents a range of rows in a table or index.</p>
+<p>A range has a start key and an end key. These keys can be open or
+closed, indicating if the range includes rows with that key.</p>
+<p>Keys are represented by lists, where the ith value in the list
+corresponds to the ith component of the table or index primary key.
+Individual values are encoded as described [here][google.spanner.v1.TypeCode].</p>
+<p>For example, consider the following table definition:</p>
+<p>CREATE TABLE UserEvents (
+ UserName STRING(MAX),
+ EventDate STRING(10)
+) PRIMARY KEY(UserName, EventDate);</p>
+<p>The following keys name rows in this table:</p>
+<p>[&quot;Bob&quot;, &quot;2014-09-23&quot;]
+[&quot;Alfred&quot;, &quot;2015-06-12&quot;]</p>
+<p>Since the <code>UserEvents</code> table&apos;s <code>PRIMARY KEY</code> clause names two
+columns, each <code>UserEvents</code> key has two elements; the first is the
+<code>UserName</code>, and the second is the <code>EventDate</code>.</p>
+<p>Key ranges with multiple components are interpreted
+lexicographically by component using the table or index key&apos;s declared
+sort order. For example, the following range returns all events for
+user <code>&amp;quot;Bob&amp;quot;</code> that occurred in the year 2015:</p>
+<p>&quot;start_closed&quot;: [&quot;Bob&quot;, &quot;2015-01-01&quot;]
+&quot;end_closed&quot;: [&quot;Bob&quot;, &quot;2015-12-31&quot;]</p>
+<p>Start and end keys can omit trailing key components. This affects the
+inclusion and exclusion of rows that exactly match the provided key
+components: if the key is closed, then rows that exactly match the
+provided components are included; if the key is open, then rows
+that exactly match are not included.</p>
+<p>For example, the following range includes all events for <code>&amp;quot;Bob&amp;quot;</code> that
+occurred during and after the year 2000:</p>
+<p>&quot;start_closed&quot;: [&quot;Bob&quot;, &quot;2000-01-01&quot;]
+&quot;end_closed&quot;: [&quot;Bob&quot;]</p>
+<p>The next example retrieves all events for <code>&amp;quot;Bob&amp;quot;</code>:</p>
+<p>&quot;start_closed&quot;: [&quot;Bob&quot;]
+&quot;end_closed&quot;: [&quot;Bob&quot;]</p>
+<p>To retrieve events before the year 2000:</p>
+<p>&quot;start_closed&quot;: [&quot;Bob&quot;]
+&quot;end_open&quot;: [&quot;Bob&quot;, &quot;2000-01-01&quot;]</p>
+<p>The following range includes all rows in the table:</p>
+<p>&quot;start_closed&quot;: []
+&quot;end_closed&quot;: []</p>
+<p>This range returns all users whose <code>UserName</code> begins with any
+character from A to C:</p>
+<p>&quot;start_closed&quot;: [&quot;A&quot;]
+&quot;end_open&quot;: [&quot;D&quot;]</p>
+<p>This range returns all users whose <code>UserName</code> begins with B:</p>
+<p>&quot;start_closed&quot;: [&quot;B&quot;]
+&quot;end_open&quot;: [&quot;C&quot;]</p>
+<p>Key ranges honor column sort order. For example, suppose a table is
+defined as follows:</p>
+<p>CREATE TABLE DescendingSortedTable {
+ Key INT64,
+ ...
+) PRIMARY KEY(Key DESC);</p>
+<p>The following range retrieves all rows with key values between 1
+and 100 inclusive:</p>
+<p>&quot;start_closed&quot;: [&quot;100&quot;]
+&quot;end_closed&quot;: [&quot;1&quot;]</p>
+<p>Note that 100 is passed as the start, and 1 is passed as the end,
+because <code>Key</code> is a descending column in the schema.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">KeyRange</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Protobuf.IMessage</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.KeyRange.html">KeyRange</a>&gt;</div>
+    <div><span class="xref">Google.Protobuf.IMessage</span></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.KeyRange.html">KeyRange</a>&gt;</div>
+    <div><span class="xref">Google.Protobuf.IDeepCloneable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.KeyRange.html">KeyRange</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.V1.html">Google.Cloud.Spanner.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.V1.dll</h6>
+  <h5 id="Google_Cloud_Spanner_V1_KeyRange_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class KeyRange : IMessage&lt;KeyRange&gt;, IMessage, IEquatable&lt;KeyRange&gt;, IDeepCloneable&lt;KeyRange&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Spanner_V1_KeyRange_EndClosed_" data-uid="Google.Cloud.Spanner.V1.KeyRange.EndClosed*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_KeyRange_EndClosed" data-uid="Google.Cloud.Spanner.V1.KeyRange.EndClosed">EndClosed</h4>
+  <div class="markdown level1 summary"><p>If the end is closed, then the range includes all rows whose
+first <code>len(end_closed)</code> key columns exactly match <code>end_closed</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ListValue EndClosed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.ListValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_KeyRange_EndKeyTypeCase_" data-uid="Google.Cloud.Spanner.V1.KeyRange.EndKeyTypeCase*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_KeyRange_EndKeyTypeCase" data-uid="Google.Cloud.Spanner.V1.KeyRange.EndKeyTypeCase">EndKeyTypeCase</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyRange.EndKeyTypeOneofCase EndKeyTypeCase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.KeyRange.EndKeyTypeOneofCase.html">KeyRange.EndKeyTypeOneofCase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_KeyRange_EndOpen_" data-uid="Google.Cloud.Spanner.V1.KeyRange.EndOpen*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_KeyRange_EndOpen" data-uid="Google.Cloud.Spanner.V1.KeyRange.EndOpen">EndOpen</h4>
+  <div class="markdown level1 summary"><p>If the end is open, then the range excludes rows whose first
+<code>len(end_open)</code> key columns exactly match <code>end_open</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ListValue EndOpen { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.ListValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_KeyRange_StartClosed_" data-uid="Google.Cloud.Spanner.V1.KeyRange.StartClosed*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_KeyRange_StartClosed" data-uid="Google.Cloud.Spanner.V1.KeyRange.StartClosed">StartClosed</h4>
+  <div class="markdown level1 summary"><p>If the start is closed, then the range includes all rows whose
+first <code>len(start_closed)</code> key columns exactly match <code>start_closed</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ListValue StartClosed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.ListValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_KeyRange_StartKeyTypeCase_" data-uid="Google.Cloud.Spanner.V1.KeyRange.StartKeyTypeCase*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_KeyRange_StartKeyTypeCase" data-uid="Google.Cloud.Spanner.V1.KeyRange.StartKeyTypeCase">StartKeyTypeCase</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyRange.StartKeyTypeOneofCase StartKeyTypeCase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.KeyRange.StartKeyTypeOneofCase.html">KeyRange.StartKeyTypeOneofCase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_KeyRange_StartOpen_" data-uid="Google.Cloud.Spanner.V1.KeyRange.StartOpen*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_KeyRange_StartOpen" data-uid="Google.Cloud.Spanner.V1.KeyRange.StartOpen">StartOpen</h4>
+  <div class="markdown level1 summary"><p>If the start is open, then the range excludes rows whose first
+<code>len(start_open)</code> key columns exactly match <code>start_open</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ListValue StartOpen { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.ListValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

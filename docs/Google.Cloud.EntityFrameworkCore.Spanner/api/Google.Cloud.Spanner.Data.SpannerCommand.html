@@ -1,0 +1,1220 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SpannerCommand
+   | Google.Cloud.EntityFrameworkCore.Spanner </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SpannerCommand
+   | Google.Cloud.EntityFrameworkCore.Spanner ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.Data.SpannerCommand">
+  
+  
+  <h1 id="Google_Cloud_Spanner_Data_SpannerCommand" data-uid="Google.Cloud.Spanner.Data.SpannerCommand" class="text-break">Class SpannerCommand
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a SQL query or command to execute against
+a Spanner database.
+If the command is a SQL query, then <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_CommandText">CommandText</a>
+contains the entire SQL statement. Use <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync">ExecuteReaderAsync()</a>  to obtain results.</p>
+<p>If the command is an update, insert or delete command, then <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_CommandText">CommandText</a>
+is simply &quot;[operation] [spanner_table]&quot; such as &quot;UPDATE MYTABLE&quot; with the parameter
+collection containing <a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a> instances whose name matches a column
+in the target table. Use <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteNonQueryAsync_System_Threading_CancellationToken_">ExecuteNonQueryAsync(CancellationToken)</a> to execute the command.</p>
+<p>The command may also be a DDL statement such as CREATE TABLE. Use <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteNonQueryAsync_System_Threading_CancellationToken_">ExecuteNonQueryAsync(CancellationToken)</a>
+to execute a DDL statement.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.ComponentModel.Component</span></div>
+    <div class="level3"><span class="xref">System.Data.Common.DbCommand</span></div>
+    <div class="level4"><span class="xref">SpannerCommand</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.IComponent</span></div>
+    <div><span class="xref">System.Data.IDbCommand</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">System.ICloneable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.CreateParameter()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.System.Data.IDbCommand.CreateParameter()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.ExecuteReader()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.ExecuteReader(System.Data.CommandBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.ExecuteNonQueryAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.ExecuteScalarAsync()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.Connection</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.System.Data.IDbCommand.Connection</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.System.Data.IDbCommand.Parameters</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.Transaction</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbCommand.System.Data.IDbCommand.Transaction</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.GetService(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.CanRaiseEvents</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Events</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Site</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Container</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.DesignMode</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Disposed</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.CreateObjRef(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Data.html">Google.Cloud.Spanner.Data</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Data.dll</h6>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerCommand_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SpannerCommand : DbCommand, IComponent, IDbCommand, IDisposable, ICloneable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand__ctor_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.#ctor*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand__ctor" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.#ctor">SpannerCommand()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerCommand()</code></pre>
+  </div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand__ctor_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.#ctor*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand__ctor_Google_Cloud_Spanner_Data_SpannerCommandTextBuilder_Google_Cloud_Spanner_Data_SpannerConnection_Google_Cloud_Spanner_Data_SpannerTransaction_Google_Cloud_Spanner_Data_SpannerParameterCollection_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.#ctor(Google.Cloud.Spanner.Data.SpannerCommandTextBuilder,Google.Cloud.Spanner.Data.SpannerConnection,Google.Cloud.Spanner.Data.SpannerTransaction,Google.Cloud.Spanner.Data.SpannerParameterCollection)">SpannerCommand(SpannerCommandTextBuilder, SpannerConnection, SpannerTransaction, SpannerParameterCollection)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerCommand(SpannerCommandTextBuilder commandTextBuilder, SpannerConnection connection, SpannerTransaction transaction = null, SpannerParameterCollection parameters = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.html">SpannerCommandTextBuilder</a></td>
+        <td><span class="parametername">commandTextBuilder</span></td>
+        <td><p>The <span class="xref">Google.Cloud.Spanner.Data.SpannerCommand.SpannerCommandTextBuilder</span>
+that configures the text of this command. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnection.html">SpannerConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>The <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_SpannerConnection">SpannerConnection</a> that is
+associated with this <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a>. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerTransaction.html">SpannerTransaction</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td><p>An optional <a class="xref" href="Google.Cloud.Spanner.Data.SpannerTransaction.html">SpannerTransaction</a>
+created through <see>
+<cref>SpannerConnection.BeginTransactionAsync</cref>
+</see></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameterCollection.html">SpannerParameterCollection</a></td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p>An optional collection of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a>
+that is used in the command. May be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand__ctor_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.#ctor*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand__ctor_System_String_Google_Cloud_Spanner_Data_SpannerConnection_Google_Cloud_Spanner_Data_SpannerTransaction_Google_Cloud_Spanner_Data_SpannerParameterCollection_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.#ctor(System.String,Google.Cloud.Spanner.Data.SpannerConnection,Google.Cloud.Spanner.Data.SpannerTransaction,Google.Cloud.Spanner.Data.SpannerParameterCollection)">SpannerCommand(String, SpannerConnection, SpannerTransaction, SpannerParameterCollection)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerCommand(string commandText, SpannerConnection connection, SpannerTransaction transaction = null, SpannerParameterCollection parameters = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">commandText</span></td>
+        <td><p>If this command is a SQL Query, then commandText is
+the SQL statement. If its an update, insert or delete command, then this text
+is &quot;[operation] [table]&quot; such as &quot;UPDATE MYTABLE&quot;</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnection.html">SpannerConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>The <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_SpannerConnection">SpannerConnection</a> that is
+associated with this <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a>. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerTransaction.html">SpannerTransaction</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td><p>An optional <a class="xref" href="Google.Cloud.Spanner.Data.SpannerTransaction.html">SpannerTransaction</a>
+created through <see>
+<cref>SpannerConnection.BeginTransactionAsync</cref></see>. May be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameterCollection.html">SpannerParameterCollection</a></td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p>An optional collection of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a>
+that is used in the command. May be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_CommandText_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.CommandText*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_CommandText" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.CommandText">CommandText</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string CommandText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.CommandText</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_CommandTimeout_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.CommandTimeout*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_CommandTimeout" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.CommandTimeout">CommandTimeout</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the wait time before terminating the attempt to execute a command and generating an error.
+Defaults to <a class="xref" href="Google.Cloud.Spanner.Data.SpannerOptions.html#Google_Cloud_Spanner_Data_SpannerOptions_Timeout">Timeout</a> which is 60 seconds.
+A value of &apos;0&apos; normally indicates that no timeout should be used (it waits an infinite amount of time).
+However, if you specify AllowImmediateTimeouts=true in the connection string, &apos;0&apos; will cause a timeout
+that expires immediately. This is normally used only for testing purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int CommandTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.CommandTimeout</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_CommandType_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.CommandType*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_CommandType" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.CommandType">CommandType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override CommandType CommandType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.CommandType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.CommandType</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_DbConnection_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.DbConnection*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_DbConnection" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.DbConnection">DbConnection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbConnection DbConnection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbConnection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.DbConnection</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_DbParameterCollection_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.DbParameterCollection*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_DbParameterCollection" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.DbParameterCollection">DbParameterCollection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbParameterCollection DbParameterCollection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbParameterCollection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.DbParameterCollection</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_DbTransaction_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.DbTransaction*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_DbTransaction" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.DbTransaction">DbTransaction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbTransaction DbTransaction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbTransaction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.DbTransaction</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_DesignTimeVisible_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.DesignTimeVisible*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_DesignTimeVisible" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.DesignTimeVisible">DesignTimeVisible</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool DesignTimeVisible { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.DesignTimeVisible</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_Logger_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Logger*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_Logger" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Logger">Logger</h4>
+  <div class="markdown level1 summary"><p>This property is for internal use only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Logger Logger { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.Internal.Logging.Logger.html">Logger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_Parameters_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Parameters*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_Parameters" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Parameters">Parameters</h4>
+  <div class="markdown level1 summary"><p>The parameters of the SQL statement or command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerParameterCollection Parameters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameterCollection.html">SpannerParameterCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_SpannerConnection_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.SpannerConnection*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_SpannerConnection" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.SpannerConnection">SpannerConnection</h4>
+  <div class="markdown level1 summary"><p>The connection to the data source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerConnection SpannerConnection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnection.html">SpannerConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_UpdatedRowSource_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.UpdatedRowSource*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_UpdatedRowSource" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.UpdatedRowSource">UpdatedRowSource</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UpdateRowSource UpdatedRowSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.UpdateRowSource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.UpdatedRowSource</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_Cancel_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Cancel*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_Cancel" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Cancel">Cancel()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Cancel()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.Cancel()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_Clone_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Clone*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_Clone" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Returns a copy of this <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>a copy of this <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.ICloneable.Clone()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_CreateDbParameter_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.CreateDbParameter*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_CreateDbParameter" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.CreateDbParameter">CreateDbParameter()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbParameter CreateDbParameter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbParameter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.CreateDbParameter()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_Dispose_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Dispose*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_Dispose_System_Boolean_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ComponentModel.Component.Dispose(System.Boolean)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteDbDataReader_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteDbDataReader*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteDbDataReader_System_Data_CommandBehavior_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteDbDataReader(System.Data.CommandBehavior)">ExecuteDbDataReader(CommandBehavior)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbDataReader ExecuteDbDataReader(CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbDataReader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.ExecuteDbDataReader(System.Data.CommandBehavior)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteDbDataReaderAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteDbDataReaderAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteDbDataReaderAsync_System_Data_CommandBehavior_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteDbDataReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)">ExecuteDbDataReaderAsync(CommandBehavior, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task&lt;DbDataReader&gt; ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Data.Common.DbDataReader</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(System.Data.CommandBehavior, System.Threading.CancellationToken)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteNonQuery_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteNonQuery*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteNonQuery" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteNonQuery">ExecuteNonQuery()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int ExecuteNonQuery()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.ExecuteNonQuery()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteNonQueryAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteNonQueryAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteNonQueryAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteNonQueryAsync(System.Threading.CancellationToken)">ExecuteNonQueryAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;int&gt; ExecuteNonQueryAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.ExecuteNonQueryAsync(System.Threading.CancellationToken)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync">ExecuteReaderAsync()</h4>
+  <div class="markdown level1 summary"><p>Sends the command to Cloud Spanner and builds a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;SpannerDataReader&gt; ExecuteReaderAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>&gt;</td>
+        <td><p>An asynchronous <span class="xref">System.Threading.Tasks.Task</span> that produces a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_Google_Cloud_Spanner_Data_TimestampBound_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(Google.Cloud.Spanner.Data.TimestampBound,System.Threading.CancellationToken)">ExecuteReaderAsync(TimestampBound, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Executes the command against the <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_SpannerConnection">SpannerConnection</a>.
+This method is thread safe.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DbDataReader&gt; ExecuteReaderAsync(TimestampBound singleUseReadSettings, CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a></td>
+        <td><span class="parametername">singleUseReadSettings</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Data.Common.DbDataReader</span>&gt;</td>
+        <td><p>a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_System_Data_CommandBehavior_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Data.CommandBehavior)">ExecuteReaderAsync(CommandBehavior)</h4>
+  <div class="markdown level1 summary"><p>Sends the command to Cloud Spanner and builds a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;SpannerDataReader&gt; ExecuteReaderAsync(CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>Options for statement execution and data retrieval.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>&gt;</td>
+        <td><p>An asynchronous <span class="xref">System.Threading.Tasks.Task</span> that produces a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_System_Data_CommandBehavior_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)">ExecuteReaderAsync(CommandBehavior, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sends the command to Cloud Spanner and builds a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;SpannerDataReader&gt; ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>Options for statement execution and data retrieval.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>&gt;</td>
+        <td><p>An asynchronous <span class="xref">System.Threading.Tasks.Task</span> that produces a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Threading.CancellationToken)">ExecuteReaderAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sends the command to Cloud Spanner and builds a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;SpannerDataReader&gt; ExecuteReaderAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>&gt;</td>
+        <td><p>An asynchronous <span class="xref">System.Threading.Tasks.Task</span> that produces a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteScalar_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteScalar*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteScalar" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteScalar">ExecuteScalar()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object ExecuteScalar()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.ExecuteScalar()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteScalarAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteScalarAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteScalarAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteScalarAsync(System.Threading.CancellationToken)">ExecuteScalarAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;object&gt; ExecuteScalarAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.ExecuteScalarAsync(System.Threading.CancellationToken)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteScalarAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteScalarAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_ExecuteScalarAsync__1_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.ExecuteScalarAsync``1(System.Threading.CancellationToken)">ExecuteScalarAsync&lt;T&gt;(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Executes the query and returns the first column of the first row in the result set returned by the query.
+All other columns and rows are ignored. The return value is converted to type T if possible.
+This method is thread safe.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;T&gt; ExecuteScalarAsync&lt;T&gt;(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><p>The first column of the first row resulting from execution of the query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The expected return type. If possible the return type will be converted to this type.
+If conversion is requested between incompatible types, an <span class="xref">System.InvalidOperationException</span>
+will be thrown.
+If the conversion fails due to the contents returned (for example a string representing a
+boolean does not have either &apos;true&apos; or &apos;false&apos;) then a <span class="xref">System.FormatException</span> exception will be
+thrown as documented by the <span class="xref">System.Convert</span> class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerCommand_Prepare_" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Prepare*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerCommand_Prepare" data-uid="Google.Cloud.Spanner.Data.SpannerCommand.Prepare">Prepare()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Prepare()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbCommand.Prepare()</span></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

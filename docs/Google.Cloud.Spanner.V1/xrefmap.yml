@@ -16245,6 +16245,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.CreateSessionRequest.DatabaseAsDatabaseName
   fullName: Google.Cloud.Spanner.V1.CreateSessionRequest.DatabaseAsDatabaseName
   nameWithType: CreateSessionRequest.DatabaseAsDatabaseName
+- uid: Google.Cloud.Spanner.V1.CreateSessionRequest.Session
+  name: Session
+  href: api/Google.Cloud.Spanner.V1.CreateSessionRequest.html#Google_Cloud_Spanner_V1_CreateSessionRequest_Session
+  commentId: P:Google.Cloud.Spanner.V1.CreateSessionRequest.Session
+  fullName: Google.Cloud.Spanner.V1.CreateSessionRequest.Session
+  nameWithType: CreateSessionRequest.Session
+- uid: Google.Cloud.Spanner.V1.CreateSessionRequest.Session*
+  name: Session
+  href: api/Google.Cloud.Spanner.V1.CreateSessionRequest.html#Google_Cloud_Spanner_V1_CreateSessionRequest_Session_
+  commentId: Overload:Google.Cloud.Spanner.V1.CreateSessionRequest.Session
+  fullName: Google.Cloud.Spanner.V1.CreateSessionRequest.Session
+  nameWithType: CreateSessionRequest.Session
 - uid: Google.Cloud.Spanner.V1.DatabaseName
   name: DatabaseName
   href: api/Google.Cloud.Spanner.V1.DatabaseName.html
@@ -16649,6 +16661,24 @@ references:
   commentId: N:Google.Cloud.Spanner.V1.Internal.Logging
   fullName: Google.Cloud.Spanner.V1.Internal.Logging
   nameWithType: Google.Cloud.Spanner.V1.Internal.Logging
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger
+  name: DefaultLogger
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.html
+  commentId: T:Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger
+  nameWithType: DefaultLogger
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.WriteLine(System.String)
+  name: WriteLine(String)
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.html#Google_Cloud_Spanner_V1_Internal_Logging_DefaultLogger_WriteLine_System_String_
+  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.WriteLine(System.String)
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.WriteLine(System.String)
+  nameWithType: DefaultLogger.WriteLine(String)
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.WriteLine*
+  name: WriteLine
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.html#Google_Cloud_Spanner_V1_Internal_Logging_DefaultLogger_WriteLine_
+  commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.WriteLine
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.DefaultLogger.WriteLine
+  nameWithType: DefaultLogger.WriteLine
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger
   name: Logger
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html
@@ -16664,18 +16694,36 @@ references:
   fullName.vb: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug(System.Func(Of System.String))
   nameWithType: Logger.Debug(Func<String>)
   nameWithType.vb: Logger.Debug(Func(Of String))
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug(System.String)
-  name: Debug(String)
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Debug_System_String_
-  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug(System.String)
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug(System.String)
-  nameWithType: Logger.Debug(String)
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug*
   name: Debug
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Debug_
   commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug
   fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Debug
   nameWithType: Logger.Debug
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.DefaultLogger
+  name: DefaultLogger
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_DefaultLogger
+  commentId: P:Google.Cloud.Spanner.V1.Internal.Logging.Logger.DefaultLogger
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.DefaultLogger
+  nameWithType: Logger.DefaultLogger
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.DefaultLogger*
+  name: DefaultLogger
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_DefaultLogger_
+  commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.DefaultLogger
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.DefaultLogger
+  nameWithType: Logger.DefaultLogger
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.EnableSensitiveDataLogging
+  name: EnableSensitiveDataLogging
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_EnableSensitiveDataLogging
+  commentId: P:Google.Cloud.Spanner.V1.Internal.Logging.Logger.EnableSensitiveDataLogging
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.EnableSensitiveDataLogging
+  nameWithType: Logger.EnableSensitiveDataLogging
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.EnableSensitiveDataLogging*
+  name: EnableSensitiveDataLogging
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_EnableSensitiveDataLogging_
+  commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.EnableSensitiveDataLogging
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.EnableSensitiveDataLogging
+  nameWithType: Logger.EnableSensitiveDataLogging
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Error(System.Func{System.String},System.Exception)
   name: Error(Func<String>, Exception)
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Error_System_Func_System_String__System_Exception_
@@ -16685,12 +16733,6 @@ references:
   fullName.vb: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Error(System.Func(Of System.String), System.Exception)
   nameWithType: Logger.Error(Func<String>, Exception)
   nameWithType.vb: Logger.Error(Func(Of String), Exception)
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Error(System.String,System.Exception)
-  name: Error(String, Exception)
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Error_System_String_System_Exception_
-  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Error(System.String,System.Exception)
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Error(System.String, System.Exception)
-  nameWithType: Logger.Error(String, Exception)
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Error*
   name: Error
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Error_
@@ -16706,30 +16748,12 @@ references:
   fullName.vb: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info(System.Func(Of System.String))
   nameWithType: Logger.Info(Func<String>)
   nameWithType.vb: Logger.Info(Func(Of String))
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info(System.String)
-  name: Info(String)
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Info_System_String_
-  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info(System.String)
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info(System.String)
-  nameWithType: Logger.Info(String)
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info*
   name: Info
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Info_
   commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info
   fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Info
   nameWithType: Logger.Info
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Instance
-  name: Instance
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Instance
-  commentId: P:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Instance
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Instance
-  nameWithType: Logger.Instance
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Instance*
-  name: Instance
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Instance_
-  commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Instance
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Instance
-  nameWithType: Logger.Instance
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogLevel
   name: LogLevel
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogLevel
@@ -16742,15 +16766,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogLevel
   fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogLevel
   nameWithType: Logger.LogLevel
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounter(System.String,System.Func{System.Double,System.Double})
-  name: LogPerformanceCounter(String, Func<Double, Double>)
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceCounter_System_String_System_Func_System_Double_System_Double__
-  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounter(System.String,System.Func{System.Double,System.Double})
-  name.vb: LogPerformanceCounter(String, Func(Of Double, Double))
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounter(System.String, System.Func<System.Double, System.Double>)
-  fullName.vb: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounter(System.String, System.Func(Of System.Double, System.Double))
-  nameWithType: Logger.LogPerformanceCounter(String, Func<Double, Double>)
-  nameWithType.vb: Logger.LogPerformanceCounter(String, Func(Of Double, Double))
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceCounter(System.String,System.Func{System.Double})
   name: LogPerformanceCounter(String, Func<Double>)
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceCounter_System_String_System_Func_System_Double__
@@ -16793,18 +16808,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceData
   fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceData
   nameWithType: Logger.LogPerformanceData
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceDataImpl
-  name: LogPerformanceDataImpl()
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceDataImpl
-  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceDataImpl
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceDataImpl()
-  nameWithType: Logger.LogPerformanceDataImpl()
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceDataImpl*
-  name: LogPerformanceDataImpl
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceDataImpl_
-  commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceDataImpl
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceDataImpl
-  nameWithType: Logger.LogPerformanceDataImpl
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceMessage(System.String)
+  name: LogPerformanceMessage(String)
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceMessage_System_String_
+  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceMessage(System.String)
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceMessage(System.String)
+  nameWithType: Logger.LogPerformanceMessage(String)
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceMessage*
+  name: LogPerformanceMessage
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceMessage_
+  commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceMessage
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceMessage
+  nameWithType: Logger.LogPerformanceMessage
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogPerformanceTraces
   name: LogPerformanceTraces
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_LogPerformanceTraces
@@ -16841,18 +16856,33 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.ResetPerformanceTracesEachInterval
   fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.ResetPerformanceTracesEachInterval
   nameWithType: Logger.ResetPerformanceTracesEachInterval
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetLogger(Google.Cloud.Spanner.V1.Internal.Logging.Logger)
-  name: SetLogger(Logger)
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_SetLogger_Google_Cloud_Spanner_V1_Internal_Logging_Logger_
-  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetLogger(Google.Cloud.Spanner.V1.Internal.Logging.Logger)
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetLogger(Google.Cloud.Spanner.V1.Internal.Logging.Logger)
-  nameWithType: Logger.SetLogger(Logger)
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetLogger*
-  name: SetLogger
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_SetLogger_
-  commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetLogger
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetLogger
-  nameWithType: Logger.SetLogger
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Sensitive_Info(System.Func{System.String})
+  name: Sensitive_Info(Func<String>)
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Sensitive_Info_System_Func_System_String__
+  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Sensitive_Info(System.Func{System.String})
+  name.vb: Sensitive_Info(Func(Of String))
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Sensitive_Info(System.Func<System.String>)
+  fullName.vb: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Sensitive_Info(System.Func(Of System.String))
+  nameWithType: Logger.Sensitive_Info(Func<String>)
+  nameWithType.vb: Logger.Sensitive_Info(Func(Of String))
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Sensitive_Info*
+  name: Sensitive_Info
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Sensitive_Info_
+  commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Sensitive_Info
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Sensitive_Info
+  nameWithType: Logger.Sensitive_Info
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetDefaultLogger(Google.Cloud.Spanner.V1.Internal.Logging.Logger)
+  name: SetDefaultLogger(Logger)
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_SetDefaultLogger_Google_Cloud_Spanner_V1_Internal_Logging_Logger_
+  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetDefaultLogger(Google.Cloud.Spanner.V1.Internal.Logging.Logger)
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetDefaultLogger(Google.Cloud.Spanner.V1.Internal.Logging.Logger)
+  nameWithType: Logger.SetDefaultLogger(Logger)
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetDefaultLogger*
+  name: SetDefaultLogger
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_SetDefaultLogger_
+  commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetDefaultLogger
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.SetDefaultLogger
+  nameWithType: Logger.SetDefaultLogger
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn(System.Func{System.String})
   name: Warn(Func<String>)
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Warn_System_Func_System_String__
@@ -16862,18 +16892,24 @@ references:
   fullName.vb: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn(System.Func(Of System.String))
   nameWithType: Logger.Warn(Func<String>)
   nameWithType.vb: Logger.Warn(Func(Of String))
-- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn(System.String)
-  name: Warn(String)
-  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Warn_System_String_
-  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn(System.String)
-  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn(System.String)
-  nameWithType: Logger.Warn(String)
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn*
   name: Warn
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_Warn_
   commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn
   fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.Warn
   nameWithType: Logger.Warn
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.WriteLine(System.String)
+  name: WriteLine(String)
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_WriteLine_System_String_
+  commentId: M:Google.Cloud.Spanner.V1.Internal.Logging.Logger.WriteLine(System.String)
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.WriteLine(System.String)
+  nameWithType: Logger.WriteLine(String)
+- uid: Google.Cloud.Spanner.V1.Internal.Logging.Logger.WriteLine*
+  name: WriteLine
+  href: api/Google.Cloud.Spanner.V1.Internal.Logging.Logger.html#Google_Cloud_Spanner_V1_Internal_Logging_Logger_WriteLine_
+  commentId: Overload:Google.Cloud.Spanner.V1.Internal.Logging.Logger.WriteLine
+  fullName: Google.Cloud.Spanner.V1.Internal.Logging.Logger.WriteLine
+  nameWithType: Logger.WriteLine
 - uid: Google.Cloud.Spanner.V1.Internal.Logging.LogLevel
   name: LogLevel
   href: api/Google.Cloud.Spanner.V1.Internal.Logging.LogLevel.html
@@ -17200,6 +17236,118 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.KeySet.Ranges
   fullName: Google.Cloud.Spanner.V1.KeySet.Ranges
   nameWithType: KeySet.Ranges
+- uid: Google.Cloud.Spanner.V1.ListSessionsRequest
+  name: ListSessionsRequest
+  href: api/Google.Cloud.Spanner.V1.ListSessionsRequest.html
+  commentId: T:Google.Cloud.Spanner.V1.ListSessionsRequest
+  fullName: Google.Cloud.Spanner.V1.ListSessionsRequest
+  nameWithType: ListSessionsRequest
+- uid: Google.Cloud.Spanner.V1.ListSessionsRequest.Database
+  name: Database
+  href: api/Google.Cloud.Spanner.V1.ListSessionsRequest.html#Google_Cloud_Spanner_V1_ListSessionsRequest_Database
+  commentId: P:Google.Cloud.Spanner.V1.ListSessionsRequest.Database
+  fullName: Google.Cloud.Spanner.V1.ListSessionsRequest.Database
+  nameWithType: ListSessionsRequest.Database
+- uid: Google.Cloud.Spanner.V1.ListSessionsRequest.Database*
+  name: Database
+  href: api/Google.Cloud.Spanner.V1.ListSessionsRequest.html#Google_Cloud_Spanner_V1_ListSessionsRequest_Database_
+  commentId: Overload:Google.Cloud.Spanner.V1.ListSessionsRequest.Database
+  fullName: Google.Cloud.Spanner.V1.ListSessionsRequest.Database
+  nameWithType: ListSessionsRequest.Database
+- uid: Google.Cloud.Spanner.V1.ListSessionsRequest.Filter
+  name: Filter
+  href: api/Google.Cloud.Spanner.V1.ListSessionsRequest.html#Google_Cloud_Spanner_V1_ListSessionsRequest_Filter
+  commentId: P:Google.Cloud.Spanner.V1.ListSessionsRequest.Filter
+  fullName: Google.Cloud.Spanner.V1.ListSessionsRequest.Filter
+  nameWithType: ListSessionsRequest.Filter
+- uid: Google.Cloud.Spanner.V1.ListSessionsRequest.Filter*
+  name: Filter
+  href: api/Google.Cloud.Spanner.V1.ListSessionsRequest.html#Google_Cloud_Spanner_V1_ListSessionsRequest_Filter_
+  commentId: Overload:Google.Cloud.Spanner.V1.ListSessionsRequest.Filter
+  fullName: Google.Cloud.Spanner.V1.ListSessionsRequest.Filter
+  nameWithType: ListSessionsRequest.Filter
+- uid: Google.Cloud.Spanner.V1.ListSessionsRequest.PageSize
+  name: PageSize
+  href: api/Google.Cloud.Spanner.V1.ListSessionsRequest.html#Google_Cloud_Spanner_V1_ListSessionsRequest_PageSize
+  commentId: P:Google.Cloud.Spanner.V1.ListSessionsRequest.PageSize
+  fullName: Google.Cloud.Spanner.V1.ListSessionsRequest.PageSize
+  nameWithType: ListSessionsRequest.PageSize
+- uid: Google.Cloud.Spanner.V1.ListSessionsRequest.PageSize*
+  name: PageSize
+  href: api/Google.Cloud.Spanner.V1.ListSessionsRequest.html#Google_Cloud_Spanner_V1_ListSessionsRequest_PageSize_
+  commentId: Overload:Google.Cloud.Spanner.V1.ListSessionsRequest.PageSize
+  fullName: Google.Cloud.Spanner.V1.ListSessionsRequest.PageSize
+  nameWithType: ListSessionsRequest.PageSize
+- uid: Google.Cloud.Spanner.V1.ListSessionsRequest.PageToken
+  name: PageToken
+  href: api/Google.Cloud.Spanner.V1.ListSessionsRequest.html#Google_Cloud_Spanner_V1_ListSessionsRequest_PageToken
+  commentId: P:Google.Cloud.Spanner.V1.ListSessionsRequest.PageToken
+  fullName: Google.Cloud.Spanner.V1.ListSessionsRequest.PageToken
+  nameWithType: ListSessionsRequest.PageToken
+- uid: Google.Cloud.Spanner.V1.ListSessionsRequest.PageToken*
+  name: PageToken
+  href: api/Google.Cloud.Spanner.V1.ListSessionsRequest.html#Google_Cloud_Spanner_V1_ListSessionsRequest_PageToken_
+  commentId: Overload:Google.Cloud.Spanner.V1.ListSessionsRequest.PageToken
+  fullName: Google.Cloud.Spanner.V1.ListSessionsRequest.PageToken
+  nameWithType: ListSessionsRequest.PageToken
+- uid: Google.Cloud.Spanner.V1.ListSessionsResponse
+  name: ListSessionsResponse
+  href: api/Google.Cloud.Spanner.V1.ListSessionsResponse.html
+  commentId: T:Google.Cloud.Spanner.V1.ListSessionsResponse
+  fullName: Google.Cloud.Spanner.V1.ListSessionsResponse
+  nameWithType: ListSessionsResponse
+- uid: Google.Cloud.Spanner.V1.ListSessionsResponse.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Cloud.Spanner.V1.ListSessionsResponse.html#Google_Cloud_Spanner_V1_ListSessionsResponse_GetEnumerator
+  commentId: M:Google.Cloud.Spanner.V1.ListSessionsResponse.GetEnumerator
+  fullName: Google.Cloud.Spanner.V1.ListSessionsResponse.GetEnumerator()
+  nameWithType: ListSessionsResponse.GetEnumerator()
+- uid: Google.Cloud.Spanner.V1.ListSessionsResponse.GetEnumerator*
+  name: GetEnumerator
+  href: api/Google.Cloud.Spanner.V1.ListSessionsResponse.html#Google_Cloud_Spanner_V1_ListSessionsResponse_GetEnumerator_
+  commentId: Overload:Google.Cloud.Spanner.V1.ListSessionsResponse.GetEnumerator
+  fullName: Google.Cloud.Spanner.V1.ListSessionsResponse.GetEnumerator
+  nameWithType: ListSessionsResponse.GetEnumerator
+- uid: Google.Cloud.Spanner.V1.ListSessionsResponse.NextPageToken
+  name: NextPageToken
+  href: api/Google.Cloud.Spanner.V1.ListSessionsResponse.html#Google_Cloud_Spanner_V1_ListSessionsResponse_NextPageToken
+  commentId: P:Google.Cloud.Spanner.V1.ListSessionsResponse.NextPageToken
+  fullName: Google.Cloud.Spanner.V1.ListSessionsResponse.NextPageToken
+  nameWithType: ListSessionsResponse.NextPageToken
+- uid: Google.Cloud.Spanner.V1.ListSessionsResponse.NextPageToken*
+  name: NextPageToken
+  href: api/Google.Cloud.Spanner.V1.ListSessionsResponse.html#Google_Cloud_Spanner_V1_ListSessionsResponse_NextPageToken_
+  commentId: Overload:Google.Cloud.Spanner.V1.ListSessionsResponse.NextPageToken
+  fullName: Google.Cloud.Spanner.V1.ListSessionsResponse.NextPageToken
+  nameWithType: ListSessionsResponse.NextPageToken
+- uid: Google.Cloud.Spanner.V1.ListSessionsResponse.Sessions
+  name: Sessions
+  href: api/Google.Cloud.Spanner.V1.ListSessionsResponse.html#Google_Cloud_Spanner_V1_ListSessionsResponse_Sessions
+  commentId: P:Google.Cloud.Spanner.V1.ListSessionsResponse.Sessions
+  fullName: Google.Cloud.Spanner.V1.ListSessionsResponse.Sessions
+  nameWithType: ListSessionsResponse.Sessions
+- uid: Google.Cloud.Spanner.V1.ListSessionsResponse.Sessions*
+  name: Sessions
+  href: api/Google.Cloud.Spanner.V1.ListSessionsResponse.html#Google_Cloud_Spanner_V1_ListSessionsResponse_Sessions_
+  commentId: Overload:Google.Cloud.Spanner.V1.ListSessionsResponse.Sessions
+  fullName: Google.Cloud.Spanner.V1.ListSessionsResponse.Sessions
+  nameWithType: ListSessionsResponse.Sessions
+- uid: Google.Cloud.Spanner.V1.ListSessionsResponse.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Cloud.Spanner.V1.ListSessionsResponse.html#Google_Cloud_Spanner_V1_ListSessionsResponse_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Cloud.Spanner.V1.ListSessionsResponse.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Cloud.Spanner.V1.ListSessionsResponse.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: ListSessionsResponse.IEnumerable.GetEnumerator()
+  nameWithType.vb: ListSessionsResponse.System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Cloud.Spanner.V1.ListSessionsResponse.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Google.Cloud.Spanner.V1.ListSessionsResponse.html#Google_Cloud_Spanner_V1_ListSessionsResponse_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Google.Cloud.Spanner.V1.ListSessionsResponse.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Google.Cloud.Spanner.V1.ListSessionsResponse.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: ListSessionsResponse.IEnumerable.GetEnumerator
+  nameWithType.vb: ListSessionsResponse.System.Collections.IEnumerable.GetEnumerator
 - uid: Google.Cloud.Spanner.V1.Mutation
   name: Mutation
   href: api/Google.Cloud.Spanner.V1.Mutation.html
@@ -17866,6 +18014,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.ReliableStreamReader.IsClosed
   fullName: Google.Cloud.Spanner.V1.ReliableStreamReader.IsClosed
   nameWithType: ReliableStreamReader.IsClosed
+- uid: Google.Cloud.Spanner.V1.ReliableStreamReader.Logger
+  name: Logger
+  href: api/Google.Cloud.Spanner.V1.ReliableStreamReader.html#Google_Cloud_Spanner_V1_ReliableStreamReader_Logger
+  commentId: P:Google.Cloud.Spanner.V1.ReliableStreamReader.Logger
+  fullName: Google.Cloud.Spanner.V1.ReliableStreamReader.Logger
+  nameWithType: ReliableStreamReader.Logger
+- uid: Google.Cloud.Spanner.V1.ReliableStreamReader.Logger*
+  name: Logger
+  href: api/Google.Cloud.Spanner.V1.ReliableStreamReader.html#Google_Cloud_Spanner_V1_ReliableStreamReader_Logger_
+  commentId: Overload:Google.Cloud.Spanner.V1.ReliableStreamReader.Logger
+  fullName: Google.Cloud.Spanner.V1.ReliableStreamReader.Logger
+  nameWithType: ReliableStreamReader.Logger
 - uid: Google.Cloud.Spanner.V1.ReliableStreamReader.NextAsync(System.Threading.CancellationToken)
   name: NextAsync(CancellationToken)
   href: api/Google.Cloud.Spanner.V1.ReliableStreamReader.html#Google_Cloud_Spanner_V1_ReliableStreamReader_NextAsync_System_Threading_CancellationToken_
@@ -18058,6 +18218,42 @@ references:
   commentId: T:Google.Cloud.Spanner.V1.Session
   fullName: Google.Cloud.Spanner.V1.Session
   nameWithType: Session
+- uid: Google.Cloud.Spanner.V1.Session.ApproximateLastUseTime
+  name: ApproximateLastUseTime
+  href: api/Google.Cloud.Spanner.V1.Session.html#Google_Cloud_Spanner_V1_Session_ApproximateLastUseTime
+  commentId: P:Google.Cloud.Spanner.V1.Session.ApproximateLastUseTime
+  fullName: Google.Cloud.Spanner.V1.Session.ApproximateLastUseTime
+  nameWithType: Session.ApproximateLastUseTime
+- uid: Google.Cloud.Spanner.V1.Session.ApproximateLastUseTime*
+  name: ApproximateLastUseTime
+  href: api/Google.Cloud.Spanner.V1.Session.html#Google_Cloud_Spanner_V1_Session_ApproximateLastUseTime_
+  commentId: Overload:Google.Cloud.Spanner.V1.Session.ApproximateLastUseTime
+  fullName: Google.Cloud.Spanner.V1.Session.ApproximateLastUseTime
+  nameWithType: Session.ApproximateLastUseTime
+- uid: Google.Cloud.Spanner.V1.Session.CreateTime
+  name: CreateTime
+  href: api/Google.Cloud.Spanner.V1.Session.html#Google_Cloud_Spanner_V1_Session_CreateTime
+  commentId: P:Google.Cloud.Spanner.V1.Session.CreateTime
+  fullName: Google.Cloud.Spanner.V1.Session.CreateTime
+  nameWithType: Session.CreateTime
+- uid: Google.Cloud.Spanner.V1.Session.CreateTime*
+  name: CreateTime
+  href: api/Google.Cloud.Spanner.V1.Session.html#Google_Cloud_Spanner_V1_Session_CreateTime_
+  commentId: Overload:Google.Cloud.Spanner.V1.Session.CreateTime
+  fullName: Google.Cloud.Spanner.V1.Session.CreateTime
+  nameWithType: Session.CreateTime
+- uid: Google.Cloud.Spanner.V1.Session.Labels
+  name: Labels
+  href: api/Google.Cloud.Spanner.V1.Session.html#Google_Cloud_Spanner_V1_Session_Labels
+  commentId: P:Google.Cloud.Spanner.V1.Session.Labels
+  fullName: Google.Cloud.Spanner.V1.Session.Labels
+  nameWithType: Session.Labels
+- uid: Google.Cloud.Spanner.V1.Session.Labels*
+  name: Labels
+  href: api/Google.Cloud.Spanner.V1.Session.html#Google_Cloud_Spanner_V1_Session_Labels_
+  commentId: Overload:Google.Cloud.Spanner.V1.Session.Labels
+  fullName: Google.Cloud.Spanner.V1.Session.Labels
+  nameWithType: Session.Labels
 - uid: Google.Cloud.Spanner.V1.Session.Name
   name: Name
   href: api/Google.Cloud.Spanner.V1.Session.html#Google_Cloud_Spanner_V1_Session_Name
@@ -18349,18 +18545,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SessionPool.Options
   fullName: Google.Cloud.Spanner.V1.SessionPool.Options
   nameWithType: SessionPool.Options
-- uid: Google.Cloud.Spanner.V1.SessionPool.ReleaseAll
-  name: ReleaseAll()
-  href: api/Google.Cloud.Spanner.V1.SessionPool.html#Google_Cloud_Spanner_V1_SessionPool_ReleaseAll
-  commentId: M:Google.Cloud.Spanner.V1.SessionPool.ReleaseAll
-  fullName: Google.Cloud.Spanner.V1.SessionPool.ReleaseAll()
-  nameWithType: SessionPool.ReleaseAll()
-- uid: Google.Cloud.Spanner.V1.SessionPool.ReleaseAll*
-  name: ReleaseAll
-  href: api/Google.Cloud.Spanner.V1.SessionPool.html#Google_Cloud_Spanner_V1_SessionPool_ReleaseAll_
-  commentId: Overload:Google.Cloud.Spanner.V1.SessionPool.ReleaseAll
-  fullName: Google.Cloud.Spanner.V1.SessionPool.ReleaseAll
-  nameWithType: SessionPool.ReleaseAll
+- uid: Google.Cloud.Spanner.V1.SessionPool.ReleaseAllAsync
+  name: ReleaseAllAsync()
+  href: api/Google.Cloud.Spanner.V1.SessionPool.html#Google_Cloud_Spanner_V1_SessionPool_ReleaseAllAsync
+  commentId: M:Google.Cloud.Spanner.V1.SessionPool.ReleaseAllAsync
+  fullName: Google.Cloud.Spanner.V1.SessionPool.ReleaseAllAsync()
+  nameWithType: SessionPool.ReleaseAllAsync()
+- uid: Google.Cloud.Spanner.V1.SessionPool.ReleaseAllAsync*
+  name: ReleaseAllAsync
+  href: api/Google.Cloud.Spanner.V1.SessionPool.html#Google_Cloud_Spanner_V1_SessionPool_ReleaseAllAsync_
+  commentId: Overload:Google.Cloud.Spanner.V1.SessionPool.ReleaseAllAsync
+  fullName: Google.Cloud.Spanner.V1.SessionPool.ReleaseAllAsync
+  nameWithType: SessionPool.ReleaseAllAsync
 - uid: Google.Cloud.Spanner.V1.SessionPool.ReleaseToPool(Google.Cloud.Spanner.V1.SpannerClient,Google.Cloud.Spanner.V1.Session)
   name: ReleaseToPool(SpannerClient, Session)
   href: api/Google.Cloud.Spanner.V1.SessionPool.html#Google_Cloud_Spanner_V1_SessionPool_ReleaseToPool_Google_Cloud_Spanner_V1_SpannerClient_Google_Cloud_Spanner_V1_Session_
@@ -18586,6 +18782,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.Spanner.SpannerBase.GetSession
   fullName: Google.Cloud.Spanner.V1.Spanner.SpannerBase.GetSession
   nameWithType: Spanner.SpannerBase.GetSession
+- uid: Google.Cloud.Spanner.V1.Spanner.SpannerBase.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.ServerCallContext)
+  name: ListSessions(ListSessionsRequest, ServerCallContext)
+  href: api/Google.Cloud.Spanner.V1.Spanner.SpannerBase.html#Google_Cloud_Spanner_V1_Spanner_SpannerBase_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.Spanner.V1.Spanner.SpannerBase.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.ServerCallContext)
+  fullName: Google.Cloud.Spanner.V1.Spanner.SpannerBase.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest, Grpc.Core.ServerCallContext)
+  nameWithType: Spanner.SpannerBase.ListSessions(ListSessionsRequest, ServerCallContext)
+- uid: Google.Cloud.Spanner.V1.Spanner.SpannerBase.ListSessions*
+  name: ListSessions
+  href: api/Google.Cloud.Spanner.V1.Spanner.SpannerBase.html#Google_Cloud_Spanner_V1_Spanner_SpannerBase_ListSessions_
+  commentId: Overload:Google.Cloud.Spanner.V1.Spanner.SpannerBase.ListSessions
+  fullName: Google.Cloud.Spanner.V1.Spanner.SpannerBase.ListSessions
+  nameWithType: Spanner.SpannerBase.ListSessions
 - uid: Google.Cloud.Spanner.V1.Spanner.SpannerBase.Read(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.ServerCallContext)
   name: Read(ReadRequest, ServerCallContext)
   href: api/Google.Cloud.Spanner.V1.Spanner.SpannerBase.html#Google_Cloud_Spanner_V1_Spanner_SpannerBase_Read_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_ServerCallContext_
@@ -18934,6 +19142,48 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSessionAsync
   fullName: Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSessionAsync
   nameWithType: Spanner.SpannerClient.GetSessionAsync
+- uid: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.CallOptions)
+  name: ListSessions(ListSessionsRequest, CallOptions)
+  href: api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.html#Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest, Grpc.Core.CallOptions)
+  nameWithType: Spanner.SpannerClient.ListSessions(ListSessionsRequest, CallOptions)
+- uid: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: ListSessions(ListSessionsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.html#Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: ListSessions(ListSessionsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: Spanner.SpannerClient.ListSessions(ListSessionsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: Spanner.SpannerClient.ListSessions(ListSessionsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions*
+  name: ListSessions
+  href: api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.html#Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessions_
+  commentId: Overload:Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions
+  fullName: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions
+  nameWithType: Spanner.SpannerClient.ListSessions
+- uid: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.CallOptions)
+  name: ListSessionsAsync(ListSessionsRequest, CallOptions)
+  href: api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.html#Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessionsAsync_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest, Grpc.Core.CallOptions)
+  nameWithType: Spanner.SpannerClient.ListSessionsAsync(ListSessionsRequest, CallOptions)
+- uid: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: ListSessionsAsync(ListSessionsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.html#Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessionsAsync_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: ListSessionsAsync(ListSessionsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: Spanner.SpannerClient.ListSessionsAsync(ListSessionsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: Spanner.SpannerClient.ListSessionsAsync(ListSessionsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync*
+  name: ListSessionsAsync
+  href: api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.html#Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessionsAsync_
+  commentId: Overload:Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync
+  fullName: Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync
+  nameWithType: Spanner.SpannerClient.ListSessionsAsync
 - uid: Google.Cloud.Spanner.V1.Spanner.SpannerClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)
   name: NewInstance(ClientBase.ClientBaseConfiguration)
   href: api/Google.Cloud.Spanner.V1.Spanner.SpannerClient.html#Google_Cloud_Spanner_V1_Spanner_SpannerClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_
@@ -19435,6 +19685,48 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerClient.GrpcClient
   fullName: Google.Cloud.Spanner.V1.SpannerClient.GrpcClient
   nameWithType: SpannerClient.GrpcClient
+- uid: Google.Cloud.Spanner.V1.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListSessions(ListSessionsRequest, CallSettings)
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpannerClient.ListSessions(ListSessionsRequest, CallSettings)
+- uid: Google.Cloud.Spanner.V1.SpannerClient.ListSessions(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListSessions(String, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ListSessions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClient.ListSessions(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListSessions(String, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.ListSessions(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Spanner.V1.SpannerClient.ListSessions(System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpannerClient.ListSessions(String, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: SpannerClient.ListSessions(String, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Spanner.V1.SpannerClient.ListSessions*
+  name: ListSessions
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ListSessions_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerClient.ListSessions
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.ListSessions
+  nameWithType: SpannerClient.ListSessions
+- uid: Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListSessionsAsync(ListSessionsRequest, CallSettings)
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ListSessionsAsync_Google_Cloud_Spanner_V1_ListSessionsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpannerClient.ListSessionsAsync(ListSessionsRequest, CallSettings)
+- uid: Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListSessionsAsync(String, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ListSessionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListSessionsAsync(String, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync(System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpannerClient.ListSessionsAsync(String, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: SpannerClient.ListSessionsAsync(String, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync*
+  name: ListSessionsAsync
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ListSessionsAsync_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync
+  nameWithType: SpannerClient.ListSessionsAsync
 - uid: Google.Cloud.Spanner.V1.SpannerClient.Read(Google.Cloud.Spanner.V1.ReadRequest,Google.Api.Gax.Grpc.CallSettings)
   name: Read(ReadRequest, CallSettings)
   href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_Read_Google_Cloud_Spanner_V1_ReadRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -19753,6 +20045,30 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerClientImpl.GrpcClient
   fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.GrpcClient
   nameWithType: SpannerClientImpl.GrpcClient
+- uid: Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListSessions(ListSessionsRequest, CallSettings)
+  href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpannerClientImpl.ListSessions(ListSessionsRequest, CallSettings)
+- uid: Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessions*
+  name: ListSessions
+  href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_ListSessions_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessions
+  fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessions
+  nameWithType: SpannerClientImpl.ListSessions
+- uid: Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListSessionsAsync(ListSessionsRequest, CallSettings)
+  href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_ListSessionsAsync_Google_Cloud_Spanner_V1_ListSessionsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpannerClientImpl.ListSessionsAsync(ListSessionsRequest, CallSettings)
+- uid: Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessionsAsync*
+  name: ListSessionsAsync
+  href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_ListSessionsAsync_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessionsAsync
+  fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessionsAsync
+  nameWithType: SpannerClientImpl.ListSessionsAsync
 - uid: Google.Cloud.Spanner.V1.SpannerClientImpl.Read(Google.Cloud.Spanner.V1.ReadRequest,Google.Api.Gax.Grpc.CallSettings)
   name: Read(ReadRequest, CallSettings)
   href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_Read_Google_Cloud_Spanner_V1_ReadRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -20041,6 +20357,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.IdempotentRetryFilter
   fullName: Google.Cloud.Spanner.V1.SpannerSettings.IdempotentRetryFilter
   nameWithType: SpannerSettings.IdempotentRetryFilter
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.ListSessionsSettings
+  name: ListSessionsSettings
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_ListSessionsSettings
+  commentId: P:Google.Cloud.Spanner.V1.SpannerSettings.ListSessionsSettings
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.ListSessionsSettings
+  nameWithType: SpannerSettings.ListSessionsSettings
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.ListSessionsSettings*
+  name: ListSessionsSettings
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_ListSessionsSettings_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.ListSessionsSettings
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.ListSessionsSettings
+  nameWithType: SpannerSettings.ListSessionsSettings
 - uid: Google.Cloud.Spanner.V1.SpannerSettings.LongRunningRetryFilter
   name: LongRunningRetryFilter
   href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_LongRunningRetryFilter
@@ -20692,6 +21020,36 @@ references:
   commentId: F:Google.Cloud.Spanner.V1.TypeCode.Unspecified
   fullName: Google.Cloud.Spanner.V1.TypeCode.Unspecified
   nameWithType: TypeCode.Unspecified
+- uid: Google.Cloud.Spanner.V1.TypeCodeExtensions
+  name: TypeCodeExtensions
+  href: api/Google.Cloud.Spanner.V1.TypeCodeExtensions.html
+  commentId: T:Google.Cloud.Spanner.V1.TypeCodeExtensions
+  fullName: Google.Cloud.Spanner.V1.TypeCodeExtensions
+  nameWithType: TypeCodeExtensions
+- uid: Google.Cloud.Spanner.V1.TypeCodeExtensions.GetOriginalName(Google.Cloud.Spanner.V1.TypeCode)
+  name: GetOriginalName(TypeCode)
+  href: api/Google.Cloud.Spanner.V1.TypeCodeExtensions.html#Google_Cloud_Spanner_V1_TypeCodeExtensions_GetOriginalName_Google_Cloud_Spanner_V1_TypeCode_
+  commentId: M:Google.Cloud.Spanner.V1.TypeCodeExtensions.GetOriginalName(Google.Cloud.Spanner.V1.TypeCode)
+  fullName: Google.Cloud.Spanner.V1.TypeCodeExtensions.GetOriginalName(Google.Cloud.Spanner.V1.TypeCode)
+  nameWithType: TypeCodeExtensions.GetOriginalName(TypeCode)
+- uid: Google.Cloud.Spanner.V1.TypeCodeExtensions.GetOriginalName*
+  name: GetOriginalName
+  href: api/Google.Cloud.Spanner.V1.TypeCodeExtensions.html#Google_Cloud_Spanner_V1_TypeCodeExtensions_GetOriginalName_
+  commentId: Overload:Google.Cloud.Spanner.V1.TypeCodeExtensions.GetOriginalName
+  fullName: Google.Cloud.Spanner.V1.TypeCodeExtensions.GetOriginalName
+  nameWithType: TypeCodeExtensions.GetOriginalName
+- uid: Google.Cloud.Spanner.V1.TypeCodeExtensions.GetTypeCode(System.String)
+  name: GetTypeCode(String)
+  href: api/Google.Cloud.Spanner.V1.TypeCodeExtensions.html#Google_Cloud_Spanner_V1_TypeCodeExtensions_GetTypeCode_System_String_
+  commentId: M:Google.Cloud.Spanner.V1.TypeCodeExtensions.GetTypeCode(System.String)
+  fullName: Google.Cloud.Spanner.V1.TypeCodeExtensions.GetTypeCode(System.String)
+  nameWithType: TypeCodeExtensions.GetTypeCode(String)
+- uid: Google.Cloud.Spanner.V1.TypeCodeExtensions.GetTypeCode*
+  name: GetTypeCode
+  href: api/Google.Cloud.Spanner.V1.TypeCodeExtensions.html#Google_Cloud_Spanner_V1_TypeCodeExtensions_GetTypeCode_
+  commentId: Overload:Google.Cloud.Spanner.V1.TypeCodeExtensions.GetTypeCode
+  fullName: Google.Cloud.Spanner.V1.TypeCodeExtensions.GetTypeCode
+  nameWithType: TypeCodeExtensions.GetTypeCode
 - uid: Google.Protobuf
   name: Google.Protobuf
   href: api/Google.Protobuf.html

@@ -1,0 +1,448 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TimestampBound
+   | Google.Cloud.EntityFrameworkCore.Spanner </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TimestampBound
+   | Google.Cloud.EntityFrameworkCore.Spanner ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.Data.TimestampBound">
+  
+  
+  <h1 id="Google_Cloud_Spanner_Data_TimestampBound" data-uid="Google.Cloud.Spanner.Data.TimestampBound" class="text-break">Class TimestampBound
+  </h1>
+  <div class="markdown level0 summary"><p>Indicates how Spanner will choose a timestamp at which to read the data for read-only
+transactions.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TimestampBound</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Data.html">Google.Cloud.Spanner.Data</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Data.dll</h6>
+  <h5 id="Google_Cloud_Spanner_Data_TimestampBound_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TimestampBound</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_TimestampBound_Mode_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.Mode*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_TimestampBound_Mode" data-uid="Google.Cloud.Spanner.Data.TimestampBound.Mode">Mode</h4>
+  <div class="markdown level1 summary"><p>Indicates how to choose the timestamp at which to read the data for Cloud Spanner read-only transactions.
+If your application can tolerate some staleness when reading data, you can use a stale read,
+which can execute much faster when compared to reading the latest data.
+The types of timestamp bounds are:
+Strong (the default): read the latest data.
+Bounded staleness: read a version of the data that&apos;s no staler than a bound.
+Exact staleness: read the version of the data at an exact timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimestampBoundMode Mode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBoundMode.html">TimestampBoundMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_TimestampBound_Staleness_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.Staleness*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_TimestampBound_Staleness" data-uid="Google.Cloud.Spanner.Data.TimestampBound.Staleness">Staleness</h4>
+  <div class="markdown level1 summary"><p>If <a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html#Google_Cloud_Spanner_Data_TimestampBound_Mode">Mode</a> is <a class="xref" href="Google.Cloud.Spanner.Data.TimestampBoundMode.html#Google_Cloud_Spanner_Data_TimestampBoundMode_ExactStaleness">ExactStaleness</a> or
+<a class="xref" href="Google.Cloud.Spanner.Data.TimestampBoundMode.html#Google_Cloud_Spanner_Data_TimestampBoundMode_MaxStaleness">MaxStaleness</a>, this indicates the duration of time
+for the staleness.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan Staleness { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_TimestampBound_Strong_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.Strong*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_TimestampBound_Strong" data-uid="Google.Cloud.Spanner.Data.TimestampBound.Strong">Strong</h4>
+  <div class="markdown level1 summary"><p>Read at a timestamp where all previously committed transactions
+are visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimestampBound Strong { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_TimestampBound_Timestamp_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.Timestamp*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_TimestampBound_Timestamp" data-uid="Google.Cloud.Spanner.Data.TimestampBound.Timestamp">Timestamp</h4>
+  <div class="markdown level1 summary"><p>If <a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html#Google_Cloud_Spanner_Data_TimestampBound_Mode">Mode</a> is <a class="xref" href="Google.Cloud.Spanner.Data.TimestampBoundMode.html#Google_Cloud_Spanner_Data_TimestampBoundMode_ReadTimestamp">ReadTimestamp</a> or
+<a class="xref" href="Google.Cloud.Spanner.Data.TimestampBoundMode.html#Google_Cloud_Spanner_Data_TimestampBoundMode_MinReadTimestamp">MinReadTimestamp</a>, this indicates the timestamp to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime Timestamp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_TimestampBound_OfExactStaleness_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfExactStaleness*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_TimestampBound_OfExactStaleness_System_TimeSpan_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfExactStaleness(System.TimeSpan)">OfExactStaleness(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Executes all reads at a timestamp that is <code data-dev-comment-type="paramref" class="paramref">duration</code>
+old. The timestamp is chosen soon after the read is started.</p>
+<p>Guarantees that all writes that have committed more than the
+specified number of seconds ago are visible. Because Cloud Spanner
+chooses the exact timestamp, this mode works even if the client&apos;s
+local clock is substantially skewed from Cloud Spanner commit
+timestamps.</p>
+<p>Useful for reading at nearby replicas without the distributed
+timestamp negotiation overhead of <a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html#Google_Cloud_Spanner_Data_TimestampBound_OfMaxStaleness_System_TimeSpan_">OfMaxStaleness(TimeSpan)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimestampBound OfExactStaleness(TimeSpan duration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The exact staleness to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a></td>
+        <td><p>A created <a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_TimestampBound_OfMaxStaleness_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfMaxStaleness*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_TimestampBound_OfMaxStaleness_System_TimeSpan_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfMaxStaleness(System.TimeSpan)">OfMaxStaleness(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Read data at a timestamp &gt;= <code>NOW - &lt;code data-dev-comment-type=&quot;paramref&quot; class=&quot;paramref&quot;&gt;duration&lt;/code&gt;</code>. Guarantees that all
+writes that have committed more than the specified number of seconds ago are
+visible.
+Because Cloud Spanner chooses the exact timestamp, this mode works even if
+the client&apos;s local clock is substantially skewed from Cloud Spanner
+commit timestamps.</p>
+<p>Useful for reading the freshest data available at a nearby
+replica, while bounding the possible staleness if the local
+replica has fallen behind.</p>
+<p>Note that this option can only be used in single-use
+transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimestampBound OfMaxStaleness(TimeSpan duration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The maximum duration of staleness to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a></td>
+        <td><p>A created <a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_TimestampBound_OfMinReadTimestamp_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfMinReadTimestamp*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_TimestampBound_OfMinReadTimestamp_System_DateTime_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfMinReadTimestamp(System.DateTime)">OfMinReadTimestamp(DateTime)</h4>
+  <div class="markdown level1 summary"><p>Executes all reads at a timestamp &gt;= <code data-dev-comment-type="paramref" class="paramref">minReadTimestamp</code>.</p>
+<p>This is useful for requesting fresher data than some previous
+read, or data that is fresh enough to observe the effects of some
+previously committed transaction whose timestamp is known.</p>
+<p>Note that this option can only be used in single-use transactions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimestampBound OfMinReadTimestamp(DateTime minReadTimestamp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">minReadTimestamp</span></td>
+        <td><p>The earliest timestamp to read from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a></td>
+        <td><p>A created <a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_TimestampBound_OfReadTimestamp_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfReadTimestamp*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_TimestampBound_OfReadTimestamp_System_DateTime_" data-uid="Google.Cloud.Spanner.Data.TimestampBound.OfReadTimestamp(System.DateTime)">OfReadTimestamp(DateTime)</h4>
+  <div class="markdown level1 summary"><p>Executes all reads at the given timestamp. Unlike other modes,
+reads at a specific timestamp are repeatable; the same read at
+the same timestamp always returns the same data. If the
+timestamp is in the future, the read will block until the
+specified timestamp, modulo the read&apos;s deadline.</p>
+<p>Useful for large scale consistent reads such as mapreduces, or
+for coordinating many reads against a consistent snapshot of the
+data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimestampBound OfReadTimestamp(DateTime timestamp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td><p>The timestamp to read from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a></td>
+        <td><p>A created <a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

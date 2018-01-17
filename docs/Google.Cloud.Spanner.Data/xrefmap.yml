@@ -8750,6 +8750,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.SpannerDbType.Float64
   fullName: Google.Cloud.Spanner.Data.SpannerDbType.Float64
   nameWithType: SpannerDbType.Float64
+- uid: Google.Cloud.Spanner.Data.SpannerDbType.FromClrType(System.Type)
+  name: FromClrType(Type)
+  href: api/Google.Cloud.Spanner.Data.SpannerDbType.html#Google_Cloud_Spanner_Data_SpannerDbType_FromClrType_System_Type_
+  commentId: M:Google.Cloud.Spanner.Data.SpannerDbType.FromClrType(System.Type)
+  fullName: Google.Cloud.Spanner.Data.SpannerDbType.FromClrType(System.Type)
+  nameWithType: SpannerDbType.FromClrType(Type)
+- uid: Google.Cloud.Spanner.Data.SpannerDbType.FromClrType*
+  name: FromClrType
+  href: api/Google.Cloud.Spanner.Data.SpannerDbType.html#Google_Cloud_Spanner_Data_SpannerDbType_FromClrType_
+  commentId: Overload:Google.Cloud.Spanner.Data.SpannerDbType.FromClrType
+  fullName: Google.Cloud.Spanner.Data.SpannerDbType.FromClrType
+  nameWithType: SpannerDbType.FromClrType
 - uid: Google.Cloud.Spanner.Data.SpannerDbType.GetHashCode
   name: GetHashCode()
   href: api/Google.Cloud.Spanner.Data.SpannerDbType.html#Google_Cloud_Spanner_Data_SpannerDbType_GetHashCode

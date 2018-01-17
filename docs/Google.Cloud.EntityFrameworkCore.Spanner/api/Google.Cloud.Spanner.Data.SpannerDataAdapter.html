@@ -1,0 +1,1013 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SpannerDataAdapter
+   | Google.Cloud.EntityFrameworkCore.Spanner </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SpannerDataAdapter
+   | Google.Cloud.EntityFrameworkCore.Spanner ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter">
+  
+  
+  <h1 id="Google_Cloud_Spanner_Data_SpannerDataAdapter" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter" class="text-break">Class SpannerDataAdapter
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a set of data commands and a database connection that are used to fill the DataSet
+and update a Spanner database.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.ComponentModel.Component</span></div>
+    <div class="level3"><span class="xref">System.Data.Common.DataAdapter</span></div>
+    <div class="level4"><span class="xref">System.Data.Common.DbDataAdapter</span></div>
+    <div class="level5"><span class="xref">SpannerDataAdapter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.IComponent</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.Data.IDbDataAdapter</span></div>
+    <div><span class="xref">System.Data.IDataAdapter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.DefaultSourceTableName</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.AddToBatch(System.Data.IDbCommand)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.ClearBatch()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.System.ICloneable.Clone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Dispose(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.ExecuteBatch()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillSchema(System.Data.DataTable, System.Data.SchemaType)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillSchema(System.Data.DataSet, System.Data.SchemaType)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillSchema(System.Data.DataSet, System.Data.SchemaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillSchema(System.Data.DataSet, System.Data.SchemaType, System.Data.IDbCommand, System.String, System.Data.CommandBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillSchema(System.Data.DataTable, System.Data.SchemaType, System.Data.IDbCommand, System.Data.CommandBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataSet)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataSet, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataSet, System.Int32, System.Int32, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataTable)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Int32, System.Int32, System.Data.DataTable[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataTable, System.Data.IDbCommand, System.Data.CommandBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataTable[], System.Int32, System.Int32, System.Data.IDbCommand, System.Data.CommandBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.GetBatchedParameter(System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.GetBatchedRecordsAffected(System.Int32, System.Int32, System.Exception)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.GetFillParameters()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.InitializeBatching()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.TerminateBatching()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Update(System.Data.DataRow[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Update(System.Data.DataTable)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Update(System.Data.DataSet, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Update(System.Data.DataRow[], System.Data.Common.DataTableMapping)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillCommandBehavior</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.UpdateBatchSize</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.ShouldSerializeTableMappings()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.HasTableMappings()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.CloneInternals()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.CreateTableMappings()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.FillSchema(System.Data.DataSet, System.Data.SchemaType, System.String, System.Data.IDataReader)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.FillSchema(System.Data.DataTable, System.Data.SchemaType, System.Data.IDataReader)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.Fill(System.Data.DataTable, System.Data.IDataReader)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.Fill(System.Data.DataTable[], System.Data.IDataReader, System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.OnFillError(System.Data.FillErrorEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.AcceptChangesDuringFill</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.AcceptChangesDuringUpdate</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.ContinueUpdateOnError</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.FillLoadOption</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.MissingMappingAction</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.MissingSchemaAction</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.ReturnProviderSpecificTypes</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.TableMappings</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.System.Data.IDataAdapter.TableMappings</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.FillError</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.GetService(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.CanRaiseEvents</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Events</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Site</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Container</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.DesignMode</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Disposed</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.CreateObjRef(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Data.html">Google.Cloud.Spanner.Data</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Data.dll</h6>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SpannerDataAdapter : DbDataAdapter, IComponent, IDisposable, ICloneable, IDbDataAdapter, IDataAdapter</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter__ctor_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.#ctor*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter__ctor" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.#ctor">SpannerDataAdapter()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the SpannerDataAdapter class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerDataAdapter()</code></pre>
+  </div>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter__ctor_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.#ctor*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter__ctor_Google_Cloud_Spanner_Data_SpannerConnection_System_String_System_String___" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.#ctor(Google.Cloud.Spanner.Data.SpannerConnection,System.String,System.String[])">SpannerDataAdapter(SpannerConnection, String, String[])</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the SpannerDataAdapter class with the specified</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerDataAdapter(SpannerConnection connection, string autoGeneratedCommandTable, params string[] primaryKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnection.html">SpannerConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>A connection to the Spanner database. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">autoGeneratedCommandTable</span></td>
+        <td><p>The Spanner database table to use for automatically generated commands.
+May be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">primaryKeys</span></td>
+        <td><p>The set of columns that form the primary key for
+<code data-dev-comment-type="paramref" class="paramref">autoGeneratedCommandTable</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_AutoGeneratedCommandPrimaryKeys_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.AutoGeneratedCommandPrimaryKeys*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_AutoGeneratedCommandPrimaryKeys" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.AutoGeneratedCommandPrimaryKeys">AutoGeneratedCommandPrimaryKeys</h4>
+  <div class="markdown level1 summary"><p>The set of primary keys defined for <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataAdapter.html#Google_Cloud_Spanner_Data_SpannerDataAdapter_AutoGeneratedCommandTable">AutoGeneratedCommandTable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISet&lt;string&gt; AutoGeneratedCommandPrimaryKeys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ISet</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_AutoGeneratedCommandTable_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.AutoGeneratedCommandTable*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_AutoGeneratedCommandTable" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.AutoGeneratedCommandTable">AutoGeneratedCommandTable</h4>
+  <div class="markdown level1 summary"><p>The table to use for automatically built commands.
+If set, the <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataAdapter.html">SpannerDataAdapter</a> will automatically create commands for
+<a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataAdapter.html#Google_Cloud_Spanner_Data_SpannerDataAdapter_SelectCommand">SelectCommand</a>, <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataAdapter.html#Google_Cloud_Spanner_Data_SpannerDataAdapter_InsertCommand">InsertCommand</a>, <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataAdapter.html#Google_Cloud_Spanner_Data_SpannerDataAdapter_UpdateCommand">UpdateCommand</a>
+and <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataAdapter.html#Google_Cloud_Spanner_Data_SpannerDataAdapter_DeleteCommand">DeleteCommand</a> selecting all columns for that Table.
+You can choose to customize some or all of the commands and use the autogenerated commands
+for ones you do not modify. For example, you can set <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataAdapter.html#Google_Cloud_Spanner_Data_SpannerDataAdapter_SelectCommand">SelectCommand</a> to be
+a custom SQL Query, and leave the other commands to be based on <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataAdapter.html#Google_Cloud_Spanner_Data_SpannerDataAdapter_AutoGeneratedCommandTable">AutoGeneratedCommandTable</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AutoGeneratedCommandTable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_DeleteCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.DeleteCommand*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_DeleteCommand" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.DeleteCommand">DeleteCommand</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> used to delete rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerCommand DeleteCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_InsertCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.InsertCommand*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_InsertCommand" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.InsertCommand">InsertCommand</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> used to insert rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerCommand InsertCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_SelectCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.SelectCommand*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_SelectCommand" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.SelectCommand">SelectCommand</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> used to run a SQL Query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerCommand SelectCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_SpannerConnection_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.SpannerConnection*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_SpannerConnection" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.SpannerConnection">SpannerConnection</h4>
+  <div class="markdown level1 summary"><p>The connection to the Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerConnection SpannerConnection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnection.html">SpannerConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_UpdateCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.UpdateCommand*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_UpdateCommand" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.UpdateCommand">UpdateCommand</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> used to update rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerCommand UpdateCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_CreateRowUpdatedEvent_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.CreateRowUpdatedEvent*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_CreateRowUpdatedEvent_System_Data_DataRow_System_Data_IDbCommand_System_Data_StatementType_System_Data_Common_DataTableMapping_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.CreateRowUpdatedEvent(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)">CreateRowUpdatedEvent(DataRow, IDbCommand, StatementType, DataTableMapping)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override RowUpdatedEventArgs CreateRowUpdatedEvent(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataRow</span></td>
+        <td><span class="parametername">dataRow</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.StatementType</span></td>
+        <td><span class="parametername">statementType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.Common.DataTableMapping</span></td>
+        <td><span class="parametername">tableMapping</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.RowUpdatedEventArgs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.CreateRowUpdatedEvent(System.Data.DataRow, System.Data.IDbCommand, System.Data.StatementType, System.Data.Common.DataTableMapping)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_CreateRowUpdatingEvent_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.CreateRowUpdatingEvent*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_CreateRowUpdatingEvent_System_Data_DataRow_System_Data_IDbCommand_System_Data_StatementType_System_Data_Common_DataTableMapping_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.CreateRowUpdatingEvent(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)">CreateRowUpdatingEvent(DataRow, IDbCommand, StatementType, DataTableMapping)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override RowUpdatingEventArgs CreateRowUpdatingEvent(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataRow</span></td>
+        <td><span class="parametername">dataRow</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.StatementType</span></td>
+        <td><span class="parametername">statementType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.Common.DataTableMapping</span></td>
+        <td><span class="parametername">tableMapping</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.RowUpdatingEventArgs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.CreateRowUpdatingEvent(System.Data.DataRow, System.Data.IDbCommand, System.Data.StatementType, System.Data.Common.DataTableMapping)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_Fill_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.Fill*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_Fill_System_Data_DataSet_System_Int32_System_Int32_System_String_System_Data_IDbCommand_System_Data_CommandBehavior_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.Fill(System.Data.DataSet,System.Int32,System.Int32,System.String,System.Data.IDbCommand,System.Data.CommandBehavior)">Fill(DataSet, Int32, Int32, String, IDbCommand, CommandBehavior)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override int Fill(DataSet dataSet, int startRecord, int maxRecords, string srcTable, IDbCommand command, CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">dataSet</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startRecord</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxRecords</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">srcTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataSet, System.Int32, System.Int32, System.String, System.Data.IDbCommand, System.Data.CommandBehavior)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_Fill_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.Fill*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_Fill_System_Data_DataSet_System_String_System_Data_IDataReader_System_Int32_System_Int32_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.Fill(System.Data.DataSet,System.String,System.Data.IDataReader,System.Int32,System.Int32)">Fill(DataSet, String, IDataReader, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override int Fill(DataSet dataSet, string srcTable, IDataReader dataReader, int startRecord, int maxRecords)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">dataSet</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">srcTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.IDataReader</span></td>
+        <td><span class="parametername">dataReader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startRecord</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxRecords</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DataAdapter.Fill(System.Data.DataSet, System.String, System.Data.IDataReader, System.Int32, System.Int32)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_OnRowUpdated_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.OnRowUpdated*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_OnRowUpdated_System_Data_Common_RowUpdatedEventArgs_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.OnRowUpdated(System.Data.Common.RowUpdatedEventArgs)">OnRowUpdated(RowUpdatedEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnRowUpdated(RowUpdatedEventArgs rowUpdatedEventArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.RowUpdatedEventArgs</span></td>
+        <td><span class="parametername">rowUpdatedEventArgs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.OnRowUpdated(System.Data.Common.RowUpdatedEventArgs)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_OnRowUpdating_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.OnRowUpdating*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_OnRowUpdating_System_Data_Common_RowUpdatingEventArgs_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.OnRowUpdating(System.Data.Common.RowUpdatingEventArgs)">OnRowUpdating(RowUpdatingEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnRowUpdating(RowUpdatingEventArgs rowUpdatingEventArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.RowUpdatingEventArgs</span></td>
+        <td><span class="parametername">rowUpdatingEventArgs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.OnRowUpdating(System.Data.Common.RowUpdatingEventArgs)</span></div>
+  <h3 id="events">Events
+  </h3>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_RowUpdated" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.RowUpdated">RowUpdated</h4>
+  <div class="markdown level1 summary"><p>Occurs during Update after a command is executed against the data source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;SpannerRowUpdatedEventArgs&gt; RowUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Data.SpannerRowUpdatedEventArgs.html">SpannerRowUpdatedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_RowUpdating" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.RowUpdating">RowUpdating</h4>
+  <div class="markdown level1 summary"><p>Occurs during Update before a command is executed against the data source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;SpannerRowUpdatingEventArgs&gt; RowUpdating</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Data.SpannerRowUpdatingEventArgs.html">SpannerRowUpdatingEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_System_Data_IDbDataAdapter_DeleteCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.System#Data#IDbDataAdapter#DeleteCommand*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_System_Data_IDbDataAdapter_DeleteCommand" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.System#Data#IDbDataAdapter#DeleteCommand">IDbDataAdapter.DeleteCommand</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+IDbCommand IDbDataAdapter.DeleteCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Data.IDbDataAdapter.DeleteCommand</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_System_Data_IDbDataAdapter_InsertCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.System#Data#IDbDataAdapter#InsertCommand*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_System_Data_IDbDataAdapter_InsertCommand" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.System#Data#IDbDataAdapter#InsertCommand">IDbDataAdapter.InsertCommand</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+IDbCommand IDbDataAdapter.InsertCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Data.IDbDataAdapter.InsertCommand</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_System_Data_IDbDataAdapter_SelectCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.System#Data#IDbDataAdapter#SelectCommand*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_System_Data_IDbDataAdapter_SelectCommand" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.System#Data#IDbDataAdapter#SelectCommand">IDbDataAdapter.SelectCommand</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+IDbCommand IDbDataAdapter.SelectCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Data.IDbDataAdapter.SelectCommand</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerDataAdapter_System_Data_IDbDataAdapter_UpdateCommand_" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.System#Data#IDbDataAdapter#UpdateCommand*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerDataAdapter_System_Data_IDbDataAdapter_UpdateCommand" data-uid="Google.Cloud.Spanner.Data.SpannerDataAdapter.System#Data#IDbDataAdapter#UpdateCommand">IDbDataAdapter.UpdateCommand</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+IDbCommand IDbDataAdapter.UpdateCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Data.IDbDataAdapter.UpdateCommand</span></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DatabaseAdmin.DatabaseAdminBase
+   | Google.Cloud.EntityFrameworkCore.Spanner </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DatabaseAdmin.DatabaseAdminBase
+   | Google.Cloud.EntityFrameworkCore.Spanner ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase">
+  
+  
+  <h1 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase" class="text-break">Class DatabaseAdmin.DatabaseAdminBase
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for server-side implementations of DatabaseAdmin</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DatabaseAdmin.DatabaseAdminBase</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.html">Google.Cloud.Spanner.Admin.Database.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Admin.Database.V1.dll</h6>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class DatabaseAdminBase</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_CreateDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.CreateDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_CreateDatabase_Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.CreateDatabase(Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest,Grpc.Core.ServerCallContext)">CreateDatabase(CreateDatabaseRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Cloud Spanner database and starts to prepare it for serving.
+The returned [long-running operation][google.longrunning.Operation] will
+have a name of the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
+can be used to track preparation of the database. The
+[metadata][google.longrunning.Operation.metadata] field type is
+[CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+[response][google.longrunning.Operation.response] field type is
+[Database][google.spanner.admin.database.v1.Database], if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; CreateDatabase(CreateDatabaseRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.html">CreateDatabaseRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.LongRunning.Operation</span>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_DropDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.DropDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_DropDatabase_Google_Cloud_Spanner_Admin_Database_V1_DropDatabaseRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.DropDatabase(Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest,Grpc.Core.ServerCallContext)">DropDatabase(DropDatabaseRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Drops (aka deletes) a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DropDatabase(DropDatabaseRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.html">DropDatabaseRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetDatabase_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetDatabase(Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest,Grpc.Core.ServerCallContext)">GetDatabase(GetDatabaseRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Gets the state of a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Database&gt; GetDatabase(GetDatabaseRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest.html">GetDatabaseRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetDatabaseDdl_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetDatabaseDdl*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseDdlRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetDatabaseDdl(Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest,Grpc.Core.ServerCallContext)">GetDatabaseDdl(GetDatabaseDdlRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Returns the schema of a Cloud Spanner database as a list of formatted
+DDL statements. This method does not show pending schema updates, those may
+be queried using the [Operations][google.longrunning.Operations] API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;GetDatabaseDdlResponse&gt; GetDatabaseDdl(GetDatabaseDdlRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest.html">GetDatabaseDdlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.html">GetDatabaseDdlResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.ServerCallContext)">GetIamPolicy(GetIamPolicyRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Gets the access control policy for a database resource. Returns an empty
+policy if a database exists but does not have a policy set.</p>
+<p>Authorization requires <code>spanner.databases.getIamPolicy</code> permission on
+[resource][google.iam.v1.GetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; GetIamPolicy(GetIamPolicyRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.GetIamPolicyRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_ListDatabases_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.ListDatabases*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_ListDatabases_Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.ListDatabases(Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest,Grpc.Core.ServerCallContext)">ListDatabases(ListDatabasesRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Lists Cloud Spanner databases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListDatabasesResponse&gt; ListDatabases(ListDatabasesRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.html">ListDatabasesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.html">ListDatabasesResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_SetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.SetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.ServerCallContext)">SetIamPolicy(SetIamPolicyRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Sets the access control policy on a database resource. Replaces any
+existing policy.</p>
+<p>Authorization requires <code>spanner.databases.setIamPolicy</code> permission on
+[resource][google.iam.v1.SetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; SetIamPolicy(SetIamPolicyRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.SetIamPolicyRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_TestIamPermissions_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.TestIamPermissions*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.ServerCallContext)">TestIamPermissions(TestIamPermissionsRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified database resource.</p>
+<p>Attempting this RPC on a non-existent Cloud Spanner database will result in
+a NOT_FOUND error if the user has <code>spanner.databases.list</code> permission on
+the containing Cloud Spanner instance. Otherwise returns an empty set of
+permissions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;TestIamPermissionsResponse&gt; TestIamPermissions(TestIamPermissionsRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.TestIamPermissionsRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Cloud.Iam.V1.TestIamPermissionsResponse</span>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_UpdateDatabaseDdl_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.UpdateDatabaseDdl*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_UpdateDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_UpdateDatabaseDdlRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.UpdateDatabaseDdl(Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest,Grpc.Core.ServerCallContext)">UpdateDatabaseDdl(UpdateDatabaseDdlRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Updates the schema of a Cloud Spanner database by
+creating/altering/dropping tables, columns, indexes, etc. The returned
+[long-running operation][google.longrunning.Operation] will have a name of
+the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and can be used to
+track execution of the schema change(s). The
+[metadata][google.longrunning.Operation.metadata] field type is
+[UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; UpdateDatabaseDdl(UpdateDatabaseDdlRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.html">UpdateDatabaseDdlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.LongRunning.Operation</span>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

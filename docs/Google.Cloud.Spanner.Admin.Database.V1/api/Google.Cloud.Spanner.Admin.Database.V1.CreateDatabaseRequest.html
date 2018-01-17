@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CreateDatabaseRequest
    | Google.Cloud.Spanner.Admin.Database.V1 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -115,7 +115,9 @@
   <h4 id="Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_CreateStatement" data-uid="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.CreateStatement">CreateStatement</h4>
   <div class="markdown level1 summary"><p>Required. A <code>CREATE DATABASE</code> statement, which specifies the ID of the
 new database.  The database ID must conform to the regular expression
-<code>[a-z][a-z0-9_\-]*[a-z0-9]</code> and be between 2 and 30 characters in length.</p>
+<code>[a-z][a-z0-9_\-]*[a-z0-9]</code> and be between 2 and 30 characters in length.
+If the database ID is a reserved word or if it contains a hyphen, the
+database ID must be enclosed in backticks (<code>` </code>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

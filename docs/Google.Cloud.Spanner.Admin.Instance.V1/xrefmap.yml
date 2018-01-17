@@ -16413,6 +16413,18 @@ references:
   commentId: T:Google.Cloud.Iam.V1.Policy
   fullName: Google.Cloud.Iam.V1.Policy
   nameWithType: Policy
+- uid: Google.Cloud.Iam.V1.Policy.AddRoleMember(System.String,System.String)
+  name: AddRoleMember(String, String)
+  href: api/Google.Cloud.Iam.V1.Policy.html#Google_Cloud_Iam_V1_Policy_AddRoleMember_System_String_System_String_
+  commentId: M:Google.Cloud.Iam.V1.Policy.AddRoleMember(System.String,System.String)
+  fullName: Google.Cloud.Iam.V1.Policy.AddRoleMember(System.String, System.String)
+  nameWithType: Policy.AddRoleMember(String, String)
+- uid: Google.Cloud.Iam.V1.Policy.AddRoleMember*
+  name: AddRoleMember
+  href: api/Google.Cloud.Iam.V1.Policy.html#Google_Cloud_Iam_V1_Policy_AddRoleMember_
+  commentId: Overload:Google.Cloud.Iam.V1.Policy.AddRoleMember
+  fullName: Google.Cloud.Iam.V1.Policy.AddRoleMember
+  nameWithType: Policy.AddRoleMember
 - uid: Google.Cloud.Iam.V1.Policy.Bindings
   name: Bindings
   href: api/Google.Cloud.Iam.V1.Policy.html#Google_Cloud_Iam_V1_Policy_Bindings
@@ -16437,6 +16449,18 @@ references:
   commentId: Overload:Google.Cloud.Iam.V1.Policy.Etag
   fullName: Google.Cloud.Iam.V1.Policy.Etag
   nameWithType: Policy.Etag
+- uid: Google.Cloud.Iam.V1.Policy.RemoveRoleMember(System.String,System.String)
+  name: RemoveRoleMember(String, String)
+  href: api/Google.Cloud.Iam.V1.Policy.html#Google_Cloud_Iam_V1_Policy_RemoveRoleMember_System_String_System_String_
+  commentId: M:Google.Cloud.Iam.V1.Policy.RemoveRoleMember(System.String,System.String)
+  fullName: Google.Cloud.Iam.V1.Policy.RemoveRoleMember(System.String, System.String)
+  nameWithType: Policy.RemoveRoleMember(String, String)
+- uid: Google.Cloud.Iam.V1.Policy.RemoveRoleMember*
+  name: RemoveRoleMember
+  href: api/Google.Cloud.Iam.V1.Policy.html#Google_Cloud_Iam_V1_Policy_RemoveRoleMember_
+  commentId: Overload:Google.Cloud.Iam.V1.Policy.RemoveRoleMember
+  fullName: Google.Cloud.Iam.V1.Policy.RemoveRoleMember
+  nameWithType: Policy.RemoveRoleMember
 - uid: Google.Cloud.Iam.V1.Policy.Version
   name: Version
   href: api/Google.Cloud.Iam.V1.Policy.html#Google_Cloud_Iam_V1_Policy_Version

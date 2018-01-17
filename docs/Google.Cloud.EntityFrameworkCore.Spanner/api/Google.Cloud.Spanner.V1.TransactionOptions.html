@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TransactionOptions
+   | Google.Cloud.EntityFrameworkCore.Spanner </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TransactionOptions
+   | Google.Cloud.EntityFrameworkCore.Spanner ">
+    <meta name="generator" content="docfx 2.28.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.V1.TransactionOptions">
+  
+  
+  <h1 id="Google_Cloud_Spanner_V1_TransactionOptions" data-uid="Google.Cloud.Spanner.V1.TransactionOptions" class="text-break">Class TransactionOptions
+  </h1>
+  <div class="markdown level0 summary"><h1 id="transactions">Transactions</h1>
+<p>Each session can have at most one active transaction at a time. After the
+active transaction is completed, the session can immediately be
+re-used for the next transaction. It is not necessary to create a
+new session for each transaction.</p>
+<h1 id="transaction-modes">Transaction Modes</h1>
+<p>Cloud Spanner supports two transaction modes:</p>
+<ol>
+<li><p>Locking read-write. This type of transaction is the only way
+to write data into Cloud Spanner. These transactions rely on
+pessimistic locking and, if necessary, two-phase commit.
+Locking read-write transactions may abort, requiring the
+application to retry.</p>
+</li>
+<li><p>Snapshot read-only. This transaction type provides guaranteed
+consistency across several reads, but does not allow
+writes. Snapshot read-only transactions can be configured to
+read at timestamps in the past. Snapshot read-only
+transactions do not need to be committed.</p>
+</li>
+</ol>
+<p>For transactions that only read, snapshot read-only transactions
+provide simpler semantics and are almost always faster. In
+particular, read-only transactions do not take locks, so they do
+not conflict with read-write transactions. As a consequence of not
+taking locks, they also do not abort, so retry loops are not needed.</p>
+<p>Transactions may only read/write data in a single database. They
+may, however, read/write data in different tables within that
+database.</p>
+<h2 id="locking-read-write-transactions">Locking Read-Write Transactions</h2>
+<p>Locking transactions may be used to atomically read-modify-write
+data anywhere in a database. This type of transaction is externally
+consistent.</p>
+<p>Clients should attempt to minimize the amount of time a transaction
+is active. Faster transactions commit with higher probability
+and cause less contention. Cloud Spanner attempts to keep read locks
+active as long as the transaction continues to do reads, and the
+transaction has not been terminated by
+[Commit][google.spanner.v1.Spanner.Commit] or
+[Rollback][google.spanner.v1.Spanner.Rollback].  Long periods of
+inactivity at the client may cause Cloud Spanner to release a
+transaction&apos;s locks and abort it.</p>
+<p>Reads performed within a transaction acquire locks on the data
+being read. Writes can only be done at commit time, after all reads
+have been completed.
+Conceptually, a read-write transaction consists of zero or more
+reads or SQL queries followed by
+[Commit][google.spanner.v1.Spanner.Commit]. At any time before
+[Commit][google.spanner.v1.Spanner.Commit], the client can send a
+[Rollback][google.spanner.v1.Spanner.Rollback] request to abort the
+transaction.</p>
+<h3 id="semantics">Semantics</h3>
+<p>Cloud Spanner can commit the transaction if all read locks it acquired
+are still valid at commit time, and it is able to acquire write
+locks for all writes. Cloud Spanner can abort the transaction for any
+reason. If a commit attempt returns <code>ABORTED</code>, Cloud Spanner guarantees
+that the transaction has not modified any user data in Cloud Spanner.</p>
+<p>Unless the transaction commits, Cloud Spanner makes no guarantees about
+how long the transaction&apos;s locks were held for. It is an error to
+use Cloud Spanner locks for any sort of mutual exclusion other than
+between Cloud Spanner transactions themselves.</p>
+<h3 id="retrying-aborted-transactions">Retrying Aborted Transactions</h3>
+<p>When a transaction aborts, the application can choose to retry the
+whole transaction again. To maximize the chances of successfully
+committing the retry, the client should execute the retry in the
+same session as the original attempt. The original session&apos;s lock
+priority increases with each consecutive abort, meaning that each
+attempt has a slightly better chance of success than the previous.</p>
+<p>Under some circumstances (e.g., many transactions attempting to
+modify the same row(s)), a transaction can abort many times in a
+short period before successfully committing. Thus, it is not a good
+idea to cap the number of retries a transaction can attempt;
+instead, it is better to limit the total amount of wall time spent
+retrying.</p>
+<h3 id="idle-transactions">Idle Transactions</h3>
+<p>A transaction is considered idle if it has no outstanding reads or
+SQL queries and has not started a read or SQL query within the last 10
+seconds. Idle transactions can be aborted by Cloud Spanner so that they
+don&apos;t hold on to locks indefinitely. In that case, the commit will
+fail with error <code>ABORTED</code>.</p>
+<p>If this behavior is undesirable, periodically executing a simple
+SQL query in the transaction (e.g., <code>SELECT 1</code>) prevents the
+transaction from becoming idle.</p>
+<h2 id="snapshot-read-only-transactions">Snapshot Read-Only Transactions</h2>
+<p>Snapshot read-only transactions provides a simpler method than
+locking read-write transactions for doing several consistent
+reads. However, this type of transaction does not support writes.</p>
+<p>Snapshot transactions do not take locks. Instead, they work by
+choosing a Cloud Spanner timestamp, then executing all reads at that
+timestamp. Since they do not acquire locks, they do not block
+concurrent read-write transactions.</p>
+<p>Unlike locking read-write transactions, snapshot read-only
+transactions never abort. They can fail if the chosen read
+timestamp is garbage collected; however, the default garbage
+collection policy is generous enough that most applications do not
+need to worry about this in practice.</p>
+<p>Snapshot read-only transactions do not need to call
+[Commit][google.spanner.v1.Spanner.Commit] or
+[Rollback]<a href="and in fact are not
+permitted to do so">google.spanner.v1.Spanner.Rollback</a>.</p>
+<p>To execute a snapshot transaction, the client specifies a timestamp
+bound, which tells Cloud Spanner how to choose a read timestamp.</p>
+<p>The types of timestamp bound are:</p>
+<ul>
+<li>Strong (the default).</li>
+<li>Bounded staleness.</li>
+<li>Exact staleness.</li>
+</ul>
+<p>If the Cloud Spanner database to be read is geographically distributed,
+stale read-only transactions can execute more quickly than strong
+or read-write transaction, because they are able to execute far
+from the leader replica.</p>
+<p>Each type of timestamp bound is discussed in detail below.</p>
+<h3 id="strong">Strong</h3>
+<p>Strong reads are guaranteed to see the effects of all transactions
+that have committed before the start of the read. Furthermore, all
+rows yielded by a single read are consistent with each other -- if
+any part of the read observes a transaction, all parts of the read
+see the transaction.</p>
+<p>Strong reads are not repeatable: two consecutive strong read-only
+transactions might return inconsistent results if there are
+concurrent writes. If consistency across reads is required, the
+reads should be executed within a transaction or at an exact read
+timestamp.</p>
+<p>See [TransactionOptions.ReadOnly.strong][google.spanner.v1.TransactionOptions.ReadOnly.strong].</p>
+<h3 id="exact-staleness">Exact Staleness</h3>
+<p>These timestamp bounds execute reads at a user-specified
+timestamp. Reads at a timestamp are guaranteed to see a consistent
+prefix of the global transaction history: they observe
+modifications done by all transactions with a commit timestamp &lt;=
+the read timestamp, and observe none of the modifications done by
+transactions with a larger commit timestamp. They will block until
+all conflicting transactions that may be assigned commit timestamps
+&lt;= the read timestamp have finished.</p>
+<p>The timestamp can either be expressed as an absolute Cloud Spanner commit
+timestamp or a staleness relative to the current time.</p>
+<p>These modes do not require a &quot;negotiation phase&quot; to pick a
+timestamp. As a result, they execute slightly faster than the
+equivalent boundedly stale concurrency modes. On the other hand,
+boundedly stale reads usually return fresher results.</p>
+<p>See [TransactionOptions.ReadOnly.read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.read_timestamp] and
+[TransactionOptions.ReadOnly.exact_staleness][google.spanner.v1.TransactionOptions.ReadOnly.exact_staleness].</p>
+<h3 id="bounded-staleness">Bounded Staleness</h3>
+<p>Bounded staleness modes allow Cloud Spanner to pick the read timestamp,
+subject to a user-provided staleness bound. Cloud Spanner chooses the
+newest timestamp within the staleness bound that allows execution
+of the reads at the closest available replica without blocking.</p>
+<p>All rows yielded are consistent with each other -- if any part of
+the read observes a transaction, all parts of the read see the
+transaction. Boundedly stale reads are not repeatable: two stale
+reads, even if they use the same staleness bound, can execute at
+different timestamps and thus return inconsistent results.</p>
+<p>Boundedly stale reads execute in two phases: the first phase
+negotiates a timestamp among all replicas needed to serve the
+read. In the second phase, reads are executed at the negotiated
+timestamp.</p>
+<p>As a result of the two phase execution, bounded staleness reads are
+usually a little slower than comparable exact staleness
+reads. However, they are typically able to return fresher
+results, and are more likely to execute at the closest replica.</p>
+<p>Because the timestamp negotiation requires up-front knowledge of
+which rows will be read, it can only be used with single-use
+read-only transactions.</p>
+<p>See [TransactionOptions.ReadOnly.max_staleness][google.spanner.v1.TransactionOptions.ReadOnly.max_staleness] and
+[TransactionOptions.ReadOnly.min_read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.min_read_timestamp].</p>
+<h3 id="old-read-timestamps-and-garbage-collection">Old Read Timestamps and Garbage Collection</h3>
+<p>Cloud Spanner continuously garbage collects deleted and overwritten data
+in the background to reclaim storage space. This process is known
+as &quot;version GC&quot;. By default, version GC reclaims versions after they
+are one hour old. Because of this, Cloud Spanner cannot perform reads
+at read timestamps more than one hour in the past. This
+restriction also applies to in-progress reads and/or SQL queries whose
+timestamp become too old while executing. Reads and SQL queries with
+too-old read timestamps fail with the error <code>FAILED_PRECONDITION</code>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TransactionOptions</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Google.Protobuf.IMessage</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.html">TransactionOptions</a>&gt;</div>
+    <div><span class="xref">Google.Protobuf.IMessage</span></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.html">TransactionOptions</a>&gt;</div>
+    <div><span class="xref">Google.Protobuf.IDeepCloneable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.html">TransactionOptions</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.V1.html">Google.Cloud.Spanner.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.V1.dll</h6>
+  <h5 id="Google_Cloud_Spanner_V1_TransactionOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TransactionOptions : IMessage&lt;TransactionOptions&gt;, IMessage, IEquatable&lt;TransactionOptions&gt;, IDeepCloneable&lt;TransactionOptions&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Spanner_V1_TransactionOptions_ModeCase_" data-uid="Google.Cloud.Spanner.V1.TransactionOptions.ModeCase*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_TransactionOptions_ModeCase" data-uid="Google.Cloud.Spanner.V1.TransactionOptions.ModeCase">ModeCase</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionOptions.ModeOneofCase ModeCase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.ModeOneofCase.html">TransactionOptions.ModeOneofCase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_TransactionOptions_ReadOnly_" data-uid="Google.Cloud.Spanner.V1.TransactionOptions.ReadOnly*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_TransactionOptions_ReadOnly" data-uid="Google.Cloud.Spanner.V1.TransactionOptions.ReadOnly">ReadOnly</h4>
+  <div class="markdown level1 summary"><p>Transaction will not write.</p>
+<p>Authorization to begin a read-only transaction requires
+<code>spanner.databases.beginReadOnlyTransaction</code> permission
+on the <code>session</code> resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionOptions.Types.ReadOnly ReadOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.html">TransactionOptions.Types.ReadOnly</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_TransactionOptions_ReadWrite_" data-uid="Google.Cloud.Spanner.V1.TransactionOptions.ReadWrite*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_TransactionOptions_ReadWrite" data-uid="Google.Cloud.Spanner.V1.TransactionOptions.ReadWrite">ReadWrite</h4>
+  <div class="markdown level1 summary"><p>Transaction may write.</p>
+<p>Authorization to begin a read-write transaction requires
+<code>spanner.databases.beginOrRollbackReadWriteTransaction</code> permission
+on the <code>session</code> resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionOptions.Types.ReadWrite ReadWrite { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.html">TransactionOptions.Types.ReadWrite</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

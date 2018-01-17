@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SpannerClientImpl
    | Google.Cloud.Spanner.V1 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -119,6 +119,12 @@
     </div>
     <div>
       <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_GetSession_Google_Cloud_Spanner_V1_SessionName_Google_Api_Gax_Grpc_CallSettings_">SpannerClient.GetSession(SessionName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ListSessionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">SpannerClient.ListSessionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ListSessions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">SpannerClient.ListSessions(String, String, Nullable&lt;Int32&gt;, CallSettings)</a>
     </div>
     <div>
       <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_SessionName_Google_Api_Gax_Grpc_CallSettings_">SpannerClient.DeleteSessionAsync(SessionName, CallSettings)</a>
@@ -1072,6 +1078,108 @@ alive.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_GetSqlStreamReader_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Cloud_Spanner_V1_Session_System_Int32_">SpannerClient.GetSqlStreamReader(ExecuteSqlRequest, Session, Int32)</a></div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClientImpl_ListSessions_" data-uid="Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessions*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClientImpl_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Google.Api.Gax.Grpc.CallSettings)">ListSessions(ListSessionsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all sessions in a given database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListSessionsResponse, Session&gt; ListSessions(ListSessionsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsRequest.html">ListSessionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsResponse.html">ListSessionsResponse</a>, <a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Google_Api_Gax_Grpc_CallSettings_">SpannerClient.ListSessions(ListSessionsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClientImpl_ListSessionsAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessionsAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClientImpl_ListSessionsAsync_Google_Cloud_Spanner_V1_ListSessionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClientImpl.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Google.Api.Gax.Grpc.CallSettings)">ListSessionsAsync(ListSessionsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all sessions in a given database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListSessionsResponse, Session&gt; ListSessionsAsync(ListSessionsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsRequest.html">ListSessionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsResponse.html">ListSessionsResponse</a>, <a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ListSessionsAsync_Google_Cloud_Spanner_V1_ListSessionsRequest_Google_Api_Gax_Grpc_CallSettings_">SpannerClient.ListSessionsAsync(ListSessionsRequest, CallSettings)</a></div>
   <a id="Google_Cloud_Spanner_V1_SpannerClientImpl_Read_" data-uid="Google.Cloud.Spanner.V1.SpannerClientImpl.Read*"></a>
   <h4 id="Google_Cloud_Spanner_V1_SpannerClientImpl_Read_Google_Cloud_Spanner_V1_ReadRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClientImpl.Read(Google.Cloud.Spanner.V1.ReadRequest,Google.Api.Gax.Grpc.CallSettings)">Read(ReadRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Reads rows from the database using key lookups and scans, as a

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Session
    | Google.Cloud.Spanner.V1 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -111,9 +111,91 @@
   </div>
   <h3 id="properties">Properties
   </h3>
+  <a id="Google_Cloud_Spanner_V1_Session_ApproximateLastUseTime_" data-uid="Google.Cloud.Spanner.V1.Session.ApproximateLastUseTime*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Session_ApproximateLastUseTime" data-uid="Google.Cloud.Spanner.V1.Session.ApproximateLastUseTime">ApproximateLastUseTime</h4>
+  <div class="markdown level1 summary"><p>Output only. The approximate timestamp when the session is last used. It is
+typically earlier than the actual last use time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp ApproximateLastUseTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Session_CreateTime_" data-uid="Google.Cloud.Spanner.V1.Session.CreateTime*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Session_CreateTime" data-uid="Google.Cloud.Spanner.V1.Session.CreateTime">CreateTime</h4>
+  <div class="markdown level1 summary"><p>Output only. The timestamp when the session is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp CreateTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Session_Labels_" data-uid="Google.Cloud.Spanner.V1.Session.Labels*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Session_Labels" data-uid="Google.Cloud.Spanner.V1.Session.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>The labels for the session.</p>
+<ul>
+<li>Label keys must be between 1 and 63 characters long and must conform to
+the following regular expression: <code>[a-z]([-a-z0-9]*[a-z0-9])?</code>.</li>
+<li>Label values must be between 0 and 63 characters long and must conform
+to the regular expression <code>([a-z]([-a-z0-9]*[a-z0-9])?)?</code>.</li>
+<li>No more than 64 labels can be associated with a given session.</li>
+</ul>
+<p>See <a href="https://goo.gl/xmQnxf">https://goo.gl/xmQnxf</a> for more information on and examples of labels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Spanner_V1_Session_Name_" data-uid="Google.Cloud.Spanner.V1.Session.Name*"></a>
   <h4 id="Google_Cloud_Spanner_V1_Session_Name" data-uid="Google.Cloud.Spanner.V1.Session.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Required. The name of the session.</p>
+  <div class="markdown level1 summary"><p>The name of the session. This is always system-assigned; values provided
+when creating a session are ignored.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
