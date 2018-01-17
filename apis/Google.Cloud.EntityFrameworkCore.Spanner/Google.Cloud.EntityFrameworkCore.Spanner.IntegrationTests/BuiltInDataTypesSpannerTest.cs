@@ -29,31 +29,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         }
 
         [Fact(Skip = "unknown")]
-        public override void Can_insert_and_read_back_all_non_nullable_data_types() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_insert_and_read_back_all_nullable_data_types_with_values_set_to_non_null() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_insert_and_read_back_all_nullable_data_types_with_values_set_to_null() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_insert_and_read_back_with_binary_key() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_insert_and_read_back_with_null_binary_foreign_key() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_insert_and_read_back_with_null_string_foreign_key() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_insert_and_read_back_with_string_key() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_insert_and_read_with_max_length_set() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_perform_query_with_max_length() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_query_using_any_data_type() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_query_using_any_nullable_data_type() { }
-        [Fact(Skip = "unknown")]
-        public override void Can_query_with_null_parameters_using_any_nullable_data_type() { }
-
-        [Fact(Skip = "unknown")]
         public virtual void Can_insert_and_read_back_all_mapped_data_types()
         {
             using (var context = CreateContext())
@@ -265,6 +240,56 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                     entity.NonPrimitiveArray);
                 Assert.Equal((uint) int.MaxValue + 1, entity.Xid);
             }
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_insert_and_read_back_all_non_nullable_data_types()
+        {
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_insert_and_read_back_all_nullable_data_types_with_values_set_to_non_null()
+        {
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_insert_and_read_back_all_nullable_data_types_with_values_set_to_null()
+        {
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_insert_and_read_back_with_binary_key()
+        {
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_insert_and_read_back_with_null_binary_foreign_key()
+        {
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_insert_and_read_back_with_null_string_foreign_key()
+        {
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_insert_and_read_back_with_string_key()
+        {
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_insert_and_read_with_max_length_set()
+        {
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_perform_query_with_max_length()
+        {
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_query_using_any_data_type()
+        {
         }
 
         [Fact(Skip = "unknown")]
@@ -509,6 +534,16 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                 Assert.Same(entity,
                     context.Set<MappedNullableDataTypes>().Single(e => e.Int == 911 && e.Xid == param25));
             }
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_query_using_any_nullable_data_type()
+        {
+        }
+
+        [Fact(Skip = "unknown")]
+        public override void Can_query_with_null_parameters_using_any_nullable_data_type()
+        {
         }
 
         // TODO: Other tests from original?

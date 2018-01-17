@@ -14,28 +14,28 @@
 
 using System.Collections.Generic;
 using Google.Api.Gax;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.Migrations
 {
-    class SpannerMigrationsSqlGenerator : MigrationsSqlGenerator
+    internal class SpannerMigrationsSqlGenerator : MigrationsSqlGenerator
     {
-
         private static readonly Dictionary<string, string> s_columnTypeMap = new Dictionary<string, string>
         {
-            {"STRING", "STRING(MAX)" },
-            {"BYTES", "BYTES(MAX)" }
+            {"STRING", "STRING(MAX)"},
+            {"BYTES", "BYTES(MAX)"}
         };
 
         public SpannerMigrationsSqlGenerator(MigrationsSqlGeneratorDependencies dependencies)
-            :base(dependencies)
+            : base(dependencies)
         {
         }
 
-        protected override void Generate(MigrationOperation operation, IModel model, MigrationCommandListBuilder builder)
+        protected override void Generate(MigrationOperation operation, IModel model,
+            MigrationCommandListBuilder builder)
         {
             if (operation is SpannerCreateDatabaseOperation createDatabaseOperation)
             {
@@ -58,7 +58,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Migrations
                 .Append(Dependencies.SqlGenerationHelper.DelimitIdentifier(name));
 
             builder.AppendLine(Dependencies.SqlGenerationHelper.StatementTerminator);
-            EndStatement(builder, suppressTransaction: true);
+            EndStatement(builder, true);
         }
 
         private void GenerateCreateDatabase(string name, IModel model, MigrationCommandListBuilder builder)
@@ -68,7 +68,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Migrations
                 .Append(Dependencies.SqlGenerationHelper.DelimitIdentifier(name));
 
             builder.AppendLine(Dependencies.SqlGenerationHelper.StatementTerminator);
-            EndStatement(builder, suppressTransaction: true);
+            EndStatement(builder, true);
         }
 
         protected override void Generate(
@@ -105,11 +105,12 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Migrations
 
             if (terminate)
             {
-                EndStatement(builder, suppressTransaction: true);
+                EndStatement(builder, true);
             }
         }
 
-        protected override void Generate(AddForeignKeyOperation operation, IModel model, MigrationCommandListBuilder builder, bool terminate)
+        protected override void Generate(AddForeignKeyOperation operation, IModel model,
+            MigrationCommandListBuilder builder, bool terminate)
         {
             // Foreign keys are not supported by spanner and are ignored.
         }
@@ -130,7 +131,8 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Migrations
         {
             columnType = columnType.ToUpperInvariant();
             return s_columnTypeMap.TryGetValue(columnType, out string convertedColumnType)
-                    ? convertedColumnType : columnType;
+                ? convertedColumnType
+                : columnType;
         }
 
         protected override void ColumnDefinition(
@@ -159,7 +161,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Migrations
                 .Append(Dependencies.SqlGenerationHelper.DelimitIdentifier(name))
                 .Append(" ")
                 .Append(GetCorrectedColumnType(
-                        type ?? GetColumnType(schema, table, name, clrType, unicode, maxLength, rowVersion, model)));
+                    type ?? GetColumnType(schema, table, name, clrType, unicode, maxLength, rowVersion, model)));
 
             if (!nullable)
             {

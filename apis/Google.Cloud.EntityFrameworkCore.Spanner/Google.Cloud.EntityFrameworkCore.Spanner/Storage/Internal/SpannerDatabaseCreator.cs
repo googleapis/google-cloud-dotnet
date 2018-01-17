@@ -26,8 +26,8 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
     /// </summary>
     public class SpannerDatabaseCreator : RelationalDatabaseCreator
     {
-        readonly ISpannerRelationalConnection _connection;
-        readonly IRawSqlCommandBuilder _rawSqlCommandBuilder;
+        private readonly ISpannerRelationalConnection _connection;
+        private readonly IRawSqlCommandBuilder _rawSqlCommandBuilder;
 
         /// <summary>
         /// </summary>
@@ -59,20 +59,21 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             using (var masterConnection = _connection.CreateMasterConnection())
             {
                 await Dependencies.MigrationCommandExecutor
-                    .ExecuteNonQueryAsync(CreateCreateOperations(), masterConnection, cancellationToken).ConfigureAwait(false);
+                    .ExecuteNonQueryAsync(CreateCreateOperations(), masterConnection, cancellationToken)
+                    .ConfigureAwait(false);
             }
         }
 
         /// <inheritdoc />
         protected override bool HasTables()
-            => (bool)CreateHasTablesCommand().ExecuteScalar(_connection);
+            => (bool) CreateHasTablesCommand().ExecuteScalar(_connection);
 
         /// <inheritdoc />
         protected override async Task<bool> HasTablesAsync(CancellationToken cancellationToken = default)
-            => (bool)await CreateHasTablesCommand()
-                    .ExecuteScalarAsync(_connection, cancellationToken: cancellationToken).ConfigureAwait(false);
+            => (bool) await CreateHasTablesCommand()
+                .ExecuteScalarAsync(_connection, cancellationToken).ConfigureAwait(false);
 
-        IRelationalCommand CreateHasTablesCommand()
+        private IRelationalCommand CreateHasTablesCommand()
             => _rawSqlCommandBuilder
                 .Build(@"
                     SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
@@ -80,7 +81,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
                     WHERE t.table_catalog = '' and t.table_schema = ''
                 ");
 
-        IReadOnlyList<MigrationCommand> CreateCreateOperations()
+        private IReadOnlyList<MigrationCommand> CreateCreateOperations()
             => Dependencies.MigrationsSqlGenerator.Generate(new[]
             {
                 new SpannerCreateDatabaseOperation
@@ -90,10 +91,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             });
 
         /// <inheritdoc />
-        public override bool Exists()
-        {
-            return ExistsAsync().ResultWithUnwrappedExceptions();
-        }
+        public override bool Exists() => ExistsAsync().ResultWithUnwrappedExceptions();
 
         /// <inheritdoc />
         public override async Task<bool> ExistsAsync(CancellationToken cancellationToken = default)
@@ -128,7 +126,8 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             using (var masterConnection = _connection.CreateMasterConnection())
             {
                 await Dependencies.MigrationCommandExecutor
-                    .ExecuteNonQueryAsync(CreateDropCommands(), masterConnection, cancellationToken).ConfigureAwait(false);
+                    .ExecuteNonQueryAsync(CreateDropCommands(), masterConnection, cancellationToken)
+                    .ConfigureAwait(false);
             }
         }
 
@@ -155,7 +154,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
         {
             var operations = new MigrationOperation[]
             {
-                new SpannerDropDatabaseOperation { Name = _connection.DbConnection.Database }
+                new SpannerDropDatabaseOperation {Name = _connection.DbConnection.Database}
             };
 
             return Dependencies.MigrationsSqlGenerator.Generate(operations);

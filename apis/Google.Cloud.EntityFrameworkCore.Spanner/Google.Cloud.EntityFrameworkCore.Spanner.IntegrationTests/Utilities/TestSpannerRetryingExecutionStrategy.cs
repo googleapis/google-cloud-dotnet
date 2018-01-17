@@ -14,7 +14,6 @@
 
 using System;
 using Google.Cloud.Spanner.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Microsoft.EntityFrameworkCore.Utilities

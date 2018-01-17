@@ -16,10 +16,10 @@ using System.Data;
 
 namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
-    class SpannerBoolTypeMapping : RelationalTypeMapping
+    internal class SpannerBoolTypeMapping : RelationalTypeMapping
     {
         public SpannerBoolTypeMapping(
-             string storeType,
+            string storeType,
             DbType? dbType = null)
             : base(storeType, typeof(bool), dbType)
         {
@@ -29,6 +29,6 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             => new SpannerBoolTypeMapping(storeType, DbType);
 
         protected override string GenerateNonNullSqlLiteral(object value)
-            => (bool)value ? "true" : "false";
+            => (bool) value ? "true" : "false";
     }
 }

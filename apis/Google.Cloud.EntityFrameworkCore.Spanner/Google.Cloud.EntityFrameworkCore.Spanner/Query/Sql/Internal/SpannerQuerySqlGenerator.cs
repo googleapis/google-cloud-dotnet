@@ -12,13 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using System.Linq.Expressions;
 using Google.Api.Gax;
 using Microsoft.EntityFrameworkCore.Query.Expressions;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.EntityFrameworkCore.Storage;
-using Remotion.Linq.Clauses.Expressions;
 
 namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
 {
@@ -37,6 +35,16 @@ namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
         {
         }
 
+        /// <summary>
+        /// The default true literal SQL.
+        /// </summary>
+        protected override string TypedTrueLiteral => "TRUE";
+
+        /// <summary>
+        /// The default false literal SQL.
+        /// </summary>
+        protected override string TypedFalseLiteral => "FALSE";
+
         /// <inheritdoc />
         protected override string GenerateOperator(Expression expression)
             => expression.NodeType == ExpressionType.Add
@@ -48,7 +56,7 @@ namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
         public override Expression VisitAlias(AliasExpression aliasExpression)
         {
             var validatedAlias = SpannerQueryCompilationContext.GetValidSymbol(aliasExpression.Alias);
-            return base.VisitAlias(validatedAlias != aliasExpression.Alias 
+            return base.VisitAlias(validatedAlias != aliasExpression.Alias
                 ? new AliasExpression(validatedAlias, aliasExpression.Expression)
                 : aliasExpression);
         }
@@ -275,35 +283,9 @@ namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
 
                     return binaryExpression;
                 }
-//                case ExpressionType.Equal:
-//                case ExpressionType.NotEqual:
-//                {
-//                    //if one side is bool, we force both to bool due
-//                    //to expectations that "1" is true.
-//                    if (binaryExpression.Left.Type != typeof(bool)
-//                        && binaryExpression.Right.Type != typeof(bool))
-//                    {
-//                        return base.VisitBinary(binaryExpression);
-//                    }
-//                    // one or both sides are bool, so we may be forced
-//                    // to CAST.
-//                    VisitBoolOperand(binaryExpression.Left);
-//                    Sql.Append(" = ");
-//                    VisitBoolOperand(binaryExpression.Right);
-//                    return binaryExpression;
-//                }
             }
 
             return base.VisitBinary(binaryExpression);
         }
-        /// <summary>
-        ///     The default true literal SQL.
-        /// </summary>
-        protected override string TypedTrueLiteral => "TRUE";
-
-        /// <summary>
-        ///     The default false literal SQL.
-        /// </summary>
-        protected override string TypedFalseLiteral => "FALSE";
     }
 }

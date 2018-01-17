@@ -21,15 +21,15 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerStringReplaceTranslator : IMethodCallTranslator
     {
-        static readonly MethodInfo s_methodInfo
-            = typeof(string).GetRuntimeMethod(nameof(string.Replace), new[] { typeof(string), typeof(string) });
+        private static readonly MethodInfo s_methodInfo
+            = typeof(string).GetRuntimeMethod(nameof(string.Replace), new[] {typeof(string), typeof(string)});
 
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
             => s_methodInfo.Equals(methodCallExpression.Method)
                 ? new SqlFunctionExpression(
                     "REPLACE",
                     methodCallExpression.Type,
-                    new[] { methodCallExpression.Object }.Concat(methodCallExpression.Arguments))
+                    new[] {methodCallExpression.Object}.Concat(methodCallExpression.Arguments))
                 : null;
     }
 }

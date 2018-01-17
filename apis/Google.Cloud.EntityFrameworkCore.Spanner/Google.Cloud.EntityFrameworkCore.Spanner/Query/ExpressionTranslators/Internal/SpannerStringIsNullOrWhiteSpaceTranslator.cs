@@ -20,8 +20,8 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerStringIsNullOrWhiteSpaceTranslator : IMethodCallTranslator
     {
-        static readonly MethodInfo s_methodInfo
-            = typeof(string).GetRuntimeMethod(nameof(string.IsNullOrWhiteSpace), new[] { typeof(string) });
+        private static readonly MethodInfo s_methodInfo
+            = typeof(string).GetRuntimeMethod(nameof(string.IsNullOrWhiteSpace), new[] {typeof(string)});
 
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
             => s_methodInfo.Equals(methodCallExpression.Method)
@@ -29,9 +29,9 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
                     ExpressionType.OrElse,
                     new IsNullExpression(methodCallExpression.Arguments[0]),
                     new SqlFunctionExpression(
-                            "REGEXP_CONTAINS",
+                        "REGEXP_CONTAINS",
                         typeof(bool),
-                        new [] { methodCallExpression.Arguments[0], Expression.Constant(@"^\\s*$") })
+                        new[] {methodCallExpression.Arguments[0], Expression.Constant(@"^\\s*$")})
                 )
                 : null;
     }

@@ -17,15 +17,12 @@ using Microsoft.EntityFrameworkCore.ValueGeneration;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
-    class IntGenerator : ValueGenerator<int>
+    internal class IntGenerator : ValueGenerator<int>
     {
-        private int _generatedValue = 0;
-
-        public override int Next(EntityEntry entry)
-        {
-            return _generatedValue++;
-        }
+        private int _generatedValue;
 
         public override bool GeneratesTemporaryValues { get; } = false;
+
+        public override int Next(EntityEntry entry) => _generatedValue++;
     }
 }

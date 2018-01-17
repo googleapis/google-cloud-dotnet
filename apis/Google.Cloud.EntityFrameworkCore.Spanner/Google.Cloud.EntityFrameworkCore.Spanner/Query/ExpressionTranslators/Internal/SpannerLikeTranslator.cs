@@ -24,12 +24,12 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
         private static readonly MethodInfo s_like
             = typeof(DbFunctionsExtensions).GetRuntimeMethod(
                 nameof(DbFunctionsExtensions.Like),
-                new[] { typeof(DbFunctions), typeof(string), typeof(string) });
+                new[] {typeof(DbFunctions), typeof(string), typeof(string)});
 
         private static readonly MethodInfo s_likeWithEscape
             = typeof(DbFunctionsExtensions).GetRuntimeMethod(
                 nameof(DbFunctionsExtensions.Like),
-                new[] { typeof(DbFunctions), typeof(string), typeof(string), typeof(string) });
+                new[] {typeof(DbFunctions), typeof(string), typeof(string), typeof(string)});
 
 
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
@@ -37,12 +37,14 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
             GaxPreconditions.CheckNotNull(methodCallExpression, nameof(methodCallExpression));
 
             if (Equals(methodCallExpression.Method, s_likeWithEscape))
-                return new LikeExpression(methodCallExpression.Arguments[1], methodCallExpression.Arguments[2], methodCallExpression.Arguments[3]);
+            {
+                return new LikeExpression(methodCallExpression.Arguments[1], methodCallExpression.Arguments[2],
+                    methodCallExpression.Arguments[3]);
+            }
 
-            if (Equals(methodCallExpression.Method, s_like))
-                return new LikeExpression(methodCallExpression.Arguments[1], methodCallExpression.Arguments[2]);
-
-            return null;
+            return Equals(methodCallExpression.Method, s_like) ? 
+                new LikeExpression(methodCallExpression.Arguments[1], methodCallExpression.Arguments[2]) 
+                : null;
         }
     }
 }

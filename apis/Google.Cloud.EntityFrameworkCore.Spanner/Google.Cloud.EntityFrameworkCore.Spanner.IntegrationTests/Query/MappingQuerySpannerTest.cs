@@ -20,9 +20,8 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 {
     public class MappingQuerySpannerTest : MappingQueryTestBase, IClassFixture<MappingQuerySpannerFixture>
     {
-        private readonly MappingQuerySpannerFixture _fixture;
-
         public MappingQuerySpannerTest(MappingQuerySpannerFixture fixture) => _fixture = fixture;
+        private readonly MappingQuerySpannerFixture _fixture;
 
         protected override DbContext CreateContext() => _fixture.CreateContext();
 

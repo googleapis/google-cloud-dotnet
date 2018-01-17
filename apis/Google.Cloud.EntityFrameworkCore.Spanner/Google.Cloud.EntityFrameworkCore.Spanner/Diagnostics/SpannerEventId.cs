@@ -21,6 +21,13 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
     /// </summary>
     public static class SpannerEventId
     {
+        private static readonly string s_logPrefix = DbLoggerCategory.Database.Name + ".";
+
+        /// <summary>
+        /// </summary>
+        public static EventId SpannerDiagnosticLog { get; } = MakeEventId(Id.SpannerDiagnosticLog);
+
+        private static EventId MakeEventId(Id id) => new EventId((int) id, s_logPrefix + id);
         //For now, we are aggregating all the logging messages done within the ADO.NET
         //layer under the "SpannerDiagnosticLog" Id
 
@@ -28,13 +35,5 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
         {
             SpannerDiagnosticLog = CoreEventId.ProviderBaseId
         }
-
-        private static readonly string s_logPrefix = DbLoggerCategory.Database.Name + ".";
-        private static EventId MakeEventId(Id id) => new EventId((int)id, s_logPrefix + id);
-
-        /// <summary>
-        /// </summary>
-        public static EventId SpannerDiagnosticLog { get; } = MakeEventId(Id.SpannerDiagnosticLog);
-
     }
 }

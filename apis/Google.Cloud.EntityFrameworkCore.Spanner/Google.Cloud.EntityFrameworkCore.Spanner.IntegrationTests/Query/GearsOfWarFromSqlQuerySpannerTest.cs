@@ -14,7 +14,6 @@
 
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.EntityFrameworkCore.Utilities;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
@@ -32,9 +31,9 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             fixture.TestSqlLoggerFactory.Clear();
         }
 
+        private string Sql => Fixture.TestSqlLoggerFactory.Sql;
+
         protected override void ClearLog()
             => Fixture.TestSqlLoggerFactory.Clear();
-
-        private string Sql => Fixture.TestSqlLoggerFactory.Sql;
     }
 }

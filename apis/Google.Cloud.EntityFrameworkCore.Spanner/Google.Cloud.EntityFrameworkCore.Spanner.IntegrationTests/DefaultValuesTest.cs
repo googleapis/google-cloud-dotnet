@@ -15,9 +15,7 @@
 using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Utilities;
-using Microsoft.EntityFrameworkCore.ValueGeneration;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
@@ -63,8 +61,8 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             protected override void OnModelCreating(ModelBuilder modelBuilder)
             {
                 modelBuilder.Entity<KettleChips>()
-                                   .Property(e => e.BestBuyDate)
-                                   .HasDefaultValue(new DateTime(2035, 9, 25));
+                    .Property(e => e.BestBuyDate)
+                    .HasDefaultValue(new DateTime(2035, 9, 25));
 
                 modelBuilder.Entity<KettleChips>()
                     .Property(e => e.Id)

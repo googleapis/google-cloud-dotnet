@@ -16,7 +16,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Cloud.Spanner.Data;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Internal;
@@ -53,14 +52,15 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                 ParameterBuilder = new RelationalParameterBuilder(typeMapper);
             }
 
-            IndentedStringBuilder IInfrastructure<IndentedStringBuilder>.Instance { get; } = new IndentedStringBuilder();
+            IndentedStringBuilder IInfrastructure<IndentedStringBuilder>.Instance { get; } =
+                new IndentedStringBuilder();
 
             public IRelationalParameterBuilder ParameterBuilder { get; }
 
             public IRelationalCommand Build()
                 => new TestRelationalCommand(
                     _logger,
-                    ((IInfrastructure<IndentedStringBuilder>)this).Instance.ToString(),
+                    ((IInfrastructure<IndentedStringBuilder>) this).Instance.ToString(),
                     ParameterBuilder.Parameters);
         }
 
@@ -71,10 +71,8 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             public TestRelationalCommand(
                 IDiagnosticsLogger<DbLoggerCategory.Database.Command> logger,
                 string commandText,
-                IReadOnlyList<IRelationalParameter> parameters)
-            {
-                _realRelationalCommand = new RelationalCommand(logger, commandText, parameters);
-            }
+                IReadOnlyList<IRelationalParameter> parameters) => _realRelationalCommand =
+                new RelationalCommand(logger, commandText, parameters);
 
             public string CommandText => _realRelationalCommand.CommandText;
 
@@ -95,11 +93,13 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             }
 
             public Task<int> ExecuteNonQueryAsync(
-                IRelationalConnection connection, IReadOnlyDictionary<string, object> parameterValues, CancellationToken cancellationToken = new CancellationToken())
+                IRelationalConnection connection, IReadOnlyDictionary<string, object> parameterValues,
+                CancellationToken cancellationToken = new CancellationToken())
             {
                 var errorNumber = PreExecution(connection);
 
-                var result = _realRelationalCommand.ExecuteNonQueryAsync(connection, parameterValues, cancellationToken);
+                var result =
+                    _realRelationalCommand.ExecuteNonQueryAsync(connection, parameterValues, cancellationToken);
                 if (errorNumber != null)
                 {
                     connection.DbConnection.Close();
@@ -123,11 +123,13 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             }
 
             public async Task<object> ExecuteScalarAsync(
-                IRelationalConnection connection, IReadOnlyDictionary<string, object> parameterValues, CancellationToken cancellationToken = new CancellationToken())
+                IRelationalConnection connection, IReadOnlyDictionary<string, object> parameterValues,
+                CancellationToken cancellationToken = new CancellationToken())
             {
                 var errorNumber = PreExecution(connection);
 
-                var result = await _realRelationalCommand.ExecuteScalarAsync(connection, parameterValues, cancellationToken);
+                var result =
+                    await _realRelationalCommand.ExecuteScalarAsync(connection, parameterValues, cancellationToken);
                 if (errorNumber != null)
                 {
                     connection.DbConnection.Close();
@@ -151,11 +153,13 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             }
 
             public async Task<RelationalDataReader> ExecuteReaderAsync(
-                IRelationalConnection connection, IReadOnlyDictionary<string, object> parameterValues, CancellationToken cancellationToken = new CancellationToken())
+                IRelationalConnection connection, IReadOnlyDictionary<string, object> parameterValues,
+                CancellationToken cancellationToken = new CancellationToken())
             {
                 var errorNumber = PreExecution(connection);
 
-                var result = await _realRelationalCommand.ExecuteReaderAsync(connection, parameterValues, cancellationToken);
+                var result =
+                    await _realRelationalCommand.ExecuteReaderAsync(connection, parameterValues, cancellationToken);
                 if (errorNumber != null)
                 {
                     connection.DbConnection.Close();
@@ -167,7 +171,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             private string PreExecution(IRelationalConnection connection)
             {
                 string errorNumber = null;
-                var testConnection = (TestSpannerConnection)connection;
+                var testConnection = (TestSpannerConnection) connection;
 
                 testConnection.ExecutionCount++;
                 if (testConnection.ExecutionFailures.Count > 0)

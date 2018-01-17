@@ -21,7 +21,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.Data;
@@ -33,16 +32,19 @@ namespace Microsoft.EntityFrameworkCore.Utilities
         private const string Northwind = "northwind";
 
         public const int CommandTimeout = 90;
+        private const int SkipToLine = 0;
 
         public static readonly string NorthwindConnectionString = CreateConnectionString(Northwind);
+
+        private static readonly Dictionary<string, List<Tuple<string, SpannerDbType>>> s_columnMap
+            = new Dictionary<string, List<Tuple<string, SpannerDbType>>>();
+
+        private static int s_gStatements;
         private readonly bool _cleanDatabase;
         private SpannerConnection _connection;
 
         private string _connectionString;
         private bool _deleteDatabase;
-
-        private static readonly Dictionary<string, List<Tuple<string, SpannerDbType>>> s_columnMap
-            = new Dictionary<string, List<Tuple<string, SpannerDbType>>>();
 
         private SpannerTestStore(string name, bool cleanDatabase = true)
         {
@@ -127,9 +129,6 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             return true;
         }
 
-        private static int s_gStatements;
-        private const int SkipToLine = 0;
-
         public static void ExecuteScript(string databaseName, string scriptPath)
         {
             if (File.Exists(@"..\..\" + scriptPath))
@@ -181,7 +180,7 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                                     }
                                     columnData.Add(new Tuple<string, SpannerDbType>(tokens[i], type));
                                     i += 2;
-                                    if (tokens[i] == "MAX" || (tokens[i][0] >= '0' && tokens[i][0] <= '9'))
+                                    if (tokens[i] == "MAX" || tokens[i][0] >= '0' && tokens[i][0] <= '9')
                                     {
                                         i++;
                                     }
@@ -207,7 +206,8 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                                 continue;
                             }
 
-                            var m = Regex.Match(statement, @"INSERT INTO ([^\r\n\t\f\v(]+)\s?(\(.*\))?.*VALUES.(\(.*\))", RegexOptions.Singleline);
+                            var m = Regex.Match(statement,
+                                @"INSERT INTO ([^\r\n\t\f\v(]+)\s?(\(.*\))?.*VALUES.(\(.*\))", RegexOptions.Singleline);
                             var targetTable = m.Groups[1].Value.Trim();
                             var columnGroup = m.Groups[2].Value;
                             var valueGroup = m.Groups[3].Value;
@@ -249,17 +249,17 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                                 valueToken = valueToken.TrimStart();
                                 if (valueToken.StartsWith("TO_DATE"))
                                 {
-                                    int dateQuoteInd = valueToken.IndexOf('\'');
-                                    int endDateQuote = valueToken.IndexOf('\'', dateQuoteInd + 1);
+                                    var dateQuoteInd = valueToken.IndexOf('\'');
+                                    var endDateQuote = valueToken.IndexOf('\'', dateQuoteInd + 1);
 
                                     values.Add(valueToken.Substring(dateQuoteInd + 1, endDateQuote - dateQuoteInd - 1));
                                     i++;
                                 }
                                 else if (valueToken.StartsWith("'") || valueToken.StartsWith("N'"))
                                 {
-                                    valueToken = valueToken.StartsWith("'") ?
-                                        valueToken.Substring(1, valueToken.Length - 1) 
-                                            : valueToken.Substring(2, valueToken.Length - 2);
+                                    valueToken = valueToken.StartsWith("'")
+                                        ? valueToken.Substring(1, valueToken.Length - 1)
+                                        : valueToken.Substring(2, valueToken.Length - 2);
                                     if (valueToken.EndsWith("'"))
                                     {
                                         values.Add(valueToken.Substring(0, valueToken.Length - 1));
@@ -271,22 +271,23 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                                 }
                                 else
                                 {
-                                    values.Add(string.Equals(valueToken, "NULL", StringComparison.InvariantCultureIgnoreCase)
-                                        ? null : valueToken);
+                                    values.Add(string.Equals(valueToken, "NULL",
+                                        StringComparison.InvariantCultureIgnoreCase)
+                                        ? null
+                                        : valueToken);
                                 }
                             }
 
                             command.CommandText = $"INSERT {targetTable}";
                             command.Parameters.Clear();
                             command.Parameters.AddRange(targetColumns.Select(x =>
-                                        new SpannerParameter(x.Item1, x.Item2)).ToArray());
+                                new SpannerParameter(x.Item1, x.Item2)).ToArray());
 
                             if (values.Count != command.Parameters.Count)
                             {
                                 throw new InvalidOperationException("error parsing input northwind.sql");
                             }
                             for (var j = 0; j < command.Parameters.Count; j++)
-                            {
                                 if (Equals(((SpannerParameter) command.Parameters[j]).SpannerDbType, SpannerDbType.Bool)
                                     && (values[j].Contains("0") || values[j].Contains("1")))
                                 {
@@ -296,9 +297,11 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                                 {
                                     command.Parameters[j].Value = values[j];
                                 }
-                            }
                         }
-                        if (s_gStatements < SkipToLine) continue;
+                        if (s_gStatements < SkipToLine)
+                        {
+                            continue;
+                        }
                         command.ExecuteNonQuery();
                     }
 
@@ -336,10 +339,12 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             {
                 try
                 {
-                    var reader = targetDb.CreateSelectCommand("SELECT COUNT(*) FROM information_schema.tables").ExecuteReader();
+                    var reader = targetDb.CreateSelectCommand("SELECT COUNT(*) FROM information_schema.tables")
+                        .ExecuteReader();
                     reader.Dispose();
                 }
-                catch (SpannerException e) when (e.ErrorCode == ErrorCode.NotFound || e.ErrorCode == ErrorCode.InvalidArgument)
+                catch (SpannerException e) when (e.ErrorCode == ErrorCode.NotFound ||
+                                                 e.ErrorCode == ErrorCode.InvalidArgument)
                 {
                     return false;
                 }
@@ -378,7 +383,8 @@ namespace Microsoft.EntityFrameworkCore.Utilities
 
         private static Task<T> ExecuteScalarAsync<T>(SpannerConnection connection, string sql,
             object[] parameters = null)
-            => ExecuteAsync(connection, async command => (T) await command.ExecuteScalarAsync().ConfigureAwait(false), sql, false,
+            => ExecuteAsync(connection, async command => (T) await command.ExecuteScalarAsync().ConfigureAwait(false),
+                sql, false,
                 parameters);
 
         public int ExecuteNonQuery(string sql, params object[] parameters)
@@ -420,7 +426,8 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                 {
                     var results = Enumerable.Empty<T>();
                     while (await dataReader.ReadAsync().ConfigureAwait(false))
-                        results = results.Concat(new[] {await dataReader.GetFieldValueAsync<T>(0).ConfigureAwait(false) });
+                        results = results.Concat(
+                            new[] {await dataReader.GetFieldValueAsync<T>(0).ConfigureAwait(false)});
                     return results;
                 }
             }, sql, false, parameters);

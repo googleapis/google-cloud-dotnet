@@ -21,16 +21,16 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerStringTrimEndTranslator : IMethodCallTranslator
     {
-        static readonly MethodInfo s_trimEndWithChars
-            = typeof(string).GetRuntimeMethod(nameof(string.TrimEnd), new[] { typeof(char[]) });
+        private static readonly MethodInfo s_trimEndWithChars
+            = typeof(string).GetRuntimeMethod(nameof(string.TrimEnd), new[] {typeof(char[])});
 
         // The following exists as an optimization in netcoreapp20
-        static readonly MethodInfo s_trimEndNoParam
+        private static readonly MethodInfo s_trimEndNoParam
             = typeof(string).GetRuntimeMethod(nameof(string.TrimEnd), new Type[0]);
 
         // The following exists as an optimization in netcoreapp20
-        static readonly MethodInfo s_trimEndSingleChar
-            = typeof(string).GetRuntimeMethod(nameof(string.TrimEnd), new[] { typeof(char) });
+        private static readonly MethodInfo s_trimEndSingleChar
+            = typeof(string).GetRuntimeMethod(nameof(string.TrimEnd), new[] {typeof(char)});
 
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
         {
@@ -47,9 +47,11 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
             {
                 var constantTrimChars = methodCallExpression.Arguments[0] as ConstantExpression;
                 if (constantTrimChars == null)
-                    return null;  // Don't translate if trim chars isn't a constant
+                {
+                    return null; // Don't translate if trim chars isn't a constant
+                }
 
-                var trimChar = (char)constantTrimChars.Value;
+                var trimChar = (char) constantTrimChars.Value;
                 return new SqlFunctionExpression(
                     "RTRIM",
                     typeof(string),
@@ -68,11 +70,16 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
             {
                 var constantTrimChars = methodCallExpression.Arguments[0] as ConstantExpression;
                 if (constantTrimChars == null)
+                {
                     return null; // Don't translate if trim chars isn't a constant
-                trimChars = (char[])constantTrimChars.Value;
+                }
+                trimChars = (char[]) constantTrimChars.Value;
             }
             else
-                throw new Exception($"{nameof(SpannerStringTrimEndTranslator)} does not support {methodCallExpression}");
+            {
+                throw new Exception(
+                    $"{nameof(SpannerStringTrimEndTranslator)} does not support {methodCallExpression}");
+            }
 
             if (trimChars == null || trimChars.Length == 0)
             {

@@ -117,7 +117,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
             public DbSet<Blog> Blogs { get; set; }
             public DbSet<Owner> Owners { get; set; }
-
         }
 
         private class Blog

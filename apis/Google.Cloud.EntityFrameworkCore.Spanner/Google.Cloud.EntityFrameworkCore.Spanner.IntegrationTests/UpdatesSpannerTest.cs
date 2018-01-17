@@ -25,7 +25,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         {
         }
 
-        [Fact(Skip="unknown")]
+        [Fact(Skip = "unknown")]
         public override void Remove_partial_on_missing_record_throws()
         {
             base.Remove_partial_on_missing_record_throws();

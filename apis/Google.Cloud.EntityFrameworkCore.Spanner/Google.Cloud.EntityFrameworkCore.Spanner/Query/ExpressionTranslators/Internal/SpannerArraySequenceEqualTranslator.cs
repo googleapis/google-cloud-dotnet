@@ -23,11 +23,11 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
     /// </summary>
     internal class SpannerArraySequenceEqualTranslator : IMethodCallTranslator
     {
-        static readonly MethodInfo s_sequenceEqualMethodInfo = typeof(Enumerable).GetTypeInfo().
-            GetDeclaredMethods(nameof(Enumerable.SequenceEqual)).Single(m =>
+        private static readonly MethodInfo s_sequenceEqualMethodInfo = typeof(Enumerable).GetTypeInfo()
+            .GetDeclaredMethods(nameof(Enumerable.SequenceEqual)).Single(m =>
                 m.IsGenericMethodDefinition &&
                 m.GetParameters().Length == 2
-        );
+            );
 
         public Expression Translate(MethodCallExpression methodCallExpression)
         {

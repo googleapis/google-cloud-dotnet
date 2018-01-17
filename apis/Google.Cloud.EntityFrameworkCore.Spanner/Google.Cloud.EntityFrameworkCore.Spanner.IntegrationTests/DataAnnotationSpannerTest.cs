@@ -30,13 +30,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         protected override void UseTransaction(DatabaseFacade facade, IDbContextTransaction transaction)
             => facade.UseTransaction(transaction.GetDbTransaction());
 
-
-        [Fact(Skip="no exception being thrown")]
-        public override void RequiredAttribute_for_property_throws_while_inserting_null_value()
-        {
-            base.RequiredAttribute_for_property_throws_while_inserting_null_value();
-        }
-
         [Fact(Skip = "no exception being thrown")]
         public override void ConcurrencyCheckAttribute_throws_if_value_in_database_changed()
         {
@@ -53,6 +46,13 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         public override void RequiredAttribute_for_navigation_throws_while_inserting_null_value()
         {
             base.RequiredAttribute_for_navigation_throws_while_inserting_null_value();
+        }
+
+
+        [Fact(Skip = "no exception being thrown")]
+        public override void RequiredAttribute_for_property_throws_while_inserting_null_value()
+        {
+            base.RequiredAttribute_for_property_throws_while_inserting_null_value();
         }
 
         [Fact(Skip = "no exception being thrown")]

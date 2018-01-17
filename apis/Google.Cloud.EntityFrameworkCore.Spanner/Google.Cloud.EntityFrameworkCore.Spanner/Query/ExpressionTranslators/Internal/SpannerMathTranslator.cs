@@ -15,67 +15,68 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.EntityFrameworkCore.Query.Expressions;
-using System.Reflection;
 using System.Linq.Expressions;
+using System.Reflection;
 using Google.Api.Gax;
+using Microsoft.EntityFrameworkCore.Query.Expressions;
 
 namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerMathTranslator : IMethodCallTranslator
     {
-        private static readonly Dictionary<MethodInfo, string> s_supportedMethodTranslations = new Dictionary<MethodInfo, string>
-        {
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] { typeof(decimal) }), "ABS" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] { typeof(double) }), "ABS" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] { typeof(float) }), "ABS" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] { typeof(int) }), "ABS" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] { typeof(long) }), "ABS" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] { typeof(sbyte) }), "ABS" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] { typeof(short) }), "ABS" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Ceiling), new[] { typeof(decimal) }), "CEILING" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Ceiling), new[] { typeof(double) }), "CEILING" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Floor), new[] { typeof(decimal) }), "FLOOR" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Floor), new[] { typeof(double) }), "FLOOR" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Pow), new[] { typeof(double), typeof(double) }), "POWER" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Exp), new[] { typeof(double) }), "EXP" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Log10), new[] { typeof(double) }), "LOG10" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Log), new[] { typeof(double) }), "LN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Log), new[] { typeof(double), typeof(double) }), "LOG" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Sqrt), new[] { typeof(double) }), "SQRT" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Acos), new[] { typeof(double) }), "ACOS" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Asin), new[] { typeof(double) }), "ASIN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Atan), new[] { typeof(double) }), "ATAN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Atan2), new[] { typeof(double), typeof(double) }), "ATAN2" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Cos), new[] { typeof(double) }), "COS" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Cosh), new[] { typeof(double) }), "COSH" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Sin), new[] { typeof(double) }), "SIN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Sinh), new[] { typeof(double) }), "SINH" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Tan), new[] { typeof(double) }), "TAN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Tanh), new[] { typeof(double) }), "TANH" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] { typeof(decimal) }), "SIGN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] { typeof(double) }), "SIGN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] { typeof(float) }), "SIGN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] { typeof(int) }), "SIGN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] { typeof(long) }), "SIGN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] { typeof(sbyte) }), "SIGN" },
-            { typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] { typeof(short) }), "SIGN" },
-            { typeof(double).GetRuntimeMethod(nameof(double.IsInfinity), new[] { typeof(double) }), "IS_INF" },
-            { typeof(double).GetRuntimeMethod(nameof(double.IsNaN), new[] { typeof(double) }), "IS_NAN" }
-        };
+        private static readonly Dictionary<MethodInfo, string> s_supportedMethodTranslations =
+            new Dictionary<MethodInfo, string>
+            {
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] {typeof(decimal)}), "ABS"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] {typeof(double)}), "ABS"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] {typeof(float)}), "ABS"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] {typeof(int)}), "ABS"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] {typeof(long)}), "ABS"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] {typeof(sbyte)}), "ABS"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Abs), new[] {typeof(short)}), "ABS"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Ceiling), new[] {typeof(decimal)}), "CEILING"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Ceiling), new[] {typeof(double)}), "CEILING"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Floor), new[] {typeof(decimal)}), "FLOOR"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Floor), new[] {typeof(double)}), "FLOOR"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Pow), new[] {typeof(double), typeof(double)}), "POWER"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Exp), new[] {typeof(double)}), "EXP"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Log10), new[] {typeof(double)}), "LOG10"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Log), new[] {typeof(double)}), "LN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Log), new[] {typeof(double), typeof(double)}), "LOG"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Sqrt), new[] {typeof(double)}), "SQRT"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Acos), new[] {typeof(double)}), "ACOS"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Asin), new[] {typeof(double)}), "ASIN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Atan), new[] {typeof(double)}), "ATAN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Atan2), new[] {typeof(double), typeof(double)}), "ATAN2"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Cos), new[] {typeof(double)}), "COS"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Cosh), new[] {typeof(double)}), "COSH"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Sin), new[] {typeof(double)}), "SIN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Sinh), new[] {typeof(double)}), "SINH"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Tan), new[] {typeof(double)}), "TAN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Tanh), new[] {typeof(double)}), "TANH"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] {typeof(decimal)}), "SIGN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] {typeof(double)}), "SIGN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] {typeof(float)}), "SIGN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] {typeof(int)}), "SIGN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] {typeof(long)}), "SIGN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] {typeof(sbyte)}), "SIGN"},
+                {typeof(Math).GetRuntimeMethod(nameof(Math.Sign), new[] {typeof(short)}), "SIGN"},
+                {typeof(double).GetRuntimeMethod(nameof(double.IsInfinity), new[] {typeof(double)}), "IS_INF"},
+                {typeof(double).GetRuntimeMethod(nameof(double.IsNaN), new[] {typeof(double)}), "IS_NAN"}
+            };
 
         private static readonly IEnumerable<MethodInfo> s_truncateMethodInfos = new[]
         {
-            typeof(Math).GetRuntimeMethod(nameof(Math.Truncate), new[] { typeof(decimal) }),
-            typeof(Math).GetRuntimeMethod(nameof(Math.Truncate), new[] { typeof(double) })
+            typeof(Math).GetRuntimeMethod(nameof(Math.Truncate), new[] {typeof(decimal)}),
+            typeof(Math).GetRuntimeMethod(nameof(Math.Truncate), new[] {typeof(double)})
         };
 
         private static readonly IEnumerable<MethodInfo> s_roundMethodInfos = new[]
         {
-            typeof(Math).GetRuntimeMethod(nameof(Math.Round), new[] { typeof(decimal) }),
-            typeof(Math).GetRuntimeMethod(nameof(Math.Round), new[] { typeof(double) }),
-            typeof(Math).GetRuntimeMethod(nameof(Math.Round), new[] { typeof(decimal), typeof(int) }),
-            typeof(Math).GetRuntimeMethod(nameof(Math.Round), new[] { typeof(double), typeof(int) })
+            typeof(Math).GetRuntimeMethod(nameof(Math.Round), new[] {typeof(decimal)}),
+            typeof(Math).GetRuntimeMethod(nameof(Math.Round), new[] {typeof(double)}),
+            typeof(Math).GetRuntimeMethod(nameof(Math.Round), new[] {typeof(decimal), typeof(int)}),
+            typeof(Math).GetRuntimeMethod(nameof(Math.Round), new[] {typeof(double), typeof(int)})
         };
 
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
@@ -103,7 +104,7 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
                 return new SqlFunctionExpression(
                     "TRUNC",
                     methodCallExpression.Type,
-                    new[] { firstArgument });
+                    new[] {firstArgument});
             }
 
             if (s_roundMethodInfos.Contains(method))
@@ -119,8 +120,8 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
                     "ROUND",
                     methodCallExpression.Type,
                     methodCallExpression.Arguments.Count == 1
-                        ? new[] { firstArgument }
-                        : new[] { firstArgument, methodCallExpression.Arguments[1] });
+                        ? new[] {firstArgument}
+                        : new[] {firstArgument, methodCallExpression.Arguments[1]});
             }
 
             return null;

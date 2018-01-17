@@ -20,10 +20,10 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
     internal class SpannerStringLengthTranslator : IMemberTranslator
     {
         public virtual Expression Translate(MemberExpression memberExpression)
-            => (memberExpression.Expression != null)
-               && (memberExpression.Expression.Type == typeof(string))
-               && (memberExpression.Member.Name == nameof(string.Length))
-                ? new SqlFunctionExpression("CHAR_LENGTH", memberExpression.Type, new[] { memberExpression.Expression })
+            => memberExpression.Expression != null
+               && memberExpression.Expression.Type == typeof(string)
+               && memberExpression.Member.Name == nameof(string.Length)
+                ? new SqlFunctionExpression("CHAR_LENGTH", memberExpression.Type, new[] {memberExpression.Expression})
                 : null;
     }
 }

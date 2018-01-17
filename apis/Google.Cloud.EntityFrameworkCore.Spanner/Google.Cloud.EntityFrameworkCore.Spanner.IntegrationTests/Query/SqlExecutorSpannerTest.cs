@@ -12,9 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Data.Common;
-using Google.Cloud.Spanner.Data;
 using Microsoft.EntityFrameworkCore.Query;
+
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
@@ -29,13 +30,11 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         {
         }
 
-        protected override DbParameter CreateDbParameter(string name, object value)
-        {
-            throw new System.NotImplementedException();
-        }
-
         protected override string TenMostExpensiveProductsSproc { get; }
         protected override string CustomerOrderHistorySproc { get; }
         protected override string CustomerOrderHistoryWithGeneratedParameterSproc { get; }
+
+        protected override DbParameter CreateDbParameter(string name, object value) =>
+            throw new NotImplementedException();
     }
 }

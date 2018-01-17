@@ -34,10 +34,8 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         [InlineData(true)]
         [InlineData(false)]
         [Theory(Skip = "unknown")]
-        public override Task QueryAsync_uses_explicit_transaction(bool autoTransaction)
-        {
-            return base.QueryAsync_uses_explicit_transaction(autoTransaction);
-        }
+        public override Task QueryAsync_uses_explicit_transaction(bool autoTransaction) => base
+            .QueryAsync_uses_explicit_transaction(autoTransaction);
 
         [InlineData(true)]
         [InlineData(false)]
@@ -47,34 +45,11 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             base.Query_uses_explicit_transaction(autoTransaction);
         }
 
-        [Fact(Skip = "unknown")]
-        public override void SaveChanges_can_be_used_with_no_transaction()
-        {
-            base.SaveChanges_can_be_used_with_no_transaction();
-        }
-
-        [Fact(Skip = "unknown")]
-        public override Task SaveChangesAsync_can_be_used_with_no_transaction()
-        {
-            return base.SaveChangesAsync_can_be_used_with_no_transaction();
-        }
-
-        [Fact(Skip="unknown")]
-        public override void SaveChanges_implicitly_starts_transaction()
-        {
-            base.SaveChanges_implicitly_starts_transaction();
-        }
-
-        [Fact(Skip = "unknown")]
-        public override Task SaveChangesAsync_implicitly_starts_transaction()
-        {
-            return base.SaveChangesAsync_implicitly_starts_transaction();
-        }
-
         [InlineData(true)]
         [InlineData(false)]
         [Theory(Skip = "unknown")]
-        public override void SaveChanges_uses_explicit_transaction_and_does_not_rollback_on_failure(bool autoTransaction)
+        public override void
+            SaveChanges_uses_explicit_transaction_and_does_not_rollback_on_failure(bool autoTransaction)
         {
             base.SaveChanges_uses_explicit_transaction_and_does_not_rollback_on_failure(autoTransaction);
         }
@@ -82,9 +57,28 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         [InlineData(true)]
         [InlineData(false)]
         [Theory(Skip = "unknown")]
-        public override Task SaveChangesAsync_uses_explicit_transaction_and_does_not_rollback_on_failure(bool autoTransaction)
+        public override Task
+            SaveChangesAsync_uses_explicit_transaction_and_does_not_rollback_on_failure(bool autoTransaction) => base
+            .SaveChangesAsync_uses_explicit_transaction_and_does_not_rollback_on_failure(autoTransaction);
+
+        [Fact(Skip = "unknown")]
+        public override void SaveChanges_can_be_used_with_no_transaction()
         {
-            return base.SaveChangesAsync_uses_explicit_transaction_and_does_not_rollback_on_failure(autoTransaction);
+            base.SaveChanges_can_be_used_with_no_transaction();
         }
+
+        [Fact(Skip = "unknown")]
+        public override void SaveChanges_implicitly_starts_transaction()
+        {
+            base.SaveChanges_implicitly_starts_transaction();
+        }
+
+        [Fact(Skip = "unknown")]
+        public override Task SaveChangesAsync_can_be_used_with_no_transaction() => base
+            .SaveChangesAsync_can_be_used_with_no_transaction();
+
+        [Fact(Skip = "unknown")]
+        public override Task SaveChangesAsync_implicitly_starts_transaction() => base
+            .SaveChangesAsync_implicitly_starts_transaction();
     }
 }

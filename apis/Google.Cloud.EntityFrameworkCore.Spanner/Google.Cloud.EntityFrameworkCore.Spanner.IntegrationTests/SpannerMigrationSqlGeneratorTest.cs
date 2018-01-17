@@ -12,11 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Xunit;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
@@ -29,25 +25,25 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         {
         }
 
-        [Fact(Skip="NYI")]
+        [Fact(Skip = "NYI")]
         public override void AlterColumnOperation()
         {
             base.AlterColumnOperation();
         }
 
-        [Fact(Skip="NYI")]
+        [Fact(Skip = "NYI")]
         public override void AlterColumnOperation_without_column_type()
         {
             base.AlterColumnOperation_without_column_type();
         }
 
-        [Fact(Skip="NYI")]
+        [Fact(Skip = "NYI")]
         public override void DropIndexOperation()
         {
             base.DropIndexOperation();
         }
 
-        [Fact(Skip="NYI")]
+        [Fact(Skip = "NYI")]
         public override void RenameTableOperation_within_schema()
         {
             base.RenameTableOperation_within_schema();

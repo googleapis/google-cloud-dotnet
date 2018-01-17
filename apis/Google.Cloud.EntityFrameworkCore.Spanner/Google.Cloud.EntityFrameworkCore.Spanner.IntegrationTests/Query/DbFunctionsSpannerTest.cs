@@ -29,6 +29,19 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             fixture.TestSqlLoggerFactory.Clear();
         }
 
+        private const string FileLineEnding = @"
+";
+
+        private string Sql => Fixture.TestSqlLoggerFactory.Sql.Replace(Environment.NewLine, FileLineEnding);
+
+        [Fact]
+        public override void String_Like_Identity()
+        {
+            base.String_Like_Identity();
+
+            Assert.Contains("WHERE c.ContactName", Sql);
+        }
+
         [Fact]
         public override void String_Like_Literal()
         {
@@ -43,27 +56,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
             Assert.Contains("WHERE c.ContactName", Sql);
         }
 
-        [Fact]
-        public override void String_Like_Identity()
-        {
-            base.String_Like_Identity();
-
-            Assert.Contains("WHERE c.ContactName", Sql);
-        }
-
-        [Fact(Skip = "ESCAPE keyword not supported in spanner")]
-        public override void String_Like_Literal_With_Escape()
-        {
-            base.String_Like_Literal_With_Escape();
-
-            Assert.Contains("WHERE c.ContactName", Sql);
-        }
-
-        private const string FileLineEnding = @"
-";
-
-        private string Sql => Fixture.TestSqlLoggerFactory.Sql.Replace(Environment.NewLine, FileLineEnding);
-
 
         [Fact(Skip = "ESCAPE keyword not supported in spanner")]
         public void String_Like_Literal_With_Backslash()
@@ -74,6 +66,14 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 
                 Assert.Equal(0, count);
             }
+
+            Assert.Contains("WHERE c.ContactName", Sql);
+        }
+
+        [Fact(Skip = "ESCAPE keyword not supported in spanner")]
+        public override void String_Like_Literal_With_Escape()
+        {
+            base.String_Like_Literal_With_Escape();
 
             Assert.Contains("WHERE c.ContactName", Sql);
         }

@@ -14,12 +14,8 @@
 
 using System;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore.TestUtilities;
 using Microsoft.EntityFrameworkCore.Utilities;
 using Microsoft.Extensions.DependencyInjection;
-using Xunit;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
@@ -128,10 +124,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                     b.Property(e => e.OnUpdateThrowBeforeThrowAfter).HasDefaultValue("Rabbit");
                 });
 
-                modelBuilder.Entity<Darwin>(b =>
-                {
-                    b.Property(e => e.Id).HasValueGenerator<IntGenerator>();
-                });
+                modelBuilder.Entity<Darwin>(b => { b.Property(e => e.Id).HasValueGenerator<IntGenerator>(); });
 
                 base.OnModelCreating(modelBuilder);
             }

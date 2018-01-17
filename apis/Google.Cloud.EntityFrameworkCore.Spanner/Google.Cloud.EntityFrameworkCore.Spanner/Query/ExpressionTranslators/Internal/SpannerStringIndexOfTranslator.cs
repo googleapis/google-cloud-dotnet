@@ -22,11 +22,11 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerStringIndexOfTranslator : IMethodCallTranslator
     {
-        static readonly MethodInfo s_indexOfString
-            = typeof(string).GetRuntimeMethod(nameof(string.IndexOf), new[] { typeof(string) });
+        private static readonly MethodInfo s_indexOfString
+            = typeof(string).GetRuntimeMethod(nameof(string.IndexOf), new[] {typeof(string)});
 
-        static readonly MethodInfo s_indexOfChar
-            = typeof(string).GetRuntimeMethod(nameof(string.IndexOf), new[] { typeof(char) });
+        private static readonly MethodInfo s_indexOfChar
+            = typeof(string).GetRuntimeMethod(nameof(string.IndexOf), new[] {typeof(char)});
 
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
         {
@@ -40,7 +40,7 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
                 new SqlFunctionExpression(
                     "STRPOS",
                     methodCallExpression.Type,
-                    new[] { methodCallExpression.Object }.Concat(methodCallExpression.Arguments)),
+                    new[] {methodCallExpression.Object}.Concat(methodCallExpression.Arguments)),
                 Expression.Constant(1)
             );
         }

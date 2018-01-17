@@ -13,23 +13,22 @@
 // limitations under the License.
 
 using System;
-using System.Collections.Generic;
 using Google.Cloud.Spanner.Data;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Microsoft.EntityFrameworkCore
 {
     /// <summary>
-    /// 
+    /// Defines how to retry operations for EF Spanner.
     /// </summary>
     public class SpannerRetryingExecutionStrategy : ExecutionStrategy
     {
         /// <summary>
-        ///     Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
+        /// Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
         /// </summary>
         /// <param name="context"> The context on which the operations will be invoked. </param>
         /// <remarks>
-        ///     The default retry limit is 6, which means that the total amount of time spent before failing is about a minute.
+        /// The default retry limit is 6, which means that the total amount of time spent before failing is about a minute.
         /// </remarks>
         public SpannerRetryingExecutionStrategy(
             DbContext context)
@@ -38,7 +37,7 @@ namespace Microsoft.EntityFrameworkCore
         }
 
         /// <summary>
-        ///     Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
+        /// Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
         /// </summary>
         /// <param name="dependencies"> Parameter object containing service dependencies. </param>
         public SpannerRetryingExecutionStrategy(
@@ -48,7 +47,7 @@ namespace Microsoft.EntityFrameworkCore
         }
 
         /// <summary>
-        ///     Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
+        /// Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
         /// </summary>
         /// <param name="context"> The context on which the operations will be invoked. </param>
         /// <param name="maxRetryCount"> The maximum number of retry attempts. </param>
@@ -60,7 +59,7 @@ namespace Microsoft.EntityFrameworkCore
         }
 
         /// <summary>
-        ///     Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
+        /// Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
         /// </summary>
         /// <param name="dependencies"> Parameter object containing service dependencies. </param>
         /// <param name="maxRetryCount"> The maximum number of retry attempts. </param>
@@ -72,7 +71,7 @@ namespace Microsoft.EntityFrameworkCore
         }
 
         /// <summary>
-        ///     Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
+        /// Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
         /// </summary>
         /// <param name="context"> The context on which the operations will be invoked. </param>
         /// <param name="maxRetryCount"> The maximum number of retry attempts. </param>
@@ -88,7 +87,7 @@ namespace Microsoft.EntityFrameworkCore
         }
 
         /// <summary>
-        ///     Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
+        /// Creates a new instance of <see cref="SpannerRetryingExecutionStrategy" />.
         /// </summary>
         /// <param name="dependencies"> Parameter object containing service dependencies. </param>
         /// <param name="maxRetryCount"> The maximum number of retry attempts. </param>

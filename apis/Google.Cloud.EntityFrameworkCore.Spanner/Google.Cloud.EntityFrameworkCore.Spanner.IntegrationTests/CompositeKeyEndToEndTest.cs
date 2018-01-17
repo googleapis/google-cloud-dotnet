@@ -76,14 +76,11 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             }
         }
 
-        class GuidGenerator : ValueGenerator<Guid>
+        private class GuidGenerator : ValueGenerator<Guid>
         {
-            public override Guid Next(EntityEntry entry)
-            {
-                return Guid.NewGuid();
-            }
-
             public override bool GeneratesTemporaryValues { get; } = false;
+
+            public override Guid Next(EntityEntry entry) => Guid.NewGuid();
         }
 
         private class Pegasus

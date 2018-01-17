@@ -12,19 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Spanner.Data;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
-using Microsoft.EntityFrameworkCore.Utilities;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Data;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Cloud.Spanner.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Utilities;
+using Microsoft.Extensions.DependencyInjection;
 using Xunit;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
@@ -81,7 +81,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             using (var testDatabase = SpannerTestStore.CreateScratch(true))
             {
                 await testDatabase.ExecuteNonQueryAsync(
-                  @"CREATE TABLE SomeTable (
+                    @"CREATE TABLE SomeTable (
 	                Id INT64 NOT NULL,
                     ) PRIMARY KEY (Id)");
 
@@ -174,7 +174,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                         await testDatabase.QueryAsync<string>(
                             "SELECT * FROM information_schema.columns WHERE TABLE_NAME='Blogs'");
                     Assert.Equal(2, columns.Count());
-
                 }
             }
         }
@@ -353,7 +352,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             await CreateTables_throws_if_database_does_not_exist_test(true);
         }
 
-        [Fact(Skip="Exists should use admin api to avoid ghost sessions.")]
+        [Fact(Skip = "Exists should use admin api to avoid ghost sessions.")]
         public async Task Delete_throws_when_database_doesnt_exist()
         {
             await Delete_throws_when_database_doesnt_exist_test(false);

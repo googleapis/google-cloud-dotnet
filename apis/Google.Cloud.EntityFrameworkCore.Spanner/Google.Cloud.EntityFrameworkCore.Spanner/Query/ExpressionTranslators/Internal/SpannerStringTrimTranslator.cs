@@ -21,15 +21,15 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerStringTrimTranslator : IMethodCallTranslator
     {
-        static readonly MethodInfo s_trim
+        private static readonly MethodInfo s_trim
             = typeof(string).GetRuntimeMethod(nameof(string.Trim), new Type[0]);
 
-        static readonly MethodInfo s_trimWithChars
-            = typeof(string).GetRuntimeMethod(nameof(string.Trim), new[] { typeof(char[]) });
+        private static readonly MethodInfo s_trimWithChars
+            = typeof(string).GetRuntimeMethod(nameof(string.Trim), new[] {typeof(char[])});
 
         // The following exists as an optimization in netcoreapp20
-        static readonly MethodInfo s_trimWithSingleChar
-            = typeof(string).GetRuntimeMethod(nameof(string.Trim), new[] { typeof(char) });
+        private static readonly MethodInfo s_trimWithSingleChar
+            = typeof(string).GetRuntimeMethod(nameof(string.Trim), new[] {typeof(char)});
 
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
         {
@@ -49,7 +49,9 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
             {
                 var constantTrimChars = methodCallExpression.Arguments[0] as ConstantExpression;
                 if (constantTrimChars == null)
+                {
                     return null;
+                }
 
                 return new SqlFunctionExpression(
                     "TRIM",
@@ -57,7 +59,7 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
                     new[]
                     {
                         methodCallExpression.Object,
-                        Expression.Constant(new string((char[])constantTrimChars.Value))
+                        Expression.Constant(new string((char[]) constantTrimChars.Value))
                     });
             }
 
@@ -65,7 +67,9 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
             {
                 var constantTrimChar = methodCallExpression.Arguments[0] as ConstantExpression;
                 if (constantTrimChar == null)
+                {
                     return null;
+                }
 
                 return new SqlFunctionExpression(
                     "TRIM",
@@ -73,7 +77,7 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
                     new[]
                     {
                         methodCallExpression.Object,
-                        Expression.Constant(new string((char)constantTrimChar.Value, 1))
+                        Expression.Constant(new string((char) constantTrimChar.Value, 1))
                     });
             }
 

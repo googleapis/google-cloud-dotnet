@@ -28,10 +28,7 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
         /// <summary>
         /// This is internal functionality and not intended for public use.
         /// </summary>
-        public SpannerLogBridge(IDiagnosticsLogger<TLoggerCategory> efLogger)
-        {
-            _efLogger = efLogger;
-        }
+        public SpannerLogBridge(IDiagnosticsLogger<TLoggerCategory> efLogger) => _efLogger = efLogger;
 
         /// <summary>
         /// This is internal functionality and not intended for public use.
@@ -40,11 +37,12 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
         {
             get => _efLogger.ShouldLogSensitiveData();
             // ReSharper disable once ValueParameterNotUsed
-            set => _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Error, SpannerEventId.SpannerDiagnosticLog,
+            set => _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Error,
+                SpannerEventId.SpannerDiagnosticLog,
                 "EnableSensitiveDataLogging should only be configured from DbContextOptionsBuilder.EnableSensitiveDataLogging",
                 null, (x, e) => x);
         }
-        
+
         /// <summary>
         /// This is internal functionality and not intended for public use.
         /// </summary>

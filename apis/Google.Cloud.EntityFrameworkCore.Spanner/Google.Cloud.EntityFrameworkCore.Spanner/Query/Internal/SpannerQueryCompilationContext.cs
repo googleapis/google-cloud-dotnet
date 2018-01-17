@@ -20,25 +20,6 @@ namespace Microsoft.EntityFrameworkCore.Query.Internal
     /// </summary>
     public class SpannerQueryCompilationContext : RelationalQueryCompilationContext
     {
-        /// <summary>
-        /// </summary>
-        /// <param name="dependencies"></param>
-        /// <param name="linqOperatorProvider"></param>
-        /// <param name="queryMethodProvider"></param>
-        /// <param name="trackQueryResults"></param>
-        public SpannerQueryCompilationContext(
-            QueryCompilationContextDependencies dependencies,
-            ILinqOperatorProvider linqOperatorProvider,
-            IQueryMethodProvider queryMethodProvider,
-            bool trackQueryResults)
-            : base(
-                dependencies,
-                linqOperatorProvider,
-                queryMethodProvider,
-                trackQueryResults)
-        {
-        }
-
         private static readonly HashSet<string> s_reservedSymbols
             = new HashSet<string>
             {
@@ -140,6 +121,25 @@ namespace Microsoft.EntityFrameworkCore.Query.Internal
             };
 
         /// <summary>
+        /// </summary>
+        /// <param name="dependencies"></param>
+        /// <param name="linqOperatorProvider"></param>
+        /// <param name="queryMethodProvider"></param>
+        /// <param name="trackQueryResults"></param>
+        public SpannerQueryCompilationContext(
+            QueryCompilationContextDependencies dependencies,
+            ILinqOperatorProvider linqOperatorProvider,
+            IQueryMethodProvider queryMethodProvider,
+            bool trackQueryResults)
+            : base(
+                dependencies,
+                linqOperatorProvider,
+                queryMethodProvider,
+                trackQueryResults)
+        {
+        }
+
+        /// <summary>
         /// Returns a valid symbol given a proposed one.
         /// </summary>
         public static string GetValidSymbol(string proposedSymbol)
@@ -157,9 +157,7 @@ namespace Microsoft.EntityFrameworkCore.Query.Internal
         }
 
         /// <inheritdoc />
-        public override string CreateUniqueTableAlias( string currentAlias)
-        {
-            return base.CreateUniqueTableAlias(GetValidSymbol(currentAlias));
-        }
+        public override string CreateUniqueTableAlias(string currentAlias) => base.CreateUniqueTableAlias(
+            GetValidSymbol(currentAlias));
     }
 }

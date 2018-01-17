@@ -35,90 +35,218 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
 
 
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void Bad_data_error_handling_invalid_cast() { }
+        public override void Bad_data_error_handling_invalid_cast()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void Bad_data_error_handling_invalid_cast_key() { }
+        public override void Bad_data_error_handling_invalid_cast_key()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void Bad_data_error_handling_invalid_cast_no_tracking() { }
+        public override void Bad_data_error_handling_invalid_cast_no_tracking()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void Bad_data_error_handling_invalid_cast_projection() { }
+        public override void Bad_data_error_handling_invalid_cast_projection()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void Bad_data_error_handling_null() { }
+        public override void Bad_data_error_handling_null()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void Bad_data_error_handling_null_no_tracking() { }
+        public override void Bad_data_error_handling_null_no_tracking()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void Bad_data_error_handling_null_projection() { }
+        public override void Bad_data_error_handling_null_projection()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_annotations_do_not_affect_successive_calls() { }
+        public override void From_sql_annotations_do_not_affect_successive_calls()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_composed_contains() { }
+        public override void From_sql_composed_contains()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_composed_contains2() { }
+        public override void From_sql_composed_contains2()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_composed_with_nullable_predicate() { }
+        public override void From_sql_composed_with_nullable_predicate()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_composed() { }
+        public override void From_sql_queryable_composed()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_composed_after_removing_whitespaces() { }
+        public override void From_sql_queryable_composed_after_removing_whitespaces()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_composed_compiled() { }
+        public override void From_sql_queryable_composed_compiled()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_composed_multiple_line_query() { }
+        public override void From_sql_queryable_composed_multiple_line_query()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_multiple_composed() { }
+        public override void From_sql_queryable_multiple_composed()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_multiple_composed_with_closure_parameters() { }
+        public override void From_sql_queryable_multiple_composed_with_closure_parameters()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_multiple_composed_with_parameters_and_closure_parameters() { }
+        public override void From_sql_queryable_multiple_composed_with_parameters_and_closure_parameters()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_multiple_composed_with_parameters_and_closure_parameters_interpolated() { }
+        public override void From_sql_queryable_multiple_composed_with_parameters_and_closure_parameters_interpolated()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_multiple_line_query() { }
+        public override void From_sql_queryable_multiple_line_query()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_simple() { }
+        public override void From_sql_queryable_simple()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_simple_as_no_tracking_not_composed() { }
+        public override void From_sql_queryable_simple_as_no_tracking_not_composed()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_simple_cache_key_includes_query_string() { }
+        public override void From_sql_queryable_simple_cache_key_includes_query_string()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_simple_columns_out_of_order() { }
+        public override void From_sql_queryable_simple_columns_out_of_order()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_simple_columns_out_of_order_and_extra_columns() { }
+        public override void From_sql_queryable_simple_columns_out_of_order_and_extra_columns()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_simple_columns_out_of_order_and_not_enough_columns_throws() { }
+        public override void From_sql_queryable_simple_columns_out_of_order_and_not_enough_columns_throws()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_simple_composed_include() { }
+        public override void From_sql_queryable_simple_composed_include()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_simple_include() { }
+        public override void From_sql_queryable_simple_include()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_simple_projection_composed() { }
+        public override void From_sql_queryable_simple_projection_composed()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_with_null_parameter() { }
+        public override void From_sql_queryable_with_null_parameter()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_with_parameters() { }
+        public override void From_sql_queryable_with_parameters()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_with_parameters_and_closure() { }
+        public override void From_sql_queryable_with_parameters_and_closure()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_with_parameters_cache_key_includes_parameters() { }
+        public override void From_sql_queryable_with_parameters_cache_key_includes_parameters()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_with_parameters_inline() { }
+        public override void From_sql_queryable_with_parameters_inline()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_with_parameters_inline_interpolated() { }
+        public override void From_sql_queryable_with_parameters_inline_interpolated()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_queryable_with_parameters_interpolated() { }
+        public override void From_sql_queryable_with_parameters_interpolated()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_with_dbParameter() { }
+        public override void From_sql_with_db_parameters_called_multiple_times()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_with_dbParameter_mixed() { }
+        public override void From_sql_with_dbParameter()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_with_db_parameters_called_multiple_times() { }
+        public override void From_sql_with_dbParameter_mixed()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_with_join_and_include() { }
+        public override void From_sql_with_join_and_include()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void From_sql_with_SelectMany_and_include() { }
+        public override void From_sql_with_SelectMany_and_include()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void Include_closed_connection_opened_by_it_when_buffering() { }
+        public override void Include_closed_connection_opened_by_it_when_buffering()
+        {
+        }
+
         [Fact(Skip = "'Order' is a reserved word")]
-        public override void Include_does_not_close_user_opened_connection_for_empty_result() { }
+        public override void Include_does_not_close_user_opened_connection_for_empty_result()
+        {
+        }
     }
 }

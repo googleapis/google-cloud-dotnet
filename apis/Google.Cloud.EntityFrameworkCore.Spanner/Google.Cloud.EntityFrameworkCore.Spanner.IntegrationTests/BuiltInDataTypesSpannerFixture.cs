@@ -302,5 +302,4 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
         public uint? Xid { get; set; }
     }
-
 }

@@ -15,7 +15,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Reflection;
 using Microsoft.EntityFrameworkCore.Query.Expressions;
 
 namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
@@ -25,28 +24,28 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
         private static readonly Dictionary<Type, string> s_typeMapping
             = new Dictionary<Type, string>
             {
-                { typeof(int), "STRING" },
-                { typeof(long), "STRING" },
-                { typeof(DateTime),"STRING" },
-                { typeof(bool), "STRING" },
-                { typeof(byte), "STRING" },
-                { typeof(byte[]), "STRING" },
-                { typeof(double), "STRING" },
-                { typeof(DateTimeOffset), "STRING" },
-                { typeof(char), "STRING" },
-                { typeof(short), "STRING" },
-                { typeof(float), "STRING" },
-                { typeof(decimal), "STRING" },
-                { typeof(TimeSpan), "STRING" },
-                { typeof(uint), "STRING" },
-                { typeof(ushort), "STRING" },
-                { typeof(ulong), "STRING" },
-                { typeof(sbyte), "STRING" }
+                {typeof(int), "STRING"},
+                {typeof(long), "STRING"},
+                {typeof(DateTime), "STRING"},
+                {typeof(bool), "STRING"},
+                {typeof(byte), "STRING"},
+                {typeof(byte[]), "STRING"},
+                {typeof(double), "STRING"},
+                {typeof(DateTimeOffset), "STRING"},
+                {typeof(char), "STRING"},
+                {typeof(short), "STRING"},
+                {typeof(float), "STRING"},
+                {typeof(decimal), "STRING"},
+                {typeof(TimeSpan), "STRING"},
+                {typeof(uint), "STRING"},
+                {typeof(ushort), "STRING"},
+                {typeof(ulong), "STRING"},
+                {typeof(sbyte), "STRING"}
             };
 
         /// <summary>
-        ///     This API supports the Entity Framework Core infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
+        /// This API supports the Entity Framework Core infrastructure and is not intended to be used
+        /// directly from your code. This API may change or be removed in future releases.
         /// </summary>
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
         {
@@ -60,9 +59,9 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
                     out var storeType))
             {
                 return new SqlFunctionExpression(
-                    functionName: "CAST",
-                    returnType: methodCallExpression.Type,
-                    arguments: new[]
+                    "CAST",
+                    methodCallExpression.Type,
+                    new[]
                     {
                         methodCallExpression.Object,
                         new SqlFragmentExpression(storeType)

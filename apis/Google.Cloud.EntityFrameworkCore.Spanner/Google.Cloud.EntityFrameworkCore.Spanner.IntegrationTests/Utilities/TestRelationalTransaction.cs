@@ -30,7 +30,8 @@ namespace Microsoft.EntityFrameworkCore.Utilities
         private bool _connectionClosed;
 
         public TestRelationalTransaction(
-            TestSpannerConnection connection, DbTransaction transaction, ILoggerFactory loggerFactory, DiagnosticSource diagnosticSource, bool transactionOwned)
+            TestSpannerConnection connection, DbTransaction transaction, ILoggerFactory loggerFactory,
+            DiagnosticSource diagnosticSource, bool transactionOwned)
             : this(
                 connection,
                 new RelationalTransaction(
@@ -42,13 +43,13 @@ namespace Microsoft.EntityFrameworkCore.Utilities
         {
         }
 
-        public virtual Guid TransactionId { get; } = Guid.NewGuid();
-
         public TestRelationalTransaction(TestSpannerConnection connection, IDbContextTransaction transaction)
         {
             _testConnection = connection;
             _realTransaction = transaction;
         }
+
+        public virtual Guid TransactionId { get; } = Guid.NewGuid();
 
         public void Dispose()
         {
@@ -89,6 +90,8 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             ClearTransaction();
         }
 
+        public DbTransaction Instance => _realTransaction.GetDbTransaction();
+
         private void ClearTransaction()
         {
             _testConnection.UseTransaction(null);
@@ -100,7 +103,5 @@ namespace Microsoft.EntityFrameworkCore.Utilities
                 _testConnection.Close();
             }
         }
-
-        public DbTransaction Instance => _realTransaction.GetDbTransaction();
     }
 }

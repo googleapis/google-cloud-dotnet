@@ -26,129 +26,81 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         }
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_annotations_do_not_affect_successive_calls()
-        {
-            return base.From_sql_annotations_do_not_affect_successive_calls();
-        }
+        public override Task From_sql_annotations_do_not_affect_successive_calls() => base
+            .From_sql_annotations_do_not_affect_successive_calls();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_composed_with_nullable_predicate()
-        {
-            return base.From_sql_composed_with_nullable_predicate();
-        }
+        public override Task From_sql_composed_with_nullable_predicate() => base
+            .From_sql_composed_with_nullable_predicate();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_composed()
-        {
-            return base.From_sql_queryable_composed();
-        }
+        public override Task From_sql_queryable_composed() => base.From_sql_queryable_composed();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_composed_multiple_line_query()
-        {
-            return base.From_sql_queryable_composed_multiple_line_query();
-        }
+        public override Task From_sql_queryable_composed_multiple_line_query() => base
+            .From_sql_queryable_composed_multiple_line_query();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_multiple_composed()
-        {
-            return base.From_sql_queryable_multiple_composed();
-        }
+        public override Task From_sql_queryable_multiple_composed() => base.From_sql_queryable_multiple_composed();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_multiple_composed_with_closure_parameters()
-        {
-            return base.From_sql_queryable_multiple_composed_with_closure_parameters();
-        }
+        public override Task From_sql_queryable_multiple_composed_with_closure_parameters() => base
+            .From_sql_queryable_multiple_composed_with_closure_parameters();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_multiple_composed_with_parameters_and_closure_parameters()
-        {
-            return base.From_sql_queryable_multiple_composed_with_parameters_and_closure_parameters();
-        }
+        public override Task From_sql_queryable_multiple_composed_with_parameters_and_closure_parameters() => base
+            .From_sql_queryable_multiple_composed_with_parameters_and_closure_parameters();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_multiple_line_query()
-        {
-            return base.From_sql_queryable_multiple_line_query();
-        }
+        public override Task From_sql_queryable_multiple_line_query() => base.From_sql_queryable_multiple_line_query();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_simple()
-        {
-            return base.From_sql_queryable_simple();
-        }
+        public override Task From_sql_queryable_simple() => base.From_sql_queryable_simple();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_simple_as_no_tracking_not_composed()
-        {
-            return base.From_sql_queryable_simple_as_no_tracking_not_composed();
-        }
+        public override Task From_sql_queryable_simple_as_no_tracking_not_composed() => base
+            .From_sql_queryable_simple_as_no_tracking_not_composed();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_simple_cache_key_includes_query_string()
-        {
-            return base.From_sql_queryable_simple_cache_key_includes_query_string();
-        }
+        public override Task From_sql_queryable_simple_cache_key_includes_query_string() => base
+            .From_sql_queryable_simple_cache_key_includes_query_string();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_simple_columns_out_of_order()
-        {
-            return base.From_sql_queryable_simple_columns_out_of_order();
-        }
+        public override Task From_sql_queryable_simple_columns_out_of_order() => base
+            .From_sql_queryable_simple_columns_out_of_order();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_simple_columns_out_of_order_and_extra_columns()
-        {
-            return base.From_sql_queryable_simple_columns_out_of_order_and_extra_columns();
-        }
+        public override Task From_sql_queryable_simple_columns_out_of_order_and_extra_columns() => base
+            .From_sql_queryable_simple_columns_out_of_order_and_extra_columns();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_simple_composed_include()
-        {
-            return base.From_sql_queryable_simple_composed_include();
-        }
+        public override Task From_sql_queryable_simple_composed_include() => base
+            .From_sql_queryable_simple_composed_include();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_simple_include()
-        {
-            return base.From_sql_queryable_simple_include();
-        }
+        public override Task From_sql_queryable_simple_include() => base.From_sql_queryable_simple_include();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_simple_projection_not_composed()
-        {
-            return base.From_sql_queryable_simple_projection_not_composed();
-        }
+        public override Task From_sql_queryable_simple_projection_not_composed() => base
+            .From_sql_queryable_simple_projection_not_composed();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_with_parameters()
-        {
-            return base.From_sql_queryable_with_parameters();
-        }
+        public override Task From_sql_queryable_with_parameters() => base.From_sql_queryable_with_parameters();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_with_parameters_and_closure()
-        {
-            return base.From_sql_queryable_with_parameters_and_closure();
-        }
+        public override Task From_sql_queryable_with_parameters_and_closure() => base
+            .From_sql_queryable_with_parameters_and_closure();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task From_sql_queryable_with_parameters_cache_key_includes_parameters()
-        {
-            return base.From_sql_queryable_with_parameters_cache_key_includes_parameters();
-        }
+        public override Task From_sql_queryable_with_parameters_cache_key_includes_parameters() => base
+            .From_sql_queryable_with_parameters_cache_key_includes_parameters();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task Include_closed_connection_opened_by_it_when_buffering()
-        {
-            return base.Include_closed_connection_opened_by_it_when_buffering();
-        }
+        public override Task Include_closed_connection_opened_by_it_when_buffering() => base
+            .Include_closed_connection_opened_by_it_when_buffering();
 
         [Fact(Skip = "FromSql test needs Spanner supported SQL")]
-        public override Task Include_does_not_close_user_opened_connection_for_empty_result()
-        {
-            return base.Include_does_not_close_user_opened_connection_for_empty_result();
-        }
+        public override Task Include_does_not_close_user_opened_connection_for_empty_result() => base
+            .Include_does_not_close_user_opened_connection_for_empty_result();
     }
 }

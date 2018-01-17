@@ -15,12 +15,10 @@
 namespace Microsoft.EntityFrameworkCore.Migrations.Operations
 {
     /// <summary>
-    /// 
     /// </summary>
     public class SpannerCreateDatabaseOperation : MigrationOperation
     {
         /// <summary>
-        /// 
         /// </summary>
         public virtual string Name { get; set; }
     }

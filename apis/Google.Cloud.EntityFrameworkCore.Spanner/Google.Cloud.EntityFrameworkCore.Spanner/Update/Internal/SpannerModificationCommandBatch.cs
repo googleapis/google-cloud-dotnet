@@ -111,13 +111,12 @@ namespace Microsoft.EntityFrameworkCore.Update.Internal
             cmd.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(_logger);
             cmd.Transaction = transaction;
             foreach (var columnModification in modificationCommand.ColumnModifications)
-            {
                 cmd.Parameters.Add(
-                    _typeMapper.GetMapping(columnModification.Property).CreateParameter(cmd, 
+                    _typeMapper.GetMapping(columnModification.Property).CreateParameter(cmd,
                         columnModification.ColumnName,
-                        columnModification.UseOriginalValueParameter ? columnModification.OriginalValue 
-                        : columnModification.Value, columnModification.Property.IsNullable));
-            }
+                        columnModification.UseOriginalValueParameter
+                            ? columnModification.OriginalValue
+                            : columnModification.Value, columnModification.Property.IsNullable));
             return cmd;
         }
     }

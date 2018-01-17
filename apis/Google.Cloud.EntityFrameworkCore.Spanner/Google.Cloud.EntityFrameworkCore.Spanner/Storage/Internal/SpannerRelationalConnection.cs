@@ -37,9 +37,10 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
         /// </summary>
         public ISpannerRelationalConnection CreateMasterConnection()
         {
-            SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder(ConnectionString);
+            var builder = new SpannerConnectionStringBuilder(ConnectionString);
             //Spanner actually has no master or admin db, so we just use a normal connection.
-            var masterConn = new SpannerConnection($"Data Source=projects/{builder.Project}/instances/{builder.SpannerInstance}");
+            var masterConn =
+                new SpannerConnection($"Data Source=projects/{builder.Project}/instances/{builder.SpannerInstance}");
             var optionsBuilder = new DbContextOptionsBuilder();
             optionsBuilder.UseSpanner(masterConn);
 

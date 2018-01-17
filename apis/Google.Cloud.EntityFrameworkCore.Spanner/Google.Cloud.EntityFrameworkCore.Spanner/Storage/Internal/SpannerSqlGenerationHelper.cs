@@ -29,6 +29,12 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
         {
         }
 
+        // Spanner does not support multiple statements per query or in DDL. So in all cases, adding a
+        // terminating semicolon just causes issues -- so we return an empty string for the statement
+        // terminator.
+        /// <inheritdoc />
+        public override string StatementTerminator { get; } = "";
+
         /// <inheritdoc />
         public override void GenerateParameterName(StringBuilder builder, string name)
         {
@@ -54,12 +60,5 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             GaxPreconditions.CheckNotNullOrEmpty(identifier, nameof(identifier));
             EscapeIdentifier(builder, identifier);
         }
-
-        // Spanner does not support multiple statements per query or in DDL. So in all cases, adding a
-        // terminating semicolon just causes issues -- so we return an empty string for the statement
-        // terminator.
-        /// <inheritdoc />
-        public override string StatementTerminator { get; } = "";
-
     }
 }

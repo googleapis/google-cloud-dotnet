@@ -11,16 +11,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Microsoft.EntityFrameworkCore.Utilities
 {
     public static class DbContextOptionsBuilderExtensions
     {
-        public static SpannerDbContextOptionsBuilder ApplyConfiguration(this SpannerDbContextOptionsBuilder optionsBuilder)
-        {
-            return optionsBuilder;
-        }
+        public static SpannerDbContextOptionsBuilder ApplyConfiguration(
+            this SpannerDbContextOptionsBuilder optionsBuilder) => optionsBuilder;
     }
 }

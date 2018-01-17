@@ -12,24 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Diagnostics;
-using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.EntityFrameworkCore.Scaffolding;
 using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 using Microsoft.Extensions.Logging;
 
 namespace Microsoft.EntityFrameworkCore.Utilities
 {
-    //TODO(benwu)
+    //TODO:implement a cleaner
     public class SpannerDatabaseCleaner : RelationalDatabaseCleaner
     {
         protected override IDatabaseModelFactory CreateDatabaseModelFactory(ILoggerFactory loggerFactory)
             => null;
-//        new SpannerDatabaseModelFactory(
-//                new DiagnosticsLogger<DbLoggerCategory.Scaffolding>(
-//                    loggerFactory,
-//                    new LoggingOptions(),
-//                    new DiagnosticListener("Fake")));
 
         protected override bool AcceptIndex(DatabaseIndex index)
             => false;

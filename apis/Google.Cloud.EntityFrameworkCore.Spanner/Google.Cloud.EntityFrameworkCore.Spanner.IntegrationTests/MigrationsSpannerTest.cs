@@ -12,14 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Data.Common;
-using Google.Cloud.Spanner.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Migrations.Operations;
-using Xunit;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
@@ -30,6 +23,5 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             : base(fixture)
         {
         }
-        
     }
 }

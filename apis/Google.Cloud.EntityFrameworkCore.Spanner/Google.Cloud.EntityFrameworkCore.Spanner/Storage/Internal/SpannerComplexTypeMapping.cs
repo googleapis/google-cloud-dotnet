@@ -24,16 +24,12 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
     {
         private readonly SpannerDbType _complexType;
 
-        public SpannerComplexTypeMapping(SpannerDbType complexType) 
-            : base(complexType.ToString(), complexType.DefaultClrType, complexType.DbType)
-        {
+        public SpannerComplexTypeMapping(SpannerDbType complexType)
+            : base(complexType.ToString(), complexType.DefaultClrType, complexType.DbType) =>
             _complexType = complexType;
-        }
 
-        public override RelationalTypeMapping Clone(string storeType, int? size)
-        {
-            return new SpannerComplexTypeMapping(_complexType);
-        }
+        public override RelationalTypeMapping Clone(string storeType, int? size) =>
+            new SpannerComplexTypeMapping(_complexType);
 
         protected override void ConfigureParameter(DbParameter parameter)
         {

@@ -68,7 +68,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         private readonly DbContextOptions _options;
         private readonly SpannerTestStore _testStore;
 
-        [Fact(Skip="Server generated column values are not supported by Spanner")]
+        [Fact(Skip = "Server generated column values are not supported by Spanner")]
         public void xmin()
         {
             using (var context = CreateContext())

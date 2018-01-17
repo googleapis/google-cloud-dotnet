@@ -20,12 +20,13 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerStringStartsWithTranslator : IMethodCallTranslator
     {
-        static readonly MethodInfo s_methodInfo
-            = typeof(string).GetRuntimeMethod(nameof(string.StartsWith), new[] { typeof(string) });
+        private static readonly MethodInfo s_methodInfo
+            = typeof(string).GetRuntimeMethod(nameof(string.StartsWith), new[] {typeof(string)});
 
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
             => ReferenceEquals(methodCallExpression.Method, s_methodInfo)
-                ? new SqlFunctionExpression("STARTS_WITH", typeof(bool), new[] { methodCallExpression.Object, methodCallExpression.Arguments[0] })
+                ? new SqlFunctionExpression("STARTS_WITH", typeof(bool),
+                    new[] {methodCallExpression.Object, methodCallExpression.Arguments[0]})
                 : null;
     }
 }

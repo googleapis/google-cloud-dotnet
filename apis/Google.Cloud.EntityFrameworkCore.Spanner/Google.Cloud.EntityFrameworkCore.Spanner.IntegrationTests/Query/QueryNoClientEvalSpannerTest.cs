@@ -24,7 +24,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests.Query
         {
         }
 
-        [Fact(Skip="unknown")]
+        [Fact(Skip = "unknown")]
         public override void Doesnt_throw_when_from_sql_not_composed()
         {
             base.Doesnt_throw_when_from_sql_not_composed();

@@ -13,12 +13,11 @@
 // limitations under the License.
 
 using System;
-using System.Data;
 using Google.Cloud.Spanner.Data;
 
 namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
-    class SpannerDoubleTypeMapping : DoubleTypeMapping
+    internal class SpannerDoubleTypeMapping : DoubleTypeMapping
     {
         public SpannerDoubleTypeMapping()
             : base(SpannerDbType.Float64.ToString(), null)

@@ -12,21 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Query.Expressions;
 
 namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerStringContainsTranslator : IMethodCallTranslator
     {
-        static readonly MethodInfo s_methodInfo
-            = typeof(string).GetRuntimeMethod(nameof(string.Contains), new[] { typeof(string) });
+        private static readonly MethodInfo s_methodInfo
+            = typeof(string).GetRuntimeMethod(nameof(string.Contains), new[] {typeof(string)});
 
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
             => methodCallExpression.Method.Equals(s_methodInfo)

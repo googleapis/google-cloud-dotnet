@@ -17,7 +17,7 @@ namespace Microsoft.EntityFrameworkCore.Migrations.Internal
     internal class SpannerMigrationsAnnotationProvider : MigrationsAnnotationProvider
     {
         /// <summary>
-        ///     Initializes a new instance of this class.
+        /// Initializes a new instance of this class.
         /// </summary>
         /// <param name="dependencies"> Parameter object containing dependencies for this service. </param>
         public SpannerMigrationsAnnotationProvider(MigrationsAnnotationProviderDependencies dependencies)

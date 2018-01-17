@@ -30,6 +30,8 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             .AddSingleton(TestModelSource.GetFactory(OnModelCreating))
             .BuildServiceProvider();
 
+        protected override string DatabaseName { get; } = "transactiontest";
+
         public override SpannerTestStore CreateTestStore()
         {
             return SpannerTestStore.GetOrCreateShared(DatabaseName, () =>
@@ -45,8 +47,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
                 }
             });
         }
-
-        protected override string DatabaseName { get; } = "transactiontest";
 
         public override DbContext CreateContext(SpannerTestStore testStore)
             => new DbContext(new DbContextOptionsBuilder()

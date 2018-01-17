@@ -52,7 +52,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Snippets
         {
             using (var context = new ChipsContext("chips"))
             {
-                context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
 
                 context.Add(new PringleChips {Id = Guid.NewGuid().ToString(), Name = "Honey Dijon"});

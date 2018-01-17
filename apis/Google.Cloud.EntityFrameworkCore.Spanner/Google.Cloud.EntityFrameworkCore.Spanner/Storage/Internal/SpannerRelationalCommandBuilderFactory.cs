@@ -289,7 +289,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
                         parameterValues = AdjustParameters(parameterValues);
                     }
 
-                    var command = (SpannerCommand)connection.DbConnection.CreateCommand();
+                    var command = (SpannerCommand) connection.DbConnection.CreateCommand();
                     command.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(Logger);
                     command.CommandText = CommandText;
 

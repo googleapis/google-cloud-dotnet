@@ -12,21 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore.Storage;
+
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
-    /// 
     /// </summary>
     public interface ISpannerRelationalConnection : IRelationalConnection
     {
         /// <summary>
-        /// 
         /// </summary>
         /// <returns></returns>
         ISpannerRelationalConnection CreateMasterConnection();

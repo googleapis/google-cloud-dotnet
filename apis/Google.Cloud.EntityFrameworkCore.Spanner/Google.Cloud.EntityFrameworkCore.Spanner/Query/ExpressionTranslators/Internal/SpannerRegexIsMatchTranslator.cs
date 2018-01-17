@@ -21,8 +21,8 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerRegexIsMatchTranslator : IMethodCallTranslator
     {
-        static readonly MethodInfo s_isMatch =
-            typeof(Regex).GetRuntimeMethod(nameof(Regex.IsMatch), new[] { typeof(string), typeof(string) });
+        private static readonly MethodInfo s_isMatch =
+            typeof(Regex).GetRuntimeMethod(nameof(Regex.IsMatch), new[] {typeof(string), typeof(string)});
 
         public Expression Translate(MethodCallExpression methodCallExpression)
         {

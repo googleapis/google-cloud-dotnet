@@ -23,6 +23,25 @@ namespace System
     [DebuggerStepThrough]
     internal static class SharedTypeExtensions
     {
+        private static readonly Dictionary<Type, object> _commonTypeDictionary = new Dictionary<Type, object>
+        {
+            {typeof(int), default(int)},
+            {typeof(Guid), default(Guid)},
+            {typeof(DateTime), default(DateTime)},
+            {typeof(DateTimeOffset), default(DateTimeOffset)},
+            {typeof(long), default(long)},
+            {typeof(bool), default(bool)},
+            {typeof(double), default(double)},
+            {typeof(short), default(short)},
+            {typeof(float), default(float)},
+            {typeof(byte), default(byte)},
+            {typeof(char), default(char)},
+            {typeof(uint), default(uint)},
+            {typeof(ushort), default(ushort)},
+            {typeof(ulong), default(ulong)},
+            {typeof(sbyte), default(sbyte)}
+        };
+
         public static Type UnwrapNullableType(this Type type) => Nullable.GetUnderlyingType(type) ?? type;
 
         public static bool IsNullableType(this Type type)
@@ -125,8 +144,10 @@ namespace System
             var typeInfo = type.GetTypeInfo();
             if (!typeInfo.IsGenericTypeDefinition)
             {
-                return (interfaceOrBaseType.GetTypeInfo().IsInterface ? typeInfo.ImplementedInterfaces : type.GetBaseTypes())
-                    .Union(new[] { type })
+                return (interfaceOrBaseType.GetTypeInfo().IsInterface
+                        ? typeInfo.ImplementedInterfaces
+                        : type.GetBaseTypes())
+                    .Union(new[] {type})
                     .Where(
                         t => t.GetTypeInfo().IsGenericType
                              && t.GetGenericTypeDefinition() == interfaceOrBaseType);
@@ -179,42 +200,19 @@ namespace System
                     yield return propertyInfo;
                 }
                 type = typeInfo.BaseType;
-            }
-            while (type != null);
+            } while (type != null);
         }
 
         public static IEnumerable<MemberInfo> GetMembersInHierarchy(this Type type, string name)
         {
             // Do the whole hierarchy for properties first since looking for fields is slower.
-            foreach (var propertyInfo in type.GetRuntimeProperties().Where(pi => pi.Name == name && !(pi.GetMethod ?? pi.SetMethod).IsStatic))
-            {
+            foreach (var propertyInfo in type.GetRuntimeProperties()
+                .Where(pi => pi.Name == name && !(pi.GetMethod ?? pi.SetMethod).IsStatic))
                 yield return propertyInfo;
-            }
 
             foreach (var fieldInfo in type.GetRuntimeFields().Where(f => f.Name == name && !f.IsStatic))
-            {
                 yield return fieldInfo;
-            }
         }
-
-        private static readonly Dictionary<Type, object> _commonTypeDictionary = new Dictionary<Type, object>
-        {
-            { typeof(int), default(int) },
-            { typeof(Guid), default(Guid) },
-            { typeof(DateTime), default(DateTime) },
-            { typeof(DateTimeOffset), default(DateTimeOffset) },
-            { typeof(long), default(long) },
-            { typeof(bool), default(bool) },
-            { typeof(double), default(double) },
-            { typeof(short), default(short) },
-            { typeof(float), default(float) },
-            { typeof(byte), default(byte) },
-            { typeof(char), default(char) },
-            { typeof(uint), default(uint) },
-            { typeof(ushort), default(ushort) },
-            { typeof(ulong), default(ulong) },
-            { typeof(sbyte), default(sbyte) }
-        };
 
         public static object GetDefaultValue(this Type type)
         {

@@ -20,12 +20,13 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerStringEndsWithTranslator : IMethodCallTranslator
     {
-        static readonly MethodInfo s_methodInfo
-            = typeof(string).GetRuntimeMethod(nameof(string.EndsWith), new[] { typeof(string) });
+        private static readonly MethodInfo s_methodInfo
+            = typeof(string).GetRuntimeMethod(nameof(string.EndsWith), new[] {typeof(string)});
 
         public virtual Expression Translate(MethodCallExpression methodCallExpression)
             => ReferenceEquals(methodCallExpression.Method, s_methodInfo)
-                ? new SqlFunctionExpression("ENDS_WITH", typeof(bool), new[] { methodCallExpression.Object, methodCallExpression.Arguments[0] })
+                ? new SqlFunctionExpression("ENDS_WITH", typeof(bool),
+                    new[] {methodCallExpression.Object, methodCallExpression.Arguments[0]})
                 : null;
     }
 }

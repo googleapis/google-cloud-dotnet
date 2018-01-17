@@ -21,13 +21,15 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     internal class SpannerDateTimeMemberTranslator : IMemberTranslator
     {
-        static readonly PropertyInfo s_utcNow = typeof(DateTime).GetProperty(nameof(DateTime.UtcNow));
-        static readonly PropertyInfo s_now = typeof(DateTime).GetProperty(nameof(DateTime.Now));
+        private static readonly PropertyInfo s_utcNow = typeof(DateTime).GetProperty(nameof(DateTime.UtcNow));
+        private static readonly PropertyInfo s_now = typeof(DateTime).GetProperty(nameof(DateTime.Now));
 
         public virtual Expression Translate(MemberExpression e)
         {
             if (e.Expression == null)
+            {
                 return TranslateStatic(e);
+            }
 
             var type = e.Expression?.Type;
             if (type != typeof(DateTime))
@@ -61,21 +63,23 @@ namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
             }
         }
 
-        static Expression GetDatePartExpression(MemberExpression e, string partName)
+        private static Expression GetDatePartExpression(MemberExpression e, string partName)
             =>
                 new SqlFunctionExpression(
-                    functionName: "EXTRACT",
-                    returnType: typeof(int),
-                    arguments: new[]
+                    "EXTRACT",
+                    typeof(int),
+                    new[]
                     {
                         new SqlFragmentExpression(partName),
                         e.Expression
                     });
 
-        Expression TranslateStatic(MemberExpression e)
+        private Expression TranslateStatic(MemberExpression e)
         {
             if (e.Member.Equals(s_utcNow) || e.Member.Equals(s_now))
+            {
                 return new SqlFunctionExpression("CURRENT_TIMESTAMP", e.Type);
+            }
             return null;
         }
     }

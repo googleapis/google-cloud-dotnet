@@ -280,7 +280,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             }
         }
 
-        [Fact(Skip="sequence not supported.")]
+        [Fact(Skip = "sequence not supported.")]
         public void Insert_with_default_value_from_sequence()
         {
             using (var testStore = SpannerTestStore.Create(DatabaseName))
@@ -379,7 +379,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             }
         }
 
-        [Fact(Skip="database values generated on add not supported")]
+        [Fact(Skip = "database values generated on add not supported")]
         public void Insert_with_non_key_default_value()
         {
             using (var testStore = SpannerTestStore.Create(DatabaseName))
@@ -470,7 +470,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             }
         }
 
-        [Fact(Skip= "server generated sequence values not supported")]
+        [Fact(Skip = "server generated sequence values not supported")]
         public void Insert_with_sequence_id()
         {
             using (var testStore = SpannerTestStore.Create(DatabaseName))
@@ -494,7 +494,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             }
         }
 
-        [Fact(Skip="Sequence not supported in Spanner.")]
+        [Fact(Skip = "Sequence not supported in Spanner.")]
         public void Insert_with_serial_non_id()
         {
             using (var testStore = SpannerTestStore.Create(DatabaseName))
@@ -519,7 +519,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
             }
         }
 
-        [Fact(Skip="server generated GUID values not supported.")]
+        [Fact(Skip = "server generated GUID values not supported.")]
         public void Insert_with_server_generated_GUID_key()
         {
             using (var testStore = SpannerTestStore.Create(DatabaseName))
