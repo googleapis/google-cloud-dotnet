@@ -57,3 +57,5 @@ Alpha:
 - [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html)
 - [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html)
 - [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
+- [Google.Cloud.EntityFrameworkCore.Spanner](Google.Cloud.EntityFrameworkCore.Spanner/index.html)
+
