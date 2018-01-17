@@ -20,21 +20,22 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Xunit;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Snippets
+// ReSharper disable once CheckNamespace
+namespace Microsoft.EntityFrameworkCore
 {
     [SnippetOutputCollector]
-    public class SpannerEfSnippets
+    public class SpannerDbContextOptionsExtensionsSnippets
     {
         private static IConfiguration Config { get; set; }
 
         const string DefaultConnectionString =
             "Data Source=projects/cloud-sharp-jenkins/instances/spannerinstance/databases/chips";
 
-        public SpannerEfSnippets()
+        public SpannerDbContextOptionsExtensionsSnippets()
         {
         }
 
-        static SpannerEfSnippets()
+        static SpannerDbContextOptionsExtensionsSnippets()
         {
             var configBuilder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -46,7 +47,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Snippets
 
         private static string DefaultConnection => Config["DefaultConnection"] ?? DefaultConnectionString;
 
-        // Sample: SpannerEntityFrameworkSample
+        // Sample: UseSpanner
         [Fact]
         public void SampleUsage()
         {
