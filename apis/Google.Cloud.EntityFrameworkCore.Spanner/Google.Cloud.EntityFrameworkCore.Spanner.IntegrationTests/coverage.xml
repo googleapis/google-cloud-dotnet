@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <CoverageParams>
   <TargetExecutable>/Program Files/dotnet/dotnet.exe</TargetExecutable>
   <TargetArguments>test --no-build -c Release</TargetArguments>
