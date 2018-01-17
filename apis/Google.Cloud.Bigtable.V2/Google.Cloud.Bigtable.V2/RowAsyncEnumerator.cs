@@ -93,20 +93,6 @@ namespace Google.Cloud.Bigtable.V2
             {
                 foreach (var chunk in response.Chunks)
                 {
-                    if (chunk.ResetRow)
-                    {
-                        Assert(
-                            chunk.RowKey.IsEmpty &&
-                            chunk.FamilyName == null &&
-                            chunk.Qualifier == null &&
-                            chunk.Value.IsEmpty &&
-                            chunk.TimestampMicros == 0,
-                            "A reset should have no data");
-                        Assert(_rowMergeState != NewRow.Instance, "NewRow must have a rowKey");
-                        Reset();
-                        continue;
-                    }
-
                     _rowMergeState = _rowMergeState.HandleChunk(this, chunk);
 
                     if (chunk.CommitRow)
@@ -152,6 +138,18 @@ namespace Google.Cloud.Bigtable.V2
             _currentFamilies.Clear();
         }
 
+        private RowMergeState ResetRow(CellChunk chunk)
+        {
+            Assert(chunk.RowKey.IsEmpty, "Reset chunks can't have row keys");
+            Assert(chunk.FamilyName == null, "Reset chunks can't have families");
+            Assert(chunk.Qualifier == null, "Reset chunks can't have qualifiers");
+            Assert(chunk.TimestampMicros == 0, "Reset chunks can't have timestamps");
+            Assert(chunk.ValueSize == 0, "Reset chunks can't have value sizes");
+            Assert(chunk.Value.IsEmpty, "Reset chunks can't have values");
+            Reset();
+            return NewRow.Instance;
+        }
+
         private struct CellInfo
         {
             public Column Column;
@@ -190,12 +188,14 @@ namespace Google.Cloud.Bigtable.V2
 
             public override RowMergeState HandleChunk(RowAsyncEnumerator owner, CellChunk chunk)
             {
+                owner.Assert(!chunk.ResetRow, "NewRow can't reset");
                 owner.Assert(!chunk.RowKey.IsEmpty, "NewRow must have a rowKey");
                 owner.Assert(chunk.FamilyName != null, "NewRow must have a family");
                 owner.Assert(chunk.Qualifier != null, "NewRow must have a qualifier");
                 owner.Assert(
                     owner._currentCell.Row == null || BigtableByteString.Compare(owner._currentCell.Row.Key, chunk.RowKey) < 0,
                     "NewRow key must be greater than the previous row's");
+                // TODO: If last scanned row key cached, make sure it is less than current row key
 
                 // WARNING: owner._currentCell is a struct value. Do not extract as a local (which will make a copy).
                 owner._currentCell.Row = new Row { Key = chunk.RowKey };
@@ -223,9 +223,25 @@ namespace Google.Cloud.Bigtable.V2
 
             public override RowMergeState HandleChunk(RowAsyncEnumerator owner, CellChunk chunk)
             {
+                if (chunk.ResetRow)
+                {
+                    return owner.ResetRow(chunk);
+                }
+
                 owner.Assert(
                     chunk.RowKey.IsEmpty || chunk.RowKey == owner._currentCell.Row.Key,
-                    "NewCell must have the same key as the current row");
+                    "Cell row keys must not change");
+
+                bool isSplit = chunk.ValueSize > 0;
+                if (isSplit)
+                {
+                    owner.Assert(
+                        !chunk.CommitRow, "NewCell can't commit when valueSize indicates more data");
+                    owner.Assert(
+                        !chunk.Value.IsEmpty,
+                        "NewCell must have data when valueSize promises more data in the next chunk");
+                }
+                owner.Assert(chunk.ValueSize >= 0, "NewCell valueSize can't be negative");
 
                 if (chunk.FamilyName != null)
                 {
@@ -251,7 +267,7 @@ namespace Google.Cloud.Bigtable.V2
                 owner._currentCell.Labels = chunk.Labels;
 
                 // calculate cell size
-                owner._currentCell.ValueSizeExpected = chunk.ValueSize > 0 ? chunk.ValueSize : chunk.Value.Length;
+                owner._currentCell.ValueSizeExpected = isSplit ? chunk.ValueSize : chunk.Value.Length;
                 owner._currentCell.ValueSizeRemaining = owner._currentCell.ValueSizeExpected - chunk.Value.Length;
                 
                 if (owner._currentCell.ValueSizeRemaining != 0)
@@ -296,6 +312,11 @@ namespace Google.Cloud.Bigtable.V2
 
             public override RowMergeState HandleChunk(RowAsyncEnumerator owner, CellChunk chunk)
             {
+                if (chunk.ResetRow)
+                {
+                    return owner.ResetRow(chunk);
+                }
+
                 owner.HadSplitCell = true;
                 owner.Assert(chunk.FamilyName == null, "CellInProgress can't have a family");
                 owner.Assert(chunk.Qualifier == null, "CellInProgress can't have a qualifier");
@@ -310,6 +331,13 @@ namespace Google.Cloud.Bigtable.V2
                     owner.Assert(
                         owner._currentCell.ValueSizeRemaining == 0,
                         $"CellInProgress is last, but is missing {owner._currentCell.ValueSizeRemaining} bytes");
+                }
+                else
+                {
+                    owner.Assert(
+                        owner._currentCell.ValueSizeExpected == chunk.ValueSize,
+                        "CellInProgress valueSizes should be identical for nonterminal chunks");
+                    owner.Assert(!chunk.CommitRow, "CellInProgress can't commit with a nonterminal chunk");
                 }
 
                 ref var accumulator = ref owner._currentCell.ValueAccumulator;
