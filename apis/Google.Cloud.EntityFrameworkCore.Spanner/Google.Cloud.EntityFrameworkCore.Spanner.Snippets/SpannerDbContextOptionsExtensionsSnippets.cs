@@ -28,24 +28,18 @@ namespace Microsoft.EntityFrameworkCore
     {
         private static IConfiguration Config { get; set; }
 
-        const string DefaultConnectionString =
-            "Data Source=projects/cloud-sharp-jenkins/instances/spannerinstance/databases/chips";
-
         public SpannerDbContextOptionsExtensionsSnippets()
         {
         }
 
         static SpannerDbContextOptionsExtensionsSnippets()
         {
-            var configBuilder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddEnvironmentVariables();
-
-            Config = configBuilder.Build()
-                .GetSection("Test:Spanner");
+            Config = new ConfigurationBuilder()
+                .AddEnvironmentVariables().Build();
         }
 
-        private static string DefaultConnection => Config["DefaultConnection"] ?? DefaultConnectionString;
+        public static string DefaultConnection =>
+            $"Data Source=projects/{Config["TEST_PROJECT"]}/instances/spannerinstance/databases/northwind";
 
         // Sample: UseSpanner
         [Fact]

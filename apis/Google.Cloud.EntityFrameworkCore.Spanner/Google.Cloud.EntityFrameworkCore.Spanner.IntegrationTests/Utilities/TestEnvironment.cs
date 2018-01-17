@@ -19,24 +19,16 @@ namespace Microsoft.EntityFrameworkCore.Utilities
 {
     public static class TestEnvironment
     {
-        private const string DefaultConnectionString =
-            "Data Source=projects/cloud-sharp-jenkins/instances/spannerinstance/databases/northwind";
-
         static TestEnvironment()
         {
-            var configBuilder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("config.json", true)
-                .AddJsonFile("config.test.json", true)
-                .AddEnvironmentVariables();
-
-            Config = configBuilder.Build()
-                .GetSection("Test:Spanner");
+            Config = new ConfigurationBuilder()
+                .AddEnvironmentVariables().Build();
         }
 
         public static IConfiguration Config { get; }
 
-        public static string DefaultConnection => Config["DefaultConnection"] ?? DefaultConnectionString;
+        public static string DefaultConnection =>
+            $"Data Source=projects/{Config["TEST_PROJECT"]}/instances/spannerinstance/databases/northwind";
 
         public static bool? GetFlag(string key)
         {
