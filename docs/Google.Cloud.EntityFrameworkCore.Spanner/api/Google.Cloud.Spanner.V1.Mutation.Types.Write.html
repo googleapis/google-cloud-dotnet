@@ -82,33 +82,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Mutation.Types.Write</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">Google.Protobuf.IMessage</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Mutation.Types.Write.html">Mutation.Types.Write</a>&gt;</div>
-    <div><span class="xref">Google.Protobuf.IMessage</span></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Mutation.Types.Write.html">Mutation.Types.Write</a>&gt;</div>
-    <div><span class="xref">Google.Protobuf.IDeepCloneable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Mutation.Types.Write.html">Mutation.Types.Write</a>&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.V1.html">Google.Cloud.Spanner.V1</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.Spanner.V1.dll</h6>
   <h5 id="Google_Cloud_Spanner_V1_Mutation_Types_Write_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Write : IMessage&lt;Mutation.Types.Write&gt;, IMessage, IEquatable&lt;Mutation.Types.Write&gt;, IDeepCloneable&lt;Mutation.Types.Write&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Write : Protobuf.IMessage&lt;Mutation.Types.Write&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -122,7 +100,7 @@ row(s) to be modified.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; Columns { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Protobuf.Collections.RepeatedField&lt;string&gt; Columns { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,7 +155,7 @@ encoded as described [here][google.spanner.v1.TypeCode].</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RepeatedField&lt;ListValue&gt; Values { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Protobuf.Collections.RepeatedField&lt;Protobuf.WellKnownTypes.ListValue&gt; Values { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

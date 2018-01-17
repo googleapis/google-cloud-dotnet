@@ -105,7 +105,7 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_CreateDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.CreateDatabase*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_CreateDatabase_Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.CreateDatabase(Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest,Grpc.Core.ServerCallContext)">CreateDatabase(CreateDatabaseRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_CreateDatabase_Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.CreateDatabase(Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest,Grpc.Core.ServerCallContext)">CreateDatabase(CreateDatabaseRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Creates a new Cloud Spanner database and starts to prepare it for serving.
 The returned [long-running operation][google.longrunning.Operation] will
 have a name of the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
@@ -118,7 +118,7 @@ can be used to track preparation of the database. The
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; CreateDatabase(CreateDatabaseRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LongRunning.Operation&gt; CreateDatabase(CreateDatabaseRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,7 +137,7 @@ can be used to track preparation of the database. The
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -161,13 +161,13 @@ can be used to track preparation of the database. The
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_DropDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.DropDatabase*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_DropDatabase_Google_Cloud_Spanner_Admin_Database_V1_DropDatabaseRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.DropDatabase(Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest,Grpc.Core.ServerCallContext)">DropDatabase(DropDatabaseRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_DropDatabase_Google_Cloud_Spanner_Admin_Database_V1_DropDatabaseRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.DropDatabase(Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest,Grpc.Core.ServerCallContext)">DropDatabase(DropDatabaseRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Drops (aka deletes) a Cloud Spanner database.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DropDatabase(DropDatabaseRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Protobuf.WellKnownTypes.Empty&gt; DropDatabase(DropDatabaseRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,7 +186,7 @@ can be used to track preparation of the database. The
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -210,13 +210,13 @@ can be used to track preparation of the database. The
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetDatabase*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetDatabase_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetDatabase(Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest,Grpc.Core.ServerCallContext)">GetDatabase(GetDatabaseRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetDatabase_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetDatabase(Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest,Grpc.Core.ServerCallContext)">GetDatabase(GetDatabaseRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Gets the state of a Cloud Spanner database.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Database&gt; GetDatabase(GetDatabaseRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Database&gt; GetDatabase(GetDatabaseRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,7 +235,7 @@ can be used to track preparation of the database. The
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -259,7 +259,7 @@ can be used to track preparation of the database. The
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetDatabaseDdl_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetDatabaseDdl*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseDdlRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetDatabaseDdl(Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest,Grpc.Core.ServerCallContext)">GetDatabaseDdl(GetDatabaseDdlRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseDdlRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetDatabaseDdl(Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest,Grpc.Core.ServerCallContext)">GetDatabaseDdl(GetDatabaseDdlRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Returns the schema of a Cloud Spanner database as a list of formatted
 DDL statements. This method does not show pending schema updates, those may
 be queried using the [Operations][google.longrunning.Operations] API.</p>
@@ -267,7 +267,7 @@ be queried using the [Operations][google.longrunning.Operations] API.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;GetDatabaseDdlResponse&gt; GetDatabaseDdl(GetDatabaseDdlRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;GetDatabaseDdlResponse&gt; GetDatabaseDdl(GetDatabaseDdlRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,7 +286,7 @@ be queried using the [Operations][google.longrunning.Operations] API.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -310,7 +310,7 @@ be queried using the [Operations][google.longrunning.Operations] API.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetIamPolicy*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.ServerCallContext)">GetIamPolicy(GetIamPolicyRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.ServerCallContext)">GetIamPolicy(Iam.V1.GetIamPolicyRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Gets the access control policy for a database resource. Returns an empty
 policy if a database exists but does not have a policy set.</p>
 <p>Authorization requires <code>spanner.databases.getIamPolicy</code> permission on
@@ -319,7 +319,7 @@ policy if a database exists but does not have a policy set.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; GetIamPolicy(GetIamPolicyRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Iam.V1.Policy&gt; GetIamPolicy(Iam.V1.GetIamPolicyRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,7 +338,7 @@ policy if a database exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -362,13 +362,13 @@ policy if a database exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_ListDatabases_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.ListDatabases*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_ListDatabases_Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.ListDatabases(Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest,Grpc.Core.ServerCallContext)">ListDatabases(ListDatabasesRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_ListDatabases_Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.ListDatabases(Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest,Grpc.Core.ServerCallContext)">ListDatabases(ListDatabasesRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Lists Cloud Spanner databases.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListDatabasesResponse&gt; ListDatabases(ListDatabasesRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListDatabasesResponse&gt; ListDatabases(ListDatabasesRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -387,7 +387,7 @@ policy if a database exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -411,7 +411,7 @@ policy if a database exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_SetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.SetIamPolicy*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.ServerCallContext)">SetIamPolicy(SetIamPolicyRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.ServerCallContext)">SetIamPolicy(Iam.V1.SetIamPolicyRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Sets the access control policy on a database resource. Replaces any
 existing policy.</p>
 <p>Authorization requires <code>spanner.databases.setIamPolicy</code> permission on
@@ -420,7 +420,7 @@ existing policy.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; SetIamPolicy(SetIamPolicyRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Iam.V1.Policy&gt; SetIamPolicy(Iam.V1.SetIamPolicyRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -439,7 +439,7 @@ existing policy.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -463,7 +463,7 @@ existing policy.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_TestIamPermissions_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.TestIamPermissions*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.ServerCallContext)">TestIamPermissions(TestIamPermissionsRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.ServerCallContext)">TestIamPermissions(Iam.V1.TestIamPermissionsRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified database resource.</p>
 <p>Attempting this RPC on a non-existent Cloud Spanner database will result in
 a NOT_FOUND error if the user has <code>spanner.databases.list</code> permission on
@@ -473,7 +473,7 @@ permissions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;TestIamPermissionsResponse&gt; TestIamPermissions(TestIamPermissionsRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Iam.V1.TestIamPermissionsResponse&gt; TestIamPermissions(Iam.V1.TestIamPermissionsRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -492,7 +492,7 @@ permissions.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -516,7 +516,7 @@ permissions.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_UpdateDatabaseDdl_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.UpdateDatabaseDdl*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_UpdateDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_UpdateDatabaseDdlRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.UpdateDatabaseDdl(Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest,Grpc.Core.ServerCallContext)">UpdateDatabaseDdl(UpdateDatabaseDdlRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdmin_DatabaseAdminBase_UpdateDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_UpdateDatabaseDdlRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminBase.UpdateDatabaseDdl(Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest,Grpc.Core.ServerCallContext)">UpdateDatabaseDdl(UpdateDatabaseDdlRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Updates the schema of a Cloud Spanner database by
 creating/altering/dropping tables, columns, indexes, etc. The returned
 [long-running operation][google.longrunning.Operation] will have a name of
@@ -528,7 +528,7 @@ track execution of the schema change(s). The
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; UpdateDatabaseDdl(UpdateDatabaseDdlRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LongRunning.Operation&gt; UpdateDatabaseDdl(UpdateDatabaseDdlRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -547,7 +547,7 @@ track execution of the schema change(s). The
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>

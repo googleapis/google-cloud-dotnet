@@ -79,36 +79,13 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Grpc.Core.ClientBase.html">ClientBase</a></div>
-    <div class="level2"><a class="xref" href="Grpc.Core.ClientBase-1.html">ClientBase</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Spanner.SpannerClient.html">Spanner.SpannerClient</a>&gt;</div>
-    <div class="level3"><span class="xref">Spanner.SpannerClient</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Grpc.Core.ClientBase-1.html#Grpc_Core_ClientBase_1_WithHost_System_String_">ClientBase&lt;Spanner.SpannerClient&gt;.WithHost(String)</a>
-    </div>
-    <div>
-      <a class="xref" href="Grpc.Core.ClientBase.html#Grpc_Core_ClientBase_CallInvoker">ClientBase.CallInvoker</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
+    <div class="level1"><span class="xref">Spanner.SpannerClient</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.V1.html">Google.Cloud.Spanner.V1</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.Spanner.V1.dll</h6>
   <h5 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SpannerClient : ClientBase&lt;Spanner.SpannerClient&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SpannerClient : Grpc.Core.ClientBase&lt;Spanner.SpannerClient&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -122,13 +99,13 @@
     <pre><code class="lang-csharp hljs">protected SpannerClient()</code></pre>
   </div>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient__ctor_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.#ctor*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient__ctor_Grpc_Core_CallInvoker_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.#ctor(Grpc.Core.CallInvoker)">SpannerClient(CallInvoker)</h4>
-  <div class="markdown level1 summary"><p>Creates a new client for Spanner that uses a custom <code>CallInvoker</code>.</p>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient__ctor_ClientBaseConfiguration_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.#ctor(ClientBaseConfiguration)">SpannerClient(ClientBaseConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Protected constructor to allow creation of configured clients.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpannerClient(CallInvoker callInvoker)</code></pre>
+    <pre><code class="lang-csharp hljs">protected SpannerClient(ClientBaseConfiguration configuration)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,7 +118,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallInvoker.html">CallInvoker</a></td>
+        <td><span class="xref">ClientBaseConfiguration</span></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The client configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient__ctor_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.#ctor*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient__ctor_Grpc_Core_CallInvoker_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.#ctor(Grpc.Core.CallInvoker)">SpannerClient(Grpc.Core.CallInvoker)</h4>
+  <div class="markdown level1 summary"><p>Creates a new client for Spanner that uses a custom <code>CallInvoker</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerClient(Grpc.Core.CallInvoker callInvoker)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallInvoker.html">Grpc.Core.CallInvoker</a></td>
         <td><span class="parametername">callInvoker</span></td>
         <td><p>The callInvoker to use to make remote calls.</p>
 </td>
@@ -149,13 +153,13 @@
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient__ctor_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.#ctor*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient__ctor_Grpc_Core_Channel_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.#ctor(Grpc.Core.Channel)">SpannerClient(Channel)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient__ctor_Grpc_Core_Channel_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.#ctor(Grpc.Core.Channel)">SpannerClient(Grpc.Core.Channel)</h4>
   <div class="markdown level1 summary"><p>Creates a new client for Spanner</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpannerClient(Channel channel)</code></pre>
+    <pre><code class="lang-csharp hljs">public SpannerClient(Grpc.Core.Channel channel)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,36 +172,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Channel.html">Channel</a></td>
+        <td><a class="xref" href="Grpc.Core.Channel.html">Grpc.Core.Channel</a></td>
         <td><span class="parametername">channel</span></td>
         <td><p>The channel to use to make remote calls.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient__ctor_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.#ctor*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient__ctor_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">SpannerClient(ClientBase.ClientBaseConfiguration)</h4>
-  <div class="markdown level1 summary"><p>Protected constructor to allow creation of configured clients.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected SpannerClient(ClientBase.ClientBaseConfiguration configuration)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Grpc.Core.ClientBase.ClientBaseConfiguration.html">ClientBase.ClientBaseConfiguration</a></td>
-        <td><span class="parametername">configuration</span></td>
-        <td><p>The client configuration.</p>
 </td>
       </tr>
     </tbody>
@@ -205,7 +182,7 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransaction_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransaction*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransaction_Google_Cloud_Spanner_V1_BeginTransactionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransaction(Google.Cloud.Spanner.V1.BeginTransactionRequest,Grpc.Core.CallOptions)">BeginTransaction(BeginTransactionRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransaction_Google_Cloud_Spanner_V1_BeginTransactionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransaction(Google.Cloud.Spanner.V1.BeginTransactionRequest,Grpc.Core.CallOptions)">BeginTransaction(BeginTransactionRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Begins a new transaction. This step can often be skipped:
 [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
 [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
@@ -214,7 +191,7 @@ side-effect.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Transaction BeginTransaction(BeginTransactionRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Transaction BeginTransaction(BeginTransactionRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,7 +210,7 @@ side-effect.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -257,7 +234,7 @@ side-effect.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransaction_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransaction*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransaction_Google_Cloud_Spanner_V1_BeginTransactionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransaction(Google.Cloud.Spanner.V1.BeginTransactionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">BeginTransaction(BeginTransactionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransaction_Google_Cloud_Spanner_V1_BeginTransactionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransaction(Google.Cloud.Spanner.V1.BeginTransactionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">BeginTransaction(BeginTransactionRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Begins a new transaction. This step can often be skipped:
 [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
 [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
@@ -266,7 +243,7 @@ side-effect.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Transaction BeginTransaction(BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Transaction BeginTransaction(BeginTransactionRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,7 +262,7 @@ side-effect.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -321,7 +298,7 @@ side-effect.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransactionAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransactionAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransactionAsync_Google_Cloud_Spanner_V1_BeginTransactionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransactionAsync(Google.Cloud.Spanner.V1.BeginTransactionRequest,Grpc.Core.CallOptions)">BeginTransactionAsync(BeginTransactionRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransactionAsync_Google_Cloud_Spanner_V1_BeginTransactionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransactionAsync(Google.Cloud.Spanner.V1.BeginTransactionRequest,Grpc.Core.CallOptions)">BeginTransactionAsync(BeginTransactionRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Begins a new transaction. This step can often be skipped:
 [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
 [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
@@ -330,7 +307,7 @@ side-effect.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Transaction&gt; BeginTransactionAsync(BeginTransactionRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Transaction&gt; BeginTransactionAsync(BeginTransactionRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,7 +326,7 @@ side-effect.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -366,14 +343,14 @@ side-effect.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransactionAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransactionAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransactionAsync_Google_Cloud_Spanner_V1_BeginTransactionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransactionAsync(Google.Cloud.Spanner.V1.BeginTransactionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">BeginTransactionAsync(BeginTransactionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_BeginTransactionAsync_Google_Cloud_Spanner_V1_BeginTransactionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.BeginTransactionAsync(Google.Cloud.Spanner.V1.BeginTransactionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">BeginTransactionAsync(BeginTransactionRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Begins a new transaction. This step can often be skipped:
 [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
 [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
@@ -382,7 +359,7 @@ side-effect.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Transaction&gt; BeginTransactionAsync(BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Transaction&gt; BeginTransactionAsync(BeginTransactionRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -401,7 +378,7 @@ side-effect.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -430,14 +407,14 @@ side-effect.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Commit_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Commit*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Commit_Google_Cloud_Spanner_V1_CommitRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Commit(Google.Cloud.Spanner.V1.CommitRequest,Grpc.Core.CallOptions)">Commit(CommitRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Commit_Google_Cloud_Spanner_V1_CommitRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Commit(Google.Cloud.Spanner.V1.CommitRequest,Grpc.Core.CallOptions)">Commit(CommitRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
 applied to rows in the database.</p>
 <p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
@@ -449,7 +426,7 @@ the transaction from the beginning, re-using the same session.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -468,7 +445,7 @@ the transaction from the beginning, re-using the same session.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -492,7 +469,7 @@ the transaction from the beginning, re-using the same session.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Commit_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Commit*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Commit_Google_Cloud_Spanner_V1_CommitRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Commit(Google.Cloud.Spanner.V1.CommitRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Commit(CommitRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Commit_Google_Cloud_Spanner_V1_CommitRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Commit(Google.Cloud.Spanner.V1.CommitRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Commit(CommitRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
 applied to rows in the database.</p>
 <p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
@@ -504,7 +481,7 @@ the transaction from the beginning, re-using the same session.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -523,7 +500,7 @@ the transaction from the beginning, re-using the same session.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -559,7 +536,7 @@ the transaction from the beginning, re-using the same session.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CommitAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CommitAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_CommitRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CommitAsync(Google.Cloud.Spanner.V1.CommitRequest,Grpc.Core.CallOptions)">CommitAsync(CommitRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_CommitRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CommitAsync(Google.Cloud.Spanner.V1.CommitRequest,Grpc.Core.CallOptions)">CommitAsync(CommitRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
 applied to rows in the database.</p>
 <p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
@@ -571,7 +548,7 @@ the transaction from the beginning, re-using the same session.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;CommitResponse&gt; CommitAsync(CommitRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;CommitResponse&gt; CommitAsync(CommitRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -590,7 +567,7 @@ the transaction from the beginning, re-using the same session.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -607,14 +584,14 @@ the transaction from the beginning, re-using the same session.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CommitAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CommitAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_CommitRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CommitAsync(Google.Cloud.Spanner.V1.CommitRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CommitAsync(CommitRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_CommitRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CommitAsync(Google.Cloud.Spanner.V1.CommitRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CommitAsync(CommitRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
 applied to rows in the database.</p>
 <p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
@@ -626,7 +603,7 @@ the transaction from the beginning, re-using the same session.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;CommitResponse&gt; CommitAsync(CommitRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;CommitResponse&gt; CommitAsync(CommitRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -645,7 +622,7 @@ the transaction from the beginning, re-using the same session.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -674,14 +651,14 @@ the transaction from the beginning, re-using the same session.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSession_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSession*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSession_Google_Cloud_Spanner_V1_CreateSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSession(Google.Cloud.Spanner.V1.CreateSessionRequest,Grpc.Core.CallOptions)">CreateSession(CreateSessionRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSession_Google_Cloud_Spanner_V1_CreateSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSession(Google.Cloud.Spanner.V1.CreateSessionRequest,Grpc.Core.CallOptions)">CreateSession(CreateSessionRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a new session. A session can be used to perform
 transactions that read and/or modify data in a Cloud Spanner database.
 Sessions are meant to be reused for many consecutive
@@ -702,7 +679,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Session CreateSession(CreateSessionRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Session CreateSession(CreateSessionRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -721,7 +698,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -745,7 +722,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSession_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSession*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSession_Google_Cloud_Spanner_V1_CreateSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSession(Google.Cloud.Spanner.V1.CreateSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSession(CreateSessionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSession_Google_Cloud_Spanner_V1_CreateSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSession(Google.Cloud.Spanner.V1.CreateSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSession(CreateSessionRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates a new session. A session can be used to perform
 transactions that read and/or modify data in a Cloud Spanner database.
 Sessions are meant to be reused for many consecutive
@@ -766,7 +743,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Session CreateSession(CreateSessionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Session CreateSession(CreateSessionRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -785,7 +762,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -821,7 +798,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSessionAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSessionAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSessionAsync_Google_Cloud_Spanner_V1_CreateSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSessionAsync(Google.Cloud.Spanner.V1.CreateSessionRequest,Grpc.Core.CallOptions)">CreateSessionAsync(CreateSessionRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSessionAsync_Google_Cloud_Spanner_V1_CreateSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSessionAsync(Google.Cloud.Spanner.V1.CreateSessionRequest,Grpc.Core.CallOptions)">CreateSessionAsync(CreateSessionRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a new session. A session can be used to perform
 transactions that read and/or modify data in a Cloud Spanner database.
 Sessions are meant to be reused for many consecutive
@@ -842,7 +819,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Session&gt; CreateSessionAsync(CreateSessionRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Session&gt; CreateSessionAsync(CreateSessionRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -861,7 +838,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -878,14 +855,14 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSessionAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSessionAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSessionAsync_Google_Cloud_Spanner_V1_CreateSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSessionAsync(Google.Cloud.Spanner.V1.CreateSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSessionAsync(CreateSessionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_CreateSessionAsync_Google_Cloud_Spanner_V1_CreateSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.CreateSessionAsync(Google.Cloud.Spanner.V1.CreateSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSessionAsync(CreateSessionRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates a new session. A session can be used to perform
 transactions that read and/or modify data in a Cloud Spanner database.
 Sessions are meant to be reused for many consecutive
@@ -906,7 +883,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Session&gt; CreateSessionAsync(CreateSessionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Session&gt; CreateSessionAsync(CreateSessionRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -925,7 +902,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -954,20 +931,20 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSession_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSession*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSession_Google_Cloud_Spanner_V1_DeleteSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSession(Google.Cloud.Spanner.V1.DeleteSessionRequest,Grpc.Core.CallOptions)">DeleteSession(DeleteSessionRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSession_Google_Cloud_Spanner_V1_DeleteSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSession(Google.Cloud.Spanner.V1.DeleteSessionRequest,Grpc.Core.CallOptions)">DeleteSession(DeleteSessionRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Ends a session, releasing server resources associated with it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Empty DeleteSession(DeleteSessionRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Protobuf.WellKnownTypes.Empty DeleteSession(DeleteSessionRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -986,7 +963,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1010,13 +987,13 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSession_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSession*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSession_Google_Cloud_Spanner_V1_DeleteSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSession(Google.Cloud.Spanner.V1.DeleteSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSession(DeleteSessionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSession_Google_Cloud_Spanner_V1_DeleteSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSession(Google.Cloud.Spanner.V1.DeleteSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSession(DeleteSessionRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Ends a session, releasing server resources associated with it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Empty DeleteSession(DeleteSessionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Protobuf.WellKnownTypes.Empty DeleteSession(DeleteSessionRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1035,7 +1012,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1071,13 +1048,13 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSessionAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSessionAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_DeleteSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSessionAsync(Google.Cloud.Spanner.V1.DeleteSessionRequest,Grpc.Core.CallOptions)">DeleteSessionAsync(DeleteSessionRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_DeleteSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSessionAsync(Google.Cloud.Spanner.V1.DeleteSessionRequest,Grpc.Core.CallOptions)">DeleteSessionAsync(DeleteSessionRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Ends a session, releasing server resources associated with it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteSessionAsync(DeleteSessionRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Protobuf.WellKnownTypes.Empty&gt; DeleteSessionAsync(DeleteSessionRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1096,7 +1073,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1113,20 +1090,20 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSessionAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSessionAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_DeleteSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSessionAsync(Google.Cloud.Spanner.V1.DeleteSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSessionAsync(DeleteSessionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_DeleteSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.DeleteSessionAsync(Google.Cloud.Spanner.V1.DeleteSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSessionAsync(DeleteSessionRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Ends a session, releasing server resources associated with it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteSessionAsync(DeleteSessionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Protobuf.WellKnownTypes.Empty&gt; DeleteSessionAsync(DeleteSessionRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1145,7 +1122,7 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1174,14 +1151,14 @@ periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSql_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSql*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.CallOptions)">ExecuteSql(ExecuteSqlRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.CallOptions)">ExecuteSql(ExecuteSqlRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Executes an SQL query, returning all rows in a single reply. This
 method cannot be used to return a result set larger than 10 MiB;
 if the query yields more data than that, the query fails with
@@ -1195,7 +1172,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ResultSet ExecuteSql(ExecuteSqlRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ResultSet ExecuteSql(ExecuteSqlRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1214,7 +1191,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1238,7 +1215,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSql_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSql*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ExecuteSql(ExecuteSqlRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ExecuteSql(ExecuteSqlRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Executes an SQL query, returning all rows in a single reply. This
 method cannot be used to return a result set larger than 10 MiB;
 if the query yields more data than that, the query fails with
@@ -1252,7 +1229,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ResultSet ExecuteSql(ExecuteSqlRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ResultSet ExecuteSql(ExecuteSqlRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1271,7 +1248,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1307,7 +1284,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSqlAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSqlAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSqlAsync_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSqlAsync(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.CallOptions)">ExecuteSqlAsync(ExecuteSqlRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSqlAsync_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSqlAsync(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.CallOptions)">ExecuteSqlAsync(ExecuteSqlRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Executes an SQL query, returning all rows in a single reply. This
 method cannot be used to return a result set larger than 10 MiB;
 if the query yields more data than that, the query fails with
@@ -1321,7 +1298,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ResultSet&gt; ExecuteSqlAsync(ExecuteSqlRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;ResultSet&gt; ExecuteSqlAsync(ExecuteSqlRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1340,7 +1317,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1357,14 +1334,14 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSqlAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSqlAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSqlAsync_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSqlAsync(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ExecuteSqlAsync(ExecuteSqlRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteSqlAsync_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteSqlAsync(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ExecuteSqlAsync(ExecuteSqlRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Executes an SQL query, returning all rows in a single reply. This
 method cannot be used to return a result set larger than 10 MiB;
 if the query yields more data than that, the query fails with
@@ -1378,7 +1355,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ResultSet&gt; ExecuteSqlAsync(ExecuteSqlRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;ResultSet&gt; ExecuteSqlAsync(ExecuteSqlRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1397,7 +1374,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1426,14 +1403,14 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteStreamingSql_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteStreamingSql*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteStreamingSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.CallOptions)">ExecuteStreamingSql(ExecuteSqlRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteStreamingSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.CallOptions)">ExecuteStreamingSql(ExecuteSqlRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
 set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
 is no limit on the size of the returned result set. However, no
@@ -1443,7 +1420,7 @@ column value can exceed 10 MiB.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncServerStreamingCall&lt;PartialResultSet&gt; ExecuteStreamingSql(ExecuteSqlRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncServerStreamingCall&lt;PartialResultSet&gt; ExecuteStreamingSql(ExecuteSqlRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1462,7 +1439,7 @@ column value can exceed 10 MiB.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1479,14 +1456,14 @@ column value can exceed 10 MiB.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">Grpc.Core.AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteStreamingSql_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteStreamingSql*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteStreamingSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ExecuteStreamingSql(ExecuteSqlRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ExecuteStreamingSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ExecuteStreamingSql(ExecuteSqlRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
 set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
 is no limit on the size of the returned result set. However, no
@@ -1496,7 +1473,7 @@ column value can exceed 10 MiB.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncServerStreamingCall&lt;PartialResultSet&gt; ExecuteStreamingSql(ExecuteSqlRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncServerStreamingCall&lt;PartialResultSet&gt; ExecuteStreamingSql(ExecuteSqlRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1515,7 +1492,7 @@ column value can exceed 10 MiB.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1544,14 +1521,14 @@ column value can exceed 10 MiB.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">Grpc.Core.AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSession_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSession*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSession_Google_Cloud_Spanner_V1_GetSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSession(Google.Cloud.Spanner.V1.GetSessionRequest,Grpc.Core.CallOptions)">GetSession(GetSessionRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSession_Google_Cloud_Spanner_V1_GetSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSession(Google.Cloud.Spanner.V1.GetSessionRequest,Grpc.Core.CallOptions)">GetSession(GetSessionRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets a session. Returns <code>NOT_FOUND</code> if the session does not exist.
 This is mainly useful for determining whether a session is still
 alive.</p>
@@ -1559,7 +1536,7 @@ alive.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Session GetSession(GetSessionRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Session GetSession(GetSessionRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1578,7 +1555,7 @@ alive.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1602,7 +1579,7 @@ alive.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSession_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSession*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSession_Google_Cloud_Spanner_V1_GetSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSession(Google.Cloud.Spanner.V1.GetSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetSession(GetSessionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSession_Google_Cloud_Spanner_V1_GetSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSession(Google.Cloud.Spanner.V1.GetSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetSession(GetSessionRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets a session. Returns <code>NOT_FOUND</code> if the session does not exist.
 This is mainly useful for determining whether a session is still
 alive.</p>
@@ -1610,7 +1587,7 @@ alive.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Session GetSession(GetSessionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Session GetSession(GetSessionRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1629,7 +1606,7 @@ alive.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1665,7 +1642,7 @@ alive.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSessionAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSessionAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSessionAsync_Google_Cloud_Spanner_V1_GetSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSessionAsync(Google.Cloud.Spanner.V1.GetSessionRequest,Grpc.Core.CallOptions)">GetSessionAsync(GetSessionRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSessionAsync_Google_Cloud_Spanner_V1_GetSessionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSessionAsync(Google.Cloud.Spanner.V1.GetSessionRequest,Grpc.Core.CallOptions)">GetSessionAsync(GetSessionRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets a session. Returns <code>NOT_FOUND</code> if the session does not exist.
 This is mainly useful for determining whether a session is still
 alive.</p>
@@ -1673,7 +1650,7 @@ alive.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Session&gt; GetSessionAsync(GetSessionRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Session&gt; GetSessionAsync(GetSessionRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1692,7 +1669,7 @@ alive.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1709,14 +1686,14 @@ alive.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSessionAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSessionAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSessionAsync_Google_Cloud_Spanner_V1_GetSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSessionAsync(Google.Cloud.Spanner.V1.GetSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetSessionAsync(GetSessionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_GetSessionAsync_Google_Cloud_Spanner_V1_GetSessionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.GetSessionAsync(Google.Cloud.Spanner.V1.GetSessionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetSessionAsync(GetSessionRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets a session. Returns <code>NOT_FOUND</code> if the session does not exist.
 This is mainly useful for determining whether a session is still
 alive.</p>
@@ -1724,7 +1701,7 @@ alive.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Session&gt; GetSessionAsync(GetSessionRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Session&gt; GetSessionAsync(GetSessionRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1743,7 +1720,7 @@ alive.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1772,20 +1749,20 @@ alive.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.CallOptions)">ListSessions(ListSessionsRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.CallOptions)">ListSessions(ListSessionsRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Lists all sessions in a given database.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ListSessionsResponse ListSessions(ListSessionsRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ListSessionsResponse ListSessions(ListSessionsRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1804,7 +1781,7 @@ alive.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1828,13 +1805,13 @@ alive.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSessions(ListSessionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessions_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessions(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSessions(ListSessionsRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Lists all sessions in a given database.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ListSessionsResponse ListSessions(ListSessionsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ListSessionsResponse ListSessions(ListSessionsRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1853,7 +1830,7 @@ alive.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1889,13 +1866,13 @@ alive.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessionsAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessionsAsync_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.CallOptions)">ListSessionsAsync(ListSessionsRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessionsAsync_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.CallOptions)">ListSessionsAsync(ListSessionsRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Lists all sessions in a given database.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListSessionsResponse&gt; ListSessionsAsync(ListSessionsRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;ListSessionsResponse&gt; ListSessionsAsync(ListSessionsRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1914,7 +1891,7 @@ alive.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1931,20 +1908,20 @@ alive.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsResponse.html">ListSessionsResponse</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsResponse.html">ListSessionsResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessionsAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessionsAsync_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSessionsAsync(ListSessionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ListSessionsAsync_Google_Cloud_Spanner_V1_ListSessionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ListSessionsAsync(Google.Cloud.Spanner.V1.ListSessionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSessionsAsync(ListSessionsRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Lists all sessions in a given database.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListSessionsResponse&gt; ListSessionsAsync(ListSessionsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;ListSessionsResponse&gt; ListSessionsAsync(ListSessionsRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1963,7 +1940,7 @@ alive.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1992,20 +1969,20 @@ alive.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsResponse.html">ListSessionsResponse</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ListSessionsResponse.html">ListSessionsResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_NewInstance_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.NewInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">NewInstance(ClientBase.ClientBaseConfiguration)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_NewInstance_ClientBaseConfiguration_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.NewInstance(ClientBaseConfiguration)">NewInstance(ClientBaseConfiguration)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance of client from given <code>ClientBaseConfiguration</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override Spanner.SpannerClient NewInstance(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override Spanner.SpannerClient NewInstance(ClientBaseConfiguration configuration)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2018,7 +1995,7 @@ alive.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ClientBase.ClientBaseConfiguration.html">ClientBase.ClientBaseConfiguration</a></td>
+        <td><span class="xref">ClientBaseConfiguration</span></td>
         <td><span class="parametername">configuration</span></td>
         <td></td>
       </tr>
@@ -2039,10 +2016,8 @@ alive.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Spanner.V1.Spanner.SpannerClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Read_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Read*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Read_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Read(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.CallOptions)">Read(ReadRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Read_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Read(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.CallOptions)">Read(ReadRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Reads rows from the database using key lookups and scans, as a
 simple key/value style alternative to
 [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
@@ -2058,7 +2033,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ResultSet Read(ReadRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ResultSet Read(ReadRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2077,7 +2052,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2101,7 +2076,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Read_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Read*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Read_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Read(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Read(ReadRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Read_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Read(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Read(ReadRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Reads rows from the database using key lookups and scans, as a
 simple key/value style alternative to
 [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
@@ -2117,7 +2092,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ResultSet Read(ReadRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ResultSet Read(ReadRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2136,7 +2111,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2172,7 +2147,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ReadAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ReadAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ReadAsync_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ReadAsync(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.CallOptions)">ReadAsync(ReadRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ReadAsync_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ReadAsync(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.CallOptions)">ReadAsync(ReadRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Reads rows from the database using key lookups and scans, as a
 simple key/value style alternative to
 [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
@@ -2188,7 +2163,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ResultSet&gt; ReadAsync(ReadRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;ResultSet&gt; ReadAsync(ReadRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2207,7 +2182,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2224,14 +2199,14 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ReadAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ReadAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ReadAsync_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ReadAsync(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ReadAsync(ReadRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_ReadAsync_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.ReadAsync(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ReadAsync(ReadRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Reads rows from the database using key lookups and scans, as a
 simple key/value style alternative to
 [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
@@ -2247,7 +2222,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ResultSet&gt; ReadAsync(ReadRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;ResultSet&gt; ReadAsync(ReadRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2266,7 +2241,7 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2295,14 +2270,14 @@ the beginning. See [Transaction][google.spanner.v1.Transaction] for more details
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Rollback_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Rollback*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Rollback_Google_Cloud_Spanner_V1_RollbackRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Rollback(Google.Cloud.Spanner.V1.RollbackRequest,Grpc.Core.CallOptions)">Rollback(RollbackRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Rollback_Google_Cloud_Spanner_V1_RollbackRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Rollback(Google.Cloud.Spanner.V1.RollbackRequest,Grpc.Core.CallOptions)">Rollback(RollbackRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Rolls back a transaction, releasing any locks it holds. It is a good
 idea to call this for any transaction that includes one or more
 [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
@@ -2314,7 +2289,7 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Empty Rollback(RollbackRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Protobuf.WellKnownTypes.Empty Rollback(RollbackRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2333,7 +2308,7 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2357,7 +2332,7 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Rollback_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Rollback*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Rollback_Google_Cloud_Spanner_V1_RollbackRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Rollback(Google.Cloud.Spanner.V1.RollbackRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Rollback(RollbackRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_Rollback_Google_Cloud_Spanner_V1_RollbackRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.Rollback(Google.Cloud.Spanner.V1.RollbackRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Rollback(RollbackRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Rolls back a transaction, releasing any locks it holds. It is a good
 idea to call this for any transaction that includes one or more
 [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
@@ -2369,7 +2344,7 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Empty Rollback(RollbackRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Protobuf.WellKnownTypes.Empty Rollback(RollbackRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2388,7 +2363,7 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2424,7 +2399,7 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_RollbackAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.RollbackAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_RollbackAsync_Google_Cloud_Spanner_V1_RollbackRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.RollbackAsync(Google.Cloud.Spanner.V1.RollbackRequest,Grpc.Core.CallOptions)">RollbackAsync(RollbackRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_RollbackAsync_Google_Cloud_Spanner_V1_RollbackRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.RollbackAsync(Google.Cloud.Spanner.V1.RollbackRequest,Grpc.Core.CallOptions)">RollbackAsync(RollbackRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Rolls back a transaction, releasing any locks it holds. It is a good
 idea to call this for any transaction that includes one or more
 [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
@@ -2436,7 +2411,7 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; RollbackAsync(RollbackRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Protobuf.WellKnownTypes.Empty&gt; RollbackAsync(RollbackRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2455,7 +2430,7 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2472,14 +2447,14 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_RollbackAsync_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.RollbackAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_RollbackAsync_Google_Cloud_Spanner_V1_RollbackRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.RollbackAsync(Google.Cloud.Spanner.V1.RollbackRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">RollbackAsync(RollbackRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_RollbackAsync_Google_Cloud_Spanner_V1_RollbackRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.RollbackAsync(Google.Cloud.Spanner.V1.RollbackRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">RollbackAsync(RollbackRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Rolls back a transaction, releasing any locks it holds. It is a good
 idea to call this for any transaction that includes one or more
 [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
@@ -2491,7 +2466,7 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; RollbackAsync(RollbackRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Protobuf.WellKnownTypes.Empty&gt; RollbackAsync(RollbackRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2510,7 +2485,7 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2539,14 +2514,14 @@ found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_StreamingRead_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.StreamingRead*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_StreamingRead_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.CallOptions)">StreamingRead(ReadRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_StreamingRead_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.CallOptions)">StreamingRead(ReadRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
 stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
 size of the returned result set. However, no individual row in
@@ -2556,7 +2531,7 @@ the result set can exceed 100 MiB, and no column value can exceed
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncServerStreamingCall&lt;PartialResultSet&gt; StreamingRead(ReadRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncServerStreamingCall&lt;PartialResultSet&gt; StreamingRead(ReadRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2575,7 +2550,7 @@ the result set can exceed 100 MiB, and no column value can exceed
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2592,14 +2567,14 @@ the result set can exceed 100 MiB, and no column value can exceed
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">Grpc.Core.AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_StreamingRead_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.StreamingRead*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_StreamingRead_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">StreamingRead(ReadRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerClient_StreamingRead_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerClient.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">StreamingRead(ReadRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
 stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
 size of the returned result set. However, no individual row in
@@ -2609,7 +2584,7 @@ the result set can exceed 100 MiB, and no column value can exceed
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncServerStreamingCall&lt;PartialResultSet&gt; StreamingRead(ReadRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncServerStreamingCall&lt;PartialResultSet&gt; StreamingRead(ReadRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2628,7 +2603,7 @@ the result set can exceed 100 MiB, and no column value can exceed
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2657,7 +2632,7 @@ the result set can exceed 100 MiB, and no column value can exceed
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">Grpc.Core.AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>

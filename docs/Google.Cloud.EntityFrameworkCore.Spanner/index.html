@@ -82,8 +82,59 @@ to create your database, query and update data. To get started, install
 the nuget package for EntityFrameworkCore Spanner and call the &quot;UseSpanner&quot;
 method extension to configure your DbContext with Spanner support.</p>
 <h1 id="sample-code">Sample code</h1>
-<!-- Can not find reference obj/snippets/Microsoft.EntityFrameworkCore.SpannerDbContextOptionsExtensions.txt -->
-<h1 id="query-limitations">Query Limitations</h1>
+<pre><code class="lang-cs">[Fact]
+public void SampleUsage()
+{
+    using (var context = new ChipsContext(&quot;chips&quot;))
+    {
+        context.Database.EnsureCreated();
+
+        context.Add(new PringleChips {Id = Guid.NewGuid().ToString(), Name = &quot;Honey Dijon&quot;});
+        context.Add(new PringleChips {Id = Guid.NewGuid().ToString(), Name = &quot;Ranch&quot;, BestBuyDate = new DateTime(2112, 2, 22)});
+
+        context.SaveChanges();
+    }
+}
+
+private class ChipsContext : DbContext
+{
+    private readonly string _databaseName;
+
+    public ChipsContext(string databaseName)
+    {
+        _databaseName = databaseName;
+    }
+
+    public DbSet&lt;PringleChips&gt; Chips { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        =&gt; optionsBuilder
+            .UseSpanner(CreateConnectionString(_databaseName));
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity&lt;PringleChips&gt;()
+            .Property(e =&gt; e.BestBuyDate)
+            .HasDefaultValue(new DateTime(2035, 9, 25));
+    }
+}
+
+private class PringleChips
+{
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public DateTime BestBuyDate { get; set; }
+}
+
+private static string CreateConnectionString(string name)
+{
+    var builder = new SpannerConnectionStringBuilder(DefaultConnection);
+    builder.DataSource = string.IsNullOrEmpty(name) ? 
+        $&quot;projects/{builder.Project}/instances/{builder.SpannerInstance}&quot; 
+        : $&quot;projects/{builder.Project}/instances/{builder.SpannerInstance}/databases/{name}&quot;;
+    return builder.ConnectionString;
+}
+</code></pre><h1 id="query-limitations">Query Limitations</h1>
 <ul>
 <li>The EFCore provider for Spanner defaults its timezone to GMT</li>
 </ul>

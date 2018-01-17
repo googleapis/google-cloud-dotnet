@@ -244,7 +244,7 @@ Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={
     <pre><code class="lang-csharp hljs">public SpannerConnectionStringBuilder()</code></pre>
   </div>
   <a id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder__ctor_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.#ctor*"></a>
-  <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder__ctor_System_String_Grpc_Core_ChannelCredentials_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.#ctor(System.String,Grpc.Core.ChannelCredentials)">SpannerConnectionStringBuilder(String, ChannelCredentials)</h4>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder__ctor_System_String_ChannelCredentials_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.#ctor(System.String,ChannelCredentials)">SpannerConnectionStringBuilder(String, ChannelCredentials)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html">SpannerConnectionStringBuilder</a> with the given
 connection string and optional credential</p>
 </div>
@@ -272,7 +272,7 @@ Must not be null.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ChannelCredentials.html">ChannelCredentials</a></td>
+        <td><span class="xref">ChannelCredentials</span></td>
         <td><span class="parametername">credentials</span></td>
         <td><p>Optionally supplied credential to use for the connection.
 If not set, then default application credentials will be used.
@@ -335,7 +335,7 @@ will use Default Application Credentials.</p>
   </table>
   <a id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_EndPoint_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.EndPoint*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_EndPoint" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.EndPoint">EndPoint</h4>
-  <div class="markdown level1 summary"><p>The <span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint</span> to use to connect to Spanner. If not supplied in the
+  <div class="markdown level1 summary"><p>The <see cref="!:ServiceEndpoint"></see> to use to connect to Spanner. If not supplied in the
 connection string, the default endpoint will be used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -353,7 +353,7 @@ connection string, the default endpoint will be used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint</span></td>
+        <td><span class="xref">ServiceEndpoint</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -526,7 +526,7 @@ port will be used.</p>
   </h3>
   <a id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_GetCredentials_" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredentials*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerConnectionStringBuilder_GetCredentials" data-uid="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.GetCredentials">GetCredentials()</h4>
-  <div class="markdown level1 summary"><p>The <a class="xref" href="Grpc.Core.ChannelCredentials.html">ChannelCredentials</a> credential used to communicate with Spanner.
+  <div class="markdown level1 summary"><p>The <see cref="!:ChannelCredentials"></see> credential used to communicate with Spanner.
 If not set, then default application credentials will be used.
 Credentials can be retrieved from a file or obtained interactively.
 See Google Cloud documentation for more information.</p>
@@ -546,7 +546,7 @@ See Google Cloud documentation for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ChannelCredentials.html">ChannelCredentials</a></td>
+        <td><span class="xref">ChannelCredentials</span></td>
         <td></td>
       </tr>
     </tbody>

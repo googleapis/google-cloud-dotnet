@@ -105,7 +105,7 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_CreateInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.CreateInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_CreateInstance_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.CreateInstance(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Grpc.Core.ServerCallContext)">CreateInstance(CreateInstanceRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_CreateInstance_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.CreateInstance(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Grpc.Core.ServerCallContext)">CreateInstance(CreateInstanceRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Creates an instance and begins preparing it to begin serving. The
 returned [long-running operation][google.longrunning.Operation]
 can be used to track the progress of preparing the new
@@ -143,7 +143,7 @@ The [response][google.longrunning.Operation.response] field type is
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; CreateInstance(CreateInstanceRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LongRunning.Operation&gt; CreateInstance(CreateInstanceRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,7 +162,7 @@ The [response][google.longrunning.Operation.response] field type is
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -186,7 +186,7 @@ The [response][google.longrunning.Operation.response] field type is
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_DeleteInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.DeleteInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.DeleteInstance(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Grpc.Core.ServerCallContext)">DeleteInstance(DeleteInstanceRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.DeleteInstance(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Grpc.Core.ServerCallContext)">DeleteInstance(DeleteInstanceRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Deletes an instance.</p>
 <p>Immediately upon completion of the request:</p>
 <ul>
@@ -202,7 +202,7 @@ is permanently deleted.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteInstance(DeleteInstanceRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Protobuf.WellKnownTypes.Empty&gt; DeleteInstance(DeleteInstanceRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,7 +221,7 @@ is permanently deleted.</li>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -245,7 +245,7 @@ is permanently deleted.</li>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_GetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.GetIamPolicy*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.ServerCallContext)">GetIamPolicy(GetIamPolicyRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.ServerCallContext)">GetIamPolicy(Iam.V1.GetIamPolicyRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Gets the access control policy for an instance resource. Returns an empty
 policy if an instance exists but does not have a policy set.</p>
 <p>Authorization requires <code>spanner.instances.getIamPolicy</code> on
@@ -254,7 +254,7 @@ policy if an instance exists but does not have a policy set.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; GetIamPolicy(GetIamPolicyRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Iam.V1.Policy&gt; GetIamPolicy(Iam.V1.GetIamPolicyRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -273,7 +273,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -297,13 +297,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_GetInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.GetInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_GetInstance_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.GetInstance(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Grpc.Core.ServerCallContext)">GetInstance(GetInstanceRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_GetInstance_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.GetInstance(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Grpc.Core.ServerCallContext)">GetInstance(GetInstanceRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Gets information about a particular instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Instance&gt; GetInstance(GetInstanceRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Instance&gt; GetInstance(GetInstanceRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -322,7 +322,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -346,13 +346,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_GetInstanceConfig_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.GetInstanceConfig*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_GetInstanceConfig_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.GetInstanceConfig(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Grpc.Core.ServerCallContext)">GetInstanceConfig(GetInstanceConfigRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_GetInstanceConfig_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.GetInstanceConfig(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Grpc.Core.ServerCallContext)">GetInstanceConfig(GetInstanceConfigRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Gets information about a particular instance configuration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;InstanceConfig&gt; GetInstanceConfig(GetInstanceConfigRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;InstanceConfig&gt; GetInstanceConfig(GetInstanceConfigRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -371,7 +371,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -395,13 +395,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_ListInstanceConfigs_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.ListInstanceConfigs*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_ListInstanceConfigs_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.ListInstanceConfigs(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Grpc.Core.ServerCallContext)">ListInstanceConfigs(ListInstanceConfigsRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_ListInstanceConfigs_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.ListInstanceConfigs(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Grpc.Core.ServerCallContext)">ListInstanceConfigs(ListInstanceConfigsRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Lists the supported instance configurations for a given project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListInstanceConfigsResponse&gt; ListInstanceConfigs(ListInstanceConfigsRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListInstanceConfigsResponse&gt; ListInstanceConfigs(ListInstanceConfigsRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -420,7 +420,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -444,13 +444,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_ListInstances_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.ListInstances*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_ListInstances_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.ListInstances(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Grpc.Core.ServerCallContext)">ListInstances(ListInstancesRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_ListInstances_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.ListInstances(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Grpc.Core.ServerCallContext)">ListInstances(ListInstancesRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Lists all instances in the given project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListInstancesResponse&gt; ListInstances(ListInstancesRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListInstancesResponse&gt; ListInstances(ListInstancesRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -469,7 +469,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -493,7 +493,7 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_SetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.SetIamPolicy*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.ServerCallContext)">SetIamPolicy(SetIamPolicyRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.ServerCallContext)">SetIamPolicy(Iam.V1.SetIamPolicyRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Sets the access control policy on an instance resource. Replaces any
 existing policy.</p>
 <p>Authorization requires <code>spanner.instances.setIamPolicy</code> on
@@ -502,7 +502,7 @@ existing policy.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; SetIamPolicy(SetIamPolicyRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Iam.V1.Policy&gt; SetIamPolicy(Iam.V1.SetIamPolicyRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -521,7 +521,7 @@ existing policy.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -545,7 +545,7 @@ existing policy.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_TestIamPermissions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.TestIamPermissions*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.ServerCallContext)">TestIamPermissions(TestIamPermissionsRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.ServerCallContext)">TestIamPermissions(Iam.V1.TestIamPermissionsRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified instance resource.</p>
 <p>Attempting this RPC on a non-existent Cloud Spanner instance resource will
 result in a NOT_FOUND error if the user has <code>spanner.instances.list</code>
@@ -555,7 +555,7 @@ empty set of permissions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;TestIamPermissionsResponse&gt; TestIamPermissions(TestIamPermissionsRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Iam.V1.TestIamPermissionsResponse&gt; TestIamPermissions(Iam.V1.TestIamPermissionsRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -574,7 +574,7 @@ empty set of permissions.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>
@@ -598,7 +598,7 @@ empty set of permissions.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_UpdateInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.UpdateInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_UpdateInstance_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.UpdateInstance(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Grpc.Core.ServerCallContext)">UpdateInstance(UpdateInstanceRequest, ServerCallContext)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminBase_UpdateInstance_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminBase.UpdateInstance(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Grpc.Core.ServerCallContext)">UpdateInstance(UpdateInstanceRequest, Grpc.Core.ServerCallContext)</h4>
   <div class="markdown level1 summary"><p>Updates an instance, and begins allocating or releasing resources
 as requested. The returned [long-running
 operation][google.longrunning.Operation] can be used to track the
@@ -641,7 +641,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; UpdateInstance(UpdateInstanceRequest request, ServerCallContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;LongRunning.Operation&gt; UpdateInstance(UpdateInstanceRequest request, Grpc.Core.ServerCallContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -660,7 +660,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">Grpc.Core.ServerCallContext</a></td>
         <td><span class="parametername">context</span></td>
         <td><p>The context of the server-side call handler being invoked.</p>
 </td>

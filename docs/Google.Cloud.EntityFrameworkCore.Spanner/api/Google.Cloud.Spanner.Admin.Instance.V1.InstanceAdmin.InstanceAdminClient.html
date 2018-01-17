@@ -79,36 +79,13 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Grpc.Core.ClientBase.html">ClientBase</a></div>
-    <div class="level2"><a class="xref" href="Grpc.Core.ClientBase-1.html">ClientBase</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.html">InstanceAdmin.InstanceAdminClient</a>&gt;</div>
-    <div class="level3"><span class="xref">InstanceAdmin.InstanceAdminClient</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Grpc.Core.ClientBase-1.html#Grpc_Core_ClientBase_1_WithHost_System_String_">ClientBase&lt;InstanceAdmin.InstanceAdminClient&gt;.WithHost(String)</a>
-    </div>
-    <div>
-      <a class="xref" href="Grpc.Core.ClientBase.html#Grpc_Core_ClientBase_CallInvoker">ClientBase.CallInvoker</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
+    <div class="level1"><span class="xref">InstanceAdmin.InstanceAdminClient</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.html">Google.Cloud.Spanner.Admin.Instance.V1</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Admin.Instance.V1.dll</h6>
   <h5 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InstanceAdminClient : ClientBase&lt;InstanceAdmin.InstanceAdminClient&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class InstanceAdminClient : Grpc.Core.ClientBase&lt;InstanceAdmin.InstanceAdminClient&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -122,13 +99,13 @@
     <pre><code class="lang-csharp hljs">protected InstanceAdminClient()</code></pre>
   </div>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient__ctor_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.#ctor*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient__ctor_Grpc_Core_CallInvoker_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.#ctor(Grpc.Core.CallInvoker)">InstanceAdminClient(CallInvoker)</h4>
-  <div class="markdown level1 summary"><p>Creates a new client for InstanceAdmin that uses a custom <code>CallInvoker</code>.</p>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient__ctor_ClientBaseConfiguration_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.#ctor(ClientBaseConfiguration)">InstanceAdminClient(ClientBaseConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Protected constructor to allow creation of configured clients.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InstanceAdminClient(CallInvoker callInvoker)</code></pre>
+    <pre><code class="lang-csharp hljs">protected InstanceAdminClient(ClientBaseConfiguration configuration)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,7 +118,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallInvoker.html">CallInvoker</a></td>
+        <td><span class="xref">ClientBaseConfiguration</span></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The client configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient__ctor_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.#ctor*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient__ctor_Grpc_Core_CallInvoker_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.#ctor(Grpc.Core.CallInvoker)">InstanceAdminClient(Grpc.Core.CallInvoker)</h4>
+  <div class="markdown level1 summary"><p>Creates a new client for InstanceAdmin that uses a custom <code>CallInvoker</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InstanceAdminClient(Grpc.Core.CallInvoker callInvoker)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallInvoker.html">Grpc.Core.CallInvoker</a></td>
         <td><span class="parametername">callInvoker</span></td>
         <td><p>The callInvoker to use to make remote calls.</p>
 </td>
@@ -149,13 +153,13 @@
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient__ctor_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.#ctor*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient__ctor_Grpc_Core_Channel_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.#ctor(Grpc.Core.Channel)">InstanceAdminClient(Channel)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient__ctor_Grpc_Core_Channel_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.#ctor(Grpc.Core.Channel)">InstanceAdminClient(Grpc.Core.Channel)</h4>
   <div class="markdown level1 summary"><p>Creates a new client for InstanceAdmin</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InstanceAdminClient(Channel channel)</code></pre>
+    <pre><code class="lang-csharp hljs">public InstanceAdminClient(Grpc.Core.Channel channel)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,36 +172,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Channel.html">Channel</a></td>
+        <td><a class="xref" href="Grpc.Core.Channel.html">Grpc.Core.Channel</a></td>
         <td><span class="parametername">channel</span></td>
         <td><p>The channel to use to make remote calls.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient__ctor_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.#ctor*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient__ctor_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">InstanceAdminClient(ClientBase.ClientBaseConfiguration)</h4>
-  <div class="markdown level1 summary"><p>Protected constructor to allow creation of configured clients.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected InstanceAdminClient(ClientBase.ClientBaseConfiguration configuration)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Grpc.Core.ClientBase.ClientBaseConfiguration.html">ClientBase.ClientBaseConfiguration</a></td>
-        <td><span class="parametername">configuration</span></td>
-        <td><p>The client configuration.</p>
 </td>
       </tr>
     </tbody>
@@ -205,7 +182,7 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstance_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstance(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Grpc.Core.CallOptions)">CreateInstance(CreateInstanceRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstance_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstance(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Grpc.Core.CallOptions)">CreateInstance(CreateInstanceRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Creates an instance and begins preparing it to begin serving. The
 returned [long-running operation][google.longrunning.Operation]
 can be used to track the progress of preparing the new
@@ -243,7 +220,7 @@ The [response][google.longrunning.Operation.response] field type is
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Operation CreateInstance(CreateInstanceRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual LongRunning.Operation CreateInstance(CreateInstanceRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,7 +239,7 @@ The [response][google.longrunning.Operation.response] field type is
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -286,7 +263,7 @@ The [response][google.longrunning.Operation.response] field type is
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstance_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstance(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateInstance(CreateInstanceRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstance_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstance(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateInstance(CreateInstanceRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates an instance and begins preparing it to begin serving. The
 returned [long-running operation][google.longrunning.Operation]
 can be used to track the progress of preparing the new
@@ -324,7 +301,7 @@ The [response][google.longrunning.Operation.response] field type is
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Operation CreateInstance(CreateInstanceRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual LongRunning.Operation CreateInstance(CreateInstanceRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,7 +320,7 @@ The [response][google.longrunning.Operation.response] field type is
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -379,7 +356,7 @@ The [response][google.longrunning.Operation.response] field type is
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstanceAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Grpc.Core.CallOptions)">CreateInstanceAsync(CreateInstanceRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Grpc.Core.CallOptions)">CreateInstanceAsync(CreateInstanceRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Creates an instance and begins preparing it to begin serving. The
 returned [long-running operation][google.longrunning.Operation]
 can be used to track the progress of preparing the new
@@ -417,7 +394,7 @@ The [response][google.longrunning.Operation.response] field type is
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; CreateInstanceAsync(CreateInstanceRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;LongRunning.Operation&gt; CreateInstanceAsync(CreateInstanceRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,7 +413,7 @@ The [response][google.longrunning.Operation.response] field type is
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -453,14 +430,14 @@ The [response][google.longrunning.Operation.response] field type is
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.LongRunning.Operation</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.LongRunning.Operation</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstanceAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateInstanceAsync(CreateInstanceRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateInstanceAsync(CreateInstanceRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates an instance and begins preparing it to begin serving. The
 returned [long-running operation][google.longrunning.Operation]
 can be used to track the progress of preparing the new
@@ -498,7 +475,7 @@ The [response][google.longrunning.Operation.response] field type is
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; CreateInstanceAsync(CreateInstanceRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;LongRunning.Operation&gt; CreateInstanceAsync(CreateInstanceRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -517,7 +494,7 @@ The [response][google.longrunning.Operation.response] field type is
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -546,7 +523,7 @@ The [response][google.longrunning.Operation.response] field type is
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.LongRunning.Operation</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.LongRunning.Operation</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -554,7 +531,7 @@ The [response][google.longrunning.Operation.response] field type is
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateOperationsClient_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateOperationsClient*"></a>
   <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_CreateOperationsClient" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.CreateOperationsClient">CreateOperationsClient()</h4>
-  <div class="markdown level1 summary"><p>Creates a new instance of <span class="xref">Google.LongRunning.Operations.OperationsClient</span> using the same call invoker as this client.</p>
+  <div class="markdown level1 summary"><p>Creates a new instance of <see cref="!:Operations.OperationsClient"></see> using the same call invoker as this client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -571,14 +548,14 @@ The [response][google.longrunning.Operation.response] field type is
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Google.LongRunning.Operations.OperationsClient</span></td>
+        <td><span class="xref">Operations.OperationsClient</span></td>
         <td><p>A new Operations client for the same target as this client.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstance(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Grpc.Core.CallOptions)">DeleteInstance(DeleteInstanceRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstance(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Grpc.Core.CallOptions)">DeleteInstance(DeleteInstanceRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Deletes an instance.</p>
 <p>Immediately upon completion of the request:</p>
 <ul>
@@ -594,7 +571,7 @@ is permanently deleted.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Empty DeleteInstance(DeleteInstanceRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Protobuf.WellKnownTypes.Empty DeleteInstance(DeleteInstanceRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -613,7 +590,7 @@ is permanently deleted.</li>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -637,7 +614,7 @@ is permanently deleted.</li>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstance(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteInstance(DeleteInstanceRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstance(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteInstance(DeleteInstanceRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Deletes an instance.</p>
 <p>Immediately upon completion of the request:</p>
 <ul>
@@ -653,7 +630,7 @@ is permanently deleted.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Empty DeleteInstance(DeleteInstanceRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Protobuf.WellKnownTypes.Empty DeleteInstance(DeleteInstanceRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -672,7 +649,7 @@ is permanently deleted.</li>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -708,7 +685,7 @@ is permanently deleted.</li>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstanceAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Grpc.Core.CallOptions)">DeleteInstanceAsync(DeleteInstanceRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Grpc.Core.CallOptions)">DeleteInstanceAsync(DeleteInstanceRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Deletes an instance.</p>
 <p>Immediately upon completion of the request:</p>
 <ul>
@@ -724,7 +701,7 @@ is permanently deleted.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteInstanceAsync(DeleteInstanceRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Protobuf.WellKnownTypes.Empty&gt; DeleteInstanceAsync(DeleteInstanceRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -743,7 +720,7 @@ is permanently deleted.</li>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -760,14 +737,14 @@ is permanently deleted.</li>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstanceAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteInstanceAsync(DeleteInstanceRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_DeleteInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.DeleteInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteInstanceAsync(DeleteInstanceRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Deletes an instance.</p>
 <p>Immediately upon completion of the request:</p>
 <ul>
@@ -783,7 +760,7 @@ is permanently deleted.</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteInstanceAsync(DeleteInstanceRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Protobuf.WellKnownTypes.Empty&gt; DeleteInstanceAsync(DeleteInstanceRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -802,7 +779,7 @@ is permanently deleted.</li>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -831,14 +808,14 @@ is permanently deleted.</li>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicy*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.CallOptions)">GetIamPolicy(GetIamPolicyRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.CallOptions)">GetIamPolicy(Iam.V1.GetIamPolicyRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets the access control policy for an instance resource. Returns an empty
 policy if an instance exists but does not have a policy set.</p>
 <p>Authorization requires <code>spanner.instances.getIamPolicy</code> on
@@ -847,7 +824,7 @@ policy if an instance exists but does not have a policy set.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Policy GetIamPolicy(GetIamPolicyRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Iam.V1.Policy GetIamPolicy(Iam.V1.GetIamPolicyRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -866,7 +843,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -890,7 +867,7 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicy*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetIamPolicy(GetIamPolicyRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetIamPolicy(Iam.V1.GetIamPolicyRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets the access control policy for an instance resource. Returns an empty
 policy if an instance exists but does not have a policy set.</p>
 <p>Authorization requires <code>spanner.instances.getIamPolicy</code> on
@@ -899,7 +876,7 @@ policy if an instance exists but does not have a policy set.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Policy GetIamPolicy(GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Iam.V1.Policy GetIamPolicy(Iam.V1.GetIamPolicyRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -918,7 +895,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -954,7 +931,7 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicyAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicyAsync(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.CallOptions)">GetIamPolicyAsync(GetIamPolicyRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicyAsync(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.CallOptions)">GetIamPolicyAsync(Iam.V1.GetIamPolicyRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets the access control policy for an instance resource. Returns an empty
 policy if an instance exists but does not have a policy set.</p>
 <p>Authorization requires <code>spanner.instances.getIamPolicy</code> on
@@ -963,7 +940,7 @@ policy if an instance exists but does not have a policy set.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Policy&gt; GetIamPolicyAsync(GetIamPolicyRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Iam.V1.Policy&gt; GetIamPolicyAsync(Iam.V1.GetIamPolicyRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -982,7 +959,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -999,14 +976,14 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicyAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicyAsync(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetIamPolicyAsync(GetIamPolicyRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetIamPolicyAsync(Google.Cloud.Iam.V1.GetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetIamPolicyAsync(Iam.V1.GetIamPolicyRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets the access control policy for an instance resource. Returns an empty
 policy if an instance exists but does not have a policy set.</p>
 <p>Authorization requires <code>spanner.instances.getIamPolicy</code> on
@@ -1015,7 +992,7 @@ policy if an instance exists but does not have a policy set.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Policy&gt; GetIamPolicyAsync(GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Iam.V1.Policy&gt; GetIamPolicyAsync(Iam.V1.GetIamPolicyRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1034,7 +1011,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1063,20 +1040,20 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstance_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstance(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Grpc.Core.CallOptions)">GetInstance(GetInstanceRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstance_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstance(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Grpc.Core.CallOptions)">GetInstance(GetInstanceRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets information about a particular instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Instance GetInstance(GetInstanceRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Instance GetInstance(GetInstanceRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1095,7 +1072,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1119,13 +1096,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstance_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstance(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetInstance(GetInstanceRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstance_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstance(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetInstance(GetInstanceRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets information about a particular instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Instance GetInstance(GetInstanceRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Instance GetInstance(GetInstanceRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1144,7 +1121,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1180,13 +1157,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Grpc.Core.CallOptions)">GetInstanceAsync(GetInstanceRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Grpc.Core.CallOptions)">GetInstanceAsync(GetInstanceRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets information about a particular instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Instance&gt; GetInstanceAsync(GetInstanceRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Instance&gt; GetInstanceAsync(GetInstanceRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1205,7 +1182,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1222,20 +1199,20 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetInstanceAsync(GetInstanceRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetInstanceAsync(GetInstanceRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets information about a particular instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Instance&gt; GetInstanceAsync(GetInstanceRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Instance&gt; GetInstanceAsync(GetInstanceRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1254,7 +1231,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1283,20 +1260,20 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfig_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfig*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfig_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfig(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Grpc.Core.CallOptions)">GetInstanceConfig(GetInstanceConfigRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfig_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfig(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Grpc.Core.CallOptions)">GetInstanceConfig(GetInstanceConfigRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets information about a particular instance configuration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual InstanceConfig GetInstanceConfig(GetInstanceConfigRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual InstanceConfig GetInstanceConfig(GetInstanceConfigRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1315,7 +1292,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1339,13 +1316,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfig_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfig*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfig_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfig(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetInstanceConfig(GetInstanceConfigRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfig_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfig(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetInstanceConfig(GetInstanceConfigRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets information about a particular instance configuration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual InstanceConfig GetInstanceConfig(GetInstanceConfigRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual InstanceConfig GetInstanceConfig(GetInstanceConfigRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1364,7 +1341,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1400,13 +1377,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfigAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfigAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfigAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfigAsync(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Grpc.Core.CallOptions)">GetInstanceConfigAsync(GetInstanceConfigRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfigAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfigAsync(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Grpc.Core.CallOptions)">GetInstanceConfigAsync(GetInstanceConfigRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Gets information about a particular instance configuration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;InstanceConfig&gt; GetInstanceConfigAsync(GetInstanceConfigRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;InstanceConfig&gt; GetInstanceConfigAsync(GetInstanceConfigRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1425,7 +1402,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1442,20 +1419,20 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html">InstanceConfig</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html">InstanceConfig</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfigAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfigAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfigAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfigAsync(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetInstanceConfigAsync(GetInstanceConfigRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_GetInstanceConfigAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.GetInstanceConfigAsync(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetInstanceConfigAsync(GetInstanceConfigRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets information about a particular instance configuration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;InstanceConfig&gt; GetInstanceConfigAsync(GetInstanceConfigRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;InstanceConfig&gt; GetInstanceConfigAsync(GetInstanceConfigRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1474,7 +1451,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1503,20 +1480,20 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html">InstanceConfig</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html">InstanceConfig</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigs_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigs*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigs_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigs(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Grpc.Core.CallOptions)">ListInstanceConfigs(ListInstanceConfigsRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigs_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigs(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Grpc.Core.CallOptions)">ListInstanceConfigs(ListInstanceConfigsRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Lists the supported instance configurations for a given project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ListInstanceConfigsResponse ListInstanceConfigs(ListInstanceConfigsRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ListInstanceConfigsResponse ListInstanceConfigs(ListInstanceConfigsRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1535,7 +1512,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1559,13 +1536,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigs_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigs*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigs_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigs(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListInstanceConfigs(ListInstanceConfigsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigs_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigs(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListInstanceConfigs(ListInstanceConfigsRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Lists the supported instance configurations for a given project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ListInstanceConfigsResponse ListInstanceConfigs(ListInstanceConfigsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ListInstanceConfigsResponse ListInstanceConfigs(ListInstanceConfigsRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1584,7 +1561,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1620,13 +1597,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigsAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigsAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigsAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigsAsync(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Grpc.Core.CallOptions)">ListInstanceConfigsAsync(ListInstanceConfigsRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigsAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigsAsync(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Grpc.Core.CallOptions)">ListInstanceConfigsAsync(ListInstanceConfigsRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Lists the supported instance configurations for a given project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListInstanceConfigsResponse&gt; ListInstanceConfigsAsync(ListInstanceConfigsRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;ListInstanceConfigsResponse&gt; ListInstanceConfigsAsync(ListInstanceConfigsRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1645,7 +1622,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1662,20 +1639,20 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.html">ListInstanceConfigsResponse</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.html">ListInstanceConfigsResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigsAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigsAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigsAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigsAsync(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListInstanceConfigsAsync(ListInstanceConfigsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstanceConfigsAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstanceConfigsAsync(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListInstanceConfigsAsync(ListInstanceConfigsRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Lists the supported instance configurations for a given project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListInstanceConfigsResponse&gt; ListInstanceConfigsAsync(ListInstanceConfigsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;ListInstanceConfigsResponse&gt; ListInstanceConfigsAsync(ListInstanceConfigsRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1694,7 +1671,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1723,20 +1700,20 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.html">ListInstanceConfigsResponse</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.html">ListInstanceConfigsResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstances_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstances*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstances_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstances(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Grpc.Core.CallOptions)">ListInstances(ListInstancesRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstances_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstances(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Grpc.Core.CallOptions)">ListInstances(ListInstancesRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Lists all instances in the given project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ListInstancesResponse ListInstances(ListInstancesRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ListInstancesResponse ListInstances(ListInstancesRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1755,7 +1732,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1779,13 +1756,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstances_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstances*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstances_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstances(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListInstances(ListInstancesRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstances_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstances(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListInstances(ListInstancesRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Lists all instances in the given project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ListInstancesResponse ListInstances(ListInstancesRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ListInstancesResponse ListInstances(ListInstancesRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1804,7 +1781,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1840,13 +1817,13 @@ policy if an instance exists but does not have a policy set.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstancesAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstancesAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstancesAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstancesAsync(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Grpc.Core.CallOptions)">ListInstancesAsync(ListInstancesRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstancesAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstancesAsync(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Grpc.Core.CallOptions)">ListInstancesAsync(ListInstancesRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Lists all instances in the given project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListInstancesResponse&gt; ListInstancesAsync(ListInstancesRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;ListInstancesResponse&gt; ListInstancesAsync(ListInstancesRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1865,7 +1842,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1882,20 +1859,20 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.html">ListInstancesResponse</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.html">ListInstancesResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstancesAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstancesAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstancesAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstancesAsync(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListInstancesAsync(ListInstancesRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_ListInstancesAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.ListInstancesAsync(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListInstancesAsync(ListInstancesRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Lists all instances in the given project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListInstancesResponse&gt; ListInstancesAsync(ListInstancesRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;ListInstancesResponse&gt; ListInstancesAsync(ListInstancesRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1914,7 +1891,7 @@ policy if an instance exists but does not have a policy set.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1943,20 +1920,20 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.html">ListInstancesResponse</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.html">ListInstancesResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_NewInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.NewInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">NewInstance(ClientBase.ClientBaseConfiguration)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_NewInstance_ClientBaseConfiguration_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.NewInstance(ClientBaseConfiguration)">NewInstance(ClientBaseConfiguration)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance of client from given <code>ClientBaseConfiguration</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override InstanceAdmin.InstanceAdminClient NewInstance(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override InstanceAdmin.InstanceAdminClient NewInstance(ClientBaseConfiguration configuration)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1969,7 +1946,7 @@ policy if an instance exists but does not have a policy set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.ClientBase.ClientBaseConfiguration.html">ClientBase.ClientBaseConfiguration</a></td>
+        <td><span class="xref">ClientBaseConfiguration</span></td>
         <td><span class="parametername">configuration</span></td>
         <td></td>
       </tr>
@@ -1990,10 +1967,8 @@ policy if an instance exists but does not have a policy set.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicy*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.CallOptions)">SetIamPolicy(SetIamPolicyRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.CallOptions)">SetIamPolicy(Iam.V1.SetIamPolicyRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Sets the access control policy on an instance resource. Replaces any
 existing policy.</p>
 <p>Authorization requires <code>spanner.instances.setIamPolicy</code> on
@@ -2002,7 +1977,7 @@ existing policy.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Policy SetIamPolicy(SetIamPolicyRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Iam.V1.Policy SetIamPolicy(Iam.V1.SetIamPolicyRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2021,7 +1996,7 @@ existing policy.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2045,7 +2020,7 @@ existing policy.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicy*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">SetIamPolicy(SetIamPolicyRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">SetIamPolicy(Iam.V1.SetIamPolicyRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Sets the access control policy on an instance resource. Replaces any
 existing policy.</p>
 <p>Authorization requires <code>spanner.instances.setIamPolicy</code> on
@@ -2054,7 +2029,7 @@ existing policy.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Policy SetIamPolicy(SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Iam.V1.Policy SetIamPolicy(Iam.V1.SetIamPolicyRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2073,7 +2048,7 @@ existing policy.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2109,7 +2084,7 @@ existing policy.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicyAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicyAsync(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.CallOptions)">SetIamPolicyAsync(SetIamPolicyRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicyAsync(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.CallOptions)">SetIamPolicyAsync(Iam.V1.SetIamPolicyRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Sets the access control policy on an instance resource. Replaces any
 existing policy.</p>
 <p>Authorization requires <code>spanner.instances.setIamPolicy</code> on
@@ -2118,7 +2093,7 @@ existing policy.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Policy&gt; SetIamPolicyAsync(SetIamPolicyRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Iam.V1.Policy&gt; SetIamPolicyAsync(Iam.V1.SetIamPolicyRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2137,7 +2112,7 @@ existing policy.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2154,14 +2129,14 @@ existing policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicyAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicyAsync(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">SetIamPolicyAsync(SetIamPolicyRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.SetIamPolicyAsync(Google.Cloud.Iam.V1.SetIamPolicyRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">SetIamPolicyAsync(Iam.V1.SetIamPolicyRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Sets the access control policy on an instance resource. Replaces any
 existing policy.</p>
 <p>Authorization requires <code>spanner.instances.setIamPolicy</code> on
@@ -2170,7 +2145,7 @@ existing policy.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Policy&gt; SetIamPolicyAsync(SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Iam.V1.Policy&gt; SetIamPolicyAsync(Iam.V1.SetIamPolicyRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2189,7 +2164,7 @@ existing policy.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2218,14 +2193,14 @@ existing policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissions*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.CallOptions)">TestIamPermissions(TestIamPermissionsRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.CallOptions)">TestIamPermissions(Iam.V1.TestIamPermissionsRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified instance resource.</p>
 <p>Attempting this RPC on a non-existent Cloud Spanner instance resource will
 result in a NOT_FOUND error if the user has <code>spanner.instances.list</code>
@@ -2235,7 +2210,7 @@ empty set of permissions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TestIamPermissionsResponse TestIamPermissions(TestIamPermissionsRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Iam.V1.TestIamPermissionsResponse TestIamPermissions(Iam.V1.TestIamPermissionsRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2254,7 +2229,7 @@ empty set of permissions.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2278,7 +2253,7 @@ empty set of permissions.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissions*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">TestIamPermissions(TestIamPermissionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">TestIamPermissions(Iam.V1.TestIamPermissionsRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified instance resource.</p>
 <p>Attempting this RPC on a non-existent Cloud Spanner instance resource will
 result in a NOT_FOUND error if the user has <code>spanner.instances.list</code>
@@ -2288,7 +2263,7 @@ empty set of permissions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TestIamPermissionsResponse TestIamPermissions(TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Iam.V1.TestIamPermissionsResponse TestIamPermissions(Iam.V1.TestIamPermissionsRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2307,7 +2282,7 @@ empty set of permissions.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2343,7 +2318,7 @@ empty set of permissions.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissionsAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissionsAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissionsAsync(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.CallOptions)">TestIamPermissionsAsync(TestIamPermissionsRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissionsAsync(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.CallOptions)">TestIamPermissionsAsync(Iam.V1.TestIamPermissionsRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified instance resource.</p>
 <p>Attempting this RPC on a non-existent Cloud Spanner instance resource will
 result in a NOT_FOUND error if the user has <code>spanner.instances.list</code>
@@ -2353,7 +2328,7 @@ empty set of permissions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;TestIamPermissionsResponse&gt; TestIamPermissionsAsync(TestIamPermissionsRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Iam.V1.TestIamPermissionsResponse&gt; TestIamPermissionsAsync(Iam.V1.TestIamPermissionsRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2372,7 +2347,7 @@ empty set of permissions.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2389,14 +2364,14 @@ empty set of permissions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.TestIamPermissionsResponse</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.TestIamPermissionsResponse</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissionsAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissionsAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissionsAsync(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">TestIamPermissionsAsync(TestIamPermissionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.TestIamPermissionsAsync(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">TestIamPermissionsAsync(Iam.V1.TestIamPermissionsRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified instance resource.</p>
 <p>Attempting this RPC on a non-existent Cloud Spanner instance resource will
 result in a NOT_FOUND error if the user has <code>spanner.instances.list</code>
@@ -2406,7 +2381,7 @@ empty set of permissions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;TestIamPermissionsResponse&gt; TestIamPermissionsAsync(TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;Iam.V1.TestIamPermissionsResponse&gt; TestIamPermissionsAsync(Iam.V1.TestIamPermissionsRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2425,7 +2400,7 @@ empty set of permissions.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2454,14 +2429,14 @@ empty set of permissions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.TestIamPermissionsResponse</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.Cloud.Iam.V1.TestIamPermissionsResponse</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstance_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstance(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Grpc.Core.CallOptions)">UpdateInstance(UpdateInstanceRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstance_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstance(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Grpc.Core.CallOptions)">UpdateInstance(UpdateInstanceRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Updates an instance, and begins allocating or releasing resources
 as requested. The returned [long-running
 operation][google.longrunning.Operation] can be used to track the
@@ -2504,7 +2479,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Operation UpdateInstance(UpdateInstanceRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual LongRunning.Operation UpdateInstance(UpdateInstanceRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2523,7 +2498,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2547,7 +2522,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstance*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstance_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstance(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateInstance(UpdateInstanceRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstance_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstance(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateInstance(UpdateInstanceRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Updates an instance, and begins allocating or releasing resources
 as requested. The returned [long-running
 operation][google.longrunning.Operation] can be used to track the
@@ -2590,7 +2565,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Operation UpdateInstance(UpdateInstanceRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual LongRunning.Operation UpdateInstance(UpdateInstanceRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2609,7 +2584,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2645,7 +2620,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstanceAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Grpc.Core.CallOptions)">UpdateInstanceAsync(UpdateInstanceRequest, CallOptions)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Grpc.Core.CallOptions)">UpdateInstanceAsync(UpdateInstanceRequest, Grpc.Core.CallOptions)</h4>
   <div class="markdown level1 summary"><p>Updates an instance, and begins allocating or releasing resources
 as requested. The returned [long-running
 operation][google.longrunning.Operation] can be used to track the
@@ -2688,7 +2663,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; UpdateInstanceAsync(UpdateInstanceRequest request, CallOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;LongRunning.Operation&gt; UpdateInstanceAsync(UpdateInstanceRequest request, Grpc.Core.CallOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2707,7 +2682,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">Grpc.Core.CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -2724,14 +2699,14 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.LongRunning.Operation</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.LongRunning.Operation</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstanceAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateInstanceAsync(UpdateInstanceRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_UpdateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.UpdateInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateInstanceAsync(UpdateInstanceRequest, Grpc.Core.Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Updates an instance, and begins allocating or releasing resources
 as requested. The returned [long-running
 operation][google.longrunning.Operation] can be used to track the
@@ -2774,7 +2749,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; UpdateInstanceAsync(UpdateInstanceRequest request, Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Grpc.Core.AsyncUnaryCall&lt;LongRunning.Operation&gt; UpdateInstanceAsync(UpdateInstanceRequest request, Grpc.Core.Metadata headers = null, DateTime? deadline = default (DateTime? ), CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2793,7 +2768,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Grpc.Core.Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -2822,7 +2797,7 @@ resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.LongRunning.Operation</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">Grpc.Core.AsyncUnaryCall</a>&lt;<span class="xref">Google.LongRunning.Operation</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>

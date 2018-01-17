@@ -83,32 +83,13 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">Google.Api.Gax.Grpc.IPageRequest</span></div>
-    <div><span class="xref">Google.Protobuf.IMessage</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.html">ListDatabasesRequest</a>&gt;</div>
-    <div><span class="xref">Google.Protobuf.IMessage</span></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.html">ListDatabasesRequest</a>&gt;</div>
-    <div><span class="xref">Google.Protobuf.IDeepCloneable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.html">ListDatabasesRequest</a>&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
+    <div><span class="xref">IPageRequest</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.html">Google.Cloud.Spanner.Admin.Database.V1</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Admin.Database.V1.dll</h6>
   <h5 id="Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ListDatabasesRequest : IPageRequest, IMessage&lt;ListDatabasesRequest&gt;, IMessage, IEquatable&lt;ListDatabasesRequest&gt;, IDeepCloneable&lt;ListDatabasesRequest&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ListDatabasesRequest : Protobuf.IMessage&lt;ListDatabasesRequest&gt;, IPageRequest</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -137,8 +118,6 @@ defaults to the server&apos;s maximum allowed page size.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">Google.Api.Gax.Grpc.IPageRequest.PageSize</span></div>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_PageToken_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.PageToken*"></a>
   <h4 id="Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_PageToken" data-uid="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.PageToken">PageToken</h4>
   <div class="markdown level1 summary"><p>If non-empty, <code>page_token</code> should contain a
@@ -165,8 +144,6 @@ previous [ListDatabasesResponse][google.spanner.admin.database.v1.ListDatabasesR
       </tr>
     </tbody>
   </table>
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">Google.Api.Gax.Grpc.IPageRequest.PageToken</span></div>
   <a id="Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_Parent_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.Parent*"></a>
   <h4 id="Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_Parent" data-uid="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.Parent">Parent</h4>
   <div class="markdown level1 summary"><p>Required. The instance whose databases should be listed.
