@@ -15,10 +15,9 @@
 using System;
 using System.Data.Common;
 using Google.Api.Gax;
-using Google.Cloud.EntityFrameworkCore.Spanner.Infrastructure;
-using Google.Cloud.EntityFrameworkCore.Spanner.Infrastructure.Internal;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.EntityFrameworkCore

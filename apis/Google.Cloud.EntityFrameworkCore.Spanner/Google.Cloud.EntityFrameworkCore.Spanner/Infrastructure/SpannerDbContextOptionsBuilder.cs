@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.EntityFrameworkCore.Spanner.Infrastructure.Internal;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Infrastructure
+// ReSharper disable once CheckNamespace
+namespace Microsoft.EntityFrameworkCore.Infrastructure
 {
     /// <summary>
     /// Allows Spanner specific configuration to be performed on <see cref="DbContextOptions" />.

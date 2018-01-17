@@ -13,16 +13,14 @@
 // limitations under the License.
 
 using System.Data.Common;
-using Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics;
 using Google.Cloud.Spanner.Data;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
+namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
     /// </summary>
-    public class SpannerRelationalConnection : RelationalConnection
+    public class SpannerRelationalConnection : RelationalConnection, ISpannerRelationalConnection
     {
         /// <summary>
         /// </summary>
@@ -34,6 +32,20 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
 
         /// <inheritdoc />
         public override bool IsMultipleActiveResultSetsEnabled => true;
+
+        /// <summary>
+        /// </summary>
+        public ISpannerRelationalConnection CreateMasterConnection()
+        {
+            var builder = new SpannerConnectionStringBuilder(ConnectionString);
+            //Spanner actually has no master or admin db, so we just use a normal connection.
+            var masterConn =
+                new SpannerConnection($"Data Source=projects/{builder.Project}/instances/{builder.SpannerInstance}");
+            var optionsBuilder = new DbContextOptionsBuilder();
+            optionsBuilder.UseSpanner(masterConn);
+
+            return new SpannerRelationalConnection(Dependencies.With(optionsBuilder.Options));
+        }
 
         /// <inheritdoc />
         protected override DbConnection CreateDbConnection()

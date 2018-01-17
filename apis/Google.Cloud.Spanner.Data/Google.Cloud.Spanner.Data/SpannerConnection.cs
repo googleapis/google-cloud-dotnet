@@ -273,6 +273,7 @@ namespace Google.Cloud.Spanner.Data
         {
             Session session;
             bool primarySessionInUse;
+            var oldState = _state;
             lock (_sync)
             {
                 if (IsClosed)
@@ -296,6 +297,10 @@ namespace Google.Cloud.Spanner.Data
             }
             ReleaseClient(SpannerClient);
             SpannerClient = null;
+            if (oldState != _state)
+            {
+                OnStateChange(new StateChangeEventArgs(oldState, _state));
+            }
         }
 
         private void ReleaseClient(SpannerClient client)
@@ -451,6 +456,7 @@ namespace Google.Cloud.Spanner.Data
 
                         _state = ConnectionState.Connecting;
                     }
+                    OnStateChange(new StateChangeEventArgs(ConnectionState.Closed, ConnectionState.Connecting));
                     SpannerClient localClient = null;
                     try
                     {
@@ -490,6 +496,7 @@ namespace Google.Cloud.Spanner.Data
                             EnlistTransaction(currentTransaction);
                         }
 #endif
+                        OnStateChange(new StateChangeEventArgs(ConnectionState.Connecting, _state));
                     }
                 }, "SpannerConnection.OpenAsync", Logger);
         }

@@ -12,12 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore.Update;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Update.Internal
+namespace Microsoft.EntityFrameworkCore.Update.Internal
 {
     /// <summary>
     /// </summary>

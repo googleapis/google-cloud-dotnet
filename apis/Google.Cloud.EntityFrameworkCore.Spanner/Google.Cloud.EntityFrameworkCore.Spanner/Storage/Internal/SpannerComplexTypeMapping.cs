@@ -14,9 +14,8 @@
 
 using System.Data.Common;
 using Google.Cloud.Spanner.Data;
-using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
+namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
     /// Represents a complex spanner type mapping. This class is used for setting up type conversions.
@@ -25,16 +24,12 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
     {
         private readonly SpannerDbType _complexType;
 
-        public SpannerComplexTypeMapping(SpannerDbType complexType) 
-            : base(complexType.ToString(), complexType.DefaultClrType, complexType.DbType)
-        {
+        public SpannerComplexTypeMapping(SpannerDbType complexType)
+            : base(complexType.ToString(), complexType.DefaultClrType, complexType.DbType) =>
             _complexType = complexType;
-        }
 
-        public override RelationalTypeMapping Clone(string storeType, int? size)
-        {
-            return new SpannerComplexTypeMapping(_complexType);
-        }
+        public override RelationalTypeMapping Clone(string storeType, int? size) =>
+            new SpannerComplexTypeMapping(_complexType);
 
         protected override void ConfigureParameter(DbParameter parameter)
         {

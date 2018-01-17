@@ -12,12 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal;
 using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Metadata.Conventions
+namespace Microsoft.EntityFrameworkCore.Metadata.Conventions
 {
     /// <summary>
     /// </summary>

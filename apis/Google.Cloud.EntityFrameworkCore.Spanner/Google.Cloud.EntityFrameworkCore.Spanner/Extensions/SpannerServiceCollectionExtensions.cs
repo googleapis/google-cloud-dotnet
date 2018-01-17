@@ -13,20 +13,23 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.EntityFrameworkCore.Spanner.Infrastructure.Internal;
-using Google.Cloud.EntityFrameworkCore.Spanner.Metadata.Conventions;
-using Google.Cloud.EntityFrameworkCore.Spanner.Query.ExpressionTranslators.Internal;
-using Google.Cloud.EntityFrameworkCore.Spanner.Query.Internal;
-using Google.Cloud.EntityFrameworkCore.Spanner.Query.Sql.Internal;
-using Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal;
-using Google.Cloud.EntityFrameworkCore.Spanner.Update.Internal;
+using Google.Cloud.EntityFrameworkCore.Spanner.Migrations;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal;
+using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Migrations.Internal;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.EntityFrameworkCore.Query.ExpressionTranslators;
+using Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.EntityFrameworkCore.Query.Sql;
+using Microsoft.EntityFrameworkCore.Query.Sql.Internal;
 using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
 using Microsoft.EntityFrameworkCore.Update;
+using Microsoft.EntityFrameworkCore.Update.Internal;
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection
@@ -50,13 +53,13 @@ namespace Microsoft.Extensions.DependencyInjection
                 .TryAdd<IRelationalTypeMapper, SpannerTypeMapper>()
                 .TryAdd<ISqlGenerationHelper, SpannerSqlGenerationHelper>()
                 //MODEL/MIGRATION SERVICES
-                //.TryAdd<IMigrationsAnnotationProvider, SpannerMigrationsAnnotationProvider>()
-                //.TryAdd<IModelValidator, SpannerModelValidator>()
-                //.TryAdd<IMigrationsSqlGenerator, SpannerMigrationsSqlGenerator>()
-                //.TryAdd<IRelationalDatabaseCreator, SpannerDatabaseCreator>()
+                .TryAdd<IMigrationsAnnotationProvider, SpannerMigrationsAnnotationProvider>()
+                .TryAdd<IModelValidator, RelationalModelValidator>()
+                .TryAdd<IMigrationsSqlGenerator, SpannerMigrationsSqlGenerator>()
+                .TryAdd<IRelationalDatabaseCreator, SpannerDatabaseCreator>()
                 .TryAdd<IConventionSetBuilder, SpannerConventionSetBuilder>()
                 //.TryAdd<IHistoryRepository, SpannerHistoryRepository>()
-                .TryAdd<IRelationalConnection, SpannerRelationalConnection>()
+                .TryAdd<IRelationalConnection>(p => p.GetService<ISpannerRelationalConnection>())
                 .TryAdd<IExecutionStrategyFactory, RelationalExecutionStrategyFactory>()
                 //QUERY SERVICES
                 .TryAdd<IQueryCompilationContextFactory, SpannerQueryCompilationContextFactory>()
@@ -65,7 +68,9 @@ namespace Microsoft.Extensions.DependencyInjection
                 .TryAdd<IQuerySqlGeneratorFactory, SpannerQuerySqlGeneratorFactory>()
                 .TryAdd<IRelationalCommandBuilderFactory, SpannerRelationalCommandBuilderFactory>()
                 //UPDATE
-                .TryAdd<IModificationCommandBatchFactory, SpannerModificationCommandBatchFactory>();
+                .TryAdd<IModificationCommandBatchFactory, SpannerModificationCommandBatchFactory>()
+                .TryAddProviderSpecificServices(b => b
+                    .TryAddScoped<ISpannerRelationalConnection, SpannerRelationalConnection>());
 
             builder.TryAddCoreServices();
             return serviceCollection;

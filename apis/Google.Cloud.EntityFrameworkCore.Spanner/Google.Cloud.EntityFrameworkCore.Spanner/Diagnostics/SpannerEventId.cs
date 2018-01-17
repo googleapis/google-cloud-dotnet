@@ -12,18 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Diagnostics;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Logging;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics
+namespace Microsoft.EntityFrameworkCore.Diagnostics
 {
     /// <summary>
     /// Event IDs for Cloud Spanner log messages
     /// </summary>
     public static class SpannerEventId
     {
+        private static readonly string s_logPrefix = DbLoggerCategory.Database.Name + ".";
+
+        /// <summary>
+        /// </summary>
+        public static EventId SpannerDiagnosticLog { get; } = MakeEventId(Id.SpannerDiagnosticLog);
+
+        private static EventId MakeEventId(Id id) => new EventId((int) id, s_logPrefix + id);
         //For now, we are aggregating all the logging messages done within the ADO.NET
         //layer under the "SpannerDiagnosticLog" Id
 
@@ -31,13 +35,5 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics
         {
             SpannerDiagnosticLog = CoreEventId.ProviderBaseId
         }
-
-        private static readonly string s_logPrefix = DbLoggerCategory.Database.Name + ".";
-        private static EventId MakeEventId(Id id) => new EventId((int)id, s_logPrefix + id);
-
-        /// <summary>
-        /// </summary>
-        public static EventId SpannerDiagnosticLog { get; } = MakeEventId(Id.SpannerDiagnosticLog);
-
     }
 }

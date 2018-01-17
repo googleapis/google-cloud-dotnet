@@ -13,10 +13,9 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Infrastructure.Internal
+namespace Microsoft.EntityFrameworkCore.Infrastructure.Internal
 {
     /// <summary>
     /// </summary>

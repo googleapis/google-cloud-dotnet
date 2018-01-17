@@ -12,26 +12,41 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.EntityFrameworkCore.Query.ExpressionTranslators;
+using System.Collections.Generic;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Query.ExpressionTranslators.Internal
+namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     /// <summary>
     /// </summary>
     public sealed class SpannerCompositeMethodCallTranslator : RelationalCompositeMethodCallTranslator
     {
-        private static readonly IMethodCallTranslator[] s_methodCallTranslators =
-        {
-        };
-
         /// <summary>
         /// </summary>
-        /// <param name="dependencies"></param>
         public SpannerCompositeMethodCallTranslator(
             RelationalCompositeMethodCallTranslatorDependencies dependencies)
             : base(dependencies)
         {
-            AddTranslators(s_methodCallTranslators);
+            AddTranslators(new List<IMethodCallTranslator>
+            {
+                new SpannerArraySequenceEqualTranslator(),
+                new SpannerConvertTranslator(),
+                new SpannerStringSubstringTranslator(),
+                new SpannerLikeTranslator(),
+                new SpannerMathTranslator(),
+                new SpannerObjectToStringTranslator(),
+                new SpannerStringEndsWithTranslator(),
+                new SpannerStringStartsWithTranslator(),
+                new SpannerStringContainsTranslator(),
+                new SpannerStringIndexOfTranslator(),
+                new SpannerStringIsNullOrWhiteSpaceTranslator(),
+                new SpannerStringReplaceTranslator(),
+                new SpannerStringToLowerTranslator(),
+                new SpannerStringToUpperTranslator(),
+                new SpannerStringTrimTranslator(),
+                new SpannerStringTrimEndTranslator(),
+                new SpannerStringTrimStartTranslator(),
+                new SpannerRegexIsMatchTranslator()
+            });
         }
     }
 }

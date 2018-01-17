@@ -18,14 +18,11 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
-using Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics;
 using Google.Cloud.Spanner.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore.Update;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Update.Internal
+namespace Microsoft.EntityFrameworkCore.Update.Internal
 {
     /// <summary>
     /// </summary>
@@ -114,13 +111,12 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Update.Internal
             cmd.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(_logger);
             cmd.Transaction = transaction;
             foreach (var columnModification in modificationCommand.ColumnModifications)
-            {
                 cmd.Parameters.Add(
-                    _typeMapper.GetMapping(columnModification.Property).CreateParameter(cmd, 
+                    _typeMapper.GetMapping(columnModification.Property).CreateParameter(cmd,
                         columnModification.ColumnName,
-                        columnModification.UseOriginalValueParameter ? columnModification.OriginalValue 
-                        : columnModification.Value, columnModification.Property.IsNullable));
-            }
+                        columnModification.UseOriginalValueParameter
+                            ? columnModification.OriginalValue
+                            : columnModification.Value, columnModification.Property.IsNullable));
             return cmd;
         }
     }

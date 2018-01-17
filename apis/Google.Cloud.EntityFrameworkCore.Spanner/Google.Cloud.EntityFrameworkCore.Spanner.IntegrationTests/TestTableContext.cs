@@ -12,22 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 {
     /// <summary>
-    /// 
     /// </summary>
     public class TestTableContext : DbContext
     {
         private readonly TestDatabaseFixture _fixture;
-        private readonly Predicate<string> _logFilter;
         private readonly StringBuilder _log = new StringBuilder();
+        private readonly Predicate<string> _logFilter;
 
         public TestTableContext(TestDatabaseFixture fixture, Predicate<string> logFilter)
         {
@@ -56,38 +55,37 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSpanner(_fixture.ConnectionString)
-            .EnableSensitiveDataLogging()
-            .UseLoggerFactory(new LoggerFactory(this));
+                .EnableSensitiveDataLogging()
+                .UseLoggerFactory(new LoggerFactory(this));
         }
 
-        class LoggerFactory : ILoggerFactory
+        private class LoggerFactory : ILoggerFactory
         {
             private readonly TestTableContext _testTableContext;
 
-            public LoggerFactory(TestTableContext testTableContext)
-            {
-                _testTableContext = testTableContext;
-            }
+            public LoggerFactory(TestTableContext testTableContext) => _testTableContext = testTableContext;
 
             public void Dispose()
             {
             }
+
             public ILogger CreateLogger(string categoryName) => new RecordedLogger(_testTableContext);
+
             public void AddProvider(ILoggerProvider provider)
-            {}
+            {
+            }
         }
 
-        class RecordedLogger : ILogger
+        private class RecordedLogger : ILogger
         {
             private readonly TestTableContext _testTableContext;
-            public RecordedLogger(TestTableContext testTableContext)
-            {
-                _testTableContext = testTableContext;
-            }
 
-            public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
+            public RecordedLogger(TestTableContext testTableContext) => _testTableContext = testTableContext;
+
+            public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception,
+                Func<TState, Exception, string> formatter)
             {
-                string message = formatter(state, exception).Replace("\r\n", " ").Trim();
+                var message = formatter(state, exception).Replace("\r\n", " ").Trim();
                 if (logLevel >= LogLevel.Error || _testTableContext._logFilter(message))
                 {
                     lock (_testTableContext._log)
@@ -100,10 +98,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
 
             public bool IsEnabled(LogLevel logLevel) => true;
 
-            public IDisposable BeginScope<TState>(TState state)
-            {
-                return null;
-            }
+            public IDisposable BeginScope<TState>(TState state) => null;
         }
     }
 
@@ -111,7 +106,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.IntegrationTests
     {
         [Key]
         public string Key { get; set; }
+
         public string StringValue { get; set; }
     }
-
 }

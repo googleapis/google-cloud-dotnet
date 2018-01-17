@@ -14,9 +14,8 @@
 
 using System.Text;
 using Google.Api.Gax;
-using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
+namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
     /// </summary>
@@ -30,11 +29,26 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
         {
         }
 
+        // Spanner does not support multiple statements per query or in DDL. So in all cases, adding a
+        // terminating semicolon just causes issues -- so we return an empty string for the statement
+        // terminator.
+        /// <inheritdoc />
+        public override string StatementTerminator { get; } = "";
+
         /// <inheritdoc />
         public override void GenerateParameterName(StringBuilder builder, string name)
         {
             builder.Append(GenerateParameterName(name));
         }
+
+        //Note we remove the shema because spanner does not support schema based names.
+        /// <inheritdoc />
+        public override string DelimitIdentifier(string name, string schema)
+            => DelimitIdentifier(name);
+
+        /// <inheritdoc />
+        public override void DelimitIdentifier(StringBuilder builder, string name, string schema)
+            => DelimitIdentifier(builder, name);
 
         /// <inheritdoc />
         public override string DelimitIdentifier(string identifier)

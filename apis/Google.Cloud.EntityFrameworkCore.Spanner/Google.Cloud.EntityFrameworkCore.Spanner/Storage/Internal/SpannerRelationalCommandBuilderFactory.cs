@@ -20,15 +20,11 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
-using Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics;
 using Google.Cloud.Spanner.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
+namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
     /// </summary>
@@ -188,7 +184,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
                     IRelationalConnection connection,
                     DbCommandMethod executeMethod,
                     IReadOnlyDictionary<string, object> parameterValues,
-                    CancellationToken cancellationToken = default(CancellationToken))
+                    CancellationToken cancellationToken = default)
                 {
                     GaxPreconditions.CheckNotNull(connection, nameof(connection));
 
@@ -293,7 +289,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
                         parameterValues = AdjustParameters(parameterValues);
                     }
 
-                    var command = (SpannerCommand)connection.DbConnection.CreateCommand();
+                    var command = (SpannerCommand) connection.DbConnection.CreateCommand();
                     command.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(Logger);
                     command.CommandText = CommandText;
 
@@ -340,19 +336,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
                             {
                                 type = Nullable.GetUnderlyingType(type) ?? type;
 
-                                if (type == typeof(bool))
-                                {
-                                    var b = (bool) kv.Value;
-
-                                    return b ? 1 : 0;
-                                }
-
-                                if (type == typeof(Guid))
-                                {
-                                    var g = (Guid) kv.Value;
-
-                                    return g.ToByteArray();
-                                }
 
                                 if (type.IsEnum)
                                 {
@@ -365,7 +348,6 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Storage.Internal
                                 {
                                     throw new NotSupportedException("DateTimeOffset is not supported.");
                                 }
-                                //TODO(benwu): test all types.
                             }
 
                             return kv.Value;

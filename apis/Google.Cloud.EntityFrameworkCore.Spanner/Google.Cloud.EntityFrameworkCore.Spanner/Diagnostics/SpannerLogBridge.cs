@@ -13,15 +13,14 @@
 // limitations under the License.
 
 using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 
-namespace Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics
+namespace Microsoft.EntityFrameworkCore.Diagnostics
 {
     /// <summary>
     /// This is internal functionality and not intended for public use.
     /// </summary>
-    public class SpannerLogBridge<TLoggerCategory> : Cloud.Spanner.V1.Internal.Logging.DefaultLogger
+    public class SpannerLogBridge<TLoggerCategory> : DefaultLogger
         where TLoggerCategory : LoggerCategory<TLoggerCategory>, new()
     {
         private readonly IDiagnosticsLogger<TLoggerCategory> _efLogger;
@@ -29,10 +28,7 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics
         /// <summary>
         /// This is internal functionality and not intended for public use.
         /// </summary>
-        public SpannerLogBridge(IDiagnosticsLogger<TLoggerCategory> efLogger)
-        {
-            _efLogger = efLogger;
-        }
+        public SpannerLogBridge(IDiagnosticsLogger<TLoggerCategory> efLogger) => _efLogger = efLogger;
 
         /// <summary>
         /// This is internal functionality and not intended for public use.
@@ -41,11 +37,12 @@ namespace Google.Cloud.EntityFrameworkCore.Spanner.Diagnostics
         {
             get => _efLogger.ShouldLogSensitiveData();
             // ReSharper disable once ValueParameterNotUsed
-            set => _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Error, SpannerEventId.SpannerDiagnosticLog,
+            set => _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Error,
+                SpannerEventId.SpannerDiagnosticLog,
                 "EnableSensitiveDataLogging should only be configured from DbContextOptionsBuilder.EnableSensitiveDataLogging",
                 null, (x, e) => x);
         }
-        
+
         /// <summary>
         /// This is internal functionality and not intended for public use.
         /// </summary>

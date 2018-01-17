@@ -17,6 +17,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
@@ -270,7 +271,44 @@ namespace Google.Cloud.Spanner.Data
             TypeCode.Struct, structMembers.Select(x => new Tuple<string, SpannerDbType>(x.Key, x.Value)));
 
         /// <summary>
+        /// Returns a SpannerDbType given a ClrType.
+        /// If the type cannot be determined, <see cref="SpannerDbType.Unspecified"/> is returned.
+        /// </summary>
+        /// <param name="type">The clrType to convert.</param>
+        /// <returns>The best Spanner representation of the given Clr Type.</returns>
+        public static SpannerDbType FromClrType(System.Type type)
+        {
+            if (type == typeof(bool))
+            {
+                return Bool;
+            }
+            if (typeof(IEnumerable<byte>).IsAssignableFrom(type))
+            {
+                return Bytes;
+            }
+            if (type == typeof(DateTime))
+            {
+                return Timestamp;
+            }
+            if (type == typeof(float) || type == typeof(double) || type == typeof(decimal))
+            {
+                return Float64;
+            }
+            if (type == typeof(short) || type == typeof(int) || type == typeof(long)
+                || type == typeof(ulong) || type == typeof(ushort) || type == typeof(uint))
+            {
+                return Int64;
+            }
+            if (type == typeof(string))
+            {
+                return String;
+            }
+            return Unspecified;
+        }
+
+        /// <summary>
         /// Returns a clone of this type with the specified size constraint.
+        /// Only valid on <see cref="TypeCode.String"/> and <see cref="TypeCode.Bytes"/>
         /// </summary>
         /// <param name="size">Represents the number of characters (for <see cref="TypeCode.String"/>)
         ///  or bytes (for <see cref="TypeCode.Bytes"/>)</param>
