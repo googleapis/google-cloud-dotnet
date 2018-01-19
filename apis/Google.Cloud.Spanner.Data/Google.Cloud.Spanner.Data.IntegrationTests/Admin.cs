@@ -58,8 +58,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task CreateWithExtrasDrop()
         {
             string dbName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+            var builder = new SpannerConnectionStringBuilder(_testFixture.NoDbConnectionString);
 
-            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            using (var connection = new SpannerConnection(builder))
             {
                 const string tableCreate = @"CREATE TABLE TX (
                               K                   STRING(MAX) NOT NULL,
@@ -73,7 +74,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await createCmd.ExecuteNonQueryAsync().ConfigureAwait(false);
             }
 
-            using (var connection = new SpannerConnection($"{_testFixture.NoDbConnectionString}/databases/{dbName}"))
+            using (var connection = new SpannerConnection(builder.WithDatabase(dbName)))
             {
                 var cmd = connection.CreateInsertCommand("TX", new SpannerParameterCollection
                 {
@@ -90,7 +91,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
 
-            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            using (var connection = new SpannerConnection(builder))
             {
                 var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
                 await dropCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
@@ -101,8 +102,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task CreateWithExtrasDrop2()
         {
             string dbName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+            var builder = new SpannerConnectionStringBuilder(_testFixture.NoDbConnectionString);
 
-            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            using (var connection = new SpannerConnection(builder))
             {
                 var createCmd = connection.CreateDdlCommand(
                     $"CREATE DATABASE {dbName}");
@@ -110,7 +112,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await createCmd.ExecuteNonQueryAsync().ConfigureAwait(false);
             }
 
-            using (var connection = new SpannerConnection($"{_testFixture.NoDbConnectionString}/databases/{dbName}"))
+            using (var connection = new SpannerConnection(builder.WithDatabase(dbName)))
             {
                 const string tableCreate1 = @"CREATE TABLE TX1 (
                               K                   STRING(MAX) NOT NULL,
@@ -138,7 +140,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
 
-            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            using (var connection = new SpannerConnection(builder))
             {
                 var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
                 await dropCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
@@ -194,8 +196,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task DdlCommandReturnsErrors()
         {
             string dbName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+            var builder = new SpannerConnectionStringBuilder(_testFixture.NoDbConnectionString);
 
-            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            using (var connection = new SpannerConnection(builder))
             {
                 const string tableSingers = @"
                         CREATE TABLE Singers (
@@ -219,7 +222,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await createCmd.ExecuteNonQueryAsync().ConfigureAwait(false);
             }
 
-            using (var connection = new SpannerConnection($"{_testFixture.NoDbConnectionString}/databases/{dbName}"))
+            using (var connection = new SpannerConnection(builder.WithDatabase(dbName)))
             {
                 var dropSingersCmd = connection.CreateDdlCommand("DROP TABLE Singers");
                 var dropAlbumsCmd = connection.CreateDdlCommand("DROP TABLE Albums");
@@ -229,7 +232,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await dropSingersCmd.ExecuteNonQueryAsync();
             }
 
-            using (var connection = new SpannerConnection(_testFixture.NoDbConnectionString))
+            using (var connection = new SpannerConnection(builder))
             {
                 var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
                 await dropCommand.ExecuteNonQueryAsync().ConfigureAwait(false);

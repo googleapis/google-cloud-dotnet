@@ -20,8 +20,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf;
 
 // ReSharper disable UnusedParameter.Local
 
@@ -38,6 +40,7 @@ namespace Google.Cloud.Spanner.Data
         private static long s_transactionCount;
         private readonly SpannerConnection _connection;
         private readonly List<Mutation> _mutations = new List<Mutation>();
+        private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
 
         /// <inheritdoc />
         public override IsolationLevel IsolationLevel => IsolationLevel.Serializable;
@@ -117,7 +120,87 @@ namespace Google.Cloud.Spanner.Data
                 () => Interlocked.Increment(ref s_transactionCount));
         }
 
+        internal static SpannerTransaction FromTransactionId(SpannerConnection connection, TransactionId transactionId)
+        {
+            return new SpannerTransaction(
+                connection, TransactionMode.ReadOnly, new Session {Name = transactionId.Session},
+                new V1.Transaction {Id = ByteString.FromBase64(transactionId.Id)}, transactionId.TimestampBound)
+            {
+                Shared = true,
+                DisposeBehavior = DisposeBehavior.Detach  //this transaction is coming from another process potentially, so we don't auto close it.
+            };
+        }
+
+        /// <summary>
+        /// Returns true if this transaction is being used by multiple <see cref="SpannerConnection"/> objects.
+        /// <see cref="SpannerCommand.GetReaderPartitionsAsync"/> will automatically mark the transaction as shared
+        /// because it is expected that you will be distributing the read among several tasks or processes.
+        /// </summary>
+        public bool Shared { get; internal set; }
+
+        /// <summary>
+        /// Specifies how resources are treated when <see cref="Dispose"/> is called.
+        /// The default behavior of <see cref="DisposeBehavior.ReleaseToPool"/> will cause transactional resources
+        /// to be sent back into a shared pool for re-use.
+        /// Shared transactions may only set this value to either <see cref="DisposeBehavior.CloseResources"/> to close
+        /// resources or <see cref="DisposeBehavior.Detach"/> to detach from the resources.
+        /// A shared transaction must have one process choose <see cref="DisposeBehavior.CloseResources"/>
+        /// to avoid leaks of transactional resources.
+        /// </summary>
+        public DisposeBehavior DisposeBehavior
+        {
+            get => _disposeBehavior;
+            set => _disposeBehavior = GaxPreconditions.CheckEnumValue(value, nameof(DisposeBehavior));
+        }
+
         private Logger Logger => _connection?.Logger ?? Logger.DefaultLogger;
+
+        internal Task<IEnumerable<ByteString>> GetPartitionTokensAsync(
+            ExecuteSqlRequest request,
+            long? partitionSizeBytes,
+            long? maxPartitions,
+            CancellationToken cancellationToken,
+            int timeoutSeconds)
+        {
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            GaxPreconditions.CheckState(
+                Mode == TransactionMode.ReadOnly, "You can only call GetPartitions on a readonly transaction.");
+
+            //Calling this method marks the used transaction as "shared" - but does not set
+            //DisposeBehavior to any value. This will cause an exception during dispose that tell's the developer
+            //that they need to handle this condition by explcitily setting DisposeBehavior to some value.
+            Shared = true;
+
+            var partitionRequest = new PartitionQueryRequest
+            {
+               Sql = request.Sql,
+               Params = request.Params,
+               PartitionOptions = partitionSizeBytes.HasValue || maxPartitions.HasValue ? new PartitionOptions() : null,
+               Transaction = GetTransactionSelector(TransactionMode.ReadOnly),
+               Session = Session.Name
+            };
+            if (partitionSizeBytes.HasValue)
+            {
+                partitionRequest.PartitionOptions.PartitionSizeBytes = partitionSizeBytes.Value;
+            }
+            if (maxPartitions.HasValue)
+            {
+                partitionRequest.PartitionOptions.MaxPartitions = maxPartitions.Value;
+            }
+            partitionRequest.ParamTypes.Add(request.ParamTypes);
+
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
+                {
+                    PartitionResponse response = await _connection.SpannerClient.PartitionQueryAsync(
+                        partitionRequest,
+                        _connection.SpannerClient.Settings.PartitionQuerySettings.WithExpiration(
+                            _connection.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds)))
+                            .ConfigureAwait(false);
+
+                    return response.Partitions.Select(x => x.PartitionToken);
+                }, "SpannerTransaction.GetPartitionTokensAsync", Logger);
+        }
 
         Task<int> ISpannerTransaction.ExecuteMutationsAsync(
             List<Mutation> mutations,
@@ -203,13 +286,38 @@ namespace Google.Cloud.Spanner.Data
                 }, "SpannerTransaction.Rollback", Logger);
         }
 
+        /// <summary>
+        /// Identifying information about this transaction.
+        /// </summary>
+        public TransactionId TransactionId => new TransactionId(
+            _connection.ConnectionString, Session.Name,
+            WireTransaction.Id.ToBase64(), TimestampBound);
+
+
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
             Logger.LogPerformanceCounter(
                 "Transactions.ActiveCount",
                 () => Interlocked.Decrement(ref s_transactionCount));
-            _connection.ReleaseSession(Session);
+            if (Shared && DisposeBehavior == DisposeBehavior.ReleaseToPool)
+            {
+                // this guard will prevent accidental leaks by forcing the developer to think
+                // about how they want to manage the lifetime of the outer transactional resources.
+                throw new InvalidOperationException(
+                    "When calling GetPartitionTokensAsync, you must indicate when transactional resources are released by setting DisposeBehavior=DisposeBehavior.CloseResources or DisposeBehavior.Detach");
+            }
+
+            if (DisposeBehavior == DisposeBehavior.ReleaseToPool)
+            {
+                _connection.ReleaseSession(Session);
+            }
+            else if (DisposeBehavior == DisposeBehavior.CloseResources)
+            {
+                //here we close out the session instead of placing it back into the queue in
+                //case the developer does something clever like attempting to close it in multiple processes.
+                Task.Run(() => SessionPool.Default.CloseAsync(Session));
+            }
         }
 
         private void CheckCompatibleMode(TransactionMode mode)

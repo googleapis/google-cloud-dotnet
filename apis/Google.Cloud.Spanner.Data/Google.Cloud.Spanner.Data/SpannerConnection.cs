@@ -197,7 +197,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        /// <returns></returns>
+        /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
         public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
             TimestampBound targetReadTimestamp,
             CancellationToken cancellationToken = default)
@@ -217,6 +217,21 @@ namespace Google.Cloud.Spanner.Data
                 TransactionMode.ReadOnly,
                 cancellationToken,
                 targetReadTimestamp);
+        }
+
+        /// <summary>
+        /// Begins a readonly transaction using the provided <see cref="TransactionId" />.
+        /// Read transactions are preferred if possible because they do not impose locks internally.
+        /// Providing a transaction id will connect to an already created transaction which is useful
+        /// for batch reads.
+        /// </summary>
+        /// <param name="transactionId">Specifies the transactionId of an existing readonly transaction.</param>
+        /// <returns>A <see cref="SpannerTransaction"/> attached to the existing transaction represented by
+        /// <paramref name="transactionId"/>.</returns>
+        public SpannerTransaction BeginReadOnlyTransaction(TransactionId transactionId)
+        {
+            GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
+            return SpannerTransaction.FromTransactionId(this, transactionId);
         }
 
         private TransactionOptions.Types.ReadOnly ConvertToOptions(TimestampBound targetReadTimestamp)
@@ -387,6 +402,19 @@ namespace Google.Cloud.Spanner.Data
             SpannerParameterCollection selectParameters = null) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateSelectTextBuilder(sqlQueryStatement), this, null,
             selectParameters);
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerCommand" /> from a <see cref="CommandPartition"/>.
+        /// The newly created command will execute on a subset of data defined by the <see cref="CommandPartition.PartitionId"/>
+        /// </summary>
+        /// <param name="partition">
+        /// Information that represents a command to execute against a subset of data.
+        /// </param>
+        /// <param name="transaction">The <see cref="SpannerTransaction"/> used when
+        /// creating the <see cref="CommandPartition"/>.  See <see cref="SpannerConnection.BeginReadOnlyTransaction"/></param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
+        public SpannerCommand CreateCommandWithPartition(CommandPartition partition, SpannerTransaction transaction)
+            => new SpannerCommand(this, transaction, partition);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to update rows in a Spanner database table.
@@ -844,31 +872,45 @@ namespace Google.Cloud.Spanner.Data
 #if !NETSTANDARD1_5
         private TimestampBound _timestampBound;
         private VolatileResourceManager _volatileResourceManager;
+        private TransactionId _transactionId;
 #endif
 
 #if !NETSTANDARD1_5
 
         /// <summary>
-        /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces
-        /// the created Cloud Spanner transaction to be a read-only transaction with the given
-        /// <see cref="TimestampBound" /> settings.
+        /// Call OpenAsReadOnly within a <see cref="System.Transactions.TransactionScope" /> to open the connection
+        /// with a read-only transaction with the given <see cref="TimestampBound" /> settings
         /// </summary>
-        /// <param name="timestampBound">
-        /// Specifies the timestamp or maximum staleness of a
-        /// read operation. Must not be null.
-        /// </param>
+        /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
         public void OpenAsReadOnly(TimestampBound timestampBound = null)
-            => Task.Run(() => OpenAsReadOnlyAsync(timestampBound, CancellationToken.None)).Wait();
+            => Task.Run(() => OpenAsReadOnlyAsync(timestampBound, CancellationToken.None)).WaitWithUnwrappedExceptions();
+
+        /// <summary>
+        /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this
+        /// will connect to an existing transaction identified by <paramref name="transactionId"/>.
+        /// </summary>
+        /// <param name="transactionId">The <see cref="TransactionId"/> representing an active readonly <see cref="SpannerTransaction"/></param>
+        public void OpenAsReadOnly(TransactionId transactionId)
+        {
+            GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
+            if (Transaction.Current == null)
+            {
+                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
+            }
+            if (!EnlistInTransaction)
+            {
+                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
+            }
+            _transactionId = transactionId;
+            OpenAsync(CancellationToken.None).WaitWithUnwrappedExceptions();
+        }
 
         /// <summary>
         /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces
         /// the created Cloud Spanner transaction to be a read-only transaction with the given
         /// <see cref="TimestampBound" /> settings.
         /// </summary>
-        /// <param name="timestampBound">
-        /// Specifies the timestamp or maximum staleness of a
-        /// read operation. Must not be null.
-        /// </param>
+        /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default)
         {
@@ -905,7 +947,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException("This connection is already enlisted to a transaction.");
             }
-            _volatileResourceManager = new VolatileResourceManager(this, _timestampBound);
+            _volatileResourceManager = new VolatileResourceManager(this, _timestampBound, _transactionId);
             transaction.EnlistVolatile(_volatileResourceManager, System.Transactions.EnlistmentOptions.None);
         }
 

@@ -67,10 +67,12 @@ namespace Google.Cloud.Spanner.Data
         private SpannerCommand(
             SpannerConnection connection,
             SpannerTransaction transaction,
-            SpannerParameterCollection parameters) : this()
+            SpannerParameterCollection parameters,
+            CommandPartition commandPartition) : this()
         {
             SpannerConnection = connection;
             _transaction = transaction;
+            Partition = commandPartition;
             if (parameters != null)
             {
                 Parameters = parameters;
@@ -93,12 +95,36 @@ namespace Google.Cloud.Spanner.Data
             SpannerConnection connection,
             SpannerTransaction transaction = null,
             SpannerParameterCollection parameters = null)
-            : this(connection, transaction, parameters)
+            : this(connection, transaction, parameters, null)
         {
             GaxPreconditions.CheckNotNull(commandTextBuilder, nameof(commandTextBuilder));
             GaxPreconditions.CheckNotNull(connection, nameof(connection));
 
             SpannerCommandTextBuilder = commandTextBuilder;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="SpannerCommand"/>.
+        /// </summary>
+        /// <param name="connection">The <see cref="SpannerConnection"/> that is
+        /// associated with this <see cref="SpannerCommand"/>. Must not be null.</param>
+        /// <param name="transaction">The <see cref="SpannerTransaction"/>
+        /// used when creating the <see cref="CommandPartition"/>.
+        /// </param>
+        /// <param name="commandPartition">
+        /// The partition which this command is restricted to.
+        /// See <see cref="SpannerConnection.BeginReadOnlyTransaction"/>
+        /// </param>
+        public SpannerCommand(
+            SpannerConnection connection,
+            SpannerTransaction transaction,
+            CommandPartition commandPartition)
+            : this(connection, transaction, null, commandPartition)
+        {
+            GaxPreconditions.CheckNotNull(connection, nameof(connection));
+            GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
+            GaxPreconditions.CheckNotNull(commandPartition, nameof(commandPartition));
+            SpannerCommandTextBuilder = new SpannerCommandTextBuilder(commandPartition.ExecuteSqlRequest.Sql);
         }
 
         /// <summary>
@@ -215,10 +241,17 @@ namespace Google.Cloud.Spanner.Data
         internal SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
 
         /// <summary>
+        /// The optional partition which this command is restricted to.
+        /// If set, the command runs only on the data associated with the given partition.
+        /// Setting this property overrides any values in <see cref="CommandText"/> and <see cref="Parameters"/>
+        /// </summary>
+        public CommandPartition Partition { get; set; }
+
+        /// <summary>
         /// Returns a copy of this <see cref="SpannerCommand"/>.
         /// </summary>
         /// <returns>a copy of this <see cref="SpannerCommand"/>.</returns>
-        public object Clone() => new SpannerCommand(SpannerConnection, _transaction, Parameters?.Clone())
+        public object Clone() => new SpannerCommand(SpannerConnection, _transaction, Parameters?.Clone(), Partition?.Clone())
         {
             DesignTimeVisible = DesignTimeVisible,
             SpannerCommandTextBuilder = SpannerCommandTextBuilder,
@@ -565,6 +598,67 @@ namespace Google.Cloud.Spanner.Data
         protected override void Dispose(bool disposing) { }
 
         /// <summary>
+        /// Creates a set of <see cref="CommandPartition"/> objects that are used to execute a query
+        /// operation in parallel.  Each of the returned command partitions are used
+        /// by <see cref="SpannerConnection.CreateCommandWithPartition"/> to create a new <see cref="SpannerCommand"/>
+        /// that returns a subset of data.
+        /// </summary>
+        /// <param name="maxPartitions">
+        /// The desired maximum number of partitions to return.  For example, this may
+        /// be set to the number of workers available.  The default for this option
+        /// is currently 10,000. The maximum value is currently 200,000.  This is only
+        /// a hint.  The actual number of partitions returned may be smaller or larger than
+        /// this maximum count request.
+        /// </param>
+        /// <param name="partitionSizeBytes">
+        /// The desired data size for each partition generated.  The default for this
+        /// option is currently 1 GiB.  This is only a hint. The actual size of each
+        /// partition may be smaller or larger than this size request.
+        /// </param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The list of partitions that can be used to create <see cref="SpannerCommand"/>
+        /// objects.</returns>
+        public Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(
+            long? partitionSizeBytes = null,
+            long? maxPartitions = null,
+            CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckState(_transaction?.Mode == TransactionMode.ReadOnly, 
+                "GetReaderPartitions can only be executed within an explicitly created readonly transaction." );
+            //snap state and call static method.
+            return GetReaderPartitionsImplAsync(
+                    SpannerConnection,
+                    GetExecuteSqlRequest(),
+                    partitionSizeBytes,
+                    maxPartitions,
+                    CommandTimeout,
+                    _transaction,
+                    Logger,
+                    cancellationToken);
+        }
+
+        private static async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsImplAsync(
+            SpannerConnection spannerConnection,
+            ExecuteSqlRequest executeSqlRequest,
+            long? partitionSizeBytes,
+            long? maxPartitions,
+            int commandTimeout,
+            SpannerTransaction transaction,
+            Logger logger,
+            CancellationToken cancellationToken)
+        {
+            var tokens =
+                await transaction.GetPartitionTokensAsync(executeSqlRequest, partitionSizeBytes, maxPartitions, 
+                            cancellationToken, commandTimeout).ConfigureAwait(false);
+            return tokens.Select(
+                x => {
+                    var request = executeSqlRequest.Clone();
+                    request.PartitionToken = x;
+                    return new CommandPartition(request);
+                }).ToList();
+        }
+
+        /// <summary>
         /// Sends the command to Cloud Spanner and builds a <see cref="SpannerDataReader"/>.
         /// </summary>
         /// <returns>An asynchronous <see cref="Task"/> that produces a <see cref="SpannerDataReader"/>.</returns>
@@ -678,6 +772,11 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException("You can only call ExecuteReader on a Select Command");
             }
 
+            if (Partition != null)
+            {
+                return Partition.ExecuteSqlRequest;
+            }
+
             var request = new ExecuteSqlRequest
             {
                 Sql = CommandText
@@ -688,6 +787,7 @@ namespace Google.Cloud.Spanner.Data
                 request.Params = new Struct();
                 Parameters.FillSpannerInternalValues(request.Params.Fields, request.ParamTypes);
             }
+
             return request;
         }
 

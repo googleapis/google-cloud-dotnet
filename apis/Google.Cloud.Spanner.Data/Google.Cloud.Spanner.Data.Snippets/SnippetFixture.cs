@@ -31,32 +31,48 @@ namespace Google.Cloud.Spanner.Data.Snippets
     {
         private readonly Lazy<Task> _creationTask;
 
-        public string TestInstanceName => "spannerintegration";
+        public string SpannerHost { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_HOST", null);
+        public string SpannerPort { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_PORT", null);
+        public string SpannerInstance { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_INSTANCE", "spannerintegration");
+        public string SpannerDatabase { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_DATABASE", "t_" + Guid.NewGuid().ToString("N").Substring(0, 28));
 
-        // Modify this to specify the host/port/credentials etc
-        // Use a leading ; before options, e.g. ";Port=12345"
-        public string ConnectionStringExtraSettings = "";
-
-        public string NoDbDataSource => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}";
-        public string DataSource => $"{NoDbDataSource}/databases/{TestDatabaseName}";
-
-        public string ConnectionString => $"{DataSource}{ConnectionStringExtraSettings}";
-        private string NoDbConnectionString => $"{NoDbDataSource}{ConnectionStringExtraSettings}";
-
-        public string TestDatabaseName { get; } =
-            "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+        // Connection string including database, generated from the above properties
+        // Connection string without the database, generated from the above properties
+        public string ConnectionString { get; }
+        public string NoDbConnectionString { get; }
 
         public int TestTableRowCount { get; } = 15;
 
         public string TestTableName { get; } = "TestTable";
 
-        public SnippetFixture() => _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
+        public SnippetFixture()
+        {
+            var builder = new SpannerConnectionStringBuilder
+            {
+                Host = SpannerHost,
+                DataSource = $"projects/{ProjectId}/instances/{SpannerInstance}"
+            };
+            if (SpannerPort != null)
+            {
+                builder.Port = int.Parse(SpannerPort);
+            }
+            NoDbConnectionString = builder.ConnectionString;
+            ConnectionString = builder.WithDatabase(SpannerDatabase).ConnectionString;
+
+            _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
+        }
+
+        private static string GetEnvironmentVariableOrDefault(string name, string defaultValue)
+        {
+            string value = Environment.GetEnvironmentVariable(name);
+            return string.IsNullOrEmpty(value) ? defaultValue : value;
+        }
 
         public override void Dispose()
         {
             using (var connection = new SpannerConnection(NoDbConnectionString))
             {
-                var createCmd = connection.CreateDdlCommand($"DROP DATABASE {TestDatabaseName}");
+                var createCmd = connection.CreateDdlCommand($"DROP DATABASE {SpannerDatabase}");
                 createCmd.ExecuteNonQuery();
             }
         }
@@ -74,7 +90,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             using (var connection = new SpannerConnection(NoDbConnectionString))
             {
-                var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {TestDatabaseName}");
+                var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}");
                 await createCmd.ExecuteNonQueryAsync();
             }
         }

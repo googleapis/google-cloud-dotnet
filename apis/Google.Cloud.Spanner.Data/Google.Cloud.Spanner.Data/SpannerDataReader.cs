@@ -199,7 +199,7 @@ namespace Google.Cloud.Spanner.Data
         /// Gets the value of the specified column as type <see cref="Timestamp"/>.
         /// </summary>
         /// <param name="i">The index of the column to retrieve.</param>
-        /// <returns></returns>
+        /// <returns>The value converted to a <see cref="Timestamp"/>.</returns>
         public Timestamp GetTimestamp(int i) => GetSpannerFieldType(i).ConvertToClrType<Timestamp>(_innerList[i]);
 
         /// <inheritdoc />
