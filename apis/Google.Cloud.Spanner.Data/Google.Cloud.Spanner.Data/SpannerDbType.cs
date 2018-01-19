@@ -265,7 +265,7 @@ namespace Google.Cloud.Spanner.Data
         /// has a default constructor.
         /// </summary>
         /// <param name="structMembers">A dictionary containing the field names and types of each member of the struct.</param>
-        /// <returns></returns>
+        /// <returns>A <see cref="SpannerDbType"/> representing a structure.</returns>
 #pragma warning restore DE0006
         public static SpannerDbType StructOf(IDictionary<string, SpannerDbType> structMembers) => new SpannerDbType(
             TypeCode.Struct, structMembers.Select(x => new Tuple<string, SpannerDbType>(x.Key, x.Value)));

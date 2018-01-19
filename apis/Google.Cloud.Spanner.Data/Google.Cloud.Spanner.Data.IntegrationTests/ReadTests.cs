@@ -109,8 +109,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task BadDbName()
         {
-            string connectionString = $"Data Source=projects/{_testFixture.ProjectId}/instances/"
-                + $"{_testFixture.TestInstanceName}/databases/badjuju";
+            string connectionString = new SpannerConnectionStringBuilder(_testFixture.ConnectionString)
+                .WithDatabase("badjuju")
+                .ConnectionString;
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
 

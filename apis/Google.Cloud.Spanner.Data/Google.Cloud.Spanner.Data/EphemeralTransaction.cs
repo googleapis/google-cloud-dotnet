@@ -51,7 +51,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="mutations">The list of changes to apply.</param>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
         /// <param name="timeoutSeconds">The timeout which will apply to the commit part of this method.</param>
-        /// <returns></returns>
+        /// <returns>The number of rows modified.</returns>
         public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
             GaxPreconditions.CheckNotNull(mutations, nameof(mutations));

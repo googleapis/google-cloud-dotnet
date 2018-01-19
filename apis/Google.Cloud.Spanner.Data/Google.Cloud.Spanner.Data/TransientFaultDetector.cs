@@ -36,7 +36,7 @@ namespace Google.Cloud.Spanner.Data
         /// Common errors that can cause this include temporary network interruption
         /// or the service being temporarily unavailable.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>True if the exception represents an error that may succeed on a retry.</returns>
         public static bool IsTransientSpannerFault(this Exception exception)
         {
             var spannerException = exception as SpannerException

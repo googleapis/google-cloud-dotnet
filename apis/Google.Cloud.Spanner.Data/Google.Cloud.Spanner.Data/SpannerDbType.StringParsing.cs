@@ -29,7 +29,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="spannerType">A string representation of a SpannerDbType. See <see cref="ToString"/></param>
         /// <param name="spannerDbType">If parsing was successful, then an instance of <see cref="SpannerDbType"/>.
         ///  Otherwise null.</param>
-        /// <returns></returns>
+        /// <returns>True if the parse was successful.</returns>
         public static bool TryParse(string spannerType, out SpannerDbType spannerDbType)
         {
             spannerDbType = null;

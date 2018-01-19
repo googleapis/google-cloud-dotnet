@@ -264,7 +264,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Clones the collection.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A cloned copy of this instance.</returns>
         public SpannerParameterCollection Clone()
         {
             return new SpannerParameterCollection(_innerList);

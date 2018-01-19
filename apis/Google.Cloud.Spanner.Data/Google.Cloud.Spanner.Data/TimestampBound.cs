@@ -13,6 +13,10 @@
 // limitations under the License.
 
 using System;
+using System.Globalization;
+using Google.Api.Gax;
+using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -20,20 +24,20 @@ namespace Google.Cloud.Spanner.Data
     /// Indicates how Spanner will choose a timestamp at which to read the data for read-only
     /// transactions.
     /// </summary>
-    public sealed class TimestampBound
+    public sealed class TimestampBound : IEquatable<TimestampBound>
     {
-        private TimestampBound(TimestampBoundMode mode)
+        internal TimestampBound(TimestampBoundMode mode)
         {
             Mode = mode;
         }
 
-        private TimestampBound(TimestampBoundMode mode, TimeSpan staleness)
+        internal TimestampBound(TimestampBoundMode mode, TimeSpan staleness)
         {
             Mode = mode;
             Staleness = staleness;
         }
 
-        private TimestampBound(TimestampBoundMode mode, DateTime timestamp)
+        internal TimestampBound(TimestampBoundMode mode, DateTime timestamp)
         {
             Mode = mode;
             Timestamp = timestamp;
@@ -136,5 +140,107 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
         public static TimestampBound OfReadTimestamp(DateTime timestamp) => new TimestampBound(
             TimestampBoundMode.ReadTimestamp, timestamp);
+
+        /// <inheritdoc />
+        public bool Equals(TimestampBound other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+            return Mode == other.Mode && Staleness.Equals(other.Staleness) && Timestamp.Equals(other.Timestamp);
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+            var timestampBound = obj as TimestampBound;
+            return timestampBound != null && Equals(timestampBound);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = (int) Mode;
+                hashCode = (hashCode * 397) ^ Staleness.GetHashCode();
+                hashCode = (hashCode * 397) ^ Timestamp.GetHashCode();
+                return hashCode;
+            }
+        }
+
+        /// <summary>
+        /// Returns a Base64 encoded string that can later be serialized back into a <see cref="TimestampBound"/>
+        /// using <see cref="TimestampBound.FromBase64String"/>
+        /// </summary>
+        /// <returns>The base64 encoded string.</returns>
+        public string ToBase64String()
+        {
+            var structValue = new Struct();
+            structValue.Fields[nameof(Mode)] = new Value { StringValue = Mode.ToString() };
+            structValue.Fields[nameof(Timestamp)] = new Value { StringValue = Timestamp.ToString("O")};
+            structValue.Fields[nameof(Staleness)] = new Value { StringValue = Staleness.Ticks.ToString() };
+            return structValue.ToByteString().ToBase64();
+        }
+
+        /// <summary>
+        /// Creates an instance of <see cref="TimestampBound"/> given its Base64 encoded string.
+        /// </summary>
+        /// <param name="base64String">The string provided by <see cref="TimestampBound.ToBase64String"/></param>
+        /// <returns>A new instance of <see cref="TimestampBound"/>.</returns>
+        public static TimestampBound FromBase64String(string base64String)
+        {
+            var structValue = new Struct();
+            structValue.MergeFrom(ByteString.FromBase64(base64String));
+            TimestampBoundMode? mode = null;
+            DateTime? timestamp = null;
+            TimeSpan? staleness = null;
+
+            if (structValue.Fields.TryGetValue(nameof(Mode), out Value timestampBoundModeValue))
+            {
+                mode = (TimestampBoundMode) System.Enum.Parse(
+                    typeof(TimestampBoundMode),
+                    timestampBoundModeValue.StringValue);
+            }
+            if (structValue.Fields.TryGetValue(nameof(Timestamp), out Value timestampValue))
+            {
+                timestamp = DateTime.ParseExact(timestampValue.StringValue, "O", CultureInfo.InvariantCulture); ;
+            }
+            if (structValue.Fields.TryGetValue(nameof(Staleness), out Value stalenessValue))
+            {
+                staleness = new TimeSpan(Convert.ToInt64(stalenessValue.StringValue));
+            }
+            if (!mode.HasValue)
+            {
+                throw new InvalidOperationException($"Unable to properly deserialize {nameof(TimestampBound)}.{nameof(Mode)}");
+            }
+            if (mode.Value == TimestampBoundMode.ExactStaleness || mode.Value == TimestampBoundMode.MaxStaleness)
+            {
+                GaxPreconditions.CheckState(staleness.HasValue, $"Unable to properly deserialize {nameof(TimestampBound)}.{nameof(Staleness)}");
+                // ReSharper disable once PossibleInvalidOperationException
+                return new TimestampBound(mode.Value, staleness.Value);
+            }
+            else if (mode.Value == TimestampBoundMode.MinReadTimestamp ||
+                mode.Value == TimestampBoundMode.ReadTimestamp)
+            {
+                GaxPreconditions.CheckState(timestamp.HasValue, $"Unable to properly deserialize {nameof(TimestampBound)}.{nameof(Timestamp)}");
+                // ReSharper disable once PossibleInvalidOperationException
+                return new TimestampBound(mode.Value, timestamp.Value);
+            }
+            return new TimestampBound(mode.Value);
+        }
     }
 }

@@ -28,44 +28,54 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     [CollectionDefinition(nameof(TestDatabaseFixture))]
     public class TestDatabaseFixture : CloudProjectFixtureBase, ICollectionFixture<TestDatabaseFixture>
     {
+        private const long NumPartitionReadRows = 10000;
         private readonly Lazy<Task> _creationTask;
 
-        public string TestInstanceName => "spannerintegration";
+        public string SpannerHost { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_HOST", null);
+        public string SpannerPort { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_PORT", null);
+        public string SpannerInstance { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_INSTANCE", "spannerintegration");
+        public string SpannerDatabase { get; } = GetEnvironmentVariableOrDefault("TEST_SPANNER_DATABASE", "t_" + Guid.NewGuid().ToString("N").Substring(0, 28));
 
-        // Modify this to specify the host/port/credentials etc
-        // Use a leading ; before options, e.g. ";Port=12345"
-        public string ConnectionStringExtraSettings = "";
+        // Connection string including database, generated from the above properties
+        // Connection string without the database, generated from the above properties
+        public string ConnectionString { get; }
+        public string NoDbConnectionString { get; }
 
-        public string NoDbDataSource => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}";
-        public string DataSource => $"{NoDbDataSource}/databases/{DatabaseName}";
-
-        public string ConnectionString => $"{DataSource}{ConnectionStringExtraSettings}";
-        public string NoDbConnectionString => $"{NoDbDataSource}{ConnectionStringExtraSettings}";
-
-        // scratch can be used to run tests on a precreated db.
-        // all tests are designed to be re-run on an exiting db (previously written state will
-        // not cause failures).
-        // if you use a scratch database, be sure to comment out the database
-        // creation and disposal methods.
-        private string DatabaseName { get; } = //"scratch";
-            "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
-
+        // Constants, effectively
         public int TestTableRowCount { get; } = 15;
-
         public string TestTable { get; } = "TestTable";
-
         public string DataAdapterTestTable { get; } = "DataTestTable";
-
         public string StressTestTable { get; } = "bookTable";
         public string ChunkingTestTable { get; } = "chunkTable";
 
-        public TestDatabaseFixture() => _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
+        public TestDatabaseFixture()
+        {
+            var builder = new SpannerConnectionStringBuilder
+            {
+                Host = SpannerHost,
+                DataSource = $"projects/{ProjectId}/instances/{SpannerInstance}"
+            };
+            if (SpannerPort != null)
+            {
+                builder.Port = int.Parse(SpannerPort);
+            }
+            NoDbConnectionString = builder.ConnectionString;
+            ConnectionString = builder.WithDatabase(SpannerDatabase).ConnectionString;
+
+            _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
+        }
+
+        private static string GetEnvironmentVariableOrDefault(string name, string defaultValue)
+        {
+            string value = Environment.GetEnvironmentVariable(name);
+            return string.IsNullOrEmpty(value) ? defaultValue : value;
+        }
 
         public override void Dispose()
         {
             using (var connection = new SpannerConnection(NoDbConnectionString))
             {
-                var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {DatabaseName}");
+                var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {SpannerDatabase}");
                 dropCommand.ExecuteNonQuery();
             }
             SpannerConnection.ClearPooledResourcesAsync().WaitWithUnwrappedExceptions();
@@ -87,15 +97,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             await Task.WhenAll(
                 CreateTableAsync(),
                 CreateTypeTableAsync(),
+                CreatePartitionReadTableAsync(),
                 CreateTxTableAsync()).ConfigureAwait(false);
-            await Task.WhenAll(FillSampleData(TestTable), FillSampleData(DataAdapterTestTable));
+            await Task.WhenAll(FillSampleData(TestTable), FillSampleData(DataAdapterTestTable), FillOrderData());
         }
 
         private async Task CreateDatabaseAsync()
         {
             using (var connection = new SpannerConnection(NoDbConnectionString))
             {
-                var createCmd = connection.CreateDdlCommand("CREATE DATABASE " + DatabaseName);
+                var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}");
                 await createCmd.ExecuteNonQueryAsync();
             }
         }
@@ -109,6 +120,46 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ) PRIMARY KEY (K)";
 
             await ExecuteDdlAsync(typeTable);
+        }
+
+        private async Task CreatePartitionReadTableAsync()
+        {
+            var partitionTable = @"CREATE TABLE Orders (
+                                OrderID STRING(MAX) NOT NULL,
+                                OrderDate TIMESTAMP,
+                                Product STRING(MAX) NOT NULL
+                            ) PRIMARY KEY (OrderID)";
+
+            await ExecuteDdlAsync(partitionTable);
+        }
+
+        private async Task FillOrderData()
+        {
+            using (var connection = new SpannerConnection(ConnectionString))
+            {
+                await connection.OpenAsync();
+                for (var i = 0; i < NumPartitionReadRows / 5000; i++)
+                {
+                    using (var tx = await connection.BeginTransactionAsync())
+                    using (var cmd = connection.CreateInsertCommand("Orders", new SpannerParameterCollection
+                    {
+                        {"OrderID", SpannerDbType.String},
+                        {"OrderDate", SpannerDbType.Timestamp},
+                        {"Product", SpannerDbType.String}
+                    }))
+                    {
+                        cmd.Transaction = tx;
+                        for (var x = 1; x < 5000; x++)
+                        {
+                            cmd.Parameters["OrderID"].Value = Guid.NewGuid().ToString();
+                            cmd.Parameters["OrderDate"].Value = DateTime.Now.Subtract(TimeSpan.FromDays(x));
+                            cmd.Parameters["Product"].Value = $"Widget#{x}";
+                            cmd.ExecuteNonQuery();
+                        }
+                        await tx.CommitAsync();
+                    }
+                }
+            }
         }
 
         private async Task ExecuteDdlAsync(string ddlStatement)

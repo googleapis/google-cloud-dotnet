@@ -22,6 +22,7 @@ using System.Threading.Tasks;
 using System.Transactions;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -29,12 +30,14 @@ namespace Google.Cloud.Spanner.Data
     {
         private readonly SpannerConnection _spannerConnection;
         private readonly TimestampBound _timestampBound;
+        private readonly TransactionId _transactionId;
         private SpannerTransaction _transaction;
 
-        public VolatileResourceManager(SpannerConnection spannerConnection, TimestampBound timestampBound)
+        public VolatileResourceManager(SpannerConnection spannerConnection, TimestampBound timestampBound, TransactionId transactionId)
         {
             _spannerConnection = spannerConnection;
             _timestampBound = timestampBound;
+            _transactionId = transactionId;
         }
 
         private Logger Logger => _spannerConnection?.Logger ?? Logger.DefaultLogger;
@@ -179,6 +182,10 @@ namespace Google.Cloud.Spanner.Data
                 return _transaction ?? (_transaction =
                     await _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound, cancellationToken)
                         .ConfigureAwait(false));
+            }
+            else if (_transactionId != null)
+            {
+                return SpannerTransaction.FromTransactionId(_spannerConnection, _transactionId);
             }
             var result = _transaction ?? (_transaction = await _spannerConnection.BeginTransactionAsync(cancellationToken)
                 .ConfigureAwait(false));

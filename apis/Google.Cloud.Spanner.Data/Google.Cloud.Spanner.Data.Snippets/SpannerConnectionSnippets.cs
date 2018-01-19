@@ -62,7 +62,9 @@ namespace Google.Cloud.Spanner.Data.Snippets
         public async Task CreateDatabaseAsync()
         {
             string databaseName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
-            string connectionString = $"{_fixture.NoDbDataSource}/databases/{databaseName}{_fixture.ConnectionStringExtraSettings}";
+            string connectionString = new SpannerConnectionStringBuilder(_fixture.ConnectionString)
+                .WithDatabase(databaseName)
+                .ConnectionString;
 
             // Sample: CreateDatabaseAsync
             // Additional: CreateDdlCommand
