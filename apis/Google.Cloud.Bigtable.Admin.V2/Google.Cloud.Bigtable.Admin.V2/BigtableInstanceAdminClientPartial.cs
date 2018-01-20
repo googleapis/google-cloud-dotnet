@@ -29,7 +29,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Parent);
 
-        // TODO: Determine why this generated as Instance instead of UpdateInstanceRequest
         partial void Modify_Instance(ref Instance request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Name);
 
@@ -45,7 +44,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_ListClustersRequest(ref ListClustersRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Parent);
 
-        // TODO: Determine why this generated as Cluster instead of UpdateClusterRequest
         partial void Modify_Cluster(ref Cluster request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Name);
 
