@@ -24,41 +24,43 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           string.Concat(
             "Cgp0ZXN0LnByb3RvEgV0ZXN0cxooZ29vZ2xlL2ZpcmVzdG9yZS92MWJldGEx",
             "L2ZpcmVzdG9yZS5wcm90bxolZ29vZ2xlL2ZpcmVzdG9yZS92MWJldGExL2Nv",
-            "bW1vbi5wcm90byKAAgoEVGVzdBITCgtkZXNjcmlwdGlvbhgBIAEoCRIdCgNn",
-            "ZXQYAiABKAsyDi50ZXN0cy5HZXRUZXN0SAASIwoGY3JlYXRlGAMgASgLMhEu",
-            "dGVzdHMuQ3JlYXRlVGVzdEgAEh0KA3NldBgEIAEoCzIOLnRlc3RzLlNldFRl",
-            "c3RIABIjCgZ1cGRhdGUYBSABKAsyES50ZXN0cy5VcGRhdGVUZXN0SAASLgoM",
-            "dXBkYXRlX3BhdGhzGAYgASgLMhYudGVzdHMuVXBkYXRlUGF0aHNUZXN0SAAS",
-            "IwoGZGVsZXRlGAcgASgLMhEudGVzdHMuRGVsZXRlVGVzdEgAQgYKBHRlc3Qi",
-            "XgoHR2V0VGVzdBIUCgxkb2NfcmVmX3BhdGgYASABKAkSPQoHcmVxdWVzdBgC",
-            "IAEoCzIsLmdvb2dsZS5maXJlc3RvcmUudjFiZXRhMS5HZXREb2N1bWVudFJl",
-            "cXVlc3QigQEKCkNyZWF0ZVRlc3QSFAoMZG9jX3JlZl9wYXRoGAEgASgJEhEK",
-            "CWpzb25fZGF0YRgCIAEoCRI4CgdyZXF1ZXN0GAMgASgLMicuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MWJldGExLkNvbW1pdFJlcXVlc3QSEAoIaXNfZXJyb3IYBCAB",
-            "KAgioAEKB1NldFRlc3QSFAoMZG9jX3JlZl9wYXRoGAEgASgJEiAKBm9wdGlv",
-            "bhgCIAEoCzIQLnRlc3RzLlNldE9wdGlvbhIRCglqc29uX2RhdGEYAyABKAkS",
-            "OAoHcmVxdWVzdBgEIAEoCzInLmdvb2dsZS5maXJlc3RvcmUudjFiZXRhMS5D",
-            "b21taXRSZXF1ZXN0EhAKCGlzX2Vycm9yGAUgASgIIr8BCgpVcGRhdGVUZXN0",
-            "EhQKDGRvY19yZWZfcGF0aBgBIAEoCRI8CgxwcmVjb25kaXRpb24YAiABKAsy",
-            "Ji5nb29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuUHJlY29uZGl0aW9uEhEKCWpz",
-            "b25fZGF0YRgDIAEoCRI4CgdyZXF1ZXN0GAQgASgLMicuZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MWJldGExLkNvbW1pdFJlcXVlc3QSEAoIaXNfZXJyb3IYBSABKAgi",
-            "7QEKD1VwZGF0ZVBhdGhzVGVzdBIUCgxkb2NfcmVmX3BhdGgYASABKAkSPAoM",
-            "cHJlY29uZGl0aW9uGAIgASgLMiYuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGEx",
-            "LlByZWNvbmRpdGlvbhIlCgtmaWVsZF9wYXRocxgDIAMoCzIQLnRlc3RzLkZp",
-            "ZWxkUGF0aBITCgtqc29uX3ZhbHVlcxgEIAMoCRI4CgdyZXF1ZXN0GAUgASgL",
-            "MicuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkNvbW1pdFJlcXVlc3QSEAoI",
-            "aXNfZXJyb3IYBiABKAgirAEKCkRlbGV0ZVRlc3QSFAoMZG9jX3JlZl9wYXRo",
-            "GAEgASgJEjwKDHByZWNvbmRpdGlvbhgCIAEoCzImLmdvb2dsZS5maXJlc3Rv",
-            "cmUudjFiZXRhMS5QcmVjb25kaXRpb24SOAoHcmVxdWVzdBgDIAEoCzInLmdv",
-            "b2dsZS5maXJlc3RvcmUudjFiZXRhMS5Db21taXRSZXF1ZXN0EhAKCGlzX2Vy",
-            "cm9yGAQgASgIIjoKCVNldE9wdGlvbhILCgNhbGwYASABKAgSIAoGZmllbGRz",
-            "GAIgAygLMhAudGVzdHMuRmllbGRQYXRoIhoKCUZpZWxkUGF0aBINCgVmaWVs",
-            "ZBgBIAMoCUIlqgIiR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5UZXN0cy5Qcm90",
-            "b2IGcHJvdG8z"));
+            "bW1vbi5wcm90byInCglUZXN0U3VpdGUSGgoFdGVzdHMYASADKAsyCy50ZXN0",
+            "cy5UZXN0IoACCgRUZXN0EhMKC2Rlc2NyaXB0aW9uGAEgASgJEh0KA2dldBgC",
+            "IAEoCzIOLnRlc3RzLkdldFRlc3RIABIjCgZjcmVhdGUYAyABKAsyES50ZXN0",
+            "cy5DcmVhdGVUZXN0SAASHQoDc2V0GAQgASgLMg4udGVzdHMuU2V0VGVzdEgA",
+            "EiMKBnVwZGF0ZRgFIAEoCzIRLnRlc3RzLlVwZGF0ZVRlc3RIABIuCgx1cGRh",
+            "dGVfcGF0aHMYBiABKAsyFi50ZXN0cy5VcGRhdGVQYXRoc1Rlc3RIABIjCgZk",
+            "ZWxldGUYByABKAsyES50ZXN0cy5EZWxldGVUZXN0SABCBgoEdGVzdCJeCgdH",
+            "ZXRUZXN0EhQKDGRvY19yZWZfcGF0aBgBIAEoCRI9CgdyZXF1ZXN0GAIgASgL",
+            "MiwuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkdldERvY3VtZW50UmVxdWVz",
+            "dCKBAQoKQ3JlYXRlVGVzdBIUCgxkb2NfcmVmX3BhdGgYASABKAkSEQoJanNv",
+            "bl9kYXRhGAIgASgJEjgKB3JlcXVlc3QYAyABKAsyJy5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxYmV0YTEuQ29tbWl0UmVxdWVzdBIQCghpc19lcnJvchgEIAEoCCKg",
+            "AQoHU2V0VGVzdBIUCgxkb2NfcmVmX3BhdGgYASABKAkSIAoGb3B0aW9uGAIg",
+            "ASgLMhAudGVzdHMuU2V0T3B0aW9uEhEKCWpzb25fZGF0YRgDIAEoCRI4Cgdy",
+            "ZXF1ZXN0GAQgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkNvbW1p",
+            "dFJlcXVlc3QSEAoIaXNfZXJyb3IYBSABKAgivwEKClVwZGF0ZVRlc3QSFAoM",
+            "ZG9jX3JlZl9wYXRoGAEgASgJEjwKDHByZWNvbmRpdGlvbhgCIAEoCzImLmdv",
+            "b2dsZS5maXJlc3RvcmUudjFiZXRhMS5QcmVjb25kaXRpb24SEQoJanNvbl9k",
+            "YXRhGAMgASgJEjgKB3JlcXVlc3QYBCABKAsyJy5nb29nbGUuZmlyZXN0b3Jl",
+            "LnYxYmV0YTEuQ29tbWl0UmVxdWVzdBIQCghpc19lcnJvchgFIAEoCCLtAQoP",
+            "VXBkYXRlUGF0aHNUZXN0EhQKDGRvY19yZWZfcGF0aBgBIAEoCRI8CgxwcmVj",
+            "b25kaXRpb24YAiABKAsyJi5nb29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuUHJl",
+            "Y29uZGl0aW9uEiUKC2ZpZWxkX3BhdGhzGAMgAygLMhAudGVzdHMuRmllbGRQ",
+            "YXRoEhMKC2pzb25fdmFsdWVzGAQgAygJEjgKB3JlcXVlc3QYBSABKAsyJy5n",
+            "b29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuQ29tbWl0UmVxdWVzdBIQCghpc19l",
+            "cnJvchgGIAEoCCKsAQoKRGVsZXRlVGVzdBIUCgxkb2NfcmVmX3BhdGgYASAB",
+            "KAkSPAoMcHJlY29uZGl0aW9uGAIgASgLMiYuZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MWJldGExLlByZWNvbmRpdGlvbhI4CgdyZXF1ZXN0GAMgASgLMicuZ29vZ2xl",
+            "LmZpcmVzdG9yZS52MWJldGExLkNvbW1pdFJlcXVlc3QSEAoIaXNfZXJyb3IY",
+            "BCABKAgiOgoJU2V0T3B0aW9uEgsKA2FsbBgBIAEoCBIgCgZmaWVsZHMYAiAD",
+            "KAsyEC50ZXN0cy5GaWVsZFBhdGgiGgoJRmllbGRQYXRoEg0KBWZpZWxkGAEg",
+            "AygJQk0KJmNvbS5nb29nbGUuY2xvdWQuZmlyZXN0b3JlLmNvbmZvcm1hbmNl",
+            "qgIiR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5UZXN0cy5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1Beta1.FirestoreReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.TestSuite), global::Google.Cloud.Firestore.Tests.Proto.TestSuite.Parser, new[]{ "Tests" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Test), global::Google.Cloud.Firestore.Tests.Proto.Test.Parser, new[]{ "Description", "Get", "Create", "Set", "Update", "UpdatePaths", "Delete" }, new[]{ "Test" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.GetTest), global::Google.Cloud.Firestore.Tests.Proto.GetTest.Parser, new[]{ "DocRefPath", "Request" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.CreateTest), global::Google.Cloud.Firestore.Tests.Proto.CreateTest.Parser, new[]{ "DocRefPath", "JsonData", "Request", "IsError" }, null, null, null),
@@ -75,6 +77,118 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   }
   #region Messages
   /// <summary>
+  /// A collection of tests.
+  /// </summary>
+  public sealed partial class TestSuite : pb::IMessage<TestSuite> {
+    private static readonly pb::MessageParser<TestSuite> _parser = new pb::MessageParser<TestSuite>(() => new TestSuite());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TestSuite> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TestSuite() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TestSuite(TestSuite other) : this() {
+      tests_ = other.tests_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TestSuite Clone() {
+      return new TestSuite(this);
+    }
+
+    /// <summary>Field number for the "tests" field.</summary>
+    public const int TestsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.Tests.Proto.Test> _repeated_tests_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Firestore.Tests.Proto.Test.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.Test> tests_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.Test>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.Test> Tests {
+      get { return tests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TestSuite);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TestSuite other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!tests_.Equals(other.tests_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= tests_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      tests_.WriteTo(output, _repeated_tests_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += tests_.CalculateSize(_repeated_tests_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TestSuite other) {
+      if (other == null) {
+        return;
+      }
+      tests_.Add(other.tests_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            tests_.AddEntriesFrom(input, _repeated_tests_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// A Test describes a single client method call and its expected result.
   /// </summary>
   public sealed partial class Test : pb::IMessage<Test> {
@@ -84,7 +198,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -448,7 +562,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -608,7 +722,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -833,7 +947,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1093,7 +1207,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1353,7 +1467,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1627,7 +1741,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1852,7 +1966,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1998,7 +2112,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
