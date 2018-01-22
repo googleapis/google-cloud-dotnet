@@ -25,11 +25,11 @@ namespace Google.Cloud.PubSub.V1.Snippets
 {
     [SnippetOutputCollector]
     [Collection(nameof(PubsubSnippetFixture))]
-    public class PublisherClientSnippets
+    public class PublisherServiceApiClientSnippets
     {
         private readonly PubsubSnippetFixture _fixture;
 
-        public PublisherClientSnippets(PubsubSnippetFixture fixture)
+        public PublisherServiceApiClientSnippets(PubsubSnippetFixture fixture)
         {
             _fixture = fixture;
         }
@@ -40,7 +40,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
 
             // Snippet: ListTopics(*,*,*,*)
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
 
             ProjectName projectName = new ProjectName(projectId);
             foreach (Topic topic in client.ListTopics(projectName))
@@ -56,7 +56,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
 
             // Snippet: ListTopicsAsync(*,*,*,*)
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
 
             ProjectName projectName = new ProjectName(projectId);
             IAsyncEnumerable<Topic> topics = client.ListTopicsAsync(projectName);
@@ -74,7 +74,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
 
             // Snippet: CreateTopic(TopicName,*)
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
 
             TopicName topicName = new TopicName(projectId, topicId);
             Topic topic = client.CreateTopic(topicName);
@@ -90,7 +90,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             // Snippet: CreateTopicAsync(TopicName,CallSettings)
             // Additional: CreateTopicAsync(TopicName,CancellationToken)
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
 
             TopicName topicName = new TopicName(projectId, topicId);
             Topic topic = await client.CreateTopicAsync(topicName);
@@ -105,7 +105,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
 
             // Snippet: Publish(*,*,*)
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
             // Make sure we have a topic to publish to
             TopicName topicName = new TopicName(projectId, topicId);
             client.CreateTopic(topicName);
@@ -133,7 +133,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             // Snippet: PublishAsync(*,*,CallSettings)
             // Additional: PublishAsync(*,*,CancellationToken)
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
             // Make sure we have a topic to publish to
             TopicName topicName = new TopicName(projectId, topicId);
             await client.CreateTopicAsync(topicName);
@@ -158,10 +158,10 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            PublisherClient.Create().CreateTopic(new TopicName(projectId, topicId));
+            PublisherServiceApiClient.Create().CreateTopic(new TopicName(projectId, topicId));
 
             // Snippet: DeleteTopic(TopicName,*)
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
 
             TopicName topicName = new TopicName(projectId, topicId);
             client.DeleteTopic(topicName);
@@ -175,11 +175,11 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            await PublisherClient.Create().CreateTopicAsync(new TopicName(projectId, topicId));
+            await PublisherServiceApiClient.Create().CreateTopicAsync(new TopicName(projectId, topicId));
 
             // Snippet: DeleteTopicAsync(TopicName,CallSettings)
             // Additional: DeleteTopicAsync(TopicName,CancellationToken)
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
 
             TopicName topicName = new TopicName(projectId, topicId);
             await client.DeleteTopicAsync(topicName);
@@ -193,10 +193,10 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            PublisherClient.Create().CreateTopic(new TopicName(projectId, topicId));
+            PublisherServiceApiClient.Create().CreateTopic(new TopicName(projectId, topicId));
 
             // Snippet: GetIamPolicy(string,*)
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
             string topicName = new TopicName(projectId, topicId).ToString();
             Policy policy = client.GetIamPolicy(topicName);
             Console.WriteLine($"Policy for {topicName}: {policy}");

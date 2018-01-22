@@ -42,7 +42,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
         public override void Dispose()
         {
-            var subscriber = SubscriberClient.Create();
+            var subscriber = SubscriberServiceApiClient.Create();
             var subscriptions = subscriber.ListSubscriptions(new ProjectName(ProjectId))
                 .Where(sub => sub.SubscriptionName.SubscriptionId.StartsWith(SubscriptionPrefix))
                 .ToList();
@@ -61,7 +61,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             }
 
-            var publisher = PublisherClient.Create();
+            var publisher = PublisherServiceApiClient.Create();
             var topics = publisher.ListTopics(new ProjectName(ProjectId))
                 .Where(topic => topic.TopicName.TopicId.StartsWith(TopicPrefix))
                 .ToList();

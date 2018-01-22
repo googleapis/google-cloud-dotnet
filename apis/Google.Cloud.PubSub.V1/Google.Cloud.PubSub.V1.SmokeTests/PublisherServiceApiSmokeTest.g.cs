@@ -47,7 +47,7 @@ namespace Google.Cloud.PubSub.V1.SmokeTests
             ProjectName project = new ProjectName(projectId);
 
             // Call API method
-            ListTopicsResponse response = client.ListTopics(project);
+            var response = client.ListTopics(project);
             // Show the result
             Console.WriteLine(response);
 

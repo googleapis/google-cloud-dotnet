@@ -1,10 +1,10 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+﻿// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,16 +35,13 @@ namespace Google.Cloud.PubSub.V1
 {
     /// <summary>
     /// A PubSub publisher that is associated with a specific <see cref="TopicName"/>.
-    /// The name "<see cref="SimplePublisher"/>" is likely to change before the GA release.
-    /// See <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1188">
-    /// https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1188</a>.
     /// </summary>
-    public abstract class SimplePublisher
+    public abstract class PublisherClient
     {
         // TODO: Logging
 
         /// <summary>
-        /// Settings for the <see cref="SimplePublisher"/>.
+        /// Settings for the <see cref="PublisherClient"/>.
         /// </summary>
         public sealed class Settings
         {
@@ -106,7 +103,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Settings for creating <see cref="PublisherClient"/>s.
+        /// Settings for creating <see cref="PublisherServiceApiClient"/>s.
         /// </summary>
         public sealed class ClientCreationSettings
         {
@@ -114,44 +111,44 @@ namespace Google.Cloud.PubSub.V1
             /// Instantiate with the specified settings.
             /// </summary>
             /// <param name="clientCount">Optional.
-            /// The number of <see cref="PublisherClient"/>s to create and use within a <see cref="SimplePublisher"/> instance.</param>
-            /// <param name="publisherSettings">Optional. The settings to use when creating <see cref="PublisherClient"/> instances.</param>
-            /// <param name="credentials">Optional. Credentials to use when creating <see cref="PublisherClient"/> instances.</param>
+            /// The number of <see cref="PublisherServiceApiClient"/>s to create and use within a <see cref="PublisherClient"/> instance.</param>
+            /// <param name="publisherServiceApiSettings">Optional. The settings to use when creating <see cref="PublisherServiceApiClient"/> instances.</param>
+            /// <param name="credentials">Optional. Credentials to use when creating <see cref="PublisherServiceApiClient"/> instances.</param>
             /// <param name="serviceEndpoint">Optional.
-            /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="PublisherClient"/> instances.</param>
+            /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="PublisherServiceApiClient"/> instances.</param>
             public ClientCreationSettings(
                 int? clientCount = null,
-                PublisherSettings publisherSettings = null,
+                PublisherServiceApiSettings publisherServiceApiSettings = null,
                 ChannelCredentials credentials = null,
                 ServiceEndpoint serviceEndpoint = null)
             {
                 ClientCount = clientCount;
-                PublisherSettings = publisherSettings;
+                PublisherServiceApiSettings = publisherServiceApiSettings;
                 Credentials = credentials;
                 ServiceEndpoint = serviceEndpoint;
             }
 
             /// <summary>
-            /// The number of <see cref="PublisherClient"/>s to create and use within a <see cref="SimplePublisher"/> instance.
+            /// The number of <see cref="PublisherServiceApiClient"/>s to create and use within a <see cref="PublisherClient"/> instance.
             /// If <c>null</c>, defaults to the CPU count on the machine this is being executed on.
             /// </summary>
             public int? ClientCount { get; }
 
             /// <summary>
-            /// The settings to use when creating <see cref="PublisherClient"/> instances.
-            /// If <c>null</c>, defaults to <see cref="PublisherSettings.GetDefault"/>.
+            /// The settings to use when creating <see cref="PublisherServiceApiClient"/> instances.
+            /// If <c>null</c>, defaults to <see cref="PublisherServiceApiSettings.GetDefault"/>.
             /// </summary>
-            public PublisherSettings PublisherSettings { get; }
+            public PublisherServiceApiSettings PublisherServiceApiSettings { get; }
 
             /// <summary>
-            /// Credentials to use when creating <see cref="PublisherClient"/> instances.
+            /// Credentials to use when creating <see cref="PublisherServiceApiClient"/> instances.
             /// If <c>null</c>, defaults to using the default credentials.
             /// </summary>
             public ChannelCredentials Credentials { get; }
 
             /// <summary>
-            /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="PublisherClient"/> instances.
-            /// If <c>null</c>, defaults to <see cref="PublisherClient.DefaultEndpoint"/>.
+            /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="PublisherServiceApiClient"/> instances.
+            /// If <c>null</c>, defaults to <see cref="PublisherServiceApiClient.DefaultEndpoint"/>.
             /// </summary>
             public ServiceEndpoint ServiceEndpoint { get; }
 
@@ -163,7 +160,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// A snapshot of the flow state of a <see cref="SimplePublisher"/>.
+        /// A snapshot of the flow state of a <see cref="PublisherClient"/>.
         /// </summary>
         public struct FlowState
         {
@@ -192,7 +189,7 @@ namespace Google.Cloud.PubSub.V1
         // All defaults taken from Java (reference) implementation.
 
         /// <summary>
-        /// Default <see cref="BatchingSettings"/> for <see cref="SimplePublisher"/>.
+        /// Default <see cref="BatchingSettings"/> for <see cref="PublisherClient"/>.
         /// Default values are:
         /// <see cref="BatchingSettings.ElementCountThreshold"/> = 100;
         /// <see cref="BatchingSettings.ByteCountThreshold"/> = 1,000;
@@ -209,18 +206,18 @@ namespace Google.Cloud.PubSub.V1
         public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 10_000_000L, null);
 
         /// <summary>
-        /// Create a <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>.
+        /// Create a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.
         /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
         /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
         /// settings may need changing; especially
-        /// <see cref="ClientCreationSettings.PublisherSettings"/>.<see cref="PublisherSettings.PublishSettings"/>.<see cref="CallSettings.Timing"/>.<see cref="CallTiming.Retry"/>.<see cref="RetrySettings.TimeoutBackoff"/>.
+        /// <see cref="ClientCreationSettings.PublisherServiceApiSettings"/>.<see cref="PublisherServiceApiSettings.PublishSettings"/>.<see cref="CallSettings.Timing"/>.<see cref="CallTiming.Retry"/>.<see cref="RetrySettings.TimeoutBackoff"/>.
         /// </summary>
         /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
         /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
-        /// <see cref="PublisherClient"/>s.</param>
-        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SimplePublisher"/>.</param>
-        /// <returns>A <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>.</returns>
-        public static async Task<SimplePublisher> CreateAsync(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null)
+        /// <see cref="PublisherServiceApiClient"/>s.</param>
+        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
+        /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
+        public static async Task<PublisherClient> CreateAsync(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null)
         {
             clientCreationSettings?.Validate();
             // Clone settings, just in case user modifies them and an await happens in this method
@@ -233,13 +230,13 @@ namespace Google.Cloud.PubSub.V1
                 var credentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
                 if (credentials.IsCreateScopedRequired)
                 {
-                    credentials = credentials.CreateScoped(PublisherClient.DefaultScopes);
+                    credentials = credentials.CreateScoped(PublisherServiceApiClient.DefaultScopes);
                 }
                 channelCredentials = credentials.ToChannelCredentials();
             }
             // Create the channels and clients, and register shutdown functions for each channel
-            var endpoint = clientCreationSettings?.ServiceEndpoint ?? PublisherClient.DefaultEndpoint;
-            var clients = new PublisherClient[clientCount];
+            var endpoint = clientCreationSettings?.ServiceEndpoint ?? PublisherServiceApiClient.DefaultEndpoint;
+            var clients = new PublisherServiceApiClient[clientCount];
             var shutdowns = new Func<Task>[clientCount];
             // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
             var channelOptions = new[]
@@ -250,16 +247,16 @@ namespace Google.Cloud.PubSub.V1
             for (int i = 0; i < clientCount; i++)
             {
                 var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
-                clients[i] = PublisherClient.Create(channel, clientCreationSettings?.PublisherSettings);
+                clients[i] = PublisherServiceApiClient.Create(channel, clientCreationSettings?.PublisherServiceApiSettings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
             Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
-            return new SimplePublisherImpl(topicName, clients, settings, shutdown);
+            return new PublisherClientImpl(topicName, clients, settings, shutdown);
         }
 
         /// <summary>
-        /// Create a <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>.
-        /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="SubscriberClient"/>s must have their
+        /// Create a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.
+        /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="PublisherServiceApiClient"/>s must have their
         /// maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
         /// possibly causing a deadlock.
         /// The default <paramref name="settings"/> are suitable for machines with high network bandwidth
@@ -267,13 +264,13 @@ namespace Google.Cloud.PubSub.V1
         /// settings may need changing.
         /// </summary>
         /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
-        /// <param name="clients">The <see cref="PublisherClient"/>s to use in a <see cref="SimplePublisher"/>.
+        /// <param name="clients">The <see cref="PublisherServiceApiClient"/>s to use in a <see cref="PublisherClient"/>.
         /// For high performance, these should all use distinct <see cref="Channel"/>s.</param>
-        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SimplePublisher"/>.</param>
-        /// <returns>A <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>.</returns>
-        public static SimplePublisher Create(TopicName topicName, IEnumerable<PublisherClient> clients, Settings settings = null) =>
+        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
+        /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
+        public static PublisherClient Create(TopicName topicName, IEnumerable<PublisherServiceApiClient> clients, Settings settings = null) =>
             // No need to clone clients, it's synchronously used to initialise a Queue<T> in the constructor
-            new SimplePublisherImpl(topicName, clients, settings?.Clone() ?? new Settings(), null);
+            new PublisherClientImpl(topicName, clients, settings?.Clone() ?? new Settings(), null);
 
         /// <summary>
         /// The associated <see cref="TopicName"/>. 
@@ -345,7 +342,7 @@ namespace Google.Cloud.PubSub.V1
         public virtual FlowState GetCurrentFlowState() => throw new NotImplementedException();
 
         /// <summary>
-        /// Shutdown this <see cref="SimplePublisher"/>. Cancelling <paramref name="hardStopToken"/> aborts the
+        /// Shutdown this <see cref="PublisherClient"/>. Cancelling <paramref name="hardStopToken"/> aborts the
         /// clean shutdown process, and may leave some locally queued messages unsent.
         /// The returned <see cref="Task"/> completes when all queued messages have been published.
         /// The returned <see cref="Task"/> cancels if <paramref name="hardStopToken"/> is cancelled.
@@ -356,7 +353,7 @@ namespace Google.Cloud.PubSub.V1
         public virtual Task ShutdownAsync(CancellationToken hardStopToken) => throw new NotImplementedException();
 
         /// <summary>
-        /// Shutdown this <see cref="SimplePublisher"/>. If <paramref name="timeout"/> expires, the clean shutdown process will
+        /// Shutdown this <see cref="PublisherClient"/>. If <paramref name="timeout"/> expires, the clean shutdown process will
         /// abort; leaving some locally queued messages unsent.
         /// The returned <see cref="Task"/> completes when all queued messages have been published.
         /// The returned <see cref="Task"/> cancels if the <paramref name="timeout"/> expires before all messages are published.
@@ -370,7 +367,7 @@ namespace Google.Cloud.PubSub.V1
     /// <summary>
     /// Implementation of PubSub publisher that is associated with a specific <see cref="TopicName"/>.
     /// </summary>
-    public sealed class SimplePublisherImpl : SimplePublisher
+    public sealed class PublisherClientImpl : PublisherClient
     {
         private class Batch
         {
@@ -391,20 +388,20 @@ namespace Google.Cloud.PubSub.V1
         // TODO: Logging
 
         /// <summary>
-        /// Instantiate a <see cref="SimplePublisherImpl"/> associated with the specified <see cref="TopicName"/>.
+        /// Instantiate a <see cref="PublisherClientImpl"/> associated with the specified <see cref="TopicName"/>.
         /// </summary>
         /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
         /// <param name="clients">The <see cref="PublisherClient"/>s to use.</param>
-        /// <param name="settings"><see cref="SimplePublisher.Settings"/> to use in this <see cref="SimplePublisherImpl"/>.</param>
-        /// <param name="shutdown">Function to call on this <see cref="SimplePublisherImpl"/> shutdown.</param>
-        public SimplePublisherImpl(TopicName topicName, IEnumerable<PublisherClient> clients, Settings settings, Func<Task> shutdown)
+        /// <param name="settings"><see cref="PublisherClient.Settings"/> to use in this <see cref="PublisherClientImpl"/>.</param>
+        /// <param name="shutdown">Function to call on this <see cref="PublisherClientImpl"/> shutdown.</param>
+        public PublisherClientImpl(TopicName topicName, IEnumerable<PublisherServiceApiClient> clients, Settings settings, Func<Task> shutdown)
             : this(topicName, clients, settings, shutdown, TaskHelper.Default) { }
 
-        internal SimplePublisherImpl(TopicName topicName, IEnumerable<PublisherClient> clients, Settings settings, Func<Task> shutdown, TaskHelper taskHelper)
+        internal PublisherClientImpl(TopicName topicName, IEnumerable<PublisherServiceApiClient> clients, Settings settings, Func<Task> shutdown, TaskHelper taskHelper)
         {
             TopicName = GaxPreconditions.CheckNotNull(topicName, nameof(topicName));
             GaxPreconditions.CheckNotNull(clients, nameof(clients));
-            _idleClients = new Queue<PublisherClient>(clients);
+            _idleClients = new Queue<PublisherServiceApiClient>(clients);
             GaxPreconditions.CheckArgument(_idleClients.Count > 0, nameof(clients), "Must contain at least one client");
             GaxPreconditions.CheckArgument(_idleClients.All(x => x != null), nameof(clients), "All elements must be non-null");
             GaxPreconditions.CheckNotNull(settings, nameof(settings));
@@ -445,7 +442,7 @@ namespace Google.Cloud.PubSub.V1
         private readonly long _batchMaxByteCount;
 
         //Internal state
-        private readonly Queue<PublisherClient> _idleClients;
+        private readonly Queue<PublisherServiceApiClient> _idleClients;
         private readonly Queue<Batch> _batchesReady;
         private readonly CancellationTokenSource _softStopCts;
         private readonly CancellationTokenSource _hardStopCts;
