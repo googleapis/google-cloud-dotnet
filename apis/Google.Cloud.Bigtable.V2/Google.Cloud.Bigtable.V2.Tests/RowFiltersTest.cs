@@ -119,9 +119,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void Condition_Validations()
         {
-            Assert.Throws<ArgumentNullException>
-                (() => RowFilters.Condition(null, RowFilters.PassAllFilter(), RowFilters.PassAllFilter()));
-            
             // The true/false mutations are allowed to be null.
             RowFilters.Condition(RowFilters.PassAllFilter(), null, null);
         }
@@ -197,6 +194,13 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var filter = RowFilters.RowSample(0.25);
             Assert.Equal(0.25, filter.RowSampleFilter);
+        }
+
+        [Fact]
+        public void RowSample_Validations()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => RowFilters.RowSample(-0.01));
+            Assert.Throws<ArgumentOutOfRangeException>(() => RowFilters.RowSample(1.01));
         }
 
         [Fact]

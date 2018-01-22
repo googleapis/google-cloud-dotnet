@@ -17,7 +17,7 @@ using System.Linq;
 
 namespace Google.Cloud.Bigtable.V2
 {
-    // TODO: Can you combine keys and ranges in a set? If so, make a helper for that as well?
+    // TODO: You can combine keys and ranges in a set. Make a helper for that as well?
     public partial class RowSet
     {
         /// <summary>

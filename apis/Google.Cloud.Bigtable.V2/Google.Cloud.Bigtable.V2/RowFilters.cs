@@ -169,7 +169,6 @@ namespace Google.Cloud.Bigtable.V2
         /// If <paramref name="predicateFilter"/> outputs any cells, then
         /// <paramref name="trueFilter"/> will be evaluated on the input row.
         /// Otherwise, <paramref name="falseFilter"/> will be evaluated.
-        /// Must not be null.
         /// </param>
         /// <param name="trueFilter">
         /// The filter to apply to the input row if <paramref name="predicateFilter"/>
@@ -187,8 +186,7 @@ namespace Google.Cloud.Bigtable.V2
             {
                 Condition = new RowFilter.Types.Condition
                 {
-                    // TODO: Verify this on server. Might be allowed for (row contains any cells).
-                    PredicateFilter = GaxPreconditions.CheckNotNull(predicateFilter, nameof(predicateFilter)),
+                    PredicateFilter = predicateFilter,
                     TrueFilter = trueFilter,
                     FalseFilter = falseFilter
                 }
@@ -235,7 +233,7 @@ namespace Google.Cloud.Bigtable.V2
         public static RowFilter FamilyNameRegex(string regex) =>
             new RowFilter { FamilyNameRegexFilter = GaxPreconditions.CheckNotNull(regex, nameof(regex)) };
 
-        // TODO: Copy docs from Interleave.Filters, but only once the formatting issues are resolved.
+        // TODO: Re-sync with Interleave.Filters proto docs when ASCII-art removed.
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which applies several
         /// RowFilters to the data in parallel and combines the results.
@@ -303,18 +301,20 @@ namespace Google.Cloud.Bigtable.V2
         public static RowFilter RowKeyRegex(string regex) =>
             new RowFilter { RowKeyRegexFilter = ByteString.CopyFromUtf8(regex) };
 
-        // TODO: Seems like this is 0-1. Verify and document it. Validate too?
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which matches all cells
         /// from a row with probability p, and matches no cells from the row with
         /// probability 1-p.
         /// </summary>
         /// <param name="probability">
-        /// The probability with which rows should be matched.
+        /// The probability with which rows should be matched. Must be between 0 and 1, inclusive.
         /// </param>
         /// <returns>The created row filter.</returns>
         public static RowFilter RowSample(double probability) =>
-            new RowFilter { RowSampleFilter = probability };
+            new RowFilter
+            {
+                RowSampleFilter = GaxPreconditions.CheckArgumentRange(probability, nameof(probability), 0.0, 1.0)
+            };
 
         /// <summary>
         /// Creates a new <see cref="RowFilter"/> instance which replaces each cell's
