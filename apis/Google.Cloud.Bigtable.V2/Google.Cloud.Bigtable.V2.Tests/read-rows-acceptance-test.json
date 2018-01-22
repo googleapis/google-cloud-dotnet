@@ -216,7 +216,7 @@
             "ts": 100
         }]
     }, {
-        "chunks": ["{\n  \"rowKey\": \"Uks=\",\n  \"familyName\": \"A\",\n  \"qualifier\": \"Qw==\",\n  \"timestampMicros\": \"100\",\n  \"labels\": [\"L\"],\n  \"value\": \"dg==\",\n  \"valueSize\": 9,\n  \"commitRow\": false\n}", "{\n  \"value\": \"YQ==\",\n  \"valueSize\": 10,\n  \"commitRow\": false\n}", "{\n  \"value\": \"bA==\",\n  \"valueSize\": 10,\n  \"commitRow\": false\n}", "{\n  \"value\": \"dWUtVkFM\",\n  \"commitRow\": true\n}"],
+        "chunks": ["{\n  \"rowKey\": \"Uks=\",\n  \"familyName\": \"A\",\n  \"qualifier\": \"Qw==\",\n  \"timestampMicros\": \"100\",\n  \"labels\": [\"L\"],\n  \"value\": \"dg==\",\n  \"valueSize\": 9,\n  \"commitRow\": false\n}", "{\n  \"value\": \"YQ==\",\n  \"valueSize\": 9,\n  \"commitRow\": false\n}", "{\n  \"value\": \"bA==\",\n  \"valueSize\": 9,\n  \"commitRow\": false\n}", "{\n  \"value\": \"dWUtVkFM\",\n  \"commitRow\": true\n}"],
         "name": "split four ways",
         "results": [{
             "fm": "A",
