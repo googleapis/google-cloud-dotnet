@@ -1,10 +1,10 @@
-// Copyright 2017, Google LLC All rights reserved.
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -29,24 +29,24 @@ using System.Threading.Tasks;
 namespace Google.Cloud.PubSub.V1
 {
     /// <summary>
-    /// Settings for a <see cref="PublisherClient"/>.
+    /// Settings for a <see cref="PublisherServiceApiClient"/>.
     /// </summary>
-    public sealed partial class PublisherSettings : ServiceSettingsBase
+    public sealed partial class PublisherServiceApiSettings : ServiceSettingsBase
     {
         /// <summary>
-        /// Get a new instance of the default <see cref="PublisherSettings"/>.
+        /// Get a new instance of the default <see cref="PublisherServiceApiSettings"/>.
         /// </summary>
         /// <returns>
-        /// A new instance of the default <see cref="PublisherSettings"/>.
+        /// A new instance of the default <see cref="PublisherServiceApiSettings"/>.
         /// </returns>
-        public static PublisherSettings GetDefault() => new PublisherSettings();
+        public static PublisherServiceApiSettings GetDefault() => new PublisherServiceApiSettings();
 
         /// <summary>
-        /// Constructs a new <see cref="PublisherSettings"/> object with default settings.
+        /// Constructs a new <see cref="PublisherServiceApiSettings"/> object with default settings.
         /// </summary>
-        public PublisherSettings() { }
+        public PublisherServiceApiSettings() { }
 
-        private PublisherSettings(PublisherSettings existing) : base(existing)
+        private PublisherServiceApiSettings(PublisherServiceApiSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateTopicSettings = existing.CreateTopicSettings;
@@ -62,11 +62,11 @@ namespace Google.Cloud.PubSub.V1
             OnCopy(existing);
         }
 
-        partial void OnCopy(PublisherSettings existing);
+        partial void OnCopy(PublisherServiceApiSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "Idempotent" <see cref="PublisherClient"/> RPC methods.
+        /// for "Idempotent" <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
         /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
@@ -80,7 +80,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "OnePlusDelivery" <see cref="PublisherClient"/> RPC methods.
+        /// for "OnePlusDelivery" <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
         /// The eligible RPC <see cref="StatusCode"/>s for retry for "OnePlusDelivery" RPC methods are:
@@ -99,7 +99,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "NonIdempotent" <see cref="PublisherClient"/> RPC methods.
+        /// for "NonIdempotent" <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
         /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
@@ -108,13 +108,13 @@ namespace Google.Cloud.PubSub.V1
             RetrySettings.FilterForStatusCodes();
 
         /// <summary>
-        /// "Default" retry backoff for <see cref="PublisherClient"/> RPC methods.
+        /// "Default" retry backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Default" retry backoff for <see cref="PublisherClient"/> RPC methods.
+        /// The "Default" retry backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Default" retry backoff for <see cref="PublisherClient"/> RPC methods is defined as:
+        /// The "Default" retry backoff for <see cref="PublisherServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
@@ -128,13 +128,13 @@ namespace Google.Cloud.PubSub.V1
         );
 
         /// <summary>
-        /// "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods.
+        /// "Default" timeout backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods.
+        /// The "Default" timeout backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods is defined as:
+        /// The "Default" timeout backoff for <see cref="PublisherServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
@@ -148,13 +148,13 @@ namespace Google.Cloud.PubSub.V1
         );
 
         /// <summary>
-        /// "Messaging" retry backoff for <see cref="PublisherClient"/> RPC methods.
+        /// "Messaging" retry backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Messaging" retry backoff for <see cref="PublisherClient"/> RPC methods.
+        /// The "Messaging" retry backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Messaging" retry backoff for <see cref="PublisherClient"/> RPC methods is defined as:
+        /// The "Messaging" retry backoff for <see cref="PublisherServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
@@ -168,13 +168,13 @@ namespace Google.Cloud.PubSub.V1
         );
 
         /// <summary>
-        /// "Messaging" timeout backoff for <see cref="PublisherClient"/> RPC methods.
+        /// "Messaging" timeout backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Messaging" timeout backoff for <see cref="PublisherClient"/> RPC methods.
+        /// The "Messaging" timeout backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Messaging" timeout backoff for <see cref="PublisherClient"/> RPC methods is defined as:
+        /// The "Messaging" timeout backoff for <see cref="PublisherServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial timeout: 12000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
@@ -189,11 +189,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.CreateTopic</c> and <c>PublisherClient.CreateTopicAsync</c>.
+        /// <c>PublisherServiceApiClient.CreateTopic</c> and <c>PublisherServiceApiClient.CreateTopicAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>PublisherClient.CreateTopic</c> and
-        /// <c>PublisherClient.CreateTopicAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherServiceApiClient.CreateTopic</c> and
+        /// <c>PublisherServiceApiClient.CreateTopicAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -219,11 +219,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.UpdateTopic</c> and <c>PublisherClient.UpdateTopicAsync</c>.
+        /// <c>PublisherServiceApiClient.UpdateTopic</c> and <c>PublisherServiceApiClient.UpdateTopicAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>PublisherClient.UpdateTopic</c> and
-        /// <c>PublisherClient.UpdateTopicAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherServiceApiClient.UpdateTopic</c> and
+        /// <c>PublisherServiceApiClient.UpdateTopicAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -249,11 +249,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.Publish</c> and <c>PublisherClient.PublishAsync</c>.
+        /// <c>PublisherServiceApiClient.Publish</c> and <c>PublisherServiceApiClient.PublishAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>PublisherClient.Publish</c> and
-        /// <c>PublisherClient.PublishAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherServiceApiClient.Publish</c> and
+        /// <c>PublisherServiceApiClient.PublishAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -284,11 +284,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.GetTopic</c> and <c>PublisherClient.GetTopicAsync</c>.
+        /// <c>PublisherServiceApiClient.GetTopic</c> and <c>PublisherServiceApiClient.GetTopicAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>PublisherClient.GetTopic</c> and
-        /// <c>PublisherClient.GetTopicAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherServiceApiClient.GetTopic</c> and
+        /// <c>PublisherServiceApiClient.GetTopicAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -314,11 +314,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.ListTopics</c> and <c>PublisherClient.ListTopicsAsync</c>.
+        /// <c>PublisherServiceApiClient.ListTopics</c> and <c>PublisherServiceApiClient.ListTopicsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>PublisherClient.ListTopics</c> and
-        /// <c>PublisherClient.ListTopicsAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherServiceApiClient.ListTopics</c> and
+        /// <c>PublisherServiceApiClient.ListTopicsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -344,11 +344,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.ListTopicSubscriptions</c> and <c>PublisherClient.ListTopicSubscriptionsAsync</c>.
+        /// <c>PublisherServiceApiClient.ListTopicSubscriptions</c> and <c>PublisherServiceApiClient.ListTopicSubscriptionsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>PublisherClient.ListTopicSubscriptions</c> and
-        /// <c>PublisherClient.ListTopicSubscriptionsAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherServiceApiClient.ListTopicSubscriptions</c> and
+        /// <c>PublisherServiceApiClient.ListTopicSubscriptionsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -374,11 +374,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.DeleteTopic</c> and <c>PublisherClient.DeleteTopicAsync</c>.
+        /// <c>PublisherServiceApiClient.DeleteTopic</c> and <c>PublisherServiceApiClient.DeleteTopicAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>PublisherClient.DeleteTopic</c> and
-        /// <c>PublisherClient.DeleteTopicAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherServiceApiClient.DeleteTopic</c> and
+        /// <c>PublisherServiceApiClient.DeleteTopicAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -404,11 +404,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.SetIamPolicy</c> and <c>PublisherClient.SetIamPolicyAsync</c>.
+        /// <c>PublisherServiceApiClient.SetIamPolicy</c> and <c>PublisherServiceApiClient.SetIamPolicyAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>PublisherClient.SetIamPolicy</c> and
-        /// <c>PublisherClient.SetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherServiceApiClient.SetIamPolicy</c> and
+        /// <c>PublisherServiceApiClient.SetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -433,11 +433,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.GetIamPolicy</c> and <c>PublisherClient.GetIamPolicyAsync</c>.
+        /// <c>PublisherServiceApiClient.GetIamPolicy</c> and <c>PublisherServiceApiClient.GetIamPolicyAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>PublisherClient.GetIamPolicy</c> and
-        /// <c>PublisherClient.GetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherServiceApiClient.GetIamPolicy</c> and
+        /// <c>PublisherServiceApiClient.GetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -463,11 +463,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.TestIamPermissions</c> and <c>PublisherClient.TestIamPermissionsAsync</c>.
+        /// <c>PublisherServiceApiClient.TestIamPermissions</c> and <c>PublisherServiceApiClient.TestIamPermissionsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>PublisherClient.TestIamPermissions</c> and
-        /// <c>PublisherClient.TestIamPermissionsAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherServiceApiClient.TestIamPermissions</c> and
+        /// <c>PublisherServiceApiClient.TestIamPermissionsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -493,14 +493,14 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this <see cref="PublisherSettings"/> object.</returns>
-        public PublisherSettings Clone() => new PublisherSettings(this);
+        /// <returns>A deep clone of this <see cref="PublisherServiceApiSettings"/> object.</returns>
+        public PublisherServiceApiSettings Clone() => new PublisherServiceApiSettings(this);
     }
 
     /// <summary>
     /// Publisher client wrapper, for convenient use.
     /// </summary>
-    public abstract partial class PublisherClient
+    public abstract partial class PublisherServiceApiClient
     {
         /// <summary>
         /// The default endpoint for the Publisher service, which is a host of "pubsub.googleapis.com" and a port of 443.
@@ -532,53 +532,53 @@ namespace Google.Cloud.PubSub.V1
         // Con: overloads!
 
         /// <summary>
-        /// Asynchronously creates a <see cref="PublisherClient"/>, applying defaults for all unspecified settings,
+        /// Asynchronously creates a <see cref="PublisherServiceApiClient"/>, applying defaults for all unspecified settings,
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <returns>The task representing the created <see cref="PublisherClient"/>.</returns>
-        public static async Task<PublisherClient> CreateAsync(ServiceEndpoint endpoint = null, PublisherSettings settings = null)
+        /// <param name="settings">Optional <see cref="PublisherServiceApiSettings"/>.</param>
+        /// <returns>The task representing the created <see cref="PublisherServiceApiClient"/>.</returns>
+        public static async Task<PublisherServiceApiClient> CreateAsync(ServiceEndpoint endpoint = null, PublisherServiceApiSettings settings = null)
         {
             Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
         /// <summary>
-        /// Synchronously creates a <see cref="PublisherClient"/>, applying defaults for all unspecified settings,
+        /// Synchronously creates a <see cref="PublisherServiceApiClient"/>, applying defaults for all unspecified settings,
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <returns>The created <see cref="PublisherClient"/>.</returns>
-        public static PublisherClient Create(ServiceEndpoint endpoint = null, PublisherSettings settings = null)
+        /// <param name="settings">Optional <see cref="PublisherServiceApiSettings"/>.</param>
+        /// <returns>The created <see cref="PublisherServiceApiClient"/>.</returns>
+        public static PublisherServiceApiClient Create(ServiceEndpoint endpoint = null, PublisherServiceApiSettings settings = null)
         {
             Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
-        /// Creates a <see cref="PublisherClient"/> which uses the specified channel for remote operations.
+        /// Creates a <see cref="PublisherServiceApiClient"/> which uses the specified channel for remote operations.
         /// </summary>
         /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <returns>The created <see cref="PublisherClient"/>.</returns>
-        public static PublisherClient Create(Channel channel, PublisherSettings settings = null)
+        /// <param name="settings">Optional <see cref="PublisherServiceApiSettings"/>.</param>
+        /// <returns>The created <see cref="PublisherServiceApiClient"/>.</returns>
+        public static PublisherServiceApiClient Create(Channel channel, PublisherServiceApiSettings settings = null)
         {
             GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(channel);
-            return new PublisherClientImpl(grpcClient, settings);
+            return new PublisherServiceApiClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, PublisherSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, PublisherSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, PublisherServiceApiSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, PublisherServiceApiSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, PublisherSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, PublisherSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, PublisherServiceApiSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, PublisherServiceApiSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
@@ -1702,7 +1702,7 @@ namespace Google.Cloud.PubSub.V1
     /// <summary>
     /// Publisher client wrapper implementation, for convenient use.
     /// </summary>
-    public sealed partial class PublisherClientImpl : PublisherClient
+    public sealed partial class PublisherServiceApiClientImpl : PublisherServiceApiClient
     {
         private readonly ApiCall<Topic, Topic> _callCreateTopic;
         private readonly ApiCall<UpdateTopicRequest, Topic> _callUpdateTopic;
@@ -1719,11 +1719,11 @@ namespace Google.Cloud.PubSub.V1
         /// Constructs a client wrapper for the Publisher service, with the specified gRPC client and settings.
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
-        /// <param name="settings">The base <see cref="PublisherSettings"/> used within this client </param>
-        public PublisherClientImpl(Publisher.PublisherClient grpcClient, PublisherSettings settings)
+        /// <param name="settings">The base <see cref="PublisherServiceApiSettings"/> used within this client </param>
+        public PublisherServiceApiClientImpl(Publisher.PublisherClient grpcClient, PublisherServiceApiSettings settings)
         {
             GrpcClient = grpcClient;
-            PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
+            PublisherServiceApiSettings effectiveSettings = settings ?? PublisherServiceApiSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             IAMPolicy.IAMPolicyClient grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
             _callCreateTopic = clientHelper.BuildApiCall<Topic, Topic>(
@@ -1749,7 +1749,7 @@ namespace Google.Cloud.PubSub.V1
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
-        partial void OnConstruction(Publisher.PublisherClient grpcClient, PublisherSettings effectiveSettings, ClientHelper clientHelper);
+        partial void OnConstruction(Publisher.PublisherClient grpcClient, PublisherServiceApiSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Publisher client.

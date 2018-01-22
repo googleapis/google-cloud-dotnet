@@ -1,10 +1,10 @@
-// Copyright 2017, Google LLC All rights reserved.
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -27,7 +27,7 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.PubSub.V1.SmokeTests
 {
-    public class PublisherSmokeTest
+    public class PublisherServiceApiSmokeTest
     {
         public static int Main(string[] args)
         {
@@ -41,18 +41,15 @@ namespace Google.Cloud.PubSub.V1.SmokeTests
             string projectId = args[0];
 
             // Create client
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
 
             // Initialize request argument(s)
             ProjectName project = new ProjectName(projectId);
 
             // Call API method
-            PagedEnumerable<ListTopicsResponse, Topic> pagedResponse = client.ListTopics(project);
+            ListTopicsResponse response = client.ListTopics(project);
             // Show the result
-            foreach (var item in pagedResponse)
-            {
-                Console.WriteLine(item);
-            }
+            Console.WriteLine(response);
 
             // Success
             Console.WriteLine("Smoke test passed OK");

@@ -1,10 +1,10 @@
-// Copyright 2017, Google LLC All rights reserved.
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -29,24 +29,24 @@ using System.Threading.Tasks;
 namespace Google.Cloud.PubSub.V1
 {
     /// <summary>
-    /// Settings for a <see cref="SubscriberClient"/>.
+    /// Settings for a <see cref="SubscriberServiceApiClient"/>.
     /// </summary>
-    public sealed partial class SubscriberSettings : ServiceSettingsBase
+    public sealed partial class SubscriberServiceApiSettings : ServiceSettingsBase
     {
         /// <summary>
-        /// Get a new instance of the default <see cref="SubscriberSettings"/>.
+        /// Get a new instance of the default <see cref="SubscriberServiceApiSettings"/>.
         /// </summary>
         /// <returns>
-        /// A new instance of the default <see cref="SubscriberSettings"/>.
+        /// A new instance of the default <see cref="SubscriberServiceApiSettings"/>.
         /// </returns>
-        public static SubscriberSettings GetDefault() => new SubscriberSettings();
+        public static SubscriberServiceApiSettings GetDefault() => new SubscriberServiceApiSettings();
 
         /// <summary>
-        /// Constructs a new <see cref="SubscriberSettings"/> object with default settings.
+        /// Constructs a new <see cref="SubscriberServiceApiSettings"/> object with default settings.
         /// </summary>
-        public SubscriberSettings() { }
+        public SubscriberServiceApiSettings() { }
 
-        private SubscriberSettings(SubscriberSettings existing) : base(existing)
+        private SubscriberServiceApiSettings(SubscriberServiceApiSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateSubscriptionSettings = existing.CreateSubscriptionSettings;
@@ -71,11 +71,11 @@ namespace Google.Cloud.PubSub.V1
             OnCopy(existing);
         }
 
-        partial void OnCopy(SubscriberSettings existing);
+        partial void OnCopy(SubscriberServiceApiSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "Idempotent" <see cref="SubscriberClient"/> RPC methods.
+        /// for "Idempotent" <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
         /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
@@ -89,7 +89,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "NonIdempotent" <see cref="SubscriberClient"/> RPC methods.
+        /// for "NonIdempotent" <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
         /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
@@ -99,7 +99,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "Pull" <see cref="SubscriberClient"/> RPC methods.
+        /// for "Pull" <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
         /// The eligible RPC <see cref="StatusCode"/>s for retry for "Pull" RPC methods are:
@@ -115,13 +115,13 @@ namespace Google.Cloud.PubSub.V1
             RetrySettings.FilterForStatusCodes(StatusCode.Cancelled, StatusCode.DeadlineExceeded, StatusCode.Internal, StatusCode.ResourceExhausted, StatusCode.Unavailable);
 
         /// <summary>
-        /// "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// "Default" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// The "Default" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// The "Default" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
@@ -135,13 +135,13 @@ namespace Google.Cloud.PubSub.V1
         );
 
         /// <summary>
-        /// "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// "Default" timeout backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// The "Default" timeout backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// The "Default" timeout backoff for <see cref="SubscriberServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
@@ -155,13 +155,13 @@ namespace Google.Cloud.PubSub.V1
         );
 
         /// <summary>
-        /// "Messaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// "Messaging" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Messaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// The "Messaging" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Messaging" retry backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// The "Messaging" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
@@ -175,13 +175,13 @@ namespace Google.Cloud.PubSub.V1
         );
 
         /// <summary>
-        /// "Messaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// "Messaging" timeout backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Messaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// The "Messaging" timeout backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Messaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// The "Messaging" timeout backoff for <see cref="SubscriberServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial timeout: 12000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
@@ -195,13 +195,13 @@ namespace Google.Cloud.PubSub.V1
         );
 
         /// <summary>
-        /// "StreamingMessaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// "StreamingMessaging" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "StreamingMessaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// The "StreamingMessaging" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "StreamingMessaging" retry backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// The "StreamingMessaging" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
@@ -215,13 +215,13 @@ namespace Google.Cloud.PubSub.V1
         );
 
         /// <summary>
-        /// "StreamingMessaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// "StreamingMessaging" timeout backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "StreamingMessaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// The "StreamingMessaging" timeout backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "StreamingMessaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// The "StreamingMessaging" timeout backoff for <see cref="SubscriberServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial timeout: 600000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
@@ -236,11 +236,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.CreateSubscription</c> and <c>SubscriberClient.CreateSubscriptionAsync</c>.
+        /// <c>SubscriberServiceApiClient.CreateSubscription</c> and <c>SubscriberServiceApiClient.CreateSubscriptionAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.CreateSubscription</c> and
-        /// <c>SubscriberClient.CreateSubscriptionAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.CreateSubscription</c> and
+        /// <c>SubscriberServiceApiClient.CreateSubscriptionAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -266,11 +266,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.GetSubscription</c> and <c>SubscriberClient.GetSubscriptionAsync</c>.
+        /// <c>SubscriberServiceApiClient.GetSubscription</c> and <c>SubscriberServiceApiClient.GetSubscriptionAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.GetSubscription</c> and
-        /// <c>SubscriberClient.GetSubscriptionAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.GetSubscription</c> and
+        /// <c>SubscriberServiceApiClient.GetSubscriptionAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -296,11 +296,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.UpdateSubscription</c> and <c>SubscriberClient.UpdateSubscriptionAsync</c>.
+        /// <c>SubscriberServiceApiClient.UpdateSubscription</c> and <c>SubscriberServiceApiClient.UpdateSubscriptionAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.UpdateSubscription</c> and
-        /// <c>SubscriberClient.UpdateSubscriptionAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.UpdateSubscription</c> and
+        /// <c>SubscriberServiceApiClient.UpdateSubscriptionAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -326,11 +326,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.ListSubscriptions</c> and <c>SubscriberClient.ListSubscriptionsAsync</c>.
+        /// <c>SubscriberServiceApiClient.ListSubscriptions</c> and <c>SubscriberServiceApiClient.ListSubscriptionsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.ListSubscriptions</c> and
-        /// <c>SubscriberClient.ListSubscriptionsAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.ListSubscriptions</c> and
+        /// <c>SubscriberServiceApiClient.ListSubscriptionsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -356,11 +356,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.DeleteSubscription</c> and <c>SubscriberClient.DeleteSubscriptionAsync</c>.
+        /// <c>SubscriberServiceApiClient.DeleteSubscription</c> and <c>SubscriberServiceApiClient.DeleteSubscriptionAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.DeleteSubscription</c> and
-        /// <c>SubscriberClient.DeleteSubscriptionAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.DeleteSubscription</c> and
+        /// <c>SubscriberServiceApiClient.DeleteSubscriptionAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -386,11 +386,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.ModifyAckDeadline</c> and <c>SubscriberClient.ModifyAckDeadlineAsync</c>.
+        /// <c>SubscriberServiceApiClient.ModifyAckDeadline</c> and <c>SubscriberServiceApiClient.ModifyAckDeadlineAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.ModifyAckDeadline</c> and
-        /// <c>SubscriberClient.ModifyAckDeadlineAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.ModifyAckDeadline</c> and
+        /// <c>SubscriberServiceApiClient.ModifyAckDeadlineAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -415,11 +415,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.Acknowledge</c> and <c>SubscriberClient.AcknowledgeAsync</c>.
+        /// <c>SubscriberServiceApiClient.Acknowledge</c> and <c>SubscriberServiceApiClient.AcknowledgeAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.Acknowledge</c> and
-        /// <c>SubscriberClient.AcknowledgeAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.Acknowledge</c> and
+        /// <c>SubscriberServiceApiClient.AcknowledgeAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -444,11 +444,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.Pull</c> and <c>SubscriberClient.PullAsync</c>.
+        /// <c>SubscriberServiceApiClient.Pull</c> and <c>SubscriberServiceApiClient.PullAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.Pull</c> and
-        /// <c>SubscriberClient.PullAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.Pull</c> and
+        /// <c>SubscriberServiceApiClient.PullAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -476,7 +476,7 @@ namespace Google.Cloud.PubSub.V1
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>SubscriberClient.StreamingPull</c>.
+        /// <see cref="CallSettings"/> for calls to <c>SubscriberServiceApiClient.StreamingPull</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 600000 milliseconds.
@@ -486,7 +486,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="BidirectionalStreamingSettings"/> for calls to
-        /// <c>SubscriberClient.StreamingPull</c>.
+        /// <c>SubscriberServiceApiClient.StreamingPull</c>.
         /// </summary>
         /// <remarks>
         /// The default local send queue size is 100.
@@ -496,11 +496,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.ModifyPushConfig</c> and <c>SubscriberClient.ModifyPushConfigAsync</c>.
+        /// <c>SubscriberServiceApiClient.ModifyPushConfig</c> and <c>SubscriberServiceApiClient.ModifyPushConfigAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.ModifyPushConfig</c> and
-        /// <c>SubscriberClient.ModifyPushConfigAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.ModifyPushConfig</c> and
+        /// <c>SubscriberServiceApiClient.ModifyPushConfigAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -525,11 +525,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.ListSnapshots</c> and <c>SubscriberClient.ListSnapshotsAsync</c>.
+        /// <c>SubscriberServiceApiClient.ListSnapshots</c> and <c>SubscriberServiceApiClient.ListSnapshotsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.ListSnapshots</c> and
-        /// <c>SubscriberClient.ListSnapshotsAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.ListSnapshots</c> and
+        /// <c>SubscriberServiceApiClient.ListSnapshotsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -555,11 +555,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.CreateSnapshot</c> and <c>SubscriberClient.CreateSnapshotAsync</c>.
+        /// <c>SubscriberServiceApiClient.CreateSnapshot</c> and <c>SubscriberServiceApiClient.CreateSnapshotAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.CreateSnapshot</c> and
-        /// <c>SubscriberClient.CreateSnapshotAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.CreateSnapshot</c> and
+        /// <c>SubscriberServiceApiClient.CreateSnapshotAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -585,11 +585,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.UpdateSnapshot</c> and <c>SubscriberClient.UpdateSnapshotAsync</c>.
+        /// <c>SubscriberServiceApiClient.UpdateSnapshot</c> and <c>SubscriberServiceApiClient.UpdateSnapshotAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.UpdateSnapshot</c> and
-        /// <c>SubscriberClient.UpdateSnapshotAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.UpdateSnapshot</c> and
+        /// <c>SubscriberServiceApiClient.UpdateSnapshotAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -615,11 +615,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.DeleteSnapshot</c> and <c>SubscriberClient.DeleteSnapshotAsync</c>.
+        /// <c>SubscriberServiceApiClient.DeleteSnapshot</c> and <c>SubscriberServiceApiClient.DeleteSnapshotAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.DeleteSnapshot</c> and
-        /// <c>SubscriberClient.DeleteSnapshotAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.DeleteSnapshot</c> and
+        /// <c>SubscriberServiceApiClient.DeleteSnapshotAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -645,11 +645,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.Seek</c> and <c>SubscriberClient.SeekAsync</c>.
+        /// <c>SubscriberServiceApiClient.Seek</c> and <c>SubscriberServiceApiClient.SeekAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.Seek</c> and
-        /// <c>SubscriberClient.SeekAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.Seek</c> and
+        /// <c>SubscriberServiceApiClient.SeekAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -674,11 +674,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.SetIamPolicy</c> and <c>SubscriberClient.SetIamPolicyAsync</c>.
+        /// <c>SubscriberServiceApiClient.SetIamPolicy</c> and <c>SubscriberServiceApiClient.SetIamPolicyAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.SetIamPolicy</c> and
-        /// <c>SubscriberClient.SetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.SetIamPolicy</c> and
+        /// <c>SubscriberServiceApiClient.SetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -703,11 +703,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.GetIamPolicy</c> and <c>SubscriberClient.GetIamPolicyAsync</c>.
+        /// <c>SubscriberServiceApiClient.GetIamPolicy</c> and <c>SubscriberServiceApiClient.GetIamPolicyAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.GetIamPolicy</c> and
-        /// <c>SubscriberClient.GetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.GetIamPolicy</c> and
+        /// <c>SubscriberServiceApiClient.GetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -733,11 +733,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>SubscriberClient.TestIamPermissions</c> and <c>SubscriberClient.TestIamPermissionsAsync</c>.
+        /// <c>SubscriberServiceApiClient.TestIamPermissions</c> and <c>SubscriberServiceApiClient.TestIamPermissionsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>SubscriberClient.TestIamPermissions</c> and
-        /// <c>SubscriberClient.TestIamPermissionsAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberServiceApiClient.TestIamPermissions</c> and
+        /// <c>SubscriberServiceApiClient.TestIamPermissionsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -763,14 +763,14 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this <see cref="SubscriberSettings"/> object.</returns>
-        public SubscriberSettings Clone() => new SubscriberSettings(this);
+        /// <returns>A deep clone of this <see cref="SubscriberServiceApiSettings"/> object.</returns>
+        public SubscriberServiceApiSettings Clone() => new SubscriberServiceApiSettings(this);
     }
 
     /// <summary>
     /// Subscriber client wrapper, for convenient use.
     /// </summary>
-    public abstract partial class SubscriberClient
+    public abstract partial class SubscriberServiceApiClient
     {
         /// <summary>
         /// The default endpoint for the Subscriber service, which is a host of "pubsub.googleapis.com" and a port of 443.
@@ -802,53 +802,53 @@ namespace Google.Cloud.PubSub.V1
         // Con: overloads!
 
         /// <summary>
-        /// Asynchronously creates a <see cref="SubscriberClient"/>, applying defaults for all unspecified settings,
+        /// Asynchronously creates a <see cref="SubscriberServiceApiClient"/>, applying defaults for all unspecified settings,
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="SubscriberSettings"/>.</param>
-        /// <returns>The task representing the created <see cref="SubscriberClient"/>.</returns>
-        public static async Task<SubscriberClient> CreateAsync(ServiceEndpoint endpoint = null, SubscriberSettings settings = null)
+        /// <param name="settings">Optional <see cref="SubscriberServiceApiSettings"/>.</param>
+        /// <returns>The task representing the created <see cref="SubscriberServiceApiClient"/>.</returns>
+        public static async Task<SubscriberServiceApiClient> CreateAsync(ServiceEndpoint endpoint = null, SubscriberServiceApiSettings settings = null)
         {
             Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
         /// <summary>
-        /// Synchronously creates a <see cref="SubscriberClient"/>, applying defaults for all unspecified settings,
+        /// Synchronously creates a <see cref="SubscriberServiceApiClient"/>, applying defaults for all unspecified settings,
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="SubscriberSettings"/>.</param>
-        /// <returns>The created <see cref="SubscriberClient"/>.</returns>
-        public static SubscriberClient Create(ServiceEndpoint endpoint = null, SubscriberSettings settings = null)
+        /// <param name="settings">Optional <see cref="SubscriberServiceApiSettings"/>.</param>
+        /// <returns>The created <see cref="SubscriberServiceApiClient"/>.</returns>
+        public static SubscriberServiceApiClient Create(ServiceEndpoint endpoint = null, SubscriberServiceApiSettings settings = null)
         {
             Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
-        /// Creates a <see cref="SubscriberClient"/> which uses the specified channel for remote operations.
+        /// Creates a <see cref="SubscriberServiceApiClient"/> which uses the specified channel for remote operations.
         /// </summary>
         /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="SubscriberSettings"/>.</param>
-        /// <returns>The created <see cref="SubscriberClient"/>.</returns>
-        public static SubscriberClient Create(Channel channel, SubscriberSettings settings = null)
+        /// <param name="settings">Optional <see cref="SubscriberServiceApiSettings"/>.</param>
+        /// <returns>The created <see cref="SubscriberServiceApiClient"/>.</returns>
+        public static SubscriberServiceApiClient Create(Channel channel, SubscriberServiceApiSettings settings = null)
         {
             GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Subscriber.SubscriberClient grpcClient = new Subscriber.SubscriberClient(channel);
-            return new SubscriberClientImpl(grpcClient, settings);
+            return new SubscriberServiceApiClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, SubscriberSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, SubscriberSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, SubscriberServiceApiSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, SubscriberServiceApiSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, SubscriberSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, SubscriberSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, SubscriberServiceApiSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, SubscriberServiceApiSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
@@ -3078,7 +3078,7 @@ namespace Google.Cloud.PubSub.V1
     /// <summary>
     /// Subscriber client wrapper implementation, for convenient use.
     /// </summary>
-    public sealed partial class SubscriberClientImpl : SubscriberClient
+    public sealed partial class SubscriberServiceApiClientImpl : SubscriberServiceApiClient
     {
         private readonly ApiCall<Subscription, Subscription> _callCreateSubscription;
         private readonly ApiCall<GetSubscriptionRequest, Subscription> _callGetSubscription;
@@ -3103,11 +3103,11 @@ namespace Google.Cloud.PubSub.V1
         /// Constructs a client wrapper for the Subscriber service, with the specified gRPC client and settings.
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
-        /// <param name="settings">The base <see cref="SubscriberSettings"/> used within this client </param>
-        public SubscriberClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberSettings settings)
+        /// <param name="settings">The base <see cref="SubscriberServiceApiSettings"/> used within this client </param>
+        public SubscriberServiceApiClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberServiceApiSettings settings)
         {
             GrpcClient = grpcClient;
-            SubscriberSettings effectiveSettings = settings ?? SubscriberSettings.GetDefault();
+            SubscriberServiceApiSettings effectiveSettings = settings ?? SubscriberServiceApiSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             IAMPolicy.IAMPolicyClient grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
             _callCreateSubscription = clientHelper.BuildApiCall<Subscription, Subscription>(
@@ -3149,7 +3149,7 @@ namespace Google.Cloud.PubSub.V1
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
-        partial void OnConstruction(Subscriber.SubscriberClient grpcClient, SubscriberSettings effectiveSettings, ClientHelper clientHelper);
+        partial void OnConstruction(Subscriber.SubscriberClient grpcClient, SubscriberServiceApiSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Subscriber client.
@@ -3607,7 +3607,7 @@ namespace Google.Cloud.PubSub.V1
             /// <param name="writeBuffer">The <see cref="BufferedClientStreamWriter{StreamingPullRequest}"/>
             /// instance associated with this streaming call.</param>
             public StreamingPullStreamImpl(
-                SubscriberClientImpl service,
+                SubscriberServiceApiClientImpl service,
                 AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse> call,
                 BufferedClientStreamWriter<StreamingPullRequest> writeBuffer)
             {
@@ -3616,7 +3616,7 @@ namespace Google.Cloud.PubSub.V1
                 _writeBuffer = writeBuffer;
             }
 
-            private SubscriberClientImpl _service;
+            private SubscriberServiceApiClientImpl _service;
             private BufferedClientStreamWriter<StreamingPullRequest> _writeBuffer;
 
             private StreamingPullRequest ModifyRequest(StreamingPullRequest request)
