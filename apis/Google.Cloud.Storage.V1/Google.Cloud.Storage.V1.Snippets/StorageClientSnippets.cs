@@ -969,5 +969,34 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             _fixture.RegisterTopicToDelete(topicName);            
         }
+
+        [Fact]
+        public void LockBucketRetentionPolicy()
+        {
+            var projectId = _fixture.ProjectId;
+
+            // Snippet: LockBucketRetentionPolicy(string, long, *)
+            var client = StorageClient.Create();
+            var bucketName = Guid.NewGuid().ToString();
+
+            // Create a bucket and set its retention policy
+            Bucket bucket = client.CreateBucket(projectId, bucketName);
+            // Retention period is specified in seconds.
+            bucket.RetentionPolicy = new Bucket.RetentionPolicyData { RetentionPeriod = 60 };
+            bucket = client.UpdateBucket(bucket);
+
+            // Once the retention policy is locked, it can't be shortened, removed or unlocked.
+            // It will be locked until the bucket is deleted.
+            client.LockBucketRetentionPolicy(bucketName, bucket.Metageneration.Value);
+            // End snippet
+
+            _fixture.RegisterBucketToDelete(bucketName);
+            StorageSnippetFixture.SleepAfterBucketCreateDelete();
+        }
+
+        // See-also: LockBucketRetentionPolicy(string, long, *)
+        // Member: LockBucketRetentionPolicyAsync(string, long, *, *)
+        // See [LockBucketRetentionPolicy](ref) for a synchronous example.
+        // End see-also
     }
 }
