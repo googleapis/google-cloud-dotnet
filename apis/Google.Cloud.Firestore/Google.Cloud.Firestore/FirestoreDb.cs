@@ -157,6 +157,33 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
+        /// Fetches document snapshots from the server.
+        /// </summary>
+        /// <remarks>
+        /// Any documents which are missing are represented in the returned list by a <see cref="DocumentSnapshot"/>
+        /// with <see cref="DocumentSnapshot.Exists"/> value of <c>false</c>.
+        /// </remarks>
+        /// <param name="documents">The document references to fetch. Must not be null, or contain null references.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation.</param>
+        /// <returns>The document snapshots, in the same order as <paramref name="documents"/>.</returns>
+        public async Task<IList<DocumentSnapshot>> SnapshotAllAsync(IEnumerable<DocumentReference> documents, CancellationToken cancellationToken = default)
+        {
+            // Check for null here, but let the underlying method check for null elements.
+            // We're just trying to make sure we don't evaluate it differently later.
+            var list = GaxPreconditions.CheckNotNull(documents, nameof(documents)).ToList();
+            var unordered = await GetDocumentSnapshotsAsync(list, null, cancellationToken).ConfigureAwait(false);
+            var map = unordered.ToDictionary(snapshot => snapshot.Reference);
+            return list.Select(docRef =>
+            {
+                if (!map.TryGetValue(docRef, out var snapshot))
+                {
+                    throw new InvalidOperationException($"Server did not return snapshot for document {docRef}");
+                }
+                return snapshot;
+            }).ToList();
+        }
+
+        /// <summary>
         /// Fetches document snapshots from the server, based on an optional transaction ID.
         /// </summary>
         /// <param name="documents">The document references to fetch. Must not be null, or contain null references.</param>
