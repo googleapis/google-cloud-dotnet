@@ -18,7 +18,7 @@ cd $API_PROTO_ROOT
 rm -rf tmp
 git clone https://github.com/GoogleCloudPlatform/google-cloud-common --depth 1 tmp
 cp tmp/testing/firestore/proto/*.proto $PROTO_TEST_ROOT
-cp tmp/testing/firestore/testdata/tests.binprotos $PROTO_TEST_ROOT
+cp tmp/testing/firestore/testdata/test-suite.binproto $PROTO_TEST_ROOT
 
 $PROTOC \
   --csharp_out=$PROTO_TEST_ROOT \

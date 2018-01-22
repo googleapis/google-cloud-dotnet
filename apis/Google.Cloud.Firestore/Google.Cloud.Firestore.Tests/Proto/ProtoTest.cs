@@ -38,15 +38,10 @@ namespace Google.Cloud.Firestore.Tests.Proto
         private static IEnumerable<Test> LoadTests()
         {
             Assembly asm = typeof(ProtoTest).GetTypeInfo().Assembly;
-            var memoryStream = new MemoryStream();
-            using (Stream stream = asm.GetManifestResourceStream(typeof(ProtoTest).GetTypeInfo().Namespace + ".tests.binprotos"))
+            using (Stream stream = asm.GetManifestResourceStream(typeof(ProtoTest).GetTypeInfo().Namespace + ".test-suite.binproto"))
             {
-                stream.CopyTo(memoryStream);
-            }
-            memoryStream.Position = 0;
-            while (memoryStream.Position != memoryStream.Length)
-            {
-                yield return Test.Parser.ParseDelimitedFrom(memoryStream);
+                var suite = TestSuite.Parser.ParseFrom(stream);
+                return suite.Tests.ToList();
             }
         }
 

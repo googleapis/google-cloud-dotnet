@@ -33,6 +33,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Proto/tests.binprotos" />
+    <EmbeddedResource Include="Proto/test-suite.binproto" />
   </ItemGroup>
 </Project>
