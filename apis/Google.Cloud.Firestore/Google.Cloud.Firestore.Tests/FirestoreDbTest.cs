@@ -134,6 +134,85 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public async Task SnapshotAllAsync()
+        {
+            string docName1 = "projects/proj/databases/db/documents/col1/doc1";
+            string docName2 = "projects/proj/databases/db/documents/col2/doc2";
+            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var request = new BatchGetDocumentsRequest
+            {
+                Database = "projects/proj/databases/db",
+                // Note that we request docName2 twice, as per the caller's request:
+                // the library doesn't perform any elision.
+                Documents = { docName1, docName2, docName2 }
+            };
+            var responses = new[]
+            {
+                // Deliberately not in the requested order
+                new BatchGetDocumentsResponse
+                {
+                    Found = new Document
+                    {
+                        Name = docName2, CreateTime = CreateProtoTimestamp(0, 1), UpdateTime = CreateProtoTimestamp(0, 2),
+                        Fields = { { "Name", CreateValue("Test") } }
+                    },
+                    ReadTime = CreateProtoTimestamp(1, 3)
+                },
+                new BatchGetDocumentsResponse { Missing = docName1, ReadTime = CreateProtoTimestamp(1, 2) },
+            };
+            mock.Setup(c => c.BatchGetDocuments(request, It.IsAny<CallSettings>())).Returns(new FakeDocumentStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            var docRef1 = db.Document("col1/doc1");
+            var docRef2 = db.Document("col2/doc2");
+            var results = await db.SnapshotAllAsync(new[] { docRef1, docRef2, docRef2 });
+
+            Assert.Equal(3, results.Count);
+            // Note that this is the first result from the request, not the first from the response -
+            // the method returns them in request order, not response order.
+            var snapshot1 = results[0];
+            Assert.False(snapshot1.Exists);
+            Assert.Equal(new Timestamp(1, 2), snapshot1.ReadTime);
+            Assert.Equal(docRef1, snapshot1.Reference);
+
+            var snapshot2 = results[1];
+            Assert.True(snapshot2.Exists);
+            Assert.Equal(new Timestamp(0, 1), snapshot2.CreateTime);
+            Assert.Equal(new Timestamp(0, 2), snapshot2.UpdateTime);
+            Assert.Equal(new Timestamp(1, 3), snapshot2.ReadTime);
+            Assert.Equal(docRef2, snapshot2.Reference);
+            Assert.Equal("Test", snapshot2.GetField<string>("Name"));
+
+            // The third result element is just a reference to the same snapshot.
+            Assert.Same(results[1], results[2]);
+            mock.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SnapshotAllAsync_ServerError()
+        {
+            string docName1 = "projects/proj/databases/db/documents/col1/doc1";
+            string docName2 = "projects/proj/databases/db/documents/col2/doc2";
+            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var request = new BatchGetDocumentsRequest
+            {
+                Database = "projects/proj/databases/db",
+                Documents = { docName1, docName2 }
+            };
+            // The server only returns information about docName1, not docName2
+            var responses = new[]
+            {
+                new BatchGetDocumentsResponse { Missing = docName1, ReadTime = CreateProtoTimestamp(1, 2) },
+            };
+            mock.Setup(c => c.BatchGetDocuments(request, It.IsAny<CallSettings>())).Returns(new FakeDocumentStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            var docRef1 = db.Document("col1/doc1");
+            var docRef2 = db.Document("col2/doc2");
+
+            await Assert.ThrowsAsync<InvalidOperationException>(async () => await db.SnapshotAllAsync(new[] { docRef1, docRef2 }));
+            mock.VerifyAll();
+        }
+
+        [Fact]
         public async Task GetDocumentSnapshotsAsync()
         {
             string docName1 = "projects/proj/databases/db/documents/col1/doc1";
