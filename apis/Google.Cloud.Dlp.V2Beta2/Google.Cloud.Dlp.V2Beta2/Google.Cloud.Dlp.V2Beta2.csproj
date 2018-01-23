@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-beta01</Version>
+    <Version>1.0.0-beta00</Version>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5</TargetFrameworks>
     <LangVersion>latest</LangVersion>
@@ -12,7 +12,7 @@
     <Deterministic>true</Deterministic>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Recommended Google client library to access the Google Data Loss Prevention API v2 beta1, which provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.</Description>
+    <Description>Recommended Google client library to access the Google Data Loss Prevention API v2 beta2, which provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.</Description>
     <PackageTags>DLP;data loss prevention;privacy;pii;Google;Cloud</PackageTags>
     <Copyright>Copyright 2017 Google Inc.</Copyright>
     <Authors>Google Inc.</Authors>
@@ -24,12 +24,22 @@
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="2.2.1" />
     <PackageReference Include="Google.LongRunning" Version="1.0.0" />
     <PackageReference Include="Grpc.Core" Version="1.8.0" PrivateAssets="None" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.1.2-alpha" PrivateAssets="All" />
-    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.0" PrivateAssets="All" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.5.0" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup Label="dotnet pack instructions">
+    <Content Include="$(OutputPath)netstandard1.5\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/netstandard1.5</PackagePath>
+    </Content>
+    <Content Include="$(OutputPath)net45\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/net45</PackagePath>
+    </Content>
   </ItemGroup>
 </Project>

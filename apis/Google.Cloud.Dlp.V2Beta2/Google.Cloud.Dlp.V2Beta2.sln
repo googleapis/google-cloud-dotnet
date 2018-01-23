@@ -1,0 +1,62 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Dlp.V2Beta2", "Google.Cloud.Dlp.V2Beta2\Google.Cloud.Dlp.V2Beta2.csproj", "{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Dlp.V2Beta2.Snippets", "Google.Cloud.Dlp.V2Beta2.Snippets\Google.Cloud.Dlp.V2Beta2.Snippets.csproj", "{53A281E1-B8AF-416D-92F6-1961C4EB920D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{7CE6B780-39A3-4359-B01F-718A1838EDF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Debug|x64.ActiveCfg = Debug|x64
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Debug|x64.Build.0 = Debug|x64
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Debug|x86.ActiveCfg = Debug|x86
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Debug|x86.Build.0 = Debug|x86
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Release|x64.ActiveCfg = Release|x64
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Release|x64.Build.0 = Release|x64
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Release|x86.ActiveCfg = Release|x86
+		{897B7DF3-FAA9-48A4-B9E0-300FDAAFBBD6}.Release|x86.Build.0 = Release|x86
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Debug|x64.ActiveCfg = Debug|x64
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Debug|x64.Build.0 = Debug|x64
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Debug|x86.ActiveCfg = Debug|x86
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Debug|x86.Build.0 = Debug|x86
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Release|x64.ActiveCfg = Release|x64
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Release|x64.Build.0 = Release|x64
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Release|x86.ActiveCfg = Release|x86
+		{53A281E1-B8AF-416D-92F6-1961C4EB920D}.Release|x86.Build.0 = Release|x86
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Debug|x64.ActiveCfg = Debug|x64
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Debug|x64.Build.0 = Debug|x64
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Debug|x86.ActiveCfg = Debug|x86
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Debug|x86.Build.0 = Debug|x86
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Release|x64.ActiveCfg = Release|x64
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Release|x64.Build.0 = Release|x64
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Release|x86.ActiveCfg = Release|x86
+		{7CE6B780-39A3-4359-B01F-718A1838EDF5}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
