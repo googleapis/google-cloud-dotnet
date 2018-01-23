@@ -33,9 +33,9 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
     // * These send/recv considerable amounts of network data.
     //   Only test with a machine and cloud account that can handle this.
     [Collection(nameof(PubsubFixture))]
-    public class SimplePubSubTest
+    public class PubSubClientTest
     {
-        public SimplePubSubTest(PubsubFixture fixture)
+        public PubSubClientTest(PubsubFixture fixture)
         {
             _fixture = fixture;
         }
@@ -62,29 +62,29 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var publisher = await PublisherClient.CreateAsync().ConfigureAwait(false);
+            var publisher = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
             await publisher.CreateTopicAsync(topicName).ConfigureAwait(false);
 
             // Subscribe to the topic
-            var subscriber = await SubscriberClient.CreateAsync().ConfigureAwait(false);
+            var subscriber = await SubscriberServiceApiClient.CreateAsync().ConfigureAwait(false);
             var subscriptionName = new SubscriptionName(_fixture.ProjectId, subscriptionId);
             await subscriber.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
 
             // Create SimplePublisher and SimpleSubscriber
-            var simplePublisher = await SimplePublisher.CreateAsync(topicName, clientCreationSettings: timeouts == null ? null :
-                new SimplePublisher.ClientCreationSettings(
-                    publisherSettings: new PublisherSettings
+            var simplePublisher = await PublisherClient.CreateAsync(topicName, clientCreationSettings: timeouts == null ? null :
+                new PublisherClient.ClientCreationSettings(
+                    publisherServiceApiSettings: new PublisherServiceApiSettings
                     {
                         PublishSettings = CallSettings.FromCallTiming(CallTiming.FromRetry(new RetrySettings(
-                            retryBackoff: PublisherSettings.GetMessagingRetryBackoff(),
+                            retryBackoff: PublisherServiceApiSettings.GetMessagingRetryBackoff(),
                             timeoutBackoff: new BackoffSettings(timeouts.Value, timeouts.Value, 1.0),
                             totalExpiration: Expiration.FromTimeout(timeouts.Value),
-                            retryFilter: PublisherSettings.NonIdempotentRetryFilter
+                            retryFilter: PublisherServiceApiSettings.NonIdempotentRetryFilter
                         )))
                     }
                 )).ConfigureAwait(false);
-            var simpleSubscriber = await SimpleSubscriber.CreateAsync(subscriptionName,
-                settings: new SimpleSubscriber.Settings
+            var simpleSubscriber = await SubscriberClient.CreateAsync(subscriptionName,
+                settings: new SubscriberClient.Settings
                 {
                     StreamAckDeadline = timeouts,
                     FlowControlSettings = new FlowControlSettings(maxMessagesInFlight, null)
@@ -109,7 +109,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                         {
                             // This ID not already nacked
                             Interlocked.Increment(ref recvCount);
-                            return Task.FromResult(SimpleSubscriber.Reply.Nack);
+                            return Task.FromResult(SubscriberClient.Reply.Nack);
                         }
                     }
                 }
@@ -130,7 +130,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     Interlocked.Add(ref dupCount, 1);
                 }
                 // ACK all messages
-                return Task.FromResult(SimpleSubscriber.Reply.Ack);
+                return Task.FromResult(SubscriberClient.Reply.Ack);
             });
 
             // Publish
@@ -278,10 +278,10 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var topicId = _fixture.CreateTopicId();
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var publisher = await PublisherClient.CreateAsync().ConfigureAwait(false);
+            var publisher = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
             await publisher.CreateTopicAsync(topicName).ConfigureAwait(false);
             // Create SimplePublisher
-            var simplePublisher = await SimplePublisher.CreateAsync(topicName).ConfigureAwait(false);
+            var simplePublisher = await PublisherClient.CreateAsync(topicName).ConfigureAwait(false);
             // Create oversized message
             Random rnd = new Random(1234);
             byte[] msg = new byte[10_000_001];
@@ -303,18 +303,18 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var topicId = _fixture.CreateTopicId();
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var publisher = await PublisherClient.CreateAsync().ConfigureAwait(false);
+            var publisher = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
             await publisher.CreateTopicAsync(topicName).ConfigureAwait(false);
             // Create SimplePublisher, with no retry
-            var batchingSettings = new BatchingSettings(SimplePublisher.ApiMaxBatchingSettings.ElementCountThreshold,
-                SimplePublisher.ApiMaxBatchingSettings.ByteCountThreshold, TimeSpan.FromSeconds(4));
-            var publisherSettings = PublisherSettings.GetDefault();
-            publisherSettings.PublishSettings = CallSettings.FromCallTiming(CallTiming.FromTimeout(TimeSpan.FromSeconds(60)));
-            var simplePublisher = await SimplePublisher.CreateAsync(topicName,
-                new SimplePublisher.ClientCreationSettings(clientCount: 1, publisherSettings: publisherSettings),
-                new SimplePublisher.Settings { BatchingSettings = batchingSettings }).ConfigureAwait(false);
-            var msgCount = SimplePublisher.ApiMaxBatchingSettings.ElementCountThreshold.Value;
-            var msgSize = SimplePublisher.ApiMaxBatchingSettings.ByteCountThreshold.Value / msgCount;
+            var batchingSettings = new BatchingSettings(PublisherClient.ApiMaxBatchingSettings.ElementCountThreshold,
+                PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold, TimeSpan.FromSeconds(4));
+            var publisherServiceApiSettings = PublisherServiceApiSettings.GetDefault();
+            publisherServiceApiSettings.PublishSettings = CallSettings.FromCallTiming(CallTiming.FromTimeout(TimeSpan.FromSeconds(60)));
+            var simplePublisher = await PublisherClient.CreateAsync(topicName,
+                new PublisherClient.ClientCreationSettings(clientCount: 1, publisherServiceApiSettings: publisherServiceApiSettings),
+                new PublisherClient.Settings { BatchingSettings = batchingSettings }).ConfigureAwait(false);
+            var msgCount = PublisherClient.ApiMaxBatchingSettings.ElementCountThreshold.Value;
+            var msgSize = PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold.Value / msgCount;
             var rnd = new Random(1234);
             var publishTasks = new Task[msgCount];
             for (int i = 0; i < msgCount; i++)

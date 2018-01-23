@@ -1,10 +1,10 @@
-// Copyright 2017, Google LLC All rights reserved.
+﻿// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -12,2234 +12,687 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Generated code. DO NOT EDIT!
-
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Iam.V1;
-using Google.Protobuf.WellKnownTypes;
+using Google.Apis.Auth.OAuth2;
+using Google.Cloud.PubSub.V1.Tasks;
+using Google.Protobuf;
+using Grpc.Auth;
 using Grpc.Core;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+
+// This class uses TaskHelper.ConfigureAwait, rather than directly calling .ConfigureAwait().
+// When running in a non-test environment this indirectly calls .ConfigureAwait(false).
+// Disable the ConfigureAwaitChecker warning:
+#pragma warning disable ConfigureAwaitChecker // CAC001
 
 namespace Google.Cloud.PubSub.V1
 {
     /// <summary>
-    /// Settings for a <see cref="PublisherClient"/>.
+    /// A PubSub publisher that is associated with a specific <see cref="TopicName"/>.
     /// </summary>
-    public sealed partial class PublisherSettings : ServiceSettingsBase
+    public abstract class PublisherClient
     {
-        /// <summary>
-        /// Get a new instance of the default <see cref="PublisherSettings"/>.
-        /// </summary>
-        /// <returns>
-        /// A new instance of the default <see cref="PublisherSettings"/>.
-        /// </returns>
-        public static PublisherSettings GetDefault() => new PublisherSettings();
-
-        /// <summary>
-        /// Constructs a new <see cref="PublisherSettings"/> object with default settings.
-        /// </summary>
-        public PublisherSettings() { }
-
-        private PublisherSettings(PublisherSettings existing) : base(existing)
-        {
-            GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            CreateTopicSettings = existing.CreateTopicSettings;
-            UpdateTopicSettings = existing.UpdateTopicSettings;
-            PublishSettings = existing.PublishSettings;
-            GetTopicSettings = existing.GetTopicSettings;
-            ListTopicsSettings = existing.ListTopicsSettings;
-            ListTopicSubscriptionsSettings = existing.ListTopicSubscriptionsSettings;
-            DeleteTopicSettings = existing.DeleteTopicSettings;
-            SetIamPolicySettings = existing.SetIamPolicySettings;
-            GetIamPolicySettings = existing.GetIamPolicySettings;
-            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
-            OnCopy(existing);
-        }
-
-        partial void OnCopy(PublisherSettings existing);
-
-        /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "Idempotent" <see cref="PublisherClient"/> RPC methods.
-        /// </summary>
-        /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
-        /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// </remarks>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
-
-        /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "OnePlusDelivery" <see cref="PublisherClient"/> RPC methods.
-        /// </summary>
-        /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "OnePlusDelivery" RPC methods are:
-        /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.Aborted"/></description></item>
-        /// <item><description><see cref="StatusCode.Cancelled"/></description></item>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// <item><description><see cref="StatusCode.Unknown"/></description></item>
-        /// </list>
-        /// </remarks>
-        public static Predicate<RpcException> OnePlusDeliveryRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Aborted, StatusCode.Cancelled, StatusCode.DeadlineExceeded, StatusCode.Internal, StatusCode.ResourceExhausted, StatusCode.Unavailable, StatusCode.Unknown);
-
-        /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "NonIdempotent" <see cref="PublisherClient"/> RPC methods.
-        /// </summary>
-        /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
-        /// </remarks>
-        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
-
-        /// <summary>
-        /// "Default" retry backoff for <see cref="PublisherClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "Default" retry backoff for <see cref="PublisherClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "Default" retry backoff for <see cref="PublisherClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
-        /// </list>
-        /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 1.3
-        );
-
-        /// <summary>
-        /// "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
-        /// </list>
-        /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(60000),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 1.0
-        );
-
-        /// <summary>
-        /// "Messaging" retry backoff for <see cref="PublisherClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "Messaging" retry backoff for <see cref="PublisherClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "Messaging" retry backoff for <see cref="PublisherClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
-        /// </list>
-        /// </remarks>
-        public static BackoffSettings GetMessagingRetryBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(100),
-            maxDelay: TimeSpan.FromMilliseconds(60000),
-            delayMultiplier: 1.3
-        );
-
-        /// <summary>
-        /// "Messaging" timeout backoff for <see cref="PublisherClient"/> RPC methods.
-        /// </summary>
-        /// <returns>
-        /// The "Messaging" timeout backoff for <see cref="PublisherClient"/> RPC methods.
-        /// </returns>
-        /// <remarks>
-        /// The "Messaging" timeout backoff for <see cref="PublisherClient"/> RPC methods is defined as:
-        /// <list type="bullet">
-        /// <item><description>Initial timeout: 12000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
-        /// </list>
-        /// </remarks>
-        public static BackoffSettings GetMessagingTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(12000),
-            maxDelay: TimeSpan.FromMilliseconds(30000),
-            delayMultiplier: 1.0
-        );
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.CreateTopic</c> and <c>PublisherClient.CreateTopicAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>PublisherClient.CreateTopic</c> and
-        /// <c>PublisherClient.CreateTopicAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings CreateTopicSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.UpdateTopic</c> and <c>PublisherClient.UpdateTopicAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>PublisherClient.UpdateTopic</c> and
-        /// <c>PublisherClient.UpdateTopicAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings UpdateTopicSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.Publish</c> and <c>PublisherClient.PublishAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>PublisherClient.Publish</c> and
-        /// <c>PublisherClient.PublishAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 12000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.Aborted"/></description></item>
-        /// <item><description><see cref="StatusCode.Cancelled"/></description></item>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Internal"/></description></item>
-        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// <item><description><see cref="StatusCode.Unknown"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings PublishSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetMessagingRetryBackoff(),
-                timeoutBackoff: GetMessagingTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: OnePlusDeliveryRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.GetTopic</c> and <c>PublisherClient.GetTopicAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>PublisherClient.GetTopic</c> and
-        /// <c>PublisherClient.GetTopicAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings GetTopicSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.ListTopics</c> and <c>PublisherClient.ListTopicsAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>PublisherClient.ListTopics</c> and
-        /// <c>PublisherClient.ListTopicsAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings ListTopicsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.ListTopicSubscriptions</c> and <c>PublisherClient.ListTopicSubscriptionsAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>PublisherClient.ListTopicSubscriptions</c> and
-        /// <c>PublisherClient.ListTopicSubscriptionsAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings ListTopicSubscriptionsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.DeleteTopic</c> and <c>PublisherClient.DeleteTopicAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>PublisherClient.DeleteTopic</c> and
-        /// <c>PublisherClient.DeleteTopicAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings DeleteTopicSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.SetIamPolicy</c> and <c>PublisherClient.SetIamPolicyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>PublisherClient.SetIamPolicy</c> and
-        /// <c>PublisherClient.SetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings SetIamPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.GetIamPolicy</c> and <c>PublisherClient.GetIamPolicyAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>PublisherClient.GetIamPolicy</c> and
-        /// <c>PublisherClient.GetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings GetIamPolicySettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>PublisherClient.TestIamPermissions</c> and <c>PublisherClient.TestIamPermissionsAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>PublisherClient.TestIamPermissions</c> and
-        /// <c>PublisherClient.TestIamPermissionsAsync</c> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public CallSettings TestIamPermissionsSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// Creates a deep clone of this object, with all the same property values.
-        /// </summary>
-        /// <returns>A deep clone of this <see cref="PublisherSettings"/> object.</returns>
-        public PublisherSettings Clone() => new PublisherSettings(this);
-    }
-
-    /// <summary>
-    /// Publisher client wrapper, for convenient use.
-    /// </summary>
-    public abstract partial class PublisherClient
-    {
-        /// <summary>
-        /// The default endpoint for the Publisher service, which is a host of "pubsub.googleapis.com" and a port of 443.
-        /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("pubsub.googleapis.com", 443);
-
-        /// <summary>
-        /// The default Publisher scopes.
-        /// </summary>
-        /// <remarks>
-        /// The default Publisher scopes are:
-        /// <list type="bullet">
-        /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
-        /// <item><description>"https://www.googleapis.com/auth/pubsub"</description></item>
-        /// </list>
-        /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/pubsub",
-        });
-
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
-
-        // Note: we could have parameterless overloads of Create and CreateAsync,
-        // documented to just use the default endpoint, settings and credentials.
-        // Pros:
-        // - Might be more reassuring on first use
-        // - Allows method group conversions
-        // Con: overloads!
-
-        /// <summary>
-        /// Asynchronously creates a <see cref="PublisherClient"/>, applying defaults for all unspecified settings,
-        /// and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary.
-        /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <returns>The task representing the created <see cref="PublisherClient"/>.</returns>
-        public static async Task<PublisherClient> CreateAsync(ServiceEndpoint endpoint = null, PublisherSettings settings = null)
-        {
-            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
-            return Create(channel, settings);
-        }
-
-        /// <summary>
-        /// Synchronously creates a <see cref="PublisherClient"/>, applying defaults for all unspecified settings,
-        /// and creating a channel connecting to the given endpoint with application default credentials where
-        /// necessary.
-        /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <returns>The created <see cref="PublisherClient"/>.</returns>
-        public static PublisherClient Create(ServiceEndpoint endpoint = null, PublisherSettings settings = null)
-        {
-            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
-            return Create(channel, settings);
-        }
-
-        /// <summary>
-        /// Creates a <see cref="PublisherClient"/> which uses the specified channel for remote operations.
-        /// </summary>
-        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <returns>The created <see cref="PublisherClient"/>.</returns>
-        public static PublisherClient Create(Channel channel, PublisherSettings settings = null)
-        {
-            GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(channel);
-            return new PublisherClientImpl(grpcClient, settings);
-        }
-
-        /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, PublisherSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, PublisherSettings)"/>. Channels which weren't automatically
-        /// created are not affected.
-        /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, PublisherSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, PublisherSettings)"/> will create new channels, which could
-        /// in turn be shut down by another call to this method.</remarks>
-        /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
-
-        /// <summary>
-        /// The underlying gRPC Publisher client.
-        /// </summary>
-        public virtual Publisher.PublisherClient GrpcClient
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// Creates the given topic with the given name.
-        /// </summary>
-        /// <param name="name">
-        /// The name of the topic. It must have the format
-        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
-        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
-        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
-        /// signs (`%`). It must be between 3 and 255 characters in length, and it
-        /// must not start with `"goog"`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Topic> CreateTopicAsync(
-            TopicName name,
-            CallSettings callSettings = null) => CreateTopicAsync(
-                new Topic
-                {
-                    TopicName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Creates the given topic with the given name.
-        /// </summary>
-        /// <param name="name">
-        /// The name of the topic. It must have the format
-        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
-        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
-        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
-        /// signs (`%`). It must be between 3 and 255 characters in length, and it
-        /// must not start with `"goog"`.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Topic> CreateTopicAsync(
-            TopicName name,
-            CancellationToken cancellationToken) => CreateTopicAsync(
-                name,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates the given topic with the given name.
-        /// </summary>
-        /// <param name="name">
-        /// The name of the topic. It must have the format
-        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
-        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
-        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
-        /// signs (`%`). It must be between 3 and 255 characters in length, and it
-        /// must not start with `"goog"`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Topic CreateTopic(
-            TopicName name,
-            CallSettings callSettings = null) => CreateTopic(
-                new Topic
-                {
-                    TopicName = GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Creates the given topic with the given name.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Topic> CreateTopicAsync(
-            Topic request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates the given topic with the given name.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Topic CreateTopic(
-            Topic request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Updates an existing topic. Note that certain properties of a topic are not
-        /// modifiable.  Options settings follow the style guide:
-        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Topic> UpdateTopicAsync(
-            UpdateTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Updates an existing topic. Note that certain properties of a topic are not
-        /// modifiable.  Options settings follow the style guide:
-        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Topic UpdateTopic(
-            UpdateTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
-        /// </summary>
-        /// <param name="topic">
-        /// The messages in the request will be published on this topic.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="messages">
-        /// The messages to publish.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<PublishResponse> PublishAsync(
-            TopicName topic,
-            IEnumerable<PubsubMessage> messages,
-            CallSettings callSettings = null) => PublishAsync(
-                new PublishRequest
-                {
-                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                    Messages = { GaxPreconditions.CheckNotNull(messages, nameof(messages)) },
-                },
-                callSettings);
-
-        /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
-        /// </summary>
-        /// <param name="topic">
-        /// The messages in the request will be published on this topic.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="messages">
-        /// The messages to publish.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<PublishResponse> PublishAsync(
-            TopicName topic,
-            IEnumerable<PubsubMessage> messages,
-            CancellationToken cancellationToken) => PublishAsync(
-                topic,
-                messages,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
-        /// </summary>
-        /// <param name="topic">
-        /// The messages in the request will be published on this topic.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="messages">
-        /// The messages to publish.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual PublishResponse Publish(
-            TopicName topic,
-            IEnumerable<PubsubMessage> messages,
-            CallSettings callSettings = null) => Publish(
-                new PublishRequest
-                {
-                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                    Messages = { GaxPreconditions.CheckNotNull(messages, nameof(messages)) },
-                },
-                callSettings);
-
-        /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<PublishResponse> PublishAsync(
-            PublishRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual PublishResponse Publish(
-            PublishRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Gets the configuration of a topic.
-        /// </summary>
-        /// <param name="topic">
-        /// The name of the topic to get.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Topic> GetTopicAsync(
-            TopicName topic,
-            CallSettings callSettings = null) => GetTopicAsync(
-                new GetTopicRequest
-                {
-                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets the configuration of a topic.
-        /// </summary>
-        /// <param name="topic">
-        /// The name of the topic to get.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Topic> GetTopicAsync(
-            TopicName topic,
-            CancellationToken cancellationToken) => GetTopicAsync(
-                topic,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets the configuration of a topic.
-        /// </summary>
-        /// <param name="topic">
-        /// The name of the topic to get.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Topic GetTopic(
-            TopicName topic,
-            CallSettings callSettings = null) => GetTopic(
-                new GetTopicRequest
-                {
-                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets the configuration of a topic.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Topic> GetTopicAsync(
-            GetTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Gets the configuration of a topic.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Topic GetTopic(
-            GetTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Lists matching topics.
-        /// </summary>
-        /// <param name="project">
-        /// The name of the cloud project that topics belong to.
-        /// Format is `projects/{project}`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
-        /// </returns>
-        public virtual PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
-            ProjectName project,
-            string pageToken = null,
-            int? pageSize = null,
-            CallSettings callSettings = null) => ListTopicsAsync(
-                new ListTopicsRequest
-                {
-                    ProjectAsProjectName = GaxPreconditions.CheckNotNull(project, nameof(project)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Lists matching topics.
-        /// </summary>
-        /// <param name="project">
-        /// The name of the cloud project that topics belong to.
-        /// Format is `projects/{project}`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="Topic"/> resources.
-        /// </returns>
-        public virtual PagedEnumerable<ListTopicsResponse, Topic> ListTopics(
-            ProjectName project,
-            string pageToken = null,
-            int? pageSize = null,
-            CallSettings callSettings = null) => ListTopics(
-                new ListTopicsRequest
-                {
-                    ProjectAsProjectName = GaxPreconditions.CheckNotNull(project, nameof(project)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Lists matching topics.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
-        /// </returns>
-        public virtual PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
-            ListTopicsRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Lists matching topics.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="Topic"/> resources.
-        /// </returns>
-        public virtual PagedEnumerable<ListTopicsResponse, Topic> ListTopics(
-            ListTopicsRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Lists the name of the subscriptions for this topic.
-        /// </summary>
-        /// <param name="topic">
-        /// The name of the topic that subscriptions are attached to.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="string"/> resources.
-        /// </returns>
-        public virtual PagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptionsAsync(
-            TopicName topic,
-            string pageToken = null,
-            int? pageSize = null,
-            CallSettings callSettings = null) => ListTopicSubscriptionsAsync(
-                new ListTopicSubscriptionsRequest
-                {
-                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Lists the name of the subscriptions for this topic.
-        /// </summary>
-        /// <param name="topic">
-        /// The name of the topic that subscriptions are attached to.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="string"/> resources.
-        /// </returns>
-        public virtual PagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptions(
-            TopicName topic,
-            string pageToken = null,
-            int? pageSize = null,
-            CallSettings callSettings = null) => ListTopicSubscriptions(
-                new ListTopicSubscriptionsRequest
-                {
-                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Lists the name of the subscriptions for this topic.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="string"/> resources.
-        /// </returns>
-        public virtual PagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptionsAsync(
-            ListTopicSubscriptionsRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Lists the name of the subscriptions for this topic.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="string"/> resources.
-        /// </returns>
-        public virtual PagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptions(
-            ListTopicSubscriptionsRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-        /// </summary>
-        /// <param name="topic">
-        /// Name of the topic to delete.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task DeleteTopicAsync(
-            TopicName topic,
-            CallSettings callSettings = null) => DeleteTopicAsync(
-                new DeleteTopicRequest
-                {
-                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-        /// </summary>
-        /// <param name="topic">
-        /// Name of the topic to delete.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task DeleteTopicAsync(
-            TopicName topic,
-            CancellationToken cancellationToken) => DeleteTopicAsync(
-                topic,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-        /// </summary>
-        /// <param name="topic">
-        /// Name of the topic to delete.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual void DeleteTopic(
-            TopicName topic,
-            CallSettings callSettings = null) => DeleteTopic(
-                new DeleteTopicRequest
-                {
-                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task DeleteTopicAsync(
-            DeleteTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual void DeleteTopic(
-            DeleteTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
-        /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="policy">
-        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
-        /// the policy is limited to a few 10s of KB. An empty policy is a
-        /// valid policy but certain Cloud Platform services (such as Projects)
-        /// might reject them.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
-            string resource,
-            Policy policy,
-            CallSettings callSettings = null) => SetIamPolicyAsync(
-                new SetIamPolicyRequest
-                {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
-        /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="policy">
-        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
-        /// the policy is limited to a few 10s of KB. An empty policy is a
-        /// valid policy but certain Cloud Platform services (such as Projects)
-        /// might reject them.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
-            string resource,
-            Policy policy,
-            CancellationToken cancellationToken) => SetIamPolicyAsync(
-                resource,
-                policy,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
-        /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="policy">
-        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
-        /// the policy is limited to a few 10s of KB. An empty policy is a
-        /// valid policy but certain Cloud Platform services (such as Projects)
-        /// might reject them.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Policy SetIamPolicy(
-            string resource,
-            Policy policy,
-            CallSettings callSettings = null) => SetIamPolicy(
-                new SetIamPolicyRequest
-                {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Policy> SetIamPolicyAsync(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Policy SetIamPolicy(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
-        /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
-            string resource,
-            CallSettings callSettings = null) => GetIamPolicyAsync(
-                new GetIamPolicyRequest
-                {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
-        /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
-            string resource,
-            CancellationToken cancellationToken) => GetIamPolicyAsync(
-                resource,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
-        /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Policy GetIamPolicy(
-            string resource,
-            CallSettings callSettings = null) => GetIamPolicy(
-                new GetIamPolicyRequest
-                {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<Policy> GetIamPolicyAsync(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Policy GetIamPolicy(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
-        /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="permissions">
-        /// The set of permissions to check for the `resource`. Permissions with
-        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
-        /// information see
-        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            string resource,
-            IEnumerable<string> permissions,
-            CallSettings callSettings = null) => TestIamPermissionsAsync(
-                new TestIamPermissionsRequest
-                {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
-                },
-                callSettings);
-
-        /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
-        /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="permissions">
-        /// The set of permissions to check for the `resource`. Permissions with
-        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
-        /// information see
-        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            string resource,
-            IEnumerable<string> permissions,
-            CancellationToken cancellationToken) => TestIamPermissionsAsync(
-                resource,
-                permissions,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
-        /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="permissions">
-        /// The set of permissions to check for the `resource`. Permissions with
-        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
-        /// information see
-        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual TestIamPermissionsResponse TestIamPermissions(
-            string resource,
-            IEnumerable<string> permissions,
-            CallSettings callSettings = null) => TestIamPermissions(
-                new TestIamPermissionsRequest
-                {
-                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
-                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
-                },
-                callSettings);
-
-        /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual TestIamPermissionsResponse TestIamPermissions(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-    }
-
-    /// <summary>
-    /// Publisher client wrapper implementation, for convenient use.
-    /// </summary>
-    public sealed partial class PublisherClientImpl : PublisherClient
-    {
-        private readonly ApiCall<Topic, Topic> _callCreateTopic;
-        private readonly ApiCall<UpdateTopicRequest, Topic> _callUpdateTopic;
-        private readonly ApiCall<PublishRequest, PublishResponse> _callPublish;
-        private readonly ApiCall<GetTopicRequest, Topic> _callGetTopic;
-        private readonly ApiCall<ListTopicsRequest, ListTopicsResponse> _callListTopics;
-        private readonly ApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse> _callListTopicSubscriptions;
-        private readonly ApiCall<DeleteTopicRequest, Empty> _callDeleteTopic;
-        private readonly ApiCall<SetIamPolicyRequest, Policy> _callSetIamPolicy;
-        private readonly ApiCall<GetIamPolicyRequest, Policy> _callGetIamPolicy;
-        private readonly ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> _callTestIamPermissions;
-
-        /// <summary>
-        /// Constructs a client wrapper for the Publisher service, with the specified gRPC client and settings.
-        /// </summary>
-        /// <param name="grpcClient">The underlying gRPC client.</param>
-        /// <param name="settings">The base <see cref="PublisherSettings"/> used within this client </param>
-        public PublisherClientImpl(Publisher.PublisherClient grpcClient, PublisherSettings settings)
-        {
-            GrpcClient = grpcClient;
-            PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
-            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
-            IAMPolicy.IAMPolicyClient grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
-            _callCreateTopic = clientHelper.BuildApiCall<Topic, Topic>(
-                GrpcClient.CreateTopicAsync, GrpcClient.CreateTopic, effectiveSettings.CreateTopicSettings);
-            _callUpdateTopic = clientHelper.BuildApiCall<UpdateTopicRequest, Topic>(
-                GrpcClient.UpdateTopicAsync, GrpcClient.UpdateTopic, effectiveSettings.UpdateTopicSettings);
-            _callPublish = clientHelper.BuildApiCall<PublishRequest, PublishResponse>(
-                GrpcClient.PublishAsync, GrpcClient.Publish, effectiveSettings.PublishSettings);
-            _callGetTopic = clientHelper.BuildApiCall<GetTopicRequest, Topic>(
-                GrpcClient.GetTopicAsync, GrpcClient.GetTopic, effectiveSettings.GetTopicSettings);
-            _callListTopics = clientHelper.BuildApiCall<ListTopicsRequest, ListTopicsResponse>(
-                GrpcClient.ListTopicsAsync, GrpcClient.ListTopics, effectiveSettings.ListTopicsSettings);
-            _callListTopicSubscriptions = clientHelper.BuildApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>(
-                GrpcClient.ListTopicSubscriptionsAsync, GrpcClient.ListTopicSubscriptions, effectiveSettings.ListTopicSubscriptionsSettings);
-            _callDeleteTopic = clientHelper.BuildApiCall<DeleteTopicRequest, Empty>(
-                GrpcClient.DeleteTopicAsync, GrpcClient.DeleteTopic, effectiveSettings.DeleteTopicSettings);
-            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
-                grpcIAMPolicyClient.SetIamPolicyAsync, grpcIAMPolicyClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
-            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
-                grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
-            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
-                grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
-            OnConstruction(grpcClient, effectiveSettings, clientHelper);
-        }
-
-        partial void OnConstruction(Publisher.PublisherClient grpcClient, PublisherSettings effectiveSettings, ClientHelper clientHelper);
-
-        /// <summary>
-        /// The underlying gRPC Publisher client.
-        /// </summary>
-        public override Publisher.PublisherClient GrpcClient { get; }
-
-        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
-        partial void Modify_Topic(ref Topic request, ref CallSettings settings);
-        partial void Modify_UpdateTopicRequest(ref UpdateTopicRequest request, ref CallSettings settings);
-        partial void Modify_PublishRequest(ref PublishRequest request, ref CallSettings settings);
-        partial void Modify_GetTopicRequest(ref GetTopicRequest request, ref CallSettings settings);
-        partial void Modify_ListTopicsRequest(ref ListTopicsRequest request, ref CallSettings settings);
-        partial void Modify_ListTopicSubscriptionsRequest(ref ListTopicSubscriptionsRequest request, ref CallSettings settings);
-        partial void Modify_DeleteTopicRequest(ref DeleteTopicRequest request, ref CallSettings settings);
-        partial void Modify_SetIamPolicyRequest(ref SetIamPolicyRequest request, ref CallSettings settings);
-        partial void Modify_GetIamPolicyRequest(ref GetIamPolicyRequest request, ref CallSettings settings);
-        partial void Modify_TestIamPermissionsRequest(ref TestIamPermissionsRequest request, ref CallSettings settings);
-
-        /// <summary>
-        /// Creates the given topic with the given name.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<Topic> CreateTopicAsync(
-            Topic request,
-            CallSettings callSettings = null)
-        {
-            Modify_Topic(ref request, ref callSettings);
-            return _callCreateTopic.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates the given topic with the given name.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override Topic CreateTopic(
-            Topic request,
-            CallSettings callSettings = null)
-        {
-            Modify_Topic(ref request, ref callSettings);
-            return _callCreateTopic.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates an existing topic. Note that certain properties of a topic are not
-        /// modifiable.  Options settings follow the style guide:
-        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<Topic> UpdateTopicAsync(
-            UpdateTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_UpdateTopicRequest(ref request, ref callSettings);
-            return _callUpdateTopic.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates an existing topic. Note that certain properties of a topic are not
-        /// modifiable.  Options settings follow the style guide:
-        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
-        /// Keeping the latter for internal consistency in V1, however it should be
-        /// corrected in V2.  See
-        /// https://cloud.google.com/apis/design/standard_methods#update for details.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override Topic UpdateTopic(
-            UpdateTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_UpdateTopicRequest(ref request, ref callSettings);
-            return _callUpdateTopic.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<PublishResponse> PublishAsync(
-            PublishRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_PublishRequest(ref request, ref callSettings);
-            return _callPublish.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override PublishResponse Publish(
-            PublishRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_PublishRequest(ref request, ref callSettings);
-            return _callPublish.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets the configuration of a topic.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<Topic> GetTopicAsync(
-            GetTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_GetTopicRequest(ref request, ref callSettings);
-            return _callGetTopic.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets the configuration of a topic.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override Topic GetTopic(
-            GetTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_GetTopicRequest(ref request, ref callSettings);
-            return _callGetTopic.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists matching topics.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
-        /// </returns>
-        public override PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
-            ListTopicsRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_ListTopicsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(_callListTopics, request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists matching topics.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="Topic"/> resources.
-        /// </returns>
-        public override PagedEnumerable<ListTopicsResponse, Topic> ListTopics(
-            ListTopicsRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_ListTopicsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(_callListTopics, request, callSettings);
-        }
+        // TODO: Logging
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        /// Settings for the <see cref="PublisherClient"/>.
         /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="string"/> resources.
-        /// </returns>
-        public override PagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptionsAsync(
-            ListTopicSubscriptionsRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_ListTopicSubscriptionsRequest(ref request, ref callSettings);
-            return new GrpcPagedAsyncEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, SubscriptionName>(_callListTopicSubscriptions, request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists the name of the subscriptions for this topic.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="string"/> resources.
-        /// </returns>
-        public override PagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptions(
-            ListTopicSubscriptionsRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_ListTopicSubscriptionsRequest(ref request, ref callSettings);
-            return new GrpcPagedEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, SubscriptionName>(_callListTopicSubscriptions, request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task DeleteTopicAsync(
-            DeleteTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_DeleteTopicRequest(ref request, ref callSettings);
-            return _callDeleteTopic.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override void DeleteTopic(
-            DeleteTopicRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_DeleteTopicRequest(ref request, ref callSettings);
-            _callDeleteTopic.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<Policy> SetIamPolicyAsync(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_SetIamPolicyRequest(ref request, ref callSettings);
-            return _callSetIamPolicy.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any
-        /// existing policy.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override Policy SetIamPolicy(
-            SetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_SetIamPolicyRequest(ref request, ref callSettings);
-            return _callSetIamPolicy.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<Policy> GetIamPolicyAsync(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_GetIamPolicyRequest(ref request, ref callSettings);
-            return _callGetIamPolicy.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets the access control policy for a resource.
-        /// Returns an empty policy if the resource exists and does not have a policy
-        /// set.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override Policy GetIamPolicy(
-            GetIamPolicyRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_GetIamPolicyRequest(ref request, ref callSettings);
-            return _callGetIamPolicy.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
-            return _callTestIamPermissions.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns permissions that a caller has on the specified resource.
-        /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override TestIamPermissionsResponse TestIamPermissions(
-            TestIamPermissionsRequest request,
-            CallSettings callSettings = null)
-        {
-            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
-            return _callTestIamPermissions.Sync(request, callSettings);
-        }
-
-    }
-
-    // Partial classes to enable page-streaming
-
-    public partial class ListTopicsRequest : IPageRequest { }
-    public partial class ListTopicsResponse : IPageResponse<Topic>
-    {
-        /// <summary>
-        /// Returns an enumerator that iterates through the resources in this response.
-        /// </summary>
-        public IEnumerator<Topic> GetEnumerator() => Topics.GetEnumerator();
-
-        /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class ListTopicSubscriptionsRequest : IPageRequest { }
-    public partial class ListTopicSubscriptionsResponse : IPageResponse<SubscriptionName>
-    {
-        /// <summary>
-        /// Returns an enumerator that iterates through the resources in this response.
-        /// </summary>
-        public IEnumerator<SubscriptionName> GetEnumerator() => SubscriptionsAsSubscriptionNames.GetEnumerator();
-
-        /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    // Partial Grpc class to enable IAMPolicy.IAMPolicyClient client creation
-    public static partial class Publisher
-    {
-        public partial class PublisherClient
+        public sealed class Settings
         {
             /// <summary>
-            /// Creates a new instance of <see cref="IAMPolicy.IAMPolicyClient"/> using the same call invoker as this client.
+            /// Create a new instance.
             /// </summary>
-            /// <returns>A new IAMPolicy.IAMPolicyClient for the same target as this client.</returns>
-            public virtual IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() => new IAMPolicy.IAMPolicyClient(CallInvoker);
+            public Settings() { }
+
+            internal Settings(Settings other)
+            {
+                BatchingSettings = other.BatchingSettings;
+                MaxBatchingSettings = other.MaxBatchingSettings;
+                Scheduler = other.Scheduler;
+            }
+
+            /// <summary>
+            /// <see cref="BatchingSettings"/> that control how messages are batched when sending.
+            /// If <c>null</c>, defaults to <see cref="DefaultBatchingSettings"/>.
+            /// </summary>
+            public BatchingSettings BatchingSettings { get; set; }
+
+            /// <summary>
+            /// <see cref="BatchingSettings"/> that control how messages are batched when a batch
+            /// cannot be immediately sent (because all clients are already busy sending batches).
+            /// <see cref="BatchingSettings.DelayThreshold"/> is not relevant in this context.
+            /// If <c>null</c>, defaults to <see cref="ApiMaxBatchingSettings"/>.
+            /// </summary>
+            public BatchingSettings MaxBatchingSettings { get; set; }
+
+            /// <summary>
+            /// The <see cref="IScheduler"/> to use.
+            /// If <c>null</c>, defaults to <see cref="SystemScheduler"/>. Usually only useful for testing.
+            /// </summary>
+            public IScheduler Scheduler { get; set; }
+
+            internal void Validate()
+            {
+                void ValidateBatchingSettings(BatchingSettings batchingSettings, string name)
+                {
+                    if (batchingSettings != null)
+                    {
+                        GaxPreconditions.CheckArgumentRange(batchingSettings.ElementCountThreshold,
+                            $"{name}.{nameof(BatchingSettings.ElementCountThreshold)}", 1, ApiMaxBatchingSettings.ElementCountThreshold.Value);
+                        GaxPreconditions.CheckArgumentRange(batchingSettings.ByteCountThreshold,
+                            $"{name}.{nameof(BatchingSettings.ByteCountThreshold)}", 1, ApiMaxBatchingSettings.ByteCountThreshold.Value);
+                        GaxPreconditions.CheckArgument((batchingSettings.DelayThreshold ?? TimeSpan.FromSeconds(1)) > TimeSpan.Zero,
+                            $"{name}.{nameof(BatchingSettings.DelayThreshold)}", "Must be positive");
+                    }
+                }
+                ValidateBatchingSettings(BatchingSettings, nameof(BatchingSettings));
+                ValidateBatchingSettings(MaxBatchingSettings, nameof(MaxBatchingSettings));
+            }
+
+            /// <summary>
+            /// Create a clone of this object.
+            /// </summary>
+            /// <returns>A clone of this object.</returns>
+            public Settings Clone() => new Settings(this);
         }
+
+        /// <summary>
+        /// Settings for creating <see cref="PublisherServiceApiClient"/>s.
+        /// </summary>
+        public sealed class ClientCreationSettings
+        {
+            /// <summary>
+            /// Instantiate with the specified settings.
+            /// </summary>
+            /// <param name="clientCount">Optional.
+            /// The number of <see cref="PublisherServiceApiClient"/>s to create and use within a <see cref="PublisherClient"/> instance.</param>
+            /// <param name="publisherServiceApiSettings">Optional. The settings to use when creating <see cref="PublisherServiceApiClient"/> instances.</param>
+            /// <param name="credentials">Optional. Credentials to use when creating <see cref="PublisherServiceApiClient"/> instances.</param>
+            /// <param name="serviceEndpoint">Optional.
+            /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="PublisherServiceApiClient"/> instances.</param>
+            public ClientCreationSettings(
+                int? clientCount = null,
+                PublisherServiceApiSettings publisherServiceApiSettings = null,
+                ChannelCredentials credentials = null,
+                ServiceEndpoint serviceEndpoint = null)
+            {
+                ClientCount = clientCount;
+                PublisherServiceApiSettings = publisherServiceApiSettings;
+                Credentials = credentials;
+                ServiceEndpoint = serviceEndpoint;
+            }
+
+            /// <summary>
+            /// The number of <see cref="PublisherServiceApiClient"/>s to create and use within a <see cref="PublisherClient"/> instance.
+            /// If <c>null</c>, defaults to the CPU count on the machine this is being executed on.
+            /// </summary>
+            public int? ClientCount { get; }
+
+            /// <summary>
+            /// The settings to use when creating <see cref="PublisherServiceApiClient"/> instances.
+            /// If <c>null</c>, defaults to <see cref="PublisherServiceApiSettings.GetDefault"/>.
+            /// </summary>
+            public PublisherServiceApiSettings PublisherServiceApiSettings { get; }
+
+            /// <summary>
+            /// Credentials to use when creating <see cref="PublisherServiceApiClient"/> instances.
+            /// If <c>null</c>, defaults to using the default credentials.
+            /// </summary>
+            public ChannelCredentials Credentials { get; }
+
+            /// <summary>
+            /// The <see cref="ServiceEndpoint"/> to use when creating <see cref="PublisherServiceApiClient"/> instances.
+            /// If <c>null</c>, defaults to <see cref="PublisherServiceApiClient.DefaultEndpoint"/>.
+            /// </summary>
+            public ServiceEndpoint ServiceEndpoint { get; }
+
+            internal void Validate()
+            {
+                // Fairly arbitrary upper limit.
+                GaxPreconditions.CheckArgumentRange(ClientCount ?? 1, nameof(ClientCount), 1, 256);
+            }
+        }
+
+        /// <summary>
+        /// A snapshot of the flow state of a <see cref="PublisherClient"/>.
+        /// </summary>
+        public struct FlowState
+        {
+            /// <summary>
+            /// Instantiate a <see cref="FlowState"/>.
+            /// </summary>
+            /// <param name="elementCount">The number of elements (messages) currently queued.</param>
+            /// <param name="byteCount">The number of bytes currently queued.</param>
+            public FlowState(long elementCount, long byteCount)
+            {
+                ElementCount = elementCount;
+                ByteCount = byteCount;
+            }
+
+            /// <summary>
+            /// The number of elements (messages) currently queued.
+            /// </summary>
+            public long ElementCount { get; }
+
+            /// <summary>
+            /// The number of bytes currently queued.
+            /// </summary>
+            public long ByteCount { get; }
+        }
+
+        // All defaults taken from Java (reference) implementation.
+
+        /// <summary>
+        /// Default <see cref="BatchingSettings"/> for <see cref="PublisherClient"/>.
+        /// Default values are:
+        /// <see cref="BatchingSettings.ElementCountThreshold"/> = 100;
+        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 1,000;
+        /// <see cref="BatchingSettings.DelayThreshold"/> = 1 millisecond;
+        /// </summary>
+        public static BatchingSettings DefaultBatchingSettings { get; } = new BatchingSettings(100L, 1000L, TimeSpan.FromMilliseconds(1));
+
+        /// <summary>
+        /// The absolute maximum <see cref="BatchingSettings"/> supported by the service.
+        /// Maximum values are:
+        /// <see cref="BatchingSettings.ElementCountThreshold"/> = 1,000;
+        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 9,500,000;
+        /// </summary>
+        public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 10_000_000L, null);
+
+        /// <summary>
+        /// Create a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.
+        /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
+        /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
+        /// settings may need changing; especially
+        /// <see cref="ClientCreationSettings.PublisherServiceApiSettings"/>.<see cref="PublisherServiceApiSettings.PublishSettings"/>.<see cref="CallSettings.Timing"/>.<see cref="CallTiming.Retry"/>.<see cref="RetrySettings.TimeoutBackoff"/>.
+        /// </summary>
+        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
+        /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
+        /// <see cref="PublisherServiceApiClient"/>s.</param>
+        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
+        /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
+        public static async Task<PublisherClient> CreateAsync(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null)
+        {
+            clientCreationSettings?.Validate();
+            // Clone settings, just in case user modifies them and an await happens in this method
+            settings = settings?.Clone() ?? new Settings();
+            var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
+            var channelCredentials = clientCreationSettings?.Credentials;
+            // Use default credentials if none given.
+            if (channelCredentials == null)
+            {
+                var credentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
+                if (credentials.IsCreateScopedRequired)
+                {
+                    credentials = credentials.CreateScoped(PublisherServiceApiClient.DefaultScopes);
+                }
+                channelCredentials = credentials.ToChannelCredentials();
+            }
+            // Create the channels and clients, and register shutdown functions for each channel
+            var endpoint = clientCreationSettings?.ServiceEndpoint ?? PublisherServiceApiClient.DefaultEndpoint;
+            var clients = new PublisherServiceApiClient[clientCount];
+            var shutdowns = new Func<Task>[clientCount];
+            // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
+            var channelOptions = new[]
+            {
+                new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
+                new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
+            };
+            for (int i = 0; i < clientCount; i++)
+            {
+                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
+                clients[i] = PublisherServiceApiClient.Create(channel, clientCreationSettings?.PublisherServiceApiSettings);
+                shutdowns[i] = channel.ShutdownAsync;
+            }
+            Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
+            return new PublisherClientImpl(topicName, clients, settings, shutdown);
+        }
+
+        /// <summary>
+        /// Create a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.
+        /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="PublisherServiceApiClient"/>s must have their
+        /// maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
+        /// possibly causing a deadlock.
+        /// The default <paramref name="settings"/> are suitable for machines with high network bandwidth
+        /// (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
+        /// settings may need changing.
+        /// </summary>
+        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
+        /// <param name="clients">The <see cref="PublisherServiceApiClient"/>s to use in a <see cref="PublisherClient"/>.
+        /// For high performance, these should all use distinct <see cref="Channel"/>s.</param>
+        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
+        /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
+        public static PublisherClient Create(TopicName topicName, IEnumerable<PublisherServiceApiClient> clients, Settings settings = null) =>
+            // No need to clone clients, it's synchronously used to initialise a Queue<T> in the constructor
+            new PublisherClientImpl(topicName, clients, settings?.Clone() ?? new Settings(), null);
+
+        /// <summary>
+        /// The associated <see cref="TopicName"/>. 
+        /// </summary>
+        public virtual TopicName TopicName => throw new NotImplementedException();
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(PubsubMessage message) => throw new NotImplementedException();
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <param name="encoding">The encoding for string to byte conversion.
+        /// If <c>null</c>, defaults to <see cref="Encoding.UTF8"/>.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(string message, Encoding encoding = null) =>
+            PublishAsync(new PubsubMessage
+            {
+                Data = encoding == null ? ByteString.CopyFromUtf8(message) : ByteString.CopyFrom(encoding.GetBytes(message))
+            });
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(IMessage message) =>
+            PublishAsync(new PubsubMessage
+            {
+                Data = message.ToByteString()
+            });
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(ByteString message) =>
+            PublishAsync(new PubsubMessage
+            {
+                Data = message
+            });
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(byte[] message) =>
+            PublishAsync(new PubsubMessage
+            {
+                Data = ByteString.CopyFrom(message)
+            });
+
+        /// <summary>
+        /// Retrieve a snapshot of the flow state.
+        /// </summary>
+        /// <returns></returns>
+        public virtual FlowState GetCurrentFlowState() => throw new NotImplementedException();
+
+        /// <summary>
+        /// Shutdown this <see cref="PublisherClient"/>. Cancelling <paramref name="hardStopToken"/> aborts the
+        /// clean shutdown process, and may leave some locally queued messages unsent.
+        /// The returned <see cref="Task"/> completes when all queued messages have been published.
+        /// The returned <see cref="Task"/> cancels if <paramref name="hardStopToken"/> is cancelled.
+        /// </summary>
+        /// <param name="hardStopToken">Cancel this <see cref="CancellationToken"/> to abort publishing queued messages.</param>
+        /// <returns>A <see cref="Task"/> that completes when all queued messages have been published; or cancels if
+        /// <paramref name="hardStopToken"/> is cancelled.</returns>
+        public virtual Task ShutdownAsync(CancellationToken hardStopToken) => throw new NotImplementedException();
+
+        /// <summary>
+        /// Shutdown this <see cref="PublisherClient"/>. If <paramref name="timeout"/> expires, the clean shutdown process will
+        /// abort; leaving some locally queued messages unsent.
+        /// The returned <see cref="Task"/> completes when all queued messages have been published.
+        /// The returned <see cref="Task"/> cancels if the <paramref name="timeout"/> expires before all messages are published.
+        /// </summary>
+        /// <param name="timeout">After this period, abort publishing queued messages.</param>
+        /// <returns>A <see cref="Task"/> that completes when all queued messages have been published; or cancels if
+        /// <paramref name="timeout"/> expires.</returns>
+        public virtual Task ShutdownAsync(TimeSpan timeout) => ShutdownAsync(new CancellationTokenSource(timeout).Token);
     }
 
+    /// <summary>
+    /// Implementation of PubSub publisher that is associated with a specific <see cref="TopicName"/>.
+    /// </summary>
+    public sealed class PublisherClientImpl : PublisherClient
+    {
+        private class Batch
+        {
+            public TaskCompletionSource<IList<string>> BatchCompletion { get; } = new TaskCompletionSource<IList<string>>();
+            public List<PubsubMessage> Messages { get; } = new List<PubsubMessage>();
+            public CancellationTokenSource TimerCts { get; } = new CancellationTokenSource();
+            public long ByteCount { get; private set; }
 
+            public int AddMessage(PubsubMessage message, int byteCount)
+            {
+                // Pre-condition: Must be locked
+                Messages.Add(message);
+                ByteCount += byteCount;
+                return Messages.Count - 1;
+            }
+        }
+
+        // TODO: Logging
+
+        /// <summary>
+        /// Instantiate a <see cref="PublisherClientImpl"/> associated with the specified <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
+        /// <param name="clients">The <see cref="PublisherClient"/>s to use.</param>
+        /// <param name="settings"><see cref="PublisherClient.Settings"/> to use in this <see cref="PublisherClientImpl"/>.</param>
+        /// <param name="shutdown">Function to call on this <see cref="PublisherClientImpl"/> shutdown.</param>
+        public PublisherClientImpl(TopicName topicName, IEnumerable<PublisherServiceApiClient> clients, Settings settings, Func<Task> shutdown)
+            : this(topicName, clients, settings, shutdown, TaskHelper.Default) { }
+
+        internal PublisherClientImpl(TopicName topicName, IEnumerable<PublisherServiceApiClient> clients, Settings settings, Func<Task> shutdown, TaskHelper taskHelper)
+        {
+            TopicName = GaxPreconditions.CheckNotNull(topicName, nameof(topicName));
+            GaxPreconditions.CheckNotNull(clients, nameof(clients));
+            _idleClients = new Queue<PublisherServiceApiClient>(clients);
+            GaxPreconditions.CheckArgument(_idleClients.Count > 0, nameof(clients), "Must contain at least one client");
+            GaxPreconditions.CheckArgument(_idleClients.All(x => x != null), nameof(clients), "All elements must be non-null");
+            GaxPreconditions.CheckNotNull(settings, nameof(settings));
+            settings.Validate();
+            _shutdown = shutdown;
+            _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
+
+            // Initialise batching settings. Use ApiMax settings for components not given.
+            var batchingSettings = settings.BatchingSettings ?? DefaultBatchingSettings;
+            _batchElementCountThreshold = batchingSettings.ElementCountThreshold ?? ApiMaxBatchingSettings.ElementCountThreshold.Value;
+            _batchByteCountThreshold = batchingSettings.ByteCountThreshold ?? ApiMaxBatchingSettings.ByteCountThreshold.Value;
+            _batchDelayThreshold = batchingSettings.DelayThreshold;
+            _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
+            var maxBatchingSettings = settings.MaxBatchingSettings ?? ApiMaxBatchingSettings;
+            _batchMaxElementCount = maxBatchingSettings.ElementCountThreshold ?? ApiMaxBatchingSettings.ElementCountThreshold.Value;
+            _batchMaxByteCount = maxBatchingSettings.ByteCountThreshold ?? ApiMaxBatchingSettings.ByteCountThreshold.Value;
+
+            // Initialise internal state
+            _batchesReady = new Queue<Batch>();
+            _softStopCts = new CancellationTokenSource();
+            _hardStopCts = new CancellationTokenSource();
+            _shutdownTcs = new TaskCompletionSource<int>();
+        }
+
+        private readonly object _lock = new object();
+        private readonly object _shutdownLock = new object();
+        private readonly IScheduler _scheduler;
+        private readonly TaskHelper _taskHelper;
+        private readonly Func<Task> _shutdown;
+
+        // Batching settings
+        private readonly long _batchElementCountThreshold;
+        private readonly long _batchByteCountThreshold;
+        private readonly TimeSpan? _batchDelayThreshold;
+
+        // Absolute maximum batch values
+        private readonly long _batchMaxElementCount;
+        private readonly long _batchMaxByteCount;
+
+        //Internal state
+        private readonly Queue<PublisherServiceApiClient> _idleClients;
+        private readonly Queue<Batch> _batchesReady;
+        private readonly CancellationTokenSource _softStopCts;
+        private readonly CancellationTokenSource _hardStopCts;
+        private readonly TaskCompletionSource<int> _shutdownTcs;
+        private Batch _currentBatch;
+        private long _queueElementCount;
+        private long _queueByteCount;
+        private int _batchesInFlightCount;
+        private bool _shutdownStarted;
+
+        /// <inheritdoc/>
+        public override TopicName TopicName { get; }
+
+        /// <inheritdoc/>
+        public override async Task<string> PublishAsync(PubsubMessage message)
+        {
+            Task<IList<string>> batchTask;
+            int index;
+            int messageByteCount = message.CalculateSize();
+            lock (_lock)
+            {
+                // Check for shutdown in the lock, to avoid a race-condition.
+                CheckShutdown();
+                // Update flow-control counts.
+                _queueElementCount += 1;
+                _queueByteCount += messageByteCount;
+                // Queue the current batch if this message would cause the batch to go over-byte-size
+                // (unless this would be the only message in the batch, then it's allowed).
+                QueueCurrentBatchIfRequired(messageByteCount);
+                if (_currentBatch == null)
+                {
+                    // Create a new batch if this is the first ever batch, or a batch has just been queued.
+                    _currentBatch = new Batch();
+                    DelaySendCurrentBatch();
+                }
+                batchTask = _currentBatch.BatchCompletion.Task;
+                // Add message to current batch, and record the message index for later ID retrieval.
+                index = _currentBatch.AddMessage(message, messageByteCount);
+                // Queue the current batch if this message has caused the batch to be over-count or over-byte-size.
+                QueueCurrentBatchIfRequired();
+            }
+            // Awaits until batch is sent and response received.
+            IList<string> ids = await _taskHelper.ConfigureAwait(batchTask);
+            // Return the message ID sent from the server.
+            return ids[index];
+        }
+
+        /// <inheritdoc/>
+        public override FlowState GetCurrentFlowState() => _lock.Locked(() => new FlowState(_queueElementCount, _queueByteCount));
+
+        /// <inheritdoc/>
+        public override Task ShutdownAsync(CancellationToken hardStopToken)
+        {
+            lock (_lock)
+            {
+                CheckShutdown();
+                _softStopCts.Cancel();
+                if (_currentBatch != null)
+                {
+                    QueueCurrentBatch();
+                }
+                var registration = hardStopToken.Register(() =>
+                {
+                    _hardStopCts.Cancel();
+                    ShutdownIfCompleted();
+                });
+                _taskHelper.Run(async () =>
+                {
+                    await _taskHelper.ConfigureAwaitHideErrors(() => _shutdownTcs.Task);
+                    registration.Dispose();
+                });
+                ShutdownIfCompleted();
+            }
+            return _shutdownTcs.Task;
+        }
+
+        private void CheckShutdown() => GaxPreconditions.CheckState(!_softStopCts.IsCancellationRequested, "Publisher already shutdown, cannot use");
+
+        private void ShutdownIfCompleted()
+        {
+            // Pre-condition: Must be locked if not a hard stop
+            if (_hardStopCts.IsCancellationRequested || (_softStopCts.IsCancellationRequested && _batchesInFlightCount == 0 && _batchesReady.Count == 0))
+            {
+                lock (_shutdownLock)
+                {
+                    if (_shutdownStarted)
+                    {
+                        return;
+                    }
+                    _shutdownStarted = true;
+                }
+                if (_hardStopCts.IsCancellationRequested)
+                {
+                    // Cancel any remaining batches. Only relevant if hard-stopped.
+                    lock (_lock)
+                    {
+                        foreach (var batch in _batchesReady)
+                        {
+                            batch.BatchCompletion.SetCanceled();
+                        }
+                    }
+                }
+                // All batches sent and shutdown requested, so signal shutdown completed successfully.
+                _taskHelper.Run(async () =>
+                {
+                    if (_shutdown != null)
+                    {
+                        await _taskHelper.ConfigureAwaitHideErrors(_shutdown);
+                    }
+                    if (_hardStopCts.IsCancellationRequested)
+                    {
+                        _shutdownTcs.SetCanceled();
+                    }
+                    else
+                    {
+                        _shutdownTcs.SetResult(0);
+                    }
+                });
+            }
+        }
+
+        private void DelaySendCurrentBatch()
+        {
+            // Pre-condition: Must be locked
+            if (_batchDelayThreshold is TimeSpan batchDelayThreshold)
+            {
+                // read cancellation token here, in case the current batch changes before the task below starts.
+                var timerCancellation =
+                    CancellationTokenSource.CreateLinkedTokenSource(_currentBatch.TimerCts.Token, _hardStopCts.Token);
+                // Ignore result of this Task. If it's cancelled, it's because the batch has already been sent.
+                _taskHelper.Run(async () =>
+                {
+                    await _taskHelper.ConfigureAwait(_scheduler.Delay(batchDelayThreshold, timerCancellation.Token));
+                    // If batch has already moved to queue, timerToken will have been cancelled.
+                    lock (_lock)
+                    {
+                        // Check for cancellation inside lock to avoid race-condition.
+                        if (!timerCancellation.IsCancellationRequested)
+                        {
+                            // Force queuing of the current batch, whatever the size.
+                            // There will always be at least one message in the batch.
+                            QueueCurrentBatch();
+                        }
+                    }
+                    timerCancellation.Dispose();
+                });
+            }
+        }
+
+        private void QueueCurrentBatchIfRequired(int extraByteCount = 0)
+        {
+            // Pre-condition: Must be locked
+            if (_currentBatch == null)
+            {
+                return;
+            }
+            // Current batch is full if either:
+            // * The number of messages in the batch >= the maximum number of messages allowed; or
+            // * The byte-count in the batch >= the maximum number of messages allowed.
+            // Special cases:
+            // * Before a message is queued, this method is called with the message byte-count;
+            //   If this message would cause the batch to exceed the maxmium byte-count, then this
+            //   batch is considered already full.
+            // * But if that is the first message in the batch, then that one message only is allowed
+            //   to make the batch go over its maximum allowed byte-count.
+            // The maximum size depends on whether local queueing is occuring.
+            // If _idleClients is empty, then all clients are currently sending, so local queueing is occuring;
+            // which means the current batch cannot be sent, even if it is full.
+            bool currentBatchIsFull = _idleClients.Count == 0 ?
+                _currentBatch.Messages.Count >= _batchMaxElementCount ||
+                    (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchMaxByteCount) :
+                _currentBatch.Messages.Count >= _batchElementCountThreshold ||
+                    (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchByteCountThreshold);
+            if (currentBatchIsFull)
+            {
+                QueueCurrentBatch();
+            }
+        }
+
+        private void QueueCurrentBatch()
+        {
+            // Pre-condition: Must be locked
+            // Cancel the timeout for this batch.
+            _currentBatch.TimerCts.Cancel();
+            // Queue the batch ready for sending.
+            _batchesReady.Enqueue(_currentBatch);
+            // Mark that there is no current batch.
+            _currentBatch = null;
+            // Trigger send to server.
+            TriggerSend();
+        }
+
+        private void TriggerSend()
+        {
+            // Pre-condition: Must be locked.
+            // Start sending a batch if there's a batch to send, and a client to use to send it.
+            if (_batchesReady.Count == 0 || _idleClients.Count == 0)
+            {
+                return;
+            }
+            // Remove client and batch from relevant queues.
+            var client = _idleClients.Dequeue();
+            var batch = _batchesReady.Dequeue();
+            _batchesInFlightCount += 1;
+            // Update flow-control counts.
+            _queueElementCount -= batch.Messages.Count;
+            _queueByteCount -= batch.ByteCount;
+
+            async Task Send()
+            {
+                // Perform the RPC to server, catching exceptions.
+                var publishTask = client.PublishAsync(TopicName, batch.Messages, CallSettings.FromCancellationToken(_hardStopCts.Token));
+                var response = await _taskHelper.ConfigureAwaitHideErrors(() => publishTask, null);
+                // Propagate task result to batch.
+                switch (publishTask.Status)
+                {
+                    case TaskStatus.RanToCompletion:
+                        batch.BatchCompletion.SetResult(response.MessageIds);
+                        break;
+                    case TaskStatus.Canceled:
+                        batch.BatchCompletion.SetCanceled();
+                        break;
+                    case TaskStatus.Faulted:
+                        batch.BatchCompletion.SetException(publishTask.Exception.InnerExceptions);
+                        break;
+                    default:
+                        throw new InvalidOperationException("Invalid TaskStatus");
+                }
+                // A client is now idle. Record it, and see if a further batch is ready to send.
+                lock (_lock)
+                {
+                    _batchesInFlightCount -= 1;
+                    _idleClients.Enqueue(client);
+                    ShutdownIfCompleted();
+                    if (_batchesReady.Count > 0)
+                    {
+                        // Already a batch in the ready-queue, so just send it.
+                        TriggerSend();
+                    }
+                    else
+                    {
+                        // If nothing queued to send, check to see if current batch is ready.
+                        QueueCurrentBatchIfRequired();
+                    }
+                }
+            }
+
+            // Send the batch
+            _taskHelper.Run(Send);
+        }
+
+    }
 }

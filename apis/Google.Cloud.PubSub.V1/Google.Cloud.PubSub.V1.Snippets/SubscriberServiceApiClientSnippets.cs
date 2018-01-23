@@ -26,11 +26,11 @@ namespace Google.Cloud.PubSub.V1.Snippets
 {
     [SnippetOutputCollector]
     [Collection(nameof(PubsubSnippetFixture))]
-    public class SubscriberClientSnippets
+    public class SubscriberServiceApiClientSnippets
     {
         private readonly PubsubSnippetFixture _fixture;
 
-        public SubscriberClientSnippets(PubsubSnippetFixture fixture)
+        public SubscriberServiceApiClientSnippets(PubsubSnippetFixture fixture)
         {
             _fixture = fixture;
         }
@@ -44,12 +44,12 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             // Sample: Overview
             // First create a topic.
-            PublisherClient publisher = PublisherClient.Create();
+            PublisherServiceApiClient publisher = PublisherServiceApiClient.Create();
             TopicName topicName = new TopicName(projectId, topicId);
             publisher.CreateTopic(topicName);
 
             // Subscribe to the topic.
-            SubscriberClient subscriber = SubscriberClient.Create();
+            SubscriberServiceApiClient subscriber = SubscriberServiceApiClient.Create();
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
             subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
 
@@ -99,42 +99,42 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             // Sample: SimpleOverview
             // First create a topic.
-            PublisherClient publisher = await PublisherClient.CreateAsync();
+            PublisherServiceApiClient publisherService = await PublisherServiceApiClient.CreateAsync();
             TopicName topicName = new TopicName(projectId, topicId);
-            publisher.CreateTopic(topicName);
+            publisherService.CreateTopic(topicName);
 
             // Subscribe to the topic.
-            SubscriberClient subscriber = await SubscriberClient.CreateAsync();
+            SubscriberServiceApiClient subscriberService = await SubscriberServiceApiClient.CreateAsync();
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
-            subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
+            subscriberService.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
 
-            // Publish a message to the topic using SimplePublisher.
-            SimplePublisher simplePublisher = await SimplePublisher.CreateAsync(topicName);
+            // Publish a message to the topic using PublisherClient.
+            PublisherClient publisher = await PublisherClient.CreateAsync(topicName);
             // PublishAsync() has various overloads. Here we're using the string overload.
-            string messageId = await simplePublisher.PublishAsync("Hello, Pubsub");
-            // SimplePublisher should be shutdown after use.
+            string messageId = await publisher.PublishAsync("Hello, Pubsub");
+            // PublisherClient instance should be shutdown after use.
             // The TimeSpan specifies for how long to attempt to publish locally queued messages.
-            await simplePublisher.ShutdownAsync(TimeSpan.FromSeconds(15));
+            await publisher.ShutdownAsync(TimeSpan.FromSeconds(15));
 
             // Pull messages from the subscription using SimpleSubscriber.
-            SimpleSubscriber simpleSubscriber = await SimpleSubscriber.CreateAsync(subscriptionName);
+            SubscriberClient subscriber = await SubscriberClient.CreateAsync(subscriptionName);
             List<PubsubMessage> receivedMessages = new List<PubsubMessage>();
             // Start the subscriber listening for messages.
-            await simpleSubscriber.StartAsync((msg, cancellationToken) =>
+            await subscriber.StartAsync((msg, cancellationToken) =>
             {
                 receivedMessages.Add(msg);
                 Console.WriteLine($"Received message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}");
                 Console.WriteLine($"Text: '{msg.Data.ToStringUtf8()}'");
                 // Stop this subscriber after one message is received.
                 // This is non-blocking, and the returned Task may be awaited.
-                simpleSubscriber.StopAsync(TimeSpan.FromSeconds(15));
+                subscriber.StopAsync(TimeSpan.FromSeconds(15));
                 // Return Reply.Ack to indicate this message has been handled.
-                return Task.FromResult(SimpleSubscriber.Reply.Ack);
+                return Task.FromResult(SubscriberClient.Reply.Ack);
             });
 
             // Tidy up by deleting the subscription and the topic.
-            subscriber.DeleteSubscription(subscriptionName);
-            publisher.DeleteTopic(topicName);
+            subscriberService.DeleteSubscription(subscriptionName);
+            publisherService.DeleteTopic(topicName);
             // End sample
 
             Assert.Equal(1, receivedMessages.Count);
@@ -147,7 +147,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
 
             // Snippet: ListSubscriptions(*,*,*,*)
-            SubscriberClient client = SubscriberClient.Create();
+            SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
 
             ProjectName projectName = new ProjectName(projectId);
             foreach (Subscription subscription in client.ListSubscriptions(projectName))
@@ -163,7 +163,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
 
             // Snippet: ListSubscriptionsAsync(*,*,*,*)
-            SubscriberClient client = SubscriberClient.Create();
+            SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
 
             ProjectName projectName = new ProjectName(projectId);
             IAsyncEnumerable<Subscription> subscriptions = client.ListSubscriptionsAsync(projectName);
@@ -181,10 +181,10 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
             string subscriptionId = _fixture.CreateSubscriptionId();
 
-            PublisherClient.Create().CreateTopic(new TopicName(projectId, topicId));
+            PublisherServiceApiClient.Create().CreateTopic(new TopicName(projectId, topicId));
 
             // Snippet: CreateSubscription(*,*,*,*,*)
-            SubscriberClient client = SubscriberClient.Create();
+            SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
 
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
             TopicName topicName = new TopicName(projectId, topicId);
@@ -201,11 +201,11 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
             string subscriptionId = _fixture.CreateSubscriptionId();
 
-            PublisherClient.Create().CreateTopic(new TopicName(projectId, topicId));
+            PublisherServiceApiClient.Create().CreateTopic(new TopicName(projectId, topicId));
 
             // Snippet: CreateSubscriptionAsync(SubscriptionName,TopicName,*,*,CallSettings)
             // Additional: CreateSubscriptionAsync(SubscriptionName,TopicName,*,*,CancellationToken)
-            SubscriberClient client = SubscriberClient.Create();
+            SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
 
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
             TopicName topicName = new TopicName(projectId, topicId);
@@ -222,15 +222,15 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
             string subscriptionId = _fixture.CreateSubscriptionId();
 
-            PublisherClient publisher = PublisherClient.Create();
+            PublisherServiceApiClient publisher = PublisherServiceApiClient.Create();
             TopicName topicName = new TopicName(projectId, topicId);
             publisher.CreateTopic(topicName);
             PubsubMessage newMessage = new PubsubMessage { Data = ByteString.CopyFromUtf8("Simple text") };
-            SubscriberClient.Create().CreateSubscription(new SubscriptionName(projectId, subscriptionId), topicName, null, 60);
+            SubscriberServiceApiClient.Create().CreateSubscription(new SubscriptionName(projectId, subscriptionId), topicName, null, 60);
             publisher.Publish(topicName, new[] { newMessage });
 
             // Snippet: Pull(*,*,*,*)
-            SubscriberClient client = SubscriberClient.Create();
+            SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
 
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
 
@@ -258,16 +258,16 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
             string subscriptionId = _fixture.CreateSubscriptionId();
 
-            PublisherClient publisher = PublisherClient.Create();
+            PublisherServiceApiClient publisher = PublisherServiceApiClient.Create();
             TopicName topicName = new TopicName(projectId, topicId);
             publisher.CreateTopic(topicName);
             PubsubMessage newMessage = new PubsubMessage { Data = ByteString.CopyFromUtf8("Simple text") };
-            SubscriberClient.Create().CreateSubscription(new SubscriptionName(projectId, subscriptionId), topicName, null, 60);
+            SubscriberServiceApiClient.Create().CreateSubscription(new SubscriptionName(projectId, subscriptionId), topicName, null, 60);
             publisher.Publish(topicName, new[] { newMessage });
 
             // Snippet: PullAsync(SubscriptionName,*,*,CallSettings)
             // Additional: PullAsync(SubscriptionName,*,*,CancellationToken)
-            SubscriberClient client = SubscriberClient.Create();
+            SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
 
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
 
@@ -296,17 +296,17 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string subscriptionId = _fixture.CreateSubscriptionId();
 
             // Snippet: StreamingPull(*, *)
-            PublisherClient publisher = PublisherClient.Create();
+            PublisherServiceApiClient publisher = PublisherServiceApiClient.Create();
             TopicName topicName = new TopicName(projectId, topicId);
             publisher.CreateTopic(topicName);
-            SubscriberClient subscriber = SubscriberClient.Create();
+            SubscriberServiceApiClient subscriber = SubscriberServiceApiClient.Create();
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
             subscriber.CreateSubscription(subscriptionName, topicName, null, 60);
 
             // If we don't see all the messages we expect in 10 seconds, we'll cancel the call.
             CancellationTokenSource cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(10));
             CallSettings callSettings = CallSettings.FromCancellationToken(cancellationTokenSource.Token);
-            SubscriberClient.StreamingPullStream stream = subscriber.StreamingPull(callSettings);
+            SubscriberServiceApiClient.StreamingPullStream stream = subscriber.StreamingPull(callSettings);
 
             // The first request must include the subscription name and the stream ack deadline
             await stream.WriteAsync(new StreamingPullRequest { SubscriptionAsSubscriptionName = subscriptionName, StreamAckDeadlineSeconds = 20 });

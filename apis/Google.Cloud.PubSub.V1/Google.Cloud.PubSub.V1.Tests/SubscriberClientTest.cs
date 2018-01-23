@@ -27,7 +27,7 @@ using Xunit;
 
 namespace Google.Cloud.PubSub.V1.Tests
 {
-    public class SimpleSubscriberTest
+    public class SubscriberClientTest
     {
         private struct TimedId
         {
@@ -64,7 +64,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             public RpcException CurrentEx { get; }
         }
 
-        private class FakeSubscriber : SubscriberClient
+        private class FakeSubscriberServiceApiClient : SubscriberServiceApiClient
         {
             public static ReceivedMessage MakeReceivedMessage(string msgId, string content) =>
                 new ReceivedMessage
@@ -195,7 +195,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 }
             }
 
-            public FakeSubscriber(
+            public FakeSubscriberServiceApiClient(
                 IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock,
                 TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId)
             {
@@ -243,9 +243,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             public TestScheduler Scheduler { get; set; }
             public DateTime Time0 { get; set; }
             public TaskHelper TaskHelper { get; set; }
-            public List<FakeSubscriber> Subscribers { get; set; }
+            public List<FakeSubscriberServiceApiClient> Subscribers { get; set; }
             public List<DateTime> ClientShutdowns { get; set; }
-            public SimpleSubscriberImpl Subscriber { get; set; }
+            public SubscriberClientImpl Subscriber { get; set; }
 
             public static Fake Create(IReadOnlyList<IEnumerable<ServerAction>> msgs,
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
@@ -258,9 +258,9 @@ namespace Google.Cloud.PubSub.V1.Tests
                 List<DateTime> clientShutdowns = new List<DateTime>();
                 var msgEn = msgs.GetEnumerator();
                 var clients = Enumerable.Range(0, clientCount)
-                    .Select(_ => new FakeSubscriber(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId))
+                    .Select(_ => new FakeSubscriberServiceApiClient(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId))
                     .ToList();
-                var settings = new SimpleSubscriber.Settings
+                var settings = new SubscriberClient.Settings
                 {
                     Scheduler = scheduler,
                     StreamAckDeadline = ackDeadline,
@@ -272,7 +272,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     clientShutdowns.Locked(() => clientShutdowns.Add(scheduler.Clock.GetCurrentDateTimeUtc()));
                     return Task.FromResult(0);
                 }
-                var subs = new SimpleSubscriberImpl(new SubscriptionName("projectid", "subscriptionid"), clients, settings, Shutdown, taskHelper);
+                var subs = new SubscriberClientImpl(new SubscriptionName("projectid", "subscriptionid"), clients, settings, Shutdown, taskHelper);
                 return new Fake
                 {
                     Scheduler = scheduler,
@@ -331,7 +331,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 : Math.Max(0, stopAfterSeconds - (hardStop ? handlerDelaySeconds : 0)) / interBatchIntervalSeconds;
             var expectedMsgCount = Math.Min(expectedCompletedBatches, batchCount) * batchSize * clientCount;
             var expectedAcks = Enumerable.Range(0, batchCount)
-                .SelectMany(batchIndex => Enumerable.Range(0, batchSize).Select(msgIndex => FakeSubscriber.MakeMsgId(batchIndex, msgIndex)))
+                .SelectMany(batchIndex => Enumerable.Range(0, batchSize).Select(msgIndex => FakeSubscriberServiceApiClient.MakeMsgId(batchIndex, msgIndex)))
                 .Take(expectedMsgCount / clientCount)
                 .OrderBy(x => x);
 
@@ -351,7 +351,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         {
                             handledMsgs.Add(msg.Data.ToStringUtf8());
                         }
-                        return SimpleSubscriber.Reply.Ack;
+                        return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
                     var isCancelled = await fake.TaskHelper.ConfigureAwaitHideCancellation(
@@ -412,7 +412,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                                 Task unused = fake.Subscriber.StopAsync(CancellationToken.None);
                             }
                         }
-                        return SimpleSubscriber.Reply.Ack;
+                        return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(startTask);
                     Assert.Equal(totalMsgCount, recvedMsgs.Count);
@@ -434,7 +434,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             [CombinatorialValues(1, 3, 9, 19)] int threadCount)
         {
             const int msgsPerClient = 100;
-            var oneMsgByteCount = FakeSubscriber.MakeReceivedMessage("0000.0000", "0000").CalculateSize();
+            var oneMsgByteCount = FakeSubscriberServiceApiClient.MakeReceivedMessage("0000.0000", "0000").CalculateSize();
             var combinedFlowMaxElements = Math.Min(flowMaxElements, flowMaxBytes / oneMsgByteCount + 1);
             var expectedMsgCount = Math.Min(msgsPerClient * clientCount, combinedFlowMaxElements * stopAfterSeconds + (hardStop ? 0 : combinedFlowMaxElements));
             var msgss = Enumerable.Range(0, msgsPerClient)
@@ -465,7 +465,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                             Assert.True((concurrentElementCount -= 1) >= 0);
                             Assert.True((concurrentByteCount -= msgSize) >= 0);
                         }
-                        return SimpleSubscriber.Reply.Ack;
+                        return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwaitHideCancellation(
@@ -493,7 +493,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         }
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
                         handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
-                        return SimpleSubscriber.Reply.Ack;
+                        return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
@@ -523,7 +523,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     {
                         handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
-                        return SimpleSubscriber.Reply.Ack;
+                        return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
@@ -556,7 +556,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     {
                         handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
-                        return SimpleSubscriber.Reply.Ack;
+                        return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
                     Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(
@@ -599,7 +599,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     {
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(70), ct));
                         Task unusedTask = fake.Subscriber.StopAsync(CancellationToken.None);
-                        return SimpleSubscriber.Reply.Ack;
+                        return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(doneTask);
                     var t0 = fake.Time0;
@@ -626,7 +626,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 fake.Scheduler.Run(async () =>
                 {
-                    var subTask = fake.Subscriber.StartAsync((msg, ct) => Task.FromResult(SimpleSubscriber.Reply.Ack));
+                    var subTask = fake.Subscriber.StartAsync((msg, ct) => Task.FromResult(SubscriberClient.Reply.Ack));
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1000), CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwait(subTask);
@@ -640,7 +640,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
         }
 
-        private class FakeSubscriberClient : SubscriberClient
+        private class FakeEmptySubscriberServiceApiClient : SubscriberServiceApiClient
         {
         }
 
@@ -648,82 +648,82 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ValidParameters()
         {
             var subscriptionName = new SubscriptionName("project", "subscriptionId");
-            var clients = new[] { new FakeSubscriberClient() };
+            var clients = new[] { new FakeEmptySubscriberServiceApiClient() };
 
-            var settingsDefault = new SimpleSubscriber.Settings();
-            new SimpleSubscriberImpl(subscriptionName, clients, settingsDefault, null);
+            var settingsDefault = new SubscriberClient.Settings();
+            new SubscriberClientImpl(subscriptionName, clients, settingsDefault, null);
 
-            var settingsAckDeadline1 = new SimpleSubscriber.Settings
+            var settingsAckDeadline1 = new SubscriberClient.Settings
             {
-                StreamAckDeadline = SimpleSubscriber.MinimumStreamAckDeadline
+                StreamAckDeadline = SubscriberClient.MinimumStreamAckDeadline
             };
-            new SimpleSubscriberImpl(subscriptionName, clients, settingsAckDeadline1, null);
+            new SubscriberClientImpl(subscriptionName, clients, settingsAckDeadline1, null);
 
-            var settingsAckDeadline2 = new SimpleSubscriber.Settings
+            var settingsAckDeadline2 = new SubscriberClient.Settings
             {
-                StreamAckDeadline = SimpleSubscriber.MaximumStreamAckDeadline
+                StreamAckDeadline = SubscriberClient.MaximumStreamAckDeadline
             };
-            new SimpleSubscriberImpl(subscriptionName, clients, settingsAckDeadline2, null);
+            new SubscriberClientImpl(subscriptionName, clients, settingsAckDeadline2, null);
 
-            var settingsAckExtension1 = new SimpleSubscriber.Settings
+            var settingsAckExtension1 = new SubscriberClient.Settings
             {
-                AckExtensionWindow = SimpleSubscriber.MinimumAckExtensionWindow
+                AckExtensionWindow = SubscriberClient.MinimumAckExtensionWindow
             };
-            new SimpleSubscriberImpl(subscriptionName, clients, settingsAckExtension1, null);
+            new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension1, null);
             
-            var settingsAckExtension2 = new SimpleSubscriber.Settings
+            var settingsAckExtension2 = new SubscriberClient.Settings
             {
-                AckExtensionWindow = TimeSpan.FromTicks(SimpleSubscriber.DefaultStreamAckDeadline.Ticks / 2)
+                AckExtensionWindow = TimeSpan.FromTicks(SubscriberClient.DefaultStreamAckDeadline.Ticks / 2)
             };
-            new SimpleSubscriberImpl(subscriptionName, clients, settingsAckExtension2, null);
+            new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension2, null);
         }
 
         [Fact]
         public void InvalidParameters()
         {
             var subscriptionName = new SubscriptionName("project", "subscriptionId");
-            var clients = new[] { new FakeSubscriberClient() };
-            var settings = new SimpleSubscriber.Settings();
+            var clients = new[] { new FakeEmptySubscriberServiceApiClient() };
+            var settings = new SubscriberClient.Settings();
 
-            var ex1 = Assert.Throws<ArgumentNullException>(() => new SimpleSubscriberImpl(null, clients, settings, null));
+            var ex1 = Assert.Throws<ArgumentNullException>(() => new SubscriberClientImpl(null, clients, settings, null));
             Assert.Equal("subscriptionName", ex1.ParamName);
 
-            var ex2 = Assert.Throws<ArgumentNullException>(() => new SimpleSubscriberImpl(subscriptionName, null, settings, null));
+            var ex2 = Assert.Throws<ArgumentNullException>(() => new SubscriberClientImpl(subscriptionName, null, settings, null));
             Assert.Equal("clients", ex2.ParamName);
 
-            var ex3 = Assert.Throws<ArgumentException>(() => new SimpleSubscriberImpl(subscriptionName, new SubscriberClient[] { null }, settings, null));
+            var ex3 = Assert.Throws<ArgumentException>(() => new SubscriberClientImpl(subscriptionName, new SubscriberServiceApiClient[] { null }, settings, null));
             Assert.Equal("clients", ex3.ParamName);
 
-            var ex4 = Assert.Throws<ArgumentNullException>(() => new SimpleSubscriberImpl(subscriptionName, clients, null, null));
+            var ex4 = Assert.Throws<ArgumentNullException>(() => new SubscriberClientImpl(subscriptionName, clients, null, null));
             Assert.Equal("settings", ex4.ParamName);
 
-            var settingsBadAckDeadline1 = new SimpleSubscriber.Settings
+            var settingsBadAckDeadline1 = new SubscriberClient.Settings
             {
-                StreamAckDeadline = SimpleSubscriber.MinimumStreamAckDeadline - TimeSpan.FromMilliseconds(1)
+                StreamAckDeadline = SubscriberClient.MinimumStreamAckDeadline - TimeSpan.FromMilliseconds(1)
             };
-            var ex5 = Assert.Throws<ArgumentOutOfRangeException>(() => new SimpleSubscriberImpl(subscriptionName, clients, settingsBadAckDeadline1, null));
+            var ex5 = Assert.Throws<ArgumentOutOfRangeException>(() => new SubscriberClientImpl(subscriptionName, clients, settingsBadAckDeadline1, null));
             Assert.Equal("StreamAckDeadline", ex5.ParamName);
 
-            var settingsBadAckDeadline2 = new SimpleSubscriber.Settings
+            var settingsBadAckDeadline2 = new SubscriberClient.Settings
             {
-                StreamAckDeadline = SimpleSubscriber.MaximumStreamAckDeadline + TimeSpan.FromMilliseconds(1)
+                StreamAckDeadline = SubscriberClient.MaximumStreamAckDeadline + TimeSpan.FromMilliseconds(1)
             };
-            var ex6 = Assert.Throws<ArgumentOutOfRangeException>(() => new SimpleSubscriberImpl(subscriptionName, clients, settingsBadAckDeadline2, null));
+            var ex6 = Assert.Throws<ArgumentOutOfRangeException>(() => new SubscriberClientImpl(subscriptionName, clients, settingsBadAckDeadline2, null));
             Assert.Equal("StreamAckDeadline", ex6.ParamName);
 
-            var settingsBadAckExtension1 = new SimpleSubscriber.Settings
+            var settingsBadAckExtension1 = new SubscriberClient.Settings
             {
-                AckExtensionWindow = SimpleSubscriber.MinimumAckExtensionWindow - TimeSpan.FromMilliseconds(1)
+                AckExtensionWindow = SubscriberClient.MinimumAckExtensionWindow - TimeSpan.FromMilliseconds(1)
             };
-            var ex7 = Assert.Throws<ArgumentOutOfRangeException>(() => new SimpleSubscriberImpl(subscriptionName, clients, settingsBadAckExtension1, null));
+            var ex7 = Assert.Throws<ArgumentOutOfRangeException>(() => new SubscriberClientImpl(subscriptionName, clients, settingsBadAckExtension1, null));
             Assert.Equal("AckExtensionWindow", ex7.ParamName);
 
-            var settingsBadAckExtension2 = new SimpleSubscriber.Settings
+            var settingsBadAckExtension2 = new SubscriberClient.Settings
             {
                 // This is too large. The ack extension window must be less than half the ack deadline.
-                AckExtensionWindow = TimeSpan.FromTicks(SimpleSubscriber.DefaultStreamAckDeadline.Ticks / 2 + 1)
+                AckExtensionWindow = TimeSpan.FromTicks(SubscriberClient.DefaultStreamAckDeadline.Ticks / 2 + 1)
             };
-            var ex8 = Assert.Throws<ArgumentOutOfRangeException>(() => new SimpleSubscriberImpl(subscriptionName, clients, settingsBadAckExtension2, null));
+            var ex8 = Assert.Throws<ArgumentOutOfRangeException>(() => new SubscriberClientImpl(subscriptionName, clients, settingsBadAckExtension2, null));
             Assert.Equal("AckExtensionWindow", ex8.ParamName);
         }
     }
