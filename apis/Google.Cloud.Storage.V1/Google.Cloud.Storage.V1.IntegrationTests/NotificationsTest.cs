@@ -51,8 +51,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var storageClient = _fixture.Client;
 
             // First create a bucket, a topic and a subscription
-            var publisherClient = PublisherClient.Create();
-            var subscriberClient = SubscriberClient.Create();
+            var publisherClient = PublisherServiceApiClient.Create();
+            var subscriberClient = SubscriberServiceApiClient.Create();
             var bucket = _fixture.BucketPrefix + "notifications";
             var topicName = new TopicName(_fixture.ProjectId, $"storage-topic-{Guid.NewGuid()}");
             var subscriptionName = new SubscriptionName(_fixture.ProjectId, $"storage-sub-{Guid.NewGuid()}");

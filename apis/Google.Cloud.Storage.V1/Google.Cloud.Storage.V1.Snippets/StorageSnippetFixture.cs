@@ -86,7 +86,7 @@ namespace Google.Cloud.Storage.V1.Snippets
 
         internal Notification CreateNotification(string prefix)
         {
-            var publisherClient = PublisherClient.Create();
+            var publisherClient = PublisherServiceApiClient.Create();
             var topicName = new TopicName(ProjectId, "topic-" + Guid.NewGuid().ToString().ToLowerInvariant());
             publisherClient.CreateTopic(topicName);
             RegisterTopicToDelete(topicName);
@@ -131,7 +131,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             {
                 File.Delete(file);
             }
-            var publisherClient = PublisherClient.Create();
+            var publisherClient = PublisherServiceApiClient.Create();
             _topicsToDelete.ForEach(topicName => publisherClient.DeleteTopic(topicName));
         }
     }
