@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JsonFormatter
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -302,13 +302,13 @@ it&apos;s not as quick as baking calls into generated messages - but is a simple
 This differs from calling <a class="xref" href="Google.Protobuf.JsonFormatter.html#Google_Protobuf_JsonFormatter_Format_Google_Protobuf_IMessage_">Format(IMessage)</a> on the default JSON
 formatter in its handling of <a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a>. As no type registry is available
 in <span class="xref">System.Object.ToString()</span> calls, the normal way of resolving the type of
-an <code>Any</code> message cannot be applied. Instead, a JSON property named <code>@value&lt;/code&gt;
+an <code>Any</code> message cannot be applied. Instead, a JSON property named <code>@value</code>
 is included with the base64 data from the <a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html#Google_Protobuf_WellKnownTypes_Any_Value">Value</a> property of the message.
-<p>
+</p>
 <p>The value returned by this method is only designed to be used for diagnostic
 purposes. It may not be parsable by <a class="xref" href="Google.Protobuf.JsonParser.html">JsonParser</a>, and may not be parsable
 by other Protocol Buffer implementations.</p>
-</code></div>
+</div>
   <a id="Google_Protobuf_JsonFormatter_WriteValue_" data-uid="Google.Protobuf.JsonFormatter.WriteValue*"></a>
   <h4 id="Google_Protobuf_JsonFormatter_WriteValue_System_IO_TextWriter_System_Object_" data-uid="Google.Protobuf.JsonFormatter.WriteValue(System.IO.TextWriter,System.Object)">WriteValue(TextWriter, Object)</h4>
   <div class="markdown level1 summary"><p>Writes a single value to the given writer as JSON. Only types understood by

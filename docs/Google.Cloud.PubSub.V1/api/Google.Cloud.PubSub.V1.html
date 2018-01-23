@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Cloud.PubSub.V1
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -145,13 +145,25 @@ messages to a topic.</p>
       <section><p>Client for Publisher</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a></h4>
-      <section><p>Publisher client wrapper, for convenient use.</p>
+      <section><p>A PubSub publisher that is associated with a specific <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_TopicName">TopicName</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.ClientCreationSettings.html">PublisherClient.ClientCreationSettings</a></h4>
+      <section><p>Settings for creating <a class="xref" href="Google.Cloud.PubSub.V1.PublisherServiceApiClient.html">PublisherServiceApiClient</a>s.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.Settings.html">PublisherClient.Settings</a></h4>
+      <section><p>Settings for the <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a>.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClientImpl.html">PublisherClientImpl</a></h4>
+      <section><p>Implementation of PubSub publisher that is associated with a specific <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClientImpl.html#Google_Cloud_PubSub_V1_PublisherClientImpl_TopicName">TopicName</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.PublisherServiceApiClient.html">PublisherServiceApiClient</a></h4>
+      <section><p>Publisher client wrapper, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.PublisherServiceApiClientImpl.html">PublisherServiceApiClientImpl</a></h4>
       <section><p>Publisher client wrapper implementation, for convenient use.</p>
 </section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.PublisherSettings.html">PublisherSettings</a></h4>
-      <section><p>Settings for a <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a>.</p>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.PublisherServiceApiSettings.html">PublisherServiceApiSettings</a></h4>
+      <section><p>Settings for a <a class="xref" href="Google.Cloud.PubSub.V1.PublisherServiceApiClient.html">PublisherServiceApiClient</a>.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.PubSub.V1.PublishRequest.html">PublishRequest</a></h4>
       <section><p>Request for the Publish method.</p>
@@ -180,37 +192,6 @@ it must contain either a non-empty data field, or at least one attribute.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.PubSub.V1.SeekResponse.html">SeekResponse</a></h4>
       <section></section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a></h4>
-      <section><p>A PubSub publisher that is associated with a specific <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html#Google_Cloud_PubSub_V1_SimplePublisher_TopicName">TopicName</a>.
-The name &quot;<a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a>&quot; is likely to change before the GA release.
-See <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1188">
-https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1188</a>.</p>
-</section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.ClientCreationSettings.html">SimplePublisher.ClientCreationSettings</a></h4>
-      <section><p>Settings for creating <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a>s.</p>
-</section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.Settings.html">SimplePublisher.Settings</a></h4>
-      <section><p>Settings for the <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a>.</p>
-</section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisherImpl.html">SimplePublisherImpl</a></h4>
-      <section><p>Implementation of PubSub publisher that is associated with a specific <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisherImpl.html#Google_Cloud_PubSub_V1_SimplePublisherImpl_TopicName">TopicName</a>.</p>
-</section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a></h4>
-      <section><p>A PubSub subscriber that is associated with a specific <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.html#Google_Cloud_PubSub_V1_SimpleSubscriber_SubscriptionName">SubscriptionName</a>.
-The name &quot;<a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a>&quot; is likely to change before the GA release.
-See <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1188">
-https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1188</a>.</p>
-</section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.html">SimpleSubscriber.ClientCreationSettings</a></h4>
-      <section><p>Settings for creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a>s.</p>
-</section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.Settings.html">SimpleSubscriber.Settings</a></h4>
-      <section><p>Settings for <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a>.
-Defaults will be used for <code>null</code> properties.</p>
-</section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriberImpl.html">SimpleSubscriberImpl</a></h4>
-      <section><p>Implementation of <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a>. </p>
-</section>
       <h4><a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a></h4>
       <section><p>A snapshot resource.</p>
 </section>
@@ -237,16 +218,29 @@ consume messages from a subscription via the <code>Pull</code> method.</p>
       <section><p>Client for Subscriber</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a></h4>
-      <section><p>Subscriber client wrapper, for convenient use.</p>
+      <section><p>A PubSub subscriber that is associated with a specific <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_SubscriptionName">SubscriptionName</a>.</p>
 </section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.StreamingPullStream.html">SubscriberClient.StreamingPullStream</a></h4>
-      <section><p>Bidirectional streaming methods for <code>StreamingPull</code>.</p>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.html">SubscriberClient.ClientCreationSettings</a></h4>
+      <section><p>Settings for creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a>s.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.Settings.html">SubscriberClient.Settings</a></h4>
+      <section><p>Settings for <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a>.
+Defaults will be used for <code>null</code> properties.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClientImpl.html">SubscriberClientImpl</a></h4>
+      <section><p>Implementation of <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a>. </p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a></h4>
+      <section><p>Subscriber client wrapper, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.StreamingPullStream.html">SubscriberServiceApiClient.StreamingPullStream</a></h4>
+      <section><p>Bidirectional streaming methods for <code>StreamingPull</code>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClientImpl.html">SubscriberServiceApiClientImpl</a></h4>
       <section><p>Subscriber client wrapper implementation, for convenient use.</p>
 </section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberSettings.html">SubscriberSettings</a></h4>
-      <section><p>Settings for a <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a>.</p>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiSettings.html">SubscriberServiceApiSettings</a></h4>
+      <section><p>Settings for a <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a>.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></h4>
       <section><p>A subscription resource.</p>
@@ -274,17 +268,17 @@ consume messages from a subscription via the <code>Pull</code> method.</p>
 </section>
     <h3 id="structs">Structs
   </h3>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.FlowState.html">SimplePublisher.FlowState</a></h4>
-      <section><p>A snapshot of the flow state of a <a class="xref" href="Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a>.</p>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.FlowState.html">PublisherClient.FlowState</a></h4>
+      <section><p>A snapshot of the flow state of a <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a>.</p>
 </section>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="Google.Cloud.PubSub.V1.SeekRequest.TargetOneofCase.html">SeekRequest.TargetOneofCase</a></h4>
       <section><p>Enum of possible cases for the &quot;target&quot; oneof.</p>
 </section>
-      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.Reply.html">SimpleSubscriber.Reply</a></h4>
-      <section><p>Reply from a message handler; whether to <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.Reply.html#Google_Cloud_PubSub_V1_SimpleSubscriber_Reply_Ack">Ack</a>
-or <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.Reply.html#Google_Cloud_PubSub_V1_SimpleSubscriber_Reply_Nack">Nack</a> the message to the server. </p>
+      <h4><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.Reply.html">SubscriberClient.Reply</a></h4>
+      <section><p>Reply from a message handler; whether to <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.Reply.html#Google_Cloud_PubSub_V1_SubscriberClient_Reply_Ack">Ack</a>
+or <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.Reply.html#Google_Cloud_PubSub_V1_SubscriberClient_Reply_Nack">Nack</a> the message to the server. </p>
 </section>
       <h4><a class="xref" href="Google.Cloud.PubSub.V1.TopicNameOneof.OneofType.html">TopicNameOneof.OneofType</a></h4>
       <section><p>The possible contents of <a class="xref" href="Google.Cloud.PubSub.V1.TopicNameOneof.html">TopicNameOneof</a>.</p>

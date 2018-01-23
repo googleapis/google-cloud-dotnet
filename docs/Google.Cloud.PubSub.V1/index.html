@@ -8,7 +8,7 @@
     <title>Google.Cloud.PubSub.V1 | Google.Cloud.PubSub.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.PubSub.V1 | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -63,6 +63,20 @@
 <h1 id="googlecloudpubsubv1">Google.Cloud.PubSub.V1</h1>
 
 <p><code>Google.Cloud.PubSub.V1</code> is a.NET client library for the <a href="https://cloud.google.com/pubsub/">Cloud Pub/Sub API</a>.</p>
+<h1 id="class-renaming-in-v100-beta16httpswwwnugetorgpackagesgooglecloudpubsubv1100-beta16">Class renaming in <a href="https://www.nuget.org/packages/Google.Cloud.PubSub.V1/1.0.0-beta16">v1.0.0-beta16</a></h1>
+<p>The following classes have been renamed when moving from version 1.0.0-beta15 to 1.0.0-beta16:</p>
+<ul>
+<li><code>SimplePublisher</code> is now named <a href="api/Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a></li>
+<li><code>SimpleSubscriber</code> is now named <a href="api/Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a></li>
+<li><code>PublisherClient</code> is now named <a href="api/Google.Cloud.PubSub.V1.PublisherServiceApiClient.html">PublisherServiceApiClient</a><ul>
+<li><code>PublisherSettings</code> is now named <code>PublisherServiceApiSettings</code></li>
+</ul>
+</li>
+<li><code>SubscriberClient</code> is now named <a href="api/Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a><ul>
+<li><code>SubscriberSettings</code> is now named <code>SubscriberServiceApiSettings</code></li>
+</ul>
+</li>
+</ul>
 <h1 id="installation">Installation</h1>
 <p>Install the <code>Google.Cloud.PubSub.V1</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
@@ -77,60 +91,60 @@ download a service account JSON file then set the <code>GOOGLE_APPLICATION_CREDE
 The credentials will automatically be used to authenticate. See the <a href="https://cloud.google.com/docs/authentication/getting-started">Getting Started With
 Authentication</a> guide for more details.</p>
 <h1 id="getting-started">Getting started</h1>
-<p><a href="api/Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a> and
-<a href="api/Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a>
+<p><a href="api/Google.Cloud.PubSub.V1.PublisherServiceApiClient.html">PublisherServiceApiClient</a> and
+<a href="api/Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a>
 provide a general-purpose abstraction over raw the RPC API, providing
 features such as page streaming to make client code cleaner and
 simpler.</p>
-<p><a href="api/Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a> and <a href="api/Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a> provide simpler APIs for message publishing and subscribing. These classes offer considerably higher performance and simplicity, especially when working with higher message throughput.</p>
+<p><a href="api/Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a> and <a href="api/Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> provide simpler APIs for message publishing and subscribing. These classes offer considerably higher performance and simplicity, especially when working with higher message throughput.</p>
 <h1 id="sample-code">Sample code</h1>
-<p>Using <a href="api/Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a> and <a href="api/Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a> for message publishing and subscribing:</p>
+<p>Using <a href="api/Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a> and <a href="api/Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> for message publishing and subscribing:</p>
 <pre><code class="lang-cs">// First create a topic.
-PublisherClient publisher = await PublisherClient.CreateAsync();
+PublisherServiceApiClient publisherService = await PublisherServiceApiClient.CreateAsync();
 TopicName topicName = new TopicName(projectId, topicId);
-publisher.CreateTopic(topicName);
+publisherService.CreateTopic(topicName);
 
 // Subscribe to the topic.
-SubscriberClient subscriber = await SubscriberClient.CreateAsync();
+SubscriberServiceApiClient subscriberService = await SubscriberServiceApiClient.CreateAsync();
 SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
-subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
+subscriberService.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
 
-// Publish a message to the topic using SimplePublisher.
-SimplePublisher simplePublisher = await SimplePublisher.CreateAsync(topicName);
+// Publish a message to the topic using PublisherClient.
+PublisherClient publisher = await PublisherClient.CreateAsync(topicName);
 // PublishAsync() has various overloads. Here we&#39;re using the string overload.
-string messageId = await simplePublisher.PublishAsync(&quot;Hello, Pubsub&quot;);
-// SimplePublisher should be shutdown after use.
+string messageId = await publisher.PublishAsync(&quot;Hello, Pubsub&quot;);
+// PublisherClient instance should be shutdown after use.
 // The TimeSpan specifies for how long to attempt to publish locally queued messages.
-await simplePublisher.ShutdownAsync(TimeSpan.FromSeconds(15));
+await publisher.ShutdownAsync(TimeSpan.FromSeconds(15));
 
 // Pull messages from the subscription using SimpleSubscriber.
-SimpleSubscriber simpleSubscriber = await SimpleSubscriber.CreateAsync(subscriptionName);
+SubscriberClient subscriber = await SubscriberClient.CreateAsync(subscriptionName);
 List&lt;PubsubMessage&gt; receivedMessages = new List&lt;PubsubMessage&gt;();
 // Start the subscriber listening for messages.
-await simpleSubscriber.StartAsync((msg, cancellationToken) =&gt;
+await subscriber.StartAsync((msg, cancellationToken) =&gt;
 {
     receivedMessages.Add(msg);
     Console.WriteLine($&quot;Received message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}&quot;);
     Console.WriteLine($&quot;Text: &#39;{msg.Data.ToStringUtf8()}&#39;&quot;);
     // Stop this subscriber after one message is received.
     // This is non-blocking, and the returned Task may be awaited.
-    simpleSubscriber.StopAsync(TimeSpan.FromSeconds(15));
+    subscriber.StopAsync(TimeSpan.FromSeconds(15));
     // Return Reply.Ack to indicate this message has been handled.
-    return Task.FromResult(SimpleSubscriber.Reply.Ack);
+    return Task.FromResult(SubscriberClient.Reply.Ack);
 });
 
 // Tidy up by deleting the subscription and the topic.
-subscriber.DeleteSubscription(subscriptionName);
-publisher.DeleteTopic(topicName);
-</code></pre><p>Using <a href="api/Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a> and
-<a href="api/Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> only:</p>
+subscriberService.DeleteSubscription(subscriptionName);
+publisherService.DeleteTopic(topicName);
+</code></pre><p>Using <a href="api/Google.Cloud.PubSub.V1.PublisherServiceApiClient.html">PublisherServiceApiClient</a> and
+<a href="api/Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a> only:</p>
 <pre><code class="lang-cs">// First create a topic.
-PublisherClient publisher = PublisherClient.Create();
+PublisherServiceApiClient publisher = PublisherServiceApiClient.Create();
 TopicName topicName = new TopicName(projectId, topicId);
 publisher.CreateTopic(topicName);
 
 // Subscribe to the topic.
-SubscriberClient subscriber = SubscriberClient.Create();
+SubscriberServiceApiClient subscriber = SubscriberServiceApiClient.Create();
 SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
 subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
 

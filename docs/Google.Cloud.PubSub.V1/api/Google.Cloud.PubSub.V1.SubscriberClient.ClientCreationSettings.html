@@ -5,12 +5,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SimpleSubscriber.ClientCreationSettings
+    <title>Class SubscriberClient.ClientCreationSettings
    | Google.Cloud.PubSub.V1 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SimpleSubscriber.ClientCreationSettings
+    <meta name="title" content="Class SubscriberClient.ClientCreationSettings
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.24.0.0">
+    <meta name="generator" content="docfx 2.28.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -68,18 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings">
   
   
-  <h1 id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings" class="text-break">Class SimpleSubscriber.ClientCreationSettings
+  <h1 id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings" class="text-break">Class SubscriberClient.ClientCreationSettings
   </h1>
-  <div class="markdown level0 summary"><p>Settings for creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a>s.</p>
+  <div class="markdown level0 summary"><p>Settings for creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a>s.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SimpleSubscriber.ClientCreationSettings</span></div>
+    <div class="level1"><span class="xref">SubscriberClient.ClientCreationSettings</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -98,20 +98,20 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.PubSub.V1.html">Google.Cloud.PubSub.V1</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.PubSub.V1.dll</h6>
-  <h5 id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_syntax">Syntax</h5>
+  <h5 id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed class ClientCreationSettings</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings__ctor_" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.#ctor*"></a>
-  <h4 id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings__ctor_System_Nullable_System_Int32__Google_Cloud_PubSub_V1_SubscriberSettings_Grpc_Core_ChannelCredentials_Google_Api_Gax_Grpc_ServiceEndpoint_" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.#ctor(System.Nullable{System.Int32},Google.Cloud.PubSub.V1.SubscriberSettings,Grpc.Core.ChannelCredentials,Google.Api.Gax.Grpc.ServiceEndpoint)">ClientCreationSettings(Nullable&lt;Int32&gt;, SubscriberSettings, ChannelCredentials, ServiceEndpoint)</h4>
+  <a id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings__ctor_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.#ctor*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings__ctor_System_Nullable_System_Int32__Google_Cloud_PubSub_V1_SubscriberServiceApiSettings_Grpc_Core_ChannelCredentials_Google_Api_Gax_Grpc_ServiceEndpoint_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.#ctor(System.Nullable{System.Int32},Google.Cloud.PubSub.V1.SubscriberServiceApiSettings,Grpc.Core.ChannelCredentials,Google.Api.Gax.Grpc.ServiceEndpoint)">ClientCreationSettings(Nullable&lt;Int32&gt;, SubscriberServiceApiSettings, ChannelCredentials, ServiceEndpoint)</h4>
   <div class="markdown level1 summary"><p>Instantiate with the specified settings.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClientCreationSettings(int ? clientCount = default (int ? ), SubscriberSettings subscriberSettings = null, ChannelCredentials credentials = null, ServiceEndpoint serviceEndpoint = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ClientCreationSettings(int ? clientCount = default (int ? ), SubscriberServiceApiSettings subscriberServiceApiSettings = null, ChannelCredentials credentials = null, ServiceEndpoint serviceEndpoint = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,35 +127,35 @@
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">clientCount</span></td>
         <td><p>Optional.
-The number of <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a>s to create and use within a <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a> instance.</p>
+The number of <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a>s to create and use within a <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> instance.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberSettings.html">SubscriberSettings</a></td>
-        <td><span class="parametername">subscriberSettings</span></td>
-        <td><p>Optional. The settings to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> instances.</p>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiSettings.html">SubscriberServiceApiSettings</a></td>
+        <td><span class="parametername">subscriberServiceApiSettings</span></td>
+        <td><p>Optional. The settings to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a> instances.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Grpc.Core.ChannelCredentials.html">ChannelCredentials</a></td>
         <td><span class="parametername">credentials</span></td>
-        <td><p>Optional. Credentials to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> instances.</p>
+        <td><p>Optional. Credentials to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a> instances.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
         <td><span class="parametername">serviceEndpoint</span></td>
         <td><p>Optional.
-The <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.html#Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_ServiceEndpoint">ServiceEndpoint</a> to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> instances.</p>
+The <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.html#Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_ServiceEndpoint">ServiceEndpoint</a> to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a> instances.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_ClientCount_" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.ClientCount*"></a>
-  <h4 id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_ClientCount" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.ClientCount">ClientCount</h4>
-  <div class="markdown level1 summary"><p>The number of <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a>s to create and use within a <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a> instance.
+  <a id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_ClientCount_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.ClientCount*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_ClientCount" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.ClientCount">ClientCount</h4>
+  <div class="markdown level1 summary"><p>The number of <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a>s to create and use within a <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> instance.
 If set, must be in the range 1 to 256 (inclusive).
 If <code>null</code>, defaults to the CPU count on the machine this is being executed on.</p>
 </div>
@@ -179,9 +179,9 @@ If <code>null</code>, defaults to the CPU count on the machine this is being exe
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_Credentials_" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.Credentials*"></a>
-  <h4 id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_Credentials" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.Credentials">Credentials</h4>
-  <div class="markdown level1 summary"><p>Credentials to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> instances.
+  <a id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_Credentials_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.Credentials*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_Credentials" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.Credentials">Credentials</h4>
+  <div class="markdown level1 summary"><p>Credentials to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a> instances.
 If <code>null</code>, defaults to using the default credentials.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -204,10 +204,10 @@ If <code>null</code>, defaults to using the default credentials.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_ServiceEndpoint_" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.ServiceEndpoint*"></a>
-  <h4 id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_ServiceEndpoint" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.ServiceEndpoint">ServiceEndpoint</h4>
-  <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.html#Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_ServiceEndpoint">ServiceEndpoint</a> to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> instances.
-If <code>null</code>, defaults to <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_DefaultEndpoint">DefaultEndpoint</a>.</p>
+  <a id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_ServiceEndpoint_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.ServiceEndpoint*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_ServiceEndpoint" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.ServiceEndpoint">ServiceEndpoint</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.html#Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_ServiceEndpoint">ServiceEndpoint</a> to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a> instances.
+If <code>null</code>, defaults to <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html#Google_Cloud_PubSub_V1_SubscriberServiceApiClient_DefaultEndpoint">DefaultEndpoint</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -229,15 +229,15 @@ If <code>null</code>, defaults to <a class="xref" href="Google.Cloud.PubSub.V1.S
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_SubscriberSettings_" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.SubscriberSettings*"></a>
-  <h4 id="Google_Cloud_PubSub_V1_SimpleSubscriber_ClientCreationSettings_SubscriberSettings" data-uid="Google.Cloud.PubSub.V1.SimpleSubscriber.ClientCreationSettings.SubscriberSettings">SubscriberSettings</h4>
-  <div class="markdown level1 summary"><p>The settings to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> instances.
-If <code>null</code>, defaults to <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_GetDefault">GetDefault()</a>.</p>
+  <a id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_SubscriberServiceApiSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.SubscriberServiceApiSettings*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_ClientCreationSettings_SubscriberServiceApiSettings" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ClientCreationSettings.SubscriberServiceApiSettings">SubscriberServiceApiSettings</h4>
+  <div class="markdown level1 summary"><p>The settings to use when creating <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiClient.html">SubscriberServiceApiClient</a> instances.
+If <code>null</code>, defaults to <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiSettings.html#Google_Cloud_PubSub_V1_SubscriberServiceApiSettings_GetDefault">GetDefault()</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SubscriberSettings SubscriberSettings { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public SubscriberServiceApiSettings SubscriberServiceApiSettings { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -249,7 +249,7 @@ If <code>null</code>, defaults to <a class="xref" href="Google.Cloud.PubSub.V1.S
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberSettings.html">SubscriberSettings</a></td>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberServiceApiSettings.html">SubscriberServiceApiSettings</a></td>
         <td></td>
       </tr>
     </tbody>
