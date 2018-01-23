@@ -19,7 +19,7 @@ There are three distinct places where `CallSettings` may optionally be provided:
 
 * When calling an RPC method *(highest priority)*.
 * Client-wide when creating a client object (for example, using
-[PublisherClient.Create()](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Cloud_PubSub_V1_PublisherSettings_)).
+[PublisherServiceApiClient.Create()](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherServiceApiClient.html#Google_Cloud_PubSub_V1_PublisherServiceApiClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Cloud_PubSub_V1_PublisherServiceApiSettings_)).
 * Per-RPC-method when creating a client object *(lowest priority)*.
 
 It's important to understand exactly which properties of which `CallSettings` will be used during an RPC invocation.
@@ -57,7 +57,7 @@ for multiple RPC invocations.
 
 By default there is a per-RPC-method client configuration that specifies a sensible
 retry policy for every method. See, for example,
-[PublisherSettings.CreateTopicSettings](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherSettings.html#Google_Cloud_PubSub_V1_PublisherSettings_CreateTopicSettings)
+[PublisherServiceApiSettings.CreateTopicSettings](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherServiceApiSettings.html#Google_Cloud_PubSub_V1_PublisherServiceApiSettings_CreateTopicSettings)
 
 ## Timing settings
 

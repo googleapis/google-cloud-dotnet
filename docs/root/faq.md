@@ -3,13 +3,17 @@
 ## How can I use non-default credentials for gRPC-based APIs?
 
 The generated classes for gRPC-based APIs (such as
-[PublisherClient](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html))
+[PublisherServiceApiClient](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherServiceApiClient.html))
 have `Create` overloads of this form:
 
 ```csharp
-public static PublisherClient Create(ServiceEndpoint endpoint = null, PublisherSettings settings = null)
+public static PublisherServiceApiClient Create(
+    ServiceEndpoint endpoint = null,
+    PublisherServiceApiSettings settings = null)
 
-public static PublisherClient Create(Channel channel, PublisherSettings settings = null)
+public static PublisherServiceApiClient Create(
+    Channel channel,
+    PublisherServiceApiSettings settings = null)
 ```
 
 (Equivalent asynchronous overloads exist as well.)
@@ -40,8 +44,8 @@ using Grpc.Auth;
 // https://developers.google.com/api-client-library/dotnet/guide/aaa_oauth
 UserCredential userCredential = ...;
 ChannelCredentials channelCredentials = userCredential.ToChannelCredentials();
-Channel channel = new Channel(PublisherClient.DefaultEndpoint, channelCredentials);
-PublisherClient client = PublisherClient.Create(channel);
+Channel channel = new Channel(PublisherServiceApiClient.DefaultEndpoint, channelCredentials);
+PublisherServiceApiClient client = PublisherServiceApiClient.Create(channel);
 // Now use client, and clean up channel if and when you need to.
 ```
 
@@ -53,7 +57,7 @@ property from the API you're using. For example:
 ```
 GoogleCredential credential = GoogleCredential
     .FromFile("auth.json")
-    .CreateScoped(PublisherClient.DefaultScopes);
+    .CreateScoped(PublisherServiceApiClient.DefaultScopes);
 ChannelCredentials channelCredentials = credential.ToChannelCredentials();
 ...
 ```
@@ -85,7 +89,7 @@ UserCredential userCredential = ...;
 CallCredentials callCredentials = userCredential.ToCallCredentials();
 
 // Use the default application credentials for the channel.
-PublisherClient client = PublisherClient.Create();
+PublisherServiceApiClient client = PublisherServiceApiClient.Create();
 client.Publish(/* regular method arguments */,
     CallSettings.FromCallCredentials(callCredentials));
 ```

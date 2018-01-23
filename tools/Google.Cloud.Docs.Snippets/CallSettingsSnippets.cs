@@ -31,7 +31,7 @@ namespace Google.Cloud.Tools.Snippets
         {
             _fixture = fixture;
         }
-
+        
         [Fact]
         public void PerRpc()
         {
@@ -39,8 +39,8 @@ namespace Google.Cloud.Tools.Snippets
             string topicId = _fixture.CreateTopicId();
 
             // Sample: PerRpc
-            // Create a PublisherClient with default settings.
-            PublisherClient client = PublisherClient.Create();
+            // Create a PublisherServiceApiClient with default settings.
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
             // Create a topic name from the projectId and topicId.
             TopicName topicName = new TopicName(projectId, topicId);
             // Create a CallSettings with a custom header.
@@ -57,12 +57,12 @@ namespace Google.Cloud.Tools.Snippets
             string topicId = _fixture.CreateTopicId();
 
             // Sample: ClientWide
-            // Create a default PublisherSettings, with a custom header for calls to all RPC methods.
-            PublisherSettings publisherSettings = new PublisherSettings
+            // Create a default PublisherServiceApiSettings, with a custom header for calls to all RPC methods.
+            PublisherServiceApiSettings publisherSettings = new PublisherServiceApiSettings
             {
                 CallSettings = new CallSettings(null, null, null, metadata => metadata.Add("ClientVersion", "1.0.0"), null, null)
             };
-            PublisherClient client = PublisherClient.Create(settings: publisherSettings);
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create(settings: publisherSettings);
             // Create a topic name from the projectId and topicId.
             TopicName topicName = new TopicName(projectId, topicId);
             // The custom 'ClientVersion' header will be included in the RPC call, due to
@@ -78,11 +78,11 @@ namespace Google.Cloud.Tools.Snippets
             string topicId = _fixture.CreateTopicId();
 
             // Sample: ClientPerMethod
-            // Create a default PublisherSettings, with a custom header for calls
+            // Create a default PublisherServiceApiSettings, with a custom header for calls
             // to the CreateTopic RPC method.
-            PublisherSettings publisherSettings = new PublisherSettings();
+            PublisherServiceApiSettings publisherSettings = new PublisherServiceApiSettings();
             publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings.WithHeader("ClientVersion", "1.0.0");
-            PublisherClient client = PublisherClient.Create(settings: publisherSettings);
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create(settings: publisherSettings);
             // Create a topic name from the projectId and topicId.
             TopicName topicName = new TopicName(projectId, topicId);
             // The custom 'ClientVersion' header will be included in the RPC call, due to
@@ -100,11 +100,11 @@ namespace Google.Cloud.Tools.Snippets
             CancellationToken cancellationToken = new CancellationTokenSource().Token;
 
             // Sample: Overrides
-            // Create a default PublisherSettings, with customizations for CreateTopic RPCs:
+            // Create a default PublisherServiceApiSettings, with customizations for CreateTopic RPCs:
             // * A custom "ClientVersion" header.
             // * A custom 5-second timeout Timing.
             // * No cancellation token.
-            PublisherSettings publisherSettings = new PublisherSettings();
+            PublisherServiceApiSettings publisherSettings = new PublisherServiceApiSettings();
             publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings
                 .WithCancellationToken(CancellationToken.None)
                 .WithCallTiming(CallTiming.FromTimeout(TimeSpan.FromSeconds(5)))
@@ -117,7 +117,7 @@ namespace Google.Cloud.Tools.Snippets
                 .WithCancellationToken(CancellationToken.None);
 
             // Create the client with the configured publisherSettings
-            PublisherClient client = PublisherClient.Create(settings: publisherSettings);
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create(settings: publisherSettings);
 
             // Create a topic name from the projectId and topicId.
             TopicName topicName = new TopicName(projectId, topicId);

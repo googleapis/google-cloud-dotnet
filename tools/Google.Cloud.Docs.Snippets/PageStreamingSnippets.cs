@@ -36,7 +36,7 @@ namespace Google.Cloud.Tools.Snippets
         {
             string projectId = _fixture.ProjectId;
             // Sample: AllResources
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
             ProjectName projectName = new ProjectName(projectId);
             PagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageSize: 3);
             foreach (Topic topic in topics)
@@ -51,7 +51,7 @@ namespace Google.Cloud.Tools.Snippets
         {
             string projectId = _fixture.ProjectId;
             // Sample: Responses
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
             ProjectName projectName = new ProjectName(projectId);
             PagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageSize: 3);
             IEnumerable<ListTopicsResponse> topicResponses = topics.AsRawResponses();
@@ -74,7 +74,7 @@ namespace Google.Cloud.Tools.Snippets
         {
             string projectId = _fixture.ProjectId;
             // Sample: SingleResponse
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
             ProjectName projectName = new ProjectName(projectId);
             PagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageSize: 3);
             IEnumerable<ListTopicsResponse> topicResponses = topics.AsRawResponses();
@@ -99,7 +99,7 @@ namespace Google.Cloud.Tools.Snippets
             string pageTokenFromRequest = "";
 
             // Sample: ReadPage
-            PublisherClient client = PublisherClient.Create();
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
             ProjectName projectName = new ProjectName(projectId);
             PagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageTokenFromRequest);
 

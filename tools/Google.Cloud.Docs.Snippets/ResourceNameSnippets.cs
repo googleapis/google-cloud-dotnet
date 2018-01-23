@@ -25,7 +25,7 @@ namespace Google.Cloud.Tools.Snippets
         public void ListTopics()
         {
             // Sample: ListTopics
-            var client = PublisherClient.Create();
+            var client = PublisherServiceApiClient.Create();
             var topics = client.ListTopics(new ProjectName("petstore"));
             foreach (Topic topic in topics)
             {

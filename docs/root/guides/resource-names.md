@@ -63,7 +63,7 @@ set, the value is formatted and stored in `Name`.
 ## API calls
 
 API calls where the request uses a resource name are typically mapped to use the corresponding class. For example, to list all the topics
-in the `projects/petstore` project, you would use the [PublisherClient.ListTopics](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_) method:
+in the `projects/petstore` project, you would use the [PublisherServiceApiClient.ListTopics](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherServiceApiClient.html#Google_Pubsub_V1_PublisherServiceApiClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_) method:
 
 [!code-cs[](../obj/snippets/Google.Cloud.Docs.ResourceName.txt#ListTopics)]
 
