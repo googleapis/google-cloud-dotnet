@@ -64,7 +64,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             public RpcException CurrentEx { get; }
         }
 
-        private class FakeSubscriber : SubscriberServiceApiClient
+        private class FakeSubscriberServiceApiClient : SubscriberServiceApiClient
         {
             public static ReceivedMessage MakeReceivedMessage(string msgId, string content) =>
                 new ReceivedMessage
@@ -195,7 +195,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 }
             }
 
-            public FakeSubscriber(
+            public FakeSubscriberServiceApiClient(
                 IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock,
                 TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId)
             {
@@ -243,7 +243,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             public TestScheduler Scheduler { get; set; }
             public DateTime Time0 { get; set; }
             public TaskHelper TaskHelper { get; set; }
-            public List<FakeSubscriber> Subscribers { get; set; }
+            public List<FakeSubscriberServiceApiClient> Subscribers { get; set; }
             public List<DateTime> ClientShutdowns { get; set; }
             public SubscriberClientImpl Subscriber { get; set; }
 
@@ -258,7 +258,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 List<DateTime> clientShutdowns = new List<DateTime>();
                 var msgEn = msgs.GetEnumerator();
                 var clients = Enumerable.Range(0, clientCount)
-                    .Select(_ => new FakeSubscriber(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId))
+                    .Select(_ => new FakeSubscriberServiceApiClient(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId))
                     .ToList();
                 var settings = new SubscriberClient.Settings
                 {
@@ -331,7 +331,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 : Math.Max(0, stopAfterSeconds - (hardStop ? handlerDelaySeconds : 0)) / interBatchIntervalSeconds;
             var expectedMsgCount = Math.Min(expectedCompletedBatches, batchCount) * batchSize * clientCount;
             var expectedAcks = Enumerable.Range(0, batchCount)
-                .SelectMany(batchIndex => Enumerable.Range(0, batchSize).Select(msgIndex => FakeSubscriber.MakeMsgId(batchIndex, msgIndex)))
+                .SelectMany(batchIndex => Enumerable.Range(0, batchSize).Select(msgIndex => FakeSubscriberServiceApiClient.MakeMsgId(batchIndex, msgIndex)))
                 .Take(expectedMsgCount / clientCount)
                 .OrderBy(x => x);
 
@@ -434,7 +434,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             [CombinatorialValues(1, 3, 9, 19)] int threadCount)
         {
             const int msgsPerClient = 100;
-            var oneMsgByteCount = FakeSubscriber.MakeReceivedMessage("0000.0000", "0000").CalculateSize();
+            var oneMsgByteCount = FakeSubscriberServiceApiClient.MakeReceivedMessage("0000.0000", "0000").CalculateSize();
             var combinedFlowMaxElements = Math.Min(flowMaxElements, flowMaxBytes / oneMsgByteCount + 1);
             var expectedMsgCount = Math.Min(msgsPerClient * clientCount, combinedFlowMaxElements * stopAfterSeconds + (hardStop ? 0 : combinedFlowMaxElements));
             var msgss = Enumerable.Range(0, msgsPerClient)
@@ -640,7 +640,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
         }
 
-        private class FakeSubscriberClient : SubscriberServiceApiClient
+        private class FakeEmptySubscriberServiceApiClient : SubscriberServiceApiClient
         {
         }
 
@@ -648,7 +648,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ValidParameters()
         {
             var subscriptionName = new SubscriptionName("project", "subscriptionId");
-            var clients = new[] { new FakeSubscriberClient() };
+            var clients = new[] { new FakeEmptySubscriberServiceApiClient() };
 
             var settingsDefault = new SubscriberClient.Settings();
             new SubscriberClientImpl(subscriptionName, clients, settingsDefault, null);
@@ -682,7 +682,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void InvalidParameters()
         {
             var subscriptionName = new SubscriptionName("project", "subscriptionId");
-            var clients = new[] { new FakeSubscriberClient() };
+            var clients = new[] { new FakeEmptySubscriberServiceApiClient() };
             var settings = new SubscriberClient.Settings();
 
             var ex1 = Assert.Throws<ArgumentNullException>(() => new SubscriberClientImpl(null, clients, settings, null));

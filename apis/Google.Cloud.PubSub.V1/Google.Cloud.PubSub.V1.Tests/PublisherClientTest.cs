@@ -28,9 +28,9 @@ namespace Google.Cloud.PubSub.V1.Tests
 {
     public class PublisherClientTest
     {
-        private class FakePublisher : PublisherServiceApiClient
+        private class FakePublisherServiceApiClient : PublisherServiceApiClient
         {
-            public FakePublisher(IScheduler scheduler, TaskHelper taskHelper, params TimeSpan[] delays)
+            public FakePublisherServiceApiClient(IScheduler scheduler, TaskHelper taskHelper, params TimeSpan[] delays)
             {
                 _schduler = scheduler;
                 _taskHelper = taskHelper;
@@ -85,7 +85,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var topicName = new TopicName("FakeProject", "FakeTopic");
             var scheduler = new TestScheduler();
             TaskHelper taskHelper = scheduler.TaskHelper;
-            var client = new FakePublisher(scheduler, taskHelper);
+            var client = new FakePublisherServiceApiClient(scheduler, taskHelper);
             var settings = MakeSettings(scheduler);
             int shutdownCount = 0;
             var pub = new PublisherClientImpl(topicName, new[] { client }, settings, () =>
@@ -115,7 +115,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var topicName = new TopicName("FakeProject", "FakeTopic");
             var scheduler = new TestScheduler(threadCount);
             TaskHelper taskHelper = scheduler.TaskHelper;
-            var clients = Enumerable.Range(0, clientCount).Select(_ => new FakePublisher(scheduler, taskHelper)).ToArray();
+            var clients = Enumerable.Range(0, clientCount).Select(_ => new FakePublisherServiceApiClient(scheduler, taskHelper)).ToArray();
             var settings = MakeSettings(scheduler, batchElementCountThreshold: batchElementCountThreshold, batchRequestByteThreshold: 10000);
             int shutdownCount = 0;
             var pub = new PublisherClientImpl(topicName, clients, settings, () =>
@@ -143,7 +143,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var topicName = new TopicName("FakeProject", "FakeTopic");
             var scheduler = new TestScheduler();
             TaskHelper taskHelper = scheduler.TaskHelper;
-            var client = new FakePublisher(scheduler, taskHelper, TimeSpan.FromSeconds(1));
+            var client = new FakePublisherServiceApiClient(scheduler, taskHelper, TimeSpan.FromSeconds(1));
             var settings = MakeSettings(scheduler, batchElementCountThreshold: 2, batchRequestByteThreshold: 1000);
             int shutdownCount = 0;
             var pub = new PublisherClientImpl(topicName, new[] { client }, settings, () =>
@@ -171,7 +171,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var topicName = new TopicName("FakeProject", "FakeTopic");
             var scheduler = new TestScheduler();
             TaskHelper taskHelper = scheduler.TaskHelper;
-            var client = new FakePublisher(scheduler, taskHelper, TimeSpan.FromSeconds(1));
+            var client = new FakePublisherServiceApiClient(scheduler, taskHelper, TimeSpan.FromSeconds(1));
             var settings = MakeSettings(scheduler);
             var pub = new PublisherClientImpl(topicName, new[] { client }, settings, null, taskHelper);
             var msgSize = new PubsubMessage { Data = ByteString.CopyFromUtf8("1") }.CalculateSize();
