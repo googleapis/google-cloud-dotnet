@@ -33,7 +33,7 @@ the API response type for the list operation, and the `TResource` is
 the type of the resource being listed. In the Pub/Sub API for
 example, the `ListTopics` operation accepts a `ListTopicsRequest`
 and returns a `ListTopicsResponse` containing a set of `Topic`
-resources - so the [PublisherClient.ListTopics](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_)
+resources - so the [PublisherServiceApiClient.ListTopics](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherServiceApiClient.html#Google_Cloud_PubSub_V1_PublisherServiceApiClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_)
 method returns a `PagedEnumerable<ListTopicsResponse, Topic>`.
 
 `PagedEnumerable<TResponse, TResource>` implements

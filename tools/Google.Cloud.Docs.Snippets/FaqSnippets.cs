@@ -30,7 +30,7 @@ namespace Google.Cloud.Tools.Snippets
             string emulatorHostAndPort = Environment.GetEnvironmentVariable("PUBSUB_EMULATOR_HOST");
 
             Channel channel = new Channel(emulatorHostAndPort, ChannelCredentials.Insecure);
-            PublisherClient client = PublisherClient.Create(channel);
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create(channel);
             client.CreateTopic(new TopicName("project", "topic"));
             foreach (var topic in client.ListTopics(new ProjectName("project")))
             {
