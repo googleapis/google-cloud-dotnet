@@ -934,7 +934,7 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             // Sample: NotificationsOverview
             // First create a Pub/Sub topic.
-            PublisherClient publisherClient = PublisherClient.Create();
+            PublisherServiceApiClient publisherClient = PublisherServiceApiClient.Create();
             TopicName topicName = new TopicName(projectId, topicId);
             publisherClient.CreateTopic(topicName);
 
