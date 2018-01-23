@@ -47,9 +47,12 @@ namespace Google.Cloud.PubSub.V1.SmokeTests
             ProjectName project = new ProjectName(projectId);
 
             // Call API method
-            var response = client.ListTopics(project);
+            PagedEnumerable<ListTopicsResponse, Topic> pagedResponse = client.ListTopics(project);
             // Show the result
-            Console.WriteLine(response);
+            foreach (var item in pagedResponse)
+            {
+                Console.WriteLine(item);
+            }
 
             // Success
             Console.WriteLine("Smoke test passed OK");
