@@ -390,7 +390,7 @@
     "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
     "version": "1.0.0-beta01",
     "type": "grpc",
-    "description": "Recommended Google client library to manages OS login configuration for Google account users.",
+    "description": "Recommended Google client library to manage OS login configuration for Google account users.",
     "tags": [ "OsLogin", "Login" ],
     "dependencies": {
       "Google.Cloud.OsLogin.Common": "project"
