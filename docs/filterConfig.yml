@@ -1,4 +1,7 @@
 apiRules:
+- include:
+    type: Method
+    uidRegex: \.#ctor
 - exclude:
     type: Method
     hasAttribute:
