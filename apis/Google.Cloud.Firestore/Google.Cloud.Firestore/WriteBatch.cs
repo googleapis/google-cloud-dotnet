@@ -162,12 +162,13 @@ namespace Google.Cloud.Firestore
                     // - Only timestamps in the mask are converted to transforms
                     // - Apply the field mask to get the updates
                     GaxPreconditions.CheckArgument(deletes.All(p => mask.Contains(p)), nameof(documentData), "Delete cannot appear in an unmerged field");
-                    serverTimestamps = serverTimestamps.Intersect(mask).ToList();
+                    serverTimestamps = serverTimestamps.Where(st => mask.Any(fp => fp.IsPrefixOf(st))).ToList();
                     RemoveSentinels(fields, deletes);
                     RemoveSentinels(fields, serverTimestamps);
                     updates = ApplyFieldMask(fields, mask);
                     // Every field path in the mask must either refer to a now-removed sentinel, or a remaining value.
-                    GaxPreconditions.CheckArgument(mask.All(p => updates.ContainsKey(p) || deletes.Contains(p) || serverTimestamps.Contains(p)),
+                    // Sentinels are permitted to be in the mask in a nested fashion rather than directly, e.g. a mask of "parent" with a sentinel of "parent.child.timestamp" is fine.
+                    GaxPreconditions.CheckArgument(mask.All(p => updates.ContainsKey(p) || deletes.Any(d => p.IsPrefixOf(d)) || serverTimestamps.Any(st => p.IsPrefixOf(st))),
                         nameof(documentData), "All paths specified for merging must appear in the data.");
                     updatePaths = mask;
                 }
