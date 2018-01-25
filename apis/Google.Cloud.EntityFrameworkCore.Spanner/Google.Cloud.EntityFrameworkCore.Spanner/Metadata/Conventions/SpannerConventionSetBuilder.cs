@@ -19,12 +19,15 @@ using Microsoft.EntityFrameworkCore.Storage.Internal;
 namespace Microsoft.EntityFrameworkCore.Metadata.Conventions
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerConventionSetBuilder : RelationalConventionSetBuilder
     {
+        //Note: This class can be used to create Spanner specific EFCore conventions.
+
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="dependencies"></param>
         public SpannerConventionSetBuilder(
             RelationalConventionSetBuilderDependencies dependencies)
             : base(dependencies)
@@ -32,8 +35,8 @@ namespace Microsoft.EntityFrameworkCore.Metadata.Conventions
         }
 
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <returns></returns>
         public static ConventionSet Build()
         {
             var spannerTypeMapper = new SpannerTypeMapper(new RelationalTypeMapperDependencies());

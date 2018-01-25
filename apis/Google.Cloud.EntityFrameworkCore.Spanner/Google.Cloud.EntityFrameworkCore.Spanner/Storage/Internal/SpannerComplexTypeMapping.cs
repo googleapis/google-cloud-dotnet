@@ -19,6 +19,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
     /// Represents a complex spanner type mapping. This class is used for setting up type conversions.
+    /// This class can be used to hold a type mapping for any <see cref="SpannerDbType"/>
     /// </summary>
     internal class SpannerComplexTypeMapping : RelationalTypeMapping
     {

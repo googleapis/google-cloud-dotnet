@@ -16,6 +16,8 @@ using System.Data;
 
 namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
+    //Note: This is required to customize the literals for 'true' and 'false' where
+    // EFCore uses '1' and '0' by default.
     internal class SpannerBoolTypeMapping : RelationalTypeMapping
     {
         public SpannerBoolTypeMapping(

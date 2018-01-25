@@ -18,26 +18,30 @@ using Microsoft.Extensions.DependencyInjection;
 namespace Microsoft.EntityFrameworkCore.Infrastructure.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerOptionsExtension : RelationalOptionsExtension
     {
+        //Note: This class can be used to create Spanner specific options.
+
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
         public SpannerOptionsExtension()
         {
         }
 
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="original"></param>
         protected SpannerOptionsExtension(SpannerOptionsExtension original)
             : base(original)
         {
         }
 
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <returns></returns>
         protected override RelationalOptionsExtension Clone()
             => new SpannerOptionsExtension(this);
 

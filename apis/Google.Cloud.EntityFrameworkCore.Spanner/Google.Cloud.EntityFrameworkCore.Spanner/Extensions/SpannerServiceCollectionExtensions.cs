@@ -40,9 +40,8 @@ namespace Microsoft.Extensions.DependencyInjection
     public static class SpannerServiceCollectionExtensions
     {
         /// <summary>
+        /// Adds base EFCore services along with Cloud Spanner specific services.
         /// </summary>
-        /// <param name="serviceCollection"></param>
-        /// <returns></returns>
         public static IServiceCollection AddEntityFrameworkSpanner(this IServiceCollection serviceCollection)
         {
             GaxPreconditions.CheckNotNull(serviceCollection, nameof(serviceCollection));

@@ -23,6 +23,9 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
     public class SpannerLogBridge<TLoggerCategory> : DefaultLogger
         where TLoggerCategory : LoggerCategory<TLoggerCategory>, new()
     {
+        //Note: This class is used to forward logging messages from within the ADO.NET layer
+        // into the logging framework provided by EFCore.  Therefore, someone looking at EFCore logs
+        // will see logs written by Google.Cloud.Spanner.Data.dll
         private readonly IDiagnosticsLogger<TLoggerCategory> _efLogger;
 
         /// <summary>

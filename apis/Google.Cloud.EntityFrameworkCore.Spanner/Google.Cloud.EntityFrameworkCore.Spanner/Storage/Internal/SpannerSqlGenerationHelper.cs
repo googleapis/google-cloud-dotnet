@@ -18,12 +18,16 @@ using Google.Api.Gax;
 namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerSqlGenerationHelper : RelationalSqlGenerationHelper
     {
+        //Note: This helper, used throughout SQL generation logic, holds provider specific settings such
+        // as delimiters and statement terminators.
+
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="dependencies"></param>
         public SpannerSqlGenerationHelper(RelationalSqlGenerationHelperDependencies dependencies)
             : base(dependencies)
         {

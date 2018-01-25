@@ -23,13 +23,17 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerDatabaseCreator : RelationalDatabaseCreator
     {
+        //Note: This creator is used for migration when the developer calls Create and Delete on a DbContext.
+
         private readonly ISpannerRelationalConnection _connection;
         private readonly IRawSqlCommandBuilder _rawSqlCommandBuilder;
 
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
         public SpannerDatabaseCreator(
             RelationalDatabaseCreatorDependencies dependencies,
@@ -96,6 +100,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
         /// <inheritdoc />
         public override async Task<bool> ExistsAsync(CancellationToken cancellationToken = default)
         {
+            //TODO: this should be fixed up to call an admin method instead of looking for an error code.
             try
             {
                 await _rawSqlCommandBuilder
