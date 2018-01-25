@@ -15,6 +15,7 @@
 using Google.Apis.Json;
 using Google.Apis.Requests;
 using Google.Apis.Util;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
@@ -58,6 +59,18 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 Error = new RequestError { Message = "Look ma, no errors collection!" }
             };
             await AssertRetriable(false, standardResponse);
+        }
+
+        [Fact]
+        public async Task IsRetriableResponse_BadGateway()
+        {
+            var httpResponse = new HttpResponseMessage
+            {
+                StatusCode = HttpStatusCode.BadGateway,
+                Content = new StringContent("No JSON returned")
+            };
+            var actual = await RetryHandler.IsRetriableResponse(httpResponse);
+            Assert.True(actual);
         }
 
         private async Task AssertRetriable(bool expectedRetriable, StandardResponse<object> standardResponse)

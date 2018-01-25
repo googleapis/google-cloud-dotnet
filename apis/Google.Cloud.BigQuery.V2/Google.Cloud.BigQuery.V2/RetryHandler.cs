@@ -18,6 +18,7 @@ using Google.Apis.Json;
 using Google.Apis.Util;
 using System;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -44,6 +45,13 @@ namespace Google.Cloud.BigQuery.V2
             StandardResponse<object> errorResponse = null;
             try
             {
+                // Always retry 502 errors.
+                if (response.StatusCode == HttpStatusCode.BadGateway)
+                {
+                    return true;
+                }
+                
+                // For other errors, check the response content.
                 var str = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                 errorResponse = NewtonsoftJsonSerializer.Instance.Deserialize<StandardResponse<object>>(str);
                 var errors = errorResponse.Error?.Errors;
