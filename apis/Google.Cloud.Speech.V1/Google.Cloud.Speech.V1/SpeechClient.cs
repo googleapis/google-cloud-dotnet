@@ -112,14 +112,14 @@ namespace Google.Cloud.Speech.V1
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="SpeechClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 190000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 1000000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 190000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 1000000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(190000),
-            maxDelay: TimeSpan.FromMilliseconds(190000),
+            delay: TimeSpan.FromMilliseconds(1000000),
+            maxDelay: TimeSpan.FromMilliseconds(1000000),
             delayMultiplier: 1.0
         );
 
@@ -134,22 +134,22 @@ namespace Google.Cloud.Speech.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 190000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 1000000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 190000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 1000000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 5000000 milliseconds.
         /// </remarks>
         public CallSettings RecognizeSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(5000000)),
                 retryFilter: IdempotentRetryFilter
             )));
 
@@ -164,21 +164,21 @@ namespace Google.Cloud.Speech.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 190000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 1000000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 190000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 1000000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 5000000 milliseconds.
         /// </remarks>
         public CallSettings LongRunningRecognizeSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(5000000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
 
@@ -207,10 +207,10 @@ namespace Google.Cloud.Speech.V1
         /// <see cref="CallSettings"/> for calls to <c>SpeechClient.StreamingRecognize</c>.
         /// </summary>
         /// <remarks>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 5000000 milliseconds.
         /// </remarks>
         public CallSettings StreamingRecognizeSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(5000000)));
 
         /// <summary>
         /// <see cref="BidirectionalStreamingSettings"/> for calls to
