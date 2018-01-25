@@ -21,8 +21,14 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace Google.Cloud.EntityFrameworkCore.Spanner.Migrations
 {
+    /// <summary>
+    /// Customizes the default migration sql generator to create Spanner compatible Ddl.
+    /// </summary>
     internal class SpannerMigrationsSqlGenerator : MigrationsSqlGenerator
     {
+        //When creating tables, we always need to specify "MAX"
+        //However, its important that the simple typename remain "STRING" because throughout query operations,
+        //the typename is used for CAST and other operations where "MAX" would result in an error.
         private static readonly Dictionary<string, string> s_columnTypeMap = new Dictionary<string, string>
         {
             {"STRING", "STRING(MAX)"},

@@ -25,17 +25,20 @@ using Microsoft.EntityFrameworkCore.Storage;
 namespace Microsoft.EntityFrameworkCore.Update.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerModificationCommandBatch : ModificationCommandBatch
     {
+        //Note: This class hooks into updates before any DML is generated. It handles the updates by converting
+        // each row update into the appropriate SpannerCommand (mutation).  Note the use of the type mapper.
+
         private readonly IDiagnosticsLogger<DbLoggerCategory.Database.Command> _logger;
         private readonly List<ModificationCommand> _modificationCommands = new List<ModificationCommand>();
         private readonly IRelationalTypeMapper _typeMapper;
 
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="typeMapper"></param>
-        /// <param name="logger"></param>
         public SpannerModificationCommandBatch(IRelationalTypeMapper typeMapper,
             IDiagnosticsLogger<DbLoggerCategory.Database.Command> logger)
         {
@@ -44,13 +47,13 @@ namespace Microsoft.EntityFrameworkCore.Update.Internal
         }
 
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
         public override IReadOnlyList<ModificationCommand> ModificationCommands => _modificationCommands;
 
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="modificationCommand"></param>
-        /// <returns></returns>
         public override bool AddCommand(ModificationCommand modificationCommand)
         {
             _modificationCommands.Add(modificationCommand);
@@ -58,8 +61,8 @@ namespace Microsoft.EntityFrameworkCore.Update.Internal
         }
 
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="connection"></param>
         public override void Execute(IRelationalConnection connection)
         {
             //TODO(benwu): call sync down the stack.
@@ -67,10 +70,8 @@ namespace Microsoft.EntityFrameworkCore.Update.Internal
         }
 
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="connection"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         public override async Task ExecuteAsync(IRelationalConnection connection,
             CancellationToken cancellationToken = new CancellationToken())
         {

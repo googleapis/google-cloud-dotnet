@@ -15,10 +15,14 @@
 namespace Microsoft.EntityFrameworkCore.Migrations.Operations
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerCreateDatabaseOperation : MigrationOperation
     {
+        //Note: Represents a Create Database operation.
+
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
         public virtual string Name { get; set; }
     }

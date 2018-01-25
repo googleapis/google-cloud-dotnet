@@ -17,15 +17,19 @@ using System.Collections.Generic;
 namespace Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public sealed class SpannerCompositeMethodCallTranslator : RelationalCompositeMethodCallTranslator
     {
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
         public SpannerCompositeMethodCallTranslator(
             RelationalCompositeMethodCallTranslatorDependencies dependencies)
             : base(dependencies)
         {
+            //adds custom Spanner method call translators.
+
             AddTranslators(new List<IMethodCallTranslator>
             {
                 new SpannerArraySequenceEqualTranslator(),

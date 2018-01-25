@@ -19,12 +19,17 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerRelationalConnection : RelationalConnection, ISpannerRelationalConnection
     {
+        //Note: Wraps around a SpannerConnection.  It also sets up the log bridge for ADO.NET logs
+        // to be seen in EF logs and has logic to set up a connection to the "master" db -- which in the spanner
+        // world is simply a connection string that does not include a database.
+
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="dependencies"></param>
         public SpannerRelationalConnection(RelationalConnectionDependencies dependencies)
             : base(dependencies)
         {

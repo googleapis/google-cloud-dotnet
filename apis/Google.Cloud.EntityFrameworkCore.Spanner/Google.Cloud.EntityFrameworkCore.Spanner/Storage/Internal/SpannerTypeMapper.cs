@@ -21,9 +21,17 @@ using Microsoft.EntityFrameworkCore.Metadata;
 namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerTypeMapper : RelationalTypeMapper
     {
+        //Note: This SpannerTypeMapper serves a key role in all of queries, updates and even migration by handling the
+        // conversion between ClrTypes and SpannerTypes.  While this class is fairly simple, it relies heavily on
+        // the type conversion support supplied in SpannerDbType which automatically coerces values into their
+        // appropriate form across the wire and when coming back.
+
+        //TODO: Decimal unfortunately loses precision with FLOAT64 and it would be nice to replace with something better.
+
         private static readonly SpannerBoolTypeMapping s_bool
             = new SpannerBoolTypeMapping(SpannerDbType.Bool.ToString());
 

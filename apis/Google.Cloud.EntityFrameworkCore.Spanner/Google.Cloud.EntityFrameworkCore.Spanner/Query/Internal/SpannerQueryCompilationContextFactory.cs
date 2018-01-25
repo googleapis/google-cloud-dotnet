@@ -15,13 +15,13 @@
 namespace Microsoft.EntityFrameworkCore.Query.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerQueryCompilationContextFactory : RelationalQueryCompilationContextFactory
     {
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="dependencies"></param>
-        /// <param name="relationalDependencies"></param>
         public SpannerQueryCompilationContextFactory(
             QueryCompilationContextDependencies dependencies,
             RelationalQueryCompilationContextDependencies relationalDependencies)

@@ -17,9 +17,11 @@ using System.Collections.Generic;
 namespace Microsoft.EntityFrameworkCore.Query.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerQueryCompilationContext : RelationalQueryCompilationContext
     {
+        //These are reserved words and cannot be used as identifiers in resulting SQL.
         private static readonly HashSet<string> s_reservedSymbols
             = new HashSet<string>
             {
@@ -121,11 +123,8 @@ namespace Microsoft.EntityFrameworkCore.Query.Internal
             };
 
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="dependencies"></param>
-        /// <param name="linqOperatorProvider"></param>
-        /// <param name="queryMethodProvider"></param>
-        /// <param name="trackQueryResults"></param>
         public SpannerQueryCompilationContext(
             QueryCompilationContextDependencies dependencies,
             ILinqOperatorProvider linqOperatorProvider,

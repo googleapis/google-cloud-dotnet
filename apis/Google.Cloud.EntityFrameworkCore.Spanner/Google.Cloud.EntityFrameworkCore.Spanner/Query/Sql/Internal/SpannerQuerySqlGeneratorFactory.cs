@@ -18,12 +18,13 @@ using Microsoft.EntityFrameworkCore.Query.Expressions;
 namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerQuerySqlGeneratorFactory : QuerySqlGeneratorFactoryBase
     {
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="dependencies"></param>
         public SpannerQuerySqlGeneratorFactory(
             QuerySqlGeneratorDependencies dependencies)
             : base(dependencies)

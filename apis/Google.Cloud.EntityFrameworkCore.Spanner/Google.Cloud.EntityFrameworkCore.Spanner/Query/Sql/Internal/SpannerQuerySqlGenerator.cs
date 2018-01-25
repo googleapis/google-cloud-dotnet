@@ -21,13 +21,19 @@ using Microsoft.EntityFrameworkCore.Storage;
 namespace Microsoft.EntityFrameworkCore.Query.Sql.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerQuerySqlGenerator : DefaultQuerySqlGenerator
     {
+        //Note: This class is the main class that can be used to diagnose the generated
+        // SQL for spanner queries.  Override the VisitX and GenerateX to see how the SQL is
+        // being constructed base on the Sql Linq Expression tree.
+        // To debug how the expression tree is being constructed/modified, you should look at
+        // expression translators (methodcall and member translators).
+
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
-        /// <param name="dependencies"></param>
-        /// <param name="selectExpression"></param>
         public SpannerQuerySqlGenerator(
             QuerySqlGeneratorDependencies dependencies,
             SelectExpression selectExpression)

@@ -27,10 +27,16 @@ using Microsoft.EntityFrameworkCore.Internal;
 namespace Microsoft.EntityFrameworkCore.Storage.Internal
 {
     /// <summary>
+    /// This is internal functionality and not intended for public use.
     /// </summary>
     public class SpannerRelationalCommandBuilderFactory : RelationalCommandBuilderFactory
     {
+        //Note: This factory creates and executes the ADO.NET commands used for queries, updates and
+        // migration. For spanner, it also hooks up our logging bridge for the created commands so that logs
+        // written at the ADO.NET layer appear in EF logs.
+
         /// <summary>
+        /// This is internal functionality and not intended for public use.
         /// </summary>
         public SpannerRelationalCommandBuilderFactory(
             IDiagnosticsLogger<DbLoggerCategory.Database.Command> logger,
