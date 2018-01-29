@@ -51,13 +51,11 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(input, nameof(input));
-            schema = schema ?? GetSchema(tableReference);
 
             var configuration = new JobConfigurationLoad
             {
                 DestinationTable = tableReference,
-                SourceFormat = "AVRO",
-                Schema = schema,
+                SourceFormat = "AVRO"
             };
             options?.ModifyConfiguration(configuration);
 
@@ -164,13 +162,11 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(input, nameof(input));
-            schema = schema ?? await GetSchemaAsync(tableReference, cancellationToken).ConfigureAwait(false);
 
             var configuration = new JobConfigurationLoad
             {
                 DestinationTable = tableReference,
-                SourceFormat = "AVRO",
-                Schema = schema,
+                SourceFormat = "AVRO"
             };
             options?.ModifyConfiguration(configuration);
 

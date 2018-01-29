@@ -82,7 +82,7 @@
         TargetType="Table"
         ReturnType="BigQueryJob">
     <AdditionalParameters>
-      <Parameter Name="schema" Type="TableSchema" Comment="The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used." />
+      <Parameter Name="schema" Type="TableSchema" Comment="Unused. In earlier versions this specified the schema of the data, but it is now ignored as the schema is always inferred from the data. The parameter is only present for backward compatibility." />
       <Parameter Name="input" Type="Stream" Comment="The stream of input data. Must not be null." />
     </AdditionalParameters>
 
