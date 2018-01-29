@@ -42,7 +42,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// This set tracks failed RPC status codes thats should be retried
         /// </summary> 
-        private readonly HashSet<int> _rertryableCodes;
+        private readonly HashSet<int> _retryableCodes;
 
         /// <summary>
         /// This array tracks the cumulative set of results across all RPC requests.
@@ -89,7 +89,7 @@ namespace Google.Cloud.Bigtable.V2
 
             _results = new Rpc.Status[_originalRequest.Entries.Count];
             
-            _rertryableCodes = new HashSet<int>(retryStatuses.Select(status => (int)status));
+            _retryableCodes = new HashSet<int>(retryStatuses.Select(status => (int)status));
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace Google.Cloud.Bigtable.V2
                 {
                     continue;
                 }
-                if (_rertryableCodes.Contains(status.Code))
+                if (_retryableCodes.Contains(status.Code))
                 {
                     if (toRetry == null)
                     {
