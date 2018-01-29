@@ -30,14 +30,14 @@ namespace Microsoft.EntityFrameworkCore
         /// <summary>
         /// Enables the Spanner Entity Framework Core extensions on the given DbContext.
         /// The Spanner EFCore provider has the following limitations:
-        /// * Does not support specifying secondary indices in queries.
-        /// * Timezone is defaulted to GMT
-        /// * Updates to data will not be returned by subequent database queries until the transaction is commited
-        ///   (read your own writes)
-        /// * Cloud Spanner does not support database generated column values or constraints.
-        /// * Migration support is limited to simple Create and Delete.
-        /// * Migration commands are never executed within a transaction, so may be partially executed if
-        /// * interrupted.
+        /// <list type="bullet">
+        /// <item>Does not support specifying secondary indices in queries.</item>
+        /// <item>Timezone is defaulted to UTC.</item>
+        /// <item>Updates to data will not be returned by subequent database queries until the transaction is commited (read your own writes).</item>
+        /// <item>Cloud Spanner does not support database generated column values or constraints.</item>
+        /// <item>Migration support is limited to simple Create and Delete.</item>
+        /// <item>Migration commands are never executed within a transaction, so may be partially executed if interrupted.</item>
+        /// </list>
         /// </summary>
         /// <param name="optionsBuilder"></param>
         /// <param name="connectionString"></param>

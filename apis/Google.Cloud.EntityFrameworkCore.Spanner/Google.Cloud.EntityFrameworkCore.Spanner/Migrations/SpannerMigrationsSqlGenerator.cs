@@ -22,7 +22,7 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 namespace Google.Cloud.EntityFrameworkCore.Spanner.Migrations
 {
     /// <summary>
-    /// Customizes the default migration sql generator to create Spanner compatible Ddl.
+    /// Customizes the default migration SQL generator to create Spanner compatible DDL.
     /// </summary>
     internal class SpannerMigrationsSqlGenerator : MigrationsSqlGenerator
     {
