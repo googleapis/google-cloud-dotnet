@@ -482,17 +482,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // report errors etc.
             // End snippet
 
-            BigQueryJob result = job.PollUntilCompleted();
-            // If there are any errors, display them *then* fail.
-            if (result.Status.ErrorResult != null)
-            {
-                foreach (ErrorProto error in result.Status.Errors)
-                {
-                    Console.WriteLine(error.Message);
-                }
-            }
-            Assert.Null(result.Status.ErrorResult);
-
+            AssertJobCompletesSuccessfully(job);
             int rowsAfter = table.ListRows().Count();
             Assert.Equal(rowsBefore + 3, rowsAfter);
         }
@@ -515,28 +505,14 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName);
             // Snippet: UploadAvro(string, string, TableSchema, Stream, *)
             BigQueryClient client = BigQueryClient.Create(projectId);
-            // This example creates a new table. If the upload doesn't need to create a new table, you
-            // can pass null as the schema value.
-            TableSchema schema = new TableSchemaBuilder
-            {
-                { "re", BigQueryDbType.Int64 },
-                { "im", BigQueryDbType.Int64 }
-            }.Build();
-            BigQueryJob job = client.UploadAvro(datasetId, tableId, schema, stream);
+            // This example creates a new table. Any schema provided is ignored, as Avro
+            // is self-describing. (The parameter only exists for legacy reasons.)
+            BigQueryJob job = client.UploadAvro(datasetId, tableId, null, stream);
             // Use the job to find out when the data has finished being inserted into the table,
             // report errors etc.
             // End snippet
 
-            BigQueryJob result = job.PollUntilCompleted();
-            // If there are any errors, display them *then* fail.
-            if (result.Status.ErrorResult != null)
-            {
-                foreach (ErrorProto error in result.Status.Errors)
-                {
-                    Console.WriteLine(error.Message);
-                }
-            }
-            Assert.Null(result.Status.ErrorResult);
+            AssertJobCompletesSuccessfully(job);
         }
 
         // See-also: UploadAvro(string, string, TableSchema, Stream, *)
@@ -583,17 +559,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // report errors etc.
             // End snippet
 
-            BigQueryJob result = job.PollUntilCompleted();
-            // If there are any errors, display them *then* fail.
-            if (result.Status.ErrorResult != null)
-            {
-                foreach (ErrorProto error in result.Status.Errors)
-                {
-                    Console.WriteLine(error.Message);
-                }
-            }
-            Assert.Null(result.Status.ErrorResult);
-
+            AssertJobCompletesSuccessfully(job);
             int rowsAfter = table.ListRows().Count();
             Assert.Equal(rowsBefore + 2, rowsAfter);
         }
@@ -632,17 +598,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // report errors etc.
             // End snippet
 
-            BigQueryJob result = job.PollUntilCompleted();
-            // If there are any errors, display them *then* fail.
-            if (result.Status.ErrorResult != null)
-            {
-                foreach (ErrorProto error in result.Status.Errors)
-                {
-                    Console.WriteLine(error.Message);
-                }
-            }
-            Assert.Null(result.Status.ErrorResult);
-
+            AssertJobCompletesSuccessfully(job);
             int rowsAfter = table.ListRows().Count();
             Assert.Equal(rowsBefore + 2, rowsAfter);
         }
@@ -1434,16 +1390,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // End snippet
 
             BigQueryJob result = job.PollUntilCompleted();
-            // If there are any errors, display them *then* fail.
-            if (result.Status.ErrorResult != null)
-            {
-                foreach (ErrorProto error in result.Status.Errors)
-                {
-                    Console.WriteLine(error.Message);
-                }
-            }
-            Assert.Null(result.Status.ErrorResult);
-
+            AssertJobCompletesSuccessfully(job);
             int rowsAfter = table.ListRows().Count();
             Assert.Equal(rowsBefore + 3, rowsAfter);
         }
@@ -1485,17 +1432,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // report errors etc.
             // End snippet
 
-            BigQueryJob result = job.PollUntilCompleted();
-            // If there are any errors, display them *then* fail.
-            if (result.Status.ErrorResult != null)
-            {
-                foreach (ErrorProto error in result.Status.Errors)
-                {
-                    Console.WriteLine(error.Message);
-                }
-            }
-            Assert.Null(result.Status.ErrorResult);
-
+            AssertJobCompletesSuccessfully(job);
             int rowsAfter = table.ListRows().Count();
             Assert.Equal(rowsBefore + 2, rowsAfter);
         }
@@ -1535,17 +1472,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // report errors etc.
             // End snippet
 
-            BigQueryJob result = job.PollUntilCompleted();
-            // If there are any errors, display them *then* fail.
-            if (result.Status.ErrorResult != null)
-            {
-                foreach (ErrorProto error in result.Status.Errors)
-                {
-                    Console.WriteLine(error.Message);
-                }
-            }
-            Assert.Null(result.Status.ErrorResult);
-
+            AssertJobCompletesSuccessfully(job);
             int rowsAfter = table.ListRows().Count();
             Assert.Equal(rowsBefore + 2, rowsAfter);
         }
@@ -2446,5 +2373,19 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // Member: GetJobAsync(JobReference, *, *)
         // See [GetJob](ref) for a synchronous example.
         // End see-also
+
+        private void AssertJobCompletesSuccessfully(BigQueryJob job)
+        {
+            BigQueryJob result = job.PollUntilCompleted();
+            // If there are any errors, display them *then* fail.
+            if (result.Status.Errors?.Count > 0)
+            {
+                foreach (ErrorProto error in result.Status.Errors)
+                {
+                    Console.WriteLine(error.Message);
+                }
+            }
+            result.ThrowOnAnyError();
+        }
     }
 }

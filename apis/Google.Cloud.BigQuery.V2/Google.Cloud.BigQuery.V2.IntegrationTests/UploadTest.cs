@@ -98,17 +98,39 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var tableId = _fixture.CreateTableId();
             var tableReference = client.GetTableReference(_fixture.DatasetId, tableId);
-            var schema = new TableSchemaBuilder
-            {
-                { "re", BigQueryDbType.Int64 },
-                { "im", BigQueryDbType.Int64 }
-            }.Build();
             var typeInfo = typeof(UploadTest).GetTypeInfo();
             string resourceName = typeInfo.Namespace + ".one_complex.avro";
             using (var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName))
             {
+                var job = client.UploadAvro(tableReference, null, stream);
+                job = job.PollUntilCompleted();
+                job.ThrowOnAnyError();
+            }
+            var rows = client.GetTable(tableReference).ListRows().ToList();
+            Assert.Equal(1, rows.Count);
+            Assert.Equal(100, (long) rows[0]["re"]);
+            Assert.Equal(200, (long) rows[0]["im"]);
+        }
+
+        [Fact]
+        public void UploadAvro_IgnoresSchema()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableId = _fixture.CreateTableId();
+            var tableReference = client.GetTableReference(_fixture.DatasetId, tableId);
+            var typeInfo = typeof(UploadTest).GetTypeInfo();
+            string resourceName = typeInfo.Namespace + ".one_complex.avro";
+            // This schema is incorrect for the data, but is completely ignored.
+            var schema = new TableSchemaBuilder
+            {
+                { "bogus", BigQueryDbType.String },
+                { "wrong", BigQueryDbType.Bytes }
+            }.Build();
+            using (var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName))
+            {
                 var job = client.UploadAvro(tableReference, schema, stream);
-                job.PollUntilCompleted();
+                job = job.PollUntilCompleted();
+                job.ThrowOnAnyError();
             }
             var rows = client.GetTable(tableReference).ListRows().ToList();
             Assert.Equal(1, rows.Count);
@@ -122,17 +144,13 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var tableId = _fixture.CreateTableId();
             var tableReference = client.GetTableReference(_fixture.DatasetId, tableId);
-            var schema = new TableSchemaBuilder
-            {
-                { "re", BigQueryDbType.Int64 },
-                { "im", BigQueryDbType.Int64 }
-            }.Build();
             var typeInfo = typeof(UploadTest).GetTypeInfo();
             string resourceName = typeInfo.Namespace + ".one_complex.avro";
             using (var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName))
             {
-                var job = await client.UploadAvroAsync(tableReference, schema, stream);
-                await job.PollUntilCompletedAsync();
+                var job = await client.UploadAvroAsync(tableReference, null, stream);
+                job = await job.PollUntilCompletedAsync();
+                job.ThrowOnAnyError();
             }
             var table = await client.GetTableAsync(tableReference);
             var rows = await table.ListRowsAsync().ToList();
@@ -140,6 +158,35 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(100, (long) rows[0]["re"]);
             Assert.Equal(200, (long) rows[0]["im"]);
         }
+
+        [Fact]
+        public async Task UploadAvroAsync_IgnoresSchema()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableId = _fixture.CreateTableId();
+            var tableReference = client.GetTableReference(_fixture.DatasetId, tableId);
+            var typeInfo = typeof(UploadTest).GetTypeInfo();
+            string resourceName = typeInfo.Namespace + ".one_complex.avro";
+            // This schema is incorrect for the data, but is completely ignored.
+            var schema = new TableSchemaBuilder
+            {
+                { "bogus", BigQueryDbType.String },
+                { "wrong", BigQueryDbType.Bytes }
+            }.Build();
+
+            using (var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName))
+            {
+                var job = await client.UploadAvroAsync(tableReference, schema, stream);
+                job = await job.PollUntilCompletedAsync();
+                job.ThrowOnAnyError();
+            }
+            var table = await client.GetTableAsync(tableReference);
+            var rows = await table.ListRowsAsync().ToList();
+            Assert.Equal(1, rows.Count);
+            Assert.Equal(100, (long) rows[0]["re"]);
+            Assert.Equal(200, (long) rows[0]["im"]);
+        }
+
         [Fact]
         public void UploadJson_Stream()
         {

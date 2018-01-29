@@ -457,7 +457,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">Unused. In earlier versions this specified the schema of the data, but it is now ignored as the schema is always inferred from the data. The parameter is only present for backward compatibility.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -471,7 +471,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">Unused. In earlier versions this specified the schema of the data, but it is now ignored as the schema is always inferred from the data. The parameter is only present for backward compatibility.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -482,7 +482,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Uploads a stream of Avro data to the specified table.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">Unused. In earlier versions this specified the schema of the data, but it is now ignored as the schema is always inferred from the data. The parameter is only present for backward compatibility.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -495,7 +495,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">Unused. In earlier versions this specified the schema of the data, but it is now ignored as the schema is always inferred from the data. The parameter is only present for backward compatibility.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -511,7 +511,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">Unused. In earlier versions this specified the schema of the data, but it is now ignored as the schema is always inferred from the data. The parameter is only present for backward compatibility.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -524,7 +524,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously uploads a stream of Avro data to the specified table.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">Unused. In earlier versions this specified the schema of the data, but it is now ignored as the schema is always inferred from the data. The parameter is only present for backward compatibility.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
