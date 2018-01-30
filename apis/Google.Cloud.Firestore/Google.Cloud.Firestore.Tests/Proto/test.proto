@@ -9,6 +9,7 @@ option java_package = "com.google.cloud.firestore.conformance";
 
 import "google/firestore/v1beta1/firestore.proto";
 import "google/firestore/v1beta1/common.proto";
+import "google/firestore/v1beta1/query.proto";
 
 // A collection of tests.
 message TestSuite {
@@ -26,6 +27,7 @@ message Test {
     UpdateTest      update = 5;
     UpdatePathsTest update_paths = 6;
     DeleteTest      delete = 7;
+    QueryTest       query = 8;
   }
 }
 
@@ -101,7 +103,53 @@ message SetOption {
   repeated FieldPath fields = 2; // field paths for a Merge option
 }
 
-// A field path.
+message QueryTest {
+  string coll_path = 1; // path of collection, e.g. "projects/projectID/databases/(default)/documents/C"
+  repeated Clause clauses = 2;
+  google.firestore.v1beta1.StructuredQuery query = 3;
+  bool is_error = 4;
+}
+
+message Clause {
+  oneof clause {
+    Select select = 1;
+    Where where = 2;
+    OrderBy order_by = 3;
+    int32 offset = 4;
+    int32 limit = 5;
+    Cursor start_at = 6;
+    Cursor start_after = 7;
+    Cursor end_at = 8;
+    Cursor end_before = 9;
+  }
+}
+
+message Select {
+  repeated FieldPath fields = 1;
+}
+
+message Where {
+  FieldPath path = 1;
+  string op = 2;
+  string json_value = 3;
+}
+
+message OrderBy {
+  FieldPath path = 1;
+  string direction = 2; // "asc" or "desc"
+}
+
+message Cursor {
+  // one of:
+  DocSnapshot doc_snapshot = 1;
+  repeated string json_values = 2;
+}
+
+message DocSnapshot {
+  string path = 1;
+  string json_data = 2;
+}
+
 message FieldPath {
   repeated string field = 1;
 }

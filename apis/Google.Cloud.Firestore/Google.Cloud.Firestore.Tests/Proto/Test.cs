@@ -24,44 +24,63 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           string.Concat(
             "Cgp0ZXN0LnByb3RvEgV0ZXN0cxooZ29vZ2xlL2ZpcmVzdG9yZS92MWJldGEx",
             "L2ZpcmVzdG9yZS5wcm90bxolZ29vZ2xlL2ZpcmVzdG9yZS92MWJldGExL2Nv",
-            "bW1vbi5wcm90byInCglUZXN0U3VpdGUSGgoFdGVzdHMYASADKAsyCy50ZXN0",
-            "cy5UZXN0IoACCgRUZXN0EhMKC2Rlc2NyaXB0aW9uGAEgASgJEh0KA2dldBgC",
-            "IAEoCzIOLnRlc3RzLkdldFRlc3RIABIjCgZjcmVhdGUYAyABKAsyES50ZXN0",
-            "cy5DcmVhdGVUZXN0SAASHQoDc2V0GAQgASgLMg4udGVzdHMuU2V0VGVzdEgA",
-            "EiMKBnVwZGF0ZRgFIAEoCzIRLnRlc3RzLlVwZGF0ZVRlc3RIABIuCgx1cGRh",
-            "dGVfcGF0aHMYBiABKAsyFi50ZXN0cy5VcGRhdGVQYXRoc1Rlc3RIABIjCgZk",
-            "ZWxldGUYByABKAsyES50ZXN0cy5EZWxldGVUZXN0SABCBgoEdGVzdCJeCgdH",
-            "ZXRUZXN0EhQKDGRvY19yZWZfcGF0aBgBIAEoCRI9CgdyZXF1ZXN0GAIgASgL",
-            "MiwuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkdldERvY3VtZW50UmVxdWVz",
-            "dCKBAQoKQ3JlYXRlVGVzdBIUCgxkb2NfcmVmX3BhdGgYASABKAkSEQoJanNv",
-            "bl9kYXRhGAIgASgJEjgKB3JlcXVlc3QYAyABKAsyJy5nb29nbGUuZmlyZXN0",
-            "b3JlLnYxYmV0YTEuQ29tbWl0UmVxdWVzdBIQCghpc19lcnJvchgEIAEoCCKg",
-            "AQoHU2V0VGVzdBIUCgxkb2NfcmVmX3BhdGgYASABKAkSIAoGb3B0aW9uGAIg",
-            "ASgLMhAudGVzdHMuU2V0T3B0aW9uEhEKCWpzb25fZGF0YRgDIAEoCRI4Cgdy",
-            "ZXF1ZXN0GAQgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkNvbW1p",
-            "dFJlcXVlc3QSEAoIaXNfZXJyb3IYBSABKAgivwEKClVwZGF0ZVRlc3QSFAoM",
-            "ZG9jX3JlZl9wYXRoGAEgASgJEjwKDHByZWNvbmRpdGlvbhgCIAEoCzImLmdv",
-            "b2dsZS5maXJlc3RvcmUudjFiZXRhMS5QcmVjb25kaXRpb24SEQoJanNvbl9k",
-            "YXRhGAMgASgJEjgKB3JlcXVlc3QYBCABKAsyJy5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxYmV0YTEuQ29tbWl0UmVxdWVzdBIQCghpc19lcnJvchgFIAEoCCLtAQoP",
-            "VXBkYXRlUGF0aHNUZXN0EhQKDGRvY19yZWZfcGF0aBgBIAEoCRI8CgxwcmVj",
-            "b25kaXRpb24YAiABKAsyJi5nb29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuUHJl",
-            "Y29uZGl0aW9uEiUKC2ZpZWxkX3BhdGhzGAMgAygLMhAudGVzdHMuRmllbGRQ",
-            "YXRoEhMKC2pzb25fdmFsdWVzGAQgAygJEjgKB3JlcXVlc3QYBSABKAsyJy5n",
-            "b29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuQ29tbWl0UmVxdWVzdBIQCghpc19l",
-            "cnJvchgGIAEoCCKsAQoKRGVsZXRlVGVzdBIUCgxkb2NfcmVmX3BhdGgYASAB",
-            "KAkSPAoMcHJlY29uZGl0aW9uGAIgASgLMiYuZ29vZ2xlLmZpcmVzdG9yZS52",
-            "MWJldGExLlByZWNvbmRpdGlvbhI4CgdyZXF1ZXN0GAMgASgLMicuZ29vZ2xl",
-            "LmZpcmVzdG9yZS52MWJldGExLkNvbW1pdFJlcXVlc3QSEAoIaXNfZXJyb3IY",
-            "BCABKAgiOgoJU2V0T3B0aW9uEgsKA2FsbBgBIAEoCBIgCgZmaWVsZHMYAiAD",
-            "KAsyEC50ZXN0cy5GaWVsZFBhdGgiGgoJRmllbGRQYXRoEg0KBWZpZWxkGAEg",
-            "AygJQk0KJmNvbS5nb29nbGUuY2xvdWQuZmlyZXN0b3JlLmNvbmZvcm1hbmNl",
-            "qgIiR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5UZXN0cy5Qcm90b2IGcHJvdG8z"));
+            "bW1vbi5wcm90bxokZ29vZ2xlL2ZpcmVzdG9yZS92MWJldGExL3F1ZXJ5LnBy",
+            "b3RvIicKCVRlc3RTdWl0ZRIaCgV0ZXN0cxgBIAMoCzILLnRlc3RzLlRlc3Qi",
+            "owIKBFRlc3QSEwoLZGVzY3JpcHRpb24YASABKAkSHQoDZ2V0GAIgASgLMg4u",
+            "dGVzdHMuR2V0VGVzdEgAEiMKBmNyZWF0ZRgDIAEoCzIRLnRlc3RzLkNyZWF0",
+            "ZVRlc3RIABIdCgNzZXQYBCABKAsyDi50ZXN0cy5TZXRUZXN0SAASIwoGdXBk",
+            "YXRlGAUgASgLMhEudGVzdHMuVXBkYXRlVGVzdEgAEi4KDHVwZGF0ZV9wYXRo",
+            "cxgGIAEoCzIWLnRlc3RzLlVwZGF0ZVBhdGhzVGVzdEgAEiMKBmRlbGV0ZRgH",
+            "IAEoCzIRLnRlc3RzLkRlbGV0ZVRlc3RIABIhCgVxdWVyeRgIIAEoCzIQLnRl",
+            "c3RzLlF1ZXJ5VGVzdEgAQgYKBHRlc3QiXgoHR2V0VGVzdBIUCgxkb2NfcmVm",
+            "X3BhdGgYASABKAkSPQoHcmVxdWVzdBgCIAEoCzIsLmdvb2dsZS5maXJlc3Rv",
+            "cmUudjFiZXRhMS5HZXREb2N1bWVudFJlcXVlc3QigQEKCkNyZWF0ZVRlc3QS",
+            "FAoMZG9jX3JlZl9wYXRoGAEgASgJEhEKCWpzb25fZGF0YRgCIAEoCRI4Cgdy",
+            "ZXF1ZXN0GAMgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkNvbW1p",
+            "dFJlcXVlc3QSEAoIaXNfZXJyb3IYBCABKAgioAEKB1NldFRlc3QSFAoMZG9j",
+            "X3JlZl9wYXRoGAEgASgJEiAKBm9wdGlvbhgCIAEoCzIQLnRlc3RzLlNldE9w",
+            "dGlvbhIRCglqc29uX2RhdGEYAyABKAkSOAoHcmVxdWVzdBgEIAEoCzInLmdv",
+            "b2dsZS5maXJlc3RvcmUudjFiZXRhMS5Db21taXRSZXF1ZXN0EhAKCGlzX2Vy",
+            "cm9yGAUgASgIIr8BCgpVcGRhdGVUZXN0EhQKDGRvY19yZWZfcGF0aBgBIAEo",
+            "CRI8CgxwcmVjb25kaXRpb24YAiABKAsyJi5nb29nbGUuZmlyZXN0b3JlLnYx",
+            "YmV0YTEuUHJlY29uZGl0aW9uEhEKCWpzb25fZGF0YRgDIAEoCRI4CgdyZXF1",
+            "ZXN0GAQgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkNvbW1pdFJl",
+            "cXVlc3QSEAoIaXNfZXJyb3IYBSABKAgi7QEKD1VwZGF0ZVBhdGhzVGVzdBIU",
+            "Cgxkb2NfcmVmX3BhdGgYASABKAkSPAoMcHJlY29uZGl0aW9uGAIgASgLMiYu",
+            "Z29vZ2xlLmZpcmVzdG9yZS52MWJldGExLlByZWNvbmRpdGlvbhIlCgtmaWVs",
+            "ZF9wYXRocxgDIAMoCzIQLnRlc3RzLkZpZWxkUGF0aBITCgtqc29uX3ZhbHVl",
+            "cxgEIAMoCRI4CgdyZXF1ZXN0GAUgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MWJldGExLkNvbW1pdFJlcXVlc3QSEAoIaXNfZXJyb3IYBiABKAgirAEKCkRl",
+            "bGV0ZVRlc3QSFAoMZG9jX3JlZl9wYXRoGAEgASgJEjwKDHByZWNvbmRpdGlv",
+            "bhgCIAEoCzImLmdvb2dsZS5maXJlc3RvcmUudjFiZXRhMS5QcmVjb25kaXRp",
+            "b24SOAoHcmVxdWVzdBgDIAEoCzInLmdvb2dsZS5maXJlc3RvcmUudjFiZXRh",
+            "MS5Db21taXRSZXF1ZXN0EhAKCGlzX2Vycm9yGAQgASgIIjoKCVNldE9wdGlv",
+            "bhILCgNhbGwYASABKAgSIAoGZmllbGRzGAIgAygLMhAudGVzdHMuRmllbGRQ",
+            "YXRoIooBCglRdWVyeVRlc3QSEQoJY29sbF9wYXRoGAEgASgJEh4KB2NsYXVz",
+            "ZXMYAiADKAsyDS50ZXN0cy5DbGF1c2USOAoFcXVlcnkYAyABKAsyKS5nb29n",
+            "bGUuZmlyZXN0b3JlLnYxYmV0YTEuU3RydWN0dXJlZFF1ZXJ5EhAKCGlzX2Vy",
+            "cm9yGAQgASgIIqgCCgZDbGF1c2USHwoGc2VsZWN0GAEgASgLMg0udGVzdHMu",
+            "U2VsZWN0SAASHQoFd2hlcmUYAiABKAsyDC50ZXN0cy5XaGVyZUgAEiIKCG9y",
+            "ZGVyX2J5GAMgASgLMg4udGVzdHMuT3JkZXJCeUgAEhAKBm9mZnNldBgEIAEo",
+            "BUgAEg8KBWxpbWl0GAUgASgFSAASIQoIc3RhcnRfYXQYBiABKAsyDS50ZXN0",
+            "cy5DdXJzb3JIABIkCgtzdGFydF9hZnRlchgHIAEoCzINLnRlc3RzLkN1cnNv",
+            "ckgAEh8KBmVuZF9hdBgIIAEoCzINLnRlc3RzLkN1cnNvckgAEiMKCmVuZF9i",
+            "ZWZvcmUYCSABKAsyDS50ZXN0cy5DdXJzb3JIAEIICgZjbGF1c2UiKgoGU2Vs",
+            "ZWN0EiAKBmZpZWxkcxgBIAMoCzIQLnRlc3RzLkZpZWxkUGF0aCJHCgVXaGVy",
+            "ZRIeCgRwYXRoGAEgASgLMhAudGVzdHMuRmllbGRQYXRoEgoKAm9wGAIgASgJ",
+            "EhIKCmpzb25fdmFsdWUYAyABKAkiPAoHT3JkZXJCeRIeCgRwYXRoGAEgASgL",
+            "MhAudGVzdHMuRmllbGRQYXRoEhEKCWRpcmVjdGlvbhgCIAEoCSJHCgZDdXJz",
+            "b3ISKAoMZG9jX3NuYXBzaG90GAEgASgLMhIudGVzdHMuRG9jU25hcHNob3QS",
+            "EwoLanNvbl92YWx1ZXMYAiADKAkiLgoLRG9jU25hcHNob3QSDAoEcGF0aBgB",
+            "IAEoCRIRCglqc29uX2RhdGEYAiABKAkiGgoJRmllbGRQYXRoEg0KBWZpZWxk",
+            "GAEgAygJQk0KJmNvbS5nb29nbGUuY2xvdWQuZmlyZXN0b3JlLmNvbmZvcm1h",
+            "bmNlqgIiR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5UZXN0cy5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1Beta1.FirestoreReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1Beta1.FirestoreReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.QueryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.TestSuite), global::Google.Cloud.Firestore.Tests.Proto.TestSuite.Parser, new[]{ "Tests" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Test), global::Google.Cloud.Firestore.Tests.Proto.Test.Parser, new[]{ "Description", "Get", "Create", "Set", "Update", "UpdatePaths", "Delete" }, new[]{ "Test" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Test), global::Google.Cloud.Firestore.Tests.Proto.Test.Parser, new[]{ "Description", "Get", "Create", "Set", "Update", "UpdatePaths", "Delete", "Query" }, new[]{ "Test" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.GetTest), global::Google.Cloud.Firestore.Tests.Proto.GetTest.Parser, new[]{ "DocRefPath", "Request" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.CreateTest), global::Google.Cloud.Firestore.Tests.Proto.CreateTest.Parser, new[]{ "DocRefPath", "JsonData", "Request", "IsError" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.SetTest), global::Google.Cloud.Firestore.Tests.Proto.SetTest.Parser, new[]{ "DocRefPath", "Option", "JsonData", "Request", "IsError" }, null, null, null),
@@ -69,6 +88,13 @@ namespace Google.Cloud.Firestore.Tests.Proto {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest), global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest.Parser, new[]{ "DocRefPath", "Precondition", "FieldPaths", "JsonValues", "Request", "IsError" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.DeleteTest), global::Google.Cloud.Firestore.Tests.Proto.DeleteTest.Parser, new[]{ "DocRefPath", "Precondition", "Request", "IsError" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.SetOption), global::Google.Cloud.Firestore.Tests.Proto.SetOption.Parser, new[]{ "All", "Fields" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.QueryTest), global::Google.Cloud.Firestore.Tests.Proto.QueryTest.Parser, new[]{ "CollPath", "Clauses", "Query", "IsError" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Clause), global::Google.Cloud.Firestore.Tests.Proto.Clause.Parser, new[]{ "Select", "Where", "OrderBy", "Offset", "Limit", "StartAt", "StartAfter", "EndAt", "EndBefore" }, new[]{ "Clause" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Select), global::Google.Cloud.Firestore.Tests.Proto.Select.Parser, new[]{ "Fields" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Where), global::Google.Cloud.Firestore.Tests.Proto.Where.Parser, new[]{ "Path", "Op", "JsonValue" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.OrderBy), global::Google.Cloud.Firestore.Tests.Proto.OrderBy.Parser, new[]{ "Path", "Direction" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Cursor), global::Google.Cloud.Firestore.Tests.Proto.Cursor.Parser, new[]{ "DocSnapshot", "JsonValues" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot), global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot.Parser, new[]{ "Path", "JsonData" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.FieldPath), global::Google.Cloud.Firestore.Tests.Proto.FieldPath.Parser, new[]{ "Field" }, null, null, null)
           }));
     }
@@ -235,6 +261,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
         case TestOneofCase.Delete:
           Delete = other.Delete.Clone();
           break;
+        case TestOneofCase.Query:
+          Query = other.Query.Clone();
+          break;
       }
 
     }
@@ -324,6 +353,17 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
     }
 
+    /// <summary>Field number for the "query" field.</summary>
+    public const int QueryFieldNumber = 8;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.QueryTest Query {
+      get { return testCase_ == TestOneofCase.Query ? (global::Google.Cloud.Firestore.Tests.Proto.QueryTest) test_ : null; }
+      set {
+        test_ = value;
+        testCase_ = value == null ? TestOneofCase.None : TestOneofCase.Query;
+      }
+    }
+
     private object test_;
     /// <summary>Enum of possible cases for the "test" oneof.</summary>
     public enum TestOneofCase {
@@ -334,6 +374,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       Update = 5,
       UpdatePaths = 6,
       Delete = 7,
+      Query = 8,
     }
     private TestOneofCase testCase_ = TestOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -367,6 +408,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (!object.Equals(Update, other.Update)) return false;
       if (!object.Equals(UpdatePaths, other.UpdatePaths)) return false;
       if (!object.Equals(Delete, other.Delete)) return false;
+      if (!object.Equals(Query, other.Query)) return false;
       if (TestCase != other.TestCase) return false;
       return true;
     }
@@ -381,6 +423,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (testCase_ == TestOneofCase.Update) hash ^= Update.GetHashCode();
       if (testCase_ == TestOneofCase.UpdatePaths) hash ^= UpdatePaths.GetHashCode();
       if (testCase_ == TestOneofCase.Delete) hash ^= Delete.GetHashCode();
+      if (testCase_ == TestOneofCase.Query) hash ^= Query.GetHashCode();
       hash ^= (int) testCase_;
       return hash;
     }
@@ -420,6 +463,10 @@ namespace Google.Cloud.Firestore.Tests.Proto {
         output.WriteRawTag(58);
         output.WriteMessage(Delete);
       }
+      if (testCase_ == TestOneofCase.Query) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Query);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -445,6 +492,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (testCase_ == TestOneofCase.Delete) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Delete);
+      }
+      if (testCase_ == TestOneofCase.Query) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Query);
       }
       return size;
     }
@@ -475,6 +525,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           break;
         case TestOneofCase.Delete:
           Delete = other.Delete;
+          break;
+        case TestOneofCase.Query:
+          Query = other.Query;
           break;
       }
 
@@ -544,6 +597,15 @@ namespace Google.Cloud.Firestore.Tests.Proto {
             }
             input.ReadMessage(subBuilder);
             Delete = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Firestore.Tests.Proto.QueryTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.QueryTest();
+            if (testCase_ == TestOneofCase.Query) {
+              subBuilder.MergeFrom(Query);
+            }
+            input.ReadMessage(subBuilder);
+            Query = subBuilder;
             break;
           }
         }
@@ -2102,9 +2164,1369 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
-  /// <summary>
-  /// A field path.
-  /// </summary>
+  public sealed partial class QueryTest : pb::IMessage<QueryTest> {
+    private static readonly pb::MessageParser<QueryTest> _parser = new pb::MessageParser<QueryTest>(() => new QueryTest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<QueryTest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QueryTest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QueryTest(QueryTest other) : this() {
+      collPath_ = other.collPath_;
+      clauses_ = other.clauses_.Clone();
+      Query = other.query_ != null ? other.Query.Clone() : null;
+      isError_ = other.isError_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QueryTest Clone() {
+      return new QueryTest(this);
+    }
+
+    /// <summary>Field number for the "coll_path" field.</summary>
+    public const int CollPathFieldNumber = 1;
+    private string collPath_ = "";
+    /// <summary>
+    /// path of collection, e.g. "projects/projectID/databases/(default)/documents/C"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CollPath {
+      get { return collPath_; }
+      set {
+        collPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "clauses" field.</summary>
+    public const int ClausesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.Tests.Proto.Clause> _repeated_clauses_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.Tests.Proto.Clause.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.Clause> clauses_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.Clause>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.Clause> Clauses {
+      get { return clauses_; }
+    }
+
+    /// <summary>Field number for the "query" field.</summary>
+    public const int QueryFieldNumber = 3;
+    private global::Google.Cloud.Firestore.V1Beta1.StructuredQuery query_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.V1Beta1.StructuredQuery Query {
+      get { return query_; }
+      set {
+        query_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_error" field.</summary>
+    public const int IsErrorFieldNumber = 4;
+    private bool isError_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsError {
+      get { return isError_; }
+      set {
+        isError_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as QueryTest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(QueryTest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CollPath != other.CollPath) return false;
+      if(!clauses_.Equals(other.clauses_)) return false;
+      if (!object.Equals(Query, other.Query)) return false;
+      if (IsError != other.IsError) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CollPath.Length != 0) hash ^= CollPath.GetHashCode();
+      hash ^= clauses_.GetHashCode();
+      if (query_ != null) hash ^= Query.GetHashCode();
+      if (IsError != false) hash ^= IsError.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (CollPath.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CollPath);
+      }
+      clauses_.WriteTo(output, _repeated_clauses_codec);
+      if (query_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Query);
+      }
+      if (IsError != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsError);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (CollPath.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CollPath);
+      }
+      size += clauses_.CalculateSize(_repeated_clauses_codec);
+      if (query_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Query);
+      }
+      if (IsError != false) {
+        size += 1 + 1;
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(QueryTest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CollPath.Length != 0) {
+        CollPath = other.CollPath;
+      }
+      clauses_.Add(other.clauses_);
+      if (other.query_ != null) {
+        if (query_ == null) {
+          query_ = new global::Google.Cloud.Firestore.V1Beta1.StructuredQuery();
+        }
+        Query.MergeFrom(other.Query);
+      }
+      if (other.IsError != false) {
+        IsError = other.IsError;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            CollPath = input.ReadString();
+            break;
+          }
+          case 18: {
+            clauses_.AddEntriesFrom(input, _repeated_clauses_codec);
+            break;
+          }
+          case 26: {
+            if (query_ == null) {
+              query_ = new global::Google.Cloud.Firestore.V1Beta1.StructuredQuery();
+            }
+            input.ReadMessage(query_);
+            break;
+          }
+          case 32: {
+            IsError = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Clause : pb::IMessage<Clause> {
+    private static readonly pb::MessageParser<Clause> _parser = new pb::MessageParser<Clause>(() => new Clause());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Clause> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Clause() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Clause(Clause other) : this() {
+      switch (other.ClauseCase) {
+        case ClauseOneofCase.Select:
+          Select = other.Select.Clone();
+          break;
+        case ClauseOneofCase.Where:
+          Where = other.Where.Clone();
+          break;
+        case ClauseOneofCase.OrderBy:
+          OrderBy = other.OrderBy.Clone();
+          break;
+        case ClauseOneofCase.Offset:
+          Offset = other.Offset;
+          break;
+        case ClauseOneofCase.Limit:
+          Limit = other.Limit;
+          break;
+        case ClauseOneofCase.StartAt:
+          StartAt = other.StartAt.Clone();
+          break;
+        case ClauseOneofCase.StartAfter:
+          StartAfter = other.StartAfter.Clone();
+          break;
+        case ClauseOneofCase.EndAt:
+          EndAt = other.EndAt.Clone();
+          break;
+        case ClauseOneofCase.EndBefore:
+          EndBefore = other.EndBefore.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Clause Clone() {
+      return new Clause(this);
+    }
+
+    /// <summary>Field number for the "select" field.</summary>
+    public const int SelectFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.Select Select {
+      get { return clauseCase_ == ClauseOneofCase.Select ? (global::Google.Cloud.Firestore.Tests.Proto.Select) clause_ : null; }
+      set {
+        clause_ = value;
+        clauseCase_ = value == null ? ClauseOneofCase.None : ClauseOneofCase.Select;
+      }
+    }
+
+    /// <summary>Field number for the "where" field.</summary>
+    public const int WhereFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.Where Where {
+      get { return clauseCase_ == ClauseOneofCase.Where ? (global::Google.Cloud.Firestore.Tests.Proto.Where) clause_ : null; }
+      set {
+        clause_ = value;
+        clauseCase_ = value == null ? ClauseOneofCase.None : ClauseOneofCase.Where;
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.OrderBy OrderBy {
+      get { return clauseCase_ == ClauseOneofCase.OrderBy ? (global::Google.Cloud.Firestore.Tests.Proto.OrderBy) clause_ : null; }
+      set {
+        clause_ = value;
+        clauseCase_ = value == null ? ClauseOneofCase.None : ClauseOneofCase.OrderBy;
+      }
+    }
+
+    /// <summary>Field number for the "offset" field.</summary>
+    public const int OffsetFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Offset {
+      get { return clauseCase_ == ClauseOneofCase.Offset ? (int) clause_ : 0; }
+      set {
+        clause_ = value;
+        clauseCase_ = ClauseOneofCase.Offset;
+      }
+    }
+
+    /// <summary>Field number for the "limit" field.</summary>
+    public const int LimitFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Limit {
+      get { return clauseCase_ == ClauseOneofCase.Limit ? (int) clause_ : 0; }
+      set {
+        clause_ = value;
+        clauseCase_ = ClauseOneofCase.Limit;
+      }
+    }
+
+    /// <summary>Field number for the "start_at" field.</summary>
+    public const int StartAtFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.Cursor StartAt {
+      get { return clauseCase_ == ClauseOneofCase.StartAt ? (global::Google.Cloud.Firestore.Tests.Proto.Cursor) clause_ : null; }
+      set {
+        clause_ = value;
+        clauseCase_ = value == null ? ClauseOneofCase.None : ClauseOneofCase.StartAt;
+      }
+    }
+
+    /// <summary>Field number for the "start_after" field.</summary>
+    public const int StartAfterFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.Cursor StartAfter {
+      get { return clauseCase_ == ClauseOneofCase.StartAfter ? (global::Google.Cloud.Firestore.Tests.Proto.Cursor) clause_ : null; }
+      set {
+        clause_ = value;
+        clauseCase_ = value == null ? ClauseOneofCase.None : ClauseOneofCase.StartAfter;
+      }
+    }
+
+    /// <summary>Field number for the "end_at" field.</summary>
+    public const int EndAtFieldNumber = 8;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.Cursor EndAt {
+      get { return clauseCase_ == ClauseOneofCase.EndAt ? (global::Google.Cloud.Firestore.Tests.Proto.Cursor) clause_ : null; }
+      set {
+        clause_ = value;
+        clauseCase_ = value == null ? ClauseOneofCase.None : ClauseOneofCase.EndAt;
+      }
+    }
+
+    /// <summary>Field number for the "end_before" field.</summary>
+    public const int EndBeforeFieldNumber = 9;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.Cursor EndBefore {
+      get { return clauseCase_ == ClauseOneofCase.EndBefore ? (global::Google.Cloud.Firestore.Tests.Proto.Cursor) clause_ : null; }
+      set {
+        clause_ = value;
+        clauseCase_ = value == null ? ClauseOneofCase.None : ClauseOneofCase.EndBefore;
+      }
+    }
+
+    private object clause_;
+    /// <summary>Enum of possible cases for the "clause" oneof.</summary>
+    public enum ClauseOneofCase {
+      None = 0,
+      Select = 1,
+      Where = 2,
+      OrderBy = 3,
+      Offset = 4,
+      Limit = 5,
+      StartAt = 6,
+      StartAfter = 7,
+      EndAt = 8,
+      EndBefore = 9,
+    }
+    private ClauseOneofCase clauseCase_ = ClauseOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ClauseOneofCase ClauseCase {
+      get { return clauseCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearClause() {
+      clauseCase_ = ClauseOneofCase.None;
+      clause_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Clause);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Clause other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Select, other.Select)) return false;
+      if (!object.Equals(Where, other.Where)) return false;
+      if (!object.Equals(OrderBy, other.OrderBy)) return false;
+      if (Offset != other.Offset) return false;
+      if (Limit != other.Limit) return false;
+      if (!object.Equals(StartAt, other.StartAt)) return false;
+      if (!object.Equals(StartAfter, other.StartAfter)) return false;
+      if (!object.Equals(EndAt, other.EndAt)) return false;
+      if (!object.Equals(EndBefore, other.EndBefore)) return false;
+      if (ClauseCase != other.ClauseCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (clauseCase_ == ClauseOneofCase.Select) hash ^= Select.GetHashCode();
+      if (clauseCase_ == ClauseOneofCase.Where) hash ^= Where.GetHashCode();
+      if (clauseCase_ == ClauseOneofCase.OrderBy) hash ^= OrderBy.GetHashCode();
+      if (clauseCase_ == ClauseOneofCase.Offset) hash ^= Offset.GetHashCode();
+      if (clauseCase_ == ClauseOneofCase.Limit) hash ^= Limit.GetHashCode();
+      if (clauseCase_ == ClauseOneofCase.StartAt) hash ^= StartAt.GetHashCode();
+      if (clauseCase_ == ClauseOneofCase.StartAfter) hash ^= StartAfter.GetHashCode();
+      if (clauseCase_ == ClauseOneofCase.EndAt) hash ^= EndAt.GetHashCode();
+      if (clauseCase_ == ClauseOneofCase.EndBefore) hash ^= EndBefore.GetHashCode();
+      hash ^= (int) clauseCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (clauseCase_ == ClauseOneofCase.Select) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Select);
+      }
+      if (clauseCase_ == ClauseOneofCase.Where) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Where);
+      }
+      if (clauseCase_ == ClauseOneofCase.OrderBy) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OrderBy);
+      }
+      if (clauseCase_ == ClauseOneofCase.Offset) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Offset);
+      }
+      if (clauseCase_ == ClauseOneofCase.Limit) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Limit);
+      }
+      if (clauseCase_ == ClauseOneofCase.StartAt) {
+        output.WriteRawTag(50);
+        output.WriteMessage(StartAt);
+      }
+      if (clauseCase_ == ClauseOneofCase.StartAfter) {
+        output.WriteRawTag(58);
+        output.WriteMessage(StartAfter);
+      }
+      if (clauseCase_ == ClauseOneofCase.EndAt) {
+        output.WriteRawTag(66);
+        output.WriteMessage(EndAt);
+      }
+      if (clauseCase_ == ClauseOneofCase.EndBefore) {
+        output.WriteRawTag(74);
+        output.WriteMessage(EndBefore);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (clauseCase_ == ClauseOneofCase.Select) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Select);
+      }
+      if (clauseCase_ == ClauseOneofCase.Where) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Where);
+      }
+      if (clauseCase_ == ClauseOneofCase.OrderBy) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OrderBy);
+      }
+      if (clauseCase_ == ClauseOneofCase.Offset) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Offset);
+      }
+      if (clauseCase_ == ClauseOneofCase.Limit) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Limit);
+      }
+      if (clauseCase_ == ClauseOneofCase.StartAt) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartAt);
+      }
+      if (clauseCase_ == ClauseOneofCase.StartAfter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartAfter);
+      }
+      if (clauseCase_ == ClauseOneofCase.EndAt) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndAt);
+      }
+      if (clauseCase_ == ClauseOneofCase.EndBefore) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndBefore);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Clause other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ClauseCase) {
+        case ClauseOneofCase.Select:
+          Select = other.Select;
+          break;
+        case ClauseOneofCase.Where:
+          Where = other.Where;
+          break;
+        case ClauseOneofCase.OrderBy:
+          OrderBy = other.OrderBy;
+          break;
+        case ClauseOneofCase.Offset:
+          Offset = other.Offset;
+          break;
+        case ClauseOneofCase.Limit:
+          Limit = other.Limit;
+          break;
+        case ClauseOneofCase.StartAt:
+          StartAt = other.StartAt;
+          break;
+        case ClauseOneofCase.StartAfter:
+          StartAfter = other.StartAfter;
+          break;
+        case ClauseOneofCase.EndAt:
+          EndAt = other.EndAt;
+          break;
+        case ClauseOneofCase.EndBefore:
+          EndBefore = other.EndBefore;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            global::Google.Cloud.Firestore.Tests.Proto.Select subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Select();
+            if (clauseCase_ == ClauseOneofCase.Select) {
+              subBuilder.MergeFrom(Select);
+            }
+            input.ReadMessage(subBuilder);
+            Select = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Firestore.Tests.Proto.Where subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Where();
+            if (clauseCase_ == ClauseOneofCase.Where) {
+              subBuilder.MergeFrom(Where);
+            }
+            input.ReadMessage(subBuilder);
+            Where = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Firestore.Tests.Proto.OrderBy subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.OrderBy();
+            if (clauseCase_ == ClauseOneofCase.OrderBy) {
+              subBuilder.MergeFrom(OrderBy);
+            }
+            input.ReadMessage(subBuilder);
+            OrderBy = subBuilder;
+            break;
+          }
+          case 32: {
+            Offset = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            Limit = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Firestore.Tests.Proto.Cursor subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Cursor();
+            if (clauseCase_ == ClauseOneofCase.StartAt) {
+              subBuilder.MergeFrom(StartAt);
+            }
+            input.ReadMessage(subBuilder);
+            StartAt = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Firestore.Tests.Proto.Cursor subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Cursor();
+            if (clauseCase_ == ClauseOneofCase.StartAfter) {
+              subBuilder.MergeFrom(StartAfter);
+            }
+            input.ReadMessage(subBuilder);
+            StartAfter = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Firestore.Tests.Proto.Cursor subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Cursor();
+            if (clauseCase_ == ClauseOneofCase.EndAt) {
+              subBuilder.MergeFrom(EndAt);
+            }
+            input.ReadMessage(subBuilder);
+            EndAt = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.Firestore.Tests.Proto.Cursor subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Cursor();
+            if (clauseCase_ == ClauseOneofCase.EndBefore) {
+              subBuilder.MergeFrom(EndBefore);
+            }
+            input.ReadMessage(subBuilder);
+            EndBefore = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Select : pb::IMessage<Select> {
+    private static readonly pb::MessageParser<Select> _parser = new pb::MessageParser<Select>(() => new Select());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Select> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Select() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Select(Select other) : this() {
+      fields_ = other.fields_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Select Clone() {
+      return new Select(this);
+    }
+
+    /// <summary>Field number for the "fields" field.</summary>
+    public const int FieldsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.Tests.Proto.FieldPath> _repeated_fields_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Firestore.Tests.Proto.FieldPath.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.FieldPath> fields_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.FieldPath>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.Tests.Proto.FieldPath> Fields {
+      get { return fields_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Select);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Select other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!fields_.Equals(other.fields_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= fields_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      fields_.WriteTo(output, _repeated_fields_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += fields_.CalculateSize(_repeated_fields_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Select other) {
+      if (other == null) {
+        return;
+      }
+      fields_.Add(other.fields_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            fields_.AddEntriesFrom(input, _repeated_fields_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Where : pb::IMessage<Where> {
+    private static readonly pb::MessageParser<Where> _parser = new pb::MessageParser<Where>(() => new Where());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Where> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Where() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Where(Where other) : this() {
+      Path = other.path_ != null ? other.Path.Clone() : null;
+      op_ = other.op_;
+      jsonValue_ = other.jsonValue_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Where Clone() {
+      return new Where(this);
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 1;
+    private global::Google.Cloud.Firestore.Tests.Proto.FieldPath path_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.FieldPath Path {
+      get { return path_; }
+      set {
+        path_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "op" field.</summary>
+    public const int OpFieldNumber = 2;
+    private string op_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Op {
+      get { return op_; }
+      set {
+        op_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "json_value" field.</summary>
+    public const int JsonValueFieldNumber = 3;
+    private string jsonValue_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string JsonValue {
+      get { return jsonValue_; }
+      set {
+        jsonValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Where);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Where other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Path, other.Path)) return false;
+      if (Op != other.Op) return false;
+      if (JsonValue != other.JsonValue) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (path_ != null) hash ^= Path.GetHashCode();
+      if (Op.Length != 0) hash ^= Op.GetHashCode();
+      if (JsonValue.Length != 0) hash ^= JsonValue.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (path_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Path);
+      }
+      if (Op.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Op);
+      }
+      if (JsonValue.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(JsonValue);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (path_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Path);
+      }
+      if (Op.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Op);
+      }
+      if (JsonValue.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(JsonValue);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Where other) {
+      if (other == null) {
+        return;
+      }
+      if (other.path_ != null) {
+        if (path_ == null) {
+          path_ = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
+        }
+        Path.MergeFrom(other.Path);
+      }
+      if (other.Op.Length != 0) {
+        Op = other.Op;
+      }
+      if (other.JsonValue.Length != 0) {
+        JsonValue = other.JsonValue;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (path_ == null) {
+              path_ = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
+            }
+            input.ReadMessage(path_);
+            break;
+          }
+          case 18: {
+            Op = input.ReadString();
+            break;
+          }
+          case 26: {
+            JsonValue = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class OrderBy : pb::IMessage<OrderBy> {
+    private static readonly pb::MessageParser<OrderBy> _parser = new pb::MessageParser<OrderBy>(() => new OrderBy());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<OrderBy> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OrderBy() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OrderBy(OrderBy other) : this() {
+      Path = other.path_ != null ? other.Path.Clone() : null;
+      direction_ = other.direction_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OrderBy Clone() {
+      return new OrderBy(this);
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 1;
+    private global::Google.Cloud.Firestore.Tests.Proto.FieldPath path_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.FieldPath Path {
+      get { return path_; }
+      set {
+        path_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "direction" field.</summary>
+    public const int DirectionFieldNumber = 2;
+    private string direction_ = "";
+    /// <summary>
+    /// "asc" or "desc"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Direction {
+      get { return direction_; }
+      set {
+        direction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as OrderBy);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(OrderBy other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Path, other.Path)) return false;
+      if (Direction != other.Direction) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (path_ != null) hash ^= Path.GetHashCode();
+      if (Direction.Length != 0) hash ^= Direction.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (path_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Path);
+      }
+      if (Direction.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Direction);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (path_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Path);
+      }
+      if (Direction.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Direction);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(OrderBy other) {
+      if (other == null) {
+        return;
+      }
+      if (other.path_ != null) {
+        if (path_ == null) {
+          path_ = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
+        }
+        Path.MergeFrom(other.Path);
+      }
+      if (other.Direction.Length != 0) {
+        Direction = other.Direction;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (path_ == null) {
+              path_ = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
+            }
+            input.ReadMessage(path_);
+            break;
+          }
+          case 18: {
+            Direction = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Cursor : pb::IMessage<Cursor> {
+    private static readonly pb::MessageParser<Cursor> _parser = new pb::MessageParser<Cursor>(() => new Cursor());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Cursor> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Cursor() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Cursor(Cursor other) : this() {
+      DocSnapshot = other.docSnapshot_ != null ? other.DocSnapshot.Clone() : null;
+      jsonValues_ = other.jsonValues_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Cursor Clone() {
+      return new Cursor(this);
+    }
+
+    /// <summary>Field number for the "doc_snapshot" field.</summary>
+    public const int DocSnapshotFieldNumber = 1;
+    private global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot docSnapshot_;
+    /// <summary>
+    /// one of:
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot DocSnapshot {
+      get { return docSnapshot_; }
+      set {
+        docSnapshot_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "json_values" field.</summary>
+    public const int JsonValuesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_jsonValues_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> jsonValues_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> JsonValues {
+      get { return jsonValues_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Cursor);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Cursor other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DocSnapshot, other.DocSnapshot)) return false;
+      if(!jsonValues_.Equals(other.jsonValues_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (docSnapshot_ != null) hash ^= DocSnapshot.GetHashCode();
+      hash ^= jsonValues_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (docSnapshot_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DocSnapshot);
+      }
+      jsonValues_.WriteTo(output, _repeated_jsonValues_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (docSnapshot_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocSnapshot);
+      }
+      size += jsonValues_.CalculateSize(_repeated_jsonValues_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Cursor other) {
+      if (other == null) {
+        return;
+      }
+      if (other.docSnapshot_ != null) {
+        if (docSnapshot_ == null) {
+          docSnapshot_ = new global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot();
+        }
+        DocSnapshot.MergeFrom(other.DocSnapshot);
+      }
+      jsonValues_.Add(other.jsonValues_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (docSnapshot_ == null) {
+              docSnapshot_ = new global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot();
+            }
+            input.ReadMessage(docSnapshot_);
+            break;
+          }
+          case 18: {
+            jsonValues_.AddEntriesFrom(input, _repeated_jsonValues_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DocSnapshot : pb::IMessage<DocSnapshot> {
+    private static readonly pb::MessageParser<DocSnapshot> _parser = new pb::MessageParser<DocSnapshot>(() => new DocSnapshot());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DocSnapshot> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocSnapshot() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocSnapshot(DocSnapshot other) : this() {
+      path_ = other.path_;
+      jsonData_ = other.jsonData_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocSnapshot Clone() {
+      return new DocSnapshot(this);
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 1;
+    private string path_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Path {
+      get { return path_; }
+      set {
+        path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "json_data" field.</summary>
+    public const int JsonDataFieldNumber = 2;
+    private string jsonData_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string JsonData {
+      get { return jsonData_; }
+      set {
+        jsonData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DocSnapshot);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DocSnapshot other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Path != other.Path) return false;
+      if (JsonData != other.JsonData) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (JsonData.Length != 0) hash ^= JsonData.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (JsonData.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(JsonData);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Path.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+      }
+      if (JsonData.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(JsonData);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DocSnapshot other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Path.Length != 0) {
+        Path = other.Path;
+      }
+      if (other.JsonData.Length != 0) {
+        JsonData = other.JsonData;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+          case 18: {
+            JsonData = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class FieldPath : pb::IMessage<FieldPath> {
     private static readonly pb::MessageParser<FieldPath> _parser = new pb::MessageParser<FieldPath>(() => new FieldPath());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2112,7 +3534,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Firestore.Tests.Proto.TestReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
