@@ -37,43 +37,46 @@ namespace Google.Cloud.Vision.V1 {
             "CzI3Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuVGV4dEFubm90YXRpb24uRGV0",
             "ZWN0ZWRMYW5ndWFnZRJMCg5kZXRlY3RlZF9icmVhaxgCIAEoCzI0Lmdvb2ds",
             "ZS5jbG91ZC52aXNpb24udjEuVGV4dEFubm90YXRpb24uRGV0ZWN0ZWRCcmVh",
-            "ayKbAQoEUGFnZRJFCghwcm9wZXJ0eRgBIAEoCzIzLmdvb2dsZS5jbG91ZC52",
+            "ayKvAQoEUGFnZRJFCghwcm9wZXJ0eRgBIAEoCzIzLmdvb2dsZS5jbG91ZC52",
             "aXNpb24udjEuVGV4dEFubm90YXRpb24uVGV4dFByb3BlcnR5Eg0KBXdpZHRo",
             "GAIgASgFEg4KBmhlaWdodBgDIAEoBRItCgZibG9ja3MYBCADKAsyHS5nb29n",
-            "bGUuY2xvdWQudmlzaW9uLnYxLkJsb2NrItICCgVCbG9jaxJFCghwcm9wZXJ0",
-            "eRgBIAEoCzIzLmdvb2dsZS5jbG91ZC52aXNpb24udjEuVGV4dEFubm90YXRp",
-            "b24uVGV4dFByb3BlcnR5EjoKDGJvdW5kaW5nX2JveBgCIAEoCzIkLmdvb2ds",
-            "ZS5jbG91ZC52aXNpb24udjEuQm91bmRpbmdQb2x5EjUKCnBhcmFncmFwaHMY",
-            "AyADKAsyIS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlBhcmFncmFwaBI7Cgpi",
-            "bG9ja190eXBlGAQgASgOMicuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CbG9j",
-            "ay5CbG9ja1R5cGUiUgoJQmxvY2tUeXBlEgsKB1VOS05PV04QABIICgRURVhU",
-            "EAESCQoFVEFCTEUQAhILCgdQSUNUVVJFEAMSCQoFUlVMRVIQBBILCgdCQVJD",
-            "T0RFEAUiuwEKCVBhcmFncmFwaBJFCghwcm9wZXJ0eRgBIAEoCzIzLmdvb2ds",
-            "ZS5jbG91ZC52aXNpb24udjEuVGV4dEFubm90YXRpb24uVGV4dFByb3BlcnR5",
-            "EjoKDGJvdW5kaW5nX2JveBgCIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24u",
-            "djEuQm91bmRpbmdQb2x5EisKBXdvcmRzGAMgAygLMhwuZ29vZ2xlLmNsb3Vk",
-            "LnZpc2lvbi52MS5Xb3JkIroBCgRXb3JkEkUKCHByb3BlcnR5GAEgASgLMjMu",
-            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5UZXh0QW5ub3RhdGlvbi5UZXh0UHJv",
-            "cGVydHkSOgoMYm91bmRpbmdfYm94GAIgASgLMiQuZ29vZ2xlLmNsb3VkLnZp",
-            "c2lvbi52MS5Cb3VuZGluZ1BvbHkSLwoHc3ltYm9scxgDIAMoCzIeLmdvb2ds",
-            "ZS5jbG91ZC52aXNpb24udjEuU3ltYm9sIpkBCgZTeW1ib2wSRQoIcHJvcGVy",
-            "dHkYASABKAsyMy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlRleHRBbm5vdGF0",
-            "aW9uLlRleHRQcm9wZXJ0eRI6Cgxib3VuZGluZ19ib3gYAiABKAsyJC5nb29n",
-            "bGUuY2xvdWQudmlzaW9uLnYxLkJvdW5kaW5nUG9seRIMCgR0ZXh0GAMgASgJ",
-            "QnQKGmNvbS5nb29nbGUuY2xvdWQudmlzaW9uLnYxQhNUZXh0QW5ub3RhdGlv",
-            "blByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvdmlzaW9uL3YxO3Zpc2lvbvgBAWIGcHJvdG8z"));
+            "bGUuY2xvdWQudmlzaW9uLnYxLkJsb2NrEhIKCmNvbmZpZGVuY2UYBSABKAIi",
+            "5gIKBUJsb2NrEkUKCHByb3BlcnR5GAEgASgLMjMuZ29vZ2xlLmNsb3VkLnZp",
+            "c2lvbi52MS5UZXh0QW5ub3RhdGlvbi5UZXh0UHJvcGVydHkSOgoMYm91bmRp",
+            "bmdfYm94GAIgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Cb3VuZGlu",
+            "Z1BvbHkSNQoKcGFyYWdyYXBocxgDIAMoCzIhLmdvb2dsZS5jbG91ZC52aXNp",
+            "b24udjEuUGFyYWdyYXBoEjsKCmJsb2NrX3R5cGUYBCABKA4yJy5nb29nbGUu",
+            "Y2xvdWQudmlzaW9uLnYxLkJsb2NrLkJsb2NrVHlwZRISCgpjb25maWRlbmNl",
+            "GAUgASgCIlIKCUJsb2NrVHlwZRILCgdVTktOT1dOEAASCAoEVEVYVBABEgkK",
+            "BVRBQkxFEAISCwoHUElDVFVSRRADEgkKBVJVTEVSEAQSCwoHQkFSQ09ERRAF",
+            "Is8BCglQYXJhZ3JhcGgSRQoIcHJvcGVydHkYASABKAsyMy5nb29nbGUuY2xv",
+            "dWQudmlzaW9uLnYxLlRleHRBbm5vdGF0aW9uLlRleHRQcm9wZXJ0eRI6Cgxi",
+            "b3VuZGluZ19ib3gYAiABKAsyJC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkJv",
+            "dW5kaW5nUG9seRIrCgV3b3JkcxgDIAMoCzIcLmdvb2dsZS5jbG91ZC52aXNp",
+            "b24udjEuV29yZBISCgpjb25maWRlbmNlGAQgASgCIs4BCgRXb3JkEkUKCHBy",
+            "b3BlcnR5GAEgASgLMjMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5UZXh0QW5u",
+            "b3RhdGlvbi5UZXh0UHJvcGVydHkSOgoMYm91bmRpbmdfYm94GAIgASgLMiQu",
+            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Cb3VuZGluZ1BvbHkSLwoHc3ltYm9s",
+            "cxgDIAMoCzIeLmdvb2dsZS5jbG91ZC52aXNpb24udjEuU3ltYm9sEhIKCmNv",
+            "bmZpZGVuY2UYBCABKAIirQEKBlN5bWJvbBJFCghwcm9wZXJ0eRgBIAEoCzIz",
+            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuVGV4dEFubm90YXRpb24uVGV4dFBy",
+            "b3BlcnR5EjoKDGJvdW5kaW5nX2JveBgCIAEoCzIkLmdvb2dsZS5jbG91ZC52",
+            "aXNpb24udjEuQm91bmRpbmdQb2x5EgwKBHRleHQYAyABKAkSEgoKY29uZmlk",
+            "ZW5jZRgEIAEoAkJ0Chpjb20uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MUITVGV4",
+            "dEFubm90YXRpb25Qcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3Zpc2lvbi92MTt2aXNpb274AQFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation), global::Google.Cloud.Vision.V1.TextAnnotation.Parser, new[]{ "Pages", "Text" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage), global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage.Parser, new[]{ "LanguageCode", "Confidence" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak), global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Parser, new[]{ "Type", "IsPrefix" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty), global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty.Parser, new[]{ "DetectedLanguages", "DetectedBreak" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Page), global::Google.Cloud.Vision.V1.Page.Parser, new[]{ "Property", "Width", "Height", "Blocks" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Block), global::Google.Cloud.Vision.V1.Block.Parser, new[]{ "Property", "BoundingBox", "Paragraphs", "BlockType" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.Block.Types.BlockType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Paragraph), global::Google.Cloud.Vision.V1.Paragraph.Parser, new[]{ "Property", "BoundingBox", "Words" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Word), global::Google.Cloud.Vision.V1.Word.Parser, new[]{ "Property", "BoundingBox", "Symbols" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Symbol), global::Google.Cloud.Vision.V1.Symbol.Parser, new[]{ "Property", "BoundingBox", "Text" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Page), global::Google.Cloud.Vision.V1.Page.Parser, new[]{ "Property", "Width", "Height", "Blocks", "Confidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Block), global::Google.Cloud.Vision.V1.Block.Parser, new[]{ "Property", "BoundingBox", "Paragraphs", "BlockType", "Confidence" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.Block.Types.BlockType) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Paragraph), global::Google.Cloud.Vision.V1.Paragraph.Parser, new[]{ "Property", "BoundingBox", "Words", "Confidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Word), global::Google.Cloud.Vision.V1.Word.Parser, new[]{ "Property", "BoundingBox", "Symbols", "Confidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Symbol), global::Google.Cloud.Vision.V1.Symbol.Parser, new[]{ "Property", "BoundingBox", "Text", "Confidence" }, null, null, null)
           }));
     }
     #endregion
@@ -85,9 +88,9 @@ namespace Google.Cloud.Vision.V1 {
   /// The hierarchy of an OCR extracted text structure is like this:
   ///     TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
   /// Each structural component, starting from Page, may further have their own
-  /// properties. Properties describe detected languages, breaks etc.. Please
-  /// refer to the [google.cloud.vision.v1.TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty] message
-  /// definition below for more detail.
+  /// properties. Properties describe detected languages, breaks etc.. Please refer
+  /// to the [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty] message definition below for more
+  /// detail.
   /// </summary>
   public sealed partial class TextAnnotation : pb::IMessage<TextAnnotation> {
     private static readonly pb::MessageParser<TextAnnotation> _parser = new pb::MessageParser<TextAnnotation>(() => new TextAnnotation());
@@ -429,6 +432,9 @@ namespace Google.Cloud.Vision.V1 {
         /// <summary>Field number for the "type" field.</summary>
         public const int TypeFieldNumber = 1;
         private global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType type_ = 0;
+        /// <summary>
+        /// Detected break type.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType Type {
           get { return type_; }
@@ -564,12 +570,11 @@ namespace Google.Cloud.Vision.V1 {
             /// </summary>
             [pbr::OriginalName("EOL_SURE_SPACE")] EolSureSpace = 3,
             /// <summary>
-            /// End-line hyphen that is not present in text; does
+            /// End-line hyphen that is not present in text; does not co-occur with
+            /// `SPACE`, `LEADER_SPACE`, or `LINE_BREAK`.
             /// </summary>
             [pbr::OriginalName("HYPHEN")] Hyphen = 4,
             /// <summary>
-            /// not co-occur with SPACE, LEADER_SPACE, or
-            /// LINE_BREAK.
             /// Line break that ends a paragraph.
             /// </summary>
             [pbr::OriginalName("LINE_BREAK")] LineBreak = 5,
@@ -768,6 +773,7 @@ namespace Google.Cloud.Vision.V1 {
       width_ = other.width_;
       height_ = other.height_;
       blocks_ = other.blocks_.Clone();
+      confidence_ = other.confidence_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -830,6 +836,20 @@ namespace Google.Cloud.Vision.V1 {
       get { return blocks_; }
     }
 
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 5;
+    private float confidence_;
+    /// <summary>
+    /// Confidence of the OCR results on the page. Range [0, 1].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Page);
@@ -847,6 +867,7 @@ namespace Google.Cloud.Vision.V1 {
       if (Width != other.Width) return false;
       if (Height != other.Height) return false;
       if(!blocks_.Equals(other.blocks_)) return false;
+      if (Confidence != other.Confidence) return false;
       return true;
     }
 
@@ -857,6 +878,7 @@ namespace Google.Cloud.Vision.V1 {
       if (Width != 0) hash ^= Width.GetHashCode();
       if (Height != 0) hash ^= Height.GetHashCode();
       hash ^= blocks_.GetHashCode();
+      if (Confidence != 0F) hash ^= Confidence.GetHashCode();
       return hash;
     }
 
@@ -880,6 +902,10 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteInt32(Height);
       }
       blocks_.WriteTo(output, _repeated_blocks_codec);
+      if (Confidence != 0F) {
+        output.WriteRawTag(45);
+        output.WriteFloat(Confidence);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -895,6 +921,9 @@ namespace Google.Cloud.Vision.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Height);
       }
       size += blocks_.CalculateSize(_repeated_blocks_codec);
+      if (Confidence != 0F) {
+        size += 1 + 4;
+      }
       return size;
     }
 
@@ -916,6 +945,9 @@ namespace Google.Cloud.Vision.V1 {
         Height = other.Height;
       }
       blocks_.Add(other.blocks_);
+      if (other.Confidence != 0F) {
+        Confidence = other.Confidence;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -943,6 +975,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 34: {
             blocks_.AddEntriesFrom(input, _repeated_blocks_codec);
+            break;
+          }
+          case 45: {
+            Confidence = input.ReadFloat();
             break;
           }
         }
@@ -982,6 +1018,7 @@ namespace Google.Cloud.Vision.V1 {
       BoundingBox = other.boundingBox_ != null ? other.BoundingBox.Clone() : null;
       paragraphs_ = other.paragraphs_.Clone();
       blockType_ = other.blockType_;
+      confidence_ = other.confidence_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1013,14 +1050,19 @@ namespace Google.Cloud.Vision.V1 {
     /// is represented as around the top-left corner as defined when the text is
     /// read in the 'natural' orientation.
     /// For example:
-    ///   * when the text is horizontal it might look like:
-    ///      0----1
-    ///      |    |
-    ///      3----2
-    ///   * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///      2----3
-    ///      |    |
-    ///      1----0
+    ///
+    /// * when the text is horizontal it might look like:
+    ///
+    ///         0----1
+    ///         |    |
+    ///         3----2
+    ///
+    /// * when it's rotated 180 degrees around the top-left corner it becomes:
+    ///
+    ///         2----3
+    ///         |    |
+    ///         1----0
+    ///
     ///   and the vertice order will still be (0, 1, 2, 3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1058,6 +1100,20 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 5;
+    private float confidence_;
+    /// <summary>
+    /// Confidence of the OCR results on the block. Range [0, 1].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Block);
@@ -1075,6 +1131,7 @@ namespace Google.Cloud.Vision.V1 {
       if (!object.Equals(BoundingBox, other.BoundingBox)) return false;
       if(!paragraphs_.Equals(other.paragraphs_)) return false;
       if (BlockType != other.BlockType) return false;
+      if (Confidence != other.Confidence) return false;
       return true;
     }
 
@@ -1085,6 +1142,7 @@ namespace Google.Cloud.Vision.V1 {
       if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
       hash ^= paragraphs_.GetHashCode();
       if (BlockType != 0) hash ^= BlockType.GetHashCode();
+      if (Confidence != 0F) hash ^= Confidence.GetHashCode();
       return hash;
     }
 
@@ -1108,6 +1166,10 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) BlockType);
       }
+      if (Confidence != 0F) {
+        output.WriteRawTag(45);
+        output.WriteFloat(Confidence);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1122,6 +1184,9 @@ namespace Google.Cloud.Vision.V1 {
       size += paragraphs_.CalculateSize(_repeated_paragraphs_codec);
       if (BlockType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlockType);
+      }
+      if (Confidence != 0F) {
+        size += 1 + 4;
       }
       return size;
     }
@@ -1146,6 +1211,9 @@ namespace Google.Cloud.Vision.V1 {
       paragraphs_.Add(other.paragraphs_);
       if (other.BlockType != 0) {
         BlockType = other.BlockType;
+      }
+      if (other.Confidence != 0F) {
+        Confidence = other.Confidence;
       }
     }
 
@@ -1177,6 +1245,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 32: {
             blockType_ = (global::Google.Cloud.Vision.V1.Block.Types.BlockType) input.ReadEnum();
+            break;
+          }
+          case 45: {
+            Confidence = input.ReadFloat();
             break;
           }
         }
@@ -1252,6 +1324,7 @@ namespace Google.Cloud.Vision.V1 {
       Property = other.property_ != null ? other.Property.Clone() : null;
       BoundingBox = other.boundingBox_ != null ? other.BoundingBox.Clone() : null;
       words_ = other.words_.Clone();
+      confidence_ = other.confidence_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1314,6 +1387,20 @@ namespace Google.Cloud.Vision.V1 {
       get { return words_; }
     }
 
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 4;
+    private float confidence_;
+    /// <summary>
+    /// Confidence of the OCR results for the paragraph. Range [0, 1].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Paragraph);
@@ -1330,6 +1417,7 @@ namespace Google.Cloud.Vision.V1 {
       if (!object.Equals(Property, other.Property)) return false;
       if (!object.Equals(BoundingBox, other.BoundingBox)) return false;
       if(!words_.Equals(other.words_)) return false;
+      if (Confidence != other.Confidence) return false;
       return true;
     }
 
@@ -1339,6 +1427,7 @@ namespace Google.Cloud.Vision.V1 {
       if (property_ != null) hash ^= Property.GetHashCode();
       if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
       hash ^= words_.GetHashCode();
+      if (Confidence != 0F) hash ^= Confidence.GetHashCode();
       return hash;
     }
 
@@ -1358,6 +1447,10 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteMessage(BoundingBox);
       }
       words_.WriteTo(output, _repeated_words_codec);
+      if (Confidence != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Confidence);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1370,6 +1463,9 @@ namespace Google.Cloud.Vision.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingBox);
       }
       size += words_.CalculateSize(_repeated_words_codec);
+      if (Confidence != 0F) {
+        size += 1 + 4;
+      }
       return size;
     }
 
@@ -1391,6 +1487,9 @@ namespace Google.Cloud.Vision.V1 {
         BoundingBox.MergeFrom(other.BoundingBox);
       }
       words_.Add(other.words_);
+      if (other.Confidence != 0F) {
+        Confidence = other.Confidence;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1417,6 +1516,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 26: {
             words_.AddEntriesFrom(input, _repeated_words_codec);
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
             break;
           }
         }
@@ -1455,6 +1558,7 @@ namespace Google.Cloud.Vision.V1 {
       Property = other.property_ != null ? other.Property.Clone() : null;
       BoundingBox = other.boundingBox_ != null ? other.BoundingBox.Clone() : null;
       symbols_ = other.symbols_.Clone();
+      confidence_ = other.confidence_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1518,6 +1622,20 @@ namespace Google.Cloud.Vision.V1 {
       get { return symbols_; }
     }
 
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 4;
+    private float confidence_;
+    /// <summary>
+    /// Confidence of the OCR results for the word. Range [0, 1].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Word);
@@ -1534,6 +1652,7 @@ namespace Google.Cloud.Vision.V1 {
       if (!object.Equals(Property, other.Property)) return false;
       if (!object.Equals(BoundingBox, other.BoundingBox)) return false;
       if(!symbols_.Equals(other.symbols_)) return false;
+      if (Confidence != other.Confidence) return false;
       return true;
     }
 
@@ -1543,6 +1662,7 @@ namespace Google.Cloud.Vision.V1 {
       if (property_ != null) hash ^= Property.GetHashCode();
       if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
       hash ^= symbols_.GetHashCode();
+      if (Confidence != 0F) hash ^= Confidence.GetHashCode();
       return hash;
     }
 
@@ -1562,6 +1682,10 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteMessage(BoundingBox);
       }
       symbols_.WriteTo(output, _repeated_symbols_codec);
+      if (Confidence != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Confidence);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1574,6 +1698,9 @@ namespace Google.Cloud.Vision.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingBox);
       }
       size += symbols_.CalculateSize(_repeated_symbols_codec);
+      if (Confidence != 0F) {
+        size += 1 + 4;
+      }
       return size;
     }
 
@@ -1595,6 +1722,9 @@ namespace Google.Cloud.Vision.V1 {
         BoundingBox.MergeFrom(other.BoundingBox);
       }
       symbols_.Add(other.symbols_);
+      if (other.Confidence != 0F) {
+        Confidence = other.Confidence;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1621,6 +1751,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 26: {
             symbols_.AddEntriesFrom(input, _repeated_symbols_codec);
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
             break;
           }
         }
@@ -1659,6 +1793,7 @@ namespace Google.Cloud.Vision.V1 {
       Property = other.property_ != null ? other.Property.Clone() : null;
       BoundingBox = other.boundingBox_ != null ? other.BoundingBox.Clone() : null;
       text_ = other.text_;
+      confidence_ = other.confidence_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1722,6 +1857,20 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 4;
+    private float confidence_;
+    /// <summary>
+    /// Confidence of the OCR results for the symbol. Range [0, 1].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Symbol);
@@ -1738,6 +1887,7 @@ namespace Google.Cloud.Vision.V1 {
       if (!object.Equals(Property, other.Property)) return false;
       if (!object.Equals(BoundingBox, other.BoundingBox)) return false;
       if (Text != other.Text) return false;
+      if (Confidence != other.Confidence) return false;
       return true;
     }
 
@@ -1747,6 +1897,7 @@ namespace Google.Cloud.Vision.V1 {
       if (property_ != null) hash ^= Property.GetHashCode();
       if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
       if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (Confidence != 0F) hash ^= Confidence.GetHashCode();
       return hash;
     }
 
@@ -1769,6 +1920,10 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(26);
         output.WriteString(Text);
       }
+      if (Confidence != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Confidence);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1782,6 +1937,9 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (Text.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      if (Confidence != 0F) {
+        size += 1 + 4;
       }
       return size;
     }
@@ -1805,6 +1963,9 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.Text.Length != 0) {
         Text = other.Text;
+      }
+      if (other.Confidence != 0F) {
+        Confidence = other.Confidence;
       }
     }
 
@@ -1832,6 +1993,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 26: {
             Text = input.ReadString();
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
             break;
           }
         }
