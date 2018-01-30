@@ -24,26 +24,35 @@ namespace Google.Cloud.Vision.V1 {
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvdmlzaW9uL3YxL3dlYl9kZXRlY3Rpb24ucHJvdG8S",
             "Fmdvb2dsZS5jbG91ZC52aXNpb24udjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8i1gMKDFdlYkRldGVjdGlvbhJECgx3ZWJfZW50aXRpZXMYASAD",
+            "bnMucHJvdG8i1AYKDFdlYkRldGVjdGlvbhJECgx3ZWJfZW50aXRpZXMYASAD",
             "KAsyLi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLldlYkRldGVjdGlvbi5XZWJF",
             "bnRpdHkSSwoUZnVsbF9tYXRjaGluZ19pbWFnZXMYAiADKAsyLS5nb29nbGUu",
             "Y2xvdWQudmlzaW9uLnYxLldlYkRldGVjdGlvbi5XZWJJbWFnZRJOChdwYXJ0",
             "aWFsX21hdGNoaW5nX2ltYWdlcxgDIAMoCzItLmdvb2dsZS5jbG91ZC52aXNp",
             "b24udjEuV2ViRGV0ZWN0aW9uLldlYkltYWdlElAKGnBhZ2VzX3dpdGhfbWF0",
             "Y2hpbmdfaW1hZ2VzGAQgAygLMiwuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5X",
-            "ZWJEZXRlY3Rpb24uV2ViUGFnZRpCCglXZWJFbnRpdHkSEQoJZW50aXR5X2lk",
-            "GAEgASgJEg0KBXNjb3JlGAIgASgCEhMKC2Rlc2NyaXB0aW9uGAMgASgJGiYK",
-            "CFdlYkltYWdlEgsKA3VybBgBIAEoCRINCgVzY29yZRgCIAEoAholCgdXZWJQ",
-            "YWdlEgsKA3VybBgBIAEoCRINCgVzY29yZRgCIAEoAkJyChpjb20uZ29vZ2xl",
-            "LmNsb3VkLnZpc2lvbi52MUIRV2ViRGV0ZWN0aW9uUHJvdG9QAVo8Z29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC92aXNpb24v",
-            "djE7dmlzaW9u+AEBYgZwcm90bzM="));
+            "ZWJEZXRlY3Rpb24uV2ViUGFnZRJOChd2aXN1YWxseV9zaW1pbGFyX2ltYWdl",
+            "cxgGIAMoCzItLmdvb2dsZS5jbG91ZC52aXNpb24udjEuV2ViRGV0ZWN0aW9u",
+            "LldlYkltYWdlEkgKEWJlc3RfZ3Vlc3NfbGFiZWxzGAggAygLMi0uZ29vZ2xl",
+            "LmNsb3VkLnZpc2lvbi52MS5XZWJEZXRlY3Rpb24uV2ViTGFiZWwaQgoJV2Vi",
+            "RW50aXR5EhEKCWVudGl0eV9pZBgBIAEoCRINCgVzY29yZRgCIAEoAhITCgtk",
+            "ZXNjcmlwdGlvbhgDIAEoCRomCghXZWJJbWFnZRILCgN1cmwYASABKAkSDQoF",
+            "c2NvcmUYAiABKAIa1gEKB1dlYlBhZ2USCwoDdXJsGAEgASgJEg0KBXNjb3Jl",
+            "GAIgASgCEhIKCnBhZ2VfdGl0bGUYAyABKAkSSwoUZnVsbF9tYXRjaGluZ19p",
+            "bWFnZXMYBCADKAsyLS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLldlYkRldGVj",
+            "dGlvbi5XZWJJbWFnZRJOChdwYXJ0aWFsX21hdGNoaW5nX2ltYWdlcxgFIAMo",
+            "CzItLmdvb2dsZS5jbG91ZC52aXNpb24udjEuV2ViRGV0ZWN0aW9uLldlYklt",
+            "YWdlGjAKCFdlYkxhYmVsEg0KBWxhYmVsGAEgASgJEhUKDWxhbmd1YWdlX2Nv",
+            "ZGUYAiABKAlCcgoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFCEVdlYkRl",
+            "dGVjdGlvblByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQvdmlzaW9uL3YxO3Zpc2lvbvgBAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection), global::Google.Cloud.Vision.V1.WebDetection.Parser, new[]{ "WebEntities", "FullMatchingImages", "PartialMatchingImages", "PagesWithMatchingImages" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity), global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity.Parser, new[]{ "EntityId", "Score", "Description" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection), global::Google.Cloud.Vision.V1.WebDetection.Parser, new[]{ "WebEntities", "FullMatchingImages", "PartialMatchingImages", "PagesWithMatchingImages", "VisuallySimilarImages", "BestGuessLabels" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity), global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity.Parser, new[]{ "EntityId", "Score", "Description" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage), global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage.Parser, new[]{ "Url", "Score" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage), global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage.Parser, new[]{ "Url", "Score" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage), global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage.Parser, new[]{ "Url", "Score", "PageTitle", "FullMatchingImages", "PartialMatchingImages" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel), global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel.Parser, new[]{ "Label", "LanguageCode" }, null, null, null)})
           }));
     }
     #endregion
@@ -81,6 +90,8 @@ namespace Google.Cloud.Vision.V1 {
       fullMatchingImages_ = other.fullMatchingImages_.Clone();
       partialMatchingImages_ = other.partialMatchingImages_.Clone();
       pagesWithMatchingImages_ = other.pagesWithMatchingImages_.Clone();
+      visuallySimilarImages_ = other.visuallySimilarImages_.Clone();
+      bestGuessLabels_ = other.bestGuessLabels_.Clone();
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,8 +119,7 @@ namespace Google.Cloud.Vision.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> fullMatchingImages_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage>();
     /// <summary>
     /// Fully matching images from the Internet.
-    /// They're definite neardups and most often a copy of the query image with
-    /// merely a size change.
+    /// Can include resized copies of the query image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> FullMatchingImages {
@@ -144,6 +154,32 @@ namespace Google.Cloud.Vision.V1 {
       get { return pagesWithMatchingImages_; }
     }
 
+    /// <summary>Field number for the "visually_similar_images" field.</summary>
+    public const int VisuallySimilarImagesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> _repeated_visuallySimilarImages_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> visuallySimilarImages_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage>();
+    /// <summary>
+    /// The visually similar image results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> VisuallySimilarImages {
+      get { return visuallySimilarImages_; }
+    }
+
+    /// <summary>Field number for the "best_guess_labels" field.</summary>
+    public const int BestGuessLabelsFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel> _repeated_bestGuessLabels_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel> bestGuessLabels_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel>();
+    /// <summary>
+    /// Best guess text labels for the request image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel> BestGuessLabels {
+      get { return bestGuessLabels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as WebDetection);
@@ -161,6 +197,8 @@ namespace Google.Cloud.Vision.V1 {
       if(!fullMatchingImages_.Equals(other.fullMatchingImages_)) return false;
       if(!partialMatchingImages_.Equals(other.partialMatchingImages_)) return false;
       if(!pagesWithMatchingImages_.Equals(other.pagesWithMatchingImages_)) return false;
+      if(!visuallySimilarImages_.Equals(other.visuallySimilarImages_)) return false;
+      if(!bestGuessLabels_.Equals(other.bestGuessLabels_)) return false;
       return true;
     }
 
@@ -171,6 +209,8 @@ namespace Google.Cloud.Vision.V1 {
       hash ^= fullMatchingImages_.GetHashCode();
       hash ^= partialMatchingImages_.GetHashCode();
       hash ^= pagesWithMatchingImages_.GetHashCode();
+      hash ^= visuallySimilarImages_.GetHashCode();
+      hash ^= bestGuessLabels_.GetHashCode();
       return hash;
     }
 
@@ -185,6 +225,8 @@ namespace Google.Cloud.Vision.V1 {
       fullMatchingImages_.WriteTo(output, _repeated_fullMatchingImages_codec);
       partialMatchingImages_.WriteTo(output, _repeated_partialMatchingImages_codec);
       pagesWithMatchingImages_.WriteTo(output, _repeated_pagesWithMatchingImages_codec);
+      visuallySimilarImages_.WriteTo(output, _repeated_visuallySimilarImages_codec);
+      bestGuessLabels_.WriteTo(output, _repeated_bestGuessLabels_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -194,6 +236,8 @@ namespace Google.Cloud.Vision.V1 {
       size += fullMatchingImages_.CalculateSize(_repeated_fullMatchingImages_codec);
       size += partialMatchingImages_.CalculateSize(_repeated_partialMatchingImages_codec);
       size += pagesWithMatchingImages_.CalculateSize(_repeated_pagesWithMatchingImages_codec);
+      size += visuallySimilarImages_.CalculateSize(_repeated_visuallySimilarImages_codec);
+      size += bestGuessLabels_.CalculateSize(_repeated_bestGuessLabels_codec);
       return size;
     }
 
@@ -206,6 +250,8 @@ namespace Google.Cloud.Vision.V1 {
       fullMatchingImages_.Add(other.fullMatchingImages_);
       partialMatchingImages_.Add(other.partialMatchingImages_);
       pagesWithMatchingImages_.Add(other.pagesWithMatchingImages_);
+      visuallySimilarImages_.Add(other.visuallySimilarImages_);
+      bestGuessLabels_.Add(other.bestGuessLabels_);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -230,6 +276,14 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 34: {
             pagesWithMatchingImages_.AddEntriesFrom(input, _repeated_pagesWithMatchingImages_codec);
+            break;
+          }
+          case 50: {
+            visuallySimilarImages_.AddEntriesFrom(input, _repeated_visuallySimilarImages_codec);
+            break;
+          }
+          case 66: {
+            bestGuessLabels_.AddEntriesFrom(input, _repeated_bestGuessLabels_codec);
             break;
           }
         }
@@ -480,8 +534,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int ScoreFieldNumber = 2;
         private float score_;
         /// <summary>
-        /// Overall relevancy score for the image.
-        /// Not normalized and not comparable across different image queries.
+        /// (Deprecated) Overall relevancy score for the image.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float Score {
@@ -610,6 +663,9 @@ namespace Google.Cloud.Vision.V1 {
         public WebPage(WebPage other) : this() {
           url_ = other.url_;
           score_ = other.score_;
+          pageTitle_ = other.pageTitle_;
+          fullMatchingImages_ = other.fullMatchingImages_.Clone();
+          partialMatchingImages_ = other.partialMatchingImages_.Clone();
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -635,8 +691,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int ScoreFieldNumber = 2;
         private float score_;
         /// <summary>
-        /// Overall relevancy score for the web page.
-        /// Not normalized and not comparable across different image queries.
+        /// (Deprecated) Overall relevancy score for the web page.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float Score {
@@ -644,6 +699,50 @@ namespace Google.Cloud.Vision.V1 {
           set {
             score_ = value;
           }
+        }
+
+        /// <summary>Field number for the "page_title" field.</summary>
+        public const int PageTitleFieldNumber = 3;
+        private string pageTitle_ = "";
+        /// <summary>
+        /// Title for the web page, may contain HTML markups.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string PageTitle {
+          get { return pageTitle_; }
+          set {
+            pageTitle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "full_matching_images" field.</summary>
+        public const int FullMatchingImagesFieldNumber = 4;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> _repeated_fullMatchingImages_codec
+            = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> fullMatchingImages_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage>();
+        /// <summary>
+        /// Fully matching images on the page.
+        /// Can include resized copies of the query image.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> FullMatchingImages {
+          get { return fullMatchingImages_; }
+        }
+
+        /// <summary>Field number for the "partial_matching_images" field.</summary>
+        public const int PartialMatchingImagesFieldNumber = 5;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> _repeated_partialMatchingImages_codec
+            = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> partialMatchingImages_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage>();
+        /// <summary>
+        /// Partial matching images on the page.
+        /// Those images are similar enough to share some key-point features. For
+        /// example an original image will likely have partial matching for its
+        /// crops.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> PartialMatchingImages {
+          get { return partialMatchingImages_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -661,6 +760,9 @@ namespace Google.Cloud.Vision.V1 {
           }
           if (Url != other.Url) return false;
           if (Score != other.Score) return false;
+          if (PageTitle != other.PageTitle) return false;
+          if(!fullMatchingImages_.Equals(other.fullMatchingImages_)) return false;
+          if(!partialMatchingImages_.Equals(other.partialMatchingImages_)) return false;
           return true;
         }
 
@@ -669,6 +771,9 @@ namespace Google.Cloud.Vision.V1 {
           int hash = 1;
           if (Url.Length != 0) hash ^= Url.GetHashCode();
           if (Score != 0F) hash ^= Score.GetHashCode();
+          if (PageTitle.Length != 0) hash ^= PageTitle.GetHashCode();
+          hash ^= fullMatchingImages_.GetHashCode();
+          hash ^= partialMatchingImages_.GetHashCode();
           return hash;
         }
 
@@ -687,6 +792,12 @@ namespace Google.Cloud.Vision.V1 {
             output.WriteRawTag(21);
             output.WriteFloat(Score);
           }
+          if (PageTitle.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(PageTitle);
+          }
+          fullMatchingImages_.WriteTo(output, _repeated_fullMatchingImages_codec);
+          partialMatchingImages_.WriteTo(output, _repeated_partialMatchingImages_codec);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -698,6 +809,11 @@ namespace Google.Cloud.Vision.V1 {
           if (Score != 0F) {
             size += 1 + 4;
           }
+          if (PageTitle.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PageTitle);
+          }
+          size += fullMatchingImages_.CalculateSize(_repeated_fullMatchingImages_codec);
+          size += partialMatchingImages_.CalculateSize(_repeated_partialMatchingImages_codec);
           return size;
         }
 
@@ -712,6 +828,11 @@ namespace Google.Cloud.Vision.V1 {
           if (other.Score != 0F) {
             Score = other.Score;
           }
+          if (other.PageTitle.Length != 0) {
+            PageTitle = other.PageTitle;
+          }
+          fullMatchingImages_.Add(other.fullMatchingImages_);
+          partialMatchingImages_.Add(other.partialMatchingImages_);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -728,6 +849,174 @@ namespace Google.Cloud.Vision.V1 {
               }
               case 21: {
                 Score = input.ReadFloat();
+                break;
+              }
+              case 26: {
+                PageTitle = input.ReadString();
+                break;
+              }
+              case 34: {
+                fullMatchingImages_.AddEntriesFrom(input, _repeated_fullMatchingImages_codec);
+                break;
+              }
+              case 42: {
+                partialMatchingImages_.AddEntriesFrom(input, _repeated_partialMatchingImages_codec);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// Label to provide extra metadata for the web detection.
+      /// </summary>
+      public sealed partial class WebLabel : pb::IMessage<WebLabel> {
+        private static readonly pb::MessageParser<WebLabel> _parser = new pb::MessageParser<WebLabel>(() => new WebLabel());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<WebLabel> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Vision.V1.WebDetection.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WebLabel() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WebLabel(WebLabel other) : this() {
+          label_ = other.label_;
+          languageCode_ = other.languageCode_;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WebLabel Clone() {
+          return new WebLabel(this);
+        }
+
+        /// <summary>Field number for the "label" field.</summary>
+        public const int LabelFieldNumber = 1;
+        private string label_ = "";
+        /// <summary>
+        /// Label for extra metadata.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Label {
+          get { return label_; }
+          set {
+            label_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "language_code" field.</summary>
+        public const int LanguageCodeFieldNumber = 2;
+        private string languageCode_ = "";
+        /// <summary>
+        /// The BCP-47 language code for `label`, such as "en-US" or "sr-Latn".
+        /// For more information, see
+        /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string LanguageCode {
+          get { return languageCode_; }
+          set {
+            languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as WebLabel);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(WebLabel other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Label != other.Label) return false;
+          if (LanguageCode != other.LanguageCode) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Label.Length != 0) hash ^= Label.GetHashCode();
+          if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Label.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Label);
+          }
+          if (LanguageCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(LanguageCode);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Label.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
+          }
+          if (LanguageCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(WebLabel other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Label.Length != 0) {
+            Label = other.Label;
+          }
+          if (other.LanguageCode.Length != 0) {
+            LanguageCode = other.LanguageCode;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                Label = input.ReadString();
+                break;
+              }
+              case 18: {
+                LanguageCode = input.ReadString();
                 break;
               }
             }
