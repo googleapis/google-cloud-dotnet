@@ -50,12 +50,40 @@ namespace Google.Cloud.Firestore.Tests.Proto
             .Where(t => t.TestCase == testCase)
             .Select(t => new object[] { new SerializableTest(t) });
 
-        // Note: we don't use Get as GetDocument is never used in this client.
         public static IEnumerable<object[]> CreateTests => FindTests(TestOneofCase.Create);
         public static IEnumerable<object[]> DeleteTests => FindTests(TestOneofCase.Delete);
+        public static IEnumerable<object[]> QueryTests => FindTests(TestOneofCase.Query);
         public static IEnumerable<object[]> SetTests => FindTests(TestOneofCase.Set);
         public static IEnumerable<object[]> UpdateTests => FindTests(TestOneofCase.Update);
         public static IEnumerable<object[]> UpdatePathsTests => FindTests(TestOneofCase.UpdatePaths);
+
+        private static readonly IDictionary<string, QueryOperator> QueryOperators = new Dictionary<string, QueryOperator>
+        {
+            { "==", QueryOperator.Equal },
+            { "<", QueryOperator.LessThan },
+            { "<=", QueryOperator.LessThanOrEqual },
+            { ">", QueryOperator.GreaterThan },
+            { ">=", QueryOperator.GreaterThanOrEqual },
+        };
+
+        [Fact]
+        public void AllTestsKnown()
+        {
+            var testTypes = s_allTests.Select(t => t.TestCase)
+                // All the test types used above
+                .Except(new[]
+                {
+                    TestOneofCase.Create,
+                    TestOneofCase.Delete,
+                    TestOneofCase.Set,
+                    TestOneofCase.Query,
+                    TestOneofCase.Update,
+                    TestOneofCase.UpdatePaths,
+                    // We don't test Get as GetDocument is never used in this client.
+                    TestOneofCase.Get
+                });
+            Assert.Empty(testTypes);
+        }
 
         [Theory]
         [MemberData(nameof(CreateTests))]
@@ -81,6 +109,93 @@ namespace Google.Cloud.Firestore.Tests.Proto
                 var precondition = Precondition.FromProto(test.Precondition);
                 batch.Delete(doc, precondition);
             });
+        }
+
+        [Theory]
+        [MemberData(nameof(QueryTests))]
+        public void Query(SerializableTest wrapper)
+        {
+            QueryTest test = wrapper.Test.Query;
+            if (test.IsError)
+            {
+                var exception = Assert.ThrowsAny<Exception>(() => BuildQuery());
+                Assert.True(exception is ArgumentException || exception is InvalidOperationException, $"Exception type: {exception.GetType()}");
+            }
+            else
+            {
+                var query = BuildQuery();
+                Assert.Equal(test.Query, query.ToStructuredQuery());
+            }
+
+            Query BuildQuery()
+            {
+                Query query = GetCollectionReference(test.CollPath);
+                foreach (var clause in test.Clauses)
+                {
+                    switch (clause.ClauseCase)
+                    {
+                        case Clause.ClauseOneofCase.EndAt:
+                            query = query.EndAt(ConvertCursor(clause.EndAt));
+                            break;
+                        case Clause.ClauseOneofCase.EndBefore:
+                            query = query.EndBefore(ConvertCursor(clause.EndBefore));
+                            break;
+                        case Clause.ClauseOneofCase.Limit:
+                            query = query.Limit(clause.Limit);
+                            break;
+                        case Clause.ClauseOneofCase.Offset:
+                            query = query.Offset(clause.Offset);
+                            break;
+                        case Clause.ClauseOneofCase.OrderBy:
+                            var ordering = clause.OrderBy;
+                            var path = ConvertFieldPath(ordering.Path);
+                            query = ordering.Direction == "asc" ? query.OrderBy(path) : query.OrderByDescending(path);
+                            break;
+                        case Clause.ClauseOneofCase.Select:
+                            query = query.Select(clause.Select.Fields.Select(ConvertFieldPath).ToArray());
+                            break;
+                        case Clause.ClauseOneofCase.StartAfter:
+                            query = query.StartAfter(ConvertCursor(clause.StartAfter));
+                            break;
+                        case Clause.ClauseOneofCase.StartAt:
+                            query = query.StartAt(ConvertCursor(clause.StartAt));
+                            break;
+                        case Clause.ClauseOneofCase.Where:
+                            var filterPath = ConvertFieldPath(clause.Where.Path) ;
+                            if (!QueryOperators.TryGetValue(clause.Where.Op, out var op))
+                            {
+                                throw new ArgumentException($"Invalid where operator: {clause.Where.Op}");
+                            }
+                            var value = DeserializeJson(clause.Where.JsonValue);
+                            query = query.Where(filterPath, op, value);
+                            break;
+                        default:
+                            throw new InvalidOperationException($"Unexpected clause case: {clause.ClauseCase}");
+                    }
+                }
+                return query;
+            }
+
+            // Note: dynamic to allow a DocumentSnapshot to be returned and used in overload resolution.
+            dynamic ConvertCursor(Cursor cursor)
+            {
+                var docSnapshot = cursor.DocSnapshot;
+                if (docSnapshot == null)
+                {
+                    return cursor.JsonValues.Select(DeserializeJson).ToArray();
+                }
+                var docRef = GetDocumentReference(docSnapshot.Path);
+                return DocumentSnapshot.ForDocument(
+                    docRef.Database,
+                    new Document
+                    {
+                        Name = docRef.Path,
+                        Fields = { ValueSerializer.SerializeMap(DeserializeJson(cursor.DocSnapshot.JsonData)) },
+                        CreateTime = wkt::Timestamp.FromDateTimeOffset(DateTimeOffset.MinValue),
+                        UpdateTime = wkt::Timestamp.FromDateTimeOffset(DateTimeOffset.MinValue),
+                    },
+                    Timestamp.FromDateTimeOffset(DateTimeOffset.MinValue));
+            }
         }
 
         [Theory]
@@ -135,6 +250,15 @@ namespace Google.Cloud.Firestore.Tests.Proto
 
         private static DocumentReference GetDocumentReference(string resourceName) =>
             FirestoreDb.Create(ProjectId, DatabaseId, new FakeFirestoreClient()).GetDocumentReferenceFromResourceName(resourceName);
+
+        private static CollectionReference GetCollectionReference(string resourceName)
+        {
+            var db = FirestoreDb.Create(ProjectId, DatabaseId, new FakeFirestoreClient());
+            Assert.StartsWith(db.DocumentsPath, resourceName);
+            Assert.Equal('/', resourceName[db.DocumentsPath.Length]);
+            string collectionPath = resourceName.Substring(db.DocumentsPath.Length + 1);
+            return db.Collection(collectionPath);
+        }
 
         private static void Check(bool expectedError, CommitRequest expectedRequest, Action<WriteBatch> action)
         {

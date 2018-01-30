@@ -176,7 +176,11 @@ namespace Google.Cloud.Firestore
         /// <returns>true if the specified path represents a field in the document; false otherwise</returns>
         public bool Contains(FieldPath path) => ExtractValue(path) != null;
 
-        private Value ExtractValue(FieldPath path)
+        /// <summary>
+        /// Extracts the internal value for a field path, still in its serialized form, without any copying.
+        /// If the document is missing or the field isn't present, this will return null.
+        /// </summary>
+        internal Value ExtractValue(FieldPath path)
         {
             if (!Exists)
             {
