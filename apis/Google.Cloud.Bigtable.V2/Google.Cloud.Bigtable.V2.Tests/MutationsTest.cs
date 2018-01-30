@@ -55,6 +55,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal("cq1", mutation.DeleteFromColumn.ColumnQualifier.ToStringUtf8());
             Assert.Equal(1000, mutation.DeleteFromColumn.TimeRange.StartTimestampMicros);
             Assert.Equal(2000, mutation.DeleteFromColumn.TimeRange.EndTimestampMicros);
+            Assert.True(mutation.IsIdempotent());
         }
 
         [Theory]
@@ -72,6 +73,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var mutation = Mutations.DeleteFromFamily(familyName);
             Assert.NotNull(mutation.DeleteFromFamily);
             Assert.Equal(familyName, mutation.DeleteFromFamily.FamilyName);
+            Assert.True(mutation.IsIdempotent());
         }
 
         [Theory]
@@ -86,6 +88,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var mutation = Mutations.DeleteFromRow();
             Assert.NotNull(mutation.DeleteFromRow);
+            Assert.True(mutation.IsIdempotent());
         }
 
         [Theory]
@@ -100,6 +103,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var bytes = mutation.SetCell.Value.ToByteArray();
             Assert.Equal(new byte[] { 1, 2, 3, 4, 5 }, bytes);
             Assert.Equal(3000, mutation.SetCell.TimestampMicros);
+            Assert.True(mutation.IsIdempotent());
         }
 
         [Theory]
@@ -118,6 +122,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             }
             Assert.Equal(12345, BitConverter.ToInt64(bytes, 0));
             Assert.Equal(3000, mutation.SetCell.TimestampMicros);
+            Assert.True(mutation.IsIdempotent());
         }
 
         [Theory]
@@ -131,6 +136,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal("cq1", mutation.SetCell.ColumnQualifier.ToStringUtf8());
             Assert.Equal("value", mutation.SetCell.Value.ToStringUtf8());
             Assert.Equal(3000, mutation.SetCell.TimestampMicros);
+            Assert.True(mutation.IsIdempotent());
         }
 
         [Theory]
@@ -139,6 +145,44 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             Assert.Throws<ArgumentException>(
                 () => Mutations.SetCell(familyName, default(string), default(string), null));
+        }
+
+        [Fact]
+        public void SetCell_NonIdempotent()
+        {
+            var mutation = Mutations.SetCell("abc", "cq1", "value", new BigtableVersion(-1));
+            Assert.True(mutation.IsIdempotent());
+
+            mutation.SetCell.TimestampMicros = -1;
+            Assert.False(mutation.IsIdempotent());
+        }
+
+        [Fact]
+        public void IdempotentCheckOnMutateRowRequest()
+        {
+            var setCell =
+                Mutations.SetCell("abc", "cq1", "value", new BigtableVersion(-1));
+            var deleteFromColumn =
+                Mutations.DeleteFromColumn("abc", "def", new BigtableVersionRange(-1, -1));
+            var request = new MutateRowRequest
+            {
+                Mutations =
+                {
+                    Mutations.DeleteFromRow(),
+                    setCell,
+                    deleteFromColumn,
+                    Mutations.DeleteFromFamily("abc")
+                }
+            };
+
+            Assert.True(request.IsIdempotent());
+
+            deleteFromColumn.DeleteFromColumn.TimeRange.StartTimestampMicros = -1;
+            deleteFromColumn.DeleteFromColumn.TimeRange.EndTimestampMicros = -1;
+            Assert.True(request.IsIdempotent());
+
+            setCell.SetCell.TimestampMicros = -1;
+            Assert.False(request.IsIdempotent());
         }
     }
 }
