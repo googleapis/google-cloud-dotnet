@@ -22,7 +22,7 @@ namespace Google.Cloud.Bigtable.V2
     public partial class BigtableSettings
     {
         /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="RetrySettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableClient.MutateRow</c> and <c>BigtableClient.MutateRowAsync</c>
         /// when the request is known to be idempotent.
         /// </summary>
@@ -44,12 +44,12 @@ namespace Google.Cloud.Bigtable.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings IdempotentMutateRowSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
+        public RetrySettings IdempotentMutateRowRetrySettings { get; set; } = 
+            new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
-            )));
+            );
     }
 }

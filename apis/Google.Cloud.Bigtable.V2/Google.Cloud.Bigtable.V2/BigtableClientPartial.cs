@@ -928,7 +928,8 @@ namespace Google.Cloud.Bigtable.V2
 
         partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableSettings effectiveSettings, ClientHelper clientHelper)
         {
-            _idempotentMutateRowSettings = effectiveSettings.IdempotentMutateRowSettings;
+            _idempotentMutateRowSettings = CallSettings.FromCallTiming(
+                CallTiming.FromRetry(effectiveSettings.IdempotentMutateRowRetrySettings));
         }
 
         partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings) =>
@@ -939,9 +940,9 @@ namespace Google.Cloud.Bigtable.V2
 
         partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings)
         {
-            if (settings == null && request.IsIdempotent())
+            if (request.IsIdempotent())
             {
-                settings = _idempotentMutateRowSettings;
+                settings = _idempotentMutateRowSettings.MergedWith(settings);
             }
             ApplyResourcePrefixHeader(ref settings, request.TableName);
         }
