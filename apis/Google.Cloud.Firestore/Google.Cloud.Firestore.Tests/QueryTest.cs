@@ -17,7 +17,6 @@ using Google.Cloud.Firestore.V1Beta1;
 using Google.Protobuf;
 using Moq;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -42,7 +41,7 @@ namespace Google.Cloud.Firestore.Tests
                 Select = new Projection { Fields = { Field("a.b"), Field("c") } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -54,7 +53,7 @@ namespace Google.Cloud.Firestore.Tests
                 Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThan, Value = CreateValue("x") }),
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Theory]
@@ -68,7 +67,7 @@ namespace Google.Cloud.Firestore.Tests
                 Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNan }),
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -80,7 +79,7 @@ namespace Google.Cloud.Firestore.Tests
                 Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNull }),
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -99,7 +98,7 @@ namespace Google.Cloud.Firestore.Tests
                 ),
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Theory]
@@ -139,7 +138,7 @@ namespace Google.Cloud.Firestore.Tests
                 Limit = 10,
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -151,7 +150,7 @@ namespace Google.Cloud.Firestore.Tests
                 OrderBy = { new Order { Field = Field("foo"), Direction = Direction.Ascending } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -163,7 +162,7 @@ namespace Google.Cloud.Firestore.Tests
                 OrderBy = { new Order { Field = Field("foo"), Direction = Direction.Ascending } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -175,7 +174,7 @@ namespace Google.Cloud.Firestore.Tests
                 OrderBy = { new Order { Field = Field("foo"), Direction = Direction.Descending } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -187,7 +186,7 @@ namespace Google.Cloud.Firestore.Tests
                 OrderBy = { new Order { Field = Field("foo"), Direction = Direction.Descending } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -215,7 +214,7 @@ namespace Google.Cloud.Firestore.Tests
                 StartAt = new Cursor { Before = true, Values = { CreateValue(1), CreateValue("x") } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -233,7 +232,7 @@ namespace Google.Cloud.Firestore.Tests
                 StartAt = new Cursor { Before = false, Values = { CreateValue(1), CreateValue("x") } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -251,7 +250,7 @@ namespace Google.Cloud.Firestore.Tests
                 EndAt = new Cursor { Before = false, Values = { CreateValue(1), CreateValue("x") } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
@@ -269,7 +268,7 @@ namespace Google.Cloud.Firestore.Tests
                 EndAt = new Cursor { Before = true, Values = { CreateValue(1), CreateValue("x") } },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Theory]
@@ -317,7 +316,7 @@ namespace Google.Cloud.Firestore.Tests
         {
             var query = GetEmptyQuery().OrderBy(FieldPath.DocumentId).StartAt("foo");
             var expected = new Value { ReferenceValue = s_db.Document("col/foo").Path };
-            var actual = query.QueryProto.StartAt.Values.Single();
+            var actual = query.ToStructuredQuery().StartAt.Values.Single();
             Assert.Equal(expected, actual);
         }
 
@@ -327,7 +326,7 @@ namespace Google.Cloud.Firestore.Tests
             var doc = s_db.Document("col/foo");
             var query = GetEmptyQuery().OrderBy(FieldPath.DocumentId).StartAt(doc);
             var expected = new Value { ReferenceValue = doc.Path };
-            var actual = query.QueryProto.StartAt.Values.Single();
+            var actual = query.ToStructuredQuery().StartAt.Values.Single();
             Assert.Equal(expected, actual);
         }
 
@@ -379,7 +378,7 @@ namespace Google.Cloud.Firestore.Tests
                 Limit = 2,
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
-            Assert.Equal(expected, query.QueryProto);
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         [Fact]
