@@ -5406,7 +5406,10 @@ namespace Google.Cloud.Dlp.V2Beta2 {
     /// <summary>Field number for the "table" field.</summary>
     public const int TableFieldNumber = 1;
     /// <summary>
-    /// Store findings in a new table in an existing dataset.
+    /// Store findings in a new table in an existing dataset. If table_id is not
+    /// set a new one will be generated for you with the following format:
+    /// dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific timezone will be used for
+    /// generating the date details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2Beta2.BigQueryTable Table {
