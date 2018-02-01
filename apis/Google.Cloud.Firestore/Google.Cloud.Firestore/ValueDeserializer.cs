@@ -33,7 +33,7 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// Provides conversions from Firestore Value protos to .NET types.
     /// </summary>
-    internal class ValueDeserializer
+    internal sealed class ValueDeserializer
     {
         // The BCL type we create when deserializing map values and when our target type is
         // just IDictionary<string, object> or object.

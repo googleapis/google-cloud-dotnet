@@ -18,7 +18,7 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// An immutable snapshot of complete query results.
     /// </summary>
-    public class QuerySnapshot
+    public sealed class QuerySnapshot
     {
         internal QuerySnapshot(Query query, IReadOnlyList<DocumentSnapshot> documents, Timestamp readTime)
         {
