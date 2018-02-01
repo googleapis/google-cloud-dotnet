@@ -29,7 +29,7 @@ namespace Google.Cloud.Firestore
     /// <see cref="FirestoreDb.RunTransactionAsync{T}(System.Func{Transaction, Task{T}}, TransactionOptions, CancellationToken)"/>
     /// (and overloads) and passed to user code.
     /// </summary>
-    public class Transaction
+    public sealed class Transaction
     {
         /// <summary>
         /// The cancellation token for this transaction
