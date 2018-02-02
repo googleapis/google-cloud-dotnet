@@ -34,16 +34,17 @@ namespace Google.Cloud.Firestore
     /// <see cref="CollectionReference"/> derives from this class as a "return-all" query against the
     /// collection it refers to.
     /// </remarks>
-    public class Query
+    public class Query : IEquatable<Query>
     {
         // These are all read-only, but may be mutable. They should never be mutated;
         // multiple Query objects may share the same internal references.
+        // Any additional fields should be included in equality/hash code checks.
         internal CollectionReference Collection { get; }
         private readonly int _offset;
         private readonly int? _limit;
-        private readonly IList<InternalOrdering> _orderings; // Never null
-        private readonly IList<InternalFilter> _filters; // May be null
-        private readonly IList<FieldPath> _projections; // May be null
+        private readonly IReadOnlyList<InternalOrdering> _orderings; // Never null
+        private readonly IReadOnlyList<InternalFilter> _filters; // May be null
+        private readonly IReadOnlyList<FieldPath> _projections; // May be null
         private readonly Cursor _startAt;
         private readonly Cursor _endAt;
 
@@ -68,7 +69,7 @@ namespace Google.Cloud.Firestore
         // no further cloning: it is the responsibility of each method to ensure it creates a clone for any new data.
         private Query(
             CollectionReference collection, int offset, int? limit,
-            IList<InternalOrdering> orderings, IList<InternalFilter> filters, IList<FieldPath> projections,
+            IReadOnlyList<InternalOrdering> orderings, IReadOnlyList<InternalFilter> filters, IReadOnlyList<FieldPath> projections,
             Cursor startAt, Cursor endAt)
         {
             Collection = collection;
@@ -498,7 +499,7 @@ namespace Google.Cloud.Firestore
             return new Query(Collection, _offset, _limit, newOrderings, _filters, _projections, _startAt, cursor);
         }
 
-        private Cursor CreateCursorFromSnapshot(DocumentSnapshot snapshot, bool before, out IList<InternalOrdering> newOrderings)
+        private Cursor CreateCursorFromSnapshot(DocumentSnapshot snapshot, bool before, out IReadOnlyList<InternalOrdering> newOrderings)
         {
             GaxPreconditions.CheckArgument(Equals(snapshot.Reference.Parent, Collection),
                 nameof(snapshot), "Snapshot was from incorrect collection");
@@ -509,6 +510,8 @@ namespace Google.Cloud.Firestore
 
             // We may or may not need to add some orderings; this is communicated through the out parameter.
             newOrderings = _orderings;
+            // Only used when we need to add orderings; set newOrderings to this at the same time.
+            List<InternalOrdering> modifiedOrderings = null;
 
             if (_orderings.Count == 0 && _filters != null)
             {
@@ -517,7 +520,8 @@ namespace Google.Cloud.Firestore
                 {
                     if (!filter.IsEqualityFilter())
                     {
-                        newOrderings = new List<InternalOrdering>(newOrderings) { new InternalOrdering(filter.Field, Direction.Ascending) };
+                        modifiedOrderings = new List<InternalOrdering>(newOrderings) { new InternalOrdering(filter.Field, Direction.Ascending) };
+                        newOrderings = modifiedOrderings;
                     }
                 }
             }
@@ -532,11 +536,12 @@ namespace Google.Cloud.Firestore
                 Direction lastDirection = _orderings.Count == 0 ? Direction.Ascending : _orderings.Last().Direction;
 
                 // Clone iff this is the first new ordering.
-                if (newOrderings == _orderings)
+                if (modifiedOrderings == null)
                 {
-                    newOrderings = new List<InternalOrdering>(newOrderings);
+                    modifiedOrderings = new List<InternalOrdering>(newOrderings);
+                    newOrderings = modifiedOrderings;
                 }
-                newOrderings.Add(new InternalOrdering(FieldPath.DocumentId, lastDirection));
+                modifiedOrderings.Add(new InternalOrdering(FieldPath.DocumentId, lastDirection));
             }
 
             foreach (var ordering in newOrderings)
@@ -552,23 +557,78 @@ namespace Google.Cloud.Firestore
             return cursor;
         }
 
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as Query);
+
+        // Note: these methods should be equivalent to producing the proto representations and checking those for
+        // equality, but that would be expensive.
+
+        /// <summary>
+        /// Compares this query with another for equality. Every aspect of the query must be equal,
+        /// including the collection. A plain Query instance is not equal to a CollectionReference instance,
+        /// even if they are logically similar: <c>collection.Offset(0).Equals(collection)</c> will return
+        /// <c>false</c>, even though 0 is the default offset.
+        /// </summary>
+        /// <param name="other">The query to compare this one with</param>
+        /// <returns><c>true</c> if this query is equal to <paramref name="other"/>; <c>false</c> otherwise.</returns>
+        public bool Equals(Query other)
+        {
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (GetType() != other.GetType())
+            {
+                return false;
+            }
+            return Collection.Equals(other.Collection) &&
+                _offset == other._offset &&
+                _limit == other._limit &&
+                EqualityHelpers.ListsEqual(_orderings, other._orderings) &&
+                EqualityHelpers.ListsEqual(_filters, other._filters) &&
+                EqualityHelpers.ListsEqual(_projections, other._projections) &&
+                Equals(_startAt, other._startAt) &&
+                Equals(_endAt, other._endAt);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode() => EqualityHelpers.CombineHashCodes(
+            Collection.GetHashCode(),
+            _offset,
+            _limit ?? -1,
+            EqualityHelpers.GetListHashCode(_orderings),
+            EqualityHelpers.GetListHashCode(_filters),
+            EqualityHelpers.GetListHashCode(_projections),
+            _startAt?.GetHashCode() ?? -1,
+            _endAt?.GetHashCode() ?? -1);
+        
         // Structs representing orderings and filters but using FieldPath instead of FieldReference.
         // This allows us to use fields specified in the ordering/filter in this more convenient form.
-        
-        private struct InternalOrdering
+
+        private struct InternalOrdering : IEquatable<InternalOrdering>
         {
             internal FieldPath Field { get; }
             internal Direction Direction { get; }
             internal Order ToProto() => new Order { Direction = Direction, Field = Field.ToFieldReference() };
+
+            public override int GetHashCode() => EqualityHelpers.CombineHashCodes(Field.GetHashCode(), (int) Direction);
 
             internal InternalOrdering(FieldPath field, Direction direction)
             {
                 Field = field;
                 Direction = direction;
             }
+
+            public override bool Equals(object obj) => obj is InternalOrdering other ? Equals(other) : false;
+
+            public bool Equals(InternalOrdering other) => Field.Equals(other.Field) && Direction == other.Direction;
         }
 
-        private struct InternalFilter
+        private struct InternalFilter : IEquatable<InternalFilter>
         {
             internal FieldPath Field { get; }
             private readonly int _op;
@@ -646,6 +706,14 @@ namespace Google.Cloud.Firestore
                         return UnaryOp.Unspecified;
                 }
             }
+
+            public override bool Equals(object obj) => obj is InternalFilter other ? Equals(other) : false;
+
+            public bool Equals(InternalFilter other) =>
+                Field.Equals(other.Field) && _op == other._op && Equals(_value, other._value);
+
+            public override int GetHashCode() =>
+                EqualityHelpers.CombineHashCodes(Field.GetHashCode(), _op, _value?.GetHashCode() ?? -1);
         }
     }
 }
