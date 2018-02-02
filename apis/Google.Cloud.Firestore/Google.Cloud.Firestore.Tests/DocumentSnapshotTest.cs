@@ -36,8 +36,8 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Null(document.UpdateTime);
             Assert.Equal(readTime, document.ReadTime);
             Assert.False(document.Exists);
-            Assert.Throws<InvalidOperationException>(() => document.ToDictionary());
-            Assert.Throws<InvalidOperationException>(() => document.Deserialize<SampleData>());
+            Assert.Null(document.ToDictionary());
+            Assert.Null(document.Deserialize<SampleData>());
             Assert.Throws<InvalidOperationException>(() => document.GetField<string>("name"));
             Assert.Throws<InvalidOperationException>(() => document.GetField<string>(new FieldPath("name")));
             Assert.False(document.TryGetField("name", out string name1));
