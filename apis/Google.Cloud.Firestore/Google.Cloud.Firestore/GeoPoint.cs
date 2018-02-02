@@ -19,6 +19,10 @@ using System.Runtime.InteropServices;
 
 namespace Google.Cloud.Firestore
 {
+    // Note: the explicit struct layout is due to a JIT bug in .NET Core 1.x on Linux.
+    // See https://codeblog.jonskeet.uk/2017/10/08/diagnosing-a-linux-only-unit-test-failure/
+    // for details.
+
     /// <summary>
     /// Immutable struct representing a geographic location in Firestore.
     /// </summary>
