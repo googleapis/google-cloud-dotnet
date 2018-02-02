@@ -435,7 +435,7 @@ namespace Google.Cloud.Firestore.Tests
                         UpdateTime = CreateProtoTimestamp(0, 2),
                         Name = "projects/proj/databases/db/documents/col/doc1",
                         Fields = { { "Name", CreateValue("x") } }
-                    }                    
+                    }
                 },
                 new RunQueryResponse
                 {
@@ -579,6 +579,177 @@ namespace Google.Cloud.Firestore.Tests
             var documents = await query.StreamAsync().ToList();
             Assert.Empty(documents);
             mock.VerifyAll();
+        }
+
+        [Fact]
+        public void Equality_CollectionRefNotEqualToQuery()
+        {
+            var col1 = s_db.Collection("col1");
+            var col2 = s_db.Collection("col2");
+
+            // Collection and "a Query isn't equal to a CollectionReference"
+            var query = col1.Offset(0);
+            EqualityTester.AssertEqual(query, equal: new[] { col1.Offset(0), query.Offset(0) }, unequal: new[] { col1, col2.Offset(0) });
+        }
+
+        [Fact]
+        public void Equality_Offset()
+        {
+            var col = s_db.Collection("col");
+            var query = col.Offset(1);
+            EqualityTester.AssertEqual(query,
+                equal: new[] { col.Offset(1), query.Offset(1) },
+                unequal: new[] { col.Offset(2), query.Offset(2) });
+        }
+
+        [Fact]
+        public void Equality_Limit()
+        {
+            var col = s_db.Collection("col");
+            var query = col.Limit(10);
+            EqualityTester.AssertEqual(query,
+                equal: new[] { col.Limit(10), query.Limit(10) },
+                unequal: new[] { col.Limit(2), query.Limit(2) });
+        }
+
+        [Fact]
+        public void Equality_Where()
+        {
+            var col = s_db.Collection("col");
+            var query = col.Where("field", QueryOperator.Equal, 10);
+            EqualityTester.AssertEqual(query,
+                equal: new[] {
+                    col.Where("field", QueryOperator.Equal, 10), // Same value
+                    col.Where("field", QueryOperator.Equal, 10L), // Same value after serialization
+                    col.Where(new FieldPath("field"), QueryOperator.Equal, 10), // FieldPath instead of Field
+                },
+                unequal: new[] {
+                    query.Where("field", QueryOperator.Equal, 10), // Repeated filter doesn't replace (at the moment, anyway)
+                    col.Where("otherfield", QueryOperator.Equal, 10), // Different field
+                    col.Where("field", QueryOperator.LessThan, 10), // Different operator
+                    col.Where("field", QueryOperator.Equal, 20), // Different value
+                }
+            );
+
+            query = col.Where("first", QueryOperator.Equal, "foo").Where("second", QueryOperator.Equal, "bar");
+            EqualityTester.AssertEqual(query,
+                equal: new[] {
+                    col.Where("first", QueryOperator.Equal, "foo").Where("second", QueryOperator.Equal, "bar")
+                },
+                unequal: new[] {
+                    // Ordering of filters matters
+                    col.Where("second", QueryOperator.Equal, "bar").Where("first", QueryOperator.Equal, "foo"),
+                    // It's not just a replacement
+                    col.Where("first", QueryOperator.Equal, "foo")
+                }
+            );
+        }
+
+        [Fact]
+        public void Equality_Select()
+        {
+            var col = s_db.Collection("col");
+            // Each call to Select replaces previous ones
+            var query = col.Select("a", "b");
+            EqualityTester.AssertEqual(query,
+                equal: new[] {
+                    col.Select("a", "b"),
+                    query.Select("a", "b"),
+                    col.Select("x").Select("a", "b"),
+                },
+                unequal: new[] {
+                    col.Select("b").Select("a"), // Order matters
+                    query.Select("a"), // Projecting again adds another projection
+                }
+            );
+        }
+
+        [Fact]
+        public void OrderBy()
+        {
+            var col = s_db.Collection("col");
+            var query = col.OrderBy("foo").OrderByDescending("bar");
+            EqualityTester.AssertEqual(query,
+                equal: new[] {
+                    col.OrderBy("foo").OrderByDescending("bar")
+                },
+                unequal: new[] {
+                    query.OrderBy("foo"),
+                    col.OrderBy("foo"),
+                    col.OrderByDescending("foo").OrderByDescending("bar"),
+                    col.OrderBy("bar").OrderByDescending("foo"),
+                }
+            );
+        }
+
+        [Fact]
+        public void Equality_Start()
+        {
+            var col = s_db.Collection("col");
+            var query = col.OrderBy("foo").StartAt(10);
+            EqualityTester.AssertEqual(query,
+                equal: new[] {
+                        col.OrderBy("foo").StartAt(10L),
+                },
+                unequal: new[] {
+                        col.OrderBy("foo"),
+                        col.OrderBy("foo").StartAt(20),
+                        col.OrderBy("foo").StartAfter(10)
+                }
+            );
+        }
+
+        [Fact]
+        public void Equality_End()
+        {
+            var col = s_db.Collection("col");
+            var query = col.OrderBy("foo").EndAt(10);
+            EqualityTester.AssertEqual(query,
+                equal: new[] {
+                    col.OrderBy("foo").EndAt(10L)
+                },
+                unequal: new[] {
+                    col.OrderBy("foo"),
+                    col.OrderBy("foo").EndAt(20),
+                    col.OrderBy("foo").EndBefore(10)
+                }
+            );
+        }
+
+        [Fact]
+        public void Equality_Complex()
+        {
+            // It doesn't matter what order the query calls are made in, other than for ordering + start etc.
+            var col = s_db.Collection("col");
+            var query = col
+                .OrderBy("foo")
+                .StartAfter(20)
+                .EndBefore(30)
+                .Select("foo")
+                .Where("bar", QueryOperator.GreaterThan, 20)
+                .Limit(20)
+                .Offset(3);
+            EqualityTester.AssertEqual(query,
+                equal: new[] {
+                    col.Where("bar", QueryOperator.GreaterThan, 20)
+                        .Select("foo")
+                        .Offset(3)
+                        .OrderBy("foo")
+                        .EndBefore(30)
+                        .Limit(20)
+                        .StartAfter(20)
+                },
+                unequal: new[] {
+                    // Just one change here - the EndBefore argument
+                    col.Where("bar", QueryOperator.GreaterThan, 20)
+                        .Select("foo")
+                        .Offset(3)
+                        .OrderBy("foo")
+                        .EndBefore(40)
+                        .Limit(20)
+                        .StartAfter(20)
+                }
+            );
         }
 
         private static FieldReference Field(string path) => new FieldReference { FieldPath = path };
