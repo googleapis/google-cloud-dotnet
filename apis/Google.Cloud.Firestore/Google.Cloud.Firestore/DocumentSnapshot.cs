@@ -84,18 +84,20 @@ namespace Google.Cloud.Firestore
         /// Returns the document data as a <see cref="Dictionary{String, Object}"/>.
         /// </summary>
         /// <exception cref="InvalidOperationException">This snapshot represents a missing document, i.e. <see cref="Exists"/> is false.</exception>
-        /// <returns>A <see cref="Dictionary{String, Object}"/> containing the document data.</returns>
+        /// <returns>A <see cref="Dictionary{String, Object}"/> containing the document data, or null if this object represents a missing document.</returns>
         public Dictionary<string, object> ToDictionary() => Deserialize<Dictionary<string, object>>();
 
         /// <summary>
         /// Deserializes the document data as the specified type.
         /// </summary>
         /// <typeparam name="T">The type to deserialize the document data as.</typeparam>
-        /// <exception cref="InvalidOperationException">This snapshot represents a missing document, i.e. <see cref="Exists"/> is false.</exception>
-        /// <returns>The deserialized data.</returns>
-        public T Deserialize<T>()
+        /// <returns>The deserialized data, or null if this object represents a missing document.</returns>
+        public T Deserialize<T>() where T : class
         {
-            GaxPreconditions.CheckState(Exists, "Document data cannot be accessed on a snapshot representing a missing document");
+            if (!Exists)
+            {
+                return null;
+            }
             return (T) ValueDeserializer.Default.DeserializeMap(Database, Document.Fields, typeof(T));
         }
 
