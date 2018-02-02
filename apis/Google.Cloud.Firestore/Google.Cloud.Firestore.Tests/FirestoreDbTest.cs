@@ -133,18 +133,21 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Throws<ArgumentException>(() => db.GetDocumentReferenceFromResourceName(path));
         }
 
+        // Use the overload accepting a transaction for this test
         [Fact]
         public async Task SnapshotAllAsync()
         {
             string docName1 = "projects/proj/databases/db/documents/col1/doc1";
             string docName2 = "projects/proj/databases/db/documents/col2/doc2";
+            ByteString transaction = ByteString.CopyFromUtf8("abc");
             var mock = new Mock<FirestoreClient> { CallBase = true };
             var request = new BatchGetDocumentsRequest
             {
                 Database = "projects/proj/databases/db",
                 // Note that we request docName2 twice, as per the caller's request:
                 // the library doesn't perform any elision.
-                Documents = { docName1, docName2, docName2 }
+                Documents = { docName1, docName2, docName2 },
+                Transaction = transaction
             };
             var responses = new[]
             {
@@ -164,7 +167,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var docRef1 = db.Document("col1/doc1");
             var docRef2 = db.Document("col2/doc2");
-            var results = await db.SnapshotAllAsync(new[] { docRef1, docRef2, docRef2 });
+            var results = await db.SnapshotAllAsync(new[] { docRef1, docRef2, docRef2 }, transaction, default);
 
             Assert.Equal(3, results.Count);
             // Note that this is the first result from the request, not the first from the response -
@@ -187,6 +190,7 @@ namespace Google.Cloud.Firestore.Tests
             mock.VerifyAll();
         }
 
+        // Use the overload that doesn't accept a transaction for this test, just for coverage
         [Fact]
         public async Task SnapshotAllAsync_ServerError()
         {

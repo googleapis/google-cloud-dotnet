@@ -66,6 +66,17 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public async Task GetAllDocumentSnapshotsAsync_FailsAfterWrite()
+        {
+            var db = CreateFirestoreDbExpectingNoCommits();
+            var transaction = await Transaction.BeginAsync(db, null, default);
+            var doc1 = db.Document("col/doc1");
+            var doc2 = db.Document("col/doc2");
+            transaction.Delete(doc1);
+            await Assert.ThrowsAsync<InvalidOperationException>(() => transaction.GetAllDocumentSnapshotsAsync(new[] { doc1, doc2 }));
+        }
+
+        [Fact]
         public async Task GetQuerySnaphotAsync_FailsAfterWrite()
         {
             var db = CreateFirestoreDbExpectingNoCommits();

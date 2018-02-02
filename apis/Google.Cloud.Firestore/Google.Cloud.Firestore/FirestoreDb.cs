@@ -166,12 +166,15 @@ namespace Google.Cloud.Firestore
         /// <param name="documents">The document references to fetch. Must not be null, or contain null references.</param>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>The document snapshots, in the same order as <paramref name="documents"/>.</returns>
-        public async Task<IList<DocumentSnapshot>> SnapshotAllAsync(IEnumerable<DocumentReference> documents, CancellationToken cancellationToken = default)
+        public Task<IList<DocumentSnapshot>> SnapshotAllAsync(IEnumerable<DocumentReference> documents, CancellationToken cancellationToken = default) =>
+            SnapshotAllAsync(documents, null, cancellationToken);
+
+        internal async Task<IList<DocumentSnapshot>> SnapshotAllAsync(IEnumerable<DocumentReference> documents, ByteString transactionId, CancellationToken cancellationToken)
         {
             // Check for null here, but let the underlying method check for null elements.
             // We're just trying to make sure we don't evaluate it differently later.
             var list = GaxPreconditions.CheckNotNull(documents, nameof(documents)).ToList();
-            var unordered = await GetDocumentSnapshotsAsync(list, null, cancellationToken).ConfigureAwait(false);
+            var unordered = await GetDocumentSnapshotsAsync(list, transactionId, cancellationToken).ConfigureAwait(false);
             var map = unordered.ToDictionary(snapshot => snapshot.Reference);
             return list.Select(docRef =>
             {
