@@ -84,6 +84,24 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
+        /// Fetch snapshots of all the documents specified by <paramref name="documentReferences"/>, with respect to this transaction.
+        /// This method cannot be called after any write operations have been created.
+        /// </summary>
+        /// <remarks>
+        /// Any documents which are missing are represented in the returned list by a <see cref="DocumentSnapshot"/>
+        /// with <see cref="DocumentSnapshot.Exists"/> value of <c>false</c>.
+        /// </remarks>
+        /// <param name="documentReferences">The document references to fetch. Must not be null, or contain null references.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The document snapshots, in the same order as <paramref name="documentReferences"/>.</returns>
+        public Task<IList<DocumentSnapshot>> GetAllDocumentSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
+            CancellationToken effectiveToken = GetEffectiveCancellationToken(cancellationToken);
+            return Database.SnapshotAllAsync(documentReferences, TransactionId, effectiveToken);
+        }
+
+        /// <summary>
         /// Performs a query and returned a snapshot of the the results, with respect to this transaction.
         /// This method cannot be called after any write operations have been created.
         /// </summary>
