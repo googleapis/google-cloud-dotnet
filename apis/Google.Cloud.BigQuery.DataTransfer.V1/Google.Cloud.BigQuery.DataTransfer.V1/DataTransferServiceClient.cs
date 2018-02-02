@@ -540,15 +540,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <remarks>
         /// The default DataTransferService scopes are:
         /// <list type="bullet">
-        /// <item><description>"https://www.googleapis.com/auth/bigquery"</description></item>
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
-        /// <item><description>"https://www.googleapis.com/auth/cloud-platform.read-only"</description></item>
         /// </list>
         /// </remarks>
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
-            "https://www.googleapis.com/auth/bigquery",
             "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
@@ -842,10 +838,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// The BigQuery project id where the transfer configuration should be created.
         /// Must be in the format /projects/{project_id}/locations/{location_id}
-        /// or
-        /// /projects/{project_id}/locations/-
-        /// In case when '-' is specified as location_id, location is infered from
-        /// the destination dataset region.
+        /// If specified location and location of the destination bigquery dataset
+        /// do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
         /// Data transfer configuration to create.
@@ -873,10 +867,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// The BigQuery project id where the transfer configuration should be created.
         /// Must be in the format /projects/{project_id}/locations/{location_id}
-        /// or
-        /// /projects/{project_id}/locations/-
-        /// In case when '-' is specified as location_id, location is infered from
-        /// the destination dataset region.
+        /// If specified location and location of the destination bigquery dataset
+        /// do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
         /// Data transfer configuration to create.
@@ -901,10 +893,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <param name="parent">
         /// The BigQuery project id where the transfer configuration should be created.
         /// Must be in the format /projects/{project_id}/locations/{location_id}
-        /// or
-        /// /projects/{project_id}/locations/-
-        /// In case when '-' is specified as location_id, location is infered from
-        /// the destination dataset region.
+        /// If specified location and location of the destination bigquery dataset
+        /// do not match - the request will fail.
         /// </param>
         /// <param name="transferConfig">
         /// Data transfer configuration to create.
@@ -1396,7 +1386,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Creates transfer runs for a time range [range_start_time, range_end_time].
+        /// Creates transfer runs for a time range [start_time, end_time].
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
@@ -1433,7 +1423,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 callSettings);
 
         /// <summary>
-        /// Creates transfer runs for a time range [range_start_time, range_end_time].
+        /// Creates transfer runs for a time range [start_time, end_time].
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
@@ -1467,7 +1457,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates transfer runs for a time range [range_start_time, range_end_time].
+        /// Creates transfer runs for a time range [start_time, end_time].
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
@@ -1504,7 +1494,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 callSettings);
 
         /// <summary>
-        /// Creates transfer runs for a time range [range_start_time, range_end_time].
+        /// Creates transfer runs for a time range [start_time, end_time].
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
@@ -1526,7 +1516,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Creates transfer runs for a time range [range_start_time, range_end_time].
+        /// Creates transfer runs for a time range [start_time, end_time].
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
@@ -2460,7 +2450,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Creates transfer runs for a time range [range_start_time, range_end_time].
+        /// Creates transfer runs for a time range [start_time, end_time].
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
@@ -2483,7 +2473,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Creates transfer runs for a time range [range_start_time, range_end_time].
+        /// Creates transfer runs for a time range [start_time, end_time].
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
