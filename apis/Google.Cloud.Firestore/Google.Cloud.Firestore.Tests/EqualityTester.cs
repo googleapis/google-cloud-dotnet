@@ -23,21 +23,25 @@ namespace Google.Cloud.Firestore.Tests
     {
         internal static void AssertEqual<T>(T control, T[] equal, T[] unequal) where T : IEquatable<T>
         {
-            foreach (var candidate in new[] { control }.Concat(equal)) // Check that control equals itself too
+            for (int i = -1; i < equal.Length; i++)
             {
-                Assert.True(control.Equals(candidate));
-                Assert.True(candidate.Equals(control));
-                Assert.True(control.Equals((object) candidate));
-                Assert.True(candidate.Equals((object) control));
+                var candidate = i == -1 ? control : equal[i];
+                string message = i == -1 ? "Control not equal to itself" : $"Equal item {i} unexpected unequal";
+                Assert.True(control.Equals(candidate), message);
+                Assert.True(candidate.Equals(control), message);
+                Assert.True(control.Equals((object) candidate), message);
+                Assert.True(candidate.Equals((object) control), message);
                 Assert.Equal(control.GetHashCode(), candidate.GetHashCode());
             }
 
-            foreach (var candidate in unequal)
+            for (int i = 0; i < unequal.Length; i++)
             {
-                Assert.False(control.Equals(candidate));
-                Assert.False(candidate.Equals(control));
-                Assert.False(control.Equals((object) candidate));
-                Assert.False(candidate.Equals((object) control));
+                var candidate = unequal[i];
+                string message = $"Unequal item {i} unexpected equal";
+                Assert.False(control.Equals(candidate), message);
+                Assert.False(candidate.Equals(control), message);
+                Assert.False(control.Equals((object) candidate), message);
+                Assert.False(candidate.Equals((object) control), message);
                 // While this isn't actually required, if it fails it would usually be due to a bug.
                 Assert.NotEqual(control.GetHashCode(), candidate.GetHashCode());
             }
