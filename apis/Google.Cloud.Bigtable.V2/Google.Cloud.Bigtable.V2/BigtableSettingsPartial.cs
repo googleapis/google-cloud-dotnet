@@ -21,6 +21,11 @@ namespace Google.Cloud.Bigtable.V2
 {
     public partial class BigtableSettings
     {
+        partial void OnCopy(BigtableSettings existing)
+        {
+            IdempotentMutateRowRetrySettings = existing.IdempotentMutateRowRetrySettings;
+        }
+
         /// <summary>
         /// <see cref="RetrySettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableClient.MutateRow</c> and <c>BigtableClient.MutateRowAsync</c>
