@@ -928,8 +928,7 @@ namespace Google.Cloud.Bigtable.V2
 
         partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableSettings effectiveSettings, ClientHelper clientHelper)
         {
-            _idempotentMutateRowSettings = CallSettings.FromCallTiming(
-                CallTiming.FromRetry(effectiveSettings.IdempotentMutateRowRetrySettings));
+            _idempotentMutateRowSettings = effectiveSettings.IdempotentMutateRowSettings;
         }
 
         partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings) =>

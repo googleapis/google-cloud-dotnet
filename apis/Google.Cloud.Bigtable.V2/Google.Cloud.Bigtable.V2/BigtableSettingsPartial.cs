@@ -23,15 +23,17 @@ namespace Google.Cloud.Bigtable.V2
     {
         partial void OnCopy(BigtableSettings existing)
         {
-            IdempotentMutateRowRetrySettings = existing.IdempotentMutateRowRetrySettings;
+            IdempotentMutateRowSettings = existing.IdempotentMutateRowSettings;
         }
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for synchronous and asynchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableClient.MutateRow</c> and <c>BigtableClient.MutateRowAsync</c>
         /// when the request is known to be idempotent.
         /// </summary>
         /// <remarks>
+        /// Note that additional settings from <see cref="MutateRowSettings"/> will be used if they
+        /// are not specified on <see cref="IdempotentMutateRowSettings"/>.
         /// The default <c>BigtableClient.MutateRow</c> and
         /// <c>BigtableClient.MutateRowAsync</c> <see cref="RetrySettings"/> for idempotent requests are:
         /// <list type="bullet">
@@ -49,12 +51,13 @@ namespace Google.Cloud.Bigtable.V2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public RetrySettings IdempotentMutateRowRetrySettings { get; set; } = 
-            new RetrySettings(
+        /// <seealso cref="MutateRowSettings"/>
+        public CallSettings IdempotentMutateRowSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
-            );
+            )));
     }
 }
