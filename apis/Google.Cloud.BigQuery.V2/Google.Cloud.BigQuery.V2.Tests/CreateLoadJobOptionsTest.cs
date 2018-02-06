@@ -38,7 +38,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 SourceFormat = FileFormat.DatastoreBackup,
                 TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
                 WriteDisposition = WriteDisposition.WriteAppend,
-                DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" }
+                DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
             };
 
             JobConfigurationLoad load = new JobConfigurationLoad();
