@@ -108,6 +108,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public BigQueryParameterMode? ParameterMode { get; set; }
 
+        /// <summary>
+        /// The encryption configuratoin to apply to the destination table, if any.
+        /// </summary>
+        public EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }
+
         internal void ModifyRequest(JobConfigurationQuery query)
         {
             // Note: no validation of combinations (flatten results etc). Leave this to the server,
@@ -160,6 +165,10 @@ namespace Google.Cloud.BigQuery.V2
             {
                 // Safe for now; we only have "named" or "positional". This is unlikely to change.
                 query.ParameterMode = ParameterMode.ToString().ToLowerInvariant();
+            }
+            if (DestinationEncryptionConfiguration != null)
+            {
+                query.DestinationEncryptionConfiguration.KmsKeyName = DestinationEncryptionConfiguration.KmsKeyName;
             }
         }
     }

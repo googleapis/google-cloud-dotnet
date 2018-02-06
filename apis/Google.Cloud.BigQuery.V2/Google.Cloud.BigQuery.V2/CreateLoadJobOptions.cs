@@ -110,6 +110,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public TimePartitioning TimePartitioning { get; set; }
 
+        /// <summary>
+        /// The encryption configuratoin to apply to the destination table, if any.
+        /// </summary>
+        public EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }
+
         internal void ModifyRequest(JobConfigurationLoad load)
         {
             if (SkipLeadingRows != null)
@@ -167,6 +172,10 @@ namespace Google.Cloud.BigQuery.V2
             if (TimePartitioning != null)
             {
                 load.TimePartitioning = TimePartitioning;
+            }
+            if(DestinationEncryptionConfiguration != null)
+            {
+                load.DestinationEncryptionConfiguration = DestinationEncryptionConfiguration;
             }
         }
     }
