@@ -47,6 +47,12 @@ namespace Google.Cloud.Bigtable.V2
             return ByteString.CopyFrom(buffer);
         }
 
+        internal static bool IsIdempotent(this MutateRowRequest request) =>
+            request.Mutations.All(IsIdempotent);
+
+        internal static bool IsIdempotent(this Mutation mutation) =>
+            mutation.SetCell?.TimestampMicros != -1;
+
         internal static ByteString RegexEscape(ByteString value)
         {
             // Logic taken from

@@ -924,14 +924,27 @@ namespace Google.Cloud.Bigtable.V2
     {
         private const string ResourcePrefixHeader = "google-cloud-resource-prefix";
 
+        private CallSettings _idempotentMutateRowSettings;
+
+        partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableSettings effectiveSettings, ClientHelper clientHelper)
+        {
+            _idempotentMutateRowSettings = effectiveSettings.IdempotentMutateRowSettings;
+        }
+
         partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.TableName);
 
         partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.TableName);
 
-        partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings) =>
+        partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings)
+        {
+            if (request.IsIdempotent())
+            {
+                settings = _idempotentMutateRowSettings.MergedWith(settings);
+            }
             ApplyResourcePrefixHeader(ref settings, request.TableName);
+        }
 
         partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.TableName);
