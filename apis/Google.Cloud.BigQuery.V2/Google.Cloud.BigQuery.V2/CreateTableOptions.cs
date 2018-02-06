@@ -59,7 +59,7 @@ namespace Google.Cloud.BigQuery.V2
         public ViewDefinition View { get; set; }
 
         /// <summary>
-        /// The encryption configuratoin to apply to the created table, if any.
+        /// The encryption configuration to apply to the created table, if any.
         /// </summary>
         public EncryptionConfiguration EncryptionConfiguration { get; set; }
 
