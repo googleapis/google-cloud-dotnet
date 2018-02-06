@@ -34,7 +34,7 @@ namespace Google.Cloud.BigQuery.V2
         public WriteDisposition? WriteDisposition { get; set; }
 
         /// <summary>
-        /// The encryption configuratoin to apply to the destination table, if any.
+        /// The encryption configuration to apply to the destination table, if any.
         /// </summary>
         public EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }
 
@@ -48,7 +48,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 copy.WriteDisposition = EnumMap.ToApiValue(WriteDisposition.Value);
             }
-            if(DestinationEncryptionConfiguration != null)
+            if (DestinationEncryptionConfiguration != null)
             {
                 copy.DestinationEncryptionConfiguration = DestinationEncryptionConfiguration;
             }
