@@ -58,6 +58,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public ViewDefinition View { get; set; }
 
+        /// <summary>
+        /// The encryption configuratoin to apply to the created table, if any.
+        /// </summary>
+        public EncryptionConfiguration EncryptionConfiguration { get; set; }
+
         internal void ModifyRequest(Table table, InsertRequest request)
         {
             if (Description != null)
@@ -89,6 +94,10 @@ namespace Google.Cloud.BigQuery.V2
             if (View != null)
             {
                 table.View = View;
+            }
+            if (EncryptionConfiguration != null)
+            {
+                table.EncryptionConfiguration.KmsKeyName = EncryptionConfiguration.KmsKeyName;
             }
         }
     }

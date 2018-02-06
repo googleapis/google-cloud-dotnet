@@ -35,7 +35,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 UseQueryCache = false,
                 WriteDisposition = WriteDisposition.WriteIfEmpty,
                 UseLegacySql = true,
-                ParameterMode = BigQueryParameterMode.Positional
+                ParameterMode = BigQueryParameterMode.Positional,
+                DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" }
             };
 
             JobConfigurationQuery query = new JobConfigurationQuery();
@@ -52,6 +53,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("WRITE_EMPTY", query.WriteDisposition);
             Assert.Equal(true, query.UseLegacySql);
             Assert.Equal("positional", query.ParameterMode);
+            Assert.Equal("projects/1/locations/us/keyRings/1/cryptoKeys/1", query.DestinationEncryptionConfiguration.KmsKeyName);
         }
     }
 }
