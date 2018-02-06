@@ -18,12 +18,6 @@ the request and want to put work into it.
 - Issue: [#1709](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1709)
 - Status: Further investigation required. We already have
   some analysis in the form of custom Roslyn analyzers.
-
-## Metadata client failure
-
-- Issue: [#1568](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1568)
-- Status: Metadata client is low priority right now; needs
-  some more investigation
   
 ## Storage client-side encryption
 

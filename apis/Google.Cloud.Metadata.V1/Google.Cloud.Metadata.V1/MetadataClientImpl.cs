@@ -43,7 +43,8 @@ namespace Google.Cloud.Metadata.V1
     /// </remarks>
     public sealed class MetadataClientImpl : MetadataClient
     {
-        private const string DefaultMetadataHost = "metadata";
+        // Use the IP address rather than the IP name to avoid a DNS lookup, which can cause intermittent failures.
+        private const string DefaultMetadataHost = "169.254.169.254";
         private const string EmulatorEnvironmentVariable = "METADATA_EMULATOR_HOST";
         private const string MetadataFlavor = "Metadata-Flavor";
         private const string GoogleMetadataHeader = "Google";
