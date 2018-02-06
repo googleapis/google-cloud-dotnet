@@ -97,7 +97,7 @@ namespace Google.Cloud.BigQuery.V2
             }
             if (EncryptionConfiguration != null)
             {
-                table.EncryptionConfiguration.KmsKeyName = EncryptionConfiguration.KmsKeyName;
+                table.EncryptionConfiguration = EncryptionConfiguration;
             }
         }
     }
