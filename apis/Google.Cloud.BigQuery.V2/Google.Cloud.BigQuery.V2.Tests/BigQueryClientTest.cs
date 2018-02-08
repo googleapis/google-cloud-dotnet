@@ -615,6 +615,17 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void GetBigQueryServiceAccountEmailEquivalents()
+        {
+            var reference = GetProjectReference();
+            var options = new GetBigQueryServiceAccountEmailOptions();
+            VerifyEquivalent("project@service-account-email.com",
+                client => client.GetBigQueryServiceAccountEmail(MatchesWhenSerialized(reference), options),
+                client => client.GetBigQueryServiceAccountEmail(options),
+                client => client.GetBigQueryServiceAccountEmail(ProjectId, options));
+        }
+
+        [Fact]
         public void CreateDatasetAsyncEquivalents()
         {
             var datasetId = "dataset";
@@ -1117,6 +1128,19 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => new BigQueryTable(client, GetTable(sourceTableReference)).CreateCopyJobAsync(destinationTableReference, options, token));
         }
 
+        [Fact]
+        public void GetBigQueryServiceAccountEmailAsyncEquivalents()
+        {
+            var reference = GetProjectReference();
+            var options = new GetBigQueryServiceAccountEmailOptions();
+            var token = new CancellationTokenSource().Token;
+
+            VerifyEquivalentAsync("project@service-account-email.com",
+                client => client.GetBigQueryServiceAccountEmailAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.GetBigQueryServiceAccountEmailAsync(options, token),
+                client => client.GetBigQueryServiceAccountEmailAsync(ProjectId, options, token));
+        }
+
         // TODO: Equivalents for GetQueryResults. That's currently a two-stage process (fetch job, fetch results) which we don't have
         // support for in the code below.
 
@@ -1204,6 +1228,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
         private static JobReference GetJobReference(string JobId) =>
             new JobReference { ProjectId = ProjectId, JobId = JobId };
+
+        private static ProjectReference GetProjectReference() => new ProjectReference { ProjectId = ProjectId };
 
         private class UnimplementedPagedEnumerable<TResponse, TResource> : PagedEnumerable<TResponse, TResource>
         {
