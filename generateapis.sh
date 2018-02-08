@@ -2,13 +2,19 @@
 
 set -e
 
+source toolversions.sh
+declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
+declare -r BASH=/c/Windows/System32/bash.exe
+
 # This script generates all APIs from the googleapis/googleapis github repository,
 # using the API toolkit from googleapis/toolkit. It will fetch both repositories if
 # necessary.
 
-# Running on Windows
+# Currently it will only work on Windows due to the way nuget packages installed;
+# changing toolversions.sh could mitigate that, if it's ever necessary.
+#
 # Most of the script can be run directly in Windows, but the codegen itself has to be
-# run via Windows Subsystem for Linux. (Unclear why as yet.)
+# run via Windows Subsystem for Linux due to a bug in a subproject.
 # Prerequisites
 # - Bash as supplied with Windows git
 # - Windows Subsystem for Linux with Ubuntu 16.04, including Java 8 (e.g. openjdk-8-jdk-headless)
@@ -23,49 +29,9 @@ set -e
 # - unzip
 # - Java 8 (e.g. openjdk-8-jdk-headless)
 
-# TODO: Use toolversions.sh
-# This script needs to work on Linux machines without nuget, unlike other scripts...
-GRPC_VERSION=1.7.0
-PROTOBUF_VERSION=3.4.0
-CORE_PROTOS_ROOT=packages/Google.Protobuf.Tools.$PROTOBUF_VERSION/tools
 OUTDIR=tmp
 
-if [[ "$OS" == "Windows_NT" ]]
-then
-  PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/windows_x64/protoc.exe
-  GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/windows_x64/grpc_csharp_plugin.exe
-  BASH=/c/Windows/System32/bash.exe
-else
-  PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/protoc
-  GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/grpc_csharp_plugin
-  BASH=/bin/bash
-fi
-
-# Fake nuget installation by downloading and unpacking a zip file
-nuget_install() {
-  outdir=packages/$1.$2
-  if [ ! -d "$outdir" ]
-  then
-    echo Fetching $1 version $2
-    mkdir -p $outdir
-    wget --quiet -Otmp.zip https://www.nuget.org/api/v2/package/$1/$2    
-    unzip -q -d $outdir tmp.zip
-    if [ -d "packages/$1.$2/tools" ]
-    then 
-      chmod +x `find packages/$1.$2/tools -type f`
-    fi
-
-    rm tmp.zip
-  fi
-}
-
-install_dependencies() {
-  # Make sure we have all the tools we need.
-  # Prerequisite: Java already installed so that gradlew will work
-  nuget_install Google.Protobuf.Tools $PROTOBUF_VERSION
-  nuget_install Google.Protobuf $PROTOBUF_VERSION
-  nuget_install Grpc.Tools $GRPC_VERSION
-  
+fetch_github_repos() {
   if [ -d "toolkit" ]
   then
     pushd toolkit > /dev/null
@@ -144,7 +110,9 @@ EOF
 
 # Entry point
 
-install_dependencies
+install_protoc
+install_grpc  
+fetch_github_repos
 TOOLKIT_VERSION=$(cat toolkit/version.txt)
 
 # Build toolkit once with gradle so we can invoke it from Java directly
