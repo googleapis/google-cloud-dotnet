@@ -2374,6 +2374,31 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // See [GetJob](ref) for a synchronous example.
         // End see-also
 
+        [Fact]
+        public void GetBigQueryServiceAccountEmail()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Snippet: GetBigQueryServiceAccountEmail(*)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            string email = client.GetBigQueryServiceAccountEmail();
+            Console.WriteLine(email);
+            // End snippet
+        }
+
+        // See-also: GetBigQueryServiceAccountEmail(*)
+        // Member: GetBigQueryServiceAccountEmail(string, *)
+        // Member: GetBigQueryServiceAccountEmail(ProjectReference, *)
+        // See [GetBigQueryServiceAccountEmail](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: GetBigQueryServiceAccountEmail(*)
+        // Member: GetBigQueryServiceAccountEmailAsync(*, *)
+        // Member: GetBigQueryServiceAccountEmailAsync(string, *, *)
+        // Member: GetBigQueryServiceAccountEmailAsync(ProjectReference, *, *)
+        // See [GetBigQueryServiceAccountEmail](ref) for a synchronous example.
+        // End see-also
+
         private void AssertJobCompletesSuccessfully(BigQueryJob job)
         {
             BigQueryJob result = job.PollUntilCompleted();
