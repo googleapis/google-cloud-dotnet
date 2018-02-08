@@ -29,6 +29,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         private static readonly Parameter DatasetReferenceParameter = new Parameter("DatasetReference", "datasetReference", "A fully-qualified identifier for the dataset. Must not be null.", null);
         private static readonly Parameter TableReferenceParameter = new Parameter("TableReference", "tableReference", "A fully-qualified identifier for the table. Must not be null.", null);
         private static readonly Parameter JobReferenceParameter = new Parameter("JobReference", "jobReference", "A fully-qualified identifier for the job. Must not be null.", null);
+        private static readonly Parameter ProjectReferenceParameter = new Parameter("ProjectReference", "projectReference", "A fully-qualified identifier for the project. Must not be null.", null);
         private static readonly Parameter CancellationTokenParameter = new Parameter("CancellationToken", "cancellationToken", "The token to monitor for cancellation requests.", "default");
 
         private static readonly Parameter[] IdParameters = { ProjectIdParameter, DatasetIdParameter, TableIdParameter, JobIdParameter };
@@ -38,6 +39,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             { TargetType.Dataset, new[] { ProjectIdParameter, DatasetIdParameter } },
             { TargetType.Table, new[] { ProjectIdParameter, DatasetIdParameter, TableIdParameter } },
             { TargetType.Job, new[] { ProjectIdParameter, JobIdParameter } },
+            { TargetType.Project, new[] { ProjectIdParameter } },
             { TargetType.None, new Parameter[0] },
         };
 
@@ -46,6 +48,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             { TargetType.Dataset, DatasetReferenceParameter },
             { TargetType.Table, TableReferenceParameter },
             { TargetType.Job, JobReferenceParameter },
+            { TargetType.Project, ProjectReferenceParameter },
             { TargetType.None, null },
         };
 

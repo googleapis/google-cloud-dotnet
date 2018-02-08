@@ -23,6 +23,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         None,
         Dataset,
         Table,
-        Job
+        Job,
+        Project
     }
 }
