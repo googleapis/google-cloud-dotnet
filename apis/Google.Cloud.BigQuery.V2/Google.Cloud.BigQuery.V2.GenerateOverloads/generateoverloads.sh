@@ -8,3 +8,4 @@ dotnet run -- Methods/InsertData.xml $CLIENT.InsertData.cs
 dotnet run -- Methods/JobCrud.xml $CLIENT.JobCrud.cs
 dotnet run -- Methods/Queries.xml $CLIENT.Queries.cs
 dotnet run -- Methods/TableCrud.xml $CLIENT.TableCrud.cs
+dotnet run -- Methods/ServiceAccount.xml $CLIENT.ServiceAccount.cs
