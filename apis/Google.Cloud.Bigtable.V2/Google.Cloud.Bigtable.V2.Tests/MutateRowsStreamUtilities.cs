@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Rpc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -47,8 +49,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         public static BigtableClient.MutateRowsStream CreateRetryableMutateRowsStream(
             MutateRowsRequest request,
             MutateRowsResponse.Types.Entry[] entriesForInitialResponse,
-            MutateRowsResponse.Types.Entry[][] entriesForRetryResponses,
-            RetrySettings retrySettings)
+            MutateRowsResponse.Types.Entry[][] entriesForRetryResponses)
         {
             // Initialize the client that will be used for retries and populate it with the retry responses.
             var client = new MockBigtableClient();
@@ -65,7 +66,12 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 request,
                 new MockMutateRowsStream(new MutateRowsResponse { Entries = { entriesForInitialResponse } }),
                 CallSettings.FromCancellationToken(CancellationToken.None),
-                retrySettings);
+                new RetrySettings(
+                    retryBackoff: BigtableSettings.GetDefaultRetryBackoff(),
+                    timeoutBackoff: BigtableSettings.GetDefaultTimeoutBackoff(),
+                    totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                    retryFilter: BigtableSettings.IdempotentRetryFilter
+                ));
         }
     }
 }

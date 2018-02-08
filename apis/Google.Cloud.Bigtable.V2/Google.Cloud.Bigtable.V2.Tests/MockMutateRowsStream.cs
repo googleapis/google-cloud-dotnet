@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All rights reserved.
+﻿// Copyright 2017 Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,14 +18,14 @@ using System.Linq;
 
 namespace Google.Cloud.Bigtable.V2.Tests
 {
-    public class MockReadRowsStream : BigtableClient.ReadRowsStream
+    public class MockMutateRowsStream : BigtableClient.MutateRowsStream
     {
-        private IAsyncEnumerator<ReadRowsResponse> _responseStream;
+        private IAsyncEnumerator<MutateRowsResponse> _responseStream;
 
-        public MockReadRowsStream(params ReadRowsResponse[] responses) =>
+        public MockMutateRowsStream(params MutateRowsResponse[] responses) =>
             _responseStream = responses.ToAsyncEnumerable().GetEnumerator();
 
-        public override AsyncServerStreamingCall<ReadRowsResponse> GrpcCall => null;
-        public override IAsyncEnumerator<ReadRowsResponse> ResponseStream => _responseStream;
+        public override AsyncServerStreamingCall<MutateRowsResponse> GrpcCall => null;
+        public override IAsyncEnumerator<MutateRowsResponse> ResponseStream => _responseStream;
     }
 }
