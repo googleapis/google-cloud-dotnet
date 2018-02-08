@@ -45,7 +45,10 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Constructs a new <see cref="BigtableSettings"/> object with default settings.
         /// </summary>
-        public BigtableSettings() { }
+        public BigtableSettings()
+        {
+            OnConstruction();
+        }
 
         private BigtableSettings(BigtableSettings existing) : base(existing)
         {
@@ -59,6 +62,7 @@ namespace Google.Cloud.Bigtable.V2
             OnCopy(existing);
         }
 
+        partial void OnConstruction();
         partial void OnCopy(BigtableSettings existing);
 
         /// <summary>
@@ -994,6 +998,7 @@ namespace Google.Cloud.Bigtable.V2
         partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings);
         partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings);
         partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings);
+        partial void Modify_MutateRowsResponse(MutateRowsRequest request, ref MutateRowsStream response, CallSettings originalCallSettings, CallSettings settings);
         partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings);
         partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref CallSettings settings);
 
@@ -1140,8 +1145,11 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowsRequest request,
             CallSettings callSettings = null)
         {
+            var originalCallSettings = callSettings;
             Modify_MutateRowsRequest(ref request, ref callSettings);
-            return new MutateRowsStreamImpl(_callMutateRows.Call(request, callSettings));
+            MutateRowsStream response = new MutateRowsStreamImpl(_callMutateRows.Call(request, callSettings));
+            Modify_MutateRowsResponse(request, ref response, originalCallSettings, callSettings);
+            return response;
         }
 
         internal sealed partial class MutateRowsStreamImpl : MutateRowsStream
