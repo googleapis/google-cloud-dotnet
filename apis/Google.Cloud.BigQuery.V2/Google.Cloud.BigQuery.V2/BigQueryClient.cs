@@ -170,6 +170,16 @@ namespace Google.Cloud.BigQuery.V2
             };
 
         /// <summary>
+        /// Creates a <see cref="ProjectReference"/> using this client's project ID.
+        /// </summary>
+        /// <remarks>
+        /// This method mostly exists for uniformity - it makes the code generation simpler for methods
+        /// using project references. While we could expose it publicly, there's little reason to do so.
+        /// </remarks>
+        /// <returns>A <see cref="ProjectReference"/> representing the requested project.</returns>
+        internal ProjectReference GetProjectReference() => GetProjectReference(ProjectId);
+
+        /// <summary>
         /// Creates a <see cref="ProjectReference"/> from the given project ID.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be null.</param>
