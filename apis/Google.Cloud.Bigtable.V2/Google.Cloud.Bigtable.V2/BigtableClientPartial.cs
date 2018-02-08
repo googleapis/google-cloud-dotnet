@@ -24,6 +24,10 @@ namespace Google.Cloud.Bigtable.V2
 {
     public partial class BigtableClient
     {
+        internal IClock Clock { get; set; } = SystemClock.Instance;
+
+        internal IScheduler Scheduler { get; set; } = SystemScheduler.Instance;
+
         /// <summary>
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
@@ -869,7 +873,7 @@ namespace Google.Cloud.Bigtable.V2
             /// <returns>An asynchronous sequence of rows from this set of results.</returns>
             public IAsyncEnumerable<Row> AsAsyncEnumerable() =>
                 _rowEnumerable ?? (_rowEnumerable = new RowAsyncEnumerable(this));
-
+            
             private class RowAsyncEnumerable : IAsyncEnumerable<Row>
             {
                 private int _enumeratorCount;
@@ -929,6 +933,8 @@ namespace Google.Cloud.Bigtable.V2
         partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableSettings effectiveSettings, ClientHelper clientHelper)
         {
             _idempotentMutateRowSettings = effectiveSettings.IdempotentMutateRowSettings;
+            Clock = clientHelper.Clock;
+            Scheduler = clientHelper.Scheduler;
         }
 
         partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings) =>
@@ -946,8 +952,25 @@ namespace Google.Cloud.Bigtable.V2
             ApplyResourcePrefixHeader(ref settings, request.TableName);
         }
 
-        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings) =>
+        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings)
+        {
+            // Strip off the retry settings specified. We will apply them to the response stream.
+            // However, keep the overall expiration so the first individual call can use it.
+            if (settings?.Timing?.Retry != null)
+            {
+                settings = settings.WithCallTiming(CallTiming.FromExpiration(settings.Timing.Retry.TotalExpiration));
+            }
             ApplyResourcePrefixHeader(ref settings, request.TableName);
+        }
+
+        partial void Modify_MutateRowsResponse(MutateRowsRequest request, ref MutateRowsStream response, CallSettings originalCallSettings, CallSettings settings)
+        {
+            var retrySettings = originalCallSettings?.Timing?.Retry;
+            if (retrySettings != null)
+            {
+                response = new RetryingMutateRowsStream(this, request, response, settings, retrySettings);
+            }
+        }
 
         partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.TableName);

@@ -16,11 +16,34 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Grpc.Core;
 using System;
+using System.Diagnostics;
 
 namespace Google.Cloud.Bigtable.V2
 {
     public partial class BigtableSettings
     {
+        partial void OnConstruction()
+        {
+            var originalMutateRowsSettings = MutateRowsSettings;
+            Debug.Assert(
+                originalMutateRowsSettings.CancellationToken == null &&
+                originalMutateRowsSettings.Credentials == null &&
+                originalMutateRowsSettings.HeaderMutation == null &&
+                originalMutateRowsSettings.PropagationToken == null &&
+                originalMutateRowsSettings.WriteOptions == null &&
+                originalMutateRowsSettings.Timing != null &&
+                originalMutateRowsSettings.Timing.Type == CallTimingType.Expiration);
+            MutateRowsSettings =
+                CallSettings.FromCallTiming(
+                    CallTiming.FromRetry(new RetrySettings(
+                        retryBackoff: GetDefaultRetryBackoff(),
+                        timeoutBackoff: GetDefaultTimeoutBackoff(),
+                        totalExpiration: Expiration.FromTimeout(
+                            originalMutateRowsSettings.Timing?.Expiration?.Timeout ?? TimeSpan.FromMilliseconds(600000)),
+                        retryFilter: IdempotentRetryFilter
+                    )));
+        }
+
         partial void OnCopy(BigtableSettings existing)
         {
             IdempotentMutateRowSettings = existing.IdempotentMutateRowSettings;
