@@ -50,6 +50,9 @@ namespace Google.Cloud.Bigtable.V2
         internal static bool IsIdempotent(this MutateRowRequest request) =>
             request.Mutations.All(IsIdempotent);
 
+        internal static bool IsIdempotent(this MutateRowsRequest.Types.Entry entry) =>
+            entry.Mutations.All(IsIdempotent);
+
         internal static bool IsIdempotent(this Mutation mutation) =>
             mutation.SetCell?.TimestampMicros != -1;
 

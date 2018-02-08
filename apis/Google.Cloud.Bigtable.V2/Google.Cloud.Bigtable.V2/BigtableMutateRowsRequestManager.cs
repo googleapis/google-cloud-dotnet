@@ -153,6 +153,14 @@ namespace Google.Cloud.Bigtable.V2
                 }
                 if (_retryableCodes.Contains(status.Code))
                 {
+                    // Skip non-idempotent entries. We could check this at the other continue above, but since
+                    // this check needs to walk through each mutation in the entry, best to way until we know
+                    // we want to retry it first.
+                    if (!_originalRequest.Entries[i].IsIdempotent())
+                    {
+                        continue;
+                    }
+
                     if (toRetry == null)
                     {
                         toRetry = new List<int>();
