@@ -13,9 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.Bigtable.Admin.V2;
-using Google.Cloud.ClientTesting;
+using Google.Cloud.Bigtable.V2.Tests;
 using Google.Rpc;
-using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
