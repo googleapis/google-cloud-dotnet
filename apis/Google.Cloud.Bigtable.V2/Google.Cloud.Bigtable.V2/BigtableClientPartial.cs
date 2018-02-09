@@ -24,6 +24,10 @@ namespace Google.Cloud.Bigtable.V2
 {
     public partial class BigtableClient
     {
+        internal IClock Clock { get; set; } = SystemClock.Instance;
+
+        internal IScheduler Scheduler { get; set; } = SystemScheduler.Instance;
+
         /// <summary>
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
@@ -925,10 +929,14 @@ namespace Google.Cloud.Bigtable.V2
         private const string ResourcePrefixHeader = "google-cloud-resource-prefix";
 
         private CallSettings _idempotentMutateRowSettings;
+        private CallSettings _mutateRowsSettings;
 
         partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableSettings effectiveSettings, ClientHelper clientHelper)
         {
             _idempotentMutateRowSettings = effectiveSettings.IdempotentMutateRowSettings;
+            _mutateRowsSettings = effectiveSettings.MutateRowsSettings;
+            Clock = clientHelper.Clock;
+            Scheduler = clientHelper.Scheduler;
         }
 
         partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings) =>
@@ -946,8 +954,26 @@ namespace Google.Cloud.Bigtable.V2
             ApplyResourcePrefixHeader(ref settings, request.TableName);
         }
 
-        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings) =>
+        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings)
+        {
+            // Strip off the retry settings specified. We will apply them to the response stream.
+            // However, keep the overall expiration so the first individual call can use it.
+            var mergedSettings = _mutateRowsSettings.MergedWith(settings);
+            request.StreamRetrySettings = mergedSettings?.Timing?.Retry;
+            if (request.StreamRetrySettings != null)
+            {
+                settings = settings.WithCallTiming(CallTiming.FromExpiration(request.StreamRetrySettings.TotalExpiration));
+            }
             ApplyResourcePrefixHeader(ref settings, request.TableName);
+        }
+
+        partial void Modify_MutateRowsResponse(MutateRowsRequest request, ref MutateRowsStream response, CallSettings settings)
+        {
+            if (request.StreamRetrySettings != null)
+            {
+                response = new RetryingMutateRowsStream(this, request, response, settings, request.StreamRetrySettings);
+            }
+        }
 
         partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.TableName);
@@ -959,5 +985,11 @@ namespace Google.Cloud.Bigtable.V2
         {
             settings = settings.WithHeader(ResourcePrefixHeader, resource);
         }
+    }
+
+    // TODO: Move to its own file.
+    public partial class MutateRowsRequest
+    {
+        internal RetrySettings StreamRetrySettings { get; set; }
     }
 }

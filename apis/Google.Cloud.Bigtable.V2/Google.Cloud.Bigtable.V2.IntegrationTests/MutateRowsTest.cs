@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Bigtable.V2.Tests;
 using Google.Rpc;
 using System;
 using System.Linq;

@@ -86,19 +86,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
         private static MutateRowsResponse CreateResponse(params Rpc.Status[] statuses) =>
             new MutateRowsResponse
             {
-                Entries = { statuses.Select((status, i) => ToEntry(i, status)) }
+                Entries = { statuses.Select((status, i) => MutateRowsStreamUtilities.CreateEntry(i, status)) }
             };
-
-        /// <summary>
-        /// Builds a <see cref="MutateRowsResponse.Types.Entry"/>. 
-        /// </summary>
-        /// <param name="index">
-        /// Integer that represents an index of an <see cref="MutateRowsResponse.Types.Entry"/>.</param>
-        /// <param name="status">
-        /// <see cref="Rpc.Status"/> that indicates whether requested mutation succeeded or not.</param>
-        /// <returns>Entry for MutateRowsResponse message.</returns>
-        private static MutateRowsResponse.Types.Entry ToEntry(int index, Rpc.Status status) =>
-            new MutateRowsResponse.Types.Entry { Index = index, Status = status };
 
         /// <summary>
         /// Sends <see cref="MutateRowsResponse"/> message to <see cref="BigtableMutateRowsRequestManager"/> 
