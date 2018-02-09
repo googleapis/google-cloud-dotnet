@@ -92,6 +92,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public TimePartitioning TimePartitioning { get; set; }
 
+        /// <summary>
+        /// The encryption configuration to apply to the destination table, if any.
+        /// </summary>
+        public EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }
+
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
             if (SkipLeadingRows != null)
@@ -141,6 +146,10 @@ namespace Google.Cloud.BigQuery.V2
             if (TimePartitioning != null)
             {
                 loadRequest.TimePartitioning = TimePartitioning;
+            }
+            if (DestinationEncryptionConfiguration != null)
+            {
+                loadRequest.DestinationEncryptionConfiguration = DestinationEncryptionConfiguration;
             }
             // TODO: Encoding? Only UTF-8 and ISO-8859-1 are supported... unsure what to do with this.
         }

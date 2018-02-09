@@ -29,7 +29,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 MaxBadRecords = 10,
                 WriteDisposition = WriteDisposition.WriteAppend,
                 Autodetect = true,
-                TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null)
+                TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
+                DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
@@ -41,6 +42,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.True(config.Autodetect);
             Assert.Equal("DAY", config.TimePartitioning.Type);
             Assert.Null(config.TimePartitioning.ExpirationMs);
+            Assert.Equal("projects/1/locations/us/keyRings/1/cryptoKeys/1", config.DestinationEncryptionConfiguration.KmsKeyName);
         }
     }
 }
