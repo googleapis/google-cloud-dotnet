@@ -873,7 +873,7 @@ namespace Google.Cloud.Bigtable.V2
             /// <returns>An asynchronous sequence of rows from this set of results.</returns>
             public IAsyncEnumerable<Row> AsAsyncEnumerable() =>
                 _rowEnumerable ?? (_rowEnumerable = new RowAsyncEnumerable(this));
-            
+
             private class RowAsyncEnumerable : IAsyncEnumerable<Row>
             {
                 private int _enumeratorCount;
@@ -929,10 +929,12 @@ namespace Google.Cloud.Bigtable.V2
         private const string ResourcePrefixHeader = "google-cloud-resource-prefix";
 
         private CallSettings _idempotentMutateRowSettings;
+        private CallSettings _mutateRowsSettings;
 
         partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableSettings effectiveSettings, ClientHelper clientHelper)
         {
             _idempotentMutateRowSettings = effectiveSettings.IdempotentMutateRowSettings;
+            _mutateRowsSettings = effectiveSettings.MutateRowsSettings;
             Clock = clientHelper.Clock;
             Scheduler = clientHelper.Scheduler;
         }
@@ -956,19 +958,20 @@ namespace Google.Cloud.Bigtable.V2
         {
             // Strip off the retry settings specified. We will apply them to the response stream.
             // However, keep the overall expiration so the first individual call can use it.
-            if (settings?.Timing?.Retry != null)
+            var mergedSettings = _mutateRowsSettings.MergedWith(settings);
+            request.StreamRetrySettings = mergedSettings?.Timing?.Retry;
+            if (request.StreamRetrySettings != null)
             {
-                settings = settings.WithCallTiming(CallTiming.FromExpiration(settings.Timing.Retry.TotalExpiration));
+                settings = settings.WithCallTiming(CallTiming.FromExpiration(request.StreamRetrySettings.TotalExpiration));
             }
             ApplyResourcePrefixHeader(ref settings, request.TableName);
         }
 
-        partial void Modify_MutateRowsResponse(MutateRowsRequest request, ref MutateRowsStream response, CallSettings originalCallSettings, CallSettings settings)
+        partial void Modify_MutateRowsResponse(MutateRowsRequest request, ref MutateRowsStream response, CallSettings settings)
         {
-            var retrySettings = originalCallSettings?.Timing?.Retry;
-            if (retrySettings != null)
+            if (request.StreamRetrySettings != null)
             {
-                response = new RetryingMutateRowsStream(this, request, response, settings, retrySettings);
+                response = new RetryingMutateRowsStream(this, request, response, settings, request.StreamRetrySettings);
             }
         }
 
@@ -982,5 +985,11 @@ namespace Google.Cloud.Bigtable.V2
         {
             settings = settings.WithHeader(ResourcePrefixHeader, resource);
         }
+    }
+
+    // TODO: Move to its own file.
+    public partial class MutateRowsRequest
+    {
+        internal RetrySettings StreamRetrySettings { get; set; }
     }
 }

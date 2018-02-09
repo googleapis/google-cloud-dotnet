@@ -998,7 +998,7 @@ namespace Google.Cloud.Bigtable.V2
         partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings);
         partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings);
         partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings);
-        partial void Modify_MutateRowsResponse(MutateRowsRequest request, ref MutateRowsStream response, CallSettings originalCallSettings, CallSettings settings);
+        partial void Modify_MutateRowsResponse(MutateRowsRequest request, ref MutateRowsStream response, CallSettings settings);
         partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings);
         partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref CallSettings settings);
 
@@ -1145,10 +1145,9 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowsRequest request,
             CallSettings callSettings = null)
         {
-            var originalCallSettings = callSettings;
             Modify_MutateRowsRequest(ref request, ref callSettings);
             MutateRowsStream response = new MutateRowsStreamImpl(_callMutateRows.Call(request, callSettings));
-            Modify_MutateRowsResponse(request, ref response, originalCallSettings, callSettings);
+            Modify_MutateRowsResponse(request, ref response, callSettings);
             return response;
         }
 
