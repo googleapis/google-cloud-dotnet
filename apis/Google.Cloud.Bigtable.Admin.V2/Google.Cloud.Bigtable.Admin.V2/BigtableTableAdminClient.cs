@@ -60,6 +60,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GenerateConsistencyTokenSettings = existing.GenerateConsistencyTokenSettings;
             CheckConsistencySettings = existing.CheckConsistencySettings;
             SnapshotTableSettings = existing.SnapshotTableSettings;
+            SnapshotTableOperationsSettings = existing.SnapshotTableOperationsSettings?.Clone();
             GetSnapshotSettings = existing.GetSnapshotSettings;
             ListSnapshotsSettings = existing.ListSnapshotsSettings;
             DeleteSnapshotSettings = existing.DeleteSnapshotSettings;
@@ -446,6 +447,27 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.SnapshotTable</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings SnapshotTableOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
+                TimeSpan.FromMilliseconds(500L),
+                1.5,
+                TimeSpan.FromMilliseconds(5000L))
+        };
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -1817,12 +1839,25 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> SnapshotTableAsync(
+        public virtual Task<Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
             SnapshotTableRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SnapshotTableAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual Task<Operation<Snapshot, SnapshotTableMetadata>> PollOnceSnapshotTableAsync(
+            string operationName,
+            CallSettings callSettings = null) => Operation<Snapshot, SnapshotTableMetadata>.PollOnceFromNameAsync(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                SnapshotTableOperationsClient,
+                callSettings);
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature
@@ -1842,12 +1877,33 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation SnapshotTable(
+        public virtual Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(
             SnapshotTableRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>SnapshotTable</c>.
+        /// </summary>
+        public virtual OperationsClient SnapshotTableOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SnapshotTable</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual Operation<Snapshot, SnapshotTableMetadata> PollOnceSnapshotTable(
+            string operationName,
+            CallSettings callSettings = null) => Operation<Snapshot, SnapshotTableMetadata>.PollOnceFromName(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                SnapshotTableOperationsClient,
+                callSettings);
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature
@@ -2272,6 +2328,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             CreateTableFromSnapshotOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateTableFromSnapshotOperationsSettings);
+            SnapshotTableOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.SnapshotTableOperationsSettings);
             _callCreateTable = clientHelper.BuildApiCall<CreateTableRequest, Table>(
                 GrpcClient.CreateTableAsync, GrpcClient.CreateTable, effectiveSettings.CreateTableSettings);
             _callCreateTableFromSnapshot = clientHelper.BuildApiCall<CreateTableFromSnapshotRequest, Operation>(
@@ -2764,12 +2822,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> SnapshotTableAsync(
+        public override async Task<Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(
             SnapshotTableRequest request,
             CallSettings callSettings = null)
         {
             Modify_SnapshotTableRequest(ref request, ref callSettings);
-            return _callSnapshotTable.Async(request, callSettings);
+            return new Operation<Snapshot, SnapshotTableMetadata>(
+                await _callSnapshotTable.Async(request, callSettings).ConfigureAwait(false), SnapshotTableOperationsClient);
         }
 
         /// <summary>
@@ -2790,13 +2849,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation SnapshotTable(
+        public override Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(
             SnapshotTableRequest request,
             CallSettings callSettings = null)
         {
             Modify_SnapshotTableRequest(ref request, ref callSettings);
-            return _callSnapshotTable.Sync(request, callSettings);
+            return new Operation<Snapshot, SnapshotTableMetadata>(
+                _callSnapshotTable.Sync(request, callSettings), SnapshotTableOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>SnapshotTable</c>.
+        /// </summary>
+        public override OperationsClient SnapshotTableOperationsClient { get; }
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable snapshots. This feature

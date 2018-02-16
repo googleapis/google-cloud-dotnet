@@ -349,7 +349,26 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             Instance instance = new Instance();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation response = await bigtableInstanceAdminClient.PartialUpdateInstanceAsync(instance, updateMask);
+            Operation<Instance, UpdateInstanceMetadata> response =
+                await bigtableInstanceAdminClient.PartialUpdateInstanceAsync(instance, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, UpdateInstanceMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
+                await bigtableInstanceAdminClient.PollOncePartialUpdateInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -363,7 +382,26 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             Instance instance = new Instance();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation response = bigtableInstanceAdminClient.PartialUpdateInstance(instance, updateMask);
+            Operation<Instance, UpdateInstanceMetadata> response =
+                bigtableInstanceAdminClient.PartialUpdateInstance(instance, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, UpdateInstanceMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
+                bigtableInstanceAdminClient.PollOncePartialUpdateInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -380,7 +418,26 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation response = await bigtableInstanceAdminClient.PartialUpdateInstanceAsync(request);
+            Operation<Instance, UpdateInstanceMetadata> response =
+                await bigtableInstanceAdminClient.PartialUpdateInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, UpdateInstanceMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
+                await bigtableInstanceAdminClient.PollOncePartialUpdateInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -397,7 +454,26 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation response = bigtableInstanceAdminClient.PartialUpdateInstance(request);
+            Operation<Instance, UpdateInstanceMetadata> response =
+                bigtableInstanceAdminClient.PartialUpdateInstance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, UpdateInstanceMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
+                bigtableInstanceAdminClient.PollOncePartialUpdateInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1173,7 +1249,26 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             AppProfile appProfile = new AppProfile();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation response = await bigtableInstanceAdminClient.UpdateAppProfileAsync(appProfile, updateMask);
+            Operation<AppProfile, UpdateAppProfileMetadata> response =
+                await bigtableInstanceAdminClient.UpdateAppProfileAsync(appProfile, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AppProfile, UpdateAppProfileMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AppProfile result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AppProfile, UpdateAppProfileMetadata> retrievedResponse =
+                await bigtableInstanceAdminClient.PollOnceUpdateAppProfileAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AppProfile retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1187,7 +1282,26 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             AppProfile appProfile = new AppProfile();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation response = bigtableInstanceAdminClient.UpdateAppProfile(appProfile, updateMask);
+            Operation<AppProfile, UpdateAppProfileMetadata> response =
+                bigtableInstanceAdminClient.UpdateAppProfile(appProfile, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AppProfile, UpdateAppProfileMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            AppProfile result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AppProfile, UpdateAppProfileMetadata> retrievedResponse =
+                bigtableInstanceAdminClient.PollOnceUpdateAppProfile(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AppProfile retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1204,7 +1318,26 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation response = await bigtableInstanceAdminClient.UpdateAppProfileAsync(request);
+            Operation<AppProfile, UpdateAppProfileMetadata> response =
+                await bigtableInstanceAdminClient.UpdateAppProfileAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AppProfile, UpdateAppProfileMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AppProfile result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AppProfile, UpdateAppProfileMetadata> retrievedResponse =
+                await bigtableInstanceAdminClient.PollOnceUpdateAppProfileAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AppProfile retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1221,7 +1354,26 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation response = bigtableInstanceAdminClient.UpdateAppProfile(request);
+            Operation<AppProfile, UpdateAppProfileMetadata> response =
+                bigtableInstanceAdminClient.UpdateAppProfile(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AppProfile, UpdateAppProfileMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            AppProfile result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AppProfile, UpdateAppProfileMetadata> retrievedResponse =
+                bigtableInstanceAdminClient.PollOnceUpdateAppProfile(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AppProfile retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
