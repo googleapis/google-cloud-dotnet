@@ -776,7 +776,26 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 Description = "",
             };
             // Make the request
-            Operation response = await bigtableTableAdminClient.SnapshotTableAsync(request);
+            Operation<Snapshot, SnapshotTableMetadata> response =
+                await bigtableTableAdminClient.SnapshotTableAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, SnapshotTableMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, SnapshotTableMetadata> retrievedResponse =
+                await bigtableTableAdminClient.PollOnceSnapshotTableAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -795,7 +814,26 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 Description = "",
             };
             // Make the request
-            Operation response = bigtableTableAdminClient.SnapshotTable(request);
+            Operation<Snapshot, SnapshotTableMetadata> response =
+                bigtableTableAdminClient.SnapshotTable(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, SnapshotTableMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, SnapshotTableMetadata> retrievedResponse =
+                bigtableTableAdminClient.PollOnceSnapshotTable(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

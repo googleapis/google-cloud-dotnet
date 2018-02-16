@@ -56,6 +56,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListInstancesSettings = existing.ListInstancesSettings;
             UpdateInstanceSettings = existing.UpdateInstanceSettings;
             PartialUpdateInstanceSettings = existing.PartialUpdateInstanceSettings;
+            PartialUpdateInstanceOperationsSettings = existing.PartialUpdateInstanceOperationsSettings?.Clone();
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             CreateClusterSettings = existing.CreateClusterSettings;
             CreateClusterOperationsSettings = existing.CreateClusterOperationsSettings?.Clone();
@@ -68,6 +69,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetAppProfileSettings = existing.GetAppProfileSettings;
             ListAppProfilesSettings = existing.ListAppProfilesSettings;
             UpdateAppProfileSettings = existing.UpdateAppProfileSettings;
+            UpdateAppProfileOperationsSettings = existing.UpdateAppProfileOperationsSettings?.Clone();
             DeleteAppProfileSettings = existing.DeleteAppProfileSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
@@ -313,6 +315,27 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.PartialUpdateInstance</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings PartialUpdateInstanceOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
+                TimeSpan.FromMilliseconds(500L),
+                1.5,
+                TimeSpan.FromMilliseconds(5000L))
+        };
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -653,6 +676,27 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.UpdateAppProfile</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 5 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings UpdateAppProfileOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(300000L)),
+                TimeSpan.FromMilliseconds(5L),
+                1.5,
+                TimeSpan.FromMilliseconds(5000L))
+        };
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -1344,7 +1388,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> PartialUpdateInstanceAsync(
+        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
             Instance instance,
             FieldMask updateMask,
             CallSettings callSettings = null) => PartialUpdateInstanceAsync(
@@ -1371,7 +1415,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> PartialUpdateInstanceAsync(
+        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
             Instance instance,
             FieldMask updateMask,
             CancellationToken cancellationToken) => PartialUpdateInstanceAsync(
@@ -1395,7 +1439,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation PartialUpdateInstance(
+        public virtual Operation<Instance, UpdateInstanceMetadata> PartialUpdateInstance(
             Instance instance,
             FieldMask updateMask,
             CallSettings callSettings = null) => PartialUpdateInstance(
@@ -1418,12 +1462,25 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> PartialUpdateInstanceAsync(
+        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
             PartialUpdateInstanceRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PartialUpdateInstanceAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> PollOncePartialUpdateInstanceAsync(
+            string operationName,
+            CallSettings callSettings = null) => Operation<Instance, UpdateInstanceMetadata>.PollOnceFromNameAsync(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                PartialUpdateInstanceOperationsClient,
+                callSettings);
 
         /// <summary>
         /// Partially updates an instance within a project.
@@ -1437,12 +1494,33 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation PartialUpdateInstance(
+        public virtual Operation<Instance, UpdateInstanceMetadata> PartialUpdateInstance(
             PartialUpdateInstanceRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>PartialUpdateInstance</c>.
+        /// </summary>
+        public virtual OperationsClient PartialUpdateInstanceOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PartialUpdateInstance</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual Operation<Instance, UpdateInstanceMetadata> PollOncePartialUpdateInstance(
+            string operationName,
+            CallSettings callSettings = null) => Operation<Instance, UpdateInstanceMetadata>.PollOnceFromName(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                PartialUpdateInstanceOperationsClient,
+                callSettings);
 
         /// <summary>
         /// Delete an instance from a project.
@@ -2546,7 +2624,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateAppProfileAsync(
+        public virtual Task<Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
             AppProfile appProfile,
             FieldMask updateMask,
             CallSettings callSettings = null) => UpdateAppProfileAsync(
@@ -2578,7 +2656,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateAppProfileAsync(
+        public virtual Task<Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
             AppProfile appProfile,
             FieldMask updateMask,
             CancellationToken cancellationToken) => UpdateAppProfileAsync(
@@ -2607,7 +2685,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation UpdateAppProfile(
+        public virtual Operation<AppProfile, UpdateAppProfileMetadata> UpdateAppProfile(
             AppProfile appProfile,
             FieldMask updateMask,
             CallSettings callSettings = null) => UpdateAppProfile(
@@ -2635,12 +2713,25 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> UpdateAppProfileAsync(
+        public virtual Task<Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
             UpdateAppProfileRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAppProfileAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual Task<Operation<AppProfile, UpdateAppProfileMetadata>> PollOnceUpdateAppProfileAsync(
+            string operationName,
+            CallSettings callSettings = null) => Operation<AppProfile, UpdateAppProfileMetadata>.PollOnceFromNameAsync(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                UpdateAppProfileOperationsClient,
+                callSettings);
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -2659,12 +2750,33 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation UpdateAppProfile(
+        public virtual Operation<AppProfile, UpdateAppProfileMetadata> UpdateAppProfile(
             UpdateAppProfileRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>UpdateAppProfile</c>.
+        /// </summary>
+        public virtual OperationsClient UpdateAppProfileOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAppProfile</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual Operation<AppProfile, UpdateAppProfileMetadata> PollOnceUpdateAppProfile(
+            string operationName,
+            CallSettings callSettings = null) => Operation<AppProfile, UpdateAppProfileMetadata>.PollOnceFromName(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                UpdateAppProfileOperationsClient,
+                callSettings);
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
@@ -3291,10 +3403,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             CreateInstanceOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings);
+            PartialUpdateInstanceOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateInstanceOperationsSettings);
             CreateClusterOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings);
             UpdateClusterOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings);
+            UpdateAppProfileOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAppProfileOperationsSettings);
             _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, Operation>(
                 GrpcClient.CreateInstanceAsync, GrpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings);
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(
@@ -3543,12 +3659,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> PartialUpdateInstanceAsync(
+        public override async Task<Operation<Instance, UpdateInstanceMetadata>> PartialUpdateInstanceAsync(
             PartialUpdateInstanceRequest request,
             CallSettings callSettings = null)
         {
             Modify_PartialUpdateInstanceRequest(ref request, ref callSettings);
-            return _callPartialUpdateInstance.Async(request, callSettings);
+            return new Operation<Instance, UpdateInstanceMetadata>(
+                await _callPartialUpdateInstance.Async(request, callSettings).ConfigureAwait(false), PartialUpdateInstanceOperationsClient);
         }
 
         /// <summary>
@@ -3563,13 +3680,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation PartialUpdateInstance(
+        public override Operation<Instance, UpdateInstanceMetadata> PartialUpdateInstance(
             PartialUpdateInstanceRequest request,
             CallSettings callSettings = null)
         {
             Modify_PartialUpdateInstanceRequest(ref request, ref callSettings);
-            return _callPartialUpdateInstance.Sync(request, callSettings);
+            return new Operation<Instance, UpdateInstanceMetadata>(
+                _callPartialUpdateInstance.Sync(request, callSettings), PartialUpdateInstanceOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>PartialUpdateInstance</c>.
+        /// </summary>
+        public override OperationsClient PartialUpdateInstanceOperationsClient { get; }
 
         /// <summary>
         /// Delete an instance from a project.
@@ -3992,12 +4115,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> UpdateAppProfileAsync(
+        public override async Task<Operation<AppProfile, UpdateAppProfileMetadata>> UpdateAppProfileAsync(
             UpdateAppProfileRequest request,
             CallSettings callSettings = null)
         {
             Modify_UpdateAppProfileRequest(ref request, ref callSettings);
-            return _callUpdateAppProfile.Async(request, callSettings);
+            return new Operation<AppProfile, UpdateAppProfileMetadata>(
+                await _callUpdateAppProfile.Async(request, callSettings).ConfigureAwait(false), UpdateAppProfileOperationsClient);
         }
 
         /// <summary>
@@ -4017,13 +4141,19 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation UpdateAppProfile(
+        public override Operation<AppProfile, UpdateAppProfileMetadata> UpdateAppProfile(
             UpdateAppProfileRequest request,
             CallSettings callSettings = null)
         {
             Modify_UpdateAppProfileRequest(ref request, ref callSettings);
-            return _callUpdateAppProfile.Sync(request, callSettings);
+            return new Operation<AppProfile, UpdateAppProfileMetadata>(
+                _callUpdateAppProfile.Sync(request, callSettings), UpdateAppProfileOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>UpdateAppProfile</c>.
+        /// </summary>
+        public override OperationsClient UpdateAppProfileOperationsClient { get; }
 
         /// <summary>
         /// This is a private alpha release of Cloud Bigtable replication. This feature
