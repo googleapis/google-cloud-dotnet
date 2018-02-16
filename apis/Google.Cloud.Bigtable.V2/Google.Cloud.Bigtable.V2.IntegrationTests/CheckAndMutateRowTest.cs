@@ -51,16 +51,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         "row_had_no_cells")
                 });
 
-            // The emulator seems to have a bug here where PredicateMatched is
-            // false even though the trueMutations are run.
-            if (_fixture.EmulatorChannel == null)
-            {
-                Assert.True(result.PredicateMatched);
-            }
-            else
-            {
-                Assert.False(result.PredicateMatched, "The emulator bug has been fixed. Remove this special case.");
-            }
+            Assert.True(result.PredicateMatched);
             await BigtableAssert.HasValueAsync(
                 client,
                 tableName,
@@ -96,16 +87,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         "row_had_no_cells")
                 });
 
-            // The emulator seems to have a bug here where PredicateMatched is
-            // false even though the trueMutations are run.
-            if (_fixture.EmulatorChannel == null)
-            {
-                Assert.True(result.PredicateMatched);
-            }
-            else
-            {
-                Assert.False(result.PredicateMatched, "The emulator bug has been fixed. Remove this special case.");
-            }
+            Assert.True(result.PredicateMatched);
             await BigtableAssert.HasValueAsync(
                 client,
                 tableName,
