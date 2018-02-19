@@ -123,6 +123,62 @@ namespace Google.Cloud.Spanner.Data.Snippets
         }        
 
         [Fact]
+        public async Task CommitTimestampAsync()
+        {
+            await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
+            string connectionString = _fixture.ConnectionString;
+
+            // Sample: CommitTimestamp
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                string createTableStatement =
+                    @"CREATE TABLE UsersHistory (
+                        Id INT64 NOT NULL,
+                        CommitTs TIMESTAMP NOT NULL OPTIONS
+                            (allow_commit_timestamp=true),
+                        Name STRING(MAX) NOT NULL,
+                        Email STRING(MAX),
+                        Deleted BOOL NOT NULL,
+                      ) PRIMARY KEY(Id, CommitTs DESC)";
+
+                await connection.CreateDdlCommand(createTableStatement).ExecuteNonQueryAsync();
+
+                // Insert a first row
+                SpannerCommand cmd = connection.CreateInsertCommand("UsersHistory",
+                    new SpannerParameterCollection
+                    {
+                        { "Id", SpannerDbType.Int64, 10L },
+                        { "CommitTs", SpannerDbType.Timestamp, SpannerParameter.CommitTimestamp },
+                        { "Name", SpannerDbType.String, "Demo 1" },
+                        { "Deleted", SpannerDbType.Bool, false }
+                    });
+                int rowsAffected = await cmd.ExecuteNonQueryAsync();
+
+                // Insert a second row
+                cmd.Parameters["Id"].Value = 11L;
+                cmd.Parameters["Name"].Value = "Demo 2";
+                rowsAffected += await cmd.ExecuteNonQueryAsync();
+                Console.WriteLine($"{rowsAffected} rows written...");
+
+                // Display the inserted values
+                SpannerCommand selectCmd = connection.CreateSelectCommand("SELECT * FROM UsersHistory");
+                using (SpannerDataReader reader = await selectCmd.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
+                    {
+                        long id = reader.GetFieldValue<long>("Id");
+                        string name = reader.GetFieldValue<string>("Name");
+                        DateTime timestamp = reader.GetFieldValue<DateTime>("CommitTs");
+                        Console.WriteLine($"{id}: {name} - {timestamp:HH:mm:ss.ffffff}");
+                    }
+                }
+            }
+            // End sample
+        }
+
+        [Fact]
         public async Task ReadUpdateDeleteAsync()
         {
             await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
