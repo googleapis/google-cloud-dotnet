@@ -62,7 +62,14 @@ namespace Google.Cloud.Spanner.Data
         private static readonly TransactionOptions s_defaultTransactionOptions = new TransactionOptions();
         private readonly object _sync = new object();
 
-        //This value is never changed and never exposed to consumers.
+        // This object is never mutated and never exposed to consumers.
+
+        /// <summary>
+        /// The current connection string builder. The object is never mutated and never exposed to consumers.
+        /// The field itself may be changed to a new builder by setting the <see cref="ConnectionString"/>
+        /// property, or within this class via the <see cref="TrySetNewConnectionInfo(SpannerConnectionStringBuilder)"/> method.
+        /// This value may return null.
+        /// </summary>
         private SpannerConnectionStringBuilder _connectionStringBuilder;
 
         private CancellationTokenSource _keepAliveCancellation;
@@ -97,9 +104,9 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// The credential used for the connection, if set.
-        /// If credentials are not specified, then application default credentials are used instead.
-        /// See gcloud documentation on how to set up application default credentials.
+        /// The <see cref="ChannelCredentials"/> credential used to communicate with Spanner, if explicitly
+        /// set. Otherwise, this method returns null, usually indicating that default application credentials should be used.
+        /// See Google Cloud documentation for more information.
         /// </summary>
         public ChannelCredentials GetCredentials() => _connectionStringBuilder?.GetCredentials();
 
@@ -535,6 +542,11 @@ namespace Google.Cloud.Spanner.Data
 #endif
             return new EphemeralTransaction(this, Logger);
         }
+
+        /// <summary>
+        /// The current connection string builder; this may be null. Callers must not mutate the returned builder.
+        /// </summary>
+        internal SpannerConnectionStringBuilder SpannerConnectionStringBuilder => _connectionStringBuilder;
 
         internal void ReleaseSession(Session session)
         {

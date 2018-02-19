@@ -33,10 +33,15 @@ namespace Google.Cloud.Spanner.Data.Snippets
 
         public string TestInstanceName => "spannerintegration";
 
-        public string ConnectionString => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}"
-            + $"/databases/{TestDatabaseName}";
+        // Modify this to specify the host/port/credentials etc
+        // Use a leading ; before options, e.g. ";Port=12345"
+        public string ConnectionStringExtraSettings = "";
 
-        private string NoDbConnectionString => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}";
+        public string NoDbDataSource => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}";
+        public string DataSource => $"{NoDbDataSource}/databases/{TestDatabaseName}";
+
+        public string ConnectionString => $"{DataSource}{ConnectionStringExtraSettings}";
+        private string NoDbConnectionString => $"{NoDbDataSource}{ConnectionStringExtraSettings}";
 
         public string TestDatabaseName { get; } =
             "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
@@ -49,9 +54,11 @@ namespace Google.Cloud.Spanner.Data.Snippets
 
         public override void Dispose()
         {
-            var databaseAdminClient = DatabaseAdminClient.Create();
-            databaseAdminClient.DropDatabase(
-                new DatabaseName(ProjectId, TestInstanceName, TestDatabaseName));
+            using (var connection = new SpannerConnection(NoDbConnectionString))
+            {
+                var createCmd = connection.CreateDdlCommand($"DROP DATABASE {TestDatabaseName}");
+                createCmd.ExecuteNonQuery();
+            }
         }
 
         public Task EnsureTestDatabaseAsync() => _creationTask.Value;

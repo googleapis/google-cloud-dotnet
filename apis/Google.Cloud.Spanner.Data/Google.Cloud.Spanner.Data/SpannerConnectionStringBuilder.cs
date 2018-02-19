@@ -40,8 +40,8 @@ namespace Google.Cloud.Spanner.Data
         private DatabaseName _databaseName;
 
         /// <summary>
-        /// The <see cref="ChannelCredentials"/> credential used to communicate with Spanner.
-        /// If not set, then default application credentials will be used.
+        /// The <see cref="ChannelCredentials"/> credential used to communicate with Spanner, if explicitly
+        /// set. Otherwise, this method returns null, usually indicating that default application credentials should be used.
         /// Credentials can be retrieved from a file or obtained interactively.
         /// See Google Cloud documentation for more information.
         /// </summary>
