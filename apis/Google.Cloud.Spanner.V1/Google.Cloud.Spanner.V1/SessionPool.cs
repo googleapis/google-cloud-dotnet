@@ -19,7 +19,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
-using Google.Apis.Util;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Grpc.Core;
@@ -218,9 +217,9 @@ namespace Google.Cloud.Spanner.V1
             TransactionOptions options,
             CancellationToken cancellationToken)
         {
-            project.ThrowIfNullOrEmpty(nameof(project));
-            spannerInstance.ThrowIfNullOrEmpty(nameof(spannerInstance));
-            spannerDatabase.ThrowIfNullOrEmpty(nameof(spannerDatabase));
+            GaxPreconditions.CheckNotNull(project, nameof(project));
+            GaxPreconditions.CheckNotNull(spannerInstance, nameof(spannerInstance));
+            GaxPreconditions.CheckNotNull(spannerDatabase, nameof(spannerDatabase));
 
             await StartSessionCreatingAsync(cancellationToken).ConfigureAwait(false);
             Session sessionResult = null;
@@ -250,9 +249,9 @@ namespace Google.Cloud.Spanner.V1
             string spannerInstance,
             string spannerDatabase)
         {
-            project.ThrowIfNullOrEmpty(nameof(project));
-            spannerInstance.ThrowIfNullOrEmpty(nameof(spannerInstance));
-            spannerDatabase.ThrowIfNullOrEmpty(nameof(spannerDatabase));
+            GaxPreconditions.CheckNotNull(project, nameof(project));
+            GaxPreconditions.CheckNotNull(spannerInstance, nameof(spannerInstance));
+            GaxPreconditions.CheckNotNull(spannerDatabase, nameof(spannerDatabase));
             var sessionPoolKey = new SessionPoolKey(spannerClient,
                 project,
                 spannerInstance,
@@ -292,7 +291,7 @@ namespace Google.Cloud.Spanner.V1
         /// <returns></returns>
         public void ReleaseToPool(SpannerClient client, Session session)
         {
-            session.ThrowIfNull(nameof(session));
+            GaxPreconditions.CheckNotNull(session, nameof(session));
 
             SessionPoolKey poolKey;
             if (_sessionsInUse.TryRemove(session, out poolKey))
@@ -353,7 +352,7 @@ namespace Google.Cloud.Spanner.V1
         /// <returns></returns>
         public async Task CloseAsync(Session session)
         {
-            session.ThrowIfNull(nameof(session));
+            GaxPreconditions.CheckNotNull(session, nameof(session));
 
             SessionPoolKey result;
             if (_sessionsInUse.TryRemove(session, out result))

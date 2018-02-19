@@ -15,9 +15,9 @@
 using System;
 using System.Data.Common;
 using System.IO;
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
-using Google.Apis.Util;
 using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.V1;
 using Grpc.Auth;
@@ -214,7 +214,7 @@ namespace Google.Cloud.Spanner.Data
         /// </param>
         public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials = null)
         {
-            connectionString.ThrowIfNullOrEmpty(nameof(connectionString));
+            GaxPreconditions.CheckNotNullOrEmpty(connectionString, nameof(connectionString));
             CredentialOverride = credentials;
             ConnectionString = connectionString;
         }
