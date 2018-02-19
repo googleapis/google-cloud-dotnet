@@ -30,6 +30,12 @@ namespace Google.Cloud.Spanner.Data
         , ICloneable
 #endif
     {
+        /// <summary>
+        /// Returns a value that will be replaced with a commit timestamp on insert or update.
+        /// Only suitable for <see cref="SpannerDbType.Timestamp"/> values.
+        /// </summary>
+        public static object CommitTimestamp => Data.CommitTimestamp.Instance;
+
         private SpannerDbType _spannerDbType;
 
         /// <inheritdoc />

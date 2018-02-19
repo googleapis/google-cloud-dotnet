@@ -128,6 +128,12 @@ namespace Google.Cloud.Spanner.Data
                 return Value.ForNull();
             }
 
+            // If we add any other special values, we can create an interface to delegate to instead.
+            if (value is CommitTimestamp ts)
+            {
+                return ts.ToProtobufValue(this);
+            }
+
             switch (TypeCode)
             {
                 case TypeCode.Bytes:

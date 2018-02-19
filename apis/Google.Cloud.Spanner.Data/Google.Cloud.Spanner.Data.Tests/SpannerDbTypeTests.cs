@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Generic;
 using Xunit;
 
@@ -185,5 +187,20 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(result, result2);
         }
 
+        [Fact]
+        public void CommitTimestampConversion_Success()
+        {
+            var options = SpannerConversionOptions.Default;
+            var actual = SpannerDbType.Timestamp.ToProtobufValue(SpannerParameter.CommitTimestamp, options);
+            var expected = new Value { StringValue = CommitTimestamp.ProtoStringValue };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void CommitTimestampConversion_WrongType()
+        {
+            var options = SpannerConversionOptions.Default;
+            Assert.Throws<InvalidOperationException>(() => SpannerDbType.Date.ToProtobufValue(SpannerParameter.CommitTimestamp, options));
+        }
     }
 }
