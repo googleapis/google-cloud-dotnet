@@ -32,10 +32,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public string TestInstanceName => "spannerintegration";
 
-        public string ConnectionString => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}"
-            + $"/databases/{DatabaseName}";
+        // Modify this to specify the host/port/credentials etc
+        // Use a leading ; before options, e.g. ";Port=12345"
+        public string ConnectionStringExtraSettings = "";
 
-        public string NoDbConnectionString => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}";
+        public string NoDbDataSource => $"Data Source=projects/{ProjectId}/instances/{TestInstanceName}";
+        public string DataSource => $"{NoDbDataSource}/databases/{DatabaseName}";
+
+        public string ConnectionString => $"{DataSource}{ConnectionStringExtraSettings}";
+        public string NoDbConnectionString => $"{NoDbDataSource}{ConnectionStringExtraSettings}";
 
         // scratch can be used to run tests on a precreated db.
         // all tests are designed to be re-run on an exiting db (previously written state will
@@ -60,8 +65,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             using (var connection = new SpannerConnection(NoDbConnectionString))
             {
-                var dropCommand = connection.CreateDdlCommand("DROP DATABASE " + DatabaseName);
-                dropCommand.ExecuteNonQueryAsync().ResultWithUnwrappedExceptions();
+                var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {DatabaseName}");
+                dropCommand.ExecuteNonQuery();
             }
             SpannerConnection.ClearPooledResourcesAsync().WaitWithUnwrappedExceptions();
         }

@@ -41,14 +41,26 @@ namespace Google.Cloud.Spanner.Data
         {
         }
 
-        private static async Task<ChannelCredentials> CreateDefaultChannelCredentialsAsync()
+        /// <summary>
+        /// Helper to create a channel from a host, port and optional credentials.
+        /// </summary>
+        /// <param name="host">The host to connect to.</param>
+        /// <param name="port">The port to connect to.</param>
+        /// <param name="credentials">The credentials to use, or null to use application default credentials.</param>
+        /// <returns></returns>
+        internal static async Task<Channel> CreateChannelAsync(string host, int port, ChannelCredentials credentials)
         {
-            var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-            if (appDefaultCredentials.IsCreateScopedRequired)
+            if (credentials == null)
             {
-                appDefaultCredentials = appDefaultCredentials.CreateScoped(SpannerClient.DefaultScopes);
+                var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
+                if (appDefaultCredentials.IsCreateScopedRequired)
+                {
+                    appDefaultCredentials = appDefaultCredentials.CreateScoped(SpannerClient.DefaultScopes);
+                }
+                credentials = appDefaultCredentials.ToChannelCredentials();
             }
-            return appDefaultCredentials.ToChannelCredentials();
+
+            return new Channel(host, port, credentials);
         }
 
         /// <inheritdoc />
@@ -62,15 +74,7 @@ namespace Google.Cloud.Spanner.Data
                 allowImmediateTimeout = Convert.ToBoolean(additionalOptions[nameof(SpannerSettings.AllowImmediateTimeouts)]);
             }
 
-            if (credentials == null)
-            {
-                credentials = await CreateDefaultChannelCredentialsAsync().ConfigureAwait(false);
-            }
-
-            var channel = new Channel(
-                endpoint.Host,
-                endpoint.Port,
-                credentials);
+            var channel = await CreateChannelAsync(endpoint.Host, endpoint.Port, credentials).ConfigureAwait(false);
             logger.LogPerformanceCounterFn("SpannerClient.RawCreateCount", x => x + 1);
 
             //Pull the timeout from spanner options.

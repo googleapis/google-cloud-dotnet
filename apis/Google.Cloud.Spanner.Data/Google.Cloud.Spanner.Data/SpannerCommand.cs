@@ -85,10 +85,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="connection">The <see cref="SpannerConnection"/> that is
         /// associated with this <see cref="SpannerCommand"/>. Must not be null.</param>
         /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
-        /// created through <see>
-        /// <cref>SpannerConnection.BeginTransactionAsync</cref>
-        /// </see>
-        /// </param>. May be null.
+        /// created through <see cref="SpannerConnection.BeginTransactionAsync" />. May be null.</param>
         /// <param name="parameters">An optional collection of <see cref="SpannerParameter"/>
         /// that is used in the command. May be null.</param>
         public SpannerCommand(
@@ -334,9 +331,14 @@ namespace Google.Cloud.Spanner.Data
             string commandText,
             CancellationToken cancellationToken)
         {
-            var databaseAdminClient = await DatabaseAdminClient.CreateAsync().ConfigureAwait(false);
+            var builder = spannerConnection.SpannerConnectionStringBuilder;
+            var channel = await SpannerClientFactory.CreateChannelAsync(
+                builder?.Host ?? DatabaseAdminClient.DefaultEndpoint.Host,
+                builder?.Port ?? DatabaseAdminClient.DefaultEndpoint.Port,
+                builder?.GetCredentials()).ConfigureAwait(false);
             try
             {
+                var databaseAdminClient = DatabaseAdminClient.Create(channel);
                 if (spannerCommandTextBuilder.IsCreateDatabaseCommand)
                 {
                     var parent = new InstanceName(spannerConnection.Project, spannerConnection.SpannerInstance);
@@ -394,6 +396,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 //we translate rpc errors into a spanner exception
                 throw new SpannerException(gRpcException);
+            }
+            finally
+            {
+                await channel.ShutdownAsync().ConfigureAwait(false);
             }
 
             return 0;
