@@ -44,9 +44,9 @@ namespace Google.Cloud.Firestore.Snippets
             DocumentSnapshot snapshot = await document.SnapshotAsync();
 
             // We can access individual fields by dot-separated path
-            Console.WriteLine(snapshot.GetField<string>("Name.First"));
-            Console.WriteLine(snapshot.GetField<string>("Name.Last"));
-            Console.WriteLine(snapshot.GetField<int>("Born"));
+            Console.WriteLine(snapshot.GetValue<string>("Name.First"));
+            Console.WriteLine(snapshot.GetValue<string>("Name.Last"));
+            Console.WriteLine(snapshot.GetValue<int>("Born"));
 
             // Or deserialize the whole document into a dictionary
             Dictionary<string, object> data = snapshot.ToDictionary();
@@ -61,9 +61,9 @@ namespace Google.Cloud.Firestore.Snippets
             QuerySnapshot querySnapshot = await query.SnapshotAsync();
             foreach (DocumentSnapshot queryResult in querySnapshot.Documents)
             {
-                string firstName = queryResult.GetField<string>("Name.First");
-                string lastName = queryResult.GetField<string>("Name.Last");
-                int born = queryResult.GetField<int>("Born");
+                string firstName = queryResult.GetValue<string>("Name.First");
+                string lastName = queryResult.GetValue<string>("Name.Last");
+                int born = queryResult.GetValue<int>("Born");
                 Console.WriteLine($"{firstName} {lastName}; born {born}");
             }
             // End sample

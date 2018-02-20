@@ -61,7 +61,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var snapshot = await query.SnapshotAsync();
 
             // Check that we got the documents we expected
-            var names = snapshot.Documents.Select(doc => doc.GetField<string>("Name")).OrderBy(x => x, StringComparer.Ordinal);
+            var names = snapshot.Documents.Select(doc => doc.GetValue<string>("Name")).OrderBy(x => x, StringComparer.Ordinal);
             Assert.Equal(HighScore.Data.Select(x => x.Name), names);
 
             // Check that the ordering is actually by document reference

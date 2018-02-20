@@ -33,7 +33,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var doc = await _fixture.NonQueryCollection.AddAsync(new { Timestamp = new Timestamp(100, 123456789) });
             var snapshot = await doc.SnapshotAsync();
 
-            var storedData = snapshot.GetField<Timestamp>("Timestamp");
+            var storedData = snapshot.GetValue<Timestamp>("Timestamp");
             Assert.Equal(new Timestamp(100, 123456000), storedData);
         }
     }

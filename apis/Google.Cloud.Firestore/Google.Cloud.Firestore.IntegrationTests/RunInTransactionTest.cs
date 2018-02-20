@@ -66,7 +66,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             // We only had two increment transactions, but one needed to retry
             Assert.Equal(3, attempts);
             var result = await doc.SnapshotAsync();
-            Assert.Equal(2, result.GetField<int>("Count"));
+            Assert.Equal(2, result.GetValue<int>("Count"));
 
             async Task IncrementCounter(Transaction transaction)
             {
@@ -82,7 +82,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 {
                     throw new TimeoutException();
                 }
-                transaction.Set(doc, new { Count = snapshot.GetField<int>("Count") + 1 });
+                transaction.Set(doc, new { Count = snapshot.GetValue<int>("Count") + 1 });
             }
         }
 
@@ -107,7 +107,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
             Assert.Equal(2, attempts);
             var result = await doc.SnapshotAsync();
-            Assert.Equal(1, result.GetField<int>("Count"));
+            Assert.Equal(1, result.GetValue<int>("Count"));
 
             async Task IncrementCounter(Transaction transaction)
             {
@@ -123,7 +123,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 {
                     throw new TimeoutException();
                 }
-                transaction.Set(doc, new { Count = snapshot.GetField<int>("Count") + 1 });
+                transaction.Set(doc, new { Count = snapshot.GetValue<int>("Count") + 1 });
             }
         }
     }

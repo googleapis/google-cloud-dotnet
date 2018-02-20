@@ -125,7 +125,7 @@ namespace Google.Cloud.Firestore.Snippets
 
             // Fetch the latest document and print the population
             DocumentSnapshot snapshot = await document.SnapshotAsync();
-            Console.WriteLine(snapshot.GetField<long>("Population")); // 3900005
+            Console.WriteLine(snapshot.GetValue<long>("Population")); // 3900005
             // End sample
         }
 

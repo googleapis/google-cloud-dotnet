@@ -38,10 +38,10 @@ namespace Google.Cloud.Firestore.Tests
             Assert.False(document.Exists);
             Assert.Null(document.ToDictionary());
             Assert.Null(document.ConvertTo<SampleData>());
-            Assert.Throws<InvalidOperationException>(() => document.GetField<string>("name"));
-            Assert.Throws<InvalidOperationException>(() => document.GetField<string>(new FieldPath("name")));
-            Assert.False(document.TryGetField("name", out string name1));
-            Assert.False(document.TryGetField(new FieldPath("name"), out string name2));
+            Assert.Throws<InvalidOperationException>(() => document.GetValue<string>("name"));
+            Assert.Throws<InvalidOperationException>(() => document.GetValue<string>(new FieldPath("name")));
+            Assert.False(document.TryGetValue("name", out string name1));
+            Assert.False(document.TryGetValue(new FieldPath("name"), out string name2));
         }
 
         [Fact]
@@ -88,39 +88,39 @@ namespace Google.Cloud.Firestore.Tests
         // string overloads just call FieldPath overloads, so we just test with strings
 
         [Fact]
-        public void GetField()
+        public void GetValue()
         {
             var doc = GetSampleSnapshot();
-            Assert.Equal("Test", doc.GetField<string>("Name"));
-            Assert.Equal(20, doc.GetField<int>("Nested.Score"));
-            Assert.Null(doc.GetField<string>("NullField"));
+            Assert.Equal("Test", doc.GetValue<string>("Name"));
+            Assert.Equal(20, doc.GetValue<int>("Nested.Score"));
+            Assert.Null(doc.GetValue<string>("NullField"));
         }
 
         [Fact]
-        public void TryGetField()
+        public void TryGetValue()
         {
             var doc = GetSampleSnapshot();
-            Assert.True(doc.TryGetField("Name", out string name));
-            Assert.True(doc.TryGetField("Nested.Score", out int score));
-            Assert.True(doc.TryGetField("NullField", out string shouldBeNull));
+            Assert.True(doc.TryGetValue("Name", out string name));
+            Assert.True(doc.TryGetValue("Nested.Score", out int score));
+            Assert.True(doc.TryGetValue("NullField", out string shouldBeNull));
             Assert.Equal("Test", name);
             Assert.Equal(20, score);
             Assert.Null(shouldBeNull);
-            Assert.False(doc.TryGetField("Foo", out string foo));
-            Assert.False(doc.TryGetField("Nested.Foo", out string nestedFoo));
+            Assert.False(doc.TryGetValue("Foo", out string foo));
+            Assert.False(doc.TryGetValue("Nested.Foo", out string nestedFoo));
         }
 
         [Fact]
-        public void Contains()
+        public void ContainsField()
         {
             var doc = GetSampleSnapshot();
-            Assert.True(doc.Contains("Name"));
-            Assert.True(doc.Contains("Nested"));
-            Assert.True(doc.Contains("Nested.Score"));
-            Assert.True(doc.Contains("NullField"));
-            Assert.False(doc.Contains("Missing"));
-            Assert.False(doc.Contains("Nested.Missing"));
-            Assert.False(doc.Contains("Nested.Score.Missing"));
+            Assert.True(doc.ContainsField("Name"));
+            Assert.True(doc.ContainsField("Nested"));
+            Assert.True(doc.ContainsField("Nested.Score"));
+            Assert.True(doc.ContainsField("NullField"));
+            Assert.False(doc.ContainsField("Missing"));
+            Assert.False(doc.ContainsField("Nested.Missing"));
+            Assert.False(doc.ContainsField("Nested.Score.Missing"));
         }
 
         private static DocumentSnapshot GetSampleSnapshot()

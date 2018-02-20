@@ -45,7 +45,7 @@ namespace Google.Cloud.Firestore.Tests
 
             var doc = db.Document("col/doc");
             var snapshot = await transaction.GetDocumentSnapshotAsync(doc);
-            Assert.Equal("transaction 1", snapshot.GetField<string>("transaction"));
+            Assert.Equal("transaction 1", snapshot.GetValue<string>("transaction"));
             var query = await transaction.GetQuerySnapshotAsync(db.Collection("col"));
             Assert.Empty(query.Documents);
 

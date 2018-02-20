@@ -77,9 +77,9 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 { new FieldPath("Timestamp"), SentinelValue.ServerTimestamp }
             });
             var snapshot = await doc.SnapshotAsync();
-            Assert.Equal("Original", snapshot.GetField<string>("Name"));
-            Assert.False(snapshot.Contains("DeleteMe"));
-            var timestamp = snapshot.GetField<Timestamp>("Timestamp");
+            Assert.Equal("Original", snapshot.GetValue<string>("Name"));
+            Assert.False(snapshot.ContainsField("DeleteMe"));
+            var timestamp = snapshot.GetValue<Timestamp>("Timestamp");
             // Assume the machine we're running tests on isn't more than 5 minutes out of sync with the server.
             // If we're getting "roughly the right time" then that must have come from the server.
             var absDifferenceMinutes = Math.Abs((timestamp.ToDateTime() - DateTime.UtcNow).TotalMinutes);

@@ -183,7 +183,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new Timestamp(0, 2), snapshot2.UpdateTime);
             Assert.Equal(new Timestamp(1, 3), snapshot2.ReadTime);
             Assert.Equal(docRef2, snapshot2.Reference);
-            Assert.Equal("Test", snapshot2.GetField<string>("Name"));
+            Assert.Equal("Test", snapshot2.GetValue<string>("Name"));
 
             // The third result element is just a reference to the same snapshot.
             Assert.Same(results[1], results[2]);
@@ -260,7 +260,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new Timestamp(0, 2), snapshot2.UpdateTime);
             Assert.Equal(new Timestamp(1, 3), snapshot2.ReadTime);
             Assert.Equal(docRef2, snapshot2.Reference);
-            Assert.Equal("Test", snapshot2.GetField<string>("Name"));
+            Assert.Equal("Test", snapshot2.GetValue<string>("Name"));
             mock.VerifyAll();
         }
 
