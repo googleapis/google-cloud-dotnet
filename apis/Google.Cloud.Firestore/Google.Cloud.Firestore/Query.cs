@@ -383,9 +383,9 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>A snapshot of documents matching the query.</returns>
-        public Task<QuerySnapshot> SnapshotAsync(CancellationToken cancellationToken = default) => SnapshotAsync(null, cancellationToken);
+        public Task<QuerySnapshot> GetSnapshotAsync(CancellationToken cancellationToken = default) => GetSnapshotAsync(null, cancellationToken);
 
-        internal async Task<QuerySnapshot> SnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
+        internal async Task<QuerySnapshot> GetSnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
             var responses = StreamResponsesAsync(transactionId, cancellationToken);
             Timestamp? readTime = null;
