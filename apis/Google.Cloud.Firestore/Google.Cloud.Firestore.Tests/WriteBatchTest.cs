@@ -30,7 +30,7 @@ namespace Google.Cloud.Firestore.Tests
         public void Create()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             batch.Create(doc, new { Name = "Test", Score = 20 });
 
@@ -54,7 +54,7 @@ namespace Google.Cloud.Firestore.Tests
         public void Delete_NoPrecondition()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             batch.Delete(doc);
 
@@ -66,7 +66,7 @@ namespace Google.Cloud.Firestore.Tests
         public void Delete_WithPrecondition()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             batch.Delete(doc, Precondition.LastUpdated(new Timestamp(1 ,2)));
 
@@ -82,7 +82,7 @@ namespace Google.Cloud.Firestore.Tests
         public void Update()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             var updates = new Dictionary<FieldPath, object>
             {
@@ -113,7 +113,7 @@ namespace Google.Cloud.Firestore.Tests
         public void Update_WithPrecondition()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             var updates = new Dictionary<FieldPath, object>
             {
@@ -142,7 +142,7 @@ namespace Google.Cloud.Firestore.Tests
         {
             var options = explicitOptions ? SetOptions.Overwrite : null;
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             var data = new { Name = "Test", Nested = new { Value1 = 10, Value2 = 20 }, Score = 30 };
             batch.Set(doc, data, options);
@@ -168,7 +168,7 @@ namespace Google.Cloud.Firestore.Tests
         public void Set_MergeAll()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             var data = new { Name = "Test", Nested = new { Value1 = 10, Value2 = 20 }, Score = 30 };
             batch.Set(doc, data, SetOptions.MergeAll);
@@ -194,7 +194,7 @@ namespace Google.Cloud.Firestore.Tests
         public void Set_MergeFields()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             var data = new { Name = "Test", Nested = new { Value1 = 10, Value2 = 20 }, Score = 30 };
             batch.Set(doc, data, SetOptions.MergeFields("Name", "Nested.Value2"));
@@ -250,7 +250,7 @@ namespace Google.Cloud.Firestore.Tests
             mock.Setup(c => c.CommitAsync(request, It.IsAny<CallSettings>())).ReturnsAsync(response);
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var reference = db.Document("col/doc");
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             batch.Elements.AddRange(new[]
             {
                 new WriteBatch.BatchElement(write1, true),
@@ -269,7 +269,7 @@ namespace Google.Cloud.Firestore.Tests
         public void IsEmpty()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             Assert.True(batch.IsEmpty);
             batch.Create(db.Document("col/doc"), new { Name = "Test" });
             Assert.False(batch.IsEmpty);

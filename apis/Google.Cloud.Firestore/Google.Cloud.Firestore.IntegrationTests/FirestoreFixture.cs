@@ -65,7 +65,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
         private async Task PopulateCollection(CollectionReference collection, IEnumerable<object> documents)
         {
-            var batch = FirestoreDb.CreateWriteBatch();
+            var batch = FirestoreDb.StartBatch();
             foreach (var doc in documents)
             {
                 batch.Create(collection.Document(), doc);

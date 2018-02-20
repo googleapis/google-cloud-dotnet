@@ -143,7 +143,7 @@ namespace Google.Cloud.Firestore
         /// Creates a write batch, which can be used to commit multiple mutations atomically.
         /// </summary>
         /// <returns>A write batch for this database.</returns>
-        public WriteBatch CreateWriteBatch() => new WriteBatch(this);
+        public WriteBatch StartBatch() => new WriteBatch(this);
 
         internal DocumentReference GetDocumentReferenceFromResourceName(string referenceValue)
         {
