@@ -68,7 +68,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var batch = FirestoreDb.CreateWriteBatch();
             foreach (var doc in documents)
             {
-                batch.Create(collection.GenerateDocument(), doc);
+                batch.Create(collection.Document(), doc);
             }
             await batch.CommitAsync();
         }

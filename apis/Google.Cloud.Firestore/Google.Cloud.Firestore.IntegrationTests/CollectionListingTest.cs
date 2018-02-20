@@ -35,8 +35,8 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var collection1 = _fixture.CreateUniqueCollection();
             var collection2 = _fixture.CreateUniqueCollection();
             var batch = db.CreateWriteBatch();
-            batch.Create(collection1.GenerateDocument(), new { Name = "doc1" });
-            batch.Create(collection2.GenerateDocument(), new { Name = "doc2" });
+            batch.Create(collection1.Document(), new { Name = "doc1" });
+            batch.Create(collection2.Document(), new { Name = "doc2" });
             await batch.CommitAsync();
 
             var rootCollections = await db.ListRootCollectionsAsync().ToList();
@@ -47,7 +47,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         [Fact]
         public async Task ListCollectionsAsync()
         {
-            var doc = _fixture.NonQueryCollection.GenerateDocument();
+            var doc = _fixture.NonQueryCollection.Document();
             var col1 = doc.Collection("col1");
             var col2 = doc.Collection("col2");
             // Put documents in the collections to force them to exist.
