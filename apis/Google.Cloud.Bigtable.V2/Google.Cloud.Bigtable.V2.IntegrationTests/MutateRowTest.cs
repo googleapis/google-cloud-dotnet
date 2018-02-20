@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Protobuf;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -281,6 +282,44 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 Mutations.DeleteFromRow());
 
             await BigtableAssert.HasNoValuesAsync(client, tableName, rowKey);
+        }
+
+        [Fact]
+        public void NonIdempotentRequestDisallowed()
+        {
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
+            BigtableByteString rowKey = Guid.NewGuid().ToString();
+
+            Assert.Throws<InvalidOperationException>(() =>
+                client.MutateRow(
+                    tableName,
+                    rowKey,
+                    new Mutation
+                    {
+                        SetCell = new Mutation.Types.SetCell
+                        {
+                            FamilyName = BigtableFixture.DefaultColumnFamily,
+                            ColumnQualifier = ByteString.CopyFromUtf8("column_name"),
+                            Value = ByteString.CopyFromUtf8("test12345"),
+                            TimestampMicros = -1
+                        }
+                    }));
+
+            // Also just verify we allow the same call which is idempotent instead (has TimestampMicros).
+            client.MutateRow(
+                tableName,
+                rowKey,
+                new Mutation
+                {
+                    SetCell = new Mutation.Types.SetCell
+                    {
+                        FamilyName = BigtableFixture.DefaultColumnFamily,
+                        ColumnQualifier = ByteString.CopyFromUtf8("column_name"),
+                        Value = ByteString.CopyFromUtf8("test12345"),
+                        TimestampMicros = 1000
+                    }
+                });
         }
     }
 }
