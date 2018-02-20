@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Protobuf;
 using Google.Rpc;
 using System;
 using System.Linq;
@@ -240,6 +241,47 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 "column_name3",
                 "valueABC",
                 new BigtableVersion(3));
+        }
+
+        [Fact]
+        public async Task NonIdempotentRequestDisallowed()
+        {
+            var tableName = _fixture.TableName;
+            var client = _fixture.TableClient;
+            BigtableByteString rowKey = Guid.NewGuid().ToString();
+
+            Assert.Throws<InvalidOperationException>(() =>
+                client.MutateRows(
+                    tableName,
+                    Mutations.CreateEntry(
+                        rowKey,
+                        new Mutation
+                        {
+                            SetCell = new Mutation.Types.SetCell
+                            {
+                                FamilyName = BigtableFixture.DefaultColumnFamily,
+                                ColumnQualifier = ByteString.CopyFromUtf8("column_name"),
+                                Value = ByteString.CopyFromUtf8("test12345"),
+                                TimestampMicros = -1
+                            }
+                        })));
+
+            // Also just verify we allow the same call which is idempotent instead (has TimestampMicros).
+            var stream = client.MutateRows(
+                tableName,
+                Mutations.CreateEntry(
+                    rowKey,
+                    new Mutation
+                    {
+                        SetCell = new Mutation.Types.SetCell
+                        {
+                            FamilyName = BigtableFixture.DefaultColumnFamily,
+                            ColumnQualifier = ByteString.CopyFromUtf8("column_name"),
+                            Value = ByteString.CopyFromUtf8("test12345"),
+                            TimestampMicros = 1000
+                        }
+                    }));
+            await stream.GetResponseEntries();
         }
     }
 }
