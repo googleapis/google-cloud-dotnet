@@ -24,6 +24,14 @@ using Xunit;
 using System.Transactions;
 #endif
 
+// All samples now use a connection string variable declared before the start of the snippet.
+// There are pros and cons for this:
+// - Pro: The tests still run correctly when the fixture specifies extra configuration, e.g. credentials or host
+// - Pro: The code is shorter (as connection string building can be verbose, particularly when already indented)
+// - Con: There are fewer examples of building a connection string
+// - Unsure: Arguably a connection string should be built elsewhere and reused, rather than appearing in the
+//           code that creates a SpannerConnection. We need to see what actual usage tends towards.
+
 namespace Google.Cloud.Spanner.Data.Snippets
 {
     [SnippetOutputCollector]
@@ -31,17 +39,8 @@ namespace Google.Cloud.Spanner.Data.Snippets
     public class SpannerConnectionSnippets
     {
         private readonly SnippetFixture _fixture;
-        private string _projectId;
-        private string _instanceName;
-        private string _databaseName;
 
-        public SpannerConnectionSnippets(SnippetFixture fixture)
-        {
-            _fixture = fixture;
-            _projectId = _fixture.ProjectId;
-            _instanceName = _fixture.TestInstanceName;
-            _databaseName = _fixture.TestDatabaseName;
-        }
+        public SpannerConnectionSnippets(SnippetFixture fixture) => _fixture = fixture;
 
         [Fact]
         public void CreateConnection()
@@ -62,16 +61,14 @@ namespace Google.Cloud.Spanner.Data.Snippets
         [Fact]
         public async Task CreateDatabaseAsync()
         {
-            // CreateDatabaseAsync will create a new database and dispose of it right after.
-            // But for consistency sake, we want to show the same variables in the snippets.
-            _databaseName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+            string databaseName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+            string connectionString = $"{_fixture.NoDbDataSource}/databases/{databaseName}{_fixture.ConnectionStringExtraSettings}";
 
             // Sample: CreateDatabaseAsync
             // Additional: CreateDdlCommand
-            using (var connection =
-                new SpannerConnection($"Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}"))
+            using (var connection = new SpannerConnection(connectionString))
             {
-                var createDbCmd = connection.CreateDdlCommand($"CREATE DATABASE {_databaseName}");
+                var createDbCmd = connection.CreateDdlCommand($"CREATE DATABASE {databaseName}");
                 await createDbCmd.ExecuteNonQueryAsync();
 
                 var createTableCmd = connection.CreateDdlCommand(
@@ -84,10 +81,9 @@ namespace Google.Cloud.Spanner.Data.Snippets
             }
             // End sample
 
-            using (var connection =
-                new SpannerConnection($"Data Source=projects/{_projectId}/instances/{_instanceName}"))
+            using (var connection = new SpannerConnection(connectionString))
             {
-                var createDbCmd = connection.CreateDdlCommand($"DROP DATABASE {_databaseName}");
+                var createDbCmd = connection.CreateDdlCommand($"DROP DATABASE {databaseName}");
                 await createDbCmd.ExecuteNonQueryAsync();
             }
         }
@@ -96,10 +92,10 @@ namespace Google.Cloud.Spanner.Data.Snippets
         public async Task InsertDataAsync()
         {
             await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
+            string connectionString = _fixture.ConnectionString;
 
             // Sample: InsertDataAsync
-            using (var connection = new SpannerConnection(
-                $"Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}"))
+            using (var connection = new SpannerConnection(connectionString))
             {
                 await connection.OpenAsync();
 
@@ -122,19 +118,19 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 }
             }
             // End sample
-        }
+        }        
 
         [Fact]
         public async Task ReadUpdateDeleteAsync()
         {
             await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
+            string connectionString = _fixture.ConnectionString;
 
             // Sample: ReadUpdateDeleteAsync
             // Additional: CreateUpdateCommand
             // Additional: CreateDeleteCommand
             // Additional: CreateSelectCommand
-            using (var connection = new SpannerConnection(
-                $"Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}"))
+            using (var connection = new SpannerConnection(connectionString))
             {
                 await connection.OpenAsync();
 
@@ -182,6 +178,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         public async Task TransactionAsync()
         {
             await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
+            string connectionString = _fixture.ConnectionString;
 
             // Sample: TransactionAsync
             // Additional: BeginTransactionAsync
@@ -190,9 +187,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
             await retryPolicy.ExecuteAsync(
                 async () =>
                 {
-                    using (var connection =
-                        new SpannerConnection(
-                            $"Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}"))
+                    using (var connection = new SpannerConnection(connectionString))
                     {
                         await connection.OpenAsync();
 
@@ -209,7 +204,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
 
                             // This executes a single transactions with alls row written at once during CommitAsync().
                             // If a transient fault occurs, this entire method is re-run.
-                            for (var i = 0; i < 5; i++)
+                            for (int i = 0; i < 5; i++)
                             {
                                 cmd.Parameters["Key"].Value = Guid.NewGuid().ToString("N");
                                 cmd.Parameters["StringValue"].Value = $"StringValue{i}";
@@ -229,6 +224,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         public async Task TransactionScopeAsync()
         {
             await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
+            string connectionString = _fixture.ConnectionString;
 
             // Sample: TransactionScopeAsync
             // Additional: CreateInsertCommand
@@ -239,9 +235,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 {
                     using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                     {
-                        using (var connection =
-                            new SpannerConnection(
-                                $"Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}"))
+                        using (var connection = new SpannerConnection(connectionString))
                         {
                             await connection.OpenAsync();
 
@@ -274,11 +268,10 @@ namespace Google.Cloud.Spanner.Data.Snippets
         public async Task DataAdapterAsync()
         {
             await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
+            string connectionString = _fixture.ConnectionString;
 
             // Sample: DataAdapterAsync
-            using (var connection =
-                new SpannerConnection(
-                    $"Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}"))
+            using (var connection = new SpannerConnection(connectionString))
             {
                 var untypedDataSet = new DataSet();
 
