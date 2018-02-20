@@ -382,7 +382,7 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public async Task SnapshotAsync_NoDocuments()
+        public async Task GetSnapshotAsync_NoDocuments()
         {
             var mock = new Mock<FirestoreClient> { CallBase = true };
             var request = new RunQueryRequest
@@ -401,7 +401,7 @@ namespace Google.Cloud.Firestore.Tests
             mock.Setup(c => c.RunQuery(request, It.IsAny<CallSettings>())).Returns(new FakeQueryStream(responses));
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var query = db.Collection("col").Select("Name");
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             Assert.Empty(snapshot.Documents);
             Assert.Same(query, snapshot.Query);
             Assert.Equal(new Timestamp(1, 2), snapshot.ReadTime);
@@ -410,7 +410,7 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public async Task SnapshotAsync_WithDocuments()
+        public async Task GetSnapshotAsync_WithDocuments()
         {
             var mock = new Mock<FirestoreClient> { CallBase = true };
             var request = new RunQueryRequest
@@ -452,7 +452,7 @@ namespace Google.Cloud.Firestore.Tests
             mock.Setup(c => c.RunQuery(request, It.IsAny<CallSettings>())).Returns(new FakeQueryStream(responses));
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var query = db.Collection("col").Select("Name").Offset(3);
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             Assert.Equal(2, snapshot.Documents.Count);
             Assert.Same(query, snapshot.Query);
             Assert.Equal(new Timestamp(1, 2), snapshot.ReadTime); // From first document
@@ -474,7 +474,7 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public async Task SnapshotAsync_NoResponses()
+        public async Task GetSnapshotAsync_NoResponses()
         {
             var mock = new Mock<FirestoreClient> { CallBase = true };
             var request = new RunQueryRequest
@@ -491,7 +491,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var query = db.Collection("col").Select("Name");
             // This shouldn't happen, of course - but let's check that we do what we expect.
-            await Assert.ThrowsAsync<InvalidOperationException>(() => query.SnapshotAsync());
+            await Assert.ThrowsAsync<InvalidOperationException>(() => query.GetSnapshotAsync());
             mock.VerifyAll();
         }
 

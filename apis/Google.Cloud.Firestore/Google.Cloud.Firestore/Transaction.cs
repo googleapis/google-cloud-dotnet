@@ -113,7 +113,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(query, nameof(query));
             CancellationToken effectiveToken = GetEffectiveCancellationToken(cancellationToken);
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            return query.SnapshotAsync(TransactionId, cancellationToken);
+            return query.GetSnapshotAsync(TransactionId, cancellationToken);
         }
 
         /// <summary>

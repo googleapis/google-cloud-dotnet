@@ -31,7 +31,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task EmptyQuery()
         {
             var query = _fixture.HighScoreCollection;
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data, items.OrderBy(x => x.Name, StringComparer.Ordinal));
         }
@@ -40,7 +40,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task WhereGreaterThan()
         {
             var query = _fixture.HighScoreCollection.Where("Score", QueryOperator.GreaterThan, 100);
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Score > 100), items.OrderBy(x => x.Name, StringComparer.Ordinal));
         }
@@ -49,7 +49,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task OrderBy()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level");
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Level), items);
         }
@@ -58,7 +58,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task OrderByDocumentId()
         {
             var query = _fixture.HighScoreCollection.Select("Name").OrderBy(FieldPath.DocumentId);
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
 
             // Check that we got the documents we expected
             var names = snapshot.Documents.Select(doc => doc.GetValue<string>("Name")).OrderBy(x => x, StringComparer.Ordinal);
@@ -74,7 +74,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task OrderBySecondaryAscending()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Score").OrderBy("Level");
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Score).ThenBy(x => x.Level), items);
         }
@@ -83,7 +83,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task OrderBySecondaryDescending()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Score").OrderByDescending("Level");
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Score).ThenByDescending(x => x.Level), items);
         }
@@ -92,7 +92,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task Select()
         {
             var query = _fixture.HighScoreCollection.Select("Name", "Score");
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(
                 // Create the equivalent results by creating new objects
@@ -104,7 +104,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task SelectDocumentId()
         {
             var query = _fixture.HighScoreCollection.Select(FieldPath.DocumentId);
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
 
             Assert.Equal(snapshot.Documents.Count, HighScore.Data.Length);
 
@@ -116,7 +116,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task Limit()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").Limit(3);
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Level).Take(3), items);
         }
@@ -125,7 +125,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task Offset()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").Offset(2);
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Level).Skip(2), items);
         }
@@ -134,7 +134,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task StartAt()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").StartAt(20);
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Level >= 20).OrderBy(x => x.Score), items);
         }
@@ -143,7 +143,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task StartAfter()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").StartAfter(20);
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Level > 20).OrderBy(x => x.Level), items);
         }
@@ -152,7 +152,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task EndAt()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").EndAt(20);
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Level <= 20).OrderBy(x => x.Level), items);
         }
@@ -161,7 +161,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task EndBefore()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").EndBefore(20);
-            var snapshot = await query.SnapshotAsync();
+            var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Level < 20).OrderBy(x => x.Level), items);
         }

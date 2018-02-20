@@ -363,7 +363,7 @@ namespace Google.Cloud.Firestore.Snippets
             CollectionReference collection = db.Collection("cities");
 
             // A CollectionReference is a Query, so we can just fetch everything
-            QuerySnapshot allCities = await collection.SnapshotAsync();
+            QuerySnapshot allCities = await collection.GetSnapshotAsync();
             foreach (DocumentSnapshot document in allCities.Documents)
             {
                 // Do anything you'd normally do with a DocumentSnapshot
@@ -376,7 +376,7 @@ namespace Google.Cloud.Firestore.Snippets
                 .Where("Population", QueryOperator.GreaterThan, 3000000)
                 .OrderByDescending("Population");
 
-            QuerySnapshot bigCities = await bigCitiesQuery.SnapshotAsync();
+            QuerySnapshot bigCities = await bigCitiesQuery.GetSnapshotAsync();
             foreach (DocumentSnapshot document in bigCities.Documents)
             {
                 // Do anything you'd normally do with a DocumentSnapshot
