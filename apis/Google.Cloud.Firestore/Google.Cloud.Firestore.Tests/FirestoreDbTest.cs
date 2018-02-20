@@ -135,7 +135,7 @@ namespace Google.Cloud.Firestore.Tests
 
         // Use the overload accepting a transaction for this test
         [Fact]
-        public async Task SnapshotAllAsync()
+        public async Task GetAllSnapshotsAsync()
         {
             string docName1 = "projects/proj/databases/db/documents/col1/doc1";
             string docName2 = "projects/proj/databases/db/documents/col2/doc2";
@@ -167,7 +167,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var docRef1 = db.Document("col1/doc1");
             var docRef2 = db.Document("col2/doc2");
-            var results = await db.SnapshotAllAsync(new[] { docRef1, docRef2, docRef2 }, transaction, default);
+            var results = await db.GetAllSnapshotsAsync(new[] { docRef1, docRef2, docRef2 }, transaction, default);
 
             Assert.Equal(3, results.Count);
             // Note that this is the first result from the request, not the first from the response -
@@ -192,7 +192,7 @@ namespace Google.Cloud.Firestore.Tests
 
         // Use the overload that doesn't accept a transaction for this test, just for coverage
         [Fact]
-        public async Task SnapshotAllAsync_ServerError()
+        public async Task GetAllSnapshotsAsync_ServerError()
         {
             string docName1 = "projects/proj/databases/db/documents/col1/doc1";
             string docName2 = "projects/proj/databases/db/documents/col2/doc2";
@@ -212,7 +212,7 @@ namespace Google.Cloud.Firestore.Tests
             var docRef1 = db.Document("col1/doc1");
             var docRef2 = db.Document("col2/doc2");
 
-            await Assert.ThrowsAsync<InvalidOperationException>(async () => await db.SnapshotAllAsync(new[] { docRef1, docRef2 }));
+            await Assert.ThrowsAsync<InvalidOperationException>(async () => await db.GetAllSnapshotsAsync(new[] { docRef1, docRef2 }));
             mock.VerifyAll();
         }
 

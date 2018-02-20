@@ -166,10 +166,10 @@ namespace Google.Cloud.Firestore
         /// <param name="documents">The document references to fetch. Must not be null, or contain null references.</param>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>The document snapshots, in the same order as <paramref name="documents"/>.</returns>
-        public Task<IList<DocumentSnapshot>> SnapshotAllAsync(IEnumerable<DocumentReference> documents, CancellationToken cancellationToken = default) =>
-            SnapshotAllAsync(documents, null, cancellationToken);
+        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documents, CancellationToken cancellationToken = default) =>
+            GetAllSnapshotsAsync(documents, null, cancellationToken);
 
-        internal async Task<IList<DocumentSnapshot>> SnapshotAllAsync(IEnumerable<DocumentReference> documents, ByteString transactionId, CancellationToken cancellationToken)
+        internal async Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documents, ByteString transactionId, CancellationToken cancellationToken)
         {
             // Check for null here, but let the underlying method check for null elements.
             // We're just trying to make sure we don't evaluate it differently later.
