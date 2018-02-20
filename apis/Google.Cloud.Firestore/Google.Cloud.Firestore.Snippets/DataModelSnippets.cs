@@ -70,7 +70,7 @@ namespace Google.Cloud.Firestore.Snippets
 
             // Fetch the data back from the server and deserialize it.
             DocumentSnapshot snapshot = await document.SnapshotAsync();
-            City citySnapshot = snapshot.Deserialize<City>();
+            City citySnapshot = snapshot.ConvertTo<City>();
             Console.WriteLine(citySnapshot.Name); // Los Angeles
             // End sample
         }

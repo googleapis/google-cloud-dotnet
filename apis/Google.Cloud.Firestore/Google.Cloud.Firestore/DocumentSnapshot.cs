@@ -85,14 +85,14 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <exception cref="InvalidOperationException">This snapshot represents a missing document, i.e. <see cref="Exists"/> is false.</exception>
         /// <returns>A <see cref="Dictionary{String, Object}"/> containing the document data, or null if this object represents a missing document.</returns>
-        public Dictionary<string, object> ToDictionary() => Deserialize<Dictionary<string, object>>();
+        public Dictionary<string, object> ToDictionary() => ConvertTo<Dictionary<string, object>>();
 
         /// <summary>
         /// Deserializes the document data as the specified type.
         /// </summary>
         /// <typeparam name="T">The type to deserialize the document data as.</typeparam>
         /// <returns>The deserialized data, or null if this object represents a missing document.</returns>
-        public T Deserialize<T>() where T : class
+        public T ConvertTo<T>() where T : class
         {
             if (!Exists)
             {

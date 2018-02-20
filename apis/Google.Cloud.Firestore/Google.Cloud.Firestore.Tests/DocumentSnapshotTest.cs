@@ -37,7 +37,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(readTime, document.ReadTime);
             Assert.False(document.Exists);
             Assert.Null(document.ToDictionary());
-            Assert.Null(document.Deserialize<SampleData>());
+            Assert.Null(document.ConvertTo<SampleData>());
             Assert.Throws<InvalidOperationException>(() => document.GetField<string>("name"));
             Assert.Throws<InvalidOperationException>(() => document.GetField<string>(new FieldPath("name")));
             Assert.False(document.TryGetField("name", out string name1));
@@ -68,10 +68,10 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public void Deserialize()
+        public void ConvertTo()
         {
             var doc = GetSampleSnapshot();
-            var sample = doc.Deserialize<SampleData>();
+            var sample = doc.ConvertTo<SampleData>();
             Assert.Equal("Test", sample.Name);
             Assert.Equal(20, sample.Nested.Score);
         }
