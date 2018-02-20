@@ -150,25 +150,18 @@ namespace Google.Cloud.Firestore
             return results[0];
         }
 
-        // TODO: Check naming. Other languages just have "get", but that feels a bit odd in .NET.
-        // Options:
-        // - Get
-        // - GetSnapshot
-        // - Snapshot
-        // (All with an Async suffix, presumably.)
+        /// <summary>
+        /// Asynchronously fetches a snapshot of the document.
+        /// </summary>
+        /// <returns>A snapshot of the document. The snapshot may represent a missing document.</returns>
+        public Task<DocumentSnapshot> GetSnapshotAsync(CancellationToken cancellationToken = default) =>
+            GetSnapshotAsync(null, cancellationToken);
 
         /// <summary>
         /// Asynchronously fetches a snapshot of the document.
         /// </summary>
         /// <returns>A snapshot of the document. The snapshot may represent a missing document.</returns>
-        public Task<DocumentSnapshot> SnapshotAsync(CancellationToken cancellationToken = default) =>
-            SnapshotAsync(null, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously fetches a snapshot of the document.
-        /// </summary>
-        /// <returns>A snapshot of the document. The snapshot may represent a missing document.</returns>
-        internal async Task<DocumentSnapshot> SnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
+        internal async Task<DocumentSnapshot> GetSnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
             var multiple = await Database.GetDocumentSnapshotsAsync(new[] { this }, transactionId, cancellationToken).ConfigureAwait(false);
             return multiple.Single();

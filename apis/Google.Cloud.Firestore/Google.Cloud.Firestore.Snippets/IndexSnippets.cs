@@ -41,7 +41,7 @@ namespace Google.Cloud.Firestore.Snippets
 
             // A DocumentReference doesn't contain the data - it's just a path.
             // Let's fetch the current document.
-            DocumentSnapshot snapshot = await document.SnapshotAsync();
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
 
             // We can access individual fields by dot-separated path
             Console.WriteLine(snapshot.GetValue<string>("Name.First"));

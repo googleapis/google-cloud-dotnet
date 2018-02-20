@@ -30,7 +30,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var doc = _fixture.NonQueryCollection.GenerateDocument();
             var result = await doc.DeleteAsync();
-            var afterDelete = await doc.SnapshotAsync();
+            var afterDelete = await doc.GetSnapshotAsync();
             Assert.False(afterDelete.Exists);
         }
 
@@ -40,7 +40,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var doc = _fixture.NonQueryCollection.GenerateDocument();
             var createResult = await doc.CreateAsync(new { Name = "Delete me" });
             var deleteResult = await doc.DeleteAsync();
-            var afterDelete = await doc.SnapshotAsync();
+            var afterDelete = await doc.GetSnapshotAsync();
             Assert.False(afterDelete.Exists);
         }
 
@@ -50,7 +50,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var doc = _fixture.NonQueryCollection.GenerateDocument();
             var createResult = await doc.CreateAsync(new { Name = "Delete me" });
             var deleteResult = await doc.DeleteAsync(Precondition.LastUpdated(createResult.UpdateTime));
-            var afterDelete = await doc.SnapshotAsync();
+            var afterDelete = await doc.GetSnapshotAsync();
             Assert.False(afterDelete.Exists);
         }
 
@@ -62,7 +62,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var otherTimestamp = Timestamp.FromDateTimeOffset(createResult.UpdateTime.ToDateTimeOffset().AddSeconds(-1));
             var exception = await Assert.ThrowsAsync<RpcException>(() => doc.DeleteAsync(Precondition.LastUpdated(otherTimestamp)));
             Assert.Equal(StatusCode.FailedPrecondition, exception.Status.StatusCode);
-            var afterDelete = await doc.SnapshotAsync();
+            var afterDelete = await doc.GetSnapshotAsync();
             Assert.True(afterDelete.Exists);
         }
 
@@ -72,7 +72,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var doc = _fixture.NonQueryCollection.GenerateDocument();
             var exception = await Assert.ThrowsAsync<RpcException>(() => doc.DeleteAsync(Precondition.LastUpdated(new Timestamp(1, 0))));
             Assert.Equal(StatusCode.FailedPrecondition, exception.Status.StatusCode);
-            var afterDelete = await doc.SnapshotAsync();
+            var afterDelete = await doc.GetSnapshotAsync();
             Assert.False(afterDelete.Exists);
         }
     }

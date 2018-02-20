@@ -339,7 +339,7 @@ namespace Google.Cloud.Firestore.Snippets
             DocumentReference document = await collection.AddAsync(city);
 
             // Sample: DocumentSnapshot
-            DocumentSnapshot snapshot = await document.SnapshotAsync();
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
             // Even if there's no document in the server, we still get a snapshot
             // back - but it knows the document doesn't exist.
             Console.WriteLine(snapshot.Exists);

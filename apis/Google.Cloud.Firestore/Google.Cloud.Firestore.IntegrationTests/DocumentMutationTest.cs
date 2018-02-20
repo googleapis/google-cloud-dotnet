@@ -34,24 +34,24 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original" });
             // Add a field
             await doc.UpdateAsync(new Dictionary<FieldPath, object> { { new FieldPath("Score"), 20 } });
-            var snapshot = await doc.SnapshotAsync();
+            var snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Original", Score = 20 });
 
             // Update a field
             await doc.UpdateAsync(new Dictionary<FieldPath, object> { { new FieldPath("Name"), "Changed"} });
-            snapshot = await doc.SnapshotAsync();
+            snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Changed", Score = 20 });
 
             // Update a field to a map
             // Note: deliberately to microsecond precision only, as that's what's supported for user-specified timestamps.
             Timestamp timestamp = new Timestamp(1, 123456000);
             await doc.UpdateAsync(new Dictionary<FieldPath, object> { { new FieldPath("Score"), new { CustomTime = timestamp, Value = 10 } } });
-            snapshot = await doc.SnapshotAsync();
+            snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Changed", Score = new { CustomTime = timestamp, Value = 10 } });
 
             // Update one field in a map
             await doc.UpdateAsync(new Dictionary<FieldPath, object> { { new FieldPath("Score", "Value"), 30 } });
-            snapshot = await doc.SnapshotAsync();
+            snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Changed", Score = new { CustomTime = timestamp, Value = 30 } });
 
             // Update two fields, add another
@@ -62,7 +62,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 { new FieldPath("Score", "Value"), 40 },
                 { new FieldPath("Level"), 2 }
             });
-            snapshot = await doc.SnapshotAsync();
+            snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Changed again", Level = 2, Score = new { CustomTime = timestamp, Value = 40 } });
         }
 
@@ -76,7 +76,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 { new FieldPath("DeleteMe"), SentinelValue.Delete },
                 { new FieldPath("Timestamp"), SentinelValue.ServerTimestamp }
             });
-            var snapshot = await doc.SnapshotAsync();
+            var snapshot = await doc.GetSnapshotAsync();
             Assert.Equal("Original", snapshot.GetValue<string>("Name"));
             Assert.False(snapshot.ContainsField("DeleteMe"));
             var timestamp = snapshot.GetValue<Timestamp>("Timestamp");
@@ -92,22 +92,22 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original" });
             // Add a field
             await doc.SetAsync(new { Score = 20 }, SetOptions.MergeAll);
-            var snapshot = await doc.SnapshotAsync();
+            var snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Original", Score = 20 });
 
             // Update one field with "MergeAll"
             await doc.SetAsync(new { Score = 30 }, SetOptions.MergeAll);
-            snapshot = await doc.SnapshotAsync();
+            snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Original", Score = 30 });
 
             // Update one field with "MergeFields"
             await doc.SetAsync(new { Name = "Ignored", Score = 30 }, SetOptions.MergeFields("Score"));
-            snapshot = await doc.SnapshotAsync();
+            snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Original", Score = 30 });
 
             // Overwrite
             await doc.SetAsync(new { Text = "Different" });
-            snapshot = await doc.SnapshotAsync();
+            snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Text = "Different" });
         }
 
@@ -122,27 +122,27 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
             // Step 1: Create
             await docRef.CreateAsync(Map(("a.b", Map("c.d", 1)), ("e", 1)));
-            var snapshot = await docRef.SnapshotAsync();
+            var snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", Map("c.d", 1L)), ("e", 1L)));
 
             // Step 2: Set (overwrite)
             await docRef.SetAsync(Map(("a.b", Map("f.g", 2)), ("h", Map("g", 2))));
-            snapshot = await docRef.SnapshotAsync();
+            snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", Map("f.g", 2L)), ("h", Map("g", 2L))));
 
             // Step 3: Set (merge)
             await docRef.SetAsync(Map("h", Map(("g", 3), ("f", 3))), SetOptions.MergeAll);
-            snapshot = await docRef.SnapshotAsync();
+            snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", Map("f.g", 2L)), ("h", Map(("g", 3L), ("f", 3L)))));
 
             // Step 4: Set (update path specified; only h.g is updated, not h.f)
             await docRef.SetAsync(Map("h", Map(("g", 4), ("f", 4))), SetOptions.MergeFields("h.g"));
-            snapshot = await docRef.SnapshotAsync();
+            snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", Map("f.g", 2L)), ("h", Map(("g", 4L), ("f", 3L)))));
 
             // Step 5: Set (update path specified; all of h is overwritten)
             await docRef.SetAsync(Map("h", Map(("g", 5), ("f", 5))), SetOptions.MergeFields("h"));
-            snapshot = await docRef.SnapshotAsync();
+            snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", Map("f.g", 2L)), ("h", Map(("g", 5L), ("f", 5L)))));
 
             // Step 6: Update
@@ -150,7 +150,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             {
                 { new FieldPath("h", "g"), Map("j.k", 6) },
             });
-            snapshot = await docRef.SnapshotAsync();
+            snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", Map("f.g", 2L)), ("h", Map(("g", Map("j.k", 6L)), ("f", 5L)))));
 
             // Step 7: Update (varargs in Java)
@@ -159,7 +159,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 { new FieldPath("a.b", "f.g"), 7 },
                 { new FieldPath("h", "m"), Map("n.o", 7) }
             });
-            snapshot = await docRef.SnapshotAsync();
+            snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", Map("f.g", 7L)), ("h", Map(("g", Map("j.k", 6L)), ("f", 5L), ("m", Map("n.o", 7L))))));
 
             // Step 8: Update (varargs in Java)
@@ -168,12 +168,12 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 { new FieldPath("a.b"), 8 },
                 { new FieldPath("h"), 8 },
             });
-            snapshot = await docRef.SnapshotAsync();
+            snapshot = await docRef.GetSnapshotAsync();
             AssertSerialized(snapshot, Map(("a.b", 8L), ("h", 8L)));
 
             // Step 9: Delete
             await docRef.DeleteAsync();
-            var doc = await docRef.SnapshotAsync();
+            var doc = await docRef.GetSnapshotAsync();
             Assert.False(doc.Exists);
         }
 

@@ -69,7 +69,7 @@ namespace Google.Cloud.Firestore.Snippets
             DocumentReference document = await collection.AddAsync(city);
 
             // Fetch the data back from the server and deserialize it.
-            DocumentSnapshot snapshot = await document.SnapshotAsync();
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
             City citySnapshot = snapshot.ConvertTo<City>();
             Console.WriteLine(citySnapshot.Name); // Los Angeles
             // End sample
@@ -95,7 +95,7 @@ namespace Google.Cloud.Firestore.Snippets
             DocumentReference document = await collection.AddAsync(city);
 
             // Fetch the data back from the server and deserialize it.
-            DocumentSnapshot snapshot = await document.SnapshotAsync();
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
             Dictionary<string, object> cityData = snapshot.ToDictionary();
             Console.WriteLine(cityData["Name"]); // Los Angeles
             // End sample
@@ -124,7 +124,7 @@ namespace Google.Cloud.Firestore.Snippets
             await document.SetAsync(new { Population = 3900005L }, SetOptions.MergeAll);
 
             // Fetch the latest document and print the population
-            DocumentSnapshot snapshot = await document.SnapshotAsync();
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
             Console.WriteLine(snapshot.GetValue<long>("Population")); // 3900005
             // End sample
         }

@@ -32,7 +32,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var reference = await collection.AddAsync(new { Name = "Test" });
 
             // Make sure we can fetch it again too...
-            var snapshot = await reference.SnapshotAsync();
+            var snapshot = await reference.GetSnapshotAsync();
             Assert.True(snapshot.Exists);
             var dictionary = snapshot.ToDictionary();
             Assert.Equal("Test", dictionary["Name"]);
