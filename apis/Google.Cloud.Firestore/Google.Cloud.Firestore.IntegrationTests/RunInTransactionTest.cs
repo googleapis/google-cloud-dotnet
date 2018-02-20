@@ -40,8 +40,8 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 transaction.Create(doc1, new { Name = "test1" });
                 transaction.Create(doc2, new { Name = "test2" });
             });
-            var snapshot1 = await doc1.SnapshotAsync();
-            var snapshot2 = await doc2.SnapshotAsync();
+            var snapshot1 = await doc1.GetSnapshotAsync();
+            var snapshot2 = await doc2.GetSnapshotAsync();
             AssertSerialized(snapshot1, new { Name = "test1" });
             AssertSerialized(snapshot2, new { Name = "test2" });
         }
@@ -65,7 +65,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
             // We only had two increment transactions, but one needed to retry
             Assert.Equal(3, attempts);
-            var result = await doc.SnapshotAsync();
+            var result = await doc.GetSnapshotAsync();
             Assert.Equal(2, result.GetValue<int>("Count"));
 
             async Task IncrementCounter(Transaction transaction)
@@ -106,7 +106,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             Assert.True(t1.IsFaulted ^ t2.IsFaulted);
 
             Assert.Equal(2, attempts);
-            var result = await doc.SnapshotAsync();
+            var result = await doc.GetSnapshotAsync();
             Assert.Equal(1, result.GetValue<int>("Count"));
 
             async Task IncrementCounter(Transaction transaction)
