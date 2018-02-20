@@ -349,7 +349,7 @@ namespace Google.Cloud.Firestore.Snippets
             Console.WriteLine(snapshot.GetField<string>("Name")); // Los Angeles
 
             // Or you can deserialize to a dictionary or a model
-            City fetchedCity = snapshot.Deserialize<City>();
+            City fetchedCity = snapshot.ConvertTo<City>();
             Console.WriteLine(fetchedCity.Name); // Los Angeles
             // End sample
         }
@@ -367,7 +367,7 @@ namespace Google.Cloud.Firestore.Snippets
             foreach (DocumentSnapshot document in allCities.Documents)
             {
                 // Do anything you'd normally do with a DocumentSnapshot
-                City city = document.Deserialize<City>();
+                City city = document.ConvertTo<City>();
                 Console.WriteLine(city.Name);
             }
 
@@ -380,7 +380,7 @@ namespace Google.Cloud.Firestore.Snippets
             foreach (DocumentSnapshot document in bigCities.Documents)
             {
                 // Do anything you'd normally do with a DocumentSnapshot
-                City city = document.Deserialize<City>();
+                City city = document.ConvertTo<City>();
                 Console.WriteLine($"{city.Name}: {city.Population}");
             }
             // End sample

@@ -32,7 +32,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection;
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data, items.OrderBy(x => x.Name, StringComparer.Ordinal));
         }
 
@@ -41,7 +41,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.Where("Score", QueryOperator.GreaterThan, 100);
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Score > 100), items.OrderBy(x => x.Name, StringComparer.Ordinal));
         }
 
@@ -50,7 +50,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level");
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Level), items);
         }
 
@@ -75,7 +75,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.OrderBy("Score").OrderBy("Level");
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Score).ThenBy(x => x.Level), items);
         }
 
@@ -84,7 +84,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.OrderBy("Score").OrderByDescending("Level");
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Score).ThenByDescending(x => x.Level), items);
         }
 
@@ -93,7 +93,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.Select("Name", "Score");
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(
                 // Create the equivalent results by creating new objects
                 HighScore.Data.Select(x => new HighScore { Name = x.Name, Score = x.Score }),
@@ -117,7 +117,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").Limit(3);
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Level).Take(3), items);
         }
 
@@ -126,7 +126,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").Offset(2);
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Level).Skip(2), items);
         }
 
@@ -135,7 +135,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").StartAt(20);
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Level >= 20).OrderBy(x => x.Score), items);
         }
 
@@ -144,7 +144,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").StartAfter(20);
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Level > 20).OrderBy(x => x.Level), items);
         }
 
@@ -153,7 +153,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").EndAt(20);
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Level <= 20).OrderBy(x => x.Level), items);
         }
 
@@ -162,7 +162,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").EndBefore(20);
             var snapshot = await query.SnapshotAsync();
-            var items = snapshot.Documents.Select(doc => doc.Deserialize<HighScore>()).ToList();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Level < 20).OrderBy(x => x.Level), items);
         }
 
