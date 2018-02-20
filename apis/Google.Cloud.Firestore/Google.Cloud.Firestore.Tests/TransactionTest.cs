@@ -44,9 +44,9 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal("transaction 1", transaction.TransactionId.ToStringUtf8());
 
             var doc = db.Document("col/doc");
-            var snapshot = await transaction.GetDocumentSnapshotAsync(doc);
+            var snapshot = await transaction.GetSnapshotAsync(doc);
             Assert.Equal("transaction 1", snapshot.GetValue<string>("transaction"));
-            var query = await transaction.GetQuerySnapshotAsync(db.Collection("col"));
+            var query = await transaction.GetSnapshotAsync(db.Collection("col"));
             Assert.Empty(query.Documents);
 
             transaction.Create(doc, new { Name = "Test" });
@@ -56,34 +56,34 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public async Task GetDocumentSnapshotAsync_FailsAfterWrite()
+        public async Task GetSnapshotAsync_FailsAfterWrite()
         {
             var db = CreateFirestoreDbExpectingNoCommits();
             var transaction = await Transaction.BeginAsync(db, null, default);
             var doc = db.Document("col/doc");
             transaction.Delete(doc);
-            await Assert.ThrowsAsync<InvalidOperationException>(() => transaction.GetDocumentSnapshotAsync(doc));
+            await Assert.ThrowsAsync<InvalidOperationException>(() => transaction.GetSnapshotAsync(doc));
         }
 
         [Fact]
-        public async Task GetAllDocumentSnapshotsAsync_FailsAfterWrite()
+        public async Task GetAllSnapshotsAsync_FailsAfterWrite()
         {
             var db = CreateFirestoreDbExpectingNoCommits();
             var transaction = await Transaction.BeginAsync(db, null, default);
             var doc1 = db.Document("col/doc1");
             var doc2 = db.Document("col/doc2");
             transaction.Delete(doc1);
-            await Assert.ThrowsAsync<InvalidOperationException>(() => transaction.GetAllDocumentSnapshotsAsync(new[] { doc1, doc2 }));
+            await Assert.ThrowsAsync<InvalidOperationException>(() => transaction.GetAllSnapshotsAsync(new[] { doc1, doc2 }));
         }
 
         [Fact]
-        public async Task GetQuerySnaphotAsync_FailsAfterWrite()
+        public async Task GetSnaphotAsync_FailsAfterWrite()
         {
             var db = CreateFirestoreDbExpectingNoCommits();
             var transaction = await Transaction.BeginAsync(db, null, default);
             var doc = db.Document("col/doc");
             transaction.Delete(doc);
-            await Assert.ThrowsAsync<InvalidOperationException>(() => transaction.GetQuerySnapshotAsync(doc.Parent));
+            await Assert.ThrowsAsync<InvalidOperationException>(() => transaction.GetSnapshotAsync(doc.Parent));
         }
 
         [Fact]

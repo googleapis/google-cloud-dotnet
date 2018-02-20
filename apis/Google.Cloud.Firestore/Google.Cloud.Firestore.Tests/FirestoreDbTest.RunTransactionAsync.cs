@@ -47,7 +47,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("proj", "db", client);
             await db.RunTransactionAsync(async transaction =>
             {
-                await transaction.GetDocumentSnapshotAsync(db.Document("col/x"));
+                await transaction.GetSnapshotAsync(db.Document("col/x"));
                 transaction.Create(db.Document("col/doc1"), new { Name = "Test" });
                 transaction.Delete(db.Document("col/doc2"));
             });
@@ -141,7 +141,7 @@ namespace Google.Cloud.Firestore.Tests
             var exception = await Assert.ThrowsAsync<IOException>(() => db.RunTransactionAsync<int>(
                 async transaction =>
                 {
-                    await transaction.GetDocumentSnapshotAsync(db.Document("col/x"));
+                    await transaction.GetSnapshotAsync(db.Document("col/x"));
                     throw new IOException("Bang!");
                 }));
             Assert.Equal("Bang!", exception.Message);
@@ -207,7 +207,7 @@ namespace Google.Cloud.Firestore.Tests
             {
                 var db = transaction.Database;
                 callbackCount++;
-                await transaction.GetDocumentSnapshotAsync(db.Document("col/x"));
+                await transaction.GetSnapshotAsync(db.Document("col/x"));
                 transaction.Create(db.Document("col/doc1"), new { Name = "Test" });
                 transaction.Delete(db.Document("col/doc2"));
                 return callbackCount;
