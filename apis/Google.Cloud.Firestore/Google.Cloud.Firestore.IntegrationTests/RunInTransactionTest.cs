@@ -70,7 +70,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
             async Task IncrementCounter(Transaction transaction)
             {
-                var snapshot = await transaction.GetDocumentSnapshotAsync(doc);
+                var snapshot = await transaction.GetSnapshotAsync(doc);
                 Interlocked.Increment(ref attempts);
                 // We wouldn't want to signal again when retrying. Nothing is going
                 // to *increment* CurrentCount, so this should be safe.
@@ -111,7 +111,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
             async Task IncrementCounter(Transaction transaction)
             {
-                var snapshot = await transaction.GetDocumentSnapshotAsync(doc);
+                var snapshot = await transaction.GetSnapshotAsync(doc);
                 Interlocked.Increment(ref attempts);
                 // We wouldn't want to signal again when retrying. Nothing is going
                 // to *increment* CurrentCount, so this should be safe.

@@ -64,10 +64,6 @@ namespace Google.Cloud.Firestore
             return new Transaction(db, response.Transaction, cancellationToken);
         }
 
-        // TODO: Consider names of GetDocumentSnapshotAsync/GetQuerySnapshotAsync.
-        // Perhaps just SnapshotDocumentAsync and SnapshotQueryAsync?
-        // Just using SnapshotAsync overloads feels like a bad idea as they do quite different things.
-
         /// <summary>
         /// Fetch a snapshot of the document specified by <paramref name="documentReference"/>, with respect to this transaction.
         /// This method cannot be called after any write operations have been created.
@@ -75,7 +71,7 @@ namespace Google.Cloud.Firestore
         /// <param name="documentReference">The document reference to fetch. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>A snapshot of the given document with respect to this transaction.</returns>
-        public Task<DocumentSnapshot> GetDocumentSnapshotAsync(DocumentReference documentReference, CancellationToken cancellationToken = default)
+        public Task<DocumentSnapshot> GetSnapshotAsync(DocumentReference documentReference, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
@@ -94,7 +90,7 @@ namespace Google.Cloud.Firestore
         /// <param name="documentReferences">The document references to fetch. Must not be null, or contain null references.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The document snapshots, in the same order as <paramref name="documentReferences"/>.</returns>
-        public Task<IList<DocumentSnapshot>> GetAllDocumentSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, CancellationToken cancellationToken = default)
+        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
             CancellationToken effectiveToken = GetEffectiveCancellationToken(cancellationToken);
@@ -108,7 +104,7 @@ namespace Google.Cloud.Firestore
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>A snapshot of results of the given query with respect to this transaction.</returns>
-        public Task<QuerySnapshot> GetQuerySnapshotAsync(Query query, CancellationToken cancellationToken = default)
+        public Task<QuerySnapshot> GetSnapshotAsync(Query query, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             CancellationToken effectiveToken = GetEffectiveCancellationToken(cancellationToken);

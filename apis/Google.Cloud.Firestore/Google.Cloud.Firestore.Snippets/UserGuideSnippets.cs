@@ -286,7 +286,7 @@ namespace Google.Cloud.Firestore.Snippets
 
             await db.RunTransactionAsync(async transaction =>
             {
-                DocumentSnapshot currentSnapshot = await transaction.GetDocumentSnapshotAsync(currentCounter);
+                DocumentSnapshot currentSnapshot = await transaction.GetSnapshotAsync(currentCounter);
                 long counter = currentSnapshot.GetValue<long>("Counter");
                 transaction.Set(dailyCounter, new { Counter = counter });
             });
@@ -310,7 +310,7 @@ namespace Google.Cloud.Firestore.Snippets
             
             long newValue = await db.RunTransactionAsync(async transaction =>
             {
-                DocumentSnapshot currentSnapshot = await transaction.GetDocumentSnapshotAsync(currentCounter);
+                DocumentSnapshot currentSnapshot = await transaction.GetSnapshotAsync(currentCounter);
                 long counter = currentSnapshot.GetValue<long>("Counter") + 1;
                 transaction.Set(currentCounter, new { Counter = counter });
                 return counter;
