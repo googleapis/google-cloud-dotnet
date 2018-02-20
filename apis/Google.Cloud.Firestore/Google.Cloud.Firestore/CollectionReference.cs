@@ -59,7 +59,7 @@ namespace Google.Cloud.Firestore
         /// This performs no server-side operations; it only generates the appropriate <c>DocumentReference</c>.
         /// </summary>
         /// <returns>A <see cref="DocumentReference"/> to a child document of this collection with a random ID.</returns>
-        public DocumentReference GenerateDocument() => new DocumentReference(Database, this, PathUtilities.GenerateId());
+        public DocumentReference Document() => new DocumentReference(Database, this, PathUtilities.GenerateId());
 
         /// <summary>
         /// Creates a <see cref="DocumentReference"/> for a child document of this reference.
@@ -92,7 +92,7 @@ namespace Google.Cloud.Firestore
         /// <returns>The reference for the newly-created document.</returns>
         public async Task<DocumentReference> AddAsync(object documentData, CancellationToken cancellationToken = default)
         {
-            var docRef = GenerateDocument();
+            var docRef = Document();
             var result = await docRef.CreateAsync(documentData, cancellationToken).ConfigureAwait(false);
             return docRef;
         }

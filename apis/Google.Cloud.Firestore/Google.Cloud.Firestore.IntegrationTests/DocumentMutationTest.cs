@@ -118,7 +118,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public async Task SpecSequence()
         {
             var collection = _fixture.NonQueryCollection;
-            var docRef = collection.GenerateDocument();
+            var docRef = collection.Document();
 
             // Step 1: Create
             await docRef.CreateAsync(Map(("a.b", Map("c.d", 1)), ("e", 1)));

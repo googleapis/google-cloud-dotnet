@@ -108,16 +108,16 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public void GenerateDocument()
+        public void Document_GeneratedId()
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
             var collection = db.Collection("root");
-            var doc = collection.GenerateDocument();
+            var doc = collection.Document();
             Assert.Equal(collection, doc.Parent);
             // Can't guarantee what it is...
             Assert.Equal(20, doc.Id.Length);
             // But we shouldn't get the same one twice
-            Assert.NotEqual(doc.Id, collection.GenerateDocument().Id);
+            Assert.NotEqual(doc.Id, collection.Document().Id);
         }
     }
 }
