@@ -62,7 +62,7 @@ namespace Google.Cloud.Firestore.Tests
         public void SentinelValuesInArrays(object documentData)
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             Assert.Throws<ArgumentException>(() => batch.Set(doc, documentData, SetOptions.MergeAll));
         }
@@ -72,7 +72,7 @@ namespace Google.Cloud.Firestore.Tests
         public void NoSentinelValuesInArrays(object documentData)
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             // Don't check the result, just that it doesn't throw.
             batch.Set(doc, documentData, SetOptions.MergeAll);
@@ -82,7 +82,7 @@ namespace Google.Cloud.Firestore.Tests
         public void SentinelValues_Simple()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             var data = new { Name = "Test", DeleteMe = SentinelValue.Delete, Timestamp = SentinelValue.ServerTimestamp };
             batch.Set(doc, data, SetOptions.MergeAll);
@@ -111,7 +111,7 @@ namespace Google.Cloud.Firestore.Tests
         public void SentinelValues_NestedSentinels()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             var data = new
             {
@@ -147,7 +147,7 @@ namespace Google.Cloud.Firestore.Tests
         public void SentinelValues_OnlyTransform()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             var doc = db.Document("col/doc");
             var data = new { Timestamp = SentinelValue.ServerTimestamp };
             batch.Set(doc, data, SetOptions.MergeAll);

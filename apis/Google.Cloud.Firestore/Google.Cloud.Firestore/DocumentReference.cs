@@ -97,7 +97,7 @@ namespace Google.Cloud.Firestore
         /// <returns>The write result of the server operation.</returns>
         public async Task<WriteResult> CreateAsync(object documentData, CancellationToken cancellationToken = default)
         {
-            var batch = Database.CreateWriteBatch();
+            var batch = Database.StartBatch();
             var results = await batch.Create(this, documentData).CommitAsync(cancellationToken).ConfigureAwait(false);
             return results.Single();
         }
@@ -114,7 +114,7 @@ namespace Google.Cloud.Firestore
         /// <returns>The write result of the server operation.</returns>
         public async Task<WriteResult> DeleteAsync(Precondition precondition = null, CancellationToken cancellationToken = default)
         {
-            var batch = Database.CreateWriteBatch();
+            var batch = Database.StartBatch();
             batch.Delete(this, precondition);
             var results = await batch.CommitAsync(cancellationToken).ConfigureAwait(false);
             return results[0];
@@ -129,7 +129,7 @@ namespace Google.Cloud.Firestore
         /// <returns>The write result of the server operation.</returns>
         public async Task<WriteResult> UpdateAsync(IDictionary<FieldPath, object> updates, Precondition precondition = null, CancellationToken cancellationToken = default)
         {
-            var batch = Database.CreateWriteBatch();
+            var batch = Database.StartBatch();
             batch.Update(this, updates, precondition);
             var results = await batch.CommitAsync(cancellationToken).ConfigureAwait(false);
             return results[0];
@@ -144,7 +144,7 @@ namespace Google.Cloud.Firestore
         /// <returns>The write result of the server operation.</returns>
         public async Task<WriteResult> SetAsync(object documentData, SetOptions options = null, CancellationToken cancellationToken = default)
         {
-            var batch = Database.CreateWriteBatch();
+            var batch = Database.StartBatch();
             batch.Set(this, documentData, options);
             var results = await batch.CommitAsync(cancellationToken).ConfigureAwait(false);
             return results[0];

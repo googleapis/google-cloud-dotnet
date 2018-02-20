@@ -34,7 +34,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             // Create documents in two collections to make sure they exist.
             var collection1 = _fixture.CreateUniqueCollection();
             var collection2 = _fixture.CreateUniqueCollection();
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             batch.Create(collection1.Document(), new { Name = "doc1" });
             batch.Create(collection2.Document(), new { Name = "doc2" });
             await batch.CommitAsync();

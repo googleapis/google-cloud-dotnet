@@ -264,7 +264,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
         {
             var mock = new MockCommitClient(expectedRequest);
             FirestoreDb db = FirestoreDb.Create(ProjectId, DatabaseId, mock);
-            var batch = db.CreateWriteBatch();
+            var batch = db.StartBatch();
             if (expectedError)
             {
                 var exception = Assert.ThrowsAny<Exception>(() => action(batch));
