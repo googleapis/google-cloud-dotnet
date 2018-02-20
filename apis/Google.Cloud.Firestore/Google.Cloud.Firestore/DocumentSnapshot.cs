@@ -21,7 +21,7 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// An immutable snapshot of the data for a document.
     /// </summary>
-    public sealed class DocumentSnapshot
+    public sealed class DocumentSnapshot : IEquatable<DocumentSnapshot>
     {
         /// <summary>
         /// The proto representation of the document. Primarily visible for testing purposes.
@@ -201,5 +201,23 @@ namespace Google.Cloud.Firestore
             }
             return value;
         }
+
+        /// <summary>
+        /// Compares this snapshot with another for equality. Only the document data and document reference
+        /// are considered; the timestamps are ignored.
+        /// </summary>
+        /// <param name="other">The snapshot to compare this one with</param>
+        /// <returns><c>true</c> if this snapshot is equal to <paramref name="other"/>; <c>false</c> otherwise.</returns>
+        public bool Equals(DocumentSnapshot other) =>
+            other != null &&
+            Reference.Equals(other.Reference) &&
+            Equals(Document?.Fields, other.Document?.Fields);
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as DocumentSnapshot);
+
+        /// <inheritdoc />
+        public override int GetHashCode() =>
+            EqualityHelpers.CombineHashCodes(Reference.GetHashCode(), Document?.Fields.GetHashCode() ?? 0);
     }
 }

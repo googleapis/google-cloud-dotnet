@@ -123,6 +123,53 @@ namespace Google.Cloud.Firestore.Tests
             Assert.False(doc.ContainsField("Nested.Score.Missing"));
         }
 
+        [Fact]
+        public void Equality()
+        {
+            var control = GetSampleSnapshot();
+            var equalDb = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+
+            // Equal (but distinct) everything
+            var doc1 = control.Document.Clone();
+            var equal1 = DocumentSnapshot.ForDocument(equalDb, doc1, control.ReadTime);
+
+            var doc2 = control.Document.Clone();
+            doc2.CreateTime = null;
+            doc2.UpdateTime = null;
+            // Different create/update times
+            var equal2 = DocumentSnapshot.ForDocument(equalDb, doc2, control.ReadTime);
+
+            // Different read time
+            var equal3 = DocumentSnapshot.ForDocument(equalDb, doc2, new Timestamp(10, 3));
+
+            // Different fields
+            var doc4 = doc1.Clone();
+            doc4.Fields["other"] = new Value { StringValue = "different" };
+            var unequal1 = DocumentSnapshot.ForDocument(equalDb, doc4, control.ReadTime);
+
+            // Different name
+            var doc5 = doc1.Clone();
+            doc5.Name += "x";
+            var unequal2 = DocumentSnapshot.ForDocument(equalDb, doc5, control.ReadTime);
+
+            EqualityTester.AssertEqual(control, new[] { equal1, equal2, equal3 }, new[] { unequal1, unequal2 });
+        }
+
+        [Fact]
+        public void Equality_Missing()
+        {
+            var nonMissing = GetSampleSnapshot();
+            var db = nonMissing.Database;
+            var doc = nonMissing.Document;
+
+            var control = DocumentSnapshot.ForMissingDocument(db, doc.Name, new Timestamp(1, 2));
+            var equal = DocumentSnapshot.ForMissingDocument(db, doc.Name, new Timestamp(1, 3));
+            var unequal1 = DocumentSnapshot.ForMissingDocument(db, doc.Name + "x", new Timestamp(1, 2));
+            var unequal2 = DocumentSnapshot.ForDocument(db, doc, new Timestamp(1, 2));
+
+            EqualityTester.AssertEqual(control, new[] { equal }, new[] { unequal1, unequal2 });
+        }
+
         private static DocumentSnapshot GetSampleSnapshot()
         {
             var poco = new SampleData
