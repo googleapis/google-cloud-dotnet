@@ -462,14 +462,14 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new Timestamp(1, 2), doc1.ReadTime);
             Assert.Equal(new Timestamp(0, 1), doc1.CreateTime);
             Assert.Equal(new Timestamp(0, 2), doc1.UpdateTime);
-            Assert.Equal("x", doc1.GetField<string>("Name"));
+            Assert.Equal("x", doc1.GetValue<string>("Name"));
 
             var doc2 = snapshot.Documents[1];
             Assert.Equal(db.Document("col/doc2"), doc2.Reference);
             Assert.Equal(new Timestamp(1, 3), doc2.ReadTime);
             Assert.Equal(new Timestamp(0, 3), doc2.CreateTime);
             Assert.Equal(new Timestamp(0, 4), doc2.UpdateTime);
-            Assert.Equal("x", doc1.GetField<string>("Name"));
+            Assert.Equal("x", doc1.GetValue<string>("Name"));
             mock.VerifyAll();
         }
 
@@ -548,14 +548,14 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new Timestamp(1, 2), doc1.ReadTime);
             Assert.Equal(new Timestamp(0, 1), doc1.CreateTime);
             Assert.Equal(new Timestamp(0, 2), doc1.UpdateTime);
-            Assert.Equal("x", doc1.GetField<string>("Name"));
+            Assert.Equal("x", doc1.GetValue<string>("Name"));
 
             var doc2 = documents[1];
             Assert.Equal(db.Document("col/doc2"), doc2.Reference);
             Assert.Equal(new Timestamp(1, 3), doc2.ReadTime);
             Assert.Equal(new Timestamp(0, 3), doc2.CreateTime);
             Assert.Equal(new Timestamp(0, 4), doc2.UpdateTime);
-            Assert.Equal("x", doc1.GetField<string>("Name"));
+            Assert.Equal("x", doc1.GetValue<string>("Name"));
             mock.VerifyAll();
         }
 

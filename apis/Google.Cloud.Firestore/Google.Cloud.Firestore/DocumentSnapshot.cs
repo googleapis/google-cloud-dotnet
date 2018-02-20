@@ -107,7 +107,7 @@ namespace Google.Cloud.Firestore
         /// <param name="path">The dot-separated field path to fetch. Must not be null or empty</param>
         /// <exception cref="InvalidOperationException">The field does not exist in the document data.</exception>
         /// <returns>The deserialized value.</returns>
-        public T GetField<T>(string path) => GetField<T>(FieldPath.FromDotSeparatedString(path));
+        public T GetValue<T>(string path) => GetValue<T>(FieldPath.FromDotSeparatedString(path));
 
         /// <summary>
         /// Attempts to fetch the given field path from the document, returning whether or not it was found, and deserializing
@@ -122,7 +122,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">When this method returns, contains the deserialized value if the field was found, or the default value
         /// of <typeparamref name="T"/> otherwise.</param>
         /// <returns>true if the field was found; false otherwise.</returns>
-        public bool TryGetField<T>(string path, out T value) => TryGetField(FieldPath.FromDotSeparatedString(path), out value);
+        public bool TryGetValue<T>(string path, out T value) => TryGetValue(FieldPath.FromDotSeparatedString(path), out value);
 
         /// <summary>
         /// Fetches a field value from the document, throwing an exception if the field does not exist.
@@ -130,7 +130,7 @@ namespace Google.Cloud.Firestore
         /// <param name="path">The field path to fetch. Must not be null.</param>
         /// <exception cref="InvalidOperationException">The field does not exist in the document data.</exception>
         /// <returns>The deserialized value.</returns>
-        public T GetField<T>(FieldPath path)
+        public T GetValue<T>(FieldPath path)
         {
             var raw = ExtractValue(path);
             GaxPreconditions.CheckState(raw != null, $"Field {path} not found in document");
@@ -150,7 +150,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">When this method returns, contains the deserialized value if the field was found, or the default value
         /// of <typeparamref name="T"/> otherwise.</param>
         /// <returns>true if the field was found; false otherwise.</returns>
-        public bool TryGetField<T>(FieldPath path, out T value)
+        public bool TryGetValue<T>(FieldPath path, out T value)
         {
             var raw = ExtractValue(path);
             if (raw == null)
@@ -168,7 +168,7 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <param name="path">The dot-separated field path to check. Must not be null or empty.</param>
         /// <returns>true if the specified path represents a field in the document; false otherwise</returns>
-        public bool Contains(string path) => Contains(FieldPath.FromDotSeparatedString(path));
+        public bool ContainsField(string path) => ContainsField(FieldPath.FromDotSeparatedString(path));
 
         /// <summary>
         /// Determines whether or not the given field path is present in the document. If this snapshot represents
@@ -176,7 +176,7 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <param name="path">The field path to check. Must not be null.</param>
         /// <returns>true if the specified path represents a field in the document; false otherwise</returns>
-        public bool Contains(FieldPath path) => ExtractValue(path) != null;
+        public bool ContainsField(FieldPath path) => ExtractValue(path) != null;
 
         /// <summary>
         /// Extracts the internal value for a field path, still in its serialized form, without any copying.
@@ -184,6 +184,7 @@ namespace Google.Cloud.Firestore
         /// </summary>
         internal Value ExtractValue(FieldPath path)
         {
+            GaxPreconditions.CheckNotNull(path, nameof(path));
             if (!Exists)
             {
                 return null;
