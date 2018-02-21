@@ -51,7 +51,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     detected from the platform.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        /// <param name="accessor"></param>
+        /// <param name="accessor">Optional, HTTP context accessor. Allows adding trace ids to log entries.</param>
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, string projectId = null,
             LoggerOptions options = null, LoggingServiceV2Client client = null,
             IHttpContextAccessor accessor = null)
@@ -69,7 +69,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="logTarget">Where to log to. Cannot be null.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        /// <param name="accessor"></param>
+        /// <param name="accessor">Optional, HTTP context accessor. Allows adding trace ids to log entries.</param>
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, LogTarget logTarget,
             LoggerOptions options = null, LoggingServiceV2Client client = null,
             IHttpContextAccessor accessor = null)
