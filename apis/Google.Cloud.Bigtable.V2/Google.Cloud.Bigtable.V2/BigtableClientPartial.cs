@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,90 @@ namespace Google.Cloud.Bigtable.V2
 {
     public partial class BigtableClient
     {
+        // TODO: Auto-generate these if possible/easy after multi-channel support is added.
+
+        /// <summary>
+        /// Asynchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <param name="appProfileId">
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <returns>The task representing the created <see cref="BigtableClient"/>.</returns>
+        public static async Task<BigtableClient> CreateAsync(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null, string appProfileId = null)
+        {
+            var client = await BigtableServiceApiClient.CreateAsync(endpoint, settings).ConfigureAwait(false);
+            return new BigtableClientImpl(client, appProfileId);
+        }
+
+        /// <summary>
+        /// Synchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <param name="appProfileId">
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <returns>The created <see cref="BigtableClient"/>.</returns>
+        public static BigtableClient Create(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null, string appProfileId = null)
+        {
+            var client = BigtableServiceApiClient.Create(endpoint, settings);
+            return new BigtableClientImpl(client, appProfileId);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="BigtableClient"/> which uses the specified channel for remote operations.
+        /// </summary>
+        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <param name="appProfileId">
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <returns>The created <see cref="BigtableClient"/>.</returns>
+        public static BigtableClient Create(Channel channel, BigtableServiceApiSettings settings = null, string appProfileId = null)
+        {
+            var client = BigtableServiceApiClient.Create(channel, settings);
+            return new BigtableClientImpl(client, appProfileId);
+        }
+
+        /// <summary>
+        /// Gets a <see cref="BigtableClient"/> matching this one but with the specified <paramref name="appProfileId"/>.
+        /// </summary>
+        /// <param name="appProfileId">
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <returns>The updated <see cref="BigtableClient"/>.</returns>
+        public virtual BigtableClient WithAppProfileId(string appProfileId) => this;
+
         /// <summary>
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
@@ -858,5 +943,25 @@ namespace Google.Cloud.Bigtable.V2
                     TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName))
                 },
                 callSettings);
+    }
+
+    public partial class BigtableClientImpl
+    {
+        private readonly string _appProfileId;
+        private readonly BigtableServiceApiClient _client;
+
+        // TODO: Add a public constructor after multi-channel support?
+        internal BigtableClientImpl(BigtableServiceApiClient client, string appProfileId)
+        {
+            _client = client;
+            _appProfileId = appProfileId;
+        }
+
+        // TODO: Add Multi-channel support
+        private BigtableServiceApiClient GetClient() => _client;
+
+        /// <inheritdoc/>
+        public override BigtableClient WithAppProfileId(string appProfileId) =>
+            new BigtableClientImpl(_client, appProfileId);
     }
 }
