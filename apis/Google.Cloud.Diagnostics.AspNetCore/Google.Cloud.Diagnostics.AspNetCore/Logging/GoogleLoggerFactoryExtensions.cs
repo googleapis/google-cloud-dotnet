@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -50,13 +51,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     detected from the platform.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
+        /// <param name="accessor"></param>
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, string projectId = null,
-            LoggerOptions options = null, LoggingServiceV2Client client = null)
+            LoggerOptions options = null, LoggingServiceV2Client client = null,
+            IHttpContextAccessor accessor = null)
         {
             GaxPreconditions.CheckNotNull(factory, nameof(factory));
             options = options ?? LoggerOptions.Create();
             projectId = Project.GetAndCheckProjectId(projectId, options.MonitoredResource);
-            return factory.AddGoogle(LogTarget.ForProject(projectId), options, client);
+            return factory.AddGoogle(LogTarget.ForProject(projectId), options, client, accessor);
         }
 
         /// <summary>
@@ -66,12 +69,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="logTarget">Where to log to. Cannot be null.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
+        /// <param name="accessor"></param>
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, LogTarget logTarget,
-            LoggerOptions options = null, LoggingServiceV2Client client = null)
+            LoggerOptions options = null, LoggingServiceV2Client client = null,
+            IHttpContextAccessor accessor = null)
         {
             GaxPreconditions.CheckNotNull(factory, nameof(factory));
             GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
-            factory.AddProvider(GoogleLoggerProvider.Create(logTarget, options, client));
+            factory.AddProvider(GoogleLoggerProvider.Create(logTarget, options, client, accessor));
             return factory;
         }
     }

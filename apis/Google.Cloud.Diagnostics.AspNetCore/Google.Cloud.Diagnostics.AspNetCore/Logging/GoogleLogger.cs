@@ -18,6 +18,7 @@ using Google.Protobuf.WellKnownTypes;
 using Google.Api.Gax;
 using Microsoft.Extensions.Logging;
 using System;
+using Microsoft.AspNetCore.Http;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -46,6 +47,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>The consumer to push logs to.</summary>
         private readonly IConsumer<LogEntry> _consumer;
 
+        /// <summary>The trace target or null if non exists.</summary>
+        private readonly TraceTarget _traceTarget;
+
         /// <summary>The logger options.</summary>
         private readonly LoggerOptions _loggerOptions;
 
@@ -55,14 +59,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>A clock for getting the current timestamp.</summary>
         private readonly IClock _clock;
 
+        /// <summary>An accessor to get the current <see cref="HttpContext"/>.</summary>
+        private readonly IHttpContextAccessor _accessor;
+
         internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions, 
-            string logName, IClock clock = null)
+            string logName, IClock clock = null, IHttpContextAccessor accessor = null)
         {
             GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName));
+            _traceTarget = logTarget.Kind == LogTargetKind.Project ?
+                TraceTarget.ForProject(logTarget.ProjectId) : null;
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions)); ;
             _logName = logTarget.GetFullLogName(logName);
+            _accessor = accessor;
             _clock = clock ?? SystemClock.Instance;
         }
 
@@ -96,9 +106,28 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
                 TextPayload = string.Concat(GoogleLoggerScope.Current, message),
                 Labels = { _loggerOptions.Labels },
+                Trace = GetTraceName() ?? "",
             };
 
             _consumer.Receive(new[] { entry });
+        }
+
+        /// <summary>
+        /// Gets the full trace name if the log target is a project, we have an
+        /// HTTP accessor and a valid trace header exists on the current context.
+        /// If the trace name cannot be determined null is returned.
+        /// See: See: https://cloud.google.com/logging/docs/reference/v2/rest/v2/LogEntry
+        /// </summary>
+        internal string GetTraceName()
+        {
+            if (_traceTarget == null || _accessor == null)
+            {
+                return null;
+            }
+
+            string header = _accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
+            var traceContext = TraceHeaderContext.FromHeader(header);
+            return traceContext.TraceId == null ? null : _traceTarget.GetFullTraceName(traceContext.TraceId);
         }
     }
 }

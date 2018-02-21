@@ -23,6 +23,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
@@ -71,10 +72,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         // End sample
 
         // Sample: RegisterGoogleLogger
-        public void Configure(ILoggerFactory loggerFactory)
+        public void Configure(ILoggerFactory loggerFactory, IHttpContextAccessor accessor)
         {
             string projectId = "[Google Cloud Platform project ID]";
-            loggerFactory.AddGoogle(projectId);
+            loggerFactory.AddGoogle(projectId, accessor: accessor);
         }
         // End sample
 

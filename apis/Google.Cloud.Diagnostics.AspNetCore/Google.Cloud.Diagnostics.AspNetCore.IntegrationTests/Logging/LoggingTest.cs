@@ -20,9 +20,11 @@ using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
@@ -207,6 +209,26 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Contains($"Scope => {message}", results.Single().TextPayload);
             }
         }
+
+        [Fact]
+        public async Task Logging_Trace()
+        {
+            string traceId = "105445aa7843bc8bf206b12000100f00";
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader,
+                    TraceHeaderContext.Create(traceId, 81237123, null).ToString());
+                await client.GetAsync($"/Main/Critical/{testId}");
+                var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
+                Assert.Contains(Utils.GetProjectIdFromEnvironment(), results.Single().Trace);
+                Assert.Contains(traceId, results.Single().Trace);
+            }
+        }
     }
 
     /// <summary>
@@ -223,6 +245,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMvc();
         }
 
@@ -239,18 +262,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
     /// <summary>
     /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
-    /// of level warning or above.
+    /// of level warning or above.  Adds trace information to log entries if available.
     /// </summary>
     public class NoBufferWarningLoggerTestApplication : LoggerTestApplication
     {
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory,
+            IHttpContextAccessor accessor)
         {
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, null, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(ProjectId, loggerOptions, accessor: accessor);
         }
     }
+
+
 
     /// <summary>
     /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
