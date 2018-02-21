@@ -45,16 +45,31 @@ do
 done
 
 # TODO: Make builddocs.sh cope with being run from any directory.
-cd docs
-./builddocs.sh root $projects
+(cd docs && ./builddocs.sh root $projects)
 
-echo "Release build complete for the following projects:"
+rm -rf releasedocs
+git clone https://github.com/GoogleCloudPlatform/google-cloud-dotnet.git releasedocs -b gh-pages --depth 1 -c core.autocrlf=input
+cd releasedocs
+
+for project in $projects
+do
+  rm -rf ./docs/$project
+  mv ../docs/output/assembled/$project ./docs
+done
+
+rm ./index.html
+mv ../docs/output/assembled/index.html ./
+
+echo "Release build and docs complete for the following projects:"
 for project in $projects
 do
   echo "- ${project}"
 done
 echo "Next steps:"
 echo "- Upload new docs to gh-pages branch"
+echo "  - cd releasebuild/releasedocs"
+echo "  - git commit -a -m 'Regenerate docs'"
+echo "  - git push"
 echo "- Push packages to nuget:"
 echo "  - cd releasebuild/nuget"
 echo "  - Remove any packages you don't want to push"
