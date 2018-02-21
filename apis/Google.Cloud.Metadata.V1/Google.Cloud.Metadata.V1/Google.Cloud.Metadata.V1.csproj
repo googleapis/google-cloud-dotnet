@@ -23,22 +23,12 @@
     <RepositoryUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.2.1" />
     <PackageReference Include="Google.Apis.Compute.v1" Version="1.30.0.1013" />
-    <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.1.2-alpha" PrivateAssets="All" />
-    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.5.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.1.3-alpha" PrivateAssets="All" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.0" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup Label="dotnet pack instructions">
-    <Content Include="$(OutputPath)netstandard1.3\$(PackageId).pdb">
-      <Pack>true</Pack>
-      <PackagePath>lib/netstandard1.3</PackagePath>
-    </Content>
-    <Content Include="$(OutputPath)net45\$(PackageId).pdb">
-      <Pack>true</Pack>
-      <PackagePath>lib/net45</PackagePath>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Reference Condition="'$(TargetFramework)' == 'net45'" Include="Microsoft.CSharp" />
