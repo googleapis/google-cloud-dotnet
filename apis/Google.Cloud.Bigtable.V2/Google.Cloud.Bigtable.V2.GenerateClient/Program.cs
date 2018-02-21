@@ -250,7 +250,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             {
                 var parameters = node.ParameterList.Parameters;
                 node = (MethodDeclarationSyntax)base.VisitMethodDeclaration(node);
-                //node = node.WithModifiers(TokenList(Token(SyntaxKind.PublicKeyword), Token(SyntaxKind.OverrideKeyword)));
+
                 // Replace the body with something like this:
                 //------------------------------------------------------------------------
                 //  if (request.AppProfileId == null)
@@ -262,13 +262,13 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 //------------------------------------------------------------------------
                 var appProfileIdProperty = parameters[0].Identifier.Member(AppProfileIdPropertyName);
                 var underlyingMethod = IdentifierName(GetClientMethodName).Invoke().Member(node.Identifier);
-
                 node = node.WithBody(Block(
                     If(appProfileIdProperty.EqualTo(Null()),
                         appProfileIdProperty.AssignFrom(AppProfileIdFieldName).ToStatement()),
                     ReturnStatement(
                         underlyingMethod.Invoke(
                             parameters.Select(parameter => Argument(parameter.Identifier))))));
+
                 return node;
             }
 
