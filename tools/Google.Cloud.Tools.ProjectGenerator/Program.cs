@@ -72,9 +72,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // The relationship between this and PrivateAssets is tested on startup.
         private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
         {
-            { CompatibilityAnalyzer, "0.1.2-alpha" },
-            { ConfigureAwaitAnalyzer, "1.0.0" },
-            { SourceLinkPackage, "2.5.0" }
+            { CompatibilityAnalyzer, "0.1.3-alpha" },
+            { ConfigureAwaitAnalyzer, "1.0.1" },
+            { SourceLinkPackage, "2.8.0" }
         };
 
         private const string DotnetPackInstructionsLabel = "dotnet pack instructions";
@@ -315,16 +315,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             {
                 propertyGroup.Add(new XElement("CodeAnalysisRuleSet", "..\\..\\..\\grpc.ruleset"));
             }
-            var packingElement = new XElement("ItemGroup",
-                new XAttribute("Label", DotnetPackInstructionsLabel),
-                targetFrameworks.Split(';').Select(tfm => new XElement("Content",
-                    new XAttribute("Include", $@"$(OutputPath){tfm}\$(PackageId).pdb"),
-                    new XElement("Pack", true),
-                    new XElement("PackagePath", $"lib/{tfm}")
-                ))
-            );
             var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.IsReleaseVersion, testProject: false, apiNames: apiNames);
-            WriteProjectFile(api, directory, propertyGroup, dependenciesElement, packingElement);
+            WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
         }
 
         private static string GetTestTargetFrameworks(ApiMetadata api) => api.TestTargetFrameworks ??
@@ -373,7 +365,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XAttribute("Include", "Microsoft.CSharp")));
             // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
             dependenciesElement.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
-            WriteProjectFile(api, directory, propertyGroup, dependenciesElement, null);
+            WriteProjectFile(api, directory, propertyGroup, dependenciesElement);
         }
 
         private static void GenerateCoverageFile(ApiMetadata api, string directory)
@@ -418,7 +410,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         }
 
         private static void WriteProjectFile(
-            ApiMetadata api, string directory, XElement propertyGroup, XElement dependenciesItemGroup, XElement packingElement)
+            ApiMetadata api, string directory, XElement propertyGroup, XElement dependenciesItemGroup)
         {
             var file = Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj");
             string beforeHash = GetFileHash(file);
@@ -432,8 +424,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\..\StripDesktopOnNonWindows.xml").Remove();
                 doc.Elements("PropertyGroup").First().ReplaceWith(propertyGroup);
                 doc.Elements("ItemGroup").First().ReplaceWith(dependenciesItemGroup);
+                // TODO: Remove this after regenerating projects
                 doc.Elements("ItemGroup").Where(x => (string)x.Attribute("Label") == DotnetPackInstructionsLabel).Remove();
-                doc.Elements("ItemGroup").First().AddAfterSelf(packingElement);
             }
             // Otherwise, create a new one
             else
@@ -441,8 +433,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 doc = new XElement("Project",
                     new XAttribute("Sdk", "Microsoft.NET.Sdk"),
                     propertyGroup,
-                    dependenciesItemGroup,
-                    packingElement);
+                    dependenciesItemGroup);
             }
 
             // Don't use File.CreateText as that omits the byte order mark.
