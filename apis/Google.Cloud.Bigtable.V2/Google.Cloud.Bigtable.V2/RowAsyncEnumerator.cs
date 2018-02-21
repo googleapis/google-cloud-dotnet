@@ -21,7 +21,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-using static Google.Cloud.Bigtable.V2.BigtableClient;
+using static Google.Cloud.Bigtable.V2.BigtableServiceApiClient;
 using static Google.Cloud.Bigtable.V2.ReadRowsResponse.Types;
 
 namespace Google.Cloud.Bigtable.V2

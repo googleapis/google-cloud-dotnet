@@ -36,15 +36,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 throw new RequestMadeException();
             public override Task<MutateRowResponse> MutateRowAsync(MutateRowRequest request, CallSettings callSettings = null) =>
                 throw new RequestMadeException();
-            public override MutateRowsStream MutateRows(MutateRowsRequest request, CallSettings callSettings = null) =>
+            public override BigtableServiceApiClient.MutateRowsStream MutateRows(MutateRowsRequest request, CallSettings callSettings = null) =>
                 throw new RequestMadeException();
             public override ReadModifyWriteRowResponse ReadModifyWriteRow(ReadModifyWriteRowRequest request, CallSettings callSettings = null) =>
                 throw new RequestMadeException();
             public override Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, CallSettings callSettings = null) =>
                 throw new RequestMadeException();
-            public override ReadRowsStream ReadRows(ReadRowsRequest request, CallSettings callSettings = null) =>
+            public override BigtableServiceApiClient.ReadRowsStream ReadRows(ReadRowsRequest request, CallSettings callSettings = null) =>
                 throw new RequestMadeException();
-            public override SampleRowKeysStream SampleRowKeys(SampleRowKeysRequest request, CallSettings callSettings = null) =>
+            public override BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(SampleRowKeysRequest request, CallSettings callSettings = null) =>
                 throw new RequestMadeException();
         }
 

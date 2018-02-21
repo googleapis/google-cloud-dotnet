@@ -449,7 +449,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// The server stream.
         /// </returns>
-        public virtual MutateRowsStream MutateRows(
+        public virtual BigtableServiceApiClient.MutateRowsStream MutateRows(
             TableName tableName,
             IEnumerable<MutateRowsRequest.Types.Entry> entries,
             CallSettings callSettings = null)
@@ -491,7 +491,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// The server stream.
         /// </returns>
-        public virtual MutateRowsStream MutateRows(
+        public virtual BigtableServiceApiClient.MutateRowsStream MutateRows(
             TableName tableName,
             params MutateRowsRequest.Types.Entry[] entries) =>
             MutateRows(tableName, entries, callSettings: null);
@@ -813,7 +813,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// The server stream.
         /// </returns>
-        public virtual ReadRowsStream ReadRows(
+        public virtual BigtableServiceApiClient.ReadRowsStream ReadRows(
             TableName tableName,
             RowSet rows = null,
             RowFilter filter = null,
@@ -850,7 +850,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// The server stream with the row key samples.
         /// </returns>
-        public virtual SampleRowKeysStream SampleRowKeys(
+        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(
             TableName tableName,
             CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest

@@ -125,7 +125,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 Mutations.SetCell("Score", "Level 1", 12));
 
             // Snippet: MutateRows(TableName,*)
-            BigtableClient.MutateRowsStream streamingResponse = client.MutateRows(
+            BigtableServiceApiClient.MutateRowsStream streamingResponse = client.MutateRows(
                 new TableName(projectId, instanceId, tableId),
                 // From row 'user12345'...
                 Mutations.CreateEntry("user12345",
@@ -301,7 +301,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             long rowsLimit = 10;
 
             // Make the request
-            BigtableClient.ReadRowsStream streamingResponse = client.ReadRows(
+            BigtableServiceApiClient.ReadRowsStream streamingResponse = client.ReadRows(
                 tableName,
                 rows,
                 filter,
@@ -341,7 +341,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             var tableId = _fixture.TableName.TableId;
 
             // Snippet: SampleRowKeys(TableName,CallSettings)
-            BigtableClient.SampleRowKeysStream streamingResponse = client.SampleRowKeys(
+            BigtableServiceApiClient.SampleRowKeysStream streamingResponse = client.SampleRowKeys(
                 new TableName(projectId, instanceId, tableId),
                 CallSettings.FromCancellationToken(cancellationToken));
 
