@@ -30,24 +30,24 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Bigtable.V2
 {
     /// <summary>
-    /// Settings for a <see cref="BigtableClient"/>.
+    /// Settings for a <see cref="BigtableServiceApiClient"/>.
     /// </summary>
-    public sealed partial class BigtableSettings : ServiceSettingsBase
+    public sealed partial class BigtableServiceApiSettings : ServiceSettingsBase
     {
         /// <summary>
-        /// Get a new instance of the default <see cref="BigtableSettings"/>.
+        /// Get a new instance of the default <see cref="BigtableServiceApiSettings"/>.
         /// </summary>
         /// <returns>
-        /// A new instance of the default <see cref="BigtableSettings"/>.
+        /// A new instance of the default <see cref="BigtableServiceApiSettings"/>.
         /// </returns>
-        public static BigtableSettings GetDefault() => new BigtableSettings();
+        public static BigtableServiceApiSettings GetDefault() => new BigtableServiceApiSettings();
 
         /// <summary>
-        /// Constructs a new <see cref="BigtableSettings"/> object with default settings.
+        /// Constructs a new <see cref="BigtableServiceApiSettings"/> object with default settings.
         /// </summary>
-        public BigtableSettings() { }
+        public BigtableServiceApiSettings() { }
 
-        private BigtableSettings(BigtableSettings existing) : base(existing)
+        private BigtableServiceApiSettings(BigtableServiceApiSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ReadRowsSettings = existing.ReadRowsSettings;
@@ -59,11 +59,11 @@ namespace Google.Cloud.Bigtable.V2
             OnCopy(existing);
         }
 
-        partial void OnCopy(BigtableSettings existing);
+        partial void OnCopy(BigtableServiceApiSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "Idempotent" <see cref="BigtableClient"/> RPC methods.
+        /// for "Idempotent" <see cref="BigtableServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
         /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
@@ -77,7 +77,7 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
-        /// for "NonIdempotent" <see cref="BigtableClient"/> RPC methods.
+        /// for "NonIdempotent" <see cref="BigtableServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
         /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
@@ -86,13 +86,13 @@ namespace Google.Cloud.Bigtable.V2
             RetrySettings.FilterForStatusCodes();
 
         /// <summary>
-        /// "Default" retry backoff for <see cref="BigtableClient"/> RPC methods.
+        /// "Default" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Default" retry backoff for <see cref="BigtableClient"/> RPC methods.
+        /// The "Default" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Default" retry backoff for <see cref="BigtableClient"/> RPC methods is defined as:
+        /// The "Default" retry backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
@@ -106,13 +106,13 @@ namespace Google.Cloud.Bigtable.V2
         );
 
         /// <summary>
-        /// "Default" timeout backoff for <see cref="BigtableClient"/> RPC methods.
+        /// "Default" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
         /// </summary>
         /// <returns>
-        /// The "Default" timeout backoff for <see cref="BigtableClient"/> RPC methods.
+        /// The "Default" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods.
         /// </returns>
         /// <remarks>
-        /// The "Default" timeout backoff for <see cref="BigtableClient"/> RPC methods is defined as:
+        /// The "Default" timeout backoff for <see cref="BigtableServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial timeout: 20000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
@@ -126,7 +126,7 @@ namespace Google.Cloud.Bigtable.V2
         );
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>BigtableClient.ReadRows</c>.
+        /// <see cref="CallSettings"/> for calls to <c>BigtableServiceApiClient.ReadRows</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 600000 milliseconds.
@@ -135,7 +135,7 @@ namespace Google.Cloud.Bigtable.V2
             CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>BigtableClient.SampleRowKeys</c>.
+        /// <see cref="CallSettings"/> for calls to <c>BigtableServiceApiClient.SampleRowKeys</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 600000 milliseconds.
@@ -145,11 +145,11 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>BigtableClient.MutateRow</c> and <c>BigtableClient.MutateRowAsync</c>.
+        /// <c>BigtableServiceApiClient.MutateRow</c> and <c>BigtableServiceApiClient.MutateRowAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>BigtableClient.MutateRow</c> and
-        /// <c>BigtableClient.MutateRowAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>BigtableServiceApiClient.MutateRow</c> and
+        /// <c>BigtableServiceApiClient.MutateRowAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -174,7 +174,7 @@ namespace Google.Cloud.Bigtable.V2
             )));
 
         /// <summary>
-        /// <see cref="CallSettings"/> for calls to <c>BigtableClient.MutateRows</c>.
+        /// <see cref="CallSettings"/> for calls to <c>BigtableServiceApiClient.MutateRows</c>.
         /// </summary>
         /// <remarks>
         /// Default RPC expiration is 600000 milliseconds.
@@ -184,11 +184,11 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>BigtableClient.CheckAndMutateRow</c> and <c>BigtableClient.CheckAndMutateRowAsync</c>.
+        /// <c>BigtableServiceApiClient.CheckAndMutateRow</c> and <c>BigtableServiceApiClient.CheckAndMutateRowAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>BigtableClient.CheckAndMutateRow</c> and
-        /// <c>BigtableClient.CheckAndMutateRowAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>BigtableServiceApiClient.CheckAndMutateRow</c> and
+        /// <c>BigtableServiceApiClient.CheckAndMutateRowAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -213,11 +213,11 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>BigtableClient.ReadModifyWriteRow</c> and <c>BigtableClient.ReadModifyWriteRowAsync</c>.
+        /// <c>BigtableServiceApiClient.ReadModifyWriteRow</c> and <c>BigtableServiceApiClient.ReadModifyWriteRowAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>BigtableClient.ReadModifyWriteRow</c> and
-        /// <c>BigtableClient.ReadModifyWriteRowAsync</c> <see cref="RetrySettings"/> are:
+        /// The default <c>BigtableServiceApiClient.ReadModifyWriteRow</c> and
+        /// <c>BigtableServiceApiClient.ReadModifyWriteRowAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -243,14 +243,14 @@ namespace Google.Cloud.Bigtable.V2
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this <see cref="BigtableSettings"/> object.</returns>
-        public BigtableSettings Clone() => new BigtableSettings(this);
+        /// <returns>A deep clone of this <see cref="BigtableServiceApiSettings"/> object.</returns>
+        public BigtableServiceApiSettings Clone() => new BigtableServiceApiSettings(this);
     }
 
     /// <summary>
     /// Bigtable client wrapper, for convenient use.
     /// </summary>
-    public abstract partial class BigtableClient
+    public abstract partial class BigtableServiceApiClient
     {
         /// <summary>
         /// The default endpoint for the Bigtable service, which is a host of "bigtable.googleapis.com" and a port of 443.
@@ -290,53 +290,53 @@ namespace Google.Cloud.Bigtable.V2
         // Con: overloads!
 
         /// <summary>
-        /// Asynchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
+        /// Asynchronously creates a <see cref="BigtableServiceApiClient"/>, applying defaults for all unspecified settings,
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="BigtableSettings"/>.</param>
-        /// <returns>The task representing the created <see cref="BigtableClient"/>.</returns>
-        public static async Task<BigtableClient> CreateAsync(ServiceEndpoint endpoint = null, BigtableSettings settings = null)
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <returns>The task representing the created <see cref="BigtableServiceApiClient"/>.</returns>
+        public static async Task<BigtableServiceApiClient> CreateAsync(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
         {
             Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
         }
 
         /// <summary>
-        /// Synchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
+        /// Synchronously creates a <see cref="BigtableServiceApiClient"/>, applying defaults for all unspecified settings,
         /// and creating a channel connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="BigtableSettings"/>.</param>
-        /// <returns>The created <see cref="BigtableClient"/>.</returns>
-        public static BigtableClient Create(ServiceEndpoint endpoint = null, BigtableSettings settings = null)
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <returns>The created <see cref="BigtableServiceApiClient"/>.</returns>
+        public static BigtableServiceApiClient Create(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
         {
             Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
         }
 
         /// <summary>
-        /// Creates a <see cref="BigtableClient"/> which uses the specified channel for remote operations.
+        /// Creates a <see cref="BigtableServiceApiClient"/> which uses the specified channel for remote operations.
         /// </summary>
         /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
-        /// <param name="settings">Optional <see cref="BigtableSettings"/>.</param>
-        /// <returns>The created <see cref="BigtableClient"/>.</returns>
-        public static BigtableClient Create(Channel channel, BigtableSettings settings = null)
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <returns>The created <see cref="BigtableServiceApiClient"/>.</returns>
+        public static BigtableServiceApiClient Create(Channel channel, BigtableServiceApiSettings settings = null)
         {
             GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Bigtable.BigtableClient grpcClient = new Bigtable.BigtableClient(channel);
-            return new BigtableClientImpl(grpcClient, settings);
+            return new BigtableServiceApiClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, BigtableSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, BigtableSettings)"/>. Channels which weren't automatically
+        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, BigtableServiceApiSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, BigtableServiceApiSettings)"/>. Channels which weren't automatically
         /// created are not affected.
         /// </summary>
-        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, BigtableSettings)"/>
-        /// and <see cref="CreateAsync(ServiceEndpoint, BigtableSettings)"/> will create new channels, which could
+        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, BigtableServiceApiSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, BigtableServiceApiSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
@@ -949,7 +949,7 @@ namespace Google.Cloud.Bigtable.V2
     /// <summary>
     /// Bigtable client wrapper implementation, for convenient use.
     /// </summary>
-    public sealed partial class BigtableClientImpl : BigtableClient
+    public sealed partial class BigtableServiceApiClientImpl : BigtableServiceApiClient
     {
         private readonly ApiServerStreamingCall<ReadRowsRequest, ReadRowsResponse> _callReadRows;
         private readonly ApiServerStreamingCall<SampleRowKeysRequest, SampleRowKeysResponse> _callSampleRowKeys;
@@ -962,11 +962,11 @@ namespace Google.Cloud.Bigtable.V2
         /// Constructs a client wrapper for the Bigtable service, with the specified gRPC client and settings.
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
-        /// <param name="settings">The base <see cref="BigtableSettings"/> used within this client </param>
-        public BigtableClientImpl(Bigtable.BigtableClient grpcClient, BigtableSettings settings)
+        /// <param name="settings">The base <see cref="BigtableServiceApiSettings"/> used within this client </param>
+        public BigtableServiceApiClientImpl(Bigtable.BigtableClient grpcClient, BigtableServiceApiSettings settings)
         {
             GrpcClient = grpcClient;
-            BigtableSettings effectiveSettings = settings ?? BigtableSettings.GetDefault();
+            BigtableServiceApiSettings effectiveSettings = settings ?? BigtableServiceApiSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>(
                 GrpcClient.ReadRows, effectiveSettings.ReadRowsSettings);
@@ -983,7 +983,7 @@ namespace Google.Cloud.Bigtable.V2
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
-        partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableSettings effectiveSettings, ClientHelper clientHelper);
+        partial void OnConstruction(Bigtable.BigtableClient grpcClient, BigtableServiceApiSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Bigtable client.
