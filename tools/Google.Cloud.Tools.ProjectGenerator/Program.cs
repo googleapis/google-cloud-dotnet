@@ -77,7 +77,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { SourceLinkPackage, "2.8.0" }
         };
 
-        private const string DotnetPackInstructionsLabel = "dotnet pack instructions";
         private const string CompatibilityAnalyzer = "Microsoft.DotNet.Analyzers.Compatibility";
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
         private const string SourceLinkPackage = "SourceLink.Create.CommandLine";
@@ -424,8 +423,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\..\StripDesktopOnNonWindows.xml").Remove();
                 doc.Elements("PropertyGroup").First().ReplaceWith(propertyGroup);
                 doc.Elements("ItemGroup").First().ReplaceWith(dependenciesItemGroup);
-                // TODO: Remove this after regenerating projects
-                doc.Elements("ItemGroup").Where(x => (string)x.Attribute("Label") == DotnetPackInstructionsLabel).Remove();
             }
             // Otherwise, create a new one
             else
