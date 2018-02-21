@@ -7,6 +7,11 @@ corresponding issues open, but we'll reopen the issue if we revisit
 the request and want to put work into it.
 
 
+## Write correlation-id with log entry metadata
+
+- Issue: [#1038](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1038)
+- Status: Further investigation and more details required.
+
 ## Make ValueSerializer public (Firestore)
 
 - Issue: [#1818](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1709)
