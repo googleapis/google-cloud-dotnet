@@ -72,7 +72,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // The relationship between this and PrivateAssets is tested on startup.
         private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
         {
-            { CompatibilityAnalyzer, "0.1.3-alpha" },
+            { CompatibilityAnalyzer, "0.1.2-alpha" },
             { ConfigureAwaitAnalyzer, "1.0.1" },
             { SourceLinkPackage, "2.8.0" }
         };
