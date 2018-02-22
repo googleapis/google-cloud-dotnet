@@ -104,6 +104,8 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     baseType: ParseTypeName(userClientName))
                     .WithLeadingTrivia(generatedApiClientSyntax.GetLeadingTrivia());
 
+            // Copy the request methods from the API client with the user client. We only require these to be copied since
+            // we already have handwritten flattening overloads to change ByteString to BigtableByteString.
             foreach (var methodSyntax in generatedApiClientSyntax.Members.OfType<MethodDeclarationSyntax>())
             {
                 var method = semanticModel.GetDeclaredSymbol(methodSyntax);
