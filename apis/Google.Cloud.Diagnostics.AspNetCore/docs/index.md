@@ -12,7 +12,7 @@ and Stackdriver Trace.
 
 # Note
 The Google.Cloud.Diagnostics.AspNetCore package attempts to collect the filename and line number when
-some entries are collected.  However. to be able to collect this information PDBs must be included with
+entries are collected.  However, to be able to collect this information PDBs must be included with
 the deployed code.
 
 # Getting started
