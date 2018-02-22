@@ -106,44 +106,44 @@ namespace Google.Cloud.Dlp.V2Beta2
     }
 
     /// <summary>
-    /// Resource name for the 'deidentify_template' resource.
+    /// Resource name for the 'organization_deidentify_template' resource.
     /// </summary>
-    public sealed partial class DeidentifyTemplateName : IResourceName, IEquatable<DeidentifyTemplateName>
+    public sealed partial class OrganizationDeidentifyTemplateName : IResourceName, IEquatable<OrganizationDeidentifyTemplateName>
     {
         private static readonly PathTemplate s_template = new PathTemplate("organizations/{organization}/deidentifyTemplates/{deidentify_template}");
 
         /// <summary>
-        /// Parses the given deidentify_template resource name in string form into a new
-        /// <see cref="DeidentifyTemplateName"/> instance.
+        /// Parses the given organization_deidentify_template resource name in string form into a new
+        /// <see cref="OrganizationDeidentifyTemplateName"/> instance.
         /// </summary>
-        /// <param name="deidentifyTemplateName">The deidentify_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="DeidentifyTemplateName"/> if successful.</returns>
-        public static DeidentifyTemplateName Parse(string deidentifyTemplateName)
+        /// <param name="organizationDeidentifyTemplateName">The organization_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationDeidentifyTemplateName"/> if successful.</returns>
+        public static OrganizationDeidentifyTemplateName Parse(string organizationDeidentifyTemplateName)
         {
-            GaxPreconditions.CheckNotNull(deidentifyTemplateName, nameof(deidentifyTemplateName));
-            TemplatedResourceName resourceName = s_template.ParseName(deidentifyTemplateName);
-            return new DeidentifyTemplateName(resourceName[0], resourceName[1]);
+            GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
+            TemplatedResourceName resourceName = s_template.ParseName(organizationDeidentifyTemplateName);
+            return new OrganizationDeidentifyTemplateName(resourceName[0], resourceName[1]);
         }
 
         /// <summary>
-        /// Tries to parse the given deidentify_template resource name in string form into a new
-        /// <see cref="DeidentifyTemplateName"/> instance.
+        /// Tries to parse the given organization_deidentify_template resource name in string form into a new
+        /// <see cref="OrganizationDeidentifyTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="deidentifyTemplateName"/> is null,
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="organizationDeidentifyTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="deidentifyTemplateName">The deidentify_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="DeidentifyTemplateName"/>,
+        /// <param name="organizationDeidentifyTemplateName">The organization_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OrganizationDeidentifyTemplateName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string deidentifyTemplateName, out DeidentifyTemplateName result)
+        public static bool TryParse(string organizationDeidentifyTemplateName, out OrganizationDeidentifyTemplateName result)
         {
-            GaxPreconditions.CheckNotNull(deidentifyTemplateName, nameof(deidentifyTemplateName));
+            GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
             TemplatedResourceName resourceName;
-            if (s_template.TryParseName(deidentifyTemplateName, out resourceName))
+            if (s_template.TryParseName(organizationDeidentifyTemplateName, out resourceName))
             {
-                result = new DeidentifyTemplateName(resourceName[0], resourceName[1]);
+                result = new OrganizationDeidentifyTemplateName(resourceName[0], resourceName[1]);
                 return true;
             }
             else
@@ -154,12 +154,12 @@ namespace Google.Cloud.Dlp.V2Beta2
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="DeidentifyTemplateName"/> resource name class
+        /// Constructs a new instance of the <see cref="OrganizationDeidentifyTemplateName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
         /// <param name="deidentifyTemplateId">The deidentifyTemplate ID. Must not be <c>null</c>.</param>
-        public DeidentifyTemplateName(string organizationId, string deidentifyTemplateId)
+        public OrganizationDeidentifyTemplateName(string organizationId, string deidentifyTemplateId)
         {
             OrganizationId = GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
             DeidentifyTemplateId = GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId));
@@ -185,57 +185,57 @@ namespace Google.Cloud.Dlp.V2Beta2
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as DeidentifyTemplateName);
+        public override bool Equals(object obj) => Equals(obj as OrganizationDeidentifyTemplateName);
 
         /// <inheritdoc />
-        public bool Equals(DeidentifyTemplateName other) => ToString() == other?.ToString();
+        public bool Equals(OrganizationDeidentifyTemplateName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(DeidentifyTemplateName a, DeidentifyTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(OrganizationDeidentifyTemplateName a, OrganizationDeidentifyTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(DeidentifyTemplateName a, DeidentifyTemplateName b) => !(a == b);
+        public static bool operator !=(OrganizationDeidentifyTemplateName a, OrganizationDeidentifyTemplateName b) => !(a == b);
     }
 
     /// <summary>
-    /// Resource name for the 'deidentify_template_2' resource.
+    /// Resource name for the 'project_deidentify_template' resource.
     /// </summary>
-    public sealed partial class DeidentifyTemplate2Name : IResourceName, IEquatable<DeidentifyTemplate2Name>
+    public sealed partial class ProjectDeidentifyTemplateName : IResourceName, IEquatable<ProjectDeidentifyTemplateName>
     {
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/deidentifyTemplates/{deidentify_template}");
 
         /// <summary>
-        /// Parses the given deidentify_template_2 resource name in string form into a new
-        /// <see cref="DeidentifyTemplate2Name"/> instance.
+        /// Parses the given project_deidentify_template resource name in string form into a new
+        /// <see cref="ProjectDeidentifyTemplateName"/> instance.
         /// </summary>
-        /// <param name="deidentifyTemplate2Name">The deidentify_template_2 resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="DeidentifyTemplate2Name"/> if successful.</returns>
-        public static DeidentifyTemplate2Name Parse(string deidentifyTemplate2Name)
+        /// <param name="projectDeidentifyTemplateName">The project_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectDeidentifyTemplateName"/> if successful.</returns>
+        public static ProjectDeidentifyTemplateName Parse(string projectDeidentifyTemplateName)
         {
-            GaxPreconditions.CheckNotNull(deidentifyTemplate2Name, nameof(deidentifyTemplate2Name));
-            TemplatedResourceName resourceName = s_template.ParseName(deidentifyTemplate2Name);
-            return new DeidentifyTemplate2Name(resourceName[0], resourceName[1]);
+            GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
+            TemplatedResourceName resourceName = s_template.ParseName(projectDeidentifyTemplateName);
+            return new ProjectDeidentifyTemplateName(resourceName[0], resourceName[1]);
         }
 
         /// <summary>
-        /// Tries to parse the given deidentify_template_2 resource name in string form into a new
-        /// <see cref="DeidentifyTemplate2Name"/> instance.
+        /// Tries to parse the given project_deidentify_template resource name in string form into a new
+        /// <see cref="ProjectDeidentifyTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="deidentifyTemplate2Name"/> is null,
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectDeidentifyTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="deidentifyTemplate2Name">The deidentify_template_2 resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="DeidentifyTemplate2Name"/>,
+        /// <param name="projectDeidentifyTemplateName">The project_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectDeidentifyTemplateName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string deidentifyTemplate2Name, out DeidentifyTemplate2Name result)
+        public static bool TryParse(string projectDeidentifyTemplateName, out ProjectDeidentifyTemplateName result)
         {
-            GaxPreconditions.CheckNotNull(deidentifyTemplate2Name, nameof(deidentifyTemplate2Name));
+            GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
             TemplatedResourceName resourceName;
-            if (s_template.TryParseName(deidentifyTemplate2Name, out resourceName))
+            if (s_template.TryParseName(projectDeidentifyTemplateName, out resourceName))
             {
-                result = new DeidentifyTemplate2Name(resourceName[0], resourceName[1]);
+                result = new ProjectDeidentifyTemplateName(resourceName[0], resourceName[1]);
                 return true;
             }
             else
@@ -246,12 +246,12 @@ namespace Google.Cloud.Dlp.V2Beta2
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="DeidentifyTemplate2Name"/> resource name class
+        /// Constructs a new instance of the <see cref="ProjectDeidentifyTemplateName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="deidentifyTemplateId">The deidentifyTemplate ID. Must not be <c>null</c>.</param>
-        public DeidentifyTemplate2Name(string projectId, string deidentifyTemplateId)
+        public ProjectDeidentifyTemplateName(string projectId, string deidentifyTemplateId)
         {
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             DeidentifyTemplateId = GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId));
@@ -277,57 +277,57 @@ namespace Google.Cloud.Dlp.V2Beta2
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as DeidentifyTemplate2Name);
+        public override bool Equals(object obj) => Equals(obj as ProjectDeidentifyTemplateName);
 
         /// <inheritdoc />
-        public bool Equals(DeidentifyTemplate2Name other) => ToString() == other?.ToString();
+        public bool Equals(ProjectDeidentifyTemplateName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(DeidentifyTemplate2Name a, DeidentifyTemplate2Name b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(ProjectDeidentifyTemplateName a, ProjectDeidentifyTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(DeidentifyTemplate2Name a, DeidentifyTemplate2Name b) => !(a == b);
+        public static bool operator !=(ProjectDeidentifyTemplateName a, ProjectDeidentifyTemplateName b) => !(a == b);
     }
 
     /// <summary>
-    /// Resource name for the 'inspect_template' resource.
+    /// Resource name for the 'organization_inspect_template' resource.
     /// </summary>
-    public sealed partial class InspectTemplateName : IResourceName, IEquatable<InspectTemplateName>
+    public sealed partial class OrganizationInspectTemplateName : IResourceName, IEquatable<OrganizationInspectTemplateName>
     {
         private static readonly PathTemplate s_template = new PathTemplate("organizations/{organization}/inspectTemplates/{inspect_template}");
 
         /// <summary>
-        /// Parses the given inspect_template resource name in string form into a new
-        /// <see cref="InspectTemplateName"/> instance.
+        /// Parses the given organization_inspect_template resource name in string form into a new
+        /// <see cref="OrganizationInspectTemplateName"/> instance.
         /// </summary>
-        /// <param name="inspectTemplateName">The inspect_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="InspectTemplateName"/> if successful.</returns>
-        public static InspectTemplateName Parse(string inspectTemplateName)
+        /// <param name="organizationInspectTemplateName">The organization_inspect_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationInspectTemplateName"/> if successful.</returns>
+        public static OrganizationInspectTemplateName Parse(string organizationInspectTemplateName)
         {
-            GaxPreconditions.CheckNotNull(inspectTemplateName, nameof(inspectTemplateName));
-            TemplatedResourceName resourceName = s_template.ParseName(inspectTemplateName);
-            return new InspectTemplateName(resourceName[0], resourceName[1]);
+            GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
+            TemplatedResourceName resourceName = s_template.ParseName(organizationInspectTemplateName);
+            return new OrganizationInspectTemplateName(resourceName[0], resourceName[1]);
         }
 
         /// <summary>
-        /// Tries to parse the given inspect_template resource name in string form into a new
-        /// <see cref="InspectTemplateName"/> instance.
+        /// Tries to parse the given organization_inspect_template resource name in string form into a new
+        /// <see cref="OrganizationInspectTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="inspectTemplateName"/> is null,
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="organizationInspectTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="inspectTemplateName">The inspect_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="InspectTemplateName"/>,
+        /// <param name="organizationInspectTemplateName">The organization_inspect_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OrganizationInspectTemplateName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string inspectTemplateName, out InspectTemplateName result)
+        public static bool TryParse(string organizationInspectTemplateName, out OrganizationInspectTemplateName result)
         {
-            GaxPreconditions.CheckNotNull(inspectTemplateName, nameof(inspectTemplateName));
+            GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
             TemplatedResourceName resourceName;
-            if (s_template.TryParseName(inspectTemplateName, out resourceName))
+            if (s_template.TryParseName(organizationInspectTemplateName, out resourceName))
             {
-                result = new InspectTemplateName(resourceName[0], resourceName[1]);
+                result = new OrganizationInspectTemplateName(resourceName[0], resourceName[1]);
                 return true;
             }
             else
@@ -338,12 +338,12 @@ namespace Google.Cloud.Dlp.V2Beta2
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="InspectTemplateName"/> resource name class
+        /// Constructs a new instance of the <see cref="OrganizationInspectTemplateName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
         /// <param name="inspectTemplateId">The inspectTemplate ID. Must not be <c>null</c>.</param>
-        public InspectTemplateName(string organizationId, string inspectTemplateId)
+        public OrganizationInspectTemplateName(string organizationId, string inspectTemplateId)
         {
             OrganizationId = GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
             InspectTemplateId = GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId));
@@ -369,57 +369,57 @@ namespace Google.Cloud.Dlp.V2Beta2
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as InspectTemplateName);
+        public override bool Equals(object obj) => Equals(obj as OrganizationInspectTemplateName);
 
         /// <inheritdoc />
-        public bool Equals(InspectTemplateName other) => ToString() == other?.ToString();
+        public bool Equals(OrganizationInspectTemplateName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(InspectTemplateName a, InspectTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(OrganizationInspectTemplateName a, OrganizationInspectTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(InspectTemplateName a, InspectTemplateName b) => !(a == b);
+        public static bool operator !=(OrganizationInspectTemplateName a, OrganizationInspectTemplateName b) => !(a == b);
     }
 
     /// <summary>
-    /// Resource name for the 'inspect_template_2' resource.
+    /// Resource name for the 'project_inspect_template' resource.
     /// </summary>
-    public sealed partial class InspectTemplate2Name : IResourceName, IEquatable<InspectTemplate2Name>
+    public sealed partial class ProjectInspectTemplateName : IResourceName, IEquatable<ProjectInspectTemplateName>
     {
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/inspectTemplates/{inspect_template}");
 
         /// <summary>
-        /// Parses the given inspect_template_2 resource name in string form into a new
-        /// <see cref="InspectTemplate2Name"/> instance.
+        /// Parses the given project_inspect_template resource name in string form into a new
+        /// <see cref="ProjectInspectTemplateName"/> instance.
         /// </summary>
-        /// <param name="inspectTemplate2Name">The inspect_template_2 resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="InspectTemplate2Name"/> if successful.</returns>
-        public static InspectTemplate2Name Parse(string inspectTemplate2Name)
+        /// <param name="projectInspectTemplateName">The project_inspect_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectInspectTemplateName"/> if successful.</returns>
+        public static ProjectInspectTemplateName Parse(string projectInspectTemplateName)
         {
-            GaxPreconditions.CheckNotNull(inspectTemplate2Name, nameof(inspectTemplate2Name));
-            TemplatedResourceName resourceName = s_template.ParseName(inspectTemplate2Name);
-            return new InspectTemplate2Name(resourceName[0], resourceName[1]);
+            GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
+            TemplatedResourceName resourceName = s_template.ParseName(projectInspectTemplateName);
+            return new ProjectInspectTemplateName(resourceName[0], resourceName[1]);
         }
 
         /// <summary>
-        /// Tries to parse the given inspect_template_2 resource name in string form into a new
-        /// <see cref="InspectTemplate2Name"/> instance.
+        /// Tries to parse the given project_inspect_template resource name in string form into a new
+        /// <see cref="ProjectInspectTemplateName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="inspectTemplate2Name"/> is null,
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectInspectTemplateName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="inspectTemplate2Name">The inspect_template_2 resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="InspectTemplate2Name"/>,
+        /// <param name="projectInspectTemplateName">The project_inspect_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectInspectTemplateName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string inspectTemplate2Name, out InspectTemplate2Name result)
+        public static bool TryParse(string projectInspectTemplateName, out ProjectInspectTemplateName result)
         {
-            GaxPreconditions.CheckNotNull(inspectTemplate2Name, nameof(inspectTemplate2Name));
+            GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
             TemplatedResourceName resourceName;
-            if (s_template.TryParseName(inspectTemplate2Name, out resourceName))
+            if (s_template.TryParseName(projectInspectTemplateName, out resourceName))
             {
-                result = new InspectTemplate2Name(resourceName[0], resourceName[1]);
+                result = new ProjectInspectTemplateName(resourceName[0], resourceName[1]);
                 return true;
             }
             else
@@ -430,12 +430,12 @@ namespace Google.Cloud.Dlp.V2Beta2
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="InspectTemplate2Name"/> resource name class
+        /// Constructs a new instance of the <see cref="ProjectInspectTemplateName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="inspectTemplateId">The inspectTemplate ID. Must not be <c>null</c>.</param>
-        public InspectTemplate2Name(string projectId, string inspectTemplateId)
+        public ProjectInspectTemplateName(string projectId, string inspectTemplateId)
         {
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             InspectTemplateId = GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId));
@@ -461,16 +461,108 @@ namespace Google.Cloud.Dlp.V2Beta2
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as InspectTemplate2Name);
+        public override bool Equals(object obj) => Equals(obj as ProjectInspectTemplateName);
 
         /// <inheritdoc />
-        public bool Equals(InspectTemplate2Name other) => ToString() == other?.ToString();
+        public bool Equals(ProjectInspectTemplateName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(InspectTemplate2Name a, InspectTemplate2Name b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(ProjectInspectTemplateName a, ProjectInspectTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(InspectTemplate2Name a, InspectTemplate2Name b) => !(a == b);
+        public static bool operator !=(ProjectInspectTemplateName a, ProjectInspectTemplateName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'project_job_trigger' resource.
+    /// </summary>
+    public sealed partial class ProjectJobTriggerName : IResourceName, IEquatable<ProjectJobTriggerName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/jobTriggers/{job_trigger}");
+
+        /// <summary>
+        /// Parses the given project_job_trigger resource name in string form into a new
+        /// <see cref="ProjectJobTriggerName"/> instance.
+        /// </summary>
+        /// <param name="projectJobTriggerName">The project_job_trigger resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectJobTriggerName"/> if successful.</returns>
+        public static ProjectJobTriggerName Parse(string projectJobTriggerName)
+        {
+            GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
+            TemplatedResourceName resourceName = s_template.ParseName(projectJobTriggerName);
+            return new ProjectJobTriggerName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given project_job_trigger resource name in string form into a new
+        /// <see cref="ProjectJobTriggerName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectJobTriggerName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="projectJobTriggerName">The project_job_trigger resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectJobTriggerName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectJobTriggerName, out ProjectJobTriggerName result)
+        {
+            GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(projectJobTriggerName, out resourceName))
+            {
+                result = new ProjectJobTriggerName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ProjectJobTriggerName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="jobTriggerId">The jobTrigger ID. Must not be <c>null</c>.</param>
+        public ProjectJobTriggerName(string projectId, string jobTriggerId)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            JobTriggerId = GaxPreconditions.CheckNotNull(jobTriggerId, nameof(jobTriggerId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The jobTrigger ID. Never <c>null</c>.
+        /// </summary>
+        public string JobTriggerId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, JobTriggerId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ProjectJobTriggerName);
+
+        /// <inheritdoc />
+        public bool Equals(ProjectJobTriggerName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ProjectJobTriggerName a, ProjectJobTriggerName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ProjectJobTriggerName a, ProjectJobTriggerName b) => !(a == b);
     }
 
     /// <summary>
@@ -656,8 +748,8 @@ namespace Google.Cloud.Dlp.V2Beta2
     /// <remarks>
     /// This resource name will contain one of the following:
     /// <list type="bullet">
-    /// <item><description>DeidentifyTemplateName: A resource of type 'deidentify_template'.</description></item>
-    /// <item><description>DeidentifyTemplate2Name: A resource of type 'deidentify_template_2'.</description></item>
+    /// <item><description>OrganizationDeidentifyTemplateName: A resource of type 'organization_deidentify_template'.</description></item>
+    /// <item><description>ProjectDeidentifyTemplateName: A resource of type 'project_deidentify_template'.</description></item>
     /// </list>
     /// </remarks>
     public sealed partial class DeidentifyTemplateNameOneof : IResourceName, IEquatable<DeidentifyTemplateNameOneof>
@@ -673,14 +765,14 @@ namespace Google.Cloud.Dlp.V2Beta2
             Unknown = 0,
 
             /// <summary>
-            /// A resource of type 'deidentify_template'.
+            /// A resource of type 'organization_deidentify_template'.
             /// </summary>
-            DeidentifyTemplateName = 1,
+            OrganizationDeidentifyTemplateName = 1,
 
             /// <summary>
-            /// A resource of type 'deidentify_template_2'.
+            /// A resource of type 'project_deidentify_template'.
             /// </summary>
-            DeidentifyTemplate2Name = 2,
+            ProjectDeidentifyTemplateName = 2,
         }
 
         /// <summary>
@@ -689,8 +781,8 @@ namespace Google.Cloud.Dlp.V2Beta2
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
-        /// <item><description>DeidentifyTemplateName: A resource of type 'deidentify_template'.</description></item>
-        /// <item><description>DeidentifyTemplate2Name: A resource of type 'deidentify_template_2'.</description></item>
+        /// <item><description>OrganizationDeidentifyTemplateName: A resource of type 'organization_deidentify_template'.</description></item>
+        /// <item><description>ProjectDeidentifyTemplateName: A resource of type 'project_deidentify_template'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -715,8 +807,8 @@ namespace Google.Cloud.Dlp.V2Beta2
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
-        /// <item><description>DeidentifyTemplateName: A resource of type 'deidentify_template'.</description></item>
-        /// <item><description>DeidentifyTemplate2Name: A resource of type 'deidentify_template_2'.</description></item>
+        /// <item><description>OrganizationDeidentifyTemplateName: A resource of type 'organization_deidentify_template'.</description></item>
+        /// <item><description>ProjectDeidentifyTemplateName: A resource of type 'project_deidentify_template'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -729,16 +821,16 @@ namespace Google.Cloud.Dlp.V2Beta2
         public static bool TryParse(string name, bool allowUnknown, out DeidentifyTemplateNameOneof result)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
-            DeidentifyTemplateName deidentifyTemplateName;
-            if (DeidentifyTemplateName.TryParse(name, out deidentifyTemplateName))
+            OrganizationDeidentifyTemplateName organizationDeidentifyTemplateName;
+            if (OrganizationDeidentifyTemplateName.TryParse(name, out organizationDeidentifyTemplateName))
             {
-                result = new DeidentifyTemplateNameOneof(OneofType.DeidentifyTemplateName, deidentifyTemplateName);
+                result = new DeidentifyTemplateNameOneof(OneofType.OrganizationDeidentifyTemplateName, organizationDeidentifyTemplateName);
                 return true;
             }
-            DeidentifyTemplate2Name deidentifyTemplate2Name;
-            if (DeidentifyTemplate2Name.TryParse(name, out deidentifyTemplate2Name))
+            ProjectDeidentifyTemplateName projectDeidentifyTemplateName;
+            if (ProjectDeidentifyTemplateName.TryParse(name, out projectDeidentifyTemplateName))
             {
-                result = new DeidentifyTemplateNameOneof(OneofType.DeidentifyTemplate2Name, deidentifyTemplate2Name);
+                result = new DeidentifyTemplateNameOneof(OneofType.ProjectDeidentifyTemplateName, projectDeidentifyTemplateName);
                 return true;
             }
             if (allowUnknown)
@@ -755,28 +847,28 @@ namespace Google.Cloud.Dlp.V2Beta2
         }
 
         /// <summary>
-        /// Construct a new instance of <see cref="DeidentifyTemplateNameOneof"/> from the provided <see cref="DeidentifyTemplateName"/>
+        /// Construct a new instance of <see cref="DeidentifyTemplateNameOneof"/> from the provided <see cref="OrganizationDeidentifyTemplateName"/>
         /// </summary>
-        /// <param name="deidentifyTemplateName">The <see cref="DeidentifyTemplateName"/> to be contained within
+        /// <param name="organizationDeidentifyTemplateName">The <see cref="OrganizationDeidentifyTemplateName"/> to be contained within
         /// the returned <see cref="DeidentifyTemplateNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="DeidentifyTemplateNameOneof"/>, containing <paramref name="deidentifyTemplateName"/>.</returns>
-        public static DeidentifyTemplateNameOneof From(DeidentifyTemplateName deidentifyTemplateName) => new DeidentifyTemplateNameOneof(OneofType.DeidentifyTemplateName, deidentifyTemplateName);
+        /// <returns>A new <see cref="DeidentifyTemplateNameOneof"/>, containing <paramref name="organizationDeidentifyTemplateName"/>.</returns>
+        public static DeidentifyTemplateNameOneof From(OrganizationDeidentifyTemplateName organizationDeidentifyTemplateName) => new DeidentifyTemplateNameOneof(OneofType.OrganizationDeidentifyTemplateName, organizationDeidentifyTemplateName);
 
         /// <summary>
-        /// Construct a new instance of <see cref="DeidentifyTemplateNameOneof"/> from the provided <see cref="DeidentifyTemplate2Name"/>
+        /// Construct a new instance of <see cref="DeidentifyTemplateNameOneof"/> from the provided <see cref="ProjectDeidentifyTemplateName"/>
         /// </summary>
-        /// <param name="deidentifyTemplate2Name">The <see cref="DeidentifyTemplate2Name"/> to be contained within
+        /// <param name="projectDeidentifyTemplateName">The <see cref="ProjectDeidentifyTemplateName"/> to be contained within
         /// the returned <see cref="DeidentifyTemplateNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="DeidentifyTemplateNameOneof"/>, containing <paramref name="deidentifyTemplate2Name"/>.</returns>
-        public static DeidentifyTemplateNameOneof From(DeidentifyTemplate2Name deidentifyTemplate2Name) => new DeidentifyTemplateNameOneof(OneofType.DeidentifyTemplate2Name, deidentifyTemplate2Name);
+        /// <returns>A new <see cref="DeidentifyTemplateNameOneof"/>, containing <paramref name="projectDeidentifyTemplateName"/>.</returns>
+        public static DeidentifyTemplateNameOneof From(ProjectDeidentifyTemplateName projectDeidentifyTemplateName) => new DeidentifyTemplateNameOneof(OneofType.ProjectDeidentifyTemplateName, projectDeidentifyTemplateName);
 
         private static bool IsValid(OneofType type, IResourceName name)
         {
             switch (type)
             {
                 case OneofType.Unknown: return true; // Anything goes with Unknown.
-                case OneofType.DeidentifyTemplateName: return name is DeidentifyTemplateName;
-                case OneofType.DeidentifyTemplate2Name: return name is DeidentifyTemplate2Name;
+                case OneofType.OrganizationDeidentifyTemplateName: return name is OrganizationDeidentifyTemplateName;
+                case OneofType.ProjectDeidentifyTemplateName: return name is ProjectDeidentifyTemplateName;
                 default: return false;
             }
         }
@@ -815,22 +907,22 @@ namespace Google.Cloud.Dlp.V2Beta2
         }
 
         /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="DeidentifyTemplateName"/>.
+        /// Get the contained <see cref="IResourceName"/> as <see cref="OrganizationDeidentifyTemplateName"/>.
         /// </summary>
         /// <remarks>
         /// An <see cref="InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="DeidentifyTemplateName"/>.
+        /// contain an instance of <see cref="OrganizationDeidentifyTemplateName"/>.
         /// </remarks>
-        public DeidentifyTemplateName DeidentifyTemplateName => CheckAndReturn<DeidentifyTemplateName>(OneofType.DeidentifyTemplateName);
+        public OrganizationDeidentifyTemplateName OrganizationDeidentifyTemplateName => CheckAndReturn<OrganizationDeidentifyTemplateName>(OneofType.OrganizationDeidentifyTemplateName);
 
         /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="DeidentifyTemplate2Name"/>.
+        /// Get the contained <see cref="IResourceName"/> as <see cref="ProjectDeidentifyTemplateName"/>.
         /// </summary>
         /// <remarks>
         /// An <see cref="InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="DeidentifyTemplate2Name"/>.
+        /// contain an instance of <see cref="ProjectDeidentifyTemplateName"/>.
         /// </remarks>
-        public DeidentifyTemplate2Name DeidentifyTemplate2Name => CheckAndReturn<DeidentifyTemplate2Name>(OneofType.DeidentifyTemplate2Name);
+        public ProjectDeidentifyTemplateName ProjectDeidentifyTemplateName => CheckAndReturn<ProjectDeidentifyTemplateName>(OneofType.ProjectDeidentifyTemplateName);
 
         /// <inheritdoc />
         public ResourceNameKind Kind => ResourceNameKind.Oneof;
@@ -860,8 +952,8 @@ namespace Google.Cloud.Dlp.V2Beta2
     /// <remarks>
     /// This resource name will contain one of the following:
     /// <list type="bullet">
-    /// <item><description>InspectTemplateName: A resource of type 'inspect_template'.</description></item>
-    /// <item><description>InspectTemplate2Name: A resource of type 'inspect_template_2'.</description></item>
+    /// <item><description>OrganizationInspectTemplateName: A resource of type 'organization_inspect_template'.</description></item>
+    /// <item><description>ProjectInspectTemplateName: A resource of type 'project_inspect_template'.</description></item>
     /// </list>
     /// </remarks>
     public sealed partial class InspectTemplateNameOneof : IResourceName, IEquatable<InspectTemplateNameOneof>
@@ -877,14 +969,14 @@ namespace Google.Cloud.Dlp.V2Beta2
             Unknown = 0,
 
             /// <summary>
-            /// A resource of type 'inspect_template'.
+            /// A resource of type 'organization_inspect_template'.
             /// </summary>
-            InspectTemplateName = 1,
+            OrganizationInspectTemplateName = 1,
 
             /// <summary>
-            /// A resource of type 'inspect_template_2'.
+            /// A resource of type 'project_inspect_template'.
             /// </summary>
-            InspectTemplate2Name = 2,
+            ProjectInspectTemplateName = 2,
         }
 
         /// <summary>
@@ -893,8 +985,8 @@ namespace Google.Cloud.Dlp.V2Beta2
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
-        /// <item><description>InspectTemplateName: A resource of type 'inspect_template'.</description></item>
-        /// <item><description>InspectTemplate2Name: A resource of type 'inspect_template_2'.</description></item>
+        /// <item><description>OrganizationInspectTemplateName: A resource of type 'organization_inspect_template'.</description></item>
+        /// <item><description>ProjectInspectTemplateName: A resource of type 'project_inspect_template'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -919,8 +1011,8 @@ namespace Google.Cloud.Dlp.V2Beta2
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
-        /// <item><description>InspectTemplateName: A resource of type 'inspect_template'.</description></item>
-        /// <item><description>InspectTemplate2Name: A resource of type 'inspect_template_2'.</description></item>
+        /// <item><description>OrganizationInspectTemplateName: A resource of type 'organization_inspect_template'.</description></item>
+        /// <item><description>ProjectInspectTemplateName: A resource of type 'project_inspect_template'.</description></item>
         /// </list>
         /// Or an <see cref="UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -933,16 +1025,16 @@ namespace Google.Cloud.Dlp.V2Beta2
         public static bool TryParse(string name, bool allowUnknown, out InspectTemplateNameOneof result)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
-            InspectTemplateName inspectTemplateName;
-            if (InspectTemplateName.TryParse(name, out inspectTemplateName))
+            OrganizationInspectTemplateName organizationInspectTemplateName;
+            if (OrganizationInspectTemplateName.TryParse(name, out organizationInspectTemplateName))
             {
-                result = new InspectTemplateNameOneof(OneofType.InspectTemplateName, inspectTemplateName);
+                result = new InspectTemplateNameOneof(OneofType.OrganizationInspectTemplateName, organizationInspectTemplateName);
                 return true;
             }
-            InspectTemplate2Name inspectTemplate2Name;
-            if (InspectTemplate2Name.TryParse(name, out inspectTemplate2Name))
+            ProjectInspectTemplateName projectInspectTemplateName;
+            if (ProjectInspectTemplateName.TryParse(name, out projectInspectTemplateName))
             {
-                result = new InspectTemplateNameOneof(OneofType.InspectTemplate2Name, inspectTemplate2Name);
+                result = new InspectTemplateNameOneof(OneofType.ProjectInspectTemplateName, projectInspectTemplateName);
                 return true;
             }
             if (allowUnknown)
@@ -959,28 +1051,28 @@ namespace Google.Cloud.Dlp.V2Beta2
         }
 
         /// <summary>
-        /// Construct a new instance of <see cref="InspectTemplateNameOneof"/> from the provided <see cref="InspectTemplateName"/>
+        /// Construct a new instance of <see cref="InspectTemplateNameOneof"/> from the provided <see cref="OrganizationInspectTemplateName"/>
         /// </summary>
-        /// <param name="inspectTemplateName">The <see cref="InspectTemplateName"/> to be contained within
+        /// <param name="organizationInspectTemplateName">The <see cref="OrganizationInspectTemplateName"/> to be contained within
         /// the returned <see cref="InspectTemplateNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="InspectTemplateNameOneof"/>, containing <paramref name="inspectTemplateName"/>.</returns>
-        public static InspectTemplateNameOneof From(InspectTemplateName inspectTemplateName) => new InspectTemplateNameOneof(OneofType.InspectTemplateName, inspectTemplateName);
+        /// <returns>A new <see cref="InspectTemplateNameOneof"/>, containing <paramref name="organizationInspectTemplateName"/>.</returns>
+        public static InspectTemplateNameOneof From(OrganizationInspectTemplateName organizationInspectTemplateName) => new InspectTemplateNameOneof(OneofType.OrganizationInspectTemplateName, organizationInspectTemplateName);
 
         /// <summary>
-        /// Construct a new instance of <see cref="InspectTemplateNameOneof"/> from the provided <see cref="InspectTemplate2Name"/>
+        /// Construct a new instance of <see cref="InspectTemplateNameOneof"/> from the provided <see cref="ProjectInspectTemplateName"/>
         /// </summary>
-        /// <param name="inspectTemplate2Name">The <see cref="InspectTemplate2Name"/> to be contained within
+        /// <param name="projectInspectTemplateName">The <see cref="ProjectInspectTemplateName"/> to be contained within
         /// the returned <see cref="InspectTemplateNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="InspectTemplateNameOneof"/>, containing <paramref name="inspectTemplate2Name"/>.</returns>
-        public static InspectTemplateNameOneof From(InspectTemplate2Name inspectTemplate2Name) => new InspectTemplateNameOneof(OneofType.InspectTemplate2Name, inspectTemplate2Name);
+        /// <returns>A new <see cref="InspectTemplateNameOneof"/>, containing <paramref name="projectInspectTemplateName"/>.</returns>
+        public static InspectTemplateNameOneof From(ProjectInspectTemplateName projectInspectTemplateName) => new InspectTemplateNameOneof(OneofType.ProjectInspectTemplateName, projectInspectTemplateName);
 
         private static bool IsValid(OneofType type, IResourceName name)
         {
             switch (type)
             {
                 case OneofType.Unknown: return true; // Anything goes with Unknown.
-                case OneofType.InspectTemplateName: return name is InspectTemplateName;
-                case OneofType.InspectTemplate2Name: return name is InspectTemplate2Name;
+                case OneofType.OrganizationInspectTemplateName: return name is OrganizationInspectTemplateName;
+                case OneofType.ProjectInspectTemplateName: return name is ProjectInspectTemplateName;
                 default: return false;
             }
         }
@@ -1019,22 +1111,22 @@ namespace Google.Cloud.Dlp.V2Beta2
         }
 
         /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="InspectTemplateName"/>.
+        /// Get the contained <see cref="IResourceName"/> as <see cref="OrganizationInspectTemplateName"/>.
         /// </summary>
         /// <remarks>
         /// An <see cref="InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="InspectTemplateName"/>.
+        /// contain an instance of <see cref="OrganizationInspectTemplateName"/>.
         /// </remarks>
-        public InspectTemplateName InspectTemplateName => CheckAndReturn<InspectTemplateName>(OneofType.InspectTemplateName);
+        public OrganizationInspectTemplateName OrganizationInspectTemplateName => CheckAndReturn<OrganizationInspectTemplateName>(OneofType.OrganizationInspectTemplateName);
 
         /// <summary>
-        /// Get the contained <see cref="IResourceName"/> as <see cref="InspectTemplate2Name"/>.
+        /// Get the contained <see cref="IResourceName"/> as <see cref="ProjectInspectTemplateName"/>.
         /// </summary>
         /// <remarks>
         /// An <see cref="InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="InspectTemplate2Name"/>.
+        /// contain an instance of <see cref="ProjectInspectTemplateName"/>.
         /// </remarks>
-        public InspectTemplate2Name InspectTemplate2Name => CheckAndReturn<InspectTemplate2Name>(OneofType.InspectTemplate2Name);
+        public ProjectInspectTemplateName ProjectInspectTemplateName => CheckAndReturn<ProjectInspectTemplateName>(OneofType.ProjectInspectTemplateName);
 
         /// <inheritdoc />
         public ResourceNameKind Kind => ResourceNameKind.Oneof;
@@ -1111,6 +1203,19 @@ namespace Google.Cloud.Dlp.V2Beta2
 
     }
 
+    public partial class CreateJobTriggerRequest
+    {
+        /// <summary>
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2Beta2.ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class DeidentifyContentRequest
     {
         /// <summary>
@@ -1163,6 +1268,19 @@ namespace Google.Cloud.Dlp.V2Beta2
 
     }
 
+    public partial class DeleteJobTriggerRequest
+    {
+        /// <summary>
+        /// <see cref="ProjectJobTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public ProjectJobTriggerName ProjectJobTriggerName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2Beta2.ProjectJobTriggerName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class GetDeidentifyTemplateRequest
     {
         /// <summary>
@@ -1197,6 +1315,19 @@ namespace Google.Cloud.Dlp.V2Beta2
         public InspectTemplateNameOneof InspectTemplateNameOneof
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2Beta2.InspectTemplateNameOneof.Parse(Name, true); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetJobTriggerRequest
+    {
+        /// <summary>
+        /// <see cref="ProjectJobTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public ProjectJobTriggerName ProjectJobTriggerName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2Beta2.ProjectJobTriggerName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -1267,6 +1398,19 @@ namespace Google.Cloud.Dlp.V2Beta2
 
     }
 
+    public partial class ListJobTriggersRequest
+    {
+        /// <summary>
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dlp.V2Beta2.ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class RedactImageRequest
     {
         /// <summary>
@@ -1314,6 +1458,19 @@ namespace Google.Cloud.Dlp.V2Beta2
         public InspectTemplateNameOneof InspectTemplateNameOneof
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2Beta2.InspectTemplateNameOneof.Parse(Name, true); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class UpdateJobTriggerRequest
+    {
+        /// <summary>
+        /// <see cref="ProjectJobTriggerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public ProjectJobTriggerName ProjectJobTriggerName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2Beta2.ProjectJobTriggerName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 

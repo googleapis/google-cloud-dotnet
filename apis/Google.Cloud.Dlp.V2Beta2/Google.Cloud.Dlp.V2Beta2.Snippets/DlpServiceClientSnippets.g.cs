@@ -292,7 +292,7 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             // Initialize request argument(s)
             UpdateInspectTemplateRequest request = new UpdateInspectTemplateRequest
             {
-                InspectTemplateNameOneof = InspectTemplateNameOneof.From(new InspectTemplateName("[ORGANIZATION]", "[INSPECT_TEMPLATE]")),
+                InspectTemplateNameOneof = InspectTemplateNameOneof.From(new OrganizationInspectTemplateName("[ORGANIZATION]", "[INSPECT_TEMPLATE]")),
             };
             // Make the request
             InspectTemplate response = await dlpServiceClient.UpdateInspectTemplateAsync(request);
@@ -308,7 +308,7 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             // Initialize request argument(s)
             UpdateInspectTemplateRequest request = new UpdateInspectTemplateRequest
             {
-                InspectTemplateNameOneof = InspectTemplateNameOneof.From(new InspectTemplateName("[ORGANIZATION]", "[INSPECT_TEMPLATE]")),
+                InspectTemplateNameOneof = InspectTemplateNameOneof.From(new OrganizationInspectTemplateName("[ORGANIZATION]", "[INSPECT_TEMPLATE]")),
             };
             // Make the request
             InspectTemplate response = dlpServiceClient.UpdateInspectTemplate(request);
@@ -444,7 +444,7 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             // Initialize request argument(s)
             DeleteInspectTemplateRequest request = new DeleteInspectTemplateRequest
             {
-                InspectTemplateNameOneof = InspectTemplateNameOneof.From(new InspectTemplateName("[ORGANIZATION]", "[INSPECT_TEMPLATE]")),
+                InspectTemplateNameOneof = InspectTemplateNameOneof.From(new OrganizationInspectTemplateName("[ORGANIZATION]", "[INSPECT_TEMPLATE]")),
             };
             // Make the request
             await dlpServiceClient.DeleteInspectTemplateAsync(request);
@@ -460,7 +460,7 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             // Initialize request argument(s)
             DeleteInspectTemplateRequest request = new DeleteInspectTemplateRequest
             {
-                InspectTemplateNameOneof = InspectTemplateNameOneof.From(new InspectTemplateName("[ORGANIZATION]", "[INSPECT_TEMPLATE]")),
+                InspectTemplateNameOneof = InspectTemplateNameOneof.From(new OrganizationInspectTemplateName("[ORGANIZATION]", "[INSPECT_TEMPLATE]")),
             };
             // Make the request
             dlpServiceClient.DeleteInspectTemplate(request);
@@ -508,7 +508,7 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             // Initialize request argument(s)
             UpdateDeidentifyTemplateRequest request = new UpdateDeidentifyTemplateRequest
             {
-                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new DeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
+                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new OrganizationDeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
             };
             // Make the request
             DeidentifyTemplate response = await dlpServiceClient.UpdateDeidentifyTemplateAsync(request);
@@ -524,7 +524,7 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             // Initialize request argument(s)
             UpdateDeidentifyTemplateRequest request = new UpdateDeidentifyTemplateRequest
             {
-                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new DeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
+                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new OrganizationDeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
             };
             // Make the request
             DeidentifyTemplate response = dlpServiceClient.UpdateDeidentifyTemplate(request);
@@ -540,7 +540,7 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             // Initialize request argument(s)
             GetDeidentifyTemplateRequest request = new GetDeidentifyTemplateRequest
             {
-                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new DeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
+                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new OrganizationDeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
             };
             // Make the request
             DeidentifyTemplate response = await dlpServiceClient.GetDeidentifyTemplateAsync(request);
@@ -556,7 +556,7 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             // Initialize request argument(s)
             GetDeidentifyTemplateRequest request = new GetDeidentifyTemplateRequest
             {
-                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new DeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
+                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new OrganizationDeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
             };
             // Make the request
             DeidentifyTemplate response = dlpServiceClient.GetDeidentifyTemplate(request);
@@ -666,7 +666,7 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             // Initialize request argument(s)
             DeleteDeidentifyTemplateRequest request = new DeleteDeidentifyTemplateRequest
             {
-                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new DeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
+                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new OrganizationDeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
             };
             // Make the request
             await dlpServiceClient.DeleteDeidentifyTemplateAsync(request);
@@ -682,7 +682,7 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             // Initialize request argument(s)
             DeleteDeidentifyTemplateRequest request = new DeleteDeidentifyTemplateRequest
             {
-                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new DeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
+                DeidentifyTemplateNameOneof = DeidentifyTemplateNameOneof.From(new OrganizationDeidentifyTemplateName("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")),
             };
             // Make the request
             dlpServiceClient.DeleteDeidentifyTemplate(request);
@@ -876,6 +876,196 @@ namespace Google.Cloud.Dlp.V2Beta2.Snippets
             };
             // Make the request
             dlpServiceClient.CancelDlpJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobTriggersAsync</summary>
+        public async Task ListJobTriggersAsync_RequestObject()
+        {
+            // Snippet: ListJobTriggersAsync(ListJobTriggersRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListJobTriggersRequest request = new ListJobTriggersRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> response =
+                dlpServiceClient.ListJobTriggersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((JobTrigger item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListJobTriggersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (JobTrigger item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<JobTrigger> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (JobTrigger item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobTriggers</summary>
+        public void ListJobTriggers_RequestObject()
+        {
+            // Snippet: ListJobTriggers(ListJobTriggersRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ListJobTriggersRequest request = new ListJobTriggersRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListJobTriggersResponse, JobTrigger> response =
+                dlpServiceClient.ListJobTriggers(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (JobTrigger item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListJobTriggersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (JobTrigger item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<JobTrigger> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (JobTrigger item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetJobTriggerAsync</summary>
+        public async Task GetJobTriggerAsync_RequestObject()
+        {
+            // Snippet: GetJobTriggerAsync(GetJobTriggerRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetJobTriggerRequest request = new GetJobTriggerRequest
+            {
+                ProjectJobTriggerName = new ProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]"),
+            };
+            // Make the request
+            JobTrigger response = await dlpServiceClient.GetJobTriggerAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetJobTrigger</summary>
+        public void GetJobTrigger_RequestObject()
+        {
+            // Snippet: GetJobTrigger(GetJobTriggerRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            GetJobTriggerRequest request = new GetJobTriggerRequest
+            {
+                ProjectJobTriggerName = new ProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]"),
+            };
+            // Make the request
+            JobTrigger response = dlpServiceClient.GetJobTrigger(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteJobTriggerAsync</summary>
+        public async Task DeleteJobTriggerAsync_RequestObject()
+        {
+            // Snippet: DeleteJobTriggerAsync(DeleteJobTriggerRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteJobTriggerRequest request = new DeleteJobTriggerRequest
+            {
+                ProjectJobTriggerName = new ProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]"),
+            };
+            // Make the request
+            await dlpServiceClient.DeleteJobTriggerAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteJobTrigger</summary>
+        public void DeleteJobTrigger_RequestObject()
+        {
+            // Snippet: DeleteJobTrigger(DeleteJobTriggerRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteJobTriggerRequest request = new DeleteJobTriggerRequest
+            {
+                ProjectJobTriggerName = new ProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]"),
+            };
+            // Make the request
+            dlpServiceClient.DeleteJobTrigger(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateJobTriggerAsync</summary>
+        public async Task UpdateJobTriggerAsync_RequestObject()
+        {
+            // Snippet: UpdateJobTriggerAsync(UpdateJobTriggerRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateJobTriggerRequest request = new UpdateJobTriggerRequest
+            {
+                ProjectJobTriggerName = new ProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]"),
+            };
+            // Make the request
+            JobTrigger response = await dlpServiceClient.UpdateJobTriggerAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateJobTrigger</summary>
+        public void UpdateJobTrigger_RequestObject()
+        {
+            // Snippet: UpdateJobTrigger(UpdateJobTriggerRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateJobTriggerRequest request = new UpdateJobTriggerRequest
+            {
+                ProjectJobTriggerName = new ProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]"),
+            };
+            // Make the request
+            JobTrigger response = dlpServiceClient.UpdateJobTrigger(request);
             // End snippet
         }
 

@@ -69,6 +69,10 @@ namespace Google.Cloud.Dlp.V2Beta2
             GetDlpJobSettings = existing.GetDlpJobSettings;
             DeleteDlpJobSettings = existing.DeleteDlpJobSettings;
             CancelDlpJobSettings = existing.CancelDlpJobSettings;
+            ListJobTriggersSettings = existing.ListJobTriggersSettings;
+            GetJobTriggerSettings = existing.GetJobTriggerSettings;
+            DeleteJobTriggerSettings = existing.DeleteJobTriggerSettings;
+            UpdateJobTriggerSettings = existing.UpdateJobTriggerSettings;
             OnCopy(existing);
         }
 
@@ -762,6 +766,125 @@ namespace Google.Cloud.Dlp.V2Beta2
             )));
 
         /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.ListJobTriggers</c> and <c>DlpServiceClient.ListJobTriggersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.ListJobTriggers</c> and
+        /// <c>DlpServiceClient.ListJobTriggersAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings ListJobTriggersSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.GetJobTrigger</c> and <c>DlpServiceClient.GetJobTriggerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.GetJobTrigger</c> and
+        /// <c>DlpServiceClient.GetJobTriggerAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings GetJobTriggerSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.DeleteJobTrigger</c> and <c>DlpServiceClient.DeleteJobTriggerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.DeleteJobTrigger</c> and
+        /// <c>DlpServiceClient.DeleteJobTriggerAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings DeleteJobTriggerSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.UpdateJobTrigger</c> and <c>DlpServiceClient.UpdateJobTriggerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.UpdateJobTrigger</c> and
+        /// <c>DlpServiceClient.UpdateJobTriggerAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings UpdateJobTriggerSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this <see cref="DlpServiceSettings"/> object.</returns>
@@ -1068,7 +1191,7 @@ namespace Google.Cloud.Dlp.V2Beta2
 
         /// <summary>
         /// Schedules a job to compute risk analysis metrics over content in a Google
-        /// Cloud Platform repository. [How-to guide}(/dlp/docs/compute-risk-analysis)
+        /// Cloud Platform repository. [How-to guide](/dlp/docs/compute-risk-analysis)
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1088,7 +1211,7 @@ namespace Google.Cloud.Dlp.V2Beta2
 
         /// <summary>
         /// Schedules a job to compute risk analysis metrics over content in a Google
-        /// Cloud Platform repository. [How-to guide}(/dlp/docs/compute-risk-analysis)
+        /// Cloud Platform repository. [How-to guide](/dlp/docs/compute-risk-analysis)
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1688,6 +1811,158 @@ namespace Google.Cloud.Dlp.V2Beta2
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Lists job triggers.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="JobTrigger"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(
+            ListJobTriggersRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists job triggers.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="JobTrigger"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(
+            ListJobTriggersRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<JobTrigger> GetJobTriggerAsync(
+            GetJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual JobTrigger GetJobTrigger(
+            GetJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteJobTriggerAsync(
+            DeleteJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteJobTrigger(
+            DeleteJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<JobTrigger> UpdateJobTriggerAsync(
+            UpdateJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual JobTrigger UpdateJobTrigger(
+            UpdateJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -1716,6 +1991,10 @@ namespace Google.Cloud.Dlp.V2Beta2
         private readonly ApiCall<GetDlpJobRequest, DlpJob> _callGetDlpJob;
         private readonly ApiCall<DeleteDlpJobRequest, Empty> _callDeleteDlpJob;
         private readonly ApiCall<CancelDlpJobRequest, Empty> _callCancelDlpJob;
+        private readonly ApiCall<ListJobTriggersRequest, ListJobTriggersResponse> _callListJobTriggers;
+        private readonly ApiCall<GetJobTriggerRequest, JobTrigger> _callGetJobTrigger;
+        private readonly ApiCall<DeleteJobTriggerRequest, Empty> _callDeleteJobTrigger;
+        private readonly ApiCall<UpdateJobTriggerRequest, JobTrigger> _callUpdateJobTrigger;
 
         /// <summary>
         /// Constructs a client wrapper for the DlpService service, with the specified gRPC client and settings.
@@ -1769,6 +2048,14 @@ namespace Google.Cloud.Dlp.V2Beta2
                 GrpcClient.DeleteDlpJobAsync, GrpcClient.DeleteDlpJob, effectiveSettings.DeleteDlpJobSettings);
             _callCancelDlpJob = clientHelper.BuildApiCall<CancelDlpJobRequest, Empty>(
                 GrpcClient.CancelDlpJobAsync, GrpcClient.CancelDlpJob, effectiveSettings.CancelDlpJobSettings);
+            _callListJobTriggers = clientHelper.BuildApiCall<ListJobTriggersRequest, ListJobTriggersResponse>(
+                GrpcClient.ListJobTriggersAsync, GrpcClient.ListJobTriggers, effectiveSettings.ListJobTriggersSettings);
+            _callGetJobTrigger = clientHelper.BuildApiCall<GetJobTriggerRequest, JobTrigger>(
+                GrpcClient.GetJobTriggerAsync, GrpcClient.GetJobTrigger, effectiveSettings.GetJobTriggerSettings);
+            _callDeleteJobTrigger = clientHelper.BuildApiCall<DeleteJobTriggerRequest, Empty>(
+                GrpcClient.DeleteJobTriggerAsync, GrpcClient.DeleteJobTrigger, effectiveSettings.DeleteJobTriggerSettings);
+            _callUpdateJobTrigger = clientHelper.BuildApiCall<UpdateJobTriggerRequest, JobTrigger>(
+                GrpcClient.UpdateJobTriggerAsync, GrpcClient.UpdateJobTrigger, effectiveSettings.UpdateJobTriggerSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1801,6 +2088,10 @@ namespace Google.Cloud.Dlp.V2Beta2
         partial void Modify_GetDlpJobRequest(ref GetDlpJobRequest request, ref CallSettings settings);
         partial void Modify_DeleteDlpJobRequest(ref DeleteDlpJobRequest request, ref CallSettings settings);
         partial void Modify_CancelDlpJobRequest(ref CancelDlpJobRequest request, ref CallSettings settings);
+        partial void Modify_ListJobTriggersRequest(ref ListJobTriggersRequest request, ref CallSettings settings);
+        partial void Modify_GetJobTriggerRequest(ref GetJobTriggerRequest request, ref CallSettings settings);
+        partial void Modify_DeleteJobTriggerRequest(ref DeleteJobTriggerRequest request, ref CallSettings settings);
+        partial void Modify_UpdateJobTriggerRequest(ref UpdateJobTriggerRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Finds potentially sensitive info in content.
@@ -2020,7 +2311,7 @@ namespace Google.Cloud.Dlp.V2Beta2
 
         /// <summary>
         /// Schedules a job to compute risk analysis metrics over content in a Google
-        /// Cloud Platform repository. [How-to guide}(/dlp/docs/compute-risk-analysis)
+        /// Cloud Platform repository. [How-to guide](/dlp/docs/compute-risk-analysis)
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2041,7 +2332,7 @@ namespace Google.Cloud.Dlp.V2Beta2
 
         /// <summary>
         /// Schedules a job to compute risk analysis metrics over content in a Google
-        /// Cloud Platform repository. [How-to guide}(/dlp/docs/compute-risk-analysis)
+        /// Cloud Platform repository. [How-to guide](/dlp/docs/compute-risk-analysis)
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2672,6 +2963,166 @@ namespace Google.Cloud.Dlp.V2Beta2
             _callCancelDlpJob.Sync(request, callSettings);
         }
 
+        /// <summary>
+        /// Lists job triggers.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="JobTrigger"/> resources.
+        /// </returns>
+        public override PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggersAsync(
+            ListJobTriggersRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListJobTriggersRequest(ref request, ref callSettings);
+            return new GrpcPagedAsyncEnumerable<ListJobTriggersRequest, ListJobTriggersResponse, JobTrigger>(_callListJobTriggers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists job triggers.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="JobTrigger"/> resources.
+        /// </returns>
+        public override PagedEnumerable<ListJobTriggersResponse, JobTrigger> ListJobTriggers(
+            ListJobTriggersRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListJobTriggersRequest(ref request, ref callSettings);
+            return new GrpcPagedEnumerable<ListJobTriggersRequest, ListJobTriggersResponse, JobTrigger>(_callListJobTriggers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<JobTrigger> GetJobTriggerAsync(
+            GetJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GetJobTriggerRequest(ref request, ref callSettings);
+            return _callGetJobTrigger.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override JobTrigger GetJobTrigger(
+            GetJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_GetJobTriggerRequest(ref request, ref callSettings);
+            return _callGetJobTrigger.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task DeleteJobTriggerAsync(
+            DeleteJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_DeleteJobTriggerRequest(ref request, ref callSettings);
+            return _callDeleteJobTrigger.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override void DeleteJobTrigger(
+            DeleteJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_DeleteJobTriggerRequest(ref request, ref callSettings);
+            _callDeleteJobTrigger.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<JobTrigger> UpdateJobTriggerAsync(
+            UpdateJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_UpdateJobTriggerRequest(ref request, ref callSettings);
+            return _callUpdateJobTrigger.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a job trigger.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override JobTrigger UpdateJobTrigger(
+            UpdateJobTriggerRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_UpdateJobTriggerRequest(ref request, ref callSettings);
+            return _callUpdateJobTrigger.Sync(request, callSettings);
+        }
+
     }
 
     // Partial classes to enable page-streaming
@@ -2707,6 +3158,18 @@ namespace Google.Cloud.Dlp.V2Beta2
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
         public IEnumerator<DlpJob> GetEnumerator() => Jobs.GetEnumerator();
+
+        /// <inheritdoc/>
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListJobTriggersRequest : IPageRequest { }
+    public partial class ListJobTriggersResponse : IPageResponse<JobTrigger>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public IEnumerator<JobTrigger> GetEnumerator() => JobTriggers.GetEnumerator();
 
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
