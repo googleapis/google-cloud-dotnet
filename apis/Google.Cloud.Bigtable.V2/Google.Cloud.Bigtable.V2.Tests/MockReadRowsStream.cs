@@ -18,7 +18,7 @@ using System.Linq;
 
 namespace Google.Cloud.Bigtable.V2.Tests
 {
-    public class MockReadRowsStream : BigtableClient.ReadRowsStream
+    public class MockReadRowsStream : BigtableServiceApiClient.ReadRowsStream
     {
         private IAsyncEnumerator<ReadRowsResponse> _responseStream;
 

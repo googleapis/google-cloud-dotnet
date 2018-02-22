@@ -25,7 +25,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         /// The order will match the order of the associated request entries.
         /// </summary>
         public static async Task<IEnumerable<MutateRowsResponse.Types.Entry>> GetResponseEntries(
-            this BigtableClient.MutateRowsStream stream)
+            this BigtableServiceApiClient.MutateRowsStream stream)
         {
             var responses = new List<MutateRowsResponse>();
             while (await stream.ResponseStream.MoveNext())

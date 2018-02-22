@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2", "Google.Cloud.Bigtable.V2\Google.Cloud.Bigtable.V2.csproj", "{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}"
 EndProject
@@ -13,6 +13,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.IntegrationTests", "Google.Cloud.Bigtable.V2.IntegrationTests\Google.Cloud.Bigtable.V2.IntegrationTests.csproj", "{80F45AB7-342D-4844-A68D-8E778DD9A6A9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.Admin.V2", "..\Google.Cloud.Bigtable.Admin.V2\Google.Cloud.Bigtable.Admin.V2\Google.Cloud.Bigtable.Admin.V2.csproj", "{D368F5F7-9D8A-417A-A1EC-4172615D1BA3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.GenerateClient", "Google.Cloud.Bigtable.V2.GenerateClient\Google.Cloud.Bigtable.V2.GenerateClient.csproj", "{97EC9E30-ADD3-4D80-A2D5-8D611557813E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,6 +98,17 @@ Global
 		{D368F5F7-9D8A-417A-A1EC-4172615D1BA3}.Release|x64.Build.0 = Release|Any CPU
 		{D368F5F7-9D8A-417A-A1EC-4172615D1BA3}.Release|x86.ActiveCfg = Release|Any CPU
 		{D368F5F7-9D8A-417A-A1EC-4172615D1BA3}.Release|x86.Build.0 = Release|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Debug|x64.Build.0 = Debug|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Debug|x86.Build.0 = Debug|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Release|x64.ActiveCfg = Release|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Release|x64.Build.0 = Release|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Release|x86.ActiveCfg = Release|Any CPU
+		{97EC9E30-ADD3-4D80-A2D5-8D611557813E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,90 @@ namespace Google.Cloud.Bigtable.V2
 {
     public partial class BigtableClient
     {
+        // TODO: Auto-generate these if possible/easy after multi-channel support is added.
+
+        /// <summary>
+        /// Asynchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <param name="appProfileId">
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <returns>The task representing the created <see cref="BigtableClient"/>.</returns>
+        public static async Task<BigtableClient> CreateAsync(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null, string appProfileId = null)
+        {
+            var client = await BigtableServiceApiClient.CreateAsync(endpoint, settings).ConfigureAwait(false);
+            return new BigtableClientImpl(client, appProfileId);
+        }
+
+        /// <summary>
+        /// Synchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <param name="appProfileId">
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <returns>The created <see cref="BigtableClient"/>.</returns>
+        public static BigtableClient Create(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null, string appProfileId = null)
+        {
+            var client = BigtableServiceApiClient.Create(endpoint, settings);
+            return new BigtableClientImpl(client, appProfileId);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="BigtableClient"/> which uses the specified channel for remote operations.
+        /// </summary>
+        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/>.</param>
+        /// <param name="appProfileId">
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <returns>The created <see cref="BigtableClient"/>.</returns>
+        public static BigtableClient Create(Channel channel, BigtableServiceApiSettings settings = null, string appProfileId = null)
+        {
+            var client = BigtableServiceApiClient.Create(channel, settings);
+            return new BigtableClientImpl(client, appProfileId);
+        }
+
+        /// <summary>
+        /// Gets a <see cref="BigtableClient"/> matching this one but with the specified <paramref name="appProfileId"/>.
+        /// </summary>
+        /// <param name="appProfileId">
+        /// This is a private alpha release of Cloud Bigtable replication. This feature
+        /// is not currently available to most Cloud Bigtable customers. This feature
+        /// might be changed in backward-incompatible ways and is not recommended for
+        /// production use. It is not subject to any SLA or deprecation policy.
+        ///
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
+        /// </param>
+        /// <returns>The updated <see cref="BigtableClient"/>.</returns>
+        public virtual BigtableClient WithAppProfileId(string appProfileId) => this;
+
         /// <summary>
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
@@ -449,7 +534,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// The server stream.
         /// </returns>
-        public virtual MutateRowsStream MutateRows(
+        public virtual BigtableServiceApiClient.MutateRowsStream MutateRows(
             TableName tableName,
             IEnumerable<MutateRowsRequest.Types.Entry> entries,
             CallSettings callSettings = null)
@@ -491,7 +576,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// The server stream.
         /// </returns>
-        public virtual MutateRowsStream MutateRows(
+        public virtual BigtableServiceApiClient.MutateRowsStream MutateRows(
             TableName tableName,
             params MutateRowsRequest.Types.Entry[] entries) =>
             MutateRows(tableName, entries, callSettings: null);
@@ -813,7 +898,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// The server stream.
         /// </returns>
-        public virtual ReadRowsStream ReadRows(
+        public virtual BigtableServiceApiClient.ReadRowsStream ReadRows(
             TableName tableName,
             RowSet rows = null,
             RowFilter filter = null,
@@ -850,7 +935,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// The server stream with the row key samples.
         /// </returns>
-        public virtual SampleRowKeysStream SampleRowKeys(
+        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(
             TableName tableName,
             CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
@@ -858,99 +943,25 @@ namespace Google.Cloud.Bigtable.V2
                     TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName))
                 },
                 callSettings);
-
-        public partial class ReadRowsStream
-        {
-            private RowAsyncEnumerable _rowEnumerable;
-
-            /// <summary>
-            /// Returns an asynchronous sequence of rows from this set of results.
-            /// </summary>
-            /// <returns>An asynchronous sequence of rows from this set of results.</returns>
-            public IAsyncEnumerable<Row> AsAsyncEnumerable() =>
-                _rowEnumerable ?? (_rowEnumerable = new RowAsyncEnumerable(this));
-
-            private class RowAsyncEnumerable : IAsyncEnumerable<Row>
-            {
-                private int _enumeratorCount;
-                private ReadRowsStream _stream;
-
-                public RowAsyncEnumerable(ReadRowsStream stream)
-                {
-                    _stream = stream;
-                }
-
-                public IAsyncEnumerator<Row> GetEnumerator()
-                {
-                    if (Interlocked.CompareExchange(ref _enumeratorCount, 1, 0) == 1)
-                    {
-                        throw new InvalidOperationException(
-                            $"The result from {nameof(ReadRowsStream)}.{nameof(ReadRowsStream.AsAsyncEnumerable)} can only be iterated once");
-                    }
-
-                    return new RowAsyncEnumerator(_stream);
-                }
-            }
-        }
-
-        public partial class SampleRowKeysStream
-        {
-            /// <summary>
-            /// Gets all responses from the stream.
-            /// </summary>
-            /// <returns>The collection of all row key samples.</returns>
-            public IList<SampleRowKeysResponse> ToList() =>
-                Task.Run(() => ToListAsync()).ResultWithUnwrappedExceptions();
-
-            /// <summary>
-            /// Gets all responses from the stream asynchronously.
-            /// </summary>
-            /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-            /// <returns>The collection of all row key samples.</returns>
-            public async Task<IList<SampleRowKeysResponse>> ToListAsync(
-                CancellationToken cancellationToken = default)
-            {
-                var responses = new List<SampleRowKeysResponse>();
-                while (await ResponseStream.MoveNext(cancellationToken).ConfigureAwait(false))
-                {
-                    responses.Add(ResponseStream.Current);
-                }
-                return responses;
-            }
-        }
     }
 
     public partial class BigtableClientImpl
     {
-        private const string ResourcePrefixHeader = "google-cloud-resource-prefix";
+        private readonly string _appProfileId;
+        private readonly BigtableServiceApiClient _client;
 
-        partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-
-        partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-
-        partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings)
+        // TODO: Add a public constructor after multi-channel support?
+        internal BigtableClientImpl(BigtableServiceApiClient client, string appProfileId)
         {
-            GaxPreconditions.CheckState(request.IsIdempotent(), "Non-idempotent MutateRow requests are not allowed. Specify a version with all SetCell mutations.");
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
+            _client = client;
+            _appProfileId = appProfileId;
         }
 
-        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings)
-        {
-            GaxPreconditions.CheckState(request.IsIdempotent(), "Non-idempotent MutateRows requests are not allowed. Specify a version with all SetCell mutations.");
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-        }
+        // TODO: Add Multi-channel support
+        private BigtableServiceApiClient GetClient() => _client;
 
-        partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-
-        partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.TableName);
-
-        private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
-        {
-            settings = settings.WithHeader(ResourcePrefixHeader, resource);
-        }
+        /// <inheritdoc/>
+        public override BigtableClient WithAppProfileId(string appProfileId) =>
+            new BigtableClientImpl(_client, appProfileId);
     }
 }
