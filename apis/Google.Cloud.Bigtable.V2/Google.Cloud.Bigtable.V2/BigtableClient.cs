@@ -51,7 +51,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// The server stream.
         /// </returns>
-        public virtual BigtableServiceApiClient.ReadRowsStream ReadRows(
+        public virtual ReadRowsStream ReadRows(
             ReadRowsRequest request,
             CallSettings callSettings = null)
         {
@@ -240,7 +240,7 @@ namespace Google.Cloud.Bigtable.V2
     public sealed partial class BigtableClientImpl : BigtableClient
     {
         /// <inheritdoc/>
-        public override BigtableServiceApiClient.ReadRowsStream ReadRows(
+        public override ReadRowsStream ReadRows(
             ReadRowsRequest request,
             CallSettings callSettings = null)
         {
@@ -249,7 +249,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetClient().ReadRows(request, callSettings);
+            return new ReadRowsStream(GetClient().ReadRows(request, callSettings));
         }
 
         /// <inheritdoc/>

@@ -25,40 +25,6 @@ namespace Google.Cloud.Bigtable.V2
 {
     public partial class BigtableServiceApiClient
     {
-        public partial class ReadRowsStream
-        {
-            private RowAsyncEnumerable _rowEnumerable;
-
-            /// <summary>
-            /// Returns an asynchronous sequence of rows from this set of results.
-            /// </summary>
-            /// <returns>An asynchronous sequence of rows from this set of results.</returns>
-            public IAsyncEnumerable<Row> AsAsyncEnumerable() =>
-                _rowEnumerable ?? (_rowEnumerable = new RowAsyncEnumerable(this));
-
-            private class RowAsyncEnumerable : IAsyncEnumerable<Row>
-            {
-                private int _enumeratorCount;
-                private ReadRowsStream _stream;
-
-                public RowAsyncEnumerable(ReadRowsStream stream)
-                {
-                    _stream = stream;
-                }
-
-                public IAsyncEnumerator<Row> GetEnumerator()
-                {
-                    if (Interlocked.CompareExchange(ref _enumeratorCount, 1, 0) == 1)
-                    {
-                        throw new InvalidOperationException(
-                            $"The result from {nameof(ReadRowsStream)}.{nameof(ReadRowsStream.AsAsyncEnumerable)} can only be iterated once");
-                    }
-
-                    return new RowAsyncEnumerator(_stream);
-                }
-            }
-        }
-
         public partial class SampleRowKeysStream
         {
             /// <summary>

@@ -866,7 +866,7 @@ namespace Google.Cloud.Bigtable.V2
                 filter,
                 callSettings: callSettings);
 
-            return await response.AsAsyncEnumerable().SingleOrDefault().ConfigureAwait(false);
+            return await response.SingleOrDefault().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -898,7 +898,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>
         /// The server stream.
         /// </returns>
-        public virtual BigtableServiceApiClient.ReadRowsStream ReadRows(
+        public virtual ReadRowsStream ReadRows(
             TableName tableName,
             RowSet rows = null,
             RowFilter filter = null,

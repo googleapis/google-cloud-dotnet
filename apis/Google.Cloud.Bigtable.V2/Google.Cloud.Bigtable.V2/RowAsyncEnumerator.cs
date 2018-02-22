@@ -21,7 +21,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-using static Google.Cloud.Bigtable.V2.BigtableServiceApiClient;
 using static Google.Cloud.Bigtable.V2.ReadRowsResponse.Types;
 
 namespace Google.Cloud.Bigtable.V2
@@ -36,9 +35,9 @@ namespace Google.Cloud.Bigtable.V2
         private readonly SortedList<string, Family> _currentFamilies = new SortedList<string, Family>(StringComparer.Ordinal);
         private RowMergeState _rowMergeState = NewRow.Instance;
         private IEnumerator<Row> _singleResponseRowEnumerator;
-        private readonly ReadRowsStream _stream;
+        private readonly BigtableServiceApiClient.ReadRowsStream _stream;
 
-        public RowAsyncEnumerator(ReadRowsStream stream)
+        public RowAsyncEnumerator(BigtableServiceApiClient.ReadRowsStream stream)
         {
             _stream = stream;
         }

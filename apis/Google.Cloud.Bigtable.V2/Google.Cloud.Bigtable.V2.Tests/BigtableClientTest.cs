@@ -42,7 +42,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 throw new RequestMadeException();
             public override Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, CallSettings callSettings = null) =>
                 throw new RequestMadeException();
-            public override BigtableServiceApiClient.ReadRowsStream ReadRows(ReadRowsRequest request, CallSettings callSettings = null) =>
+            public override ReadRowsStream ReadRows(ReadRowsRequest request, CallSettings callSettings = null) =>
                 throw new RequestMadeException();
             public override BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(SampleRowKeysRequest request, CallSettings callSettings = null) =>
                 throw new RequestMadeException();
@@ -366,7 +366,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 });
 
             int rowCount = 0;
-            await stream.AsAsyncEnumerable().ForEachAsync(row =>
+            await stream.ForEachAsync(row =>
             {
                 rowCount++;
 
