@@ -16,7 +16,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Collections.Generic;
-
+using System.Linq;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 
 namespace Google.Cloud.Bigtable.V2.GenerateClient
@@ -58,6 +58,12 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
         internal static MemberAccessExpressionSyntax Member(this ExpressionSyntax expression, SyntaxToken name) =>
             MemberAccessExpression(SyntaxKind.SimpleMemberAccessExpression, expression, IdentifierName(name));
+
+        internal static ObjectCreationExpressionSyntax New(this TypeSyntax type, params ExpressionSyntax[] argumentExpressions) =>
+            type.New(argumentExpressions.Select(expression => SyntaxFactory.Argument(expression)));
+
+        internal static ObjectCreationExpressionSyntax New(this TypeSyntax type, IEnumerable<ArgumentSyntax> arguments) =>
+            ObjectCreationExpression(type, ArgumentList(SeparatedList(arguments)), initializer: null);
 
         internal static LiteralExpressionSyntax Null() =>
             LiteralExpression(SyntaxKind.NullLiteralExpression);

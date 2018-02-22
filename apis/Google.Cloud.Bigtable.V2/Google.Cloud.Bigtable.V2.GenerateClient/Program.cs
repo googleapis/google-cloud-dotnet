@@ -35,6 +35,11 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         private const string AppProfileIdPropertyName = "AppProfileId";
         private const string GetClientMethodName = "GetClient";
 
+        // TODO: Figure out how to replace the comments on BigtableClient.ReadRows describing cell chunks. Perhaps make this a
+        //       dictionary that maps the custom stream name to the summary comment that should be replaced on the associated
+        //       method. We can just make a custom summary then.
+        private static readonly HashSet<string> s_customStreams = new HashSet<string> { "ReadRowsStream" };
+
         private static async Task<int> Main(string[] args)
         {
             // TODO: Figure out why `dotnet run` from generateapis.sh is sending 6 args instead of 3 as in: arg1 arg2 arg3 arg1 arg2 arg3
@@ -81,14 +86,14 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             if (generatedApiClientSyntax == null)
             {
                 Console.WriteLine($"Could not find an auto-generated file containing the {apiClientName} definition");
-                return 2;
+                return 3;
             }
 
             var syntaxTree = generatedApiClientSyntax.SyntaxTree;
             var semanticModel = compilation.GetSemanticModel(syntaxTree);
             var generator = SyntaxGenerator.GetGenerator(project.GetDocument(syntaxTree));
             var requestMethodRewriter = new RequestMethodRewriter(semanticModel);
-            var requestMethodImplRewriter = new RequestMethodToImplRewriter();
+            var requestMethodToImplRewriter = new RequestMethodToImplRewriter();
 
             var userClientSyntax =
                 (ClassDeclarationSyntax)generator.ClassDeclaration(
@@ -120,7 +125,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     var rewrittenMethod = (MethodDeclarationSyntax)requestMethodRewriter.Visit(methodSyntax);
                     userClientSyntax = userClientSyntax.AddMembers(rewrittenMethod);
 
-                    rewrittenMethod = (MethodDeclarationSyntax)requestMethodImplRewriter.Visit(rewrittenMethod);
+                    rewrittenMethod = (MethodDeclarationSyntax)requestMethodToImplRewriter.Visit(rewrittenMethod);
                     userClientImplSyntax = userClientImplSyntax.AddMembers(rewrittenMethod);
                 }
             }
@@ -154,7 +159,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             catch (Exception e)
             {
                 Console.WriteLine($"Could not write the auto-generated {userClientName}:\n{e}");
-                return 3;
+                return 4;
             }
             return 0;
         }
@@ -184,11 +189,14 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     node = (MethodDeclarationSyntax)base.VisitMethodDeclaration(node);
 
                     // If the method's return type is defined in the underlying client's class, qualify the return type.
-                    if (method.ReturnType.ContainingType == method.ContainingType)
+                    // However, if we've added a custom stream type in the main namespace and the name matches, skip the
+                    // qualification: we want it to point to the custom type.
+                    if (method.ReturnType.ContainingType == method.ContainingType &&
+                        !s_customStreams.Contains(method.ReturnType.Name))
                     {
                         node = node.WithReturnType(
                             QualifiedName(
-                                IdentifierName(method.ReturnType.ContainingType.Name),
+                                IdentifierName(method.ContainingType.Name),
                                 IdentifierName(method.ReturnType.Name)));
                     }
 
@@ -264,12 +272,19 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 //------------------------------------------------------------------------
                 var appProfileIdProperty = parameters[0].Identifier.Member(AppProfileIdPropertyName);
                 var underlyingMethod = IdentifierName(GetClientMethodName).Invoke().Member(node.Identifier);
+                var resultExpresion =
+                    (ExpressionSyntax)underlyingMethod.Invoke(
+                        parameters.Select(parameter => Argument(parameter.Identifier)));
+                if (s_customStreams.Contains(node.ReturnType.ToString()))
+                {
+                    // If we have a custom stream for this method, wrap the underlying result stream
+                    // in a constructor call for the custom stream.
+                    resultExpresion = node.ReturnType.New(resultExpresion);
+                }
                 node = node.WithBody(Block(
                     If(appProfileIdProperty.EqualTo(Null()),
                         appProfileIdProperty.AssignFrom(AppProfileIdFieldName).ToStatement()),
-                    ReturnStatement(
-                        underlyingMethod.Invoke(
-                            parameters.Select(parameter => Argument(parameter.Identifier))))));
+                    ReturnStatement(resultExpresion)));
 
                 return node;
             }
