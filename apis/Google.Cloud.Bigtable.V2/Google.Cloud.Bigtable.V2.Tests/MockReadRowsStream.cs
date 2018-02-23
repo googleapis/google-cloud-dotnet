@@ -18,14 +18,20 @@ using System.Linq;
 
 namespace Google.Cloud.Bigtable.V2.Tests
 {
-    public class MockReadRowsStream : BigtableServiceApiClient.ReadRowsStream
+    public class MockReadRowsStream : ReadRowsStream
     {
-        private IAsyncEnumerator<ReadRowsResponse> _responseStream;
+        public MockReadRowsStream(params ReadRowsResponse[] responses)
+            : base(new UnderlyingReadRowsStream(responses)) { }
 
-        public MockReadRowsStream(params ReadRowsResponse[] responses) =>
-            _responseStream = responses.ToAsyncEnumerable().GetEnumerator();
+        private class UnderlyingReadRowsStream : BigtableServiceApiClient.ReadRowsStream
+        {
+            private IAsyncEnumerator<ReadRowsResponse> _responseStream;
 
-        public override AsyncServerStreamingCall<ReadRowsResponse> GrpcCall => null;
-        public override IAsyncEnumerator<ReadRowsResponse> ResponseStream => _responseStream;
+            public UnderlyingReadRowsStream(params ReadRowsResponse[] responses) =>
+                _responseStream = responses.ToAsyncEnumerable().GetEnumerator();
+
+            public override AsyncServerStreamingCall<ReadRowsResponse> GrpcCall => null;
+            public override IAsyncEnumerator<ReadRowsResponse> ResponseStream => _responseStream;
+        }
     }
 }

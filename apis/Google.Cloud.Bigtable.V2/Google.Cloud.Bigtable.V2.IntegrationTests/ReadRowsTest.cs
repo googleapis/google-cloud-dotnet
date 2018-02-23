@@ -58,7 +58,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     tableName,
                     new RowSet { RowKeys = { rowKey.Value } },
                     RowFilters.CellsPerColumnLimit(1));
-                using (var enumerator = (RowAsyncEnumerator)response.AsAsyncEnumerable().GetEnumerator())
+                using (var enumerator = (RowAsyncEnumerator)response.GetEnumerator())
                 {
                     while (await enumerator.MoveNext(default))
                     {
@@ -234,7 +234,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             rowKeys.Sort();
 
             int currentRowIndex = 0;
-            await response.AsAsyncEnumerable().ForEachAsync(row =>
+            await response.ForEachAsync(row =>
             {
                 var currentRowKey = rowKeys[currentRowIndex++];
                 Assert.Equal(currentRowKey.Value, row.Key);
@@ -279,7 +279,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             rowKeys.Sort();
 
             int rowCount = 0;
-            await response.AsAsyncEnumerable().ForEachAsync(row =>
+            await response.ForEachAsync(row =>
             {
                 rowCount++;
                 int index = originalIndexes[row.Key];
@@ -325,7 +325,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             rowKeys.Sort();
 
             int rowCount = 0;
-            await response.AsAsyncEnumerable().ForEachAsync(row =>
+            await response.ForEachAsync(row =>
             {
                 rowCount++;
                 int index = originalIndexes[row.Key];
@@ -362,7 +362,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowSet.FromRowRanges(RowRange.ClosedOpen(startRange, endRange)));
 
             int currentRowIndex = 0;
-            await response.AsAsyncEnumerable().ForEachAsync(row =>
+            await response.ForEachAsync(row =>
             {
                 BigtableAssert.HasSingleValue(
                     row,
@@ -397,7 +397,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowFilters.ValueRegex(".*[a-z]$"));
 
             int currentRowIndex = 'a';
-            await response.AsAsyncEnumerable().ForEachAsync(row =>
+            await response.ForEachAsync(row =>
             {
                 BigtableAssert.HasSingleValue(
                     row,
@@ -431,7 +431,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 rowsLimit: 37);
 
             int currentRowIndex = 0;
-            await response.AsAsyncEnumerable().ForEachAsync(row =>
+            await response.ForEachAsync(row =>
             {
                 BigtableAssert.HasSingleValue(
                     row,
@@ -454,13 +454,12 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             System.Diagnostics.Debug.WriteLine((string)rowKey);
 
             var response = client.ReadRows(tableName);
-            await response.AsAsyncEnumerable().ForEachAsync(row =>
+            await response.ForEachAsync(row =>
             {
                 Assert.Equal(rowKey.Value, row.Key);
             });
-
-            var enumerable = response.AsAsyncEnumerable();
-            Assert.Throws<InvalidOperationException>(() => enumerable.GetEnumerator());
+            
+            Assert.Throws<InvalidOperationException>(() => response.GetEnumerator());
         }
 
         [Fact]
@@ -496,7 +495,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 RowFilters.RowKeyExact("row\0\\1"));
 
             int rowCount = 0;
-            await rowsStream.AsAsyncEnumerable().ForEachAsync(row =>
+            await rowsStream.ForEachAsync(row =>
             {
                 rowCount++;
                 Assert.Equal("row\0\\1", row.Key.ToStringUtf8());

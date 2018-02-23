@@ -301,7 +301,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             long rowsLimit = 10;
 
             // Make the request
-            BigtableServiceApiClient.ReadRowsStream streamingResponse = client.ReadRows(
+            ReadRowsStream streamingResponse = client.ReadRows(
                 tableName,
                 rows,
                 filter,
@@ -309,7 +309,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 CallSettings.FromCancellationToken(cancellationToken));
 
             // Read streaming responses from server until complete
-            await streamingResponse.AsAsyncEnumerable().ForEachAsync(row =>
+            await streamingResponse.ForEachAsync(row =>
             {
                 Console.WriteLine($"Row key: {row.Key.ToStringUtf8()}");
                 foreach (Family family in row.Families)

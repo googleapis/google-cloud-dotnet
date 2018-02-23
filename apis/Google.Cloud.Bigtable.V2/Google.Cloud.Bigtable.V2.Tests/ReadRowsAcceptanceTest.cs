@@ -60,11 +60,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 // Do not use ToList() here. We want to get all results before the first failure.
                 responses = new List<Row>();
                 await Assert.ThrowsAsync<InvalidOperationException>(
-                    () => stream.AsAsyncEnumerable().ForEachAsync(row => responses.Add(row)));
+                    () => stream.ForEachAsync(row => responses.Add(row)));
             }
             else
             {
-                responses = await stream.AsAsyncEnumerable().ToList();
+                responses = await stream.ToList();
             }
 
             var results = from row in responses
