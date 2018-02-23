@@ -128,9 +128,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Log()
         {
             var labels = new Dictionary<string, string> { { "some-key", "some-value" } };
-            Predicate<IEnumerable<LogEntry>> matcher = (l) =>
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
             {
-                LogEntry entry = l.Single();
+                LogEntry entry = logEntries.Single();
                 KeyValuePair<string, string> label = entry.Labels.Single();
                 return entry.LogName == new LogName(_projectId, _logName).ToString() &&
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
@@ -155,9 +155,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             string traceId = "105445aa7843bc8bf206b12000100f00";
             string fullTraceName = TraceTarget.ForProject(_projectId).GetFullTraceName(traceId);
 
-            Predicate<IEnumerable<LogEntry>> matcher = (l) =>
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
             {
-                LogEntry entry = l.Single();
+                LogEntry entry = logEntries.Single();
                 return entry.LogName == new LogName(_projectId, _logName).ToString() &&
                     entry.Trace == fullTraceName;
             };

@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -34,23 +33,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>Where to log to.</summary>
         private readonly LogTarget _logTarget;
 
-        /// <summary>An accessor to get the current <see cref="HttpContext"/>.</summary>
-        private readonly IHttpContextAccessor _accessor;
-
         /// <summary>
         /// <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
         /// </summary>
         /// <param name="consumer">The consumer to push logs to. Cannot be null.</param>
         /// <param name="logTarget">Where to log to. Cannot be null.</param>
         /// <param name="loggerOptions">The logger options. Cannot be null.</param>
-        /// <param name="accessor">Optional, HTTP context accessor. Allows adding trace ids to log entries.</param>
         internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, LogTarget logTarget,
-            LoggerOptions loggerOptions, IHttpContextAccessor accessor)
+            LoggerOptions loggerOptions)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _logTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
-            _accessor = accessor;
         }
 
         /// <summary>
@@ -61,10 +55,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     detected from the platform.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        /// <param name="accessor">Optional, HTTP context accessor. Allows adding trace ids to log entries.</param>
         public static GoogleLoggerProvider Create(string projectId = null,
-            LoggerOptions options = null, LoggingServiceV2Client client = null, 
-            IHttpContextAccessor accessor = null)
+            LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             options = options ?? LoggerOptions.Create();
             projectId = Project.GetAndCheckProjectId(projectId, options.MonitoredResource);
@@ -77,10 +69,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="logTarget">Where to log to. Cannot be null.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        /// <param name="accessor">Optional, HTTP context accessor. Allows adding trace ids to log entries.</param>
         public static GoogleLoggerProvider Create(LogTarget logTarget,
-            LoggerOptions options = null, LoggingServiceV2Client client = null,
-            IHttpContextAccessor accessor = null)
+            LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             // Check params and set defaults if unset.
             GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
@@ -89,7 +79,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             // Get the proper consumer from the options and add a logger provider.
             IConsumer<LogEntry> consumer = LogConsumer.Create(client, options.BufferOptions, options.RetryOptions);
-            return new GoogleLoggerProvider(consumer, logTarget, options, accessor);
+            return new GoogleLoggerProvider(consumer, logTarget, options);
         }
 
         /// <summary>
@@ -97,7 +87,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         /// <param name="logName">The name of the log.  This will be combined with the log location
         ///     (<see cref="LogTarget"/>) to generate the resource name for the log.</param>
-        public ILogger CreateLogger(string logName) => new GoogleLogger(_consumer, _logTarget, _loggerOptions, logName, accessor: _accessor);
+        public ILogger CreateLogger(string logName) => new GoogleLogger(
+            _consumer, _logTarget, _loggerOptions, logName, accessor: HttpContextAccessorWrapper.Accessor);
 
         /// <inheritdoc />
         public void Dispose() => _consumer.Dispose();

@@ -247,10 +247,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMvc();
+            services.AddGoogleTrace(options => 
+            {
+                options.ProjectId = ProjectId;
+                // Don't actually trace anything.
+                options.Options = TraceOptions.Create(qpsSampleRate: 0.00000001);
+            });
         }
 
         public void SetupRoutes(IApplicationBuilder app)
         {
+            app.UseGoogleTrace();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -262,7 +269,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
     /// <summary>
     /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
-    /// of level warning or above.  Adds trace information to log entries if available.
+    /// of level warning or above.
     /// </summary>
     public class NoBufferWarningLoggerTestApplication : LoggerTestApplication
     {
@@ -272,11 +279,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, null, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(ProjectId, loggerOptions, accessor: accessor);
+            loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
     }
-
-
 
     /// <summary>
     /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
