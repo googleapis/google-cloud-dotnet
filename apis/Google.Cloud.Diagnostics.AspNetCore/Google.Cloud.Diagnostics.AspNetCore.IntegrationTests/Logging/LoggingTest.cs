@@ -273,8 +273,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class NoBufferWarningLoggerTestApplication : LoggerTestApplication
     {
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory,
-            IHttpContextAccessor accessor)
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(

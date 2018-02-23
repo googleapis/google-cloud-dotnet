@@ -39,8 +39,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="consumer">The consumer to push logs to. Cannot be null.</param>
         /// <param name="logTarget">Where to log to. Cannot be null.</param>
         /// <param name="loggerOptions">The logger options. Cannot be null.</param>
-        internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, LogTarget logTarget,
-            LoggerOptions loggerOptions)
+        internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _logTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));

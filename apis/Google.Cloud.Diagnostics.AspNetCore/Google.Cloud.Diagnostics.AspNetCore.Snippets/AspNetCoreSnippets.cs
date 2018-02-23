@@ -72,7 +72,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         // End sample
 
         // Sample: RegisterGoogleLogger
-        public void Configure(ILoggerFactory loggerFactory, IHttpContextAccessor accessor)
+        public void Configure(ILoggerFactory loggerFactory)
         {
             string projectId = "[Google Cloud Platform project ID]";
             loggerFactory.AddGoogle(projectId);
@@ -106,7 +106,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // Sample: RegisterGoogleTracer
             public void ConfigureServices(IServiceCollection services)
             {
-                // Use the below line is needed for trace ids to be added to logs.
+                // The line below is needed for trace ids to be added to logs.
                 services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
                 string projectId = "[Google Cloud Platform project ID]";
                 services.AddGoogleTrace(options =>
