@@ -17,6 +17,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Collections.Generic;
 using System.Linq;
+
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 
 namespace Google.Cloud.Bigtable.V2.GenerateClient
@@ -26,8 +27,14 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
     /// </summary>
     internal static class RoslynHelpers
     {
+        internal static IEnumerable<ArgumentSyntax> AddArgument(this IEnumerable<ArgumentSyntax> arguments, ExpressionSyntax additionalArgument) =>
+            arguments.Concat(Enumerable.Repeat(SyntaxFactory.Argument(additionalArgument), 1));
+
         internal static ArgumentSyntax Argument(SyntaxToken identifier) =>
             SyntaxFactory.Argument(IdentifierName(identifier));
+
+        internal static IEnumerable<ArgumentSyntax> AsArguments(this ParameterListSyntax parameterList) =>
+            parameterList.Parameters.Select(parameter => Argument(parameter.Identifier));
 
         internal static AssignmentExpressionSyntax AssignFrom(this ExpressionSyntax left, string right) =>
             left.AssignFrom(IdentifierName(right));
@@ -44,11 +51,23 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static IfStatementSyntax If(ExpressionSyntax condition, params StatementSyntax[] statements) =>
             IfStatement(condition, Block(statements));
 
+        internal static InvocationExpressionSyntax Invoke(this ExpressionSyntax expression) =>
+            InvocationExpression(expression);
+
+        internal static InvocationExpressionSyntax Invoke(this MethodDeclarationSyntax method, IEnumerable<ArgumentSyntax> arguments) =>
+            IdentifierName(method.Identifier).Invoke(arguments);
+
+        internal static InvocationExpressionSyntax Invoke(this ExpressionSyntax expression, params ExpressionSyntax[] argumentExpressions) =>
+            expression.Invoke(argumentExpressions.Select(argumentExpression => SyntaxFactory.Argument(argumentExpression)));
+
         internal static InvocationExpressionSyntax Invoke(this ExpressionSyntax expression, params ArgumentSyntax[] arguments) =>
             expression.Invoke((IEnumerable<ArgumentSyntax>)arguments);
 
         internal static InvocationExpressionSyntax Invoke(this ExpressionSyntax expression, IEnumerable<ArgumentSyntax> arguments) =>
             InvocationExpression(expression, ArgumentList(SeparatedList(arguments)));
+
+        internal static ParenthesizedLambdaExpressionSyntax Lambda(ExpressionSyntax expression) =>
+            ParenthesizedLambdaExpression(expression);
 
         internal static MemberAccessExpressionSyntax Member(this SyntaxToken identifier, string name) =>
             IdentifierName(identifier).Member(name);
@@ -68,10 +87,21 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static LiteralExpressionSyntax Null() =>
             LiteralExpression(SyntaxKind.NullLiteralExpression);
 
+        internal static GenericNameSyntax Of(this SyntaxToken typeName, params TypeSyntax[] typeArguments) =>
+            GenericName(typeName, TypeArgumentList(SeparatedList(typeArguments)));
+
         internal static XmlEmptyElementSyntax SeeTag(CrefSyntax cref) =>
             XmlEmptyElement("see").AddAttributes(XmlCrefAttribute(cref));
 
+        internal static SyntaxToken Task() => Identifier("Task");
+
+        internal static MethodDeclarationSyntax ToAsync(this MethodDeclarationSyntax method) =>
+            method.WithReturnType(Task().Of(method.ReturnType)).WithIdentifier(Identifier(method.Identifier.ToString() + "Async"));
+
         internal static ExpressionStatementSyntax ToStatement(this ExpressionSyntax expression) =>
             ExpressionStatement(expression);
+
+        internal static MethodDeclarationSyntax WithBody(this MethodDeclarationSyntax method, ExpressionSyntax expressionBody) =>
+            method.WithBody(null).WithExpressionBody(ArrowExpressionClause(expressionBody)).WithSemicolonToken(Token(SyntaxKind.SemicolonToken));
     }
 }

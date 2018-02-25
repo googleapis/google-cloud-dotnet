@@ -33,12 +33,48 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
     {
         private const string AppProfileIdFieldName = "_appProfileId";
         private const string AppProfileIdPropertyName = "AppProfileId";
-        private const string GetClientMethodName = "GetClient";
+        private const string GetUnderlyingClientMethodName = "GetUnderlyingClient";
 
-        // TODO: Figure out how to replace the comments on BigtableClient.ReadRows describing cell chunks. Perhaps make this a
-        //       dictionary that maps the custom stream name to the summary comment that should be replaced on the associated
-        //       method. We can just make a custom summary then.
-        private static readonly HashSet<string> s_customStreams = new HashSet<string> { "ReadRowsStream" };
+        private class CustomStreamMethodInfo
+        {
+            public readonly Dictionary<string, string> CustomDocs = new Dictionary<string, string>();
+            public bool SplitSyncAndAsync { get; set; }
+            public string TypeName { get; set; }
+        }
+
+        private static readonly Dictionary<string, CustomStreamMethodInfo> s_customStreamMethods =
+            new Dictionary<string, CustomStreamMethodInfo>
+            {
+                {
+                    "ReadRows",
+                    new CustomStreamMethodInfo
+                    {
+                        CustomDocs =
+                        {
+                            {
+                                "<summary>",
+                                "Streams back the contents of all requested rows in key order, optionally applying the same Reader filter to each."
+                            }
+                        },
+                        TypeName = "ReadRowsStream"
+                    }
+                },
+                {
+                    "MutateRows",
+                    new CustomStreamMethodInfo
+                    {
+                        CustomDocs =
+                        {
+                            {
+                                "<returns>",
+                                "The RPC response."
+                            }
+                        },
+                        SplitSyncAndAsync = true,
+                        TypeName = "MutateRowsResponse"
+                    }
+                }
+            };
 
         private static async Task<int> Main(string[] args)
         {
@@ -122,11 +158,30 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
                 if (method.Parameters[0].Type.Name.EndsWith("Request"))
                 {
-                    var rewrittenMethod = (MethodDeclarationSyntax)requestMethodRewriter.Visit(methodSyntax);
-                    userClientSyntax = userClientSyntax.AddMembers(rewrittenMethod);
+                    var clientMethod = (MethodDeclarationSyntax)requestMethodRewriter.Visit(methodSyntax);
+                    userClientSyntax = userClientSyntax.AddMembers(clientMethod);
 
-                    rewrittenMethod = (MethodDeclarationSyntax)requestMethodToImplRewriter.Visit(rewrittenMethod);
-                    userClientImplSyntax = userClientImplSyntax.AddMembers(rewrittenMethod);
+                    var clientImplMethod = (MethodDeclarationSyntax)requestMethodToImplRewriter.Visit(clientMethod);
+
+                    if (s_customStreamMethods.TryGetValue(method.Name, out var customStreamMethodInfo) &&
+                        customStreamMethodInfo.SplitSyncAndAsync)
+                    {
+                        var asyncMethod = clientMethod.ToAsync();
+                        userClientSyntax = userClientSyntax.AddMembers(asyncMethod);
+
+                        var clientImplSyncMethod = clientImplMethod.WithBody(
+                            Task().Member("Run")
+                                .Invoke(Lambda(asyncMethod.Invoke(clientImplMethod.ParameterList.AsArguments())))
+                                .Member("ResultWithUnwrappedExceptions").Invoke());
+                        userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplSyncMethod);
+
+                        var clientImplAsyncMethod = clientImplMethod.ToAsync();
+                        userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplAsyncMethod);
+                    }
+                    else
+                    {
+                        userClientImplSyntax = userClientImplSyntax.AddMembers(clientImplMethod);
+                    }
                 }
             }
 
@@ -171,6 +226,8 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         private class RequestMethodRewriter : CSharpSyntaxRewriter
         {
             private readonly SemanticModel _semanticModel;
+
+            private IMethodSymbol _method;
             private ParameterSyntax _requestParameterSyntax;
 
             public RequestMethodRewriter(SemanticModel semanticModel) :
@@ -183,21 +240,23 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             {
                 try
                 {
+                    _method = _semanticModel.GetDeclaredSymbol(node);
                     _requestParameterSyntax = node.ParameterList.Parameters[0];
 
-                    var method = _semanticModel.GetDeclaredSymbol(node);
                     node = (MethodDeclarationSyntax)base.VisitMethodDeclaration(node);
 
-                    // If the method's return type is defined in the underlying client's class, qualify the return type.
-                    // However, if we've added a custom stream type in the main namespace and the name matches, skip the
-                    // qualification: we want it to point to the custom type.
-                    if (method.ReturnType.ContainingType == method.ContainingType &&
-                        !s_customStreams.Contains(method.ReturnType.Name))
+                    if (s_customStreamMethods.TryGetValue(_method.Name, out var customStreamMethodInfo) &&
+                        customStreamMethodInfo.TypeName != null)
                     {
+                        node = node.WithReturnType(ParseTypeName(customStreamMethodInfo.TypeName));
+                    }
+                    else if (_method.ReturnType.ContainingType == _method.ContainingType)
+                    {
+                        // If the method's return type is defined in the underlying client's class, qualify the return type.
                         node = node.WithReturnType(
                             QualifiedName(
-                                IdentifierName(method.ContainingType.Name),
-                                IdentifierName(method.ReturnType.Name)));
+                                IdentifierName(_method.ContainingType.Name),
+                                IdentifierName(_method.ReturnType.Name)));
                     }
 
                     return node;
@@ -205,6 +264,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 finally
                 {
                     _requestParameterSyntax = null;
+                    _method = null;
                 }
             }
 
@@ -212,13 +272,20 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             {
                 node = (XmlElementSyntax)base.VisitXmlElement(node);
 
-                // Append request param tags with a note about how the AppProfileId will be added to the request object
-                // if unspecified.
-                if (node.StartTag.Name.LocalName.ToString() == "param" &&
+                var content = node.Content;
+
+                if (s_customStreamMethods.TryGetValue(_method.Name, out var customStreamMethodInfo) &&
+                    customStreamMethodInfo.CustomDocs.TryGetValue(node.StartTag.ToString(), out var comment))
+                {
+                    content = SingletonList((XmlNodeSyntax)XmlText(XmlTextLiteral(comment)));
+                }
+                else if (
+                    node.StartTag.Name.LocalName.ToString() == "param" &&
                     node.StartTag.Attributes.FirstOrDefault() is XmlNameAttributeSyntax paramNameSyntax &&
                     paramNameSyntax.Identifier.ToString() == _requestParameterSyntax.Identifier.ToString())
                 {
-                    var content = node.Content;
+                    // Append request param tags with a note about how the AppProfileId will be added to the request object
+                    // if unspecified.
                     var endingText = (XmlTextSyntax)content.Last();
                     content = content
                         .Replace(
@@ -230,10 +297,9 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                             XmlTextLiteral(" has not been specified, it will be initialized from the value stored in the client."),
                             XmlTextNewLine("\n", continueXmlDocumentationComment: false),
                             endingText.TextTokens.Last()));
-                    node = node.WithContent(content);
                 }
 
-                return node;
+                return node.WithContent(content);
             }
         }
 
@@ -244,22 +310,13 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         private class RequestMethodToImplRewriter : CSharpSyntaxRewriter
         {
             public RequestMethodToImplRewriter() : base(visitIntoStructuredTrivia: true) { }
-
-            public override SyntaxNode VisitDocumentationCommentTrivia(DocumentationCommentTriviaSyntax node)
-            {
-                // Replace the doc comments with <inheritdoc/>
-                return node.WithContent(List(
-                    new XmlNodeSyntax[] {
-                        XmlText(" ").WithLeadingTrivia(node.GetLeadingTrivia()),
-                        XmlEmptyElement("inheritdoc"),
-                        XmlText(XmlTextNewLine("\n", continueXmlDocumentationComment: false))
-                    }));
-            }
-
+            
             public override SyntaxNode VisitMethodDeclaration(MethodDeclarationSyntax node)
             {
-                var parameters = node.ParameterList.Parameters;
                 node = (MethodDeclarationSyntax)base.VisitMethodDeclaration(node);
+
+                // Replace the doc comments with <inheritdoc/>
+                node = node.WithLeadingTrivia(ParseLeadingTrivia("/// <inheritdoc/>\n        "));
 
                 // Replace the body with something like this:
                 //------------------------------------------------------------------------
@@ -268,23 +325,24 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 //      request.AppProfileId = _appProfileId;
                 //  }
                 //
-                //  return GetClient().MethodName(request, callSettings);
+                //  return GetUnderlyingClient().MethodName(request, callSettings);
                 //------------------------------------------------------------------------
-                var appProfileIdProperty = parameters[0].Identifier.Member(AppProfileIdPropertyName);
-                var underlyingMethod = IdentifierName(GetClientMethodName).Invoke().Member(node.Identifier);
-                var resultExpresion =
-                    (ExpressionSyntax)underlyingMethod.Invoke(
-                        parameters.Select(parameter => Argument(parameter.Identifier)));
-                if (s_customStreams.Contains(node.ReturnType.ToString()))
+                var appProfileIdProperty = node.ParameterList.Parameters[0].Identifier.Member(AppProfileIdPropertyName);
+                var underlyingMethod = IdentifierName(GetUnderlyingClientMethodName).Invoke().Member(node.Identifier);
+                var resultExpression = (ExpressionSyntax)underlyingMethod.Invoke(node.ParameterList.AsArguments());
+                if (s_customStreamMethods.TryGetValue(node.Identifier.ToString(), out var customStreamMethodInfo))
                 {
-                    // If we have a custom stream for this method, wrap the underlying result stream
-                    // in a constructor call for the custom stream.
-                    resultExpresion = node.ReturnType.New(resultExpresion);
+                    // If we have a custom implementation, pass all parameters as well as the
+                    // underlying result to a method named ConvertResult, which should be
+                    // implemented manually.
+                    resultExpression =
+                        IdentifierName("ConvertResult").Invoke(
+                            node.ParameterList.AsArguments().AddArgument(resultExpression));
                 }
                 node = node.WithBody(Block(
                     If(appProfileIdProperty.EqualTo(Null()),
                         appProfileIdProperty.AssignFrom(AppProfileIdFieldName).ToStatement()),
-                    ReturnStatement(resultExpresion)));
+                    ReturnStatement(resultExpression)));
 
                 return node;
             }
