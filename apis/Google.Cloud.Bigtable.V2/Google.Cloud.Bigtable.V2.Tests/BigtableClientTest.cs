@@ -197,41 +197,41 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
-        public void MutateRows_Valid_Request()
+        public async Task MutateRows_Valid_Request()
         {
             var tableName = new TableName("project", "instance", "table");
-            MutateRows_ValidateArguments<RequestMadeException>(
+            await MutateRows_ValidateArguments<RequestMadeException>(
                 tableName,
                 new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
         }
 
         [Fact]
-        public void MutateRows_Validate_TableName()
+        public async Task MutateRows_Validate_TableName()
         {
-            MutateRows_ValidateArguments<ArgumentNullException>(
+            await MutateRows_ValidateArguments<ArgumentNullException>(
                 null,
                 new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
         }
 
         [Fact]
-        public void MutateRows_Validate_Mutations()
+        public async Task MutateRows_Validate_Mutations()
         {
             var tableName = new TableName("project", "instance", "table");
-            MutateRows_ValidateArguments<ArgumentNullException>(tableName, null);
-            MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[0]);
-            MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[] { null });
+            await MutateRows_ValidateArguments<ArgumentNullException>(tableName, null);
+            await MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[0]);
+            await MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[] { null });
         }
 
-        private void MutateRows_ValidateArguments<TException>(
+        private async Task MutateRows_ValidateArguments<TException>(
             TableName tableName,
             IEnumerable<MutateRowsRequest.Types.Entry> entries)
             where TException : Exception
         {
             var client = new TestBigtableClient();
-            Assert.Throws<TException>(
-                () => client.MutateRows(tableName, entries?.ToArray()));
-            Assert.Throws<TException>(
-                () => client.MutateRows(tableName, entries, CallSettings.FromCancellationToken(default)));
+            await Assert.ThrowsAsync<TException>(
+                () => client.MutateRowsAsync(tableName, entries?.ToArray()));
+            await Assert.ThrowsAsync<TException>(
+                () => client.MutateRowsAsync(tableName, entries, CallSettings.FromCancellationToken(default)));
         }
 
         [Fact]

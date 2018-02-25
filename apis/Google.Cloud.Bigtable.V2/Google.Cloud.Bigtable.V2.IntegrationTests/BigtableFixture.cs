@@ -94,18 +94,18 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             valuePrefix = valuePrefix ?? "";
 
             int counter = 0;
-            var entries =
-                await TableClient.MutateRows(
-                    tableName,
-                    rowKeys.Select(k =>
-                        Mutations.CreateEntry(
-                            k.Value,
-                            Mutations.SetCell(
-                                familyName,
-                                qualifierName.Value,
-                                valuePrefix.Value.Value.Concat(
-                                    new BigtableByteString(counter++).Value),
-                                version))).ToArray()).GetResponseEntries();
+            var response = await TableClient.MutateRowsAsync(
+                tableName,
+                rowKeys.Select(k =>
+                    Mutations.CreateEntry(
+                        k.Value,
+                        Mutations.SetCell(
+                            familyName,
+                            qualifierName.Value,
+                            valuePrefix.Value.Value.Concat(
+                                new BigtableByteString(counter++).Value),
+                            version))).ToArray());
+            var entries = response.Entries.OrderBy(e => e.Index);
             Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
         }
     }
