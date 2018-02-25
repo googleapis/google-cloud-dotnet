@@ -189,7 +189,11 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         private void CreateRetryRequest(List<int> indiciesToRetry)
         {
-            RetryRequest = new MutateRowsRequest();
+            RetryRequest = new MutateRowsRequest
+            {
+                TableName = _originalRequest.TableName,
+                AppProfileId = _originalRequest.AppProfileId
+            };
             _mapToOriginalIndex = new int[indiciesToRetry.Count];
             for (int i = 0; i < _mapToOriginalIndex.Length; i++)
             {
