@@ -21,9 +21,11 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
+using static Google.Cloud.Bigtable.V2.BigtableMutateRowsRequestManager;
+
 namespace Google.Cloud.Bigtable.V2
 {
-    public partial class BigtableClient
+    public abstract partial class BigtableClient
     {
         // TODO: Auto-generate these if possible/easy after multi-channel support is added.
 
@@ -47,7 +49,7 @@ namespace Google.Cloud.Bigtable.V2
         public static async Task<BigtableClient> CreateAsync(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null, string appProfileId = null)
         {
             var client = await BigtableServiceApiClient.CreateAsync(endpoint, settings).ConfigureAwait(false);
-            return new BigtableClientImpl(client, appProfileId);
+            return new BigtableClientImpl(client, appProfileId) { UnderlyingClientSettings = settings };
         }
 
         /// <summary>
@@ -70,7 +72,7 @@ namespace Google.Cloud.Bigtable.V2
         public static BigtableClient Create(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null, string appProfileId = null)
         {
             var client = BigtableServiceApiClient.Create(endpoint, settings);
-            return new BigtableClientImpl(client, appProfileId);
+            return new BigtableClientImpl(client, appProfileId) { UnderlyingClientSettings = settings };
         }
 
         /// <summary>
@@ -91,7 +93,7 @@ namespace Google.Cloud.Bigtable.V2
         public static BigtableClient Create(Channel channel, BigtableServiceApiSettings settings = null, string appProfileId = null)
         {
             var client = BigtableServiceApiClient.Create(channel, settings);
-            return new BigtableClientImpl(client, appProfileId);
+            return new BigtableClientImpl(client, appProfileId) { UnderlyingClientSettings = settings };
         }
 
         /// <summary>
@@ -510,10 +512,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note this method executes a server streaming RPC. It is not a synchronous call. The caller must process the responses from
-        /// stream as they are returned from the server. Each response will indicate the status for one or more entry of mutations.
-        /// </para>
-        /// <para>
         /// This method simply delegates to <see cref="MutateRows(MutateRowsRequest, CallSettings)"/>.
         /// </para>
         /// </remarks>
@@ -532,22 +530,13 @@ namespace Google.Cloud.Bigtable.V2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// The server stream.
+        /// The response from mutating the rows.
         /// </returns>
-        public virtual BigtableServiceApiClient.MutateRowsStream MutateRows(
+        public virtual MutateRowsResponse MutateRows(
             TableName tableName,
             IEnumerable<MutateRowsRequest.Types.Entry> entries,
-            CallSettings callSettings = null)
-        {
-            var request = new MutateRowsRequest
-            {
-                TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
-                Entries = { Utilities.ValidateCollection(entries, nameof(entries)) }
-            };
-            GaxPreconditions.CheckArgument(
-                request.Entries.Count != 0, nameof(entries), "There must be at least one entry.");
-            return MutateRows(request, callSettings);
-        }
+            CallSettings callSettings = null) =>
+            MutateRows(CreateMutateRowRequest(tableName, entries), callSettings);
 
         /// <summary>
         /// Mutates multiple rows in a batch. Each individual row is mutated
@@ -555,10 +544,6 @@ namespace Google.Cloud.Bigtable.V2
         /// but the entire batch is not executed atomically.
         /// </summary>
         /// <remarks>
-        /// <para>
-        /// Note this method executes a server streaming RPC. It is not a synchronous call. The caller must process the responses from
-        /// stream as they are returned from the server. Each response will indicate the status for one or more entry of mutations.
-        /// </para>
         /// <para>
         /// This method simply delegates to <see cref="MutateRows(TableName, IEnumerable{MutateRowsRequest.Types.Entry}, CallSettings)"/>.
         /// </para>
@@ -574,12 +559,85 @@ namespace Google.Cloud.Bigtable.V2
         /// contain at most 100000 mutations.
         /// </param>
         /// <returns>
-        /// The server stream.
+        /// The response from mutating the rows.
         /// </returns>
-        public virtual BigtableServiceApiClient.MutateRowsStream MutateRows(
+        public virtual MutateRowsResponse MutateRows(
             TableName tableName,
             params MutateRowsRequest.Types.Entry[] entries) =>
             MutateRows(tableName, entries, callSettings: null);
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in <see cref="MutateRow(MutateRowRequest, CallSettings)"/>,
+        /// but the entire batch is not executed atomically.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="MutateRowsAsync(MutateRowsRequest, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the mutations should be applied. Must not be null.
+        /// </param>
+        /// <param name="entries">
+        /// The row keys and corresponding mutations to be applied in bulk.
+        /// Each entry is applied as an atomic mutation, but the entries may be
+        /// applied in arbitrary order (even between entries for the same row).
+        /// At least one entry must be specified, and in total the entries can
+        /// contain at most 100000 mutations. Must not be null, or contain null
+        /// elements.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The response from mutating the rows.
+        /// </returns>
+        public virtual Task<MutateRowsResponse> MutateRowsAsync(
+            TableName tableName,
+            IEnumerable<MutateRowsRequest.Types.Entry> entries,
+            CallSettings callSettings = null) =>
+            MutateRowsAsync(CreateMutateRowRequest(tableName, entries), callSettings);
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in <see cref="MutateRow(MutateRowRequest, CallSettings)"/>,
+        /// but the entire batch is not executed atomically.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method simply delegates to <see cref="MutateRowsAsync(TableName, IEnumerable{MutateRowsRequest.Types.Entry}, CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableName">
+        /// The unique name of the table to which the mutations should be applied. Must not be null.
+        /// </param>
+        /// <param name="entries">
+        /// The row keys and corresponding mutations to be applied in bulk.
+        /// Each entry is applied as an atomic mutation, but the entries may be
+        /// applied in arbitrary order (even between entries for the same row).
+        /// At least one entry must be specified, and in total the entries can
+        /// contain at most 100000 mutations.
+        /// </param>
+        /// <returns>
+        /// The response from mutating the rows.
+        /// </returns>
+        public virtual Task<MutateRowsResponse> MutateRowsAsync(
+            TableName tableName,
+            params MutateRowsRequest.Types.Entry[] entries) =>
+            MutateRowsAsync(tableName, entries, callSettings: null);
+
+        private static MutateRowsRequest CreateMutateRowRequest(TableName tableName, IEnumerable<MutateRowsRequest.Types.Entry> entries)
+        {
+            var request = new MutateRowsRequest
+            {
+                TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                Entries = { Utilities.ValidateCollection(entries, nameof(entries)) }
+            };
+            GaxPreconditions.CheckArgument(
+                request.Entries.Count != 0, nameof(entries), "There must be at least one entry.");
+            return request;
+        }
 
         /// <summary>
         /// Modifies a row atomically on the server. The method reads the latest existing version
@@ -943,6 +1001,68 @@ namespace Google.Cloud.Bigtable.V2
                     TableNameAsTableName = GaxPreconditions.CheckNotNull(tableName, nameof(tableName))
                 },
                 callSettings);
+
+        private BigtableServiceApiSettings UnderlyingClientSettings { get; set; }
+
+        /// <summary>
+        /// Gets an underlying API client that can be used to make requests.
+        /// </summary>
+        protected abstract BigtableServiceApiClient GetUnderlyingClient();
+
+        internal ReadRowsStream ConvertResult(
+            ReadRowsRequest request,
+            CallSettings callSettings,
+            BigtableServiceApiClient.ReadRowsStream result)
+        {
+            return new ReadRowsStream(result);
+        }
+
+        internal async Task<MutateRowsResponse> ConvertResult(
+            MutateRowsRequest request,
+            CallSettings callSettings,
+            BigtableServiceApiClient.MutateRowsStream result)
+        {
+            var defaultCallSettings = (UnderlyingClientSettings ?? new BigtableServiceApiSettings()).MutateRowSettings;
+            var effectiveCallSettings = defaultCallSettings.MergedWith(callSettings);
+            var retrySettings = effectiveCallSettings?.Timing?.Retry;
+            if (retrySettings != null)
+            {
+                effectiveCallSettings = effectiveCallSettings.WithCallTiming(CallTiming.FromExpiration(retrySettings.TotalExpiration));
+            }
+
+            // TODO: Should the request manager be using the retry filter? We would need to fabricate RpcExceptions
+            StatusCode[] retryStatuses = { StatusCode.DeadlineExceeded, StatusCode.Unavailable };
+            var requestManager = new BigtableMutateRowsRequestManager(retryStatuses, request);
+
+            var currentStream = result;
+            var status = await ProcessCurrentStream().ConfigureAwait(false);
+            if (retrySettings != null && status == ProcessingStatus.Retryable)
+            {
+                await ApiCallRetryExtensions.RetryOperationUntilCompleted(
+                    async () =>
+                    {
+                        currentStream = GetUnderlyingClient().MutateRows(requestManager.RetryRequest, callSettings);
+                        return await ProcessCurrentStream().ConfigureAwait(false) != ProcessingStatus.Retryable;
+                    },
+                    // TODO: Do we want to get these from the underlying stream somehow? The underlying stream may change with each retry though.
+                    SystemClock.Instance,
+                    SystemScheduler.Instance,
+                    effectiveCallSettings,
+                    retrySettings).ConfigureAwait(false);
+            }
+            return requestManager.BuildResponse();
+
+            async Task<ProcessingStatus> ProcessCurrentStream()
+            {
+                var cancellationToken = effectiveCallSettings.CancellationToken ?? default;
+                var responseStream = currentStream.ResponseStream;
+                while (await responseStream.MoveNext(cancellationToken).ConfigureAwait(false))
+                {
+                    requestManager.SetStatus(responseStream.Current);
+                }
+                return requestManager.OnOk();
+            }
+        }
     }
 
     public partial class BigtableClientImpl
@@ -958,7 +1078,8 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         // TODO: Add Multi-channel support
-        private BigtableServiceApiClient GetClient() => _client;
+        /// <inheritdoc/>
+        protected override BigtableServiceApiClient GetUnderlyingClient() => _client;
 
         /// <inheritdoc/>
         public override BigtableClient WithAppProfileId(string appProfileId) =>
