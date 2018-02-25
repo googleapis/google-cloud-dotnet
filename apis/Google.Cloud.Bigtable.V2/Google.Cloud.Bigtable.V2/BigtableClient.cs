@@ -34,13 +34,7 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     public partial class BigtableClient
     {
-        /// <summary>
-        /// Streams back the contents of all requested rows in key order, optionally
-        /// applying the same Reader filter to each. Depending on their size,
-        /// rows and cells may be broken up across multiple responses, but
-        /// atomicity of each row will still be preserved. See the
-        /// ReadRowsResponse documentation for details.
-        /// </summary>
+        /// <summary>Streams back the contents of all requested rows in key order, optionally applying the same Reader filter to each.</summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// If the <see cref="ReadRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
@@ -135,10 +129,28 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
-        /// <returns>
-        /// The server stream.
-        /// </returns>
-        public virtual BigtableServiceApiClient.MutateRowsStream MutateRows(
+        /// <returns>The RPC response.</returns>
+        public virtual MutateRowsResponse MutateRows(
+            MutateRowsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in MutateRow, but the entire batch is not executed
+        /// atomically.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// If the <see cref="MutateRowsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>The RPC response.</returns>
+        public virtual Task<MutateRowsResponse> MutateRowsAsync(
             MutateRowsRequest request,
             CallSettings callSettings = null)
         {
@@ -249,7 +261,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return new ReadRowsStream(GetClient().ReadRows(request, callSettings));
+            return ConvertResult(request, callSettings, GetUnderlyingClient().ReadRows(request, callSettings));
         }
 
         /// <inheritdoc/>
@@ -262,7 +274,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetClient().SampleRowKeys(request, callSettings);
+            return GetUnderlyingClient().SampleRowKeys(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -275,7 +287,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetClient().MutateRowAsync(request, callSettings);
+            return GetUnderlyingClient().MutateRowAsync(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -288,11 +300,16 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetClient().MutateRow(request, callSettings);
+            return GetUnderlyingClient().MutateRow(request, callSettings);
         }
 
         /// <inheritdoc/>
-        public override BigtableServiceApiClient.MutateRowsStream MutateRows(
+        public override MutateRowsResponse MutateRows(
+            MutateRowsRequest request,
+            CallSettings callSettings = null) => Task.Run(() => MutateRowsAsync(request, callSettings)).ResultWithUnwrappedExceptions();
+
+        /// <inheritdoc/>
+        public override Task<MutateRowsResponse> MutateRowsAsync(
             MutateRowsRequest request,
             CallSettings callSettings = null)
         {
@@ -301,7 +318,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetClient().MutateRows(request, callSettings);
+            return ConvertResult(request, callSettings, GetUnderlyingClient().MutateRows(request, callSettings));
         }
 
         /// <inheritdoc/>
@@ -314,7 +331,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetClient().CheckAndMutateRowAsync(request, callSettings);
+            return GetUnderlyingClient().CheckAndMutateRowAsync(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -327,7 +344,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetClient().CheckAndMutateRow(request, callSettings);
+            return GetUnderlyingClient().CheckAndMutateRow(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -340,7 +357,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetClient().ReadModifyWriteRowAsync(request, callSettings);
+            return GetUnderlyingClient().ReadModifyWriteRowAsync(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -353,7 +370,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetClient().ReadModifyWriteRow(request, callSettings);
+            return GetUnderlyingClient().ReadModifyWriteRow(request, callSettings);
         }
     }
 }
