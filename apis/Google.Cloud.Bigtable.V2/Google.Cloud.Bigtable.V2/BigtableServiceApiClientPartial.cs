@@ -23,6 +23,32 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2
 {
+    public partial class BigtableServiceApiSettings
+    {
+        partial void OnConstruction()
+        {
+            var originalMutateRowsSettings = MutateRowsSettings;
+            GaxPreconditions.CheckState(
+                originalMutateRowsSettings.CancellationToken == null &&
+                originalMutateRowsSettings.Credentials == null &&
+                originalMutateRowsSettings.HeaderMutation == null &&
+                originalMutateRowsSettings.PropagationToken == null &&
+                originalMutateRowsSettings.WriteOptions == null &&
+                originalMutateRowsSettings.Timing != null &&
+                originalMutateRowsSettings.Timing.Type == CallTimingType.Expiration,
+                "The default MutateRowsSettings are not in the expected state");
+            MutateRowsSettings =
+                CallSettings.FromCallTiming(
+                    CallTiming.FromRetry(new RetrySettings(
+                        retryBackoff: GetDefaultRetryBackoff(),
+                        timeoutBackoff: GetDefaultTimeoutBackoff(),
+                        totalExpiration: Expiration.FromTimeout(
+                            originalMutateRowsSettings.Timing?.Expiration?.Timeout ?? TimeSpan.FromMilliseconds(600000)),
+                        retryFilter: IdempotentRetryFilter
+                    )));
+        }
+    }
+
     public partial class BigtableServiceApiClient
     {
         public partial class SampleRowKeysStream
