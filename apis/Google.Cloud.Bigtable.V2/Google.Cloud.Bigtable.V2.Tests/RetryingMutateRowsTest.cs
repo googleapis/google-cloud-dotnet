@@ -110,7 +110,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                         // Original entry 4
                         MutateRowsStreamUtilities.CreateEntry(2, Code.Ok)
                     },
-                    // 2end retry response entries
+                    // 2nd retry response entries
                     new[]
                     {
                         // Original entry 3

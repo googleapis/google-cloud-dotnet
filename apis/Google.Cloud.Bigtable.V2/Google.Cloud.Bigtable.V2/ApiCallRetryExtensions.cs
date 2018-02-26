@@ -22,7 +22,7 @@ namespace Google.Cloud.Bigtable.V2
 {
     internal static class ApiCallRetryExtensions
     {
-        // TODO: This is a modified/simplified version of ApiCallRetryExtensions.WithRetry from Google.Api.Gax.Grpc. Can we combine them somwhow?
+        // TODO: This is a modified/simplified version of ApiCallRetryExtensions.WithRetry from Google.Api.Gax.Grpc. Can we combine them somehow?
         internal static async Task RetryOperationUntilCompleted(
             Func<Task<bool>> fn,
             IClock clock,

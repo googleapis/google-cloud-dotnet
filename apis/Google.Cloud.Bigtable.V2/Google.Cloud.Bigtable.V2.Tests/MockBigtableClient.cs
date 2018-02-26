@@ -24,6 +24,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
 {
     public class RequestMadeException : Exception { }
 
+    // TODO: See if Moq would be possible/easier rather than hand-rolling.
     public class MockBigtableClient : BigtableClient
     {
         private readonly MockBigtableServiceApiClient _client = new MockBigtableServiceApiClient();

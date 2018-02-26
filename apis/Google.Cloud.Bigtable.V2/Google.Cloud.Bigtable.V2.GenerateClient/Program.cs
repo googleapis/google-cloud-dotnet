@@ -35,13 +35,30 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         private const string AppProfileIdPropertyName = "AppProfileId";
         private const string GetUnderlyingClientMethodName = "GetUnderlyingClient";
 
+        /// <summary>
+        /// Information about how to modify stream methods from the underlying client when customizing them.
+        /// </summary>
         private class CustomStreamMethodInfo
         {
+            /// <summary>
+            /// A collection of custom triple-slash docs to replace on the original stream method, keyed by the XML tag name.
+            /// </summary>
             public readonly Dictionary<string, string> CustomDocs = new Dictionary<string, string>();
+
+            /// <summary>
+            /// Value indicating whether to split the synchronous stream method into synchronous and asynchronous methods.
+            /// </summary>
             public bool SplitSyncAndAsync { get; set; }
+
+            /// <summary>
+            /// The name of the return type to replace in the stream method, or null to leave the return type unmodified.
+            /// </summary>
             public string TypeName { get; set; }
         }
 
+        /// <summary>
+        /// Collection of stream methods from the underlying client that should be customized, keyed by the method name.
+        /// </summary>
         private static readonly Dictionary<string, CustomStreamMethodInfo> s_customStreamMethods =
             new Dictionary<string, CustomStreamMethodInfo>
             {
@@ -52,7 +69,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                         CustomDocs =
                         {
                             {
-                                "<summary>",
+                                "summary",
                                 "Streams back the contents of all requested rows in key order, optionally applying the same Reader filter to each."
                             }
                         },
@@ -66,7 +83,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                         CustomDocs =
                         {
                             {
-                                "<returns>",
+                                "returns",
                                 "The RPC response."
                             }
                         },
@@ -275,7 +292,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 var content = node.Content;
 
                 if (s_customStreamMethods.TryGetValue(_method.Name, out var customStreamMethodInfo) &&
-                    customStreamMethodInfo.CustomDocs.TryGetValue(node.StartTag.ToString(), out var comment))
+                    customStreamMethodInfo.CustomDocs.TryGetValue(node.StartTag.Name.ToString(), out var comment))
                 {
                     content = SingletonList((XmlNodeSyntax)XmlText(XmlTextLiteral(comment)));
                 }
