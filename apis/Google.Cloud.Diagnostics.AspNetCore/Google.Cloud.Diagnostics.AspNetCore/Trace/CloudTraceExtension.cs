@@ -83,6 +83,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             GaxPreconditions.CheckNotNull(app, nameof(app));
             app.UseMiddleware<CloudTraceMiddleware>();
+            HttpContextAccessorWrapper.Accessor = app.ApplicationServices.GetService<IHttpContextAccessor>();
         }
 
         /// <summary>

@@ -18,6 +18,7 @@ using Google.Api.Gax.Testing;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;
@@ -45,10 +46,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
         private GoogleLogger GetLogger(
             IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information,
-            Dictionary<string, string> labels = null)
+            Dictionary<string, string> labels = null, IHttpContextAccessor accessor = null)
         {
             LoggerOptions options = LoggerOptions.Create(logLevel, labels, MonitoredResourceBuilder.GlobalResource);
-            return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock);
+            return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock, accessor);
         }
 
         [Fact]
@@ -127,12 +128,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Log()
         {
             var labels = new Dictionary<string, string> { { "some-key", "some-value" } };
-            Predicate<IEnumerable<LogEntry>> matcher = (l) =>
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
             {
-                LogEntry entry = l.Single();
+                LogEntry entry = logEntries.Single();
                 KeyValuePair<string, string> label = entry.Labels.Single();
                 return entry.LogName == new LogName(_projectId, _logName).ToString() &&
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
+                    string.IsNullOrWhiteSpace(entry.Trace) &&
                     entry.Timestamp.Equals(Timestamp.FromDateTime(s_dateTime)) &&
                     entry.TextPayload == Formatter(_logMessage, s_exception) &&
                     entry.Resource.Equals(MonitoredResourceBuilder.GlobalResource) &&
@@ -143,6 +145,37 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information, labels);
+            logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void Log_Trace()
+        {
+            string traceId = "105445aa7843bc8bf206b12000100f00";
+            string fullTraceName = TraceTarget.ForProject(_projectId).GetFullTraceName(traceId);
+
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
+            {
+                LogEntry entry = logEntries.Single();
+                return entry.LogName == new LogName(_projectId, _logName).ToString() &&
+                    entry.Trace == fullTraceName;
+            };
+
+            var tracerContext = TraceHeaderContext.Create(traceId, 81237123, null);
+            HeaderDictionary dict = new HeaderDictionary();
+            dict[TraceHeaderContext.TraceHeader] = tracerContext.ToString();
+
+            var mockAccessor = new Mock<IHttpContextAccessor>();
+            var mockContext = new Mock<HttpContext>();
+            var mockRequest = new Mock<HttpRequest>();
+            mockAccessor.Setup(a => a.HttpContext).Returns(mockContext.Object);
+            mockContext.Setup(c => c.Request).Returns(mockRequest.Object);
+            mockRequest.Setup(r => r.Headers).Returns(dict);
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, accessor: mockAccessor.Object);
             logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
             mockConsumer.VerifyAll();
         }

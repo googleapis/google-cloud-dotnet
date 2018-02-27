@@ -23,6 +23,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
@@ -105,6 +106,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // Sample: RegisterGoogleTracer
             public void ConfigureServices(IServiceCollection services)
             {
+                // The line below is needed for trace ids to be added to logs.
+                services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
                 string projectId = "[Google Cloud Platform project ID]";
                 services.AddGoogleTrace(options =>
                 {

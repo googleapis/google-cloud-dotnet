@@ -86,7 +86,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         /// <param name="logName">The name of the log.  This will be combined with the log location
         ///     (<see cref="LogTarget"/>) to generate the resource name for the log.</param>
-        public ILogger CreateLogger(string logName) => new GoogleLogger(_consumer, _logTarget, _loggerOptions, logName);
+        public ILogger CreateLogger(string logName) => new GoogleLogger(
+            _consumer, _logTarget, _loggerOptions, logName, accessor: HttpContextAccessorWrapper.Accessor);
 
         /// <inheritdoc />
         public void Dispose() => _consumer.Dispose();
