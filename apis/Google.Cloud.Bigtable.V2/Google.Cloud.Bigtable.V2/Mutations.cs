@@ -45,6 +45,9 @@ namespace Google.Cloud.Bigtable.V2
         /// <seealso cref="BigtableClient.MutateRows(MutateRowsRequest, Api.Gax.Grpc.CallSettings)"/>
         /// <seealso cref="BigtableClient.MutateRows(TableName, MutateRowsRequest.Types.Entry[])"/>
         /// <seealso cref="BigtableClient.MutateRows(TableName, System.Collections.Generic.IEnumerable{MutateRowsRequest.Types.Entry}, Api.Gax.Grpc.CallSettings)"/>
+        /// <seealso cref="BigtableClient.MutateRowsAsync(MutateRowsRequest, Api.Gax.Grpc.CallSettings)"/>
+        /// <seealso cref="BigtableClient.MutateRowsAsync(TableName, MutateRowsRequest.Types.Entry[])"/>
+        /// <seealso cref="BigtableClient.MutateRowsAsync(TableName, System.Collections.Generic.IEnumerable{MutateRowsRequest.Types.Entry}, Api.Gax.Grpc.CallSettings)"/>
         public static MutateRowsRequest.Types.Entry CreateEntry(BigtableByteString rowKey, params Mutation[] mutations)
         {
             GaxPreconditions.CheckArgument(rowKey.Length != 0, nameof(rowKey), "The row key must not empty");

@@ -34,7 +34,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = _fixture.TableName;
             var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
-            var stream = client.MutateRows(
+            var response = await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(
                     rowKey,
@@ -44,7 +44,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         "test12345",
                         new BigtableVersion(1))));
 
-            var entries = await stream.GetResponseEntries();
+            var entries = response.Entries.OrderBy(e => e.Index);
             Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
 
             await BigtableAssert.HasSingleValueAsync(
@@ -64,7 +64,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName);
 
-            var stream = client.MutateRows(
+            var response = await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(
                     rowKey,
@@ -74,7 +74,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         "new_cell_value",
                         new BigtableVersion(1))));
 
-            var entries = await stream.GetResponseEntries();
+            var entries = response.Entries.OrderBy(e => e.Index);
             Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
 
             await BigtableAssert.HasValueAsync(
@@ -102,7 +102,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     "abcd",
                     new BigtableVersion(2)));
 
-            var stream = client.MutateRows(
+            var response = await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(
                     rowKey,
@@ -111,7 +111,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         BigtableFixture.DefaultColumnQualifier,
                         new BigtableVersionRange(1, 2))));
 
-            var entries = await stream.GetResponseEntries();
+            var entries = response.Entries.OrderBy(e => e.Index);
             Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
 
             await BigtableAssert.HasSingleValueAsync(
@@ -139,13 +139,13 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     "Smith",
                     new BigtableVersion(3)));
 
-            var stream = client.MutateRows(
+            var response = await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(
                     rowKey,
                     Mutations.DeleteFromFamily(BigtableFixture.DefaultColumnFamily)));
 
-            var entries = await stream.GetResponseEntries();
+            var entries = response.Entries.OrderBy(e => e.Index);
             Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
 
             await BigtableAssert.HasSingleValueAsync(
@@ -165,13 +165,13 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var client = _fixture.TableClient;
             var rowKey = await _fixture.InsertRowAsync(tableName);
 
-            var stream = client.MutateRows(
+            var response = await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(
                     rowKey,
                     Mutations.DeleteFromRow()));
 
-            var entries = await stream.GetResponseEntries();
+            var entries = response.Entries.OrderBy(e => e.Index);
             Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
 
             await BigtableAssert.HasNoValuesAsync(client, tableName, rowKey);
@@ -185,7 +185,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var rowKey1 = await _fixture.InsertRowAsync(tableName);
             BigtableByteString rowKey2 = Guid.NewGuid().ToString();
 
-            var stream = client.MutateRows(
+            var response = await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(
                     rowKey2,
@@ -210,7 +210,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         "valueXYZ",
                         new BigtableVersion(2))));
 
-            var entries = await stream.GetResponseEntries();
+            var entries = response.Entries.OrderBy(e => e.Index);
             Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
 
             await BigtableAssert.HasNoValuesAsync(
@@ -250,8 +250,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var client = _fixture.TableClient;
             BigtableByteString rowKey = Guid.NewGuid().ToString();
 
-            Assert.Throws<InvalidOperationException>(() =>
-                client.MutateRows(
+            await Assert.ThrowsAsync<InvalidOperationException>(() =>
+                client.MutateRowsAsync(
                     tableName,
                     Mutations.CreateEntry(
                         rowKey,
@@ -267,7 +267,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                         })));
 
             // Also just verify we allow the same call which is idempotent instead (has TimestampMicros).
-            var stream = client.MutateRows(
+            await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(
                     rowKey,
@@ -281,7 +281,6 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                             TimestampMicros = 1000
                         }
                     }));
-            await stream.GetResponseEntries();
         }
     }
 }

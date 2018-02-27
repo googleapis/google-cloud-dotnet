@@ -124,8 +124,8 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 "user23456",
                 Mutations.SetCell("Score", "Level 1", 12));
 
-            // Snippet: MutateRows(TableName,*)
-            BigtableServiceApiClient.MutateRowsStream streamingResponse = client.MutateRows(
+            // Snippet: MutateRowsAsync(TableName,*)
+            MutateRowsResponse response = await client.MutateRowsAsync(
                 new TableName(projectId, instanceId, tableId),
                 // From row 'user12345'...
                 Mutations.CreateEntry("user12345",
@@ -140,24 +140,18 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                 // Delete all data from row 'user23456'
                 Mutations.CreateEntry("user23456", Mutations.DeleteFromRow()));
 
-            // Read streaming responses from server until complete
-            IAsyncEnumerator<MutateRowsResponse> responseStream = streamingResponse.ResponseStream;
-            while (await responseStream.MoveNext(cancellationToken))
+            foreach (MutateRowsResponse.Types.Entry entry in response.Entries)
             {
-                MutateRowsResponse response = responseStream.Current;
-                foreach (MutateRowsResponse.Types.Entry entry in response.Entries)
+                switch (entry.Index)
                 {
-                    switch (entry.Index)
-                    {
-                        case 0:
-                            Console.WriteLine($"The mutations to row 'user12345' finished with status code {entry.Status.Code}");
-                            break;
-                        case 1:
-                            Console.WriteLine($"The mutations to row 'user23456' finished with status code {entry.Status.Code}");
-                            break;
-                        default:
-                            throw new ArgumentOutOfRangeException();
-                    }
+                    case 0:
+                        Console.WriteLine($"The mutations to row 'user12345' finished with status code {entry.Status.Code}");
+                        break;
+                    case 1:
+                        Console.WriteLine($"The mutations to row 'user23456' finished with status code {entry.Status.Code}");
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
                 }
             }
             // End snippet

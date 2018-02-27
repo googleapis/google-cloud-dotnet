@@ -14,15 +14,32 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Grpc.Core;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2
 {
+    public partial class BigtableServiceApiSettings
+    {
+        partial void OnConstruction()
+        {
+            var originalMutateRowsSettings = MutateRowsSettings;
+            GaxPreconditions.CheckState(
+                originalMutateRowsSettings.Timing != null &&
+                originalMutateRowsSettings.Timing.Type == CallTimingType.Expiration,
+                "The default MutateRowsSettings are not in the expected state");
+            MutateRowsSettings = originalMutateRowsSettings.WithCallTiming(
+                CallTiming.FromRetry(new RetrySettings(
+                    retryBackoff: GetDefaultRetryBackoff(),
+                    timeoutBackoff: GetDefaultTimeoutBackoff(),
+                    totalExpiration: originalMutateRowsSettings.Timing.Expiration,
+                    retryFilter: IdempotentRetryFilter
+                )));
+        }
+    }
+
     public partial class BigtableServiceApiClient
     {
         public partial class SampleRowKeysStream

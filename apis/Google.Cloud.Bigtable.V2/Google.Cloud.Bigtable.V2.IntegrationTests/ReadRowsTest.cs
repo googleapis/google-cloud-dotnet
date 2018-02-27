@@ -458,7 +458,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             {
                 Assert.Equal(rowKey.Value, row.Key);
             });
-            
+
             Assert.Throws<InvalidOperationException>(() => response.GetEnumerator());
         }
 
@@ -469,24 +469,24 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var client = _fixture.TableClient;
 
             // Reset the rows we want to target
-            var response = client.MutateRows(
+            var response = await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(@"arow\1", Mutations.DeleteFromRow()),
                 Mutations.CreateEntry(@"row\1", Mutations.DeleteFromRow()),
                 Mutations.CreateEntry("row\0\\1", Mutations.DeleteFromRow()),
                 Mutations.CreateEntry(@"row1", Mutations.DeleteFromRow()),
                 Mutations.CreateEntry(@"row\2", Mutations.DeleteFromRow()));
-            var entries = await response.GetResponseEntries();
+            var entries = response.Entries.OrderBy(e => e.Index);
             Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
 
-            response = client.MutateRows(
+            response = await client.MutateRowsAsync(
                 tableName,
                 Mutations.CreateEntry(@"row\1", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 0)),
                 Mutations.CreateEntry(@"arow\1", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 1)),
                 Mutations.CreateEntry("row\0\\1", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 2)),
                 Mutations.CreateEntry(@"row1", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 3)),
                 Mutations.CreateEntry(@"row\2", Mutations.SetCell(BigtableFixture.DefaultColumnFamily, "i", 4)));
-            entries = await response.GetResponseEntries();
+            entries = response.Entries.OrderBy(e => e.Index);
             Assert.True(entries.All(e => e.Status.Code == (int)Code.Ok));
 
             var rowsStream = client.ReadRows(

@@ -24,30 +24,6 @@ namespace Google.Cloud.Bigtable.V2.Tests
 {
     public class BigtableClientTest
     {
-        private class RequestMadeException : Exception { }
-
-        private class TestBigtableClient : BigtableClient
-        {
-            public override CheckAndMutateRowResponse CheckAndMutateRow(CheckAndMutateRowRequest request, CallSettings callSettings = null) =>
-                throw new RequestMadeException();
-            public override Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(CheckAndMutateRowRequest request, CallSettings callSettings = null) =>
-                throw new RequestMadeException();
-            public override MutateRowResponse MutateRow(MutateRowRequest request, CallSettings callSettings = null) =>
-                throw new RequestMadeException();
-            public override Task<MutateRowResponse> MutateRowAsync(MutateRowRequest request, CallSettings callSettings = null) =>
-                throw new RequestMadeException();
-            public override BigtableServiceApiClient.MutateRowsStream MutateRows(MutateRowsRequest request, CallSettings callSettings = null) =>
-                throw new RequestMadeException();
-            public override ReadModifyWriteRowResponse ReadModifyWriteRow(ReadModifyWriteRowRequest request, CallSettings callSettings = null) =>
-                throw new RequestMadeException();
-            public override Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, CallSettings callSettings = null) =>
-                throw new RequestMadeException();
-            public override ReadRowsStream ReadRows(ReadRowsRequest request, CallSettings callSettings = null) =>
-                throw new RequestMadeException();
-            public override BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(SampleRowKeysRequest request, CallSettings callSettings = null) =>
-                throw new RequestMadeException();
-        }
-
         [Fact]
         public async Task CheckAndMutateRow_Valid_Request()
         {
@@ -126,7 +102,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             bool callTrueMutationsOnlyOverload = true)
             where TException : Exception
         {
-            var client = new TestBigtableClient();
+            var client = new MockBigtableClient();
             if (callTrueMutationsOnlyOverload)
             {
                 Assert.Throws<TException>(
@@ -185,7 +161,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             IEnumerable<Mutation> mutations)
             where TException : Exception
         {
-            var client = new TestBigtableClient();
+            var client = new MockBigtableClient();
             Assert.Throws<TException>(
                 () => client.MutateRow(tableName, rowKey, mutations?.ToArray()));
             Assert.Throws<TException>(
@@ -197,41 +173,41 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
-        public void MutateRows_Valid_Request()
+        public async Task MutateRows_Valid_Request()
         {
             var tableName = new TableName("project", "instance", "table");
-            MutateRows_ValidateArguments<RequestMadeException>(
+            await MutateRows_ValidateArguments<RequestMadeException>(
                 tableName,
                 new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
         }
 
         [Fact]
-        public void MutateRows_Validate_TableName()
+        public async Task MutateRows_Validate_TableName()
         {
-            MutateRows_ValidateArguments<ArgumentNullException>(
+            await MutateRows_ValidateArguments<ArgumentNullException>(
                 null,
                 new[] { Mutations.CreateEntry("abc", Mutations.DeleteFromRow()) });
         }
 
         [Fact]
-        public void MutateRows_Validate_Mutations()
+        public async Task MutateRows_Validate_Mutations()
         {
             var tableName = new TableName("project", "instance", "table");
-            MutateRows_ValidateArguments<ArgumentNullException>(tableName, null);
-            MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[0]);
-            MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[] { null });
+            await MutateRows_ValidateArguments<ArgumentNullException>(tableName, null);
+            await MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[0]);
+            await MutateRows_ValidateArguments<ArgumentException>(tableName, new MutateRowsRequest.Types.Entry[] { null });
         }
 
-        private void MutateRows_ValidateArguments<TException>(
+        private async Task MutateRows_ValidateArguments<TException>(
             TableName tableName,
             IEnumerable<MutateRowsRequest.Types.Entry> entries)
             where TException : Exception
         {
-            var client = new TestBigtableClient();
-            Assert.Throws<TException>(
-                () => client.MutateRows(tableName, entries?.ToArray()));
-            Assert.Throws<TException>(
-                () => client.MutateRows(tableName, entries, CallSettings.FromCancellationToken(default)));
+            var client = new MockBigtableClient();
+            await Assert.ThrowsAsync<TException>(
+                () => client.MutateRowsAsync(tableName, entries?.ToArray()));
+            await Assert.ThrowsAsync<TException>(
+                () => client.MutateRowsAsync(tableName, entries, CallSettings.FromCancellationToken(default)));
         }
 
         [Fact]
@@ -239,7 +215,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         {
             var tableName = new TableName("project", "instance", "table");
             await ReadModifyWriteRow_ValidateArguments<RequestMadeException>(
-                tableName, "abc", new[] { ReadModifyWriteRules.Append("a", "b", "c") } );
+                tableName, "abc", new[] { ReadModifyWriteRules.Append("a", "b", "c") });
         }
 
         [Fact]
@@ -273,7 +249,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             IEnumerable<ReadModifyWriteRule> rules)
             where TException : Exception
         {
-            var client = new TestBigtableClient();
+            var client = new MockBigtableClient();
             Assert.Throws<TException>(
                 () => client.ReadModifyWriteRow(tableName, rowKey, rules?.ToArray()));
             Assert.Throws<TException>(
@@ -312,7 +288,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             RowFilter filter)
             where TException : Exception
         {
-            var client = new TestBigtableClient();
+            var client = new MockBigtableClient();
             Assert.Throws<TException>(
                 () => client.ReadRow(tableName, rowKey, filter));
             await Assert.ThrowsAsync<TException>(
@@ -430,7 +406,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             long? rowsLimit)
             where TException : Exception
         {
-            var client = new TestBigtableClient();
+            var client = new MockBigtableClient();
             Assert.Throws<TException>(
                 () => client.ReadRows(tableName, rows, filter, rowsLimit));
         }
@@ -438,7 +414,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void SampleRowKeys_Valid_Request()
         {
-            var client = new TestBigtableClient();
+            var client = new MockBigtableClient();
             var tableName = new TableName("project", "instance", "table");
             Assert.Throws<RequestMadeException>(() => client.SampleRowKeys(tableName));
         }
@@ -446,7 +422,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void SampleRowKeys_Validate_TableName()
         {
-            var client = new TestBigtableClient();
+            var client = new MockBigtableClient();
             Assert.Throws<ArgumentNullException>(() => client.SampleRowKeys((TableName)null));
         }
     }
