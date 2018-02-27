@@ -1335,7 +1335,8 @@ namespace Google.Cloud.Spanner.V1 {
     private global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode queryMode_ = 0;
     /// <summary>
     /// Used to control the amount of debugging information returned in
-    /// [ResultSetStats][google.spanner.v1.ResultSetStats].
+    /// [ResultSetStats][google.spanner.v1.ResultSetStats]. If [partition_token][google.spanner.v1.ExecuteSqlRequest.partition_token] is set, [query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode] can only
+    /// be set to [QueryMode.NORMAL][google.spanner.v1.ExecuteSqlRequest.QueryMode.NORMAL].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode QueryMode {
@@ -1641,8 +1642,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// The desired maximum number of partitions to return.  For example, this may
     /// be set to the number of workers available.  The default for this option
     /// is currently 10,000. The maximum value is currently 200,000.  This is only
-    /// a hint.  The actual number of partitions returned may be smaller than
-    /// this maximum count request.
+    /// a hint.  The actual number of partitions returned may be smaller or larger
+    /// than this maximum count request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long MaxPartitions {
