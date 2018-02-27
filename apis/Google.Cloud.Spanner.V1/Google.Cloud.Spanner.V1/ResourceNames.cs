@@ -304,32 +304,6 @@ namespace Google.Cloud.Spanner.V1
 
     }
 
-    public partial class PartitionQueryRequest
-    {
-        /// <summary>
-        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
-        /// </summary>
-        public SessionName SessionAsSessionName
-        {
-            get { return string.IsNullOrEmpty(Session) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Session); }
-            set { Session = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
-    public partial class PartitionReadRequest
-    {
-        /// <summary>
-        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
-        /// </summary>
-        public SessionName SessionAsSessionName
-        {
-            get { return string.IsNullOrEmpty(Session) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Session); }
-            set { Session = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
     public partial class ReadRequest
     {
         /// <summary>

@@ -555,13 +555,11 @@ namespace Google.Cloud.Spanner.V1
         /// The default Spanner scopes are:
         /// <list type="bullet">
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
-        /// <item><description>"https://www.googleapis.com/auth/spanner.admin"</description></item>
         /// <item><description>"https://www.googleapis.com/auth/spanner.data"</description></item>
         /// </list>
         /// </remarks>
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/spanner.admin",
             "https://www.googleapis.com/auth/spanner.data",
         });
 

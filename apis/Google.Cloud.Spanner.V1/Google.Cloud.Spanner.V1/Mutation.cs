@@ -610,6 +610,8 @@ namespace Google.Cloud.Spanner.V1 {
         private global::Google.Cloud.Spanner.V1.KeySet keySet_;
         /// <summary>
         /// Required. The primary keys of the rows within [table][google.spanner.v1.Mutation.Delete.table] to delete.
+        /// Delete is idempotent. The transaction will succeed even if some or all
+        /// rows do not exist.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Spanner.V1.KeySet KeySet {
