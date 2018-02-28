@@ -26,16 +26,24 @@ namespace Google.Cloud.Spanner.Data
 {
     public sealed partial class SpannerDbType
     {
-        internal object ConvertToClrType(Value protobufValue) => ConvertToClrType(
-            protobufValue, typeof(object));
+        internal object ConvertToClrType(Value protobufValue, SpannerConversionOptions options) =>
+            ConvertToClrType(protobufValue, typeof(object), options, topLevel: true);
 
-        internal T ConvertToClrType<T>(
-            Value protobufValue) => (T) ConvertToClrType(protobufValue, typeof(T));
+        internal T ConvertToClrType<T>(Value protobufValue, SpannerConversionOptions options) =>
+            (T) ConvertToClrType(protobufValue, typeof(T), options, topLevel: true);
 
-        internal object ConvertToClrType(Value protobufValue, System.Type targetClrType)
+        // Visible only for test simplification reasons.
+        internal object ConvertToClrType(Value protobufValue, System.Type targetClrType, SpannerConversionOptions options, bool topLevel)
         {
             if (protobufValue.KindCase == Value.KindOneofCase.NullValue)
             {
+                // DBNull is only used for top-level values, not arrays or structs.
+                if (options.UseDBNull && topLevel)
+                {
+                    // No check for the target type. This matches the behavior of SqlDbDataReader etc,
+                    // where calling GetString (etc) for a null value will throw an InvalidCastException.
+                    return DBNull.Value;
+                }
                 if (targetClrType.GetTypeInfo().IsValueType)
                 {
                     //Returns default(T) for targetClrType
@@ -57,48 +65,50 @@ namespace Google.Cloud.Spanner.Data
             //we call the spannerType with the known supported version and cast it down to lose precision.
             if (targetClrType == typeof(int))
             {
-                return Convert.ToInt32(ConvertToClrTypeImpl<long>(protobufValue));
+                return Convert.ToInt32(ConvertToClrTypeImpl<long>(protobufValue, options));
             }
 
             if (targetClrType == typeof(uint))
             {
-                return Convert.ToUInt32(ConvertToClrTypeImpl<long>(protobufValue));
+                return Convert.ToUInt32(ConvertToClrTypeImpl<long>(protobufValue, options));
             }
 
             if (targetClrType == typeof(short))
             {
-                return Convert.ToInt16(ConvertToClrTypeImpl<long>(protobufValue));
+                return Convert.ToInt16(ConvertToClrTypeImpl<long>(protobufValue, options));
             }
 
             if (targetClrType == typeof(ushort))
             {
-                return Convert.ToUInt16(ConvertToClrTypeImpl<long>(protobufValue));
+                return Convert.ToUInt16(ConvertToClrTypeImpl<long>(protobufValue, options));
             }
 
             if (targetClrType == typeof(sbyte))
             {
-                return Convert.ToSByte(ConvertToClrTypeImpl<long>(protobufValue));
+                return Convert.ToSByte(ConvertToClrTypeImpl<long>(protobufValue, options));
             }
 
             if (targetClrType == typeof(byte))
             {
-                return Convert.ToByte(ConvertToClrTypeImpl<long>(protobufValue));
+                return Convert.ToByte(ConvertToClrTypeImpl<long>(protobufValue, options));
             }
 
             if (targetClrType == typeof(float))
             {
-                return Convert.ToSingle(ConvertToClrTypeImpl<double>(protobufValue));
+                return Convert.ToSingle(ConvertToClrTypeImpl<double>(protobufValue, options));
             }
 
             if (targetClrType == typeof(Guid))
             {
-                return Guid.Parse(ConvertToClrTypeImpl<string>(protobufValue));
+                return Guid.Parse(ConvertToClrTypeImpl<string>(protobufValue, options));
             }
 
-            return ConvertToClrTypeImpl(protobufValue, targetClrType);
+            return ConvertToClrTypeImpl(protobufValue, targetClrType, options);
         }
 
-        internal Value ToProtobufValue(object value)
+        // Note: the options can *currently* be null because we're not using them, but
+        // every call site should check that it could provide options if they become required.
+        internal Value ToProtobufValue(object value, SpannerConversionOptions options)
         {
             if (value == null || value is DBNull)
             {
@@ -150,7 +160,7 @@ namespace Google.Cloud.Spanner.Data
                     {
                         return Value.ForList(
                             enumerable.Cast<object>()
-                                .Select(x => ArrayElementType.ToProtobufValue(x)).ToArray());
+                                .Select(x => ArrayElementType.ToProtobufValue(x, options)).ToArray());
                     }
                     throw new ArgumentException("The given array instance needs to implement IEnumerable.");
                 case TypeCode.Struct:
@@ -164,8 +174,7 @@ namespace Google.Cloud.Spanner.Data
                             {
                                 throw new ArgumentException("The given struct instance has members not defined in the Struct.", nameof(value));
                             }
-                            structValue.Fields[keyString] = StructMembers[keyString].ToProtobufValue(
-                                dictionary[key]);
+                            structValue.Fields[keyString] = StructMembers[keyString].ToProtobufValue(dictionary[key], options);
                         }
                         return Value.ForStruct(structValue);
                     }
@@ -176,10 +185,9 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        private T ConvertToClrTypeImpl<T>(Value wireValue) =>
-            (T)ConvertToClrTypeImpl(wireValue, typeof(T));
+        private T ConvertToClrTypeImpl<T>(Value wireValue, SpannerConversionOptions options) => (T) ConvertToClrTypeImpl(wireValue, typeof(T), options);
 
-        private object ConvertToClrTypeImpl(Value wireValue, System.Type targetClrType)
+        private object ConvertToClrTypeImpl(Value wireValue, System.Type targetClrType, SpannerConversionOptions options)
         {
             //If the wireValue itself is assignable to the target type, just return it
             //This covers both typeof(Value) and typeof(object).
@@ -393,8 +401,8 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.StructValue:
                         foreach (var structField in StructMembers)
                         {
-                            dictionary[structField.Key] = structField.Value.ConvertToClrType(
-                                    wireValue.StructValue.Fields[structField.Key], itemType);
+                            var fieldValue = wireValue.StructValue.Fields[structField.Key];
+                            dictionary[structField.Key] = structField.Value.ConvertToClrType(fieldValue, itemType, options, topLevel: false);
                         }
 
                         return dictionary;
@@ -403,9 +411,8 @@ namespace Google.Cloud.Spanner.Data
                         {
                             for (var i = 0; i < StructOrder?.Count; i++)
                             {
-                                dictionary[StructOrder[i]] =
-                                    StructMembers[StructOrder[i]].ConvertToClrType(wireValue
-                                            .ListValue.Values[i], itemType);
+                                var elementValue = wireValue.ListValue.Values[i];
+                                dictionary[StructOrder[i]] = StructMembers[StructOrder[i]].ConvertToClrType(elementValue, itemType, options, topLevel: false);
                             }
                         }
                         else
@@ -413,7 +420,7 @@ namespace Google.Cloud.Spanner.Data
                             var i = 0;
                             foreach (var listItemValue in wireValue.ListValue.Values)
                             {
-                                dictionary[i] = ArrayElementType.ConvertToClrType(listItemValue, itemType);
+                                dictionary[i] = ArrayElementType.ConvertToClrType(listItemValue, itemType, options, topLevel: false);
                                 i++;
                             }
                         }
@@ -435,7 +442,7 @@ namespace Google.Cloud.Spanner.Data
 
                         var i = 0;
                         foreach (var obj in wireValue.ListValue.Values.Select(
-                            x => ArrayElementType.ConvertToClrType(x, targetClrType.GetElementType())))
+                            x => ArrayElementType.ConvertToClrType(x, targetClrType.GetElementType(), options, topLevel: false)))
                         {
                             newArray.SetValue(obj, i);
                             i++;
@@ -459,7 +466,7 @@ namespace Google.Cloud.Spanner.Data
                         var newList = (IList) Activator.CreateInstance(targetClrType);
                         var itemType = targetClrType.GetGenericArguments().FirstOrDefault() ?? typeof(object);
                         foreach (var obj in wireValue.ListValue.Values.Select(
-                            x => ArrayElementType.ConvertToClrType(x, itemType)))
+                            x => ArrayElementType.ConvertToClrType(x, itemType, options, topLevel: false)))
                         {
                             newList.Add(obj);
                         }

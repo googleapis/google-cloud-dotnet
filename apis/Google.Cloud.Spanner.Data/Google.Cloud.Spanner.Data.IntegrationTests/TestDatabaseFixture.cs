@@ -244,12 +244,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         });
                     cmd.Transaction = tx;
 
-                    for (var i = 0; i < TestTableRowCount; ++i)
+                    for (var i = 0; i < TestTableRowCount - 1; ++i)
                     {
                         cmd.Parameters["Key"].Value = "k" + i;
                         cmd.Parameters["StringValue"].Value = "v" + i;
                         await cmd.ExecuteNonQueryAsync();
                     }
+
+                    // And one extra row, with a null value.
+                    cmd.Parameters["Key"].Value = "kNull";
+                    cmd.Parameters["StringValue"].Value = DBNull.Value;
+                    await cmd.ExecuteNonQueryAsync();
 
                     await tx.CommitAsync();
                 }

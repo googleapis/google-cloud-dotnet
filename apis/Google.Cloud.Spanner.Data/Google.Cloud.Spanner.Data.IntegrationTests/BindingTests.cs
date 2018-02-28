@@ -41,7 +41,48 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private readonly TestDatabaseFixture _testFixture;
 
-        private async Task TestBind<T>(SpannerDbType parameterType, T value, Func<SpannerDataReader, T> typeSpecificReader = null)
+        public static TheoryData<SpannerDbType> BindNullData { get; } = new TheoryData<SpannerDbType>
+        {
+            SpannerDbType.Bool,
+            SpannerDbType.String,
+            SpannerDbType.Int64,
+            SpannerDbType.Timestamp,
+            SpannerDbType.Float64,
+            SpannerDbType.Date,
+            SpannerDbType.Bytes,
+            SpannerDbType.ArrayOf(SpannerDbType.Bool),
+            SpannerDbType.ArrayOf(SpannerDbType.String),
+            SpannerDbType.ArrayOf(SpannerDbType.Int64),
+            SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
+            SpannerDbType.ArrayOf(SpannerDbType.Float64),
+            SpannerDbType.ArrayOf(SpannerDbType.Date),
+            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
+        };        
+
+        [Theory]
+        [MemberData(nameof(BindNullData))]
+        public async Task BindNull(SpannerDbType parameterType)
+        {
+            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            {
+                var cmd = connection.CreateSelectCommand(
+                    "SELECT @v",
+                    new SpannerParameterCollection { new SpannerParameter("v", parameterType) });
+
+                cmd.Parameters["v"].Value = null;
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.True(await reader.ReadAsync());
+
+                    Assert.True(reader.IsDBNull(0));
+                    Assert.Equal(DBNull.Value, reader.GetValue(0));
+
+                    Assert.False(await reader.ReadAsync());
+                }
+            }
+        }
+
+        private async Task TestBindNonNull<T>(SpannerDbType parameterType, T value, Func<SpannerDataReader, T> typeSpecificReader = null)
         {
             int rowsRead;
             var valueRead = default(T);
@@ -65,7 +106,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         {
                             Assert.Equal(typeSpecificReader(reader), valueRead);
                             // ReSharper disable once CompareNonConstrainedGenericWithNull
-                            Assert.Equal(reader.IsDBNull(0), value == null);
+                            Assert.False(reader.IsDBNull(0));
                         }
 
                         rowsRead++;
@@ -92,31 +133,25 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public Task BindBoolean() => TestBind(SpannerDbType.Bool, true, r => r.GetBoolean(0));
+        public Task BindBoolean() => TestBindNonNull(SpannerDbType.Bool, true, r => r.GetBoolean(0));
 
         [Fact]
-        public Task BindBooleanArray() => TestBind(
+        public Task BindBooleanArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             new bool?[] {true, null, false});
 
         [Fact]
-        public Task BindBooleanEmptyArray() => TestBind(
+        public Task BindBooleanEmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             new bool[] { });
 
         [Fact]
-        public Task BindBooleanNull() => TestBind<bool?>(SpannerDbType.Bool, null);
-
-        [Fact]
-        public Task BindBooleanNullArray() => TestBind<bool[]>(SpannerDbType.Bool, null);
-
-        [Fact]
-        public Task BindByteArray() => TestBind(
+        public Task BindByteArray() => TestBindNonNull(
             SpannerDbType.Bytes,
             new byte[] {1, 2, 3});
 
         [Fact]
-        public Task BindByteArrayList() => TestBind(
+        public Task BindByteArrayList() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
             new List<byte[]> {
                 new byte[] { 1, 2, 3 },
@@ -125,127 +160,78 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             });
 
         [Fact]
-        public Task BindEmptyByteArrayList() => TestBind(
+        public Task BindEmptyByteArrayList() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
             new List<byte[]>());
 
         [Fact]
-        public Task BindNullByteArrayList() => TestBind<List<byte[]>>(
-            SpannerDbType.ArrayOf(SpannerDbType.Bytes), null);
-
-        [Fact]
-        public Task BindByteArrayNull() => TestBind<byte[]>(SpannerDbType.Bytes, null);
-
-        [Fact]
-        public Task BindDate() => TestBind(
+        public Task BindDate() => TestBindNonNull(
             SpannerDbType.Date,
             new DateTime(2017, 5, 26));
 
         [Fact]
-        public Task BindDateArray() => TestBind(
+        public Task BindDateArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Date),
             new DateTime?[] {new DateTime(2017, 5, 26), null, new DateTime(2017, 5, 9)});
 
         [Fact]
-        public Task BindDateEmptyArray() => TestBind(
+        public Task BindDateEmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Date),
             new DateTime?[] { });
 
         [Fact]
-        public Task BindDateNull() => TestBind<DateTime?>(SpannerDbType.Date, null);
+        public Task BindFloat64() => TestBindNonNull(SpannerDbType.Float64, 1.0, r => r.GetDouble(0));
 
         [Fact]
-        public Task BindDateNullArray() => TestBind<DateTime?[]>(
-            SpannerDbType.ArrayOf(SpannerDbType.Date),
-            null);
-
-        [Fact]
-        public Task BindFloat64() => TestBind(SpannerDbType.Float64, 1.0, r => r.GetDouble(0));
-
-        [Fact]
-        public Task BindFloat64Array() => TestBind(
+        public Task BindFloat64Array() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Float64),
             new double?[] {0.0, null, 1.0});
 
         [Fact]
-        public Task BindFloat64EmptyArray() => TestBind(
+        public Task BindFloat64EmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Float64),
             new double[] { });
 
         [Fact]
-        public Task BindFloat64Null() => TestBind<double?>(SpannerDbType.Float64, null);
+        public Task BindInt64() => TestBindNonNull(SpannerDbType.Int64, 1, r => r.GetInt64(0));
 
         [Fact]
-        public Task BindFloat64NullArray() => TestBind<double[]>(
-            SpannerDbType.ArrayOf(SpannerDbType.Float64),
-            null);
-
-        [Fact]
-        public Task BindInt64() => TestBind(SpannerDbType.Int64, 1, r => r.GetInt64(0));
-
-        [Fact]
-        public Task BindInt64Array() => TestBind(
+        public Task BindInt64Array() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
             new long?[] {1, null, 0});
 
         [Fact]
-        public Task BindInt64EmptyArray() => TestBind(
+        public Task BindInt64EmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
             new long[] { });
 
         [Fact]
-        public Task BindInt64Null() => TestBind<long?>(SpannerDbType.Int64, null);
+        public Task BindString() => TestBindNonNull(SpannerDbType.String, "abc", r => r.GetString(0));
 
         [Fact]
-        public Task BindInt64NullArray() => TestBind<long[]>(
-            SpannerDbType.ArrayOf(SpannerDbType.Int64),
-            null);
-
-        [Fact]
-        public Task BindString() => TestBind(SpannerDbType.String, "abc", r => r.GetString(0));
-
-        [Fact]
-        public Task BindStringArray() => TestBind(
+        public Task BindStringArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.String),
             new[] {"abc", null, "123"});
 
         [Fact]
-        public Task BindStringEmptyArray() => TestBind(
+        public Task BindStringEmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.String),
             new string[] { });
 
         [Fact]
-        public Task BindStringNull() => TestBind<string>(SpannerDbType.String, null);
-
-        [Fact]
-        public Task BindStringNullArray() => TestBind<string[]>(
-            SpannerDbType.ArrayOf(SpannerDbType.String),
-            null);
-
-        [Fact]
-        public Task BindTimestamp() => TestBind(
+        public Task BindTimestamp() => TestBindNonNull(
             SpannerDbType.Timestamp,
             new DateTime(2017, 5, 26, 15, 0, 0));
 
         [Fact]
-        public Task BindTimestampArray() => TestBind(
+        public Task BindTimestampArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
             new DateTime?[]
                 {new DateTime(2017, 5, 26, 3, 15, 0), null, new DateTime(2017, 5, 9, 12, 30, 0)});
 
         [Fact]
-        public Task BindTimestampEmptyArray() => TestBind(
+        public Task BindTimestampEmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
             new DateTime?[] { });
-
-        [Fact]
-        public Task BindTimestampNull() => TestBind<DateTime?>(
-            SpannerDbType.Timestamp,
-            null);
-
-        [Fact]
-        public Task BindTimestampNullArray() => TestBind<DateTime?[]>(
-            SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
-            null);
     }
 }
