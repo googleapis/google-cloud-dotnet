@@ -99,5 +99,31 @@ namespace Google.Cloud.Firestore.Tests
             // Modifying the array doesn't modify the options
             Assert.Equal(new[] { path1, path2 }, options.FieldMask);
         }
+
+        [Fact]
+        public void Equality()
+        {
+            EqualityTester.AssertEqual(SetOptions.MergeAll,
+                equal: new[] { SetOptions.MergeAll },
+                unequal: new[] { SetOptions.Overwrite, SetOptions.MergeFields("a", "b") });
+
+            EqualityTester.AssertEqual(SetOptions.Overwrite,
+                equal: new[] { SetOptions.Overwrite },
+                unequal: new[] { SetOptions.MergeFields("a", "b") });
+
+            EqualityTester.AssertEqual(SetOptions.MergeFields("a", "b.c"),
+                equal: new[] {
+                    SetOptions.MergeFields("a", "b.c"),
+                    SetOptions.MergeFields(new FieldPath("a"), new FieldPath("b", "c"))
+                },
+                unequal: new[] {
+                    SetOptions.MergeFields("a"),
+                    SetOptions.MergeFields("b.c"),
+                    SetOptions.MergeFields("a", "b.c", "d"),
+                    SetOptions.MergeFields("x"),
+                    // Currently, equality is order-sensitive. This is being reviewed.
+                    SetOptions.MergeFields("b.c", "a")
+                });
+        }
     }
 }
