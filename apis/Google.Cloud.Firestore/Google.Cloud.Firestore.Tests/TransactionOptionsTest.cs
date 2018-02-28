@@ -37,5 +37,13 @@ namespace Google.Cloud.Firestore.Tests
             var options = TransactionOptions.Create(attempts);
             Assert.Equal(attempts, options.MaxAttempts);
         }
+
+        [Fact]
+        public void Equality()
+        {
+            EqualityTester.AssertEqual(TransactionOptions.Create(10),
+                equal: new[] { TransactionOptions.Create(10) },
+                unequal: new[] { TransactionOptions.Create(20) });
+        }
     }
 }
