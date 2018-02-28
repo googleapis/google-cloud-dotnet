@@ -25,7 +25,7 @@ namespace Google.Cloud.Firestore
         private const int HashInitialValue = 3581;
 
         /// <summary>
-        /// Checks if two lists are equal.
+        /// Checks if two lists are equal, in an ordering-sensitive manner.
         /// </summary>
         internal static bool ListsEqual<T>(IReadOnlyList<T> left, IReadOnlyList<T> right)
             where T : IEquatable<T>
@@ -53,7 +53,7 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
-        /// Computes a hash code for a list
+        /// Computes an ordering-sensitive hash code for a list.
         /// </summary>
         internal static int GetListHashCode<T>(IReadOnlyList<T> list) where T : IEquatable<T>
         {            
