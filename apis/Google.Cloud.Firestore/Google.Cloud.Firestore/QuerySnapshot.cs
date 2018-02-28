@@ -20,7 +20,7 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// An immutable snapshot of complete query results.
     /// </summary>
-    public sealed class QuerySnapshot : IReadOnlyList<DocumentSnapshot>
+    public sealed class QuerySnapshot : IReadOnlyList<DocumentSnapshot>, IEquatable<QuerySnapshot>
     {
         internal QuerySnapshot(Query query, IReadOnlyList<DocumentSnapshot> documents, Timestamp readTime)
         {
@@ -63,5 +63,24 @@ namespace Google.Cloud.Firestore
 
         /// <inheritdoc />
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+        /// <summary>
+        /// Compares this snapshot with another for equality. The documents and query are compared;
+        /// the read time is not.
+        /// </summary>
+        /// <param name="other">The snapshot to compare this one with</param>
+        /// <returns><c>true</c> if this snapshot is equal to <paramref name="other"/>; <c>false</c> otherwise.</returns>
+        public bool Equals(QuerySnapshot other) =>
+            other != null &&
+            Query.Equals(other.Query) &&
+            EqualityHelpers.ListsEqual(Documents, other.Documents);
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as QuerySnapshot);
+
+        /// <inheritdoc />
+        public override int GetHashCode() =>
+            EqualityHelpers.CombineHashCodes(Query.GetHashCode(), EqualityHelpers.GetListHashCode(Documents));
+
     }
 }
